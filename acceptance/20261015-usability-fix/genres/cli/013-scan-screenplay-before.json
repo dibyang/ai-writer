@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-10-15T14:43:07.069Z",
+  "finished_at": "2026-10-15T14:43:07.144Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "bin/ai-writer.mjs",
+    "style-scan",
+    "--project",
+    "acceptance/20261015-usability-fix/works/借一把椅子",
+    "--draft",
+    "正文/0001-借一把椅子.md",
+    "--out",
+    "审查/语言线索-before.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"scope\": \"advisory-pattern-scan\",\n  \"kind\": \"screenplay\",\n  \"draft\": \"正文/0001-借一把椅子.md\",\n  \"source_sha256\": \"d06563b5b20c3535ca9e5d4b27453ff82f7af4b7ee6054f9584011a6b322aa3f\",\n  \"quality_verdict\": \"requires-contextual-reading\",\n  \"candidates\": [\n    {\n      \"category\": \"template-expression\",\n      \"line\": 7,\n      \"column\": 3,\n      \"quote\": \"缓缓开口\",\n      \"context\": \"许安缓缓开口：“方姐，这两把能先留一晚吗？”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 9,\n      \"column\": 4,\n      \"quote\": \"眼中闪过一丝\",\n      \"context\": \"方姐的眼中闪过一丝复杂：“东西有数。二十五把，少一把我明早就得找。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 13,\n      \"column\": 3,\n      \"quote\": \"深吸一口气\",\n      \"context\": \"方姐深吸一口气，缓缓开口：“那你签个字。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 13,\n      \"column\": 9,\n      \"quote\": \"缓缓开口\",\n      \"context\": \"方姐深吸一口气，缓缓开口：“那你签个字。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"sentence-pattern\",\n      \"line\": 25,\n      \"column\": 27,\n      \"quote\": \"不是物品，而是\",\n      \"context\": \"许安心中涌起一股感动，他终于懂得，人与人之间最珍贵的不是物品，而是那份无法用语言衡量的温暖。\",\n      \"reason\": \"核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"emotion-summary\",\n      \"line\": 25,\n      \"column\": 3,\n      \"quote\": \"心中涌起一股\",\n      \"context\": \"许安心中涌起一股感动，他终于懂得，人与人之间最珍贵的不是物品，而是那份无法用语言衡量的温暖。\",\n      \"reason\": \"实读情绪诱因与后果，判断有无重复解释或套式反应。\",\n      \"advisory\": true\n    }\n  ],\n  \"candidate_count\": 6,\n  \"manual_review\": [\n    \"情绪因果与人物反应\",\n    \"对白的身份、目的及人物差异\",\n    \"收尾功能与跨章重复\",\n    \"解释是否必要与视角权限\",\n    \"事实、人物声音与正常修辞是否被误伤\"\n  ],\n  \"skipped_quote_or_code_lines\": 0,\n  \"note\": \"命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。\"\n}\n",
+  "stderr": "",
+  "error": null
+}

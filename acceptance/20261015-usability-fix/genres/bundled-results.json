@@ -1,0 +1,184 @@
+[
+  {
+    "kind": "screenplay",
+    "command": "doctor",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"node\": \"v24.15.0\",\n  \"tool_version\": \"0.3.0\",\n  \"tool_root\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\借一把椅子\\\\.writer\\\\tool\",\n  \"skills\": 7,\n  \"engine\": \"optional-in-workspace-copy\",\n  \"errors\": [],\n  \"warnings\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "status",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"title\": \"借一把椅子\",\n  \"kind\": \"screenplay\",\n  \"revision\": 3,\n  \"schema_version\": 1,\n  \"next_unit\": 2,\n  \"stale_units\": [],\n  \"changed_sources\": [],\n  \"view\": \"full\",\n  \"draft_inventory\": {\n    \"registered_count\": 1,\n    \"unregistered\": [],\n    \"unsafe_entries\": []\n  },\n  \"next\": {\n    \"unit\": 2,\n    \"plan_exists\": false,\n    \"action\": \"先准备下一单元细纲；已有正文时先实读再建立细纲\",\n    \"command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\借一把椅子\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs' plan '--help'\"\n  },\n  \"snapshot\": {\n    \"characters\": {\n      \"许安\": \"社区活动室；持签到册；已在借用单写明早十点；两把椅子获准留室内，供明早九点老梁登记使用\",\n      \"方姐\": \"社区活动室；持库房钥匙并收好借用单；把一把椅子推到墙边，叮嘱别堵门\",\n      \"老梁\": \"未出场；仅由许安说明明早九点来登记，未叙述其实际行动或所知\"\n    },\n    \"threads\": [],\n    \"timeline\": [\n      \"夜：二十五把椅子中二十三把已回库房，两把留室内借用，方姐只挪其中一把\",\n      \"明早九点是许安所说明的登记安排，十点是单上归还时间；均未写作已经发生\"\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "init-help",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\n  \"ok\": false,\n  \"error\": \"无效、重复或缺值参数：--project\",\n  \"code\": \"COMMAND_FAILED\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\借一把椅子\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs' init '--help'\"\n}\n"
+  },
+  {
+    "kind": "screenplay",
+    "command": "plan-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / plan\n保存下一章、场或篇的细纲。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' plan --project 作品目录 --input 细纲.json\n\n输入示例（UTF-8 JSON）：\n{\n  \"unit\": 1,\n  \"title\": \"来信\",\n  \"goal\": \"确认寄件人\",\n  \"change\": \"发现寄件时间不符\",\n  \"beats\": [\n    \"核对邮戳\"\n  ],\n  \"cast\": [],\n  \"setting_refs\": [],\n  \"research_refs\": []\n}\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "context-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / context\n读取下一单元的写作上下文；须先保存细纲。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' context --project 作品目录 --unit 1 [--max-chars 40000]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "record-template-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / record-template\n动笔前取得登记模板。短篇填写 snapshot，长篇填写 changes；保留真实来源哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' record-template --project 作品目录 --unit 1 --draft 正文/0001-来信.md\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "record-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / record\n填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' record --project 作品目录 --input 登记.json\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "rewind-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / rewind\n备份并作废指定单元及后续追踪，保留正文。先 status 获取当前修订号。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' rewind --project 作品目录 --from 1 --expected-revision 当前修订号\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "style-scan-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / style-scan\n只读扫描表达线索，供去 AI 味实读复核；不自动改稿、不打 AI 概率分。可检查未登记正文。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' style-scan --project 作品目录 --draft 正文/0001-标题.md [--out 审查/语言线索-r1.json]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "check-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / check\n检查机械一致性与未登记正文；不裁定文学质量。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' check --project 作品目录\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "export-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / export\n导出已登记草稿，列出未纳入的正文；不覆盖旧导出。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' export --project 作品目录 --out 作品目录外的新目录\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "status-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / status\n查看进度、过期来源、未登记正文和建议下一步。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' status --project 作品目录 [--view compact|full]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "screenplay",
+    "command": "doctor-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / doctor\n检查当前工具，或指定作品的随附技能、用户文档和工具文件。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' doctor [--project 作品目录]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "doctor",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"node\": \"v24.15.0\",\n  \"tool_version\": \"0.3.0\",\n  \"tool_root\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\字放回格子里\\\\.writer\\\\tool\",\n  \"skills\": 7,\n  \"engine\": \"optional-in-workspace-copy\",\n  \"errors\": [],\n  \"warnings\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "status",
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"title\": \"字放回格子里\",\n  \"kind\": \"history\",\n  \"revision\": 3,\n  \"schema_version\": 1,\n  \"next_unit\": 2,\n  \"stale_units\": [],\n  \"changed_sources\": [],\n  \"view\": \"full\",\n  \"draft_inventory\": {\n    \"registered_count\": 1,\n    \"unregistered\": [],\n    \"unsafe_entries\": []\n  },\n  \"next\": {\n    \"unit\": 2,\n    \"plan_exists\": false,\n    \"action\": \"先准备下一单元细纲；已有正文时先实读再建立细纲\",\n    \"command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\字放回格子里\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs' plan '--help'\"\n  },\n  \"snapshot\": {\n    \"characters\": {\n      \"沈括\": \"仅作为梦溪笔谈卷十八活版条的记述者；正文不补其现场动作或心理\",\n      \"毕昇\": \"仅在否定心理独白的限定中出现；不声称知道其思考过程\"\n    },\n    \"threads\": [],\n    \"timeline\": [\n      \"本章依同一活版条解释备印、分类和再次取用；不新增历史年月或现场时序\",\n      \"史料记载若止印三、二本未为简易；不是现代计时实验，未量化库存和寻找耗时\"\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "init-help",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\n  \"ok\": false,\n  \"error\": \"无效、重复或缺值参数：--project\",\n  \"code\": \"COMMAND_FAILED\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\字放回格子里\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs' init '--help'\"\n}\n"
+  },
+  {
+    "kind": "history",
+    "command": "plan-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / plan\n保存下一章、场或篇的细纲。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' plan --project 作品目录 --input 细纲.json\n\n输入示例（UTF-8 JSON）：\n{\n  \"unit\": 1,\n  \"title\": \"来信\",\n  \"goal\": \"确认寄件人\",\n  \"change\": \"发现寄件时间不符\",\n  \"beats\": [\n    \"核对邮戳\"\n  ],\n  \"cast\": [],\n  \"setting_refs\": [],\n  \"research_refs\": []\n}\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "context-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / context\n读取下一单元的写作上下文；须先保存细纲。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' context --project 作品目录 --unit 1 [--max-chars 40000]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "record-template-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / record-template\n动笔前取得登记模板。短篇填写 snapshot，长篇填写 changes；保留真实来源哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' record-template --project 作品目录 --unit 1 --draft 正文/0001-来信.md\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "record-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / record\n填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' record --project 作品目录 --input 登记.json\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "rewind-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / rewind\n备份并作废指定单元及后续追踪，保留正文。先 status 获取当前修订号。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' rewind --project 作品目录 --from 1 --expected-revision 当前修订号\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "style-scan-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / style-scan\n只读扫描表达线索，供去 AI 味实读复核；不自动改稿、不打 AI 概率分。可检查未登记正文。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' style-scan --project 作品目录 --draft 正文/0001-标题.md [--out 审查/语言线索-r1.json]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "check-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / check\n检查机械一致性与未登记正文；不裁定文学质量。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' check --project 作品目录\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "export-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / export\n导出已登记草稿，列出未纳入的正文；不覆盖旧导出。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' export --project 作品目录 --out 作品目录外的新目录\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "status-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / status\n查看进度、过期来源、未登记正文和建议下一步。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' status --project 作品目录 [--view compact|full]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  },
+  {
+    "kind": "history",
+    "command": "doctor-help",
+    "exit_code": 0,
+    "stdout": "ai-writer 0.3.0 / doctor\n检查当前工具，或指定作品的随附技能、用户文档和工具文件。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' doctor [--project 作品目录]\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+    "stderr": ""
+  }
+]

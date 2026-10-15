@@ -1,0 +1,152 @@
+{
+  "kind": "screenplay",
+  "title": "借一把椅子",
+  "revision": 3,
+  "final_sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+  "baseline_sha256": "d06563b5b20c3535ca9e5d4b27453ff82f7af4b7ee6054f9584011a6b322aa3f",
+  "sources": [
+    {
+      "path": "writer.json",
+      "sha256": "3e252f518004a6b83aab20a3ae3ab6590541625d8759513dd81a0025ace1341d"
+    },
+    {
+      "path": ".writer/state.json",
+      "sha256": "f752177d196a9cbe34a193ec0ccf09dc9289552512dfe4e5bdfca04de33158ef",
+      "note": "写前 revision=2 的真实状态哈希；登记后状态必变，已与写前 context 对照"
+    },
+    {
+      "path": "大纲/单元/0001.json",
+      "sha256": "691dd7ab2952e88551cc54871ea5590794debf658cd73ca35326caf12810a098"
+    },
+    {
+      "path": "设定/作品定位.md",
+      "sha256": "c0b3158c70a08af14454f9197a115786a5ec54c81411034db9315728e6fabde6"
+    },
+    {
+      "path": "设定/文风.md",
+      "sha256": "8cec9a424d30e98ab1f056a763cd06153a8b9724fa9ca3e0b3339d6367756d9b"
+    },
+    {
+      "path": "设定/权威规则.md",
+      "sha256": "a511ef14b83ac8fb6c6956e760f1c8cc1d937120d6bd47dbd49f6390e607829a"
+    },
+    {
+      "path": "大纲/全书大纲.md",
+      "sha256": "944e0d0f4b2168e557586b8a50d1c0e80a959239325d68ec5de55f451bf64c22"
+    }
+  ],
+  "rewind_backup": {
+    "path": "acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\rewind-1-747dfef8-cea3-4b28-a4d7-f31e58c2ea01.json",
+    "sha256": "90f6760dfd6008998174b122bd7229e6644d1274c430e01663a82050cbf8ca2a"
+  },
+  "bundled_doctor": {
+    "ok": true,
+    "node": "v24.15.0",
+    "tool_version": "0.3.0",
+    "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool",
+    "skills": 7,
+    "engine": "optional-in-workspace-copy",
+    "errors": [],
+    "warnings": []
+  },
+  "helps": [
+    {
+      "command": "init",
+      "evidence": "cli/bundled-screenplay-init-help-corrected.json",
+      "exit_code": 0
+    },
+    {
+      "command": "plan",
+      "evidence": "cli/bundled-screenplay-plan-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "context",
+      "evidence": "cli/bundled-screenplay-context-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "record-template",
+      "evidence": "cli/bundled-screenplay-record-template-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "record",
+      "evidence": "cli/bundled-screenplay-record-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "rewind",
+      "evidence": "cli/bundled-screenplay-rewind-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "style-scan",
+      "evidence": "cli/bundled-screenplay-style-scan-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "check",
+      "evidence": "cli/bundled-screenplay-check-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "export",
+      "evidence": "cli/bundled-screenplay-export-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "status",
+      "evidence": "cli/bundled-screenplay-status-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "doctor",
+      "evidence": "cli/bundled-screenplay-doctor-help.json",
+      "exit_code": 0
+    }
+  ],
+  "tool_files": [
+    {
+      "path": "bin/ai-writer.mjs",
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    {
+      "path": "lib/help.mjs",
+      "sha256": "3a32b6d5701433144a265b50d13c286f2ef65848fa53569b16d6bb0f81522696"
+    },
+    {
+      "path": "lib/journal.mjs",
+      "sha256": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a"
+    },
+    {
+      "path": "lib/longform.mjs",
+      "sha256": "1db2aa937205e1bdd2420c83f94b86914d12590b94596c6098b988c80320eb15"
+    },
+    {
+      "path": "lib/style.mjs",
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    {
+      "path": "lib/workspace.mjs",
+      "sha256": "2579b5b5b3ef55d64a793fa8a3cee039cd9392d91ebd85972b72931dfa3e5e1d"
+    }
+  ],
+  "provenance": [
+    {
+      "path": "LICENSE.md",
+      "present_in_work": false,
+      "root_sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    {
+      "path": "docs/sources.md",
+      "present_in_work": false,
+      "root_sha256": "22983b4261c72ce82166e94993f98ba8482129c15482482e3d0ed9a4eee7b6d5"
+    },
+    {
+      "path": "docs/usability-sources.json",
+      "present_in_work": false,
+      "root_sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+    }
+  ]
+}

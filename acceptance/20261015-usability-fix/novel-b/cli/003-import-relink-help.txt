@@ -1,0 +1,21 @@
+ai-writer 0.3.0 / import-relink
+为同一冻结内容重定位原文件；内容哈希不同会拒绝。保留定位历史，不修改冻结清单与正文。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' import-relink --project 作品目录 --input 路径映射.json --expected-revision 当前修订号
+
+输入示例（UTF-8 JSON）：
+{
+  "files": [
+    {
+      "unit": 1,
+      "path": "D:/新位置/第一章.md"
+    }
+  ]
+}
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

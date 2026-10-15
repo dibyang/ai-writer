@@ -1,0 +1,97 @@
+✖ Windows 初始化目录短暂拒绝后可有界重试完成，正文配置不丢失 (57.2884ms)
+✖ Windows 持续拒绝最多尝试六次，仍报错且不留下半成品目标 (47.066ms)
+✖ Windows 重试期间目标被创建时停止，保留竞争方文件不覆盖 (44.8695ms)
+✖ Windows 导出目录也处理短暂重命名拒绝，不更改正文或状态 (65.5516ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 297.9859
+
+✖ failing tests:
+
+test at tests\windows-rename.test.mjs:15:1
+✖ Windows 初始化目录短暂拒绝后可有界重试完成，正文配置不丢失 (57.2884ms)
+  Error: injected temporary rename denial
+      at temporary (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:13:39)
+      at Object.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:19:100)
+      at Object.apply (node:internal/test_runner/mock/mock:756:20)
+      at initProject (file:///D:/work/other/ai-writer/lib/workspace.mjs:216:8)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:22:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    code: 'EPERM'
+  }
+
+test at tests\windows-rename.test.mjs:28:1
+✖ Windows 持续拒绝最多尝试六次，仍报错且不留下半成品目标 (47.066ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 6
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:36:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\windows-rename.test.mjs:40:1
+✖ Windows 重试期间目标被创建时停止，保留竞争方文件不覆盖 (44.8695ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /不覆盖/. Input:
+  
+  'Error: injected temporary rename denial'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:49:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: injected temporary rename denial
+        at temporary (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:13:39)
+        at Object.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:45:105)
+        at Object.apply (node:internal/test_runner/mock/mock:756:20)
+        at initProject (file:///D:/work/other/ai-writer/lib/workspace.mjs:216:8)
+        at file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:49:29
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:49:16)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1201:25),
+    expected: /不覆盖/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\windows-rename.test.mjs:54:1
+✖ Windows 导出目录也处理短暂重命名拒绝，不更改正文或状态 (65.5516ms)
+  Error: injected temporary rename denial
+      at temporary (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:13:39)
+      at Object.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:63:102)
+      at Object.apply (node:internal/test_runner/mock/mock:756:20)
+      at exportWork (file:///D:/work/other/ai-writer/lib/workspace.mjs:366:8)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/windows-rename.test.mjs:66:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12) {
+    code: 'EPERM'
+  }

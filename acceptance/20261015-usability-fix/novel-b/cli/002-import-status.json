@@ -1,0 +1,16 @@
+{
+  "started": "2026-10-15T14:23:59.008Z",
+  "finished": "2026-10-15T14:23:59.113Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "command": [
+    "node",
+    "bin/ai-writer.mjs",
+    "import-status",
+    "--project",
+    "acceptance/20261015-usability-fix/works/雨后失物"
+  ],
+  "status": 1,
+  "signal": null,
+  "stdout": "{\n  \"ok\": false,\n  \"can_continue\": false,\n  \"phase\": \"blocked\",\n  \"next_unit\": 2,\n  \"blockers\": [\n    {\n      \"code\": \"ORIGINAL_UNAVAILABLE_OR_CHANGED\",\n      \"unit\": 2,\n      \"path\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\fixtures\\\\original\\\\0002.md\",\n      \"next_action\": \"若只是移动位置，用 import-relink 绑定内容哈希相同的新路径；内容变更不能直接替换冻结基线。\"\n    }\n  ],\n  \"location_revision\": 0,\n  \"next_action\": \"先按 blockers 核实并恢复来源；路径移动时查看 import-relink --help\",\n  \"total\": 2,\n  \"registered_units\": [\n    1\n  ],\n  \"unread_or_unregistered\": [\n    2\n  ],\n  \"unchanged_baseline_units\": [\n    1\n  ],\n  \"baseline_registered_through\": 1,\n  \"changed_copies\": [],\n  \"changed_originals\": [\n    1,\n    2\n  ],\n  \"role\": \"own-work-continuation-baseline\",\n  \"note\": \"源文件变化不自动覆盖副本；登记只是填写者声明的阅读与草稿追踪\"\n}\n",
+  "stderr": ""
+}

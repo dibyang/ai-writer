@@ -1,0 +1,17 @@
+{
+  "started": "2026-10-15T14:24:00.500Z",
+  "finished": "2026-10-15T14:24:00.594Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "command": [
+    "node",
+    "bin/ai-writer.mjs",
+    "import-relink",
+    "--project",
+    "acceptance/20261015-usability-fix/works/雨后失物",
+    "--help"
+  ],
+  "status": 0,
+  "signal": null,
+  "stdout": "ai-writer 0.3.0 / import-relink\n为同一冻结内容重定位原文件；内容哈希不同会拒绝。保留定位历史，不修改冻结清单与正文。\n\nnode 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' import-relink --project 作品目录 --input 路径映射.json --expected-revision 当前修订号\n\n输入示例（UTF-8 JSON）：\n{\n  \"files\": [\n    {\n      \"unit\": 1,\n      \"path\": \"D:/新位置/第一章.md\"\n    }\n  ]\n}\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+  "stderr": ""
+}

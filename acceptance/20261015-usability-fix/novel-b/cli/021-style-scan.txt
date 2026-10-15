@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "scope": "advisory-pattern-scan",
+  "kind": "novel",
+  "draft": "正文/0002-导入.md",
+  "source_sha256": "616fbc76d16d5ae921d7f7d6abb3d16e1cdc6dcaf63c3110de806ec49ee25e47",
+  "quality_verdict": "requires-contextual-reading",
+  "candidates": [
+    {
+      "category": "template-expression",
+      "line": 11,
+      "column": 3,
+      "quote": "缓缓开口",
+      "context": "周叔缓缓开口：“我再查一查。”他深吸一口气，目光看向另一页。许棠也深吸一口气，目光看向另一页。两个人都陷入了沉默，空气仿佛凝固了，时",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 11,
+      "column": 17,
+      "quote": "深吸一口气",
+      "context": "周叔缓缓开口：“我再查一查。”他深吸一口气，目光看向另一页。许棠也深吸一口气，目光看向另一页。两个人都陷入了沉默，空气仿佛凝固了，时间仿佛停止了流动。",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 11,
+      "column": 34,
+      "quote": "深吸一口气",
+      "context": "周叔缓缓开口：“我再查一查。”他深吸一口气，目光看向另一页。许棠也深吸一口气，目光看向另一页。两个人都陷入了沉默，空气仿佛凝固了，时间仿佛停止了流动。",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "sentence-pattern",
+      "line": 17,
+      "column": 37,
+      "quote": "不是等待，而是",
+      "context": "她没有去拿错袋。周叔把它放回原柜，扣上门。这一刻，许棠终于懂得，有些等待不是等待，而是人生给她上的一堂课。",
+      "reason": "核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。",
+      "advisory": true
+    }
+  ],
+  "candidate_count": 4,
+  "manual_review": [
+    "情绪因果与人物反应",
+    "对白的身份、目的及人物差异",
+    "收尾功能与跨章重复",
+    "解释是否必要与视角权限",
+    "事实、人物声音与正常修辞是否被误伤"
+  ],
+  "skipped_quote_or_code_lines": 0,
+  "note": "命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。"
+}

@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-10-15T14:16:59.214Z",
+  "cwd": "D:/work/other/ai-writer",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物",
+  "ok": true,
+  "scope": "文件与哈希核对；不读取展示第二章正文，不构成文学质量验收",
+  "assertions": [
+    {
+      "name": "unit-1-original-frozen-draft-identical",
+      "pass": true
+    },
+    {
+      "name": "unit-2-original-frozen-draft-identical",
+      "pass": true
+    },
+    {
+      "name": "explicit-source-order",
+      "pass": true
+    },
+    {
+      "name": "schema2-revision2-unit1-only",
+      "pass": true
+    },
+    {
+      "name": "second-and-third-unit-plan-absent",
+      "pass": true
+    },
+    {
+      "name": "third-draft-absent",
+      "pass": true
+    },
+    {
+      "name": "export-unit1-only",
+      "pass": true
+    },
+    {
+      "name": "export-explicitly-excludes-unit2",
+      "pass": true
+    },
+    {
+      "name": "export-byte-identical-to-original1",
+      "pass": true
+    },
+    {
+      "name": "logged-main-workflow-all-successful",
+      "pass": true
+    }
+  ],
+  "comparisons": [
+    {
+      "unit": 1,
+      "original": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\fixtures\\original\\0001.md",
+      "copy": ".writer/import-source/6771c71b-399d-4fba-b8fa-63f0b01dbfa8/0001.md",
+      "draft": "正文/0001-导入.md",
+      "hashes": {
+        "baseline": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f",
+        "original": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f",
+        "frozen": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f",
+        "draft": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f"
+      }
+    },
+    {
+      "unit": 2,
+      "original": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\fixtures\\original\\0002.md",
+      "copy": ".writer/import-source/6771c71b-399d-4fba-b8fa-63f0b01dbfa8/0002.md",
+      "draft": "正文/0002-导入.md",
+      "hashes": {
+        "baseline": "616fbc76d16d5ae921d7f7d6abb3d16e1cdc6dcaf63c3110de806ec49ee25e47",
+        "original": "616fbc76d16d5ae921d7f7d6abb3d16e1cdc6dcaf63c3110de806ec49ee25e47",
+        "frozen": "616fbc76d16d5ae921d7f7d6abb3d16e1cdc6dcaf63c3110de806ec49ee25e47",
+        "draft": "616fbc76d16d5ae921d7f7d6abb3d16e1cdc6dcaf63c3110de806ec49ee25e47"
+      }
+    }
+  ],
+  "export_sha256": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f",
+  "successful_cli_commands": 16,
+  "git_status_exit_code": 0
+}

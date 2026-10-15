@@ -2,6 +2,10 @@
 
 以下命令从 ai-writer 根目录执行。`--project` 指作品目录；JSON 输入文件路径相对于当前命令目录。JSON 中引用的文件路径相对于作品目录，使用正斜杠。路径含空格时加引号。所有文本使用 UTF-8。
 
+作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
+
+**协议选择：** 本页的完整 snapshot 示例适用于 schema 1。启用长篇后，record-template 返回 changes，必须按 [长篇流程](long-form.md) 填写，不能复制下面的 snapshot 覆盖长篇账本。两种协议的修订、来源核验与导出保护一致。
+
 ## 初始化
 
 ```powershell
@@ -92,6 +96,8 @@ node bin/ai-writer.mjs rewind --project "works/示例" --from 1 --expected-revis
 
 `status` 同时返回 `stale_units`（正文变化）和 `changed_sources`（已消费资料变化）。规则、被引用的大纲、事实卡等改变或缺失，`check` 会报 `CONTEXT_SOURCE_CHANGED`，续写和导出都会阻断。按最早消费者回退并重新评估；这是保守的文件依赖检查，不是史实或语义裁定。状态文件本身在登记时必然更新，不按旧输入哈希判过期。
 
+`status.draft_inventory.unregistered` 显示未登记正文候选；回退保留的旧稿也可能在其中。`status.next` 给出下一步与命令，不会自动执行。先核对候选用途，避免覆盖或重复登记。
+
 ## 导出
 
 ```powershell
@@ -99,6 +105,33 @@ node bin/ai-writer.mjs export --project "works/示例" --out "exports/示例-v1"
 ```
 
 导出到全新、位于作品外的目录，包含 `manuscript.md` 和 `manifest.json`。清单包含修订号、正文及其创作来源哈希。只导出顺序登记的草稿；未登记文件不会被偷偷合并。仍需读者视图和文学质量验收，不自动发布。
+
+命令输出与清单同时包含 `included_units`、`excluded_drafts` 和 `warnings`。未登记正文会形成警告但不阻止导出已登记范围；交付前必须核对排除列表，不能把“命令成功”当成“全部正文已导出”。
+
+## 旧稿重定位
+
+导入流程先按 [长篇流程](long-form.md) 建立冻结基线。仅原文件换路径时，先 status 获取作品 revision，再保存映射 JSON：
+
+```json
+{"files":[{"unit":1,"path":"D:/新位置/第一章.md"},{"unit":2,"path":"D:/新位置/第二章.md"}]}
+```
+
+```powershell
+node bin/ai-writer.mjs import-status --project "works/示例"
+node bin/ai-writer.mjs import-relink --project "works/示例" --input "路径映射.json" --expected-revision 1
+```
+
+示例修订号 1 必须替换成实际值。全部映射先校验再写入；任一内容不同、重复单元或链接文件均拒绝整批修改。新路径的内容须与冻结副本 SHA-256 相同。相对路径按命令 cwd 解释，建议提供绝对路径。
+
+定位历史保存在 `.writer/import-locations.json`；冻结的 import.json、原稿副本、正文和追踪不改。已登记来源仍使用同一内容，旧报告不会因为换路径被冒充为新版。`import-status.can_continue` 表示可继续取下一章，`blockers` 列出阻断；phase=complete 时转为普通创作。
+
+## 去 AI 味扫描与审修
+
+```powershell
+node bin/ai-writer.mjs style-scan --project "works/示例" --draft "正文/0001-没寄出的信.md" --out "审查/语言线索-r1.json"
+```
+
+扫描只读正文，可接受未登记稿；out 可省略，提供时必须为新的审查 JSON。结果提供原稿哈希、位置和 advisory 候选，不提供 AI 概率与文学通过结论。完整的诊断、修改和复核由 Codex 按 [去 AI 味流程](deslop.md) 执行。
 
 ## 原有质量引擎
 
@@ -122,3 +155,5 @@ node bin/ai-writer.mjs gate chapter-gate vendor/story-gate-studio/examples/fixtu
 | context 过大 | 定点选资料或显式扩容，不能悄悄删关键约束 |
 
 退出码：0 表示该命令成功；1 表示检查存在阻断结果；2 表示输入或运行异常。`--help` 输出可读文本，其余命令输出 JSON。
+
+异常包含 code、error、next_action、help_command；适用时带 file 和 next_command。缺章纲会提示先 plan；JSON 解析错误给文件和解析位置。不要在输入尚未核实时直接执行建议的回退命令。

@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "scope": "advisory-pattern-scan",
+  "kind": "history",
+  "draft": "正文/0001-字放回格子里.md",
+  "source_sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+  "quality_verdict": "requires-contextual-reading",
+  "candidates": [
+    {
+      "category": "sentence-pattern",
+      "line": 9,
+      "column": 2,
+      "quote": "不是现代字库的精确库存表，而是",
+      "context": "这不是现代字库的精确库存表，而是沈括对一种做法的记述。我们不能据此推算作坊究竟有多少枚字印，也不知道每次寻找要花多久。按类别保管有助于再次取用，这是依据",
+      "reason": "核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。",
+      "advisory": true
+    }
+  ],
+  "candidate_count": 1,
+  "manual_review": [
+    "情绪因果与人物反应",
+    "对白的身份、目的及人物差异",
+    "收尾功能与跨章重复",
+    "解释是否必要与视角权限",
+    "事实、人物声音与正常修辞是否被误伤"
+  ],
+  "skipped_quote_or_code_lines": 1,
+  "note": "命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。"
+}

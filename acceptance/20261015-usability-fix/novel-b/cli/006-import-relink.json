@@ -1,0 +1,20 @@
+{
+  "started": "2026-10-15T14:24:30.205Z",
+  "finished": "2026-10-15T14:24:30.311Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "command": [
+    "node",
+    "bin/ai-writer.mjs",
+    "import-relink",
+    "--project",
+    "acceptance/20261015-usability-fix/works/雨后失物",
+    "--input",
+    "acceptance/20261015-usability-fix/novel-b/relink-input.json",
+    "--expected-revision",
+    "2"
+  ],
+  "status": 0,
+  "signal": null,
+  "stdout": "{\n  \"ok\": true,\n  \"revision\": 2,\n  \"location_revision\": 1,\n  \"relocated\": [\n    {\n      \"unit\": 1,\n      \"before\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\fixtures\\\\original\\\\0001.md\",\n      \"after\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\fixtures\\\\relocated\\\\0001.md\",\n      \"sha256\": \"992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f\"\n    },\n    {\n      \"unit\": 2,\n      \"before\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\fixtures\\\\original\\\\0002.md\",\n      \"after\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\fixtures\\\\relocated\\\\0002.md\",\n      \"sha256\": \"616fbc76d16d5ae921d7f7d6abb3d16e1cdc6dcaf63c3110de806ec49ee25e47\"\n    }\n  ],\n  \"note\": \"仅重定位同一冻结内容，正文与已登记来源哈希未变。\"\n}\n",
+  "stderr": ""
+}

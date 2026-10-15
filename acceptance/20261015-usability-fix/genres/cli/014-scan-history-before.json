@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-10-15T14:43:08.565Z",
+  "finished_at": "2026-10-15T14:43:08.639Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "bin/ai-writer.mjs",
+    "style-scan",
+    "--project",
+    "acceptance/20261015-usability-fix/works/字放回格子里",
+    "--draft",
+    "正文/0001-字放回格子里.md",
+    "--out",
+    "审查/语言线索-before.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"scope\": \"advisory-pattern-scan\",\n  \"kind\": \"history\",\n  \"draft\": \"正文/0001-字放回格子里.md\",\n  \"source_sha256\": \"ac8a4215c851bb416e8a6e3116766200f1bff2efdf8c817936d935ad865bb747\",\n  \"quality_verdict\": \"requires-contextual-reading\",\n  \"candidates\": [\n    {\n      \"category\": \"sentence-pattern\",\n      \"line\": 9,\n      \"column\": 2,\n      \"quote\": \"不是现代字库的精确库存表，而是\",\n      \"context\": \"这不是现代字库的精确库存表，而是沈括对一种做法的记述。我们不能据此推算作坊究竟有多少枚字印，也不知道每次寻找要花多久。按类别保管有助于再次取用，这是依据\",\n      \"reason\": \"核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"over-explanation\",\n      \"line\": 11,\n      \"column\": 37,\n      \"quote\": \"命运的齿轮\",\n      \"context\": \"少印几本是否划算，沈括也有限定：“若止印三、二本，未为简易。”读到这里，命运的齿轮缓缓转动，我们终于明白，小小的字印承载着人类文明无比伟大的梦想。\",\n      \"reason\": \"核对叙述视角、信息权限及是否提前揭底；不自动改变叙述方式。\",\n      \"advisory\": true\n    }\n  ],\n  \"candidate_count\": 2,\n  \"manual_review\": [\n    \"情绪因果与人物反应\",\n    \"对白的身份、目的及人物差异\",\n    \"收尾功能与跨章重复\",\n    \"解释是否必要与视角权限\",\n    \"事实、人物声音与正常修辞是否被误伤\"\n  ],\n  \"skipped_quote_or_code_lines\": 1,\n  \"note\": \"命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。\"\n}\n",
+  "stderr": "",
+  "error": null
+}

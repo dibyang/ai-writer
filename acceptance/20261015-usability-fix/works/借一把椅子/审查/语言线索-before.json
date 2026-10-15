@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "scope": "advisory-pattern-scan",
+  "kind": "screenplay",
+  "draft": "正文/0001-借一把椅子.md",
+  "source_sha256": "d06563b5b20c3535ca9e5d4b27453ff82f7af4b7ee6054f9584011a6b322aa3f",
+  "quality_verdict": "requires-contextual-reading",
+  "candidates": [
+    {
+      "category": "template-expression",
+      "line": 7,
+      "column": 3,
+      "quote": "缓缓开口",
+      "context": "许安缓缓开口：“方姐，这两把能先留一晚吗？”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 9,
+      "column": 4,
+      "quote": "眼中闪过一丝",
+      "context": "方姐的眼中闪过一丝复杂：“东西有数。二十五把，少一把我明早就得找。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 13,
+      "column": 3,
+      "quote": "深吸一口气",
+      "context": "方姐深吸一口气，缓缓开口：“那你签个字。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 13,
+      "column": 9,
+      "quote": "缓缓开口",
+      "context": "方姐深吸一口气，缓缓开口：“那你签个字。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "sentence-pattern",
+      "line": 25,
+      "column": 27,
+      "quote": "不是物品，而是",
+      "context": "许安心中涌起一股感动，他终于懂得，人与人之间最珍贵的不是物品，而是那份无法用语言衡量的温暖。",
+      "reason": "核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。",
+      "advisory": true
+    },
+    {
+      "category": "emotion-summary",
+      "line": 25,
+      "column": 3,
+      "quote": "心中涌起一股",
+      "context": "许安心中涌起一股感动，他终于懂得，人与人之间最珍贵的不是物品，而是那份无法用语言衡量的温暖。",
+      "reason": "实读情绪诱因与后果，判断有无重复解释或套式反应。",
+      "advisory": true
+    }
+  ],
+  "candidate_count": 6,
+  "manual_review": [
+    "情绪因果与人物反应",
+    "对白的身份、目的及人物差异",
+    "收尾功能与跨章重复",
+    "解释是否必要与视角权限",
+    "事实、人物声音与正常修辞是否被误伤"
+  ],
+  "skipped_quote_or_code_lines": 0,
+  "note": "命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。"
+}

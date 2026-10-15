@@ -1,0 +1,458 @@
+{
+  "ok": true,
+  "failures": [],
+  "candidate_files": 60,
+  "phases": [
+    {
+      "phase": "novel-a",
+      "exit_code": 0,
+      "elapsed_s": 533,
+      "command_events": 25,
+      "events": 118
+    },
+    {
+      "phase": "novel-b",
+      "exit_code": 0,
+      "elapsed_s": 899,
+      "command_events": 75,
+      "events": 276
+    },
+    {
+      "phase": "genres",
+      "exit_code": 0,
+      "elapsed_s": 878,
+      "command_events": 53,
+      "events": 231
+    },
+    {
+      "phase": "final-recheck",
+      "exit_code": 0,
+      "elapsed_s": 201,
+      "command_events": 2,
+      "events": 42
+    }
+  ],
+  "works": [
+    {
+      "name": "雨后失物",
+      "revision": 12,
+      "units": 3,
+      "draft_hashes": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-导入.md",
+          "sha256": "907fd552ba6ed8509522c123a01e40137c6f3553e3a32f145d512d93e403f186"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-导入.md",
+          "sha256": "c291518d613393ea2e49ca48157575fa6e469ecee9e47551bbe8eb60e63abc52"
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-盒盖里面.md",
+          "sha256": "183f060acc8f1d0722473251cd159eaf6ddfbde06e2fcbd3b74676ef5bfdb6da"
+        }
+      ],
+      "cli": [
+        {
+          "args": [
+            "doctor",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "node": "v24.15.0",
+            "tool_version": "0.3.0",
+            "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\.writer\\tool",
+            "skills": 7,
+            "engine": "optional-in-workspace-copy",
+            "errors": [],
+            "warnings": []
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "status",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "title": "雨后失物",
+            "kind": "novel",
+            "revision": 12,
+            "schema_version": 2,
+            "next_unit": 4,
+            "stale_units": [],
+            "changed_sources": [],
+            "view": "compact",
+            "draft_inventory": {
+              "registered_count": 3,
+              "unregistered": [],
+              "unsafe_entries": []
+            },
+            "next": {
+              "unit": 4,
+              "plan_exists": false,
+              "action": "先准备下一单元细纲；已有正文时先实读再建立细纲",
+              "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\.writer\\tool\\bin\\ai-writer.mjs' plan '--help'"
+            },
+            "current": {
+              "character_count": 3,
+              "ledger_count": 11,
+              "recent": [
+                {
+                  "unit": 1,
+                  "summary": "雨夜，许棠向值班员周叔寻找蓝色布袋，出示左下角补五针白线的照片。叙述交代袋内保温饭盒的“棠”字及父亲前后两次交代。许棠说最后见袋是六点四十的三路末班车，下车接电话时手里只拿伞。周叔找到一条登记并伸手拿钥匙，许棠收回手机；尚未开柜、确认物件或完成交接，父亲电话缘由未明。"
+                },
+                {
+                  "unit": 2,
+                  "summary": "周叔开柜取出黑线蓝袋；许棠以白线五针和缝时扎伤的食指结痂拒认。双方再查，发现补记写三路车蓝袋送调度室、经手何字且无签收时间。周叔拨电话并放号码牌，未明确接通；许棠未拿错袋，周叔将错袋回柜扣门。目标袋、饭盒和父亲缘由仍未核实。"
+                },
+                {
+                  "unit": 3,
+                  "summary": "调度室电话接通，周叔带许棠到走廊尽头核认蓝袋。许棠先看左下角五针白线，开袋前主动说保温饭盒及盖内棠字；接电话的人取盒开盖，许棠与周叔看见标记。对方复盖装袋，许棠签领物单后接袋、取伞，门口拨父亲号码，电话仍在响，无父亲处境或改口缘由答案；接听者身份未与何字等同。"
+                }
+              ],
+              "timeline_tail": [
+                "此前：许棠昨晚缝过蓝袋左下角的五针白线；父亲先说等她下班再吃，后来打电话说不用等；两次交代的缘由未明。",
+                "许棠自述最后见袋：六点四十、三路末班车；下车时接电话，手里只拿伞。具体日期与他证未给出。",
+                "本章雨夜：许棠到登记台寻物并出示照片；周叔找到一条登记、伸手拿钥匙；许棠收回手机，核验和交接尚未发生。",
+                "同一雨夜：周叔开柜展示黑线错袋，许棠据白线五针及食指结痂拒认；双方查看补记，周叔拨调度室电话、放号码牌后将错袋回柜扣门。目标袋未交接。",
+                "同一雨夜接续：调度室接通，周叔陪许棠到走廊尽头；五针白线与开盖前所述棠字核验后，接电话的人复盖装袋，许棠签名单据并接回蓝袋，门口取伞拨父亲号码，电话仍响。未补原签收时间或父亲缘由。"
+              ]
+            }
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "check",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "scope": "mechanical-only",
+            "literary_quality": "unreviewed",
+            "units": 3,
+            "revision": 12,
+            "findings": [],
+            "draft_inventory": {
+              "registered_count": 3,
+              "unregistered": [],
+              "unsafe_entries": []
+            },
+            "rolling_review": {
+              "valid": 1,
+              "stale": 0,
+              "pending_windows": [],
+              "nature": "coverage-only-not-literary-pass"
+            }
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "record",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物",
+            "--help"
+          ],
+          "exit_code": 0,
+          "output": "ai-writer 0.3.0 / record\n填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\.writer\\tool\\bin\\ai-writer.mjs' record --project 作品目录 --input 登记.json\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "name": "借一把椅子",
+      "revision": 3,
+      "units": 1,
+      "draft_hashes": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-借一把椅子.md",
+          "sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775"
+        }
+      ],
+      "cli": [
+        {
+          "args": [
+            "doctor",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "node": "v24.15.0",
+            "tool_version": "0.3.0",
+            "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool",
+            "skills": 7,
+            "engine": "optional-in-workspace-copy",
+            "errors": [],
+            "warnings": []
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "status",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "title": "借一把椅子",
+            "kind": "screenplay",
+            "revision": 3,
+            "schema_version": 1,
+            "next_unit": 2,
+            "stale_units": [],
+            "changed_sources": [],
+            "view": "full",
+            "draft_inventory": {
+              "registered_count": 1,
+              "unregistered": [],
+              "unsafe_entries": []
+            },
+            "next": {
+              "unit": 2,
+              "plan_exists": false,
+              "action": "先准备下一单元细纲；已有正文时先实读再建立细纲",
+              "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' plan '--help'"
+            },
+            "snapshot": {
+              "characters": {
+                "许安": "社区活动室；持签到册；已在借用单写明早十点；两把椅子获准留室内，供明早九点老梁登记使用",
+                "方姐": "社区活动室；持库房钥匙并收好借用单；把一把椅子推到墙边，叮嘱别堵门",
+                "老梁": "未出场；仅由许安说明明早九点来登记，未叙述其实际行动或所知"
+              },
+              "threads": [],
+              "timeline": [
+                "夜：二十五把椅子中二十三把已回库房，两把留室内借用，方姐只挪其中一把",
+                "明早九点是许安所说明的登记安排，十点是单上归还时间；均未写作已经发生"
+              ]
+            }
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "check",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "scope": "mechanical-only",
+            "literary_quality": "unreviewed",
+            "units": 1,
+            "revision": 3,
+            "findings": [],
+            "draft_inventory": {
+              "registered_count": 1,
+              "unregistered": [],
+              "unsafe_entries": []
+            }
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "record",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子",
+            "--help"
+          ],
+          "exit_code": 0,
+          "output": "ai-writer 0.3.0 / record\n填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool\\bin\\ai-writer.mjs' record --project 作品目录 --input 登记.json\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "name": "字放回格子里",
+      "revision": 3,
+      "units": 1,
+      "draft_hashes": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-字放回格子里.md",
+          "sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987"
+        }
+      ],
+      "cli": [
+        {
+          "args": [
+            "doctor",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "node": "v24.15.0",
+            "tool_version": "0.3.0",
+            "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool",
+            "skills": 7,
+            "engine": "optional-in-workspace-copy",
+            "errors": [],
+            "warnings": []
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "status",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "title": "字放回格子里",
+            "kind": "history",
+            "revision": 3,
+            "schema_version": 1,
+            "next_unit": 2,
+            "stale_units": [],
+            "changed_sources": [],
+            "view": "full",
+            "draft_inventory": {
+              "registered_count": 1,
+              "unregistered": [],
+              "unsafe_entries": []
+            },
+            "next": {
+              "unit": 2,
+              "plan_exists": false,
+              "action": "先准备下一单元细纲；已有正文时先实读再建立细纲",
+              "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' plan '--help'"
+            },
+            "snapshot": {
+              "characters": {
+                "沈括": "仅作为梦溪笔谈卷十八活版条的记述者；正文不补其现场动作或心理",
+                "毕昇": "仅在否定心理独白的限定中出现；不声称知道其思考过程"
+              },
+              "threads": [],
+              "timeline": [
+                "本章依同一活版条解释备印、分类和再次取用；不新增历史年月或现场时序",
+                "史料记载若止印三、二本未为简易；不是现代计时实验，未量化库存和寻找耗时"
+              ]
+            }
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "check",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里"
+          ],
+          "exit_code": 0,
+          "output": {
+            "ok": true,
+            "scope": "mechanical-only",
+            "literary_quality": "unreviewed",
+            "units": 1,
+            "revision": 3,
+            "findings": [],
+            "draft_inventory": {
+              "registered_count": 1,
+              "unregistered": [],
+              "unsafe_entries": []
+            }
+          },
+          "stderr": ""
+        },
+        {
+          "args": [
+            "record",
+            "--project",
+            "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里",
+            "--help"
+          ],
+          "exit_code": 0,
+          "output": "ai-writer 0.3.0 / record\n填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。\n\nnode 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool\\bin\\ai-writer.mjs' record --project 作品目录 --input 登记.json\n\n在作品目录运行时可省略 --project；其他位置须明确提供作品目录。\n作者手册：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\user-guide.md\n命令与 JSON：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\workflow.md\n长篇：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\long-form.md\n去 AI 味：D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\docs\\deslop.md\n创作与审修改写由 Codex 根据自然语言任务完成。\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "directory": "acceptance\\20261015-usability-fix\\novel-a\\export",
+      "title": "雨后失物",
+      "revision": 2,
+      "units": 1,
+      "excluded": 1,
+      "sha256": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\novel-b\\export",
+      "title": "雨后失物",
+      "revision": 12,
+      "units": 3,
+      "excluded": 0,
+      "sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\genres\\exports\\history-r3",
+      "title": "字放回格子里",
+      "revision": 3,
+      "units": 1,
+      "excluded": 0,
+      "sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\genres\\exports\\screenplay-r3",
+      "title": "借一把椅子",
+      "revision": 3,
+      "units": 1,
+      "excluded": 0,
+      "sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\final-runtime\\novel-export",
+      "title": "雨后失物",
+      "revision": 12,
+      "units": 3,
+      "excluded": 0,
+      "sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\final-recheck\\exports\\借一把椅子",
+      "title": "借一把椅子",
+      "revision": 3,
+      "units": 1,
+      "excluded": 0,
+      "sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\final-recheck\\exports\\字放回格子里",
+      "title": "字放回格子里",
+      "revision": 3,
+      "units": 1,
+      "excluded": 0,
+      "sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987"
+    },
+    {
+      "directory": "acceptance\\20261015-usability-fix\\final-recheck\\exports\\雨后失物",
+      "title": "雨后失物",
+      "revision": 12,
+      "units": 3,
+      "excluded": 0,
+      "sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc"
+    }
+  ]
+}

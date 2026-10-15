@@ -1,5 +1,7 @@
 # oh-story 完整能力盘点与 ai-writer 吸收清单
 
+0.3.0 后续补充：去 AI 味专题已单独复核，落实专项审修流程与只读扫描，参见 [来源清单](usability-sources.json)、[操作指南](deslop.md) 和 [本轮验证](../acceptance/20261015-usability-fix/README.md)。下表保留 0.2.0 盘点时的采用状态。
+
 2026-10-15，参考 [zenstory-ai/oh-story-claudecode](https://github.com/zenstory-ai/oh-story-claudecode)，固定提交 **6d72f70e5fe3de110b457fd6bc81ede6ea614702**。此前只保留四份规则，提交为 c945de68…；本轮按整个仓库盘点，并非在旧四份资料上补想象。
 
 ## 盘点覆盖与深度

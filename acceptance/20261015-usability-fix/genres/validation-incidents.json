@@ -1,0 +1,30 @@
+{
+  "incidents": [
+    {
+      "stage": "bundled help",
+      "type": "验收脚本参数错误",
+      "observed": "init --help --project 被拒绝，exit=2",
+      "resolution": "保留两份失败CLI日志，补跑两个正确 init --help；不改产品",
+      "evidence": [
+        "cli/bundled-screenplay-init-help.json",
+        "cli/bundled-history-init-help.json",
+        "cli/bundled-screenplay-init-help-corrected.json",
+        "cli/bundled-history-init-help-corrected.json"
+      ]
+    },
+    {
+      "stage": "first final evidence verifier",
+      "type": "额外分发核对假设失败",
+      "observed": "ENOENT: no such file or directory, open 'D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\LICENSE.md'",
+      "exit_code": 1,
+      "resolution": "只读核对初始化复制清单与两作品目录，确认缺失；改为报告实际缺失，不再断言随附存在，不补文件掩盖现象"
+    },
+    {
+      "stage": "second final evidence verifier",
+      "type": "全局零漂移断言失败",
+      "observed": "3 个范围外验收文件哈希变化；另有一个新增验收文件",
+      "exit_code": 1,
+      "resolution": "保留前后哈希与新增路径；产品/输入不变作为单独硬检查，其他验收变更作为来源未确认的外部观测。不改、不回退外部文件。"
+    }
+  ]
+}

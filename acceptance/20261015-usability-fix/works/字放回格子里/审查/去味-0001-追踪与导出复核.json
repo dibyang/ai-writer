@@ -1,0 +1,156 @@
+{
+  "kind": "history",
+  "title": "字放回格子里",
+  "revision": 3,
+  "final_sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+  "baseline_sha256": "ac8a4215c851bb416e8a6e3116766200f1bff2efdf8c817936d935ad865bb747",
+  "sources": [
+    {
+      "path": "writer.json",
+      "sha256": "60104ac7a34222853e9d56b57e64bb5eb4c26b059753f756435e1f1956de272b"
+    },
+    {
+      "path": ".writer/state.json",
+      "sha256": "f752177d196a9cbe34a193ec0ccf09dc9289552512dfe4e5bdfca04de33158ef",
+      "note": "写前 revision=2 的真实状态哈希；登记后状态必变，已与写前 context 对照"
+    },
+    {
+      "path": "大纲/单元/0001.json",
+      "sha256": "3421a0178dcdfa3e6218c7d3c87fe23c318ef9d6b497a7c672a932d32be61211"
+    },
+    {
+      "path": "设定/作品定位.md",
+      "sha256": "9d5f50800fb1111ab51f78726ec04b6d3756cff679c3ab58a8ec145904f0113a"
+    },
+    {
+      "path": "设定/文风.md",
+      "sha256": "0e4d575c7c54af022f3314b0485fedc6a2d804387c2faa94593574f5426d81ed"
+    },
+    {
+      "path": "设定/权威规则.md",
+      "sha256": "4e9499c137d9d9c12af3b19e75713f7ec6a48e621abc114019ca692a8052f92e"
+    },
+    {
+      "path": "大纲/全书大纲.md",
+      "sha256": "39cda471a29eb317560af6f0730798f983c06ab79acbbb3d0f69a29c82f82bac"
+    },
+    {
+      "path": "研究/history-facts.json",
+      "sha256": "86bc3e5aa30634ec2d7cd5da27108eaec89df3745d03fe34ac27b0418b2ad43a"
+    }
+  ],
+  "rewind_backup": {
+    "path": "acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\rewind-1-8ad7b16f-3601-403e-937f-8a73bc7d8d48.json",
+    "sha256": "f5ba9d09c8af9d2722ec797823e1040ad29a409c78139b7b60f387bac8de1e6d"
+  },
+  "bundled_doctor": {
+    "ok": true,
+    "node": "v24.15.0",
+    "tool_version": "0.3.0",
+    "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool",
+    "skills": 7,
+    "engine": "optional-in-workspace-copy",
+    "errors": [],
+    "warnings": []
+  },
+  "helps": [
+    {
+      "command": "init",
+      "evidence": "cli/bundled-history-init-help-corrected.json",
+      "exit_code": 0
+    },
+    {
+      "command": "plan",
+      "evidence": "cli/bundled-history-plan-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "context",
+      "evidence": "cli/bundled-history-context-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "record-template",
+      "evidence": "cli/bundled-history-record-template-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "record",
+      "evidence": "cli/bundled-history-record-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "rewind",
+      "evidence": "cli/bundled-history-rewind-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "style-scan",
+      "evidence": "cli/bundled-history-style-scan-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "check",
+      "evidence": "cli/bundled-history-check-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "export",
+      "evidence": "cli/bundled-history-export-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "status",
+      "evidence": "cli/bundled-history-status-help.json",
+      "exit_code": 0
+    },
+    {
+      "command": "doctor",
+      "evidence": "cli/bundled-history-doctor-help.json",
+      "exit_code": 0
+    }
+  ],
+  "tool_files": [
+    {
+      "path": "bin/ai-writer.mjs",
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    {
+      "path": "lib/help.mjs",
+      "sha256": "3a32b6d5701433144a265b50d13c286f2ef65848fa53569b16d6bb0f81522696"
+    },
+    {
+      "path": "lib/journal.mjs",
+      "sha256": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a"
+    },
+    {
+      "path": "lib/longform.mjs",
+      "sha256": "1db2aa937205e1bdd2420c83f94b86914d12590b94596c6098b988c80320eb15"
+    },
+    {
+      "path": "lib/style.mjs",
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    {
+      "path": "lib/workspace.mjs",
+      "sha256": "2579b5b5b3ef55d64a793fa8a3cee039cd9392d91ebd85972b72931dfa3e5e1d"
+    }
+  ],
+  "provenance": [
+    {
+      "path": "LICENSE.md",
+      "present_in_work": false,
+      "root_sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    {
+      "path": "docs/sources.md",
+      "present_in_work": false,
+      "root_sha256": "22983b4261c72ce82166e94993f98ba8482129c15482482e3d0ed9a4eee7b6d5"
+    },
+    {
+      "path": "docs/usability-sources.json",
+      "present_in_work": false,
+      "root_sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+    }
+  ]
+}

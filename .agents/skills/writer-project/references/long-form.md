@@ -86,3 +86,5 @@ ledger 类型：fact / thread / object / relationship / observation；状态：a
 `import-status` 显示冻结副本、原文件漂移、已登记和未登记范围。`import-next` 复制下一章（重复执行同章内容一致则复用），实际完整读该章，反推已发生的事件与信息边界，保存章纲，取 context/template，再登记真实 summary/changes。未登记前下一次仍返回这一章。把读取覆盖和不确定项记入研究/审查文件，导入范围超过当前能读的范围时如实停在断点，不宣称全文深读完成。
 
 导入旧稿是本书续写基线，不放进对标库，不套成别书素材。完整导入后才正常续写下一章；若需要修订，先冻结基线登记，再用 rewind 流程修订，原稿副本继续保留。
+
+原文件仅移动目录时，import-status 的 can_continue/blockers 给出当前阻断。准备 `{"files":[{"unit":1,"path":"D:/新位置/第一章.md"}]}`，用 `import-relink --input 文件 --expected-revision 当前号` 重定位；新文件哈希必须与冻结副本相同。全部映射通过后才写独立的 import-locations.json 并保留历史；不修改 import.json、state 或正文。内容改变属于版本变更，不能通过重定位接受。已完整导入后 phase=complete，继续正常规划，不再反复 import-next。

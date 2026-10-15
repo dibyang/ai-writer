@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "scope": "advisory-pattern-scan",
+  "kind": "screenplay",
+  "draft": "正文/0001-借一把椅子.md",
+  "source_sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+  "quality_verdict": "requires-contextual-reading",
+  "candidates": [
+    {
+      "category": "template-expression",
+      "line": 16,
+      "column": 3,
+      "quote": "深吸一口气",
+      "context": "方姐深吸一口气。",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    }
+  ],
+  "candidate_count": 1,
+  "manual_review": [
+    "情绪因果与人物反应",
+    "对白的身份、目的及人物差异",
+    "收尾功能与跨章重复",
+    "解释是否必要与视角权限",
+    "事实、人物声音与正常修辞是否被误伤"
+  ],
+  "skipped_quote_or_code_lines": 0,
+  "note": "命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。"
+}

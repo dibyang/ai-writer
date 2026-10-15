@@ -1,0 +1,877 @@
+{
+  "started_at": "2026-10-15T14:59:48.834Z",
+  "finished_at": "2026-10-15T14:59:50.761Z",
+  "candidate": "acceptance/20261015-usability-fix/candidate-v4.json",
+  "final_tool": "acceptance/20261015-usability-fix/final-recheck/new-work/.writer/tool/bin/ai-writer.mjs",
+  "node": "v24.15.0",
+  "command_count": 19,
+  "nonzero_commands": [],
+  "check_count": 53,
+  "failed_check_count": 0,
+  "ok": true,
+  "checks": [
+    {
+      "name": "candidate product hashes before",
+      "pass": true,
+      "detail": {
+        "count": 60,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "new-work init: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "new-work: complete documents and attribution",
+      "pass": true,
+      "detail": {
+        "user_documents": 6,
+        "source_manifests": 3,
+        "upstream_licenses": 3,
+        "files": [
+          {
+            "file": "docs/quickstart.md",
+            "exists": true,
+            "size": 3753,
+            "sha256": "820d07a574c0e0844b59db416da0e82ebc44a6fe3348758ab6862cafb577b88b",
+            "product_sha256": "820d07a574c0e0844b59db416da0e82ebc44a6fe3348758ab6862cafb577b88b"
+          },
+          {
+            "file": "docs/user-guide.md",
+            "exists": true,
+            "size": 6596,
+            "sha256": "829a3320d118631ac3b3d4fa96f51087fa92acd8b0652d7e7f4014e77002ad1b",
+            "product_sha256": "829a3320d118631ac3b3d4fa96f51087fa92acd8b0652d7e7f4014e77002ad1b"
+          },
+          {
+            "file": "docs/workflow.md",
+            "exists": true,
+            "size": 10048,
+            "sha256": "e2750621b882aa1b39645ac12a4f83d986f8b62bf834ed3d413c06af1848fac2",
+            "product_sha256": "e2750621b882aa1b39645ac12a4f83d986f8b62bf834ed3d413c06af1848fac2"
+          },
+          {
+            "file": "docs/long-form.md",
+            "exists": true,
+            "size": 2138,
+            "sha256": "46915051935be76155f8e71365e931e7bc4f2dd444a2df83ec10cb3e471753a6",
+            "product_sha256": "46915051935be76155f8e71365e931e7bc4f2dd444a2df83ec10cb3e471753a6"
+          },
+          {
+            "file": "docs/deslop.md",
+            "exists": true,
+            "size": 4274,
+            "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339",
+            "product_sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+          },
+          {
+            "file": "docs/attribution.md",
+            "exists": true,
+            "size": 1515,
+            "sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5",
+            "product_sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5"
+          },
+          {
+            "file": "LICENSE.md",
+            "exists": true,
+            "size": 809,
+            "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c",
+            "product_sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+          },
+          {
+            "file": "docs/source-manifest.json",
+            "exists": true,
+            "size": 43269,
+            "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb",
+            "product_sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+          },
+          {
+            "file": "docs/oh-story-audit-manifest.json",
+            "exists": true,
+            "size": 27367,
+            "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591",
+            "product_sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+          },
+          {
+            "file": "docs/usability-sources.json",
+            "exists": true,
+            "size": 982,
+            "sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188",
+            "product_sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+          },
+          {
+            "file": "vendor/oh-story-reference/LICENSE",
+            "exists": true,
+            "size": 1102,
+            "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+            "product_sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+          },
+          {
+            "file": "vendor/oh-story-reference-20261015/LICENSE",
+            "exists": true,
+            "size": 1102,
+            "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+            "product_sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+          },
+          {
+            "file": "vendor/oh-story-deslop-reference/LICENSE",
+            "exists": true,
+            "size": 1102,
+            "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+            "product_sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+          },
+          {
+            "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md",
+            "exists": true,
+            "size": 5092,
+            "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156",
+            "product_sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+          }
+        ]
+      }
+    },
+    {
+      "name": "new-work: usability source SHA-256",
+      "pass": true,
+      "detail": [
+        {
+          "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md",
+          "expected": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156",
+          "actual": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+        },
+        {
+          "file": "vendor/oh-story-deslop-reference/LICENSE",
+          "expected": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+          "actual": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+        }
+      ]
+    },
+    {
+      "name": "new-work: bundled tool equals candidate product",
+      "pass": true,
+      "detail": [
+        {
+          "file": "bin/ai-writer.mjs",
+          "actual": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b",
+          "expected": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+        },
+        {
+          "file": "lib/workspace.mjs",
+          "actual": "5926dcb7e0810716df90b7d1e4e31833ec3686fe3de594932102ae3e5e433158",
+          "expected": "5926dcb7e0810716df90b7d1e4e31833ec3686fe3de594932102ae3e5e433158"
+        },
+        {
+          "file": "lib/journal.mjs",
+          "actual": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a",
+          "expected": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a"
+        },
+        {
+          "file": "lib/longform.mjs",
+          "actual": "1db2aa937205e1bdd2420c83f94b86914d12590b94596c6098b988c80320eb15",
+          "expected": "1db2aa937205e1bdd2420c83f94b86914d12590b94596c6098b988c80320eb15"
+        },
+        {
+          "file": "lib/help.mjs",
+          "actual": "3a32b6d5701433144a265b50d13c286f2ef65848fa53569b16d6bb0f81522696",
+          "expected": "3a32b6d5701433144a265b50d13c286f2ef65848fa53569b16d6bb0f81522696"
+        },
+        {
+          "file": "lib/style.mjs",
+          "actual": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9",
+          "expected": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+        },
+        {
+          "file": "package.json",
+          "actual": "950a06cb47e665a0e9eb3515f5a94de70ba5b2e6cab528818f18afc446d3dc26",
+          "expected": "950a06cb47e665a0e9eb3515f5a94de70ba5b2e6cab528818f18afc446d3dc26"
+        }
+      ]
+    },
+    {
+      "name": "new-work: empty essay",
+      "pass": true,
+      "detail": {
+        "kind": "essay",
+        "registered_units": 0,
+        "revision": 0
+      }
+    },
+    {
+      "name": "new-work bundled doctor: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "new-work doctor result",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "node": "v24.15.0",
+        "tool_version": "0.3.0",
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\final-recheck\\new-work\\.writer\\tool",
+        "skills": 7,
+        "engine": "optional-in-workspace-copy",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "sibling-work bundled init: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "sibling-work: complete documents and attribution",
+      "pass": true,
+      "detail": {
+        "user_documents": 6,
+        "source_manifests": 3,
+        "upstream_licenses": 3,
+        "files": [
+          {
+            "file": "docs/quickstart.md",
+            "exists": true,
+            "size": 3753,
+            "sha256": "820d07a574c0e0844b59db416da0e82ebc44a6fe3348758ab6862cafb577b88b",
+            "product_sha256": "820d07a574c0e0844b59db416da0e82ebc44a6fe3348758ab6862cafb577b88b"
+          },
+          {
+            "file": "docs/user-guide.md",
+            "exists": true,
+            "size": 6596,
+            "sha256": "829a3320d118631ac3b3d4fa96f51087fa92acd8b0652d7e7f4014e77002ad1b",
+            "product_sha256": "829a3320d118631ac3b3d4fa96f51087fa92acd8b0652d7e7f4014e77002ad1b"
+          },
+          {
+            "file": "docs/workflow.md",
+            "exists": true,
+            "size": 10048,
+            "sha256": "e2750621b882aa1b39645ac12a4f83d986f8b62bf834ed3d413c06af1848fac2",
+            "product_sha256": "e2750621b882aa1b39645ac12a4f83d986f8b62bf834ed3d413c06af1848fac2"
+          },
+          {
+            "file": "docs/long-form.md",
+            "exists": true,
+            "size": 2138,
+            "sha256": "46915051935be76155f8e71365e931e7bc4f2dd444a2df83ec10cb3e471753a6",
+            "product_sha256": "46915051935be76155f8e71365e931e7bc4f2dd444a2df83ec10cb3e471753a6"
+          },
+          {
+            "file": "docs/deslop.md",
+            "exists": true,
+            "size": 4274,
+            "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339",
+            "product_sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+          },
+          {
+            "file": "docs/attribution.md",
+            "exists": true,
+            "size": 1515,
+            "sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5",
+            "product_sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5"
+          },
+          {
+            "file": "LICENSE.md",
+            "exists": true,
+            "size": 809,
+            "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c",
+            "product_sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+          },
+          {
+            "file": "docs/source-manifest.json",
+            "exists": true,
+            "size": 43269,
+            "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb",
+            "product_sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+          },
+          {
+            "file": "docs/oh-story-audit-manifest.json",
+            "exists": true,
+            "size": 27367,
+            "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591",
+            "product_sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+          },
+          {
+            "file": "docs/usability-sources.json",
+            "exists": true,
+            "size": 982,
+            "sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188",
+            "product_sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+          },
+          {
+            "file": "vendor/oh-story-reference/LICENSE",
+            "exists": true,
+            "size": 1102,
+            "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+            "product_sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+          },
+          {
+            "file": "vendor/oh-story-reference-20261015/LICENSE",
+            "exists": true,
+            "size": 1102,
+            "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+            "product_sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+          },
+          {
+            "file": "vendor/oh-story-deslop-reference/LICENSE",
+            "exists": true,
+            "size": 1102,
+            "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+            "product_sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+          },
+          {
+            "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md",
+            "exists": true,
+            "size": 5092,
+            "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156",
+            "product_sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sibling-work: usability source SHA-256",
+      "pass": true,
+      "detail": [
+        {
+          "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md",
+          "expected": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156",
+          "actual": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+        },
+        {
+          "file": "vendor/oh-story-deslop-reference/LICENSE",
+          "expected": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf",
+          "actual": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+        }
+      ]
+    },
+    {
+      "name": "sibling-work: bundled tool equals candidate product",
+      "pass": true,
+      "detail": [
+        {
+          "file": "bin/ai-writer.mjs",
+          "actual": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b",
+          "expected": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+        },
+        {
+          "file": "lib/workspace.mjs",
+          "actual": "5926dcb7e0810716df90b7d1e4e31833ec3686fe3de594932102ae3e5e433158",
+          "expected": "5926dcb7e0810716df90b7d1e4e31833ec3686fe3de594932102ae3e5e433158"
+        },
+        {
+          "file": "lib/journal.mjs",
+          "actual": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a",
+          "expected": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a"
+        },
+        {
+          "file": "lib/longform.mjs",
+          "actual": "1db2aa937205e1bdd2420c83f94b86914d12590b94596c6098b988c80320eb15",
+          "expected": "1db2aa937205e1bdd2420c83f94b86914d12590b94596c6098b988c80320eb15"
+        },
+        {
+          "file": "lib/help.mjs",
+          "actual": "3a32b6d5701433144a265b50d13c286f2ef65848fa53569b16d6bb0f81522696",
+          "expected": "3a32b6d5701433144a265b50d13c286f2ef65848fa53569b16d6bb0f81522696"
+        },
+        {
+          "file": "lib/style.mjs",
+          "actual": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9",
+          "expected": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+        },
+        {
+          "file": "package.json",
+          "actual": "950a06cb47e665a0e9eb3515f5a94de70ba5b2e6cab528818f18afc446d3dc26",
+          "expected": "950a06cb47e665a0e9eb3515f5a94de70ba5b2e6cab528818f18afc446d3dc26"
+        }
+      ]
+    },
+    {
+      "name": "sibling-work: empty essay",
+      "pass": true,
+      "detail": {
+        "kind": "essay",
+        "registered_units": 0,
+        "revision": 0
+      }
+    },
+    {
+      "name": "sibling-work bundled doctor: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "sibling-work doctor result",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "node": "v24.15.0",
+        "tool_version": "0.3.0",
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\final-recheck\\sibling-work\\.writer\\tool",
+        "skills": 7,
+        "engine": "optional-in-workspace-copy",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "雨后失物 doctor --project: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "雨后失物: doctor",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "node": "v24.15.0",
+        "tool_version": "0.3.0",
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\雨后失物\\.writer\\tool",
+        "skills": 7,
+        "engine": "optional-in-workspace-copy",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "雨后失物 status: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "雨后失物: status counts and drift",
+      "pass": true,
+      "detail": {
+        "registered_units": 3,
+        "revision": 12,
+        "unregistered": [],
+        "unsafe_entries": [],
+        "stale_units": [],
+        "changed_sources": []
+      }
+    },
+    {
+      "name": "雨后失物 check: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "雨后失物: mechanical check",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "scope": "mechanical-only",
+        "literary_quality": "unreviewed",
+        "units": 3,
+        "revision": 12,
+        "findings": [],
+        "draft_inventory": {
+          "registered_count": 3,
+          "unregistered": [],
+          "unsafe_entries": []
+        },
+        "rolling_review": {
+          "valid": 1,
+          "stale": 0,
+          "pending_windows": [],
+          "nature": "coverage-only-not-literary-pass"
+        }
+      }
+    },
+    {
+      "name": "雨后失物 record --project --help: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "雨后失物: record help",
+      "pass": true,
+      "detail": {
+        "exit_code": 0
+      }
+    },
+    {
+      "name": "雨后失物 export to new directory: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "雨后失物: export matches prior",
+      "pass": true,
+      "detail": {
+        "previous": "novel-b/export",
+        "output": "acceptance/20261015-usability-fix/final-recheck/exports/雨后失物",
+        "title": "雨后失物",
+        "kind": "novel",
+        "revision": 12,
+        "included_units": [
+          1,
+          2,
+          3
+        ],
+        "excluded_drafts": [],
+        "sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc",
+        "previous_sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc",
+        "manifest_sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc",
+        "previous_manifest_sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc",
+        "files": [
+          {
+            "file": "manuscript.md",
+            "sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc",
+            "previous_sha256": "d71b8d93dfeab356815c069fe2bb1645e06ec944f2837d65163a9caddee478cc"
+          },
+          {
+            "file": "manifest.json",
+            "sha256": "5f0ab8f21f9fb692120bd9f16eb267a8d6ad04de326ce62c7eb9e87bbd4e2d9f",
+            "previous_sha256": "5f0ab8f21f9fb692120bd9f16eb267a8d6ad04de326ce62c7eb9e87bbd4e2d9f"
+          }
+        ],
+        "status": "draft-export",
+        "quality_review": "required"
+      }
+    },
+    {
+      "name": "借一把椅子 doctor --project: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "借一把椅子: doctor",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "node": "v24.15.0",
+        "tool_version": "0.3.0",
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\借一把椅子\\.writer\\tool",
+        "skills": 7,
+        "engine": "optional-in-workspace-copy",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "借一把椅子 status: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "借一把椅子: status counts and drift",
+      "pass": true,
+      "detail": {
+        "registered_units": 1,
+        "revision": 3,
+        "unregistered": [],
+        "unsafe_entries": [],
+        "stale_units": [],
+        "changed_sources": []
+      }
+    },
+    {
+      "name": "借一把椅子 check: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "借一把椅子: mechanical check",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "scope": "mechanical-only",
+        "literary_quality": "unreviewed",
+        "units": 1,
+        "revision": 3,
+        "findings": [],
+        "draft_inventory": {
+          "registered_count": 1,
+          "unregistered": [],
+          "unsafe_entries": []
+        }
+      }
+    },
+    {
+      "name": "借一把椅子 record --project --help: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "借一把椅子: record help",
+      "pass": true,
+      "detail": {
+        "exit_code": 0
+      }
+    },
+    {
+      "name": "借一把椅子 export to new directory: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "借一把椅子: export matches prior",
+      "pass": true,
+      "detail": {
+        "previous": "genres/exports/screenplay-r3",
+        "output": "acceptance/20261015-usability-fix/final-recheck/exports/借一把椅子",
+        "title": "借一把椅子",
+        "kind": "screenplay",
+        "revision": 3,
+        "included_units": [
+          1
+        ],
+        "excluded_drafts": [],
+        "sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+        "previous_sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+        "manifest_sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+        "previous_manifest_sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+        "files": [
+          {
+            "file": "manuscript.md",
+            "sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775",
+            "previous_sha256": "7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775"
+          },
+          {
+            "file": "manifest.json",
+            "sha256": "abf507306cb8367dea255889bcf0b6ebf63c417a58818d1ecef1c3237005ca06",
+            "previous_sha256": "abf507306cb8367dea255889bcf0b6ebf63c417a58818d1ecef1c3237005ca06"
+          }
+        ],
+        "status": "draft-export",
+        "quality_review": "required"
+      }
+    },
+    {
+      "name": "字放回格子里 doctor --project: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "字放回格子里: doctor",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "node": "v24.15.0",
+        "tool_version": "0.3.0",
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261015-usability-fix\\works\\字放回格子里\\.writer\\tool",
+        "skills": 7,
+        "engine": "optional-in-workspace-copy",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "字放回格子里 status: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "字放回格子里: status counts and drift",
+      "pass": true,
+      "detail": {
+        "registered_units": 1,
+        "revision": 3,
+        "unregistered": [],
+        "unsafe_entries": [],
+        "stale_units": [],
+        "changed_sources": []
+      }
+    },
+    {
+      "name": "字放回格子里 check: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "字放回格子里: mechanical check",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "scope": "mechanical-only",
+        "literary_quality": "unreviewed",
+        "units": 1,
+        "revision": 3,
+        "findings": [],
+        "draft_inventory": {
+          "registered_count": 1,
+          "unregistered": [],
+          "unsafe_entries": []
+        }
+      }
+    },
+    {
+      "name": "字放回格子里 record --project --help: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "字放回格子里: record help",
+      "pass": true,
+      "detail": {
+        "exit_code": 0
+      }
+    },
+    {
+      "name": "字放回格子里 export to new directory: CLI exit",
+      "pass": true,
+      "detail": {
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "字放回格子里: export matches prior",
+      "pass": true,
+      "detail": {
+        "previous": "genres/exports/history-r3",
+        "output": "acceptance/20261015-usability-fix/final-recheck/exports/字放回格子里",
+        "title": "字放回格子里",
+        "kind": "history",
+        "revision": 3,
+        "included_units": [
+          1
+        ],
+        "excluded_drafts": [],
+        "sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+        "previous_sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+        "manifest_sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+        "previous_manifest_sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+        "files": [
+          {
+            "file": "manuscript.md",
+            "sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987",
+            "previous_sha256": "0b498a27903b39dae56b2d5c224ce9b27dcc3e92eded4f95d00c698e6cfe5987"
+          },
+          {
+            "file": "manifest.json",
+            "sha256": "1139eec1b3539fca5f707075c1c91b904c25d965fe121125be1a64143b521318",
+            "previous_sha256": "1139eec1b3539fca5f707075c1c91b904c25d965fe121125be1a64143b521318"
+          }
+        ],
+        "status": "draft-export",
+        "quality_review": "required"
+      }
+    },
+    {
+      "name": "candidate product hashes after",
+      "pass": true,
+      "detail": {
+        "count": 60,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "candidate manifest unchanged",
+      "pass": true,
+      "detail": {
+        "file": "acceptance/20261015-usability-fix/candidate-v4.json",
+        "sha256": "a8df264c502aceb967c8a8df11503b0d026325911a72575ff692212333946ecd"
+      }
+    },
+    {
+      "name": "雨后失物: all existing work files unchanged",
+      "pass": true,
+      "detail": {
+        "files": 108,
+        "changes": []
+      }
+    },
+    {
+      "name": "雨后失物: previous export unchanged",
+      "pass": true,
+      "detail": {
+        "directory": "novel-b/export",
+        "files": 2,
+        "changes": []
+      }
+    },
+    {
+      "name": "借一把椅子: all existing work files unchanged",
+      "pass": true,
+      "detail": {
+        "files": 77,
+        "changes": []
+      }
+    },
+    {
+      "name": "借一把椅子: previous export unchanged",
+      "pass": true,
+      "detail": {
+        "directory": "genres/exports/screenplay-r3",
+        "files": 2,
+        "changes": []
+      }
+    },
+    {
+      "name": "字放回格子里: all existing work files unchanged",
+      "pass": true,
+      "detail": {
+        "files": 79,
+        "changes": []
+      }
+    },
+    {
+      "name": "字放回格子里: previous export unchanged",
+      "pass": true,
+      "detail": {
+        "directory": "genres/exports/history-r3",
+        "files": 2,
+        "changes": []
+      }
+    }
+  ],
+  "scope": "Actual CLI delivery, mechanical consistency and byte preservation only; no literary review, new prose, tests, commits, pushes or publishing."
+}

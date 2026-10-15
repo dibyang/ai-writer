@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "scope": "advisory-pattern-scan",
+  "kind": "novel",
+  "draft": "正文/0001-导入.md",
+  "source_sha256": "992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f",
+  "quality_verdict": "requires-contextual-reading",
+  "candidates": [
+    {
+      "category": "template-expression",
+      "line": 3,
+      "column": 3,
+      "quote": "深吸一口气",
+      "context": "许棠深吸一口气，缓缓开口：“我找一个蓝色布袋。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 3,
+      "column": 9,
+      "quote": "缓缓开口",
+      "context": "许棠深吸一口气，缓缓开口：“我找一个蓝色布袋。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 5,
+      "column": 18,
+      "quote": "深吸一口气",
+      "context": "雨水顺着她的袖口落在登记台上。她又深吸一口气，把手机里的照片推过去。照片里不是黑袋，而是蓝袋，左下角补着五针白线。这一点她记得很清楚，因为那五针是她昨晚缝的。",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "sentence-pattern",
+      "line": 5,
+      "column": 38,
+      "quote": "不是黑袋，而是",
+      "context": "雨水顺着她的袖口落在登记台上。她又深吸一口气，把手机里的照片推过去。照片里不是黑袋，而是蓝袋，左下角补着五针白线。这一点她记得很清楚，因为那五针是她昨晚缝的。",
+      "reason": "核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 7,
+      "column": 15,
+      "quote": "眼中闪过一丝",
+      "context": "值班员周叔低下头翻册子。他的眼中闪过一丝复杂，嘴角勾起一抹笑容：“姑娘，别急。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "template-expression",
+      "line": 7,
+      "column": 24,
+      "quote": "嘴角勾起一抹",
+      "context": "值班员周叔低下头翻册子。他的眼中闪过一丝复杂，嘴角勾起一抹笑容：“姑娘，别急。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "emotion-summary",
+      "line": 9,
+      "column": 3,
+      "quote": "心中涌起一股",
+      "context": "许棠心中涌起一股焦虑。她很焦虑，因为袋子还没有找到。她之所以站在这里，是因为袋子是在这趟车上丢的。袋里有一只保温饭盒，盒盖内侧刻着“棠”",
+      "reason": "实读情绪诱因与后果，判断有无重复解释或套式反应。",
+      "advisory": true
+    },
+    {
+      "category": "over-explanation",
+      "line": 17,
+      "column": 45,
+      "quote": "她不知道的是",
+      "context": "许棠收回了手机。她忽然明白，寻找失物不只是寻找失物，更是寻找人与人之间那份珍贵的信任。而她不知道的是，这个雨夜的故事才刚刚开始。",
+      "reason": "核对叙述视角、信息权限及是否提前揭底；不自动改变叙述方式。",
+      "advisory": true
+    },
+    {
+      "category": "over-explanation",
+      "line": 17,
+      "column": 57,
+      "quote": "故事才刚刚开始",
+      "context": "许棠收回了手机。她忽然明白，寻找失物不只是寻找失物，更是寻找人与人之间那份珍贵的信任。而她不知道的是，这个雨夜的故事才刚刚开始。",
+      "reason": "核对叙述视角、信息权限及是否提前揭底；不自动改变叙述方式。",
+      "advisory": true
+    }
+  ],
+  "candidate_count": 9,
+  "manual_review": [
+    "情绪因果与人物反应",
+    "对白的身份、目的及人物差异",
+    "收尾功能与跨章重复",
+    "解释是否必要与视角权限",
+    "事实、人物声音与正常修辞是否被误伤"
+  ],
+  "skipped_quote_or_code_lines": 0,
+  "note": "命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。"
+}

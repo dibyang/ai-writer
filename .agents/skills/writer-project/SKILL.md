@@ -11,6 +11,8 @@ description: 在 Codex 中初始化或恢复作品，组织小说、剧本、历
 
 工具位置：在 ai-writer 根目录用 `node bin/ai-writer.mjs`；独立作品用 `node .writer/tool/bin/ai-writer.mjs`。新作品初始化：
 
+首次使用优先在主项目会话显式传作品路径；如果独立目录 Codex 出现 helper 启动失败，返回主项目入口恢复，不改全局安全设置。新作品自带 docs/quickstart.md 和 docs/user-guide.md；各命令支持 --help，在含 writer.json 的当前作品目录可省略 --project。
+
 ```text
 node bin/ai-writer.mjs init --path works/作品名 --kind novel --title 作品名
 ```
@@ -30,14 +32,16 @@ node bin/ai-writer.mjs init --path works/作品名 --kind novel --title 作品�
 
 ## 恢复与修订
 
-- 新会话先 `status`，然后从 `next_unit` 继续。发现正文哈希变化，先核实最早变动单元及受影响范围。
+- 新会话先 `status`，检查 draft_inventory.unregistered 与 next，再从 next_unit 继续。未登记稿可能是新稿或回退留稿，先实读核对，不自动删除、覆盖或合并。发现正文哈希变化，先核实最早变动单元及受影响范围。
 - 修订已登记单元先 `rewind --project 目录 --from N --expected-revision 当前号`。工具保留旧状态备份和全部正文，将 N 及之后的追踪作废；重读前文，修改后逐单元重新登记。不要删除旧正文来绕过校验。
 - `status.changed_sources` 列出已登记单元消费过但现在改变或缺失的资料。研究卡、规则或被引用的大纲变化后，续写和导出会阻断；核实最早受影响单元，按 rewind 流程重读重登。工具只发现文件变化，不推断语义影响。未登记单元的过期 context 也会被来源哈希拒绝。
 - 同时写入会加锁。中断锁需要先确认没有活跃写入者；不自动删锁。
-- `export` 只合并已登记草稿到全新目录，并产生源哈希清单；不修改正文，也不发布。
+- `export` 只合并已登记草稿到全新目录，并产生源哈希清单；检查 included_units、excluded_drafts 和 warnings，交付时明确排除内容及原因，不把未登记稿遗漏当作完整交付。
 
 详细 JSON 格式在主项目 `docs/workflow.md`；本技能已列出独立作品所需字段，不依赖安装者的全局技能。
 
 ## 长篇与导入
 
 长篇分卷、跨卷恢复、复杂角色/线索、旧稿导入时，读取 [references/long-form.md](references/long-form.md)。用 `long-enable` 显式备份迁移，`volume` 建卷契约，`outline` 取当前切片；长篇模板改用 `changes` 自动保留未变项。`recall` 定位旧章后实读正文，`review` 绑定实际滚动连读覆盖。自有旧稿以 `import-index / import-next / import-status` 冻结原文副本、逐章阅读登记，不把未读范围当作已分析。
+
+原文件仅移动位置时，先看 import-status 的 can_continue/blockers，再用 import-relink --help 核对映射格式。只有新路径内容与冻结副本哈希相同才可重定位；不手改 import.json/state，内容改变须按版本修订处理。

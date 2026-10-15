@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "scope": "advisory-pattern-scan",
+  "kind": "novel",
+  "draft": "正文/0001-导入.md",
+  "source_sha256": "907fd552ba6ed8509522c123a01e40137c6f3553e3a32f145d512d93e403f186",
+  "quality_verdict": "requires-contextual-reading",
+  "candidates": [
+    {
+      "category": "template-expression",
+      "line": 3,
+      "column": 3,
+      "quote": "深吸一口气",
+      "context": "许棠深吸一口气：“我找一个蓝色布袋。”",
+      "reason": "检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。",
+      "advisory": true
+    },
+    {
+      "category": "sentence-pattern",
+      "line": 5,
+      "column": 31,
+      "quote": "不是黑袋，而是",
+      "context": "雨水顺着她的袖口落在登记台上。她把手机里的照片推过去。照片里不是黑袋，而是蓝袋，左下角补着五针白线。这一点她记得很清楚，因为那五针是她昨晚缝的。",
+      "reason": "核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。",
+      "advisory": true
+    }
+  ],
+  "candidate_count": 2,
+  "manual_review": [
+    "情绪因果与人物反应",
+    "对白的身份、目的及人物差异",
+    "收尾功能与跨章重复",
+    "解释是否必要与视角权限",
+    "事实、人物声音与正常修辞是否被误伤"
+  ],
+  "skipped_quote_or_code_lines": 0,
+  "note": "命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。"
+}

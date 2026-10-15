@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-10-15T14:45:57.938Z",
+  "finished_at": "2026-10-15T14:45:58.007Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "bin/ai-writer.mjs",
+    "style-scan",
+    "--project",
+    "acceptance/20261015-usability-fix/works/借一把椅子",
+    "--draft",
+    "正文/0001-借一把椅子.md",
+    "--out",
+    "审查/语言线索-after.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"scope\": \"advisory-pattern-scan\",\n  \"kind\": \"screenplay\",\n  \"draft\": \"正文/0001-借一把椅子.md\",\n  \"source_sha256\": \"7f4552d282c2cb33d264fa82a80918fc31f145d9569ceb6fd4bfc76130a74775\",\n  \"quality_verdict\": \"requires-contextual-reading\",\n  \"candidates\": [\n    {\n      \"category\": \"template-expression\",\n      \"line\": 16,\n      \"column\": 3,\n      \"quote\": \"深吸一口气\",\n      \"context\": \"方姐深吸一口气。\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    }\n  ],\n  \"candidate_count\": 1,\n  \"manual_review\": [\n    \"情绪因果与人物反应\",\n    \"对白的身份、目的及人物差异\",\n    \"收尾功能与跨章重复\",\n    \"解释是否必要与视角权限\",\n    \"事实、人物声音与正常修辞是否被误伤\"\n  ],\n  \"skipped_quote_or_code_lines\": 0,\n  \"note\": \"命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。\"\n}\n",
+  "stderr": "",
+  "error": null
+}

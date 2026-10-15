@@ -1,0 +1,16 @@
+{
+  "started": "2026-10-15T14:29:10.026Z",
+  "finished": "2026-10-15T14:29:10.121Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "command": [
+    "node",
+    "bin/ai-writer.mjs",
+    "status",
+    "--project",
+    "acceptance/20261015-usability-fix/works/雨后失物"
+  ],
+  "status": 0,
+  "signal": null,
+  "stdout": "{\n  \"ok\": true,\n  \"title\": \"雨后失物\",\n  \"kind\": \"novel\",\n  \"revision\": 5,\n  \"schema_version\": 2,\n  \"next_unit\": 1,\n  \"stale_units\": [],\n  \"changed_sources\": [],\n  \"view\": \"compact\",\n  \"draft_inventory\": {\n    \"registered_count\": 0,\n    \"unregistered\": [\n      {\n        \"draft\": \"正文/0001-导入.md\",\n        \"reason\": \"unregistered\",\n        \"possible_unit\": 1,\n        \"action\": \"核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。\"\n      },\n      {\n        \"draft\": \"正文/0002-导入.md\",\n        \"reason\": \"unregistered\",\n        \"possible_unit\": 2,\n        \"action\": \"核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。\"\n      },\n      {\n        \"draft\": \"正文/0003-盒盖里面.md\",\n        \"reason\": \"unregistered\",\n        \"possible_unit\": 3,\n        \"action\": \"核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。\"\n      }\n    ],\n    \"unsafe_entries\": []\n  },\n  \"next\": {\n    \"unit\": 1,\n    \"plan_exists\": true,\n    \"action\": \"先核对未登记正文，再读取下一单元上下文\",\n    \"command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\bin\\\\ai-writer.mjs' context '--project' 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261015-usability-fix\\\\works\\\\雨后失物' '--unit' '1'\"\n  },\n  \"current\": {\n    \"character_count\": 0,\n    \"ledger_count\": 0,\n    \"recent\": [],\n    \"timeline_tail\": []\n  }\n}\n",
+  "stderr": ""
+}

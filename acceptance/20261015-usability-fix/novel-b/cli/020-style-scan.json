@@ -1,0 +1,18 @@
+{
+  "started": "2026-10-15T14:28:00.448Z",
+  "finished": "2026-10-15T14:28:00.535Z",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "command": [
+    "node",
+    "bin/ai-writer.mjs",
+    "style-scan",
+    "--project",
+    "acceptance/20261015-usability-fix/works/雨后失物",
+    "--draft",
+    "正文/0001-导入.md"
+  ],
+  "status": 0,
+  "signal": null,
+  "stdout": "{\n  \"ok\": true,\n  \"scope\": \"advisory-pattern-scan\",\n  \"kind\": \"novel\",\n  \"draft\": \"正文/0001-导入.md\",\n  \"source_sha256\": \"992c03096d803bbfe6937385fd13a697713076c6ecc8e9ce3a9451dae1f9e83f\",\n  \"quality_verdict\": \"requires-contextual-reading\",\n  \"candidates\": [\n    {\n      \"category\": \"template-expression\",\n      \"line\": 3,\n      \"column\": 3,\n      \"quote\": \"深吸一口气\",\n      \"context\": \"许棠深吸一口气，缓缓开口：“我找一个蓝色布袋。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 3,\n      \"column\": 9,\n      \"quote\": \"缓缓开口\",\n      \"context\": \"许棠深吸一口气，缓缓开口：“我找一个蓝色布袋。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 5,\n      \"column\": 18,\n      \"quote\": \"深吸一口气\",\n      \"context\": \"雨水顺着她的袖口落在登记台上。她又深吸一口气，把手机里的照片推过去。照片里不是黑袋，而是蓝袋，左下角补着五针白线。这一点她记得很清楚，因为那五针是她昨晚缝的。\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"sentence-pattern\",\n      \"line\": 5,\n      \"column\": 38,\n      \"quote\": \"不是黑袋，而是\",\n      \"context\": \"雨水顺着她的袖口落在登记台上。她又深吸一口气，把手机里的照片推过去。照片里不是黑袋，而是蓝袋，左下角补着五针白线。这一点她记得很清楚，因为那五针是她昨晚缝的。\",\n      \"reason\": \"核对对比是否传达辨认、辩解或情绪递进；不要因为句式命中而删除。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 7,\n      \"column\": 15,\n      \"quote\": \"眼中闪过一丝\",\n      \"context\": \"值班员周叔低下头翻册子。他的眼中闪过一丝复杂，嘴角勾起一抹笑容：“姑娘，别急。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"template-expression\",\n      \"line\": 7,\n      \"column\": 24,\n      \"quote\": \"嘴角勾起一抹\",\n      \"context\": \"值班员周叔低下头翻册子。他的眼中闪过一丝复杂，嘴角勾起一抹笑容：“姑娘，别急。”\",\n      \"reason\": \"检查是否成片重复、是否承担具体动作或人物特征；成立的表达保留。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"emotion-summary\",\n      \"line\": 9,\n      \"column\": 3,\n      \"quote\": \"心中涌起一股\",\n      \"context\": \"许棠心中涌起一股焦虑。她很焦虑，因为袋子还没有找到。她之所以站在这里，是因为袋子是在这趟车上丢的。袋里有一只保温饭盒，盒盖内侧刻着“棠”\",\n      \"reason\": \"实读情绪诱因与后果，判断有无重复解释或套式反应。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"over-explanation\",\n      \"line\": 17,\n      \"column\": 45,\n      \"quote\": \"她不知道的是\",\n      \"context\": \"许棠收回了手机。她忽然明白，寻找失物不只是寻找失物，更是寻找人与人之间那份珍贵的信任。而她不知道的是，这个雨夜的故事才刚刚开始。\",\n      \"reason\": \"核对叙述视角、信息权限及是否提前揭底；不自动改变叙述方式。\",\n      \"advisory\": true\n    },\n    {\n      \"category\": \"over-explanation\",\n      \"line\": 17,\n      \"column\": 57,\n      \"quote\": \"故事才刚刚开始\",\n      \"context\": \"许棠收回了手机。她忽然明白，寻找失物不只是寻找失物，更是寻找人与人之间那份珍贵的信任。而她不知道的是，这个雨夜的故事才刚刚开始。\",\n      \"reason\": \"核对叙述视角、信息权限及是否提前揭底；不自动改变叙述方式。\",\n      \"advisory\": true\n    }\n  ],\n  \"candidate_count\": 9,\n  \"manual_review\": [\n    \"情绪因果与人物反应\",\n    \"对白的身份、目的及人物差异\",\n    \"收尾功能与跨章重复\",\n    \"解释是否必要与视角权限\",\n    \"事实、人物声音与正常修辞是否被误伤\"\n  ],\n  \"skipped_quote_or_code_lines\": 0,\n  \"note\": \"命中不等于错误，零命中不代表没有问题；不提供 AI 概率或固定删减比例。历史引文和事实边界优先。\"\n}\n",
+  "stderr": ""
+}
