@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "patch": [
+    {
+      "at": [
+        "characters",
+        "方叔"
+      ],
+      "had": false,
+      "has": true,
+      "after": "排练室门内；扶着07号椅背，尚未说明老梁的情况"
+    },
+    {
+      "at": [
+        "characters",
+        "小许"
+      ],
+      "had": false,
+      "has": true,
+      "after": "排练室门边；知道有人被等候，不知道老梁情况"
+    },
+    {
+      "at": [
+        "timeline"
+      ],
+      "append": [
+        "傍晚清场：07号椅仍由方叔暂时掌握，没有出门"
+      ],
+      "length": 0
+    },
+    {
+      "at": [
+        "ledger"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "P07": {
+          "type": "object",
+          "statement": "社区07号木椅",
+          "status": "active",
+          "cast": [
+            "方叔",
+            "小许"
+          ],
+          "custody": {
+            "holder": "方叔",
+            "location": "排练室门内",
+            "condition": "完好，两条后腿落地，仍扶着椅背"
+          },
+          "reader_known": "椅子是社区财物，没有被带走",
+          "character_known": {
+            "方叔": "知道椅子不能带走，想留给老梁",
+            "小许": "椅子是社区财物，尚未收回储物间"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/0001.md",
+              "sha256": "d2fc32a9984f29682e063326c256c483ea14886192984eedba9d26e528f9832b",
+              "line": 28,
+              "quote": "方叔看看她，退回门内，把椅子两条后腿落地，手还扶着椅背。"
+            }
+          ],
+          "tags": [],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        },
+        "F01": {
+          "type": "thread",
+          "statement": "方叔在等谁，为什么执意留椅子",
+          "status": "pending",
+          "cast": [
+            "方叔",
+            "小许"
+          ],
+          "due_unit": 2,
+          "author_truth": "方叔想给住院未归的老搭档老梁留座",
+          "reader_known": "节目单圈了两个相邻座号，方叔在等人",
+          "character_known": {
+            "方叔": "知道自己想给老梁留座",
+            "小许": "只知道方叔在等人"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/0001.md",
+              "sha256": "d2fc32a9984f29682e063326c256c483ea14886192984eedba9d26e528f9832b",
+              "line": 33,
+              "quote": "折痕旁圈着两个挨在一起的座号。"
+            }
+          ],
+          "tags": [],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Only the new final-recheck audit helper. Project CLI commands and exports had already succeeded.",
+  "mechanical_edit_rejection": "Replacement references an undefined capture group: ${added.map(change => change.file).join('；')}. The pattern defines no capture groups. Fix the replacement; nothing was written.",
+  "attempts": [
+    {
+      "command": "node acceptance/20261015-long/final-recheck/audit.mjs after-final",
+      "exit_code": 1
+    },
+    {
+      "command": "node acceptance/20261015-long/final-recheck/audit.mjs report",
+      "exit_code": 1
+    }
+  ],
+  "output_reconstructed_from_tool_results_with_line_endings_normalized": "file:///D:/work/other/ai-writer/acceptance/20261015-long/final-recheck/audit.mjs:209\n    `- 原始保护基线始终保留：检查前 ${comparison.before_files} 个作品/导入源文件全部保持 SHA-256、大小、mtime 不变，包括 ${drafts.length} 个正文与 ${states.length} 份 state；旧导出也未变。检查后 ${comparison.after_files} 个文件，新增 ${added.length} 项：`${added.map(change => change.file).join('；')}`。该历史审查报告来源未确认，本轮日志无 review/record/rewind 等写入调用；未删除、覆盖或重设基线来消除差异。见 [protected-comparison-final.json](protected-comparison-final.json)，首次差异仍保留于 [protected-comparison.json](protected-comparison.json)。`, '',\n                                                                                                                                                                                                    ^\n\nSyntaxError: Unexpected identifier '$'\n    at compileSourceTextModule (node:internal/modules/esm/utils:318:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:90:18)\n    at #translate (node:internal/modules/esm/loader:451:20)\n    at afterLoad (node:internal/modules/esm/loader:507:29)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:512:12)\n    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:555:36)\n    at afterResolve (node:internal/modules/esm/loader:603:52)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:609:12)\n    at node:internal/modules/esm/loader:628:32\n    at TracingChannel.tracePromise (node:diagnostics_channel:362:14)\n\nNode.js v24.15.0\n",
+  "impact": "Both commands failed at module parse before mode dispatch; original baseline and previous evidence unchanged."
+}

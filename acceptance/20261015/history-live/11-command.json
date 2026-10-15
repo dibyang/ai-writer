@@ -1,0 +1,20 @@
+{
+  "scope": "actual-cli-command-only",
+  "execution": "current-codex-conversation",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "bin/ai-writer.mjs",
+    "record-template",
+    "--project",
+    "acceptance/20261015/works/把字拆开以后",
+    "--unit",
+    "2",
+    "--draft",
+    "正文/0002-三两本与许多本.md"
+  ],
+  "exit_code": 0,
+  "elapsed_ms": 84,
+  "stdout": "{\n  \"unit\": 2,\n  \"expected_revision\": 1,\n  \"source_hashes\": {\n    \"writer.json\": \"39d2ca0455efbca0e81139d47b3fe30ebb2a35ab42b38882df00926e288734b8\",\n    \".writer/state.json\": \"7c0c997ee76e424205cce3ead45f91e9598a567c5661117a7d2c727f072bea75\",\n    \"大纲/单元/0002.json\": \"9b5502d88e713f7a434a305b4e1143e3284f3942fe1d2d4493ca06105147e078\",\n    \"设定/作品定位.md\": \"d3b95ab45b255a57fd962b88556feee6581d6cd08409dd9d79b3fea456ba0bbf\",\n    \"设定/文风.md\": \"2700ee39367a5f132faf143a864c10c8889a2bca7669e86759ef8f4f0d11d7f4\",\n    \"设定/权威规则.md\": \"36a46fccc58af127994a59e3a71ff4e15a85a8552cc1818d6bb52651d8a520ae\",\n    \"大纲/全书大纲.md\": \"b142a5eda06bf0698fe5f61ab9814feff672ef30131fba5f7817415104a8edf3\",\n    \"研究/史料原文.md\": \"e2bf57d909486c94384f24e1d111279cff7ef5f7055634bb30a047484ecaf900\",\n    \"研究/活版事实卡.json\": \"9c3b273b9761a69eea3ce1830756dab84dd476bb7d2596273a24869c75896763\",\n    \"正文/0001-一版字怎样站稳.md\": \"9342bfe5a0fd5df71eabbc90a2565bb7bacfa063734af0333f6888ecccf4c6c5\"\n  },\n  \"draft\": \"正文/0002-三两本与许多本.md\",\n  \"summary\": \"\",\n  \"snapshot\": {\n    \"characters\": {\n      \"毕昇\": \"已按沈括记述介绍为庆历中制作活版的布衣；本章只述工序，不补个人经历和心理\",\n      \"沈括\": \"本章引用的记述者；没有说他亲见制作\"\n    },\n    \"threads\": [\n      \"只印三两本为何未为简易，以及反复使用需要哪些准备\"\n    ],\n    \"timeline\": [\n      \"庆历中：据《梦溪笔谈》记载，布衣毕昇制作活版；未补具体发明日期或现场\"\n    ]\n  },\n  \"_instructions\": \"先阅读 context 并实写正文，再填写真实摘要和完整快照；空摘要不能登记。未变项保留，已兑现线索移出 threads，不把细纲当作已发生情节。\"\n}\n",
+  "stderr": "",
+  "error": null
+}

@@ -1,0 +1,199 @@
+{
+  "ok": true,
+  "scope": "mechanical-only",
+  "state_revision": 2,
+  "registered_units": 2,
+  "export_status": "draft-export",
+  "export_sha256": "e47caf6e109b4377fc2c488b451b61e19b404697a9ee293e417641357fa17645",
+  "manifest_sha256_matches": true,
+  "review_sha256": "0ef4f8e0089a99a99934cdfbb5f2d35553d57d8315fb6fbd20f1205dc8140de0",
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-八点以后.md",
+      "sha256": "912408ae823134f87dccb9f3b9826dab9b909dd76bcf5057fd8a7247e2deb67f",
+      "state_hash_match": true,
+      "manifest_hash_match": true,
+      "review_hash_bound": true,
+      "export_text_equal": true
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-退件人.md",
+      "sha256": "9dda074bf53b66f88e4aa9d834116538a777257df2358997ebde999f6a71404f",
+      "state_hash_match": true,
+      "manifest_hash_match": true,
+      "review_hash_bound": true,
+      "export_text_equal": true
+    }
+  ],
+  "cli_command_count": 13,
+  "commands": [
+    {
+      "log": "01-init.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "acceptance/20261015/works/夜班退件",
+        "--kind",
+        "novel",
+        "--title",
+        "夜班退件"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "02-plan-0001.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--input",
+        "acceptance/20261015/works/夜班退件/.writer/plan-input.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "03-plan-0002.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--input",
+        "acceptance/20261015/works/夜班退件/.writer/plan-input-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "04-context-0001.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--unit",
+        "1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "06-record-0001.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--input",
+        "acceptance/20261015/works/夜班退件/.writer/record-input-0001.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "07-check-0001.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261015/works/夜班退件"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "08-status-before-0002.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261015/works/夜班退件"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "09-context-0002.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--unit",
+        "2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "11-record-0002.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--input",
+        "acceptance/20261015/works/夜班退件/.writer/record-input-0002.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "12-check-0002.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261015/works/夜班退件"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "14-status-final.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261015/works/夜班退件"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "15-check-final.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261015/works/夜班退件"
+      ],
+      "exit_code": 0
+    },
+    {
+      "log": "16-export-v1.json",
+      "command": [
+        "node",
+        "bin/ai-writer.mjs",
+        "export",
+        "--project",
+        "acceptance/20261015/works/夜班退件",
+        "--out",
+        "acceptance/20261015/exports/夜班退件-v1"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "limitations": [
+    "not literary acceptance",
+    "rewind not exercised because no post-record draft edits were necessary",
+    "no cold reader or real courier workflow validation"
+  ]
+}

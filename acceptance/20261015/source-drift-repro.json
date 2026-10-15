@@ -1,0 +1,24 @@
+{
+  "scope": "synthetic-regression-only",
+  "previous_tool_sha256": "5a2c270e308234497481e0b34292e31ad53e7c3955b817c73ff9348f0c42ed11",
+  "current_tool_sha256": "0a4ff6ff3c467f784a4782b1959db2284c319a6fc39e68804712ad89b77e8b37",
+  "previous_check_ok": true,
+  "previous_export_ok": true,
+  "current_check": {
+    "ok": false,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 1,
+    "revision": 1,
+    "findings": [
+      {
+        "severity": "error",
+        "code": "CONTEXT_SOURCE_CHANGED",
+        "unit": 1,
+        "ref": "研究/test.json"
+      }
+    ]
+  },
+  "current_export_error": "创作来源已变化或缺失：研究/test.json（单元 1）。先核实影响，再 rewind --from 1 并重新核对登记；哈希只能发现变更，不能判断语义影响",
+  "fixture_directory": "D:\\work\\other\\ai-writer\\.tmp\\source-drift-Rz9kED"
+}

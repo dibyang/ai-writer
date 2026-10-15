@@ -1,0 +1,148 @@
+{
+  "schema_version": 2,
+  "revision": 9,
+  "snapshot": {
+    "characters": {
+      "方叔": "排练室门外；椅子已交回，节目单在衣袋，答应下周五八点半来摆椅子",
+      "小许": "随方叔出门；知道老梁未归，已收椅锁库并完成清点"
+    },
+    "threads": [],
+    "timeline": [
+      "傍晚清场：07号椅仍由方叔暂时掌握，没有出门",
+      "傍晚连续：07号椅交小许入储物间；两人约定下周五八点半摆椅子"
+    ],
+    "ledger": {
+      "P07": {
+        "type": "object",
+        "statement": "社区07号木椅",
+        "status": "active",
+        "cast": [
+          "方叔",
+          "小许"
+        ],
+        "custody": {
+          "holder": "小许",
+          "location": "社区储物间，叠椅旁",
+          "condition": "完好，贴号朝外，库门已锁"
+        },
+        "reader_known": "椅子已交接入库，归社区保管",
+        "character_known": {
+          "方叔": "知道椅子已入库，下次活动前一起搬",
+          "小许": "已接椅入库锁门，清点完成"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "21b1ae48efff93adf41954c5bae67b7147de7579d860f5a253afd784421cdc44",
+            "line": 28,
+            "quote": "方叔看看她，退回门内，把椅子两条后腿落地，手还扶着椅背。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "27d980ca737a009506f27b289aad037836d45af043f4a486bf5f00a128d6d98d",
+            "line": 33,
+            "quote": "小许把椅子抱进相连的储物间，平放在叠椅旁，贴号朝外。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 2,
+        "previous_holder": "方叔"
+      },
+      "F01": {
+        "type": "thread",
+        "statement": "方叔在等谁，为什么执意留椅子",
+        "status": "resolved",
+        "cast": [
+          "方叔",
+          "小许"
+        ],
+        "due_unit": 2,
+        "author_truth": "方叔想给住院未归的老搭档老梁留座",
+        "reader_known": "老梁仍在医院，方叔盼他能来；留座转为下次一起摆椅子的约定",
+        "character_known": {
+          "方叔": "知道自己想给老梁留座",
+          "小许": "知道方叔在等老梁，已约定下周五八点半一起摆椅子"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "21b1ae48efff93adf41954c5bae67b7147de7579d860f5a253afd784421cdc44",
+            "line": 33,
+            "quote": "折痕旁圈着两个挨在一起的座号。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "27d980ca737a009506f27b289aad037836d45af043f4a486bf5f00a128d6d98d",
+            "line": 10,
+            "quote": "他还在医院。上回就是坐这儿，读了半首，嫌我翻纸太响。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "27d980ca737a009506f27b289aad037836d45af043f4a486bf5f00a128d6d98d",
+            "line": 35,
+            "quote": "写下“周五，八点半”。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001.md",
+      "sha256": "21b1ae48efff93adf41954c5bae67b7147de7579d860f5a253afd784421cdc44",
+      "summary": "小许清点缺07号椅，方叔守着椅子且露出圈有相邻座号的旧节目单，尚未说明等谁。",
+      "source_hashes": {
+        "writer.json": "a23588e6fbae95440cfb205b9d6eb7c0746481acfc91fea55edcc6f69d9f1387",
+        ".writer/state.json": "141795b4005a239264bcb0588bf7f81cf7619ff50afe677e746097d476ab817b",
+        "大纲/单元/0001.json": "bec46d5fde31b6d39166be8ed5f3439057b34a5507880e36a3b79f2c548d6b6f",
+        "设定/作品定位.md": "a4860b3c601ece99a785c132ba05395ff714782c27fec85b91b59061fca4133b",
+        "设定/文风.md": "4a2779e52e03fd14bcda5f8a0ee5ffc6403cdeadaf9b6840915c5674a1087fc6",
+        "设定/权威规则.md": "e428c187bfa53dbe5127b0f4a5a50935b597f81e20f88d69eccece8ea40bcd54",
+        "设定/角色/方叔.md": "71838f65da046629c8c026c477e1a7bfb6a4faeb5a8f6406fa38ce165f12f10f",
+        "设定/角色/小许.md": "c38ba673ba26c32d79d7733ed863c9b6a7c655baef88c3e8ff5fd3e639857ce1",
+        "大纲/分卷/V1.json": "075a7a18bcf374cbbc94c012dae94d6217c0c83264ddba3cf2b5e64ac43d033c"
+      },
+      "fingerprint": "a0887fbae7f3e2e8a0f6cbe8666f639e266e710c9beddd7a2005c8914b9bfeae",
+      "status": "draft-recorded",
+      "journal": ".writer/journal/3f7b3876-5811-40af-b80d-7abe6a3367ce.json",
+      "journal_sha256": "3adbcc8acc2f600a96a6dfc872e3b634faa6b7bd034df163a3f4d407591889de"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002.md",
+      "sha256": "27d980ca737a009506f27b289aad037836d45af043f4a486bf5f00a128d6d98d",
+      "summary": "方叔说明老梁仍住院、想再来；两人约定下周五八点半摆椅子。07号椅由方叔交给小许入库，旧节目单背面留下时间。",
+      "source_hashes": {
+        "writer.json": "a23588e6fbae95440cfb205b9d6eb7c0746481acfc91fea55edcc6f69d9f1387",
+        ".writer/state.json": "7bf695dcfe7759e2eb5e5313685481e5863525a7766291994cb26f701d432ea8",
+        "大纲/单元/0002.json": "212dc34ffddc8748b8b4f446361d1559140026cf9006df9b017c02d9496b4aed",
+        "设定/作品定位.md": "a4860b3c601ece99a785c132ba05395ff714782c27fec85b91b59061fca4133b",
+        "设定/文风.md": "4a2779e52e03fd14bcda5f8a0ee5ffc6403cdeadaf9b6840915c5674a1087fc6",
+        "设定/权威规则.md": "e428c187bfa53dbe5127b0f4a5a50935b597f81e20f88d69eccece8ea40bcd54",
+        "设定/角色/方叔.md": "71838f65da046629c8c026c477e1a7bfb6a4faeb5a8f6406fa38ce165f12f10f",
+        "设定/角色/小许.md": "c38ba673ba26c32d79d7733ed863c9b6a7c655baef88c3e8ff5fd3e639857ce1",
+        "大纲/分卷/V1.json": "075a7a18bcf374cbbc94c012dae94d6217c0c83264ddba3cf2b5e64ac43d033c",
+        "正文/0001.md": "21b1ae48efff93adf41954c5bae67b7147de7579d860f5a253afd784421cdc44"
+      },
+      "fingerprint": "7ab736980f36326d109ff2be048e8180d2a2b9d48c4299fde952cb483d528596",
+      "status": "draft-recorded",
+      "journal": ".writer/journal/6ee63974-7533-49df-be8e-c17f8735f67b.json",
+      "journal_sha256": "04a5cf3ce4095ba8a1a70a20bc8d33256ec9a9c5b99df14a65a4205dde5b3238"
+    }
+  ],
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  }
+}

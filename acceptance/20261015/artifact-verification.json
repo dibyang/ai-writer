@@ -1,0 +1,215 @@
+{
+  "ok": true,
+  "checked_at": "2026-10-15T08:34:14.162Z",
+  "scope": "artifact-integrity-only",
+  "literary_quality": "requires-reading",
+  "human_acceptance": "not-run",
+  "implementation_sha256": {
+    "lib/workspace.mjs": "206d4e22856f6f7bb935f2bd2aff6591f52451c4331a79f9c25e390f2447afaa",
+    "bin/ai-writer.mjs": "67b99b3f70745d71d7252da040119a1fe3f92b64fb08b4fba998a133eda1339e",
+    "package.json": "6aeaa1c0e740c43b70d238dd89d94ab6c512b3cf285ef3a3188c34d70d88ce56",
+    "scripts/codex-acceptance.mjs": "64667ea5261443e655f85aee618c49b081b8cd0c36098e732f58c16865b7971a",
+    "scripts/verify-acceptance.mjs": "2935c46dea82abce23fff12a17fdaed408a9b022b44b67f541bc9eb1607dcc40",
+    "tests/workspace.test.mjs": "35edd21a432b65eebd309066cee34c8d1eb0e29b4c542153e8e6d14947198c91",
+    "docs/source-manifest.json": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb",
+    ".agents/skills/writer-project/SKILL.md": "7e22c00d4f446dc606d90b106d87aa287a97bf65e472acc7a8d98b3b441fc378",
+    ".agents/skills/writer-review/SKILL.md": "3a08e8d0eefd92e4c9cb25938f2eb7599cd4ea62aa526e409a8819a0bc345848",
+    ".agents/skills/writer-novel/SKILL.md": "66e045fef9305065b496cf473c62fe54abae50c331fd15f2c5e208d016250fbd",
+    ".agents/skills/writer-screenplay/SKILL.md": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376",
+    ".agents/skills/writer-history/SKILL.md": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+  },
+  "artifacts": [
+    {
+      "name": "夜班退件",
+      "kind": "novel",
+      "ok": true,
+      "status": {
+        "ok": true,
+        "title": "夜班退件",
+        "kind": "novel",
+        "revision": 2,
+        "next_unit": 3,
+        "stale_units": [],
+        "changed_sources": [],
+        "snapshot": {
+          "characters": {
+            "梁穗": "已向周姐和许芸承认改线、未核地址、明知却报原计划时刻；已签差错单并给许芸底联；九点后经许芸交托双手托箱随她出门，尚未写到家；承诺明早归还收音机并回话，未完成",
+            "周姐": "小站留灯延后关门；从灰筐核到修理铺20:00退件，提供回收单和差错本；要求照实际写，无替梁穗隐瞒",
+            "许芸": "已亲自核蓝布、木盒连续旧封条和舅舅照片并确认是该盒；持差错页照片、底联和站里电话；未表示原谅；把箱子交梁穗托稳，先拉门出站，尚未回家",
+            "陈师傅": "未出场；电话无人接；其修理铺卷帘门已落，店内退件格可见为空，去向未知"
+          },
+          "threads": [
+            "收音机已由许芸带回小站保管；梁穗承诺次晨归还并回话，尚未实际完成",
+            "差错留有当事人记录，后续处理及信任恢复未写；不影响当晚骨灰盒找回主线闭合"
+          ],
+          "timeline": [
+            "傍晚：许芸舅舅把装有蓝布包裹骨灰盒的纸箱交给梁穗；装车时该箱在收音机箱上层",
+            "19:48：梁穗临时先到修理铺，为取隔壁摊的备用电池；把上层箱放门内凳上，拍照后离开，未核侧面地址",
+            "随后：梁穗到桥西，把下层箱交给忙于收拾行李的许芸，仍未核地址",
+            "20:00：周姐收过修理铺退件格；当晚收回三件放小站灰筐",
+            "20:32：许芸来电报错；梁穗向周姐报修理铺20:15，随后骑车赴修理铺",
+            "当晚继续：修理铺已锁、退件格空、电话未通；梁穗翻出19:48照片未发，周姐追问真实顺序",
+            "紧接前章：梁穗承认先送修理铺、实际19:48，发送包含拍摄时间的交付截图；周姐转查20:00回收灰筐",
+            "当晚：梁穗返站核外箱地址与交付人字迹；周姐回收单显示修理铺20:00一件，另外两件来自杂货铺",
+            "当晚：许芸安顿母亲后带收音机来站，亲自开外箱核蓝布及木盒旧封条，和舅舅照片比对后确认；木盒未开",
+            "当晚：梁穗说明改顺序、未核地址和报错时间，按许芸要求写差错单并签名；许芸拍页、留电话、收底联；收音机登记留站待明早归还",
+            "九点以后：周姐仍留站；许芸把盒子交梁穗托稳，拉门在前，梁穗跟随出门，未叙述到家或次日归还"
+          ]
+        }
+      },
+      "check": {
+        "ok": true,
+        "scope": "mechanical-only",
+        "literary_quality": "unreviewed",
+        "units": 2,
+        "revision": 2,
+        "findings": []
+      },
+      "drafts": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-八点以后.md",
+          "sha256": "912408ae823134f87dccb9f3b9826dab9b909dd76bcf5057fd8a7247e2deb67f",
+          "han_chars": 1070
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-退件人.md",
+          "sha256": "9dda074bf53b66f88e4aa9d834116538a777257df2358997ebde999f6a71404f",
+          "han_chars": 1093
+        }
+      ],
+      "reports": [
+        {
+          "file": "acceptance/20261015/works/夜班退件/审查/全稿-20261015.md",
+          "sha256": "0ef4f8e0089a99a99934cdfbb5f2d35553d57d8315fb6fbd20f1205dc8140de0",
+          "binds_all_final_drafts": true
+        }
+      ],
+      "bundle_matches_current_tool": true,
+      "manuscript_sha256": "e47caf6e109b4377fc2c488b451b61e19b404697a9ee293e417641357fa17645",
+      "export_manifest_sha256": "1211c92fb931b2459ccb4d2eb7561063f006cf3a8020f3adf94521a495c05397"
+    },
+    {
+      "name": "停电以后",
+      "kind": "screenplay",
+      "ok": true,
+      "status": {
+        "ok": true,
+        "title": "停电以后",
+        "kind": "screenplay",
+        "revision": 6,
+        "next_unit": 4,
+        "stale_units": [],
+        "changed_sources": [],
+        "snapshot": {
+          "characters": {
+            "陈良": "已穿棉大衣，钥匙从柜台装入裤袋并用于关店；在同店门槛处带上店门，打算回自己的住处过夜、明日买新被；答应周日两点在家让许青挑冬衣。",
+            "许青": "已独自抱着封好的透明袋与17号浅蓝被跨出店门槛；手机和纸取件条收进外套口袋；今晚拿被子回租处，周日两点只取冬衣，明确不搬回。"
+          },
+          "threads": [],
+          "timeline": [
+            "深秋同一傍晚场1：打烊前许青来取17号，双方争同一床被子；停电未恢复，许青用手机灯，陈良抱被准备移台。",
+            "紧接场2：手机放台角；夹布经回退拉链取出，两人折被；约定今晚厚被归许青，陈良带棉大衣回去并打算明日购被；折被仍在台上未装袋。",
+            "紧接场3：共同装袋，约定周日两点只取冬衣；手机、纸条、钥匙各自收回，许青实际抱被离店，陈良穿棉大衣关店；停电未恢复。婚姻未来开放，今晚归属已落实；未来购被与取衣均只是人物约定，未冒充已发生。"
+          ]
+        }
+      },
+      "check": {
+        "ok": true,
+        "scope": "mechanical-only",
+        "literary_quality": "unreviewed",
+        "units": 3,
+        "revision": 6,
+        "findings": []
+      },
+      "drafts": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-十七号.md",
+          "sha256": "3b296079f02f7cd14b96868d6983436557efcda5c98bf7381565b392c1abe15d",
+          "han_chars": 420
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-被角.md",
+          "sha256": "7004b168f580ed1fe90c652a97b9282df8dbfc5c4df9a5ac3e89f60d54a47299",
+          "han_chars": 485
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-扶一下门.md",
+          "sha256": "21b39e253d7ee24b04c6c486dcacd760ea4c82f60dbff6878a8ae54d50c15cc4",
+          "han_chars": 500
+        }
+      ],
+      "reports": [
+        {
+          "file": "acceptance/20261015/works/停电以后/审查/全剧-20261015.md",
+          "sha256": "cbc4ce828e1e854dea04344f504985071e845d8790a4e9f13533efefd71f522a",
+          "binds_all_final_drafts": true
+        }
+      ],
+      "bundle_matches_current_tool": true,
+      "manuscript_sha256": "496721b8968c2e528fd0fe8124883811bfba3a33580b2b2d7fd9f0dac7cc7988",
+      "export_manifest_sha256": "ed577b67e722e8a2708e9d4bad705017e0bdd7aba2d9077be5ac451b1279ebfd"
+    },
+    {
+      "name": "把字拆开以后",
+      "kind": "history",
+      "ok": true,
+      "status": {
+        "ok": true,
+        "title": "把字拆开以后",
+        "kind": "history",
+        "revision": 2,
+        "next_unit": 3,
+        "stale_units": [],
+        "changed_sources": [],
+        "snapshot": {
+          "characters": {
+            "毕昇": "两章按沈括记述说明活版做法与使用条件；已写其去世后字印留藏的记载，未补生平和动机",
+            "沈括": "两章的同一核心史源记述者；已说明字印为其家中亲属所得，记述时尚存；未声称亲见制作"
+          },
+          "threads": [],
+          "timeline": [
+            "庆历中：据《梦溪笔谈》记载，布衣毕昇制作活版；未补具体发明日期或现场",
+            "毕昇去世后：据沈括记述，字印为沈括家中亲属所得，记述时仍保藏；本文不推出后世普及及传世至今"
+          ]
+        }
+      },
+      "check": {
+        "ok": true,
+        "scope": "mechanical-only",
+        "literary_quality": "unreviewed",
+        "units": 2,
+        "revision": 2,
+        "findings": []
+      },
+      "drafts": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-一版字怎样站稳.md",
+          "sha256": "9342bfe5a0fd5df71eabbc90a2565bb7bacfa063734af0333f6888ecccf4c6c5",
+          "han_chars": 880
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-三两本与许多本.md",
+          "sha256": "ee57a14dfd0077cd8eba163a97f9ca806d25bd37bdf779b63080af2475e5d457",
+          "han_chars": 919
+        }
+      ],
+      "reports": [
+        {
+          "file": "acceptance/20261015/works/把字拆开以后/审查/全稿-20261015.md",
+          "sha256": "deea7d56c551aa857b1cce2933ae6a8beccc3175e52dbca7a900a86b05bea81b",
+          "binds_all_final_drafts": true
+        }
+      ],
+      "bundle_matches_current_tool": true,
+      "manuscript_sha256": "013fd1e07882c514af9a96f39a5e085faeb7e0162765a556acc1e08ae3226102",
+      "export_manifest_sha256": "c27109f65c10cdd19d45e47aa9e8236f7fabe07a6b3d264f9e2201242f9af570"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "unit": 2,
+  "expected_revision": 5,
+  "source_hashes": {
+    "writer.json": "a23588e6fbae95440cfb205b9d6eb7c0746481acfc91fea55edcc6f69d9f1387",
+    ".writer/state.json": "f857273f1c151c67e949f27befaaf5cbeee7a27859c23afa186ad7e728dd8d01",
+    "大纲/单元/0002.json": "212dc34ffddc8748b8b4f446361d1559140026cf9006df9b017c02d9496b4aed",
+    "设定/作品定位.md": "a4860b3c601ece99a785c132ba05395ff714782c27fec85b91b59061fca4133b",
+    "设定/文风.md": "4a2779e52e03fd14bcda5f8a0ee5ffc6403cdeadaf9b6840915c5674a1087fc6",
+    "设定/权威规则.md": "e428c187bfa53dbe5127b0f4a5a50935b597f81e20f88d69eccece8ea40bcd54",
+    "设定/角色/方叔.md": "71838f65da046629c8c026c477e1a7bfb6a4faeb5a8f6406fa38ce165f12f10f",
+    "设定/角色/小许.md": "c38ba673ba26c32d79d7733ed863c9b6a7c655baef88c3e8ff5fd3e639857ce1",
+    "大纲/分卷/V1.json": "075a7a18bcf374cbbc94c012dae94d6217c0c83264ddba3cf2b5e64ac43d033c",
+    "正文/0001.md": "d2fc32a9984f29682e063326c256c483ea14886192984eedba9d26e528f9832b"
+  },
+  "draft": "正文/0002.md",
+  "summary": "方叔说明老梁仍住院、想再来；两人约定下周五八点半摆椅子。07号椅由方叔交给小许入库，旧节目单背面留下时间。",
+  "changes": {
+    "characters": {
+      "方叔": "排练室门外；椅子已交回，节目单在衣袋，答应下周五八点半来摆椅子",
+      "小许": "随方叔出门；知道老梁未归，已收椅锁库并完成清点"
+    },
+    "timeline_append": [
+      "傍晚连续：07号椅交小许入储物间；两人约定下周五八点半摆椅子"
+    ],
+    "ledger": {
+      "P07": {
+        "previous_holder": "方叔",
+        "custody": {
+          "holder": "小许",
+          "location": "社区储物间，叠椅旁",
+          "condition": "完好，贴号朝外，库门已锁"
+        },
+        "reader_known": "椅子已交接入库，归社区保管",
+        "character_known": {
+          "方叔": "知道椅子已入库，下次活动前一起搬",
+          "小许": "已接椅入库锁门，清点完成"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "小许把椅子抱进相连的储物间，平放在叠椅旁，贴号朝外。"
+          }
+        ]
+      },
+      "F01": {
+        "status": "resolved",
+        "reader_known": "老梁仍在医院，方叔盼他能来；留座转为下次一起摆椅子的约定",
+        "character_known": {
+          "小许": "知道方叔在等老梁，已约定下周五八点半一起摆椅子"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "他还在医院。上回就是坐这儿，读了半首，嫌我翻纸太响。"
+          },
+          {
+            "unit": 2,
+            "quote": "写下“周五，八点半”。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

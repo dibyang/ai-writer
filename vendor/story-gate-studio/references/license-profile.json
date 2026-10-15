@@ -1,0 +1,40 @@
+{
+  "schema_version": "story-gate-license-profile@0.1.0",
+  "activation": "local-file-and-documentation-only",
+  "tiers": [
+    {
+      "tier": "Trial",
+      "use_case": "private evaluation",
+      "offline": true,
+      "support": "community or limited async support"
+    },
+    {
+      "tier": "Pro",
+      "use_case": "single author or editor",
+      "offline": true,
+      "support": "standard async support"
+    },
+    {
+      "tier": "Studio",
+      "use_case": "small writing team",
+      "offline": true,
+      "support": "priority async support"
+    },
+    {
+      "tier": "Enterprise",
+      "use_case": "custom workflow, CI, or container integration",
+      "offline": true,
+      "support": "custom support agreement"
+    }
+  ],
+  "privacy_boundary": [
+    "does not upload manuscripts",
+    "customer work remains customer-owned",
+    "support bundles must not copy manuscript prose"
+  ],
+  "future_extension_points": [
+    "signed local license file",
+    "offline activation code",
+    "optional enterprise license server"
+  ]
+}

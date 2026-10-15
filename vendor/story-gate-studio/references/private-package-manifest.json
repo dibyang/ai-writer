@@ -1,0 +1,77 @@
+{
+  "profile": "private-commercial-trial@0.1.0",
+  "description": "Curated file set for private paid trials or customer evaluation packages.",
+  "include_files": [
+    ".codex-plugin/plugin.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "RELEASE.md",
+    "package.json",
+    "marketplace.private.example.json",
+    "docs/commercialization.md",
+    "docs/commercial-operations.md",
+    "docs/customer-pilot.md",
+    "docs/quickstart.md",
+    "docs/help.md",
+    "docs/customer-install.md",
+    "docs/project-rule-pack-template.md",
+    "docs/review-capability-enhancement.md",
+    "docs/host-adapter.md",
+    "docs/support-playbook.md",
+    "docs/release-management.md",
+    "docs/private-package.md",
+    "docs/traceability.md",
+    "docs/phased-roadmap.md",
+    "docs/v0.1-design.md",
+    "docs/implementation-plan.md"
+  ],
+  "include_roots": [
+    "skills",
+    "references",
+    "scripts",
+    "tests",
+    "templates",
+    "examples",
+    "reports"
+  ],
+  "exclude_paths": [
+    ".tmp-pydeps",
+    "node_modules",
+    "story-gate-projects",
+    "reports/generated",
+    "reports/customer",
+    "dist"
+  ],
+  "required_smoke_commands": [
+    ["scripts/story-gate.js", "--help"],
+    ["scripts/story-gate.js", "tasks"],
+    ["scripts/story-gate.js", "release-check"],
+    ["scripts/story-gate.js", "commercial-readiness-check"],
+    ["scripts/story-gate.js", "customer-pilot", "--project", "examples/customer-pilot"],
+    ["scripts/story-gate.js", "support-bundle", "--project", "examples/customer-pilot", "--dry-run"],
+    ["scripts/story-gate.js", "project-rule-check", "templates/project-rule-pack/rule-pack.template.json"],
+    ["scripts/story-gate.js", "review-scorecard", "examples/fixtures/review-scorecard-pass.md"],
+    ["scripts/story-gate.js", "blind-read-gate", "examples/fixtures/blind-read-pass.json"],
+    ["scripts/story-gate.js", "host-run", "examples/host-adapter/review-scorecard-request.json"],
+    ["scripts/story-gate.js", "customer-install-smoke"],
+    ["scripts/story-gate.js", "chapter-gate", "examples/fixtures/chapter-gate-pass.json"],
+    ["scripts/story-gate.js", "chapter-batch-metrics", "examples/final-arc-live-cost/chapter-01.md", "examples/final-arc-live-cost/chapter-02.md", "examples/final-arc-live-cost/chapter-03.md"]
+  ],
+  "required_docs": [
+    "docs/quickstart.md",
+    "docs/help.md",
+    "docs/commercial-operations.md",
+    "docs/customer-pilot.md",
+    "docs/customer-install.md",
+    "docs/support-playbook.md",
+    "docs/project-rule-pack-template.md",
+    "docs/release-management.md",
+    "docs/private-package.md"
+  ],
+  "required_quality_gates": [
+    "node scripts/story-gate.js validate",
+    "node --test tests/*.test.js",
+    "Codex validate_plugin.py"
+  ]
+}
