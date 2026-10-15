@@ -1,0 +1,35 @@
+{
+  "unit": 9,
+  "expected_revision": 11,
+  "source_hashes": {
+    "writer.json": "3f53132d5abf3853de2e6f9f596a5bf78e055eae2d7182b5f7fe030ed7e73ac7",
+    ".writer/state.json": "0950355a6f015b483c710549b0e7ba0ff0b53e6309f82ef3498242e60a68ce85",
+    "大纲/单元/0009.json": "a6a05a15147e40aeb2f78a87fa6715fbb343217a684db9d751959b00ada55b60",
+    "设定/作品定位.md": "d7ef176101431c560c293f9b70073de66d8e943f7a20894485e429d2ea215aa6",
+    "设定/文风.md": "655000a278e46d6352eb1459d8254319a5ffb3fd517fb2a87a4323c23933d2e0",
+    "设定/权威规则.md": "8db34e8a7a01f365e1ca142e104364abf2ad8f229084fb79726416d22c516fe2",
+    "大纲/分卷/V3.json": "f981dd78acdf0e09dd0934bcbd08bc37930977ab7a3f97bf602ce42741a283e5",
+    "正文/0008-门前的空托盘.md": "1bedc669d89cca42c2a33be8e1972cf8e663c4f4f6d98cebbce67c4a9d6164a2"
+  },
+  "draft": "正文/0009-隔离探针.md",
+  "summary": "仅用于预期失败的隔离检查",
+  "changes": {
+    "ledger": {
+      "P_KEY": {
+        "previous_holder": "不存在的旧保管人",
+        "custody": {
+          "holder": "异常接收人",
+          "location": "隔离探针",
+          "condition": "不改原稿"
+        },
+        "evidence": [
+          {
+            "unit": 9,
+            "quote": "异常接收人接过铜钥匙。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

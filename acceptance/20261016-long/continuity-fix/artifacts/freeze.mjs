@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const out=import.meta.dirname,root=path.resolve(out,'..'),p=path.join(root,'acceptance/20261016-long/works/雨线档案');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
+const pre=path.join(out,'before');
+if(fs.existsSync(pre)) throw Error('before exists');
+fs.mkdirSync(pre,{recursive:true});
+const paths=['writer.json','.writer/state.json',...['正文','审查','.writer/reviews','.writer/journal'].flatMap(d=>walk(path.join(p,d)).map(f=>path.relative(p,f).replaceAll('\\','/')))];
+const files=[];
+for(const rel of paths){const b=fs.readFileSync(path.join(p,rel));const dest=path.join(pre,rel);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,b);files.push({path:rel,sha256:sha(b),bytes:b.length});}
+const state=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json'),'utf8'));
+const tool_files=walk(path.join(p,'.writer/tool')).map(f=>({path:path.relative(p,f).replaceAll('\\','/'),sha256:sha(fs.readFileSync(f))}));
+const protected_files=['lib','bin','tests','docs','.agents'].flatMap(d=>walk(path.join(root,d))).map(f=>({path:path.relative(root,f).replaceAll('\\','/'),sha256:sha(fs.readFileSync(f))}));
+const git=spawnSync('git',['status','--short'],{cwd:root,encoding:'utf8',windowsHide:true});
+fs.writeFileSync(path.join(pre,'git-status.txt'),git.stdout);
+fs.writeFileSync(path.join(pre,'manifest.json'),JSON.stringify({captured:new Date().toISOString(),revision:state.revision,files,tool_files,protected_files,units_1_8:state.units.slice(0,8)},null,2)+'\n');
+console.log(JSON.stringify({revision:state.revision,files:files.length,units_1_8_sha256:sha(JSON.stringify(state.units.slice(0,8))),tool_files},null,2));

@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..');
+const project=path.join(root,'acceptance/20261016-long/works/雨线档案');
+const [label,...args]=process.argv.slice(2);
+if(!/^[a-z0-9-]+$/.test(label||'')) throw Error('label required');
+const dir=path.join(import.meta.dirname,'cli',label);
+fs.mkdirSync(dir,{recursive:true});
+if(fs.existsSync(path.join(dir,'execution.json'))) throw Error('log already exists');
+const argv=[path.join(project,'.writer/tool/bin/ai-writer.mjs'),...args,'--project',project];
+const started=new Date().toISOString();
+const result=spawnSync(process.execPath,argv,{cwd:root,encoding:null,windowsHide:true});
+fs.writeFileSync(path.join(dir,'stdout.txt'),result.stdout||Buffer.alloc(0));
+fs.writeFileSync(path.join(dir,'stderr.txt'),result.stderr||Buffer.alloc(0));
+fs.writeFileSync(path.join(dir,'execution.json'),JSON.stringify({executable:process.execPath,argv,cwd:root,started,ended:new Date().toISOString(),exit_code:result.status,signal:result.signal,error:result.error?.message},null,2)+'\n');
+process.stdout.write(result.stdout||''); process.stderr.write(result.stderr||'');
+process.exitCode=result.status??1;

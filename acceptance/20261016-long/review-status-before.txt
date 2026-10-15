@@ -1,0 +1,69 @@
+✔ 差量追加、替换、删除可双向还原；时间线追加存储量不随历史长度增长 (6.5087ms)
+✔ 长篇差量登记幂等、回退保留正文并恢复完整旧状态 (100.3799ms)
+✔ 不可变观察、未来证据、编造引文与省略本章证据均拒绝，不推进状态 (88.7424ms)
+✔ 召回保留到期线索、明确列出省略项，人物知识不注入作者秘密 (110.7472ms)
+✔ 显式召回不存在的 ID、错误剧情单元及重叠卷纲拒绝 (51.4174ms)
+✔ 已消费卷纲不能静默改写；外部改写使上下文与导出失效 (61.3904ms)
+✔ journal 被篡改或丢失拒绝恢复，不猜状态 (57.3063ms)
+✔ 旧作品显式备份迁移，回退后能恢复旧格式章节之前的状态 (102.5091ms)
+✖ 滚动审查绑定实际正文和报告版本，回退/重写后旧报告失效 (101.4619ms)
+✖ 旧章回退重登后，分段审查不冒充完整连读，当前覆盖不删除失效历史 (215.2922ms)
+✔ 旧稿导入断点续跑、冻结副本不覆盖、源漂移阻断与逐章阅读边界 (106.5753ms)
+✔ 独立作品工具复制全部长篇模块，单独进程可以召回与校验 (205.2442ms)
+✔ 可选召回有界，显式/到期/置顶不被容量裁掉，物证保管状态进入上下文 (71.952ms)
+✔ 物证交接拒绝错认原保管人，知识增量保留另一人物，完整快照不能删掉账本 (90.9228ms)
+✔ 新增参考快照与清单绑定固定提交和MIT许可，原文不进入运行依赖 (8.7618ms)
+✔ 长篇恢复入口默认精简，完整快照只在显式查看时返回 (60.5046ms)
+✔ 旧稿角色键顺序变化不应使迁移后的差量链失效 (105.9923ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 15
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1631.2812
+
+✖ failing tests:
+
+test at tests\longform.test.mjs:110:1
+✖ 滚动审查绑定实际正文和报告版本，回退/重写后旧报告失效 (101.4619ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== 0
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/longform.test.mjs:120:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\longform.test.mjs:130:1
+✖ 旧章回退重登后，分段审查不冒充完整连读，当前覆盖不删除失效历史 (215.2922ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== 1
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/longform.test.mjs:152:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

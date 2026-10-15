@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const out=import.meta.dirname,p=path.join(out,'../acceptance/20261016-long/works/雨线档案'),old='审查/1-12连续性修复-20261016.md',rel='审查/1-12连续性修复-20261016-r31.md';
+const input=JSON.parse(fs.readFileSync(path.join(out,'review-input.json'),'utf8'));
+for(const [f,h] of Object.entries(input.source_hashes))if(crypto.createHash('sha256').update(fs.readFileSync(path.join(p,f))).digest('hex')!==h)throw Error('reading drift');
+const report=fs.readFileSync(path.join(p,old),'utf8').replace('最终登记revision：28。','最终登记revision：31。')+'\n## 补充追踪复核\n\n首次重登到revision28后，补充校验发现T_MISSED遗漏第11章“不入核验单”与第12章“仍未知”两条证据锚点；不是私人原因改变。已正式rewind11：28→29，以新context/template及新source_hashes重登11至30、12至31，补回这两条锚点和最新人物知识。原输入、旧journal、r28失败校验、r28报告及导出均保留。T_MISSED完整对象已恢复与修前最终账本一致，仍intentional-open。1–12正文与上述实际完整连读版本逐字节一致，阅读捕获生成时为revision28，最终revision31仅补追踪，无新增未读正文。\n';
+fs.writeFileSync(path.join(p,rel),report,{flag:'wx'});
+fs.writeFileSync(path.join(out,'review-input-r31.json'),JSON.stringify({...input,report:rel},null,2)+'\n');
+fs.renameSync(path.join(out,'export'),path.join(out,'export-r28'));
+fs.renameSync(path.join(out,'final-state.json'),path.join(out,'final-state-r28.json'));
+const failed=JSON.parse(fs.readFileSync(path.join(out,'verification-r28-failed.json'),'utf8'));
+fs.writeFileSync(path.join(out,'verification-r28.stdout.txt'),JSON.stringify({...failed,checks:failed.checks.map(({details,...c})=>c)},null,2)+'\n');
+fs.writeFileSync(path.join(out,'verification-r28-execution.json'),JSON.stringify({executable:process.execPath,argv:['continuity-fix/verify.mjs'],cwd:path.resolve(out,'..'),exit_code:1,stdout:'verification-r28.stdout.txt',stderr:'verification-r28.stderr.txt',note:'首次补充校验失败；保留原JSON及输出，补回11–12证据后重验'},null,2)+'\n');
+fs.writeFileSync(path.join(out,'verification-r28.stderr.txt'),'');
+console.log(JSON.stringify({report:rel,report_sha256:crypto.createHash('sha256').update(report).digest('hex')}));

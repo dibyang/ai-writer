@@ -1,0 +1,15 @@
+{
+  "sequence": 11,
+  "command": "record",
+  "argv": [
+    "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+    "record",
+    "--project",
+    "D:\\work\\other\\ai-writer\\acceptance\\20261016-long\\guard-probes\\ledger-rejections",
+    "--input",
+    "D:\\work\\other\\ai-writer\\acceptance\\20261016-long\\guard-probes\\wrong-holder.json"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\n  \"ok\": false,\n  \"error\": \"ledger.P_KEY.previous_holder 必须与 custody 同级，并等于当前保管人“陆衡”；不能填在 custody 内\",\n  \"code\": \"COMMAND_FAILED\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\bin\\\\ai-writer.mjs' record '--help'\"\n}\n"
+}

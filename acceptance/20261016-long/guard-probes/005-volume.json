@@ -1,0 +1,15 @@
+{
+  "sequence": 5,
+  "command": "volume",
+  "argv": [
+    "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+    "volume",
+    "--project",
+    "D:\\work\\other\\ai-writer\\acceptance\\20261016-long\\guard-probes\\volume-drift",
+    "--input",
+    "D:\\work\\other\\ai-writer\\acceptance\\20261016-long\\guard-probes\\changed-volume.json"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\n  \"ok\": false,\n  \"error\": \"此卷纲已用于正文。先核实修订影响并 rewind 最早受影响单元，再修改\",\n  \"code\": \"COMMAND_FAILED\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\bin\\\\ai-writer.mjs' volume '--help'\"\n}\n"
+}

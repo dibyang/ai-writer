@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const base=path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'));
+const root=path.resolve(base,'../../..');
+const project=path.resolve(base,'../works/雨线档案');
+const [label,...args]=process.argv.slice(2);
+if(!label||!args.length) throw Error('label and CLI args required');
+const argv=[path.join(project,'.writer/tool/bin/ai-writer.mjs'),...args,'--project',project];
+const started=new Date().toISOString();
+const r=spawnSync(process.execPath,argv,{cwd:root,encoding:null});
+const dir=path.join(base,'cli'); fs.mkdirSync(dir,{recursive:true});
+fs.writeFileSync(path.join(dir,label+'.stdout'),r.stdout??Buffer.alloc(0));
+fs.writeFileSync(path.join(dir,label+'.stderr'),r.stderr??Buffer.alloc(0));
+fs.writeFileSync(path.join(dir,label+'.json'),JSON.stringify({executable:process.execPath,argv,cwd:root,started,finished:new Date().toISOString(),exit_code:r.status,signal:r.signal,error:r.error?.message??null},null,2)+'\n');
+process.stdout.write(r.stdout??''); process.stderr.write(r.stderr??''); process.exitCode=r.status??1;

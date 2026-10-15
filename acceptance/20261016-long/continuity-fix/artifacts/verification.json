@@ -1,0 +1,524 @@
+{
+  "ok": true,
+  "revision": 31,
+  "before_state_sha256": "c8719405e3a9fd021e636aa711af498ca128382da599fa4f9ebee58cb45e0b44",
+  "final_state_sha256": "fe3364e172de13fd1436fb6fa1e9b67baba64b6affd34748255e30c179dec9b0",
+  "checks": [
+    {
+      "name": "units_1_8_complete_index_identical",
+      "ok": true,
+      "details": {
+        "before_sha256": "bdce258a6c422f3bbedd01071c1ebc9e0e0698462f78ea7c8296bf9e3505d538",
+        "after_sha256": "bdce258a6c422f3bbedd01071c1ebc9e0e0698462f78ea7c8296bf9e3505d538",
+        "fields": "full units entries including summary, source_hashes, fingerprint, journal and journal_sha256"
+      }
+    },
+    {
+      "name": "units_exactly_1_12",
+      "ok": true
+    },
+    {
+      "name": "only_chapter_9_text_changed",
+      "ok": true,
+      "details": [
+        {
+          "unit": 1,
+          "path": "正文/0001-檐下的钥匙.md",
+          "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+          "unchanged_from_before": true,
+          "han": 523
+        },
+        {
+          "unit": 2,
+          "path": "正文/0002-封套里面.md",
+          "sha256": "6bd808fd5207d8b0ac5e61c638ab98fcc3b7d3e3f2b6d7cf16742630c2fb56aa",
+          "unchanged_from_before": true,
+          "han": 509
+        },
+        {
+          "unit": 3,
+          "path": "正文/0003-先留一栏.md",
+          "sha256": "ffea4b0bcf78324fb8730a2b3a1d887a42d834592ce080ef60717f54365a6639",
+          "unchanged_from_before": true,
+          "han": 534
+        },
+        {
+          "unit": 4,
+          "path": "正文/0004-交给你.md",
+          "sha256": "8d36322983b01b06d51df3c83024a60fd5e463625a0d45bb5966148d661acbac",
+          "unchanged_from_before": true,
+          "han": 519
+        },
+        {
+          "unit": 5,
+          "path": "正文/0005-先把话说完.md",
+          "sha256": "be9c98f75ac5c7ebeb64c636aea108b52ec2e7f3c025669373f0696071e49683",
+          "unchanged_from_before": true,
+          "han": 513
+        },
+        {
+          "unit": 6,
+          "path": "正文/0006-收件以后.md",
+          "sha256": "913c0d95f2caf6031f98bb89ad31a7a41854d63ebdfb3d9aee249c16c62cb799",
+          "unchanged_from_before": true,
+          "han": 526
+        },
+        {
+          "unit": 7,
+          "path": "正文/0007-名单上的早晨.md",
+          "sha256": "4298c06d3fd9f4475a6790c103fbac6a59f40186b3f122eade8a0a3ab4068a08",
+          "unchanged_from_before": true,
+          "han": 566
+        },
+        {
+          "unit": 8,
+          "path": "正文/0008-门前的空托盘.md",
+          "sha256": "1bedc669d89cca42c2a33be8e1972cf8e663c4f4f6d98cebbce67c4a9d6164a2",
+          "unchanged_from_before": true,
+          "han": 546
+        },
+        {
+          "unit": 9,
+          "path": "正文/0009-锁舌退回去.md",
+          "sha256": "0aa78a0296a761baffadf8a6c85ca663da1d8abd166a6af2a4c8c89564874eda",
+          "unchanged_from_before": false,
+          "han": 516
+        },
+        {
+          "unit": 10,
+          "path": "正文/0010-薄夹袋.md",
+          "sha256": "b68f03a3537d7c490cfadfe77582d462aa7c89571acd0b879c4690b889bdf5fc",
+          "unchanged_from_before": true,
+          "han": 507
+        },
+        {
+          "unit": 11,
+          "path": "正文/0011-逐栏念过去.md",
+          "sha256": "50d76e8ac7646d5dfcff4392260d2e69ca7676c5d579e51547f658cbdf53fede",
+          "unchanged_from_before": true,
+          "han": 521
+        },
+        {
+          "unit": 12,
+          "path": "正文/0012-名字落在这里.md",
+          "sha256": "ee13358d4b599a9f779fbfab0a881676d7e54f6c70a7365c838324349f07ce37",
+          "unchanged_from_before": true,
+          "han": 573
+        }
+      ]
+    },
+    {
+      "name": "all_chapters_450_700_han",
+      "ok": true
+    },
+    {
+      "name": "all_old_evidence_files_retained_identically",
+      "ok": true,
+      "details": {
+        "count": 48,
+        "files": [
+          {
+            "path": "writer.json",
+            "sha256": "3f53132d5abf3853de2e6f9f596a5bf78e055eae2d7182b5f7fe030ed7e73ac7",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0001-檐下的钥匙.md",
+            "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0002-封套里面.md",
+            "sha256": "6bd808fd5207d8b0ac5e61c638ab98fcc3b7d3e3f2b6d7cf16742630c2fb56aa",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0003-先留一栏.md",
+            "sha256": "ffea4b0bcf78324fb8730a2b3a1d887a42d834592ce080ef60717f54365a6639",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0004-交给你.md",
+            "sha256": "8d36322983b01b06d51df3c83024a60fd5e463625a0d45bb5966148d661acbac",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0005-先把话说完.md",
+            "sha256": "be9c98f75ac5c7ebeb64c636aea108b52ec2e7f3c025669373f0696071e49683",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0006-收件以后.md",
+            "sha256": "913c0d95f2caf6031f98bb89ad31a7a41854d63ebdfb3d9aee249c16c62cb799",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0007-名单上的早晨.md",
+            "sha256": "4298c06d3fd9f4475a6790c103fbac6a59f40186b3f122eade8a0a3ab4068a08",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0008-门前的空托盘.md",
+            "sha256": "1bedc669d89cca42c2a33be8e1972cf8e663c4f4f6d98cebbce67c4a9d6164a2",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0010-薄夹袋.md",
+            "sha256": "b68f03a3537d7c490cfadfe77582d462aa7c89571acd0b879c4690b889bdf5fc",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0011-逐栏念过去.md",
+            "sha256": "50d76e8ac7646d5dfcff4392260d2e69ca7676c5d579e51547f658cbdf53fede",
+            "unchanged": true
+          },
+          {
+            "path": "正文/0012-名字落在这里.md",
+            "sha256": "ee13358d4b599a9f779fbfab0a881676d7e54f6c70a7365c838324349f07ce37",
+            "unchanged": true
+          },
+          {
+            "path": "审查/1-12终检-session-c.md",
+            "sha256": "b74900f27a466844edadfed7d0b959a47afbf0e74ec73219e4a26426ad587b9e",
+            "unchanged": true
+          },
+          {
+            "path": "审查/1-3连读-20261016.md",
+            "sha256": "ebd255224e81649fd7f7ab86e4f8f320e0a5ec4234ed071e4052167247277a2b",
+            "unchanged": true
+          },
+          {
+            "path": "审查/1-6连读-session-b.md",
+            "sha256": "d9056e35b2165d97cd24345f48708fff82a530995b53d71cd457978ce8f4890d",
+            "unchanged": true
+          },
+          {
+            "path": "审查/1-8修订连读-20261016.md",
+            "sha256": "6dfe50dc8731dce92c24580a411155953c20f756f43f87986ab87d92c9f42837",
+            "unchanged": true
+          },
+          {
+            "path": "审查/4-9连读-session-c.md",
+            "sha256": "e2586d66eed8c9c999ded412055d0bb70356ad63e53ef41c7cf7c58294acf8bf",
+            "unchanged": true
+          },
+          {
+            "path": "审查/4章自检-20261016.md",
+            "sha256": "f1cf16c289d6fd1ecd09287492789e2fde4e69f71208cf64d14668aa0038b03e",
+            "unchanged": true
+          },
+          {
+            "path": "审查/7-12连读-session-c.md",
+            "sha256": "9e7f61ab198dde03427bd73d33ffdf469edca6cfd578ccd62bc6829111e5f177",
+            "unchanged": true
+          },
+          {
+            "path": "审查/7-8实读自检-session-b.md",
+            "sha256": "a7f533f3fce57c1f9cb421b50cb9f725010d4579dddf139463502eeb0247a879",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/08e38c80-aff1-4692-b7f6-8970758ac8f0.json",
+            "sha256": "b8d48dd9a2502cf57abce87265a76efdd432b5e309ea9fb200aaae2c27b4821f",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/110eae28-d768-4843-94b3-36e968ca9f55.json",
+            "sha256": "e12827797c6c5ec6e12d601ae9002e5391c63e8f2687297e248afcd455d0f4bb",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/2c29601c-405e-44ce-863a-55ae26030765.json",
+            "sha256": "857c36db66376c60096de6bfaacfead228685f2356d6cc38ffb13f1a9310742e",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/6141f156-d6e1-4710-b75f-64197d81391b.json",
+            "sha256": "b19f377cfa0539a2fb00c1e0b458414a97068df77eeaf3f1f4fbd7d5938c8ed9",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/9bfd7c27-ddcb-4169-a3aa-80c53c067624.json",
+            "sha256": "f69764822d566672446f21845dcd035c92196a44785a96be273229d80bc63e73",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/9f3b4b18-6e8f-4e16-80e8-7795571dce10.json",
+            "sha256": "0b33d08543b5df824c7404a61916cfed7b252bb66259673198251a339c7accd6",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/a77330d7-65cb-4172-a15f-35b1af5e2e7e.json",
+            "sha256": "4a575aff326aa1e3ec40ade12170a5ac0a2f29937eacbc3eb9231bf4c47fa4cd",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/reviews/f06b5e69-a8d2-41ca-adf3-927719eb06ef.json",
+            "sha256": "d1f6bcb9ecbed87c4992e72fda605a9f70ed6020261824ffa7b832c512c82d67",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/04debaf1-66a6-4534-8c48-1b7e3474a669.json",
+            "sha256": "ad0bc0c0ad0ff0938ef710f52babdf09eddfdd249b8c8b8d483e7cb7c2479c05",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/0f48afaf-0d5f-4016-be2a-628ddeb4bc63.json",
+            "sha256": "9a6233733be91e67746592e1be73ec1aabd1d7663e358e9a9af3428141d99dba",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/33a2089b-2fa6-4bfb-924a-583355f3c787.json",
+            "sha256": "a0dc2d563a4af4e7fcefef4b35092ba4ee37790b65ecfbb8afa42e4f2082593d",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/48dcc67e-e573-4828-81cf-44c586fa9c08.json",
+            "sha256": "48d0ab34ce8a3716482e997471dfcdf99afcc16e07a2249f40a021f2c59eb923",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/4d4de54a-6e86-4bab-b53f-1bf300f4d159.json",
+            "sha256": "9201fc489b391a0d6c4e2c29e34f71b115cce5ecad7600b03e04943ef06918b4",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/5eebf451-ff06-479d-bf90-0b009e6834c7.json",
+            "sha256": "086767712b1347df3a2f0ec24f927177aaed3db47214a15332fe4b0f1052d302",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/83c36dc3-e20c-4dcd-b7b2-3ae431565359.json",
+            "sha256": "4fbc65b56e64e4b295e1b225b56704e365dc943563f4d84e2606cc603a6e5fd3",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/882dcef6-58d0-455d-ad27-93372d8ebda6.json",
+            "sha256": "5ad4bef56f39f336262cd87fc6c2b246de30945c96b7e7e48dd4910a50d197f1",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/91638b00-300b-4094-952d-f6a9c31ef689.json",
+            "sha256": "692fe5516c1d4ce4ccc514ee6d855818624bbc6f4dca380bb540c140ab229b16",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/94e4d974-8ff1-417c-a14c-bd505a654e73.json",
+            "sha256": "f83d0b3758fe5b2fae665532a54c831b1fc7de5ba549c361e94fe99d62ed1d87",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/9a14b9ea-ddd2-4f31-8acc-51785a671376.json",
+            "sha256": "914b1498ff4895cd19af4ca1d6d31e6ea6da94afcb67b433275708ef973387b7",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/9a883a3e-9c96-4a4f-882a-f2ed9a7179a7.json",
+            "sha256": "a67ddfac12befc0a2e3b44f93c7b497e32d64d5a48e402c2c457bb4db18f7915",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/9ecc552a-5fde-4501-8724-7e2630edd765.json",
+            "sha256": "fb7107ef7bc2ec96e64179453650e882ba29206502fdba4c975c6eb291c7196e",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/a014f624-7467-4360-987c-63e038823f22.json",
+            "sha256": "1b6c814ecee8565d7c08fc4b3975ef078490eca9683906e5231a9556127b34b9",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/ab36e80f-9fcc-4c12-bd77-115cf2fcd40a.json",
+            "sha256": "29754f4477b7b1e29b64b32b833731e85191179b96710e4e425da8217a844435",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/c64ca217-1d66-4ee1-8ac7-654fb1107692.json",
+            "sha256": "61d6c1ca26b0563848f203e85d0d0e37b61f49318cc5ddf698aa376acaf0a9f2",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/cb84b4b8-9394-46c8-a6a4-08701d8c9d58.json",
+            "sha256": "2bac70d9152492ef44b82555e3007d44bc6298b0ffea323f4606d7f528bfa805",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/eb3c1a5c-9e1a-4151-bee2-b7071cb1a27b.json",
+            "sha256": "5e29676c7c2587d1f5694e2e9e5c9e3c0667601d987b533948f8f73e76fc1d08",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/f2a1fee1-0a44-42fe-ae07-4f6942bb8574.json",
+            "sha256": "8f01a363a8e55d920d21f74cd492920a4c8377b3223d321d7cb6e80a8b49acbf",
+            "unchanged": true
+          },
+          {
+            "path": ".writer/journal/f797be69-3a34-4b6a-838f-470aa1fe3b93.json",
+            "sha256": "ee551cfec9f47e586a3f1e5e34ce1bd00b1127b84e50baa564895d048639a649",
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "frozen_tool_unchanged",
+      "ok": true,
+      "details": [
+        {
+          "path": ".writer/tool/bin/ai-writer.mjs",
+          "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b",
+          "unchanged": true
+        },
+        {
+          "path": ".writer/tool/lib/help.mjs",
+          "sha256": "c4c2303496b93e810aa13267a37e01deaa0c462ba7a1c10a86aaa4f521906093",
+          "unchanged": true
+        },
+        {
+          "path": ".writer/tool/lib/journal.mjs",
+          "sha256": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a",
+          "unchanged": true
+        },
+        {
+          "path": ".writer/tool/lib/longform.mjs",
+          "sha256": "9b9ccd96221c295999cf4168bec7d1e2ffdc6396eabeac8f39b3a090bad22305",
+          "unchanged": true
+        },
+        {
+          "path": ".writer/tool/lib/style.mjs",
+          "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9",
+          "unchanged": true
+        },
+        {
+          "path": ".writer/tool/lib/workspace.mjs",
+          "sha256": "5926dcb7e0810716df90b7d1e4e31833ec3686fe3de594932102ae3e5e433158",
+          "unchanged": true
+        },
+        {
+          "path": ".writer/tool/package.json",
+          "sha256": "950a06cb47e665a0e9eb3515f5a94de70ba5b2e6cab528818f18afc446d3dc26",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "name": "product_sources_and_skills_unchanged",
+      "ok": true,
+      "details": {
+        "files_checked": 58,
+        "changes": []
+      }
+    },
+    {
+      "name": "immutable_observations_unchanged",
+      "ok": true
+    },
+    {
+      "name": "private_thread_unchanged",
+      "ok": true
+    },
+    {
+      "name": "consumed_settings_plans_contracts_unchanged",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "all_current_ledger_evidence_hashes_and_lines_match",
+      "ok": true,
+      "details": {
+        "anchors": 98,
+        "failed": []
+      }
+    },
+    {
+      "name": "fresh_context_template_sources_and_journals_for_9_12",
+      "ok": true,
+      "details": [
+        {
+          "unit": 9,
+          "input_revision": 24,
+          "output_revision": 25,
+          "new_journal": ".writer/journal/5018d17d-469b-493a-8742-3868ff78baa2.json",
+          "old_journal": ".writer/journal/5eebf451-ff06-479d-bf90-0b009e6834c7.json",
+          "source_state_sha256": "f9a8c90506b7b20c06a6c2f7257f6352f99701d709f658dba0251991eded033b",
+          "ok": true
+        },
+        {
+          "unit": 10,
+          "input_revision": 25,
+          "output_revision": 26,
+          "new_journal": ".writer/journal/f811e319-8edb-4a81-8332-d0098accbc4e.json",
+          "old_journal": ".writer/journal/f797be69-3a34-4b6a-838f-470aa1fe3b93.json",
+          "source_state_sha256": "33ddffc6d076da2a7d56da0a9db9e6578fc21be14ee44589f0c1704ced3eefc3",
+          "ok": true
+        },
+        {
+          "unit": 11,
+          "input_revision": 29,
+          "output_revision": 30,
+          "new_journal": ".writer/journal/13dd0cee-2168-4350-80b1-95f80759e844.json",
+          "old_journal": ".writer/journal/33a2089b-2fa6-4bfb-924a-583355f3c787.json",
+          "source_state_sha256": "ab631ec30c0eae3ac553dcc2a727777133c863f6a85797d995a7236e7cbebce2",
+          "ok": true
+        },
+        {
+          "unit": 12,
+          "input_revision": 30,
+          "output_revision": 31,
+          "new_journal": ".writer/journal/9f26baf7-a355-4db3-bb87-8ac08426555f.json",
+          "old_journal": ".writer/journal/cb84b4b8-9394-46c8-a6a4-08701d8c9d58.json",
+          "source_state_sha256": "53bf479d2eb6606286ad43a44d7c827388ee16aec5ec954a5b0c1eea589b2159",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "final_cli_status_check_doctor",
+      "ok": true,
+      "details": {
+        "revision": 31,
+        "status_ok": true,
+        "check_ok": true,
+        "doctor_ok": true,
+        "rolling_review": {
+          "valid": 3,
+          "stale": 7,
+          "stale_with_current_coverage": 7,
+          "stale_without_current_coverage": 0,
+          "pending_windows": [],
+          "nature": "coverage-only-not-literary-pass"
+        }
+      }
+    },
+    {
+      "name": "export_exactly_1_12_and_hashes_match",
+      "ok": true,
+      "details": {
+        "included_units": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "excluded_drafts": [],
+        "warnings": [],
+        "manuscript_sha256": "7bc455492c6c4195de1587d197aba7349b85139defe3ba2913fe9c9031530eae"
+      }
+    },
+    {
+      "name": "all_logged_cli_exit_zero",
+      "ok": true,
+      "details": {
+        "calls": 36
+      }
+    }
+  ]
+}

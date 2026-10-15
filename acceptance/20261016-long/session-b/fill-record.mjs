@@ -1,0 +1,11 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+const [unit] = process.argv.slice(2);
+if (!/^0[5-8]$/.test(unit)) throw new Error('unit');
+const stage = 'acceptance/20261016-long/session-b';
+const dest = `acceptance/20261016-long/works/雨线档案/.writer/record-b${unit}.json`;
+const template = JSON.parse(readFileSync(dest, 'utf8'));
+const data = JSON.parse(readFileSync(`${stage}/changes-${unit}.json`, 'utf8'));
+template.summary = data.summary;
+template.changes = data.changes;
+writeFileSync(dest, JSON.stringify(template, null, 2) + '\n', 'utf8');
+console.log(JSON.stringify({input:dest,expected_revision:template.expected_revision,unchanged_prewrite_source_hashes:template.source_hashes},null,2));

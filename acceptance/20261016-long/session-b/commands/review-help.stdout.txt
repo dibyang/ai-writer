@@ -1,0 +1,22 @@
+ai-writer 0.3.0 / review
+登记已实际阅读的审查报告及正文哈希，不自动审稿。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' review --project 作品目录 --input 审查登记.json
+
+输入示例（UTF-8 JSON）：
+{
+  "from": 1,
+  "to": 3,
+  "kind": "model-self-review",
+  "report": "审查/1-3连读-r3.md",
+  "source_hashes": {
+    "正文/0001.md": "按实际阅读版本填写，不能使用示例值"
+  }
+}
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const out=import.meta.dirname,p=path.join(out,'../acceptance/20261016-long/works/雨线档案');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const s=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json'),'utf8'));
+if(s.units.length!==12)throw Error('expected 12');
+const rows=s.units.map(u=>{const b=fs.readFileSync(path.join(p,u.draft));if(sha(b)!==u.sha256)throw Error('stale');return {unit:u.unit,path:u.draft,sha256:sha(b),han:(b.toString('utf8').replace(/^#.*\r?\n/u,'').match(/\p{Script=Han}/gu)||[]).length,text:b.toString('utf8')};});
+fs.writeFileSync(path.join(out,'final-read-1-12.txt'),rows.map(r=>`===== 第${r.unit}章 | ${r.path} | SHA256 ${r.sha256} =====\n${r.text}`).join('\n'));
+fs.writeFileSync(path.join(out,'final-reading.json'),JSON.stringify({captured:new Date().toISOString(),revision:s.revision,read_capture_sha256:sha(fs.readFileSync(path.join(out,'final-read-1-12.txt'))),units:rows.map(({text,...r})=>r)},null,2)+'\n');
+console.log(JSON.stringify({revision:s.revision,units:rows.map(({text,...r})=>r)},null,2));

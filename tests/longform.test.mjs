@@ -117,6 +117,50 @@ test('滚动审查绑定实际正文和报告版本，回退/重写后旧报告�
   assert.deepEqual(check(root).rolling_review.pending_windows, []);
   fs.appendFileSync(path.join(root, '审查/连读.md'), '\n修订报告');
   assert.equal(check(root).rolling_review.stale, 1);
+  assert.equal(check(root).rolling_review.stale_with_current_coverage, 0);
+  assert.equal(check(root).rolling_review.stale_without_current_coverage, 1);
+  main(['review', '--project', root, '--input', path.join(base, 'review.json')]);
+  const refreshed = check(root).rolling_review;
+  assert.equal(refreshed.stale, 1);
+  assert.equal(refreshed.stale_with_current_coverage, 1);
+  assert.equal(refreshed.stale_without_current_coverage, 0);
+  assert.deepEqual(refreshed.pending_windows, []);
+  assert.equal(fs.readdirSync(path.join(root, '.writer/reviews')).length, 2);
+});
+test('旧章回退重登后，分段审查不冒充完整连读，当前覆盖不删除失效历史', t => {
+  const { root, base } = work(t);
+  for (let n = 1; n <= 6; n++) append(root, n);
+  const state = () => JSON.parse(fs.readFileSync(path.join(root, '.writer/state.json')));
+  const first = state().units[0];
+  const review = (from, to, name) => {
+    const report = `审查/${name}.md`;
+    write(root, report, `模型自检：实际连读${from}至${to}章；不是文学验收。`);
+    write(base, 'review.json', { from, to, kind: 'model-self-review', report,
+      source_hashes: Object.fromEntries(state().units.slice(from - 1, to).map(u => [u.draft, u.sha256])) });
+    main(['review', '--project', root, '--input', path.join(base, 'review.json')]);
+  };
+  review(1, 6, '原版');
+  rewind(root, 2, state().revision);
+  for (let n = 2; n <= 6; n++) {
+    savePlan(root, { unit: n, title: '复核', goal: '确认交接', change: '重建追踪', beats: ['交信'] });
+    const draft = `正文/${String(n).padStart(4, '0')}.md`;
+    const tx = main(['record-template', '--project', root, '--unit', String(n), '--draft', draft]);
+    if (n === 2) write(root, draft, '# 第二章\n\n阿禾先放下托盘，再把信交给老陈。');
+    tx.summary = '复核交信顺序'; tx.changes = { timeline_append: [`第${n}夜：确认交接`] };
+    record(root, tx);
+  }
+  assert.equal(check(root).rolling_review.stale_without_current_coverage, 1);
+  review(1, 3, '前段'); review(4, 6, '后段');
+  assert.equal(check(root).rolling_review.stale_without_current_coverage, 1);
+  assert.deepEqual(check(root).rolling_review.pending_windows, [{ from: 1, to: 6 }]);
+  review(1, 6, '新版连读');
+  const current = check(root).rolling_review;
+  assert.equal(current.stale, 1);
+  assert.equal(current.stale_with_current_coverage, 1);
+  assert.equal(current.stale_without_current_coverage, 0);
+  assert.deepEqual(current.pending_windows, []);
+  assert.deepEqual(state().units[0], first);
+  assert.equal(fs.readdirSync(path.join(root, '.writer/reviews')).length, 4);
 });
 test('旧稿导入断点续跑、冻结副本不覆盖、源漂移阻断与逐章阅读边界', t => {
   const { root, base } = work(t);

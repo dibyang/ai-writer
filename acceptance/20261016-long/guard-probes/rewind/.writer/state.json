@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "revision": 12,
+  "snapshot": {
+    "characters": {
+      "林岚": "汛前第一日上午；离开旧泵房准备去镇档案室；持有袋装铜钥匙，见半月缺口但不知能开什么锁；想找维护记录副页。",
+      "陆衡": "与林岚离开泵房，准备致电档案室；见过缺口并办理领取单；未持钥匙，不知其用途及封套内情。",
+      "陈师傅": "旧泵房门廊；钥匙已交林岚，签了领取单；声称旧封套由自己送许澄，未拆过，不知内情。"
+    },
+    "threads": [],
+    "timeline": [
+      "汛前第一日上午：陈师傅交钥匙并签领取单，林岚与陆衡观察缺口；林岚装袋收包，未试锁，决定往档案室。"
+    ],
+    "ledger": {
+      "O_KEY": {
+        "type": "observation",
+        "statement": "铜钥匙柄边有一个实际可见的半月缺口，缺口内积有黑垢。",
+        "author_truth": "铜钥匙柄边有一个实际可见的半月缺口，缺口内积有黑垢。",
+        "status": "active",
+        "cast": [
+          "林岚",
+          "陆衡"
+        ],
+        "tags": [
+          "铜钥匙",
+          "不可逆观察"
+        ],
+        "reader_known": "看见缺口与黑垢；未验证钥匙用途。",
+        "character_known": {
+          "林岚": "在天光下亲见半月缺口与黑垢；不知道能开什么锁。",
+          "陆衡": "凑近看过缺口并登记；不知道能开什么锁。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-檐下的钥匙.md",
+            "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+            "line": 9,
+            "quote": "灰白天光照出柄边一个半月缺口，缺口里也积着黑垢。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_KEY": {
+        "type": "object",
+        "statement": "陈师傅从工具箱翻出的唯一一枚小指长铜钥匙；未复制、未试锁。",
+        "status": "active",
+        "cast": [
+          "林岚",
+          "陆衡",
+          "陈师傅"
+        ],
+        "tags": [
+          "铜钥匙",
+          "O_KEY"
+        ],
+        "previous_holder": "陈师傅",
+        "custody": {
+          "holder": "林岚",
+          "location": "随身帆布包的拉链内袋，小透明袋内",
+          "condition": "袋口压紧；钥匙带干油污和缺口黑垢，未清理、未试配、未复制"
+        },
+        "reader_known": "陈师傅掏出后交林岚；她装袋收包。",
+        "character_known": {
+          "林岚": "亲手接收、装袋并收包，尚不知用途。",
+          "陆衡": "见证领取及装袋收包，未持有钥匙。",
+          "陈师傅": "交出工具箱翻出的钥匙并签领取单，未确认用途。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-檐下的钥匙.md",
+            "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+            "line": 9,
+            "quote": "林岚伸手接住。"
+          },
+          {
+            "unit": 1,
+            "draft": "正文/0001-檐下的钥匙.md",
+            "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+            "line": 27,
+            "quote": "林岚把钥匙装进小透明袋，压紧袋口，收进帆布包的拉链内袋。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_COPY": {
+        "type": "thread",
+        "statement": "找齐并核验维护记录副页；目前只有缺页记录和旧封套去向的陈述，尚未取得或核验副页。",
+        "status": "pending",
+        "due_unit": 6,
+        "cast": [
+          "林岚",
+          "陆衡"
+        ],
+        "tags": [
+          "主线",
+          "副页",
+          "档案手续"
+        ],
+        "reader_known": "副页缺失，周五简报构成时间压力；旧封套可能提供方向但未拆。",
+        "character_known": {
+          "林岚": "知道维护记录缺副页及简报期限；听陈师傅说封套存许澄处，尚未见内容。",
+          "陆衡": "知道查副页任务和封套去向陈述，未见内容。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-檐下的钥匙.md",
+            "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+            "line": 3,
+            "quote": "汛前简报周五要交，她包里的维护记录却少了一份副页。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-檐下的钥匙.md",
+      "sha256": "2232c3542b7c153b7d39534dcec189361efe66d1881b35bad654d6275607448d",
+      "summary": "汛前林岚与陆衡到旧泵房，陈师傅将工具箱翻出的铜钥匙交林岚并签领取单。林岚与陆衡看见柄上半月缺口，未认定用途、未试锁；钥匙装透明袋由林岚收进包内。陈师傅说档案室有他送去的未拆牛皮封套。",
+      "source_hashes": {
+        "writer.json": "3f53132d5abf3853de2e6f9f596a5bf78e055eae2d7182b5f7fe030ed7e73ac7",
+        ".writer/state.json": "17d7f85ce858b54a0ddbff38af734cc23ea5e4afed543351d978f7578093b105",
+        "大纲/单元/0001.json": "8b8cce4116e0626c5156f730003e184b79e8e30f420209ac0d69df03055c46d2",
+        "设定/作品定位.md": "d7ef176101431c560c293f9b70073de66d8e943f7a20894485e429d2ea215aa6",
+        "设定/文风.md": "655000a278e46d6352eb1459d8254319a5ffb3fd517fb2a87a4323c23933d2e0",
+        "设定/权威规则.md": "8db34e8a7a01f365e1ca142e104364abf2ad8f229084fb79726416d22c516fe2",
+        "大纲/全书大纲.md": "02d9baad21d0ad88d4b9714dd965fd0e6a04ab77d8fe06f2172f9d0f00067628",
+        "设定/角色卡.md": "6d95a97298386e1bfe3002ce4d28cac7fa500091a74d43e601811a86f303c09d",
+        "大纲/分卷/V1.json": "687f597b313cbd16a1c69fc73bea6616d7e2ef8102972bbf405d53172d75c9ed"
+      },
+      "fingerprint": "68de0919f3789c5c38bae2bb9fd51d8912587732f1fa40cd5e54f0def896d772",
+      "status": "draft-recorded",
+      "journal": ".writer/journal/eb3c1a5c-9e1a-4151-bee2-b7071cb1a27b.json",
+      "journal_sha256": "5e29676c7c2587d1f5694e2e9e5c9e3c0667601d987b533948f8f73e76fc1d08"
+    }
+  ],
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  }
+}

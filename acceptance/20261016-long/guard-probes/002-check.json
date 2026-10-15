@@ -1,0 +1,13 @@
+{
+  "sequence": 2,
+  "command": "check",
+  "argv": [
+    "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+    "check",
+    "--project",
+    "D:\\work\\other\\ai-writer\\acceptance\\20261016-long\\guard-probes\\body-drift"
+  ],
+  "exit_code": 1,
+  "stdout": "{\n  \"ok\": false,\n  \"scope\": \"mechanical-only\",\n  \"literary_quality\": \"unreviewed\",\n  \"units\": 8,\n  \"revision\": 11,\n  \"findings\": [\n    {\n      \"severity\": \"error\",\n      \"code\": \"SOURCE_CHANGED\",\n      \"unit\": 2\n    },\n    {\n      \"severity\": \"error\",\n      \"code\": \"CONTEXT_SOURCE_CHANGED\",\n      \"unit\": 3,\n      \"ref\": \"正文/0002-封套里面.md\"\n    }\n  ],\n  \"draft_inventory\": {\n    \"registered_count\": 8,\n    \"unregistered\": [],\n    \"unsafe_entries\": []\n  },\n  \"rolling_review\": {\n    \"valid\": 1,\n    \"stale\": 3,\n    \"pending_windows\": [\n      {\n        \"from\": 1,\n        \"to\": 3\n      },\n      {\n        \"from\": 1,\n        \"to\": 6\n      }\n    ],\n    \"nature\": \"coverage-only-not-literary-pass\"\n  }\n}\n",
+  "stderr": ""
+}

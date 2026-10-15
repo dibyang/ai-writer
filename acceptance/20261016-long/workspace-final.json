@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-15T17:24:35.640Z",
+  "commands": [
+    {
+      "argv": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "4ab0d2720781697d1d762d6a7b14d8acb9103fad\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "status",
+        "--short"
+      ],
+      "exit_code": 0,
+      "stdout": " M docs/long-form.md\n M lib/longform.mjs\n M tests/longform.test.mjs\n?? .idea/\n?? acceptance/20261016-long/\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
