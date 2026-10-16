@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: parent-reading.jsonl
++ actual - expected
+
++ '84662e6289c49458095e4b89c7e5972e8cb2c6bd3cedeec3d288b7eed23f9a8d'
+- '2b7e89b5bc7d0717b78772a722c85fe1f84def0e7abdea671b9d5fbcb9911abb'
+
+    at file:///D:/work/other/ai-writer/acceptance/20261016-expanded/revision-b/audit-final.mjs:38:119
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '84662e6289c49458095e4b89c7e5972e8cb2c6bd3cedeec3d288b7eed23f9a8d',
+  expected: '2b7e89b5bc7d0717b78772a722c85fe1f84def0e7abdea671b9d5fbcb9911abb',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

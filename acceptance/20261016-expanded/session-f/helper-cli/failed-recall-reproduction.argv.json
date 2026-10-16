@@ -1,0 +1,9 @@
+{
+  "cwd": "D:\\work\\other\\ai-writer",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "-e",
+    "const f=require('fs'),b='acceptance/20261016-expanded/session-f/cli/';for(const x of f.readdirSync(b).filter(x=>x.startsWith('recall-')&&x.endsWith('.stdout.txt'))){const j=JSON.parse(f.readFileSync(b+x));console.log(x+': '+j.matches.map(x=>x.id).join(','));}"
+  ],
+  "started": "2026-10-16T01:40:42.247Z"
+}

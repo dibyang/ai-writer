@@ -1,0 +1,15 @@
+file:///D:/work/other/ai-writer/[eval1]:1
+import {json,write,stage,root} from './acceptance/20261016-expanded/revision-b/run.mjs';import fs from 'node:fs';const old=json(stage+'/before/work/.writer/state.json');write(stage+'/early-parse-failure/captured.stdout.txt',JSON.stringify(json(stage+'/before/work/'+old.units[10].journal),null,2)+'\n');write(stage+'/early-parse-failure/meta.json',{executable:process.execPath,argv:['--input-type=module','-e',String.rawimport {json,write,stage,project,run} from './acceptance/20261016-expanded/revision-b/run.mjs';const s=json(project+'/.writer/state.json');console.log(JSON.stringify(json(project+'/'+s.units[10].journal),null,2));write(stage+'/reading/ledger-compact.md',Object.entries(s.snapshot.ledger).map(([id,v])=>id+' '+JSON.stringify({...v,evidence:v.evidence.map(e=>({unit:e.unit,quote:e.quote}))})).join('\n'));write(stage+'/reading/sources.json',s.units.map(u=>({unit:u.unit,source_hashes:u.source_hashes})));for(const a of ['rewind','plan','context','record-template','review','export','doctor']){const r=run([a,'--help'],'help-'+a);console.log(a,JSON.stringify(r));}],cwd:root,exit_code:1,capture_provenance:'原exec工具回包stdout/stderr文本转录；stdout按原回包所示完整journal文本复原，未重新执行失败命令，非字节级原始分流抓取',child_cli:'rewind --help 成功且原始stdout/stderr见logs中help-rewind；失败为辅助JSON解析，不是rewind变更失败'});console.log('Archived early auxiliary failure tool capture.');
+                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+
+SyntaxError: Unexpected token '{'
+    at compileSourceTextModule (node:internal/modules/esm/utils:318:16)
+    at ModuleLoader.createModuleWrap (node:internal/modules/esm/loader:231:12)
+    at ModuleLoader.eval (node:internal/modules/esm/loader:270:23)
+    at node:internal/process/execution:77:24
+    at asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:11)
+    at Object.runEntryPointWithESMLoader (node:internal/modules/run_main:123:19)
+    at evalModuleEntryPoint (node:internal/process/execution:76:47)
+    at node:internal/main/eval_string:37:3
+
+Node.js v24.15.0

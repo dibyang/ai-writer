@@ -1,0 +1,61 @@
+{
+  "process_failures": [
+    {
+      "meta": "aux-logs/1792112123158-aux.meta.json",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "acceptance/20261016-expanded/revision-b/prepare.mjs"
+      ],
+      "cwd": "D:/work/other/ai-writer",
+      "exit_code": 1,
+      "signal": null,
+      "error": null
+    },
+    {
+      "meta": "aux-logs/1792112262499-aux.meta.json",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "acceptance/20261016-expanded/revision-b/rebuild.mjs",
+        "record",
+        "8"
+      ],
+      "cwd": "D:/work/other/ai-writer",
+      "exit_code": 1,
+      "signal": null,
+      "error": null
+    },
+    {
+      "meta": "aux-logs/1792112485217-aux.meta.json",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "acceptance/20261016-expanded/revision-b/audit-final.mjs"
+      ],
+      "cwd": "D:/work/other/ai-writer",
+      "exit_code": 1,
+      "signal": null,
+      "error": null
+    },
+    {
+      "meta": "aux-logs/1792112823537-aux.meta.json",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "--input-type=module",
+        "-e",
+        "import {json,write,stage,root} from './acceptance/20261016-expanded/revision-b/run.mjs';import fs from 'node:fs';const old=json(stage+'/before/work/.writer/state.json');write(stage+'/early-parse-failure/captured.stdout.txt',JSON.stringify(json(stage+'/before/work/'+old.units[10].journal),null,2)+'\\n');write(stage+'/early-parse-failure/meta.json',{executable:process.execPath,argv:['--input-type=module','-e',String.rawimport {json,write,stage,project,run} from './acceptance/20261016-expanded/revision-b/run.mjs';const s=json(project+'/.writer/state.json');console.log(JSON.stringify(json(project+'/'+s.units[10].journal),null,2));write(stage+'/reading/ledger-compact.md',Object.entries(s.snapshot.ledger).map(([id,v])=>id+' '+JSON.stringify({...v,evidence:v.evidence.map(e=>({unit:e.unit,quote:e.quote}))})).join('\\n'));write(stage+'/reading/sources.json',s.units.map(u=>({unit:u.unit,source_hashes:u.source_hashes})));for(const a of ['rewind','plan','context','record-template','review','export','doctor']){const r=run([a,'--help'],'help-'+a);console.log(a,JSON.stringify(r));}],cwd:root,exit_code:1,capture_provenance:'原exec工具回包stdout/stderr文本转录；stdout按原回包所示完整journal文本复原，未重新执行失败命令，非字节级原始分流抓取',child_cli:'rewind --help 成功且原始stdout/stderr见logs中help-rewind；失败为辅助JSON解析，不是rewind变更失败'});console.log('Archived early auxiliary failure tool capture.');"
+      ],
+      "cwd": "D:/work/other/ai-writer",
+      "exit_code": 1,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "early_orchestration_error": {
+    "kind": "orchestration-error",
+    "code": "tools.mcp__fastctx__read is not a function",
+    "argv": null,
+    "exit_code": null,
+    "note": "初次组合调用在构造 Promise 数组时失败；非 CLI 失败。初次 git status 和 status 另行持久化复跑。"
+  },
+  "initial_backup_issue": "before-invalid-buffer-copy 保留，未用于回退或重登；before/work 171文件逐原字节hash验证通过",
+  "early_auxiliary_parse_failure": "见 early-parse-failure/。此失败发生在host包装器建立前；实际工具回包文本与argv已转录，非事后重跑冒充原始失败。"
+}

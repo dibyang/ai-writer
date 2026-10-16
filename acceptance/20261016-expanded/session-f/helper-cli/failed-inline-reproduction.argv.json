@@ -1,0 +1,9 @@
+{
+  "cwd": "D:\\work\\other\\ai-writer",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "-e",
+    "const f=require('fs'),c=require('crypto'),b='acceptance/20261016-expanded/session-f/',p='acceptance/20261016-expanded/works/潮汐信号/';const m=JSON.parse(f.readFileSync(b+'export/manifest.json')),x=JSON.parse(f.readFileSync(b+'cli/final-export.stdout.txt')),s=JSON.parse(f.readFileSync(p+'.writer/state.json'));const t=f.readFileSync(b+'export/manuscript.md','utf8'),sh=c.createHash('sha256').update(t).digest('hex');let last=-1,found=[];for(const u of s.units){const body=f.readFileSync(p+u.draft,'utf8');const at=t.indexOf(body.trim());found.push({unit:u.unit,found:at>=0,ordered:at>last,occurrences:t.split(body.trim()).length-1});last=at;}const r={included_units:x.included_units,excluded_drafts:x.excluded_drafts,warnings:x.warnings,sha256:sh,manifest_sha256:c.createHash('sha256').update(f.readFileSync(b+'export/manifest.json')).digest('hex'),hash_matches:sh===x.sha256,all_bodies_exact_once_in_order:found.every(v=>v.found&&v.ordered&&v.occurrences===1),found,manifest_keys:Object.keys(m)};f.writeFileSync(b+'export-verification.json',JSON.stringify(r,null,2)+'\\n');console.log(JSON.stringify({...r,found:undefined},null,2));}"
+  ],
+  "started": "2026-10-16T01:40:43.668Z"
+}

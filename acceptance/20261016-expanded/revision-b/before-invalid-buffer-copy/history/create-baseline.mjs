@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+const dir = path.dirname(fileURLToPath(import.meta.url)), root = path.resolve(dir, '../..');
+const old = JSON.parse(fs.readFileSync(path.join(root, 'acceptance/20261016-long/candidate-final.json')));
+const hash = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const data = { commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(), created_at: new Date().toISOString(), files: old.files.map(r => ({ file: r.file, sha256: hash(path.join(root, r.file)) })) };
+fs.writeFileSync(path.join(dir, 'source-baseline.json'), JSON.stringify(data, null, 2) + '\n', { flag: 'wx' });
+console.log(JSON.stringify({ commit: data.commit, files: data.files.length }));

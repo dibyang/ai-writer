@@ -1,0 +1,18 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const cp = require('node:child_process');
+const root = path.resolve(__dirname, '../../..');
+const project = 'acceptance/20261016-expanded/works/潮汐信号';
+const [label, command, ...args] = process.argv.slice(2);
+if (!label || !command || !/^[a-zA-Z0-9_-]+$/.test(label)) throw new Error('label and command required');
+const dir = path.join(__dirname, 'cli'); fs.mkdirSync(dir, {recursive:true});
+const prefix = path.join(dir,label);
+if (fs.existsSync(prefix+'.result.json')) throw new Error('log already exists');
+const argv = [project+'/.writer/tool/bin/ai-writer.mjs',command,'--project',project,...args];
+const started = new Date().toISOString();
+fs.writeFileSync(prefix+'.argv.json',JSON.stringify({executable:process.execPath,cwd:root,argv,started},null,2)+'\n');
+const r=cp.spawnSync(process.execPath,argv,{cwd:root,encoding:null,maxBuffer:32*1024*1024});
+fs.writeFileSync(prefix+'.stdout.txt',r.stdout||Buffer.alloc(0));
+fs.writeFileSync(prefix+'.stderr.txt',r.stderr||Buffer.alloc(0));
+fs.writeFileSync(prefix+'.result.json',JSON.stringify({started,ended:new Date().toISOString(),status:r.status,signal:r.signal,error:r.error?String(r.error):null},null,2)+'\n');
+process.stdout.write(r.stdout||''); process.stderr.write(r.stderr||''); process.exitCode=r.status===null?1:r.status;

@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--input-type=module",
+    "-e",
+    "import {json,stage} from './acceptance/20261016-expanded/revision-b/run.mjs';const a=json(stage+'/audit.json');console.log(JSON.stringify({externalAppends:a.externalAppends,chapters:a.chapterRows.map(x=>[x.unit,x.han]),omitted:a.sourceRows.map(x=>({unit:x.unit,omitted:x.recall.omitted_ids})),pending:a.pending},null,2));"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

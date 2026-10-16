@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--input-type=module",
+    "-e",
+    "import {run,stage,project,write} from './acceptance/20261016-expanded/revision-b/run.mjs';console.log('review',run(['review','--project',project,'--input',stage+'/inputs/review.json'],'final-review'));for(const c of ['status','check','doctor']){const v=run([c,'--project',project],'final-'+c);write(stage+'/after/'+c+'.json',v);console.log(c,JSON.stringify(v));}const e=run(['export','--project',project,'--out',stage+'/export'],'final-export');write(stage+'/after/export-command.json',e);console.log('export',JSON.stringify(e));"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {root,stage,write} from './run.mjs';
+const argv=process.argv.slice(2),name=String(Date.now())+'-aux';
+const r=spawnSync(process.execPath,argv,{cwd:root,encoding:'buffer',maxBuffer:32*1024*1024});
+fs.mkdirSync(stage+'/aux-logs',{recursive:true});
+fs.writeFileSync(stage+'/aux-logs/'+name+'.stdout',r.stdout??Buffer.alloc(0));
+fs.writeFileSync(stage+'/aux-logs/'+name+'.stderr',r.stderr??Buffer.alloc(0));
+write(stage+'/aux-logs/'+name+'.meta.json',{executable:process.execPath,argv,cwd:root,exit_code:r.status,signal:r.signal,error:r.error?String(r.error):null});
+process.stdout.write(r.stdout??'');process.stderr.write(r.stderr??'');process.exit(r.status??1);

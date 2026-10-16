@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const p='acceptance/20261016-expanded/works/潮汐信号';
+const b='acceptance/20261016-expanded/session-b';
+const sha=s=>crypto.createHash('sha256').update(s).digest('hex');
+const state=JSON.parse(fs.readFileSync(`${p}/.writer/state.json`,'utf8'));
+const refs=['writer.json','.writer/state.json',...state.units.map(u=>u.draft),'设定/作品定位.md','设定/文风.md','设定/权威规则.md','设定/角色卡.md','大纲/全书大纲.md','大纲/分卷/V1.json','大纲/分卷/V2.json',...state.units.map(u=>`大纲/单元/${String(u.unit).padStart(4,'0')}.json`)];
+const files=Object.fromEntries(refs.map(r=>[r,sha(fs.readFileSync(`${p}/${r}`))]));
+fs.writeFileSync(`${b}/initial-evidence.json`,JSON.stringify({time:new Date().toISOString(),revision:state.revision,files,ledger:state.snapshot.ledger},null,2)+'\n');
+console.log(JSON.stringify({revision:state.revision,files:refs.length,state_sha256:files['.writer/state.json']}));

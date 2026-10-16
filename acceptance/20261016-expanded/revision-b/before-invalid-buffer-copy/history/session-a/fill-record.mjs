@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const dir=path.resolve('acceptance/20261016-expanded/session-a/inputs');
+const n=process.argv[2];
+const target=path.join(dir,`record-${n}.json`);
+const template=JSON.parse(fs.readFileSync(target,'utf8'));
+const change=JSON.parse(fs.readFileSync(path.join(dir,`changes-${n}.json`),'utf8'));
+template.summary=change.summary;template.changes=change.changes;
+fs.writeFileSync(target,JSON.stringify(template,null,2)+'\n');
+console.log(JSON.stringify({unit:template.unit,expected_revision:template.expected_revision,ledger:Object.keys(template.changes.ledger)}));

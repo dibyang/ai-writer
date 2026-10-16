@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const session=path.resolve('acceptance/20261016-expanded/session-a');
+const work=path.resolve('acceptance/20261016-expanded/works/潮汐信号');
+const to=Number(process.argv[2]);
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const files=fs.readdirSync(path.join(work,'正文')).filter(x=>x.endsWith('.md')).sort().slice(0,to);
+const source_hashes=Object.fromEntries(files.map(f=>['正文/'+f,sha(fs.readFileSync(path.join(work,'正文',f)))]));
+const content=`# 1–${to}章完整连读\n\n审查性质：同一创作者的知情自检（model-self-review）。已依次完整实读以下正文及writer.json，不是隔离盲读、真人验收或发布判断。\n\n${Object.entries(source_hashes).map(([f,h])=>`- ${f}：${h}`).join('\n')}\n\n## 连续性与人物\n第1日中午至傍晚依次为到站、试听副本、整理、独自开箱、封箱交唐穗、顾遥处迟到；第2日上午付费暂放、领回封箱、店中取钥匙。场景转换均由时间地点和移动承接。沈禾对声音的信赖受限于缺日期，配页失败没有变成结果；唐穗按期交接但愿意腾位、分食和请求帮忙，顾遥守收费与客户优先，周砚的问出处和实际托箱接插线相容。关系通过帮助、改约和付出推进。\n\n铜牌只有沈禾亲见；第2章周砚已离站、唐穗在院外；沈禾未拍照抄字，外标签不含牌文。旧地名联想保持猜测。第3章唐穗搬封箱、顾遥给顶架，均未获铜牌内情；豆浆杯照片不含物证。\n铁箱保持唯一：长凳下→窗前开箱→原布复原牌留箱→编织袋封装→唐穗小库锁存→唐穗实交沈禾→厚布袋搬运→店后顶架未拆。两次交接都有正文动作。钥匙是另一原物，三角磨痕、红棉绳明确，封袋入背包，与无锁搭扣的箱子分开；未建立用途解释。罗敬承认失约但拒答私因；无author_truth、无罪责推断。\n\n${to===4?'第4章承接取扇等待，离店到罗敬住处再返回，信号灯口述只有罗敬说、沈禾听；灯外壳不证明开灯含义。原录音带由罗敬亲交沈禾；条件准备及试听可见，听见短钟声、背景声和残句后因异响停机。未补全话、认定声源或与工作副本配对。原箱、钥匙未擅变保管人。\n\n':''}## 判断与问题\n当前范围没有确认的连续性硬伤；没有必要为了形式改写已登记章。第2章登记前已补清隔布翻面动作，并将离站“箱子”改成“行李箱”以避免保管误读。文字有生活细节和行动，不以反复总结或清单撑篇幅。\n\n## 真人语言别扭句\n### 真人语言硬问题\n没有\n\n四项核对已执行：当面说话测试看角色立场与改口；动宾拆分看指代和拿取尺度；具体落地看工时、搬运、付费和失约后果；逐句默读节奏检查反复改口的摩擦。未将个人措辞偏好升级硬伤。\n\n## 物理与操作\n物理逻辑、操作可行性、显露顺序、小物动作、物件连续性：在当前小说场景范围自检通过。未据此声称真实设备或档案技术专业验收。\n\n## 未覆盖与未结\n只读1–${to}章；5–24章未写、未验收。T_SIGNAL到期12，${to===4?'T_LAMP到期9、T_TAPE到期18，':''}均未到正文兑付范围；钥匙跨卷保留与试用尚未发生。第5/7章告知、灯语V3核实、录音跨卷实际回收及V4主线收束均为约束，不登记为结果。罗敬私因可继续intentional-open。CLI check只核机械一致性；本文判断不能代表市场或真人阅读结果。\n`;
+fs.mkdirSync(path.join(session,'reviews'),{recursive:true});
+const report=path.join(session,'reviews',`1-${to}-连读.md`);
+fs.writeFileSync(report,content);
+fs.writeFileSync(path.join(session,'inputs',`review-${to}.json`),JSON.stringify({from:1,to,kind:'model-self-review',report:path.relative(work,report).split(path.sep).join('/'),source_hashes},null,2)+'\n');
+console.log(JSON.stringify({report,source_hashes},null,2));

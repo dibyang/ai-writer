@@ -1,0 +1,25 @@
+ai-writer 0.3.0 / plan
+保存下一章、场或篇的细纲。
+
+node 'D:\work\other\ai-writer\acceptance\20261016-expanded\works\潮汐信号\.writer\tool\bin\ai-writer.mjs' plan --project 作品目录 --input 细纲.json
+
+输入示例（UTF-8 JSON）：
+{
+  "unit": 1,
+  "title": "来信",
+  "goal": "确认寄件人",
+  "change": "发现寄件时间不符",
+  "beats": [
+    "核对邮戳"
+  ],
+  "cast": [],
+  "setting_refs": [],
+  "research_refs": []
+}
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\acceptance\20261016-expanded\works\潮汐信号\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\acceptance\20261016-expanded\works\潮汐信号\docs\workflow.md
+长篇：D:\work\other\ai-writer\acceptance\20261016-expanded\works\潮汐信号\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\acceptance\20261016-expanded\works\潮汐信号\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

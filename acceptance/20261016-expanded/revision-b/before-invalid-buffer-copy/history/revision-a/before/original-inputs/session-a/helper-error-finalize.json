@@ -1,0 +1,14 @@
+{
+  "note": "由events.jsonl直接提取的原始命令执行事件；aggregated_output为工具合并输出，不冒称分离stdout/stderr。",
+  "original_event": {
+    "type": "item.completed",
+    "item": {
+      "id": "item_109",
+      "type": "command_execution",
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261016-expanded/session-a/finalize.mjs'",
+      "aggregated_output": "<anonymous_script>:1\r\n\r\n\r\nSyntaxError: Unexpected end of JSON input\r\n    at JSON.parse (<anonymous>)\r\n    at json (file:///D:/work/other/ai-writer/acceptance/20261016-expanded/session-a/finalize.mjs:10:20)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261016-expanded/session-a/finalize.mjs:64:144\r\n    at Array.map (<anonymous>)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261016-expanded/session-a/finalize.mjs:64:21\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\n\r\nNode.js v24.15.0\r\n",
+      "exit_code": 1,
+      "status": "failed"
+    }
+  }
+}

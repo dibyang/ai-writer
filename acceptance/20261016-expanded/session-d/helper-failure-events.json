@@ -1,0 +1,21 @@
+{
+  "scope": "verbatim original Codex command event; aggregated output only, not separately captured stdout/stderr",
+  "source": "events.jsonl",
+  "source_sha256": "0bce9cb823aba23adcf15478b5787a86ca21d45ad9f21ae008182781032c7183",
+  "records": [
+    {
+      "line": 149,
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_76",
+          "type": "command_execution",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261016-expanded/session-d/files.mjs prepare-record 13'",
+          "aggregated_output": "file:///D:/work/other/ai-writer/acceptance/20261016-expanded/session-d/files.mjs:26\r\n if(han<1500||han>2000)throw Error('Han out of range: '+han);\r\n                             ^\r\n\r\nError: Han out of range: 1444\r\n    at file:///D:/work/other/ai-writer/acceptance/20261016-expanded/session-d/files.mjs:26:30\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\n\r\nNode.js v24.15.0\r\n",
+          "exit_code": 1,
+          "status": "failed"
+        }
+      }
+    }
+  ]
+}

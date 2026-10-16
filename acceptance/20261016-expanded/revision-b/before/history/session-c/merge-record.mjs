@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const b='acceptance/20261016-expanded/session-c';
+const n=String(Number(process.argv[2])).padStart(4,'0');
+const p=`${b}/record-${n}.json`,t=JSON.parse(fs.readFileSync(p,'utf8'));
+const d=JSON.parse(fs.readFileSync(`${b}/changes-${n}.json`,'utf8'));
+if(t.summary)throw new Error('already filled');
+t.summary=d.summary;t.changes=d.changes;
+fs.writeFileSync(p,JSON.stringify(t,null,2)+'\n');
+const text=fs.readFileSync('acceptance/20261016-expanded/works/潮汐信号/'+t.draft,'utf8');
+console.log(JSON.stringify({unit:t.unit,expected_revision:t.expected_revision,han:(text.split('\n').slice(1).join('\n').match(/\p{Script=Han}/gu)||[]).length}));

@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--input-type=module",
+    "-e",
+    "import {json,write,stage,project,run} from './acceptance/20261016-expanded/revision-b/run.mjs';const s=json(project+'/.writer/state.json');console.log(JSON.stringify(json(project+'/'+s.units[10].journal),null,2));write(stage+'/reading/ledger-compact.md',Object.entries(s.snapshot.ledger).map(([id,v])=>id+' '+JSON.stringify({...v,evidence:v.evidence.map(e=>({unit:e.unit,quote:e.quote}))})).join('\\n'));write(stage+'/reading/sources.json',s.units.map(u=>({unit:u.unit,source_hashes:u.source_hashes})));for(const a of ['rewind','plan','context','record-template','review','export','doctor']){const r=run([a,'--help'],'help-'+a);console.log(a,JSON.stringify(r));}"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "exit_code": 1,
+  "capture_provenance": "原exec工具回包stdout/stderr文本转录；stdout按原回包所示完整journal文本复原，未重新执行失败命令，非字节级原始分流抓取",
+  "child_cli": "rewind --help 成功且原始stdout/stderr见logs中help-rewind；失败为辅助JSON解析，不是rewind变更失败"
+}

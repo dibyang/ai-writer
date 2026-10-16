@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const root='D:/work/other/ai-writer';
+const stage=path.join(root,'acceptance/20261016-expanded/revision-a');
+const[label,script,...args]=process.argv.slice(2);
+const base=path.join(stage,'script-logs',label);fs.mkdirSync(path.dirname(base),{recursive:true});
+if(fs.existsSync(base+'.json'))throw new Error('log exists');
+const argv=[path.join(stage,script),...args],started=new Date().toISOString();
+const r=spawnSync(process.execPath,argv,{cwd:root,encoding:'utf8',maxBuffer:64*1024*1024});
+const log={started,ended:new Date().toISOString(),cwd:root,executable:process.execPath,argv,exit_code:r.status,signal:r.signal,stdout:r.stdout??'',stderr:r.stderr??'',error:r.error?String(r.error):null};
+fs.writeFileSync(base+'.json',JSON.stringify(log,null,2)+'\n');fs.writeFileSync(base+'.stdout',log.stdout);fs.writeFileSync(base+'.stderr',log.stderr);
+process.stdout.write(log.stdout);process.stderr.write(log.stderr);process.exitCode=r.status??1;

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const b='acceptance/20261016-expanded/session-b';
+const p='acceptance/20261016-expanded/works/潮汐信号';
+const [fromArg,toArg,report,key]=process.argv.slice(2);
+const from=Number(fromArg),to=Number(toArg);
+const s=JSON.parse(fs.readFileSync(`${p}/.writer/state.json`,'utf8'));
+const units=s.units.filter(u=>u.unit>=from&&u.unit<=to);
+const hashes=Object.fromEntries(units.map(u=>[u.draft,crypto.createHash('sha256').update(fs.readFileSync(`${p}/${u.draft}`)).digest('hex')]));
+const table='| 章节文件 | SHA-256 |\n| --- | --- |\n'+Object.entries(hashes).map(([r,h])=>`| ${r} | ${h} |`).join('\n')+'\n';
+fs.appendFileSync(`${p}/${report}`,table);
+fs.writeFileSync(`${b}/review-${key}.json`,JSON.stringify({from,to,kind:'model-self-review',report,source_hashes:hashes},null,2)+'\n');
+console.log(JSON.stringify({from,to,report,revision:s.revision,units:units.length}));

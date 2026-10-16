@@ -1,0 +1,7 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const b=__dirname,p=path.resolve(b,'../works/潮汐信号'),hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const m=JSON.parse(fs.readFileSync(path.join(b,'export/manifest.json'))),x=JSON.parse(fs.readFileSync(path.join(b,'cli/final-export.stdout.txt'))),s=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json')));
+const buf=fs.readFileSync(path.join(b,'export/manuscript.md')),t=buf.toString('utf8');let last=-1,found=[];
+for(const u of s.units){const body=fs.readFileSync(path.join(p,u.draft),'utf8'),at=t.indexOf(body.trim());found.push({unit:u.unit,found:at>=0,ordered:at>last,occurrences:t.split(body.trim()).length-1});last=at;}
+const r={included_units:x.included_units,excluded_drafts:x.excluded_drafts,warnings:x.warnings,sha256:hash(buf),manifest_sha256:hash(fs.readFileSync(path.join(b,'export/manifest.json'))),hash_matches:hash(buf)===x.sha256,exact_1_to_24:JSON.stringify(x.included_units)===JSON.stringify(Array.from({length:24},(_,i)=>i+1)),all_bodies_exact_once_in_order:found.every(v=>v.found&&v.ordered&&v.occurrences===1),found,manifest_keys:Object.keys(m)};
+fs.writeFileSync(path.join(b,'export-verification.json'),JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify({...r,found:undefined},null,2));if(!r.exact_1_to_24||!r.all_bodies_exact_once_in_order||!r.hash_matches||r.excluded_drafts.length||r.warnings.length)process.exitCode=1;

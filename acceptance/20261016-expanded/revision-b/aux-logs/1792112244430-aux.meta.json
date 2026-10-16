@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--input-type=module",
+    "-e",
+    "import fs from 'node:fs';import {json,write,stage} from './acceptance/20261016-expanded/revision-b/run.mjs';const s=json(stage+'/before/work/.writer/state.json');for(const [a,b]of [[8,10],[11,14],[15,17],[18,20]])write(stage+'/reading/rewind-'+a+'-'+b+'.md',s.units.slice(a-1,b).map(u=>fs.readFileSync(stage+'/candidates/'+u.draft,'utf8')).join('\\n\\n'));"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--input-type=module",
+    "-e",
+    "import {run,stage,write,project,json} from './acceptance/20261016-expanded/revision-b/run.mjs';import fs from 'node:fs';for(const c of ['status','check','doctor'])console.log(c,JSON.stringify(run([c,'--project',project],'pre-review-'+c)));const s=json(project+'/.writer/state.json');for(let a=1;a<=20;a+=4)write(stage+'/reading/final-'+a+'.md',s.units.slice(a-1,a+3).map(u=>fs.readFileSync(project+'/'+u.draft,'utf8')).join('\\n\\n'));console.log('recall',JSON.stringify(run(['recall','--project',project,'--query','铜牌'],'plate-recall')));"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--input-type=module",
+    "-e",
+    "import fs from 'node:fs';import {json,write,stage,project,hash} from './acceptance/20261016-expanded/revision-b/run.mjs';const s=json(project+'/.writer/state.json');const report='审查/revision-b-0001-0020-模型知情复核-r59.md';const rows=s.units.map(u=>'| '+u.unit+' | '+u.draft+' | '+hash(fs.readFileSync(project+'/'+u.draft))+' |').join('\\n');write(project+'/'+report,fs.readFileSync(stage+'/review-body.md','utf8')+'\\n\\n| 章 | 文件 | SHA-256 |\\n|---|---|---|\\n'+rows+'\\n');write(stage+'/inputs/review.json',{from:1,to:20,kind:'model-self-review',report,source_hashes:Object.fromEntries(s.units.map(u=>[u.draft,hash(fs.readFileSync(project+'/'+u.draft))]))});write(stage+'/final-reading.json',s.units.map(u=>({unit:u.unit,draft:u.draft,sha256:u.sha256,kind:'model-informed-full-read',covered:true,finished_at:new Date().toISOString()})));console.log(report);"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}
