@@ -1,0 +1,455 @@
+outline-90-write {
+  "ok": true,
+  "ref": "大纲/分卷/V13.json",
+  "volume": {
+    "id": "V13",
+    "title": "接着生活",
+    "start": 89,
+    "end": 100,
+    "promises": [
+      "回收T_VOICE_CONSENT；未知有明确边界，第一部事实保持"
+    ],
+    "constraints": [
+      "第一部1—24章为已发生，不推翻T_SIGNAL/T_TAPE/T_HANDOVER/T_LAMP的已兑现范围",
+      "罗敬私人失约不设作者答案；新材料不能逆改旧观察",
+      "原物按现行custody调用，工作副本不冒充原件"
+    ],
+    "reserved": [
+      "余带中男声与钟确源、剪者与目录命名用意未证，不强行解释",
+      "远期具体场景和配角选择待正文形成"
+    ]
+  },
+  "arc": {
+    "id": "V13A1",
+    "start": 89,
+    "end": 92,
+    "goal": "有人撤回或限制自己的讲述",
+    "payoff": "共同材料接受缺口而继续使用",
+    "forbidden": [
+      "计划不得登记为已发生事实",
+      "无证提前获得他人知识或复制原物"
+    ]
+  },
+  "note": "全部是计划；兑现情况须在正文、ledger 及审查中核实"
+}
+
+plan-90-cli {
+  "ok": true,
+  "plan": "大纲\\单元\\0090.json",
+  "unit": 90
+}
+
+{
+  "context_keys": [
+    "ok",
+    "kind",
+    "title",
+    "unit",
+    "revision",
+    "plan",
+    "settings",
+    "snapshot",
+    "recent",
+    "previous_ending",
+    "research",
+    "instruction",
+    "outline",
+    "continuity",
+    "source_hashes"
+  ],
+  "unit": 90,
+  "revision": 274,
+  "characters": {
+    "沈禾": "第89章当前：55日下午近16点镇家洗碗，刚给使用两页/大字四页/标改试样各原袋外添55撤回说明，本机旧稿夹另存指各版文件名退出说明不改内容；移动盘未查/何未告/邱未回报。14:30邱铺听撤回后续展示朗读及不匿名接用，承自己曾盼下一场，答明早告何后回邱；原缺名两页仍邱柜盒未开，24史事不翻，冯先离才谈旧事。",
+    "何映": "第88章当前：55日10:20多自持实购木面方凳/小票向自家巷转角离，未证到家合用；同行现场获乔名字及叫乔范的办法，亲过外路不入灯侧。9:50多葛铺首次读55—61/58晨休纸、坐老人离后的木椅，自购糕，不接问位任务；屋仍无新时段，83移盒电话及72滑页两夹旧知保留，不获新旧纸许可。",
+    "邱阿兰": "第89章当前：55日14:50多缝纫铺接拉链客；此前实为初见冯小满补围裙袋收8，套袖换右边。本人向沈撤回后续展示朗读及匿名接用，不等忙完例问，不否认已核送话；原两页仍柜盒留、未开未补名，要求沈告何后再回声。仅听沈答应，未见沈后来家中逐袋/本机处理。"
+  },
+  "entries": [
+    {
+      "path": "/continuity/author/P_TAPE",
+      "statement": "唯一原标准紧凑型录音带，壳角磕白、标签残留褪色播字无可辨日期，连原透明塑料盒由罗敬住处交沈禾；旧广播室来处仅罗敬口述。",
+      "status": "active",
+      "due_unit": 18,
+      "custody": {
+        "holder": "宋俭",
+        "location": "镇航运服务室干燥独立柜格，原透明盒内，与铁箱分开",
+        "condition": "已完整实际听取及保留转录；24沈从前硬袋取原带连原盒另交宋，记录罗口述来处与代存同意，不确定所有权；纸与带壳分隔原条件保留"
+      }
+    },
+    {
+      "path": "/continuity/author/T_KEEPER_SHARE",
+      "statement": "阅览间开放与旧物接待依靠何映兼职时段、宋现行值班；活动不能靠每次延长下班和随叫开柜维持，长期人手及费用分担尚待形成。",
+      "status": "partial",
+      "due_unit": 56
+    },
+    {
+      "path": "/continuity/author/T_VOICE_CONSENT",
+      "statement": "公开讲述旧站材料须让当事人选择可说范围：罗拒以自己坐听形象作引子，只愿先看工作与完整灯语修正稿；邱允许有限无观众试读不网上放。长期允许限制和撤回的做法尚待落实。",
+      "status": "partial",
+      "due_unit": 100
+    },
+    {
+      "path": "/continuity/author/P_TRIAL_VOICE",
+      "statement": "第30章第12日上午沈禾自录90秒今日自述，独立新文件，不含母亲旧声或原带转录；本次在阅览间播放，不发送或留拷。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "38夜沈家电脑旧自述原文件夹，载体干桌",
+        "condition": "90秒原文件未新开播放或传拷，随载体返家，不作新房音"
+      }
+    },
+    {
+      "path": "/continuity/author/P_QIU_WORK_PAGES",
+      "statement": "第31章留给邱先看的两页新版工作说明，无旧图旧音，细夹夹合，与沈后来改的电子稿分开。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "邱阿兰",
+        "location": "50日下午河街缝纫铺下柜内独格，格底铺干布，透明盒扣好并合柜门",
+        "condition": "邱亲托原透明盒连原袋移入，沈亲见外袋一角/停用字，盒及原袋未开、未重读原两页或两夹；54原两页原袋/松细夹/宽夹历史保留，不用新观察冒称检查内页"
+      }
+    },
+    {
+      "path": "/continuity/author/T_PAGE_PAIR",
+      "statement": "工作说明放大成两页后，第二页无姓名可脱离当事人范围；邱用细夹先保成对。以后公开版本、分拆及撤回怎样跟随纸页实际流转，尚需实践，不能将电子稿改好视作所有纸已同步。",
+      "status": "partial",
+      "due_unit": 100
+    },
+    {
+      "path": "/continuity/author/T_SOUND_CONTEXT",
+      "statement": "沈在当次亲眼看到椅轮成因，且静止房音不含两响；相似听感不能替代来源现场，客户声也不能挪作旧带佐证。以后怎样给有偿工程留够试声和可用底声时间，以及旧余带能证到哪里，仍须分开实践。",
+      "status": "partial",
+      "due_unit": 72
+    },
+    {
+      "path": "/continuity/author/P_PUBLIC_PAGES",
+      "statement": "第35章沈从家打印的两页题名/页次版工作说明，邱当面对照后只准第16日一场桌边使用，区别31缺名旧稿。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "55日下午沈镇家干架旧使用两页独立原袋",
+        "condition": "本人取到桌核仍两页，原文未改/旧停用字留；袋外另夹55邱撤回后续展示朗读不匿名接用说明后归原位，未转何/邱"
+      }
+    },
+    {
+      "path": "/continuity/author/P_RO_WORK_PAGES",
+      "statement": "第36章给罗先看的两页工作整稿与一页沈自述；罗当面提去看扇形象，沈保旧另打三页唐穗先看版封袋，与邱新旧两套纸分别。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "35出发后沈家干架原封三页袋",
+        "condition": "37唐40何先看后已收回，60原袋留家未带出/未新开读或公开，旧改稿另存"
+      }
+    },
+    {
+      "path": "/continuity/author/P_QIU_LARGE_PAGES",
+      "statement": "第38章在第35章两页文字基础放大重排的四页实样；每页题名姓名页次，用途行移题名下与正文同字号。与标改试样及两套旧两页分开。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "55日下午沈镇家干架大字四页原袋",
+        "condition": "本人取至桌核仍四张，原文不涂/旧停用字留，外夹55撤回说明后各合归原位，不与试样或旧缺名原两页混"
+      }
+    },
+    {
+      "path": "/continuity/author/I_PUBLIC_SCOPE_40",
+      "statement": "第40章20日早邱确认当次四页且此后先不用、无自动恢复日；下午14:50新自述及四页慢读、父只读前两页自停，15:30前全收无拷，何落实结束不留展。只这一场的实际使用与退出，不代替长期安排。",
+      "status": "active",
+      "due_unit": null
+    },
+    {
+      "path": "/continuity/author/T_HE_OLD_PAY",
+      "statement": "50何先前真实少开时段与原报酬仍须逐段核，不能把21上午在场抹成全日未到、不能用三轮新款冲抵，姚未许本次全清。",
+      "status": "partial",
+      "due_unit": 56
+    },
+    {
+      "path": "/continuity/author/T_ROOM_AFTER33",
+      "statement": "56有限三轮结束，34起暂停实贴；严负责新询问/同姚继续经办并答当日联系送报暂缓，电话尚未写已打。未来重开时段和费用待定，不能自动排何陈沈。",
+      "status": "partial",
+      "due_unit": 64
+    },
+    {
+      "path": "/continuity/author/P_QIU_MARKED_SAMPLE_89",
+      "statement": "38形成的四页标改试样，挤过用途小字/旁作标记，非后来可用四页实样；89在沈家现原袋独立核见并增袋外撤回说明。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "55日下午沈家干架标改试样原袋",
+        "condition": "旧标改/挤小字全保留，袋外新夹55撤回说明，不能因改痕当另一可公开稿；不转何邱"
+      }
+    },
+    {
+      "path": "/continuity/author/P_QIU_TEXT_FILES_89",
+      "statement": "沈本人电脑内31后形成的邱送话说明旧电子各版，与母亲原硬盘工作短片/旧录音转录及客户项目分开；89本机旧稿夹旁新增指向各文件名的55退出说明。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "55日下午镇家本人电脑旧稿夹及旁存本日退出说明",
+        "condition": "各旧版内容不改不匿名重做，本机说明已存；本人移动盘旧备份未查未添，不写全载体同步，母原盘未开"
+      }
+    },
+    {
+      "path": "/continuity/author/T_QIU_WITHDRAWAL_89",
+      "statement": "89第55日邱撤回后续展示朗读送话说明及匿名接用；沈答56早告何并做完后回邱。55下午三袋与本机说明实做，移动盘未查、何未告、邱未回告；其他真实受话人范围待逐项核，不能宣全同步。",
+      "status": "pending",
+      "due_unit": 94
+    },
+    {
+      "path": "/continuity/author/R_SHEN_QIU_LIFE",
+      "statement": "53沈以真实付费改衣顾客到邱铺，接受其量袖与套袖的具体需要，主动告旧页滑出而不等追问；邱可提出只收原两张、不必用挑错证明要回。关系有日常劳动与边界，非新公开授权。",
+      "status": "active",
+      "due_unit": null
+    },
+    {
+      "path": "/continuity/author/I_ROUTE_DELAY_ACCOUNT_88",
+      "statement": "88第55早乔在旧站门口向沈何当前口述：52当批未送、53早减量送、余另约且价仍谈；沈何只听本次回顾，55见离的是另一小车，不作53现场证据。",
+      "status": "partial",
+      "due_unit": null
+    },
+    {
+      "path": "/continuity/author/O_ROUTE_PREP_85",
+      "statement": "85第52日早沈见乔范先搬零件箱再门内转空架，乔主动电话让未发的当批垫条缓送；两红砖当次干、半月缺口朝围挡白罩未亮，邹原双侧筐车从砖旁外路过。后续52下午是否到货与分车费用未见答。",
+      "status": "active",
+      "due_unit": null
+    },
+    {
+      "path": "/continuity/author/P_HE_HOME_STOOL_88",
+      "statement": "88第55日日杂铺何为母亲换鞋需求实买的木面方凳，有窄提口当场由老板磨平；与先试未买小折凳、葛原木椅、公屋椅分开。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "何映",
+        "location": "55日10:20多街角往何家巷转角后自持归家方向",
+        "condition": "本人付款、试坐/取小票后一路自提，沈未见到家交母/合用，不登记已安装或换掉旧凳"
+      }
+    },
+    {
+      "path": "/continuity/author/P_LAMP",
+      "statement": "旧站外墙唯一矮信号灯柱，白灯罩、铁丝小门、内铆接用法片；原位断电保留，未拆原片。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "范勤",
+        "location": "旧站外墙原灯柱位置，改建围挡绕留检查空间",
+        "condition": "24经办现场核并签整根保留防碰不接电，原门原片保持，未拆迁"
+      }
+    },
+    {
+      "path": "/continuity/author/P_SHOP_CHAIR_66",
+      "statement": "66葛茶食铺有靠背木椅，初门口叠两空筐，后收门内凹处供当次坐。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "葛筠",
+        "location": "55日10:20葛茶食铺原门内凹处",
+        "condition": "原椅本晨供老人后何，何起身自离；不与何自购家用木面方凳混，未交何或沈管理，店主自管"
+      }
+    },
+    {
+      "path": "/continuity/author/T_ROUTE_COMMON",
+      "statement": "旧灯已原位保留，但周边卸货、通行与停歇的现实需求未由保存自动满足；沈目睹菜车受阻、范当次让车留外路，未来可持续停留路线须居民与接管方共同讨论。",
+      "status": "resolved",
+      "due_unit": 88
+    },
+    {
+      "path": "/continuity/author/T_SHOP_SEAT_WEEK_86",
+      "statement": "86第54晨葛在陶沈老人场内明确55—61晨9:30—10:30继续清原木椅，58上午店休不排陶；实夹新纸，非专位无需消费。未来执行未知，承诺只七日不自动常设。",
+      "status": "partial",
+      "due_unit": 100
+    },
+    {
+      "path": "/continuity/author/P_BOWL_SKETCH_87",
+      "statement": "84周只口述家中先画碗像锅；87第54晚周实际展示该原纸，沈首次亲见碗底线重描三次/右侧淡长弯，周称擦错后越补越长，非为等她重画。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "周砚",
+        "location": "54晚周家柜上本人画册内",
+        "condition": "周展示供沈看后亲取回夹入，随后画册由干架旁移至柜上避滴水；纸角外露，不送沈不外传"
+      }
+    },
+    {
+      "path": "/continuity/author/P_CUP_SKETCH_84",
+      "statement": "84周在沈家用自带白纸一面先试葱叶两笔，翻背画沈家的普通白杯，杯口有擦毛、杯把后连上；非旧站材料或公开工作稿。",
+      "status": "active",
+      "due_unit": null,
+      "custody": {
+        "holder": "沈禾",
+        "location": "54晚沈镇家柜里家用本后空页间",
+        "condition": "本章未带往周家，回家仍平夹原杯画/背葱两笔未擦，不与周原碗画混，不外传"
+      }
+    },
+    {
+      "path": "/continuity/author/R_SHEN_ZHOU",
+      "statement": "第23章沈按约与周吃饭，承认过去失联不给工作辩解，决定先留一个月家中接活并约明晚买菜；周要走前通知，不代替挑时间。是当下选择及约，不代表已共同生活一月。",
+      "status": "active",
+      "due_unit": null
+    },
+    {
+      "path": "/continuity/author/T_RETURN_MONTH",
+      "statement": "沈第23章决定先留一月，第25章实际与周买菜做饭，并开始讨论工作等待和各自时间；住满一月后的职业与相处安排未定。",
+      "status": "resolved",
+      "due_unit": 88
+    }
+  ],
+  "omitted_ids": [
+    "T_SIGNAL",
+    "T_HANDOVER",
+    "T_PRIVATE",
+    "T_LAMP",
+    "T_TAPE",
+    "T_KEY_CABINET",
+    "I_KEY_USE",
+    "I_DECK_REPAIR",
+    "T_SERVICE_VISIT",
+    "T_CONTACT",
+    "T_ARCHIVE",
+    "T_MESSAGE_VERIFY",
+    "T_PAID_WORK",
+    "T_PUBLIC_USE",
+    "I_ROOM_VISIT_PRICE",
+    "I_LATCH_ADJUST_42",
+    "T_ROOM_TRIAL",
+    "P_BORROWED_RECIPE",
+    "I_HOURS_DELIVERY_46",
+    "T_ROOM_NEXT_OPEN",
+    "T_ROOM_FUND_MEET",
+    "I_ROOM_THREE_MORNINGS",
+    "T_THREE_DAY_ENQUIRY",
+    "I_SMALL_SAMPLES_51",
+    "I_ROOM_FIRST_52",
+    "T_ROOM_NOTICE_31",
+    "T_QIU_TAKE_BACK",
+    "T_ZHOU_UPDATE_32",
+    "T_FISH_DINNER_34",
+    "T_ROOM_NOTICE_33",
+    "T_NEW_ROOM_COST",
+    "P_ZHOU_FISH_BOX",
+    "T_ZHOU_DEPARTURE_NOTICE",
+    "T_CITY_THREE_DAY_DELIVERY",
+    "T_CALL_36",
+    "T_SHOES_39",
+    "T_LOCAL_MENU_SOUND",
+    "T_POST_LISTEN_67",
+    "T_MONTH_TALK_70",
+    "T_ROUTE_CONTACT_71",
+    "T_ROUTE_TRIAL_73",
+    "T_RIVER_EVENING_74",
+    "T_SHOP_SEAT_TRIAL_76",
+    "T_SHOP_SEAT_NEXT_80",
+    "T_HOME_LISTEN_81",
+    "T_SHARED_EVENING_84",
+    "O_PAGE_PAIR",
+    "O_HOME_CUT_82",
+    "P_HOME_NEW_AUDIO_81",
+    "O_RAIN_TILE",
+    "O_ROUTE_RAIN_71",
+    "O_PAGE_SLIP_48",
+    "P_POST_CUT_67",
+    "I_POST_WAIT_69",
+    "O_PHOTO_WAIT_62",
+    "P_CITY_THREE_AUDIO",
+    "P_SHOP_PLAN_66",
+    "P_SHOP_SAMPLE_66",
+    "O_SHOP_CHAIR_66",
+    "T_AUDIO_REMAINDER",
+    "P_AUDIO_COPY",
+    "P_CITY_AUDIO",
+    "P_NEW_ROOM_RECEIPT",
+    "P_LONG_LEAD_58",
+    "O_LEAD_DROP_58",
+    "P_HOURS_NOTE",
+    "P_READING_ROOM_DUTY_KEY",
+    "P_ROOM_FUNDS_SHEET",
+    "P_ROOM_TRIAL_SHEET",
+    "O_ROUTE_PASS_54",
+    "P_DOOR_RECEIPT_42",
+    "O_RAIN_DURING_42",
+    "O_ROUTE_DRY_48",
+    "O_ZOU_ACCOUNT_48",
+    "P_READING_ROOM_SPARE_KEY",
+    "O_HOURS_NEW_44",
+    "O_HOURS_NOTE",
+    "O_ROOM_LATCH",
+    "O_LAMP_PANEL",
+    "P_CHEN_NOTE",
+    "O_ROOM_TONE",
+    "O_WHEEL_KNOCK",
+    "R_SHEN_TANG",
+    "P_BOX",
+    "P_KEY",
+    "P_LAMP_BOOK",
+    "P_NOTICE",
+    "O_DECK",
+    "O_DISPATCH_RETURN",
+    "O_INDEX_PAGE",
+    "O_MESSAGE_ROW",
+    "O_MESSAGE_SIGN",
+    "O_PLATE",
+    "O_QIU_ACCOUNT",
+    "O_TAPE_18",
+    "P_SERVICE_BAG",
+    "T_INDEX",
+    "I_AUDIO_ALIGN",
+    "O_INDEX_CONT",
+    "O_KEY",
+    "O_LAMP_RECORD",
+    "O_MAP",
+    "O_NOTICE",
+    "P_MAP",
+    "T_EAST",
+    "T_MAP",
+    "O_CURRENT"
+  ],
+  "source_hashes": {
+    "writer.json": "e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3",
+    ".writer/state.json": "9e9de52c0a057722c73ca7f5fbac7531eec415abe4b5ac7598da2b35f8dcc416",
+    "大纲/单元/0090.json": "ebcd10101a8ce9f04df1d44cc33020c4ee5afefc3f52e2e86012b9f3ae18deee",
+    "设定/作品定位.md": "1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94",
+    "设定/文风.md": "2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c",
+    "设定/权威规则.md": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+    "大纲/分卷/V13.json": "ecd6c96a3ba6c40bf9bc618c39546dbe0fe49b4b7458330bc582968b0583beba",
+    "大纲/续部总纲.md": "27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440",
+    "设定/续部人物与场所.md": "19e46ab7bda4d3fb2616da0044e29c136f0da709d3fdf53c67b82bcfe3ae09d1",
+    "正文/0089-这回不留下一次.md": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160"
+  }
+}
+{
+  "template_saved": true,
+  "unit": 90,
+  "keys": [
+    "unit",
+    "expected_revision",
+    "source_hashes",
+    "draft",
+    "summary",
+    "changes",
+    "_instructions"
+  ],
+  "revision": 274,
+  "source_hashes": {
+    "writer.json": "e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3",
+    ".writer/state.json": "9e9de52c0a057722c73ca7f5fbac7531eec415abe4b5ac7598da2b35f8dcc416",
+    "大纲/单元/0090.json": "ebcd10101a8ce9f04df1d44cc33020c4ee5afefc3f52e2e86012b9f3ae18deee",
+    "设定/作品定位.md": "1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94",
+    "设定/文风.md": "2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c",
+    "设定/权威规则.md": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+    "大纲/分卷/V13.json": "ecd6c96a3ba6c40bf9bc618c39546dbe0fe49b4b7458330bc582968b0583beba",
+    "大纲/续部总纲.md": "27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440",
+    "设定/续部人物与场所.md": "19e46ab7bda4d3fb2616da0044e29c136f0da709d3fdf53c67b82bcfe3ae09d1",
+    "正文/0089-这回不留下一次.md": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160"
+  },
+  "changes": {
+    "characters": {},
+    "timeline_append": [],
+    "ledger": {}
+  }
+}
+{"now":"2026-10-16T11:51:51.435Z","elapsed_s":1882}

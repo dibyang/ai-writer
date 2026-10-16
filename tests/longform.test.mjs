@@ -28,6 +28,29 @@ function append(root, unit, changes = {}, extra = {}) {
 }
 const observed = { type: 'observation', statement: '信封有一道裂口', status: 'pending', cast: ['阿禾'], tags: ['裂口'], author_truth: '裂口的成因尚待核实', reader_known: '看见裂口', character_known: { 阿禾: '看见裂口' }, due_unit: 5, evidence: [{ unit: 1, quote: '阿禾看见信封有一道裂口。' }] };
 
+test('recall精确账本ID优先于关联和较长ID，限额及AND查询保持可预期', t => {
+  const { root } = work(t);
+  append(root, 1, { ledger: {
+    R_BEFORE: { ...observed, tags: ['T_TARGET', 'alpha'] },
+    T_TARGET_SUFFIX: { ...observed, tags: ['alpha'] },
+    T_TARGET: { ...observed, tags: ['alpha'] }
+  } });
+  const stateFile = path.join(root, '.writer/state.json'), before = fs.readFileSync(stateFile);
+  const recall = (query, limit) => {
+    const result = spawnSync(process.execPath, [path.join(ROOT, 'bin/ai-writer.mjs'), 'recall', '--project', root, '--query', query, '--limit', String(limit)], { encoding: 'utf8' });
+    assert.equal(result.status, 0, result.stderr); return JSON.parse(result.stdout);
+  };
+  for (const query of ['T_TARGET', 't_target', ' T_TARGET ']) {
+    const result = recall(query, 1);
+    assert.equal(result.matches[0].id, 'T_TARGET');
+    assert.equal(result.total, 3); assert.equal(result.omitted, 2);
+  }
+  assert.deepEqual(recall('T_TARGET', 3).matches.map(x => x.id), ['T_TARGET', 'R_BEFORE', 'T_TARGET_SUFFIX']);
+  assert.deepEqual(recall('T_TARGET alpha', 10).matches.map(x => x.id), ['R_BEFORE', 'T_TARGET_SUFFIX', 'T_TARGET']);
+  assert.deepEqual(recall('T_TARGET absentword', 10).matches, []);
+  assert.deepEqual(fs.readFileSync(stateFile), before, 'Recall must remain read-only');
+});
+
 test('差量追加、替换、删除可双向还原；时间线追加存储量不随历史长度增长', () => {
   const before = { characters: { 甲: '东门', 乙: '西门' }, timeline: Array.from({ length: 5000 }, (_, i) => `第${i}夜`), ledger: {} };
   const after = { characters: { 甲: '南门', 丙: '北门' }, timeline: [...before.timeline, '新的一夜'], ledger: { F1: { state: 'pending' } } };

@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawn } from 'node:child_process';
+import crypto from 'node:crypto';
+const root = path.resolve(import.meta.dirname, '../../..');
+const stage = import.meta.dirname;
+const cmdDir = path.join(stage, 'commands');
+fs.mkdirSync(cmdDir, { recursive: true });
+const [label, exe, ...args] = process.argv.slice(2);
+if (!label || !exe) throw new Error('usage: run-cli.mjs LABEL EXECUTABLE [ARGS...]');
+const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+const prefix = path.join(cmdDir, `${stamp}-${label}`);
+const meta = { started_at: new Date().toISOString(), cwd: root, executable: exe, argv: args, capture: 'separate raw child stdout/stderr bytes; wrapper launch output is tool-merged' };
+fs.writeFileSync(prefix + '.json', JSON.stringify(meta, null, 2), 'utf8');
+const out = fs.openSync(prefix + '.stdout.txt', 'wx');
+const err = fs.openSync(prefix + '.stderr.txt', 'wx');
+const child = spawn(exe === 'node' ? process.execPath : exe, args, { cwd: root, shell: false, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+child.stdout.on('data', b => { fs.writeSync(out, b); process.stdout.write(b); });
+child.stderr.on('data', b => { fs.writeSync(err, b); process.stderr.write(b); });
+child.on('error', e => { meta.spawn_error = String(e); });
+child.on('close', (code, signal) => {
+  fs.closeSync(out); fs.closeSync(err);
+  Object.assign(meta, { ended_at: new Date().toISOString(), exit_code: code, signal });
+  for (const stream of ['stdout', 'stderr']) meta[stream + '_sha256'] = crypto.createHash('sha256').update(fs.readFileSync(prefix + `.${stream}.txt`)).digest('hex');
+  fs.writeFileSync(prefix + '.json', JSON.stringify(meta, null, 2), 'utf8');
+  process.stderr.write(`\n[wrapper ${path.basename(prefix)} exit=${code}]\n`);
+  process.exitCode = code ?? 1;
+});

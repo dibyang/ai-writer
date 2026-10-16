@@ -1,0 +1,13 @@
+{
+  "source": "Actual exec_command tool result for the failed outer PowerShell audit-structure invocation; no child createRunner execution occurred",
+  "native_executable_and_argv_available": false,
+  "native_started_at_available": false,
+  "tool_result": {
+    "chunk_id": "0cdf2a",
+    "wall_time_seconds": 0.2892069,
+    "exit_code": 1,
+    "original_token_count": 55,
+    "output": "ParserError: \r\nLine |\r\n   2 |  �� .keys(JSON.parse(fs.readFileSync(p+'evidence-audit.json')))},null,2)) ��\r\n     |                                                                 ~\r\n     | Missing expression after ','.\r\n"
+  },
+  "interpretation": "Shell quoting failed before the proposed read-only structure helper began. Tool wall time is preserved as tool metadata, not relabeled as a native command start or child-machine timer."
+}

@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const base='acceptance/20261016-hundred',work=path.resolve(base,'works/潮汐信号'),phase=path.join(base,'final-review');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert(!fs.existsSync(phase),'Preserve prior phase');assert.equal(read(`${base}/session-13/process-result.json`).exit_code,0);
+assert.equal(read(`${base}/active-candidate.json`).manifest,'source-baseline-v4.json');
+const statePath=path.join(work,'.writer/state.json'),state=read(statePath);assert.equal(state.units.length,100);
+const source=read(`${base}/source-baseline-v4.json`);for(const row of source.files)assert.equal(hash(row.file),row.sha256,row.file);
+assert.equal(hash('lib/help.mjs'),hash(path.join(work,'.writer/tool/lib/help.mjs')));
+const feedback=['prose91-at339.md','narrative92-at340.md','prop96-at346.md','ledger96-ro-note-scope.md','knowledge93-ro-tang.md','knowledge97-98-scope.md'].map(file=>fs.readFileSync(`${base}/parent-findings/${file}`,'utf8')).join('\n');
+const prose=fs.readFileSync(`${base}/final-review-request-draft.md`,'utf8').split(/\r?\n/).slice(4).join('\n')+'\n\n主会话定点读者反馈，请回到最终当前正文判断并执行授权内最小修订：\n'+feedback+'\n\n本次v4运行时另在默认context.continuity.instruction加入追踪章号/账本ID只供定位、正文使用人物可知日期称谓动作的提示。正式回退重登时保存真实context返包及实际指引文本、主/内置longform源码SHA，核实确实使用最终运行时。提示存在本身不证明语言质量，仍须修具体原句并完整读稿；不能把它当自动编号检测器或保证以后绝无泄漏。\n';
+const request=`这是用户授权的百章长篇实跑最终全书模型复查，开始时真实100章r${state.revision}。主仓库D:/work/other/ai-writer，当前作品${work.replaceAll('\\','/')}，本阶段acceptance/20261016-hundred/final-review。使用默认Codex原生进程，不使用子代理。只能修改本作品与本阶段辅助文件，不改产品源码；发现产品问题留复现报告供主会话修。不得提交推送上传付费或发布。\n\n开始前绑定：当前state SHA256 ${hash(statePath)}；最终产品来源清单source-baseline-v4 SHA256 ${hash(`${base}/source-baseline-v4.json`)}。这些仅是绑定，不是阅读证明。先自行从当前文件恢复，不读其他阶段的请求、结果或旧状态补剧情；允许只读本轮command-runner.mjs/rebuild-utils.mjs无剧情辅助代码。\n\n${prose}\n\n最终导出固定新目录acceptance/20261016-hundred/final-review/export，若中间候选需导出用其他目录，不能占用最终目录或覆盖旧导出。所有审查报告置作品审查目录以便review登记。核实最终帮助review示例完整from1/to1哈希集合、recall精确ID优先与limit1—100、context最小1000等用户可见指引，保存真实帮助文本和实际查询输出。纯帮助不按JSON解析。辅助外层与内层CLI唯一label，所有原始失败留档，不虚构分流。\n`;
+fs.mkdirSync(phase);fs.writeFileSync(path.join(phase,'request.md'),request,{flag:'wx'});
+fs.writeFileSync(path.join(phase,'start-binding.json'),JSON.stringify({at:new Date().toISOString(),revision:state.revision,units:100,state_sha256:hash(statePath),source_manifest:'source-baseline-v4.json',source_manifest_sha256:hash(`${base}/source-baseline-v4.json`),request_sha256:hash(path.join(phase,'request.md'))},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(`${base}/active.json`,JSON.stringify({phase:'final-review',expected_units:100,started_at:new Date().toISOString()},null,2)+'\n');
+console.log(JSON.stringify({ready:true,phase:'final-review',revision:state.revision,units:100,source:'v4'}));

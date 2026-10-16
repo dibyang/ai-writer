@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {isDeepStrictEqual as same} from 'node:util';
+import {createRunner} from '../command-runner.mjs';
+const stage='acceptance/20261016-hundred/session-10',work='acceptance/20261016-hundred/works/潮汐信号',r=createRunner(stage);
+const read=p=>fs.readFileSync(p,'utf8'),json=p=>JSON.parse(read(p)),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const result=json(stage+'/result.json'),hashes=json(stage+'/delivery-hashes.json'),state=json(work+'/.writer/state.json');
+const rows=read(r.index).split(/\r?\n/).filter(Boolean).map(JSON.parse);
+const checks={result_md:sha(stage+'/result.md')===hashes.result_md,result_json:sha(stage+'/result.json')===hashes.result_json,reading:sha(stage+'/reading.jsonl')===hashes.reading,state:sha(work+'/.writer/state.json')===hashes.state&&state.revision===269,manuscript:sha(stage+'/export/manuscript.md')===hashes.manuscript&&hashes.manuscript===result.export.sha256,manifest:sha(stage+'/export/manifest.json')===hashes.manifest,counts:result.per_chapter.length===6&&result.per_chapter.every(x=>x.han>=2400&&x.han<=3200),checks:Object.values(result.protected_checks).every(Boolean),raw_command_receipts:rows.every(x=>{const meta=json(x.files.metadata);return same(meta.argv,x.argv)&&meta.label===x.label&&meta.exit_code===x.exit_code&&fs.existsSync(x.files.stdout)&&fs.existsSync(x.files.stderr);}),status_label:r.last('status-final').label==='status-final'&&r.json('status-final').next_unit===85,pending:r.json('check-final').rolling_review.pending_windows.length===0};
+fs.writeFileSync(stage+'/delivery-verification.json',JSON.stringify({at:new Date().toISOString(),checks,command_records_verified:rows.length,revision:state.revision},null,2)+'\n','utf8');
+console.log(JSON.stringify({checks,revision:state.revision,next_unit:85,total_han:result.total_han,elapsed_s:result.elapsed_s,command_records_verified:rows.length}));
+if(Object.values(checks).some(x=>!x))throw Error('delivery check failed');

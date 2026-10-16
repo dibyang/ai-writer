@@ -1,0 +1,19 @@
+file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-09/ops.mjs:11
+export function must(r){if(r.exit_code!==0)throw Error(`${r.label}: ${r.exit_code}: ${r.stderr}`);return JSON.parse(r.stdout);}
+                                                 ^
+
+Error: repair-template-32: 2: {
+  "ok": false,
+  "error": "无效、重复或缺值参数：--max-chars",
+  "code": "COMMAND_FAILED",
+  "next_action": "按报错核对输入，查看本命令帮助。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' record-template '--help'"
+}
+
+    at must (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-09/ops.mjs:11:50)
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-09/ops.mjs:63:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

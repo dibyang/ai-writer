@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRunner} from '../command-runner.mjs';
+const stage='acceptance/20261016-hundred/session-13';
+const runner=createRunner(stage);
+const [label,executable,...args]=process.argv.slice(2);
+if(!label||!executable)throw Error('label executable args required');
+const r=runner.run(executable,args,label);
+process.stdout.write(JSON.stringify({...r,stdout:undefined,stderr:undefined})+'\n');
+process.stdout.write(r.stdout);
+if(r.stderr)process.stderr.write(r.stderr);
+process.exitCode=r.exit_code??1;

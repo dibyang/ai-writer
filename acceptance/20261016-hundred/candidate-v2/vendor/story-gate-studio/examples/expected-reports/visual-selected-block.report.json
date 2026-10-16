@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-visual-selected-block",
+  "module_id": "SGM-VIS-001",
+  "mode": "visual",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/visual-selected-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-VIS-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-VIS-001-R001",
+      "severity": "high",
+      "location": "input.prompt_record",
+      "recommendation": "Add prompt record, version state, selection basis, and usage purpose before allowing selected entry.",
+      "source_refs": [
+        "docs/traceability.md#SGM-VIS-001"
+      ]
+    }
+  ]
+}

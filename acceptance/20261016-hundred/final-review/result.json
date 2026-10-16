@@ -1,0 +1,192 @@
+{
+  "status": "completed-model-review-draft",
+  "completed_at": "2026-10-16T15:30:10.103Z",
+  "started_at": "2026-10-16T14:34:53.868Z",
+  "elapsed_ms": 3316235,
+  "work": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\works\\潮汐信号",
+  "stage": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review",
+  "initial_revision": 350,
+  "final_revision": 371,
+  "initial_state_sha256": "c3ab9e7d347d720c41480441ee6996f3ed012998c292aa6d5d5bbd4c390ce6b9",
+  "final_state_sha256": "414cd9b1c04a9d5923de41e8f51ce848612bed63985d557daf22d9e38f91a606",
+  "source_baseline_v4_sha256": "52f6a0f755871c7886dd4d6936133fbe522a22407eea058f36a07966583d7ec9",
+  "product_files_unchanged": 246,
+  "body_read": {
+    "current_complete_chapters": 100,
+    "current_total_chapters": 100,
+    "current_lines": 7822,
+    "missing_lines": 0,
+    "body_command_ranges": 285,
+    "notes_before": 17,
+    "changed_body_chapters_re_read": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "basis": "Actual body returned to same native model; coverage script is record validation only."
+  },
+  "changes": {
+    "body_chapters": 6,
+    "body_line_edits": 8,
+    "knowledge_fields": 7,
+    "body_diff": "body-before-after.json",
+    "knowledge_diff": "knowledge-before-after.json",
+    "fixed_1_24_untouched": true,
+    "original_1_90_chain_untouched": true,
+    "ledger_ids": 141,
+    "original_evidence_preserved": 1155,
+    "final_evidence": 1157
+  },
+  "formal_chain": {
+    "first": "r350 -> rewind91/r351 -> record91-100/r361",
+    "second": "freeze r361; rewind92/r362 -> record92-100/r371; restore two original unit27 anchors",
+    "active_record_count": 100,
+    "first_pass_record_calls": 10,
+    "second_pass_record_calls": 9,
+    "inputs": [
+      "inputs",
+      "inputs-pass2"
+    ],
+    "revision_chain": "revision-chain.json"
+  },
+  "overall_report": {
+    "path": "审查/final-review-overall-0001-0100-r371-complete.md",
+    "source_hashes_count": 100,
+    "review_ref": ".writer/reviews/58fd36cb-513d-405d-b8b7-3e5e2ca6178d.json"
+  },
+  "gates": {
+    "status": true,
+    "check": true,
+    "doctor": true,
+    "pending_windows": [],
+    "stale_reviews_preserved": 62,
+    "stale_without_current_coverage": 0
+  },
+  "export": {
+    "directory": "export",
+    "status": "draft-export",
+    "included": 100,
+    "order_equal": true,
+    "verbatim_chapters": 100,
+    "manuscript_sha256": "f579c2cb65c88864e93271c317021c6d49c5e10d4d7bbc916bd9e7ab70f7b3ab"
+  },
+  "failures_preserved": [
+    {
+      "label": "outer-helperread",
+      "exit_code": 1,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-11-53-963Z-8be84c64-de34-4785-b680-b59a8e049d27-outer-helperread.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-11-53-963Z-8be84c64-de34-4785-b680-b59a8e049d27-outer-helperread.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-11-53-963Z-8be84c64-de34-4785-b680-b59a8e049d27-outer-helperread.json"
+      }
+    },
+    {
+      "label": "outer-contextminquery",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-21-707Z-cf044323-5772-4755-b721-aac400baf548-outer-contextminquery.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-21-707Z-cf044323-5772-4755-b721-aac400baf548-outer-contextminquery.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-21-707Z-cf044323-5772-4755-b721-aac400baf548-outer-contextminquery.json"
+      }
+    },
+    {
+      "label": "inner-context-min-query",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-21-787Z-f2415e6b-1941-4004-b944-7b6850c9bed3-inner-context-min-query.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-21-787Z-f2415e6b-1941-4004-b944-7b6850c9bed3-inner-context-min-query.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-21-787Z-f2415e6b-1941-4004-b944-7b6850c9bed3-inner-context-min-query.json"
+      }
+    },
+    {
+      "label": "outer-build91",
+      "exit_code": 1,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-46-425Z-ff84aaae-4aa0-4b5e-9675-82ebb1399db0-outer-build91.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-46-425Z-ff84aaae-4aa0-4b5e-9675-82ebb1399db0-outer-build91.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-14-46-425Z-ff84aaae-4aa0-4b5e-9675-82ebb1399db0-outer-build91.json"
+      }
+    },
+    {
+      "label": "outer-validate-rebuild",
+      "exit_code": 1,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-20-03-927Z-21d0a797-b075-4639-96a7-edbb4e668b96-outer-validate-rebuild.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-20-03-927Z-21d0a797-b075-4639-96a7-edbb4e668b96-outer-validate-rebuild.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-20-03-927Z-21d0a797-b075-4639-96a7-edbb4e668b96-outer-validate-rebuild.json"
+      }
+    },
+    {
+      "label": "outer-recall-limit101-final",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-07-911Z-56509970-ed2b-44dc-be1c-883b5e64b11d-outer-recall-limit101-final.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-07-911Z-56509970-ed2b-44dc-be1c-883b5e64b11d-outer-recall-limit101-final.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-07-911Z-56509970-ed2b-44dc-be1c-883b5e64b11d-outer-recall-limit101-final.json"
+      }
+    },
+    {
+      "label": "inner-recall-limit101-final",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-07-989Z-6b1106d7-0140-49ca-b3a4-9cd17fb41f5a-inner-recall-limit101-final.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-07-989Z-6b1106d7-0140-49ca-b3a4-9cd17fb41f5a-inner-recall-limit101-final.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-07-989Z-6b1106d7-0140-49ca-b3a4-9cd17fb41f5a-inner-recall-limit101-final.json"
+      }
+    },
+    {
+      "label": "outer-contextmin1000-final",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-56-454Z-2538004e-e6ab-484e-b540-b393e607856e-outer-contextmin1000-final.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-56-454Z-2538004e-e6ab-484e-b540-b393e607856e-outer-contextmin1000-final.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-56-454Z-2538004e-e6ab-484e-b540-b393e607856e-outer-contextmin1000-final.json"
+      }
+    },
+    {
+      "label": "inner-context-min1000-final",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-56-534Z-16b12b49-6a75-46f0-b02d-ffeafb34ea7f-inner-context-min1000-final.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-56-534Z-16b12b49-6a75-46f0-b02d-ffeafb34ea7f-inner-context-min1000-final.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-23-56-534Z-16b12b49-6a75-46f0-b02d-ffeafb34ea7f-inner-context-min1000-final.json"
+      }
+    },
+    {
+      "label": "outer-register-overall100",
+      "exit_code": 1,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-26-21-492Z-34b4d380-880a-4e7f-aa1e-35cf8e198cd9-outer-register-overall100.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-26-21-492Z-34b4d380-880a-4e7f-aa1e-35cf8e198cd9-outer-register-overall100.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-26-21-492Z-34b4d380-880a-4e7f-aa1e-35cf8e198cd9-outer-register-overall100.json"
+      }
+    },
+    {
+      "label": "inner-final-review-final-review-overall-0001-0100-r371",
+      "exit_code": 2,
+      "raw": {
+        "stdout": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-26-21-601Z-8173c3c9-0da1-4433-9dcc-80494489e1e5-inner-final-review-final-review-overall-0001-0100-r371.stdout.raw.txt",
+        "stderr": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-26-21-601Z-8173c3c9-0da1-4433-9dcc-80494489e1e5-inner-final-review-final-review-overall-0001-0100-r371.stderr.raw.txt",
+        "metadata": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\final-review\\commands\\2026-10-16T15-26-21-601Z-8173c3c9-0da1-4433-9dcc-80494489e1e5-inner-final-review-final-review-overall-0001-0100-r371.json"
+      }
+    }
+  ],
+  "deviations": [
+    "One opening git status --short was run before command-runner restoration; disclosed, no source mutation. All subsequent shell commands routed through runner.",
+    "One invalid empty 95 line range was preserved in original/auxiliary reading logs and excluded from final reading.jsonl coverage.",
+    "Ledger/audit/metadata outputs that were truncated are not claimed as body reads; explicit missing semantic-read ranges were re-read. Export metadata tool output was truncated; original full output saved and all100 exported bodies verified separately.",
+    "Command end timestamps are derived from each original start plus measured elapsed_ms; originals remain unchanged."
+  ],
+  "remaining_work_problems": "See overall model report: repeated mid/late scene skeleton affects pace; unresolved sound origins, custody interim dates, old two pay periods, old chair deposit and broader permanent arrangements remain bounded, not invented as solved.",
+  "product_bugs_confirmed": [],
+  "subagents_used": false,
+  "product_source_modified": false,
+  "committed": false,
+  "pushed": false,
+  "uploaded": false,
+  "paid": false,
+  "published": false
+}

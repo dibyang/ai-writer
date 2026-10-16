@@ -1,0 +1,10 @@
+import {createRunner} from '../command-runner.mjs';
+import fs from 'node:fs';
+const runner=createRunner('acceptance/20261016-hundred/session-12');
+const [label, executable,...args]=process.argv.slice(2);
+const start='acceptance/20261016-hundred/session-12/start.json';
+if(!fs.existsSync(start))fs.writeFileSync(start,JSON.stringify({started_at:'2026-10-16T12:58:19Z',bootstrap:'Tool calls before runner creation return merged tool output; no invented stdout/stderr separation.'},null,2)+'\n');
+const r=runner.run(executable,args,label);
+process.stdout.write(r.stdout);process.stderr.write(r.stderr);
+process.stdout.write('\nRUNNER_METADATA '+JSON.stringify({label:r.label,exit_code:r.exit_code,elapsed_ms:r.elapsed_ms,files:r.files})+'\n');
+process.exitCode=r.exit_code??1;

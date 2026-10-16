@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-CHAP-001-R001",
+      "severity": "blocker",
+      "location": "input.main_event",
+      "recommendation": "Replace research-only activity with a visible event that changes the character's situation and creates a next-chapter pursuit question.",
+      "source_refs": [
+        "docs/traceability.md#SGM-CHAP-001"
+      ]
+    }
+  ]
+}

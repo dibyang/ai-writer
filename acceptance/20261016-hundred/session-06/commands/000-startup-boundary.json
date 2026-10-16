@@ -1,0 +1,16 @@
+{
+  "command": {
+    "executable": "powershell",
+    "argv_command": "Get-Date -Format o",
+    "cwd": "D:/work/other/ai-writer"
+  },
+  "tool_exit_code": 0,
+  "tool_merged_output": "2026-10-16T14:57:32.5680140+08:00\r\n",
+  "boundary": "启动时首次时钟命令仅取得 exec_command 合并回包；未捕获原始 stdout/stderr 字节，不能视为分流日志。后续 CLI 与辅助命令统一由共享 runner 捕获。",
+  "raw_process_argv_available": false,
+  "exact_tool_request": {
+    "cmd": "Get-Date -Format o",
+    "workdir": "D:/work/other/ai-writer"
+  },
+  "note": "启动请求已知；底层PowerShell进程完整argv与分流原字节未取得，不虚构。"
+}

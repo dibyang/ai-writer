@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const base='acceptance/20261016-hundred',file=`${base}/active-candidate.json`,before=fs.readFileSync(file),active=JSON.parse(before),out=`${base}/active-manifest-path-correction`,hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert(!fs.existsSync(out));assert.equal(active.manifest,`${base}/source-baseline-v3.json`);
+const oldResolved=path.resolve(active.manifest),newValue=path.basename(active.manifest),newResolved=path.resolve(base,newValue);assert.equal(oldResolved,newResolved);
+for(const row of JSON.parse(fs.readFileSync(oldResolved)).files)assert.equal(hash(row.file),row.sha256,row.file);
+const authority=`${base}/works/潮汐信号/.writer/state.json`,stateHash=hash(authority);
+fs.mkdirSync(out);fs.writeFileSync(`${out}/before.json`,before,{flag:'wx'});active.manifest=newValue;fs.writeFileSync(file,JSON.stringify(active,null,2)+'\n');assert.equal(hash(authority),stateHash);
+fs.writeFileSync(`${out}/proof.json`,JSON.stringify({scope:'Auxiliary orchestration path correction found before session12; not a product failure or a completed native audit',reason:'audit.mjs resolves manifest relative to campaign, while v3 activation supplied root-relative path',old_value:JSON.parse(before).manifest,new_value:newValue,same_actual_source_file:oldResolved,source_manifest_sha256:hash(oldResolved),all_source_files_verified:true,authority_unchanged:true,state_sha256:stateHash},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,manifest:newValue,same_source:true,authority_unchanged:true}));

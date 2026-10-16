@@ -1,0 +1,9 @@
+file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/fix.mjs:121
+   for(const e of previous.evidence??[]){let q=e.quote;if(e.unit===95)q=q.replace('第三十一章两页','后来新印的缺名两页');if(e.unit===94)q=q.replace('九点五十八，他们在楼下分路。','九点五十八，他们在门外分路。');if(!(l.evidence??[]).some(f=>f.unit===e.unit&&f.quote===q))throw Error(`Evidence lost ${id}:${e.unit}:${q}`);preserved++;}
+                                                                                                                                                                                                                                        ^
+
+Error: Evidence lost P_QIU_SINGLE_27:27:沈禾将有邱当面改词的这一页留给她，只带走自己的笔记
+    at Module.main (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/fix.mjs:121:233)
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/ops.mjs:98:37
+
+Node.js v24.15.0

@@ -1,0 +1,268 @@
+{
+  "unit": 61,
+  "expected_revision": 191,
+  "input": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\revision-b\\inputs\\061-r191-a1.json",
+  "summary": "35日16:20沈下车、16:52到旅馆告周梁，电脑盘自持未开旧声。晚饭与陆梁当面核新场地原360，陆称退240未到/120取消费；梁实际先转360陆核收，项目承担120、退240待归梁，旧椅押金另核未清。沈实际吃饭买次早餐包洗衣，晚与周通话说找店/提鞋不传垫款，约36晚20:30可通话、变化先说，未约三晚或定住所。旅馆休息、明早现场尚未做。两房仍照新确认顺排，取消仅原并行的额外保留时段。",
+  "source_count": 11,
+  "context_omitted_ids": [
+    "T_SIGNAL",
+    "T_HANDOVER",
+    "T_PRIVATE",
+    "T_LAMP",
+    "T_TAPE",
+    "T_KEY_CABINET",
+    "I_KEY_USE",
+    "I_DECK_REPAIR",
+    "T_SERVICE_VISIT",
+    "T_CONTACT",
+    "T_ARCHIVE",
+    "T_MESSAGE_VERIFY",
+    "T_PUBLIC_USE",
+    "I_ROOM_VISIT_PRICE",
+    "I_LATCH_ADJUST_42",
+    "T_ROOM_TRIAL",
+    "P_BORROWED_RECIPE",
+    "I_HOURS_DELIVERY_46",
+    "T_ROOM_NEXT_OPEN",
+    "T_ROOM_FUND_MEET",
+    "I_ROOM_THREE_MORNINGS",
+    "I_SMALL_SAMPLES_51",
+    "I_ROOM_FIRST_52",
+    "T_ROOM_NOTICE_31",
+    "T_QIU_TAKE_BACK",
+    "T_ZHOU_UPDATE_32",
+    "T_ROOM_NOTICE_33",
+    "T_ZHOU_DEPARTURE_NOTICE",
+    "T_FISH_DINNER_34",
+    "O_LEAD_DROP_58",
+    "P_HOURS_NOTE",
+    "P_READING_ROOM_DUTY_KEY",
+    "P_ROOM_FUNDS_SHEET",
+    "P_ROOM_TRIAL_SHEET",
+    "T_ROOM_AFTER33",
+    "O_PAGE_SLIP_48",
+    "O_ROUTE_PASS_54",
+    "P_LAMP",
+    "T_ROUTE_COMMON",
+    "P_DOOR_RECEIPT_42",
+    "O_RAIN_DURING_42",
+    "O_RAIN_TILE",
+    "O_ROUTE_DRY_48",
+    "O_ZOU_ACCOUNT_48",
+    "P_READING_ROOM_SPARE_KEY",
+    "O_HOURS_NEW_44",
+    "O_HOURS_NOTE",
+    "O_ROOM_LATCH",
+    "O_LAMP_PANEL",
+    "P_CHEN_NOTE",
+    "O_ROOM_TONE",
+    "O_WHEEL_KNOCK",
+    "R_SHEN_TANG",
+    "P_BOX",
+    "P_KEY",
+    "P_LAMP_BOOK",
+    "P_NOTICE",
+    "O_DECK",
+    "O_DISPATCH_RETURN",
+    "O_INDEX_PAGE",
+    "O_MESSAGE_ROW",
+    "O_MESSAGE_SIGN",
+    "O_PLATE",
+    "O_QIU_ACCOUNT",
+    "O_TAPE_18",
+    "P_SERVICE_BAG",
+    "T_INDEX",
+    "I_AUDIO_ALIGN",
+    "O_INDEX_CONT",
+    "O_KEY",
+    "O_LAMP_RECORD",
+    "O_MAP",
+    "O_NOTICE",
+    "P_MAP",
+    "T_EAST",
+    "T_MAP",
+    "O_CURRENT"
+  ],
+  "characters": [
+    "沈禾",
+    "周砚",
+    "梁秋",
+    "陆岑"
+  ],
+  "timeline": [
+    "35日16:20沈下车，16:52到旅馆报周梁；晚与陆梁吃饭，梁先偿新场地垫360陆实收，退240尚未到/120取消费项目承担；晚周电话约36晚20:30，旅馆休息未开录。"
+  ],
+  "ledger": {
+    "P_AUDIO_COPY": {
+      "fields": [
+        "custody",
+        "character_known",
+        "evidence"
+      ],
+      "custody": {
+        "holder": "沈禾",
+        "location": "35晚城里旅馆本人电脑及移动盘包内",
+        "condition": "旧转录补录原分文件未开未外传，母原盘仍家、原带宋格"
+      },
+      "known": {
+        "沈禾": "第61章：载体自持旅馆包，旧文件未开。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "旧转录和旧客户文件没有打开"
+      ]
+    },
+    "R_SHEN_ZHOU": {
+      "fields": [
+        "character_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第61章：本人已报抵达并电话讲日常，约明36晚20:30，变化先说，不保每晚。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "周砚": "第61章：实际获抵达及本晚电话，答36晚能说、37仍看班，不获项目账目。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "先约明晚，哪边有变化先发一句"
+      ]
+    },
+    "T_PAID_WORK": {
+      "fields": [
+        "character_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第61章：亲见新场地偿款，不拿自己的2700填120取消费，尾1350仍待三天履约。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "梁秋": "第61章：现场另偿陆360，120项目成本与沈工资分开，退款240待。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "陆岑": "第61章：原垫360已实际先还，240退回待归项目，旧椅押金未清。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "余下一百二由项目承担"
+      ]
+    },
+    "T_RETURN_MONTH": {
+      "fields": [
+        "character_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第61章：城里第一晚愿回去相处，住所仍未定，具体只约次晚通话。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "周砚": "第61章：知道沈愿返继续见，不以三晚固定联系或永久住所相许。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "回来我还想同你吃饭"
+      ]
+    },
+    "P_TRIAL_VOICE": {
+      "fields": [
+        "custody",
+        "evidence"
+      ],
+      "custody": {
+        "holder": "沈禾",
+        "location": "35晚旅馆本人电脑包内旧自述文件夹",
+        "condition": "原90秒随载体不打开不外传，非明日场地底声"
+      },
+      "known": {},
+      "quotes": [
+        "电脑和移动盘仍合在自己的包里"
+      ]
+    },
+    "P_CITY_AUDIO": {
+      "fields": [
+        "custody",
+        "character_known",
+        "evidence"
+      ],
+      "custody": {
+        "holder": "陆岑",
+        "location": "旧项目原盘具体位置本章未核；沈的委托暂备随本人电脑在城里旅馆包",
+        "condition": "旧两日工程不与新单混，未开旧客户暂备，未发生原盘转手"
+      },
+      "known": {
+        "沈禾": "第61章：旧委托暂备随自己载体但未开，不替陆原盘补位置。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "旧转录和旧客户文件没有打开"
+      ]
+    },
+    "T_NEW_ROOM_COST": {
+      "fields": [
+        "status",
+        "character_known",
+        "reader_known",
+        "evidence"
+      ],
+      "status": "partial",
+      "known": {
+        "沈禾": "第61章：原付款/退数前史来自陆梁口述，现场只见本次360偿还核收。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "梁秋": "第61章：本人确认240待退、120项目承担，先偿陆360，旧椅押金另核。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "陆岑": "第61章：本人实际收回360，退240待到账后归梁，原票自己夹板留。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "给他看三百六已收",
+        "退二百四到账后再找自己核"
+      ]
+    },
+    "T_CITY_THREE_DAY_DELIVERY": {
+      "fields": [
+        "character_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第61章：已35晚实际抵达，明早8:30三楼约定，尚未现场履约。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "梁秋": "第61章：收到抵达并当面定次早8:30，未做现场。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "明早八点半在三楼等"
+      ]
+    },
+    "P_NEW_ROOM_RECEIPT": {
+      "fields": [
+        "type",
+        "statement",
+        "status",
+        "cast",
+        "custody",
+        "character_known",
+        "tags",
+        "evidence"
+      ],
+      "statement": "61晚陆拿出57视频里新场地原折票，票记360，与旧椅押金借物单分开。",
+      "status": "active",
+      "custody": {
+        "holder": "陆岑",
+        "location": "35日晚陆本人夹板袋，饭后回后街",
+        "condition": "原票折角白毛保留，拍取消确认同放，退款尚待，未交梁"
+      },
+      "known": {
+        "陆岑": "第61章：本人拿票供核后收回，不同旧椅单。",
+        "梁秋": "第61章：当面核360及取消数，未领原票。",
+        "沈禾": "第61章：只当次亲见原票和核偿，不是33付款见证。"
+      },
+      "quotes": [
+        "票暂留陆手"
+      ]
+    },
+    "T_CALL_36": {
+      "fields": [
+        "type",
+        "statement",
+        "status",
+        "due_unit",
+        "cast",
+        "character_known",
+        "tags",
+        "evidence"
+      ],
+      "statement": "61沈周真实约36晚20:30通话，变化先报；37以后仍看班，不等连续三晚。",
+      "status": "pending",
+      "due_unit": 62,
+      "known": {
+        "沈禾": "第61章：本人答明晚主动拨或变先报。",
+        "周砚": "第61章：本人答36晚可说一会，37待班。"
+      },
+      "quotes": [
+        "周说第三十六日晚八点半能说一会儿"
+      ]
+    }
+  }
+}

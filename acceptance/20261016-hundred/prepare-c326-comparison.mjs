@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const base='acceptance/20261016-hundred',source=`${base}/revision-c/candidate-r326`,target=`${base}/checkpoints/revision-c-r326-reading`,hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert(!fs.existsSync(target));const manifest=JSON.parse(fs.readFileSync(`${source}/manifest.json`));
+for(const[file,sha]of Object.entries(manifest))assert.equal(hash(path.join(source,'work',file)),sha,file);
+fs.mkdirSync(target,{recursive:true});fs.cpSync(`${source}/work`,`${target}/files`,{recursive:true});
+for(const[file,sha]of Object.entries(manifest))assert.equal(hash(path.join(target,'files',file)),sha,file);
+const state=JSON.parse(fs.readFileSync(`${target}/files/.writer/state.json`));assert.equal(state.revision,326);assert.equal(state.units.length,90);
+fs.writeFileSync(`${target}/provenance.json`,JSON.stringify({scope:'Intermediate r326 frozen candidate for independent semantic diff reading only; NOT completed or final C audit',source,manifest_sha256:hash(`${source}/manifest.json`),files:Object.keys(manifest).length,revision:state.revision,state_sha256:hash(`${target}/files/.writer/state.json`)},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({intermediate:true,revision:326,files:Object.keys(manifest).length}));

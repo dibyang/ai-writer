@@ -1,0 +1,18 @@
+file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-10/task.mjs:49
+ for(const id of args){const out=r.run(process.execPath,['bin/ai-writer.mjs','recall','--project',work,'--query',id,'--limit','150'],'recall-'+id);if(out.exit_code!==0)throw Error(out.stderr);const data=JSON.parse(out.stdout),entry=data.matches.find(x=>x.kind==='ledger'&&x.id===id);if(!entry)throw Error('Exact ID absent:'+id);save(stage+'/recall/'+id+'.json',data);console.log(JSON.stringify({id,entry:entry.entry},null,2));}
+                                                                                                                                                                              ^
+
+Error: {
+  "ok": false,
+  "error": "limit 最多 100",
+  "code": "COMMAND_FAILED",
+  "next_action": "按报错核对输入，查看本命令帮助。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' recall '--help'"
+}
+
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-10/task.mjs:49:175
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

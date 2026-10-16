@@ -1,0 +1,127 @@
+{
+  "at": "2026-10-16T15:38:36.106Z",
+  "ok": true,
+  "scope": "Completed hundred-chapter model/CLI validation with independent mechanical and targeted parent semantic review; not human blind reading, market validation, publication acceptance, or a performance improvement claim.",
+  "revision": 371,
+  "units": 100,
+  "volumes": 13,
+  "total_han": 228287,
+  "new_units": 76,
+  "new_han": 189745,
+  "new_min_han": 2411,
+  "new_max_han": 2840,
+  "completed_native_processes": 17,
+  "unique_threads": 17,
+  "native_elapsed_s": 43280,
+  "failed_starts": [
+    "session-01",
+    "session-01b"
+  ],
+  "state_sha256": "414cd9b1c04a9d5923de41e8f51ce848612bed63985d557daf22d9e38f91a606",
+  "state_bytes": 1095397,
+  "final_source_manifest": "source-baseline-v4.json",
+  "source_manifest_sha256": "52f6a0f755871c7886dd4d6936133fbe522a22407eea058f36a07966583d7ec9",
+  "source_files": 246,
+  "overall_model_report": {
+    "path": "审查/final-review-overall-0001-0100-r371-complete.md",
+    "kind": "model-self-review",
+    "sha256": "60157acd12b3b679330cdbf3bd74be6fcb4e513682ed9af54e808d55f984f144",
+    "body_bindings": 100,
+    "review_record": ".writer/reviews/58fd36cb-513d-405d-b8b7-3e5e2ca6178d.json"
+  },
+  "native_reading": {
+    "chapters": 100,
+    "lines": 7822,
+    "visible_nonempty_chunks": 269
+  },
+  "anchors": {
+    "before": 1155,
+    "unchanged_quote_contents": 1153,
+    "intentional_replacements": 2,
+    "new": 2,
+    "final": 1157
+  },
+  "checks": [
+    {
+      "label": "integrated-docs-test",
+      "file": "parent-commands/integrated-docs-test/result.json",
+      "sha256": "6140e4c139e52c75ddd220f15d5236a806fba91e4be22af3e83bfd4f2f407fdb"
+    },
+    {
+      "label": "integrated-docs-engine",
+      "file": "parent-commands/integrated-docs-engine/result.json",
+      "sha256": "3dd6c4df8e7caad1ff903ea6d5be6eef7676b23da257b78a86023a94c98a7e6b"
+    },
+    {
+      "label": "integrated-docs-doctor",
+      "file": "parent-commands/integrated-docs-doctor/result.json",
+      "sha256": "987f8486c5563a02f5347b6297e1102db18bd1c7555bf291c80573442a2a7bba"
+    },
+    {
+      "label": "final-git-diff-check",
+      "file": "parent-commands/final-git-diff-check/result.json",
+      "sha256": "7a72993a18a98ca2f7ff19982dbde4ba6813f0b178babd7a714fa71d2e6c6d1d"
+    },
+    {
+      "label": "final-v4-context-r2",
+      "file": "parent-commands/final-v4-context-r2/result.json",
+      "sha256": "446ce526a11cd1724f2bf82e861c6c32184222803049a462a8c0ed31a54ba79a"
+    },
+    {
+      "label": "final-mixed-drift",
+      "file": "parent-commands/final-mixed-drift/result.json",
+      "sha256": "ecb9d803819833b09dc9e1307e6f783cb6ecb6d6b18a6ae094032c474d56291c"
+    },
+    {
+      "label": "final-anchor-mappings",
+      "file": "parent-commands/final-anchor-mappings/result.json",
+      "sha256": "f33a34005b7524adfee68084b97ac82323eed7713c050299286fda347b98960d"
+    }
+  ],
+  "proofs": [
+    {
+      "file": "audits/final-review.json",
+      "sha256": "e859bc707d48ad533fad0908e2e2109488322f85c2b3c1c059aefc3149a337bf"
+    },
+    {
+      "file": "final-reading-proof.json",
+      "sha256": "43ca0a3fbee8ecc96848bb647e27eaaed4119f2f74bb4dc89ecd95bac8ca1c89"
+    },
+    {
+      "file": "final-invariants-proof.json",
+      "sha256": "71ed0a9d8488fd96f295dd96797bc2119d6659d7c900d1a6c1430a6ace22131c"
+    },
+    {
+      "file": "final-anchor-mapping-proof.json",
+      "sha256": "cac8fd3ec74290ea1d164fa6c497154e26b544b0e59e9e2f6ffe42182ffa53c3"
+    },
+    {
+      "file": "input-bindings/final-review/proof.json",
+      "sha256": "b255c89c2ef8eee7cbd1eeecacd105d7b0bbe28a11a9c0c2199b81abe000cd89"
+    },
+    {
+      "file": "legacy-proofs/final-review.json",
+      "sha256": "4a997ae5adc1eaca8ed7597d6d57330752a7268fc691ae53a3f51cdd6d828450"
+    },
+    {
+      "file": "origin-final-integrity.json",
+      "sha256": "52d9a5c22f6ebb9609f06ae19ed3f4fa90e93e3d159b6d1017ed7f3f88d0727e"
+    },
+    {
+      "file": "integration-documentation/native-context-proof.json",
+      "sha256": "7e1106cc1b2d593168b7992bd3f96744819f7d6ef0f0c7fdc97daad03b33e4ef"
+    }
+  ],
+  "export": {
+    "path": "final-review/export/manuscript.md",
+    "sha256": "f579c2cb65c88864e93271c317021c6d49c5e10d4d7bbc916bd9e7ab70f7b3ab",
+    "status": "draft"
+  },
+  "git": {
+    "head": "8c7aded96cb724b58939d135fb261d8b8d31bed1",
+    "committed": false,
+    "pushed": false,
+    "unrelated_idea_preserved": true
+  },
+  "archive_note": "Evidence inventory is sealed separately after this result and all final notes stop changing."
+}

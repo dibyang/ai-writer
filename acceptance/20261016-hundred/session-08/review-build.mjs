@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {project,stage,runner,hash} from './run-cli.mjs';
+const to=Number(process.argv[2]),from=to-5,tag=String(to).padStart(4,'0');
+const names=fs.readdirSync(project+'/正文');
+const sources=Object.fromEntries(Array.from({length:6},(_,i)=>from+i).map(n=>{const rel='正文/'+names.find(x=>x.startsWith(String(n).padStart(4,'0')+'-'));return[rel,hash(project+'/'+rel)];}));
+const report='审查/'+String(from).padStart(4,'0')+'-'+tag+'-会话08知情连读.md';
+const reads=fs.readFileSync(stage+'/reading.jsonl','utf8').trim().split('\n').map(JSON.parse);
+const old=[...new Map(reads.filter(r=>r.path.includes('/正文/')&&!Object.keys(sources).some(p=>r.path.endsWith(p))).map(r=>[r.path,r])).values()];
+fs.writeFileSync(project+'/'+report,'# '+from+'—'+to+'章知情连读\n\n'+fs.readFileSync(stage+'/review-body-'+tag+'.md','utf8')+'\n\n本窗口实际正文SHA256：\n\n'+Object.entries(sources).map(([p,h])=>'- '+p+' | '+h+' | 全文').join('\n')+'\n\n相关旧正文实际全文回查（不是哈希扫描）：\n\n'+old.map(r=>'- '+r.path+' | '+r.sha256+' | 全文 | '+r.purpose).join('\n')+'\n',{flag:'wx'});
+const input={from,to,kind:'model-self-review',report,source_hashes:sources};
+fs.writeFileSync(stage+'/review-'+tag+'.json',JSON.stringify(input,null,2)+'\n');
+const r=runner.run(process.execPath,['bin/ai-writer.mjs','review','--project',project,'--input',stage+'/review-'+tag+'.json'],'review-'+tag);console.log(r.stdout,r.stderr);process.exitCode=r.exit_code??1;

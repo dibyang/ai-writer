@@ -1,0 +1,43 @@
+[
+  {
+    "category": "auxiliary-call",
+    "event": "一处apply_patch预期文本匹配失败",
+    "effect": "该次原子修改未落地，随后按真实内容修正补丁；不是作品或产品错误",
+    "raw": "工具调用原始错误保留于本次会话；不伪造命令退出码"
+  },
+  {
+    "category": "auxiliary-transform",
+    "event": "首轮辅助审计发现四条未变引文未保留",
+    "checks": 2447,
+    "failed": [
+      {
+        "ok": false,
+        "name": "旧证据保留或明确映射:T_PAID_WORK:25:31"
+      },
+      {
+        "ok": false,
+        "name": "旧证据保留或明确映射:T_PUBLIC_USE:27:95"
+      },
+      {
+        "ok": false,
+        "name": "旧证据保留或明确映射:T_VOICE_CONSENT:30:35"
+      },
+      {
+        "ok": false,
+        "name": "旧证据保留或明确映射:T_VOICE_CONSENT:36:25"
+      }
+    ],
+    "reason": "同章同一行可有多个引文，辅助脚本按unit+line挑首条造成覆盖",
+    "repair": "改为按原证据数组索引保留；真实rewind --from25 --expected-revision109并重新context/template/record/check25—42，109→110→128；正文哈希不变",
+    "preserved": [
+      "audit-first-failed.json",
+      "r109-export-before-evidence-repair/"
+    ],
+    "final": "delivery-audit-final退出0，2451项全部通过"
+  },
+  {
+    "category": "display-truncation",
+    "event": "较大ledger/汇总工具输出显示截断",
+    "effect": "不把截断视作完整实读；正文全文按三章块另读补齐，原命令stdout/stderr文件不截断，扫描和阅读分开"
+  }
+]

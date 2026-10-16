@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const work=path.resolve('acceptance/20261016-hundred/works/潮汐信号');for(const n of [42,43,47,57,60,61,62]){const draft='大纲/单元/'+String(n).padStart(4,'0')+'.json',b=fs.readFileSync(path.join(work,draft));console.log(JSON.stringify({unit:n,source:draft,sha256:crypto.createHash('sha256').update(b).digest('hex')}));console.log(b.toString('utf8'));}

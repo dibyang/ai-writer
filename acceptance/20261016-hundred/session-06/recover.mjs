@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const stage='acceptance/20261016-hundred/session-06',project='acceptance/20261016-hundred/works/潮汐信号';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const entries=JSON.parse(fs.readFileSync(path.join(stage,'read-initial.json'),'utf8'));
+const rows=entries.map(e=>({...e,sha256:sha(fs.readFileSync(path.join(project,e.path)))}));
+fs.writeFileSync(path.join(stage,'recovery-sources.json'),JSON.stringify({at:new Date().toISOString(),revision:153,sources:rows,state_sha256:sha(fs.readFileSync(path.join(project,'.writer/state.json')))},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(stage,'recovery.md'),fs.readFileSync(path.join(stage,'recovery-body.md'),'utf8')+'\n|来源全文|SHA-256|用途|\n|---|---|---|\n'+rows.map(e=>`|${e.path}|${e.sha256}|${e.purpose}|`).join('\n')+'\n',{flag:'wx'});
+console.log(JSON.stringify({sources:rows.length,revision:153,state_sha256:sha(fs.readFileSync(path.join(project,'.writer/state.json')))}));

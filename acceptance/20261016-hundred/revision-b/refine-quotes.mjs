@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';
+const stage=path.resolve('acceptance/20261016-hundred/revision-b');fs.mkdirSync(path.join(stage,'desired-v3'));const edits=[];
+for(let n=0;n<=66;n++){const x=JSON.parse(fs.readFileSync(path.join(stage,'desired-v2',String(n).padStart(3,'0')+'.json'),'utf8'));for(const[id,l]of Object.entries(x.ledger??{}))for(const[i,e]of (l.evidence??[]).entries())if(e.unit===43&&e.quote==='十五点零六，梁秋转来二百'){edits.push({unit_snapshot:n,id,evidence_index:i,unit:43,before:e.quote,after:'十五点零六，梁秋转来二百四十'});e.quote='十五点零六，梁秋转来二百四十';}fs.writeFileSync(path.join(stage,'desired-v3',String(n).padStart(3,'0')+'.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});}
+fs.writeFileSync(path.join(stage,'quote-refinements.json'),JSON.stringify(edits,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(edits.slice(0,1)));console.log('snapshots refined: '+edits.length);

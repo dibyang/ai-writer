@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const [label,...texts]=process.argv.slice(2),base='acceptance/20261016-hundred',work=`${base}/works/潮汐信号`;
+if(!/^[a-z0-9-]+$/.test(label??''))throw Error('Unique label required');
+const state=JSON.parse(fs.readFileSync(`${work}/.writer/state.json`)),dir=`${base}/parent-reading-copies/${label}`;
+fs.mkdirSync(dir,{recursive:false});
+const rows=texts.map(text=>{const unit=Number(text),entry=state.units.find(r=>r.unit===unit);if(!entry)throw Error('Unregistered '+unit);const bytes=fs.readFileSync(`${work}/${entry.draft}`),sha256=crypto.createHash('sha256').update(bytes).digest('hex');assert.equal(sha256,entry.sha256);const target=path.join(dir,path.basename(entry.draft));fs.writeFileSync(target,bytes,{flag:'wx'});return{unit,file:target,sha256,registration:entry};});
+const after=JSON.parse(fs.readFileSync(`${work}/.writer/state.json`));for(const row of rows)assert.deepEqual(after.units.find(r=>r.unit===row.unit),row.registration,'Registration changed while freezing');
+fs.writeFileSync(`${dir}/manifest.json`,JSON.stringify({at:new Date().toISOString(),revision_at_start:state.revision,revision_at_end:after.revision,scope:'Frozen registered bodies for parent reading; file hashing is not reading',rows},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({label,revision:state.revision,files:rows.map(r=>r.file)}));

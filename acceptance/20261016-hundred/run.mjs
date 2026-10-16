@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const [label,exe,...args]=process.argv.slice(2);
+if(!/^[a-z0-9-]+$/.test(label??'')||!exe)throw Error('run <unique-label> <exe> <args...>');
+const dir=path.resolve('acceptance/20261016-hundred/parent-commands',label);
+fs.mkdirSync(dir,{recursive:true});
+if(fs.existsSync(path.join(dir,'result.json')))throw Error('Never overwrite command evidence');
+const start=Date.now(),r=spawnSync(exe,args,{cwd:process.cwd(),encoding:'buffer',maxBuffer:100*1024*1024,windowsHide:true,timeout:180000});
+fs.writeFileSync(path.join(dir,'stdout.raw.txt'),r.stdout??Buffer.alloc(0));
+fs.writeFileSync(path.join(dir,'stderr.raw.txt'),r.stderr??Buffer.alloc(0));
+const result={exe,argv:args,cwd:process.cwd(),started_at:new Date(start).toISOString(),elapsed_ms:Date.now()-start,exit_code:r.status,signal:r.signal,error:r.error?.message};
+fs.writeFileSync(path.join(dir,'result.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));
+process.exitCode=r.status??1;

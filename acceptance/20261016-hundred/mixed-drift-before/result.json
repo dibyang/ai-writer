@@ -1,0 +1,38 @@
+{
+  "scope": "Isolated copy of real 42-chapter frozen data, recovery guidance consistency only",
+  "starting_revision": 90,
+  "body_drift_unit": 36,
+  "source_first_consumer": 25,
+  "status_next": {
+    "unit": 43,
+    "plan_exists": false,
+    "action": "核实来源变更，按最早受影响单元回退并逐单元核对登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' rewind '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\mixed-drift-before\\work' '--from' '25' '--expected-revision' '90'"
+  },
+  "context_exit": 2,
+  "context_error": {
+    "ok": false,
+    "error": "正文已变化或缺失，旧追踪失效：36。先 rewind --from 最早受影响单元，再逐单元重新登记",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'"
+  },
+  "export_exit": 2,
+  "export_error": {
+    "ok": false,
+    "error": "正文已变化或缺失，旧追踪失效：36。先 rewind --from 最早受影响单元，再逐单元重新登记",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' export '--help'"
+  },
+  "blocked_export_created": false,
+  "body_only_rewind_exit": 0,
+  "after_body_rewind_context_exit": 2,
+  "after_body_rewind_error": {
+    "ok": false,
+    "error": "创作来源已变化或缺失：设定/续部人物与场所.md（单元 25）, 设定/续部人物与场所.md（单元 26）, 设定/续部人物与场所.md（单元 27）, 设定/续部人物与场所.md（单元 28）, 设定/续部人物与场所.md（单元 29）, 设定/续部人物与场所.md（单元 30）, 设定/续部人物与场所.md（单元 31）, 设定/续部人物与场所.md（单元 32）, 设定/续部人物与场所.md（单元 33）, 设定/续部人物与场所.md（单元 34）, 设定/续部人物与场所.md（单元 35）。先核实影响，再 rewind --from 25 并重新核对登记；哈希只能发现变更，不能判断语义影响",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'"
+  }
+}

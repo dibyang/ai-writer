@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {stage,project,hash} from './session.mjs';
+const r=JSON.parse(fs.readFileSync(stage+'/result.json','utf8'));
+const v=JSON.parse(fs.readFileSync(stage+'/artifact-verification.json','utf8'));
+const expected=[24,31,32,33,36,39,42,48,54,55,56,57,58,59,60,61,62,63,64,65,66];
+if(JSON.stringify(r.read_scope.unique_body_units)!==JSON.stringify(expected))throw Error('Actual reading summary differs');
+if(r.checks.initial_live_ledger_count!==72)throw Error('Initial active ledger count differs');
+for(const [p,h] of [[stage+'/result.json',v.result_json_sha256],[stage+'/result.md',v.result_md_sha256],[stage+'/reading.jsonl',v.reading_sha256],[project+'/.writer/state.json',v.state_sha256],[stage+'/export/manuscript.md',v.manuscript_sha256]])if(hash(p)!==h)throw Error('Final artifact hash drift '+p);
+for(const x of r.chapters)if(hash(project+'/'+x.draft)!==x.sha256)throw Error('Draft changed '+x.unit);
+for(const x of r.reviews)if(hash(project+'/'+x.path)!==x.sha256)throw Error('Review changed '+x.path);
+console.log(JSON.stringify({ok:true,revision:r.final_revision,han_total:r.total_han,units_completed:r.units_completed,export_units:r.export.included_units.length,reading_unique_chapters:expected.length,initial_live_ledger_count:72,report_hashes_valid:true,pending_windows:r.checks.check.rolling_review.pending_windows,product_defects:r.product_defects},null,2));

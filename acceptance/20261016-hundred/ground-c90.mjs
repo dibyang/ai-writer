@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const base='acceptance/20261016-hundred',root=`${base}/checkpoints/session-11/files`,bytes=fs.readFileSync(`${root}/.writer/state.json`),state=JSON.parse(bytes),sha=x=>crypto.createHash('sha256').update(x).digest('hex');assert.equal(state.units.length,90);assert.equal(state.revision,275);
+assert.equal(sha(fs.readFileSync(`${base}/works/潮汐信号/.writer/state.json`)),sha(bytes));
+const ledger=state.snapshot.ledger,observations=Object.entries(ledger).filter(([,e])=>e.type==='observation').map(([id,e])=>({id,statement:e.statement,introduced_unit:e.introduced_unit}));
+const selected=Object.entries(ledger).filter(([id])=>/ROOM_VISIT_PRICE|DOOR_RECEIPT|PHOTO|POST_WAIT|SHOP_SEAT|PAGE_PAIR|VOICE_CONSENT|QIU_WORK_PAGES/.test(id)).map(([id,e])=>({id,type:e.type,statement:e.statement,status:e.status,introduced_unit:e.introduced_unit,due_unit:e.due_unit,reader_known:e.reader_known,custody:e.custody}));
+const candidates=observations.filter(e=>/10:30|十点半|第四遍|八十|(?<!\d)80(?!\d)/u.test(e.statement));
+const result={at:new Date().toISOString(),scope:'Selected frozen90 grounding, not complete knowledge reading or permission to rewrite observations',source:`${root}/.writer/state.json`,state_sha256:sha(bytes),revision:275,units:90,observations_total:observations.length,observations_mentioning_candidate_values:candidates,selected_entries:selected};
+const dir=`${base}/revision-c-grounding`;assert(!fs.existsSync(dir));fs.mkdirSync(dir);fs.writeFileSync(`${dir}/ledger-at90.json`,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({observations:observations.length,candidates:candidates.map(e=>e.id),selected:selected.map(e=>e.id)}));

@@ -1,0 +1,25 @@
+{
+  "release_id": "story-gate-studio@0.1.0-private-commercial-trial.1",
+  "release_status": "private_trial",
+  "plugin_name": "story-gate-studio",
+  "plugin_version": "0.1.0",
+  "package_profile": "private-commercial-trial@0.1.0",
+  "package_dir_name": "story-gate-studio-private-commercial-trial",
+  "archive_name": "story-gate-studio-v0.1.0-private-commercial-trial.zip",
+  "release_notes": "RELEASE.md",
+  "changelog": "CHANGELOG.md",
+  "design_doc": "docs/release-management.md",
+  "quality_evidence": [
+    "node scripts/story-gate.js validate",
+    "node --test tests/*.test.js",
+    "node scripts/story-gate.js private-package-check",
+    "node scripts/story-gate.js build-release-archive",
+    "node scripts/story-gate.js customer-install-smoke --full",
+    "Codex validate_plugin.py"
+  ],
+  "rollback": {
+    "previous_release_id": null,
+    "strategy": "Reinstall the previous accepted local package, then rerun customer-install-smoke --full.",
+    "support_record_required": true
+  }
+}

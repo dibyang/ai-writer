@@ -1,0 +1,17 @@
+{
+  "ok": false,
+  "error": "审查报告 必须是非空字符串，且不超过 20000 字符",
+  "code": "COMMAND_FAILED",
+  "next_action": "按报错核对输入，查看本命令帮助。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' review '--help'"
+}
+file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/fix.mjs:18
+function cli(label,args){const r=runner.run(process.execPath,[path.join(root,'bin/ai-writer.mjs'),...args],`inner-final-${label}`);if(r.exit_code!==0){process.stdout.write(r.stdout);process.stderr.write(r.stderr);throw Error(`CLI ${label} exit ${r.exit_code}; raw ${r.files.metadata}`);}return {r,value:JSON.parse(r.stdout)};}
+                                                                                                                                                                                                                           ^
+
+Error: CLI review-final-review-overall-0001-0100-r371 exit 2; raw D:\work\other\ai-writer\acceptance\20261016-hundred\final-review\commands\2026-10-16T15-26-21-601Z-8173c3c9-0da1-4433-9dcc-80494489e1e5-inner-final-review-final-review-overall-0001-0100-r371.json
+    at cli (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/fix.mjs:18:220)
+    at Module.main (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/fix.mjs:113:16)
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/final-review/ops.mjs:98:37
+
+Node.js v24.15.0

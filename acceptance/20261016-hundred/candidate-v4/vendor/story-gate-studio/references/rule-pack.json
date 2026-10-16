@@ -1,0 +1,385 @@
+{
+  "rule_pack": "universal-novel",
+  "version": "0.1.6",
+  "modes": [
+    "novel",
+    "visual",
+    "screenplay",
+    "short_drama"
+  ],
+  "modules": [
+    {
+      "module_id": "SGM-CHAP-001",
+      "name": "Chapter Gate Card",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-CHAP-001"
+      ]
+    },
+    {
+      "module_id": "SGM-REV-001",
+      "name": "Third-party Cold Review",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-REV-001"
+      ]
+    },
+    {
+      "module_id": "SGM-BLIND-001",
+      "name": "Single and Continuous Blind-read Gate",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "module_id": "SGM-GATE-001",
+      "name": "Release Gate",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-GATE-001"
+      ]
+    },
+    {
+      "module_id": "SGM-PROOF-001",
+      "name": "Line-by-line Proofreading and Language Quality",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-PROOF-001"
+      ]
+    },
+    {
+      "module_id": "SGM-MKT-001",
+      "name": "Market Readability Review",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-MKT-001"
+      ]
+    },
+    {
+      "module_id": "SGM-READ-001",
+      "name": "Current-page Readability",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-READ-001"
+      ]
+    },
+    {
+      "module_id": "SGM-EMO-001",
+      "name": "Emotion Landing Review",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-EMO-001"
+      ]
+    },
+    {
+      "module_id": "SGM-PHY-001",
+      "name": "Physical Logic and Operability",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    },
+    {
+      "module_id": "SGM-DUAL-001",
+      "name": "Dual Timeline and Closed-loop Evidence Continuity",
+      "mode": "novel",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    },
+    {
+      "module_id": "SGM-VIS-001",
+      "name": "Visual Asset Manager",
+      "mode": "visual",
+      "source_refs": [
+        "docs/traceability.md#SGM-VIS-001"
+      ]
+    },
+    {
+      "module_id": "SGM-SCR-001",
+      "name": "Screenplay Adapter",
+      "mode": "screenplay",
+      "source_refs": [
+        "docs/traceability.md#SGM-SCR-001"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "SGM-CHAP-001-R001",
+      "module_id": "SGM-CHAP-001",
+      "severity": "blocker",
+      "description": "A chapter gate card must include a concrete main event, worsening situation, reader-facing mainline, and next-chapter pursuit question.",
+      "source_refs": [
+        "docs/traceability.md#SGM-CHAP-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-REV-001-R001",
+      "module_id": "SGM-REV-001",
+      "severity": "high",
+      "description": "Third-party review must surface abandonment risk before defending the project.",
+      "source_refs": [
+        "docs/traceability.md#SGM-REV-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R001",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Every blind-read round must lock date, file order, word count, git ref or modified time, include/appendix state, ticket type, and questionnaire version before issuing tasks.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R002",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Human blind tickets, isolated agent tickets, and informed review must be counted separately; informed review cannot be counted as blind reading.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R003",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Blind readers may only receive locked manuscript text, neutral task text, and the questionnaire; prompts must not reveal author concerns, prior answers, outlines, settings, comments, or later chapters.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R004",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Substantive manuscript changes invalidate related old blind-read tickets; only mechanical typo, punctuation, and pure-format edits may preserve old tickets with an explicit record.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R005",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Formal blind-read decisions require at least two qualifying isolated agent or human tickets; one screening ticket cannot prove pass.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R006",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Single-chapter blind-read results and continuous blind-read results must not substitute for each other.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R007",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Formal quality scores and page-turner or commercial stickiness scores must be recorded separately and cannot be merged into one average.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R008",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Every formal single-chapter ticket must pass independently; averages cannot cover an incomplete read, wrong retell, key misread, low continuation score, or unwillingness to continue.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R009",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Single-chapter strong page-turner pass requires basic pass, strong continuation, character closeness, scene pressure, and a continuation reason rooted in a concrete character.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R010",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Continuous blind reading must read ordered chapters without substitution, record each chapter immediately, track first slow-down, first skim, stable fatigue, and block shared time misread, result pre-spoiling, hard chapter breaks, or stable skip zones.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R011",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Formal quality pass requires every qualifying ticket to meet the formal quality threshold and avoid logic, time, identity, professional-boundary, and causality hard injuries.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R012",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Continuous strong page-turner pass requires every qualifying ticket to meet the stickiness threshold, keep each chapter at least 4, immediately continue, avoid shared stable fatigue, and cite both a concrete character and unresolved event.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R013",
+      "module_id": "SGM-BLIND-001",
+      "severity": "blocker",
+      "description": "Blind-read work must use an internal temporary agent that does not create previewable tasks, does not inherit current conversation context, discards results after readback, and leaves no sidebar entry.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-GATE-001-R001",
+      "module_id": "SGM-GATE-001",
+      "severity": "blocker",
+      "description": "Release gate reports must flag TODO markers, placeholders, meta-writing residue, encoding markers, and forbidden expression classes.",
+      "source_refs": [
+        "docs/traceability.md#SGM-GATE-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-PROOF-001-R001",
+      "module_id": "SGM-PROOF-001",
+      "severity": "blocker",
+      "description": "Formal release review must include a dedicated human line-by-line pass for typos, incorrect characters, broken collocations, missing sentence components, unclear references, subject drift, quotation and punctuation errors, accidental repetition, and inconsistent names, ages, numbers, or object labels; mechanical scans alone do not satisfy this gate.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PROOF-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-MKT-001-R001",
+      "module_id": "SGM-MKT-001",
+      "severity": "high",
+      "description": "Release readiness and market-readability scores must be reported separately.",
+      "source_refs": [
+        "docs/traceability.md#SGM-MKT-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-READ-001-R003",
+      "module_id": "SGM-READ-001",
+      "severity": "medium",
+      "description": "Cold-read review must flag drafts that lack a current-page human exchange or reader-facing handle.",
+      "source_refs": [
+        "docs/review-capability-enhancement.md#Scoring Rules"
+      ]
+    },
+    {
+      "rule_id": "SGM-EMO-001-R001",
+      "module_id": "SGM-EMO-001",
+      "severity": "high",
+      "description": "Emotion must land on body, object, relationship, or changed behavior instead of staying concept-only.",
+      "source_refs": [
+        "docs/review-capability-enhancement.md#Scoring Rules"
+      ]
+    },
+    {
+      "rule_id": "SGM-PHY-001-R001",
+      "module_id": "SGM-PHY-001",
+      "severity": "blocker",
+      "description": "Key evidence, injuries, marks, concealment, reveal order, and on-page actions must be physically operable through position, obstruction, angle, light, distance, posture, tools, timing, and procedure instead of appearing only when suspense requires them.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-PHY-001-R002",
+      "module_id": "SGM-PHY-001",
+      "severity": "blocker",
+      "description": "Physical operability explanations must contain a concrete evidence or action target and enough physical support anchors; generic statements such as 'physically reasonable' are not enough.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-PHY-001-R003",
+      "module_id": "SGM-PHY-001",
+      "severity": "blocker",
+      "description": "Small evidence objects such as wet paper, paper corners, medicine tags, broken needles, seal slips, or page fragments must specify a handling action that matches their size and state.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-PHY-001-R004",
+      "module_id": "SGM-PHY-001",
+      "severity": "blocker",
+      "description": "The same object must keep a continuous physical state across beats; it must not shift between palm-sized item and bundle-sized package, or between protected fragile support and direct edge pinching without explanation.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-DUAL-001-R001",
+      "module_id": "SGM-DUAL-001",
+      "severity": "blocker",
+      "description": "Dual-timeline or body-switch chapters must track both bodies, locations, elapsed one-to-one time, post-exit care or movement, and next wake position.",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-DUAL-001-R002",
+      "module_id": "SGM-DUAL-001",
+      "severity": "blocker",
+      "description": "Already observed facts such as photographed, recorded, measured, numbered, or archived evidence cannot retroactively change; later action may reveal unobserved layers or change interpretation, not rewrite observed facts.",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-DUAL-001-R003",
+      "module_id": "SGM-DUAL-001",
+      "severity": "blocker",
+      "description": "A cross-boundary artifact exception must have a complete lifecycle: old observed state, present/source state, active trigger or carry condition, one-way cost or modern loss, handoff/use, and final storage or evidence state.",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-VIS-001-R001",
+      "module_id": "SGM-VIS-001",
+      "severity": "high",
+      "description": "Selected visual assets must have a visual card, prompt record, version state, selection basis, and usage purpose.",
+      "source_refs": [
+        "docs/traceability.md#SGM-VIS-001"
+      ]
+    },
+    {
+      "rule_id": "SGM-SCR-001-R001",
+      "module_id": "SGM-SCR-001",
+      "severity": "blocker",
+      "description": "Novel mode must not emit shot lists, camera instructions, or production checklists unless screenplay or short_drama mode is explicit.",
+      "source_refs": [
+        "docs/traceability.md#SGM-SCR-001"
+      ]
+    }
+  ]
+}

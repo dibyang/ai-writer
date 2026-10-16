@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import {runner,project,stage} from './run-cli.mjs';
+const unit=Number(process.argv[2]),tag=String(unit).padStart(4,'0'),suffix=process.argv[3]?'-'+process.argv[3]:'';
+const call=(cmd,args,label)=>{const r=runner.run(process.execPath,['bin/ai-writer.mjs',cmd,'--project',project,...args],label);if(r.exit_code!==0){console.log(r.stdout,r.stderr);throw Error(label+' failed');}return JSON.parse(r.stdout);};
+console.log('PLAN',call('plan',['--input',stage+'/plan-'+tag+'.json'],'plan-'+tag+suffix));
+console.log('OUTLINE',call('outline',['--unit',String(unit)],'outline-'+tag));
+const c=call('context',['--unit',String(unit),'--max-chars','1000000'],'context-'+tag+suffix);
+fs.writeFileSync(stage+'/context-'+tag+suffix+'.json',JSON.stringify(c,null,2)+'\n');
+console.log('CONTEXT KEYS',Object.keys(c));
+console.log('CONTEXT SOURCES',c.source_hashes,'REVISION',c.revision,'OMITTED',c.omitted_ids);
+const p=JSON.parse(fs.readFileSync(stage+'/plan-'+tag+'.json','utf8'));
+const draft='正文/'+tag+'-'+p.title+'.md';
+const t=call('record-template',['--unit',String(unit),'--draft',draft],'template-'+tag+suffix);
+fs.writeFileSync(stage+'/record-'+tag+'-before'+suffix+'.json',JSON.stringify(t,null,2)+'\n',{flag:'wx'});
+console.log('TEMPLATE',JSON.stringify(t));

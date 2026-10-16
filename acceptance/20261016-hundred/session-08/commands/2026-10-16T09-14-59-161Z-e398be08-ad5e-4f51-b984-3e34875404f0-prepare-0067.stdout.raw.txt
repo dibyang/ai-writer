@@ -1,0 +1,51 @@
+PLAN { ok: true, plan: '大纲\\单元\\0067.json', unit: 67 }
+OUTLINE {
+  ok: true,
+  ref: '大纲/分卷/V10.json',
+  volume: {
+    id: 'V10',
+    title: '有人付钱',
+    start: 65,
+    end: 72,
+    promises: [ '阶段回收T_PAID_WORK' ],
+    constraints: [
+      '第一部1—24章为已发生，不推翻T_SIGNAL/T_TAPE/T_HANDOVER/T_LAMP的已兑现范围',
+      '罗敬私人失约不设作者答案；新材料不能逆改旧观察',
+      '原物按现行custody调用，工作副本不冒充原件'
+    ],
+    reserved: [ '余带中男声与钟确源、剪者与目录命名用意未证，不强行解释', '远期具体场景和配角选择待正文形成' ]
+  },
+  arc: {
+    id: 'V10A1',
+    start: 65,
+    end: 68,
+    goal: '收入和公共使用利益发生分歧',
+    payoff: '拒绝把旧材料包装成虚构史事',
+    forbidden: [ '计划不得登记为已发生事实', '无证提前获得他人知识或复制原物' ]
+  },
+  note: '全部是计划；兑现情况须在正文、ledger 及审查中核实'
+}
+CONTEXT KEYS [
+  'ok',            'kind',
+  'title',         'unit',
+  'revision',      'plan',
+  'settings',      'snapshot',
+  'recent',        'previous_ending',
+  'research',      'instruction',
+  'outline',       'continuity',
+  'source_hashes'
+]
+CONTEXT SOURCES {
+  'writer.json': 'e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3',
+  '.writer/state.json': 'db7e20f786e157d704fe2f82794e4f7638c917c66a53e3702da68336eb512905',
+  '大纲/单元/0067.json': '9d9ccef07595dac46d8faf034c18f67f73f1fcb1cf80f617fa51013007d717b0',
+  '设定/作品定位.md': '1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94',
+  '设定/文风.md': '2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c',
+  '设定/权威规则.md': '23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2',
+  '设定/角色卡.md': '944495ced492696613e970d574e1ea07dd636cb38c56170a2bf9d80f7041e21e',
+  '设定/续部人物与场所.md': '19e46ab7bda4d3fb2616da0044e29c136f0da709d3fdf53c67b82bcfe3ae09d1',
+  '大纲/续部总纲.md': '27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440',
+  '大纲/分卷/V10.json': '6c019456df60b262693d27f51b373d525a052e731505005940873ff77dfe0840',
+  '正文/0066-这把椅子先给人坐.md': 'd5d0b18dbc2090695210c638395b1ca6c63ef887fe8140c34b5095b542c5637f'
+} REVISION 197 OMITTED undefined
+TEMPLATE {"unit":67,"expected_revision":197,"source_hashes":{"writer.json":"e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3",".writer/state.json":"db7e20f786e157d704fe2f82794e4f7638c917c66a53e3702da68336eb512905","大纲/单元/0067.json":"9d9ccef07595dac46d8faf034c18f67f73f1fcb1cf80f617fa51013007d717b0","设定/作品定位.md":"1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94","设定/文风.md":"2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c","设定/权威规则.md":"23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2","设定/角色卡.md":"944495ced492696613e970d574e1ea07dd636cb38c56170a2bf9d80f7041e21e","设定/续部人物与场所.md":"19e46ab7bda4d3fb2616da0044e29c136f0da709d3fdf53c67b82bcfe3ae09d1","大纲/续部总纲.md":"27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440","大纲/分卷/V10.json":"6c019456df60b262693d27f51b373d525a052e731505005940873ff77dfe0840","正文/0066-这把椅子先给人坐.md":"d5d0b18dbc2090695210c638395b1ca6c63ef887fe8140c34b5095b542c5637f"},"draft":"正文/0067-晚饭以前的两小时.md","summary":"","changes":{"characters":{},"timeline_append":[],"ledger":{}},"_instructions":"先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"}

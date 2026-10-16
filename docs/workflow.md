@@ -96,7 +96,11 @@ node bin/ai-writer.mjs rewind --project "works/示例" --from 1 --expected-revis
 
 `status` 同时返回 `stale_units`（正文变化）和 `changed_sources`（已消费资料变化）。规则、被引用的大纲、事实卡等改变或缺失，`check` 会报 `CONTEXT_SOURCE_CHANGED`，续写和导出都会阻断。按最早消费者回退并重新评估；这是保守的文件依赖检查，不是史实或语义裁定。状态文件本身在登记时必然更新，不按旧输入哈希判过期。
 
+`context`、`export` 的漂移异常为 `CONTEXT_CHANGED`，包含 `recovery.from`、`recovery.expected_revision`、`recovery.stale_units`、`recovery.changed_sources` 及可核对的 `next_command`。正文与来源一起改变时，最早点按两者共同影响计算。先保存修前稿、核对完整列表，再按建议或实际确认的更早范围正式回退，逐章取得新模板重登；只修追踪语义而文件字节未漂移时也应主动核定首次错误点。
+
 `status.draft_inventory.unregistered` 显示未登记正文候选；回退保留的旧稿也可能在其中。`status.next` 给出下一步与命令，不会自动执行。先核对候选用途，避免覆盖或重复登记。
+
+审查报告用 `review --input` 登记。`from`—`to` 必须是实际完整读过的范围，`source_hashes` 列齐这些正文的真实路径和当前SHA；报告放作品的 `审查/`。先完整构造映射、核对键集合及单元数，再一次提交，不在循环内提前交一部分。正文修订或输出截断需补读；哈希与覆盖只核版本，人物知识或账本改动后还需核对报告结论是否仍适用。
 
 ## 导出
 
@@ -147,7 +151,8 @@ node bin/ai-writer.mjs gate chapter-gate vendor/story-gate-studio/examples/fixtu
 | 情况 | 处理 |
 | --- | --- |
 | 目标已存在 | 换新目录，不覆盖旧稿 |
-| 来源已变化/追踪失效 | 找最早受影响单元，回退并重读重登 |
+| 来源已变化/追踪失效 | 核对正文与来源共同影响及 recovery 最早单元、修订号，备份后回退并逐章重读重登 |
+| 审查正文哈希不符 | 核对完整实读范围的全部路径/当前哈希，改动稿补读后一次提交完整覆盖 |
 | 存在写入锁 | 确认没有写入进程；异常中断后由操作者核实再清理锁 |
 | 无权限/写入失败 | 原状态保持；先修权限或空间，重试同一输入 |
 | JSON 无效、缺字段、路径越界 | 按报错修输入，不使用强制绕过 |
@@ -156,4 +161,4 @@ node bin/ai-writer.mjs gate chapter-gate vendor/story-gate-studio/examples/fixtu
 
 退出码：0 表示该命令成功；1 表示检查存在阻断结果；2 表示输入或运行异常。`--help` 输出可读文本，其余命令输出 JSON。
 
-异常包含 code、error、next_action、help_command；适用时带 file 和 next_command。缺章纲会提示先 plan；JSON 解析错误给文件和解析位置。不要在输入尚未核实时直接执行建议的回退命令。
+异常包含 code、error、next_action、help_command；适用时带 file、next_command 和 recovery。缺章纲会提示先 plan；JSON 解析错误给文件和解析位置。不要在输入尚未核实时直接执行建议的回退命令。包装脚本先保存真实退出码、stdout和stderr，再按实际回包解析；帮助文本和外层辅助结果不能当成CLI成功JSON。

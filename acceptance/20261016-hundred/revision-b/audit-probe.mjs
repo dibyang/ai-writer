@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import {createRunner} from '../command-runner.mjs';
+const stage=path.resolve('acceptance/20261016-hundred/revision-b'),work=path.resolve('acceptance/20261016-hundred/works/潮汐信号'),read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const s=read(path.join(work,'.writer/state.json')),b=read(path.join(stage,'before-r165/snapshots/024.json'));
+const hits=[];function scan(v,p){if(typeof v==='string'){if(/朝(?:着)?车道|八十三|83分钟|\b200\b|十一点十三|十一点零二|11:13|11:02|二百(?!四十)/.test(v)&&!p.endsWith('/sha256'))hits.push({path:p,value:v});}else if(v&&typeof v==='object')for(const[k,x]of Object.entries(v))scan(x,p+'/'+k);}
+scan(s.snapshot,'snapshot');s.units.forEach(u=>scan(u.summary,'summary/'+u.unit));
+const r=createRunner(stage),exp=r.last('final-export');const ej=JSON.parse(exp.stdout);
+console.log(JSON.stringify({state_keys:Object.keys(s),snapshot_keys:Object.keys(s.snapshot),unit:s.units.at(-1),ledger_sample:s.snapshot.ledger.O_RAIN_TILE,firstpart_counts:{characters:Object.keys(b.characters).length,ledger:Object.keys(b.ledger).length,knowledge:Object.values(b.ledger).reduce((n,e)=>n+Object.keys(e.character_known??{}).length,0),anchors:Object.values(b.ledger).reduce((n,e)=>n+(e.evidence??[]).length,0)},hits,export:{keys:Object.keys(ej),included:ej.included_units,excluded:ej.excluded_drafts,files:fs.readdirSync(path.join(stage,'export-r197'))}},null,2));

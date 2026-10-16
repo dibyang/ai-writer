@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const b='acceptance/20261016-hundred',work=`${b}/works/潮汐信号`,beforeRoot=`${b}/checkpoints/session-11/files`,before=JSON.parse(fs.readFileSync(`${beforeRoot}/.writer/state.json`)),observedBytes=fs.readFileSync(`${work}/.writer/state.json`),observed=JSON.parse(observedBytes),hash=x=>crypto.createHash('sha256').update(x).digest('hex'),dir=`${b}/revision-c-parent-reading/initial-edits`;assert(!fs.existsSync(dir));assert.equal(before.units.length,90);
+const rows=[];for(const unit of before.units){const p=path.join(work,unit.draft),bytes=fs.readFileSync(p),sha256=hash(bytes);if(sha256!==unit.sha256){assert.equal(hash(fs.readFileSync(path.join(beforeRoot,unit.draft))),unit.sha256);rows.push({unit:unit.unit,draft:unit.draft,before_sha256:unit.sha256,sha256,bytes,line_count:bytes.toString('utf8').split(/\r?\n/).length,registered_in_observed_state:observed.units[unit.unit-1]?.sha256===sha256});}}
+assert(rows.length>0);for(const row of rows)assert.equal(hash(fs.readFileSync(path.join(work,row.draft))),row.sha256,'Body changed during capture; retry with a fresh label');
+fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(`${dir}/observed-state.json`,observedBytes,{flag:'wx'});
+for(const row of rows){const target=path.join(dir,row.draft);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,row.bytes,{flag:'wx'});row.copy=target;delete row.bytes;}
+const result={at:new Date().toISOString(),scope:'In-progress edited-body copies for actual parent reading; not final registrations or final audit',observed_revision:observed.revision,observed_registered_units:observed.units.length,observed_state_sha256:hash(observedBytes),before_checkpoint:'session-11',files:rows};fs.writeFileSync(`${dir}/manifest.json`,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({copied:rows.length,units:rows.map(r=>r.unit),observed_revision:observed.revision,observed_registered_units:observed.units.length}));

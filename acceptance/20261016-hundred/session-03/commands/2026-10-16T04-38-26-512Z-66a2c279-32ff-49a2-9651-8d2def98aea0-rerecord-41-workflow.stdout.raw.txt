@@ -1,0 +1,37 @@
+Han 2446 draft_sha256 ee487eff02e88e0cc84fb93669957eb72c11e2138219eed7741d33a60ef7bf04
+{
+  ok: true,
+  unit: 41,
+  revision: 89,
+  sha256: 'ee487eff02e88e0cc84fb93669957eb72c11e2138219eed7741d33a60ef7bf04',
+  status: 'draft-recorded',
+  quality_review: 'required'
+}
+{
+  ok: true,
+  scope: 'mechanical-only',
+  literary_quality: 'unreviewed',
+  units: 41,
+  revision: 89,
+  findings: [
+    {
+      severity: 'warning',
+      code: 'UNREGISTERED_DRAFT',
+      draft: '正文/0042-雨还没下完.md',
+      message: '该正文未登记，不会纳入导出；请核对用途。'
+    }
+  ],
+  draft_inventory: {
+    registered_count: 41,
+    unregistered: [ [Object] ],
+    unsafe_entries: []
+  },
+  rolling_review: {
+    valid: 10,
+    stale: 12,
+    stale_with_current_coverage: 12,
+    stale_without_current_coverage: 0,
+    pending_windows: [],
+    nature: 'coverage-only-not-literary-pass'
+  }
+}

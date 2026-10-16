@@ -1,0 +1,12 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const b='acceptance/20261016-hundred',p=`${b}/works/潮汐信号`,phase=`${b}/revision-b`,sha=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const state=JSON.parse(fs.readFileSync(`${p}/.writer/state.json`)),audit=JSON.parse(fs.readFileSync(`${b}/audits/session-07.json`));
+assert(audit.ok);assert.equal(state.revision,165);assert.equal(state.units.length,66);assert.equal(sha(`${p}/.writer/state.json`),sha(`${b}/checkpoints/session-07/files/.writer/state.json`));
+for(const row of JSON.parse(fs.readFileSync(`${b}/source-baseline-v2.json`)).files)assert.equal(sha(row.file),row.sha256,row.file);
+let request=fs.readFileSync(`${phase}/request-draft.md`,'utf8');
+const old='本请求草稿须在66章独立冻结后由主会话核定方可启动。';assert(request.includes(old));
+request=request.replace(old,'主会话已核定：66章r165真实完成并独立审计2159项通过，当前可直接执行。');
+request+='\n最终核定补充：当前四项方向观察即O_RAIN_TILE、O_RAIN_DURING_42、O_ROUTE_DRY_48、O_ROUTE_PASS_54；66方向引用沿已有条目，未发现需额外扩大的初始观察。场地取消语义消歧在当前初始观察statement中没有匹配项，若自行发现额外变化，逐项记录并证明是必要最小范围，不扩大其他事实。原151项文本知识（139项ledger人物知识加12人物快照）在r165均仍保有原文，应逐字段继续保留；原第一部timeline前缀保持，不让新第25日11:02替换旧第5日11:02。完整字串保留只是防丢机械项，不能自动证明当前与历史语义正确。\n';
+fs.writeFileSync(`${phase}/request.md`,request,{flag:'wx',encoding:'utf8'});
+const record={phase:'revision-b',expected_units:66,started_at:new Date().toISOString(),before_revision:165,unchanged_prefix_expected:35,source_manifest:'source-baseline-v2.json',request_sha256:sha(`${phase}/request.md`),state_sha256:sha(`${p}/.writer/state.json`)};
+fs.writeFileSync(`${phase}/parent-preparation.json`,JSON.stringify(record,null,2)+'\n',{flag:'wx'});fs.writeFileSync(`${b}/active.json`,JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify(record));

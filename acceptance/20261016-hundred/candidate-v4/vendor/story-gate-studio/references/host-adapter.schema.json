@@ -1,0 +1,29 @@
+{
+  "schema_version": "story-gate-host-adapter-schema@0.1.0",
+  "adapter_version": "story-gate-host-adapter@0.1.0",
+  "required_fields": [
+    "adapter_version",
+    "host",
+    "task",
+    "mode",
+    "target_refs"
+  ],
+  "allowed_hosts": [
+    "codex",
+    "agent",
+    "container",
+    "ci"
+  ],
+  "allowed_tasks": [
+    "review_scorecard",
+    "blind_read_gate",
+    "chapter_gate",
+    "project_rule_pack_check"
+  ],
+  "allowed_modes": [
+    "novel",
+    "visual",
+    "screenplay",
+    "short_drama"
+  ]
+}

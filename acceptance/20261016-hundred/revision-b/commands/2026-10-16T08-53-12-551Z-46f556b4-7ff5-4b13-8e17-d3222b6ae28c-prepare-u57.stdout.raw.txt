@@ -1,0 +1,164 @@
+{
+  "unit": 57,
+  "expected_revision": 187,
+  "input": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\revision-b\\inputs\\057-r187-a1.json",
+  "summary": "33日16点沈家收到新表两房首日上午同开，电话梁并视频陆，查明设备人不听整句，沈拒一人双开全责。陆在未开回程车上有自身排期/场地保留款压力，出示折票称自己已垫、撤原并行时额外保留时段仅部分退，提先补差额未实际补；梁答自己去谈。沈报36—38三天顺排2700、8:30准备9开17:30收盘、中午完整1小时、交通另结、35晚到住至38、38六点半后走，后制另计；梁明日午前再回，未接未定金未票。沈收自用线、只想明早问顾预检尚未联络，旧声没开。取消所指为原并行额外保留时段，不是整间停用；此时新顺排仍待确认。",
+  "source_count": 11,
+  "context_omitted_ids": [
+    "T_SIGNAL",
+    "T_HANDOVER",
+    "T_PRIVATE",
+    "T_LAMP",
+    "T_TAPE",
+    "T_KEY_CABINET",
+    "I_KEY_USE",
+    "I_DECK_REPAIR",
+    "T_SERVICE_VISIT",
+    "T_CONTACT",
+    "T_ARCHIVE",
+    "T_MESSAGE_VERIFY",
+    "T_PUBLIC_USE",
+    "I_ROOM_VISIT_PRICE",
+    "I_LATCH_ADJUST_42",
+    "T_ROOM_TRIAL",
+    "P_BORROWED_RECIPE",
+    "I_HOURS_DELIVERY_46",
+    "T_ROOM_NEXT_OPEN",
+    "T_ROOM_FUND_MEET",
+    "I_SMALL_SAMPLES_51",
+    "I_ROOM_FIRST_52",
+    "P_LAMP",
+    "P_PUBLIC_PAGES",
+    "P_QIU_LARGE_PAGES",
+    "P_QIU_WORK_PAGES",
+    "R_SHEN_QIU_LIFE",
+    "T_PAGE_PAIR",
+    "T_QIU_TAKE_BACK",
+    "T_RETURN_MONTH",
+    "T_ROUTE_COMMON",
+    "T_VOICE_CONSENT",
+    "P_DOOR_RECEIPT_42",
+    "O_RAIN_DURING_42",
+    "O_RAIN_TILE",
+    "O_ROUTE_DRY_48",
+    "O_ZOU_ACCOUNT_48",
+    "P_READING_ROOM_SPARE_KEY",
+    "O_HOURS_NEW_44",
+    "O_HOURS_NOTE",
+    "P_RO_WORK_PAGES",
+    "O_ROOM_LATCH",
+    "P_TRIAL_VOICE",
+    "I_PUBLIC_SCOPE_40",
+    "O_LAMP_PANEL",
+    "P_CHEN_NOTE",
+    "P_AUDIO_COPY",
+    "R_SHEN_TANG",
+    "P_BOX",
+    "P_KEY",
+    "P_LAMP_BOOK",
+    "P_NOTICE",
+    "O_DECK",
+    "O_DISPATCH_RETURN",
+    "O_INDEX_PAGE",
+    "O_MESSAGE_ROW",
+    "O_MESSAGE_SIGN",
+    "O_PLATE",
+    "O_QIU_ACCOUNT",
+    "O_TAPE_18",
+    "P_SERVICE_BAG",
+    "T_INDEX",
+    "I_AUDIO_ALIGN",
+    "O_INDEX_CONT",
+    "O_KEY",
+    "O_LAMP_RECORD",
+    "O_MAP",
+    "O_NOTICE",
+    "P_MAP",
+    "T_EAST",
+    "T_MAP",
+    "O_CURRENT"
+  ],
+  "characters": [
+    "沈禾",
+    "梁秋",
+    "陆岑"
+  ],
+  "timeline": [
+    "33日16点沈家与梁陆通话核双房同开不可一人监听；沈正式只报36—38顺排2700含8:30—17:30与完整午休、35晚到38晚走/交通另结，梁34午前再回，未成交。陆场地垫款仅屏幕口述及折票所见，退数未定。"
+  ],
+  "ledger": {
+    "T_PAID_WORK": {
+      "fields": [
+        "reader_known",
+        "character_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第57章：2700只顺排不双开，面对丢单可能，未收。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "梁秋": "第57章：得正式报价仍问客户，不同旧单款混。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "陆岑": "第57章：知本人提补差不被接受，无补款实际出。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "两千七。交通凭票另结",
+        "票仍在她夹板里，既没退回，也没变成沈已收的工钱。"
+      ]
+    },
+    "T_SOUND_CONTEXT": {
+      "fields": [
+        "character_known",
+        "reader_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第57章：实际拒机器开着等同人在听，要求每房先后试声，未把旧项目声当新房底声。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "陆岑": "第57章：实际问蹭线谁停/主讲走后补谁，已接沈每房准备要求，不知余带。；历史有效信息（原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "换房和试声都在这个范围里",
+        "一台开着的机器并不替人听"
+      ]
+    },
+    "T_THREE_DAY_ENQUIRY": {
+      "fields": [
+        "status",
+        "character_known",
+        "reader_known",
+        "evidence"
+      ],
+      "status": "partial",
+      "known": {
+        "沈禾": "第57章：已问出两房同开无第二监听者并只报顺排；等34午前答。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "梁秋": "第57章：知2700仅顺排，答再问，不是已订沈。；历史有效信息（原章时点）：[prior knowledge retained]",
+        "陆岑": "第57章：实际在通话获顺排要求、双开须另找人，未答客户已同意。"
+      },
+      "quotes": [
+        "现在这笔是三天先后录。两边一齐开，我不接全责。",
+        "他没有转定金，沈也没回一个接。"
+      ]
+    },
+    "T_NEW_ROOM_COST": {
+      "fields": [
+        "type",
+        "statement",
+        "status",
+        "due_unit",
+        "cast",
+        "tags",
+        "character_known",
+        "evidence"
+      ],
+      "statement": "57视频陆展示折票，自述33早垫新场地保留款、撤原并行时额外保留时段只肯部分退但数不明；她提补差额被止，梁答自己谈。沈仅屏幕听见/见纸，非垫款付款或退款见证。",
+      "status": "pending",
+      "due_unit": 64,
+      "known": {
+        "沈禾": "第57章：听陆口述保留款与退款不明，拒把其钱先填自己报价。",
+        "梁秋": "第57章：在会听陆说并答本人去谈不叫其补。",
+        "陆岑": "第57章：本人主张垫款/展示票，退数未知，未实际补差。"
+      },
+      "quotes": [
+        "保留款已经垫了，要撤的是原来并行时额外保留的时段，对方只肯退一部分",
+        "梁叫她先别补，自己去谈"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const base='acceptance/20261016-hundred',active=JSON.parse(fs.readFileSync(`${base}/active.json`)),phase=active.phase;
+const state=JSON.parse(fs.readFileSync(`${base}/works/潮汐信号/.writer/state.json`));
+const events=fs.readFileSync(`${base}/${phase}/events.jsonl`,'utf8').split(/\r?\n/).filter(Boolean).flatMap(s=>{try{return[JSON.parse(s)]}catch{return[]}});
+const message=events.findLast(x=>x.type==='item.completed'&&x.item?.type==='agent_message')?.item?.text??'';
+const key=phase+':'+crypto.createHash('sha256').update(message).digest('hex'),cursor=`${base}/watch-cursor.json`;
+let previous=null;if(fs.existsSync(cursor))previous=JSON.parse(fs.readFileSync(cursor));
+const processFile=`${base}/${phase}/process-result.json`,result=fs.existsSync(processFile)?JSON.parse(fs.readFileSync(processFile)):null;
+const record={at:new Date().toISOString(),phase,minutes:Math.floor((Date.now()-Date.parse(active.started_at))/60000),registered:state.units.length,revision:state.revision,events:events.length,done:result?.exit_code??null,audited:fs.existsSync(`${base}/audits/${phase}.json`),...(previous?.key!==key?{message:message.slice(0,300)}:{})};
+fs.appendFileSync(`${base}/watch.jsonl`,JSON.stringify(record)+'\n');fs.writeFileSync(cursor,JSON.stringify({key})+'\n');console.log(JSON.stringify(record));

@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+const dir = path.dirname(fileURLToPath(import.meta.url)), root = path.resolve(dir, '../..');
+const read = p => JSON.parse(fs.readFileSync(p, 'utf8'));
+const hash = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const checkpoint = path.join(dir, 'checkpoints/revision-c/files');
+const state = read(path.join(checkpoint, '.writer/state.json'));
+const manifest = read(path.join(dir, 'revision-c-parent-reading/initial-edits/manifest.json'));
+const notes = ['reading-41-44.md', 'reading-48-50.md', 'reading-62-64-69.md', 'reading-76-80-86-88.md'];
+if (state.units.length !== 90 || read(path.join(dir, 'revision-c/process-result.json')).exit_code !== 0) throw Error('Requires completed and audited C90');
+const checks = manifest.files.map(row => {
+  const unit = state.units[row.unit - 1];
+  const copied = path.join(root, row.copy);
+  return { unit: row.unit, draft: row.draft, read_copy_sha256: row.sha256, actual_copy_sha256: hash(copied), final_registered_sha256: unit?.sha256, frozen_body_sha256: hash(path.join(checkpoint, row.draft)), unchanged_since_actual_read: row.sha256 === hash(copied) && row.sha256 === unit?.sha256 && unit?.sha256 === hash(path.join(checkpoint, row.draft)) };
+});
+const result = { scope: 'Bind documented actual full body reads to final C registrations; hashes alone do not constitute reading', checkpoint: 'revision-c', revision: state.revision, state_sha256: hash(path.join(checkpoint, '.writer/state.json')), notes: notes.map(file => ({ file, sha256: hash(path.join(dir, 'revision-c-parent-reading', file)) })), checks, ok: checks.length === 14 && checks.every(x => x.unchanged_since_actual_read) };
+fs.writeFileSync(path.join(dir, 'revision-c-parent-reading/final-binding.json'), JSON.stringify(result, null, 2) + '\n', { flag: 'wx' });
+console.log(JSON.stringify({ ok: result.ok, revision: state.revision, bodies: checks.length, changed_since_read: checks.filter(x => !x.unchanged_since_actual_read).map(x => x.unit) }));
+process.exitCode = result.ok ? 0 : 1;

@@ -1,0 +1,15 @@
+node:fs:439
+      path = getValidatedPath(path);
+             ^
+
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.readFileSync (node:fs:439:14)
+    at read (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/revision-b/audit-probe.mjs:2:150)
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/revision-b/audit-probe.mjs:6:65
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+
+Node.js v24.15.0

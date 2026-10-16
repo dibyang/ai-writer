@@ -1,0 +1,194 @@
+{
+  "unit": 45,
+  "expected_revision": 175,
+  "input": "D:\\work\\other\\ai-writer\\acceptance\\20261016-hundred\\revision-b\\inputs\\045-r175-a1.json",
+  "summary": "24日14:33沈到阅览间真借食谱并取回37留何的按键笔；陈按14:30约在学，严向陈说明25日11点后常用钥须亲交超市入口第二排自己、不能放收银台且明早不能来直接告何严，备用钥自收后离。陈在何指导下辨同名不同册、完成沈真实借阅，约第38日前还；老人误认提前收报，陈移空杯留整报，何明确下午仍开。14:47后何摘常用钥交陈试锁开，陈实还何掌心重新挂圈；仍约明25日9:50到10点接、11锁门去交严，柜钥不交，来不了可停开不自找替补。14:57陈离去接孩子，沈携食谱/笔离，家中实做米饭硬后添水焖、炒剩菜、将食谱夹旧信封收包；新旧工作纸仍家高架不开放。",
+  "source_count": 10,
+  "context_omitted_ids": [
+    "T_SIGNAL",
+    "T_HANDOVER",
+    "T_PRIVATE",
+    "T_LAMP",
+    "T_TAPE",
+    "T_KEY_CABINET",
+    "I_KEY_USE",
+    "I_DECK_REPAIR",
+    "T_SERVICE_VISIT",
+    "T_CONTACT",
+    "T_ARCHIVE",
+    "T_MESSAGE_VERIFY",
+    "T_PUBLIC_USE",
+    "O_RAIN_TILE",
+    "O_ROOM_LATCH",
+    "P_LAMP",
+    "P_TRIAL_VOICE",
+    "T_AUDIO_REMAINDER",
+    "T_ROUTE_COMMON",
+    "O_LAMP_PANEL",
+    "P_CHEN_NOTE",
+    "T_PAGE_PAIR",
+    "O_ROOM_TONE",
+    "O_WHEEL_KNOCK",
+    "R_SHEN_ZHOU",
+    "T_RETURN_MONTH",
+    "O_PAGE_PAIR",
+    "P_AUDIO_COPY",
+    "R_SHEN_TANG",
+    "P_BOX",
+    "P_KEY",
+    "P_LAMP_BOOK",
+    "P_NOTICE",
+    "O_DECK",
+    "O_DISPATCH_RETURN",
+    "O_INDEX_PAGE",
+    "O_MESSAGE_ROW",
+    "O_MESSAGE_SIGN",
+    "O_PLATE",
+    "O_QIU_ACCOUNT",
+    "O_TAPE_18",
+    "P_SERVICE_BAG",
+    "T_INDEX",
+    "I_AUDIO_ALIGN",
+    "O_INDEX_CONT",
+    "O_KEY",
+    "O_LAMP_RECORD",
+    "O_MAP",
+    "O_NOTICE",
+    "P_MAP",
+    "T_EAST",
+    "T_MAP",
+    "O_CURRENT"
+  ],
+  "characters": [
+    "沈禾",
+    "何映",
+    "读报老人",
+    "陈玉荷",
+    "严倩"
+  ],
+  "timeline": [
+    "24日14:33—14:57沈真实借食谱、陈学办及何指导试锁后还常用钥；严只在前段交待明日超市收钥且备用自持先离，下午仍正常开；沈家试饭后食谱夹信封收包，25轮换尚未开始。"
+  ],
+  "ledger": {
+    "T_KEEPER_SHARE": {
+      "fields": [
+        "character_known",
+        "evidence"
+      ],
+      "known": {
+        "沈禾": "第45章：只真实借书及门边两分钟，不领班；何允陈不能来可停开。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "何映": "第45章：试一次前先教，敢接受少开，不把陈后续全排满或沈默认兜底。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "陈玉荷": "第45章：自己只一回可退出，父午饭不是可无限延后的值班代价。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "就把那一小时关了"
+      ]
+    },
+    "P_READING_ROOM_SPARE_KEY": {
+      "fields": [
+        "custody",
+        "character_known",
+        "evidence"
+      ],
+      "custody": {
+        "holder": "严倩",
+        "location": "24日14:33后严本人串内衣袋，离阅览间往超市",
+        "condition": "只展示挂牌而未摘下或交陈，与何训练常用钥不同"
+      },
+      "known": {
+        "严倩": "第45章：自持备用不交，约收的是何明日临给陈的常用钥。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "沈禾": "第45章：亲见严只展示未摘后自收。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "陈玉荷": "第45章：只见严挂牌备用未接，明日用何常用。"
+      },
+      "quotes": [
+        "严没把备用钥匙摘下来"
+      ]
+    },
+    "P_READING_ROOM_DUTY_KEY": {
+      "fields": [
+        "custody",
+        "character_known",
+        "evidence"
+      ],
+      "custody": {
+        "holder": "何映",
+        "location": "24日14:57后阅览间何本人原钥匙圈",
+        "condition": "45摘下临交陈在何近旁试锁开，陈已实放回何掌心并挂回原圈；明日正式临交尚未发生，不含柜钥"
+      },
+      "known": {
+        "何映": "第45章：训练后已实收回，25十点才给陈一把，柜钥不交。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "沈禾": "第45章：亲见临交试锁后还何挂圈，自己未持。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "陈玉荷": "第45章：实际试后还何，明日十点才正式接，不将整串拿走。"
+      },
+      "quotes": [
+        "看她重新挂上原圈"
+      ]
+    },
+    "T_ROOM_TRIAL": {
+      "fields": [
+        "status",
+        "character_known",
+        "evidence"
+      ],
+      "status": "partial",
+      "known": {
+        "沈禾": "第45章：亲见学习、借阅及试锁还钥，只完成写前训练，25日试行未发生。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "何映": "第45章：教会这次借阅试锁而非保证所有情况，明确退出可停开和钥去向。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "严倩": "第45章：自己只前段说明接钥地与号码，未见后段实训，备用仍自持。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "陈玉荷": "第45章：实学借还和锁，训练钥还何；9:50到10点接/11锁后严超市亲收为明日安排，不能来直告可停。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]"
+      },
+      "quotes": [
+        "陈将钥匙放回何摊开的掌心",
+        "九点五十我来，十点接。十一点锁好，拿你这把去交严姐。"
+      ]
+    },
+    "P_ROOM_TRIAL_SHEET": {
+      "fields": [
+        "custody",
+        "character_known",
+        "evidence"
+      ],
+      "custody": {
+        "holder": "何映",
+        "location": "24日阅览间桌内公共记录夹",
+        "condition": "45严在背面添联络号码，何补明日钥去向后夹回，不混蓝字旧纸"
+      },
+      "known": {
+        "沈禾": "第45章：亲见严添号码、何补钥去向夹回。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "何映": "第45章：补去向持公夹，另蓝字旧纸未作新时段表。；截至第44章的有效旧知情（按原章时点）：[prior knowledge retained]",
+        "陈玉荷": "第45章：当面获严号码和明日归钥办法，不持公夹原纸。",
+        "严倩": "第45章：自己在背面添号码，后段何补写未亲见。"
+      },
+      "quotes": [
+        "何把试行纸上的钥匙去向补清，公夹压回桌内"
+      ]
+    },
+    "P_BORROWED_RECIPE": {
+      "fields": [
+        "type",
+        "statement",
+        "status",
+        "cast",
+        "custody",
+        "character_known",
+        "tags",
+        "evidence"
+      ],
+      "statement": "第45章沈真实从阅览间借的薄食谱，封皮发白书脊窄册号，含小碗量米做法，陈在何指导下按实册登记，约第38日前归还。",
+      "status": "active",
+      "custody": {
+        "holder": "沈禾",
+        "location": "24日下午沈家本人包内",
+        "condition": "已照做米饭、手洗净后夹干净旧信封作书签，未混工作稿"
+      },
+      "known": {
+        "沈禾": "第45章：借回实用，约第38日前还。",
+        "陈玉荷": "第45章：亲办借阅核实际册号期限，但不知沈后来做饭结果。",
+        "何映": "第45章：指导实借出，未见沈家做饭。"
+      },
+      "quotes": [
+        "她用干净旧信封作书签，插在刚读的页间，放回包里"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const stage=path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'));
+const dir=path.join(stage,'commands');fs.mkdirSync(dir,{recursive:true});
+const args=process.argv.slice(2);const label=args.shift();
+if(!label||!args.length)throw new Error('label and executable required');
+const stamp=new Date().toISOString().replace(/[:.]/g,'-');
+const base=path.join(dir,`${stamp}-${label}`);
+const start=new Date().toISOString();
+const r=spawnSync(args[0],args.slice(1),{cwd:process.cwd(),encoding:null,maxBuffer:40*1024*1024,windowsHide:true});
+fs.writeFileSync(base+'.stdout',r.stdout??Buffer.alloc(0));
+fs.writeFileSync(base+'.stderr',r.stderr??Buffer.alloc(0));
+fs.writeFileSync(base+'.json',JSON.stringify({started:start,finished:new Date().toISOString(),cwd:process.cwd(),argv:args,exit_code:r.status,signal:r.signal,error:r.error?.message,stdout_file:path.basename(base)+'.stdout',stderr_file:path.basename(base)+'.stderr'},null,2)+'\n','utf8');
+process.stdout.write(r.stdout??'');process.stderr.write(r.stderr??'');
+if(r.error)process.stderr.write(r.error.message+'\n');
+process.exitCode=r.status??1;

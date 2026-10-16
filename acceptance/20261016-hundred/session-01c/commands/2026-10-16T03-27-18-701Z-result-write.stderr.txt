@@ -1,0 +1,11 @@
+file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-01c/deliver.mjs:27
+ if(Object.entries(export_checks).some(([k,v])=>k==='section_count'?v!==30:v!==true))throw Error('export verification failed '+JSON.stringify(export_checks));
+                                                                                           ^
+
+Error: export verification failed {"included_exact_1_to_30":true,"excluded_empty":true,"warnings_empty":true,"section_count":30,"each_section_equals_current_source":false,"source_hashes_match":true,"manuscript_hash_matches":true}
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/session-01c/deliver.mjs:27:92
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

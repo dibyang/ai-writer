@@ -1,0 +1,32 @@
+✖ recall精确账本ID优先于关联和较长ID，限额及AND查询保持可预期 (230.5535ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 331.2626
+
+✖ failing tests:
+
+test at acceptance\20261016-hundred\candidate-v3-recall\tests\longform.test.mjs:31:1
+✖ recall精确账本ID优先于关联和较长ID，限额及AND查询保持可预期 (230.5535ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'R_BEFORE'
+  - 'T_TARGET'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/candidate-v3-recall/tests/longform.test.mjs:45:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'R_BEFORE',
+    expected: 'T_TARGET',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,45 @@
+{
+  "rule_pack": "sample-customer-project",
+  "version": "0.1.0",
+  "modes": [
+    "novel"
+  ],
+  "modules": [
+    {
+      "module_id": "PROJECT-CUSTOM-001",
+      "name": "Project-specific boundary",
+      "mode": "novel",
+      "source_refs": [
+        "rule-pack.json"
+      ]
+    },
+    {
+      "module_id": "PROJECT-PHYSICAL-001",
+      "name": "Project-specific physical constraints",
+      "mode": "novel",
+      "source_refs": [
+        "rule-pack.json"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PROJECT-CUSTOM-001-R001",
+      "module_id": "PROJECT-CUSTOM-001",
+      "severity": "high",
+      "description": "Customer project rules must stay outside the universal plugin package unless deliberately anonymized and approved for redistribution.",
+      "source_refs": [
+        "rule-pack.json"
+      ]
+    },
+    {
+      "rule_id": "PROJECT-PHYSICAL-001-R001",
+      "module_id": "PROJECT-PHYSICAL-001",
+      "severity": "high",
+      "description": "Record project-local evidence forms, artifact materials, scene procedures, period constraints, or visual reveal rules here; keep private names and plot-specific evidence chains out of the distributable plugin.",
+      "source_refs": [
+        "rule-pack.json"
+      ]
+    }
+  ]
+}

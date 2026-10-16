@@ -1,0 +1,12 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {isDeepStrictEqual as same} from 'node:util';
+const [label]=process.argv.slice(2),base='acceptance/20261016-hundred';
+if(!/^[a-z0-9-]+$/.test(label??''))throw Error('Checkpoint label required');
+const original='acceptance/20261016-expanded/works/潮汐信号/.writer/state.json',current=`${base}/checkpoints/${label}/files/.writer/state.json`;
+const read=p=>JSON.parse(fs.readFileSync(p)),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'),a=read(original),b=read(current),fields=[];
+for(const [name,value]of Object.entries(a.snapshot.characters))fields.push({field:`characters.${name}`,old:value,current:b.snapshot.characters[name]});
+for(const [id,e]of Object.entries(a.snapshot.ledger))for(const [name,value]of Object.entries(e.character_known??{}))fields.push({field:`ledger.${id}.character_known.${name}`,old:value,current:b.snapshot.ledger[id]?.character_known?.[name]});
+const missing=fields.filter(x=>typeof x.current!=='string'||!x.current.includes(x.old));
+const timelinePrefix=same(a.snapshot.timeline,b.snapshot.timeline.slice(0,a.snapshot.timeline.length)),registrations=same(a.units,b.units.slice(0,a.units.length));
+const result={scope:'Original first-part text and timeline retention only; inclusion is not current/history semantic approval',label,original_state_sha256:sha(original),current_state_sha256:sha(current),original_fields:fields.length,fields_retained:fields.length-missing.length,missing,original_timeline_rows:a.snapshot.timeline.length,original_timeline_prefix_unchanged:timelinePrefix,original24_registrations_unchanged:registrations,ok:!missing.length&&timelinePrefix&&registrations};
+fs.mkdirSync(`${base}/legacy-proofs`,{recursive:true});fs.writeFileSync(`${base}/legacy-proofs/${label}.json`,JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({label,ok:result.ok,retained:result.fields_retained,total:fields.length,missing:missing.map(x=>x.field),timelinePrefix,registrations}));if(!result.ok)process.exitCode=1;

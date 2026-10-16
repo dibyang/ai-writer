@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {stage,work,cli,save,logRead} from './stage.mjs';
+logRead(path.join(stage,'before/work/设定/续部人物与场所.md'),'A1原始场所资料全文');
+const status=cli('status',[],'drift-status');
+const context=cli('context',['--unit','43'],'drift-context43');
+const out=path.join(stage,'blocked-export');
+if(fs.existsSync(out))throw Error('blocked-export must be new');
+const exported=cli('export',['--out',out],'drift-export');
+const result={status,context,exported,export_directory_exists:fs.existsSync(out)};
+save(path.join(stage,'source-drift.json'),result);
+console.log(JSON.stringify(result));

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+import {createRunner} from './command-runner.mjs';
+const base='acceptance/20261016-hundred',stage=base+'/helper-verification',work=base+'/works/潮汐信号',state=work+'/.writer/state.json';
+if(fs.existsSync(stage))throw Error('Do not overwrite evidence');
+const sha=()=>crypto.createHash('sha256').update(fs.readFileSync(state)).digest('hex'),before=sha(),r=createRunner(stage);
+const status=r.run(process.execPath,['bin/ai-writer.mjs','status','--project',work],'status-final');assert.equal(status.exit_code,0);
+const git=r.run('git',['status','--short'],'git-status-final');assert.equal(git.exit_code,0);
+const value=r.json('status-final');assert.equal(value.ok,true);assert.equal(r.last('git-status-final').label,'git-status-final');
+assert.equal(r.last('status-final').files.metadata,status.files.metadata);
+assert.throws(()=>r.json('missing-status-final'),/No exact command label/);
+const failed=r.run(process.execPath,['bin/ai-writer.mjs','recall','--project',work,'--query',''],'expected-invalid-recall');assert.notEqual(failed.exit_code,0);assert.throws(()=>r.json('expected-invalid-recall'),/exited/);
+const after=sha();assert.equal(before,after);
+const report={ok:true,scope:'Regression check for the observed auxiliary suffix collision; no manuscript mutation',revision:value.revision,registered:value.draft_inventory.registered_count,exact_label_neighbor_isolated:true,missing_label_rejected:true,nonzero_result_not_parsed_as_success:true,failed_raw_output_preserved:true,state_sha256_before:before,state_sha256_after:after};
+fs.writeFileSync(stage+'/result.json',JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report));

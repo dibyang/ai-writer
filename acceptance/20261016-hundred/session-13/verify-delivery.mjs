@@ -1,0 +1,11 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import {createRunner} from '../command-runner.mjs';
+const stage='acceptance/20261016-hundred/session-13',p='acceptance/20261016-hundred/works/潮汐信号',r=createRunner(stage),read=f=>JSON.parse(fs.readFileSync(f)),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const j=read(stage+'/result.json'),m=read(stage+'/export/manifest.json');
+if(hash(p+'/.writer/state.json')!==j.source_and_state_hashes.final_state||hash(stage+'/reading.jsonl')!==j.source_and_state_hashes.reading_log||hash(stage+'/export/manuscript.md')!==j.export.manuscript_sha256)throw Error('delivery hash drift');
+if(m.included_units.length!==100||m.included_units.some((n,i)=>n!==i+1)||m.excluded_drafts.length||m.warnings.length)throw Error('exact 1–100 inventory');
+const reviews=[];for(const label of ['review-99-cli','review-100-cli-corrected-report']){const x=r.json(label),f=read(p+'/'+x.ref);if(hash(p+'/'+f.report)!==f.report_sha256)throw Error('report drift');for(const u of f.units)if(hash(p+'/'+u.draft)!==u.sha256)throw Error('review chapter drift');reviews.push({label,ref:x.ref,report_sha256:f.report_sha256,coverage:[f.from,f.to]});}
+const meta=r.last('status-final');if(meta.label!=='status-final'||meta.executable!=='node'||meta.argv[1]!=='status')throw Error('status exact label');
+for(const x of j.chapters){if(x.han<2400||x.han>3200||hash(p+'/'+x.draft)!==x.sha256)throw Error('chapter metric/hash');if(Object.keys(x.source_hashes).length<10)throw Error('source hash loss');}
+if(j.checks.check.rolling_review.pending_windows.length||j.checks.check.findings.length||!j.checks.doctor.ok)throw Error('checks');
+const result={ok:true,at:new Date().toISOString(),elapsed_s:(Date.now()-read(stage+'/start.json').epoch_ms)/1000,revision:j.revision,chapters:j.chapters.map(({unit,han,sha256})=>({unit,han,sha256})),export_units:100,reviews,result_json_sha256:hash(stage+'/result.json'),result_md_sha256:hash(stage+'/result.md'),metadata_boundary:'Mechanical final artifact verification only; no claim of full manuscript reading or literary acceptance.'};
+fs.writeFileSync(stage+'/delivery-verification.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result,null,2));

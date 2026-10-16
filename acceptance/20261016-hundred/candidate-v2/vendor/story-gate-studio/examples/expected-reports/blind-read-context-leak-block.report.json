@@ -1,0 +1,26 @@
+{
+  "report_id": "TEST-BLIND-CONTEXT-LEAK-BLOCK-REPORT",
+  "module_id": "SGM-BLIND-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/blind-read-context-leak-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-BLIND-001",
+    "references/blind-read-review-rules.md"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-BLIND-001-R013",
+      "severity": "blocker",
+      "location": "input.execution",
+      "recommendation": "Blind reading must be performed by an internal temporary agent that creates no previewable task, inherits none of the current conversation context, discards the result after readback, and leaves no sidebar entry.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+file:///D:/work/other/ai-writer/acceptance/20261016-hundred/revision-c/prepare.mjs:4
+function edit(rel,line,from,to){const file=path.join(work,rel),b=fs.readFileSync(file),text=b.toString('utf8'),lines=text.split('\n');const before=lines[line-1];if(!before?.includes(from))throw Error(`Missing ${rel}:${line}:${from}`);const after=before.split(from).join(to);lines[line-1]=after;fs.writeFileSync(file,lines.join('\n'));changes.push({file:rel,line,before,after,from,to,before_sha256:hash(b),after_sha256:hash(fs.readFileSync(file))});}
+                                                                                                                                                                                                  ^
+
+Error: Missing 大纲/单元/0041.json:35:顾14点可来、工钱先说
+    at edit (file:///D:/work/other/ai-writer/acceptance/20261016-hundred/revision-c/prepare.mjs:4:195)
+    at file:///D:/work/other/ai-writer/acceptance/20261016-hundred/revision-c/prepare.mjs:22:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

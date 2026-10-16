@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+import {stage,hash} from './run-cli.mjs';
+const rows=[['.agents/skills/writer-project/SKILL.md','1-48'],['.agents/skills/writer-novel/SKILL.md','1-36'],['.agents/skills/writer-review/SKILL.md','1-38'],['.agents/skills/writer-project/references/long-form.md','1-91'],['.agents/skills/writer-novel/references/suspense-continuity.md','1-30'],['.agents/skills/writer-review/references/general-review.md','1-125'],['.agents/skills/writer-review/references/natural-language-authenticity.md','1-95'],['acceptance/20261016-hundred/command-runner.mjs','1-34']];
+for(const [p,range]of rows)fs.appendFileSync(stage+'/reading.jsonl',JSON.stringify({path:p,sha256:hash(p),purpose:'Skill/reference or shared non-story runner actually read earlier via FastCtx complete output',range:'full ('+range+')',method:'FastCtx full text was read earlier; hash recorded now; not a new full reading claim',logged_at:new Date().toISOString()})+'\n');
+console.log('Recorded 8 earlier complete FastCtx reads; no new story files read.');

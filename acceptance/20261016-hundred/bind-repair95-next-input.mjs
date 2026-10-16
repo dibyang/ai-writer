@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import { replaySnapshots } from './rebuild-utils.mjs';
+const b='acceptance/20261016-hundred',phase=`${b}/session-12`,dir=`${b}/intermediate-proofs/repair-at95`,work=`${b}/works/潮汐信号`,read=p=>JSON.parse(fs.readFileSync(p,'utf8')),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const proof=read(`${dir}/proof.json`),state=read(`${work}/.writer/state.json`);assert(state.units.length>=96);assert.deepEqual(state.units[94],read(`${dir}/actual-unit95.json`));assert.deepEqual(replaySnapshots(work,state)[95],read(`${dir}/actual-after-snapshot95.json`));
+const file=`${phase}/record-96.json`,input=read(file),unit=state.units[95];assert.equal(input.unit,96);assert.equal(input.expected_revision,345);assert.equal(input.source_hashes['.writer/state.json'],proof.context96_state_sha256);assert.deepEqual(input.source_hashes,unit.source_hashes);assert.equal(input.summary,unit.summary);
+const index=fs.readFileSync(`${phase}/commands/index.jsonl`,'utf8').trim().split(/\r?\n/).map(JSON.parse),command=index.findLast(x=>x.label==='record-96-cli');assert(command);assert.equal(command.exit_code,0);assert(command.argv[0].replaceAll('\\','/').endsWith('bin/ai-writer.mjs'));assert(command.argv.some(x=>x.replaceAll('\\','/').endsWith('/session-12/record-96.json')));assert.equal(read(command.files.stdout).revision,346);
+assert.equal(hash(`${work}/${unit.journal}`),unit.journal_sha256);assert.equal(hash(`${work}/${unit.draft}`),unit.sha256);
+fs.copyFileSync(file,`${dir}/actual-input96.json`,fs.constants.COPYFILE_EXCL);
+const result={at:new Date().toISOString(),ok:true,scope:'Actual successful chapter96 record consumed repaired r345 context; native phase completion and final checkpoint binding still separate',observed_revision:state.revision,observed_units:state.units.length,consumed_state_sha256:input.source_hashes['.writer/state.json'],input96_sha256:hash(file),actual_cli_metadata:command.files.metadata,record_revision:346,unit95:state.units[94],unit96:unit};
+fs.writeFileSync(`${dir}/actual96-input-binding.json`,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,consumed_repaired_revision:345,record96_revision:346,actual_record:true}));

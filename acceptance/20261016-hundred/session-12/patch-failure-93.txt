@@ -1,0 +1,5 @@
+Tool: apply_patch
+Result: verification failed, no change written.
+Exact reported missing line: 陈没说自己只是替他想，站了一会儿，才答知道。
+Cause: the intended insertion anchor was only part of a longer paragraph, and the patch supplied no actual insertion content. Corrected by a separate patch anchored to the actual dialogue line “你一锅能吃完？”陈问。
+This is a helper edit error, not a product CLI defect. The failed tool output is merged tool feedback; no stdout/stderr byte split is claimed.

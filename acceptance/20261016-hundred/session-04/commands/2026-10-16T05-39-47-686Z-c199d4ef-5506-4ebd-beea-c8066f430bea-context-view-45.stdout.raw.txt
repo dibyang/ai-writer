@@ -1,0 +1,529 @@
+{
+  "unit": 45,
+  "revision": 130,
+  "plan": {
+    "unit": 45,
+    "title": "借一本自己要的书",
+    "goal": "把一次替班从口头好意推进到可承担的具体动作，保留陈的生活与退出权",
+    "change": "陈在何指导下完成真实借阅并试关门，明确25日常用钥仅临时交陈后锁门交严超市；沈真实借一本食谱而不入轮值",
+    "cast": [
+      "沈禾",
+      "何映",
+      "陈玉荷",
+      "严倩",
+      "读报老人"
+    ],
+    "setting_refs": [
+      "大纲/分卷/V7.json",
+      "大纲/续部总纲.md",
+      "设定/权威规则.md",
+      "设定/文风.md",
+      "设定/续部人物与场所.md"
+    ],
+    "research_refs": [],
+    "forbidden": [
+      "把练习当25日已值班",
+      "常用钥训练后丢失保管",
+      "沈成默认替补",
+      "讲成对所有旧材料获得权限"
+    ],
+    "beats": [
+      "24日14:30沈带还借阅流程疑问来取留何的笔并想借食谱，陈按约学，严只说明次日钥交回地点后走",
+      "陈给沈办真实借书遇同题不同册号，用书脊和登记页找到正确册不抄另册；沈等其做好而非代填",
+      "老人想保留未读完报，陈认识借还之外还有人的选择，不把所有书桌收空；何讲自己也做错过",
+      "陈在何近旁试门锁后钥还何，约25日9:50到、10点正式接、11锁门再去严超市交，若不能来提前直告何严；沈取回笔带书回家做饭"
+    ],
+    "recall_ids": [
+      "T_ROOM_TRIAL",
+      "P_ROOM_TRIAL_SHEET",
+      "T_KEEPER_SHARE",
+      "P_READING_ROOM_DUTY_KEY",
+      "P_READING_ROOM_SPARE_KEY",
+      "T_VOICE_CONSENT",
+      "I_PUBLIC_SCOPE_40",
+      "P_HOURS_NOTE",
+      "O_HOURS_NEW_44"
+    ]
+  },
+  "outline": {
+    "ref": "大纲/分卷/V7.json",
+    "volume": {
+      "id": "V7",
+      "title": "谁来开门",
+      "start": 41,
+      "end": 48,
+      "promises": [
+        "试行轮值和费用承担"
+      ],
+      "constraints": [
+        "第一部1—24章为已发生，不推翻T_SIGNAL/T_TAPE/T_HANDOVER/T_LAMP的已兑现范围",
+        "罗敬私人失约不设作者答案；新材料不能逆改旧观察",
+        "原物按现行custody调用，工作副本不冒充原件"
+      ],
+      "reserved": [
+        "余带中男声与钟确源、剪者与目录命名用意未证，不强行解释",
+        "远期具体场景和配角选择待正文形成"
+      ]
+    },
+    "arc": {
+      "id": "V7A2",
+      "start": 45,
+      "end": 48,
+      "goal": "建立有人退出也能运作的责任分配",
+      "payoff": "试行轮值和费用承担",
+      "forbidden": [
+        "计划不得登记为已发生事实",
+        "无证提前获得他人知识或复制原物"
+      ]
+    },
+    "note": "全部是计划；兑现情况须在正文、ledger 及审查中核实"
+  },
+  "snapshot": {
+    "characters": {
+      "沈禾": "第44章当前：23日10:47离阅览间，仅短会不顶班不接钥。亲读今日告示、听严费用结算未回；见何原四折纸新写25日10:15另份送样，非交付见证。写一次试行纸交何夹：25日何9—10/陈10—11，陈24先学；均未发生。",
+      "何映": "第44章当前：23日上午阅览间继续日常借报，原四折纸自持、公夹收一次试行纸；25日9—10答在、10:15另份改页须送印铺属计划，陈愿一回替后段，24先教。自己报酬和80来源未回，不以沈补班，旧稿暂停仍告陈。",
+      "陈玉荷": "第44章当前：23日上午来还书买菜，自述22日11点后走空。只愿25日10—11一次无酬替班、以后常排先谈钱；24日14:30—15先学不等胜任已证。种花书仅翻未借，父休息和窗葱属自己口述，没带父到场或交便笺。知旧稿仍不用不获复制权。",
+      "严倩": "第44章当前：23日10:40从阅览间离，原80收据修缮夹自收，结算未回；见旧17:10与新25日10:15分开，听何另份有偿改页口述。只确认25日一次轮换并要求陈先学，未交备用钥；旧稿仅听不在上回结束不获正文。",
+      "读报老人": "第44章当前：23日上午阅览间读报，知25日轮换只计划，重申要留报纸，不接任何班钥。回忆26章替看橡皮未认全，不冒已会借还。"
+    }
+  },
+  "continuity": {
+    "author": {
+      "P_TAPE": {
+        "type": "object",
+        "statement": "唯一原标准紧凑型录音带，壳角磕白、标签残留褪色播字无可辨日期，连原透明塑料盒由罗敬住处交沈禾；旧广播室来处仅罗敬口述。",
+        "truth": null,
+        "status": "active",
+        "due_unit": 18,
+        "custody": {
+          "holder": "宋俭",
+          "location": "镇航运服务室干燥独立柜格，原透明盒内，与铁箱分开",
+          "condition": "已完整实际听取及保留转录；24沈从前硬袋取原带连原盒另交宋，记录罗口述来处与代存同意，不确定所有权；纸与带壳分隔原条件保留"
+        }
+      },
+      "T_KEEPER_SHARE": {
+        "type": "thread",
+        "statement": "阅览间开放与旧物接待依靠何映兼职时段、宋现行值班；活动不能靠每次延长下班和随叫开柜维持，长期人手及费用分担尚待形成。",
+        "truth": null,
+        "status": "partial",
+        "due_unit": 56
+      },
+      "T_VOICE_CONSENT": {
+        "type": "thread",
+        "statement": "公开讲述旧站材料须让当事人选择可说范围：罗拒以自己坐听形象作引子，只愿先看工作与完整灯语修正稿；邱允许有限无观众试读不网上放。长期允许限制和撤回的做法尚待落实。",
+        "truth": null,
+        "status": "partial",
+        "due_unit": 100
+      },
+      "P_HOURS_NOTE": {
+        "type": "object",
+        "statement": "第35章何使用的废打印纸，正面本日14:45—15:15时段、背17:10交校样蓝笔字，折四折自持。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "何映",
+          "location": "23日10:47阅览间何本人手内，未交公共夹",
+          "condition": "35原四折蓝17:10与37加行保留；44另一面新写25日10:15送另一份改页，不混医院单和新试行纸"
+        }
+      },
+      "I_PUBLIC_SCOPE_40": {
+        "type": "fact",
+        "statement": "第40章20日早邱确认当次四页且此后先不用、无自动恢复日；下午14:50新自述及四页慢读、父只读前两页自停，15:30前全收无拷，何落实结束不留展。只这一场的实际使用与退出，不代替长期安排。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null
+      },
+      "P_READING_ROOM_SPARE_KEY": {
+        "type": "object",
+        "statement": "第41章严倩实际拿出的挂牌阅览间备用门钥，自己钥匙串内；与何常用另一串及赵保管原蓝绳铜钥均不同。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "严倩",
+          "location": "21日14:20严当场锁阅览间后收自己口袋，往超市",
+          "condition": "亲开给修后亲锁，无交沈/何，无扩旧档案或稿件权限；午后仍暂停借阅"
+        }
+      },
+      "P_READING_ROOM_DUTY_KEY": {
+        "type": "object",
+        "statement": "第41章明确何平日使用的阅览间门钥，挂于与严备用不同的一串；不与旧站原铜钥混同。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "何映",
+          "location": "何本人钥匙圈，21日街角分开后自持",
+          "condition": "未按计划交严，正文实际两串各持，何去接母未将钥交沈；没有新长期值班授权"
+        }
+      },
+      "O_HOURS_NEW_44": {
+        "type": "observation",
+        "statement": "第44章23日10:20后沈在阅览间见何取原四折旧蓝字纸，翻至另一面空处写第二十五日十点十五送改页；旧17:10与37加行保留。何口述是另一份改页、有酬包原价，25日须送印铺；未见交付付款。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null
+      },
+      "T_ROOM_TRIAL": {
+        "type": "thread",
+        "statement": "第44章为25日9—11阅览间开门约一次试轮换：何9—10、陈10—11，陈24日14:30—15先学，严确认该次；沈不作固定或兜底，钥未交。需以实际到场、交接、关门与退出检验。",
+        "truth": null,
+        "status": "pending",
+        "due_unit": 48
+      },
+      "P_ROOM_TRIAL_SHEET": {
+        "type": "object",
+        "statement": "第44章沈另起的一张只记25日两段轮换的纸，不是何原四折蓝字纸或医院单。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "何映",
+          "location": "阅览间公共记录夹",
+          "condition": "沈10:40后推交何收，未来试行尚未履行，未画数周表"
+        }
+      },
+      "O_HOURS_NOTE": {
+        "type": "observation",
+        "statement": "第35章第16日15:13后沈在阅览间见何桌边废打印纸，正面写本日14:45—15:15时段，背透蓝笔十七点十分交校样；何当面翻纸补地点、折四折放帆布袋，折痕横过十七点后墨迹。何称校样昨晚排、本日关门就送，交样尚未发生。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null
+      },
+      "P_DOOR_RECEIPT_42": {
+        "type": "object",
+        "statement": "第42章顾当面写给严的本次上门查看调试收据，实收80，无换件栏被划线，与何旧蓝字条不同。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "严倩",
+          "location": "23日10:40严离阅览间随身修缮夹",
+          "condition": "原80据出示何对过后自收，未交沈，最终结算来源仍无回话"
+        }
+      },
+      "P_CITY_AUDIO": {
+        "type": "object",
+        "statement": "第32—33章两机客户录音、首句补录与当次30秒房音组成首日委托文件集，原各份保留。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "陆岑",
+          "location": "梁秋指定客户工程盘留现场；沈随身电脑保委托暂备，现带回汀湾家",
+          "condition": "两日文件与次序说明16:20实交另一机试开，梁确认可往后做；含房音仍限定本课，不作旧站素材"
+        }
+      },
+      "P_PUBLIC_PAGES": {
+        "type": "object",
+        "statement": "第35章沈从家打印的两页题名/页次版工作说明，邱当面对照后只准第16日一场桌边使用，区别31缺名旧稿。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "沈禾",
+          "location": "22日沈家干燥高架旧使用两页原袋",
+          "condition": "35用过38对照，43上架不另用；不混31缺名版/四页"
+        }
+      },
+      "P_QIU_LARGE_PAGES": {
+        "type": "object",
+        "statement": "第38章在第35章两页文字基础放大重排的四页实样；每页题名姓名页次，用途行移题名下与正文同字号。与标改试样及两套旧两页分开。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "沈禾",
+          "location": "22日沈家干燥高架，原大字四页文件袋",
+          "condition": "午饭后收上架，未出借或恢复使用，40暂停不变"
+        }
+      },
+      "P_QIU_WORK_PAGES": {
+        "type": "object",
+        "statement": "第31章留给邱先看的两页新版工作说明，无旧图旧音，细夹夹合，与沈后来改的电子稿分开。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "沈禾",
+          "location": "22日沈家干燥高架旧缺名两页原独立袋",
+          "condition": "31缺名初始纸不改，35还沈后与使用版试样各别，43收上架"
+        }
+      },
+      "P_RO_WORK_PAGES": {
+        "type": "object",
+        "statement": "第36章给罗先看的两页工作整稿与一页沈自述；罗当面提去看扇形象，沈保旧另打三页唐穗先看版封袋，与邱新旧两套纸分别。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null,
+        "custody": {
+          "holder": "沈禾",
+          "location": "22日沈家干燥高架，封着的原三页袋",
+          "condition": "37唐、40何先看后收原袋，43未开或公开，旧改稿另存"
+        }
+      },
+      "T_PAID_WORK": {
+        "type": "thread",
+        "statement": "沈禾选择留镇后接梁秋八分钟课程修音的有偿订单，约第11日下午交、两轮修改且不含字幕核对；长期怎样兼顾收入与地方责任尚待实践。",
+        "truth": null,
+        "status": "active",
+        "due_unit": 72
+      },
+      "T_SOUND_CONTEXT": {
+        "type": "thread",
+        "statement": "沈在当次亲眼看到椅轮成因，且静止房音不含两响；相似听感不能替代来源现场，客户声也不能挪作旧带佐证。以后怎样给有偿工程留够试声和可用底声时间，以及旧余带能证到哪里，仍须分开实践。",
+        "truth": null,
+        "status": "partial",
+        "due_unit": 72
+      },
+      "I_LATCH_ADJUST_42": {
+        "type": "fact",
+        "statement": "第42章21日14点顾在严沈在场时垫稳门，见上合页两颗螺丝随晃动并紧回、微调锁扣；无新件。严松开托手后单手来回三次及顾撤垫再试能合，14:20严锁门。只当次效果，不保证以后雨后不再挂。",
+        "truth": null,
+        "status": "resolved",
+        "due_unit": null
+      },
+      "I_ROOM_VISIT_PRICE": {
+        "type": "fact",
+        "statement": "第41章21日上午沈电话找顾，严直接接受当日14点上门查看调试80、换材先商量；顾须先验送锅。仅报价预约，尚未现场诊因、修复或付款。",
+        "truth": null,
+        "status": "resolved",
+        "due_unit": 42
+      },
+      "O_RAIN_DURING_42": {
+        "type": "observation",
+        "statement": "第42章21日14:20后至近15点沈在旧站外路雨中见同两暗红砖、临车道半月缺口方向不变；当次泥纹被打深，围挡下滴水一股沿砖缝走，范展卷遮布搭临槽后水转沟、泥仍贴，外绑带收回。邹车侧两空筐更宽，自停平处等；沈离雨未停、车未过。不是年代责任或雨后终态证据。",
+        "truth": null,
+        "status": "active",
+        "due_unit": null
+      }
+    },
+    "reader": {
+      "P_TAPE": "原带最终宋代存，与箱和工作副本分开；原标签无日期及罗称来处边界不改。",
+      "T_KEEPER_SHARE": "44只形成25日上午一次试轮换和24学习约，费用/何报酬未决，长期替代due56仍未兑。",
+      "T_PAID_WORK": "43完成一次另计200核听并实收，不等所有后制及长期职业安排完成，due72保持。",
+      "T_SOUND_CONTEXT": "39后制实际来问，把33的30秒推进为本课接头可用、另教室不可借铺；全段重听须另计，尚未形成长期工时安排，不是余带声源新证，due72不改。",
+      "I_ROOM_VISIT_PRICE": "41的当日14点80查看调试预约在42真实履行并付款，无换材；结清这次工钱不等何/严时段及长期人手经费解决。due42保留。"
+    },
+    "characters": {
+      "沈禾": {
+        "P_TAPE": "第21章补录起首并核重叠，分文件保存未补杂音；第23章给罗周完整播放工作转录；第24章从前层硬袋取唯一原带连原盒正式交宋另格代存，自己仅留工作转录、原硬盘及凭据，不再自持原盒原带；来处仍仅罗口述、无确权；历史知情（截至第18章，以下为当时范围，不作当前结论）：18亲取原带准备后监听转录，收回原盒硬袋，两面所听不等整段缺声复原。；此前知情保留：亲接并保存原带，标签只见播字；旧站来处仅听罗敬说；准备后短听、异响停机，不知完整内容。",
+        "T_KEEPER_SHARE": "第44章：亲历短会，自己不列替补，见一次试行纸交何；未发生开门替班。",
+        "T_VOICE_CONSENT": "第40章：邱暂停不必找错字，已经当次用后收/告何；再次须另问无自动恢复，罗稿37唐先看、40另准何一人预看，仍不公开。",
+        "P_HOURS_NOTE": "第44章：见何纸仍自持，自己只将另张试行纸交公夹。",
+        "I_PUBLIC_SCOPE_40": "第40章：现场及早晚电话亲历全部范围。",
+        "P_READING_ROOM_SPARE_KEY": "第42章：亲见严开锁收口袋，自己没有钥匙或值班承诺。",
+        "P_READING_ROOM_DUTY_KEY": "第41章：亲见何常用与严备用各持，自己无钥。",
+        "O_HOURS_NEW_44": "第44章：亲见新写和何口述，未见25日送样。",
+        "T_ROOM_TRIAL": "第44章：见一次约、没执行。",
+        "P_ROOM_TRIAL_SHEET": "第44章：亲写交何夹不自持。",
+        "O_HOURS_NOTE": "第44章：原35蓝17:10和37加行仍在；何另面新记25日10:15，另份送样口述未见交付，不改35观察。",
+        "P_DOOR_RECEIPT_42": "第44章：亲见收据对过严自收，知结算待回。",
+        "P_CITY_AUDIO": "第43章：收到本课38:20剪版作另计核听，原暂备仍家，说明发陆，不改原文件不扩大使用。",
+        "P_PUBLIC_PAGES": "第43章：35使用两页独袋上架，不恢复许可。",
+        "P_QIU_LARGE_PAGES": "第43章：完整四页原袋上干高架，未用。",
+        "P_QIU_WORK_PAGES": "第43章：旧缺名原页原袋上架，不因电子版改了而改原页。",
+        "P_RO_WORK_PAGES": "第43章：三页仍封上干高架不外借，未新告罗何读后结果。",
+        "T_PAID_WORK": "第43章：22日确认新范围后14点实核听、14:58交、15:06实收200，未承诺新剪。",
+        "T_SOUND_CONTEXT": "第43章：本课核听见底声骤薄与车尾断两种问题，回原段定位而不跨用房音；当次椅试声不得列可用房音，不证余带。",
+        "I_LATCH_ADJUST_42": "第42章：现场亲见查调与开合付款锁门。",
+        "I_ROOM_VISIT_PRICE": "第42章：亲见顾到场实查调及严付顾到账80、收据，不是只有预约。",
+        "O_RAIN_DURING_42": "第42章：全部当次亲见，离后未知。"
+      },
+      "何映": {
+        "T_KEEPER_SHARE": "第44章：陈只愿一回无酬，后续真按班须谈钱；自己25日送样不可无限兼看屋。",
+        "T_VOICE_CONSENT": "第40章：本次后邱先不用真实告知与落地，不将此后屋开等作讲稿可用，罗仍不公开。",
+        "P_HOURS_NOTE": "第44章：自持原四折纸，另一张试行纸归公共夹。",
+        "I_PUBLIC_SCOPE_40": "第40章：现场和沈电话转述后确认，无下次安排。",
+        "P_READING_ROOM_SPARE_KEY": "第41章：亲见严用另一串备用，自己常用仍自持。",
+        "P_READING_ROOM_DUTY_KEY": "第41章：自持自己常用钥未交。",
+        "O_HOURS_NEW_44": "第44章：自己安排另一份送样、旧字未改。",
+        "T_ROOM_TRIAL": "第44章：答该次首段且须按时走，不等新常班。",
+        "P_ROOM_TRIAL_SHEET": "第44章：实收公夹，不混自己的旧纸。",
+        "O_HOURS_NOTE": "第44章：原字保留，另面新记另一份25日10:15，不是旧约延迟。",
+        "P_DOOR_RECEIPT_42": "第44章：亲看80及划线栏核无误，不等费用已报销。",
+        "P_PUBLIC_PAGES": "第35章：亲看用后收，自己不留纸。",
+        "P_QIU_LARGE_PAGES": "第40章：亲见四页收齐不留自己，知道此后暂停。",
+        "P_RO_WORK_PAGES": "第37章：仅读沈自述页并还沈，罗两页未展示，未获其全文细节、不持纸。；补入第40章已发生知情：第40章上午：9:35沈告罗唐已预看收回无拷，罗新允只给何一人连沈自页预看、看后还沈不朗读；10:05—10:38阅览间沈在场何完整读三页并归还，无拷，沈十一点前离回家收好三页，下午只带邱四页。",
+        "I_LATCH_ADJUST_42": "第42章：电话只从沈获当次做法与能合，不是螺丝现场观察者，不知未来雨后结果。"
+      },
+      "陈玉荷": {
+        "T_KEEPER_SHARE": "第44章：自己只约25日10—11和24半小时学习，不能当长期义务；不懂可退出。",
+        "T_VOICE_CONSENT": "第44章：何告纸不在上回结束，自己答记得父自停，替班不获公开权。",
+        "I_PUBLIC_SCOPE_40": "第40章：现场知本次与之后先不用，不获他人全文或原件。",
+        "T_ROOM_TRIAL": "第44章：仅一回无酬，长期须谈钱，不懂可不接。",
+        "P_PUBLIC_PAGES": "第35章：可看听但不给带拍，未获份。",
+        "P_QIU_LARGE_PAGES": "第40章：父只读前半，本人没得带纸。"
+      },
+      "严倩": {
+        "T_KEEPER_SHARE": "第44章：确认一次试行、须先学门锁借还，仍管备用与费用待问。",
+        "T_VOICE_CONSENT": "第44章：在场仅听何纸不在/上回结束，无旧稿正文、旧音或新授权。",
+        "P_HOURS_NOTE": "第44章：未接何原纸，自己另记试行。",
+        "P_READING_ROOM_SPARE_KEY": "第42章：自用开锁后仍自持，今日未转人。",
+        "P_READING_ROOM_DUTY_KEY": "第41章：自己不接何常用，持另一串备用。",
+        "O_HOURS_NEW_44": "第44章：看两时间、听另份工作，不知最终付酬。",
+        "T_ROOM_TRIAL": "第44章：只确认该次并先教，仍未授权无条件开柜。",
+        "O_HOURS_NOTE": "第44章：当面区分旧蓝17:10与新25日10:15，另一份有偿改页只何口述，未见送样收款。",
+        "P_DOOR_RECEIPT_42": "第44章：出示何对过自收，资金来源未回。",
+        "I_LATCH_ADJUST_42": "第42章：现场亲看顾做并自己单手试，不是托着才过。",
+        "I_ROOM_VISIT_PRICE": "第42章：实际接受查调结果并付款收据自持，无材料新费，最终报销结算未决。"
+      },
+      "读报老人": {
+        "T_KEEPER_SHARE": "第44章：听一次试行未担班，不拿读报抵值守。",
+        "T_VOICE_CONSENT": "第40章：只本次旁听不获复制或此后续用。",
+        "I_PUBLIC_SCOPE_40": "第40章：在场知范围不等读过四页。"
+      }
+    },
+    "recall": {
+      "selected": {
+        "P_TAPE": [
+          "due"
+        ],
+        "T_KEEPER_SHARE": [
+          "explicit"
+        ],
+        "T_VOICE_CONSENT": [
+          "explicit"
+        ],
+        "P_HOURS_NOTE": [
+          "explicit"
+        ],
+        "I_PUBLIC_SCOPE_40": [
+          "explicit"
+        ],
+        "P_READING_ROOM_SPARE_KEY": [
+          "explicit"
+        ],
+        "P_READING_ROOM_DUTY_KEY": [
+          "explicit"
+        ],
+        "O_HOURS_NEW_44": [
+          "explicit"
+        ],
+        "T_ROOM_TRIAL": [
+          "explicit"
+        ],
+        "P_ROOM_TRIAL_SHEET": [
+          "explicit"
+        ],
+        "O_HOURS_NOTE": [
+          "cast",
+          "recent"
+        ],
+        "P_DOOR_RECEIPT_42": [
+          "cast",
+          "recent"
+        ],
+        "P_CITY_AUDIO": [
+          "cast",
+          "recent"
+        ],
+        "P_PUBLIC_PAGES": [
+          "cast",
+          "recent"
+        ],
+        "P_QIU_LARGE_PAGES": [
+          "cast",
+          "recent"
+        ],
+        "P_QIU_WORK_PAGES": [
+          "cast",
+          "recent"
+        ],
+        "P_RO_WORK_PAGES": [
+          "cast",
+          "recent"
+        ],
+        "T_PAID_WORK": [
+          "cast",
+          "recent"
+        ],
+        "T_SOUND_CONTEXT": [
+          "cast",
+          "recent"
+        ],
+        "I_LATCH_ADJUST_42": [
+          "recent"
+        ],
+        "I_ROOM_VISIT_PRICE": [
+          "recent"
+        ],
+        "O_RAIN_DURING_42": [
+          "cast",
+          "recent"
+        ]
+      },
+      "omitted_ids": [
+        "T_SIGNAL",
+        "T_HANDOVER",
+        "T_PRIVATE",
+        "T_LAMP",
+        "T_TAPE",
+        "T_KEY_CABINET",
+        "I_KEY_USE",
+        "I_DECK_REPAIR",
+        "T_SERVICE_VISIT",
+        "T_CONTACT",
+        "T_ARCHIVE",
+        "T_MESSAGE_VERIFY",
+        "T_PUBLIC_USE",
+        "O_RAIN_TILE",
+        "O_ROOM_LATCH",
+        "P_LAMP",
+        "P_TRIAL_VOICE",
+        "T_AUDIO_REMAINDER",
+        "T_ROUTE_COMMON",
+        "O_LAMP_PANEL",
+        "P_CHEN_NOTE",
+        "T_PAGE_PAIR",
+        "O_ROOM_TONE",
+        "O_WHEEL_KNOCK",
+        "R_SHEN_ZHOU",
+        "T_RETURN_MONTH",
+        "O_PAGE_PAIR",
+        "P_AUDIO_COPY",
+        "R_SHEN_TANG",
+        "P_BOX",
+        "P_KEY",
+        "P_LAMP_BOOK",
+        "P_NOTICE",
+        "O_DECK",
+        "O_DISPATCH_RETURN",
+        "O_INDEX_PAGE",
+        "O_MESSAGE_ROW",
+        "O_MESSAGE_SIGN",
+        "O_PLATE",
+        "O_QIU_ACCOUNT",
+        "O_TAPE_18",
+        "P_SERVICE_BAG",
+        "T_INDEX",
+        "I_AUDIO_ALIGN",
+        "O_INDEX_CONT",
+        "O_KEY",
+        "O_LAMP_RECORD",
+        "O_MAP",
+        "O_NOTICE",
+        "P_MAP",
+        "T_EAST",
+        "T_MAP",
+        "O_CURRENT"
+      ],
+      "total": 75,
+      "optional_limit": 12
+    },
+    "instruction": "作者真相只供创作核对。人物只能使用其已知信息；无人物条目表示未登记，不能据此断定其知道或不知道。召回摘要不能代替相关正文复读。"
+  },
+  "source_hashes": {
+    "writer.json": "e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3",
+    ".writer/state.json": "be19c42e4ae0c3866e2a80f433cd60cc7e5a8cfbf1fd96d9a1ea51882810a017",
+    "大纲/单元/0045.json": "cec76914933e624b77cbb543bbca7e2193bd4cdffb397e63259be7c14f3f1afb",
+    "设定/作品定位.md": "1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94",
+    "设定/文风.md": "2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c",
+    "设定/权威规则.md": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+    "大纲/分卷/V7.json": "f0322ac1569745cc50d69e6a9c99dee307970da22a94b601f1718f5bf690b84f",
+    "大纲/续部总纲.md": "27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440",
+    "设定/续部人物与场所.md": "19e46ab7bda4d3fb2616da0044e29c136f0da709d3fdf53c67b82bcfe3ae09d1",
+    "正文/0044-纸的两面不是同一天.md": "20ff1da81a7c4a296612c30c9bad37ab30cf4c1c5b1ebb917ac35d64298052ef"
+  }
+}

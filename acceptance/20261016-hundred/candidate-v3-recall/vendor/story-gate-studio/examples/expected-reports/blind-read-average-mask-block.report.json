@@ -1,0 +1,26 @@
+{
+  "report_id": "TEST-BLIND-AVERAGE-MASK-BLOCK-REPORT",
+  "module_id": "SGM-BLIND-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/blind-read-average-mask-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-BLIND-001",
+    "references/blind-read-review-rules.md"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-BLIND-001-R008",
+      "severity": "blocker",
+      "location": "input.readers",
+      "recommendation": "Every formal single-chapter ticket must complete reading, retell the surface event accurately, avoid key causality or identity misread, meet the continuation threshold, and explicitly want to continue; averages cannot rescue a failed ticket.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    }
+  ]
+}

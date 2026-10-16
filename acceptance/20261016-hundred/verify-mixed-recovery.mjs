@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {createRunner} from './command-runner.mjs';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const [label,checkpoint,unitText,cliPath=path.join(base,'candidate-v2/bin/ai-writer.mjs')]=process.argv.slice(2),unit=Number(unitText);
+if(![label,checkpoint].every(x=>/^[a-z0-9-]+$/.test(x??'')))throw Error('Use safe unique label and checkpoint names');
+const stage=path.join(base,label),work=path.join(stage,'work');if(fs.existsSync(stage))throw Error('Never overwrite evidence');
+fs.mkdirSync(stage,{recursive:true});fs.cpSync(path.join(base,'checkpoints',checkpoint,'files'),work,{recursive:true});
+const stateFile=path.join(work,'.writer/state.json'),state=JSON.parse(fs.readFileSync(stateFile)),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+assert.ok(Number.isInteger(unit)&&unit>=1&&unit<=state.units.length);
+const ref='设定/续部人物与场所.md',consumers=state.units.filter(x=>Object.hasOwn(x.source_hashes,ref)).map(x=>x.unit),expected=Math.min(unit,...consumers);
+fs.appendFileSync(path.join(work,ref),'\n<!-- 隔离副本来源漂移验证 -->\n');
+const body=path.join(work,state.units[unit-1].draft);fs.appendFileSync(body,'\n<!-- 隔离副本正文漂移验证 -->\n');
+const before=sha(stateFile),runner=createRunner(stage),cli=(name,args)=>runner.run(process.execPath,[path.resolve(cliPath),...args,'--project',work],name);
+const status=cli('status-mixed',['status']);assert.equal(status.exit_code,0);
+const blocked=cli('context-mixed',['context','--unit',String(state.units.length+1)]);assert.equal(blocked.exit_code,2);
+const expectedSources=state.units.flatMap(row=>Object.keys(row.source_hashes).filter(key=>key===ref||key===state.units[unit-1].draft).map(key=>({unit:row.unit,ref:key})));
+const detail=JSON.parse(blocked.stderr);assert.equal(detail.code,'CONTEXT_CHANGED');assert.equal(detail.recovery.from,expected);assert.equal(detail.recovery.expected_revision,state.revision);assert.deepEqual(detail.recovery.stale_units,[unit]);assert.deepEqual(detail.recovery.changed_sources,expectedSources);assert.equal(detail.next_command,JSON.parse(status.stdout).next.command);
+const destination=path.join(stage,'blocked-export'),exp=cli('export-mixed',['export','--out',destination]);assert.equal(exp.exit_code,2);assert.equal(JSON.parse(exp.stderr).recovery.from,expected);assert.equal(fs.existsSync(destination),false);assert.equal(sha(stateFile),before);
+const rewound=cli('one-rewind',['rewind','--from',String(detail.recovery.from),'--expected-revision',String(detail.recovery.expected_revision)]);assert.equal(rewound.exit_code,0,rewound.stderr);
+const resumed=cli('resumed-context',['context','--unit',String(expected),'--max-chars','200000']);assert.equal(resumed.exit_code,0,resumed.stderr);const packet=JSON.parse(resumed.stdout);assert.equal(packet.unit,expected);assert.equal(packet.source_hashes[ref],sha(path.join(work,ref)));
+const after=JSON.parse(fs.readFileSync(stateFile));assert.deepEqual(after.units,state.units.slice(0,expected-1));assert.equal(after.revision,state.revision+1);assert.ok(fs.existsSync(body));
+let snapshotProof=null;if(expected===25){const origin=JSON.parse(fs.readFileSync(path.resolve(base,'../20261016-expanded/works/潮汐信号/.writer/state.json')));snapshotProof=JSON.stringify(after.snapshot)===JSON.stringify(origin.snapshot);assert.ok(snapshotProof);}
+const report={ok:true,scope:'Real frozen manuscript copy; mixed-drift guidance and one-step rewind recovery, not full re-registration',checkpoint,starting_units:state.units.length,starting_revision:state.revision,body_drift_unit:unit,source_consumer_units:consumers,recovery_from:expected,context_and_export_agree_with_status:true,no_export_or_authority_write_on_rejection:true,one_rewind_context_ok:true,remaining_prefix:after.units.length,prefix24_snapshot_identical_to_original:snapshotProof,main_manuscript_untouched:true};
+fs.writeFileSync(path.join(stage,'result.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(report));

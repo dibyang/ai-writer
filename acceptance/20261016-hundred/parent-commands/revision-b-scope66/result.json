@@ -1,0 +1,12 @@
+{
+  "exe": "node",
+  "argv": [
+    "-e",
+    "const fs=require('fs'),b='acceptance/20261016-hundred';const s=JSON.parse(fs.readFileSync(b+'/checkpoints/session-07/files/.writer/state.json')),o=JSON.parse(fs.readFileSync('acceptance/20261016-expanded/works/潮汐信号/.writer/state.json'));const list=Object.entries(s.snapshot.ledger).filter(([id,e])=>e.type==='observation'&&/半月|取消|保留款/.test(e.statement+' '+(e.author_truth??''))).map(([id,e])=>({id,introduced_unit:e.introduced_unit,statement:e.statement,author_truth:e.author_truth}));const rows=[];for(const [n,v] of Object.entries(o.snapshot.characters))rows.push({field:'characters.'+n,old:v,current:s.snapshot.characters[n]});for(const [id,e] of Object.entries(o.snapshot.ledger))for(const [n,v] of Object.entries(e.character_known??{}))rows.push({field:'ledger.'+id+'.character_known.'+n,old:v,current:s.snapshot.ledger[id]?.character_known?.[n]});const requiring=rows.filter(r=>typeof r.current!=='string'||!r.current.includes(r.old));console.log(JSON.stringify({revision:s.revision,observation_candidates:list,original_knowledge_fields:rows.length,original_text_present:rows.length-requiring.length,original_fields_requiring_review:requiring.map(r=>r.field)},null,2));"
+  ],
+  "cwd": "D:\\work\\other\\ai-writer",
+  "started_at": "2026-10-16T08:30:00.440Z",
+  "elapsed_ms": 88,
+  "exit_code": 0,
+  "signal": null
+}

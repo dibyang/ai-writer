@@ -97,8 +97,8 @@ npm run doctor
 npm run test:engine
 ```
 
-0.3.0 验证记录见 [本轮验证](acceptance/20261015-usability-fix/README.md)。0.2.0 的工具回归 40/40、内置引擎回归 29/29 及六章小说、旧稿导入、剧本与历史散文实跑继续保留，见 [0.2.0真实验证](acceptance/20261015-long/README.md)；[0.1.0三文体证据](acceptance/20261015/README.md)也继续保留。
+0.3.0 的易用性与去味流程记录见 [专项验证](acceptance/20261015-usability-fix/README.md)；长篇见 [24章扩大实跑](acceptance/20261016-expanded/README.md)与 [百章真实Codex实跑](acceptance/20261016-hundred/README.md)，各轮源码、实际完成范围、失败记录及未核边界以报告为准。0.2.0 的工具回归 40/40、内置引擎回归 29/29 及六章小说、旧稿导入、剧本与历史散文实跑继续保留，见 [0.2.0真实验证](acceptance/20261015-long/README.md)；[0.1.0三文体证据](acceptance/20261015/README.md)也继续保留。
 
-本机Codex嵌套目录cwd曾遇宿主helper初始化失败，成功入口为工作区根目录加明确作品路径；作品随附Node工具可独立运行。跨系统CI、完整百章语义连续性、真人阅读、排演与作者定稿尚未验收。容量测量只统计当前state和有效journal，包含保留备份的全目录不承诺同等缩减。
+本机Codex嵌套目录cwd曾遇宿主helper初始化失败，成功入口为工作区根目录加明确作品路径；作品随附Node工具可独立运行。百章的模型实读、连续性发现与修复范围见上述实跑记录；跨系统CI、真人阅读、排演与作者定稿尚未验收，模型检查不能保证全书没有其他语义问题。容量测量只统计当前state和有效journal，包含保留备份的全目录不承诺同等缩减。
 
 本项目尚未对外发布；许可证与内置私有内容的分发限制见 [LICENSE.md](LICENSE.md)。
