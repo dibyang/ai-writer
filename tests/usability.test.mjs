@@ -78,6 +78,8 @@ test('独立作品保留来源、原文与许可，缺失许可时诊断明确�
   for (const row of provenance.files) assert.equal(sha(path.join(root, row.file)), row.sha256);
   const license = 'vendor/oh-story-deslop-reference/LICENSE';
   fs.unlinkSync(path.join(root, license));
+  assert.ok(main(['doctor','--project',root]).warnings.some(message=>message.includes(license)));
+  fs.unlinkSync(path.join(root,'.writer/tool',license));
   const report = main(['doctor', '--project', root]);
   assert.equal(report.ok, false); assert.ok(report.errors.some(message => message.includes(license)));
 });

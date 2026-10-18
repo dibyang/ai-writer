@@ -1,0 +1,63 @@
+{
+  "expected_revision": 32,
+  "operation_id": "native-d-two-workflow-revision",
+  "author_evidence": {
+    "quote": "只在D批验证副本继续做工程回归，不写第七章，不扩充故事或改变任何事实、人物所知、物件保管和未决选择。允许把第三章一处现有保管动作做极小的等价澄清，用于检验更新后的旧章修订和连续性；将它明确标为工程控制变化，不冒充已证明的文学优化。是否值得润色仍是可选意见，不能升级成必改。修订范围只覆盖3至6章，后面三章原则上原字节保留，但都要实读承接、顺序重登。可以建立两个独立候选验证并行CAS：只提交A，B在A提交后须因旧基线拒绝，保留并明确中止B。把所采用的可选意见与实际提交、复核结果闭环；旧的保留/延期选择继续保留。必要时对受影响的既有验证意见重核。完成后正文暂停，只讨论规划。",
+    "local_source": "研究/D批修订授权原话.md",
+    "source_sha256": "8bf70e179fb39a5428322d678469bde7159732a66a35be00221ecd3d7af8c9af",
+    "locator": "研究/D批修订授权原话.md:5; synthetic acceptance original quote, no message ID",
+    "recorded_by": "native-d-two Codex; synthetic acceptance recorder"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "synthetic acceptance：仅D副本第三章一处对象名称等价澄清，实读并顺序重登3–6，A提交/B旧基线拒绝后中止；不写7章，完成后暂停。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 3,
+        "to": 6
+      },
+      "stop_conditions": [
+        "仅第三章一处簿子到借物簿；4–6正文原字节保留",
+        "事实、知情、保管、候选和未决不变；只提交A，B冲突后保留并中止",
+        "非预期产品阻断停止依赖步骤；完成后正文暂停，只讨论规划"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

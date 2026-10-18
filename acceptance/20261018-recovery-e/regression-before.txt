@@ -1,0 +1,54 @@
+✖ 新随附包丢失清单不能降级成旧副本；只读诊断、预览及写入均识别损坏 (7823.8062ms)
+✖ 安装后的包不能只重建清单追认不同资源；写前核对已安装完整内容身份 (8030.1869ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15982.2152
+
+✖ failing tests:
+
+test at tests\tool-update.test.mjs:32:1
+✖ 新随附包丢失清单不能降级成旧副本；只读诊断、预览及写入均识别损坏 (7823.8062ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/tool-update.test.mjs:32:366)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\tool-update.test.mjs:34:1
+✖ 安装后的包不能只重建清单追认不同资源；写前核对已安装完整内容身份 (8030.1869ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'TOOL_BUILD_CHANGED'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/tool-update.test.mjs:34:610)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'TOOL_BUILD_CHANGED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

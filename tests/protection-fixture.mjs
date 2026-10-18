@@ -31,7 +31,7 @@ export function unit(root, n, token, suffix = '') {
 }
 export function fixture(t, units = 2, kind = 'novel') {
   const tmp = path.join(ROOT, '.tmp'); fs.mkdirSync(tmp, { recursive: true }); const dir = fs.mkdtempSync(path.join(tmp, 'protection-')), root = path.join(dir, 'work');
-  t.after(() => { assert.equal(path.dirname(fs.realpathSync(dir)), fs.realpathSync(tmp)); fs.rmSync(dir, { recursive: true, force: true }); });
+  t.after(async () => { assert.equal(path.dirname(fs.realpathSync(dir)), fs.realpathSync(tmp)); await fs.promises.rm(dir, { recursive: true, force: true, maxRetries:12, retryDelay:150 }); });
   initProject(root, kind, '独立验证'); file(root, '研究/验证授权.md', '允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。\n这是合成测试材料，不冒充实际作者逐条确认。\n'); workflow(root);
   for (let n = 1; n <= units; n++) unit(root, n); return { root, dir };
 }

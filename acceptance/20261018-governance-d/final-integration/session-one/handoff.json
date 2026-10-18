@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "stage": "native-d-one-stopped-at-prepared",
+  "synthetic_acceptance": true,
+  "work": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\work",
+  "main_cwd": "D:/work/other/ai-writer",
+  "source_root": "D:/work/other/ai-writer",
+  "no_recover_or_unlock_executed": true,
+  "body_authorization": {
+    "stage": "structure",
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "draft_range": null,
+    "revise_range": null,
+    "stop": "正文暂停，不写第7章；不改六章"
+  },
+  "protocol": {
+    "original": {
+      "schema_version": 5,
+      "revision": 24,
+      "generation": null,
+      "generation_note": "not enabled"
+    },
+    "before_enable": {
+      "schema_version": 5,
+      "revision": 28,
+      "generation": null
+    },
+    "current": {
+      "schema_version": 6,
+      "revision": 29,
+      "generation": 0,
+      "state_sha256": "3cd972118d6ba324b8e2610e7653b9cf5587b03e8bb08f6a85f0978eeb821686"
+    },
+    "prepared_candidate_only": {
+      "schema_version": 6,
+      "revision": 30,
+      "generation": 1,
+      "state_sha256": "330732be322ff2b06d48321ebf8bb2232a307a6e9edf06a1db6548c299f74fec",
+      "not_published": true
+    }
+  },
+  "author_evidence": {
+    "quote": "只在D批《渡口旧箱》验证副本继续检查工具，正文仍暂停，不写第七章。先仅讨论规划，保留现有未决选择；可新增‘旧纸样可留给下一卷核查’的候选备忘，不能当已发生事实或确认扩店。允许从D:/work/other/ai-writer这份本地0.7来源检查并启用新更新协议，保留原状态备份，再更新随附工具。保留根AGENTS、技能和手册里的验证笔记。分两次会话测试中断恢复：本会话故意停在事务准备后，下一会话只凭文件明确完成恢复，不抢活进程锁、不覆盖第三方改动。不得影响原C材料或真实作品。",
+    "local_source": "研究/D批更新授权原话.md",
+    "source_sha256": "259a54e74e7095ce9e44e3d30fcabd31218c6add479490dd9eca51250119b9a9",
+    "locator": "研究/D批更新授权原话.md:5，完整合成作者原话；本轮用户指定文本，无消息ID",
+    "recorded_by": "native-d-one Codex; synthetic acceptance recorder"
+  },
+  "enable": {
+    "ok": true,
+    "schema_version": 6,
+    "revision": 29,
+    "generation": 0,
+    "enable_id": "e998da67-ac55-4ed7-9ae7-23257cb4424b",
+    "backup": ".writer/tool-enables/e998da67-ac55-4ed7-9ae7-23257cb4424b/before-state.bin",
+    "tool_unchanged": true,
+    "backup_sha256": "e25243221dacc9079927178f438d21a7af6a6e5b0130b9060309bf3bdbef7091",
+    "original_session_state": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\session-one\\initial-state.json",
+    "original_session_state_sha256": "c344be09515ac2c6e153314e4e407dd8aab05557711983a640e51cf4b466e68a"
+  },
+  "builds": {
+    "source": {
+      "root": "D:\\work\\other\\ai-writer",
+      "version": "0.7.0",
+      "content_id": "cf999dbe85fe5a0ad41382078c10c900402bfe2a82905811a715ae5c294469b9",
+      "runtime_id": "f393d25ef6587af6591904135e5fe308ac7d75e8e4ca297f97455a4d7476165b",
+      "provenance": {
+        "source_commit": "257c08ad6c6a74feb7f60df7ce7075393a812c66",
+        "dirty": true
+      }
+    },
+    "target": {
+      "content_id": "43c16173ba50149b2c088ebb2e161cacbda1b58593ec56ee16483daa5d925144",
+      "version": "0.6.0",
+      "manifest_sha256": "62d06fe8eaa606b473e39f3ac24297e686fb2bd6871f346d6950f5c4c8100d21"
+    },
+    "runtime_guard_main": "f9009b6aa8dd347558a41ebef9447fc943dd5342fbc885eef16f8fca4f146d83",
+    "runtime_guard_old": "bafba65483cbae67215ee3cfabcc3c00868889407731ce886204e3a4cfacff2b",
+    "source_files_verified_unchanged": 61,
+    "namespace_note": "content_id/runtime_id/runtime_guard_id are distinct observed namespaces; no signature or module byte attestation"
+  },
+  "customizations": [
+    {
+      "ref": "AGENTS.md",
+      "before_sha256": "577b721c6c129b3a5132f691595b4f5695d0ff98bdb389c13e1442608679ff02",
+      "after_sha256": "b3333b6a50508d7be0e93b4a63364893eacce40e8bdbc275074251a41a715998",
+      "appended_utf8": "\n## D批合成验证笔记（synthetic acceptance）\n\n本段仅是2026-10-18 D批副本的定制保留样本，不增加或覆盖任何项目指令、作者选择与正文授权。当前六章继续暂停；旧纸样核查仅为未来候选。该笔记用于观察本地工具更新时根资源的默认保留，不是文学定稿或发布结论。\n",
+      "final_sha256": "b3333b6a50508d7be0e93b4a63364893eacce40e8bdbc275074251a41a715998",
+      "plan_action": "preserve"
+    },
+    {
+      "ref": "docs/quickstart.md",
+      "before_sha256": "6227c9050111a769cc39cf9ddd79088c220fe17f38b80b8ed751446d866d6760",
+      "after_sha256": "fe669a49f47f562038634f32bd0cda0782cd3484cf0ba978e89dfd8cd301f4f9",
+      "appended_utf8": "\n## D批合成验证笔记（synthetic acceptance）\n\n本段仅是2026-10-18 D批副本的定制保留样本，不增加或覆盖任何项目指令、作者选择与正文授权。当前六章继续暂停；旧纸样核查仅为未来候选。该笔记用于观察本地工具更新时根资源的默认保留，不是文学定稿或发布结论。\n",
+      "final_sha256": "fe669a49f47f562038634f32bd0cda0782cd3484cf0ba978e89dfd8cd301f4f9",
+      "plan_action": "preserve"
+    },
+    {
+      "ref": ".agents/skills/writer-project/SKILL.md",
+      "before_sha256": "0fd05f9ffb840f717cf645fcd4a6d2c3f37c32df7dd3f1ef4ea32b99f721a257",
+      "after_sha256": "872b109186d90422ce7d33b9595417c8c3828b962385df0d4d2bf872e58f8174",
+      "appended_utf8": "\n## D批合成验证笔记（synthetic acceptance）\n\n本段仅是2026-10-18 D批副本的定制保留样本，不增加或覆盖任何项目指令、作者选择与正文授权。当前六章继续暂停；旧纸样核查仅为未来候选。该笔记用于观察本地工具更新时根资源的默认保留，不是文学定稿或发布结论。\n",
+      "final_sha256": "872b109186d90422ce7d33b9595417c8c3828b962385df0d4d2bf872e58f8174",
+      "plan_action": "preserve"
+    }
+  ],
+  "update_input": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\session-one\\update-input.json",
+  "update_input_sha256": "589a0512b35f44829c6486102b0b613b5c821b8b2328e67a93b6cc487e1d32c4",
+  "original_request": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\session-one\\update-request-original.json",
+  "original_request_sha256": "1e0085661dbcd71becb7bc18a8c89c82991202fc873bcdc9cc645cffa929c3e3",
+  "plan_sha256": "ee4fbdc35ecab257195ce4e8552ac9a10835afb086d2dbab81c136f37badcc4c",
+  "operation_id": "3b19dbc2-9462-4a7b-a3f7-b6c40de68552",
+  "prepared_transaction": {
+    "id": "6b0c8e71-58f2-4559-b891-1a35b87efd6e",
+    "status": "prepared",
+    "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\work\\.writer\\transactions\\6b0c8e71-58f2-4559-b891-1a35b87efd6e\\transaction.json",
+    "sha256": "a35a5e9d9d4b2e2c384740d080ad6e3816468372c0a5ac306d239cc10726a759",
+    "plan_sha256": "058576415d8a82e2c3e9b289a49b2d1dd55ecd93b23fb6907a48d19e95549ef7",
+    "target_count": 59,
+    "all_current_targets_old": true,
+    "all_old_new_backups_hash_valid": true,
+    "lock": {
+      "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\work\\.writer\\write.lock",
+      "sha256": "528d379c8c02ca285ab5674520887fcce9e081cd4616025744692dc025428fb9",
+      "pid": 44476,
+      "at": "2026-10-18T06:55:54.950Z"
+    },
+    "process_exit_evidence": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\session-one\\process-exit-evidence.json",
+    "capture_exit_code": 97,
+    "process_probe_alive": false
+  },
+  "decisions": {
+    "current": [],
+    "candidates": [
+      {
+        "id": "D_PATTERN_NEXT_VOLUME",
+        "topic": "旧纸样的未来核查",
+        "status": "candidate",
+        "options": [
+          "旧纸样可留给下一卷核查"
+        ],
+        "adopted_items": [],
+        "excluded_items": [],
+        "unresolved_items": [
+          "是否下一卷核查、何时及如何核查未定",
+          "FUTURE_STAY：林禾是否留镇常住未定",
+          "FUTURE_COST：费用分担未定",
+          "FUTURE_PATTERN：纸样是否复制给更多人未定",
+          "不确认扩店或任何经营安排"
+        ],
+        "effective_range": {
+          "from": 7,
+          "to": null
+        },
+        "event_ref": ".writer/objects/cd2f8b71-5fed-45a8-955d-0ba587f24acf.json",
+        "event_sha256": "cb55fee9a971fbad6292a92f2d79309157a92bd66a00cfa0b542fa4b4264b748"
+      }
+    ],
+    "history_count": 0
+  },
+  "unresolved": [
+    "FUTURE_STAY",
+    "FUTURE_COST",
+    "FUTURE_PATTERN"
+  ],
+  "source_future": {
+    "version_id": "D_PATTERN_MEMO_V1",
+    "from": 7,
+    "mode": "future",
+    "required_readings": {
+      ".writer/objects/b62f299c5060ccb65113118ec1763a3b827dfc74cab62b76c2c89dfa4dd7b9a0.source": "b62f299c5060ccb65113118ec1763a3b827dfc74cab62b76c2c89dfa4dd7b9a0"
+    },
+    "report": "审查/D批候选备忘影响实读.md",
+    "report_sha256": "732e5697ce17d3fbacc42162bc411b621d5617175d61876e51bb3a5efeddf55a",
+    "candidate_remains_candidate": true
+  },
+  "opinions": [
+    {
+      "id": "NATIVE_C_READABILITY_01",
+      "effective_status": "verified",
+      "context_changed": false,
+      "application_commit_id": "c5e3da0b-4b95-4e7a-884f-b58febd07421",
+      "author_choice": "adopted"
+    },
+    {
+      "id": "NATIVE_C_STYLE_02",
+      "effective_status": "retained",
+      "context_changed": false,
+      "application_commit_id": null,
+      "author_choice": "retained"
+    },
+    {
+      "id": "NATIVE_C_PACING_03",
+      "effective_status": "deferred",
+      "context_changed": true,
+      "application_commit_id": null,
+      "author_choice": "deferred"
+    }
+  ],
+  "invariants": {
+    "six_bodies_unchanged": true,
+    "snapshot_unchanged": true,
+    "units_unchanged": true,
+    "original_consumption_hashes_unchanged": true,
+    "old_journals_and_objects_unchanged": true,
+    "root_customizations_preserved": true,
+    "source_package_read_only_verified": true
+  },
+  "recovery_next_session": {
+    "direction": "complete",
+    "suggested_input": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\final-integration\\session-one\\recovery-complete-input.suggested.json",
+    "suggested_commands": [
+      "node acceptance/20261018-governance-d/capture.mjs native-d-two-01-updates node bin/ai-writer.mjs tool updates --project D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/work",
+      "node acceptance/20261018-governance-d/capture.mjs native-d-two-02-recover-complete node bin/ai-writer.mjs tool recover --project D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/work --input D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/session-one/recovery-complete-input.suggested.json"
+    ],
+    "preconditions": [
+      "新会话先实读本交接、report、command-index及实际事务文件；不要使用历史marker中的旧C绝对路径",
+      "重新核实际lock SHA和PID；锁SHA须匹配本交接且原进程不存活。出现活进程、PID复用或无法确认时停止，不能抢锁",
+      "重新比对事务每项当前字节只属于已知旧/新集合，核备份与保护清单；第三方字节保留并停止，禁止用备份覆盖",
+      "故障环境必须为空；仅从被替换包外的新0.7入口tool recover完成恢复；不要用revision recover或先unlock",
+      "恢复成功后新进程从随附入口运行help/doctor/status/discussion context并经capture留证，再核六章、snapshot、units和三处定制哈希",
+      "预期最终schema6/revision30/generation1仅在恢复确实完成后认定；本会话未完成工具更新，正文仍暂停"
+    ],
+    "execute_now": false
+  },
+  "not_done": [
+    "未执行tool recover、revision recover、unlock或undo-enable",
+    "未做最终安装工具验收或更新完成认定",
+    "未修改正文、真实作品、旧C材料；未创建新修订会话/子代理、发送消息、提交、推送或联网发布"
+  ]
+}

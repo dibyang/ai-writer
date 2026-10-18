@@ -12,7 +12,7 @@ const write = (root, ref, value) => { fs.mkdirSync(path.dirname(path.join(root, 
 function work(t, end = 12) {
   fs.mkdirSync(path.join(ROOT, '.tmp'), { recursive: true });
   const base = fs.mkdtempSync(path.join(ROOT, '.tmp/long-')), root = path.join(base, '作品');
-  t.after(() => { assert.ok(fs.realpathSync(base).startsWith(fs.realpathSync(path.join(ROOT, '.tmp')) + path.sep)); fs.rmSync(base, { recursive: true, force: true }); });
+  t.after(async () => { assert.equal(path.dirname(fs.realpathSync(base)), fs.realpathSync(path.join(ROOT, '.tmp'))); await fs.promises.rm(base, { recursive: true, force: true, maxRetries: 12, retryDelay: 150 }); });
   initProject(root, 'novel', '长篇测试', { legacy: true }); enableLong(root, 0);
   const volume = { id: 'V1', title: '查信', start: 1, end, promises: ['追查错信'], constraints: ['观察先于解释'], reserved: ['寄件人身份'], arcs: [{ id: 'A1', start: 1, end, goal: '查信', payoff: '确认编号重复', forbidden: ['直接揭示寄件人'] }] };
   write(base, '卷.json', volume); main(['volume', '--project', root, '--input', path.join(base, '卷.json')]);

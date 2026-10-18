@@ -1,0 +1,195 @@
+{
+  "unit": 3,
+  "expected_revision": 35,
+  "source_hashes": {
+    "writer.json": "39ad8a9044270cb949b008e7604c3f0307049ea9ac8c2377935a2d1a4904a306",
+    ".writer/state.json": "52bd1fde50c9c1aac75a89ec6ff177628c710fac7231f4a38918cc2b96ab989d",
+    "大纲/单元/0003.json": "c448612000bed4c03e2187087ce98c6b634bd173d243d38dc65035b903dc1ae7",
+    "设定/作品定位.md": "2c7f72f92e2f1dce19ecf5e7fe4ea47f42f72cd2e67bc20af224d699c7762d93",
+    "设定/文风.md": "9cc72195683be519f0013f5c54a53e1510e4782fef462f4e96a23b82521fb14d",
+    "设定/权威规则.md": "99e43c5485358fa1a1fafd1049e10cf982886669740eed4fcda16837b15cfe68",
+    "设定/人物声音.md": "281de5bb32dcbf6e30a8f116cfc82476ca4ff5dd9bf7090b79903e70f6a4e609",
+    "大纲/全书骨架.md": "8a7a4b17e731e5ca5cf704b0cbc00ae5d2b52c2d8c531464d7dc05d05f170249",
+    "大纲/分卷/V1.json": "a36ec51d9e4fb700f36237c6f031362b4ad01e40df7b72a177a846dc614221a4",
+    "正文/0002-先放一夜.md": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0"
+  },
+  "draft": "正文/0003-垫高两块砖.md",
+  "source_bindings": {},
+  "summary": "雨夜墙根进水，周梅带砖来帮林禾把箱子移到长凳垫高。两人读借物簿见徐兰黄漆箱存缝纫物，但借存方向不明；免提电话约老邵明早八点半到，箱锁未开。林禾邀周梅端菜来分饭。",
+  "changes": {
+    "characters": {
+      "林禾": "便民处；与周梅移箱，看到旧簿文字，听老邵约明早八点半；开始让周梅参与保管动作，留饭等菜",
+      "老邵": "县里接免提电话；答应次日八点半到便民处，尚未当面核簿",
+      "周梅": "回家端菜；已看箱底蓝布，认为像母亲围裙布但承认同店布不能定主；亲读簿中母名，电话约老邵"
+    },
+    "timeline_append": [
+      "第一天雨夜：林禾周梅共同移箱防潮，读借物簿并电话约见老邵，准备分饭。"
+    ],
+    "ledger": {
+      "O_BOX": {
+        "type": "object",
+        "statement": "从渡口仓房送来的一只锁着的半米长黄漆木箱",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵",
+          "周梅"
+        ],
+        "tags": [],
+        "reader_known": "老邵送来，等待认领",
+        "character_known": {
+          "林禾": "暂存物，归属未知",
+          "老邵": "来自仓房，认领时要在场",
+          "周梅": "看见黄漆，尚未说明认领依据"
+        },
+        "custody": {
+          "holder": "林禾",
+          "location": "便民处离墙长凳，砖与旧毛巾垫高",
+          "condition": "挂锁未开；暂避墙根渗水"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "两人把砖摆平，又在上面铺了折叠的旧毛巾。"
+          }
+        ]
+      },
+      "O_BOOK": {
+        "type": "object",
+        "statement": "老邵留下的旧借物簿",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "tags": [],
+        "reader_known": "出现徐兰黄漆箱存缝纫物一行",
+        "character_known": {
+          "林禾": "亲读文字，但不知借走借来",
+          "周梅": "亲读母亲姓名，等老邵说明"
+        },
+        "custody": {
+          "holder": "林禾",
+          "location": "便民处抽屉，读后收好",
+          "condition": "读到徐兰一行；含义待老邵解释"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "林禾收好借物簿，把湿抹布拧进水桶，周梅扶着桶沿，免得她连桶一起提起来。"
+          }
+        ]
+      },
+      "T_CLAIM": {
+        "type": "thread",
+        "statement": "旧箱等人认领，外观与记忆是否足够尚待查问",
+        "status": "partial",
+        "cast": [
+          "林禾",
+          "老邵",
+          "周梅"
+        ],
+        "tags": [],
+        "due_unit": 4,
+        "reader_known": "有簿册相关记录，等老邵当面说明；明早八点半见",
+        "character_known": {
+          "林禾": "知道簿中文字与时间，尚无借存方向",
+          "老邵": "已答应到场，须戴眼镜核簿",
+          "周梅": "见母名但未领箱"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "老邵在电话里应了，说八点半到，别忙着撬，锁能用。"
+          }
+        ]
+      },
+      "R_LISTEN": {
+        "type": "relationship",
+        "statement": "林禾承认自己可能想错，周梅仍愿次日再来",
+        "status": "partial",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "tags": [],
+        "reader_known": "从认领时隔柜台询问走到共同防潮、约着分饭",
+        "character_known": {
+          "林禾": "接受周梅帮忙并留饭",
+          "周梅": "帮忙移箱，准备端菜分饭"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "她留了一半饭在锅里，让周梅回去端菜。"
+          }
+        ]
+      },
+      "OBS_REGISTER": {
+        "type": "observation",
+        "statement": "借物簿折角页写徐兰，黄漆箱一个，存缝纫物",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "tags": [],
+        "reader_known": "原簿文字有相关记载，但方向未明",
+        "character_known": {
+          "林禾": "亲读，不知道借走还是借来",
+          "周梅": "亲读，确认母名"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "林禾翻到一张折角页，上面写着“徐兰，黄漆箱一个，存缝纫物”。"
+          }
+        ]
+      },
+      "T_BLUE": {
+        "type": "thread",
+        "statement": "蓝布补角是否与徐兰的围裙旧布有关",
+        "status": "pending",
+        "cast": [
+          "林禾",
+          "周梅",
+          "老邵"
+        ],
+        "tags": [],
+        "due_unit": 4,
+        "reader_known": "周梅只说像，未认定",
+        "character_known": {
+          "林禾": "听周梅说像围裙布，也听见她否认凭颜色定主",
+          "周梅": "看见布色，尚未核对具体裁缝痕迹"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "周梅说颜色像母亲以前做围裙剩的，随即又摇头：“镇上买布都去那一家，光看蓝色，算不了。”"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "恢复的是原登记事实草案；路径、当前context哈希和未变项自动填入。必须实读新正文与承接，修正摘要/changes/失效引文，填写replay_review真实报告及六项checked_fields；先record-preview，再record。不能把自动草案当无变化结论。",
+  "_replay": {
+    "session_id": "62adfd19-2036-4b01-a82b-0f93597be78f",
+    "base_state_sha256": "5caa87a18f30e9b165a7117ffd2b4a2140c75149e9402086a6c90e86f044273a",
+    "old_unit_sha256": "8d628e3f706f8442fb348b7587163035727ce1258f9022db3b08da65d58d1fa3",
+    "old_journal_sha256": "99da6084974c348812b0fe1c28200bae453ffa9c479ae80c292af58e99f07279",
+    "draft_sha256": "0f373cc414a1267f614f65dfd54254e2158361063e31e100f4e0a780837c10bf"
+  },
+  "replay_review": {
+    "reviewer": "native-d-two Codex informed model reading; synthetic acceptance",
+    "report": "审查/D批第3章重登实读.md",
+    "draft_sha256": "0f373cc414a1267f614f65dfd54254e2158361063e31e100f4e0a780837c10bf",
+    "checked_fields": [
+      "summary",
+      "characters",
+      "timeline",
+      "ledger",
+      "evidence",
+      "downstream"
+    ]
+  }
+}

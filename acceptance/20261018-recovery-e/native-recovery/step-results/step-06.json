@@ -1,0 +1,568 @@
+{
+  "step": 6,
+  "passed": true,
+  "description": "删除清单及资源变化保护；公开API重建清单不能追认安装身份；精确还原后重跑成功",
+  "commands": [
+    {
+      "name": "23-damaged-embedded-doctor",
+      "exit_code": 1,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": [
+        "构建文件缺失或与初始清单不同；查看 tool identify 的 missing/mismatches，不会自动更新",
+        "随附完整内容与已安装代次不符；重建清单不能追认资源变化，从外部入口核对原版"
+      ],
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work/.writer/tool/bin/ai-writer.mjs",
+        "args": [
+          "doctor",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:50.535Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:50.535Z",
+      "finished_at": "2026-10-18T09:03:50.986Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/23-damaged-embedded-doctor/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/23-damaged-embedded-doctor/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/23-damaged-embedded-doctor/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/23-damaged-embedded-doctor/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/23-damaged-embedded-doctor/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/23-damaged-embedded-doctor/result.json"
+      }
+    },
+    {
+      "name": "24-damaged-embedded-plan",
+      "exit_code": 2,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": "TOOL_BUILD_CHANGED",
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work/.writer/tool/bin/ai-writer.mjs",
+        "args": [
+          "plan",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--input",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/inputs/legal-existing-unit-plan.json"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:51.029Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:51.029Z",
+      "finished_at": "2026-10-18T09:03:51.818Z",
+      "records": {
+        "input": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/input.raw.json",
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/24-damaged-embedded-plan/result.json"
+      }
+    },
+    {
+      "name": "25-damaged-external-identify",
+      "exit_code": 1,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": [
+        {
+          "group": "manifest",
+          "file": "build-manifest.json"
+        }
+      ],
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "identify",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:51.820Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:51.820Z",
+      "finished_at": "2026-10-18T09:03:52.015Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/25-damaged-external-identify/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/25-damaged-external-identify/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/25-damaged-external-identify/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/25-damaged-external-identify/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/25-damaged-external-identify/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/25-damaged-external-identify/result.json"
+      }
+    },
+    {
+      "name": "26-damaged-external-update-plan",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": false,
+      "blockers": [
+        {
+          "code": "TOOL_INSTALLED_BUILD_MISMATCH",
+          "reason": "当前包与已安装完整内容身份不符；先核原版，不能通过重建清单追认资源变化"
+        },
+        {
+          "code": "TOOL_TARGET_INCOMPLETE",
+          "reason": "目标受管文件缺失，需先核旧基线"
+        },
+        {
+          "code": "TOOL_LEGACY_ACK_REQUIRED",
+          "reason": "旧无清单副本不能证明未定制；须明确接受此观察基线并完整备份"
+        }
+      ],
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "update-plan",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--source",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/sources/package"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:52.017Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:52.017Z",
+      "finished_at": "2026-10-18T09:03:53.669Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/26-damaged-external-update-plan/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/26-damaged-external-update-plan/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/26-damaged-external-update-plan/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/26-damaged-external-update-plan/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/26-damaged-external-update-plan/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/26-damaged-external-update-plan/result.json"
+      }
+    },
+    {
+      "name": "27-rebuilt-external-identify",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": [],
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "identify",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:03.630Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:03.630Z",
+      "finished_at": "2026-10-18T09:04:03.844Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/27-rebuilt-external-identify/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/27-rebuilt-external-identify/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/27-rebuilt-external-identify/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/27-rebuilt-external-identify/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/27-rebuilt-external-identify/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/27-rebuilt-external-identify/result.json"
+      }
+    },
+    {
+      "name": "28-rebuilt-embedded-doctor",
+      "exit_code": 1,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": [
+        "随附完整内容与已安装代次不符；重建清单不能追认资源变化，从外部入口核对原版"
+      ],
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work/.writer/tool/bin/ai-writer.mjs",
+        "args": [
+          "doctor",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:03.847Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:03.847Z",
+      "finished_at": "2026-10-18T09:04:04.281Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/28-rebuilt-embedded-doctor/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/28-rebuilt-embedded-doctor/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/28-rebuilt-embedded-doctor/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/28-rebuilt-embedded-doctor/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/28-rebuilt-embedded-doctor/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/28-rebuilt-embedded-doctor/result.json"
+      }
+    },
+    {
+      "name": "29-rebuilt-embedded-plan",
+      "exit_code": 2,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": "TOOL_BUILD_CHANGED",
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work/.writer/tool/bin/ai-writer.mjs",
+        "args": [
+          "plan",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--input",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/inputs/legal-existing-unit-plan.json"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:04.283Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:04.283Z",
+      "finished_at": "2026-10-18T09:04:04.691Z",
+      "records": {
+        "input": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/input.raw.json",
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/29-rebuilt-embedded-plan/result.json"
+      }
+    },
+    {
+      "name": "30-rebuilt-external-update-plan",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": false,
+      "blockers": [
+        {
+          "code": "TOOL_INSTALLED_BUILD_MISMATCH",
+          "reason": "当前包与已安装完整内容身份不符；先核原版，不能通过重建清单追认资源变化"
+        }
+      ],
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "update-plan",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--source",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/sources/package"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:04.693Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:04.693Z",
+      "finished_at": "2026-10-18T09:04:06.148Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/30-rebuilt-external-update-plan/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/30-rebuilt-external-update-plan/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/30-rebuilt-external-update-plan/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/30-rebuilt-external-update-plan/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/30-rebuilt-external-update-plan/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/30-rebuilt-external-update-plan/result.json"
+      }
+    },
+    {
+      "name": "31-restored-embedded-doctor",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": [],
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work/.writer/tool/bin/ai-writer.mjs",
+        "args": [
+          "doctor",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:14.773Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:14.773Z",
+      "finished_at": "2026-10-18T09:04:14.989Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/31-restored-embedded-doctor/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/31-restored-embedded-doctor/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/31-restored-embedded-doctor/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/31-restored-embedded-doctor/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/31-restored-embedded-doctor/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/31-restored-embedded-doctor/result.json"
+      }
+    },
+    {
+      "name": "32-restored-embedded-check",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work/.writer/tool/bin/ai-writer.mjs",
+        "args": [
+          "check",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:14.991Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:14.991Z",
+      "finished_at": "2026-10-18T09:04:15.206Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/32-restored-embedded-check/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/32-restored-embedded-check/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/32-restored-embedded-check/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/32-restored-embedded-check/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/32-restored-embedded-check/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/32-restored-embedded-check/result.json"
+      }
+    },
+    {
+      "name": "33-restored-external-identify",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": [],
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "identify",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:15.208Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:15.208Z",
+      "finished_at": "2026-10-18T09:04:15.400Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/33-restored-external-identify/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/33-restored-external-identify/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/33-restored-external-identify/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/33-restored-external-identify/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/33-restored-external-identify/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/33-restored-external-identify/result.json"
+      }
+    },
+    {
+      "name": "34-restored-external-update-plan",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": true,
+      "blockers": [],
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "update-plan",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--source",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/sources/package"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:04:15.403Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:04:15.403Z",
+      "finished_at": "2026-10-18T09:04:16.662Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/34-restored-external-update-plan/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/34-restored-external-update-plan/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/34-restored-external-update-plan/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/34-restored-external-update-plan/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/34-restored-external-update-plan/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/34-restored-external-update-plan/result.json"
+      }
+    }
+  ],
+  "evidence": []
+}

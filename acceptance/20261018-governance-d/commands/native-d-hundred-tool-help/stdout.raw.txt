@@ -1,0 +1,11 @@
+ai-writer 0.7.0 / tool
+identify/compare/update-plan只读。更新须外部入口、完整本地来源、作者依据、当前revision与计划指纹；schema5先显式enable为6。updates列中断事务，recover完成或回滚并保留备份。根技能/AGENTS/手册默认保留；详见tool-updates.md。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' tool identify|compare|update-plan|enable|undo-enable|update|updates|recover [--project 作品目录] [--other 工具或作品目录] [--source 本地来源] [--input 输入.json]
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

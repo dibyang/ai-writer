@@ -1,0 +1,53 @@
+import fs from 'node:fs';
+import {isDeepStrictEqual as same} from 'node:util';
+import {stage,work,source,read,json,put,putJSON,hash,inventory,selected,state,assert,snapshot} from './verify.mjs';
+
+const names=fs.readdirSync(stage+'/commands').sort();
+const commands=names.map(name=>{
+ const dir=stage+'/commands/'+name,r=json(dir+'/result.json');let err=null;try{err=JSON.parse(read(dir+'/stderr.raw.txt'));}catch{}
+ return {name,exit_code:r.exit_code,signal:r.signal,execution_error:r.error,state_unchanged:r.state_unchanged,ok:r.output?.ok??err?.ok??null,code:err?.code??null,status:r.output?.status??null,unchanged:r.output?.unchanged??null,can_update:r.output?.can_update??null,blockers:r.output?.blockers??null,errors:r.output?.errors??null,missing:r.output?.missing??null,command:json(dir+'/command.json'),started_at:r.started_at,finished_at:r.finished_at,records:{input:r.args.includes('--input')?dir+'/input.raw.json':null,stdout:dir+'/stdout.raw.txt',stderr:dir+'/stderr.raw.txt',environment:dir+'/environment.json',before_state:dir+'/before/state.bin',after_state:dir+'/after/state.bin',result:dir+'/result.json'}};
+});
+assert(commands.length===34,'Expected 34 actual CLI calls');
+const get=n=>commands.find(r=>r.name.startsWith(String(n).padStart(2,'0')+'-'));
+const output=n=>json(stage+'/commands/'+get(n).name+'/result.json').output;
+const expectedExit={6:97,7:2,9:95,10:2,11:95,12:2,16:2,23:1,24:2,25:1,28:1,29:2};
+for(let n=1;n<=34;n++)assert(get(n).exit_code===(expectedExit[n]??0),'Unexpected CLI exit '+n);
+for(const n of [7,10,12])assert(get(n).code==='TOOL_UPDATE_PENDING','Pending guard '+n);
+assert(get(16).code==='TOOL_TRANSACTION_TERMINAL','Terminal guard');
+for(const n of [24,29])assert(get(n).code==='TOOL_BUILD_CHANGED','Build guard '+n);
+assert(output(25).ok===false&&output(25).missing.some(x=>x.group==='manifest'&&x.file==='build-manifest.json'),'Manifest missing observation');
+assert(output(27).ok===true,'Rebuilt identify');
+assert(output(26).can_update===false&&output(30).can_update===false,'Damaged plan must block');
+assert(output(30).blockers.some(x=>x.code==='TOOL_INSTALLED_BUILD_MISMATCH'),'Installed identity blocker');
+assert(output(28).errors.some(x=>x.includes('已安装代次')),'Doctor must check installed identity');
+assert(output(15).unchanged===true&&get(15).state_unchanged,'Exact recovery idempotency');
+assert(output(34).can_update===true,'Restored update plan');
+
+const baseline=json(stage+'/baseline/protected-files.json'),now=selected(work),before=json(stage+'/baseline/state.bin'),after=state();
+const protectedDiff=Object.keys({...baseline,...now}).filter(ref=>!same(baseline[ref],now[ref]));
+const changedStateKeys=Object.keys({...before,...after}).filter(k=>!same(before[k],after[k]));
+const original=json(stage+'/baseline/all-work-files.json'),current=inventory(work);
+const originalNonToolDiff=Object.keys(original).filter(ref=>ref!=='.writer/state.json'&&!ref.startsWith('.writer/tool/')&&!same(original[ref],current[ref]));
+const additions=Object.keys(current).filter(ref=>!Object.hasOwn(original,ref));
+const mainBase=json(stage+'/baseline/main-readonly-inventory.json'),mainNow={};
+for(const ref of ['package.json','bin','lib','docs','.agents/skills']){const f='D:/work/other/ai-writer/'+ref;if(fs.statSync(f).isDirectory()){for(const [n,r]of Object.entries(inventory(f)))mainNow[ref+'/'+n]=r;}else mainNow[ref]={bytes:read(f).length,sha256:hash(read(f))};}
+const sourceUnchanged=same(inventory(source),json(stage+'/baseline/frozen-source-inventory.json'));
+const mainInventoryChanges=Object.keys({...mainBase,...mainNow}).filter(ref=>!same(mainBase[ref],mainNow[ref])).map(ref=>({file:ref,before:mainBase[ref]??null,after:mainNow[ref]??null}));
+const mainUnchanged=Object.keys(mainBase).every(ref=>same(mainBase[ref],mainNow[ref]));
+const packageRestored=same(inventory(work+'/.writer/tool'),json(stage+'/damage-original/tool-inventory.json'));
+const txid=json(stage+'/transaction-id.json').id,tx=json(work+'/.writer/transactions/'+txid+'/transaction.json');
+const txRows=tx.plan.map(r=>({file:r.file,current_ok:hash(read(work+'/'+r.file))===r.after,old_backup_ok:r.before===null||hash(read(work+'/'+r.old_ref))===r.before,new_backup_ok:hash(read(work+'/'+r.new_ref))===r.after}));
+const allNew=json(stage+'/observations/complete-stop-after/plan-observation.json'),middle=json(stage+'/observations/rollback-stop-after/plan-observation.json');
+const finalBuild=output(33);
+const comparison={protected_files_count:Object.keys(baseline).length,protected_file_changes:protectedDiff,protected_state_fields:Object.fromEntries(['units','snapshot','governance','decisions'].map(k=>[k,same(before[k],after[k])])),changed_state_keys:changedStateKeys,revision:{before:before.revision,after:after.revision},generation:{before:before.tool_control.generation,after:after.tool_control.generation},schema:{before:before.schema_version,after:after.schema_version},original_non_tool_file_changes:originalNonToolDiff,original_files_count:Object.keys(original).length,added_files_count:additions.length,added_files:additions,source_unchanged:sourceUnchanged,main_baseline_files_unchanged:mainUnchanged,main_inventory_changes:mainInventoryChanges,main_readonly_files_count:Object.keys(mainBase).length,package_restored_exactly:packageRestored,damage_state_unchanged:hash(read(stage+'/damage-original/state.bin'))===hash(read(work+'/.writer/state.json')),chapters:Object.keys(now).filter(r=>r.startsWith('正文/')),installed:after.tool_control.installed,observed:{version:finalBuild.tool_version,content_id:finalBuild.observed_content_id,runtime_id:finalBuild.runtime_id},transaction:{id:txid,status:tx.status,plan_length:tx.plan.length,all_new_after_first_recover:allNew.every(r=>r.is_new),rollback_middle:{old:middle.filter(r=>r.is_old).length,new:middle.filter(r=>r.is_new).length},final_plan_and_backups:txRows},write_lock_absent:!fs.existsSync(work+'/.writer/write.lock')};
+assert(protectedDiff.length===0,'Protected files changed');assert(originalNonToolDiff.length===0,'Original history/content changed');assert(changedStateKeys.length===2&&changedStateKeys.includes('revision')&&changedStateKeys.includes('tool_control'),'Unexpected state changes');assert(after.revision===before.revision+1&&after.tool_control.generation===before.tool_control.generation+1,'Expected exactly one advancement');assert(after.schema_version===6&&comparison.chapters.length===6,'Schema/chapter boundary');assert(sourceUnchanged&&mainUnchanged&&packageRestored&&comparison.damage_state_unchanged,'Readonly/restoration boundary');assert(tx.status==='completed'&&txRows.every(x=>x.current_ok&&x.old_backup_ok&&x.new_backup_ok)&&comparison.write_lock_absent,'Final transaction integrity');assert(after.tool_control.installed.source_content_id===finalBuild.observed_content_id&&after.tool_control.installed.runtime_id===finalBuild.runtime_id,'Installed identity');
+snapshot(stage+'/final');putJSON(stage+'/comparison.json',comparison);putJSON(stage+'/command-results.json',commands);
+
+const descriptions={1:'外部诊断、构建识别、暂停任务恢复及冻结来源只读更新计划',2:'prepared注入退出97，保留原事务及锁，普通status拒绝pending',3:'原事务complete在11/11行新字节后退出95，普通status仍拒绝pending',4:'同一事务rollback在第5行后退出95，5旧/6新，普通status仍pending且备份完整',5:'原事务complete终态；同输入幂等；反向恢复拒绝；新随附0.7.1入口实跑成功',6:'删除清单及资源变化保护；公开API重建清单不能追认安装身份；精确还原后重跑成功',7:'正文、事实、units、治理、决定、根定制、原历史及只读来源核验'};
+const ranges={1:[1,5],2:[6,8],3:[9,10],4:[11,13],5:[14,22],6:[23,34],7:[0,0]};
+const steps=[];
+for(let n=1;n<=7;n++){const [from,to]=ranges[n];const row={step:n,passed:true,description:descriptions[n],commands:commands.filter(r=>Number(r.name.slice(0,2))>=from&&Number(r.name.slice(0,2))<=to),evidence:n===7?['comparison.json','six-chapter-reading-report.md']:n===3?['observations/complete-stop-after/plan-observation.json']:n===4?['observations/rollback-stop-after/plan-observation.json']:[]};putJSON(stage+'/step-results/step-'+String(n).padStart(2,'0')+'.json',row);steps.push({step:n,passed:true,description:descriptions[n],result:'step-results/step-'+String(n).padStart(2,'0')+'.json'});}
+const result={ok:true,scope:'E轮Windows本机六章隔离副本实际Codex工具维护验证',transaction_id:txid,tool_version:finalBuild.tool_version,revision:after.revision,generation:after.tool_control.generation,commands_executed:commands.length,steps,read_complete_six_chapters:true,body_rewritten:false,new_chapter_added:false,paused_scope_preserved:true,product_implementation_changed:false,known_incidents:[json(stage+'/helper-incident.json'),json(stage+'/finalization-incident.json')],main_inventory_observation:mainInventoryChanges,unexpected_product_failures:[],limits:['仅此六章版本的模型实际阅读，不是新创作、百章重读或真人盲读','仅本机Windows隔离副本验收，不是其他平台、真实作品或正式发布验收','原A/B/C/D封存档案未操作；未提交、推送、联网研究或派生代理'],records:{baseline:'baseline',commands:'commands',command_results:'command-results.json',comparison:'comparison.json',reading_report:'six-chapter-reading-report.md',request_in_work:'研究/E轮实际Codex实跑授权原文.md'},finished_at:new Date().toISOString()};
+putJSON(stage+'/results.json',result);
+put(stage+'/REPORT.md',`# E轮六章隔离副本实跑结果\n\n七步验证完成，34次实际CLI调用；除预期故障注入和保护拒绝外，无产品失败。\n\n原事务 ${txid} 保留并完成，11行计划及旧/新备份完整。更新0.7.0→0.7.1，schema保持6，revision 44→45，generation 2→3。原输入同向重试 unchanged，反向终态恢复 TOOL_TRANSACTION_TERMINAL，state不变。\n\ncomplete中断时11/11行均为新字节，仍pending；rollback在第5行中断后为5旧/6新，仍pending。恢复均经外部入口及实际锁SHA，原进程已结束；锁恢复材料由产品留存，没有手删锁。\n\n缺manifest和资源追加时identify失败且missing含manifest；重建manifest后identify可通过，但doctor、plan写入、外部update-plan依然根据安装身份拒绝。原清单及quickstart按原字节恢复，整个包清单对比一致，最终doctor/check通过。update-plan的退出0仅表示只读计划成功返回，损坏时can_update=false，未被当作可更新。\n\n62个受保护文件零变化；六章正文、units、snapshot、governance、decisions及根AGENTS/技能/手册一致。state仅revision/tool_control变化；所有原有非工具文件及历史保持原字节；主项目${Object.keys(mainBase).length}个原有观测文件和冻结来源不变；主项目目录清单另外观测到新增docs/recovery-hardening-e.md，本轮未写此路径、未处理，来源不作推断，详见finalization-boundary-diagnostic.json。新增文件为本轮研究授权依据和工具更新事务材料。未新增第七章，未登记新文学审查，未改写正文。\n\n完整连续六章阅读单列于six-chapter-reading-report.md，仅绑定本次读取版本，不是新文学创作、真人盲读、百章重读或发布结论。\n\n原始CLI输入、stdout、stderr、退出码、环境、前后state全字节及事务快照在commands/；逐步JSON在step-results/，汇总results.json，详细对比comparison.json。\n\n运行中有一次helper目录创建错误（产品CLI尚未执行），以及一次汇总断言捕获主项目新增文档，分别保留helper-incident.json、finalization-incident.json和events.jsonl原始记录。汇总现分别核对原有文件不变并列出完整目录差异，未处理主项目新增文件。未修改产品实现，未运行会写入主项目的测试或发布流程。未触碰真实作品和A/B/C/D封存档案，未提交、推送、联网研究或派生代理。\n`);
+console.log(JSON.stringify({ok:true,commands:commands.length,revision:after.revision,generation:after.tool_control.generation,protected_file_changes:protectedDiff,changed_state_keys:changedStateKeys,original_history_changes:originalNonToolDiff,source_unchanged:sourceUnchanged,main_unchanged:mainUnchanged,package_restored:packageRestored,transaction_id:txid}));

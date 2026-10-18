@@ -1,0 +1,24 @@
+{
+  "synthetic_acceptance": true,
+  "failures": [
+    {
+      "command": "node acceptance/20261018-governance-d/final-integration/session-two/close-governance.mjs",
+      "exit_code": 1,
+      "error": "SyntaxError: Unexpected token ] at close-governance.mjs:8",
+      "product_cli_started": false,
+      "source_evidence": "D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/session-two/audit-attempt-one/close-governance-failed-input.mjs",
+      "evidence_note": "Original input reconstructed exactly from initial apply_patch plus the recorded one-character mechanical correction; error text transcribed from exec tool output, not relabeled as a capture raw stream."
+    },
+    {
+      "command": "node acceptance/20261018-governance-d/final-integration/session-two/finalize.mjs",
+      "exit_code": 1,
+      "error": "final_managed_source_and_installed_same=false because the helper serialized Buffer copies as JSON. Source and installed SHA still matched; only the additional frozen-source artifact was malformed.",
+      "preserved_outputs": "D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/session-two/audit-attempt-one",
+      "preserved_bad_frozen_copies": "D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/session-two/frozen-final-source",
+      "replacement_raw_copies": "D:/work/other/ai-writer/acceptance/20261018-governance-d/final-integration/session-two/frozen-final-source-raw-v2",
+      "product_state_unchanged": true
+    }
+  ],
+  "state_sha256_before": "c11bccaadb736fab8dfaf28a4116390225fe62049947331c4af60c42440806e4",
+  "state_sha256_after": "c11bccaadb736fab8dfaf28a4116390225fe62049947331c4af60c42440806e4"
+}

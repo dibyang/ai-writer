@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {runner,readState,sha} from './cli-support.mjs';
+const r=runner(process.argv[2]),root=path.join(r.dest,'work');r.setup(root);const p=r.run(root,['tool','update-plan','--source',process.cwd()]),input={...p.request,author_evidence:r.evidence(root)},before=fs.readFileSync(path.join(root,'.writer/state.json')),tool=fs.readFileSync(path.join(root,'.writer/tool/build-manifest.json'));
+r.run(root,['tool','update'],input,98,{AI_WRITER_TEST_FAULT:'1',AI_WRITER_TEST_TOOL_STOP_PHASE:'backups'});assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),before);assert.deepEqual(fs.readFileSync(path.join(root,'.writer/tool/build-manifest.json')),tool);const staging=r.run(root,['tool','updates']);assert.equal(staging.transactions.length,0);assert.equal(staging.staging.length,1);assert.equal(r.run(root,['status']).ok,true);
+r.run(root,['revision','unlock'],{lock_sha256:sha(fs.readFileSync(path.join(root,'.writer/write.lock'))),author_evidence:r.evidence(root),reason:'合成验证：已退出的备份阶段进程，原state/工具未变，明确处理锁后重试原输入'});r.run(root,['tool','update'],input);assert.equal(readState(root).tool_control.generation,1);assert.equal(r.run(root,['tool','update'],input).unchanged,true);assert.equal(r.run(root,['check']).ok,true);r.summary({pre_transaction_exit:98,original_state_and_tool_unchanged:true,staging_visible:true,explicit_unlock_then_same_request_retry:true,generation:1});console.log(JSON.stringify({ok:true,pre_transaction_retry:true}));

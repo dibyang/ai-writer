@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+import {runner,BASE,write,readState,sha} from './cli-support.mjs';
+import {writeBuildManifest} from '../../lib/tool-build.mjs';
+const r=runner(process.argv[2]),root=path.join(r.dest,'work');r.setup(root);
+const tool=path.join(root,'.writer/tool');assert.equal(path.dirname(fs.realpathSync(tool)),path.join(fs.realpathSync(root),'.writer'));fs.rmSync(tool,{recursive:true});fs.cpSync(path.join(BASE,'fixtures/tool-0.6'),tool,{recursive:true});fs.unlinkSync(path.join(tool,'source-manifest.json'));const s=readState(root);s.schema_version=5;delete s.tool_control;write(path.join(root,'.writer/state.json'),s);writeBuildManifest(tool);
+const input=write(path.join(r.dest,'old-inflight-input.json'),{expected_revision:s.revision,operation_id:'held-old-workflow',workflow:s.governance,author_evidence:r.evidence(root)}),out=path.join(r.dest,'held-result.json'),stdout=fs.openSync(path.join(r.dest,'held-stdout.txt'),'wx'),stderr=fs.openSync(path.join(r.dest,'held-stderr.txt'),'wx');
+const child=spawn(process.execPath,[path.join(BASE,'old-held-worker.mjs'),root,input,out],{stdio:['ignore',stdout,stderr,'ipc'],windowsHide:true});
+const exited=new Promise((resolve,reject)=>{child.once('error',reject);child.once('exit',(code,signal)=>resolve({code,signal}));});
+const ready=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('held process not ready')),30000);child.once('message',value=>{clearTimeout(timer);resolve(value);});});assert.equal(ready.schema,5);write(path.join(r.dest,'ready.json'),ready);
+const p=r.run(root,['tool','update-plan','--source',process.cwd()]);r.run(root,['tool','enable'],{expected_revision:s.revision,operation_id:'held-enable',source:process.cwd(),expected_source_build_id:p.source.content_id,expected_target_build_id:p.target.content_id,author_evidence:r.evidence(root)});const planned=r.run(root,['tool','update-plan','--source',process.cwd()]);r.run(root,['tool','update'],{...planned.request,author_evidence:r.evidence(root)});const before=sha(fs.readFileSync(path.join(root,'.writer/state.json')));
+child.send({continue:true});const result=await exited;fs.closeSync(stdout);fs.closeSync(stderr);assert.equal(result.code,0);const held=JSON.parse(fs.readFileSync(out));assert.equal(held.rejected,true);assert.equal(sha(fs.readFileSync(path.join(root,'.writer/state.json'))),before);assert.equal(r.run(root,['check']).ok,true);r.summary({ready,held,result,state_unchanged_after_old_write:true,nature:'Actual 0.6 module process loaded and read schema5 before update, attempted ordinary workflow write only after 0.7 completion. No simulated rejection.'});console.log(JSON.stringify({ok:true,held,old_process_blocked:true}));

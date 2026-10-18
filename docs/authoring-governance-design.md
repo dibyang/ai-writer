@@ -2,7 +2,7 @@
 
 日期：2026-10-18。状态：**设计候选，未实现、未验收**。本轮由作者明确选择先完成八项设计；不修改小说、作品追踪、随附工具或既有封存档案，不提交、不推送。
 
-作者已授权A、B及当前C。A见[0.4.0首批记录](../acceptance/20261018-governance-a/README.md)，B见[第二批实现说明](authoring-governance-b-implementation.md)及[版本修订手册](revision-and-sources.md)。C的跨章复核、登记减负、意见闭环见[本批实现约束](authoring-governance-c-implementation.md)及[专项手册](review-and-registration.md)。上方状态和正文保留原设计阶段基线，具体交付以各批最终验证记录为准；D未实施。
+作者已分批授权A→B→C→D。A见[0.4.0首批记录](../acceptance/20261018-governance-a/README.md)，B见[第二批实现说明](authoring-governance-b-implementation.md)及[版本修订手册](revision-and-sources.md)。C的跨章复核、登记减负、意见闭环见[第三批约束](authoring-governance-c-implementation.md)及[专项手册](review-and-registration.md)。D的完整本地工具包、schema6代次保护及可恢复更新见[D批约束](authoring-governance-d-implementation.md)、[更新手册](tool-updates.md)和[D批验证记录](../acceptance/20261018-governance-d/README.md)。上方状态和下文保留原设计阶段基线，具体已交付范围、最终验收及未覆盖项以各批最终记录为准；本轮工具维护未对实际旧作品执行迁移或改稿，其目录若有同期变化则另存观察差异、不覆盖回填。
 
 ## 1. 背景、目标与非目标
 

@@ -1,0 +1,10 @@
+{
+  "kind": "acceptance-report-assertion",
+  "phase": "finalize",
+  "exit_code": 1,
+  "error": "Readonly/restoration boundary",
+  "diagnostic": "finalization-boundary-diagnostic.json",
+  "product_failure": false,
+  "observed_difference": "Main project directory inventory gained docs/recovery-hardening-e.md; no original baseline files changed. This run did not write that path. Origin is not inferred.",
+  "report_correction": "Retain exact full inventory difference in final results, separately verify all original main files unchanged. Do not modify or remove the added file. Frozen source and restored package inventories and state were exact."
+}

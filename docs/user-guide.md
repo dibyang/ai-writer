@@ -39,7 +39,7 @@ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追
 
 恢复顺序是查看当前任务和授权范围、作者已选与未决项，再处理来源漂移或待登记稿。允许写正文时才读取章纲与原文继续写。聊天中的旧描述不能替代作品文件；next_unit 是登记顺序，不是写作许可。
 
-0.6新作品默认schema5，用changes保留未变项。明确新长篇可init --mode long；旧作品先long-enable-preview，按实际授权long-enable启用分卷并保持原协议（schema1迁移2）。旧schema1用snapshot，2/3/4/5用changes；不要把召回切片当完整快照。见[长篇流程](long-form.md)。
+0.7新作品默认schema6，用changes保留未变项。明确新长篇可init --mode long；旧作品先long-enable-preview，按实际授权long-enable启用分卷并保持原协议（schema1迁移2）。旧schema1用snapshot，2–6用changes；不要把召回切片当完整快照。见[长篇流程](long-form.md)。
 
 ## 阶段、允许范围和作者决定
 
@@ -89,7 +89,7 @@ revise_range 须覆盖最早影响章至原末章，代理不能自行扩权。s
 
 比较重复须完整阅读实际范围，逐章说明目标、阻力、选择、后果和关系变化，以原句作证。共词或相似行动不自动等于文学重复；模型说明相似结构、不同收益、保留项、可选调整及不确定性，缺证填unknown/none及原因。review-template填当前范围和哈希，模型完成后review登记；脚本只验记录，不给文学通过或重复率合格。
 
-record-preview列缺项和实际差量，不登记、不生成journal、不补空摘要、不刷新来源哈希。新稿用写前record-template；schema5历史修订在独立区回退后用revision replay-input恢复旧摘要、changes与引文草案。路径、当前context哈希自动填，未变项保留；实际读稿核承接后填写replay_review真实报告及六项checked_fields，先preview再record。旧引文消失或正文再次变更仍拒绝，草案不能当“无变化”结论。
+record-preview列缺项和实际差量，不登记、不生成journal、不补空摘要、不刷新来源哈希。新稿用写前record-template；schema5及以上历史修订在独立区回退后用revision replay-input恢复旧摘要、changes与引文草案。路径、当前context哈希自动填，未变项保留；实际读稿核承接后填写replay_review真实报告及六项checked_fields，先preview再record。旧引文消失或正文再次变更仍拒绝，草案不能当“无变化”结论。
 
 context、record-template、record-preview、review-template、replay-input可选--out保存.writer/drafts下新JSON，不覆盖旧输入，不作正式设定来源。活跃修订的输出在所属独立区带令牌完成，正常作者无需查找UUID或手填哈希。
 
@@ -132,10 +132,12 @@ context、record-template、record-preview、review-template、replay-input可�
 
 保留整个作品目录，以及需要留存的外部原稿和导出目录。 `.writer/` 保存权威状态、差量记录和回退备份；`.agents/` 保存随作品使用的技能。原稿与审查报告建议按版本另存，不覆盖已经绑定哈希的材料。
 
-0.6新作自带手册、治理/来源/修订/意见模块及构建清单。旧协议不自动迁移，新主项目可显式传--project按原协议操作；需新能力在已授权副本迁移3、启用保护4，再review-workflow启用5，保留各次备份，旧0.5拒绝5。不手改版本号降级或自动迁移现有作品。
+0.7新作自带完整轻量工具、包内技能/手册/示例/许可和构建清单；不包含主项目质量引擎。旧协议不自动迁移，新主项目可显式传--project按原协议操作；需新能力在已授权副本迁移3、启用保护4、review-workflow启用5，再按工具更新任务显式enable至6，保留各次备份。旧0.6拒绝6。不手改版本号降级或自动迁移现有作品。
 
-本批仅提供 tool identify/compare，只读报告内容指纹、版本号、模块/文档/技能差异及初始清单状态。随附副本有意不含完整引擎，profile 差异单列；无清单的旧副本只报观测值，不伪造来源 commit。指纹不是供应链签名或作者身份认证。
+更新由Codex根据[更新手册](tool-updates.md)准备输入：明确本地来源，先只读计划，确认实际授权、revision与包指纹，再从外部入口替换。根AGENTS/技能/手册笔记默认保留，包内资源与新入口配套；选用包内技能须由当前任务决定，不自动改写作者定制。受管包被定制、未知文件、活跃修订、正文漂移或第三方改动都会阻断。中断后普通入口停止；外部tool updates列事务，按现场证据完成或回滚，不自动抢锁、不清理备份。成功更新只增加一次revision及工具generation，不改变文学事实、章节消费来源或正文授权。
 
-尚无安全更新/恢复命令；不要只复制一个 CLI 或在未核对定制时替换整个工具。治理迁移后如旧入口拒绝，从新主项目入口继续；实际旧作品升级必须另获范围明确的授权，不能因查看 doctor 自动执行。
+tool identify/compare只读报告内容指纹、版本号、模块/文档/技能差异及初始清单状态；更新另外使用上述update-plan/update/recover流程。随附副本有意不含完整引擎，profile差异单列；0.1–0.6无清单旧副本只报观测值，不伪造来源commit。0.7包应有清单，缺失属于损坏。指纹不是供应链签名或作者身份认证。
+
+0.7.1还核对已安装的完整内容身份，重建清单不能追认变化。发现清单丢失或TOOL_INSTALLED_BUILD_MISMATCH时，保留原包、state与备份，从外部入口核原版，不能修改指纹绕过。恢复途中再次中断，继续使用原事务，核实际遗留锁后明确complete或rollback；完成后同方向重试不重复增加revision/generation。实际旧作品升级须有范围明确的授权，查看doctor不会自动执行。
 
 随作品保留的许可、来源清单与原文哈希见 [来源与许可](attribution.md)。历史来源清单不表示清单中所有主项目组件都已随作品复制。

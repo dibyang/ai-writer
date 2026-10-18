@@ -1,0 +1,9 @@
+{
+  "kind": "acceptance-helper-only",
+  "phase": "initial",
+  "exit_code": 1,
+  "error": "ENOENT mkdir native-recovery/commands/01-external-doctor; commands parent did not exist",
+  "product_cli_executed": false,
+  "correction": "Create commands parent before exclusive per-command directory creation",
+  "raw_evidence": "events.jsonl command_execution record for verify.mjs initial"
+}

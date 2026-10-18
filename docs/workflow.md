@@ -4,7 +4,7 @@
 
 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
 
-**协议选择：** 0.6新作品默认schema5，2/3/4/5均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4/5历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)及[跨章/登记/意见手册](review-and-registration.md)。
+**协议选择：** 0.7新作品默认schema6，2–6均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4及以上历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)、[跨章/登记/意见手册](review-and-registration.md)及[工具更新手册](tool-updates.md)。
 
 ## 本批C：预览、跨章复核和意见
 
@@ -29,7 +29,7 @@ node bin/ai-writer.mjs revision replay-input --project "实际独立workspace" -
 
 恢复旧summary/changes并填当前路径和来源；须实读新稿、旧证据及下游，修正失效引文，填写replay_review的reviewer、审查/下report、draft_sha256和六项checked_fields：summary/characters/timeline/ledger/evidence/downstream。模板保持待核，不自动确认无变化。out只写新内部JSON，不覆盖，不作正式来源，不改变state；活跃主修订时应在所属独立区带令牌操作。不同会话凭status、可读草案和意见ID恢复，不手查UUID材料。
 
-已有schema4只读review-workflow preview；enable须expected_revision和author_evidence，备份升5后旧0.5解析器拒绝，新主入口继续操作；1/2/3先按已有治理/保护流程。本批不更新随附工具。
+已有schema4只读review-workflow preview；enable须expected_revision和author_evidence，备份升5后旧0.5解析器拒绝，新主入口继续操作；1/2/3先按已有治理/保护流程。tool update-plan只读列完整本地包和目标差异；schema5另行tool enable至6后重新计划，tool update绑定expected_revision、operation_id、source/target内容ID、plan_sha256和author_evidence。tool updates/recover处理未完成更新，不能用revision recover替代。协议迁移与工具替换分开授权和记录，不自动更新旧作品。
 
 ## 初始化
 

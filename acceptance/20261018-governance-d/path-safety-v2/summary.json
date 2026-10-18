@@ -1,0 +1,198 @@
+{
+  "ok": true,
+  "calls": 13,
+  "rows": [
+    {
+      "label": "path-safety-v2-1-init",
+      "args": [
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+        "--kind",
+        "novel",
+        "--title",
+        "机械断点验证"
+      ],
+      "root": null,
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 1424,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-2-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 97,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-3-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 113,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-4-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 106,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-5-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 114,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-6-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 121,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-7-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 109,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-8-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 114,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-9-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 114,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-10-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 106,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-11-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 134,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "path-safety-v2-12-tool",
+      "args": [
+        "tool",
+        "update-plan",
+        "--source",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\source-junction"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 109,
+      "environment": {},
+      "code": "BUILD_UNSAFE_PATH"
+    },
+    {
+      "label": "path-safety-v2-13-tool",
+      "args": [
+        "tool",
+        "update-plan",
+        "--source",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\hardlink-source"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\path-safety-v2\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 696,
+      "environment": {},
+      "code": "TOOL_SOURCE_INVALID"
+    }
+  ],
+  "cases": [
+    {
+      "kind": "junction",
+      "rejected": "BUILD_UNSAFE_PATH"
+    },
+    {
+      "kind": "hardlink",
+      "rejected": "TOOL_SOURCE_INVALID"
+    }
+  ],
+  "state_unchanged": true,
+  "nature": "Windows directory junction and file hardlink created only in D fixture; source junction removed by unlink, never recursive traversal. Hardlink pair only inside disposable source copy; main source nlink untouched."
+}

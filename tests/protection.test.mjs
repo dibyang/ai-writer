@@ -7,8 +7,8 @@ import { main, initProject } from '../lib/workspace.mjs';
 import { fixture, state, file, call, evidence, workflow, unit, freeze, publishInput, sourceInput, begin, edit, prepare, commit, rewindBranch, review, sha, ROOT } from './protection-fixture.mjs';
 const fails = (fn, code) => assert.throws(fn, e => e.code === code);
 
-test('默认schema5且真实旧0.4解析器拒绝，原状态不变', t => {
-  const { root } = fixture(t, 0), before = fs.readFileSync(path.join(root, '.writer/state.json')); assert.equal(state(root).schema_version, 5);
+test('默认schema6且真实旧0.4解析器拒绝，原状态不变', t => {
+  const { root } = fixture(t, 0), before = fs.readFileSync(path.join(root, '.writer/state.json')); assert.equal(state(root).schema_version, 6);
   const old = path.join(ROOT, 'tests/fixtures/tool-0.4/bin/ai-writer.mjs');
   const r = spawnSync(process.execPath, [old, 'status', '--project', root], { encoding: 'utf8' }); assert.equal(r.status, 2); assert.deepEqual(fs.readFileSync(path.join(root, '.writer/state.json')), before);
 });

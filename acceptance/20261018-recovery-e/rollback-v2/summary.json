@@ -1,0 +1,1843 @@
+{
+  "ok": true,
+  "calls": 121,
+  "rows": [
+    {
+      "label": "rollback-v2-1-init",
+      "args": [
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+        "--kind",
+        "novel",
+        "--title",
+        "机械断点验证"
+      ],
+      "root": null,
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2177,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-2-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 138,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-3-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 161,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-4-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 157,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-5-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 193,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-6-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 190,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-7-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 261,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-8-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 202,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-9-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 213,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-10-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 140,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-11-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 167,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-12-tool",
+      "args": [
+        "tool",
+        "update-plan",
+        "--source",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\sources\\package"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 1589,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-13-tool",
+      "args": [
+        "tool",
+        "update"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 97,
+      "exit_code": 97,
+      "elapsed_ms": 8191,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_PHASE": "prepared"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-14-tool",
+      "args": [
+        "tool",
+        "updates"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 127,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-15-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-recovery-e\\rollback-v2\\pending-work",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 763,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "10"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-16-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-1",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 505,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "1"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-17-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-1",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 129,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-18-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-1",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2462,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-19-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-1",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 173,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-20-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-1",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 159,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-21-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-2",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 532,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "2"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-22-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-2",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 123,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-23-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-2",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2533,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-24-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-2",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 210,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-25-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-2",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 457,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-26-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-3",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 529,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "3"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-27-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-3",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 127,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-28-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-3",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2095,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-29-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-3",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 187,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-30-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-3",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 157,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-31-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-4",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 512,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "4"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-32-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-4",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 138,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-33-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-4",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2412,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-34-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-4",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 177,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-35-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-4",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 156,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-36-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-5",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 532,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "5"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-37-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-5",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 213,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-38-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-5",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2298,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-39-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-5",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 179,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-40-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-5",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 180,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-41-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-6",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 514,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "6"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-42-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-6",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 140,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-43-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-6",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2796,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-44-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-6",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 219,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-45-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-6",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 161,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-46-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-7",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 525,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "7"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-47-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-7",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 129,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-48-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-7",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2275,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-49-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-7",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 175,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-50-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-7",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 207,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-51-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-8",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 708,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "8"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-52-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-8",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 132,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-53-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-8",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2440,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-54-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-8",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 172,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-55-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-8",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 168,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-56-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-9",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 541,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "9"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-57-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-9",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 126,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-58-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-9",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2213,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-59-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-9",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 168,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-60-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-9",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 158,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-61-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-10",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 716,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "10"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-62-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-10",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 160,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-63-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-10",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 2037,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-64-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-10",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 156,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-65-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\complete-10",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 144,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-66-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-1",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 495,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "1"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-67-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-1",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 137,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-68-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-1",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 851,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-69-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-1",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 169,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-70-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-1",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 167,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-71-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-2",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 531,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "2"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-72-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-2",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 130,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-73-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-2",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 822,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-74-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-2",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 160,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-75-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-2",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 149,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-76-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-3",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 466,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "3"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-77-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-3",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 126,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-78-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-3",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 803,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-79-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-3",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 157,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-80-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-3",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 163,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-81-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-4",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 460,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "4"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-82-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-4",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 119,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-83-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-4",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 794,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-84-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-4",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 155,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-85-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-4",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 147,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-86-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-5",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 490,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "5"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-87-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-5",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 124,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-88-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-5",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 761,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-89-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-5",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 160,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-90-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-5",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 194,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-91-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-6",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 455,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "6"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-92-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-6",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 117,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-93-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-6",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 680,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-94-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-6",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 146,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-95-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-6",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 156,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-96-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-7",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 532,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "7"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-97-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-7",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 142,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-98-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-7",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 729,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-99-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-7",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 149,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-100-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-7",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 138,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-101-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-8",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 467,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "8"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-102-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-8",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 115,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-103-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-8",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 664,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-104-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-8",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 165,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-105-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-8",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 147,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-106-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-9",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 520,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "9"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-107-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-9",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 126,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-108-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-9",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 831,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-109-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-9",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 178,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-110-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-9",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 162,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-111-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-10",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 688,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "10"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-112-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-10",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 124,
+      "environment": {},
+      "code": "TOOL_UPDATE_PENDING"
+    },
+    {
+      "label": "rollback-v2-113-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-10",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 747,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-114-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-10",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 169,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-115-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\rollback-10",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 184,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "rollback-v2-116-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\external-after-rollback",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 487,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "2"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-117-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\external-after-rollback",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 396,
+      "environment": {},
+      "code": "TRANSACTION_EXTERNAL_CONFLICT"
+    },
+    {
+      "label": "rollback-v2-118-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\external-after-rollback",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 365,
+      "environment": {},
+      "code": "TRANSACTION_EXTERNAL_CONFLICT"
+    },
+    {
+      "label": "rollback-v2-119-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\body-after-rollback",
+      "expected_exit_code": 95,
+      "exit_code": 95,
+      "elapsed_ms": 566,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_AFTER": "2"
+      },
+      "code": null
+    },
+    {
+      "label": "rollback-v2-120-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\body-after-rollback",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 419,
+      "environment": {},
+      "code": "TOOL_BUSINESS_CHANGED"
+    },
+    {
+      "label": "rollback-v2-121-tool",
+      "args": [
+        "tool",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\.tmp\\recovery-e-1792313920333\\body-after-rollback",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 351,
+      "environment": {},
+      "code": "TOOL_BUSINESS_CHANGED"
+    }
+  ],
+  "cases": [
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 1,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 3991
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 2,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 4629
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 3,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 3689
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 4,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 4194
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 5,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 4254
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 6,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 4454
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 7,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 4053
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 8,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 4188
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 9,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 3771
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "complete",
+      "rollback_stop_after": 10,
+      "state_sha256": "cc05a48e737847ae2bf63414b9571c37bb6f34f1f558e4e96290d97747e63112",
+      "generation": 1,
+      "plan_files": 10,
+      "elapsed_ms": 3823
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 1,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2378
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 2,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2350
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 3,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2237
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 4,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2194
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 5,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2299
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 6,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2102
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 7,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2231
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 8,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2065
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 9,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2405
+    },
+    {
+      "initial_direction": "complete",
+      "first_recovery": "rollback",
+      "final_direction": "rollback",
+      "rollback_stop_after": 10,
+      "state_sha256": "e7c4d6c349550579abef75f9c64cdd7d3db743bee473856de6ace7f86e267bcf",
+      "generation": 0,
+      "plan_files": 10,
+      "elapsed_ms": 2496
+    },
+    {
+      "phase": "external-after-rollback",
+      "codes": [
+        "TRANSACTION_EXTERNAL_CONFLICT",
+        "TRANSACTION_EXTERNAL_CONFLICT"
+      ],
+      "third_party_preserved": true,
+      "state_unchanged": true
+    },
+    {
+      "phase": "body-after-rollback",
+      "codes": [
+        "TOOL_BUSINESS_CHANGED",
+        "TOOL_BUSINESS_CHANGED"
+      ],
+      "third_party_preserved": true,
+      "state_unchanged": true
+    }
+  ],
+  "plan_files": 10,
+  "all_rollback_boundaries_both_final_directions": true,
+  "nature": "Fresh CLI process fault injection; no literary claims. Canonical fully-forward pending transaction retained. Disposable clones deleted only after exact verification; all raw commands, inputs and state snapshots retained."
+}

@@ -1,0 +1,196 @@
+{
+  "source": ".writer/state.json",
+  "source_sha256": "3cd972118d6ba324b8e2610e7653b9cf5587b03e8bb08f6a85f0978eeb821686",
+  "threads": [],
+  "characters": {
+    "林禾": "两家门口吃面后准备回便民处；箱、钥匙、纸样已交周梅，保留签字清单；承认旧伞误怪；未定回县日期或留镇",
+    "老邵": "带旧簿离开便民处；承认混记两只黄箱，说明徐兰自带此箱存放；未断定纸样用途",
+    "周梅": "改衣摊；持有箱钥匙和纸样，接受本次交接；承认未全忘旧伞争执，为伞重缠柄，提出明日若在可帮看十分钟摊"
+  },
+  "ledger": {
+    "O_BOX": {
+      "type": "object",
+      "statement": "从渡口仓房送来的一只锁着的半米长黄漆木箱",
+      "status": "active",
+      "custody": {
+        "holder": "周梅",
+        "location": "改衣摊腾出的矮架",
+        "condition": "箱底不挨地，盖合铜锁扣上；纸样、围裙带、蓝布在箱内"
+      },
+      "reader_known": "正式完成交接，进入周梅改衣摊",
+      "character_known": {
+        "林禾": "实际帮搬，已交周梅",
+        "老邵": "自述记混公家另一黄箱",
+        "周梅": "签单并收箱，安排自己的空位"
+      }
+    },
+    "O_KEY": {
+      "type": "object",
+      "statement": "木箱小铜挂锁的一把钥匙",
+      "status": "active",
+      "custody": {
+        "holder": "周梅",
+        "location": "本人钥匙圈，挂围裙口袋内小钩",
+        "condition": "一把；已试锁，并拉钩确认不易掉"
+      },
+      "reader_known": "由林禾真实递给周梅，周梅串入自己的钥匙圈",
+      "character_known": {
+        "林禾": "自己从布袋取出交给周梅，空布袋收回",
+        "老邵": "在场指导按盖开锁",
+        "周梅": "亲自接钥匙、试锁并串圈保管"
+      }
+    },
+    "O_BOOK": {
+      "type": "object",
+      "statement": "老邵留下的旧借物簿",
+      "status": "active",
+      "custody": {
+        "holder": "老邵",
+        "location": "离开便民处，腋下携带",
+        "condition": "原簿收回"
+      },
+      "reader_known": "出现徐兰黄漆箱存缝纫物一行",
+      "character_known": {
+        "林禾": "已亲读旧簿，并在第四章听老邵解释存入方向；原簿已由老邵带走",
+        "周梅": "已亲读母名，并在第四章听老邵说明；簿现由老邵持有"
+      }
+    },
+    "OBS_BLUE": {
+      "type": "observation",
+      "statement": "箱底外侧有蓝布补住左边缺角",
+      "status": "active",
+      "reader_known": "可见蓝布，来源未知",
+      "character_known": {
+        "林禾": "亲眼看到，没扯布",
+        "老邵": "见着时已有，不记得谁补"
+      }
+    },
+    "T_CLAIM": {
+      "type": "thread",
+      "statement": "旧箱等人认领，外观与记忆是否足够尚待查问",
+      "status": "resolved",
+      "reader_known": "周梅实际收箱、钥匙和箱内物，本次失物交接完成",
+      "character_known": {
+        "林禾": "交箱钥匙并帮搬",
+        "老邵": "已当面说明旧簿和混记",
+        "周梅": "签单并接收"
+      }
+    },
+    "OBS_LIST": {
+      "type": "observation",
+      "statement": "周梅家清单最下面写黄漆木箱，字旁有小钩，无年月和去处",
+      "status": "active",
+      "reader_known": "清单文字可见，不能单凭它确认此箱",
+      "character_known": {
+        "林禾": "在灯下读过原件",
+        "周梅": "提供家存原件并带回"
+      }
+    },
+    "O_COPY": {
+      "type": "object",
+      "statement": "周梅抄写认领描述并留下联系方式的纸",
+      "status": "active",
+      "custody": {
+        "holder": "林禾",
+        "location": "寄存本夹页",
+        "condition": "抄纸，非原清单"
+      }
+    },
+    "R_LISTEN": {
+      "type": "relationship",
+      "statement": "林禾承认自己可能想错，周梅仍愿次日再来",
+      "status": "partial",
+      "reader_known": "林禾承认误怪旧伞，周梅承认没全忘；仍能重缠伞柄与吃面，关系只有限修复",
+      "character_known": {
+        "林禾": "已明确承认丢伞怪错人，知道周梅当年找过半下午",
+        "周梅": "听见林禾承认，说明自己没全忘，提出有条件帮看摊"
+      }
+    },
+    "OBS_REGISTER": {
+      "type": "observation",
+      "statement": "借物簿折角页写徐兰，黄漆箱一个，存缝纫物",
+      "status": "active",
+      "reader_known": "原簿文字有相关记载，但方向未明",
+      "character_known": {
+        "林禾": "亲读，不知道借走还是借来",
+        "周梅": "亲读，确认母名"
+      }
+    },
+    "T_BLUE": {
+      "type": "thread",
+      "statement": "蓝布补角是否与徐兰的围裙旧布有关",
+      "status": "resolved",
+      "reader_known": "前卷蓝布线索由回针与余料比对得到生活层面的兑现",
+      "character_known": {
+        "林禾": "见比对并听周梅说明",
+        "周梅": "将布认作母亲的余料"
+      }
+    },
+    "I_BOX_ORIGIN": {
+      "type": "fact",
+      "statement": "老邵自述此箱由徐兰带来存缝纫物，他曾与公家另一黄箱记混",
+      "status": "active",
+      "reader_known": "当事人解释与纸面记录合在一起支持本次交接，不等同独立司法证明",
+      "character_known": {
+        "林禾": "现场听见老邵解释",
+        "周梅": "现场听见，仍追问迟迟未叫她的原因",
+        "老邵": "承认自己混记"
+      }
+    },
+    "I_BLUE": {
+      "type": "fact",
+      "statement": "周梅认出母亲在补角卷边回针三趟的习惯，箱内余料裁口与外补角轮廓可相接",
+      "status": "active",
+      "reader_known": "蓝布不再只有颜色关联，仍是现场辨认，非鉴定",
+      "character_known": {
+        "林禾": "扶箱看见周梅用余料比对，并听针法记忆",
+        "周梅": "实际看针法和裁口，认为是母亲的料"
+      }
+    },
+    "O_PATTERN": {
+      "type": "object",
+      "statement": "箱内首次发现的一叠旧纸样及硬纸板",
+      "status": "active",
+      "custody": {
+        "holder": "周梅",
+        "location": "改衣摊木箱内宽纸套与硬纸板上",
+        "condition": "同箱交接，未强行摊平；原用途仍不明"
+      },
+      "reader_known": "纸样随箱交周梅，无名样原用途和复制计划未定",
+      "character_known": {
+        "林禾": "实际参与放稳纸套及移箱；复制需等能展开",
+        "周梅": "接收纸样，尚未确定给谁"
+      }
+    },
+    "T_PATTERN": {
+      "type": "thread",
+      "statement": "无名童背心纸样原给谁、是否复制留给更多人尚未确定",
+      "status": "intentional-open",
+      "reader_known": "复制计划明确暂不决定，原纸样给谁仍不知道",
+      "character_known": {
+        "林禾": "问过描一套，听周梅说等能摊开再想",
+        "周梅": "尚不知给谁，未作复制决定"
+      }
+    },
+    "O_RECEIPT": {
+      "type": "object",
+      "statement": "周梅签字的交接清单，含木箱纸样围裙带蓝布",
+      "status": "active",
+      "custody": {
+        "holder": "林禾",
+        "location": "便民处柜台",
+        "condition": "有划痕、日期改笔；周梅已签字"
+      }
+    },
+    "T_FUTURE": {
+      "type": "thread",
+      "statement": "林禾何时回县、是否留镇，寄存与缠柄费用尚未决定",
+      "status": "intentional-open",
+      "reader_known": "费用等林秀回来问，林禾回县日期尚未定",
+      "character_known": {
+        "林禾": "未定回县，不能替母亲定费用",
+        "周梅": "知道费用待林秀、明日是否帮忙取决林禾在不在"
+      }
+    }
+  }
+}

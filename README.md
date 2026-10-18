@@ -2,7 +2,7 @@
 
 通过 Codex 创作中文小说、剧本、历史散文，以及散文和一般非虚构。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究和追踪各有职责；新会话可以从文件恢复创作。
 
-当前版本：**0.6.0 本地候选版**。新增跨章功能/差异复核、登记预览/原changes重登草案、审查意见的取舍—实改—复核闭环。新作品默认schema5，复用阶段/有限授权、作者决策、设定版本、独立修订事务与增量账本。旧作品不自动迁移。包含7个Codex skills、去AI味流程和原有质量引擎；文学重复、史实与作者验收仍由实际阅读核验裁定。
+当前版本：**0.7.1 本地候选版**。新增完整轻量工具包的本地更新计划、显式协议启用、文件事务发布/恢复与代次保护。新作品默认schema6，继续复用阶段/有限授权、作者决策、设定版本、独立修订、增量账本、跨章复核和意见闭环。旧作品不自动迁移或替换工具。包含7个Codex skills、去AI味流程和主项目原有质量引擎；文学重复、史实与作者验收仍由实际阅读核验裁定。
 
 ## 开始使用
 
@@ -79,7 +79,7 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 命令和 JSON 见 [完整工作流](docs/workflow.md)，自然语言例子见 [创作任务示例](examples/prompts.md)。
 
-长篇按[长篇流程](docs/long-form.md)启用分卷契约，保持原增量链。未来设定固定旧输入后按章发布；旧章在独立区实读、重登、复核后提交，冲突保留双方，中断事务显式恢复。详见[治理设计](docs/authoring-governance-design.md)及[第三批实现约束](docs/authoring-governance-c-implementation.md)。安全更新、自动合并、跨机保证仍未实施，锁外编辑有边界。
+长篇按[长篇流程](docs/long-form.md)启用分卷契约，保持原增量链。未来设定固定旧输入后按章发布；旧章在独立区实读、重登、复核后提交，冲突保留双方，中断事务显式恢复。随附工具使用[本地安全更新](docs/tool-updates.md)：明确来源、先只读计划，根规则/技能/笔记默认保留，按当前授权显式启用6并更新；中断从外部恢复。详见[治理设计](docs/authoring-governance-design.md)及[D批约束](docs/authoring-governance-d-implementation.md)。不自动合并或抢锁，锁外编辑与跨机协作仍有边界。
 
 ## 吸收与复用
 
@@ -91,7 +91,9 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 ## 验证
 
-0.6.0 C批实现及实跑状态见[本轮记录](acceptance/20261018-governance-c/README.md)，以最终结果和封存清单为准。此前[0.5.0 B批](acceptance/20261018-governance-b/README.md)、[0.4.0 A批](acceptance/20261018-governance-a/README.md)保持原记录，不计作本轮结果；D仍未实施。
+0.7.0 D批实现及实跑状态见[本轮记录](acceptance/20261018-governance-d/README.md)，以最终结果和封存清单为准。此前[0.6.0 C批](acceptance/20261018-governance-c/README.md)、[0.5.0 B批](acceptance/20261018-governance-b/README.md)、[0.4.0 A批](acceptance/20261018-governance-a/README.md)保持原记录，不计作本轮结果。
+
+0.7.1 E轮补强清单缺失、已安装完整内容保护与恢复再中断验证，见[实现边界](docs/recovery-hardening-e.md)和[最终验证记录](acceptance/20261018-recovery-e/README.md)。
 
 ```powershell
 npm test

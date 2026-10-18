@@ -1,0 +1,36 @@
+✔ 新包公共身份一致、资源自足；从随附包再次初始化四文体 (7091.8085ms)
+✔ 实际旧0.6读5、拒绝6；显式启用保留事实/旧章/来源，安全撤销逐字节恢复 (4558.1449ms)
+✔ 只读计划列定制，默认保留根文件；选择定制文档或改动受管资源均拒绝 (5026.8663ms)
+✔ 更新后事实/来源/正文和根定制不变、代次只增一次；稳定operation重试 (7945.5937ms)
+✔ 中断准备后普通及旧入口阻断，外部complete恢复保留备份 (10442.9017ms)
+✔ 中断准备后普通及旧入口阻断，外部rollback恢复保留备份 (8953.1193ms)
+✖ 恢复绝不覆盖第三方工具字节，旧/新/外部版本均保留 (6738.7949ms)
+✔ 更新期间业务漂移及验证副本篡改都阻断完成，不伪造已验收 (7359.2708ms)
+✔ 持有旧代次的主进程拒绝后续写入，即使磁盘运行模块未变 (7250.3514ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 65469.0522
+
+✖ failing tests:
+
+test at tests\tool-update.test.mjs:24:1
+✖ 恢复绝不覆盖第三方工具字节，旧/新/外部版本均保留 (6738.7949ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/tool-update.test.mjs:24:138)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

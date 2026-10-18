@@ -1,0 +1,146 @@
+{
+  "step": 4,
+  "passed": true,
+  "description": "同一事务rollback在第5行后退出95，5旧/6新，普通status仍pending且备份完整",
+  "commands": [
+    {
+      "name": "11-recover-rollback-middle-stop",
+      "exit_code": 95,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": null,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "recover",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--input",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/inputs/rollback-stop.json"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {
+          "AI_WRITER_TEST_FAULT": "1",
+          "AI_WRITER_TEST_TOOL_STOP_AFTER": "5"
+        },
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:10.519Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:10.519Z",
+      "finished_at": "2026-10-18T09:03:11.164Z",
+      "records": {
+        "input": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/input.raw.json",
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/11-recover-rollback-middle-stop/result.json"
+      }
+    },
+    {
+      "name": "12-status-rollback-pending",
+      "exit_code": 2,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": "TOOL_UPDATE_PENDING",
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "status",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:11.183Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:11.183Z",
+      "finished_at": "2026-10-18T09:03:11.697Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/12-status-rollback-pending/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/12-status-rollback-pending/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/12-status-rollback-pending/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/12-status-rollback-pending/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/12-status-rollback-pending/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/12-status-rollback-pending/result.json"
+      }
+    },
+    {
+      "name": "13-tool-updates-rollback-pending",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "updates",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:03:11.700Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:03:11.700Z",
+      "finished_at": "2026-10-18T09:03:11.954Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/13-tool-updates-rollback-pending/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/13-tool-updates-rollback-pending/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/13-tool-updates-rollback-pending/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/13-tool-updates-rollback-pending/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/13-tool-updates-rollback-pending/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/13-tool-updates-rollback-pending/result.json"
+      }
+    }
+  ],
+  "evidence": [
+    "observations/rollback-stop-after/plan-observation.json"
+  ]
+}

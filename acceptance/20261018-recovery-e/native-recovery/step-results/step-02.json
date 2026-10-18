@@ -1,0 +1,144 @@
+{
+  "step": 2,
+  "passed": true,
+  "description": "prepared注入退出97，保留原事务及锁，普通status拒绝pending",
+  "commands": [
+    {
+      "name": "06-update-prepared-stop",
+      "exit_code": 97,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": null,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "update",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+          "--input",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/inputs/update.json"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {
+          "AI_WRITER_TEST_FAULT": "1",
+          "AI_WRITER_TEST_TOOL_STOP_PHASE": "prepared"
+        },
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:02:22.903Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:02:22.903Z",
+      "finished_at": "2026-10-18T09:02:36.017Z",
+      "records": {
+        "input": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/input.raw.json",
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/06-update-prepared-stop/result.json"
+      }
+    },
+    {
+      "name": "07-status-prepared-pending",
+      "exit_code": 2,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": false,
+      "code": "TOOL_UPDATE_PENDING",
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "status",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:02:36.031Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:02:36.031Z",
+      "finished_at": "2026-10-18T09:02:36.561Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/07-status-prepared-pending/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/07-status-prepared-pending/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/07-status-prepared-pending/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/07-status-prepared-pending/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/07-status-prepared-pending/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/07-status-prepared-pending/result.json"
+      }
+    },
+    {
+      "name": "08-tool-updates-prepared",
+      "exit_code": 0,
+      "signal": null,
+      "execution_error": null,
+      "state_unchanged": true,
+      "ok": true,
+      "code": null,
+      "status": null,
+      "unchanged": null,
+      "can_update": null,
+      "blockers": null,
+      "errors": null,
+      "missing": null,
+      "command": {
+        "entry": "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "args": [
+          "tool",
+          "updates",
+          "--project",
+          "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work"
+        ],
+        "cwd": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native/work",
+        "environment_overrides": {},
+        "removed_inherited_test_variables": [],
+        "started_at": "2026-10-18T09:02:36.563Z",
+        "node": "C:\\Program Files\\nodejs\\node.exe",
+        "node_version": "v24.15.0",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.26300"
+      },
+      "started_at": "2026-10-18T09:02:36.563Z",
+      "finished_at": "2026-10-18T09:02:37.731Z",
+      "records": {
+        "input": null,
+        "stdout": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/08-tool-updates-prepared/stdout.raw.txt",
+        "stderr": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/08-tool-updates-prepared/stderr.raw.txt",
+        "environment": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/08-tool-updates-prepared/environment.json",
+        "before_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/08-tool-updates-prepared/before/state.bin",
+        "after_state": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/08-tool-updates-prepared/after/state.bin",
+        "result": "D:/work/other/ai-writer/acceptance/20261018-recovery-e/native-recovery/commands/08-tool-updates-prepared/result.json"
+      }
+    }
+  ],
+  "evidence": []
+}

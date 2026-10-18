@@ -1,0 +1,31 @@
+✔ 新包公共身份一致、资源自足；从随附包再次初始化四文体 (7679.1865ms)
+✖ 新随附包丢失清单不能降级成旧副本；只读诊断、预览及写入均识别损坏 (9142.843ms)
+✔ 安装后的包不能只重建清单追认不同资源；写前核对已安装完整内容身份 (8288.9978ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25222.1892
+
+✖ failing tests:
+
+test at tests\tool-update.test.mjs:32:1
+✖ 新随附包丢失清单不能降级成旧副本；只读诊断、预览及写入均识别损坏 (9142.843ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/tool-update.test.mjs:32:553)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

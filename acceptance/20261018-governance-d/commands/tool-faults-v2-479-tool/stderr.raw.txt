@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "error": "工具目录存在第三方改动，旧/新/外部均保留",
+  "code": "TRANSACTION_EXTERNAL_CONFLICT",
+  "next_action": "按报错核对输入，查看本命令帮助。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' tool '--help'",
+  "conflicts": [
+    {
+      "file": ".writer/tool/lib/journal.mjs",
+      "before": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d",
+      "after": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d",
+      "external_sha256": "60e942871ccdff1dc9c0afc9fae129dc655ac92f08f5e9b6bc1c083a0d8c328c",
+      "external_ref": ".writer/transactions/5d1d772b-f076-4a65-9836-fbe2a72369cb/external/92e42e1e-8afc-4a74-aff3-f2ea4a07944b.bin"
+    }
+  ]
+}

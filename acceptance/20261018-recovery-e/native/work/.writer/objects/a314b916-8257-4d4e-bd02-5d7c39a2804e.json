@@ -1,0 +1,144 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "D_OPTIONAL_CLARITY_01",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "low",
+      "statement": "第三章“林禾收好簿子”已可理解；对象名称可极小明确，文学收益尚未证明。",
+      "suggestion": "仅以“借物簿”替换此处“簿子”，不添加去处或交接；作为synthetic acceptance工程控制，非必改。",
+      "evidence": [
+        {
+          "unit": 3,
+          "draft": "正文/0003-垫高两块砖.md",
+          "sha256": "8d628e3f706f8442fb348b7587163035727ce1258f9022db3b08da65d58d1fa3",
+          "line": 35,
+          "quote": "林禾收好簿子，把湿抹布拧进水桶，周梅扶着桶沿，免得她连桶一起提起来。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/057afd32-435e-4e4d-8729-53c63be8d1ee.json",
+        "review_sha256": "0c0e9a011ab0f10eb176e8cce55ad8fe3132289e041a9957e47b6ca7283fdee0",
+        "units": [
+          {
+            "unit": 3,
+            "draft": "正文/0003-垫高两块砖.md",
+            "sha256": "8d628e3f706f8442fb348b7587163035727ce1258f9022db3b08da65d58d1fa3",
+            "dependency": "3d2c884ac6223956bbee2dc18e439e0fe93552cb597a0ed6d9b5321e68ae7e29"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/6b90b480-5e25-4012-85cb-39abe1abb66d.json",
+          "sha256": "034fd458e20c52e482be0c304749b8e3df6a3cb7d645935a4ed7889833f65530"
+        },
+        {
+          "ref": ".writer/objects/57e13b06-a938-4cbd-bd8e-3555de746729.json",
+          "sha256": "3ae2eff5be4964eb58fd7ca28119815d72cc51a307e4b94b53221af2f19ce327"
+        },
+        {
+          "ref": ".writer/objects/d4b780cf-d2ac-4e95-ad48-6dbba096ec19.json",
+          "sha256": "bfc557d1dc77021017819250226eb9c6a8976ddda9815a6ba538ad600c830bed"
+        },
+        {
+          "ref": ".writer/objects/3be07d98-c884-4505-b503-f657713e2a94.json",
+          "sha256": "35daa789ba959e8376f9931485805bd01a88550ad1a4ffaa179bd990beea41b0"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/d0bbd74b-d772-405f-83ea-e16e3d827ba0.json",
+          "sha256": "a22d5e5deebd1561db34b94dff9d92d59fd4d5946933b40d203fdcbdb3bcd239"
+        },
+        "disposition": "adopted",
+        "reason": "依合成作者已给有限授权，由代理采用本工程控制意见；不是作者逐字确认，也不证明文学优化。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 3,
+            "draft": "正文/0003-垫高两块砖.md",
+            "sha256": "8d628e3f706f8442fb348b7587163035727ce1258f9022db3b08da65d58d1fa3",
+            "dependency": "3d2c884ac6223956bbee2dc18e439e0fe93552cb597a0ed6d9b5321e68ae7e29"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "7b5b5d45-93b6-474c-aa62-dd11e6f0c43a",
+        "commit_binding": {
+          "ref": ".writer/objects/7b5b5d45-93b6-474c-aa62-dd11e6f0c43a.json",
+          "sha256": "a14247ad7f40a529e7a28ebd4a53d36955e4c0abb754669df7a52fa08b7d4737"
+        },
+        "transaction_id": "9ac94914-6d3c-47aa-a9d3-3c17ac34dc14",
+        "reason": "synthetic acceptance：只绑定本次A实际completed事务9ac94914-6d3c-47aa-a9d3-3c17ac34dc14；第三章原句簿子变为借物簿，前后真实正文不同。工程控制，不冒充文学收益，B未发布。",
+        "changes": [
+          {
+            "unit": 3,
+            "draft": "正文/0003-垫高两块砖.md",
+            "before": "8d628e3f706f8442fb348b7587163035727ce1258f9022db3b08da65d58d1fa3",
+            "after": "0f373cc414a1267f614f65dfd54254e2158361063e31e100f4e0a780837c10bf"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 3,
+            "draft": "正文/0003-垫高两块砖.md",
+            "sha256": "0f373cc414a1267f614f65dfd54254e2158361063e31e100f4e0a780837c10bf",
+            "dependency": "5d2654321256b5df4abf3ca0de5b23e50533db22cf2569e9e6515c0175bb7c83"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/39dc60f5-1d7c-4e9d-b4a5-1c737bf5c374.json",
+        "review_sha256": "90df4623059973c3d0cf7800fbb07ae42162c1c81930491892caaa77df650644",
+        "reviewer": "native-d-two Codex; complete current-six informed model reading",
+        "conclusion": "resolved",
+        "reason": "当前主稿完整六章顺读确认只改第三章对象名称，工程控制实际落实，文学收益仍可选且未证。",
+        "rechecked_context": false,
+        "application_commit_id": "7b5b5d45-93b6-474c-aa62-dd11e6f0c43a",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-木架空着一层.md",
+            "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+            "dependency": "0b98205610be1a8546150aeb93c7660ea2aabd753193d53e8790c9b86fb66aff"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "dependency": "256a51423c07471deb778d325b9c520e315c5a8b3391c7464e61bcfd9ff93b1d"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/0003-垫高两块砖.md",
+            "sha256": "0f373cc414a1267f614f65dfd54254e2158361063e31e100f4e0a780837c10bf",
+            "dependency": "5d2654321256b5df4abf3ca0de5b23e50533db22cf2569e9e6515c0175bb7c83"
+          },
+          {
+            "unit": 4,
+            "draft": "正文/0004-盖子打开以后.md",
+            "sha256": "f76c6874d4d8d492343cfb0e354a6f1a8157e01e47753f1cc9f495097a937aa2",
+            "dependency": "e8300a9bc5292f7fbec19b658a5270e06761c4b91f15246c56e642156bf85bab"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-抽屉留条缝.md",
+            "sha256": "b819ba8107ddbc052709f26480638e6fa5b9fe14450e5f3570e832d46efbd307",
+            "dependency": "e5c0b677f8a57347e4ce544c5cf0f6311c025d14ba9b044c90a290881d4595ba"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-一碗面的位置.md",
+            "sha256": "33c171a68b6b80b932693306de8f5180a637167033cbff2e1ecdeed078f73126",
+            "dependency": "bbc4583fc9837d4a39287ed21c15976e8db722308bd55fb8f96431aeb3198725"
+          }
+        ]
+      }
+    }
+  }
+}

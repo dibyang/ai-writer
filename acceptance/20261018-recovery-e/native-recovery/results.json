@@ -1,0 +1,104 @@
+{
+  "ok": true,
+  "scope": "E轮Windows本机六章隔离副本实际Codex工具维护验证",
+  "transaction_id": "2cabf69a-19f0-4440-b473-9f6d5f249a63",
+  "tool_version": "0.7.1",
+  "revision": 45,
+  "generation": 3,
+  "commands_executed": 34,
+  "steps": [
+    {
+      "step": 1,
+      "passed": true,
+      "description": "外部诊断、构建识别、暂停任务恢复及冻结来源只读更新计划",
+      "result": "step-results/step-01.json"
+    },
+    {
+      "step": 2,
+      "passed": true,
+      "description": "prepared注入退出97，保留原事务及锁，普通status拒绝pending",
+      "result": "step-results/step-02.json"
+    },
+    {
+      "step": 3,
+      "passed": true,
+      "description": "原事务complete在11/11行新字节后退出95，普通status仍拒绝pending",
+      "result": "step-results/step-03.json"
+    },
+    {
+      "step": 4,
+      "passed": true,
+      "description": "同一事务rollback在第5行后退出95，5旧/6新，普通status仍pending且备份完整",
+      "result": "step-results/step-04.json"
+    },
+    {
+      "step": 5,
+      "passed": true,
+      "description": "原事务complete终态；同输入幂等；反向恢复拒绝；新随附0.7.1入口实跑成功",
+      "result": "step-results/step-05.json"
+    },
+    {
+      "step": 6,
+      "passed": true,
+      "description": "删除清单及资源变化保护；公开API重建清单不能追认安装身份；精确还原后重跑成功",
+      "result": "step-results/step-06.json"
+    },
+    {
+      "step": 7,
+      "passed": true,
+      "description": "正文、事实、units、治理、决定、根定制、原历史及只读来源核验",
+      "result": "step-results/step-07.json"
+    }
+  ],
+  "read_complete_six_chapters": true,
+  "body_rewritten": false,
+  "new_chapter_added": false,
+  "paused_scope_preserved": true,
+  "product_implementation_changed": false,
+  "known_incidents": [
+    {
+      "kind": "acceptance-helper-only",
+      "phase": "initial",
+      "exit_code": 1,
+      "error": "ENOENT mkdir native-recovery/commands/01-external-doctor; commands parent did not exist",
+      "product_cli_executed": false,
+      "correction": "Create commands parent before exclusive per-command directory creation",
+      "raw_evidence": "events.jsonl command_execution record for verify.mjs initial"
+    },
+    {
+      "kind": "acceptance-report-assertion",
+      "phase": "finalize",
+      "exit_code": 1,
+      "error": "Readonly/restoration boundary",
+      "diagnostic": "finalization-boundary-diagnostic.json",
+      "product_failure": false,
+      "observed_difference": "Main project directory inventory gained docs/recovery-hardening-e.md; no original baseline files changed. This run did not write that path. Origin is not inferred.",
+      "report_correction": "Retain exact full inventory difference in final results, separately verify all original main files unchanged. Do not modify or remove the added file. Frozen source and restored package inventories and state were exact."
+    }
+  ],
+  "main_inventory_observation": [
+    {
+      "file": "docs/recovery-hardening-e.md",
+      "before": null,
+      "after": {
+        "bytes": 2854,
+        "sha256": "5de67420a2e5317e3fb2fedf06556fa3243bf4e2b5f2ea3ac7087350db57fcef"
+      }
+    }
+  ],
+  "unexpected_product_failures": [],
+  "limits": [
+    "仅此六章版本的模型实际阅读，不是新创作、百章重读或真人盲读",
+    "仅本机Windows隔离副本验收，不是其他平台、真实作品或正式发布验收",
+    "原A/B/C/D封存档案未操作；未提交、推送、联网研究或派生代理"
+  ],
+  "records": {
+    "baseline": "baseline",
+    "commands": "commands",
+    "command_results": "command-results.json",
+    "comparison": "comparison.json",
+    "reading_report": "six-chapter-reading-report.md",
+    "request_in_work": "研究/E轮实际Codex实跑授权原文.md"
+  },
+  "finished_at": "2026-10-18T09:07:37.953Z"
+}

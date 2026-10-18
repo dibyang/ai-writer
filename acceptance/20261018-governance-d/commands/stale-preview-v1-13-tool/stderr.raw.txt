@@ -1,0 +1,21 @@
+{
+  "ok": false,
+  "error": "正文已变化或缺失，旧追踪失效：1。创作来源已变化或缺失：正文/0001.md（单元 2）。先核实影响，再 rewind --from 1 并重新核对登记；哈希只能发现变更，不能判断语义影响",
+  "code": "CONTEXT_CHANGED",
+  "next_action": "核实变更后，从第 1 单元回退并逐单元实读重登；回退会保留正文。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' tool '--help'",
+  "next_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' rewind '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\stale-preview-v1\\work' '--from' '1' '--expected-revision' '4'",
+  "recovery": {
+    "from": 1,
+    "expected_revision": 4,
+    "stale_units": [
+      1
+    ],
+    "changed_sources": [
+      {
+        "unit": 2,
+        "ref": "正文/0001.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T06:52:56.073Z",
+  "operation_id": "native-d-one-workflow",
+  "base_revision": 24,
+  "payload": {
+    "stage": "structure",
+    "task": "synthetic acceptance：D副本仅讨论/规划及本地工具更新验证；保留未决选择，正文暂停，不写第7章；本会话停在prepared",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "正文暂停，不写第7章，不改六章；候选不当事实或确认扩店",
+        "本会话工具事务prepared后停止，不recover/unlock；后续须另会话核锁与进程并显式恢复"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "只在D批《渡口旧箱》验证副本继续检查工具，正文仍暂停，不写第七章。先仅讨论规划，保留现有未决选择；可新增‘旧纸样可留给下一卷核查’的候选备忘，不能当已发生事实或确认扩店。允许从D:/work/other/ai-writer这份本地0.7来源检查并启用新更新协议，保留原状态备份，再更新随附工具。保留根AGENTS、技能和手册里的验证笔记。分两次会话测试中断恢复：本会话故意停在事务准备后，下一会话只凭文件明确完成恢复，不抢活进程锁、不覆盖第三方改动。不得影响原C材料或真实作品。",
+    "local_source": "研究/D批更新授权原话.md",
+    "source_sha256": "259a54e74e7095ce9e44e3d30fcabd31218c6add479490dd9eca51250119b9a9",
+    "locator": "研究/D批更新授权原话.md:5，完整合成作者原话；本轮用户指定文本，无消息ID",
+    "recorded_by": "native-d-one Codex; synthetic acceptance recorder",
+    "frozen_ref": ".writer/objects/259a54e74e7095ce9e44e3d30fcabd31218c6add479490dd9eca51250119b9a9.txt"
+  }
+}

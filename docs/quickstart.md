@@ -28,7 +28,7 @@ node bin/ai-writer.mjs doctor
 
 历史小说选择 novel；讨论真实历史的非虚构选择 history。散文和一般非虚构选择 essay，并提供真实经历或素材。
 
-0.6.0新作品默认schema5，复用changes、设定版本和独立修订区，新增跨章功能表与意见闭环。明确长篇时Codex可用init --mode long提前组织分卷。初始只允许讨论/规划；Codex据真实原话登记任务，你无需填写JSON或重复确认已授权细节。文件存在不等于已获正文授权。
+0.7.1新作品默认schema6，复用changes、设定版本、独立修订区、跨章功能表与意见闭环，并加入工具更新代次保护。明确长篇时Codex可用init --mode long提前组织分卷。初始只允许讨论/规划；Codex据真实原话登记任务，你无需填写JSON或重复确认已授权细节。文件存在不等于已获正文授权。
 
 ## 3. 看结果，继续写
 
@@ -48,7 +48,7 @@ node bin/ai-writer.mjs doctor
 
 > 从当前文件恢复这部作品，回读将要回收的伏笔及最近变化，核对每个人实际知道什么、原物由谁保管。若旧章已修改，先处理后续受影响的知识和追踪，再续写；不要把约定当作已经发生。完成登记和当前版本的审查报告。
 
-收到正文或资料改变的提示时，让Codex核对共同影响。schema4/5先建独立修订区，在区内回退、逐章实读重登，完整尾段复核后prepare/commit。schema5可用replay-input恢复旧changes草案；新稿、引文及下游仍须核读，先record-preview核待补项，不直接补哈希。
+收到正文或资料改变的提示时，让Codex核对共同影响。schema4及以上先建独立修订区，在区内回退、逐章实读重登，完整尾段复核后prepare/commit。schema5可用replay-input恢复旧changes草案；新稿、引文及下游仍须核读，先record-preview核待补项，不直接补哈希。
 
 未来补设定可以说：
 
@@ -103,7 +103,11 @@ node .writer/tool/bin/ai-writer.mjs status
 
 只读识别构建可用 `node bin/ai-writer.mjs tool identify`；比较随附工具用 `node bin/ai-writer.mjs tool compare --project "作品路径" --other "主项目路径"`。版本号相同不一定内容相同。这些命令不会升级工具。
 
-旧schema1/2/3/4继续按原协议运行。需要新能力先只读预览；1/2显式governance migrate至3，再protection enable至4，本批review-workflow preview/enable从4至5，均须对应作品授权和备份。旧0.5拒绝5；本批无随附工具安全更新，使用新主项目入口，不能只复制CLI或手改版本号。先在独立副本验证，不自动迁移实际旧作。
+旧schema1–5继续按原协议运行。需要新能力先只读预览；1/2显式governance migrate至3，再protection enable至4、review-workflow enable至5，均须对应作品授权和备份。需要更新作品随附工具时，告诉Codex：“从指定本地主项目检查这个作品的更新计划，保留我的规则、技能和手册笔记。”Codex先运行tool update-plan，说明差异；schema5另行显式tool enable至6，旧0.6会拒绝6。然后重新计划并执行可恢复更新。先在独立副本验证，不自动迁移实际旧作。
+
+更新必须从被替换包之外运行，不能只复制CLI或改版本号。新版完整资源位于.writer/tool；作品根AGENTS、技能和手册默认原样保留，新入口help指向包内新手册。中断时保留现场，用外部入口tool updates查看，再按作者明确选择tool recover完成或回滚。详见[工具更新](tool-updates.md)。
+
+恢复途中再次中断也保留原事务，从外部入口按实际锁和明确方向重试。0.7随附包若丢失清单或与安装记录不同，先保留现场检查，不自行重建清单、改state指纹或冒充旧无清单包。
 
 在本机 Windows 的既有验证中，Codex CLI 使用嵌套作品目录作为 cwd 曾出现 `helper_unknown_error`，而从主项目目录启动并明确指定作品路径可以完成任务。遇到这类错误，返回 ai-writer 主项目会话，提供作品当前完整路径后继续；不要把宿主启动失败当成正文损坏，也不要为此关闭全局安全设置。独立 Node 工具可作为状态诊断入口。
 

@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "calls": 19,
+  "rows": [
+    {
+      "label": "pre-transaction-v1-1-init",
+      "args": [
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+        "--kind",
+        "novel",
+        "--title",
+        "机械断点验证"
+      ],
+      "root": null,
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 1676,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-2-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 124,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-3-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 122,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-4-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 129,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-5-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 143,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-6-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 165,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-7-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 139,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-8-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 158,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-9-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 162,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-10-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 117,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-11-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 139,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-12-tool",
+      "args": [
+        "tool",
+        "update-plan",
+        "--source",
+        "D:\\work\\other\\ai-writer"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 1041,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-13-tool",
+      "args": [
+        "tool",
+        "update"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 98,
+      "exit_code": 98,
+      "elapsed_ms": 4265,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_TOOL_STOP_PHASE": "backups"
+      },
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-14-tool",
+      "args": [
+        "tool",
+        "updates"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 105,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-15-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 146,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-16-revision",
+      "args": [
+        "revision",
+        "unlock"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 136,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-17-tool",
+      "args": [
+        "tool",
+        "update"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 5845,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-18-tool",
+      "args": [
+        "tool",
+        "update"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 143,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "pre-transaction-v1-19-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-d\\pre-transaction-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 148,
+      "environment": {},
+      "code": null
+    }
+  ],
+  "pre_transaction_exit": 98,
+  "original_state_and_tool_unchanged": true,
+  "staging_visible": true,
+  "explicit_unlock_then_same_request_retry": true,
+  "generation": 1
+}

@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "sessions": [
+    {
+      "id": "5ff8caac-0676-4307-85a1-b6984b352604",
+      "owner": "native-three independent Codex; synthetic-acceptance",
+      "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+      "build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+      "scope": {
+        "from": 6,
+        "through": 6
+      },
+      "status": "committed",
+      "base_sha256": "0ae9ceeb6b3a9271de4b202cc3e6ae4e5acc4f9c95eb31dd6697745250f99c0c",
+      "created_at": "2026-10-18T04:50:16.049Z",
+      "transaction_id": "22294ec7-1e8c-4970-820d-01fd9d90bcea",
+      "session_sha256": "1468bed5bc890963176ea06e04ca66f76e508e1e649d3dec98c432e2c197cc2c"
+    },
+    {
+      "id": "62adfd19-2036-4b01-a82b-0f93597be78f",
+      "owner": "native-d-two A synthetic acceptance local candidate",
+      "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+      "build_id": "aaadda3bbf0277de3cff06f1be9442d01c37bf35aa91a6e7ce64886ff5cdc7d3",
+      "scope": {
+        "from": 3,
+        "through": 6
+      },
+      "status": "committed",
+      "base_sha256": "5286a1f2cebad06519bd68161a9329a3304cb4fd025c6f7432c894b29ee48bad",
+      "created_at": "2026-10-18T07:10:34.686Z",
+      "transaction_id": "9ac94914-6d3c-47aa-a9d3-3c17ac34dc14",
+      "session_sha256": "be4db29b0d3429b9bb4f80def7b2ce068b602def9771d5d2a1dfe021b183abd6"
+    },
+    {
+      "id": "baeb7ec5-e4bc-4ac1-a1f8-c205555af10f",
+      "owner": "native-d-two B synthetic acceptance local candidate",
+      "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+      "build_id": "aaadda3bbf0277de3cff06f1be9442d01c37bf35aa91a6e7ce64886ff5cdc7d3",
+      "scope": {
+        "from": 3,
+        "through": 6
+      },
+      "status": "aborted",
+      "base_sha256": "5286a1f2cebad06519bd68161a9329a3304cb4fd025c6f7432c894b29ee48bad",
+      "created_at": "2026-10-18T07:10:35.655Z",
+      "conflict": {
+        "ref": ".writer/revisions/baeb7ec5-e4bc-4ac1-a1f8-c205555af10f/conflict-ba578cc5-03e5-49aa-8b36-76e8ab680819.json",
+        "sha256": "89b2c102315a96223b0f144ca4eb60941173d0ebad6a97cf3a0089970346c517"
+      },
+      "reason": "synthetic acceptance：A已按真实基线提交，B因旧基线CAS拒绝；明确中止B，保留候选及冲突证据，不刷新基线、不合并。",
+      "session_sha256": "3e2ae4ad53a4ab1fbd1b48e0a022f93adfbe2792f9881f74dd7590313d50dcb6"
+    },
+    {
+      "id": "db1d9ffb-dd55-4216-81a1-769eb76e40fe",
+      "owner": "native-two independent Codex; synthetic-acceptance",
+      "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+      "build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+      "scope": {
+        "from": 5,
+        "through": 6
+      },
+      "status": "committed",
+      "base_sha256": "2856bb48a973be6db851e9c984d92c62eaf4c062ccd168be53f8667a6a8de699",
+      "created_at": "2026-10-18T04:33:47.044Z",
+      "transaction_id": "99ce3f6b-c1b2-492a-84e0-a46c9af92732",
+      "session_sha256": "4d8577cc1b3907fcd2ae0fecb68516452df4ddd65df1b3950267dbcef1ad2e09"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1a1e5e00-ceb9-4919-ad0a-d5539683daea",
+      "status": "completed"
+    },
+    {
+      "id": "22294ec7-1e8c-4970-820d-01fd9d90bcea",
+      "session_id": "5ff8caac-0676-4307-85a1-b6984b352604",
+      "status": "completed"
+    },
+    {
+      "id": "6b0c8e71-58f2-4559-b891-1a35b87efd6e",
+      "status": "completed"
+    },
+    {
+      "id": "99ce3f6b-c1b2-492a-84e0-a46c9af92732",
+      "session_id": "db1d9ffb-dd55-4216-81a1-769eb76e40fe",
+      "status": "completed"
+    },
+    {
+      "id": "9ac94914-6d3c-47aa-a9d3-3c17ac34dc14",
+      "session_id": "62adfd19-2036-4b01-a82b-0f93597be78f",
+      "status": "completed"
+    }
+  ],
+  "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+}

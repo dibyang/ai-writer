@@ -4,7 +4,7 @@
 
 已有作品先运行 `node bin/ai-writer.mjs status --project 目录`。尚未启用长篇追踪的 schema 1 作品可用 `long-enable --expected-revision 当前号` 迁移，工具保留旧状态备份；已是 schema 2 的直接恢复续写。schema 1 仍兼容，schema 2 增加分卷和差量 journal；不要手改 `.writer/state.json` 或删除 journal。
 
-0.6新作品默认schema5，先恢复任务/授权/作者选择、版本、意见与活跃修订。2/3/4/5共用changes/journal；明确新长篇可init --mode long，旧作先long-enable-preview，实际启用3/4/5不降级，散文不强制卷纲。旧作不自动迁移，本批无安全更新。规划context discussion无需下一章细纲。版本修订见[原专项](revision-and-sources.md)，复核/登记减负/意见闭环见[本批专项](review-and-registration.md)，不另造账本。
+0.7新作品默认schema6，先恢复任务/授权/作者选择、版本、意见与活跃修订。2–6共用changes/journal；明确新长篇可init --mode long，旧作先long-enable-preview，实际启用3及以上不降级，散文不强制卷纲。旧作不自动迁移，随附工具另按[安全更新流程](tool-updates.md)显式处理。规划context discussion无需下一章细纲。版本修订见[原专项](revision-and-sources.md)，复核/登记减负/意见闭环见[复核专项](review-and-registration.md)，不另造账本。
 
 `outline --unit` 与 `context --unit` 自动取当前卷/剧情单元；`recall --query` 用来定位早期线索及正文；`record-template` 返回 changes 格式。`check` 同时校验差量链并报告滚动审查欠覆盖。所有导出仍是草稿。
 

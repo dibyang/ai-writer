@@ -1,0 +1,10 @@
+{
+  "status": "environment-setup-failure",
+  "phase": "before hardlink product invocation",
+  "code": "EPERM",
+  "errno": -4048,
+  "operation": "fs.linkSync",
+  "source": "hardlink-source/lib/tool-update.mjs",
+  "destination": "hardlink-twin.mjs",
+  "note": "Observed from main tool output, not an automatically captured raw stderr file. Product CLI records before failure remain in commands/path-safety-v1-*. A scoped tool-approved rerun path-safety-v2 passed real junction and hardlink rejection. No global settings changed."
+}
