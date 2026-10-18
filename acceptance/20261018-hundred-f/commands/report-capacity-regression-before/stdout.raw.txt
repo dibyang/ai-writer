@@ -1,0 +1,77 @@
+✖ 结构化长篇报告超过20k仍完整冻结，报告变化仍使审查失效 (2631.1437ms)
+✖ 兼容审查入口支持同一长报告且保持原有不推进业务revision行为 (2181.3941ms)
+✖ 报告严格按UTF8一MiB边界、非空保护，普通比较字段仍保持20k (2022.56ms)
+✖ 历史重登大报告完整冻结、预览只读，超文件上限仍在写入前拒绝 (2709.3709ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9659.1229
+
+✖ failing tests:
+
+test at acceptance\20261018-hundred-f\report-capacity-fix\report-capacity-before.test.mjs:16:1
+✖ 结构化长篇报告超过20k仍完整冻结，报告变化仍使审查失效 (2631.1437ms)
+  Error: 审查报告 必须是非空字符串，且不超过 20000 字符
+      at fail (file:///D:/work/other/ai-writer/lib/workspace.mjs:25:33)
+      at string (file:///D:/work/other/ai-writer/lib/workspace.mjs:28:73)
+      at Object.reviewData (file:///D:/work/other/ai-writer/lib/longform.mjs:179:7)
+      at reviewData (file:///D:/work/other/ai-writer/lib/workspace.mjs:516:134)
+      at file:///D:/work/other/ai-writer/lib/review-workflow.mjs:61:158
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:94:67)
+      at Object.register (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:61:12)
+      at Object.registerReview (file:///D:/work/other/ai-writer/lib/workspace.mjs:506:174)
+      at Object.review (file:///D:/work/other/ai-writer/lib/longform.mjs:186:118)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:694:36)
+
+test at acceptance\20261018-hundred-f\report-capacity-fix\report-capacity-before.test.mjs:22:1
+✖ 兼容审查入口支持同一长报告且保持原有不推进业务revision行为 (2181.3941ms)
+  Error: 审查报告 必须是非空字符串，且不超过 20000 字符
+      at fail (file:///D:/work/other/ai-writer/lib/workspace.mjs:25:33)
+      at string (file:///D:/work/other/ai-writer/lib/workspace.mjs:28:73)
+      at reviewData (file:///D:/work/other/ai-writer/lib/longform.mjs:179:7)
+      at file:///D:/work/other/ai-writer/lib/longform.mjs:188:57
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:94:67)
+      at Object.review (file:///D:/work/other/ai-writer/lib/longform.mjs:187:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:694:36)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/acceptance/20261018-hundred-f/report-capacity-fix/report-capacity-before.test.mjs:23:101)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+
+test at acceptance\20261018-hundred-f\report-capacity-fix\report-capacity-before.test.mjs:26:1
+✖ 报告严格按UTF8一MiB边界、非空保护，普通比较字段仍保持20k (2022.56ms)
+  Error: 审查报告 必须是非空字符串，且不超过 20000 字符
+      at fail (file:///D:/work/other/ai-writer/lib/workspace.mjs:25:33)
+      at string (file:///D:/work/other/ai-writer/lib/workspace.mjs:28:73)
+      at Object.reviewData (file:///D:/work/other/ai-writer/lib/longform.mjs:179:7)
+      at reviewData (file:///D:/work/other/ai-writer/lib/workspace.mjs:516:134)
+      at file:///D:/work/other/ai-writer/lib/review-workflow.mjs:61:158
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:94:67)
+      at Object.register (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:61:12)
+      at Object.registerReview (file:///D:/work/other/ai-writer/lib/workspace.mjs:506:174)
+      at Object.review (file:///D:/work/other/ai-writer/lib/longform.mjs:186:118)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:694:36)
+
+test at acceptance\20261018-hundred-f\report-capacity-fix\report-capacity-before.test.mjs:32:1
+✖ 历史重登大报告完整冻结、预览只读，超文件上限仍在写入前拒绝 (2709.3709ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/acceptance/20261018-hundred-f/report-capacity-fix/report-capacity-before.test.mjs:36:46)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

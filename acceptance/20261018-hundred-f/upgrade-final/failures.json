@@ -1,0 +1,53 @@
+{
+  "stage": "upgrade-final",
+  "product_unexpected": [
+    {
+      "command": "../commands/f-upgrade-final-0008-update-plan",
+      "exit_code": 2,
+      "code": "TOOL_INPUT_INVALID",
+      "reason": "Recorder supplied expected_source_build_id in update-plan options; that field belongs in the plan-returned update request and is not accepted in plan options.",
+      "correction": "0009 used source and documents=[] only; checked its returned real CID against source-build-v3, then used the returned request for update.",
+      "before_after_state_equal": true
+    }
+  ],
+  "expected_rejections": [
+    {"command":"../commands/f-upgrade-final-0029-resume-wrong-token","exit_code":2,"code":"REVISION_OWNER_REQUIRED","state_unchanged":true,"base_unchanged":true},
+    {"command":"../commands/f-upgrade-final-0034-deny-107-draft-context","exit_code":2,"code":"ACTION_OUT_OF_SCOPE","state_unchanged":true},
+    {"command":"../commands/f-upgrade-final-0035-deny-107-record-template","exit_code":2,"code":"ACTION_OUT_OF_SCOPE","state_unchanged":true}
+  ],
+  "helper_and_lookup_failures": [
+    {
+      "tool_result_chunk": "fd42e1",
+      "operation": "initial source-build-v3 per-file verification in inline node script",
+      "exit_code": 1,
+      "error": "ENOENT opening D:\\work\\other\\ai-writer\\writer-essay\\SKILL.md",
+      "cause": "skills group paths are relative to .agents/skills, not tool root",
+      "effect": "baseline-business.json was saved; no product update-plan/update was reached in this invocation",
+      "correction": "group-aware .agents/skills resolution, all 61 main/frozen/embedded files subsequently verified",
+      "product_state_impact": false
+    },
+    {
+      "tool": "FastCtx grep",
+      "operation": "export implementation lookup",
+      "error": "Invalid regex pattern: the literal newline is not allowed in a regex",
+      "correction": "searched function exportWork|manuscript, then read exact export source range",
+      "product_state_impact": false
+    },
+    {
+      "tool": "FastCtx read",
+      "path": "../final-source/manifest.json",
+      "error": "File does not exist",
+      "cause": "snapshot-final-source.mjs is present but its final-source manifest has not yet been produced by the parent audit",
+      "correction": "did not claim the absent manifest exists; verified source-build-v3 and original final-tests-v3/final-doctor-v3 records directly",
+      "product_state_impact": false
+    }
+  ],
+  "inherited_failures_retained": [
+    "../revise-d/failures.json",
+    "../commands/f-revise-d-branch-0062-review-48-106",
+    "../commands/report-capacity-regression-before",
+    "../commands/report-capacity-regression-after",
+    "../final-recover/failures.json"
+  ],
+  "raw_policy": "All 44 product CLI calls have complete capture input/stdout/stderr/result and before/after state. Inline helpers and FastCtx calls remain in this actual process event stream; this file indexes those failures and does not fabricate a separate complete raw transcript. The final audit helper has its own raw capture in ../commands/upgrade-final-helper-audit-001. No failure or historical file was deleted."
+}

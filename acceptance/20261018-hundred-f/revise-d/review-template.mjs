@@ -1,0 +1,2 @@
+import path from 'node:path';import {session,readJSON} from '../session-support.mjs';
+const s=session('revise-d'),r=readJSON(path.join(s.stage,'revision-local.json')),b=session('revise-d-branch',{project:r.workspace,token:r.token});const v=b.run('full-review-template',['review-template','--from','48','--to','106']);s.write('full-review-template.json',v.value);console.log(JSON.stringify(v.value).slice(0,4500));

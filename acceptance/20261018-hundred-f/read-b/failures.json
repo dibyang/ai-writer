@@ -1,0 +1,10 @@
+{
+  "product_defects": [],
+  "recording_errors": [
+    {"id":"F-B-E01","kind":"assistant-helper-path","actual":"执行不存在的evidence-placeholder.mjs，MODULE_NOT_FOUND","correct":"本阶段新建read-b/evidence.mjs baseline","reproduction":"../commands/f-b-006-helper-path-failure","result":"correct helper succeeded; no work mutation; original direct invocation also retained in events"},
+    {"id":"F-B-E02","kind":"terminal-empty-line-count","actual":"初版helper split后pop末尾空行，令每章末行假报mismatch","correct":"与FastCtx一致保留终端空行，覆盖21—50共2420行","preserved_initial":"read-tool-evidence.json","corrected":"read-tool-evidence-v2.json","result":"all 30 complete; no raw or source changed"},
+    {"id":"F-B-E03","kind":"quote-transcription","actual":"29章引句多写一个你，校验拒绝Quote not in unit 29","correct":"那先做。你别接着我电话，把锅一直放着。","reproduction":"../commands/f-b-007-readings-quote-failure","verified":"../commands/f-b-008-readings-verified","result":"only model note corrected to actual original; source untouched"},
+    {"id":"F-B-E04","kind":"quote-attribution-draft","actual":"45章首份手填摘录误用了44章先问父亲那句","correct":"45章摘录改用书架上有同名的。你手里是哪一本，就记哪本。","evidence":"FastCtx replace event and notes-41-45.json; before readings merge","result":"final 30 main quotes and issue quote verified in their actual chapter; source untouched"}
+  ],
+  "scope":"These are phase recording/call errors, not product failures. No protection bypass, source or product implementation edit. All actual event logs retained."
+}

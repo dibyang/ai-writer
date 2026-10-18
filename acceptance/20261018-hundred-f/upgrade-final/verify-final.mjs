@@ -1,0 +1,90 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {session,readJSON,sha,BASE,ROOT} from '../session-support.mjs';
+const s=session('upgrade-final'),stage=s.stage,work=s.project;
+const bytes=ref=>fs.readFileSync(path.join(work,ref));
+const baseline=readJSON(path.join(stage,'baseline-state.bin')),state=s.state();
+const afterUpgrade=readJSON(path.join(stage,'after-upgrade-state.bin'));
+assert.equal(sha(fs.readFileSync(path.join(stage,'baseline-state.bin'))),readJSON(path.join(BASE,'final-recover/handoff.json')).state_sha256);
+assert.equal(baseline.revision,405);assert.equal(baseline.tool_control.generation,3);
+assert.equal(afterUpgrade.revision,406);assert.equal(afterUpgrade.tool_control.generation,4);
+assert.equal(state.revision,409);assert.equal(state.schema_version,6);assert.equal(state.tool_control.generation,4);
+for(const field of ['units','snapshot','baseline','source_versions','source_ranges','source_events','source_operations','impact_pending','decisions','committed_revisions'])assert.deepEqual(state[field],baseline[field],field);
+assert.equal(state.tool_control.events.length,baseline.tool_control.events.length+1);
+assert.deepEqual(state.tool_control.events.slice(0,-1),baseline.tool_control.events);
+const sourceManifest=readJSON(path.join(BASE,'source-build-v3.json'));
+const pathFor=f=>f.group==='skills'?path.join('.agents/skills',f.file):f.file;
+const sourceChecks=sourceManifest.files.map(f=>{
+ const ref=pathFor(f),main=sha(fs.readFileSync(path.join(ROOT,ref))),frozen=sha(fs.readFileSync(path.join(BASE,'sources/package-v3',ref))),embedded=sha(bytes(path.join('.writer/tool',ref)));
+ assert.equal(main,f.sha256);assert.equal(frozen,f.sha256);assert.equal(embedded,f.sha256);
+ return {...f,ref,main,frozen,embedded};
+});
+const oldFrozen=[];
+for(const [manifestFile,folder]of [['source-build.json','package'],['source-build-v2.json','package-v2']]){
+ const m=readJSON(path.join(BASE,manifestFile));
+ const rows=m.files.map(f=>{const actual=sha(fs.readFileSync(path.join(BASE,'sources',folder,pathFor(f))));assert.equal(actual,f.sha256);return {ref:pathFor(f),sha256:actual};});oldFrozen.push({manifest:manifestFile,folder,rows});
+}
+const plan=readJSON(path.join(stage,'update-plan.json'));
+for(const f of plan.local_content)if(f.current_sha256)assert.equal(sha(bytes(f.file)),f.current_sha256,'root customization '+f.file);
+const bodyRows=state.units.map(u=>{
+ const b=bytes(u.draft),text=b.toString('utf8'),body=text.replace(/^#[^\r\n]*(?:\r?\n)?/u,'');assert.equal(sha(b),u.sha256);
+ return {unit:u.unit,draft:u.draft,sha256:sha(b),bytes:b.length,han:(body.match(/\p{Script=Han}/gu)||[]).length,body_non_whitespace:body.replace(/\s/gu,'').length};
+});assert.equal(bodyRows.length,106);
+const tr=readJSON(path.join(stage,'transcription-result.json')),record=readJSON(path.join(work,tr.ref)),recordBytes=bytes(tr.ref),original=fs.readFileSync(path.join(stage,'original-detailed-report.bin'));
+assert.equal(record.from,48);assert.equal(record.to,106);assert.equal(record.units.length,59);
+assert.equal(state.review_workflow.reports[tr.ref],sha(recordBytes));
+assert.ok(bytes(record.report).equals(original));assert.ok(bytes(record.frozen_report).equals(original));
+assert.equal(original.toString('utf8').length,25777);
+const dependency=u=>sha(JSON.stringify({source_hashes:u.source_hashes,source_bindings:u.source_bindings??{},decision_bindings:u.decision_bindings??[]}));
+for(const u of record.units){const current=state.units[u.unit-1];assert.equal(current.sha256,u.sha256);assert.equal(dependency(current),record.dependencies[u.unit]);assert.equal(sha(bytes(u.frozen_ref)),u.sha256);}
+assert.equal(Object.keys(state.impact_pending).length,0);
+const oldDRef=readJSON(path.join(BASE,'final-recover/handoff.json')).review.ref;
+const oldDRecord=readJSON(path.join(work,oldDRef));
+assert.equal(state.review_workflow.reports[oldDRef],sha(bytes(oldDRef)));
+assert.equal(sha(bytes(oldDRecord.report)),oldDRecord.report_sha256);
+for(const u of oldDRecord.units)assert.equal(dependency(state.units[u.unit-1]),oldDRecord.dependencies[u.unit]);
+const branch=readJSON(path.join(stage,'revision-begin.json')),branchDir=path.join(work,'.writer/revisions',branch.id),candidate=readJSON(path.join(branch.workspace,'.writer/state.json'));
+assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);assert.equal(candidate.units.length,106);assert.deepEqual(candidate.snapshot,state.snapshot);
+for(const u of state.units)assert.equal(sha(fs.readFileSync(path.join(branch.workspace,u.draft))),u.sha256);
+assert.ok(fs.readFileSync(path.join(branchDir,'base.json')).equals(fs.readFileSync(path.join(stage,'branch-original/base.json'))));
+assert.ok(fs.readFileSync(path.join(stage,'pre-branch-root-state.bin')).equals(fs.readFileSync(path.join(stage,'after-abort-root-state.bin'))));
+const candidateReplay=candidate.units.at(-1).replay_review,longReport=fs.readFileSync(path.join(stage,'model-106-with-d-appendix.md'));
+assert.ok(fs.readFileSync(path.join(branch.workspace,candidateReplay.frozen_ref)).equals(longReport));assert.equal(candidateReplay.checked_fields.length,6);
+assert.ok(longReport.toString('utf8').length>20000&&longReport.length<1048576);
+const beforeSessions=readJSON(path.join(BASE,'commands/f-upgrade-final-0003-pre-revisions/stdout.raw.txt')).sessions;
+const afterSessions=readJSON(path.join(stage,'final-revisions.json')).sessions;
+for(const old of beforeSessions)assert.deepEqual(afterSessions.find(x=>x.id===old.id),old,'old terminal session must stay exact');
+assert.equal(afterSessions.find(x=>x.id===branch.id).status,'aborted');
+const oldDBase=readJSON(path.join(work,'.writer/revisions/16d38509-69a6-42ef-8766-7a8f88a2ca0d/base-state.json'));
+const observations=Object.entries(oldDBase.snapshot.ledger).filter(([id])=>id.startsWith('O_')).map(([id,x])=>{const current=state.snapshot.ledger[id];assert.equal(current.statement,x.statement);assert.deepEqual(current.author_truth,x.author_truth);return {id,statement_unchanged:true,author_truth_unchanged:true};});assert.equal(observations.length,36);
+assert.ok(state.snapshot.characters['顾遥'].includes('掉盘瞬间非亲见'));
+const finalCheck=readJSON(path.join(stage,'final-check.json')),finalStatus=readJSON(path.join(stage,'final-status.json'));
+assert.equal(finalCheck.ok,true);assert.deepEqual(finalCheck.rolling_review.pending_windows,[]);assert.deepEqual(finalCheck.rolling_review.unpublished_records,[]);
+assert.equal(finalStatus.next_unit,107);assert.equal(finalStatus.governance.stage,'paused');assert.deepEqual(finalStatus.governance.authorization.allowed_actions,['discuss','plan']);assert.equal(finalStatus.governance.authorization.draft_range,null);assert.equal(finalStatus.governance.authorization.revise_range,null);
+assert.deepEqual(state.review_workflow.issues,baseline.review_workflow.issues);
+const exportDir=path.join(stage,'draft-export'),manifest=readJSON(path.join(exportDir,'manifest.json')),manuscript=fs.readFileSync(path.join(exportDir,'manuscript.md'));
+assert.deepEqual(manifest.included_units,Array.from({length:106},(_,i)=>i+1));assert.deepEqual(manifest.excluded_drafts,[]);assert.deepEqual(manifest.warnings,[]);
+const chapters=state.units.map(u=>bytes(u.draft).toString('utf8').trim());assert.ok(Buffer.from(chapters.join('\n\n---\n\n')+'\n').equals(manuscript));assert.equal(sha(manuscript),manifest.sha256);
+for(let i=0;i<106;i++){assert.equal(manifest.units[i].sha256,bodyRows[i].sha256);assert.deepEqual(manifest.units[i].source_hashes,state.units[i].source_hashes);}
+const oldExport=readJSON(path.join(BASE,'final-recover/handoff.json')).draft_export;
+assert.equal(sha(fs.readFileSync(path.join(BASE,'final-recover/draft-export/manifest.json'))),oldExport.manifest_sha256);
+assert.equal(sha(fs.readFileSync(path.join(BASE,'final-recover/draft-export/manuscript.md'))),oldExport.manuscript_sha256);
+const productCommands=fs.readdirSync(path.join(BASE,'commands')).filter(n=>n.startsWith('f-upgrade-final-')).map(name=>{
+ const dir=path.join(BASE,'commands',name),meta=readJSON(path.join(dir,'result.json'));assert.equal(meta.runtime_files_stable,true);
+ return {name,...meta,stdout_sha256:sha(fs.readFileSync(path.join(dir,'stdout.raw.txt'))),stderr_sha256:sha(fs.readFileSync(path.join(dir,'stderr.raw.txt'))),ref:'../commands/'+name};
+});
+assert.equal(productCommands.some(c=>c.args.includes('prepare')||c.args.includes('commit')),false);
+const parentTestMeta=readJSON(path.join(BASE,'commands/final-tests-v3/result.json')),testText=fs.readFileSync(path.join(BASE,'commands/final-tests-v3/stdout.raw.txt'),'utf8'),parentDoctorMeta=readJSON(path.join(BASE,'commands/final-doctor-v3/result.json'));
+assert.equal(parentTestMeta.exit_code,0);assert.match(testText,/tests 152/);assert.match(testText,/pass 151/);assert.match(testText,/fail 0/);assert.match(testText,/skipped 1/);assert.equal(parentDoctorMeta.exit_code,0);
+const ownReads=readJSON(path.join(stage,'own-readings-98-106.json'));
+const seedSpecs=[[4,1,70,true],[19,1,68,true],[24,1,48,true],[27,65,98,false],[31,35,79,false],[58,1,30,false],[92,47,81,false],[95,59,78,false],[97,29,51,false]];
+const seeds=seedSpecs.map(([unit,from,to,full])=>{const u=state.units[unit-1],b=bytes(u.draft);return {unit,draft:u.draft,sha256:sha(b),bytes:b.length,displayed_range:[from,to],scope:full?'full':'targeted-contiguous-excerpt',read_by:'actual-Codex-upgrade-final',method:'actual FastCtx displayed range; not regex scan or inherited full reading',marked_after_read_at:new Date().toISOString()};});
+for(const row of seeds){const dest=path.join(stage,'read-versions',row.sha256+'.md');if(!fs.existsSync(dest))fs.writeFileSync(dest,bytes(row.draft),{flag:'wx'});}
+const doctor=readJSON(path.join(stage,'branch-doctor.json'));
+const result={stage:'upgrade-final',status:'completed-final-0.7.3-stage-not-campaign-sealed',completed_at:new Date().toISOString(),elapsed_minutes:(Date.now()-Date.parse(readJSON(path.join(stage,'started.json')).started_at))/60000,project:work,tool_version:'0.7.3',schema:6,generation:4,revision:state.revision,state_sha256:sha(bytes('.writer/state.json')),build:{content_id:sourceManifest.observed_content_id,runtime_id:sourceManifest.runtime_id,loaded_guard:doctor.revision_context.execution_build_id,guard_basis:'actual branch main doctor execution_build_id; fresh CLI disk guard separately captured; namespaces distinct'},upgrade:{from_version:'0.7.2',from_revision:405,to_revision:406,generation_before:3,generation_after:4,idempotent:true,business_units_snapshot_source_bindings_bodies_unchanged:true,root_customizations_preserved:true,documents:[]},transcription:{ref:tr.ref,record_sha256:sha(recordBytes),report:record.report,frozen_report:record.frozen_report,report_sha256:sha(original),characters:original.toString('utf8').length,bytes:original.length,range:[48,106],units:59,current:true,original_reviewer:'actual-Codex-revise-d',recording_executor:'actual-Codex-upgrade-final',this_process_read_all_59:false},diagnostic_candidate:{...branch,status:'aborted',branch_revision:candidate.revision,base_sha256:sha(fs.readFileSync(path.join(branchDir,'base.json'))),state_sha256:sha(fs.readFileSync(path.join(branch.workspace,'.writer/state.json'))),replay_review:candidateReplay,long_report_characters:longReport.toString('utf8').length,long_report_bytes:longReport.length,long_report_sha256:sha(longReport),all_106_bodies_and_snapshot_equal:true,root_state_bytes_unchanged_during_branch:true,prepared:false,committed:false,applied_issue:false,pending_windows:readJSON(path.join(BASE,productCommands.find(c=>c.name.endsWith('check-after-record')).ref.replace('../',''), 'stdout.raw.txt')).rolling_review.pending_windows},old_sessions:afterSessions.filter(x=>x.id!==branch.id),workflow:finalStatus.governance,rolling_review:finalCheck.rolling_review,issues:readJSON(path.join(stage,'final-review-issues.json')),readings:{full_units:[98,99,100,101,102,103,104,105,106,4,19,24],full_count:12,targeted_units:[27,31,58,92,95,97],branch_additional_full_106:true,manifest:'own-readings.json',model_report:'model-review.md',six_field_report:'model-106-with-d-appendix.md',inherited_D59:'d-59-reading-and-current-bindings.json'},export:{output:exportDir,manifest_sha256:sha(fs.readFileSync(path.join(exportDir,'manifest.json'))),manuscript_sha256:sha(manuscript),bytes:manuscript.length,included_count:106,included_units:manifest.included_units,excluded_drafts:manifest.excluded_drafts,warnings:manifest.warnings,han:bodyRows.reduce((a,b)=>a+b.han,0),body_non_whitespace:bodyRows.reduce((a,b)=>a+b.body_non_whitespace,0),exact_registered_text_order_and_content:true,status:manifest.status,quality_review:manifest.quality_review,old_export_preserved:true},source_integrity:{v3_files:sourceChecks.length,main_frozen_embedded_equal:true,old_frozen_packages:oldFrozen.map(x=>({folder:x.folder,files:x.rows.length,all_equal:true})),all_36_observation_statements_author_truth_unchanged:true,source_data_unchanged:true},gate107:readJSON(path.join(stage,'gate-107-verification.json')),parent_tests:{version:'0.7.3',npm_test:{...parentTestMeta,tests:152,pass:151,fail:0,skipped:1,meta_ref:'../commands/final-tests-v3/result.json',stdout_sha256:sha(Buffer.from(testText))},doctor:{...parentDoctorMeta,meta_ref:'../commands/final-doctor-v3/result.json'},not_rerun_this_process:true,no_engine_changes:true},commands:{count:productCommands.length,root:productCommands.filter(x=>!x.name.startsWith('f-upgrade-final-branch-')).length,branch:productCommands.filter(x=>x.name.startsWith('f-upgrade-final-branch-')).length,nonzero:productCommands.filter(x=>x.exit_code!==0).map(x=>({name:x.name,exit_code:x.exit_code,ref:x.ref,state_unchanged:x.before_state_sha256===x.after_state_sha256})),index:'command-index.json',environment_overrides:{}},limits:['知情模型自检，不是真人盲读、市场验证、文学定稿或发布验收。','原D报告保持精确字节，正文中的本进程及prepared旧时态属于D历史；原分支已committed且不可resume。','诊断候选重登使其中旧报告stale与pending增加；未prepare/commit，不清理诊断。','旧带源头/日期/钟声/男声/缺名人、罗私因、27移入私册日、旧款及长期经费人手、永久椅位/老人后续、菜单收款、新页未来阅读及下月仍未解。','仅本阶段完成，campaign未封存，等待父任务总审计。'],prohibitions:{main_source_modified:false,old_frozen_source_modified:false,body_modified:false,wrote107:false,git_commit:false,push:false,publish:false,network:false,subagents:false,other_session_started:false,campaign_sealed:false}};
+s.write('own-readings.json',{root_full:ownReads,seed_readings:seeds,branch:{unit:106,workspace:branch.workspace,draft:state.units[105].draft,sha256:state.units[105].sha256,displayed_range:[1,126],journal:readJSON(path.join(stage,'branch-106-original-unit.json')).journal,journal_displayed_range:[1,262],original_report:'审查/F-revise-d-106重登核查.md',original_report_displayed_range:[1,26],summary_and_changes:'actual replay-input stdout fully read in this process',downstream:'current terminal106, no107 registered'}});
+s.write('source-integrity.json',{sourceChecks,oldFrozen,root_local_content:plan.local_content});s.write('body-manifest-106.json',bodyRows);
+s.write('command-index.json',productCommands);s.write('final-state.bin',bytes('.writer/state.json'));
+s.write('results.json',result);s.write('handoff.json',result);
+console.log(JSON.stringify({ok:true,revision:result.revision,state_sha256:result.state_sha256,build:result.build,transcription:result.transcription,candidate:result.diagnostic_candidate.id,report_chars:result.diagnostic_candidate.long_report_characters,commands:result.commands,export:{...result.export,included_units:'1-106'},elapsed_minutes:result.elapsed_minutes},null,2));

@@ -1,0 +1,5 @@
+Command: node acceptance/20261018-hundred-f/repair-upgrade-run.mjs baseline
+Exit code: 1
+Before any product CLI call or work mutation.
+Error: ENOENT opening a Git-quoted non-ASCII path under acceptance/20261015-long/final-recheck/commands.
+Git ls-files without -z in PowerShell preserved Git core.quotepath quoting, which is not an actual path. Corrected inventory uses git -c core.quotepath=false ls-files -- . ':!acceptance' and saves main-tracked-files-v2.json. Original erroneous file list remains. No original archive file was modified; opening the quoted nonexistent name failed. No product defect inferred.

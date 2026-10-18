@@ -50,6 +50,15 @@ test('并行候选A提交后B全局CAS冲突，双方稿件保留', t => {
   fails(() => commit(root, b), 'BASELINE_CONFLICT'); assert.match(fs.readFileSync(path.join(root, '正文/0001.md'), 'utf8'), /甲候选/); assert.match(fs.readFileSync(path.join(b.workspace, '正文/0001.md'), 'utf8'), /乙候选/);
   call(root, 'revision', 'abort', { id: b.id, token: b.token, reason: '保留冲突候选另建会话' }); assert.equal(main(['check', '--project', root]).ok, true);
 });
+
+test('修订工作区doctor复用父包并保持只读，父包损坏仍拒绝健康结论', t => {
+  const {root}=fixture(t,1);workflow(root,true);const branch=begin(root),parentState=fs.readFileSync(path.join(root,'.writer/state.json')),branchState=fs.readFileSync(path.join(branch.workspace,'.writer/state.json'));
+  assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);
+  const result=main(['doctor','--project',branch.workspace]);assert.equal(result.ok,true);assert.equal(result.tool_root,path.join(root,'.writer/tool'));assert.equal(result.resource_project_root,root);assert.equal(result.project_root,branch.workspace);assert.equal(result.revision_context.id,branch.id);assert.equal(result.revision_context.build_matches,true);
+  const sessionRef=path.join(root,`.writer/revisions/${branch.id}/session.json`),sessionBytes=fs.readFileSync(sessionRef),sessionValue=JSON.parse(sessionBytes);sessionValue.build_id='0'.repeat(64);fs.writeFileSync(sessionRef,JSON.stringify(sessionValue));const mismatch=main(['doctor','--project',branch.workspace]);assert.equal(mismatch.ok,false);assert.equal(mismatch.revision_context.build_matches,false);assert.ok(mismatch.errors.some(x=>x.includes('会话绑定不同')));fs.writeFileSync(sessionRef,sessionBytes);
+  fs.appendFileSync(path.join(root,'.writer/tool/docs/quickstart.md'),'\n父包测试损坏\n');const damaged=main(['doctor','--project',branch.workspace]);assert.equal(damaged.ok,false);assert.ok(damaged.errors.some(x=>x.includes('构建文件')));
+  assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),parentState);assert.deepEqual(fs.readFileSync(path.join(branch.workspace,'.writer/state.json')),branchState);
+});
 test('prepare后锁外改候选被拒绝；主稿第三方字节冲突不覆盖', t => {
   const { root } = fixture(t); workflow(root, true); const branch = begin(root); edit(branch); prepare(root, branch); file(branch.workspace, '正文/0001.md', '准备后外部修改'); fails(() => commit(root, branch), 'REVISION_CANDIDATE_CHANGED');
   file(root, '正文/0001.md', '主稿外部修改'); fails(() => commit(root, branch), 'BASELINE_CONFLICT'); assert.equal(fs.readFileSync(path.join(root, '正文/0001.md'), 'utf8'), '主稿外部修改');

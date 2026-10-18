@@ -1,0 +1,9 @@
+Command: node acceptance/20261018-hundred-f/repair-upgrade-run.mjs baseline
+Exit code: 1
+Before any product CLI call or work mutation. Baseline state, units, snapshot, source hashes, bodies and custom files had already been saved.
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+null !== 0
+at tracked (repair-upgrade-run.mjs:15:114)
+at repair-upgrade-run.mjs:27:57
+Node.js v24.15.0
+The direct Node spawnSync('git', ['ls-files','-z']) returned null status. The driver did not print its nested OS error, so the exact OS cause is unknown. PowerShell git ls-files succeeded; Node spawnSync(process.execPath,['--version']) succeeded with status 0 and v24.15.0. The file list is saved as main-tracked-files.json. No product defect inferred.

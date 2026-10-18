@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "sessions": [
+    {
+      "id": "1243c96a-85ea-4f88-8a56-1697e962b2fc",
+      "owner": "actual-Codex-draft-e-authorized-local-language-fix",
+      "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+      "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+      "scope": {
+        "from": 102,
+        "through": 103
+      },
+      "status": "committed",
+      "base_sha256": "6e936a6c662ad4ed2acbe1c61f29d8fc4a30d99152ce81fb77f88a8fc99b8979",
+      "created_at": "2026-10-18T12:11:31.275Z",
+      "transaction_id": "37e2507e-5011-4d82-aed5-e0055af488ad",
+      "session_sha256": "634f7638f27bf786686335663e35753fa14487bc7684a00a150e367570cb7753"
+    },
+    {
+      "id": "16d38509-69a6-42ef-8766-7a8f88a2ca0d",
+      "owner": "actual-Codex-F-revise-a-20261018-unique-48-106",
+      "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+      "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+      "scope": {
+        "from": 48,
+        "through": 106
+      },
+      "status": "prepared",
+      "base_sha256": "f33e849ffc48b52509ce7e65f2636e44d6537edf6da56db62fbe6c0bef6bdee7",
+      "created_at": "2026-10-18T12:57:32.366Z",
+      "prepared_sha256": "0e9986a6142ab0dda11e2d0a4bc683bcf9e8fd5ee3901588186c30e9d2c65be8",
+      "session_sha256": "22175252eb9cab100911c9537196a35cd31edb55f24ea9fd1eb485043b57c676"
+    },
+    {
+      "id": "7fc0be19-6e2f-4822-a3b5-8eafb88c8429",
+      "owner": "actual-Codex-repair-upgrade no-text-change diagnostic",
+      "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+      "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+      "scope": {
+        "from": 100,
+        "through": 100
+      },
+      "status": "aborted",
+      "base_sha256": "534d85a874dbca94ab3ff1e30bc5c44175f770e6530dd65dd058130c43983784",
+      "created_at": "2026-10-18T11:46:04.071Z",
+      "reason": "F轮0.7.2独立修订区doctor和令牌恢复诊断完成；未修改任何正文，未rewind、未record。本候选仅诊断，明确abort并保留全部分支/备份，不作正式提交。",
+      "session_sha256": "0ad53be33a3da23e6e687547eb50cb6ab5553e20856812a436250d5367873307"
+    },
+    {
+      "id": "d7698919-3375-4b8c-9155-a040c1057e36",
+      "owner": "actual-Codex-draft-f-local-confirmed-fixes",
+      "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+      "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+      "scope": {
+        "from": 104,
+        "through": 106
+      },
+      "status": "committed",
+      "base_sha256": "e1850acba53993faa0696a2d79968fd5e534aab17f6b2cb91ace19f37c054f60",
+      "created_at": "2026-10-18T12:44:25.709Z",
+      "transaction_id": "2730926b-4eaf-4bea-9716-194ad2b847c5",
+      "session_sha256": "b68309027f4ef258b5a7852ba70f11b5c4fac0c2743f031558ac8818a179fd2c"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "2730926b-4eaf-4bea-9716-194ad2b847c5",
+      "session_id": "d7698919-3375-4b8c-9155-a040c1057e36",
+      "status": "completed"
+    },
+    {
+      "id": "2c7a6023-5247-41dc-acaf-6317fb70e884",
+      "status": "completed"
+    },
+    {
+      "id": "37e2507e-5011-4d82-aed5-e0055af488ad",
+      "session_id": "1243c96a-85ea-4f88-8a56-1697e962b2fc",
+      "status": "completed"
+    },
+    {
+      "id": "82326b4d-13f3-4377-bc2d-5f168d01c165",
+      "status": "completed"
+    },
+    {
+      "id": "d1c1d73c-9df7-4271-8101-85da87686cc0",
+      "status": "completed"
+    }
+  ],
+  "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+}

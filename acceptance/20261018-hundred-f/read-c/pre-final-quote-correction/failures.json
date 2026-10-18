@@ -1,0 +1,29 @@
+{
+  "product_failures": [],
+  "recording_and_inspection_issues": [
+    {
+      "kind": "missing-directory",
+      "tool": "FastCtx glob",
+      "path": "read-a",
+      "actual": "Path does not exist",
+      "impact": "Unused optional lookup; no product call, no file changed."
+    },
+    {
+      "unit": 66,
+      "issue": "草记将章名混列为事件引句，且残留一句尚未执行的编辑指示；章名虽真实存在，不当作场景引文。",
+      "action": "readings.json移除该章名引句，并改为实际文学判断。原notes保留。"
+    },
+    {
+      "unit": 72,
+      "issue": "草记judgment含写作记录口吻，不是文学证据。",
+      "action": "readings.json仅留其袋位复述偏好判断，不改quotes与原稿。"
+    }
+  ],
+  "protocol_limitations": [
+    {
+      "kind": "recovery-order",
+      "detail": "Initial reading used installed workspace root skills; later inspection found preserved work writer-project/review/long-form differ. Actual preserved versions subsequently fully read, no work changes or migration commands executed. Novel and common review modules same hashes; current protocol uses captured CLI. No incompatible action was taken."
+    }
+  ],
+  "inherited_history": "B helper path, blank-line audit false alarm and quote corrections remain in read-b/failures.json; not erased or reclassified as product bugs."
+}

@@ -1,0 +1,37 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {session,sha} from '../session-support.mjs';
+const s=session('read-c');
+const file=n=>path.join(s.stage,n);
+const handoff=JSON.parse(fs.readFileSync(file('handoff.json')));
+const failures=JSON.parse(fs.readFileSync(file('failures.json')));
+s.write('pre-final-quote-correction/failures.json',fs.readFileSync(file('failures.json')));
+const correction={location:'REPORT.md:44',issue:'Asset-list paraphrase was enclosed as a direct quote',actual_source_quote:'可还是擦掉了',preserved_previous:'pre-final-quote-correction/',body_changed:false};
+const syntaxFailure={kind:'recording-script-syntax-error',command:'node --input-type=module -e (final artifact hash update; actual full command retained in events.jsonl)',actual:'SyntaxError: Unexpected token )',cause:'One extra closing parenthesis in map/fromEntries expression',exit_code:1,impact:'Compilation failed before any instruction ran; no product CLI or work write',correction:'Use this readable helper, preserve prior artifact metadata, then reverify all delivered hashes'};
+failures.recording_and_inspection_issues.push(correction,syntaxFailure);
+fs.writeFileSync(file('failures.json'),JSON.stringify(failures,null,2)+'\n');
+s.write('final-quote-correction.json',correction);
+s.write('final-recording-issue.json',syntaxFailure);
+handoff.final_quote_correction=correction;
+handoff.final_recording_issue='final-recording-issue.json';
+handoff.finalized_at=new Date().toISOString();
+handoff.final_elapsed_ms=Date.parse(handoff.finalized_at)-Date.parse(handoff.phase_started_at);
+for(const name of Object.keys(handoff.artifacts))handoff.artifacts[name].sha256=sha(fs.readFileSync(file(name)));
+fs.writeFileSync(file('handoff.json'),JSON.stringify(handoff,null,2)+'\n');
+const names=['handoff.json',...Object.keys(handoff.artifacts),'final-quote-correction.json','final-recording-issue.json'];
+const hashes=Object.fromEntries(names.map(name=>[name,sha(fs.readFileSync(file(name)))]));
+s.write('artifact-hashes-final.json',hashes);
+const readings=JSON.parse(fs.readFileSync(file('readings.json')));
+assert.equal(readings.readings.length,30);
+for(let i=0;i<30;i++){
+ const n=readings.readings[i];assert.equal(n.unit,i+46);assert.equal(sha(fs.readFileSync(path.join(s.project,n.path))),n.sha256);
+ assert.equal(sha(fs.readFileSync(file(n.version))),n.sha256);assert.equal(n.tool_evidence.length,1);
+ for(const e of n.tool_evidence)assert.equal(sha(fs.readFileSync(file(e.raw))),e.raw_sha256);
+ for(const quote of n.quotes)assert.ok(fs.readFileSync(path.join(s.project,n.path),'utf8').includes(quote));
+}
+for(const [name,digest] of Object.entries(hashes))assert.equal(sha(fs.readFileSync(file(name))),digest);
+const seal=JSON.parse(fs.readFileSync(file('seal-verification.json')));
+assert.equal(sha(fs.readFileSync(path.join(s.project,'.writer/state.json'))),seal.state_sha256);
+s.write('delivery-verification.json',{at:new Date().toISOString(),artifact_hashes_match:true,readings_count:30,order_46_to75:true,body_and_preserved_version_hashes_match:true,raw_response_hashes_match:true,quotes_exist_in_actual_sources:true,state_sha256:seal.state_sha256,work_unchanged_at_seal:seal.all_work_bytes_unchanged,line_audit_executed:false,reading_c_audit_exists:fs.existsSync(path.join(s.stage,'../reading-audit/read-c.json')),nature:'Artifact and byte verification only; not a line algorithm or literary verdict',final_hash_manifest:'artifact-hashes-final.json'});
+console.log(JSON.stringify({elapsed_minutes:handoff.final_elapsed_ms/60000,revision:handoff.revision,generation:handoff.generation,read_units:30,all_artifact_hashes_match:true,raw_and_version_hashes_match:true,line_audit:'pending-main-task',recording_failures_preserved:true,product_failures:failures.product_failures},null,2));

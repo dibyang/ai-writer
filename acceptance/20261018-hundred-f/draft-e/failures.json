@@ -1,0 +1,29 @@
+{
+  "product_guard_rejections": [
+    {
+      "label": "f-draft-e-0046-replay-preview-102",
+      "exit_code": 1,
+      "code": "REPLAY_INPUT_STALE",
+      "state_unchanged": true,
+      "classification": "Correct protection: replay template preceded manuscript edit; fixed by actual reread and newly generated replay input, no source hash override"
+    }
+  ],
+  "driver_failures": [
+    {
+      "command": "Initial cli.mjs record-101 JSON-argv invocation",
+      "error": "SyntaxError: Unexpected token backslash in JSON at [\\\"record\\\"]",
+      "effect": "Before product launch; no state mutation",
+      "resolution": "Helper now uses plain argv; successful product command separately captured."
+    },
+    {
+      "command": "Read f-draft-e-0024-context-102 stdout",
+      "error": "ENOENT: actual generated context label was f-draft-e-0025-context-102",
+      "effect": "Read-only helper path error",
+      "resolution": "Read actual label by suffix; original tool event retained."
+    }
+  ],
+  "console_truncation": "Some broad JSON console displays were truncated. Complete product stdout/stderr and states remain in commands; later targeted inspection used relevant fields.",
+  "report_erratum": "Review report wrote chapter 95 as day 95 once; preserved original and registered separate date-locator correction without changing body or claiming new reading.",
+  "confirmed_product_defects": [],
+  "product_modified": false
+}

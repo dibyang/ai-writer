@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import {session} from '../session-support.mjs';
+const s=session('draft-f'),t=JSON.parse(fs.readFileSync(path.join(s.stage,'template-105.json')));
+t.summary='65日午后沈新纸先借老人/葛当日场面证明自己终于学会，实际长线划掉，另写本人63日看球想被谢/64日未接720仍盼挽留；草稿漏水联想被本人否定不带入新页，不改旧95半面。实付6元买油麦菜，打印铺遇何独立改菜单/与客户核双份实为合装，沈只读眼前十八，不给何看新稿。何新样发图仅获正在看、本人付打印费并自持新旧样离，未全单通过/获款。沈重抄自读，原草稿与新页前后入独立窄夹、小包干层，愿带今晚未获周答看。';
+t.changes={characters:{沈禾:'第105章：65日17点后镇家备赴18:30周家饭，油麦菜实花6元已拣沥松包；新本人页/划去开头原稿在独立窄夹随小包干层，旧95半面未动；只自读，无人评新页，何未看周未答看。',何映:'第105章：65午后亲在打印铺工作，新菜单小份18大份24/双份实为两小合装由客户电话确认，重排新样发图仅获正在看；本人付打印费、自持新旧样往母亲家方向，未证到达/全份批准/劳务款到账。只问沈眼前一价，不读沈新页。'},timeline_append:['第65日午后—17点后：沈划掉新稿借人开头并重写/自读新本人页；6元买油麦菜，打印铺见何独立做菜单样；新页与原稿独立窄夹准备自带赴晚约，尚未给周。'],ledger:{
+P_SELF_PAGE_105:{type:'object',statement:'65日沈另写本人看球/未接追加经历的新页与本日原稿；原稿借老人葛作证的开头实际划去，新页不带借用开头和不确定漏水，不是95半面重写。',status:'active',cast:['沈禾'],custody:{holder:'沈禾',location:'65日17点后沈家小包干层的独立窄纸夹，新重抄页在前、划头原稿另折夹后',condition:'新写/自读后有句子改痕，无外人读/接取/录拍；旧95半面原夹仍留干架'},reader_known:'只沈自己读；周是否想看仍未问；漏水是原稿曾写后否定的不确定联想，不登记旧球局新增水事实。',character_known:{沈禾:'亲写/划去/重抄/自读；愿带今晚但不知周是否愿看。'},evidence:[{unit:105,quote:'沈在两行中间画一道长线，连后面那句终于一起划去。'},{unit:105,quote:'划去开头的原稿另折在夹后，两张一前一后'},{unit:105,quote:'只将夹子合上，放在小包干的那一层'}]},
+O_MENU_LABOR65_105:{type:'observation',statement:'65午后沈在打印铺亲见何核菜单份量价/重排出样，客户电话澄清双份为两碗小的合装；发新样图仅获正在看，不证明全单已过或何收到劳务款。',status:'active',cast:['沈禾','何映'],character_known:{沈禾:'亲见本段何劳动与眼前样，未见后续客户回核/到账。',何映:'本人完成所见修改并发新样图，后续仍待核，不知沈新页正文。'},evidence:[{unit:105,quote:'对方这次说双份按两碗小的，只是打包可合一盒。'},{unit:105,quote:'对方只回正在看'}]}
+}};
+s.write('record-105-model.json',t);
+for(const cmd of ['record-preview','record']){const r=s.run(cmd+'-105',[cmd],{input:t,entry:'embedded'});console.log(JSON.stringify(cmd==='record'?r.value:{ok:r.value.ok,unit:r.value.unit,revision:r.value.revision,findings:r.value.findings,unchanged:r.value.unchanged}));}

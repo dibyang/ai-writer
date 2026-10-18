@@ -1,0 +1,35 @@
+{
+  "product_failures": [],
+  "confirmed_product_defects": [],
+  "orchestration_issues": [
+    {
+      "kind": "unavailable-nested-fastctx",
+      "count": 6,
+      "attempt": "functions.exec tools.mcp__fastctx__read batch",
+      "actual": "Promise.allSettled returned rejected reason {} because FastCtx is not exposed inside functions tools inventory.",
+      "resolution": "Used direct FastCtx tools; all required files actually read. No product command or work mutation occurred."
+    },
+    {
+      "kind": "display-output-truncated",
+      "commands": [
+        "f-d-0001-doctor",
+        "f-d-0002-status",
+        "f-d-0005-identify",
+        "f-d-0007-recall-audio",
+        "f-d-0008-recall-pages"
+      ],
+      "actual": "Combined exec display truncated long captured JSON.",
+      "resolution": "Full raw stdout/stderr preserved under commands and full parsed values saved under recovery. Relevant recovery summaries and actual source chapters inspected. No body read truncated."
+    },
+    {
+      "kind": "draft-note-correction",
+      "unit": 84,
+      "actual": "An unsaved draft consequence initially contained 84日? before actual51日.",
+      "resolution": "Corrected notes before assembly, no body or historical report changed; raw events preserve edit."
+    }
+  ],
+  "inherited_failures": "read-c/failures.json and earlier phase files retained, not reclassified as product defects",
+  "network": false,
+  "subagents": false,
+  "new_sessions": false
+}

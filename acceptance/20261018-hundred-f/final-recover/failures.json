@@ -1,0 +1,48 @@
+[
+  {
+    "kind": "intentional-product-guard",
+    "commands": [
+      "f-final-recover-0020-paused-context-107",
+      "f-final-recover-0021-paused-record-template-107"
+    ],
+    "exit_code": 2,
+    "code": "ACTION_OUT_OF_SCOPE",
+    "state_unchanged": true,
+    "note": "暂停107保护实测，预期拒绝，非工具缺陷"
+  },
+  {
+    "kind": "auxiliary-driver",
+    "file": "pause-export.mjs",
+    "message": "预期退出码1，实际CLI保护退出2；session-support断言停住。已保留原拒绝并用finish-actions.mjs顺续，没有重设workflow或重发context。"
+  },
+  {
+    "kind": "auxiliary-audit",
+    "file": "audit.mjs initial run",
+    "message": "TypeError: root.snapshot.ledger.filter is not a function；ledger是按ID索引对象，未进行产品写操作。"
+  },
+  {
+    "kind": "superseded-audit",
+    "files": [
+      "precommit-audit-v2.json",
+      "semantic-state-audit-v2.json",
+      "replay-journal-validation-v2.json"
+    ],
+    "message": "曾错误按value.id筛ledger得到0观察，且去journal顶层找replay_review得null；这些语义字段无效。semantic.mjs/semantic-final.json改按ledger键和unit.replay_review实核36条与59份，不采信旧0/null。其余106正文/251准备/61构建文件核验由后续verify-final独立验证。"
+  },
+  {
+    "kind": "auxiliary-node-e",
+    "message": "SyntaxError: Unexpected token )；一次只读字段盘点括号错误，未执行任何产品命令。"
+  },
+  {
+    "kind": "auxiliary-path",
+    "message": "猜测f-final-recover-0029-final-identify/result.json导致ENOENT；FastCtx glob定位实际0028后全文读取。"
+  },
+  {
+    "kind": "display-truncation",
+    "message": "三次辅助JSON盘点输出超过控制台预算（15856/13554/1690 tokens），原事件保留；改用定向文件及字段核实，不把截断当全文阅读。"
+  },
+  {
+    "kind": "historical-product-failure-preserved",
+    "message": "D详细报告25777字符触发普通字符串20k限制；本阶段未重试未修源码，有效14769字符登记版仍覆盖同59章。完整后续0.7.3计划见../report-capacity-fix/PLAN.md，非本阶段最终验收。"
+  }
+]

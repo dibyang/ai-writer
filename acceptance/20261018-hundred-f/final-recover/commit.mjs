@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {s,h,save,run} from './run.mjs';import {sha} from '../session-support.mjs';
+const input={id:h.id,token:h.token};
+const committed=run('commit',['revision','commit'],{input});
+const first=fs.readFileSync(path.join(s.project,'.writer/state.json'));save('committed-state.bin',first);
+assert.equal(s.state().revision,404);assert.equal(sha(first),h.prepared_target_state_sha256);
+const retry=run('commit-idempotent',['revision','commit'],{input});
+assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),first);
+save('commit-idempotency.json',{same_input:true,before_sha256:sha(first),after_sha256:sha(fs.readFileSync(path.join(s.project,'.writer/state.json'))),state_byte_identical:true,revision:404,branch_revision:467,base_revision:403,committed,retry});
+for(const [label,args] of [['postcommit-doctor',['doctor']],['postcommit-status',['status']],['postcommit-check',['check']],['postcommit-workflow',['workflow','show']],['postcommit-discussion',['context','--purpose','discussion']],['postcommit-issues',['review-issues','list']],['postcommit-revisions',['revision','list']]])run(label,args);
+console.log(JSON.stringify({committed,retry}));

@@ -1,0 +1,14 @@
+# F轮最终0.7.3新会话：升级恢复、完整长报告登记与真实重登容量验证
+
+先读campaign REQUEST.md/COVERAGE.md、final-recover/handoff.md/json及其实际报告、revise-d/handoff.md/json、report-capacity-fix/PLAN.md与修复/测试记录、source-build-v3.json、reading-audit/revise-d.json及其start_marker，按writer-project/writer-novel/writer-review及连续性参考恢复。唯一可写作品为F work及本阶段新建候选，记录upgrade-final；真实作品、原百章、A—E档案、主源码及全部冻结源只读。不Git提交/push/发布/联网/启动代理或其他会话。
+
+本轮原总授权允许隔离验证副本上的工具修复验证。0.7.2四批59章重登及原prepared提交已实际完成，原会话现应committed，**不resume或重绑旧终态**。这次最终产品0.7.3仅修报告容量，schema6不迁移；不要把旧0.7.2测试冒充最终版测试，也不要把原D的59章实读冒充你本人又读59章。使用 ../session-support.mjs session('upgrade-final')捕获产品CLI，root升级前用main新入口，升级成功后普通root命令用entry:'embedded'；branch用另phase前缀+main+实际token。
+
+1. 实际tool identify/status/revision list/doctor/check/workflow/discussion恢复当前106章、0.7.2/gen3、已提交状态与暂停。保存升级前完整state原字节、106正文SHA与units/snapshot/source_hashes；先读真实F授权研究文件，用source-build-v3的真实CID从sources/package-v3实际tool plan/update，documents=[]保留根定制，expected_revision取当前。不得只复制文件/改state/改旧会话绑定。完全相同输入幂等重试一次，核generation仅3→4一次，业务units/snapshot/所有正文/旧源保持。
+2. 新随附0.7.3入口实际doctor/identify/status/check/discussion/workflow，核source内容ID、runtime_id及loaded guard分别匹配本命名空间，gen4/106章。旧已提交分支终态保留，不要求旧绑定与新构建相同。
+3. 读取原D实际详细报告（25,777字符、SHA335b9de80453557e3c2c2a619dcec719c924988d01b397e4a161126bef4c351a；实际路径见D原失败输入/prepare文件清单），读取其59章最终稿字节展示证明、每章判断和当前59章SHA/来源绑定。确认报告与当前正文同字节并有真实原D实读证据。保留原报告精确字节，**将原D已做的模型复核转录登记到当前root**：新expected_revision/operation_id、实际当前source_hashes，沿用原真实功能/引句/判断；不要生成假文学结论、伪称自己刚全文看59或把脚本当审稿。transcription.json明确原审阅主体D、你是记录执行者、本次亲读范围。登记后核冻结report完整原字节/SHA/字符数>20k、单位范围48–106全59、current有效。失败前后状态留存；不改作者采用/意见历史。
+4. 本新进程实际全文实读98–106及必要种子原文/引用（路径从追踪取，不凭题名猜），核Gu58见证澄清、原单页/两页/新半页/105新页、103款项与未接报价、104椅位代价、106周未接未读纸。如引用先前报告，明确是继承不是自己亲见；本人实际读到的文件SHA/范围另列。不要扩大正文修改或编造原带来源，原余线未解继续保留。
+5. 在真实F总范围内临时正式workflow revise仅106–106，draft=null，说明最终版无正文变化的接口演练。revision begin from106 through106，保存原base、id/token；新branch不带tool，doctor须正确父资源/当前构建匹配。**branch实际完整读106及原摘要/changes/证据/下游边界后rewind106、replay-input106**，不改正文。写真实106六项复核报告（本次实际判断）并附录原D长报告原文，明确附录是原D59章判断、非本人新增59章阅读，整体>20k且<1MiB UTF8。填真实replay_review字段后preview、record，核长报告完整冻结、候选snapshot/正文与主稿等价、全106再登记，root业务state原字节未变。原D详版及本次106判断都保留，不能复制短报告凑长度或脚本盖文学章。实际fresh CLI错误token resume拒绝、正确token resume原分支/base不变，再abort保留诊断候选，**不prepare/commit这个无改稿演练，不据它标意见applied**。
+6. root正式回paused仅discuss/plan、两范围null；当前next107不能写。实际请求107 draft context及record-template，按真实CLI退出码记录拒绝，state不变、无107正文。最终随附doctor/check/status/discussion/review-issues list，所有旧报告stale/未解如实保留，确认pending_windows当前。
+7. 以最终0.7.3随附入口再导出一份新的106章草稿，建议本阶段draft-export（如API要求作品内则WORK/导出新路径），保留0.7.2旧导出、不覆盖。核manifest顺序、全部106章内容SHA、实际字数/警告；无游离稿混入、无发布。导出不等于文学定稿。
+8. REPORT.md/results.json/handoff.md/json包含最终0.7.3/schema6/gen4/实际revision/stateSHA与三个构建身份、升级幂等/业务保持、原D长报告新登记ref/冻结SHA/当前性及原阅读主体、本次106大报告实际replay证据/诊断候选abort、本人98–106回读范围、107门禁、最终版导出、所有失败及完整命令索引。主源码/包只读；引用主任务最终全测实际结果（若未找到不要假称通过）。不封存campaign，父任务还要总审计。每60秒内报告阶段/实数/耗时/下一检查点，预计15–25分钟。

@@ -1,0 +1,221 @@
+diff --git a/README.md b/README.md
+index c12cd584..7f97dad5 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ 通过 Codex 创作中文小说、剧本、历史散文，以及散文和一般非虚构。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究和追踪各有职责；新会话可以从文件恢复创作。
+ 
+-当前版本：**0.7.1 本地候选版**。新增完整轻量工具包的本地更新计划、显式协议启用、文件事务发布/恢复与代次保护。新作品默认schema6，继续复用阶段/有限授权、作者决策、设定版本、独立修订、增量账本、跨章复核和意见闭环。旧作品不自动迁移或替换工具。包含7个Codex skills、去AI味流程和主项目原有质量引擎；文学重复、史实与作者验收仍由实际阅读核验裁定。
++当前版本：**0.7.3 本地候选版**。修复独立修订区的工具诊断路径，并支持在现有1MiB文件保护内完整登记长篇审查报告。继续提供完整轻量工具包的本地更新计划、显式协议启用、文件事务发布/恢复与代次保护。新作品默认schema6，复用阶段/有限授权、作者决策、设定版本、独立修订、增量账本、跨章复核和意见闭环。旧作品不自动迁移或替换工具。包含7个Codex skills、去AI味流程和主项目原有质量引擎；文学重复、史实与作者验收仍由实际阅读核验裁定。
+ 
+ ## 开始使用
+ 
+@@ -95,6 +95,8 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "
+ 
+ 0.7.1 E轮补强清单缺失、已安装完整内容保护与恢复再中断验证，见[实现边界](docs/recovery-hardening-e.md)和[最终验证记录](acceptance/20261018-recovery-e/README.md)。
+ 
++0.7.3 F轮通过13个真实Codex进程，在隔离的百章副本上续写至106章，验证工具更新、多轮恢复、跨卷回收与旧章修改后59章重登及复读，并修复实跑发现的问题。范围、失败原件、完整实读证据和最终测试见[百章更新与恢复实跑记录](acceptance/20261018-hundred-f/README.md)。现有作品未修改，模型复核不代替作者定稿。
++
+ ```powershell
+ npm test
+ npm run doctor
+diff --git a/docs/quickstart.md b/docs/quickstart.md
+index d010d4b9..963100e4 100644
+--- a/docs/quickstart.md
++++ b/docs/quickstart.md
+@@ -1,5 +1,7 @@
+ # 快速入门：在 Codex 中开始写作
+ 
++0.7.3支持长篇完整审查报告：普通审查与旧章重登报告可使用不超过1 MiB的UTF-8文本，不再误用普通短字段的20,000字符限制。仍须实际阅读声明范围，并由Codex绑定当前正文与来源；报告变长不等于自动完成文学复核。
++
+ 准备好能正常使用的 Codex 和 Node.js 20 或以上。不需要安装 npm 依赖。模型由当前 Codex 会话提供。
+ 
+ ## 1. 打开主项目，检查环境
+@@ -60,6 +62,8 @@ node bin/ai-writer.mjs doctor
+ 
+ 具体恢复、令牌移交及中断处理见 [设定版本与修订](revision-and-sources.md)。
+ 
++0.7.2起可从主项目新入口运行 `doctor --project 修订区完整路径`。独立区有意不复制运行包，doctor复用父作品安装资源，并列出会话绑定和当前执行构建；不要在分支里补装工具或重新初始化。构建不匹配时保留候选，使用原绑定入口或按新基线另建会话。
++
+ 详细步骤见 [长篇用法](long-form.md)。
+ 
+ ## 4. 审查或直接润色
+diff --git a/docs/revision-and-sources.md b/docs/revision-and-sources.md
+index ff272337..de9b8fdb 100644
+--- a/docs/revision-and-sources.md
++++ b/docs/revision-and-sources.md
+@@ -1,5 +1,7 @@
+ # 设定版本、影响分析与跨会话修订
+ 
++0.7.3的普通审查及replay_review报告均按非空UTF-8文件校验，最多1 MiB；不再继承普通字符串的20,000字符默认值。路径、范围、原文引句、来源哈希、报告冻结及原观察保护继续生效；prepare仍要求最终字节上的完整尾段复核，较大的报告不能替代真实阅读。
++
+ 本页原schema4保护同样适用于schema5/6；重登草案、登记预览及意见闭环见[复核专项手册](review-and-registration.md)。0.7新作品默认6，旧作品仅显式启用，不自动迁移；随附工具另按[本地安全更新](tool-updates.md)处理。
+ 
+ 适用 0.5.0 候选及 state schema 4。普通作者用自然语言说明任务，由 Codex 准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
+@@ -18,6 +20,8 @@
+ 
+ > 先 status 和 revision list，恢复当前任务、未决决策、版本及活跃修订。我的修订 ID 和令牌保存在本地交接文件。恢复原分支，不刷新基线；如果主稿已变化，保留候选并比较新基线。
+ 
++0.7.2支持从主项目入口对独立workspace运行doctor，资源来自其已核验的父作品，不要求分支自带.writer/tool。结果分别列project_root、resource_project_root和revision_context；当前执行构建与会话绑定不同会明确失败。保留候选并选择匹配入口或新基线，不复制运行包或篡改绑定。正文/来源完整性仍由check及提交前校验负责，doctor通过不等于文学或提交验收。
++
+ ## 协议与兼容
+ 
+ - 0.5 新作品默认 schema 4；阶段/授权、作者决策和增量 changes 沿用上一批机制。long-enable 仅启用分卷契约，schema 4 不降为 2/3。
+diff --git a/docs/user-guide.md b/docs/user-guide.md
+index e324ccce..4dc30889 100644
+--- a/docs/user-guide.md
++++ b/docs/user-guide.md
+@@ -1,5 +1,9 @@
+ # ai-writer 使用手册
+ 
++## 长篇报告容量（0.7.3）
++
++完整尾段审查与重登复核报告采用同一文件边界：非空UTF-8文本，单文件最多1 MiB，按实际字节计；普通摘要、角色状态及比较字段仍保持原短字段限制。有效长报告可以完整登记和冻结，修改报告或依赖后仍须重新核读、登记，不改旧哈希追认。超过文件上限时保留原文，整理覆盖同一实际阅读范围的重点报告，不通过缩小范围或填表冒充完整复核。文学判断仍由实读者负责。
++
+ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追踪、来源和导出。日常使用可以直接说任务，无需手工编辑追踪 JSON。
+ 
+ 首次使用按 [快速入门](quickstart.md)。命令使用者另看 [命令说明](workflow.md)。
+@@ -130,6 +134,8 @@ context、record-template、record-preview、review-template、replay-input可
+ 
+ ## 保留与备份
+ 
++独立修订区不含随附工具包。0.7.2的doctor识别其合法父作品，检查父包并报告revision_context，读取诊断不需要所有者令牌，也不会修改正文或状态。父包损坏、协议不符或执行构建与会话绑定不匹配仍失败；不能为了通过诊断向分支复制工具、改构建ID或覆盖state。旧0.7.1在合法修订区可能报缺少.writer/tool，从新主项目入口诊断并核实际绑定，不将该报错当成稿件丢失。
++
+ 保留整个作品目录，以及需要留存的外部原稿和导出目录。 `.writer/` 保存权威状态、差量记录和回退备份；`.agents/` 保存随作品使用的技能。原稿与审查报告建议按版本另存，不覆盖已经绑定哈希的材料。
+ 
+ 0.7新作自带完整轻量工具、包内技能/手册/示例/许可和构建清单；不包含主项目质量引擎。旧协议不自动迁移，新主项目可显式传--project按原协议操作；需新能力在已授权副本迁移3、启用保护4、review-workflow启用5，再按工具更新任务显式enable至6，保留各次备份。旧0.6拒绝6。不手改版本号降级或自动迁移现有作品。
+diff --git a/lib/longform.mjs b/lib/longform.mjs
+index 019e6b72..1826b8d2 100644
+--- a/lib/longform.mjs
++++ b/lib/longform.mjs
+@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
+ import { cleanKeys } from './journal.mjs';
+ 
+ export function createLongform(api) {
+-  const { project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, fail, object, guard = () => {}, resolveSource = (p, ref) => ({ file: safe(p.root, ref) }), revisionInfo = () => null } = api;
++  const { project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, fail, object, reportLimit = 1024 * 1024, guard = () => {}, resolveSource = (p, ref) => ({ file: safe(p.root, ref) }), revisionInfo = () => null } = api;
+   const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+   const unitId = n => String(n).padStart(4, '0');
+   function long(p) { if (p.state.schema_version < 2 || (p.state.schema_version >= 3 && !p.state.long_form)) fail('先用 long-enable 备份并启用长篇协议'); }
+@@ -176,7 +176,7 @@ export function createLongform(api) {
+       if (input.to > p.state.units.length) fail('审查范围超过已登记正文');
+       if (input.kind !== 'model-self-review') fail('此自动流程只登记 model-self-review，不生成真人验收记录');
+       if (!input.report?.startsWith('审查/')) fail('report 必须在 审查/ 下');
+-      string(text(safe(p.root, input.report)), '审查报告');
++      string(text(safe(p.root, input.report)), '审查报告', reportLimit);
+       const units = p.state.units.slice(input.from - 1, input.to).map(u => ({ unit: u.unit, draft: u.draft, sha256: u.sha256 }));
+       if (!object(input.source_hashes) || Object.keys(input.source_hashes).length !== units.length || units.some(u => input.source_hashes[u.draft] !== u.sha256)) fail('审查正文哈希不符；按实际阅读版本重新审查');
+       return { from: input.from, to: input.to, kind: input.kind, report: input.report, report_sha256: hash(fs.readFileSync(safe(p.root, input.report))), units,
+diff --git a/lib/workspace.mjs b/lib/workspace.mjs
+index df44e98e..233eb9cf 100644
+--- a/lib/workspace.mjs
++++ b/lib/workspace.mjs
+@@ -376,7 +376,7 @@ function validateReplay(p,value,draftSha){
+   if(!isDeepStrictEqual(value._replay,expected))throw userError('重登草案绑定的原登记或当前正文已变化；重新replay-input并实读，不只刷新SHA',{code:'REPLAY_INPUT_STALE'});
+   const review=value.replay_review;cleanKeys(review);
+   if(!object(review)||Object.keys(review).some(k=>!['reviewer','report','draft_sha256','checked_fields'].includes(k))||review.draft_sha256!==draftSha||!Array.isArray(review.checked_fields)||review.checked_fields.length!==REPLAY_FIELDS.length||REPLAY_FIELDS.some(k=>!review.checked_fields.includes(k)))throw userError('重登草案尚未完成摘要、人物、时间线、账本、引文及下游复核；需真实报告和checked_fields，不自动确认无变化',{code:'REPLAY_REVIEW_REQUIRED'});
+-  string(review.reviewer,'replay_review.reviewer');if(!review.report?.startsWith('审查/'))fail('重登复核报告须位于审查/');string(text(safe(p.root,review.report)),'重登复核报告');
++  string(review.reviewer,'replay_review.reviewer');if(!review.report?.startsWith('审查/'))fail('重登复核报告须位于审查/');string(text(safe(p.root,review.report)),'重登复核报告',LIMIT);
+ }
+ export function recordPreview(root,value){
+   const p=project(root),findings=[];
+@@ -503,7 +503,7 @@ export function exportWork(root, target) {
+ }
+ const journal = createJournal({ safe, json, hash, atomic, stateLimit: STATE_LIMIT });
+ const governance = createGovernance({ project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, object, stateLimit: STATE_LIMIT, journal, sessionScope: p => revisions.info(p.root)?.scope });
+-const longform = createLongform({ project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, fail, object, registerReview:(...args)=>reviewWorkflow.register(...args),
++const longform = createLongform({ project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, fail, object, reportLimit:LIMIT, registerReview:(...args)=>reviewWorkflow.register(...args),
+   resolveSource: (p, ref, unit) => sources.resolve(p, ref, unit), revisionInfo: root => revisions.info(root),
+   guard: (p, action, from, to) => governance.gate(p, action === 'write' ? governance.unitAction(p, from) : action, from, to) });
+ const revisions = createRevisions({ project, safe, json, text, hash, atomic, withLock, fresh, string, integer, stateLimit: STATE_LIMIT,
+@@ -539,9 +539,13 @@ function outputDraft(root,out,produce){
+ }
+ function doctor(target) {
+   const work = target === undefined ? null : project(target);
+-  const toolRoot = work ? path.join(work.root, '.writer/tool') : ROOT;
+-  let skillRoot = work ? path.join(work.root, '.agents/skills') : SKILL_ROOT;
+-  let contentRoot = work ? work.root : CONTENT_ROOT;
++  const revision = work ? revisions.info(work.root) : null;
++  // Revision workspaces intentionally omit the runtime and package resources.
++  // Their validated marker identifies the parent whose installed package they use.
++  const resourceProjectRoot = revision?.parent ?? work?.root ?? null;
++  const toolRoot = resourceProjectRoot ? path.join(resourceProjectRoot, '.writer/tool') : ROOT;
++  let skillRoot = resourceProjectRoot ? path.join(resourceProjectRoot, '.agents/skills') : SKILL_ROOT;
++  let contentRoot = resourceProjectRoot ?? CONTENT_ROOT;
+   const errors = [], warnings = [], packageFile = path.join(toolRoot, 'package.json');
+   const version = fs.existsSync(packageFile) ? json(packageFile).version : null;
+   if(version?.startsWith('0.7.')) {skillRoot=path.join(toolRoot,'.agents/skills');contentRoot=toolRoot;}
+@@ -551,7 +555,7 @@ function doctor(target) {
+   if (legacy) warnings.push('这是旧版作品工具；可从当前主项目显式传作品路径操作，或备份后完整升级随附工具与手册。');
+   if (!legacy) for (const name of WORK_GUIDES.filter(name => name==='tool-updates.md'?version?.startsWith('0.7.'):name==='review-and-registration.md'?/^0\.[67]\./.test(version??''):name!=='revision-and-sources.md'||/^0\.[567]\./.test(version??''))) if (!fs.existsSync(path.join(contentRoot, 'docs', name))) errors.push(`缺少用户文档 ${name}`);
+   if (!legacy) for (const ref of WORK_ATTRIBUTION) if (!fs.existsSync(path.join(contentRoot, ref))) errors.push(`缺少来源或许可资料 ${ref}`);
+-  if(work&&version?.startsWith('0.7.')) for(const ref of WORK_ATTRIBUTION) if(!fs.existsSync(path.join(work.root,ref))) warnings.push(`作品根缺少原来源或许可副本 ${ref}；随附包仍保留原文`);
++  if(resourceProjectRoot&&version?.startsWith('0.7.')) for(const ref of WORK_ATTRIBUTION) if(!fs.existsSync(path.join(resourceProjectRoot,ref))) warnings.push(`作品根缺少原来源或许可副本 ${ref}；随附包仍保留原文`);
+   const modules = version?.startsWith('0.1.') ? ['workspace.mjs'] : legacy ? ['workspace.mjs', 'journal.mjs', 'longform.mjs'] : ['workspace.mjs', 'journal.mjs', 'longform.mjs', 'help.mjs', 'style.mjs', ...(/^0\.[4567]\./.test(version ?? '') ? ['governance.mjs', 'tool-build.mjs'] : []), ...(/^0\.[567]\./.test(version??'') ? ['sources.mjs', 'revisions.mjs'] : []), ...(/^0\.[67]\./.test(version??'')?['review-workflow.mjs']:[]), ...(version?.startsWith('0.7.')?['tool-update.mjs']:[])];
+   for (const name of modules) if (!fs.existsSync(path.join(toolRoot, 'lib', name))) errors.push(`缺少工具模块 ${name}`);
+   const embedded = path.basename(path.dirname(toolRoot)) === '.writer';
+@@ -562,7 +566,13 @@ function doctor(target) {
+   const installed = work?.state.tool_control?.installed;
+   if (installed && (installed.runtime_id !== build.runtime_id || installed.source_content_id !== build.observed_content_id)) errors.push('随附完整内容与已安装代次不符；重建清单不能追认资源变化，从外部入口核对原版');
+   if (work && !build.supported_state_schemas.includes(work.state.schema_version)) errors.push(`随附工具版本/清单未声明支持当前 state schema ${work.state.schema_version}；从新主项目入口操作。本批不自动更新随附工具，不要手改 state 或只复制 CLI。`);
+-  return { ok: !errors.length, node: process.version, tool_version: version, tool_root: toolRoot, build, skills: SKILLS.length, engine: engine ? 'bundled' : 'optional-in-workspace-copy', errors, warnings };
++  let revisionContext = null;
++  if (revision) {
++    const bound = revisions.list(revision.parent).sessions.find(s => s.id === revision.id)?.build_id ?? null;
++    revisionContext = { ...revision, resource_policy: 'parent-installed-package', bound_build_id: bound, execution_build_id: revisions.loadedBuild, build_matches: bound === revisions.loadedBuild };
++    if (!revisionContext.build_matches) errors.push('当前执行构建与修订会话绑定不同；保留候选，使用原绑定入口或按新基线另建会话。不要向修订区复制工具或改写构建标识。');
++  }
++  return { ok: !errors.length, node: process.version, tool_version: version, tool_root: toolRoot, project_root: work?.root ?? null, resource_project_root: resourceProjectRoot, revision_context: revisionContext, build, skills: SKILLS.length, engine: engine ? 'bundled' : 'optional-in-workspace-copy', errors, warnings };
+ }
+ export function main(argv) {
+   const [command, ...rest] = argv;
+diff --git a/package.json b/package.json
+index 1afe9b51..acb6b810 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "ai-writer",
+-  "version": "0.7.1",
++  "version": "0.7.3",
+   "private": true,
+   "description": "Codex 驱动的中文小说、剧本、历史散文与非虚构写作工作区",
+   "type": "module",
+diff --git a/tests/protection.test.mjs b/tests/protection.test.mjs
+index c195a691..5aaa3628 100644
+--- a/tests/protection.test.mjs
++++ b/tests/protection.test.mjs
+@@ -50,6 +50,15 @@ test('并行候选A提交后B全局CAS冲突，双方稿件保留', t => {
+   fails(() => commit(root, b), 'BASELINE_CONFLICT'); assert.match(fs.readFileSync(path.join(root, '正文/0001.md'), 'utf8'), /甲候选/); assert.match(fs.readFileSync(path.join(b.workspace, '正文/0001.md'), 'utf8'), /乙候选/);
+   call(root, 'revision', 'abort', { id: b.id, token: b.token, reason: '保留冲突候选另建会话' }); assert.equal(main(['check', '--project', root]).ok, true);
+ });
++
++test('修订工作区doctor复用父包并保持只读，父包损坏仍拒绝健康结论', t => {
++  const {root}=fixture(t,1);workflow(root,true);const branch=begin(root),parentState=fs.readFileSync(path.join(root,'.writer/state.json')),branchState=fs.readFileSync(path.join(branch.workspace,'.writer/state.json'));
++  assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);
++  const result=main(['doctor','--project',branch.workspace]);assert.equal(result.ok,true);assert.equal(result.tool_root,path.join(root,'.writer/tool'));assert.equal(result.resource_project_root,root);assert.equal(result.project_root,branch.workspace);assert.equal(result.revision_context.id,branch.id);assert.equal(result.revision_context.build_matches,true);
++  const sessionRef=path.join(root,`.writer/revisions/${branch.id}/session.json`),sessionBytes=fs.readFileSync(sessionRef),sessionValue=JSON.parse(sessionBytes);sessionValue.build_id='0'.repeat(64);fs.writeFileSync(sessionRef,JSON.stringify(sessionValue));const mismatch=main(['doctor','--project',branch.workspace]);assert.equal(mismatch.ok,false);assert.equal(mismatch.revision_context.build_matches,false);assert.ok(mismatch.errors.some(x=>x.includes('会话绑定不同')));fs.writeFileSync(sessionRef,sessionBytes);
++  fs.appendFileSync(path.join(root,'.writer/tool/docs/quickstart.md'),'\n父包测试损坏\n');const damaged=main(['doctor','--project',branch.workspace]);assert.equal(damaged.ok,false);assert.ok(damaged.errors.some(x=>x.includes('构建文件')));
++  assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),parentState);assert.deepEqual(fs.readFileSync(path.join(branch.workspace,'.writer/state.json')),branchState);
++});
+ test('prepare后锁外改候选被拒绝；主稿第三方字节冲突不覆盖', t => {
+   const { root } = fixture(t); workflow(root, true); const branch = begin(root); edit(branch); prepare(root, branch); file(branch.workspace, '正文/0001.md', '准备后外部修改'); fails(() => commit(root, branch), 'REVISION_CANDIDATE_CHANGED');
+   file(root, '正文/0001.md', '主稿外部修改'); fails(() => commit(root, branch), 'BASELINE_CONFLICT'); assert.equal(fs.readFileSync(path.join(root, '正文/0001.md'), 'utf8'), '主稿外部修改');
+diff --git a/tests/workspace.test.mjs b/tests/workspace.test.mjs
+index 52841ba3..9e4b3a9c 100644
+--- a/tests/workspace.test.mjs
++++ b/tests/workspace.test.mjs
+@@ -9,9 +9,9 @@ import { ROOT, KINDS, initProject, savePlan, context, record, rewind, check, exp
+ function sandbox(t) {
+   const base = path.join(ROOT, '.tmp'); fs.mkdirSync(base, { recursive: true });
+   const dir = fs.mkdtempSync(path.join(base, 'test-'));
+-  t.after(() => {
+-    const resolved = fs.realpathSync(dir), boundary = fs.realpathSync(base) + path.sep;
+-    assert.ok(resolved.startsWith(boundary)); fs.rmSync(resolved, { recursive: true, force: true });
++  t.after(async () => {
++    const resolved = fs.realpathSync(dir);
++    assert.equal(path.dirname(resolved), fs.realpathSync(base)); await fs.promises.rm(resolved, { recursive: true, force: true, maxRetries: 12, retryDelay: 150 });
+   });
+   return dir;
+ }

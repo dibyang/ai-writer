@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {s,save,run} from './run.mjs';import {sha,BASE,readJSON} from '../session-support.mjs';
+const before=fs.readFileSync(path.join(s.stage,'paused-state.bin'));assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),before);
+const command=path.join(BASE,'commands/f-final-recover-0020-paused-context-107');const refused=JSON.parse(fs.readFileSync(path.join(command,'stderr.raw.txt'),'utf8'));assert.equal(refused.code,'ACTION_OUT_OF_SCOPE');assert.equal(readJSON(path.join(command,'result.json')).exit_code,2);save('paused-context-107-actual.json',refused);
+run('paused-record-template-107',['record-template','--unit','107','--draft','正文/0107-暂停门禁验证.md'],{expected:2});
+assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),before);
+save('pause-guard-state-equality.json',{revision:s.state().revision,before_sha256:sha(before),after_sha256:sha(fs.readFileSync(path.join(s.project,'.writer/state.json'))),byte_identical:true,requests:['context draft 107','record-template 107'],no_draft_created:!fs.existsSync(path.join(s.project,'正文/0107-暂停门禁验证.md'))});
+run('draft-export',['export','--out',path.join(s.stage,'draft-export')]);
+assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),before);
+for(const [label,args] of [['final-status',['status']],['final-discussion',['context','--purpose','discussion']],['final-workflow',['workflow','show']],['final-check',['check']],['final-doctor',['doctor']],['final-identify',['tool','identify']],['final-revisions',['revision','list']]])run(label,args);

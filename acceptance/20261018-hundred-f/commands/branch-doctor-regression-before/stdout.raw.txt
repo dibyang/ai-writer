@@ -1,0 +1,30 @@
+✖ 修订工作区doctor复用父包并保持只读，父包损坏仍拒绝健康结论 (2882.194ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3003.2657
+
+✖ failing tests:
+
+test at tests\protection.test.mjs:54:1
+✖ 修订工作区doctor复用父包并保持只读，父包损坏仍拒绝健康结论 (2882.194ms)
+  Error: ENOENT: no such file or directory, lstat 'D:\work\other\ai-writer\.tmp\protection-5vU7jj\work\.writer\revisions\ad408066-cfcc-45a3-b8d4-628373230aad\workspace\.writer\tool'
+      at Object.lstatSync (node:fs:1702:25)
+      at ordinary (file:///D:/work/other/ai-writer/lib/tool-build.mjs:17:12)
+      at identifyBuild (file:///D:/work/other/ai-writer/lib/tool-build.mjs:31:42)
+      at doctor (file:///D:/work/other/ai-writer/lib/workspace.mjs:560:17)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:601:27)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/protection.test.mjs:57:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'lstat',
+    path: 'D:\\work\\other\\ai-writer\\.tmp\\protection-5vU7jj\\work\\.writer\\revisions\\ad408066-cfcc-45a3-b8d4-628373230aad\\workspace\\.writer\\tool'
+  }

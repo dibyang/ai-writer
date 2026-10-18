@@ -1,0 +1,13 @@
+file:///D:/work/other/ai-writer/acceptance/20261018-hundred-f/read-b/evidence.mjs:36
+ const chapters=notes.map(n=>{const r=evidence.rows.find(r=>r.unit===n.unit),s=fs.readFileSync(path.join(out,r.version),'utf8');if(!s.includes(n.quote))throw Error('Quote not in unit '+n.unit);for(const i of n.issues??[])if(!s.includes(i.quote))throw Error('Issue quote not in unit');return {...n,path:r.file,absolute_path:r.absolute_path,sha256:r.sha256,bytes:r.bytes,line_count:r.line_count,coverage:r.coverage,max_line_chars:r.max_line_chars,han_characters:r.han_characters,read_method:'FastCtx original full read, Complete. Additional 48 excerpt Partial was continued at 51 to Complete.',tool_evidence:r.reads,version:r.version};});
+                                                                                                                                                              ^
+
+Error: Quote not in unit 29
+    at file:///D:/work/other/ai-writer/acceptance/20261018-hundred-f/read-b/evidence.mjs:36:159
+    at Array.map (<anonymous>)
+    at file:///D:/work/other/ai-writer/acceptance/20261018-hundred-f/read-b/evidence.mjs:36:23
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

@@ -1,0 +1,20 @@
+{
+  "product_failures": [
+    {"label":"f-a-005-compare","exit_code":2,"error":"缺少 --other","cause":"操作方误将compare参数写为--source；不是产品缺陷","correction":"f-a-007-compare-corrected改用--other，退出0","evidence":"../commands/f-a-005-compare/stderr.raw.txt","state_unchanged":true}
+  ],
+  "orchestration_or_inspection_failures": [
+    {"stage":"首次批量准备","error":"TypeError: tools.mcp__fastctx__read is not a function","cause":"FastCtx未暴露为functions.exec嵌套工具","correction":"改用已提供的直接FastCtx接口；未运行任何产品写命令","raw":"orchestration-failure.raw.txt"},
+    {"stage":"读取第23章","requested":"work/正文/0023-一顿饭的时间.md","error":"File does not exist","correction":"按提示读取work/正文/0023-留一顿饭的时间.md，70行Complete，断点0023","raw":"chapter23-path-failure.raw.txt"}
+  ],
+  "metadata_corrections": [
+    {"evidence":"line-count-correction.json","cause":"首批元数据未计末尾空行，真实工具已读到Complete","correction":"1—3章按实际FastCtx行号统一为82/66/78，最终逐行比对无缺失"},
+    {"evidence":"final-audit.json","cause":"session.mjs的早期source_hashes_unchanged比较顶层不存在的字段，不能单独作为来源证明","correction":"final-audit实际比较100个units内source_hashes，均不变；整个units亦字节语义不变。保留早期输出，不冒充顶层检查有证明力。"}
+  ],
+  "environment_notes": [
+    "本进程启动日志提示respect_system_proxy为开发中功能；未修改配置、未联网。不是本轮产品CLI失败。",
+    "少数helper元数据展示被输出预算截短，非原文读取；全部产品stdout/stderr原始文件完整保留。"
+  ],
+  "confirmed_reproducible_product_bugs": [],
+  "main_project_code_modified": false,
+  "state_or_hash_protection_bypassed": false
+}

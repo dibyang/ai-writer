@@ -1,0 +1,107 @@
+[
+  {
+    "name": "branch-doctor-before",
+    "result": {
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261018-governance-d/final-integration/work/.writer/revisions/5ff8caac-0676-4307-85a1-b6984b352604/workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T11:24:09.340Z",
+      "elapsed_ms": 124,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "81cbaa132ac94e169fbb6acc0f8a6b95fd077d4244138159fbc06d4b1df11b66",
+      "after_state_sha256": "81cbaa132ac94e169fbb6acc0f8a6b95fd077d4244138159fbc06d4b1df11b66",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.1",
+        "runtime_guard_id": "8699e076699cb34935361728b1c2395d862e05f97dde022c6ae35910638ae1b6",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.1",
+        "runtime_guard_id": "8699e076699cb34935361728b1c2395d862e05f97dde022c6ae35910638ae1b6",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    "stdout": "",
+    "stderr": "{\n  \"ok\": false,\n  \"error\": \"修订区位置与会话不符\",\n  \"code\": \"REVISION_CORRUPT\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\bin\\\\ai-writer.mjs' doctor '--help'\"\n}\n"
+  },
+  {
+    "name": "branch-doctor-before-v2",
+    "result": {
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261018-governance-d/final-integration/work/.writer/revisions/62adfd19-2036-4b01-a82b-0f93597be78f/workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T11:24:40.386Z",
+      "elapsed_ms": 332,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "bf2147dc05a4c18b20d3379c6ca37bc0dd39e337553f1465d420a23210ce74d3",
+      "after_state_sha256": "bf2147dc05a4c18b20d3379c6ca37bc0dd39e337553f1465d420a23210ce74d3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.1",
+        "runtime_guard_id": "8699e076699cb34935361728b1c2395d862e05f97dde022c6ae35910638ae1b6",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.1",
+        "runtime_guard_id": "8699e076699cb34935361728b1c2395d862e05f97dde022c6ae35910638ae1b6",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    "stdout": "",
+    "stderr": "{\n  \"ok\": false,\n  \"error\": \"ENOENT: no such file or directory, lstat 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261018-governance-d\\\\final-integration\\\\work\\\\.writer\\\\revisions\\\\62adfd19-2036-4b01-a82b-0f93597be78f\\\\workspace\\\\.writer\\\\tool'\",\n  \"code\": \"ENOENT\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\bin\\\\ai-writer.mjs' doctor '--help'\"\n}\n"
+  },
+  {
+    "name": "branch-doctor-after",
+    "result": {
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261018-governance-d/final-integration/work/.writer/revisions/62adfd19-2036-4b01-a82b-0f93597be78f/workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T11:34:31.942Z",
+      "elapsed_ms": 710,
+      "exit_code": 1,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "bf2147dc05a4c18b20d3379c6ca37bc0dd39e337553f1465d420a23210ce74d3",
+      "after_state_sha256": "bf2147dc05a4c18b20d3379c6ca37bc0dd39e337553f1465d420a23210ce74d3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.2",
+        "runtime_guard_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.2",
+        "runtime_guard_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    "stdout": "{\n  \"ok\": false,\n  \"node\": \"v24.15.0\",\n  \"tool_version\": \"0.7.0\",\n  \"tool_root\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261018-governance-d\\\\final-integration\\\\work\\\\.writer\\\\tool\",\n  \"project_root\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261018-governance-d\\\\final-integration\\\\work\\\\.writer\\\\revisions\\\\62adfd19-2036-4b01-a82b-0f93597be78f\\\\workspace\",\n  \"resource_project_root\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261018-governance-d\\\\final-integration\\\\work\",\n  \"revision_context\": {\n    \"id\": \"62adfd19-2036-4b01-a82b-0f93597be78f\",\n    \"scope\": {\n      \"from\": 3,\n      \"through\": 6\n    },\n    \"status\": \"committed\",\n    \"parent\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261018-governance-d\\\\final-integration\\\\work\",\n    \"owner\": \"native-d-two A synthetic acceptance local candidate\",\n    \"resource_policy\": \"parent-installed-package\",\n    \"bound_build_id\": \"aaadda3bbf0277de3cff06f1be9442d01c37bf35aa91a6e7ce64886ff5cdc7d3\",\n    \"execution_build_id\": \"14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf\",\n    \"build_matches\": false\n  },\n  \"build\": {\n    \"ok\": true,\n    \"tool_root\": \"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261018-governance-d\\\\final-integration\\\\work\\\\.writer\\\\tool\",\n    \"tool_version\": \"0.7.0\",\n    \"profile\": \"workspace-copy\",\n    \"observed_content_id\": \"8a9e937e5942887d25339fe5189a8f96374df389215721d82f0a6aac9e974167\",\n    \"runtime_id\": \"9691ef5a39f6893894a8cbc7ea6a48d6958d3274b32bea532124c48f74badff3\",\n    \"attestation\": \"manifest-present-not-a-signature\",\n    \"declared_build_id\": \"8a9e937e5942887d25339fe5189a8f96374df389215721d82f0a6aac9e974167\",\n    \"provenance\": {\n      \"source_commit\": \"257c08ad6c6a74feb7f60df7ce7075393a812c66\",\n      \"dirty\": true\n    },\n    \"supported_state_schemas\": [\n      1,\n      2,\n      3,\n      4,\n      5,\n      6\n    ],\n    \"schema_support_basis\": \"known-version-protocol; not a semantic execution probe\",\n    \"files\": [\n      {\n        \"group\": \"content\",\n        \"file\": \"LICENSE.md\",\n        \"bytes\": 809,\n        \"sha256\": \"b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/attribution.md\",\n        \"bytes\": 1515,\n        \"sha256\": \"94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/deslop.md\",\n        \"bytes\": 4274,\n        \"sha256\": \"d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/long-form.md\",\n        \"bytes\": 10249,\n        \"sha256\": \"e2c981b763549144c346010ee95b6fe8544f74246087f67254555fb7bd0a0ed6\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/oh-story-audit-manifest.json\",\n        \"bytes\": 27367,\n        \"sha256\": \"d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/quickstart.md\",\n        \"bytes\": 7990,\n        \"sha256\": \"2e14c97de765182465392d6f8542cf9d1cd5feb698d52bdb7c88003efad4f819\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/review-and-registration.md\",\n        \"bytes\": 5358,\n        \"sha256\": \"bf5b978dfd79a16c1fd4ff34f201010702b5595c15d4ea3e03dc757cf7634904\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/revision-and-sources.md\",\n        \"bytes\": 13738,\n        \"sha256\": \"660ceda544e894ae52fc173acb0f354012b503564d281f63ed7b021046138403\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/source-manifest.json\",\n        \"bytes\": 43269,\n        \"sha256\": \"b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/tool-updates.md\",\n        \"bytes\": 4888,\n        \"sha256\": \"09ea9d63610722b3dfccca3b8133ebc8e810ceda94462abe2a80c09f5d31b9d7\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/usability-sources.json\",\n        \"bytes\": 982,\n        \"sha256\": \"5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/user-guide.md\",\n        \"bytes\": 16577,\n        \"sha256\": \"efc7e616d09972dc523893586643e99613da9ddaf1ca92eee2781c2fddcbf379\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"docs/workflow.md\",\n        \"bytes\": 20225,\n        \"sha256\": \"0a65ffa397a3e80f4a891f314a41737e2c9c42c5e755b32ca9b15248d6eef454\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"examples/history-fact-card.json\",\n        \"bytes\": 593,\n        \"sha256\": \"cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"examples/prompts.md\",\n        \"bytes\": 3588,\n        \"sha256\": \"a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"vendor/oh-story-deslop-reference/LICENSE\",\n        \"bytes\": 1102,\n        \"sha256\": \"3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md\",\n        \"bytes\": 5092,\n        \"sha256\": \"8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"vendor/oh-story-reference-20261015/LICENSE\",\n        \"bytes\": 1102,\n        \"sha256\": \"3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf\"\n      },\n      {\n        \"group\": \"content\",\n        \"file\": \"vendor/oh-story-reference/LICENSE\",\n        \"bytes\": 1102,\n        \"sha256\": \"3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"bin/ai-writer.mjs\",\n        \"bytes\": 417,\n        \"sha256\": \"23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/governance.mjs\",\n        \"bytes\": 18912,\n        \"sha256\": \"4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/help.mjs\",\n        \"bytes\": 12868,\n        \"sha256\": \"99d9c92e60a27450d4d5454b40fa78f27e9455d05669025aa71e13bcbcce2b2b\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/journal.mjs\",\n        \"bytes\": 6328,\n        \"sha256\": \"590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/longform.mjs\",\n        \"bytes\": 28523,\n        \"sha256\": \"31af3f56bc491cef64a80995b6499c63fa9f5a13e6181cb733fda8dfc68c7b50\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/review-workflow.mjs\",\n        \"bytes\": 22240,\n        \"sha256\": \"977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/revisions.mjs\",\n        \"bytes\": 36315,\n        \"sha256\": \"5fb424ee38c73b471415cb6daec883c38e8ee3bbcea668eb7daa3337a417011a\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/sources.mjs\",\n        \"bytes\": 22797,\n        \"sha256\": \"39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/style.mjs\",\n        \"bytes\": 3990,\n        \"sha256\": \"711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/tool-build.mjs\",\n        \"bytes\": 11718,\n        \"sha256\": \"7ec1bf60963518d4b0150338971a640b8bd9b3bfaf8f6305be25653971267c28\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/tool-update.mjs\",\n        \"bytes\": 27194,\n        \"sha256\": \"4e4262cf8672d5a93fb0f00f015da8be4e1cea5fd71f61ba7293e543ab1f7293\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"lib/workspace.mjs\",\n        \"bytes\": 61275,\n        \"sha256\": \"42650bce65df12c54a35c6f13eeed89ffa044ed021e433f35ae22f18e3e3a8c0\"\n      },\n      {\n        \"group\": \"runtime\",\n        \"file\": \"package.json\",\n        \"bytes\": 502,\n        \"sha256\": \"ecc06e886e4ef5e8d50f667a2f69dec343ad06b1529d75fd17e840af11e7ee4d\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-essay/SKILL.md\",\n        \"bytes\": 1596,\n        \"sha256\": \"465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-history/SKILL.md\",\n        \"bytes\": 2339,\n        \"sha256\": \"64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-history/references/history-method.md\",\n        \"bytes\": 2919,\n        \"sha256\": \"b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-novel/SKILL.md\",\n        \"bytes\": 3630,\n        \"sha256\": \"e8e46e9af84ed2417a5c74cffb3d07c381115314bcaa20eb76e091e2d66664fc\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-novel/references/suspense-continuity.md\",\n        \"bytes\": 1946,\n        \"sha256\": \"a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-project/SKILL.md\",\n        \"bytes\": 8487,\n        \"sha256\": \"13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-project/references/long-form.md\",\n        \"bytes\": 9112,\n        \"sha256\": \"77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-research/SKILL.md\",\n        \"bytes\": 2213,\n        \"sha256\": \"427add709c5d0c101ecde2d92735e8af85af80c5a9ac11ed1c631d37b8d620d0\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/SKILL.md\",\n        \"bytes\": 5275,\n        \"sha256\": \"77e69491130f6c5983d8ff9504d7596477ded17132bc51deeb0a39b3f6cb5621\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/action-scene-review.md\",\n        \"bytes\": 4500,\n        \"sha256\": \"274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/architecture-continuity-review.md\",\n        \"bytes\": 10047,\n        \"sha256\": \"efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/character-emotion-consistency.md\",\n        \"bytes\": 5379,\n        \"sha256\": \"3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/deslop.md\",\n        \"bytes\": 5393,\n        \"sha256\": \"9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/dual-world-review.md\",\n        \"bytes\": 2703,\n        \"sha256\": \"48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/final-publication-review.md\",\n        \"bytes\": 8833,\n        \"sha256\": \"943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/general-review.md\",\n        \"bytes\": 8251,\n        \"sha256\": \"92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/historical-review.md\",\n        \"bytes\": 3495,\n        \"sha256\": \"79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/knife-emotional-impact.md\",\n        \"bytes\": 9218,\n        \"sha256\": \"416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/natural-language-authenticity.md\",\n        \"bytes\": 6546,\n        \"sha256\": \"1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/page-turner-review.md\",\n        \"bytes\": 17958,\n        \"sha256\": \"8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/physical-logic-operability.md\",\n        \"bytes\": 3317,\n        \"sha256\": \"0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/proofreading-language-quality.md\",\n        \"bytes\": 2205,\n        \"sha256\": \"2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/psychology-readability.md\",\n        \"bytes\": 14297,\n        \"sha256\": \"6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/publication-gate.md\",\n        \"bytes\": 5380,\n        \"sha256\": \"610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/readability-accessibility.md\",\n        \"bytes\": 4564,\n        \"sha256\": \"9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/suspense-review.md\",\n        \"bytes\": 3151,\n        \"sha256\": \"2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/transmigration-review.md\",\n        \"bytes\": 3108,\n        \"sha256\": \"7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-review/references/xianxia-review.md\",\n        \"bytes\": 2836,\n        \"sha256\": \"daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c\"\n      },\n      {\n        \"group\": \"skills\",\n        \"file\": \"writer-screenplay/SKILL.md\",\n        \"bytes\": 2317,\n        \"sha256\": \"a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376\"\n      }\n    ],\n    \"missing\": [],\n    \"mismatches\": [],\n    \"content_scope\": \"tool-root\",\n    \"note\": \"内容指纹为本次磁盘观测，非作者身份或供应链签名；识别/比较不升级工具。轻量包有意省略引擎，新包资源在tool-root，作品根定制另行保留。\"\n  },\n  \"skills\": 7,\n  \"engine\": \"optional-in-workspace-copy\",\n  \"errors\": [\n    \"当前执行构建与修订会话绑定不同；保留候选，使用原绑定入口或按新基线另建会话。不要向修订区复制工具或改写构建标识。\"\n  ],\n  \"warnings\": []\n}\n",
+    "stderr": ""
+  }
+]

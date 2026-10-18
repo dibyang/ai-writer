@@ -1,0 +1,32 @@
+{
+  "unexpected_product_failures": [
+    {
+      "label": "f-repair-upgrade-0002-initial-workflow",
+      "code": "COMMAND_FAILED",
+      "exit_code": 2,
+      "classification": "operator CLI syntax error, state unchanged",
+      "state_unchanged": true
+    },
+    {
+      "label": "f-repair-upgrade-0011-new-help",
+      "code": "COMMAND_FAILED",
+      "exit_code": 2,
+      "classification": "operator CLI syntax error, state unchanged",
+      "state_unchanged": true
+    }
+  ],
+  "expected_rejections": [
+    {
+      "label": "f-repair-upgrade-0023-wrong-token-resume",
+      "code": "REVISION_OWNER_REQUIRED",
+      "state_unchanged": true
+    }
+  ],
+  "driver_failures": [
+    "baseline-driver-failure.txt",
+    "baseline-driver-failure-2.txt",
+    "help-text-driver-failure.txt"
+  ],
+  "confirmed_new_product_defects": [],
+  "prior_failure_distinction": "marker-position rejection, real D ENOENT, and old binding mismatch are separate; original archives untouched"
+}

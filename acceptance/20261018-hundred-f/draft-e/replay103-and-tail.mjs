@@ -1,0 +1,11 @@
+import fs from 'node:fs';import {session,sha} from '../session-support.mjs';
+const r=JSON.parse(fs.readFileSync(new URL('revision-local.json',import.meta.url))),s=session('draft-e',{project:r.workspace,token:r.token});
+const t=JSON.parse(fs.readFileSync(s.project+'/.writer/drafts/f-e-replay-103.json'));
+const report='审查/F-E-103重登核查.md';
+fs.writeFileSync(s.project+'/'+report,'# 103重登核查\n\n实际Codex完整读分支当前103的1—92行，正文未改，SHA256='+sha(fs.readFileSync(s.project+'/'+t.draft))+'。根原登记输入、当前草案与本章实际内容核对：summary的64日8:22新片、9—11/480预尾各240、10:26追加转人、10:51实到均成立；characters为沈午后镇家、梁远程交付与周上班消息，不引入夜谈事实；timeline仅当日实际；ledger旧81/82观察不替换，新版重叠/湿干与未接720分别立项；evidence的到账、定位、两处可听可见与另存动作均仍逐字存在；downstream当前末103没有已写104，汤底吃完、袖口洗晾与下一批的新页计划仍分开。102吹汤动作不改这些因果/人物所知/费用/物件。六项由模型核读后确认，保留实际摘要与changes，不是脚本语义勾选。\n',{flag:'wx'});
+t.replay_review={reviewer:'actual-Codex-draft-e-informed-self-review',report,draft_sha256:sha(fs.readFileSync(s.project+'/'+t.draft)),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+s.write('replay-record-103.json',t);const p=s.run('replay-preview-103',['record-preview'],{input:t});console.log({ok:p.value.ok,findings:p.value.findings});console.log(s.run('replay-record-103',['record'],{input:t}).value);
+const tail='审查/F-E-102-103修订尾段连读.md';
+fs.writeFileSync(s.project+'/'+tail,'# 102—103修订尾段连读\n\n实际知情模型在分支依次完整读102修后1—106与103未改1—92行。102唯一动作改为低头吹汤，动宾与模拟朗读不再把勺当吹气工具；其余事实不改。102的看球/输局/误夸/想被重视与103失追加/期待被再求同承沈不够好看的动机，收益不同。63晚20:24各归接64早餐汤底合理，袖口浸洗承接；103周仅消息知道失追加而无客户或旧音详情。两章各有吃东西与收物，但102是同伴间误会具体缓解，103是工作选择仍不甘，不据共词合并。保留周烦与球未进、沈想走和想让梁再问、梁赶午前交人的利益。103不证明整片已改好。\n\n## 真人语言别扭句\n\n### 真人语言硬问题\n\n没有\n\n原102拿勺将汤面那点油吹开已按首轮报告最小修正。风格观察：103仍有几句边界式旁白，未形成新的可确认歧义，暂保留；后续宜换场景。报告只支持此受保护尾段，不是真人/市场/作者定稿。\n',{flag:'wx'});
+const source_hashes={};for(const u of s.state().units.filter(x=>x.unit>=102))source_hashes[u.draft]=sha(fs.readFileSync(s.project+'/'+u.draft));
+const v=s.run('review-local-tail',['review'],{input:{expected_revision:s.state().revision,operation_id:'f-e-local-tail-102-103-review-v1',from:102,to:103,kind:'model-self-review',report:tail,source_hashes}});s.write('tail-review-result.json',v.value);console.log(v.value);

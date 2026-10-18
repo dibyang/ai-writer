@@ -1,0 +1,18 @@
+{
+  "exe": "node",
+  "args": [
+    "-e",
+    "const fs=require('fs');const p='acceptance/20261018-hundred-f/commands/final-tests-v2';for(const f of ['result.json','stdout.raw.txt']){const t=fs.readFileSync(p+'/'+f,'utf8');console.log(f==='result.json'?t:t.slice(-2200));}"
+  ],
+  "cwd": "D:\\work\\other\\ai-writer",
+  "started_at": "2026-10-18T11:49:20.581Z",
+  "elapsed_ms": 85,
+  "exit_code": 0,
+  "signal": null,
+  "input": null,
+  "before_state_sha256": null,
+  "after_state_sha256": null,
+  "build_before": null,
+  "build_after": null,
+  "runtime_files_stable": null
+}

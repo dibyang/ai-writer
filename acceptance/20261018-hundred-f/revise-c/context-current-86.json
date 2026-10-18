@@ -1,0 +1,611 @@
+{
+  "note": "Display current clauses only; full historical arrays and texts retained in original context and state, exact original-to-replay delta separately inspected.",
+  "plan": {
+    "unit": 86,
+    "title": "椅子上不放篮子",
+    "goal": "第54日早到葛铺，亲见续留期限末晨9:27—10:40一段，不见10:40—10:45末五分钟，老人和店员各有自己的事",
+    "change": "原约9:30至10:45，沈亲见本晨9:30清位至10:40离店，老人10:30自主离去不消费；葛在经营可承受范围新定55—61除58不开，陶不接下班负担；既往各晨只当事人口述",
+    "cast": [
+      "沈禾",
+      "葛筠",
+      "陶敏",
+      "读报老人"
+    ],
+    "setting_refs": [
+      "大纲/分卷/V12.json",
+      "大纲/续部总纲.md",
+      "设定/文风.md",
+      "设定/权威规则.md",
+      "设定/续部人物与场所.md"
+    ],
+    "research_refs": [],
+    "forbidden": [
+      "49—53的执行不得写成沈亲见",
+      "不增加旧带来源或灯下开放",
+      "不将店椅等同阅览间复开或新报服务",
+      "54晚仍尚未做"
+    ],
+    "beats": [
+      "沈54日九点半前到买点心，葛在出锅忙乱里亲搬椅面篮",
+      "老人拿自己的报和杯来，不愿替店展示有人使用；同沈闲谈报上小错和自己午饭",
+      "忙时客人要加单，陶守本班离开时点，葛自己接后续；椅仍由店主留",
+      "葛在老人10:30自主离前续55—61除58店休的9:30—10:45并实改告示，沈10:40带点心归家、不见末五分钟，准备晚约"
+    ],
+    "recall_ids": [
+      "T_ROUTE_COMMON",
+      "T_SHOP_SEAT_NEXT_80",
+      "P_SHOP_CHAIR_66",
+      "T_KEEPER_SHARE",
+      "T_ROOM_AFTER33",
+      "T_SHARED_EVENING_84"
+    ],
+    "arc_id": "V12A2"
+  },
+  "recent": [
+    {
+      "unit": 83,
+      "summary": "50日午后何约沈15点买擦镜布，何付3元后独去买母亲葱饼，沈独往邱铺配灰线。取裙女人赶车替母再剪，电话问清坐下勒后选择先带回试，非已赶车结果。邱清柜上尺寸纸，实际将扣着的透明盒连原袋移入柜内铺干布独格，未开盒/未重读；沈亲见并依邱要求当场免提告已归家何，何仅听新位置，不获得取看。其他使用两页/大字四页/试样仍沈家分袋暂停。沈付3元灰线，4点多离铺买豆腐，回家补领口余段。"
+    },
+    {
+      "unit": 84,
+      "summary": "51日9:07梁实转新12分样尾240、沈核本次480齐，后改版仍等未接。沈主动约周19点各吃过来坐到20:30，周真带画册白纸笔盒来，沈读自家旧小说，两人挪桌面各自做事。周画葱试两笔翻背画普通白杯，沈笑引他不自在，承认偷看后不代描；新听他画碗像锅只本人述。沈只口述本次已交齐款/外声误记，四元垫片当晚才告，无新工钱数或客户文件/邱移盒。20:20真约54日19—20:30周家各吃后坐；20:28周洗杯归柜、实际把杯画交沈夹家用本，画册笔盒自带离，各钥各家，54约未做。"
+    },
+    {
+      "unit": 85,
+      "summary": "52日早沈买米途经外路，亲见乔范不将空架抬外路，实搬零件箱后内转；乔主动电话缓发当批垫条，下午/分车费用仍未答，沈不替等回。邹原双侧筐本次通过，不承固定来时；52下午实际收货未知。沈付购五斤米分袋带回，补自用袋提带，午前剪少量葱做蛋，旧物不动。"
+    }
+  ],
+  "characters": {
+    "沈禾": "第85章当前：52日午前镇家做葱蛋米饭，五斤米实购分袋带回/补袋提带；早亲见乔范腾内架、乔缓送和邹原宽车过，未知52下午是否收货及费用。54日19—20:30周家约仍未来，51核听480已齐改版未接，旧纸不动。",
+    "葛筠": "第80章当前：48午前葛铺自行接单洗手收碟、陶已离，原木椅空着且门可开；本章亲口回顾46/47清位，亲承续留及51晨进货不开，实际将告示入门夹，不等新约已执行。",
+    "陶敏": "第80章当前：48日11刚过从葛铺向另一工作方向实离，明确后完回家而不返班；走前在场本晨杯碟及葛接三份，未听自己走后形成的49—54/51告示新约。",
+    "读报老人": "第80章当前：48日11点多自持报杯伞离葛铺同鱼贩说话后转弯，沈未见归家；本晨靠坐/起身再坐，口述47约9:50来10:10离；本章现场获并亲读51晨不开，知49—54续留但不许天天到，未获48板车过程/周身份与同居情况。"
+  },
+  "ledger_before": {
+    "T_ROUTE_COMMON": {
+      "type": "thread",
+      "statement": "旧灯已原位保留，但周边卸货、通行与停歇的现实需求未由保存自动满足；沈目睹菜车受阻、范当次让车留外路，未来可持续停留路线须居民与接管方共同讨论。",
+      "status": "partial",
+      "cast": [
+        "沈禾",
+        "范勤",
+        "何映",
+        "邱阿兰",
+        "读报老人",
+        "邹秀琴"
+      ],
+      "due_unit": 88,
+      "tags": [
+        "续部跨卷",
+        "关联P_LAMP",
+        "公共生活空间"
+      ],
+      "reader_known": "85门内腾位和缓发有实价：乔得重谈长度/分车钱，未定52下午，不靠沈守场；邹原宽车当次通过，仍非永久/全雨路。",
+      "character_known": {
+        "沈禾": "第85章：亲见早内转架及过车，电话只听乔及外放般漏出的装好一句，不知对方后答。",
+        "范勤": "第85章：亲搬箱/收绑带，下午人手需另找，不任长期全段保证。",
+        "何映": "第30章当前：亲在场见历史被当现路，记原问句；老人个人需求已明示不代表大家，后续需再问其他人。",
+        "邱阿兰": "在场听老人平常过路需求与沈围挡不开放解释，不替原泊位沿革背书。",
+        "读报老人": "第80章：亲坐及读51告示，另问新报未获，不等店椅替阅览间。",
+        "邹秀琴": "第85章：本次原双筐实过且不固定自己时刻，不见后续供货回话。",
+        "周砚": "第54章：本次首次亲见双侧筐转车/范收撑，过去雨仍沈/邹口述，短站非公众坐处。",
+        "葛筠": "第80章：亲承本店续留、51上午进货不开并实夹告示，车场新司机过程未告知。",
+        "陶敏": "第68章：自己可提醒且准时走，短扶非包位。",
+        "乔平": "第85章：本人主动缓发并量架/问价，自己接后续，不以75/79旧试保证今天。",
+        "丁海": "第79章：亲经历候车看架/让菜车/卸板，有十一点用车的本人口述压力，只知本次外路需要。"
+      },
+      "evidence": [
+        {
+          "unit": 28,
+          "draft": "正文/0028-围挡外的一条路.md",
+          "sha256": "c8835b6dc636b2dc53bb3f62c3b684f21a320041904e58e0ac420ed6ae25ab8c",
+          "line": 71,
+          "quote": "检查那点地方，不是给你办活动的。"
+        },
+        {
+          "unit": 28,
+          "draft": "正文/0028-围挡外的一条路.md",
+          "sha256": "c8835b6dc636b2dc53bb3f62c3b684f21a320041904e58e0ac420ed6ae25ab8c",
+          "line": 79,
+          "quote": "灯留着是真的，能走到灯下还不是。"
+        },
+        {
+          "unit": 28,
+          "draft": "正文/0028-围挡外的一条路.md",
+          "sha256": "c8835b6dc636b2dc53bb3f62c3b684f21a320041904e58e0ac420ed6ae25ab8c",
+          "line": 59,
+          "quote": "车停到门前偏前的位置，尾板与路沿间留出能推车的宽度"
+        },
+        {
+          "unit": 30,
+          "draft": "正文/0030-桌子这一头.md",
+          "sha256": "1c1c87aa5a98e47b741f479180291eb30693d4c88a864598677c9b96c8e23a6a",
+          "line": 67,
+          "quote": "这是我要。别人坐不坐，你问别人。"
+        },
+        {
+          "unit": 30,
+          "draft": "正文/0030-桌子这一头.md",
+          "sha256": "1c1c87aa5a98e47b741f479180291eb30693d4c88a864598677c9b96c8e23a6a",
+          "line": 53,
+          "quote": "这句我写错了。今天不能照它往里走。"
+        },
+        {
+          "unit": 36,
+          "draft": "正文/0036-雨水经过的地方.md",
+          "sha256": "62cf78914a3afd5b167f16235d3c50ef0dea64a188f8d00594cba2d24c04f400",
+          "line": 59,
+          "quote": "这回车没有进围挡。"
+        },
+        {
+          "unit": 36,
+          "draft": "正文/0036-雨水经过的地方.md",
+          "sha256": "62cf78914a3afd5b167f16235d3c50ef0dea64a188f8d00594cba2d24c04f400",
+          "line": 73,
+          "quote": "今天只清这一处沟口"
+        },
+        {
+          "unit": 42,
+          "draft": "正文/0042-雨还没下完.md",
+          "sha256": "18d2f96cc4bc5550930669456971670b2526b762c22b890000b8493ae617882f",
+          "line": 63,
+          "quote": "车还没过那两块砖，雨也还没停。"
+        },
+        {
+          "unit": 48,
+          "draft": "正文/0048-还回去的和留下来的.md",
+          "sha256": "5d5a5641bf0bbc45a3b37df4ae0d4ac05f8dbb2456654b5ccf8f08e6704d39ce",
+          "line": 37,
+          "quote": "下回还有空筐，我还是那样宽"
+        },
+        {
+          "unit": 54,
+          "draft": "正文/0054-放得下菜袋的地方.md",
+          "sha256": "dc06448b4b3cd657758c3381e56a8bd2b90fe7ff921b40d4b6f9283baf1a061d",
+          "line": 35,
+          "quote": "沈先将自己的袋子放下，周也放过去"
+        },
+        {
+          "unit": 54,
+          "draft": "正文/0054-放得下菜袋的地方.md",
+          "sha256": "dc06448b4b3cd657758c3381e56a8bd2b90fe7ff921b40d4b6f9283baf1a061d",
+          "line": 37,
+          "quote": "车从那两块砖旁过，前轮没进围挡。"
+        },
+        {
+          "unit": 66,
+          "draft": "正文/0066-这把椅子先给人坐.md",
+          "sha256": "6838679c0afa7ddac4b95fd4a5bd0243b586ad3a3835cc11b8bdb7cbb1250f43",
+          "line": 49,
+          "quote": "不在菜单上写常设歇脚点"
+        },
+        {
+          "unit": 66,
+          "draft": "正文/0066-这把椅子先给人坐.md",
+          "sha256": "6838679c0afa7ddac4b95fd4a5bd0243b586ad3a3835cc11b8bdb7cbb1250f43",
+          "line": 49,
+          "quote": "不能下班以后还回来替这把椅子清位"
+        },
+        {
+          "unit": 68,
+          "draft": "正文/0068-不用点开的菜单.md",
+          "sha256": "40922ca763847253ae9f7c3a92dcc8807a6af6b837bdd2bcbe01336819db2ca9",
+          "line": 55,
+          "quote": "她没向沈说这地方以后一定永远空着"
+        },
+        {
+          "unit": 71,
+          "draft": "正文/0071-雨还没走到沟口.md",
+          "sha256": "3663dcb219a72ba50a6f322b55d1061600a1c3dab8ae3d72240e3b8f8dbb2038",
+          "line": 41,
+          "quote": "前轮从砖旁外路过，双侧筐没擦围挡"
+        },
+        {
+          "unit": 71,
+          "draft": "正文/0071-雨还没走到沟口.md",
+          "sha256": "3663dcb219a72ba50a6f322b55d1061600a1c3dab8ae3d72240e3b8f8dbb2038",
+          "line": 55,
+          "quote": "不保经办那时已经肯来"
+        },
+        {
+          "unit": 73,
+          "draft": "正文/0073-先把车停下来.md",
+          "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+          "line": 39,
+          "quote": "框底真正靠稳以后，范才让出门边。"
+        },
+        {
+          "unit": 73,
+          "draft": "正文/0073-先把车停下来.md",
+          "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+          "line": 77,
+          "quote": "明早先看，不是你今天就给我画一条谁都能走的路。"
+        },
+        {
+          "unit": 75,
+          "draft": "正文/0075-车筐转过来以后.md",
+          "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+          "line": 17,
+          "quote": "你那肩膀会收，我这只收不了。"
+        },
+        {
+          "unit": 75,
+          "draft": "正文/0075-车筐转过来以后.md",
+          "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+          "line": 53,
+          "quote": "这不是空箱。"
+        },
+        {
+          "unit": 75,
+          "draft": "正文/0075-车筐转过来以后.md",
+          "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+          "line": 69,
+          "quote": "今天能过的是这一车、一副筐"
+        },
+        {
+          "unit": 76,
+          "draft": "正文/0076-不必买那壶茶.md",
+          "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+          "line": 65,
+          "quote": "你来能坐就坐，不用点茶。"
+        },
+        {
+          "unit": 76,
+          "draft": "正文/0076-不必买那壶茶.md",
+          "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+          "line": 49,
+          "quote": "别带到这里，马上把我交了。"
+        },
+        {
+          "unit": 77,
+          "draft": "正文/0077-这回不是等她来.md",
+          "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+          "line": 25,
+          "quote": "原来鼓着的底终于全落在架板上"
+        },
+        {
+          "unit": 77,
+          "draft": "正文/0077-这回不是等她来.md",
+          "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+          "line": 37,
+          "quote": "沈站在外侧听清这一段，没有替他们给未出现的司机记一句已经同意。"
+        },
+        {
+          "unit": 78,
+          "draft": "正文/0078-下雨也出门.md",
+          "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+          "line": 9,
+          "quote": "雨里的沟口、第二晨木椅怎样，不能坐在窗前替谁续写。"
+        },
+        {
+          "unit": 79,
+          "draft": "正文/0079-换了一个开车的人.md",
+          "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+          "line": 53,
+          "quote": "下一趟发谁，就还是自己去问经办"
+        },
+        {
+          "unit": 79,
+          "draft": "正文/0079-换了一个开车的人.md",
+          "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+          "line": 73,
+          "quote": "沟边一小片湿泥没有跟着全走"
+        },
+        {
+          "unit": 80,
+          "draft": "正文/0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 71,
+          "quote": "五十一日上午不开门，下午照常"
+        },
+        {
+          "unit": 80,
+          "draft": "正文/0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 77,
+          "quote": "那里还没新开放时间"
+        },
+        {
+          "unit": 85,
+          "draft": "正文/0085-先别把架子抬出去.md",
+          "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+          "line": 33,
+          "quote": "这次空架在门内转正，脚没有伸到外路。"
+        },
+        {
+          "unit": 85,
+          "draft": "正文/0085-先别把架子抬出去.md",
+          "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+          "line": 69,
+          "quote": "那边还得算多跑的车钱，没答，先等他回。"
+        }
+      ],
+      "introduced_unit": 28,
+      "updated_unit": 85
+    },
+    "P_SHOP_CHAIR_66": {
+      "type": "object",
+      "statement": "66葛茶食铺有靠背木椅，初门口叠两空筐，后收门内凹处供当次坐。",
+      "status": "active",
+      "cast": [
+        "葛筠",
+        "陶敏",
+        "沈禾",
+        "邹秀琴"
+      ],
+      "tags": [],
+      "custody": {
+        "holder": "葛筠",
+        "location": "48日11:20多葛茶食铺原门内凹处小转角",
+        "condition": "老人已自行离，原木椅空/门可开；葛将欲暂放的账簿改回柜台窄格，原椅未换手；不保证下一晨"
+      },
+      "evidence": [
+        {
+          "unit": 66,
+          "draft": "正文/0066-这把椅子先给人坐.md",
+          "sha256": "6838679c0afa7ddac4b95fd4a5bd0243b586ad3a3835cc11b8bdb7cbb1250f43",
+          "line": 43,
+          "quote": "把椅子整把收进门内凹处"
+        },
+        {
+          "unit": 66,
+          "draft": "正文/0066-这把椅子先给人坐.md",
+          "sha256": "6838679c0afa7ddac4b95fd4a5bd0243b586ad3a3835cc11b8bdb7cbb1250f43",
+          "line": 69,
+          "quote": "木椅这一次空着"
+        },
+        {
+          "unit": 68,
+          "draft": "正文/0068-不用点开的菜单.md",
+          "sha256": "40922ca763847253ae9f7c3a92dcc8807a6af6b837bdd2bcbe01336819db2ca9",
+          "line": 55,
+          "quote": "椅子再空出来"
+        },
+        {
+          "unit": 76,
+          "draft": "正文/0076-不必买那壶茶.md",
+          "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+          "line": 37,
+          "quote": "两人只在凹处转过一个小角度"
+        },
+        {
+          "unit": 76,
+          "draft": "正文/0076-不必买那壶茶.md",
+          "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+          "line": 37,
+          "quote": "门边没扫椅脚"
+        },
+        {
+          "unit": 77,
+          "draft": "正文/0077-这回不是等她来.md",
+          "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+          "line": 59,
+          "quote": "这次自己知道该朝柜里转"
+        },
+        {
+          "unit": 80,
+          "draft": "正文/0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 81,
+          "quote": "椅空着，门仍能开"
+        }
+      ],
+      "introduced_unit": 66,
+      "updated_unit": 80,
+      "character_known": {
+        "葛筠": "第80章：原椅本人保管，亲不把账簿放回，后续自己清位。",
+        "沈禾": "第80章：亲见48后段靠坐起身再坐及离前空椅，不曾全时段守看。",
+        "陶敏": "第77章：亲在班见箱和收起，无下班清位承诺。",
+        "读报老人": "第80章：本晨亲坐起身再坐、本人选择离，未交自己物件给店代存。"
+      },
+      "previous_holder": "葛筠"
+    },
+    "T_SHOP_SEAT_NEXT_80": {
+      "type": "thread",
+      "statement": "80葛在48日午前亲承49—54日早9:30—10:45由自己开门清原木椅，51日上午进货不开、已实夹告示；老人自由来去，陶已下班未听新约，沈不常驻。未来执行待核。",
+      "status": "pending",
+      "cast": [
+        "沈禾",
+        "葛筠",
+        "读报老人"
+      ],
+      "tags": [
+        "关联T_ROUTE_COMMON",
+        "关联P_SHOP_CHAIR_66"
+      ],
+      "due_unit": 88,
+      "reader_known": "只有新约和51不开告示已经发生，49—54尚未执行，不延期旧due80或无限常设。",
+      "character_known": {
+        "沈禾": "第80章：亲在场听新约/见告示，不接长期守椅。",
+        "葛筠": "第80章：自己承并贴未来不开信息，未把陶排回来。",
+        "读报老人": "第80章：亲读51不开、听续留，明确自己不天天来。"
+      },
+      "evidence": [
+        {
+          "unit": 80,
+          "draft": "正文/0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 71,
+          "quote": "先接着留到五十四日"
+        },
+        {
+          "unit": 80,
+          "draft": "正文/0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 73,
+          "quote": "等她夹好才自己读过"
+        }
+      ],
+      "introduced_unit": 80,
+      "updated_unit": 80
+    }
+  },
+  "outline": {
+    "ref": "大纲/分卷/V12.json",
+    "volume": {
+      "id": "V12",
+      "title": "各自的日子",
+      "start": 81,
+      "end": 88,
+      "promises": [
+        "阶段回收T_RETURN_MONTH及T_ROUTE_COMMON"
+      ],
+      "constraints": [
+        "第一部1—24章为已发生，不推翻T_SIGNAL/T_TAPE/T_HANDOVER/T_LAMP的已兑现范围",
+        "罗敬私人失约不设作者答案；新材料不能逆改旧观察",
+        "原物按现行custody调用，工作副本不冒充原件"
+      ],
+      "reserved": [
+        "余带中男声与钟确源、剪者与目录命名用意未证，不强行解释",
+        "远期具体场景和配角选择待正文形成"
+      ]
+    },
+    "arc": {
+      "id": "V12A2",
+      "start": 85,
+      "end": 88,
+      "goal": "将时间与公共空间承诺落到可维持安排",
+      "payoff": "阶段回收T_RETURN_MONTH及T_ROUTE_COMMON",
+      "forbidden": [
+        "计划不得登记为已发生事实",
+        "无证提前获得他人知识或复制原物"
+      ]
+    },
+    "note": "全部是计划；兑现情况须在正文、ledger 及审查中核实"
+  },
+  "settings_refs": [
+    {
+      "ref": "设定/作品定位.md",
+      "sha256": "1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94"
+    },
+    {
+      "ref": "设定/文风.md",
+      "sha256": "2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c"
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "sha256": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2"
+    },
+    {
+      "ref": "大纲/分卷/V12.json",
+      "sha256": "39a665162524a82c2176ffe57783b7db6b1172794396d55aa49a5915ac521e57"
+    },
+    {
+      "ref": "大纲/续部总纲.md",
+      "sha256": "27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440"
+    },
+    {
+      "ref": "设定/续部人物与场所.md",
+      "sha256": "19e46ab7bda4d3fb2616da0044e29c136f0da709d3fdf53c67b82bcfe3ae09d1"
+    }
+  ],
+  "omitted": [
+    "T_SIGNAL",
+    "T_HANDOVER",
+    "T_PRIVATE",
+    "T_LAMP",
+    "T_TAPE",
+    "T_KEY_CABINET",
+    "I_KEY_USE",
+    "I_DECK_REPAIR",
+    "T_SERVICE_VISIT",
+    "T_CONTACT",
+    "T_ARCHIVE",
+    "T_MESSAGE_VERIFY",
+    "T_PUBLIC_USE",
+    "I_ROOM_VISIT_PRICE",
+    "I_LATCH_ADJUST_42",
+    "T_ROOM_TRIAL",
+    "P_BORROWED_RECIPE",
+    "I_HOURS_DELIVERY_46",
+    "T_ROOM_NEXT_OPEN",
+    "T_ROOM_FUND_MEET",
+    "I_ROOM_THREE_MORNINGS",
+    "T_THREE_DAY_ENQUIRY",
+    "I_SMALL_SAMPLES_51",
+    "I_ROOM_FIRST_52",
+    "T_ROOM_NOTICE_31",
+    "T_QIU_TAKE_BACK",
+    "T_ZHOU_UPDATE_32",
+    "T_FISH_DINNER_34",
+    "T_ROOM_NOTICE_33",
+    "T_NEW_ROOM_COST",
+    "P_ZHOU_FISH_BOX",
+    "T_ZHOU_DEPARTURE_NOTICE",
+    "T_CITY_THREE_DAY_DELIVERY",
+    "T_CALL_36",
+    "T_SHOES_39",
+    "T_LOCAL_MENU_SOUND",
+    "T_POST_LISTEN_67",
+    "T_MONTH_TALK_70",
+    "T_ROUTE_CONTACT_71",
+    "T_ROUTE_TRIAL_73",
+    "T_RIVER_EVENING_74",
+    "T_SHOP_SEAT_TRIAL_76",
+    "T_VOICE_CONSENT",
+    "O_HOME_CUT_82",
+    "P_HOME_NEW_AUDIO_81",
+    "O_RAIN_TILE",
+    "P_LAMP",
+    "O_ROUTE_RAIN_71",
+    "I_PUBLIC_SCOPE_40",
+    "O_PAGE_SLIP_48",
+    "P_POST_CUT_67",
+    "I_POST_WAIT_69",
+    "O_PHOTO_WAIT_62",
+    "P_CITY_THREE_AUDIO",
+    "P_SHOP_PLAN_66",
+    "P_SHOP_SAMPLE_66",
+    "O_SHOP_CHAIR_66",
+    "P_RO_WORK_PAGES",
+    "T_AUDIO_REMAINDER",
+    "P_AUDIO_COPY",
+    "P_CITY_AUDIO",
+    "P_NEW_ROOM_RECEIPT",
+    "P_TRIAL_VOICE",
+    "P_LONG_LEAD_58",
+    "O_LEAD_DROP_58",
+    "P_HOURS_NOTE",
+    "P_READING_ROOM_DUTY_KEY",
+    "P_ROOM_FUNDS_SHEET",
+    "P_ROOM_TRIAL_SHEET",
+    "O_ROUTE_PASS_54",
+    "P_DOOR_RECEIPT_42",
+    "O_RAIN_DURING_42",
+    "O_ROUTE_DRY_48",
+    "O_ZOU_ACCOUNT_48",
+    "P_READING_ROOM_SPARE_KEY",
+    "O_HOURS_NEW_44",
+    "O_HOURS_NOTE",
+    "O_ROOM_LATCH",
+    "O_LAMP_PANEL",
+    "P_CHEN_NOTE",
+    "O_ROOM_TONE",
+    "O_WHEEL_KNOCK",
+    "R_SHEN_TANG",
+    "P_BOX",
+    "P_KEY",
+    "P_LAMP_BOOK",
+    "P_NOTICE",
+    "O_DECK",
+    "O_DISPATCH_RETURN",
+    "O_INDEX_PAGE",
+    "O_MESSAGE_ROW",
+    "O_MESSAGE_SIGN",
+    "O_PLATE",
+    "O_QIU_ACCOUNT",
+    "O_TAPE_18",
+    "P_SERVICE_BAG",
+    "T_INDEX",
+    "I_AUDIO_ALIGN",
+    "O_INDEX_CONT",
+    "O_KEY",
+    "O_LAMP_RECORD",
+    "O_MAP",
+    "O_NOTICE",
+    "P_MAP",
+    "T_EAST",
+    "T_MAP",
+    "O_CURRENT"
+  ]
+}

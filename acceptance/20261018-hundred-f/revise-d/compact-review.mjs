@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {session,readJSON,sha} from '../session-support.mjs';
+const s=session('revise-d'),a=readJSON(path.join(s.stage,'audit-before-review-v2.json')),rs=readJSON(path.join(s.stage,'readings.json')).filter(x=>x.phase==='final'),ns=fs.readFileSync(path.join(s.stage,'final-notes.jsonl'),'utf8').trim().split('\n').map(JSON.parse);let report=fs.readFileSync(path.join(s.stage,'final-review-narrative.md'),'utf8');
+report+='\n原完整详细版final-review-48-106.md及首次失败输入保留；它超过产品报告20000字符限制，本登记版仅压缩排版与逐章重复字段。全部59章五项功能/引句仍随同一review输入提交，详读判断未缩范围。\n';
+for(const n of ns){const r=rs.find(x=>x.unit===n.unit);report+=`\n${n.unit}｜实读${r.line_range.join('—')}行｜${r.sha256}\n核验：${n.continuity} 后果：${n.consequence} 原句：“${n.quote}”\n`;}
+report+='\n六新章实际字数（去标题）：章/汉字/正文非空白字符；101/3049/3444，102/3164/3633，103/3188/3604，104/3386/3881，105/3492/3961，106/3548/4078；SHA见对应章清单。\n';
+assert.ok(report.length<=20000,String(report.length));s.write('final-review-48-106-registration.md',report);console.log({characters:report.length,sha256:sha(Buffer.from(report))});
+let js=fs.readFileSync(path.join(s.stage,'review-and-check.mjs'),'utf8').replaceAll('final-review-48-106.md','final-review-48-106-registration.md').replaceAll('F-revise-d-48-106完整尾段复核.md','F-revise-d-48-106完整尾段复核登记版.md').replace('revise-d-final-48-106-actual-full-reading','revise-d-final-48-106-actual-full-reading-v2');s.write('review-and-check-v2.mjs',js);

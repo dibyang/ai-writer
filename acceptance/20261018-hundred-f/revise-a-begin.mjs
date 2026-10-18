@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {session,sha} from './session-support.mjs';
+const s=session('revise-a'),st=s.state();assert.equal(st.revision,402);assert.equal(st.units.length,106);
+const workflow={stage:'revision',task:'F轮受保护修订A：按F总授权由代理选择48/54/66/71四处唯一同两块→那两块，同组minor readability澄清；保护范围48—106，本阶段先完整43—47复读，再仅48—62逐章实读重登，到62停止交接，不prepare/commit。101经当前原文及观察快照确认E已修复，不重复改。',authorization:{allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:48,to:106},stop_conditions:['本阶段重登止于62，不写63登记，不prepare/commit，不写107。','四处同→那各一字；天气/围挡通行/在场与转述/缺口方向/物件流转保持。','43—47只读，正文及登记原样；下游63—106与末轮完整48—106尾段审查待后续真实进程。','不改主源码、冻结包、其他作品和A—E档案，不提交Git/推送/发布，不启动子代理或其他会话。']},planning:st.governance.planning};
+const w=s.run('workflow-revise-48-106',['workflow','set'],{entry:'embedded',input:{expected_revision:st.revision,operation_id:'revise-a-authorized-f-48-106',author_evidence:s.evidence(),workflow}});s.write('workflow-result.json',w.value);console.log(w.value);
+const before=fs.readFileSync(path.join(s.project,'.writer/state.json'));s.write('root-base-state.bin',before);
+const r=s.run('revision-begin-48-106',['revision','begin'],{entry:'embedded',input:{expected_revision:s.state().revision,owner:'actual-Codex-F-revise-a-20261018-unique-48-106',from:48,through:106}});s.write('revision-local.json',r.value);
+assert.equal(sha(before),sha(fs.readFileSync(path.join(s.project,'.writer/state.json'))));
+const b=session('revise-a-branch',{project:r.value.workspace,token:r.value.token});const d=b.run('doctor-initial',['doctor']);s.write('branch-doctor-initial.json',d.value);s.write('branch-initial-state.bin',fs.readFileSync(path.join(b.project,'.writer/state.json')));
+console.log({id:r.value.id,token_saved:'revise-a/revision-local.json',workspace:r.value.workspace,base_revision:r.value.base_revision,root_state_sha256:sha(before),doctor_ok:d.value.ok,revision_context:d.value.revision_context});
+const baseline=JSON.parse(fs.readFileSync(path.join(s.stage,'root-body-baseline.json')));s.write('reading-paths.json',baseline.filter(u=>u.unit>=43&&u.unit<=71));

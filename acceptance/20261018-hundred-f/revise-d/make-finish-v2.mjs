@@ -1,0 +1,5 @@
+import fs from 'node:fs';const base=new URL('./',import.meta.url);let t=fs.readFileSync(new URL('finish-handoff.mjs',base),'utf8');
+t=t.replace("const protectedMetadata={};", "const writeNew=s.write;s.write=(ref,value)=>{const f=path.join(s.stage,ref),bytes=Buffer.isBuffer(value)||typeof value==='string'?value:JSON.stringify(value,null,2)+'\\n';if(fs.existsSync(f)){assert.equal(sha(fs.readFileSync(f)),sha(Buffer.from(bytes)));return f;}return writeNew(ref,value);};\nconst protectedMetadata={};");
+t=t.replace('path.join(ROOT,x.file)',"path.join(ROOT,...(x.group==='skills'?['.agents','skills']:[]),x.file)");
+t=t.replace("const failures=[...readJSON(path.join(s.stage,'failures-initial.json')),", "const failures=[...readJSON(path.join(s.stage,'failures-initial.json')),\n{kind:'own-source-audit-path',operation:'finish-handoff.mjs',error:'ENOENT writer-essay/SKILL.md under repository root',correction:'skills-group resolved under .agents/skills, final read-only audit rerun; existing preservation copies checked byte-identical',state_impact:false},");
+fs.writeFileSync(new URL('finish-handoff-v2.mjs',base),t,{flag:'wx'});

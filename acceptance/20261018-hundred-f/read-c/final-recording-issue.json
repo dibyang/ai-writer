@@ -1,0 +1,9 @@
+{
+  "kind": "recording-script-syntax-error",
+  "command": "node --input-type=module -e (final artifact hash update; actual full command retained in events.jsonl)",
+  "actual": "SyntaxError: Unexpected token )",
+  "cause": "One extra closing parenthesis in map/fromEntries expression",
+  "exit_code": 1,
+  "impact": "Compilation failed before any instruction ran; no product CLI or work write",
+  "correction": "Use this readable helper, preserve prior artifact metadata, then reverify all delivered hashes"
+}

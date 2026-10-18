@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {BASE,session,sha,readJSON} from '../session-support.mjs';
+const s=session('repair-upgrade'),b=readJSON(path.join(s.stage,'baseline.json')),ref='writer.json',row=b.work.find(x=>x.path===ref),bytes=fs.readFileSync(path.join(s.project,ref));assert.equal(sha(bytes),row.sha256);
+s.write('additional-config-baseline-matched.raw.json',bytes);
+const old=readJSON(path.join(BASE,'read-d/root-customization-verification.json'));assert.equal(old.length,40);assert.ok(old.some(x=>x.path===ref));
+const scope={ok:true,root_agents_skills_guides:39,writer_config:1,total_root_customizations:40,config_sha256:sha(bytes),initial_manifest_sha256:row.sha256,config_matches_initial_manifest:true,definition_reference:'read-d/seal.mjs:18 and root-customization-verification.json',note:'39 files were archived raw at initial baseline; writer.json was included in the initial full-work SHA manifest and is now copied only after proving an exact hash match. Initial evidence is not overwritten.'};s.write('root-customization-scope.json',scope);
+const handoff=readJSON(path.join(s.stage,'handoff.json'));assert.equal(sha(fs.readFileSync(path.join(s.project,'.writer/state.json'))),handoff.state_sha256);
+const refs=['REPORT.md','results.json','handoff.md','handoff.json','seal-verification.json','command-index.json','failures.json','delivery-verification.json','root-customization-scope.json'];s.write('final-artifact-index.json',refs.map(f=>({path:f,sha256:sha(fs.readFileSync(path.join(s.stage,f)))})));
+s.write('delivery-final.json',{ok:true,checked_at:new Date().toISOString(),revision:handoff.revision,generation:handoff.generation,state_sha256:handoff.state_sha256,root_customizations:scope,report_scope_clarified:true,artifact_index:'final-artifact-index.json',initial_artifact_index_preserved:true,formal_acceptance:false});console.log(JSON.stringify({ok:true,revision:handoff.revision,generation:handoff.generation,root_customizations:40,state_sha256:handoff.state_sha256}));

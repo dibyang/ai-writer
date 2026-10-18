@@ -1,0 +1,4 @@
+Command: node acceptance/20261018-hundred-f/repair-upgrade-run.mjs verify-new
+Exit code: 1
+The embedded --help CLI itself succeeded with exit code 0 (f-repair-upgrade-0012-new-help) and returned plain text. The recorder intentionally parsed non-JSON as null; the driver incorrectly dereferenced value.ok and raised TypeError: Cannot read properties of null (reading 'ok').
+Corrected the acceptance driver to assert exit code 0 and actual 0.7.2 help text for --help. The succeeding f-repair-upgrade-0013-new-help raw output is also retained. No product failure or work mutation from either help call.

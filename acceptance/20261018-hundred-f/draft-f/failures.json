@@ -1,0 +1,41 @@
+[
+  {
+    "kind": "product-cli-input",
+    "command": "f-draft-f-0012-review-97-103",
+    "exit_code": 2,
+    "code": "REVIEW_INPUT_INVALID",
+    "cause": "agent used observation/difference instead of judgment/differences plus required fields",
+    "correction": "retry-pre-review.mjs uses valid fields; no manuscript/state change on failure",
+    "raw": "../commands/f-draft-f-0012-review-97-103/"
+  },
+  {
+    "kind": "helper-assertion",
+    "command": "first replay-and-commit.mjs attempt",
+    "exit_code": 1,
+    "cause": "direct equality compared normalized replay ledger with minimal original delta; inherited fields/tags/previous_holder added by normal replay protocol",
+    "correction": "model checked displayed normalized fields against baseline; asserted original delta subset, kept original real chapter changes only; source hashes untouched; rerun succeeded",
+    "raw": "actual Codex tool event stream plus branch-template-104.json and original model input"
+  },
+  {
+    "kind": "file-path",
+    "path": "work/正文/0080-今天不开的那扇门.md",
+    "cause": "guessed title did not exist",
+    "correction": "read actual suggested0080-十点半以后.md in full"
+  },
+  {
+    "kind": "file-path",
+    "path": "campaign/measure.mjs",
+    "cause": "campaign subfolder does not exist under this F root",
+    "correction": "glob found actual ../measure.mjs; all count runs captured against actual work"
+  },
+  {
+    "kind": "console-truncation",
+    "commands": [
+      "recall.mjs broad recall output",
+      "context104 initial full extract",
+      "record104 preview console"
+    ],
+    "cause": "console output cap",
+    "correction": "raw product stdout saved fully; actual manuscript reading uses FastCtx Complete. Context needed selections/omitted IDs separately displayed. No claim every recalled ledger full text was read."
+  }
+]

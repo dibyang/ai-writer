@@ -1,0 +1,5 @@
+import {session} from '../session-support.mjs';
+const s=session('draft-e');
+const input={unit:102,title:'球没有进的时候',arc_id:'V14A1',goal:'按63日新约真去看周打球，让没被挑过的失败进入两人相处',change:'沈在场目击输球后说错安慰，周直说不想即刻被夸；两人不顺后谈具体失误与自己想被招呼的心思，按交场与归家时限结束',beats:['18:30到河西矮树旁，周自己放包/热身，沈守边线外','半场三人球，周有真实失误与输局；沈不了解全局的喝彩/安慰反使他烦，两人暂时分开喘气','19:30后续用场者接场，周自己收包；两人在街里进食时承认当下失落，不宣告永久懂彼此','20:30前各自回家，本次看成而不好看的部分留下'],cast:['沈禾','周砚'],setting_refs:['设定/文风.md','设定/权威规则.md','设定/角色卡.md'],research_refs:['大纲/F轮有限后续101-106.md'],recall_ids:['R_SHEN_ZHOU','T_BALL_VISIT_101','T_RIVER_EVENING_74','T_RETURN_MONTH'],forbidden:['不倒改74/78取消或81独立打过','不让沈替周看包至下班','不借球声认旧声','不新增事故伤病或永久关系结论','不写104']};
+console.log(s.run('plan-102',['plan'],{input,entry:'embedded'}).value);
+for(const [label,args] of [['outline-102',['outline','--unit','102']],['context-102',['context','--unit','102','--max-chars','160000']],['template-102',['record-template','--unit','102','--draft','正文/0102-球没有进的时候.md','--out','.writer/drafts/f-e-102-template.json']]]){const r=s.run(label,args,{entry:'embedded'});console.log(r.label,r.value?.ok??'template',r.value?.revision??r.value?.expected_revision);}

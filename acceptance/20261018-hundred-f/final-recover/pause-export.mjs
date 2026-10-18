@@ -1,0 +1,17 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {s,h,save,run} from './run.mjs';import {sha} from '../session-support.mjs';
+const local_source='研究/F-final-recover-本阶段暂停授权.md';
+const quote='依F总任务完成事实正式设置workflow paused，仅discuss/plan、draft/revise_range=null。实际请求107的context/record-template，验证暂停范围提示/拒绝与state不变，保留真实结果；不能单因next_unit107就开始写。';
+const source='# 本阶段用户明确授权摘录\n\n来源：2026-10-18本次final-recover用户消息，本地摘录不认证作者身份。\n\n'+quote+'\n\n仍严格使用已冻结0.7.2入口；本阶段只准备跨会话commit/恢复/导出/暂停，不改源码/包/手册/构建绑定，不封存，不作为全任务最终验收。\n';
+fs.writeFileSync(path.join(s.project,local_source),source,{flag:'wx'});
+const st=s.state();const workflow={...st.governance,stage:'paused',task:'F轮0.7.2保护提交与跨会话恢复阶段完成：106章已登记，48/54/66/71四处字改已CAS发布；58派生知情澄清保留，101已在E首登前澄清。本进程复读98—106及种子回查，只导出草稿，不写107；待主任务另修0.7.3和upgrade-final实跑及总审计，本阶段不封存。',authorization:{allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['到106停止，不写107，不改正文；next_unit107不构成授权。','只允许讨论与规划；旧声源、缺名、罗私人原因和永久椅位仍未知。','保留stale、原分支、失败与草稿警告；不Git提交、push、发布或封存campaign。']}};
+run('workflow-paused',['workflow','set'],{input:{expected_revision:st.revision,operation_id:'final-recover-pause-after-protected-commit-072',author_evidence:{local_source,source_sha256:sha(Buffer.from(source)),quote,locator:'本次用户消息第4项的原话摘录',recorded_by:'actual-Codex-final-recover'},workflow}});
+const before=fs.readFileSync(path.join(s.project,'.writer/state.json'));save('paused-state.bin',before);
+run('paused-context-107',['context','--unit','107','--purpose','draft'],{expected:1});
+assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),before);
+run('paused-record-template-107',['record-template','--unit','107','--draft','正文/0107-暂停门禁验证.md'],{expected:1});
+assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),before);
+save('pause-guard-state-equality.json',{revision:s.state().revision,before_sha256:sha(before),after_sha256:sha(fs.readFileSync(path.join(s.project,'.writer/state.json'))),byte_identical:true,requests:[107],no_draft_created:!fs.existsSync(path.join(s.project,'正文/0107-暂停门禁验证.md'))});
+run('draft-export',['export','--out',path.join(s.stage,'draft-export')]);
+assert.deepEqual(fs.readFileSync(path.join(s.project,'.writer/state.json')),before);
+for(const [label,args] of [['final-status',['status']],['final-discussion',['context','--purpose','discussion']],['final-workflow',['workflow','show']],['final-check',['check']],['final-doctor',['doctor']],['final-identify',['tool','identify']],['final-revisions',['revision','list']]])run(label,args);

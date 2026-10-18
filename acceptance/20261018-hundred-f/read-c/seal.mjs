@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {session,sha,BASE,ROOT,readJSON} from '../session-support.mjs';
+const s=session('read-c');
+const calls={};
+for(const [label,args] of [['final-status',['status']],['final-check',['check']],['final-identify',['tool','identify']],['final-doctor',['doctor']]])calls[label]=s.run(label,args).value;
+s.write('final-product-results.json',calls);
+function inventory(dir,root=dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>{const p=path.join(dir,e.name);return e.isDirectory()?inventory(p,root):[{path:path.relative(root,p).replaceAll('\\','/'),sha256:sha(fs.readFileSync(p)),bytes:fs.statSync(p).size}];}).sort((a,b)=>a.path.localeCompare(b.path));}
+const baseline=readJSON(path.join(s.stage,'baseline-work.json')),after=inventory(s.project),beforeMap=new Map(baseline.map(f=>[f.path,f])),afterMap=new Map(after.map(f=>[f.path,f]));
+const changed=after.filter(f=>beforeMap.has(f.path)&&beforeMap.get(f.path).sha256!==f.sha256),added=after.filter(f=>!beforeMap.has(f.path)),missing=baseline.filter(f=>!afterMap.has(f.path));
+s.write('final-work-inventory.json',after);
+const original=readJSON(path.join(BASE,'original-inventory.json'));
+const sourceInventory=inventory(original.source),sourceMap=new Map(sourceInventory.map(f=>[f.path,f]));
+const originalMismatches=original.files.filter(f=>sourceMap.get(f.file)?.sha256!==f.sha256),sourceAdded=sourceInventory.filter(f=>!original.files.some(o=>o.file===f.path));
+const frozen=readJSON(path.join(BASE,'source-build.json'));
+const buildMismatches=frozen.files.flatMap(f=>{const p=path.join(ROOT,f.group==='skills'?'.agents/skills':'',f.file);return !fs.existsSync(p)||sha(fs.readFileSync(p))!==f.sha256?[{...f,path:p}]:[];});
+const rootCustom=original.files.filter(f=>f.file==='AGENTS.md'||f.file==='writer.json'||f.file.startsWith('.agents/')||f.file.startsWith('docs/')).map(f=>({path:f.file,expected_sha256:f.sha256,current_sha256:afterMap.get(f.file)?.sha256}));
+s.write('root-customization-verification.json',rootCustom);
+const stateBytes=fs.readFileSync(path.join(s.project,'.writer/state.json')),state=JSON.parse(stateBytes);
+const gitDiff=spawnSync('git',['diff','--exit-code'],{cwd:ROOT,encoding:'utf8',windowsHide:true});
+const gitStatus=spawnSync('git',['status','--short'],{cwd:ROOT,encoding:'utf8',windowsHide:true});
+s.write('root-git-diff.txt',gitDiff.stdout+gitDiff.stderr);s.write('root-git-status.txt',gitStatus.stdout+gitStatus.stderr);
+const commands=fs.readdirSync(path.join(BASE,'commands')).filter(n=>n.startsWith('f-c-')).map(label=>({label,result:readJSON(path.join(BASE,'commands',label,'result.json')),stdout_sha256:sha(fs.readFileSync(path.join(BASE,'commands',label,'stdout.raw.txt'))),stderr_sha256:sha(fs.readFileSync(path.join(BASE,'commands',label,'stderr.raw.txt')))}));
+s.write('command-index-final.json',commands);
+const report={at:new Date().toISOString(),work_files:after.length,all_work_bytes_unchanged:!changed.length&&!added.length&&!missing.length,changed,added,missing,body_count:after.filter(f=>/^正文\/\d{4}-.*\.md$/.test(f.path)).length,registered_units:state.units.length,units_and_snapshot_unchanged:beforeMap.get('.writer/state.json').sha256===sha(stateBytes),state_sha256:sha(stateBytes),revision:state.revision,generation:state.tool_control.generation,build_id:calls['final-identify'].observed_content_id,runtime_id:calls['final-identify'].runtime_id,source:original.source,source_files:sourceInventory.length,source_unchanged:!originalMismatches.length&&!sourceAdded.length,original_mismatches:originalMismatches,source_added:sourceAdded,main_frozen_manifest_files:frozen.files.length,main_frozen_manifest_unchanged:!buildMismatches.length,build_mismatches:buildMismatches,root_customizations:rootCustom.length,root_customizations_unchanged:rootCustom.every(f=>f.expected_sha256===f.current_sha256),check:calls['final-check'],doctor:calls['final-doctor'],git_diff_exit:gitDiff.status,git_status_exit:gitStatus.status,captured_product_commands:commands.length,failed_product_commands:commands.filter(c=>c.result.exit_code!==0).map(c=>c.label),new_review_registered:false,line_audit:'pending-main-task',audit_not_executed_here:true};
+s.write('seal-verification.json',report);
+console.log(JSON.stringify({...report,check:report.check,doctor:report.doctor},null,2));

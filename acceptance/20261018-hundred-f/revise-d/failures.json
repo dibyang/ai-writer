@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "kind": "own-path-lookup",
+      "path": "draft-f/scenario-plan.md",
+      "corrected": "read-d/scenario-plan.md",
+      "state_impact": false
+    },
+    {
+      "kind": "own-path-lookup",
+      "path": "campaign/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "corrected": "root/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "state_impact": false
+    },
+    {
+      "kind": "own-source-audit-path",
+      "operation": "finish-handoff.mjs",
+      "error": "ENOENT writer-essay/SKILL.md under repository root",
+      "correction": "skills-group resolved under .agents/skills, final read-only audit rerun; existing preservation copies checked byte-identical",
+      "state_impact": false
+    },
+    {
+      "kind": "own-path-lookup",
+      "path": "revise-c/chapter.mjs",
+      "corrected": "revise-c/replay-ops.mjs",
+      "state_impact": false
+    },
+    {
+      "kind": "own-title-lookup",
+      "unit": 88,
+      "wrong": "回去吃那顿饭",
+      "corrected": "走过去再坐一会儿",
+      "state_impact": false
+    },
+    {
+      "kind": "own-title-lookup",
+      "unit": 67,
+      "wrong": "晚饭不是另一份活",
+      "corrected": "晚饭以前的两小时",
+      "state_impact": false
+    },
+    {
+      "kind": "own-inline-node",
+      "operation": "construct focus101/102 via inline escaping",
+      "exit_code": 1,
+      "output": "no output in tool result",
+      "correction": "focus-existing.mjs file executed successfully",
+      "state_impact": false
+    },
+    {
+      "kind": "display-truncation",
+      "detail": "Cumulative character history in inspect-compact101 and omitted-ID line were longer than display limits; full raw preserved. Actual replay characters101 displayed separately; focused102—106 preserves exact current replay delta.",
+      "state_impact": false
+    },
+    {
+      "kind": "own-audit-labeling",
+      "detail": "v1 recursively compared arrays in preserved order but displayed loop positions; it did not pin a fixed evidence index. Kept audit-before-review.json, use audit-before-review-v2.json with stable ID/unit/quote labels.",
+      "state_impact": false
+    },
+    {
+      "kind": "own-powershell-quoting",
+      "operation": "inline construction of audit-final-v2.mjs",
+      "exit_code": 1,
+      "error": "ParserError: Missing argument in parameter list.",
+      "follow_on": "premature run returned MODULE_NOT_FOUND",
+      "correction": "make-audit-v2.mjs then audit-final-v2.mjs succeeded",
+      "state_impact": false
+    },
+    {
+      "kind": "product-review-length-rejection",
+      "exit_code": 2,
+      "command": "commands/f-revise-d-branch-0062-review-48-106",
+      "input": "revise-d-branch/inputs/f-revise-d-branch-0062-review-48-106.json",
+      "error": "审查报告 必须是非空字符串，且不超过 20000 字符",
+      "original_report_characters": 25777,
+      "corrected_report_characters": 14769,
+      "correction": "Retained original full report and input; same59 chapters/current bytes, compressed registration report and full59 functions accepted once at revision467.",
+      "state_unchanged": true
+    }
+  ],
+  "inherited_records": [
+    "revise-a/failures.json",
+    "revise-a/snapshot-at62-diff.json",
+    "revise-a/snapshot-at62-diff-v2.json",
+    "revise-b/audit-failure-v1.json",
+    "revise-b/input-corrections-v2.json",
+    "revise-b/report-errata.md",
+    "revise-c/failures.json"
+  ],
+  "raw_policy": "Product CLI raw input/stdout/stderr/result files retained in commands. Local lookup/helper raw tool events remain in this conversation; this file is a factual index, not fabricated complete raw transcripts."
+}

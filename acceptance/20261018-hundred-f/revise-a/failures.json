@@ -1,0 +1,35 @@
+[
+  {
+    "kind": "own-helper-syntax",
+    "operation": "node -e quote inventory",
+    "message": "extra closing parenthesis: SyntaxError Unexpected token",
+    "effect": "read-only helper did not execute; no product or state change",
+    "preserved": "actual Codex exec event; quote inventory subsequently fully displayed from replay input"
+  },
+  {
+    "kind": "own-helper-diagnostic",
+    "operation": "audit-final first reconstruction",
+    "message": "first read-only reconstruction ignored append-array reverse operations and overstated snapshot differences",
+    "effect": "no product state modified; original audit retained but invalid",
+    "preserved": [
+      "preservation.json",
+      "snapshot-at62-diff.json"
+    ],
+    "correction": [
+      "preservation-v2.json",
+      "snapshot-at62-diff-v2.json",
+      "final-audit-confirmation.json"
+    ]
+  },
+  {
+    "kind": "console-display-truncation",
+    "operations": [
+      "setup-replay console",
+      "48 broad continuity console",
+      "60 original long character line",
+      "review-and-check console"
+    ],
+    "correction": "raw product stdout retained; exact original deltas/evidence displayed separately; he60-full.txt fully read; final check report retains all44 warnings",
+    "not_product_defect": true
+  }
+]

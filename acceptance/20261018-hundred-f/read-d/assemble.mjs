@@ -1,0 +1,41 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {session,sha,BASE,readJSON} from '../session-support.mjs';
+import a from './notes-71-80.mjs';
+import b from './notes-81-90.mjs';
+import c from './notes-91-100.mjs';
+const s=session('read-d');
+const originalWrite=s.write;
+s.write=(ref,value)=>{const file=path.join(s.stage,ref);if(fs.existsSync(file)){const bytes=Buffer.isBuffer(value)||typeof value==='string'?value:JSON.stringify(value,null,2)+'\n';assert.deepEqual(fs.readFileSync(file),Buffer.from(bytes),'retry must not change an existing artifact: '+ref);return file;}return originalWrite(ref,value);};
+const rawEvents=fs.readFileSync(path.join(s.stage,'events.jsonl'));
+s.write('reading-events.final.snapshot.jsonl',rawEvents);
+const events=rawEvents.toString('utf8').trim().split('\n').map(JSON.parse);
+const reads=events.filter(e=>e.type==='item.completed'&&e.item?.type==='mcp_tool_call'&&e.item.server==='fastctx'&&e.item.tool==='read'&&e.item.arguments?.file_path?.replaceAll('\\','/').includes('/work/正文/'));
+const files=fs.readdirSync(path.join(s.project,'正文'));
+const all=[...a,...b,...c],ends={4:70,19:68,24:48,27:98,31:88,48:72,54:74,66:72};
+const bodies=new Map();
+for(const n of [...all,...Object.entries(ends).map(([u,end])=>({unit:Number(u),end,quotes:[],kind:'earlier-complete-reread'}))]){
+ n.path='正文/'+files.find(f=>f.startsWith(String(n.unit).padStart(4,'0')+'-'));
+ const bytes=fs.readFileSync(path.join(s.project,n.path)),body=bytes.toString('utf8');
+ n.sha256=sha(bytes);n.coverage=[[1,n.end]];n.version='versions/'+n.sha256+'.md';
+ n.nature=n.kind??(n.unit<=75?'boundary-complete-reread':'new-complete-coverage');
+ n.tool_observation={shown_from:1,shown_to:n.end,complete_marker:true,partial:false,visible_long_line_truncation:false,exact_line_audit:'pending-main-task'};
+ n.tool_evidence=reads.filter(e=>e.item.arguments.file_path.replaceAll('\\','/').endsWith('/'+n.path)).map(e=>{
+  const i=e.item,raw=i.result.content.filter(c=>c.type==='text').map(c=>c.text).join('\n'),ref='read-raw/'+String(n.unit).padStart(4,'0')+'-'+i.id+'.fastctx.txt';
+  s.write(ref,raw);return {event_id:i.id,arguments:i.arguments,raw:ref,raw_sha256:sha(Buffer.from(raw)),shown_from:1,shown_to:n.end,complete_marker_observed_by_model:true};
+ });
+ assert.equal(n.tool_evidence.length,1,'one complete actual read expected for '+n.unit);
+ for(const q of n.quotes)assert.ok(body.includes(q),'quote mismatch '+n.unit+': '+q);
+ s.write(n.version,bytes);bodies.set(n.unit,{...n,body});
+}
+const totals={chapters:30,boundary_reread:5,new_coverage:25,displayed_lines_as_observed:all.reduce((v,n)=>v+n.end,0),han_characters_including_titles:all.reduce((v,n)=>v+(bodies.get(n.unit).body.match(/\p{Script=Han}/gu)||[]).length,0),non_whitespace_characters_including_titles:all.reduce((v,n)=>v+Array.from(bodies.get(n.unit).body.replace(/\s/gu,'')).length,0),exact_line_audit:'pending main task from original events; not executed here',script_literary_pass:false};
+s.write('readings.json',{phase:'read-d',work:s.project,order:all.map(n=>n.unit),from:71,to:100,totals,readings:all});
+s.write('earlier-rereads.json',{counted_as_new_hundred_chapter_coverage:false,rows:Object.keys(ends).map(Number).map(u=>{const {body,...r}=bodies.get(u);return r;})});
+s.write('read-evidence-index.json',{raw_events_snapshot:'reading-events.final.snapshot.jsonl',raw_events_sha256:sha(rawEvents),process_thread_id:events.find(e=>e.type==='thread.started')?.thread_id,exact_line_audit:'reserved for main task',rows:[...bodies.values()].map(({unit,path,sha256,coverage,version,tool_evidence,nature})=>({unit,path,sha256,coverage,version,tool_evidence,nature}))});
+s.write('initial-confirmed-48.preserved.json',fs.readFileSync(path.join(BASE,'findings/confirmed-48.json')));
+s.write('inherited-brick-wording-group.preserved.json',fs.readFileSync(path.join(BASE,'findings/brick-wording-group.json')));
+s.write('failures.json',{product_failures:[],confirmed_product_defects:[],orchestration_issues:[{kind:'unavailable-nested-fastctx',count:6,attempt:'functions.exec tools.mcp__fastctx__read batch',actual:'Promise.allSettled returned rejected reason {} because FastCtx is not exposed inside functions tools inventory.',resolution:'Used direct FastCtx tools; all required files actually read. No product command or work mutation occurred.'},{kind:'display-output-truncated',commands:['f-d-0001-doctor','f-d-0002-status','f-d-0005-identify','f-d-0007-recall-audio','f-d-0008-recall-pages'],actual:'Combined exec display truncated long captured JSON.',resolution:'Full raw stdout/stderr preserved under commands and full parsed values saved under recovery. Relevant recovery summaries and actual source chapters inspected. No body read truncated.'},{kind:'draft-note-correction',unit:84,actual:'An unsaved draft consequence initially contained 84日? before actual51日.',resolution:'Corrected notes before assembly, no body or historical report changed; raw events preserve edit.'}],inherited_failures:'read-c/failures.json and earlier phase files retained, not reclassified as product defects',network:false,subagents:false,new_sessions:false});
+const state=s.state();
+s.write('stable-id-index.json',{basis:'Actual state IDs used as locators only; current snapshot not backfilled into early knowledge',ids:['T_AUDIO_REMAINDER','T_SIGNAL','T_TAPE','P_TAPE','P_QIU_WORK_PAGES','O_PAGE_PAIR','O_PAGE_SLIP_48','T_QIU_TAKE_BACK','T_VOICE_CONSENT','P_RO_WORK_PAGES','T_ROOM_AFTER33','T_HE_OLD_PAY','T_ROUTE_COMMON','T_RETURN_MONTH','R_SHEN_ZHOU'].map(id=>({id,exists:!!state.snapshot.ledger[id],evidence_units:[...new Set((state.snapshot.ledger[id]?.evidence??[]).map(e=>e.unit))]}))});
+console.log(JSON.stringify({totals,earlier_complete_rereads:Object.keys(ends),actual_body_read_events:reads.length,thread_id:events.find(e=>e.type==='thread.started')?.thread_id}));

@@ -1,0 +1,64 @@
+{
+  "expected_revision": 402,
+  "operation_id": "revise-a-authorized-f-48-106",
+  "author_evidence": {
+    "local_source": "研究/F轮用户授权与执行范围.md",
+    "source_sha256": "0ac5e6bb0e93c39f4d1c19966ad26239dc2215081ddc380143120db13a3da208",
+    "quote": "继续通过 Codex 做百章规模的长篇实跑验证，重点覆盖工具更新后的多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "locator": "用户原话段，F轮隔离验证范围",
+    "recorded_by": "actual-Codex-revise-a"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "F轮受保护修订A：按F总授权由代理选择48/54/66/71四处唯一同两块→那两块，同组minor readability澄清；保护范围48—106，本阶段先完整43—47复读，再仅48—62逐章实读重登，到62停止交接，不prepare/commit。101经当前原文及观察快照确认E已修复，不重复改。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 48,
+        "to": 106
+      },
+      "stop_conditions": [
+        "本阶段重登止于62，不写63登记，不prepare/commit，不写107。",
+        "四处同→那各一字；天气/围挡通行/在场与转述/缺口方向/物件流转保持。",
+        "43—47只读，正文及登记原样；下游63—106与末轮完整48—106尾段审查待后续真实进程。",
+        "不改主源码、冻结包、其他作品和A—E档案，不提交Git/推送/发布，不启动子代理或其他会话。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

@@ -9,9 +9,9 @@ import { ROOT, KINDS, initProject, savePlan, context, record, rewind, check, exp
 function sandbox(t) {
   const base = path.join(ROOT, '.tmp'); fs.mkdirSync(base, { recursive: true });
   const dir = fs.mkdtempSync(path.join(base, 'test-'));
-  t.after(() => {
-    const resolved = fs.realpathSync(dir), boundary = fs.realpathSync(base) + path.sep;
-    assert.ok(resolved.startsWith(boundary)); fs.rmSync(resolved, { recursive: true, force: true });
+  t.after(async () => {
+    const resolved = fs.realpathSync(dir);
+    assert.equal(path.dirname(resolved), fs.realpathSync(base)); await fs.promises.rm(resolved, { recursive: true, force: true, maxRetries: 12, retryDelay: 150 });
   });
   return dir;
 }
