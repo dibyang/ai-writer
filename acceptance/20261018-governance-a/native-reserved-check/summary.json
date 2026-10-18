@@ -1,0 +1,297 @@
+{
+  "result": "PASS_FOR_REQUESTED_LOCAL_CLI_REPLAY",
+  "stage": "native-reserved-check",
+  "started_at": "2026-10-18T00:07:08.066Z",
+  "completed_at": "2026-10-18T00:11:49.139Z",
+  "platform": "win32",
+  "node_version": "v24.15.0",
+  "work": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-reserved-check\\最终交付重放作品",
+  "command_count": 41,
+  "successful_commands": 33,
+  "expected_nonzero_commands": 8,
+  "unexpected_failures": [],
+  "reserved_key_refusals": {
+    "workflow_operation_id": 3,
+    "decision_id": 3,
+    "total": 6,
+    "cases": [
+      {
+        "label": "native-four-workflow-reserved-prototype",
+        "id": "prototype",
+        "exit_code": 2,
+        "code": "INVALID_INPUT",
+        "state_unchanged": true,
+        "drafts_unchanged": true,
+        "work_files_unchanged": true,
+        "before_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a",
+        "after_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a"
+      },
+      {
+        "label": "native-four-workflow-reserved-constructor",
+        "id": "constructor",
+        "exit_code": 2,
+        "code": "INVALID_INPUT",
+        "state_unchanged": true,
+        "drafts_unchanged": true,
+        "work_files_unchanged": true,
+        "before_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a",
+        "after_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a"
+      },
+      {
+        "label": "native-four-workflow-reserved-proto",
+        "id": "__proto__",
+        "exit_code": 2,
+        "code": "INVALID_INPUT",
+        "state_unchanged": true,
+        "drafts_unchanged": true,
+        "work_files_unchanged": true,
+        "before_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a",
+        "after_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a"
+      },
+      {
+        "label": "native-four-decision-reserved-prototype",
+        "id": "prototype",
+        "exit_code": 2,
+        "code": "INVALID_INPUT",
+        "state_unchanged": true,
+        "drafts_unchanged": true,
+        "work_files_unchanged": true,
+        "before_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a",
+        "after_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a"
+      },
+      {
+        "label": "native-four-decision-reserved-constructor",
+        "id": "constructor",
+        "exit_code": 2,
+        "code": "INVALID_INPUT",
+        "state_unchanged": true,
+        "drafts_unchanged": true,
+        "work_files_unchanged": true,
+        "before_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a",
+        "after_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a"
+      },
+      {
+        "label": "native-four-decision-reserved-proto",
+        "id": "__proto__",
+        "exit_code": 2,
+        "code": "INVALID_INPUT",
+        "state_unchanged": true,
+        "drafts_unchanged": true,
+        "work_files_unchanged": true,
+        "before_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a",
+        "after_state_sha256": "355d604be65e731adf17c7f55bdeda3b19671dffc3e5331ea7c84cc0dc265b8a"
+      }
+    ],
+    "status_after_each_rejection_successful": true
+  },
+  "idempotency": [
+    {
+      "label": "native-four-trial-tostring-replay",
+      "unchanged": true,
+      "before_revision": 1,
+      "after_revision": 1,
+      "response_revision": 1
+    },
+    {
+      "label": "native-four-decision-location-replay",
+      "unchanged": true,
+      "before_revision": 3,
+      "after_revision": 3,
+      "response_revision": 2
+    },
+    {
+      "label": "native-four-decision-gift-replay",
+      "unchanged": true,
+      "before_revision": 3,
+      "after_revision": 3,
+      "response_revision": 3
+    },
+    {
+      "label": "native-four-record-1-replay",
+      "unchanged": true,
+      "before_revision": 4,
+      "after_revision": 4,
+      "response_revision": 4
+    }
+  ],
+  "flow": {
+    "schema_version": 3,
+    "stages": [
+      "direction",
+      "trial",
+      "structure",
+      "paused"
+    ],
+    "revision_path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trial_range": {
+      "from": 1,
+      "to": 1
+    },
+    "trial_stop_conditions": [
+      "第1章复用登记后核对事实与候选边界，转为只讨论总纲，然后暂停全部创作动作"
+    ],
+    "structure_deferred_reason": "作者明确允许远期结构暂缓，本轮仅复用第1章验证工具流程；登记后先讨论总纲再全部暂停，不延展剧情。",
+    "selected_location": {
+      "id": "D_LOCATION_NATIVE_FOUR",
+      "topic": "第1章地点",
+      "status": "confirmed",
+      "options": [
+        "旧渡口方案"
+      ],
+      "adopted_items": [
+        "旧渡口方案"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": 1
+      },
+      "event_ref": ".writer/objects/0830c58a-9a61-411c-a9d2-fbdc9749edde.json",
+      "event_sha256": "fd15c88933f2ea3e992086880d63138966af2ad00140f09a2c94e92ecd4cec7a"
+    },
+    "candidate_gift": {
+      "id": "D_GIFT_NATIVE_FOUR",
+      "topic": "赠物选择",
+      "status": "candidate",
+      "options": [
+        "纸签",
+        "铜铃"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "纸签与铜铃仍为候选，未授权自行选择"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/27173cfa-7506-46b1-bf66-a981c39bcd7c.json",
+      "event_sha256": "8fb50bf49cb94af8644ffd00a7e52e39f78c40bde2bce6321f2789627d250b8b"
+    },
+    "formal_plan_context_template_record_check": true,
+    "structure_discussion_success": true,
+    "structure_unit2_draft_refused": true,
+    "paused_discussion_refused": true,
+    "paused_next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+    "status_suggested_workflow_show_executed": true
+  },
+  "source_replay": {
+    "copied_at": "2026-10-18T00:08:48.489Z",
+    "source": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-final-check\\最终回归微型作品\\正文\\0001-提手.md",
+    "target": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-reserved-check\\最终交付重放作品\\正文\\0001-提手.md",
+    "source_sha256": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451",
+    "target_sha256": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451",
+    "bytes": 1217,
+    "text_characters": 419,
+    "han_characters": 343,
+    "identical": true,
+    "new_literary_characters": 0,
+    "classification": "复用原文；不是新增文学创作",
+    "record_template_path": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\commands\\native-four-template-1\\stdout.raw.txt",
+    "record_template_sha256": "5f9aae638c502f1c4303b5fd7ddb83220214e9d789c2bfd6dd2b1255573225fb",
+    "source_hashes_origin": "本阶段主工具 native-four-template-1 的实际输出，未读取旧 state 或旧 source_hashes"
+  },
+  "build": {
+    "tool_version": "0.4.0",
+    "main_profile": "main",
+    "bundled_profile": "workspace-copy",
+    "observed_content_id": "ce3feec4071aba1f6ad7ea85388793a892fd72afaf38f23457bf769c1e2d7797",
+    "runtime_id": "7924f07a6243ae103767f0c525a98c71c66059aa35f5044740eca48cb3245b9c",
+    "declared_build_id": "ce3feec4071aba1f6ad7ea85388793a892fd72afaf38f23457bf769c1e2d7797",
+    "source_commit": "36bd9c27797a43dd958e74b4e4b8f5b9713e140a",
+    "source_tree_dirty": true,
+    "managed_file_count": 45,
+    "group_counts": {
+      "content": 7,
+      "runtime": 9,
+      "skills": 29
+    },
+    "differences": [],
+    "bundled_missing": [],
+    "bundled_mismatches": [],
+    "governance_module": {
+      "group": "runtime",
+      "file": "lib/governance.mjs",
+      "bytes": 18557,
+      "sha256": "361731881688509df07cd071cb4f85e9857f542709bd1b8b43e5b8abb16d88f9"
+    },
+    "all_captured_commands_same_build": true
+  },
+  "final": {
+    "revision": 6,
+    "next_unit": 2,
+    "stage": "paused",
+    "allowed_actions": [],
+    "draft_range": null,
+    "revise_range": null,
+    "planning_structure": {
+      "status": "deferred",
+      "refs": [],
+      "unresolved_ids": [
+        "远期结构"
+      ],
+      "reason": "作者明确允许远期结构暂缓，本轮仅复用第1章验证工具流程；登记后先讨论总纲再全部暂停，不延展剧情。"
+    },
+    "draft_inventory": {
+      "registered_count": 1,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "findings": [],
+    "literary_quality": "unreviewed",
+    "state_sha256": "0b47f6a53193b6a65840fe109e39dbb246aa174e4898c09089b258dae02db375"
+  },
+  "protected": {
+    "workspace": {
+      "unchanged": true,
+      "before_files": 5371,
+      "after_files": 5371
+    },
+    "other_acceptance": {
+      "unchanged": true,
+      "before_files": 7173,
+      "after_files": 7173
+    },
+    "actual_work": {
+      "unchanged": true,
+      "before_files": 195,
+      "after_files": 195
+    }
+  },
+  "implementation_changes": false,
+  "authoritative_state_hand_edits": false,
+  "old_work_migration_or_tool_update": false,
+  "network_used": false,
+  "subagents_used": false,
+  "commit_or_push": false,
+  "new_literary_han_characters": 0,
+  "not_covered": [
+    "未重跑 npm test、npm run doctor 或内置引擎测试；本阶段未改实现，覆盖为所列最终CLI流程",
+    "未验证 supersedes 保留键、所有其他ID/Unicode边界或跨范围替代链",
+    "未做并发、中断、磁盘故障、锁外修改或长篇规模验证",
+    "未做旧作品迁移/更新、旧故障现场恢复、外部发布或联网验证",
+    "未做 Linux、其他 Node 版本或多机器验证",
+    "复用单章，不是新增文学创作、真人盲读、市场验证、作者定稿或正式发布验收"
+  ],
+  "evidence": {
+    "commands_index": "commands-index.json",
+    "raw_commands": "../commands/native-four-*",
+    "observations": "observations/*.json",
+    "author_instruction": "author-instruction.txt",
+    "reading": "reading-evidence.json",
+    "source_copy": "copy-evidence.json",
+    "model_replay_review": "model-replay-review.md",
+    "build": "build-verification.json",
+    "protected": "protected-before.json + protected-after.json + protected-comparison.json"
+  }
+}

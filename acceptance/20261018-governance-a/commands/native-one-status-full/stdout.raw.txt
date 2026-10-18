@@ -1,0 +1,248 @@
+{
+  "ok": true,
+  "title": "纸灯札记",
+  "kind": "novel",
+  "revision": 12,
+  "schema_version": 3,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "暂停正文，先讨论全书总纲",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只允许讨论和规划，不准备第7章细纲、不写第7章",
+        "全书总纲与新的有限授权未经作者明确确认，不恢复正文或修订"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "定位草案待作者复盘采纳"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "全书终局",
+          "全书篇幅",
+          "后续卷数"
+        ],
+        "reason": "已完成有限六章试写，按作者指令暂停正文，先复盘并讨论全书总纲；已有骨架仍为草案"
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json"
+        ],
+        "unresolved_ids": [
+          "试写卷契约待复盘采纳"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "现有细纲仅覆盖1—6章且未获作者整体采纳；不生成第7章细纲"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_SECT",
+          "topic": "宗门方向",
+          "status": "confirmed",
+          "options": [
+            "青岚宗方向"
+          ],
+          "adopted_items": [
+            "青岚宗方向"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [
+            "经名",
+            "住舍人数",
+            "作息数字"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/57afd68e-637b-4246-8ba9-ed9c90f74346.json",
+          "event_sha256": "ba4adf00542aa6b741fa83183e2076ee041a9dd92ae2b7aef9420d25161c619a"
+        },
+        {
+          "id": "D_CRAFT",
+          "topic": "技艺路线",
+          "status": "confirmed",
+          "options": [
+            "炼器先行"
+          ],
+          "adopted_items": [
+            "炼器先行"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/fb94f17f-3d57-42f2-aea5-e561ad9bf434.json",
+          "event_sha256": "3a04371f7d729ea73057541c07cc6c85dadc286b03e74aebe82fea635087602d"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_FIRST_ITEM",
+          "topic": "首件法器",
+          "status": "candidate",
+          "options": [
+            "小盾（仅推荐）"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "首件法器仍未选",
+            "小盾仅推荐"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/db055a27-8a1a-400e-a780-46fa540858fc.json",
+          "event_sha256": "99a678c292cd7af7a1929bd43a1bf3f07326a2769876dd14724231f4cebcdb7e"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 7,
+  "stale_units": [],
+  "changed_sources": [],
+  "view": "full",
+  "draft_inventory": {
+    "registered_count": 6,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 7,
+    "plan_exists": false,
+    "action": "暂停正文，先讨论全书总纲",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\works\\纸灯札记' '--purpose' 'discussion'"
+  },
+  "snapshot": {
+    "characters": {
+      "林小河": "工坊；独立复核后已正式交灯；分类保存旧样并记录操作误判与停手求证，当前无后续正文任务",
+      "陶娘": "工坊；已正式接收旧灯及提醒纸，补完袖口后熄灯；知道维修范围和继续检查的限制"
+    },
+    "threads": [],
+    "timeline": [
+      "试修起始：林小河查出两处旧纸易碎，旧灯未点火，暂不能使用",
+      "卸纸后：林小河做干燥粘合比较，停止用稀浆装灯",
+      "贴灯前：发现旧裂篾，停手求证，换篾贴纸；约待明日查看接口",
+      "次日：灯纸干透，裸试油盏发现挑芯过高，熄火调整后试罩照明，收工熄灯",
+      "交接准备：熄灯查东窗摆位，改放工坊内侧清空桌面；复述说明后等待最终复核",
+      "试修收束：独立复核后正式交陶娘保管；陶娘缝袖并熄灯，林小河整理旧样与札记"
+    ],
+    "ledger": {
+      "O_LAMP": {
+        "type": "object",
+        "statement": "待修的旧纸灯",
+        "status": "resolved",
+        "cast": [
+          "林小河",
+          "陶娘"
+        ],
+        "custody": {
+          "holder": "陶娘",
+          "location": "工坊内侧清空桌面瓷盘上",
+          "condition": "本次修理与交接已完成，缝袖后熄灭；后续老化等仍需检查"
+        },
+        "reader_known": "本轮修灯交接完成；不是永久不坏或首件法器的结论",
+        "character_known": {
+          "林小河": "已独立复核、说明边界并交陶娘保管；亲见其缝袖后熄灯",
+          "陶娘": "已正式接灯，知道起烟先熄、不能带火移动；已使用并熄灭"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-留下那片纸.md",
+            "sha256": "73343f61beca2a417bec64d5120d942ea25cd82ba8625994063de32617205264",
+            "line": 27,
+            "quote": "又把灯放回软布。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-碗底的清水.md",
+            "sha256": "11e8b9b54a15983ce8c2fd47fae0c604b75be69b2f773be8692a7300b482e58d",
+            "line": 3,
+            "quote": "空竹架露了出来，细篾间都是积灰。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/0003-不肯弯的篾.md",
+            "sha256": "69e6d7b818460a412a561ef8fad7e24bfdd0e316f61952564b854ddbfd6eae1c",
+            "line": 27,
+            "quote": "林小河把它留在通风架上，朝外转了转接口，方便明日查看。"
+          },
+          {
+            "unit": 4,
+            "draft": "正文/0004-烟从哪里来.md",
+            "sha256": "ef027bc6c610f219ec956cb057d97eeb60f637ef6a45e7d3c6459955f6e3a575",
+            "line": 25,
+            "quote": "收工时，他亲手熄了灯。"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-给用灯的人.md",
+            "sha256": "93ce8419696d518258f5d74cf9a05931223f37016791ba20218e0ef053955057",
+            "line": 19,
+            "quote": "灯只是暂放在这里，最后的接口还要由他独自再看一遍。"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-灯交出去以后.md",
+            "sha256": "9ee11fad74a906af544abd8310c96b59cf2cbebf69ed61787542f8a7f110e871",
+            "line": 17,
+            "quote": "从这句话起，灯才算正式交给陶娘保管。"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-灯交出去以后.md",
+            "sha256": "9ee11fad74a906af544abd8310c96b59cf2cbebf69ed61787542f8a7f110e871",
+            "line": 21,
+            "quote": "陶娘缝完袖口，熄灯后过来看。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 6,
+        "previous_holder": "林小河"
+      }
+    }
+  }
+}

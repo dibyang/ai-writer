@@ -1,0 +1,118 @@
+{
+  "ok": true,
+  "title": "最终源码交付确认",
+  "kind": "novel",
+  "revision": 6,
+  "schema_version": 3,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "全部创作动作暂停，仅查看任务",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期"
+        ],
+        "reason": "仅限本轮单章合成重放"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_PLACE",
+          "topic": "地点",
+          "status": "confirmed",
+          "adopted_items": [
+            "旧渡口"
+          ],
+          "options": [
+            "旧渡口"
+          ],
+          "unresolved_items": [],
+          "excluded_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/03ddbd4a-2d61-4655-9134-7a254b8fe3a4.json",
+          "event_sha256": "3f383c40ce57586215df0f317255db15584f6b6dad8fa05780862db89ba06673"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_GIFT",
+          "topic": "赠物",
+          "status": "candidate",
+          "adopted_items": [],
+          "options": [
+            "纸签",
+            "铜铃"
+          ],
+          "unresolved_items": [
+            "尚未选赠物"
+          ],
+          "excluded_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/11a3265c-3011-4af4-9684-64a3eb597090.json",
+          "event_sha256": "37cfa56f28b67000bbaad5b4577a6ca27f6c691fab44cf0d4c0aa927f555985e"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 2,
+  "stale_units": [],
+  "changed_sources": [],
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 1,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 2,
+    "plan_exists": false,
+    "action": "全部创作动作暂停，仅查看任务",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' workflow show '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 0,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "许桥在旧渡口重绑纸灯提手，试提后交还老人；赠物未定且未在正文采用。"
+      }
+    ],
+    "timeline_tail": [
+      "许桥重绑提手并试提后交还纸灯"
+    ]
+  }
+}

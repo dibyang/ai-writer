@@ -1,0 +1,47 @@
+{
+  "unit": 3,
+  "expected_revision": 7,
+  "source_hashes": {
+    "writer.json": "5f16a5af38b846f01d088dc8e3d9fddc1a1a45abbfa1b9280d403098ac5ce894",
+    ".writer/state.json": "cb688c2fb2bf588b818a5b7f349e9c35ec6e6e45cdd9541f3d0c3699c1340479",
+    "大纲/单元/0003.json": "a729f345f70ef45a03dfbf8e93147450c9ecdd36148e778cbeb85826a775b451",
+    "设定/作品定位.md": "fcbaf226c02cfb9aac0e5e9b88ba88375c3906824c69702711ae57c5e296468a",
+    "设定/文风.md": "86c7ffee7057407586c07cef1fbbc70f0a356bfd1a25ea5cc2f82c79c0cf917a",
+    "设定/权威规则.md": "52a46ec6dc8dc1135ee961ce6f9e92e3071b62d834125ad765d5dee824459ec0",
+    "设定/人物.md": "be7fd5249c08e3114844b156ac9882bab922e52df979dc637adf4f776f2a656d",
+    "大纲/分卷/V1.json": "ae109e9e88afd790d930d4e40ddb76374c503eeec7d38e783ce994ac1493c4b8",
+    "正文/0002-碗底的清水.md": "11e8b9b54a15983ce8c2fd47fae0c604b75be69b2f773be8692a7300b482e58d"
+  },
+  "draft": "正文/0003-不肯弯的篾.md",
+  "summary": "林小河发现灯架变形，在拉紧绑线前见到裂缝并停手求证；陶娘承认漏看旧伤，二人换篾后贴好新纸，旧灯置通风架待干，尚未点火。",
+  "changes": {
+    "characters": {
+      "林小河": "工坊；知道裂篾旧伤与继续拉断是不同责任；保留旧裂篾，贴纸后等待干燥",
+      "陶娘": "工坊；亲查旧裂，承认先前漏看；扶接口并共同贴纸"
+    },
+    "timeline_append": [
+      "贴灯前：发现旧裂篾，停手求证，换篾贴纸；约待明日查看接口"
+    ],
+    "ledger": {
+      "O_LAMP": {
+        "custody": {
+          "holder": "林小河",
+          "location": "工坊通风架",
+          "condition": "已换裂篾并贴新纸，接口朝外待干，未点火"
+        },
+        "reader_known": "裂篾已换，灯面已贴；干燥与用灯检查尚待完成",
+        "character_known": {
+          "林小河": "亲自换篾贴纸，知道明日仍须查接口",
+          "陶娘": "亲查裂纹并参与换篾贴纸，知道灯仍未点火"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "林小河把它留在通风架上，朝外转了转接口，方便明日查看。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

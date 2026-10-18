@@ -1,0 +1,62 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T00:17:42.443Z",
+  "operation_id": "native-five-trial-1",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "仅重放并正式登记既有第1章，完成后复盘、讨论总纲，保留远期 deferred，随后全部暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第1章重放登记完成后复盘并转总纲讨论，不写第2章；讨论后暂停全部创作动作"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "远期骨架"
+        ],
+        "reason": "作者仅授权本测试作品第1章原文字节重放；登记后复盘并讨论总纲，远期骨架继续暂缓"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "仅在这部新验收作品中复用第三轮 `native-final-check/最终回归微型作品` 第1章原文字节，不改原稿，不算新增创作篇幅。先完整读原章；地点沿用旧渡口，纸签和铜铃仍未选。允许远期骨架暂缓，仅授权本测试作品第1章；正式登记后先讨论总纲并保留 deferred，再暂停全部创作动作，只读查看任务。",
+    "local_source": "研究/本轮作者原话.txt",
+    "source_sha256": "9916ebd36af4930c6c16f7d7641877439c0d51ff09d910f57568be765c8404f3",
+    "locator": "本次用户任务第2项引文；本地来源第1行，无可用消息ID",
+    "recorded_by": "Codex 当前主会话，真实 CLI 验收",
+    "frozen_ref": ".writer/objects/9916ebd36af4930c6c16f7d7641877439c0d51ff09d910f57568be765c8404f3.txt"
+  }
+}

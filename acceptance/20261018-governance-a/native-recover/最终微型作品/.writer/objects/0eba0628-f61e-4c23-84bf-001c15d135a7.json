@@ -1,0 +1,63 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-17T23:49:57.620Z",
+  "operation_id": "native-two-final-trial-001",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "仅试写第1章300–500正文汉字，完成自检、正式登记和check后暂停全部创作动作",
+    "authorization": {
+      "allowed_actions": [
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第1章自检、正式登记和机械检查完成即设为paused，allowed_actions=[]，两范围=null",
+        "暂停后仅查看状态，不再讨论、规划、写作或修订"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "结尾道具"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "作者只授权单章微型试写，不编排后续"
+      },
+      "volume": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "短篇差量协议，不分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "在独立微型验收小说中，地点已选河埠；结尾道具仍未选，雨伞和铜铃都只是候选。只授权试写第1章300–500正文汉字，写陈岑在雨后河埠替老人点亮一盏纸灯，动作具体，不强加阴谋。完成自检和正式登记后暂停全部创作动作，仅查看状态，不再讨论或写作。请逐项记录选择与未决项。",
+    "local_source": "研究/作者指令.md",
+    "source_sha256": "f01560be09145236215d9e947e1037543ba953236afc5f54d02336d136df3fc1",
+    "locator": "当前用户消息 > 最终构建的另建微型作品 > 引用段落；本地研究/作者指令.md第5行；无可核验消息ID",
+    "recorded_by": "独立 Codex 恢复验收会话 native-two",
+    "frozen_ref": ".writer/objects/f01560be09145236215d9e947e1037543ba953236afc5f54d02336d136df3fc1.txt"
+  }
+}

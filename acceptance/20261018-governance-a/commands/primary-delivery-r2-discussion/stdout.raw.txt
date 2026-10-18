@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "最终源码交付确认",
+  "kind": "novel",
+  "revision": 5,
+  "next_unit": 2,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "只讨论总纲，保留远期暂缓",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期"
+        ],
+        "reason": "仅限本轮单章合成重放"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_PLACE",
+          "topic": "地点",
+          "status": "confirmed",
+          "adopted_items": [
+            "旧渡口"
+          ],
+          "options": [
+            "旧渡口"
+          ],
+          "unresolved_items": [],
+          "excluded_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/03ddbd4a-2d61-4655-9134-7a254b8fe3a4.json",
+          "event_sha256": "3f383c40ce57586215df0f317255db15584f6b6dad8fa05780862db89ba06673"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_GIFT",
+          "topic": "赠物",
+          "status": "candidate",
+          "adopted_items": [],
+          "options": [
+            "纸签",
+            "铜铃"
+          ],
+          "unresolved_items": [
+            "尚未选赠物"
+          ],
+          "excluded_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/11a3265c-3011-4af4-9684-64a3eb597090.json",
+          "event_sha256": "37cfa56f28b67000bbaad5b4577a6ca27f6c691fab44cf0d4c0aa927f555985e"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

@@ -1,0 +1,76 @@
+{
+  "ok": false,
+  "error": "本轮任务“总纲讨论阶段已完成本轮边界核对；全部创作动作暂停，仅只读查看 workflow 任务，远期骨架 deferred 与未选赠物保留”不允许 discuss；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "总纲讨论阶段已完成本轮边界核对；全部创作动作暂停，仅只读查看 workflow 任务，远期骨架 deferred 与未选赠物保留",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "等待作者新的明确授权；当前只读查看任务"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "远期骨架"
+        ],
+        "reason": "作者仅授权本测试作品第1章原文字节重放；登记后复盘并讨论总纲，远期骨架继续暂缓"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [
+        {
+          "id": "D_GIFT_NATIVE_FIVE",
+          "topic": "赠物候选",
+          "status": "candidate",
+          "options": [
+            "纸签",
+            "铜铃"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "纸签和铜铃仍未选；本章未发生赠物"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/79f547f9-cf5a-4005-8cfa-8c33f8446687.json",
+          "event_sha256": "2716dcc45ed02561053840d516bb3f45941d42eeb410b09e214358b581fd77d3"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

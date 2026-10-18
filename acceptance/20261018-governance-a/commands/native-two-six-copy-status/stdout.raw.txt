@@ -1,0 +1,183 @@
+{
+  "ok": true,
+  "title": "纸灯札记",
+  "kind": "novel",
+  "revision": 12,
+  "schema_version": 3,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "暂停正文，先讨论全书总纲",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只允许讨论和规划，不准备第7章细纲、不写第7章",
+        "全书总纲与新的有限授权未经作者明确确认，不恢复正文或修订"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "定位草案待作者复盘采纳"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "全书终局",
+          "全书篇幅",
+          "后续卷数"
+        ],
+        "reason": "已完成有限六章试写，按作者指令暂停正文，先复盘并讨论全书总纲；已有骨架仍为草案"
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json"
+        ],
+        "unresolved_ids": [
+          "试写卷契约待复盘采纳"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "现有细纲仅覆盖1—6章且未获作者整体采纳；不生成第7章细纲"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_SECT",
+          "topic": "宗门方向",
+          "status": "confirmed",
+          "options": [
+            "青岚宗方向"
+          ],
+          "adopted_items": [
+            "青岚宗方向"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [
+            "经名",
+            "住舍人数",
+            "作息数字"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/57afd68e-637b-4246-8ba9-ed9c90f74346.json",
+          "event_sha256": "ba4adf00542aa6b741fa83183e2076ee041a9dd92ae2b7aef9420d25161c619a"
+        },
+        {
+          "id": "D_CRAFT",
+          "topic": "技艺路线",
+          "status": "confirmed",
+          "options": [
+            "炼器先行"
+          ],
+          "adopted_items": [
+            "炼器先行"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/fb94f17f-3d57-42f2-aea5-e561ad9bf434.json",
+          "event_sha256": "3a04371f7d729ea73057541c07cc6c85dadc286b03e74aebe82fea635087602d"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_FIRST_ITEM",
+          "topic": "首件法器",
+          "status": "candidate",
+          "options": [
+            "小盾（仅推荐）"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "首件法器仍未选",
+            "小盾仅推荐"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/db055a27-8a1a-400e-a780-46fa540858fc.json",
+          "event_sha256": "99a678c292cd7af7a1929bd43a1bf3f07326a2769876dd14724231f4cebcdb7e"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 7,
+  "stale_units": [],
+  "changed_sources": [],
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 6,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 7,
+    "plan_exists": false,
+    "action": "暂停正文，先讨论全书总纲",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\works\\纸灯札记\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\works\\纸灯札记' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 1,
+    "recent": [
+      {
+        "unit": 4,
+        "summary": "次日干燥与底座检查后，林小河先裸试油盏；因自己挑高灯芯冒烟，先熄火再剪焦端收低灯芯，罩回纸灯照明，收工熄灯并写使用提醒。"
+      },
+      {
+        "unit": 5,
+        "summary": "陶娘要借灯补袖口，林小河携熄灭的灯检查东窗台，拒绝窄台加木板方案，清空内侧桌面；他补全维修与使用说明，陶娘复述后等待最终检查，尚未正式接灯。"
+      },
+      {
+        "unit": 6,
+        "summary": "林小河独立复核接口、灯芯和底座，说清材料故障与自己的操作失误，并说明使用限制；陶娘正式接灯、看护缝袖后熄灯。林小河分类记录旧样与误判，也记下停手求证。"
+      }
+    ],
+    "timeline_tail": [
+      "试修起始：林小河查出两处旧纸易碎，旧灯未点火，暂不能使用",
+      "卸纸后：林小河做干燥粘合比较，停止用稀浆装灯",
+      "贴灯前：发现旧裂篾，停手求证，换篾贴纸；约待明日查看接口",
+      "次日：灯纸干透，裸试油盏发现挑芯过高，熄火调整后试罩照明，收工熄灯",
+      "交接准备：熄灯查东窗摆位，改放工坊内侧清空桌面；复述说明后等待最终复核",
+      "试修收束：独立复核后正式交陶娘保管；陶娘缝袖并熄灯，林小河整理旧样与札记"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "最终交付确认作品",
+  "kind": "novel",
+  "revision": 5,
+  "next_unit": 2,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "第1章重放已登记；现在只讨论全书总纲，远期骨架保留 deferred，纸签和铜铃仍未选，不写第2章；讨论后暂停全部创作动作",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "完成本轮总纲讨论后暂停全部创作动作，仅只读查看任务"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "远期骨架"
+        ],
+        "reason": "作者仅授权本测试作品第1章原文字节重放；登记后复盘并讨论总纲，远期骨架继续暂缓"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [
+        {
+          "id": "D_GIFT_NATIVE_FIVE",
+          "topic": "赠物候选",
+          "status": "candidate",
+          "options": [
+            "纸签",
+            "铜铃"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "纸签和铜铃仍未选；本章未发生赠物"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/79f547f9-cf5a-4005-8cfa-8c33f8446687.json",
+          "event_sha256": "2716dcc45ed02561053840d516bb3f45941d42eeb410b09e214358b581fd77d3"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

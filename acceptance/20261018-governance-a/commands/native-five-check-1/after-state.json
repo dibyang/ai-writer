@@ -1,0 +1,196 @@
+{
+  "schema_version": 3,
+  "revision": 4,
+  "project_id": "16daa87b-606e-4092-96e6-da5d327abd0b",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "许桥": "旧渡口矮桌旁；以细麻绳将提手固定到竹箍，托底试提后请老人试提，并整理绳尾。",
+      "老人": "旧渡口矮桌旁；原先双手托着纸灯，修好后亲手提起，空出的手能拢住衣襟。"
+    },
+    "threads": [],
+    "timeline": [
+      "第1章：许桥在旧渡口为老人修稳纸灯提手，双方先后试提确认。"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-提手.md",
+      "sha256": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451",
+      "summary": "旧渡口矮桌旁，许桥用细麻绳重新固定老人纸灯的提手，试提确认稳定后让老人亲手提灯；本章没有赠物。",
+      "source_hashes": {
+        "writer.json": "912c7229ba5c7babc83a0f77f4d94c417779ac679bae2209b56752d0a4aeab3c",
+        ".writer/state.json": "0860b1921172e15e975bea752f552cebc0b9bd11d69d2c2b79cfe14579151bd2",
+        "大纲/单元/0001.json": "50e383ffdf7c60486f8ebaad3c5b3c645b9b9ae22e44d5d73150938af58af529",
+        "设定/作品定位.md": "184121210907b901fb23965f66bf7cdab9e508068c346c0e69b99ba3e74bcd2b",
+        "设定/文风.md": "1f29973f4d0883457121d9c5307ff7e12e51ffbfb09f92a704ec4a1d9483de98",
+        "设定/权威规则.md": "85861d7ae0b92a924eb5518278f3873effa26fee3bce9db3560d1a5d84792f67"
+      },
+      "fingerprint": "7bf5e41a6b7a5072496c85035a5936777b5a91b0a09a6fd93283f4b771a729ab",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/2c5d4651-74f8-4e44-97e4-14d7b3992b53.json",
+          "sha256": "116e8fdb519adaabe68b920d4f794e81d1ab66f51c2efeb37559f09194849b1b"
+        },
+        "action": "draft"
+      },
+      "journal": ".writer/journal/93f24069-3c87-44c7-b223-153bcddae6f5.json",
+      "journal_sha256": "20d4be8cc13741e6d734603f5a0c7cdf99ece2243fc97eeb6137d47a0a7d998d"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "仅重放并正式登记既有第1章，完成后复盘、讨论总纲，保留远期 deferred，随后全部暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第1章重放登记完成后复盘并转总纲讨论，不写第2章；讨论后暂停全部创作动作"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "远期骨架"
+        ],
+        "reason": "作者仅授权本测试作品第1章原文字节重放；登记后复盘并讨论总纲，远期骨架继续暂缓"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_LOCATION_NATIVE_FIVE": {
+      "id": "D_LOCATION_NATIVE_FIVE",
+      "topic": "本测试作品场景地点",
+      "status": "confirmed",
+      "options": [
+        "旧渡口"
+      ],
+      "adopted_items": [
+        "旧渡口"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": 1
+      },
+      "event_ref": ".writer/objects/f1668e91-6ef7-4b60-be24-39fcf2bc5b5c.json",
+      "event_sha256": "b17bcc48a258a6c1a711a4f88d18be57a97a342ff92097e93fac0dd9cc5a2022"
+    },
+    "D_GIFT_NATIVE_FIVE": {
+      "id": "D_GIFT_NATIVE_FIVE",
+      "topic": "赠物候选",
+      "status": "candidate",
+      "options": [
+        "纸签",
+        "铜铃"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "纸签和铜铃仍未选；本章未发生赠物"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/79f547f9-cf5a-4005-8cfa-8c33f8446687.json",
+      "event_sha256": "2716dcc45ed02561053840d516bb3f45941d42eeb410b09e214358b581fd77d3"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/2c5d4651-74f8-4e44-97e4-14d7b3992b53.json",
+      "sha256": "116e8fdb519adaabe68b920d4f794e81d1ab66f51c2efeb37559f09194849b1b"
+    },
+    {
+      "ref": ".writer/objects/f1668e91-6ef7-4b60-be24-39fcf2bc5b5c.json",
+      "sha256": "b17bcc48a258a6c1a711a4f88d18be57a97a342ff92097e93fac0dd9cc5a2022"
+    },
+    {
+      "ref": ".writer/objects/79f547f9-cf5a-4005-8cfa-8c33f8446687.json",
+      "sha256": "2716dcc45ed02561053840d516bb3f45941d42eeb410b09e214358b581fd77d3"
+    }
+  ],
+  "operations": {
+    "native-five-trial-1": {
+      "input_sha256": "d2fda82a648a0a891b6392267064392109a724cb93690006faa40e518f48c52e",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-five-trial-1",
+        "event": {
+          "ref": ".writer/objects/2c5d4651-74f8-4e44-97e4-14d7b3992b53.json",
+          "sha256": "116e8fdb519adaabe68b920d4f794e81d1ab66f51c2efeb37559f09194849b1b"
+        }
+      }
+    },
+    "native-five-location-1": {
+      "input_sha256": "19cbfb32052792b9237ffd838ff4abf4eb412a46c1428df64732e5f5a8a7c21f",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "native-five-location-1",
+        "event": {
+          "ref": ".writer/objects/f1668e91-6ef7-4b60-be24-39fcf2bc5b5c.json",
+          "sha256": "b17bcc48a258a6c1a711a4f88d18be57a97a342ff92097e93fac0dd9cc5a2022"
+        },
+        "decision_id": "D_LOCATION_NATIVE_FIVE"
+      }
+    },
+    "native-five-gift-1": {
+      "input_sha256": "4e72ef3e8b5be206553c9909a4e046c26e06e923d92ba2983429cd4597db9cea",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "native-five-gift-1",
+        "event": {
+          "ref": ".writer/objects/79f547f9-cf5a-4005-8cfa-8c33f8446687.json",
+          "sha256": "2716dcc45ed02561053840d516bb3f45941d42eeb410b09e214358b581fd77d3"
+        },
+        "decision_id": "D_GIFT_NATIVE_FIVE"
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/2c5d4651-74f8-4e44-97e4-14d7b3992b53.json",
+    "sha256": "116e8fdb519adaabe68b920d4f794e81d1ab66f51c2efeb37559f09194849b1b"
+  }
+}

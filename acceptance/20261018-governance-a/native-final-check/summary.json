@@ -1,0 +1,409 @@
+{
+  "scope": "native Codex regression of final A candidate; workflow and protection only",
+  "created_at": "2026-10-18T00:01:06.349Z",
+  "result": "passed-requested-cli-flow-with-documentation-residual",
+  "checks": {
+    "six_chapters_next_7_discuss_plan": true,
+    "six_discussion_success": true,
+    "trial_finite_range": true,
+    "author_evidence_exact": true,
+    "body_han_range": true,
+    "context_template_sources_match": true,
+    "schema3_changes_only": true,
+    "record_and_check_success": true,
+    "structure_discussion_success": true,
+    "both_ranges_null_after_trial": true,
+    "deferred_preserved": true,
+    "paused_empty_actions": true,
+    "paused_status_suggests_workflow_show": true,
+    "suggestion_executed_success": true,
+    "paused_refusal_read_only_hint": true,
+    "three_refusals_exit2_and_unchanged": true,
+    "new_copy_matches_main": true,
+    "all_invocations_final_main": true,
+    "all_protected_trees_unchanged": true,
+    "candidate_preserved": true,
+    "confirmed_location_separate": true,
+    "fact_ledger_empty": true,
+    "final_check_success": true,
+    "doctor_success": true
+  },
+  "command_count": 31,
+  "exit_code_counts": {
+    "0": 28,
+    "2": 3
+  },
+  "commands_index": "commands-index.json",
+  "refusals": [
+    {
+      "label": "native-three-six-draft-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "before_state_sha256": "007a9b29a16b4006cd26facbbcb1f263399ac7cbe739d0fa1ef568a20fa861bd",
+      "after_state_sha256": "007a9b29a16b4006cd26facbbcb1f263399ac7cbe739d0fa1ef568a20fa861bd",
+      "state_unchanged": true,
+      "manuscript_before": {
+        "正文/0001-留下那片纸.md": "73343f61beca2a417bec64d5120d942ea25cd82ba8625994063de32617205264",
+        "正文/0002-碗底的清水.md": "11e8b9b54a15983ce8c2fd47fae0c604b75be69b2f773be8692a7300b482e58d",
+        "正文/0003-不肯弯的篾.md": "69e6d7b818460a412a561ef8fad7e24bfdd0e316f61952564b854ddbfd6eae1c",
+        "正文/0004-烟从哪里来.md": "ef027bc6c610f219ec956cb057d97eeb60f637ef6a45e7d3c6459955f6e3a575",
+        "正文/0005-给用灯的人.md": "93ce8419696d518258f5d74cf9a05931223f37016791ba20218e0ef053955057",
+        "正文/0006-灯交出去以后.md": "9ee11fad74a906af544abd8310c96b59cf2cbebf69ed61787542f8a7f110e871"
+      },
+      "manuscript_after": {
+        "正文/0001-留下那片纸.md": "73343f61beca2a417bec64d5120d942ea25cd82ba8625994063de32617205264",
+        "正文/0002-碗底的清水.md": "11e8b9b54a15983ce8c2fd47fae0c604b75be69b2f773be8692a7300b482e58d",
+        "正文/0003-不肯弯的篾.md": "69e6d7b818460a412a561ef8fad7e24bfdd0e316f61952564b854ddbfd6eae1c",
+        "正文/0004-烟从哪里来.md": "ef027bc6c610f219ec956cb057d97eeb60f637ef6a45e7d3c6459955f6e3a575",
+        "正文/0005-给用灯的人.md": "93ce8419696d518258f5d74cf9a05931223f37016791ba20218e0ef053955057",
+        "正文/0006-灯交出去以后.md": "9ee11fad74a906af544abd8310c96b59cf2cbebf69ed61787542f8a7f110e871"
+      },
+      "hash_evidence": [
+        "protected-before.json",
+        "protected-after.json"
+      ],
+      "manuscripts_unchanged": true
+    },
+    {
+      "label": "native-three-next-draft-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "before_state_sha256": "fb8fd2d41b814ba6c704e0abca43edd9ff1b0f5f6ff3285c70e10d35ce1a2595",
+      "after_state_sha256": "fb8fd2d41b814ba6c704e0abca43edd9ff1b0f5f6ff3285c70e10d35ce1a2595",
+      "state_unchanged": true,
+      "manuscript_before": {
+        "正文/0001-提手.md": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451"
+      },
+      "manuscript_after": {
+        "正文/0001-提手.md": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451"
+      },
+      "hash_evidence": [
+        "structure-refusal-before.json",
+        "structure-refusal-after.json"
+      ],
+      "manuscripts_unchanged": true
+    },
+    {
+      "label": "native-three-paused-discussion-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "before_state_sha256": "fe77681dc1ee097aba94bbdbb96596b1eca7e7eba77b37aca02f23255d634a54",
+      "after_state_sha256": "fe77681dc1ee097aba94bbdbb96596b1eca7e7eba77b37aca02f23255d634a54",
+      "state_unchanged": true,
+      "manuscript_before": {
+        "正文/0001-提手.md": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451"
+      },
+      "manuscript_after": {
+        "正文/0001-提手.md": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451"
+      },
+      "hash_evidence": [
+        "paused-refusal-before.json",
+        "paused-refusal-after.json"
+      ],
+      "manuscripts_unchanged": true
+    }
+  ],
+  "author_evidence": {
+    "local_source": "最终回归微型作品/研究/本轮作者原话.txt",
+    "source_sha256": "ebb74d9d973b83e035b9a56cf7c58ba5904d28a0791d32e4e101ad1333df2930",
+    "quote": "在这部独立验收小说中，主角叫许桥，地点已选河边旧渡口；结尾的赠物仍未定，纸签和铜铃只是候选。允许远期全书骨架暂缓，先有限试写第1章300–450正文汉字，写许桥替老人修好纸灯的提手，动作具体、人物温和，不加阴谋。第1章登记并检查后，先转为只讨论总纲，保留远期暂缓及原因；确认讨论上下文可用且下一章不得写，再暂停全部创作动作，仅可查看任务。两次转阶段都应正式登记。",
+    "locator": "本轮用户任务正文的完整新指令引文；本地来源第1行；未提供消息ID，不编造",
+    "message_id": null,
+    "note": "No message ID supplied or invented; exact local evidence bound by formal commands"
+  },
+  "workflow_inputs": [
+    {
+      "file": "inputs/trial.json",
+      "workflow_source": "native-three-initial-workflow.workflow",
+      "expected_revision": 0
+    },
+    {
+      "file": "inputs/structure.json",
+      "workflow_source": "native-three-after-record-workflow.workflow",
+      "expected_revision": 4
+    },
+    {
+      "file": "inputs/paused.json",
+      "workflow_source": "native-three-before-pause-workflow.workflow",
+      "expected_revision": 5
+    }
+  ],
+  "phase_events": [
+    {
+      "label": "native-three-trial-set",
+      "ok": true,
+      "revision": 1,
+      "operation_id": "native-three-trial-1",
+      "event": {
+        "ref": ".writer/objects/6cc43c0e-8625-44a5-ad85-4ac201d0105b.json",
+        "sha256": "689f9ffe351c06cb506d578adfb293b995627567b46a7b1721c7fc9dd8f2fbed"
+      }
+    },
+    {
+      "label": "native-three-structure-set",
+      "ok": true,
+      "revision": 5,
+      "operation_id": "native-three-return-structure",
+      "event": {
+        "ref": ".writer/objects/684e031c-69fd-4ae7-a18b-91079860679d.json",
+        "sha256": "ac5fb14e46c042db622d0a8c634a2314c4228d8c32515ed41fe4f5c99b9086af"
+      }
+    },
+    {
+      "label": "native-three-paused-set",
+      "ok": true,
+      "revision": 6,
+      "operation_id": "native-three-pause-all",
+      "event": {
+        "ref": ".writer/objects/f25dcd5b-765d-48b1-b1a7-88662378ba70.json",
+        "sha256": "b3a34353f05524343b15e5cc4119eb47e94cfc477328c95fe2a60aca2b0353c5"
+      }
+    }
+  ],
+  "draft": {
+    "file": "acceptance/20261018-governance-a/native-final-check/最终回归微型作品/正文/0001-提手.md",
+    "sha256": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451",
+    "body_han_count": 338,
+    "body_codepoint_count": 408,
+    "body_nonwhitespace_count": 394,
+    "counting_rule": "exclude Markdown chapter heading; body_han_count uses Unicode Script=Han; punctuation and whitespace excluded from Han count"
+  },
+  "final_state": {
+    "schema_version": 3,
+    "revision": 6,
+    "next_unit": 2,
+    "stage": "paused",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "全部创作动作暂停；仅只读查看当前任务与范围",
+        "未经作者新的明确指令，不讨论、不规划、不起草、不修订",
+        "保留远期骨架deferred及原因，纸签与铜铃仍为候选"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "全篇长度待总纲讨论"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期全书骨架",
+          "全书终局",
+          "结尾赠物"
+        ],
+        "reason": "作者允许远期全书骨架暂缓，先有限试写第1章并在登记检查后复盘动作与人物语气，再只讨论总纲；终局与赠物尚未选定"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "独立短篇验收，不启用分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json"
+        ],
+        "unresolved_ids": [
+          "仅准备第1章细纲，不授权下一章"
+        ]
+      }
+    },
+    "registered_units": 1,
+    "ledger": {},
+    "quality": "draft-recorded; model selfcheck only; literary_quality unreviewed"
+  },
+  "decisions": {
+    "current": [
+      {
+        "id": "D_LOCATION",
+        "topic": "故事地点",
+        "status": "confirmed",
+        "options": [
+          "河边旧渡口"
+        ],
+        "adopted_items": [
+          "河边旧渡口"
+        ],
+        "excluded_items": [],
+        "unresolved_items": [],
+        "effective_range": {
+          "from": 1,
+          "to": null
+        },
+        "event_ref": ".writer/objects/05351ccf-119a-4b97-8d43-77adfd2d0612.json",
+        "event_sha256": "217c6dcafcf91dda38327f4eb6fcbf6a4bb41ae6b0ad558f0cdbb0f89faf80c2"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "D_END_GIFT",
+        "topic": "结尾赠物",
+        "status": "candidate",
+        "options": [
+          "纸签",
+          "铜铃"
+        ],
+        "adopted_items": [],
+        "excluded_items": [],
+        "unresolved_items": [
+          "结尾赠物仍未定；纸签和铜铃只是候选"
+        ],
+        "effective_range": {
+          "from": 1,
+          "to": null
+        },
+        "event_ref": ".writer/objects/54304821-08fb-409f-bb37-2fc1d87058b0.json",
+        "event_sha256": "30471ee19aeb47947f6963cd09f63a8598392ca166827c7d173b395ce3119427"
+      }
+    ],
+    "history_count": 0
+  },
+  "builds": {
+    "main": {
+      "tool_version": "0.4.0",
+      "profile": "main",
+      "observed_content_id": "2f480dcd474029329094f16bf7cb8227aeafd908a48032b945ccb8657766de96",
+      "runtime_id": "4ede90a3216570a4363b096bd39c08928e8b875efe314cbfff226ee96db0c34a",
+      "provenance": {
+        "source_commit": "36bd9c27797a43dd958e74b4e4b8f5b9713e140a",
+        "dirty": true
+      }
+    },
+    "new_copy": {
+      "tool_version": "0.4.0",
+      "profile": "workspace-copy",
+      "observed_content_id": "2f480dcd474029329094f16bf7cb8227aeafd908a48032b945ccb8657766de96",
+      "runtime_id": "4ede90a3216570a4363b096bd39c08928e8b875efe314cbfff226ee96db0c34a",
+      "missing": [],
+      "mismatches": []
+    },
+    "new_compare": {
+      "same_version": true,
+      "same_content": true,
+      "differences": []
+    },
+    "old_copies": [
+      {
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\最终微型作品\\.writer\\tool",
+        "tool_version": "0.4.0",
+        "observed_content_id": "83053facf5ee9604e03a351688a66babe31181626743c4197fc4828b200241ae",
+        "runtime_id": "766354af4935d9dcc2fb9ec4088ef33ce6066eaac9881d6e6979f6f15d21c3a9",
+        "same_version": true,
+        "same_content": false,
+        "differences": [
+          {
+            "group": "runtime",
+            "file": "lib/governance.mjs",
+            "left_sha256": "43e597cc2b2ec1345e1dcdce783738a17d964aab826ed89a848dfc3bb6a5a354",
+            "right_sha256": "880c561adf0605cffa4b922fa1f92634c044a6e93296571a6b242727ccdfb67a"
+          }
+        ],
+        "updated": false,
+        "executed_as_entrypoint": false
+      },
+      {
+        "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\works\\纸灯札记\\.writer\\tool",
+        "tool_version": "0.4.0",
+        "observed_content_id": "4445d3b042df7ce080fa3bb84ed49b38adf67fa02fa1d4d8ed4ecb8313ac592c",
+        "runtime_id": "f65e2bbbced61a4fa9df356eb5b2edcf9c784a1d65ae9350983fdbe107c5c61c",
+        "same_version": true,
+        "same_content": false,
+        "differences": [
+          {
+            "group": "content",
+            "file": "docs/user-guide.md",
+            "left_sha256": "766c3d9f413fff55c2a8459e312d7b06247657a987f2be1d1779c5782b9078a1",
+            "right_sha256": "cb81e5c6d08b901ca6aa628106411d454e8a7a1d2722bfe6f6b4b40f78c19e5d"
+          },
+          {
+            "group": "runtime",
+            "file": "lib/governance.mjs",
+            "left_sha256": "62fa2440da0717beccc95fb18ab89fcd6ac14e8f50dc4f6a6f6acce774005bb8",
+            "right_sha256": "880c561adf0605cffa4b922fa1f92634c044a6e93296571a6b242727ccdfb67a"
+          },
+          {
+            "group": "runtime",
+            "file": "lib/workspace.mjs",
+            "left_sha256": "b8da44820b24d72d3a92068435a46bdf93200f93e226dcf588c91ae266f5c9e4",
+            "right_sha256": "4d0bd6d36ca065962664e81089ee6e3447642f75f90c19db0b341ef879538b6f"
+          },
+          {
+            "group": "skills",
+            "file": "writer-project/references/long-form.md",
+            "left_sha256": "4da9937d01d0a7a0e747061fc9102224d0fabb4ef29884f94a77f5eddf6b8173",
+            "right_sha256": "a469afc0c4914bab34edb13f9177b68ac28b256e058064db46f504eb56d9aa0a"
+          }
+        ],
+        "updated": false,
+        "executed_as_entrypoint": false
+      }
+    ]
+  },
+  "protected_trees": [
+    {
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\works\\纸灯札记",
+      "files_before": 102,
+      "files_after": 102,
+      "unchanged": true
+    },
+    {
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\最终微型作品",
+      "files_before": 74,
+      "files_after": 74,
+      "unchanged": true
+    },
+    {
+      "root": "D:\\work\\小说\\dzkxqxx",
+      "files_before": 195,
+      "files_after": 195,
+      "unchanged": true
+    }
+  ],
+  "input_errors": [],
+  "retries": [],
+  "unexpected_cli_errors": [],
+  "observations": [
+    {
+      "severity": "documentation-residual",
+      "file": "docs/user-guide.md",
+      "line": 102,
+      "observation": "ACTION_OUT_OF_SCOPE guidance still generally suggests discussion/planning; paused empty-actions workflow must only view task. Runtime next_action is correct in this regression.",
+      "changed": false
+    },
+    {
+      "severity": "harness-observation",
+      "observation": "The outer PowerShell executor reported exit 1 for the three negative runs; capture result.json and raw product process preserve actual exit 2. No output or exit code rewritten."
+    }
+  ],
+  "not_covered": [
+    "No implementation changes or npm test/npm run doctor/test:engine rerun; doctor product command executed on new project",
+    "No migration, legacy tool update, rewind/revision, concurrent-session or transaction stress tests",
+    "No engine gate, long-form volume flow, import/export, publication or external upload",
+    "No human blind reading, literary acceptance or market validation",
+    "No invocation of old copy entrypoints; new-copy identity observed through final main CLI, not a separate native-Codex host session"
+  ],
+  "actions_not_taken": {
+    "implementation_edits": false,
+    "subagents": false,
+    "commit": false,
+    "push": false,
+    "real_work_migration": false,
+    "real_work_update": false
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "revision": 5,
+  "workflow": {
+    "stage": "structure",
+    "task": "第1章已登记并check；现只讨论总纲，保留远期骨架暂缓及原因，确认讨论上下文可用且下一章不得写后，正式暂停全部创作动作",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只讨论总纲，不写第2章或修订已登记章",
+        "保持远期全书骨架deferred及原因，不将纸签、铜铃候选伪造为已采纳",
+        "实际确认discussion context可用且第2章draft context拒绝后，正式转paused，仅可查看任务"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "全篇长度待总纲讨论"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期全书骨架",
+          "全书终局",
+          "结尾赠物"
+        ],
+        "reason": "作者允许远期全书骨架暂缓，先有限试写第1章并在登记检查后复盘动作与人物语气，再只讨论总纲；终局与赠物尚未选定"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "独立短篇验收，不启用分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json"
+        ],
+        "unresolved_ids": [
+          "仅准备第1章细纲，不授权下一章"
+        ]
+      }
+    }
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "第1章已登记并check；现只讨论总纲，保留远期骨架暂缓及原因，确认讨论上下文可用且下一章不得写后，正式暂停全部创作动作",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只讨论总纲，不写第2章或修订已登记章",
+        "保持远期全书骨架deferred及原因，不将纸签、铜铃候选伪造为已采纳",
+        "实际确认discussion context可用且第2章draft context拒绝后，正式转paused，仅可查看任务"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "全篇长度待总纲讨论"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期全书骨架",
+          "全书终局",
+          "结尾赠物"
+        ],
+        "reason": "作者允许远期全书骨架暂缓，先有限试写第1章并在登记检查后复盘动作与人物语气，再只讨论总纲；终局与赠物尚未选定"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "独立短篇验收，不启用分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json"
+        ],
+        "unresolved_ids": [
+          "仅准备第1章细纲，不授权下一章"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_LOCATION",
+          "topic": "故事地点",
+          "status": "confirmed",
+          "options": [
+            "河边旧渡口"
+          ],
+          "adopted_items": [
+            "河边旧渡口"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/05351ccf-119a-4b97-8d43-77adfd2d0612.json",
+          "event_sha256": "217c6dcafcf91dda38327f4eb6fcbf6a4bb41ae6b0ad558f0cdbb0f89faf80c2"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_END_GIFT",
+          "topic": "结尾赠物",
+          "status": "candidate",
+          "options": [
+            "纸签",
+            "铜铃"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "结尾赠物仍未定；纸签和铜铃只是候选"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/54304821-08fb-409f-bb37-2fc1d87058b0.json",
+          "event_sha256": "30471ee19aeb47947f6963cd09f63a8598392ca166827c7d173b395ce3119427"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

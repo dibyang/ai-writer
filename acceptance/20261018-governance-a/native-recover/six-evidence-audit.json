@@ -1,0 +1,284 @@
+[
+  {
+    "ref": ".writer/objects/9db9a005-42fb-4f94-813f-7255f8d95d4b.json",
+    "kind": "workflow",
+    "payload": {
+      "stage": "trial",
+      "task": "仅试写第1至6章；第3、6章后实读复盘；六章后暂停正文，先讨论全书总纲",
+      "authorization": {
+        "allowed_actions": [
+          "discuss",
+          "plan",
+          "draft"
+        ],
+        "draft_range": {
+          "from": 1,
+          "to": 6
+        },
+        "revise_range": null,
+        "stop_conditions": [
+          "第3章后暂停推进并滚动实读第1—3章",
+          "第6章后滚动实读第1—6章并复盘",
+          "第6章结束后正式转 structure，仅 discuss/plan，正文和修订范围均 null；不准备第7章细纲、不写第7章"
+        ]
+      },
+      "planning": {
+        "positioning": {
+          "status": "draft",
+          "refs": [
+            "设定/作品定位.md",
+            "设定/文风.md",
+            "设定/人物.md"
+          ],
+          "unresolved_ids": [
+            "定位草案待作者复盘采纳"
+          ]
+        },
+        "structure": {
+          "status": "draft",
+          "refs": [
+            "大纲/全书大纲.md"
+          ],
+          "unresolved_ids": [
+            "全书终局",
+            "全书篇幅",
+            "后续卷数"
+          ],
+          "reason": "作者仅要求先建简洁骨架，六章后才讨论全书总纲；草案未获整体采纳"
+        },
+        "volume": {
+          "status": "draft",
+          "refs": [
+            "大纲/分卷/V1.json"
+          ],
+          "unresolved_ids": [
+            "试写卷契约待复盘采纳"
+          ]
+        },
+        "outline": {
+          "status": "draft",
+          "refs": [],
+          "unresolved_ids": [
+            "仅逐章生成1—6章细纲；第7章不准备"
+          ]
+        }
+      }
+    },
+    "evidence": {
+      "local_source": "研究/作者指令.md",
+      "source_sha256": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+      "locator": "本轮用户请求 > 独立夹具作者的真实指令；研究/作者指令.md 第5行；无可用消息ID",
+      "recorded_by": "独立 Codex 写作会话 native-one",
+      "quote": "本轮仅授权试写第1至6章，每章400–700正文汉字；六章后暂停正文并复盘，转为讨论全书总纲，不写第7章。",
+      "frozen_ref": ".writer/objects/f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5.txt"
+    },
+    "event_hash_match": true,
+    "local_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "local_hash_match": true,
+    "frozen_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "frozen_hash_match": true,
+    "local_equals_frozen": true,
+    "quote_in_local": true,
+    "quote_in_frozen": true
+  },
+  {
+    "ref": ".writer/objects/57afd68e-637b-4246-8ba9-ed9c90f74346.json",
+    "kind": "decision",
+    "payload": {
+      "id": "D_SECT",
+      "topic": "宗门方向",
+      "status": "confirmed",
+      "options": [
+        "青岚宗方向"
+      ],
+      "adopted_items": [
+        "青岚宗方向"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [
+        "经名",
+        "住舍人数",
+        "作息数字"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      }
+    },
+    "evidence": {
+      "local_source": "研究/作者指令.md",
+      "source_sha256": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+      "locator": "本轮用户请求 > 独立夹具作者的真实指令；研究/作者指令.md 第5行；无可用消息ID",
+      "recorded_by": "独立 Codex 写作会话 native-one",
+      "quote": "宗门方向已选青岚宗，只确认这个方向，不确认经名、住舍人数和作息数字",
+      "frozen_ref": ".writer/objects/f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5.txt"
+    },
+    "event_hash_match": true,
+    "local_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "local_hash_match": true,
+    "frozen_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "frozen_hash_match": true,
+    "local_equals_frozen": true,
+    "quote_in_local": true,
+    "quote_in_frozen": true
+  },
+  {
+    "ref": ".writer/objects/fb94f17f-3d57-42f2-aea5-e561ad9bf434.json",
+    "kind": "decision",
+    "payload": {
+      "id": "D_CRAFT",
+      "topic": "技艺路线",
+      "status": "confirmed",
+      "options": [
+        "炼器先行"
+      ],
+      "adopted_items": [
+        "炼器先行"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      }
+    },
+    "evidence": {
+      "local_source": "研究/作者指令.md",
+      "source_sha256": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+      "locator": "本轮用户请求 > 独立夹具作者的真实指令；研究/作者指令.md 第5行；无可用消息ID",
+      "recorded_by": "独立 Codex 写作会话 native-one",
+      "quote": "技艺路线已选炼器先行",
+      "frozen_ref": ".writer/objects/f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5.txt"
+    },
+    "event_hash_match": true,
+    "local_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "local_hash_match": true,
+    "frozen_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "frozen_hash_match": true,
+    "local_equals_frozen": true,
+    "quote_in_local": true,
+    "quote_in_frozen": true
+  },
+  {
+    "ref": ".writer/objects/db055a27-8a1a-400e-a780-46fa540858fc.json",
+    "kind": "decision",
+    "payload": {
+      "id": "D_FIRST_ITEM",
+      "topic": "首件法器",
+      "status": "candidate",
+      "options": [
+        "小盾（仅推荐）"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "首件法器仍未选",
+        "小盾仅推荐"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      }
+    },
+    "evidence": {
+      "local_source": "研究/作者指令.md",
+      "source_sha256": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+      "locator": "本轮用户请求 > 独立夹具作者的真实指令；研究/作者指令.md 第5行；无可用消息ID",
+      "recorded_by": "独立 Codex 写作会话 native-one",
+      "quote": "首件法器仍未选，小盾仅推荐。",
+      "frozen_ref": ".writer/objects/f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5.txt"
+    },
+    "event_hash_match": true,
+    "local_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "local_hash_match": true,
+    "frozen_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "frozen_hash_match": true,
+    "local_equals_frozen": true,
+    "quote_in_local": true,
+    "quote_in_frozen": true
+  },
+  {
+    "ref": ".writer/objects/98c0f7c8-f332-4c94-a9dd-42da25b8fc24.json",
+    "kind": "workflow",
+    "payload": {
+      "stage": "structure",
+      "task": "暂停正文，先讨论全书总纲",
+      "authorization": {
+        "allowed_actions": [
+          "discuss",
+          "plan"
+        ],
+        "draft_range": null,
+        "revise_range": null,
+        "stop_conditions": [
+          "只允许讨论和规划，不准备第7章细纲、不写第7章",
+          "全书总纲与新的有限授权未经作者明确确认，不恢复正文或修订"
+        ]
+      },
+      "planning": {
+        "positioning": {
+          "status": "draft",
+          "refs": [
+            "设定/作品定位.md",
+            "设定/文风.md",
+            "设定/人物.md"
+          ],
+          "unresolved_ids": [
+            "定位草案待作者复盘采纳"
+          ]
+        },
+        "structure": {
+          "status": "draft",
+          "refs": [
+            "大纲/全书大纲.md"
+          ],
+          "unresolved_ids": [
+            "全书终局",
+            "全书篇幅",
+            "后续卷数"
+          ],
+          "reason": "已完成有限六章试写，按作者指令暂停正文，先复盘并讨论全书总纲；已有骨架仍为草案"
+        },
+        "volume": {
+          "status": "draft",
+          "refs": [
+            "大纲/分卷/V1.json"
+          ],
+          "unresolved_ids": [
+            "试写卷契约待复盘采纳"
+          ]
+        },
+        "outline": {
+          "status": "draft",
+          "refs": [
+            "大纲/单元/0001.json",
+            "大纲/单元/0002.json",
+            "大纲/单元/0003.json",
+            "大纲/单元/0004.json",
+            "大纲/单元/0005.json",
+            "大纲/单元/0006.json"
+          ],
+          "unresolved_ids": [
+            "现有细纲仅覆盖1—6章且未获作者整体采纳；不生成第7章细纲"
+          ]
+        }
+      }
+    },
+    "evidence": {
+      "local_source": "研究/作者指令.md",
+      "source_sha256": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+      "locator": "本轮用户请求 > 独立夹具作者的真实指令；研究/作者指令.md 第5行；无可用消息ID",
+      "recorded_by": "独立 Codex 写作会话 native-one",
+      "quote": "第6章结束后请正式保存“暂停正文，先讨论全书总纲”的任务，只允许讨论和规划。",
+      "frozen_ref": ".writer/objects/f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5.txt"
+    },
+    "event_hash_match": true,
+    "local_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "local_hash_match": true,
+    "frozen_hash": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "frozen_hash_match": true,
+    "local_equals_frozen": true,
+    "quote_in_local": true,
+    "quote_in_frozen": true
+  }
+]

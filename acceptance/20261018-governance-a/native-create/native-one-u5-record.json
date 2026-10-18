@@ -1,0 +1,47 @@
+{
+  "unit": 5,
+  "expected_revision": 9,
+  "source_hashes": {
+    "writer.json": "5f16a5af38b846f01d088dc8e3d9fddc1a1a45abbfa1b9280d403098ac5ce894",
+    ".writer/state.json": "675145e3b2787fc812028d6dfe677f9cf9647029181d3cd467adcd7fdd645445",
+    "大纲/单元/0005.json": "c8d6800eece5325055f283a540315926b75fbdb8165becfb1fa4b26f62645618",
+    "设定/作品定位.md": "fcbaf226c02cfb9aac0e5e9b88ba88375c3906824c69702711ae57c5e296468a",
+    "设定/文风.md": "86c7ffee7057407586c07cef1fbbc70f0a356bfd1a25ea5cc2f82c79c0cf917a",
+    "设定/权威规则.md": "52a46ec6dc8dc1135ee961ce6f9e92e3071b62d834125ad765d5dee824459ec0",
+    "设定/人物.md": "be7fd5249c08e3114844b156ac9882bab922e52df979dc637adf4f776f2a656d",
+    "大纲/分卷/V1.json": "ae109e9e88afd790d930d4e40ddb76374c503eeec7d38e783ce994ac1493c4b8",
+    "正文/0004-烟从哪里来.md": "ef027bc6c610f219ec956cb057d97eeb60f637ef6a45e7d3c6459955f6e3a575"
+  },
+  "draft": "正文/0005-给用灯的人.md",
+  "summary": "陶娘要借灯补袖口，林小河携熄灭的灯检查东窗台，拒绝窄台加木板方案，清空内侧桌面；他补全维修与使用说明，陶娘复述后等待最终检查，尚未正式接灯。",
+  "changes": {
+    "characters": {
+      "林小河": "工坊内侧桌边；知道提醒须对应实际摆位；负责最后独立检查，当前灯未交出",
+      "陶娘": "工坊内侧桌旁；按提醒复述熄火等步骤，袖口放凳上等复核后借灯"
+    },
+    "timeline_append": [
+      "交接准备：熄灯查东窗摆位，改放工坊内侧清空桌面；复述说明后等待最终复核"
+    ],
+    "ledger": {
+      "O_LAMP": {
+        "custody": {
+          "holder": "林小河",
+          "location": "工坊内侧清空桌面瓷盘上",
+          "condition": "熄灭，待独立复核；提醒纸放瓷盘外"
+        },
+        "reader_known": "实际摆位已选并核对，陶娘尚未正式接收",
+        "character_known": {
+          "林小河": "知道东窗台不合用，实际桌位已清空，最后复核待做",
+          "陶娘": "知道暂放桌位、使用提醒，等林小河复核再借用"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "灯只是暂放在这里，最后的接口还要由他独自再看一遍。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

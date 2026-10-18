@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "revision": 3,
+  "project_id": "6ea1205f-00dd-4c45-b1c0-21bd9a1dd956",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "trial",
+    "task": "仅重放一章后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "完成第一章后讨论，再全部暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期"
+        ],
+        "reason": "仅限本轮单章合成重放"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_PLACE": {
+      "id": "D_PLACE",
+      "topic": "地点",
+      "status": "confirmed",
+      "adopted_items": [
+        "旧渡口"
+      ],
+      "options": [
+        "旧渡口"
+      ],
+      "unresolved_items": [],
+      "excluded_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/03ddbd4a-2d61-4655-9134-7a254b8fe3a4.json",
+      "event_sha256": "3f383c40ce57586215df0f317255db15584f6b6dad8fa05780862db89ba06673"
+    },
+    "D_GIFT": {
+      "id": "D_GIFT",
+      "topic": "赠物",
+      "status": "candidate",
+      "adopted_items": [],
+      "options": [
+        "纸签",
+        "铜铃"
+      ],
+      "unresolved_items": [
+        "尚未选赠物"
+      ],
+      "excluded_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/11a3265c-3011-4af4-9684-64a3eb597090.json",
+      "event_sha256": "37cfa56f28b67000bbaad5b4577a6ca27f6c691fab44cf0d4c0aa927f555985e"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/7cdf1afc-3602-453d-ab0f-5792a5f501e5.json",
+      "sha256": "dbd77f7d9d9b88d24023b2f45e11a2adbf6034c96df6a727f47935f96b3e42ea"
+    },
+    {
+      "ref": ".writer/objects/03ddbd4a-2d61-4655-9134-7a254b8fe3a4.json",
+      "sha256": "3f383c40ce57586215df0f317255db15584f6b6dad8fa05780862db89ba06673"
+    },
+    {
+      "ref": ".writer/objects/11a3265c-3011-4af4-9684-64a3eb597090.json",
+      "sha256": "37cfa56f28b67000bbaad5b4577a6ca27f6c691fab44cf0d4c0aa927f555985e"
+    }
+  ],
+  "operations": {
+    "toString": {
+      "input_sha256": "92f26dde8eee529142b39671d976ad24634c37ebf1f76cfa787607bbf2ad8275",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "toString",
+        "event": {
+          "ref": ".writer/objects/7cdf1afc-3602-453d-ab0f-5792a5f501e5.json",
+          "sha256": "dbd77f7d9d9b88d24023b2f45e11a2adbf6034c96df6a727f47935f96b3e42ea"
+        }
+      }
+    },
+    "d_place": {
+      "input_sha256": "3b980244cf0b2b8dee44514895605e20873286c4b8f9620837dbf9a77a806263",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "d_place",
+        "event": {
+          "ref": ".writer/objects/03ddbd4a-2d61-4655-9134-7a254b8fe3a4.json",
+          "sha256": "3f383c40ce57586215df0f317255db15584f6b6dad8fa05780862db89ba06673"
+        },
+        "decision_id": "D_PLACE"
+      }
+    },
+    "d_gift": {
+      "input_sha256": "412ed1d347ad46d7d1330f95ae15c6695a5d0aabe7881cc7821b90cb42f5ca2e",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "d_gift",
+        "event": {
+          "ref": ".writer/objects/11a3265c-3011-4af4-9684-64a3eb597090.json",
+          "sha256": "37cfa56f28b67000bbaad5b4577a6ca27f6c691fab44cf0d4c0aa927f555985e"
+        },
+        "decision_id": "D_GIFT"
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/7cdf1afc-3602-453d-ab0f-5792a5f501e5.json",
+    "sha256": "dbd77f7d9d9b88d24023b2f45e11a2adbf6034c96df6a727f47935f96b3e42ea"
+  }
+}

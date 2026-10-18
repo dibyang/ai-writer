@@ -1,0 +1,29 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: s1-old-init: {
+  "ok": false,
+  "error": "ENOENT: no such file or directory, lstat 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\migration-matrix\\frozen-0.3-host\\examples\\prompts.md'",
+  "code": "ENOENT",
+  "next_action": "按报错核对输入，查看本命令帮助。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\migration-matrix\\frozen-0.3-host\\bin\\ai-writer.mjs' init '--help'"
+}
+
+
+2 !== 0
+
+    at run (file:///D:/work/other/ai-writer/acceptance/20261018-governance-a/migration-matrix.mjs:23:10)
+    at file:///D:/work/other/ai-writer/acceptance/20261018-governance-a/migration-matrix.mjs:28:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

@@ -6,7 +6,7 @@
 
 先读定位、文风、权威规则和全书大纲。按阶段讨论、卷纲、章纲、正文、修订，只完成作者要求的阶段；已有连续创作授权时不中途逐章索要确认。当前请求优先于本书风格，本书风格优先于通用技法。风格不能改变事实和人物信息边界，不因缺对标阻断原创。
 
-1. `status` 取 revision；`long-enable --expected-revision N` 备份并启用 schema 2。不手改 state；旧 schema 1 仍可原样使用。长篇status默认只给进度和最近摘要，不载入全量追踪；明确排障才用 `status --view full`，正常续写取context/recall。
+1. `status` 先恢复当前任务和允许范围，再取 revision。`long-enable --expected-revision N` 对旧 schema 1 备份迁移为 schema 2；对 schema 3 仅启用分卷契约，仍为 schema 3。schema 3 初始已有 changes 差量追踪，但默认未授权正文；阶段/决策用法见 docs/user-guide.md 与 docs/workflow.md。不手改 state；旧 schema 1/2 不自动启用治理。长篇status默认只给进度和最近摘要，不载入全量追踪；明确排障才用 `status --view full`，正常续写取context/recall。
 2. 保存分卷 JSON，用 `volume --input 文件`。范围用全书连续单元号；卷之间不重叠，每卷 arcs 连续覆盖卷范围。未来卷可粗排，近期细化。分卷契约是计划，不建立已经发生的追踪。
 
 ```json

@@ -1,0 +1,61 @@
+file:///D:/work/other/ai-writer/scripts/smoke.mjs:13
+  if (result.status !== 0) throw new Error(result.stderr || result.stdout);
+                                 ^
+
+Error: {
+  "ok": false,
+  "error": "本轮任务“完善作品定位和故事骨架，明确本轮允许的创作范围”不允许 draft 1–1；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "direction",
+    "task": "完善作品定位和故事骨架，明确本轮允许的创作范围",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}
+
+    at run (file:///D:/work/other/ai-writer/scripts/smoke.mjs:13:34)
+    at file:///D:/work/other/ai-writer/scripts/smoke.mjs:22:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

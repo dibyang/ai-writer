@@ -1,0 +1,146 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "纸灯札记",
+  "kind": "novel",
+  "revision": 12,
+  "next_unit": 7,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "暂停正文，先讨论全书总纲",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只允许讨论和规划，不准备第7章细纲、不写第7章",
+        "全书总纲与新的有限授权未经作者明确确认，不恢复正文或修订"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "定位草案待作者复盘采纳"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "全书终局",
+          "全书篇幅",
+          "后续卷数"
+        ],
+        "reason": "已完成有限六章试写，按作者指令暂停正文，先复盘并讨论全书总纲；已有骨架仍为草案"
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json"
+        ],
+        "unresolved_ids": [
+          "试写卷契约待复盘采纳"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "现有细纲仅覆盖1—6章且未获作者整体采纳；不生成第7章细纲"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_SECT",
+          "topic": "宗门方向",
+          "status": "confirmed",
+          "options": [
+            "青岚宗方向"
+          ],
+          "adopted_items": [
+            "青岚宗方向"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [
+            "经名",
+            "住舍人数",
+            "作息数字"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/57afd68e-637b-4246-8ba9-ed9c90f74346.json",
+          "event_sha256": "ba4adf00542aa6b741fa83183e2076ee041a9dd92ae2b7aef9420d25161c619a"
+        },
+        {
+          "id": "D_CRAFT",
+          "topic": "技艺路线",
+          "status": "confirmed",
+          "options": [
+            "炼器先行"
+          ],
+          "adopted_items": [
+            "炼器先行"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/fb94f17f-3d57-42f2-aea5-e561ad9bf434.json",
+          "event_sha256": "3a04371f7d729ea73057541c07cc6c85dadc286b03e74aebe82fea635087602d"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_FIRST_ITEM",
+          "topic": "首件法器",
+          "status": "candidate",
+          "options": [
+            "小盾（仅推荐）"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "首件法器仍未选",
+            "小盾仅推荐"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/db055a27-8a1a-400e-a780-46fa540858fc.json",
+          "event_sha256": "99a678c292cd7af7a1929bd43a1bf3f07326a2769876dd14724231f4cebcdb7e"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

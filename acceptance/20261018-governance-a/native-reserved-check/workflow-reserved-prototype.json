@@ -1,0 +1,57 @@
+{
+  "expected_revision": 0,
+  "operation_id": "prototype",
+  "author_evidence": {
+    "quote": "本轮仅在新建验收作品中复用第三轮 `native-final-check/最终回归微型作品` 的第1章原文字节作为测试草稿，先实际读完再登记，不改原稿和原作品。地点沿用旧渡口方案，纸签与铜铃仍为候选，不自行选赠物。允许远期结构暂缓，只授权本测试作品第1章，完成登记后先转只讨论总纲，再暂停全部创作动作，仅查看任务。这个重放不算新创作篇幅。",
+    "local_source": "研究/本轮作者原话.txt",
+    "source_sha256": "c98fdf67731e85170b652c8196a24457a511935c53bfd8be5752a5ee411a3490",
+    "locator": "本阶段用户任务中的测试作者指令；完整原话第1行，无可用消息ID",
+    "recorded_by": "Codex 主会话，本地CLI重放执行者"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "仅复用已完整读过的第三轮第1章，登记并复盘后转总纲讨论",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第1章复用登记后核对事实与候选边界，转为只讨论总纲，然后暂停全部创作动作"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期结构"
+        ],
+        "reason": "作者明确允许远期结构暂缓，本轮仅复用第1章验证工具流程；登记后先讨论总纲再全部暂停，不延展剧情。"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

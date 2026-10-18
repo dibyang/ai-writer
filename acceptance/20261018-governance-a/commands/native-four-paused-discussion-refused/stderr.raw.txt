@@ -1,0 +1,74 @@
+{
+  "ok": false,
+  "error": "本轮任务“暂停全部创作动作，仅只读查看当前任务”不允许 discuss；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "暂停全部创作动作，仅只读查看当前任务",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "未经作者新明确指令，不恢复正文或扩大范围"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期结构"
+        ],
+        "reason": "作者明确允许远期结构暂缓，本轮仅复用第1章验证工具流程；登记后先讨论总纲再全部暂停，不延展剧情。"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [
+        {
+          "id": "D_GIFT_NATIVE_FOUR",
+          "topic": "赠物选择",
+          "status": "candidate",
+          "options": [
+            "纸签",
+            "铜铃"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "纸签与铜铃仍为候选，未授权自行选择"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/27173cfa-7506-46b1-bf66-a981c39bcd7c.json",
+          "event_sha256": "8fb50bf49cb94af8644ffd00a7e52e39f78c40bde2bce6321f2789627d250b8b"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

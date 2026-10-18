@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "schema_version": 2,
+  "target_schema": 3,
+  "revision": 2,
+  "units": 1,
+  "already_enabled": false,
+  "requires": "显式授权；备份后保持原事实并迁移差量链。旧工具将拒绝 schema 3；本批不提供随附工具自动更新。",
+  "default_workflow": {
+    "stage": "direction",
+    "task": "完善作品定位和故事骨架，明确本轮允许的创作范围",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

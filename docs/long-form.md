@@ -4,6 +4,8 @@
 
 已有作品先运行 `node bin/ai-writer.mjs status --project 目录`。尚未启用长篇追踪的 schema 1 作品可用 `long-enable --expected-revision 当前号` 迁移，工具保留旧状态备份；已是 schema 2 的直接恢复续写。schema 1 仍兼容，schema 2 增加分卷和差量 journal；不要手改 `.writer/state.json` 或删除 journal。
 
+0.4 新作品默认 schema 3，先恢复当前任务/授权/作者选择，再决定是否写正文。schema 3 已有 changes 与 journal，long-enable 只启用分卷契约，版本仍为 3；未启用分卷时不强制每篇散文配置卷纲。旧 schema 1/2 不自动启用治理，governance migrate 必须另获对应作品授权；本批无随附工具安全更新。阶段为规划时用 context --purpose discussion，不先要求下一章细纲。
+
 `outline --unit` 与 `context --unit` 自动取当前卷/剧情单元；`recall --query` 用来定位早期线索及正文；`record-template` 返回 changes 格式。`check` 同时校验差量链并报告滚动审查欠覆盖。所有导出仍是草稿。
 
 `rolling_review.stale` 保留所有失效历史记录数；其中 `stale_with_current_coverage` 表示已有一份当前有效报告完整覆盖该旧记录的阅读范围，`stale_without_current_coverage` 表示尚无这样的报告。分段报告不能拼作一次完整连读。旧记录不会重新有效，也不应删除历史来清零；需要补做的每三章滚动窗口看 `pending_windows`。回退后尚未重登的章节也可能落在旧报告范围内。上述数字只表示版本与阅读覆盖，不表示文学质量通过。

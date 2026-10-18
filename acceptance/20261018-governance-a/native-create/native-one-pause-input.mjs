@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+const b='acceptance/20261018-governance-a',p=`${b}/works/纸灯札记`;
+const state=JSON.parse(fs.readFileSync(`${p}/.writer/state.json`,'utf8'));
+const evidence=JSON.parse(fs.readFileSync(`${b}/native-create/native-one-author-evidence.json`,'utf8'));
+const trial=JSON.parse(fs.readFileSync(`${b}/native-create/native-one-trial-input.json`,'utf8'));
+const workflow=structuredClone(trial.workflow);
+workflow.stage='structure';
+workflow.task='暂停正文，先讨论全书总纲';
+workflow.authorization={allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['只允许讨论和规划，不准备第7章细纲、不写第7章','全书总纲与新的有限授权未经作者明确确认，不恢复正文或修订']};
+workflow.planning.structure.reason='已完成有限六章试写，按作者指令暂停正文，先复盘并讨论全书总纲；已有骨架仍为草案';
+workflow.planning.outline.refs=Array.from({length:6},(_,i)=>`大纲/单元/${String(i+1).padStart(4,'0')}.json`);
+workflow.planning.outline.unresolved_ids=['现有细纲仅覆盖1—6章且未获作者整体采纳；不生成第7章细纲'];
+const input={expected_revision:state.revision,operation_id:'native-one-pause-structure-001',author_evidence:{...evidence,quote:'第6章结束后请正式保存“暂停正文，先讨论全书总纲”的任务，只允许讨论和规划。'},workflow};
+fs.writeFileSync(`${b}/native-create/native-one-pause-input.json`,JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(input,null,2));

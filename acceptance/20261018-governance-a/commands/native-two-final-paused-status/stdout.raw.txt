@@ -1,0 +1,129 @@
+{
+  "ok": true,
+  "title": "最终微型作品",
+  "kind": "novel",
+  "revision": 5,
+  "schema_version": 3,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "第1章试写、自检、正式登记与机械检查已完成；暂停全部创作动作，仅查看状态，不再讨论或写作",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "仅查看状态，不再讨论、规划、写作或修订",
+        "未经作者新的明确指令，不恢复任何创作动作"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "结尾道具"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "作者只授权单章微型试写，不编排后续"
+      },
+      "volume": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "短篇差量协议，不分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_LOCATION",
+          "topic": "地点",
+          "status": "confirmed",
+          "options": [
+            "河埠"
+          ],
+          "adopted_items": [
+            "河埠"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+          "event_sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_END_PROP",
+          "topic": "结尾道具",
+          "status": "candidate",
+          "options": [
+            "雨伞",
+            "铜铃"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "结尾道具仍未选",
+            "雨伞和铜铃都只是候选"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+          "event_sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 2,
+  "stale_units": [],
+  "changed_sources": [],
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 1,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 2,
+    "plan_exists": false,
+    "action": "第1章试写、自检、正式登记与机械检查已完成；暂停全部创作动作，仅查看状态，不再讨论或写作",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' workflow show '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\最终微型作品'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 0,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "雨后河埠，陈岑替看不清湿阶的老人安放并点亮纸灯，照着细苔旁的落脚处陪他下阶，到埠底把灯交回。老人提醒他取回布袋；无阴谋和后续任务。"
+      }
+    ],
+    "timeline_tail": [
+      "雨停后：陈岑在河埠替老人点亮纸灯、照阶下行并交还；老人提醒他取布袋"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+const [label, exe, ...args] = process.argv.slice(2);
+if (!/^[a-z][a-z0-9-]*$/.test(label ?? '') || !exe) throw Error('capture <unique label> <exe> <args...>');
+const dir = path.resolve('acceptance/20261018-governance-a/commands', label);
+fs.mkdirSync(dir, { recursive: true });
+if (fs.existsSync(path.join(dir, 'result.json'))) throw Error('Never overwrite evidence');
+const started = Date.now();
+const isNpm = exe === 'npm.cmd';
+if (isNpm && args.some(x => !/^[A-Za-z0-9:_-]+$/.test(x))) throw Error('Only simple npm script arguments are supported');
+const actualExe = isNpm ? process.env.ComSpec : exe, actualArgs = isNpm ? ['/d', '/c', 'npm.cmd', ...args] : args;
+const r = spawnSync(actualExe, actualArgs, { cwd: process.cwd(), windowsHide: true, timeout: 300000, maxBuffer: 100 * 1024 * 1024 });
+fs.writeFileSync(path.join(dir, 'stdout.raw.txt'), r.stdout ?? Buffer.alloc(0));
+fs.writeFileSync(path.join(dir, 'stderr.raw.txt'), r.stderr ?? Buffer.alloc(0));
+const result = { exe, argv: args, actual_exe: actualExe, actual_argv: actualArgs, cwd: process.cwd(), started_at: new Date(started).toISOString(), elapsed_ms: Date.now() - started,
+  exit_code: r.status, signal: r.signal, error: r.error?.message };
+fs.writeFileSync(path.join(dir, 'result.json'), JSON.stringify(result, null, 2) + '\n', { flag: 'wx' });
+if (r.stdout?.length) process.stdout.write(r.stdout);
+if (r.stderr?.length) process.stderr.write(r.stderr);
+console.log(JSON.stringify(result)); process.exitCode = r.status ?? 1;

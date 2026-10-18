@@ -1,0 +1,165 @@
+{
+  "schema_version": 3,
+  "revision": 3,
+  "project_id": "d9dc40b9-965d-4cd8-8c9c-9053ac02acdf",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "trial",
+    "task": "仅试写第1章300–500正文汉字，完成自检、正式登记和check后暂停全部创作动作",
+    "authorization": {
+      "allowed_actions": [
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第1章自检、正式登记和机械检查完成即设为paused，allowed_actions=[]，两范围=null",
+        "暂停后仅查看状态，不再讨论、规划、写作或修订"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "结尾道具"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "作者只授权单章微型试写，不编排后续"
+      },
+      "volume": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "短篇差量协议，不分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_LOCATION": {
+      "id": "D_LOCATION",
+      "topic": "地点",
+      "status": "confirmed",
+      "options": [
+        "河埠"
+      ],
+      "adopted_items": [
+        "河埠"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+      "event_sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+    },
+    "D_END_PROP": {
+      "id": "D_END_PROP",
+      "topic": "结尾道具",
+      "status": "candidate",
+      "options": [
+        "雨伞",
+        "铜铃"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "结尾道具仍未选",
+        "雨伞和铜铃都只是候选"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+      "event_sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+      "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+    },
+    {
+      "ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+      "sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+    },
+    {
+      "ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+      "sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+    }
+  ],
+  "operations": {
+    "native-two-final-trial-001": {
+      "input_sha256": "4b33116ada81cfbb7fa38db484bb8b1cd28da6447ecc58dab9f4b047e7d69e07",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-two-final-trial-001",
+        "event": {
+          "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+          "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+        }
+      }
+    },
+    "native-two-final-location-001": {
+      "input_sha256": "6fa3ede3d2f02ec5812b7efa6ba5071b1598b5afef83df838c1d48177e28ea42",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "native-two-final-location-001",
+        "event": {
+          "ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+          "sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+        },
+        "decision_id": "D_LOCATION"
+      }
+    },
+    "native-two-final-ending-prop-001": {
+      "input_sha256": "3cf5bffa219e4266c48408af21908c4d5842d4fd96ef59dde1943a47beb13a37",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "native-two-final-ending-prop-001",
+        "event": {
+          "ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+          "sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+        },
+        "decision_id": "D_END_PROP"
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+    "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+  }
+}

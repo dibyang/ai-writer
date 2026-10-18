@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "patch": [
+    {
+      "at": [
+        "characters",
+        "林小河"
+      ],
+      "had": false,
+      "has": true,
+      "after": "工坊；保留两处旧纸样，知道旧纸酥坏，尚不据此否认操作可能有误；不使用旧灯"
+    },
+    {
+      "at": [
+        "characters",
+        "陶娘"
+      ],
+      "had": false,
+      "has": true,
+      "after": "工坊门边；见到取样过程，允许学徒停工查料"
+    },
+    {
+      "at": [
+        "timeline"
+      ],
+      "append": [
+        "试修起始：林小河查出两处旧纸易碎，旧灯未点火，暂不能使用"
+      ],
+      "length": 0
+    },
+    {
+      "at": [
+        "ledger"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "O_LAMP": {
+          "type": "object",
+          "statement": "待修的旧纸灯",
+          "status": "active",
+          "cast": [
+            "林小河",
+            "陶娘"
+          ],
+          "custody": {
+            "holder": "林小河",
+            "location": "工坊软布上",
+            "condition": "未点火，纸面有破口，已取旧纸样"
+          },
+          "reader_known": "两处旧纸酥坏；尚未完成修理",
+          "character_known": {
+            "林小河": "已查两处旧纸；不能立即使用",
+            "陶娘": "亲见取样和停工"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/0001-留下那片纸.md",
+              "sha256": "73343f61beca2a417bec64d5120d942ea25cd82ba8625994063de32617205264",
+              "line": 27,
+              "quote": "又把灯放回软布。"
+            }
+          ],
+          "tags": [],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        }
+      }
+    }
+  ]
+}

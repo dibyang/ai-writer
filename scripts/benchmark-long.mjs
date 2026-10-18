@@ -4,7 +4,7 @@ import { performance } from 'node:perf_hooks';
 import crypto from 'node:crypto';
 import { ROOT, initProject, enableLong, savePlan, context, record, rewind, check, exportWork, main } from '../lib/workspace.mjs';
 
-// Synthetic capacity measurement only; it does not evaluate prose continuity.
+// Explicit schema 1/2 synthetic comparison; not a schema 3 performance or prose acceptance.
 const count = Number(process.argv[2] ?? 100);
 const label = process.argv[3] ?? '';
 if (label && !/^[a-z0-9-]+$/.test(label)) throw new Error('invalid measurement label');
@@ -13,7 +13,7 @@ fs.mkdirSync(path.join(ROOT, '.tmp'), { recursive: true });
 const base = fs.mkdtempSync(path.join(ROOT, '.tmp/capacity-'));
 const results = [];
 for (const mode of ['legacy', 'long']) {
-  const root = path.join(base, mode); initProject(root, 'novel', '合成容量夹具');
+  const root = path.join(base, mode); initProject(root, 'novel', '合成容量夹具', { legacy: true });
   if (mode === 'long') {
     enableLong(root, 0);
     const file = path.join(base, 'volume.json');
@@ -45,6 +45,8 @@ for (const mode of ['legacy', 'long']) {
 const output = { nature: 'synthetic-capacity-only', root: base, results,
   tool_sha256: Object.fromEntries(['lib/workspace.mjs', 'lib/journal.mjs', 'lib/longform.mjs', 'scripts/benchmark-long.mjs'].map(ref => [ref, crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, ref))).digest('hex')])),
   tracking_reduction_percent: +(100 * (1 - results[1].total_tracking_bytes / results[0].total_tracking_bytes)).toFixed(2) };
-const destination = path.join(ROOT, `acceptance/20261015-long/capacity-${count}${label ? `-${label}` : ''}.json`);
+// New runs must never add files to an already sealed historical campaign.
+const destination = process.argv[4] ? path.resolve(process.argv[4]) : path.join(base, `capacity-${count}${label ? `-${label}` : ''}.json`);
+output.destination = destination;
 fs.writeFileSync(destination, JSON.stringify(output, null, 2) + '\n', { flag: 'wx', encoding: 'utf8' });
 console.log(JSON.stringify(output));

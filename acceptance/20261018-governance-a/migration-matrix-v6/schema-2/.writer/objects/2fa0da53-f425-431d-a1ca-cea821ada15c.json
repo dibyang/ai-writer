@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-17T23:50:28.739Z",
+  "operation_id": "s2-authorize",
+  "base_revision": 3,
+  "payload": {
+    "stage": "trial",
+    "task": "仅续写第2章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 2,
+        "to": 2
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第2章后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "合成迁移夹具：允许对本测试副本显式迁移，并仅续写第2章后暂停。",
+    "local_source": "研究/作者要求.md",
+    "source_sha256": "b9d55f12e45f48ea224850cec22b28450d077de55357c9d140fdfb387535e559",
+    "locator": "自动验收夹具第1行",
+    "recorded_by": "migration-matrix",
+    "frozen_ref": ".writer/objects/b9d55f12e45f48ea224850cec22b28450d077de55357c9d140fdfb387535e559.txt"
+  }
+}

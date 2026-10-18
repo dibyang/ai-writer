@@ -1,0 +1,53 @@
+{
+  "unit": 6,
+  "expected_revision": 10,
+  "source_hashes": {
+    "writer.json": "5f16a5af38b846f01d088dc8e3d9fddc1a1a45abbfa1b9280d403098ac5ce894",
+    ".writer/state.json": "9d5049103ba3c27b9ad487dace00f21960c2604446a4544e4145fde000d2e99f",
+    "大纲/单元/0006.json": "ad972d6d2f94214b1a5ef2ec6c8786d2eaa6c35d4fa2e24ee21361ba39108185",
+    "设定/作品定位.md": "fcbaf226c02cfb9aac0e5e9b88ba88375c3906824c69702711ae57c5e296468a",
+    "设定/文风.md": "86c7ffee7057407586c07cef1fbbc70f0a356bfd1a25ea5cc2f82c79c0cf917a",
+    "设定/权威规则.md": "52a46ec6dc8dc1135ee961ce6f9e92e3071b62d834125ad765d5dee824459ec0",
+    "设定/人物.md": "be7fd5249c08e3114844b156ac9882bab922e52df979dc637adf4f776f2a656d",
+    "大纲/分卷/V1.json": "ae109e9e88afd790d930d4e40ddb76374c503eeec7d38e783ce994ac1493c4b8",
+    "正文/0005-给用灯的人.md": "93ce8419696d518258f5d74cf9a05931223f37016791ba20218e0ef053955057"
+  },
+  "draft": "正文/0006-灯交出去以后.md",
+  "summary": "林小河独立复核接口、灯芯和底座，说清材料故障与自己的操作失误，并说明使用限制；陶娘正式接灯、看护缝袖后熄灯。林小河分类记录旧样与误判，也记下停手求证。",
+  "changes": {
+    "characters": {
+      "林小河": "工坊；独立复核后已正式交灯；分类保存旧样并记录操作误判与停手求证，当前无后续正文任务",
+      "陶娘": "工坊；已正式接收旧灯及提醒纸，补完袖口后熄灯；知道维修范围和继续检查的限制"
+    },
+    "timeline_append": [
+      "试修收束：独立复核后正式交陶娘保管；陶娘缝袖并熄灯，林小河整理旧样与札记"
+    ],
+    "ledger": {
+      "O_LAMP": {
+        "status": "resolved",
+        "previous_holder": "林小河",
+        "custody": {
+          "holder": "陶娘",
+          "location": "工坊内侧清空桌面瓷盘上",
+          "condition": "本次修理与交接已完成，缝袖后熄灭；后续老化等仍需检查"
+        },
+        "reader_known": "本轮修灯交接完成；不是永久不坏或首件法器的结论",
+        "character_known": {
+          "林小河": "已独立复核、说明边界并交陶娘保管；亲见其缝袖后熄灯",
+          "陶娘": "已正式接灯，知道起烟先熄、不能带火移动；已使用并熄灭"
+        },
+        "evidence": [
+          {
+            "unit": 6,
+            "quote": "从这句话起，灯才算正式交给陶娘保管。"
+          },
+          {
+            "unit": 6,
+            "quote": "陶娘缝完袖口，熄灯后过来看。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

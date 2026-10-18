@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "title": "接口测试-essay",
+  "kind": "essay",
+  "revision": 2,
+  "schema_version": 3,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "仅试写第1章，结束后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一单元完成后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 2,
+  "stale_units": [],
+  "changed_sources": [],
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 1,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 2,
+    "plan_exists": false,
+    "action": "试写范围已到，先复盘：仅试写第1章，结束后复盘",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\cli-matrix-final\\essay' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 0,
+    "ledger_count": 0,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "完成一次独立夹具登记"
+      }
+    ],
+    "timeline_tail": []
+  }
+}

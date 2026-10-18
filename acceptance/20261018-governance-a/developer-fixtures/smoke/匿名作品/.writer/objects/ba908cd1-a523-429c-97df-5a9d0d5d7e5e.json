@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T00:19:51.028Z",
+  "operation_id": "smoke-trial",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "仅重放本测试副本第1章，完成后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一章完成后复盘"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "合成 smoke 验证指令：只允许本测试副本试写第1章，完成后停止并复盘；样例仅验证文件流程，不代表真实作者定稿。",
+    "local_source": ".writer/smoke-author.txt",
+    "source_sha256": "66e5bba9658c06388ce6e8640437b1b9510b6d9ce60dcbe8defcd78b2a67354c",
+    "locator": "本 smoke 合成测试指令第1行",
+    "recorded_by": "smoke synthetic fixture",
+    "frozen_ref": ".writer/objects/66e5bba9658c06388ce6e8640437b1b9510b6d9ce60dcbe8defcd78b2a67354c.txt"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 3,
+  "revision": 2,
+  "project_id": "80672ef1-6c9f-4d91-b784-b1c50b8f224b",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "structure",
+    "task": "暂停正文，讨论总纲",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期"
+        ],
+        "reason": "作者允许有限试写后再补骨架"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/b5999b2f-96f2-4d0f-a04f-3109a3b82fd6.json",
+      "sha256": "be3e78d769d15ad17ac37399faa3a3c233a8ee2af162be2c884df21ebe221f32"
+    },
+    {
+      "ref": ".writer/objects/02ae0bf8-56fa-4ec3-a041-c31607fcefe2.json",
+      "sha256": "446216dbcba77b4a313629b97c5bf60e9bc23d6c146bf552e6b1609f0faedd99"
+    }
+  ],
+  "operations": {
+    "deferred-trial": {
+      "input_sha256": "af1bd4c9630bfdf2d853b2b4d1dc895dafe6246ab0c2b2e784dbde9c50ad54de",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "deferred-trial",
+        "event": {
+          "ref": ".writer/objects/b5999b2f-96f2-4d0f-a04f-3109a3b82fd6.json",
+          "sha256": "be3e78d769d15ad17ac37399faa3a3c233a8ee2af162be2c884df21ebe221f32"
+        }
+      }
+    },
+    "deferred-pause": {
+      "input_sha256": "ad4f434a58f2c9aa89a11ea2909d8df9ddf135cd6b660f59f1298081d34a3831",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "deferred-pause",
+        "event": {
+          "ref": ".writer/objects/02ae0bf8-56fa-4ec3-a041-c31607fcefe2.json",
+          "sha256": "446216dbcba77b4a313629b97c5bf60e9bc23d6c146bf552e6b1609f0faedd99"
+        }
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/02ae0bf8-56fa-4ec3-a041-c31607fcefe2.json",
+    "sha256": "446216dbcba77b4a313629b97c5bf60e9bc23d6c146bf552e6b1609f0faedd99"
+  }
+}

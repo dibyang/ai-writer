@@ -4,7 +4,7 @@
 
 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
 
-**协议选择：** 本页的完整 snapshot 示例适用于 schema 1。启用长篇后，record-template 返回 changes，必须按 [长篇流程](long-form.md) 填写，不能复制下面的 snapshot 覆盖长篇账本。两种协议的修订、来源核验与导出保护一致。
+**协议选择：** 0.4 新作品默认 schema 3，用 changes 差量登记；schema 2 同样用 changes，schema 1 才用完整 snapshot。下方 snapshot 示例仅为旧作品兼容说明。schema 3 的分卷契约仍需 long-enable；其余来源核验、回退、审查与导出保护继续有效。新作品初始仅允许讨论/规划，正文须先登记有限授权。
 
 ## 初始化
 
@@ -13,6 +13,88 @@ node bin/ai-writer.mjs init --path "works/示例" --kind novel --title "示例"
 ```
 
 目标必须不存在。初始化写入技能、工具和待完善的创作说明，不生成假正文。Codex 下一步按作者要求完善定位、文风和大纲。
+
+## 创作治理：阶段、范围与作者决策（最小首批 A）
+
+```powershell
+node bin/ai-writer.mjs workflow show --project "works/示例"
+node bin/ai-writer.mjs context --project "works/示例" --purpose discussion
+node bin/ai-writer.mjs decision current --project "works/示例"
+```
+
+discussion 不要求下一章细纲，返回当前任务、允许范围、已选和未决项及漂移诊断，不作为有效写作 context。draft 默认需 --unit；revision 需在授权 rewind 后按顺序恢复。工具只能约束正式命令，代理也应在聊天/文件动笔前遵守作者范围。
+
+workflow set 输入由 Codex 根据真实任务准备，字段如下；示例中的 quote/source_sha256/expected_revision 必须换成实际来源与状态，不复制假哈希：
+
+```json
+{
+  "expected_revision": 0,
+  "operation_id": "trial-1-author-instruction",
+  "author_evidence": {
+    "quote": "先试写第1章，完成后暂停复盘",
+    "local_source": "研究/作者要求.md",
+    "source_sha256": "该来源文件的实际SHA256",
+    "locator": "实际任务记录中的位置；拿不到会话ID时不伪造",
+    "recorded_by": "执行本次任务的代理或操作者"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "试写第1章，完成后暂停复盘",
+    "authorization": {
+      "allowed_actions": ["discuss", "plan", "draft"],
+      "draft_range": {"from": 1, "to": 1},
+      "revise_range": null,
+      "stop_conditions": ["第1章完成后暂停并复盘"]
+    },
+    "planning": {
+      "positioning": {"status": "draft", "refs": ["设定/作品定位.md"], "unresolved_ids": []},
+      "structure": {"status": "deferred", "refs": [], "unresolved_ids": ["远期结构"], "reason": "作者允许有限试写后复盘"},
+      "volume": {"status": "missing", "refs": [], "unresolved_ids": []},
+      "outline": {"status": "draft", "refs": [], "unresolved_ids": []}
+    }
+  }
+}
+```
+
+`workflow set --input 文件` 用 CAS 推进 revision；相同 operation_id/相同输入重试幂等，不同输入复用 ID 拒绝。stage 为 direction/structure/volume/outline/trial/drafting/revision/paused；规划/paused 不允许新正文，但可有明确 revise_range。draft/revise 动作必须分别有非空有限闭区间；空范围不是无限授权。stop_conditions 是待代理落实的文字条件，程序只自动检查动作与单元范围，不理解任意自然语言触发器。
+
+operation_id、decision.id 及 supersedes 引用为 1–100 位字母数字/下划线/连字符，首位为字母或数字；禁止使用 __proto__、constructor、prototype 保留键。非法 ID 在写入前拒绝，不会保存不可恢复的索引。
+
+暂停正文时 stage=structure、allowed_actions=[discuss,plan]，两个范围为 null，并填写实际任务。status.next_unit 保留登记序号，next.action 改指当前任务；context、record-template、record 同步拒绝越权，不能单改 next 的显示。
+
+决策用 `decision set --input 文件`，复用上方 expected_revision/operation_id/author_evidence，另传 decision 对象：
+
+```json
+{
+  "id": "D_SECT",
+  "topic": "宗门方向",
+  "status": "confirmed",
+  "options": ["青岚宗方向", "另一候选方向"],
+  "adopted_items": ["青岚宗方向"],
+  "excluded_items": [],
+  "unresolved_items": ["经名", "住舍人数", "作息数字"],
+  "effective_range": {"from": 1, "to": null}
+}
+```
+
+status 为 candidate/confirmed/withdrawn；confirmed 必须逐项列 adopted_items，其他状态不能带当前采纳项。首件法器仍未选时另建 candidate，adopted_items=[]，在 unresolved_items 写“小盾仅推荐”。current 按 --unit（默认 next_unit）列已选和候选，list 保留历史；不生成会被误当权威的 Markdown 当前设定文件。
+
+确认项变化需新 ID+supersedes，指向同主题、同生效范围当前确认项；不支持循环、悬空或双重重叠确认。本批不支持跨范围设定发布/影响分析。决定是作者计划，不代表该事实已发生；不得直接改 ledger。
+
+作者证据要求 quote 在真实 local_source 中，且来源字节哈希匹配。工具保存不可变事件和冻结原话对象，原记录可以继续追加，冻结对象若改变则拒绝。这里只证明记录字节，没有自动认证作者身份或判断自然语言采纳范围。
+
+## 旧协议预览与显式迁移
+
+`governance preview --project 目录` 只读；`governance migrate --input 迁移.json` 的输入只有 expected_revision、operation_id、author_evidence 三项。迁移先校验来源和原事实链，保存 pre-governance 备份，最后一次替换 state；schema 1 转为差量、schema 2 保留已有差量链，均升为 3，默认仅讨论/规划。正文、原消费哈希和事实终态保持不变；不自动更新随附工具，旧工具会拒绝新 state。真实旧作不得未经授权迁移。
+
+## 只读构建识别和比较
+
+```powershell
+node bin/ai-writer.mjs tool identify
+node bin/ai-writer.mjs tool compare --project "作品目录" --other "主项目目录"
+```
+
+identify 返回 observed_content_id、runtime_id、版本、profile、文件哈希、清单差异和可知来源。副本初始化时保存 build-manifest.json；时间戳不参与内容 ID。compare 不改任一目录，正确报告同版本不同内容，分别列 runtime/content/skills。main/workspace-copy 的引擎省略属于已知 profile 边界。缺清单旧副本标 legacy-unattested，不虚构历史 commit；主项目报 observed-source-tree。观测指纹不等于数字签名，也不承诺旧在途进程已加载磁盘上的新模块。本批没有 tool update 或恢复命令。
 
 ## 细纲
 

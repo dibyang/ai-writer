@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T00:19:13.839Z",
+  "operation_id": "native-five-paused-1",
+  "base_revision": 5,
+  "payload": {
+    "stage": "paused",
+    "task": "总纲讨论阶段已完成本轮边界核对；全部创作动作暂停，仅只读查看 workflow 任务，远期骨架 deferred 与未选赠物保留",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "等待作者新的明确授权；当前只读查看任务"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "远期骨架"
+        ],
+        "reason": "作者仅授权本测试作品第1章原文字节重放；登记后复盘并讨论总纲，远期骨架继续暂缓"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "仅在这部新验收作品中复用第三轮 `native-final-check/最终回归微型作品` 第1章原文字节，不改原稿，不算新增创作篇幅。先完整读原章；地点沿用旧渡口，纸签和铜铃仍未选。允许远期骨架暂缓，仅授权本测试作品第1章；正式登记后先讨论总纲并保留 deferred，再暂停全部创作动作，只读查看任务。",
+    "local_source": "研究/本轮作者原话.txt",
+    "source_sha256": "9916ebd36af4930c6c16f7d7641877439c0d51ff09d910f57568be765c8404f3",
+    "locator": "本次用户任务第2项引文；本地来源第1行，无可用消息ID",
+    "recorded_by": "Codex 当前主会话，真实 CLI 验收",
+    "frozen_ref": ".writer/objects/9916ebd36af4930c6c16f7d7641877439c0d51ff09d910f57568be765c8404f3.txt"
+  }
+}

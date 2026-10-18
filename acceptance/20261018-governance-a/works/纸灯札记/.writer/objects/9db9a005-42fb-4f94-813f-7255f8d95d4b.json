@@ -1,0 +1,76 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-17T23:34:22.016Z",
+  "operation_id": "native-one-trial-001",
+  "base_revision": 1,
+  "payload": {
+    "stage": "trial",
+    "task": "仅试写第1至6章；第3、6章后实读复盘；六章后暂停正文，先讨论全书总纲",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第3章后暂停推进并滚动实读第1—3章",
+        "第6章后滚动实读第1—6章并复盘",
+        "第6章结束后正式转 structure，仅 discuss/plan，正文和修订范围均 null；不准备第7章细纲、不写第7章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "定位草案待作者复盘采纳"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "全书终局",
+          "全书篇幅",
+          "后续卷数"
+        ],
+        "reason": "作者仅要求先建简洁骨架，六章后才讨论全书总纲；草案未获整体采纳"
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json"
+        ],
+        "unresolved_ids": [
+          "试写卷契约待复盘采纳"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": [
+          "仅逐章生成1—6章细纲；第7章不准备"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/作者指令.md",
+    "source_sha256": "f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5",
+    "locator": "本轮用户请求 > 独立夹具作者的真实指令；研究/作者指令.md 第5行；无可用消息ID",
+    "recorded_by": "独立 Codex 写作会话 native-one",
+    "quote": "本轮仅授权试写第1至6章，每章400–700正文汉字；六章后暂停正文并复盘，转为讨论全书总纲，不写第7章。",
+    "frozen_ref": ".writer/objects/f3985204320b2fcbde6d7cf23076d6ab36fe1fa4baf489d92b330ebf05b857b5.txt"
+  }
+}

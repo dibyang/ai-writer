@@ -2,7 +2,7 @@
 
 通过 Codex 创作中文小说、剧本、历史散文，以及散文和一般非虚构。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究和追踪各有职责；新会话可以从文件恢复创作。
 
-当前版本：**0.3.0 本地候选版**。包含 7 个 Codex skills、小说审查参考规则、去 AI 味专项流程、可执行作品管理工具及 story-gate-studio 质量引擎。支持长篇分卷、线索召回、旧稿导入和同内容重定位；状态与导出主动列出未登记正文。自动化检查验证文件流程和保护逻辑；文学质量、史实真伪和作者验收由实际阅读与核验裁定。
+当前版本：**0.4.0 本地候选版**。新增只读构建识别、创作阶段与有限授权、基础作者决策管理；新作品默认 schema 3 差量追踪，先规划并明确范围再写正文，旧作品不自动迁移。包含 7 个 Codex skills、去 AI 味流程及 story-gate-studio 质量引擎。长篇分卷、线索召回、旧稿导入和来源哈希保护继续保留。文学质量、史实真伪和作者验收仍由实际阅读与核验裁定。
 
 ## 开始使用
 
@@ -79,7 +79,7 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 命令和 JSON 见 [完整工作流](docs/workflow.md)，自然语言例子见 [创作任务示例](examples/prompts.md)。
 
-长篇先按 [长篇流程](docs/long-form.md) 显式启用新协议。原schema 1兼容；迁移前自动备份，作品随附工具可独立续写。
+长篇按 [长篇流程](docs/long-form.md) 显式启用分卷契约。新 schema 3 已有差量追踪；原 schema 1/2 保持兼容。本批不含设定版本发布、独立修订区、跨会话提交事务或随附工具安全更新；不要把范围/CAS 保护视为已解决全部并行改稿问题。设计及分批边界见 [治理设计](docs/authoring-governance-design.md)。
 
 ## 吸收与复用
 
@@ -90,6 +90,8 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 本轮对参考项目816份文件建立完整索引、读完13个技能入口，并深入长篇协议和相关脚本。逐项采用、改造与未移植内容见 [完整能力盘点](docs/reference-audit.md)，来源深度与26份新快照哈希见 [审计清单](docs/oh-story-audit-manifest.json)。
 
 ## 验证
+
+0.4.0 最小首批 A 的构建识别、阶段/范围与作者决策实跑见[本轮记录](acceptance/20261018-governance-a/README.md)，实际完成范围、最终构建、失败重试及未覆盖项以该记录最终状态为准；不将其计为 B—D 已交付。
 
 ```powershell
 npm test

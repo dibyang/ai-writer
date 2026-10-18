@@ -1,0 +1,4151 @@
+{
+  "ok": true,
+  "scope": "Minimal A candidate; mechanical regressions, five native Codex model workflows and final primary Codex CLI replay; not human acceptance",
+  "version": "0.4.0",
+  "source_candidate": "candidate-delivery / identical final-delivery; final runtime v9 plus legacy0.2 module-profile correction and developer-script adaptation",
+  "source_files": 84,
+  "build": {
+    "observed_content_id": "1fdb8d6b7b1698e95291168f46a7874882bcf38e9050c6c7530bb291f4c9e4ba",
+    "runtime_id": "a5d887bfe37406dc570d591786f4776f7c73a328efed5dedc27d8a00c4ae223e",
+    "profile": "main"
+  },
+  "regressions": {
+    "tests": 81,
+    "pass": 81,
+    "fail": 0,
+    "skipped": 0
+  },
+  "doctor_ok": true,
+  "smoke_ok": true,
+  "native": [
+    {
+      "phase": "native-create",
+      "thread_id": "01a14c35-0835-7762-9915-03a6ff8599db",
+      "process": {
+        "phase": "native-create",
+        "launcher": "C:\\Users\\admin\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+        "codex_version": "codex-cli 0.163.0-alpha.10.2",
+        "node": "v24.15.0",
+        "platform": "win32",
+        "exit_code": 0,
+        "signal": null,
+        "elapsed_s": 756,
+        "events": 221,
+        "commands": 62,
+        "messages": 11,
+        "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-create",
+        "args": [
+          "exec",
+          "--json",
+          "--sandbox",
+          "workspace-write",
+          "-C",
+          "D:\\work\\other\\ai-writer",
+          "--output-last-message",
+          "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-create\\final.md",
+          "-"
+        ]
+      },
+      "command_events": 62,
+      "command_failures": [
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-one-reject-u7-context node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/works/纸灯札记\" --unit 7'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-one-reject-u7-template node bin/ai-writer.mjs record-template --project \"acceptance/20261018-governance-a/works/纸灯札记\" --unit 7 --draft \"正文/0007-越界探针.md\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-one-reject-u7-record node bin/ai-writer.mjs record --project \"acceptance/20261018-governance-a/works/纸灯札记\" --input acceptance/20261018-governance-a/native-create/native-one-fake-u7-record.json'",
+          "exit_code": 1
+        }
+      ],
+      "failed_file_changes": 0
+    },
+    {
+      "phase": "native-recover",
+      "thread_id": "01a14c40-ce92-7e30-a5cb-81366759ccae",
+      "process": {
+        "phase": "native-recover",
+        "launcher": "C:\\Users\\admin\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+        "codex_version": "codex-cli 0.163.0-alpha.10.2",
+        "node": "v24.15.0",
+        "platform": "win32",
+        "exit_code": 0,
+        "signal": null,
+        "elapsed_s": 722,
+        "events": 254,
+        "commands": 54,
+        "messages": 12,
+        "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover",
+        "args": [
+          "exec",
+          "--json",
+          "--sandbox",
+          "workspace-write",
+          "-C",
+          "D:\\work\\other\\ai-writer",
+          "--output-last-message",
+          "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\final.md",
+          "-"
+        ]
+      },
+      "command_events": 54,
+      "command_failures": [
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-six-main-draft-context node \"bin/ai-writer.mjs\" context --purpose draft --unit 7 --project \"acceptance/20261018-governance-a/works/纸灯札记\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-six-main-record-template node \"bin/ai-writer.mjs\" record-template --unit 7 --draft \"正文/0007-越权探针-不存在.md\" --project \"acceptance/20261018-governance-a/works/纸灯札记\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-six-main-record node \"bin/ai-writer.mjs\" record --input acceptance/20261018-governance-a/native-recover/six-forbidden-record.json --project \"acceptance/20261018-governance-a/works/纸灯札记\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-six-copy-draft-context node \"acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs\" context --purpose draft --unit 7 --project \"acceptance/20261018-governance-a/works/纸灯札记\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-six-copy-record-template node \"acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs\" record-template --unit 7 --draft \"正文/0007-越权探针-不存在.md\" --project \"acceptance/20261018-governance-a/works/纸灯札记\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-six-copy-record node \"acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs\" record --input acceptance/20261018-governance-a/native-recover/six-forbidden-record.json --project \"acceptance/20261018-governance-a/works/纸灯札记\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-two-final-discussion-denied node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/native-recover/最终微型作品\" --purpose discussion'",
+          "exit_code": 1
+        }
+      ],
+      "failed_file_changes": 0
+    },
+    {
+      "phase": "native-final-check",
+      "thread_id": "01a14c4a-8035-7df1-bb24-e6a4c7ae1b8f",
+      "process": {
+        "phase": "native-final-check",
+        "launcher": "C:\\Users\\admin\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+        "codex_version": "codex-cli 0.163.0-alpha.10.2",
+        "node": "v24.15.0",
+        "platform": "win32",
+        "exit_code": 0,
+        "signal": null,
+        "elapsed_s": 450,
+        "events": 154,
+        "commands": 48,
+        "messages": 8,
+        "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-final-check",
+        "args": [
+          "exec",
+          "--json",
+          "--sandbox",
+          "workspace-write",
+          "-C",
+          "D:\\work\\other\\ai-writer",
+          "--output-last-message",
+          "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-final-check\\final.md",
+          "-"
+        ]
+      },
+      "command_events": 48,
+      "command_failures": [
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-three-six-draft-denied node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/works/纸灯札记\" --purpose draft --unit 7'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-three-next-draft-denied node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/native-final-check/最终回归微型作品\" --purpose draft --unit 2'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-three-paused-discussion-denied node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/native-final-check/最终回归微型作品\" --purpose discussion'",
+          "exit_code": 1
+        }
+      ],
+      "failed_file_changes": 0
+    },
+    {
+      "phase": "native-reserved-check",
+      "thread_id": "01a14c53-5cc7-7893-9a49-65e9d30dd0a0",
+      "process": {
+        "phase": "native-reserved-check",
+        "launcher": "C:\\Users\\admin\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+        "codex_version": "codex-cli 0.163.0-alpha.10.2",
+        "node": "v24.15.0",
+        "platform": "win32",
+        "exit_code": 0,
+        "signal": null,
+        "elapsed_s": 447,
+        "events": 162,
+        "commands": 52,
+        "messages": 8,
+        "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-reserved-check",
+        "args": [
+          "exec",
+          "--json",
+          "--sandbox",
+          "workspace-write",
+          "-C",
+          "D:\\work\\other\\ai-writer",
+          "--output-last-message",
+          "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-reserved-check\\final.md",
+          "-"
+        ]
+      },
+      "command_events": 52,
+      "command_failures": [],
+      "failed_file_changes": 0
+    },
+    {
+      "phase": "native-delivery-check",
+      "thread_id": "01a14c5c-5dfd-7ff1-9661-4f729c23009e",
+      "process": {
+        "phase": "native-delivery-check",
+        "launcher": "C:\\Users\\admin\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+        "codex_version": "codex-cli 0.163.0-alpha.10.2",
+        "node": "v24.15.0",
+        "platform": "win32",
+        "exit_code": 0,
+        "signal": null,
+        "elapsed_s": 567,
+        "events": 215,
+        "commands": 75,
+        "messages": 9,
+        "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-delivery-check",
+        "args": [
+          "exec",
+          "--json",
+          "--sandbox",
+          "workspace-write",
+          "-C",
+          "D:\\work\\other\\ai-writer",
+          "--output-last-message",
+          "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-delivery-check\\final.md",
+          "-"
+        ]
+      },
+      "command_events": 75,
+      "command_failures": [
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-five-fixture-main-doctor node bin/ai-writer.mjs doctor --project \"acceptance/20261018-governance-a/migration-matrix-v9/schema-1\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-five-fixture-old-status node acceptance/20261018-governance-a/migration-matrix-v9/schema-1/.writer/tool/bin/ai-writer.mjs status --project \"acceptance/20261018-governance-a/migration-matrix-v9/schema-1\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-five-invalid-prototype node bin/ai-writer.mjs workflow set --project \"acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品\" --input \"acceptance/20261018-governance-a/native-delivery-check/inputs/workflow-invalid-prototype.json\"'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-five-structure-unit2-refusal node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品\" --unit 2 --purpose draft'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/capture.mjs native-five-paused-discussion-refusal node bin/ai-writer.mjs context --project \"acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品\" --purpose discussion'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/native-delivery-check/audit.mjs compare paused-readonly-before work-final'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/native-delivery-check/audit.mjs compare protected-before protected-after'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/native-delivery-check/audit.mjs compare protected-after protected-final'",
+          "exit_code": 1
+        },
+        {
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261018-governance-a/native-delivery-check/seal-report.mjs'",
+          "exit_code": 1
+        }
+      ],
+      "failed_file_changes": 0
+    }
+  ],
+  "chapters": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-留下那片纸.md",
+      "han": 456,
+      "sha256": "73343f61beca2a417bec64d5120d942ea25cd82ba8625994063de32617205264"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-碗底的清水.md",
+      "han": 453,
+      "sha256": "11e8b9b54a15983ce8c2fd47fae0c604b75be69b2f773be8692a7300b482e58d"
+    },
+    {
+      "unit": 3,
+      "draft": "正文/0003-不肯弯的篾.md",
+      "han": 469,
+      "sha256": "69e6d7b818460a412a561ef8fad7e24bfdd0e316f61952564b854ddbfd6eae1c"
+    },
+    {
+      "unit": 4,
+      "draft": "正文/0004-烟从哪里来.md",
+      "han": 446,
+      "sha256": "ef027bc6c610f219ec956cb057d97eeb60f637ef6a45e7d3c6459955f6e3a575"
+    },
+    {
+      "unit": 5,
+      "draft": "正文/0005-给用灯的人.md",
+      "han": 454,
+      "sha256": "93ce8419696d518258f5d74cf9a05931223f37016791ba20218e0ef053955057"
+    },
+    {
+      "unit": 6,
+      "draft": "正文/0006-灯交出去以后.md",
+      "han": 471,
+      "sha256": "9ee11fad74a906af544abd8310c96b59cf2cbebf69ed61787542f8a7f110e871"
+    }
+  ],
+  "total_han": 2749,
+  "previous_mini": {
+    "units": 1,
+    "build": "83053facf5ee9604e03a351688a66babe31181626743c4197fc4828b200241ae",
+    "preservation": "kept as the candidate-v6 observation; not upgraded"
+  },
+  "mini": {
+    "units": 1,
+    "han": 338,
+    "final_build_matches_main": true,
+    "paused_all": true,
+    "deferred_preserved": true
+  },
+  "recovery_book_files_unchanged": 102,
+  "protected_project_content_files_unchanged": 195,
+  "protected_project_path_and_bytes_unchanged": 515,
+  "protected_codex_checkpoint_path_change": {
+    "before_files": 516,
+    "after_files": 516,
+    "unchanged_files": 515,
+    "changed": [],
+    "added": [
+      {
+        "file": ".git/refs/codex/turn-diffs/checkpoints/f586fd1bb1766691892b1f556c4e2904/800c3bed085c7952791d53612c462d05/1792281534885/a767f1f8-3fb4-4e29-be3e-a148dce8ded1",
+        "bytes": 41,
+        "sha256": "743790eeead088730a9a6db7b81a8425fe2c761c5163bdabebfb20726976ab80"
+      }
+    ],
+    "removed": [
+      {
+        "file": ".git/refs/codex/turn-diffs/checkpoints/f586fd1bb1766691892b1f556c4e2904/71bb39504008e18ba61a45569711ffe2/1792279104415/15d85210-85fc-406a-89cf-8535ff38f035",
+        "bytes": 41,
+        "sha256": "743790eeead088730a9a6db7b81a8425fe2c761c5163bdabebfb20726976ab80"
+      }
+    ],
+    "note": "Observed external-directory differences. No restoration or writes to protected directory. Hash comparison alone cannot attribute authorship."
+  },
+  "cli_matrix_calls": 49,
+  "migration_matrix_calls": 38,
+  "primary_delivery": {
+    "ok": true,
+    "scope": "Primary Codex session final-source real CLI replay; not a sixth native model session or new literary writing",
+    "calls": 24,
+    "command_results": [
+      {
+        "label": "primary-delivery-r2-init",
+        "exit_code": 0,
+        "before": null,
+        "after": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c"
+      },
+      {
+        "label": "primary-delivery-r2-initial-workflow",
+        "exit_code": 0,
+        "before": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c",
+        "after": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c"
+      },
+      {
+        "label": "primary-delivery-r2-invalid-id",
+        "exit_code": 2,
+        "before": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c",
+        "after": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c"
+      },
+      {
+        "label": "primary-delivery-r2-after-invalid-readable",
+        "exit_code": 0,
+        "before": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c",
+        "after": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c"
+      },
+      {
+        "label": "primary-delivery-r2-trial",
+        "exit_code": 0,
+        "before": "68a74440aa88238da53d61418ad8b0ac30a92378a9e3d39af63e324103333a3c",
+        "after": "73c0788fbcac3b9ba685bf9f2a8fa99def68076b1d2ca3a838333463310af3ea"
+      },
+      {
+        "label": "primary-delivery-r2-trial-idempotent",
+        "exit_code": 0,
+        "before": "73c0788fbcac3b9ba685bf9f2a8fa99def68076b1d2ca3a838333463310af3ea",
+        "after": "73c0788fbcac3b9ba685bf9f2a8fa99def68076b1d2ca3a838333463310af3ea"
+      },
+      {
+        "label": "primary-delivery-r2-d-place",
+        "exit_code": 0,
+        "before": "73c0788fbcac3b9ba685bf9f2a8fa99def68076b1d2ca3a838333463310af3ea",
+        "after": "df8bc5fc99558238d8f8df0f3c931216ff1d05e30e852acb080e260b15cf8d26"
+      },
+      {
+        "label": "primary-delivery-r2-d-gift",
+        "exit_code": 0,
+        "before": "df8bc5fc99558238d8f8df0f3c931216ff1d05e30e852acb080e260b15cf8d26",
+        "after": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c"
+      },
+      {
+        "label": "primary-delivery-r2-plan",
+        "exit_code": 0,
+        "before": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c",
+        "after": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c"
+      },
+      {
+        "label": "primary-delivery-r2-context",
+        "exit_code": 0,
+        "before": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c",
+        "after": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c"
+      },
+      {
+        "label": "primary-delivery-r2-template",
+        "exit_code": 0,
+        "before": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c",
+        "after": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c"
+      },
+      {
+        "label": "primary-delivery-r2-record",
+        "exit_code": 0,
+        "before": "2d1d6265d130eb2530c8e1b6532e5f69945893897960b4f95aeec45477a5e23c",
+        "after": "201ed45ab680da58d6a441e6b12bf0861f38ae518214b39ac258e6f920fbf45f"
+      },
+      {
+        "label": "primary-delivery-r2-check",
+        "exit_code": 0,
+        "before": "201ed45ab680da58d6a441e6b12bf0861f38ae518214b39ac258e6f920fbf45f",
+        "after": "201ed45ab680da58d6a441e6b12bf0861f38ae518214b39ac258e6f920fbf45f"
+      },
+      {
+        "label": "primary-delivery-r2-after-record-workflow",
+        "exit_code": 0,
+        "before": "201ed45ab680da58d6a441e6b12bf0861f38ae518214b39ac258e6f920fbf45f",
+        "after": "201ed45ab680da58d6a441e6b12bf0861f38ae518214b39ac258e6f920fbf45f"
+      },
+      {
+        "label": "primary-delivery-r2-structure",
+        "exit_code": 0,
+        "before": "201ed45ab680da58d6a441e6b12bf0861f38ae518214b39ac258e6f920fbf45f",
+        "after": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338"
+      },
+      {
+        "label": "primary-delivery-r2-discussion",
+        "exit_code": 0,
+        "before": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338",
+        "after": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338"
+      },
+      {
+        "label": "primary-delivery-r2-draft-denied",
+        "exit_code": 2,
+        "before": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338",
+        "after": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338"
+      },
+      {
+        "label": "primary-delivery-r2-before-pause-workflow",
+        "exit_code": 0,
+        "before": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338",
+        "after": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338"
+      },
+      {
+        "label": "primary-delivery-r2-paused",
+        "exit_code": 0,
+        "before": "9764592fce9eb78e07142ccd5832ed245b936774bfe4155d0bd6e76c53fde338",
+        "after": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267"
+      },
+      {
+        "label": "primary-delivery-r2-status",
+        "exit_code": 0,
+        "before": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267",
+        "after": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267"
+      },
+      {
+        "label": "primary-delivery-r2-suggestion",
+        "exit_code": 0,
+        "before": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267",
+        "after": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267"
+      },
+      {
+        "label": "primary-delivery-r2-discussion-denied",
+        "exit_code": 2,
+        "before": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267",
+        "after": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267"
+      },
+      {
+        "label": "primary-delivery-r2-doctor",
+        "exit_code": 0,
+        "before": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267",
+        "after": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267"
+      },
+      {
+        "label": "primary-delivery-r2-compare",
+        "exit_code": 0,
+        "before": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267",
+        "after": "61f860cf6c28cb960b5f52132cc7d50877b316ff8a9c0dc08bdf731cf788e267"
+      }
+    ],
+    "build": {
+      "content": "1fdb8d6b7b1698e95291168f46a7874882bcf38e9050c6c7530bb291f4c9e4ba",
+      "runtime": "a5d887bfe37406dc570d591786f4776f7c73a328efed5dedc27d8a00c4ae223e",
+      "matches_main": true
+    },
+    "copied_body_sha256": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451",
+    "new_literary_han": 0,
+    "units": 1,
+    "stage": "paused",
+    "deferred_preserved": true,
+    "candidate_preserved": true,
+    "rejected_requests_state_unchanged": true
+  },
+  "native_product_calls": 188,
+  "product_calls": [
+    {
+      "label": "native-five-after-invalid-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e7d3dbb60eb095c1993cd6fcf9a53d75660e5640f12334d4248b7895e141139e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-after-record-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "8443900b0fa765d8315b9f8ff8c15619259f2c041f7a0ec8b2f09cf0baa491ab",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-check-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c0e465c49c2023b8f6f3e5868b2d0bbbcfaab3d47eef5a3226bba19d2833d77",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-context-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "428b28b93d028c6287d598e3ac6407d48b21e1da9a1ec79e8e00c7a48c2492ef",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "1",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-copy-doctor",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "3771557c15f8e57fd2b233063534034500919301355570a322a0185c35d4c6ab",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品/.writer/tool/bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-copy-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "83681721265a523ef6c4c8b70c62825acf5ed5ebdb18f5636ad003c966d052a9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-five-copy-main-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a804d5a8978271766b99bc7abb8c7473c170fe23ca4cb60ebdf746c45333201c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-five-copy-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a01741025bc28f70025ea524bcacb3fb152d23d881b971f91f7f5cda8a66f9c9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-decision-current",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "fc2d6b15086e5e341fe2987c03af03ae8a81ccd026739d60c65868426af4d7f5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-decision-gift",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b9cdc3828f7e52bce10db4463acf0f3a8a4e5f79bef0ac97d894519184b43458",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/decision-gift.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ],
+      "input_file": "native-delivery-check\\inputs\\decision-gift.json",
+      "input_sha256": "5ac6703eb37f92cdfebd9f2ec52e3c35df7c8a57326fc2077ac90a9efe7260f4",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-decision-location",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "04c282ac29a893ea51d272f7fcbf1931bab36ba4b1e720b462385cf3ef083069",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/decision-location.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ],
+      "input_file": "native-delivery-check\\inputs\\decision-location.json",
+      "input_sha256": "7236a3fa9b2041ba1166eca0f75baabb3140c6d0194a69e43b41baf4c40177b5",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-fixture-main-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "75b0f9c97fa074f5df2ff0303705085579000a96e483fd2555173723f3f20b8f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/migration-matrix-v9/schema-1"
+      ]
+    },
+    {
+      "label": "native-five-fixture-main-doctor",
+      "exit_code": 1,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "6c684a8209377c8835329b5a0145b35debd59ca43bdb524df261ef527659d3c4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261018-governance-a/migration-matrix-v9/schema-1"
+      ]
+    },
+    {
+      "label": "native-five-fixture-old-status",
+      "exit_code": 2,
+      "code": "COMMAND_FAILED",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a2a23065bc2259d557088733aa21b074fdd257d2ca5e828312b5befdaadfd6a0",
+      "argv": [
+        "acceptance/20261018-governance-a/migration-matrix-v9/schema-1/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/migration-matrix-v9/schema-1"
+      ]
+    },
+    {
+      "label": "native-five-init",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "9e22b5017c6de4d68e4dd3f6fbd80034ca2ea087142a6725322e30c9c058487f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--kind",
+        "novel",
+        "--title",
+        "最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-initial-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0affd4505c33e98fb0592fb55a2f00631bdee3e3f424899c6ab7761687250349",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-five-initial-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e7d3dbb60eb095c1993cd6fcf9a53d75660e5640f12334d4248b7895e141139e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-invalid-prototype",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f446518cda54f756dcb072d6d6a3a72009e91fdd908979ab096ab7a302a5ffab",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/workflow-invalid-prototype.json"
+      ],
+      "input_file": "native-delivery-check\\inputs\\workflow-invalid-prototype.json",
+      "input_sha256": "5f670349038de0e95347dab4885a46e802d45870df30ad5f90caf2853f9985b0",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-main-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "eadb2b18befc24fbe7c3ce57fa5368f343dffb29192ee5c6c57eac2a673652e8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-five-old-four-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "2d23859a6fb82709fea19fc4b9a023695cdf14681178d078957ecfa95b961396",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-five-old-one-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "6ea9389a656a556ae854cc0f600b0fb733470f1acb8b377a6fee77b8f2d1a3d8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-five-old-three-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "19e804fe375679a0ac4b5a07ac40f8b6a3f15e0fa98ea4e3438253041cc2850d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-five-old-two-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "bf42c93ae48a2c43f888e7dc121615a20e2d3bcfe5160c63c03ec246015ad56f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-five-paused",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "9fe4fae9b4d24da1f9f4b529658c2e83dbb5cbddaa93fa10459f48ae45e9705f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/workflow-paused.json"
+      ],
+      "input_file": "native-delivery-check\\inputs\\workflow-paused.json",
+      "input_sha256": "e2a598f8f770cfb73f979e0657615f0bcd3eab7ff4e250a37f4cbd123c23bbf5",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-paused-discussion-refusal",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6ee020cc58ee3883494a35a2f0f94e37c3649b9c51365262d06b2998c989956c",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-five-paused-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a1a8a2186f5244f9caedc03309b43b4300d23260631f6cad239aac0a3b39e702",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-paused-suggested-show",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "7905252bf3c2eaf004e7a6bbc7c4a71adad6dd05397bb8b4557ec7f49a3e0bfa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-delivery-check\\最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-plan-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/plan-1.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ],
+      "input_file": "native-delivery-check\\inputs\\plan-1.json",
+      "input_sha256": "d5c5b5c7a2848739e8fd192250255203325528ae39dd3736f47b949e2a5196ae",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-record-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0362a24bb44cbf7f01925ac704ac32d69cbca2393509e634afdfcdefa5b04a73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/record-1.json"
+      ],
+      "input_file": "native-delivery-check\\inputs\\record-1.json",
+      "input_sha256": "fe80dacfc7e96a8f244afb6cc4e6cb29d7a7e8e88acb1559a4786aae48f1f504",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-record-template-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "48dcd8de35b01802129b4fe8860aa853278b2b575649daa2b9077711e0eac47e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-提手.md",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ]
+    },
+    {
+      "label": "native-five-structure",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "dcff212b2623ee0b975d7a5fd1fdf676782ee64d2d5c845fde601ad0b0f959ce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/workflow-structure.json"
+      ],
+      "input_file": "native-delivery-check\\inputs\\workflow-structure.json",
+      "input_sha256": "f89faeaab903c30a032687897980ecab010d5a9f4bf5f68507639ab4d15ec366",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-five-structure-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d44c177268daa0a93c58bf44ee1cd5f53ee7129dd45c8f2a7f224a05a5d7cb0f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-five-structure-unit2-refusal",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "3c094549470a2fee9f348f1c9af9ba71f89a25e0b8d6aa850e50022b0d19dd3f",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品",
+        "--unit",
+        "2",
+        "--purpose",
+        "draft"
+      ]
+    },
+    {
+      "label": "native-five-trial",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "15f9e829c91bf16b09fccd574260c5ab1642f8ca4a30bccaa0a351a50680b67c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "acceptance/20261018-governance-a/native-delivery-check/inputs/workflow-trial.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-delivery-check/最终交付确认作品"
+      ],
+      "input_file": "native-delivery-check\\inputs\\workflow-trial.json",
+      "input_sha256": "7bae0f732139e3bbcd5c59a974ea6f034c96ed0418039c0ccbd9ce3ac356fc03",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-bundled-final-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c33af42456acbcbca72304c0a541f291a6203bd649878ca8d64a6731e8149da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品/.writer/tool/bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-bundled-final-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "778db27796f038b08d1dc9d84807925a9546bbd5daa090ac2f6ec9366a507bee",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-bundled-workflow-show",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "6f693b9461c0b0be1378093352ab5edf921aebd380524e51ba9224dc3b080481",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-check-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c0e465c49c2023b8f6f3e5868b2d0bbbcfaab3d47eef5a3226bba19d2833d77",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b4532df72e38cec6af41216dcdcca78e37b2470b372c2553a8a2492cf2e5a8b7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-four-context-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "822574dfb842bc449700b84eae3430dbe0b35e63c42ff2d48451440bfcbc870a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--unit",
+        "1"
+      ]
+    },
+    {
+      "label": "native-four-decision-gift",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4a7f3b943308e2a1e881ab9d668e15657b6260620ede4b9427aba41265ae9484",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-gift.json"
+      ],
+      "input_file": "native-reserved-check\\decision-gift.json",
+      "input_sha256": "ec952ce5633396618cd711b5b2fd3e1c8d5373633dccee53e10dc186e5f52aa7",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decision-gift-replay",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "3475b7f22d5e48e392b04637d0c87d5e22fac783c9987485e13bf6f23dc1b1ae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-gift.json"
+      ],
+      "input_file": "native-reserved-check\\decision-gift.json",
+      "input_sha256": "ec952ce5633396618cd711b5b2fd3e1c8d5373633dccee53e10dc186e5f52aa7",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decision-location",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a13fabb73a6b57efbe567c748d774082ace3d3397d5dccca55cb7d5058afd75f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-location.json"
+      ],
+      "input_file": "native-reserved-check\\decision-location.json",
+      "input_sha256": "2c7fce908c7c22ccd0ef2084c9a26cee1d6606142debba578f52c3dc414efa51",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decision-location-replay",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a80199e382a56011163ac4d2797cd75d6ca06fdcaf4f6ca4c083e2eaf8a8f3aa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-location.json"
+      ],
+      "input_file": "native-reserved-check\\decision-location.json",
+      "input_sha256": "2c7fce908c7c22ccd0ef2084c9a26cee1d6606142debba578f52c3dc414efa51",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decision-reserved-constructor",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f84715b3d7c96b25592b59cecfda46af6a11f4e31dc2925e10b6205b4abfbd24",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-reserved-constructor.json"
+      ],
+      "input_file": "native-reserved-check\\decision-reserved-constructor.json",
+      "input_sha256": "cdc30d23740b69024f1e551f88df2b06b251295ad1d6589864eaa2389e416119",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decision-reserved-proto",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f84715b3d7c96b25592b59cecfda46af6a11f4e31dc2925e10b6205b4abfbd24",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-reserved-__proto__.json"
+      ],
+      "input_file": "native-reserved-check\\decision-reserved-__proto__.json",
+      "input_sha256": "abb70b3352cadc2b1a8ad30010ed44904bf8c43ba7b88da5169f4c3274155458",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decision-reserved-prototype",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f84715b3d7c96b25592b59cecfda46af6a11f4e31dc2925e10b6205b4abfbd24",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/decision-reserved-prototype.json"
+      ],
+      "input_file": "native-reserved-check\\decision-reserved-prototype.json",
+      "input_sha256": "f49c57aa40eba658bf774df50d3acae92d03880ccb8dcdd5b0d6f6b8ee2e1fb9",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-decisions-unit1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "7cd0dcb3c8dbeedcf695ee9af18a1eb0d32ce3ff4727098ca916920721278338",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--unit",
+        "1"
+      ]
+    },
+    {
+      "label": "native-four-identify-bundled",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4768be4f2040a9e07b7529bd5a718185ee2e50bf86fc640cd3b117f17deb07d2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-four-identify-main",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d1e60f7959f1791c5e953b68f2f61b7a19b51a81cc4f0bb59c639703ab5598fe",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-four-init",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "cc7eded651143717fbb95dabae0ad850e93d5d6587f68966a33e474973a55fa0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--kind",
+        "novel",
+        "--title",
+        "最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-initial-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-paused",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "82daf2822ad4392bb8dce3d9c104bbdf31748f7c538bcf9f26325f9a2a43332c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-paused.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-paused.json",
+      "input_sha256": "3a004c77b98666fbcfd55090331e56dc3e3a50da7c55a1be957663601433445e",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-paused-discussion-refused",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "82ca3d46b05125f0252608958546fe91cf3992ad0e17e74cb0b376ff7a08a4d8",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-four-paused-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "65490de6a4fa1f78ecef4b4a416ff99f44ee185ef05d6e0bf0859d09d74d8ab2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-plan-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/plan-1.json"
+      ],
+      "input_file": "native-reserved-check\\plan-1.json",
+      "input_sha256": "f1192aefe517fda9d493eef701dfcf6013effbdfcc7804ef9279b2a9c92b63cf",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-record-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0362a24bb44cbf7f01925ac704ac32d69cbca2393509e634afdfcdefa5b04a73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/record-1.json"
+      ],
+      "input_file": "native-reserved-check\\record-1.json",
+      "input_sha256": "1d470a17e2259b5cf20c0c0949206338ef0622f767770be6e4851c070a46896e",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-record-1-replay",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "3188f2768d134a003abec422f0afdeca6083cfce58a340ae053d7f4aa86d699b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/record-1.json"
+      ],
+      "input_file": "native-reserved-check\\record-1.json",
+      "input_sha256": "1d470a17e2259b5cf20c0c0949206338ef0622f767770be6e4851c070a46896e",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-status-after-decision-constructor",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-status-after-decision-proto",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-status-after-decision-prototype",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-status-after-workflow-constructor",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-status-after-workflow-proto",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-status-after-workflow-prototype",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "febe8d0d1a19bef31ea656340c0607db66dbbde78b62d75ecb2701a82dfc597f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-structure",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "7f655e4c1c39d1eb6cba70e9c23388cdf9a0d70e60c85c5a450aa933cd169bf0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-structure.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-structure.json",
+      "input_sha256": "fd465ad0ccef11decea0533e808cd50b1c01b9d9f354368fed9e23b6c147fc54",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-structure-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "8f121c369fb1d5e5122159c0a50afdb38ec395f002e6a04e462cbdf4172bcf25",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-four-structure-draft2-refused",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "0da595763f73a279846d123f97ba9e4a4c4a4d88a8bc6356d29fcca6c7eb6e07",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--unit",
+        "2",
+        "--purpose",
+        "draft"
+      ]
+    },
+    {
+      "label": "native-four-suggested-workflow-show",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "6f693b9461c0b0be1378093352ab5edf921aebd380524e51ba9224dc3b080481",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "D:/work/other/ai-writer/bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品"
+      ]
+    },
+    {
+      "label": "native-four-template-1",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "5f9aae638c502f1c4303b5fd7ddb83220214e9d789c2bfd6dd2b1255573225fb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-提手.md"
+      ]
+    },
+    {
+      "label": "native-four-tool-help",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "275095d865c327975e5619892abf0c5598f4fdebdc0a70f2b903d622f82b67c1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "--help"
+      ]
+    },
+    {
+      "label": "native-four-trial-tostring",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "7b62e0ab4d1cb1324e22b139cfd9b2a54266c5740df8d38b523e87e4d4c93be3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-trial.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-trial.json",
+      "input_sha256": "ff1c71c1923c6eb97eb1faf125d133e8b7b7044f8ca5c5e820fa72c391993a81",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-trial-tostring-replay",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "6f5f2d59e50b70f7c411dd61698e7214c3bf469e6432bf813d850f984525de50",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-trial.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-trial.json",
+      "input_sha256": "ff1c71c1923c6eb97eb1faf125d133e8b7b7044f8ca5c5e820fa72c391993a81",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-workflow-reserved-constructor",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f446518cda54f756dcb072d6d6a3a72009e91fdd908979ab096ab7a302a5ffab",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-reserved-constructor.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-reserved-constructor.json",
+      "input_sha256": "417196d601d35cc7cd0ca53bf2a69b4e62ec90362d2a084dd1fd8fe5916508da",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-workflow-reserved-proto",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f446518cda54f756dcb072d6d6a3a72009e91fdd908979ab096ab7a302a5ffab",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-reserved-__proto__.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-reserved-__proto__.json",
+      "input_sha256": "878f03fddee08c2f926d2c79f3f43f69d0d79de832512b2a81a6b65c51e90220",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-four-workflow-reserved-prototype",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f446518cda54f756dcb072d6d6a3a72009e91fdd908979ab096ab7a302a5ffab",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-reserved-check/最终交付重放作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-reserved-check/workflow-reserved-prototype.json"
+      ],
+      "input_file": "native-reserved-check\\workflow-reserved-prototype.json",
+      "input_sha256": "b645b28f08e9971951f4a83d12518d1787ded7ca7d4352d0776cdd79bb605d8f",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-one-bundled-doctor",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "14a0b8e9dfc230229fb5682d6b079081f11094af7889699a41c1bbdb7828e9f6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "doctor"
+      ]
+    },
+    {
+      "label": "native-one-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d033d203dbac7ea52ea3e0e756e8d3e1439279a53b8999379269322587ee7494",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-decision-craft",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f5155c5700978bcd3837f4057a86840ba0ddcc8cf42b5897d57c11944e90accc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-craft-input.json"
+      ],
+      "input_file": "native-create\\native-one-craft-input.json",
+      "input_sha256": "321ae6a44275b5b663ee31098e6b8891f233f893407e18660046ea3fb33adf09",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-decision-first-item",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "3d87c9c09bbfff670e2985bf0a6b439092551c2a2965b720fb61275669a939ec",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-first-item-input.json"
+      ],
+      "input_file": "native-create\\native-one-first-item-input.json",
+      "input_sha256": "09f987dd7865597adf66f9b247f69c4d01cba5c463f7fcad6b541c5f848a2bf7",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-decision-sect",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "48f2da5fe4f3831da7eee30b1ec45ebffd458931bdebc02e4633b4021fb950f4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-sect-input.json"
+      ],
+      "input_file": "native-create\\native-one-sect-input.json",
+      "input_sha256": "fbda0f64a2e876084e5fb52b64cc51d3ee95655ad435661d6f32e1b12f4ea5d9",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-decisions-current",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "20f744c9d06d12ed268de7642dbc677159c6de6bad8d48f1df9dfea9750982f1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "84679877ffcf565be6805aaca353c44c0571fe511877adc1b1a06ef717303c55",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-init",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0452d1be59a34dc17876bff09ea18fb04cc4e66c83bb87c264c14d364042602d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--kind",
+        "novel",
+        "--title",
+        "纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-long-enable",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "2e52525434b1ae8a42730788cbb127c8bb0ff01c83e0ed5b031ce6396fcbec62",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "long-enable",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--expected-revision",
+        "0"
+      ]
+    },
+    {
+      "label": "native-one-pause-structure",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "005a5bad1393164a0b0be55c97a717612e7cbc2ce58f27d959e93fa4c86df7ae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-pause-input.json"
+      ],
+      "input_file": "native-create\\native-one-pause-input.json",
+      "input_sha256": "3a38a7e2e7f1440149bc34f22bc897c91c9b87f99f96a126c310dc31c423e09c",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-reject-u7-context",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "219875c48099a2a00bf1e5579c5261b343325faa9b2c8f354396c70a24f2c245",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--unit",
+        "7"
+      ]
+    },
+    {
+      "label": "native-one-reject-u7-record",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c4be0ff92978ca0595ccd8bfb339d341baaaf20840c5176f04fb6a288943b734",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-fake-u7-record.json"
+      ],
+      "input_file": "native-create\\native-one-fake-u7-record.json",
+      "input_sha256": "c76f4dab8c626ab0e7f77d8bc0ee2c242568412d4b4d904d709c9f8558922091",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-reject-u7-template",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "882d58ff6211122a75a3fff599469e175609ef6c35fbb18370684d72a980606e",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--unit",
+        "7",
+        "--draft",
+        "正文/0007-越界探针.md"
+      ]
+    },
+    {
+      "label": "native-one-review-1-3",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "16b82568d4119473d0603801f4006f8d7f8e0f6b78deaeb1bcf15d8796985aad",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "review",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-review-3-input.json"
+      ],
+      "input_file": "native-create\\native-one-review-3-input.json",
+      "input_sha256": "76f5418485a54dbd2b74e3d7797ca502039839a7835c1ce5e7468c965c90ed4f",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-review-1-6",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4f54ade6cea990ba2b56f791d348c7d4ef291e52752b4a6baf12f4984ffe8a4d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "review",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-review-6-input.json"
+      ],
+      "input_file": "native-create\\native-one-review-6-input.json",
+      "input_sha256": "d5c065914ee7fa0742b48075dd4028f9cff3282fe3798ef8f4caa1c521fa1ced",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-status-compact",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4e4804d8f45c8af4bcc33bcf676e847ed3e9b1f5889e2226da9545abcd093cce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--view",
+        "compact",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-status-full",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "8533d3be480edbad51c44ed3d94d076ba6600b1978e968321e29e0af907c8bb5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--view",
+        "full",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-status-initial",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "72e1bb69a7ab491bec89c5d80a9582acb498aa06109c1005b3621b7efcad0674",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--view",
+        "compact"
+      ]
+    },
+    {
+      "label": "native-one-trial-set",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "29326fb99db982c4a210a1253969283f16caf87b5bccdd36ab00a13d4fd632f9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-trial-input.json"
+      ],
+      "input_file": "native-create\\native-one-trial-input.json",
+      "input_sha256": "51bc2818a1c1ee21ddfd62b5c90bc3fd94fe8cd7bcb60aa3f0ce6d054fcc73d0",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u1-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a0f681ceb70e5be8ed9ec7a678adabf7302e077c1f0f349f78555b0be4addc57",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--unit",
+        "1"
+      ]
+    },
+    {
+      "label": "native-one-u1-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u1-plan.json"
+      ],
+      "input_file": "native-create\\native-one-u1-plan.json",
+      "input_sha256": "edb0b9570d97e6d32262414805ff99618701df029be583766e399723b81a1730",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u1-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f25cf190106e9a89ec0c6ca9e70919c3789c4abced64df9e757ce27787ec297d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u1-record.json"
+      ],
+      "input_file": "native-create\\native-one-u1-record.json",
+      "input_sha256": "85cd6f54cde0bc12b3d93115fe126d17441d7bf5adaf134ce5a71d5484266f87",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u1-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1cae5c6961cbd9cb3352deb5d7db7d939028493bd8815f91c979676d8a8ad145",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-留下那片纸.md"
+      ]
+    },
+    {
+      "label": "native-one-u2-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f33fc0f9d12a98e34d851c70207ce8b49ecfc86d6cfd92e2b3a304512fd5241e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "2",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u2-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "5c980f23c7bcc5a033691468a245ff7d8c584df00edb0519e7065919eb0b4de6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u2-plan.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-create\\native-one-u2-plan.json",
+      "input_sha256": "5bfa8f3b76296e9f6a140cffeb298d3e624ba209ed15c44bb7566b23a537f290",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u2-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "eb4184735c0cda0f5d32bf3b60cad9b878ce323da3c7519b5b75f05c4e2579a3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u2-record.json"
+      ],
+      "input_file": "native-create\\native-one-u2-record.json",
+      "input_sha256": "a26e031e96a96ef2c002d7c5d6c64d00602d8b285e7f1e21e8f0752853bf4973",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u2-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "ee9955429c5cce827f763a13bd93fe80278882c44a24f52e694e2af3b71badc2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002-碗底的清水.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u3-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "7796c996f0a97d8cbf4d7f863df7ad6777aa9c25acf093b8d970ac7375f4dd96",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "3",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u3-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "3a3b02e6539354d7acc1bf43aa8c8eadd3478d4f38396f53468f28ec76e18761",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u3-plan.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-create\\native-one-u3-plan.json",
+      "input_sha256": "cfa66468db02de2729e811954c81c65b54f82f6d782d2288ec2923edf62dbe7d",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u3-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "bfd935d16a219d2c68cb7d5cc153c40d0164853b8623387b6425f223653d087e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u3-record.json"
+      ],
+      "input_file": "native-create\\native-one-u3-record.json",
+      "input_sha256": "d135c028cb80e756ee97c503d88b6c0f6d4740aecbe46b8997b83eef5534b41f",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u3-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d5ac3e182c6b42d58196d30f332b339f89cd9b912aff78f24d59da3c538bbb9f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "3",
+        "--draft",
+        "正文/0003-不肯弯的篾.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u4-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "72133dd8a9d949ed9d06465e14186d44f8a95ddd48a39bcf436c4503f111d759",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "4",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u4-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e45766925d119aa433c315add69c5d1a85d8d3a81d9fa034b3c587c465e5539f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u4-plan.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-create\\native-one-u4-plan.json",
+      "input_sha256": "4e26ab5548070f93adc2c966f53d48d3a953b672d87daa5aa542ea55af991108",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u4-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "63be4ba19af3905c3689c80f131815a6588ff440351091682926a386a6adf022",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u4-record.json"
+      ],
+      "input_file": "native-create\\native-one-u4-record.json",
+      "input_sha256": "ab6289f1396e2680bab65d51d171570247e162a2f33ae812197837a7fab1213e",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u4-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b3ade14c6a0c37930f16b98cb0338b4872fd98aad15643856875f1db639d9850",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "4",
+        "--draft",
+        "正文/0004-烟从哪里来.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u5-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "deaf40e8aa796bc3942bbee4c8bcbd33b5ac8e17abfaafd6e1a88805136182f3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "5",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u5-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "07f45a02365990d7c56229755e157057460807e5240a44e1f04cbf8aace6ac46",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u5-plan.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-create\\native-one-u5-plan.json",
+      "input_sha256": "69cd947f1b9d0d78f1524000f6c35e076f8e75de0bfca5f2dbeb6727b6b68439",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u5-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "56e3480ce7c5c294394d8987730ef2b8dd92b4b40568bef80217924456cc0eea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u5-record.json"
+      ],
+      "input_file": "native-create\\native-one-u5-record.json",
+      "input_sha256": "d57c190e62fd6959bb01c30caaf202170fc9a02843e408e88b15bc08634fc2f1",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u5-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "9337cedca3827bd52b5829898bdda35d60bc2cb9a7bd634a2bcee83f31f440ed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "5",
+        "--draft",
+        "正文/0005-给用灯的人.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u6-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "136721b428fbcb313c334e8af5796cc5ba943d0c1cda90fd24965612bde5b5ac",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "6",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-u6-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d00abf8bb236af61aaf89f68fe2324d130ea771aaab9614bfb88daddde17bcf3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u6-plan.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-create\\native-one-u6-plan.json",
+      "input_sha256": "50c6b53d345af20a8c195d8eab82c67e76e899c62be7e6a8b9dacfcf20f47bd6",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u6-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a9a5d1a4b4fe96624d5c0b9e73c483b9be4e3a12434e0f76c9e3180195f3846f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-u6-record.json"
+      ],
+      "input_file": "native-create\\native-one-u6-record.json",
+      "input_sha256": "1202e400c9b303e95d55815987226313d1059dd086ad45cdbc048f3809ee64c3",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-u6-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "79064fa73efcae194278f50fcdc626457cb3917aaf9c91cb8ecc1533159417ad",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "6",
+        "--draft",
+        "正文/0006-灯交出去以后.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-one-volume",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "92825ceff61d16f7502e1dde150574f018fa1ed0d59b69b54e2812bc76a94b3c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "volume",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--input",
+        "acceptance/20261018-governance-a/native-create/native-one-volume-input.json"
+      ],
+      "input_file": "native-create\\native-one-volume-input.json",
+      "input_sha256": "ae109e9e88afd790d930d4e40ddb76374c503eeec7d38e783ce994ac1493c4b8",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-one-workflow-initial",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0fff830ecd5de603b16e8ae221921dc1b2c4becc411c610429d1a1c62b29ee02",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-three-after-record-workflow",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e2ba2c856975467cc094b27feab6efeeaa3553969fa5c6bd405512a5093f654a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-before-pause-workflow",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "902d1be12bacf0516d95028a1d7bb206bef8da6140b190a3f5d635fd2f96a207",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-check-one",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c0e465c49c2023b8f6f3e5868b2d0bbbcfaab3d47eef5a3226bba19d2833d77",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-context-one",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e000ab4501e219a33b5b8f3f91cb9c3ffc176379675da9426b060cf69c1c1154",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--purpose",
+        "draft",
+        "--unit",
+        "1"
+      ]
+    },
+    {
+      "label": "native-three-doctor",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "75a7265249a9ad414fb34b58a2771d377c27686a6d1426e8c2ff6fda3555b4c4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-final-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c33af42456acbcbca72304c0a541f291a6203bd649878ca8d64a6731e8149da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-final-decisions",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b92eef55c955c8b7fd8255dacb152f1239130c6a5a629a3f21c5092ca6e26ee7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-gift-set",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "6fc2a6fe4a0474205b767742f84db7b98e1449d6c368c87c9cf36940544b85a4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/decision-gift.json"
+      ],
+      "input_file": "native-final-check\\inputs\\decision-gift.json",
+      "input_sha256": "ba47b283c9cc6b7c0cf0d0756e23acf4eb14a85a45ed6dc3474217349d8315ba",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-three-init",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d91b987190b28c2d1dbf549ccdbe3935781d6eb65062c2e2075fd938bb47fb6d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--kind",
+        "novel",
+        "--title",
+        "最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-initial-workflow",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0fff830ecd5de603b16e8ae221921dc1b2c4becc411c610429d1a1c62b29ee02",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-location-set",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "36241069caff4d46311e18419e433b3d9e4d115e29adf756c0c9c4f86152808c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/decision-location.json"
+      ],
+      "input_file": "native-final-check\\inputs\\decision-location.json",
+      "input_sha256": "ee5e65050b6069cc023f307d2d1da2987f5939a570943f236ae6f9a585c14ec3",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-three-main-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "28d7eaf234a9f1c17ca62673ba00393a19f3c4a621cc4564b496167355c823cb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-three-new-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "84bf10e2835694eabd9d5e8d2d7fe952612ba1a5575788798f43498d4d409cbd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-three-new-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d6d321f837059f4b0068dcf4bd56f346ec0c3799a4ae21430f6b99506ab0942b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-next-draft-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "879fe148c0f4cba18d48f54b27d7774c494d9b5d9219b8cc1a14ff2d6e4a54eb",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--purpose",
+        "draft",
+        "--unit",
+        "2"
+      ]
+    },
+    {
+      "label": "native-three-old-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4db8ca333656682fe3d22d60956889d3e87afdf78babd005ef0074b2a3d8b78e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-three-paused-discussion-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "8aa6e1051c21a9a7513cbd6158f76a0661dbd5419e1561af17582b9c9d64777e",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-three-paused-set",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "ada84c96db9ae4c634d7e200ccf50f7ccf21f798c19057e71ac04505d74be6b5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/paused.json"
+      ],
+      "input_file": "native-final-check\\inputs\\paused.json",
+      "input_sha256": "d0fbcc706c75387d9095d870d067a5d635111983c1b335a7fdd7b5b3b6e9e781",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-three-paused-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "04742b68116435cdf1a8c5322cfddd15df5f4faa4b2688a3f8a1db1f075ff182",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-paused-suggested-show",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b7c606e31ac0b8bc5df710825aa84f63db996a470497c2e5e7c5e906c36cd740",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-final-check\\最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-plan-one",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/plan-1.json"
+      ],
+      "input_file": "native-final-check\\inputs\\plan-1.json",
+      "input_sha256": "04276a19b04e92bf0abd1b77b373c3dfb59b1b6372975a6098b815c94512a9c2",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-three-record-one",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0362a24bb44cbf7f01925ac704ac32d69cbca2393509e634afdfcdefa5b04a73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/record-1.json"
+      ],
+      "input_file": "native-final-check\\inputs\\record-1.json",
+      "input_sha256": "2f8c638ab735d1705ea35d4124375e3edbd59287ec47501efb197fa8cb30b7b5",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-three-record-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1d7e70bf5d5805d4d712306876e147e526469e148abb82cd9d18906c1ac20809",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-提手.md"
+      ]
+    },
+    {
+      "label": "native-three-six-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "84679877ffcf565be6805aaca353c44c0571fe511877adc1b1a06ef717303c55",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-three-six-draft-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "ed5bf2aa696a2f746a63288345a0993936ff48ca56891015b72df3ce310e5b4c",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--purpose",
+        "draft",
+        "--unit",
+        "7"
+      ]
+    },
+    {
+      "label": "native-three-six-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4e4804d8f45c8af4bcc33bcf676e847ed3e9b1f5889e2226da9545abcd093cce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-three-six-tool-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d05908ee3a06b21ea2398f33f3cbff960ffb48f6f859c7479a3e897f235b8c52",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--other",
+        "D:/work/other/ai-writer"
+      ]
+    },
+    {
+      "label": "native-three-structure-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "82477d6601b7c4aab08c028ff2423d9a7131cbdeaecce8ac7e1be44adc2b04c9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-three-structure-set",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "34a3c94ffa42ea5a89f97dcd184896f86662b33d5b6d7f756fcf3a4bee00ee9d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/structure.json"
+      ],
+      "input_file": "native-final-check\\inputs\\structure.json",
+      "input_sha256": "95af171b9ca41312f933661eb20c8d64b8155bcb0491f71f078bd34a6cfe47ef",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-three-structure-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "c9c8b9e808a3c330edf3bca3836376e16e9b40611b79f3f26a2c678c38bbd4d9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品"
+      ]
+    },
+    {
+      "label": "native-three-trial-set",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "693d1215daeed031ba8903b1487ff7162a8fe070bef94e158811f6a05bad8e04",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-final-check/最终回归微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-final-check/inputs/trial.json"
+      ],
+      "input_file": "native-final-check\\inputs\\trial.json",
+      "input_sha256": "b760a23ef546c000b1cc3a8bfb64a0827b61d4744bdd0103bb1559acfd012dc8",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-final-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c0e465c49c2023b8f6f3e5868b2d0bbbcfaab3d47eef5a3226bba19d2833d77",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-copy-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0f26840ac444eae006cbb2f74d93c7ac3421985f3cce8ae20bb0fd9d00181430",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-recover/最终微型作品/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--other",
+        "."
+      ]
+    },
+    {
+      "label": "native-two-final-copy-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "7bb354282484a8e9a568fb9c524004683114bf0e0d81fb6831a1b68873ff7833",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-recover/最终微型作品/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-copy-paused-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e9a1589b392ecec6c824cf09275e8548a84eea85c4dfbac2c51f6c56ea4551a0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/native-recover/最终微型作品/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-copy-suggested-workflow-show",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "dffcca40c3daaecd915c882ce9413c17a254c1a2e2319144fddcfe32f07ea7ee",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\最终微型作品\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-decision-ending-prop",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b2363e5da070f6938432069094ba45a14a5121bd5be798acaa147abe67108238",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/final-decision-ending-prop.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ],
+      "input_file": "native-recover\\final-decision-ending-prop.json",
+      "input_sha256": "0036120909f100c10899f8098ec71627f8e68a94d46d25424b3b1bc8a9d9c6fb",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-final-decision-location",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "032c4deaec8e1ff8b2ca843c71d213d64efcca6fcdef655db7f6d0021d06e6db",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/final-decision-location.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ],
+      "input_file": "native-recover\\final-decision-location.json",
+      "input_sha256": "644d724355e724c7375ad29122510161579f02b0d9ec6e332662c43bef40bef6",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-final-discussion-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e16962a5f2dee33d7dac6076c93073a8b994906b8626809f1f8d4746d5c1b5a6",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "native-two-final-draft-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "dd727a94d6c6260644905ad812b76d412be772df18a06791001302850174aa2d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "1",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-init",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f356070c91c0bbaf65e9e275cabb0fd2b494a8df2fcf1de3e57241b9e121697f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--kind",
+        "novel",
+        "--title",
+        "最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-initial-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "8a9d1cc3f3cf86a06f36c27109c14b134a23fc4d7e799381feb2a1673bd76dfa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-main-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0f26840ac444eae006cbb2f74d93c7ac3421985f3cce8ae20bb0fd9d00181430",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--other",
+        "."
+      ]
+    },
+    {
+      "label": "native-two-final-main-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "2e08e171ea63c690439823a24c0d965a3fa9a7c45551c6aab04e3d77b2c43079",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-two-final-paused-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1ad77f6426fc8d2d87b56678e3956569772d32a6c80fa10adac92eab36f27213",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/final-plan-input.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ],
+      "input_file": "native-recover\\final-plan-input.json",
+      "input_sha256": "1d3f8eb1bb6409630f0fc88746300020bf12058b1711e8efb15073ee1074839e",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-final-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "e155d82131e94c5891c8b610ae21c7d8e51a23b53a523e893c3412c835f86cb5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/final-record-input.json"
+      ],
+      "input_file": "native-recover\\final-record-input.json",
+      "input_sha256": "6c7064b25ac99aaec2b6386585555bd78e16c31e6d9126f63090d101631d7ca6",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-final-record-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "ef35b7602b42257481df8028414d047d8053e50c2ed8bb8a44c56691399d3c16",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-石阶上的光.md",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-suggested-workflow-show",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "dffcca40c3daaecd915c882ce9413c17a254c1a2e2319144fddcfe32f07ea7ee",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\native-recover\\最终微型作品"
+      ]
+    },
+    {
+      "label": "native-two-final-workflow-paused",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4cab0a6bf22801316fa52e763d35a0287bd829a2f0f1263a8f044b17a0c5a452",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/final-workflow-paused.json"
+      ],
+      "input_file": "native-recover\\final-workflow-paused.json",
+      "input_sha256": "2b7b3eb9b0e6901754d87ae7fbc31ff733f473c9beaa5930e63561eceac64a80",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-final-workflow-trial",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "9dfa83f93fd900e697922ab989f2f922f0ecffec29e9780ea26a43e9f8aa69e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/final-workflow-trial.json",
+        "--project",
+        "acceptance/20261018-governance-a/native-recover/最终微型作品"
+      ],
+      "input_file": "native-recover\\final-workflow-trial.json",
+      "input_sha256": "fdc9d9f0badd58c0b2cd1424622c19da29c24f123e037c5fa5122a41f36b02ef",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "native-two-six-copy-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "80c17887356eae278e55221efec4187c98db2f0fe6ffff04acf06d6302509900",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--other",
+        "."
+      ]
+    },
+    {
+      "label": "native-two-six-copy-decisions",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "20f744c9d06d12ed268de7642dbc677159c6de6bad8d48f1df9dfea9750982f1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-copy-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "84679877ffcf565be6805aaca353c44c0571fe511877adc1b1a06ef717303c55",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-copy-draft-context",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c09e988d6568b60703c8fb8a3c373fddb8729784f8255172165c52dee7dd6abf",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "7",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-copy-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "ea41a756bd164ef612912a47704f01c2b3425c8262e8727e7bec286ff8437c27",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-copy-record",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6fa3734e7e9c02a062b46b4836ed3f231c90c18ec330e1f85035056ab1060e38",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "record",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/six-forbidden-record.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-recover\\six-forbidden-record.json",
+      "input_sha256": "14e2787675163dcc127c60993d07a39cf995b779676c571c8e04dd2f83737000",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-two-six-copy-record-template",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b3a2268c4fc19e357891d12436ef0aaf1871d14215854468abcd99d235e973e7",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "7",
+        "--draft",
+        "正文/0007-越权探针-不存在.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-copy-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f34d4715592c9daa5619a7d233535ae73f9500d09f8fb81b8118478d43ac4651",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "acceptance/20261018-governance-a/works/纸灯札记/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-main-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "d033d203dbac7ea52ea3e0e756e8d3e1439279a53b8999379269322587ee7494",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-main-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "80c17887356eae278e55221efec4187c98db2f0fe6ffff04acf06d6302509900",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记",
+        "--other",
+        "."
+      ]
+    },
+    {
+      "label": "native-two-six-main-decisions",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "20f744c9d06d12ed268de7642dbc677159c6de6bad8d48f1df9dfea9750982f1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-main-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "84679877ffcf565be6805aaca353c44c0571fe511877adc1b1a06ef717303c55",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-main-draft-context",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "219875c48099a2a00bf1e5579c5261b343325faa9b2c8f354396c70a24f2c245",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "7",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-main-identify",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "2e08e171ea63c690439823a24c0d965a3fa9a7c45551c6aab04e3d77b2c43079",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ]
+    },
+    {
+      "label": "native-two-six-main-record",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c4be0ff92978ca0595ccd8bfb339d341baaaf20840c5176f04fb6a288943b734",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--input",
+        "acceptance/20261018-governance-a/native-recover/six-forbidden-record.json",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ],
+      "input_file": "native-recover\\six-forbidden-record.json",
+      "input_sha256": "14e2787675163dcc127c60993d07a39cf995b779676c571c8e04dd2f83737000",
+      "input_binding": "retained step-specific input (early wrapper)"
+    },
+    {
+      "label": "native-two-six-main-record-template",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务继续讨论/规划；只有作者另有明确指令时才更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "882d58ff6211122a75a3fff599469e175609ef6c35fbb18370684d72a980606e",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "7",
+        "--draft",
+        "正文/0007-越权探针-不存在.md",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "native-two-six-main-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4e4804d8f45c8af4bcc33bcf676e847ed3e9b1f5889e2226da9545abcd093cce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-a/works/纸灯札记"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-after-invalid-readable",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0900ae59ae852d01cccb7a24be28da4e7cff0c12490ebc8a21b24e0b8eecdef1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-after-record-workflow",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "68de4ee34c6679418dd85fd9bcd0ba99b62867c385e25d7ff0faf771251a1861",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-before-pause-workflow",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "4222e029320a7c7d35bc1d881830cb9240b1d02bc5495e8e96060fe0d25905bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-check",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "1c0e465c49c2023b8f6f3e5868b2d0bbbcfaab3d47eef5a3226bba19d2833d77",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-compare",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "8c245e7dffb523755a8ce1099f6875201a9b1a4f8521f5e0c83f22a636098c45",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--other",
+        "D:\\work\\other\\ai-writer"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-context",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "cf55abb83ba30eaf8a8b2156ca5f38e58893486fa1a173a086cbd379bc2eb51f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--unit",
+        "1"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-d-gift",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "60fa4ab316bd7552cfbfb6b80f73ca0e4430beb6a5844ca0d55df9797ffc45ee",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\d_gift.json"
+      ],
+      "input_file": "primary-delivery-r2\\d_gift.json",
+      "input_sha256": "1affbc21f6a6e8f372033618a39f64c101f52b20c63acda6f8a98bec8246420a",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-d-place",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "58ab37f5d4681153a3ad6f2b391f0363a4f33a717c5741f85f026ef36d82f1f9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\d_place.json"
+      ],
+      "input_file": "primary-delivery-r2\\d_place.json",
+      "input_sha256": "9110de0e03c1d5a58a9f8a8e2eee6bd55f478b50056ab9eb2c89907f05b04bee",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-discussion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0bc822180a9da1f524255aab5241f3b30033011c2a6bbe578567c96e7747afa7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-discussion-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "当前所有创作动作均暂停，仅可只读查看任务。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "62ad97237c197bd3e45698fb6f39990cb58dfff8612b4c0719f4551c7728e577",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--purpose",
+        "discussion"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-doctor",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "bc3912921937b97433f7bbb2941655fdfcf6be4584c89261261e6faecdd03f23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-draft-denied",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f57e8e3c1103f5e8ddf9f5027a3430045b1de1c06439f030c31c817a28f5e3a6",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--unit",
+        "2"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-init",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "06f0f3bef3a2c188379730e3843be57f531aa78bd6f67388438b643c7bb68279",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--kind",
+        "novel",
+        "--title",
+        "最终源码交付确认"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-initial-workflow",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0fff830ecd5de603b16e8ae221921dc1b2c4becc411c610429d1a1c62b29ee02",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-invalid-id",
+      "exit_code": 2,
+      "code": "INVALID_INPUT",
+      "next_action": "按报错核对输入，查看本命令帮助。",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f446518cda54f756dcb072d6d6a3a72009e91fdd908979ab096ab7a302a5ffab",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\invalid-id.json"
+      ],
+      "input_file": "primary-delivery-r2\\invalid-id.json",
+      "input_sha256": "3772720c2d1d2615d9b764742fe29d118619bdb23358590e448e4eff00e02691",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-paused",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "bd541fa5cb04e4f573eb540364b3ec49732a561a6f0e95c6f1d71a4550a02b97",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\paused.json"
+      ],
+      "input_file": "primary-delivery-r2\\paused.json",
+      "input_sha256": "690d03cfd59a97dbdd2ebc3eab157e9cdcfedd8b8e2682c438d5da44b86e3d39",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-plan",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\plan.json"
+      ],
+      "input_file": "primary-delivery-r2\\plan.json",
+      "input_sha256": "6210e4714a306405e01430e143370ea31dee351a5c133a4dc6cfc281636efdc4",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-record",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "0362a24bb44cbf7f01925ac704ac32d69cbca2393509e634afdfcdefa5b04a73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\record.json"
+      ],
+      "input_file": "primary-delivery-r2\\record.json",
+      "input_sha256": "acc8b13d5aa6b1513ec62bbd20d3e6e4dfe4b5fdffea176defe0efbcd076cc34",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-status",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "39fc8a3fa137971e2b18e2be6fc655b8ce53b678dd2754a7bd97b4fd27d03950",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-structure",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "42f1707a36e423d56c1a3827ee68fa8cb84e4296fc96f1c7cf5b4c3b4f88aa5b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\structure.json"
+      ],
+      "input_file": "primary-delivery-r2\\structure.json",
+      "input_sha256": "2e5932486c20fc29b290bb8a82216d762d381bd73266b684922a9408ab1a1fac",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-suggestion",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "a58d26e713e15b1bbd1f91f6dd3d69d1862c87c881c11e2bcf34086f1c9f840f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-template",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "c4e705de9597ddefa3cfae12696b3e50190db1622dbe9809fd5e65fd912ab86f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-交付重放.md"
+      ]
+    },
+    {
+      "label": "primary-delivery-r2-trial",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "40905bf441778eeee8766d32cc113aab404b239be6c3d1b23ffd193dd09caa63",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\trial.json"
+      ],
+      "input_file": "primary-delivery-r2\\trial.json",
+      "input_sha256": "9c9e612ecec0f9eaa93d3430582304437a4516970dd98fb0a6df81e9eb587c96",
+      "input_binding": "captured raw bytes"
+    },
+    {
+      "label": "primary-delivery-r2-trial-idempotent",
+      "exit_code": 0,
+      "code": null,
+      "next_action": null,
+      "stdout_sha256": "b4f8070b5d05dcee6bb45ced20787c29d8aa2b5418cd25628b5a58cce5d6ff65",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\交付确认作品",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\primary-delivery-r2\\trial.json"
+      ],
+      "input_file": "primary-delivery-r2\\trial.json",
+      "input_sha256": "9c9e612ecec0f9eaa93d3430582304437a4516970dd98fb0a6df81e9eb587c96",
+      "input_binding": "captured raw bytes"
+    }
+  ],
+  "retained_testbook_build_difference": [
+    {
+      "group": "content",
+      "file": "docs/user-guide.md",
+      "left_sha256": "766c3d9f413fff55c2a8459e312d7b06247657a987f2be1d1779c5782b9078a1",
+      "right_sha256": "05f10b5a7435cd140eaafbb803ccdef4cc48c3aa90bde9d74d9d7b024ee18bfd"
+    },
+    {
+      "group": "content",
+      "file": "docs/workflow.md",
+      "left_sha256": "1f2c8cee43f2340496e1b4790d742417f02cec974c7668cab96a8acbd0cb7973",
+      "right_sha256": "df0f97dabf67f74f1df235558dc10e88ca6a80d7433c3af4442e94ec70b1494c"
+    },
+    {
+      "group": "runtime",
+      "file": "lib/governance.mjs",
+      "left_sha256": "62fa2440da0717beccc95fb18ab89fcd6ac14e8f50dc4f6a6f6acce774005bb8",
+      "right_sha256": "361731881688509df07cd071cb4f85e9857f542709bd1b8b43e5b8abb16d88f9"
+    },
+    {
+      "group": "runtime",
+      "file": "lib/tool-build.mjs",
+      "left_sha256": "d4f118ef6da4764e43d248bbe72c2f564751825f791f75327172c9c5675a8adc",
+      "right_sha256": "f6749a20559dc168a8de3475ae549ae47d03c87ce41bb4c9cd6195f8dd0d03f5"
+    },
+    {
+      "group": "runtime",
+      "file": "lib/workspace.mjs",
+      "left_sha256": "b8da44820b24d72d3a92068435a46bdf93200f93e226dcf588c91ae266f5c9e4",
+      "right_sha256": "135ec6b635c95c94567a79d7573f5f218fa1c5b1b35419d56d34146f1dc81da0"
+    },
+    {
+      "group": "skills",
+      "file": "writer-project/references/long-form.md",
+      "left_sha256": "4da9937d01d0a7a0e747061fc9102224d0fabb4ef29884f94a77f5eddf6b8173",
+      "right_sha256": "a469afc0c4914bab34edb13f9177b68ac28b256e058064db46f504eb56d9aa0a"
+    }
+  ],
+  "limitations": [
+    "B/C/D features not implemented",
+    "No automatic natural-language authorization inference or author identity authentication",
+    "No source version publishing, long revision session, transaction update, or tool safe update",
+    "Five native sessions span fixes; last legacy0.2 metadata/developer-script corrections are covered by final primary Codex 24-call full replay and final regression/matrices",
+    "Old test copies preserved; current main and final primary copy share final build",
+    "No engine change; engine tests not rerun",
+    "Actual work content unchanged; one Codex Git checkpoint ref changed path with identical bytes, attribution not inferred",
+    "No real old work migrated or updated; no commit or push"
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "command": "node acceptance/20261018-governance-a/native-delivery-check/audit.mjs compare paused-readonly-before work-final",
+    "exit_code": 1,
+    "code": "EEXIST",
+    "message": "Audit helper refused to overwrite paused-readonly-before-comparison.json, already created for the earlier before/after pair.",
+    "category": "acceptance-helper-error",
+    "product_error": false,
+    "recovery": "Kept original comparison unchanged; compared work-final against paused-readonly-before using the unique work-final-comparison.json. The hashes are equal.",
+    "retried_product_commands": 0
+  },
+  {
+    "command": "node acceptance/20261018-governance-a/native-delivery-check/seal-report.mjs",
+    "exit_code": 1,
+    "code": "SyntaxError",
+    "message": "Unexpected end of JSON input at seal-report.mjs:27:23; negative product JSON is in stderr, stdout is empty.",
+    "category": "acceptance-helper-error",
+    "product_error": false,
+    "recovery": "Updated this stage report helper to parse stdout when nonempty, otherwise stderr. No product commands rerun and no raw evidence changed.",
+    "helper_reruns": 1
+  },
+  {
+    "category": "workspace-drift-observed",
+    "product_error": false,
+    "evidence": "protected-final-comparison.json",
+    "exit_code": 1,
+    "note": "Global inventory comparisons correctly returned nonzero because unrelated files changed or appeared; targeted protected works and current product files are unchanged."
+  }
+]

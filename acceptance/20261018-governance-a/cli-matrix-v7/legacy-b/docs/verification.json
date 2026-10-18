@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-15",
+  "workspace": "D:\\work\\other\\ai-writer",
+  "node": "v24.15.0",
+  "platform": "win32",
+  "checks": [
+    {
+      "name": "workspace",
+      "exit_code": 0,
+      "passed": 24,
+      "skipped": 0,
+      "evidence": "acceptance/20261015/workspace-tests.txt"
+    },
+    {
+      "name": "doctor",
+      "exit_code": 0,
+      "skills": 7,
+      "evidence": "acceptance/20261015/doctor.txt"
+    },
+    {
+      "name": "engine",
+      "exit_code": 0,
+      "passed": 29,
+      "skipped": 0,
+      "evidence": "current conversation tool output; vendor source unchanged"
+    },
+    {
+      "name": "native-skill-discovery",
+      "exit_code": 0,
+      "evidence": "acceptance/20261015/discovery-native"
+    },
+    {
+      "name": "novel",
+      "execution": "codex-exec",
+      "exit_code": 0,
+      "units": 2,
+      "prose_han_chars": 2150,
+      "evidence": "acceptance/20261015/novel-live"
+    },
+    {
+      "name": "screenplay",
+      "execution": "codex-exec",
+      "exit_code": 0,
+      "units": 3,
+      "prose_han_chars": 1262,
+      "revision": 6,
+      "rewind_used": true,
+      "evidence": "acceptance/20261015/screenplay-live"
+    },
+    {
+      "name": "history",
+      "execution": "current-codex-conversation",
+      "process_exit_code": null,
+      "cli_commands": 15,
+      "all_cli_exit_codes_zero": true,
+      "units": 2,
+      "prose_han_chars": 1570,
+      "evidence": "acceptance/20261015/history-live"
+    },
+    {
+      "name": "final-artifact-integrity",
+      "ok": true,
+      "works": 3,
+      "units": 7,
+      "evidence": "acceptance/20261015/artifact-verification.json"
+    }
+  ],
+  "implementation_sha256": {
+    "lib/workspace.mjs": "206d4e22856f6f7bb935f2bd2aff6591f52451c4331a79f9c25e390f2447afaa",
+    "bin/ai-writer.mjs": "67b99b3f70745d71d7252da040119a1fe3f92b64fb08b4fba998a133eda1339e",
+    "package.json": "6aeaa1c0e740c43b70d238dd89d94ab6c512b3cf285ef3a3188c34d70d88ce56",
+    "scripts/codex-acceptance.mjs": "64667ea5261443e655f85aee618c49b081b8cd0c36098e732f58c16865b7971a",
+    "scripts/verify-acceptance.mjs": "2935c46dea82abce23fff12a17fdaed408a9b022b44b67f541bc9eb1607dcc40",
+    "tests/workspace.test.mjs": "35edd21a432b65eebd309066cee34c8d1eb0e29b4c542153e8e6d14947198c91",
+    "docs/source-manifest.json": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb",
+    ".agents/skills/writer-project/SKILL.md": "7e22c00d4f446dc606d90b106d87aa287a97bf65e472acc7a8d98b3b441fc378",
+    ".agents/skills/writer-review/SKILL.md": "3a08e8d0eefd92e4c9cb25938f2eb7599cd4ea62aa526e409a8819a0bc345848",
+    ".agents/skills/writer-novel/SKILL.md": "66e045fef9305065b496cf473c62fe54abae50c331fd15f2c5e208d016250fbd",
+    ".agents/skills/writer-screenplay/SKILL.md": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376",
+    ".agents/skills/writer-history/SKILL.md": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+  },
+  "limits": [
+    "样稿知情自检不是真人盲读、作者定稿或市场验证",
+    "100单元为合成容量，不是长篇语义连续性验收",
+    "剧本未经排演；历史未核影印底本、正式页码或第二独立史源",
+    "essay真实创作、新独立history进程、Linux及在线CI未验收"
+  ]
+}

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+const u=Number(process.argv[2]);
+if(!Number.isInteger(u)||u<1||u>6) throw Error('only actual units 1—6');
+const b='acceptance/20261018-governance-a';
+const t=JSON.parse(fs.readFileSync(`${b}/commands/native-one-u${u}-template/stdout.raw.txt`,'utf8'));
+const m=JSON.parse(fs.readFileSync(`${b}/native-create/native-one-u${u}-actual.json`,'utf8'));
+if(!t.source_hashes || !Object.hasOwn(t,'expected_revision')) throw Error('inspect template envelope');
+t.summary=m.summary;
+t.changes=m.changes;
+fs.writeFileSync(`${b}/native-create/native-one-u${u}-record.json`,JSON.stringify(t,null,2)+'\n',{flag:'wx'});
+const draft=fs.readFileSync(`${b}/works/纸灯札记/${t.draft}`,'utf8');
+const body=draft.replace(/^# .*\r?\n/,'');
+const han=(body.match(/\p{Script=Han}/gu)||[]).length;
+if(han<400||han>700) throw Error(`actual body Han count ${han}`);
+fs.writeFileSync(`${b}/works/纸灯札记/审查/000${u}-写后自检.md`, `# 第${u}章写后自检\n\n性质：model-self-review，非真人验收或作者定稿。\n\n正文汉字：${han}（去标题后 Unicode Script=Han 计数；不计标点）。\n\n${m.self_review}\n`,'utf8');
+console.log(JSON.stringify({unit:u,body_han:han,template_revision:t.expected_revision,summary:t.summary,changes:t.changes},null,2));

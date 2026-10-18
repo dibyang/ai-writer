@@ -1,0 +1,87 @@
+{
+  "same_version": true,
+  "same_content": false,
+  "left": {
+    "ok": true,
+    "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-a\\works\\纸灯札记\\.writer\\tool",
+    "tool_version": "0.4.0",
+    "profile": "workspace-copy",
+    "observed_content_id": "4445d3b042df7ce080fa3bb84ed49b38adf67fa02fa1d4d8ed4ecb8313ac592c",
+    "runtime_id": "f65e2bbbced61a4fa9df356eb5b2edcf9c784a1d65ae9350983fdbe107c5c61c",
+    "attestation": "manifest-present-not-a-signature",
+    "declared_build_id": "4445d3b042df7ce080fa3bb84ed49b38adf67fa02fa1d4d8ed4ecb8313ac592c",
+    "provenance": {
+      "source_commit": "36bd9c27797a43dd958e74b4e4b8f5b9713e140a",
+      "dirty": true
+    },
+    "supported_state_schemas": [
+      1,
+      2,
+      3
+    ],
+    "missing": [],
+    "mismatches": [],
+    "note": "内容指纹为本次磁盘观测，非作者身份或供应链签名；不升级工具、不修改作品。main/workspace-copy 有意省略引擎，公共受管文件才可直接比较。",
+    "file_count": 45,
+    "group_counts": {
+      "content": 7,
+      "runtime": 9,
+      "skills": 29
+    }
+  },
+  "right": {
+    "ok": true,
+    "tool_root": "D:\\work\\other\\ai-writer",
+    "tool_version": "0.4.0",
+    "profile": "main",
+    "observed_content_id": "83053facf5ee9604e03a351688a66babe31181626743c4197fc4828b200241ae",
+    "runtime_id": "766354af4935d9dcc2fb9ec4088ef33ce6066eaac9881d6e6979f6f15d21c3a9",
+    "attestation": "observed-source-tree",
+    "declared_build_id": null,
+    "provenance": {
+      "source_commit": "36bd9c27797a43dd958e74b4e4b8f5b9713e140a",
+      "dirty": true
+    },
+    "supported_state_schemas": [
+      1,
+      2,
+      3
+    ],
+    "missing": [],
+    "mismatches": [],
+    "note": "内容指纹为本次磁盘观测，非作者身份或供应链签名；不升级工具、不修改作品。main/workspace-copy 有意省略引擎，公共受管文件才可直接比较。",
+    "file_count": 45,
+    "group_counts": {
+      "content": 7,
+      "runtime": 9,
+      "skills": 29
+    }
+  },
+  "differences": [
+    {
+      "group": "content",
+      "file": "docs/user-guide.md",
+      "left_sha256": "766c3d9f413fff55c2a8459e312d7b06247657a987f2be1d1779c5782b9078a1",
+      "right_sha256": "cb81e5c6d08b901ca6aa628106411d454e8a7a1d2722bfe6f6b4b40f78c19e5d"
+    },
+    {
+      "group": "runtime",
+      "file": "lib/governance.mjs",
+      "left_sha256": "62fa2440da0717beccc95fb18ab89fcd6ac14e8f50dc4f6a6f6acce774005bb8",
+      "right_sha256": "43e597cc2b2ec1345e1dcdce783738a17d964aab826ed89a848dfc3bb6a5a354"
+    },
+    {
+      "group": "runtime",
+      "file": "lib/workspace.mjs",
+      "left_sha256": "b8da44820b24d72d3a92068435a46bdf93200f93e226dcf588c91ae266f5c9e4",
+      "right_sha256": "4d0bd6d36ca065962664e81089ee6e3447642f75f90c19db0b341ef879538b6f"
+    },
+    {
+      "group": "skills",
+      "file": "writer-project/references/long-form.md",
+      "left_sha256": "4da9937d01d0a7a0e747061fc9102224d0fabb4ef29884f94a77f5eddf6b8173",
+      "right_sha256": "a469afc0c4914bab34edb13f9177b68ac28b256e058064db46f504eb56d9aa0a"
+    }
+  ],
+  "conclusion": "版本号相同、构建内容不同"
+}

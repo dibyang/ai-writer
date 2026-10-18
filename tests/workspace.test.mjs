@@ -19,7 +19,7 @@ function write(root, ref, value) {
   const file = path.join(root, ref); fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, typeof value === 'string' ? value : JSON.stringify(value, null, 2), 'utf8');
 }
-function work(t, kind = 'novel') { const dir = sandbox(t), root = path.join(dir, '作品'); initProject(root, kind, '测试作品'); return { dir, root }; }
+function work(t, kind = 'novel') { const dir = sandbox(t), root = path.join(dir, '作品'); initProject(root, kind, '测试作品', { legacy: true }); return { dir, root }; }
 function plan(root, unit = 1, kind = 'novel') {
   if (kind === 'history') write(root, '研究/fixture.json', { status: 'verified', claims: [{ type: 'direct', statement: '仅用于结构测试的虚构材料', boundary: '不是史料，不能进入实际历史正文', source_dependency: '单一测试夹具，不是独立互证', sources: [{ title: '测试夹具', locator: '第1行', excerpt: 'fixture', checked_at: '2026-10-15' }] }] });
   savePlan(root, { unit, title: `单元${unit}`, goal: '主角确认信件是否送达', change: '收件人身份出现疑点', beats: ['找到寄件记录', '发现编号重复'], research_refs: kind === 'history' ? ['研究/fixture.json'] : [] });

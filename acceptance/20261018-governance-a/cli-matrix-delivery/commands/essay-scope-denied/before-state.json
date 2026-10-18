@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "revision": 2,
+  "project_id": "3a46de68-b698-4472-8b91-c35e7c099ad8",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": [],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-接口夹具.md",
+      "sha256": "d6f269b6fbf905d9d73ba5489777ae72b311f65bafa8395340c36dc81e1fcf3e",
+      "summary": "完成一次独立夹具登记",
+      "source_hashes": {
+        "writer.json": "51fd1490fd9cc81b8a9801c558ae87f31d2d65cce07adc8922c5b4f6a5713b2a",
+        ".writer/state.json": "ed58a0492eb07680d93d6681fd70cf2031737a147d28ef935532714f42416bc4",
+        "大纲/单元/0001.json": "79afc7a1e3bfac61fb02994b8e2a00e238bee2350e1389685682bedc85f3450f",
+        "设定/作品定位.md": "38e3de8cc05bb6555df4c0dcf33cc1175e51ebdbf55c3d5480c73e544803ee82",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "a34690e444ba2023327fd5fbae17554b3f4ec5332e8beb9895a50257f40a42f9",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/02b0ebdb-4b98-4df1-96e7-9a554ae76b81.json",
+          "sha256": "c5fb45943c9512227985bb5f97b505a223d0522b2c30d4bde04bb640ac9b240a"
+        },
+        "action": "draft"
+      },
+      "journal": ".writer/journal/df44daaf-15e3-472b-8384-6cd468256f59.json",
+      "journal_sha256": "208b55f61229375776a76fd443b0fa68fbd79094b172e128dc8c1ce73dc9e311"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "仅试写第1章，结束后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一单元完成后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/02b0ebdb-4b98-4df1-96e7-9a554ae76b81.json",
+      "sha256": "c5fb45943c9512227985bb5f97b505a223d0522b2c30d4bde04bb640ac9b240a"
+    }
+  ],
+  "operations": {
+    "essay-trial": {
+      "input_sha256": "2fac7d82e29e6efdbb6d03fb5aa2b18d18a07cb9ef96324a373007c4c0becdba",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "essay-trial",
+        "event": {
+          "ref": ".writer/objects/02b0ebdb-4b98-4df1-96e7-9a554ae76b81.json",
+          "sha256": "c5fb45943c9512227985bb5f97b505a223d0522b2c30d4bde04bb640ac9b240a"
+        }
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/02b0ebdb-4b98-4df1-96e7-9a554ae76b81.json",
+    "sha256": "c5fb45943c9512227985bb5f97b505a223d0522b2c30d4bde04bb640ac9b240a"
+  }
+}

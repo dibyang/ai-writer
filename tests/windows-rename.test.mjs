@@ -53,7 +53,7 @@ test('Windows 重试期间目标被创建时停止，保留竞争方文件不覆
 
 test('Windows 导出目录也处理短暂重命名拒绝，不更改正文或状态', { skip: process.platform !== 'win32' }, t => {
   const dir = base(t), root = path.join(dir, '作品'), output = path.join(dir, '交付');
-  initProject(root, 'novel', '导出');
+  initProject(root, 'novel', '导出', { legacy: true });
   savePlan(root, { unit: 1, title: '核对', goal: '核对', change: '确认', beats: ['核对'] });
   const input = main(['record-template', '--project', root, '--unit', '1', '--draft', '正文/0001.md']);
   fs.writeFileSync(path.join(root, input.draft), '# 核对\n\n小林收好了收据。\n'); input.summary = '收好收据'; record(root, input);

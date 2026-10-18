@@ -12,7 +12,7 @@ function work(t, kind = 'novel') {
   fs.mkdirSync(path.join(ROOT, '.tmp'), { recursive: true });
   const base = fs.mkdtempSync(path.join(ROOT, '.tmp/usability-test-')), root = path.join(base, '中文 空格作品');
   t.after(() => { assert.ok(fs.realpathSync(base).startsWith(fs.realpathSync(path.join(ROOT, '.tmp')) + path.sep)); fs.rmSync(base, { recursive: true, force: true }); });
-  initProject(root, kind, '用法验证');
+  initProject(root, kind, '用法验证', { legacy: true });
   return { base, root };
 }
 function append(root, unit) {

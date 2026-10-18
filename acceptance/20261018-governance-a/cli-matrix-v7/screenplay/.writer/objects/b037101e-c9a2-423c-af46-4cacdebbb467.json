@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-17T23:56:48.685Z",
+  "operation_id": "screenplay-trial",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "仅试写第1章，结束后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一单元完成后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "这是自动接口验收夹具，不是真实作者会话。允许在独立作品试写第1章并暂停复盘；允许显式治理迁移。",
+    "local_source": "研究/接口夹具要求.md",
+    "source_sha256": "8c5b6b8a0cdf4ab3e1796e07f6a5ca06dc135cd61e855128719af13707c745be",
+    "locator": "自动测试夹具完整第1行",
+    "recorded_by": "cli-matrix synthetic fixture",
+    "frozen_ref": ".writer/objects/8c5b6b8a0cdf4ab3e1796e07f6a5ca06dc135cd61e855128719af13707c745be.txt"
+  }
+}

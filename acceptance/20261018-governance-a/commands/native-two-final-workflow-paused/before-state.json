@@ -1,0 +1,200 @@
+{
+  "schema_version": 3,
+  "revision": 4,
+  "project_id": "d9dc40b9-965d-4cd8-8c9c-9053ac02acdf",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "陈岑": "雨后河埠底部回望廊下，正返回取布袋；已替老人点灯照阶并归还灯具，未获后续任务",
+      "老人": "雨后河埠底部；扶栏并持已点亮的纸灯，提醒陈岑取回布袋"
+    },
+    "threads": [],
+    "timeline": [
+      "雨停后：陈岑在河埠替老人点亮纸灯、照阶下行并交还；老人提醒他取布袋"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-石阶上的光.md",
+      "sha256": "474ee6ef68df8ca4f460bd13d4d6aa8e47a4cc0098292e531d3bbb4e503bdb87",
+      "summary": "雨后河埠，陈岑替看不清湿阶的老人安放并点亮纸灯，照着细苔旁的落脚处陪他下阶，到埠底把灯交回。老人提醒他取回布袋；无阴谋和后续任务。",
+      "source_hashes": {
+        "writer.json": "7380165c09e3d3f904e32cfdea27db57247a8ba89a877c9fc421df2796c1c275",
+        ".writer/state.json": "0aa885fdc0f52c067fee1283c7b698d6f5160871c8f49a0cb8803ff1e71e4329",
+        "大纲/单元/0001.json": "3fc40a3f3962d92f6268a2d19a6b6abea19fc7b56ba86041ac2d057d809e18bc",
+        "设定/作品定位.md": "0f158e369fa1090abd975f7780bf8e47969b5ac99b441c234f06e00e47cd0112",
+        "设定/文风.md": "53c1a97ea6f922e26b9092a678c9f9f936aa84500588d6d16042ce9363897f13",
+        "设定/权威规则.md": "d0cae0bc431a86a06bc6e62ca97863b8755a07555d7999b89feef5e4d89d50b6",
+        "设定/人物.md": "26c1f53912029148b66f490b2d10ae62c467df452119fd49bf72f405256be287",
+        "研究/作者指令.md": "f01560be09145236215d9e947e1037543ba953236afc5f54d02336d136df3fc1"
+      },
+      "fingerprint": "1d32b5374cdf57ab0b7c37651d406993b44246ae9670168713abaed5a8b6b0c8",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+          "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+        },
+        "action": "draft"
+      },
+      "journal": ".writer/journal/c737bb97-c94c-4278-9331-884c9e30389c.json",
+      "journal_sha256": "8f14ff4825d5e135bf823ee1e6062cbcadcf025a5817877c2fbc374e5968cc4e"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "仅试写第1章300–500正文汉字，完成自检、正式登记和check后暂停全部创作动作",
+    "authorization": {
+      "allowed_actions": [
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第1章自检、正式登记和机械检查完成即设为paused，allowed_actions=[]，两范围=null",
+        "暂停后仅查看状态，不再讨论、规划、写作或修订"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": [
+          "结尾道具"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "作者只授权单章微型试写，不编排后续"
+      },
+      "volume": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "短篇差量协议，不分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_LOCATION": {
+      "id": "D_LOCATION",
+      "topic": "地点",
+      "status": "confirmed",
+      "options": [
+        "河埠"
+      ],
+      "adopted_items": [
+        "河埠"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+      "event_sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+    },
+    "D_END_PROP": {
+      "id": "D_END_PROP",
+      "topic": "结尾道具",
+      "status": "candidate",
+      "options": [
+        "雨伞",
+        "铜铃"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "结尾道具仍未选",
+        "雨伞和铜铃都只是候选"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+      "event_sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+      "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+    },
+    {
+      "ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+      "sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+    },
+    {
+      "ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+      "sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+    }
+  ],
+  "operations": {
+    "native-two-final-trial-001": {
+      "input_sha256": "4b33116ada81cfbb7fa38db484bb8b1cd28da6447ecc58dab9f4b047e7d69e07",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-two-final-trial-001",
+        "event": {
+          "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+          "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+        }
+      }
+    },
+    "native-two-final-location-001": {
+      "input_sha256": "6fa3ede3d2f02ec5812b7efa6ba5071b1598b5afef83df838c1d48177e28ea42",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "native-two-final-location-001",
+        "event": {
+          "ref": ".writer/objects/f5f32dc7-ed02-4b42-9321-84f4cb88aceb.json",
+          "sha256": "6e4d220087860e04ee7d7a38eccfaa49bea53370f6de3e7dadda269dbc5f2b42"
+        },
+        "decision_id": "D_LOCATION"
+      }
+    },
+    "native-two-final-ending-prop-001": {
+      "input_sha256": "3cf5bffa219e4266c48408af21908c4d5842d4fd96ef59dde1943a47beb13a37",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "native-two-final-ending-prop-001",
+        "event": {
+          "ref": ".writer/objects/369feddb-2be9-4b18-b034-d10abf9dc549.json",
+          "sha256": "c4d15d7e74011ed0933a9caaac58450ef46d0de63a449c27640bcda5689fa685"
+        },
+        "decision_id": "D_END_PROP"
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/0eba0628-f61e-4c23-84bf-001c15d135a7.json",
+    "sha256": "bb1d1afb6a5959f472996b9c74ac7b82795323feaa4479be2ede3111fd857c3f"
+  }
+}

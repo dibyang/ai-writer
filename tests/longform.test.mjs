@@ -13,7 +13,7 @@ function work(t, end = 12) {
   fs.mkdirSync(path.join(ROOT, '.tmp'), { recursive: true });
   const base = fs.mkdtempSync(path.join(ROOT, '.tmp/long-')), root = path.join(base, '作品');
   t.after(() => { assert.ok(fs.realpathSync(base).startsWith(fs.realpathSync(path.join(ROOT, '.tmp')) + path.sep)); fs.rmSync(base, { recursive: true, force: true }); });
-  initProject(root, 'novel', '长篇测试'); enableLong(root, 0);
+  initProject(root, 'novel', '长篇测试', { legacy: true }); enableLong(root, 0);
   const volume = { id: 'V1', title: '查信', start: 1, end, promises: ['追查错信'], constraints: ['观察先于解释'], reserved: ['寄件人身份'], arcs: [{ id: 'A1', start: 1, end, goal: '查信', payoff: '确认编号重复', forbidden: ['直接揭示寄件人'] }] };
   write(base, '卷.json', volume); main(['volume', '--project', root, '--input', path.join(base, '卷.json')]);
   return { base, root, volume };
@@ -121,7 +121,7 @@ test('journal 被篡改或丢失拒绝恢复，不猜状态', t => {
   fs.unlinkSync(file); assert.throws(() => rewind(root, 1, 2), /缺失/);
 });
 test('旧作品显式备份迁移，回退后能恢复旧格式章节之前的状态', t => {
-  const { base } = work(t), root = path.join(base, '旧书'); initProject(root, 'novel', '旧书');
+  const { base } = work(t), root = path.join(base, '旧书'); initProject(root, 'novel', '旧书', { legacy: true });
   savePlan(root, { unit: 1, title: '旧章', goal: '核对', change: '查到', beats: ['查信'] });
   const packet = context(root, 1); write(root, '正文/旧章.md', '信到了。');
   record(root, { unit: 1, draft: '正文/旧章.md', summary: '信到了。', expected_revision: 0, source_hashes: packet.source_hashes, snapshot: { characters: { 甲: '拿到信' }, threads: [], timeline: ['信到了'] } });
@@ -254,7 +254,7 @@ test('长篇恢复入口默认精简，完整快照只在显式查看时返回',
   const full = main(['status', '--project', root, '--view', 'full']); assert.equal(full.snapshot.ledger.O1.statement, observed.statement);
 });
 test('旧稿角色键顺序变化不应使迁移后的差量链失效', t => {
-  const { base } = work(t), root = path.join(base, '键序旧书'); initProject(root, 'novel', '键序旧书');
+  const { base } = work(t), root = path.join(base, '键序旧书'); initProject(root, 'novel', '键序旧书', { legacy: true });
   for (const unit of [1, 2]) {
     savePlan(root, { unit, title: '收到信', goal: '核查', change: '继续', beats: ['核查'] });
     const packet = context(root, unit), draft = `正文/000${unit}.md`; write(root, draft, `第${unit}天收信。`);

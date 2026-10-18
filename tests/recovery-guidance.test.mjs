@@ -10,7 +10,7 @@ function fixture(t){
  const tmp=path.join(ROOT,'.tmp');fs.mkdirSync(tmp,{recursive:true});
  const base=fs.mkdtempSync(path.join(tmp,'recovery-guidance-')),root=path.join(base,'中文 空格作品');
  t.after(()=>{assert.ok(fs.realpathSync(base).startsWith(fs.realpathSync(tmp)+path.sep));fs.rmSync(base,{recursive:true,force:true})});
- initProject(root,'novel','恢复指引');enableLong(root,0);
+ initProject(root,'novel','恢复指引',{legacy:true});enableLong(root,0);
  fs.writeFileSync(path.join(base,'volume.json'),JSON.stringify({id:'V1',title:'收据',start:1,end:4,promises:['查清'],constraints:[],reserved:[],arcs:[{id:'A1',start:1,end:4,goal:'核实',payoff:'查清',forbidden:[]}]}));
  main(['volume','--project',root,'--input',path.join(base,'volume.json')]);
  fs.writeFileSync(path.join(root,'设定/场所.md'),'收据柜在值班室。\n');

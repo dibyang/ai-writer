@@ -1,0 +1,232 @@
+{
+  "schema_version": 3,
+  "revision": 6,
+  "project_id": "5e2463f0-f2f1-4e47-9db5-9ef65d919359",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "许桥": "河边旧渡口矮桌旁；已替老人修好纸灯提手并检查绳结，帮助老人试提",
+      "老人": "河边旧渡口；持有自己的未点燃纸灯，已试提修好的提手"
+    },
+    "threads": [],
+    "timeline": [
+      "河边旧渡口：许桥以细麻绳修复纸灯提手、低位试提检查，老人接手试提；纸灯未点燃"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-提手.md",
+      "sha256": "11c972bb478a04553c0e809216f5a58be9c2528159414aa2fdfd3f99eefab451",
+      "summary": "许桥在河边旧渡口发现老人纸灯的提手麻线磨断，用细麻绳穿孔绕箍并打结，低位试提检查后由老人提起；纸灯未点燃。",
+      "source_hashes": {
+        "writer.json": "c854c8254d121e501c8547153c9a657b976f1ff156a65e0f5305b2f51fdce3bc",
+        ".writer/state.json": "cf1f69c76af7611343e19896a077d26bd6759b1dafcc0d70c7cc8d1d21e6916b",
+        "大纲/单元/0001.json": "55f2f13e5a66ca75bf8971437af8d53df33b16a669fb74586d7cdca358b5201b",
+        "设定/作品定位.md": "92dc1d0c93618153b0e1c33556a4b8cbc4e1277b596183c2b9a9b9f6f5b00840",
+        "设定/文风.md": "026d5dd5d2ac9ccfa2fa78e10c6000069132a6b60d3e3229aeac526aecf53c52",
+        "设定/权威规则.md": "9a86feee90c958c09384d082ff45dc0e7e778afc8112cfa5a1ee32e085fcc73f"
+      },
+      "fingerprint": "c6255d082ed55433e2fffb77d9de6496a62d21ce9feb84d950319e542f6f54b1",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/6cc43c0e-8625-44a5-ad85-4ac201d0105b.json",
+          "sha256": "689f9ffe351c06cb506d578adfb293b995627567b46a7b1721c7fc9dd8f2fbed"
+        },
+        "action": "draft"
+      },
+      "journal": ".writer/journal/4fc0f46c-d02c-4e0c-9880-684fd627bf7e.json",
+      "journal_sha256": "6e4f60feffdb533069500f9c9ce4186b482fa8e353d06ce706c54f82c2f09642"
+    }
+  ],
+  "governance": {
+    "stage": "paused",
+    "task": "第1章登记检查完成，总纲讨论上下文已验证可用、第2章draft已实际拒绝；按作者指令暂停全部创作动作，仅可查看任务",
+    "authorization": {
+      "allowed_actions": [],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "全部创作动作暂停；仅只读查看当前任务与范围",
+        "未经作者新的明确指令，不讨论、不规划、不起草、不修订",
+        "保留远期骨架deferred及原因，纸签与铜铃仍为候选"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "全篇长度待总纲讨论"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "远期全书骨架",
+          "全书终局",
+          "结尾赠物"
+        ],
+        "reason": "作者允许远期全书骨架暂缓，先有限试写第1章并在登记检查后复盘动作与人物语气，再只讨论总纲；终局与赠物尚未选定"
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": [],
+        "reason": "独立短篇验收，不启用分卷"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json"
+        ],
+        "unresolved_ids": [
+          "仅准备第1章细纲，不授权下一章"
+        ]
+      }
+    }
+  },
+  "decisions": {
+    "D_LOCATION": {
+      "id": "D_LOCATION",
+      "topic": "故事地点",
+      "status": "confirmed",
+      "options": [
+        "河边旧渡口"
+      ],
+      "adopted_items": [
+        "河边旧渡口"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/05351ccf-119a-4b97-8d43-77adfd2d0612.json",
+      "event_sha256": "217c6dcafcf91dda38327f4eb6fcbf6a4bb41ae6b0ad558f0cdbb0f89faf80c2"
+    },
+    "D_END_GIFT": {
+      "id": "D_END_GIFT",
+      "topic": "结尾赠物",
+      "status": "candidate",
+      "options": [
+        "纸签",
+        "铜铃"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "结尾赠物仍未定；纸签和铜铃只是候选"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/54304821-08fb-409f-bb37-2fc1d87058b0.json",
+      "event_sha256": "30471ee19aeb47947f6963cd09f63a8598392ca166827c7d173b395ce3119427"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/6cc43c0e-8625-44a5-ad85-4ac201d0105b.json",
+      "sha256": "689f9ffe351c06cb506d578adfb293b995627567b46a7b1721c7fc9dd8f2fbed"
+    },
+    {
+      "ref": ".writer/objects/05351ccf-119a-4b97-8d43-77adfd2d0612.json",
+      "sha256": "217c6dcafcf91dda38327f4eb6fcbf6a4bb41ae6b0ad558f0cdbb0f89faf80c2"
+    },
+    {
+      "ref": ".writer/objects/54304821-08fb-409f-bb37-2fc1d87058b0.json",
+      "sha256": "30471ee19aeb47947f6963cd09f63a8598392ca166827c7d173b395ce3119427"
+    },
+    {
+      "ref": ".writer/objects/684e031c-69fd-4ae7-a18b-91079860679d.json",
+      "sha256": "ac5fb14e46c042db622d0a8c634a2314c4228d8c32515ed41fe4f5c99b9086af"
+    },
+    {
+      "ref": ".writer/objects/f25dcd5b-765d-48b1-b1a7-88662378ba70.json",
+      "sha256": "b3a34353f05524343b15e5cc4119eb47e94cfc477328c95fe2a60aca2b0353c5"
+    }
+  ],
+  "operations": {
+    "native-three-trial-1": {
+      "input_sha256": "c156fc2c3224e65c9393f9101033122da2337c3a84b2c4612fb8c374f07bbb76",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-three-trial-1",
+        "event": {
+          "ref": ".writer/objects/6cc43c0e-8625-44a5-ad85-4ac201d0105b.json",
+          "sha256": "689f9ffe351c06cb506d578adfb293b995627567b46a7b1721c7fc9dd8f2fbed"
+        }
+      }
+    },
+    "native-three-location": {
+      "input_sha256": "b1d1d737b623c9df4d0e401cf86524aaeb7c17d2f28b2df903b796e50f1c8ec4",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "native-three-location",
+        "event": {
+          "ref": ".writer/objects/05351ccf-119a-4b97-8d43-77adfd2d0612.json",
+          "sha256": "217c6dcafcf91dda38327f4eb6fcbf6a4bb41ae6b0ad558f0cdbb0f89faf80c2"
+        },
+        "decision_id": "D_LOCATION"
+      }
+    },
+    "native-three-gift": {
+      "input_sha256": "65bc71822a858c8c195874ba874169d07fd55f9d3d9425707d09772abe8bbc93",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "native-three-gift",
+        "event": {
+          "ref": ".writer/objects/54304821-08fb-409f-bb37-2fc1d87058b0.json",
+          "sha256": "30471ee19aeb47947f6963cd09f63a8598392ca166827c7d173b395ce3119427"
+        },
+        "decision_id": "D_END_GIFT"
+      }
+    },
+    "native-three-return-structure": {
+      "input_sha256": "f32b54755ce240bef01a458033f52b3b243aafb2a4b35a5592bd475101feeb59",
+      "result": {
+        "ok": true,
+        "revision": 5,
+        "operation_id": "native-three-return-structure",
+        "event": {
+          "ref": ".writer/objects/684e031c-69fd-4ae7-a18b-91079860679d.json",
+          "sha256": "ac5fb14e46c042db622d0a8c634a2314c4228d8c32515ed41fe4f5c99b9086af"
+        }
+      }
+    },
+    "native-three-pause-all": {
+      "input_sha256": "b959c2b5681f935371f1ff269d83ef418c1feb75ce2ac87500120ff8e09395a9",
+      "result": {
+        "ok": true,
+        "revision": 6,
+        "operation_id": "native-three-pause-all",
+        "event": {
+          "ref": ".writer/objects/f25dcd5b-765d-48b1-b1a7-88662378ba70.json",
+          "sha256": "b3a34353f05524343b15e5cc4119eb47e94cfc477328c95fe2a60aca2b0353c5"
+        }
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/f25dcd5b-765d-48b1-b1a7-88662378ba70.json",
+    "sha256": "b3a34353f05524343b15e5cc4119eb47e94cfc477328c95fe2a60aca2b0353c5"
+  }
+}
