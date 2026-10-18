@@ -1,0 +1,84 @@
+{
+  "reader": "native-two independent Codex; informed model reread, not blind/human",
+  "initial_recovery": {
+    "units": [
+      {
+        "unit": 1,
+        "draft": "正文/0001-木架空着一层.md",
+        "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+        "lines": 46,
+        "method": "FastCtx entire file to EOF, sequential 1 to 6"
+      },
+      {
+        "unit": 2,
+        "draft": "正文/0002-先放一夜.md",
+        "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+        "lines": 50,
+        "method": "FastCtx entire file to EOF, sequential 1 to 6"
+      },
+      {
+        "unit": 3,
+        "draft": "正文/0003-垫高两块砖.md",
+        "sha256": "8d628e3f706f8442fb348b7587163035727ce1258f9022db3b08da65d58d1fa3",
+        "lines": 44,
+        "method": "FastCtx entire file to EOF, sequential 1 to 6"
+      },
+      {
+        "unit": 4,
+        "draft": "正文/0004-盖子打开以后.md",
+        "sha256": "f76c6874d4d8d492343cfb0e354a6f1a8157e01e47753f1cc9f495097a937aa2",
+        "lines": 38,
+        "method": "FastCtx entire file to EOF, sequential 1 to 6"
+      },
+      {
+        "unit": 5,
+        "draft": "正文/0005-抽屉留条缝.md",
+        "sha256": "abe9dd297f1420bcde8e91c307459030b4b74debd82ec22af9189fc7502e3439",
+        "lines": 34,
+        "method": "FastCtx entire file to EOF, sequential 1 to 6"
+      },
+      {
+        "unit": 6,
+        "draft": "正文/0006-一碗面的位置.md",
+        "sha256": "6ee9bebd47547da185ce9f263fee36eb049c02fc67b0e37fa6684574254a9e78",
+        "lines": 44,
+        "method": "FastCtx entire file to EOF, sequential 1 to 6"
+      }
+    ]
+  },
+  "final_tail": {
+    "after_records": true,
+    "range": [
+      5,
+      6
+    ],
+    "reads": [
+      {
+        "unit": 5,
+        "draft": "正文/0005-抽屉留条缝.md",
+        "sha256": "b819ba8107ddbc052709f26480638e6fa5b9fe14450e5f3570e832d46efbd307",
+        "lines": [
+          1,
+          34
+        ],
+        "method": "FastCtx entire file to EOF in order 5 then 6, before formal review"
+      },
+      {
+        "unit": 6,
+        "draft": "正文/0006-一碗面的位置.md",
+        "sha256": "6ee9bebd47547da185ce9f263fee36eb049c02fc67b0e37fa6684574254a9e78",
+        "lines": [
+          1,
+          44
+        ],
+        "method": "FastCtx entire file to EOF in order 5 then 6, before formal review"
+      }
+    ],
+    "review_ref": ".writer/reviews/fee4d58a-00b0-4d11-a7c1-0fa9aebf0067.json"
+  },
+  "limits": [
+    "No formal current full 1–6 reread in this phase",
+    "No review-issues verify",
+    "No human blind reading or market acceptance"
+  ]
+}

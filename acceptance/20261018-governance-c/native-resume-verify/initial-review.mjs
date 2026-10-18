@@ -1,0 +1,15 @@
+import fs from 'node:fs';import path from 'node:path';
+import {call,read,write,dir,work,state} from './helpers.mjs';
+import {functions,comparison,prose} from './review-content.mjs';
+const input=read(path.join(dir,'commands/native-three-07-template-initial/stdout.raw.txt'));
+input.operation_id='native-three-initial-full-six-review';input.report='审查/native-three-初次六章实读.md';input.chapter_functions=functions();input.comparison=comparison;input.issues=[];
+write(path.join(work,input.report),prose('当前六章首次复核',input,'在任何第6章控制变化前完整实读。重复字已经真实修复，当前无需再改；这里只作当前版本resolved判断，不以applied推定定稿。'));
+const r=call('native-three-09-initial-review',['review'],{input});write(path.join(dir,'initial-review-result.json'),r);
+call('native-three-10-initial-verify',['review-issues','verify'],{input:{expected_revision:state().revision,operation_id:'native-three-initial-verify',id:'NATIVE_C_READABILITY_01',review_ref:r.ref,reviewer:'native-three independent Codex; informed full-six model reading',conclusion:'resolved',reason:'当前完整六章实读及事务旧新原文核对：第5章重复里已删，O_KEY当前第25行完整引文正确。原application提交真实且保留。结论限当前版本模型复核，不等于作者定稿。'}});
+call('native-three-11-initial-verified-view',['review-issues','list','--id','NATIVE_C_READABILITY_01']);
+const s=state(), old=s.review_workflow.issues.NATIVE_C_STYLE_02.resolution.author_choice;
+call('native-three-12-repeat-retained',['review-issues','resolve'],{input:{expected_revision:s.revision,operation_id:'native-three-repeat-retained',id:'NATIVE_C_STYLE_02',disposition:'retained',reason:'代理沿用第二阶段作者明确保留原句的选择，当前真实授权允许讨论；不伪称作者作了新决定。',decision_actor:'agent-within-authorized-scope',authorization:s.governance_binding}});
+if(JSON.stringify(state().review_workflow.issues.NATIVE_C_STYLE_02.resolution.author_choice)!==JSON.stringify(old))throw Error('author_choice lost');
+call('native-three-13-retained-author-choice-view',['review-issues','list','--id','NATIVE_C_STYLE_02']);
+call('native-three-14-flip-retained-denied',['review-issues','resolve'],{input:{expected_revision:state().revision,operation_id:'native-three-flip-retained-denied',id:'NATIVE_C_STYLE_02',disposition:'adopted',reason:'负向验收：尝试代理翻转已有作者保留；无作者新原话，不扩大范围。',decision_actor:'agent-within-authorized-scope',authorization:state().governance_binding},exit:2});
+call('native-three-15-verify-retained-denied',['review-issues','verify'],{input:{expected_revision:state().revision,operation_id:'native-three-verify-retained-denied',id:'NATIVE_C_STYLE_02',review_ref:r.ref,reviewer:'native-three informed model; negative control',conclusion:'resolved',reason:'负向验收：保留项没有application，不得冒充修复。'},exit:2});

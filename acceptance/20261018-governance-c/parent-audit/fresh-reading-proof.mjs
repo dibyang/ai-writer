@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import { fileURLToPath } from 'node:url';
+const out=path.dirname(fileURLToPath(import.meta.url)),base=path.dirname(out),project=path.join(base,'native-hundred-replay/fresh-work');
+const s=JSON.parse(fs.readFileSync(path.join(project,'.writer/state.json'))),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const old=s.review_workflow.issues.FRESH_C_TYPO?.evidence.find(e=>e.unit===2)?.sha256??s.units[1].sha256;
+const rows=s.units.map(u=>{const expected=u.unit===2?old:u.sha256,frozen=path.join(project,`.writer/objects/${expected}.review-body`),file=fs.existsSync(frozen)?frozen:path.join(project,u.draft),bytes=fs.readFileSync(file),text=bytes.toString('utf8');assert.equal(sha(bytes),expected);if(u.unit===2)assert.ok(text.includes('顾宁把小车车推到许姨手边'));return {unit:u.unit,draft:u.draft,sha256:expected,body_han:(text.split(/\r?\n/).slice(1).join('\n').match(/\p{Script=Han}/gu)??[]).length,lines:text.split(/\r?\n/).length,source:file,observed_full_fastctx_lines:u.unit===1?[1,42]:[1,40]};});
+const result={at:new Date().toISOString(),nature:'Parent informed model fully read initial two chapters through FastCtx before control correction; not blind or human reading. Identity anchored to original frozen body objects when current manuscript later changes.',rows,reading_notes:['第一章迟到归还小车、提出延借、知悉许姨当晚自用、选择付12元寄存并承担晚饭变化；七点是具体边界。','第二章实际付费寄存并在6:56归还车，询问以后喝茶、接受来前询问及未获顺路接送；时间、物件和选择可承接。','本轮明确重复字小车车是受控样本；不把两章成稿或模型阅读称文学通过。'],auxiliary_error:{location:'parent tool transcript',operation:'read-only node -e counting command',error:'SyntaxError: Invalid regular expression: /\\\\p{Script=Han}/gu: Incomplete quantifier',cause:'regex escaped twice in shell command',effect:'compile failure before execution, no files changed',repair:'use this standalone UTF-8 script; never report an erroneous count'}};
+fs.writeFileSync(path.join(out,'fresh-reading-observation.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,rows}));

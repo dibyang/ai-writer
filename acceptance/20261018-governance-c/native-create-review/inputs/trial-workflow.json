@@ -1,0 +1,61 @@
+{
+  "expected_revision": 0,
+  "operation_id": "native-one-trial-1-6",
+  "author_evidence": {
+    "quote": "创建独立小说《渡口旧箱》，现实小镇题材，失物交接、误认与修复关系，不设系统或大阴谋。计划两卷六章，每卷三章，先组织定位、人物声音、全书骨架、卷契约与滚动细纲。本轮只授权试写1–6，完成后暂停正文，只做结构审查，不写7。每章正文800–1100汉字，保持亲近、自然，不把审核结论写进对白或旁白。对象、物证、人物所知和伏笔以正文登记。",
+    "local_source": "研究/验证授权原话.md",
+    "source_sha256": "9a4812f5ff98f6d8eac7f770a12abc77fd0e7d51ec4c5a470d983259981caba4",
+    "locator": "合成验收授权原话第一段，用户本次提供；没有可用消息ID",
+    "recorded_by": "native Codex primary session"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "先规划后有限试写1–6，完成后暂停正文，只做结构审查",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "六章登记完成后暂停正文，做完整六章结构连读，不写7"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

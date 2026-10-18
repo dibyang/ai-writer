@@ -1,0 +1,60 @@
+{
+  "ok": false,
+  "error": "本轮任务“六章试写已完成；暂停正文，仅讨论结构、登记开放意见，不写7也不改5–6”不允许 draft 7–7；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' record-template '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "六章试写已完成；暂停正文，仅讨论结构、登记开放意见，不写7也不改5–6",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "等待下一阶段新的模拟作者授权；不写第7章，不修控制样本"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

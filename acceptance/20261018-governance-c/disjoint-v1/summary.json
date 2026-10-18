@@ -1,0 +1,502 @@
+{
+  "ok": true,
+  "calls": 30,
+  "rows": [
+    {
+      "label": "disjoint-v1-1-init",
+      "args": [
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+        "--kind",
+        "novel",
+        "--title",
+        "机械断点验证"
+      ],
+      "root": null,
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 1231,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-2-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 133,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-3-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 155,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-4-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 149,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-5-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 167,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-6-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 257,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-7-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 145,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-8-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 190,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-9-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 201,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-10-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 143,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-11-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 157,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-12-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 560,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-13-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 536,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-14-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "b565a7599832979b8e2b6b560f717b5f16f3729ab47fa6eb432b294b588ded79"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 341,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-15-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "b565a7599832979b8e2b6b560f717b5f16f3729ab47fa6eb432b294b588ded79"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 214,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-16-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 290,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-17-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "b565a7599832979b8e2b6b560f717b5f16f3729ab47fa6eb432b294b588ded79"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 250,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-18-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "b565a7599832979b8e2b6b560f717b5f16f3729ab47fa6eb432b294b588ded79"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 275,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-19-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 242,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-20-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "b565a7599832979b8e2b6b560f717b5f16f3729ab47fa6eb432b294b588ded79"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 252,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-21-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "b565a7599832979b8e2b6b560f717b5f16f3729ab47fa6eb432b294b588ded79"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\3965a48b-1794-48c6-9fb1-ae993bbc06a5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 267,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-22-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "2",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "9cf581d60b1eeb472010e292f41ecf7d0a991cf7f47413c6c9adf7f983ca6850"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\6f6f8fd9-f856-4003-a3f3-2254b685fa9c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 200,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-23-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "9cf581d60b1eeb472010e292f41ecf7d0a991cf7f47413c6c9adf7f983ca6850"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\6f6f8fd9-f856-4003-a3f3-2254b685fa9c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 185,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-24-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\6f6f8fd9-f856-4003-a3f3-2254b685fa9c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 326,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-25-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "9cf581d60b1eeb472010e292f41ecf7d0a991cf7f47413c6c9adf7f983ca6850"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\6f6f8fd9-f856-4003-a3f3-2254b685fa9c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 262,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-26-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "9cf581d60b1eeb472010e292f41ecf7d0a991cf7f47413c6c9adf7f983ca6850"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work\\.writer\\revisions\\6f6f8fd9-f856-4003-a3f3-2254b685fa9c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 298,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-27-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 711,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-28-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 712,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-29-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 758,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "disjoint-v1-30-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\disjoint-v1\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 354,
+      "environment": {},
+      "code": "BASELINE_CONFLICT"
+    }
+  ],
+  "same_base_revision": 4,
+  "direct_body_changes": {
+    "A": [
+      "正文/0001.md"
+    ],
+    "B": [
+      "正文/0002.md"
+    ]
+  },
+  "dependent_replay_ranges": {
+    "A": {
+      "from": 1,
+      "through": 2
+    },
+    "B": {
+      "from": 2,
+      "through": 2
+    }
+  },
+  "B_refusal": {
+    "ok": false,
+    "error": "主作品业务或相关文件/工具已变化；双方稿件保留，实读新基线后另建会话，不自动合并",
+    "code": "BASELINE_CONFLICT",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' revision '--help'",
+    "recovery": {
+      "session_id": "6f6f8fd9-f856-4003-a3f3-2254b685fa9c",
+      "base_revision": 4,
+      "current_revision": 5,
+      "conflict_ref": ".writer/revisions/6f6f8fd9-f856-4003-a3f3-2254b685fa9c/conflict-27ef8cef-b107-4384-91cb-64f9a96bab7a.json",
+      "omitted_changes": 0
+    },
+    "conflicts": [
+      {
+        "file": ".writer/state.json",
+        "expected_sha256": "3ae66043e0bf13aec961c2600986cf10a618be356ed3553772dcb506facff414",
+        "actual_sha256": "790715c3c7c23217236f118ac2cc7d69a111a9d1bb3aedcae527a15732567aba"
+      },
+      {
+        "file": "正文/0001.md",
+        "expected_sha256": "ed8de2a7fd5cc2afe27d06a9a0d17ae93d5b46a383b177b70fdddbdc12c741c7",
+        "actual_sha256": "19f5bb7e9ec801d3e0a77f7dcb9d159ce5ce2198fc00b3599ea7034eb8264956"
+      },
+      {
+        "file": ".writer/journal/246f5075-f1f1-41f4-b29e-12738297fb35.json",
+        "expected_sha256": null,
+        "actual_sha256": "53d49b3830f28d65cbd641a637f61daa5e17ae5b823961841c4940c8a613b888"
+      },
+      {
+        "file": ".writer/journal/2ebf9ee7-0bf3-4ae4-82af-07aebf958b62.json",
+        "expected_sha256": null,
+        "actual_sha256": "a680bce04a7de91bcc47d98ca6db65b4400f95445f32f64048c3a7f17ccfb992"
+      },
+      {
+        "file": ".writer/objects/39fe8a50-694b-413f-8db0-1deaeb9d7cc5.json",
+        "expected_sha256": null,
+        "actual_sha256": "bc637d935538df4e5db8d374a239ca50f0fa1f6f6496b442ce985a2d613ca153"
+      },
+      {
+        "file": ".writer/reviews/75d36ff8-e5ac-40ab-936d-2438540a791a.json",
+        "expected_sha256": null,
+        "actual_sha256": "a3b11a53df0af52e4d5f279053e7de5d0881bdd399959c4ffee852e02ecac215"
+      },
+      {
+        "file": "审查/disjoint-v1-mechanical.md",
+        "expected_sha256": null,
+        "actual_sha256": "e19a068a8726bb3c01e8243d669d4d0abdb584db92aad4dafaca1de1d321a43f"
+      }
+    ]
+  },
+  "both_candidates_preserved": true,
+  "note": "Different direct chapter edits still require global state CAS; no automatic semantic merge"
+}

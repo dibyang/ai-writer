@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { fileURLToPath } from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),file=path.join(base,'audit.mjs');
+const label=process.argv[2]??'preflight';assert.match(label,/^preflight(?:-[a-z0-9-]+)?$/);
+let source=fs.readFileSync(file,'utf8');
+assert.ok(source.includes("check('four sequential independent actual Codex processes finished'"));
+source=source.split('\n').filter(line=>!line.startsWith("check('four sequential independent actual Codex processes finished'")&&!line.startsWith("check('all protected existing work files unchanged including git'")).join('\n');
+source=source.replaceAll('sources/final-delivery','sources/candidate-v2').replaceAll('command-index-final.json',`command-index-${label}.json`).replaceAll('final-verification.json',`${label}-verification.json`).replace('const output={ok:true,',"const output={ok:true,scope:'Selected preflight only; fourth native process still reporting; final protected-file and process completion checks deliberately omitted; no final seal',");
+fs.writeFileSync(path.join(base,`audit-${label}-runner.mjs`),'// Derived selected preflight; not final verification. See make-preflight.mjs.\n'+source,{flag:'wx'});
+console.log(JSON.stringify({ok:true,derived:`audit-${label}-runner.mjs`,omitted:['fourth process completion','final protected-work snapshot']}));

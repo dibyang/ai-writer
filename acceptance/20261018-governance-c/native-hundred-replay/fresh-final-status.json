@@ -1,0 +1,133 @@
+{
+  "ok": true,
+  "title": "关门以前",
+  "kind": "novel",
+  "revision": 13,
+  "schema_version": 5,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "一字修订已实际提交并当前两章复核，暂停，仅讨论和规划",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "没有新授权不改正文、不写第三章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 3,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+        "owner": "native-four-fresh-one-character",
+        "project_id": "4071add7-fc74-4dfa-af9f-873250d40a7e",
+        "build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "scope": {
+          "from": 2,
+          "through": 2
+        },
+        "status": "committed",
+        "base_sha256": "1000bb7e0026c4b69034fa8fafe29a0a27220198cf6584ec87b1a16e6ad7397a",
+        "created_at": "2026-10-18T05:09:55.846Z",
+        "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577",
+        "session_sha256": "256740f19a33f1fde38ebd60404a2a085d3c47a77db5c2a6b2950093f9ca970a"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "c3009152-f31a-4744-955d-7b37de9f3577",
+        "session_id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 13,
+    "counts": {
+      "verified": 1,
+      "retained": 1
+    },
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 2,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 3,
+    "plan_exists": false,
+    "action": "一字修订已实际提交并当前两章复核，暂停，仅讨论和规划",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 4,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "周五18:42顾宁迟到修补店，借来的唯一小车仍载最后一箱书。想再借一晚，许姨明确今晚要运自家旧电扇、明天歇；顾宁接受拒绝，选择付12元存书，答应19点前空车回来。连车带箱出门，尚未付款存书或归还。"
+      },
+      {
+        "unit": 2,
+        "summary": "顾宁找到街口空柜、付12元存书并保存柜号取件码，18:56将空车交许姨，许收车装旧扇。顾宁明日分袋背书仍是计划；两人约下周二五点左右喝茶但来前须问，不等到访。19点许姨关门，推车左行，顾宁右行返家方向，归还完成。"
+      }
+    ],
+    "timeline_tail": [
+      "周五18:42顾宁到修补店，请再借一晚遭拒，选择到街口柜存书并19点前还车；仍推车出门未存。",
+      "周五顾宁实际付12元存书保留取件码，18:56空车交许姨，19点许关门各向左右离；下周二茶约待确认履行。"
+    ]
+  }
+}

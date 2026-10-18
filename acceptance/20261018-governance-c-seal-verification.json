@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-18T05:26:45.800Z",
+  "scope": "Seal and subsequent read-only verification of acceptance/20261018-governance-c after all four native Codex processes ended. This receipt is outside the sealed tree and does not change it.",
+  "ok": true,
+  "files": 24357,
+  "bytes_excluding_manifest": 280508966,
+  "manifest_sha256": "0be2e366611b2ccdaeb760ea5c488d7821a99b141534b6e0ee1998a83afd63a5",
+  "manifest_excludes": [
+    "evidence-manifest.json"
+  ],
+  "cwd": "D:/work/other/ai-writer",
+  "seal_command": "node acceptance/20261018-governance-c/seal-evidence.mjs seal",
+  "verify_command": "node acceptance/20261018-governance-c/seal-evidence.mjs verify",
+  "seal_exec_command_results": [
+    {
+      "chunk_id": "85e6eb",
+      "wall_time_seconds": 10.0081517,
+      "session_id": 72659,
+      "original_token_count": 81,
+      "output": "{\"mode\":\"seal\",\"hashed_files\":2500,\"bytes\":12676561}\n{\"mode\":\"seal\",\"hashed_files\":5000,\"bytes\":23449077}\n{\"mode\":\"seal\",\"hashed_files\":7500,\"bytes\":33963902}\n{\"mode\":\"seal\",\"hashed_files\":10000,\"bytes\":39400855}\n{\"mode\":\"seal\",\"hashed_files\":12500,\"bytes\":94676775}\n{\"mode\":\"seal\",\"hashed_files\":15000,\"bytes\":160545297}\n"
+    },
+    {
+      "chunk_id": "30b18d",
+      "wall_time_seconds": 1.6613129,
+      "exit_code": 0,
+      "original_token_count": 77,
+      "output": "{\"mode\":\"seal\",\"hashed_files\":17500,\"bytes\":172517782}\n{\"mode\":\"seal\",\"hashed_files\":20000,\"bytes\":184388148}\n{\"mode\":\"seal\",\"hashed_files\":22500,\"bytes\":244257616}\n{\"ok\":true,\"mode\":\"seal\",\"files\":24357,\"bytes\":280508966,\"manifest_sha256\":\"0be2e366611b2ccdaeb760ea5c488d7821a99b141534b6e0ee1998a83afd63a5\"}\n"
+    }
+  ],
+  "verify_exec_command_results": [
+    {
+      "chunk_id": "c9cf5d",
+      "wall_time_seconds": 9.9409293,
+      "exit_code": 0,
+      "original_token_count": 163,
+      "output": "{\"mode\":\"verify\",\"hashed_files\":2500,\"bytes\":12676561}\n{\"mode\":\"verify\",\"hashed_files\":5000,\"bytes\":23449077}\n{\"mode\":\"verify\",\"hashed_files\":7500,\"bytes\":33963902}\n{\"mode\":\"verify\",\"hashed_files\":10000,\"bytes\":39400855}\n{\"mode\":\"verify\",\"hashed_files\":12500,\"bytes\":94676775}\n{\"mode\":\"verify\",\"hashed_files\":15000,\"bytes\":160545297}\n{\"mode\":\"verify\",\"hashed_files\":17500,\"bytes\":172517782}\n{\"mode\":\"verify\",\"hashed_files\":20000,\"bytes\":184388148}\n{\"mode\":\"verify\",\"hashed_files\":22500,\"bytes\":244257616}\n{\"ok\":true,\"mode\":\"verify\",\"files\":24357,\"bytes\":280508966,\"manifest_sha256\":\"0be2e366611b2ccdaeb760ea5c488d7821a99b141534b6e0ee1998a83afd63a5\"}\n"
+    }
+  ],
+  "source_of_output": "Exact command-tool returned output chunks retained; no claim of raw binary stdout beyond tool observations"
+}
+

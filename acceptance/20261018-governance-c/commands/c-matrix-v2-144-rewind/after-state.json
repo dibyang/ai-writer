@@ -1,0 +1,380 @@
+{
+  "schema_version": 5,
+  "revision": 9,
+  "project_id": "d636f899-e56e-401f-a045-aaa902e52b8d",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "revision",
+    "task": "独立机械验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/04c1c50b-97f6-4966-8c6b-0fab29c58d47.json",
+      "sha256": "af88bb5e5a4563e9d90492705481f8e08c3ddf6011ae9f45c0a2927e6c2c7cc5"
+    },
+    {
+      "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+      "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+    }
+  ],
+  "operations": {
+    "c-matrix-v2-workflow-125": {
+      "input_sha256": "fd3edb9fe16e3f614997d79607e8b57715a5b596478d1cdb44406120ba4c296f",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "c-matrix-v2-workflow-125",
+        "event": {
+          "ref": ".writer/objects/04c1c50b-97f6-4966-8c6b-0fab29c58d47.json",
+          "sha256": "af88bb5e5a4563e9d90492705481f8e08c3ddf6011ae9f45c0a2927e6c2c7cc5"
+        }
+      }
+    },
+    "c-matrix-v2-workflow-138": {
+      "input_sha256": "02150a2be4f9d62cd739ac7ba8b68e6934af15f4cacd07c5a0d0a64388414249",
+      "result": {
+        "ok": true,
+        "revision": 5,
+        "operation_id": "c-matrix-v2-workflow-138",
+        "event": {
+          "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+          "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {
+      ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff"
+    },
+    "issues": {
+      "I_CHECK": {
+        "id": "I_CHECK",
+        "type": "readability",
+        "severity": "minor",
+        "confidence": "medium",
+        "statement": "合成流程意见，不是实际读稿发现",
+        "suggestion": "只验证取舍和版本绑定",
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "line": 3,
+            "quote": "本页只演练合成输入的字段边界。"
+          }
+        ],
+        "status": "adopted",
+        "origin": {
+          "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+          "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+          "units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001.md",
+              "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+              "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+            }
+          ]
+        },
+        "history": [
+          {
+            "ref": ".writer/objects/34c292f0-ca13-4ab9-83fc-72e1cde13ec8.json",
+            "sha256": "6a429d98b062a4e4272e8d11c6fb649abf517cd1e38ad080058088a2d438f4fc"
+          }
+        ],
+        "resolution": {
+          "decision_actor": "agent-within-authorized-scope",
+          "authorization": {
+            "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+            "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+          },
+          "disposition": "adopted",
+          "reason": "合成处置，不冒充作者逐条决定",
+          "author_choice": null,
+          "basis_units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001.md",
+              "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+              "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+            }
+          ]
+        },
+        "application": null,
+        "verification": null,
+        "binding": {
+          "ref": ".writer/objects/5955657c-9815-403b-b69f-e95d3fe11b36.json",
+          "sha256": "c7c2f9b4abe941250273ad71060d145d1bcd6fd5a1c7bd61b30e47cc57ea9b70"
+        }
+      },
+      "I_STYLE": {
+        "id": "I_STYLE",
+        "type": "optional_style",
+        "severity": "suggestion",
+        "confidence": "medium",
+        "statement": "合成流程意见，不是实际读稿发现",
+        "suggestion": "只验证取舍和版本绑定",
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "line": 3,
+            "quote": "本页只演练合成输入的字段边界。"
+          }
+        ],
+        "status": "retained",
+        "origin": {
+          "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+          "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+          "units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001.md",
+              "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+              "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+            }
+          ]
+        },
+        "history": [
+          {
+            "ref": ".writer/objects/6c20f4db-12ae-468f-809f-d1aaeebc1eee.json",
+            "sha256": "21dc92c08c95f09608d5b6d800bd3888572728ba8450736da68b25b6f474e247"
+          }
+        ],
+        "resolution": {
+          "decision_actor": "agent-within-authorized-scope",
+          "authorization": {
+            "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+            "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+          },
+          "disposition": "retained",
+          "reason": "合成处置，不冒充作者逐条决定",
+          "author_choice": null,
+          "basis_units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001.md",
+              "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+              "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+            }
+          ]
+        },
+        "application": null,
+        "verification": null,
+        "binding": {
+          "ref": ".writer/objects/d14f2bce-414d-41fa-bfb3-f648ff3aaa29.json",
+          "sha256": "0225dadd33462c95e34cfd54db8c59550b8a03b4623cad843e5d8e3b1e464f13"
+        }
+      },
+      "I_WAIT": {
+        "id": "I_WAIT",
+        "type": "readability",
+        "severity": "minor",
+        "confidence": "medium",
+        "statement": "合成流程意见，不是实际读稿发现",
+        "suggestion": "只验证取舍和版本绑定",
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "line": 3,
+            "quote": "本页只演练合成输入的字段边界。"
+          }
+        ],
+        "status": "deferred",
+        "origin": {
+          "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+          "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+          "units": [
+            {
+              "unit": 2,
+              "draft": "正文/0002.md",
+              "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+              "dependency": "d0b00e7e1e354ab274e26e60a7e774e2f00c620aab647a7b559c98798cd7f16f"
+            }
+          ]
+        },
+        "history": [
+          {
+            "ref": ".writer/objects/e675fcd9-5bf2-450b-8771-3f199491db19.json",
+            "sha256": "8da1b2ba873bd667dd1c7469aeffcda56fd72ea30e75d667d4b77b7d881db4da"
+          }
+        ],
+        "resolution": {
+          "decision_actor": "agent-within-authorized-scope",
+          "authorization": {
+            "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+            "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+          },
+          "disposition": "deferred",
+          "reason": "合成处置，不冒充作者逐条决定",
+          "author_choice": null,
+          "basis_units": [
+            {
+              "unit": 2,
+              "draft": "正文/0002.md",
+              "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+              "dependency": "d0b00e7e1e354ab274e26e60a7e774e2f00c620aab647a7b559c98798cd7f16f"
+            }
+          ]
+        },
+        "application": null,
+        "verification": null,
+        "binding": {
+          "ref": ".writer/objects/15d203a2-16c4-4d0d-938b-927e4b7edf69.json",
+          "sha256": "a6e68a8bc5dae7d4ede39c99671e4c30cfc8d4524c73009eb96ee273aa456b95"
+        }
+      }
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/34c292f0-ca13-4ab9-83fc-72e1cde13ec8.json",
+        "sha256": "6a429d98b062a4e4272e8d11c6fb649abf517cd1e38ad080058088a2d438f4fc"
+      },
+      {
+        "ref": ".writer/objects/6c20f4db-12ae-468f-809f-d1aaeebc1eee.json",
+        "sha256": "21dc92c08c95f09608d5b6d800bd3888572728ba8450736da68b25b6f474e247"
+      },
+      {
+        "ref": ".writer/objects/e675fcd9-5bf2-450b-8771-3f199491db19.json",
+        "sha256": "8da1b2ba873bd667dd1c7469aeffcda56fd72ea30e75d667d4b77b7d881db4da"
+      },
+      {
+        "ref": ".writer/objects/5955657c-9815-403b-b69f-e95d3fe11b36.json",
+        "sha256": "c7c2f9b4abe941250273ad71060d145d1bcd6fd5a1c7bd61b30e47cc57ea9b70"
+      },
+      {
+        "ref": ".writer/objects/d14f2bce-414d-41fa-bfb3-f648ff3aaa29.json",
+        "sha256": "0225dadd33462c95e34cfd54db8c59550b8a03b4623cad843e5d8e3b1e464f13"
+      },
+      {
+        "ref": ".writer/objects/15d203a2-16c4-4d0d-938b-927e4b7edf69.json",
+        "sha256": "a6e68a8bc5dae7d4ede39c99671e4c30cfc8d4524c73009eb96ee273aa456b95"
+      }
+    ],
+    "operations": {
+      "review-1-2-r3": {
+        "input_sha256": "21e574dbbcaf3c0c12b1e6f7115a22f85c612de190834ef845826f121651e070",
+        "result": {
+          "ok": true,
+          "revision": 4,
+          "ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+          "coverage": [
+            1,
+            2
+          ],
+          "issue_ids": [
+            "I_CHECK",
+            "I_STYLE",
+            "I_WAIT"
+          ],
+          "quality": "review-recorded-not-acceptance"
+        }
+      },
+      "c-139": {
+        "input_sha256": "26c72a7a3780af70b25054cc9c04337acf7583269f54e4aef7b05dd15592e083",
+        "result": {
+          "ok": true,
+          "revision": 6,
+          "id": "I_CHECK",
+          "status": "adopted",
+          "event": {
+            "ref": ".writer/objects/5955657c-9815-403b-b69f-e95d3fe11b36.json",
+            "sha256": "c7c2f9b4abe941250273ad71060d145d1bcd6fd5a1c7bd61b30e47cc57ea9b70"
+          }
+        }
+      },
+      "c-140": {
+        "input_sha256": "d79005ee98ebcc456861eddd4b8bcb028854cd866173238a8daae5cc23a210b3",
+        "result": {
+          "ok": true,
+          "revision": 7,
+          "id": "I_STYLE",
+          "status": "retained",
+          "event": {
+            "ref": ".writer/objects/d14f2bce-414d-41fa-bfb3-f648ff3aaa29.json",
+            "sha256": "0225dadd33462c95e34cfd54db8c59550b8a03b4623cad843e5d8e3b1e464f13"
+          }
+        }
+      },
+      "c-141": {
+        "input_sha256": "cb1a6c75224494f0db7e1fa224a295b812ed0295f58cdb1f6f063be94ca37cd1",
+        "result": {
+          "ok": true,
+          "revision": 8,
+          "id": "I_WAIT",
+          "status": "deferred",
+          "event": {
+            "ref": ".writer/objects/15d203a2-16c4-4d0d-938b-927e4b7edf69.json",
+            "sha256": "a6e68a8bc5dae7d4ede39c99671e4c30cfc8d4524c73009eb96ee273aa456b95"
+          }
+        }
+      }
+    }
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+    "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+  },
+  "revision_scope": {
+    "from": 1,
+    "through": 2
+  }
+}

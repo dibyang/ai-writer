@@ -1,0 +1,223 @@
+{
+  "ok": true,
+  "scope": "record-input-preview",
+  "revision": 2,
+  "unit": 2,
+  "writes": false,
+  "summary": "周梅凭母亲清单和黄漆记忆认领，承认不记得箱底。林禾守约等老邵，承认自己也可能想错；周梅带回原清单，留下抄纸和联系方式，约明早再看。",
+  "changes": [
+    {
+      "at": [
+        "characters",
+        "林禾"
+      ],
+      "had": true,
+      "has": true,
+      "before": "便民处；暂收木箱，独自保管钥匙和旧借物簿；看见蓝布但不知来历，知道老邵要求认领时叫他",
+      "after": "便民处；看过周梅家清单，仍不能确认归属；把抄纸夹在寄存本，承诺明早叫周梅；钥匙未取"
+    },
+    {
+      "at": [
+        "characters",
+        "周梅"
+      ],
+      "had": true,
+      "has": true,
+      "before": "经过便民处后去取皮带；看见黄漆木箱，说黄漆还在；尚未公开认领依据",
+      "after": "回家；说明母亲在箱中放剪刀布头的记忆，不记得箱底；原清单带回，留下抄纸与现用电话；感到被怀疑但约好再来"
+    },
+    {
+      "at": [
+        "timeline"
+      ],
+      "append": [
+        "第一天傍晚：周梅认领，林禾未凭清单和黄漆交箱；双方约第二天等老邵到场。"
+      ],
+      "length": 1
+    },
+    {
+      "at": [
+        "ledger",
+        "T_CLAIM",
+        "status"
+      ],
+      "had": true,
+      "has": true,
+      "before": "pending",
+      "after": "partial"
+    },
+    {
+      "at": [
+        "ledger",
+        "T_CLAIM",
+        "reader_known"
+      ],
+      "had": true,
+      "has": true,
+      "before": "老邵要求认领先叫他",
+      "after": "周梅清单有黄漆木箱，但无年月地点；认领尚未完成"
+    },
+    {
+      "at": [
+        "ledger",
+        "T_CLAIM",
+        "character_known",
+        "林禾"
+      ],
+      "had": true,
+      "has": true,
+      "before": "不能急着送人",
+      "after": "见到清单，不足以独自交箱；等老邵"
+    },
+    {
+      "at": [
+        "ledger",
+        "T_CLAIM",
+        "character_known",
+        "周梅"
+      ],
+      "had": true,
+      "has": true,
+      "before": "仅在门口看见箱子",
+      "after": "明天见老邵，不记得箱底"
+    },
+    {
+      "at": [
+        "ledger",
+        "T_CLAIM",
+        "evidence"
+      ],
+      "append": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-先放一夜.md",
+          "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+          "line": 7,
+          "quote": "没有年月，也没写箱子后来放在哪里。"
+        }
+      ],
+      "length": 1
+    },
+    {
+      "at": [
+        "ledger",
+        "T_CLAIM",
+        "updated_unit"
+      ],
+      "had": true,
+      "has": true,
+      "before": 1,
+      "after": 2
+    },
+    {
+      "at": [
+        "ledger",
+        "OBS_LIST"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "type": "observation",
+        "statement": "周梅家清单最下面写黄漆木箱，字旁有小钩，无年月和去处",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "reader_known": "清单文字可见，不能单凭它确认此箱",
+        "character_known": {
+          "林禾": "在灯下读过原件",
+          "周梅": "提供家存原件并带回"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 7,
+            "quote": "纸上写着米缸、棉被，最下面是黄漆木箱，字旁有个小钩。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      }
+    },
+    {
+      "at": [
+        "ledger",
+        "O_COPY"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "type": "object",
+        "statement": "周梅抄写认领描述并留下联系方式的纸",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "寄存本夹页",
+          "condition": "抄纸，非原清单"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 47,
+            "quote": "她走后，林禾把抄纸夹进寄存本，没压在箱上。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      }
+    },
+    {
+      "at": [
+        "ledger",
+        "R_LISTEN"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "type": "relationship",
+        "statement": "林禾承认自己可能想错，周梅仍愿次日再来",
+        "status": "partial",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "reader_known": "有小幅缓和，未和好",
+        "character_known": {
+          "林禾": "知道周梅不想被当成捡便宜",
+          "周梅": "听见林禾承认自己也不了解箱子"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 37,
+            "quote": "“也可能是我想错了。你知道这箱，我不知道。”"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      }
+    }
+  ],
+  "unchanged": {
+    "characters": 1,
+    "ledger": 4
+  },
+  "source_hashes": "matched-current-context",
+  "replay_review": "not-replay",
+  "findings": [],
+  "note": "与record共用验证；仅机械准备就绪，不是文学或作者验收"
+}

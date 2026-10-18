@@ -1,0 +1,52 @@
+{
+  "expected_revision": 3,
+  "operation_id": "native-four-fresh-pause-for-review",
+  "author_evidence": {
+    "local_source": "研究/模拟创作授权.md",
+    "source_sha256": "0b3db8a4d22574a773ffbafd16e97a284ee157c9ce848484663caa5da0772924",
+    "quote": "两章完成后暂停，仅讨论审查，无第三章。",
+    "locator": "全文授权段",
+    "recorded_by": "Codex native-four; synthetic acceptance author"
+  },
+  "workflow": {
+    "stage": "structure",
+    "task": "两章已完成，暂停正文，仅讨论和审查",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "不写第三章，等待实际模拟作者取舍"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

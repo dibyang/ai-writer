@@ -1,0 +1,36 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_STYLE",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001.md",
+          "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/18cb1187-1db7-4262-b23b-14df9b9bdea9.json",
+        "review_sha256": "080ecc2811b3e17a85886a32908a04237a085dc382b4d61b4974c0b6b62dabab",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "63eb556f1d42816e09abcdd5688b53fb1295261744180cde3a24546690376b46"
+          }
+        ]
+      },
+      "history": []
+    }
+  }
+}

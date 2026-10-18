@@ -1,0 +1,150 @@
+{
+  "unit": 1,
+  "expected_revision": 1,
+  "source_hashes": {
+    "writer.json": "39ad8a9044270cb949b008e7604c3f0307049ea9ac8c2377935a2d1a4904a306",
+    ".writer/state.json": "41cb53b66a4bd5fdf708c16e988b6ba28106d252e3ba882e24ac253c56eac3d1",
+    "大纲/单元/0001.json": "d70716146ef82664e6dd57f0f1a8badc3e0f6e2b0b728ff2809cc1424b5e896f",
+    "设定/作品定位.md": "2c7f72f92e2f1dce19ecf5e7fe4ea47f42f72cd2e67bc20af224d699c7762d93",
+    "设定/文风.md": "9cc72195683be519f0013f5c54a53e1510e4782fef462f4e96a23b82521fb14d",
+    "设定/权威规则.md": "99e43c5485358fa1a1fafd1049e10cf982886669740eed4fcda16837b15cfe68",
+    "设定/人物声音.md": "281de5bb32dcbf6e30a8f116cfc82476ca4ff5dd9bf7090b79903e70f6a4e609",
+    "大纲/全书骨架.md": "8a7a4b17e731e5ca5cf704b0cbc00ae5d2b52c2d8c531464d7dc05d05f170249",
+    "大纲/分卷/V1.json": "a36ec51d9e4fb700f36237c6f031362b4ad01e40df7b72a177a846dc614221a4"
+  },
+  "draft": "正文/0001-木架空着一层.md",
+  "source_bindings": {},
+  "summary": "初秋下午老邵从渡口仓房送来锁着的黄漆木箱和旧借物簿，林禾暂收、分别保管钥匙与箱子；箱底有蓝布补角，来历未知。周梅路过认出黄漆但未提出正式认领。",
+  "changes": {
+    "characters": {
+      "林禾": "便民处；暂收木箱，独自保管钥匙和旧借物簿；看见蓝布但不知来历，知道老邵要求认领时叫他",
+      "老邵": "离开便民处；知道从仓房移来旧箱，不记得蓝布谁补，要求认领时在场",
+      "周梅": "经过便民处后去取皮带；看见黄漆木箱，说黄漆还在；尚未公开认领依据"
+    },
+    "timeline_append": [
+      "初秋第一天下午：老邵从渡口仓房把旧箱和簿册交林禾暂存，钥匙进林禾柜台抽屉。"
+    ],
+    "ledger": {
+      "O_BOX": {
+        "type": "object",
+        "statement": "从渡口仓房送来的一只锁着的半米长黄漆木箱",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵",
+          "周梅"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "便民处木架上层",
+          "condition": "旧黄漆；左底缺角有蓝布，挂锁未开"
+        },
+        "reader_known": "老邵送来，等待认领",
+        "character_known": {
+          "林禾": "暂存物，归属未知",
+          "老邵": "来自仓房，认领时要在场",
+          "周梅": "看见黄漆，尚未说明认领依据"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "放稳前，老邵托住箱头，让她看底下。"
+          }
+        ]
+      },
+      "O_KEY": {
+        "type": "object",
+        "statement": "木箱小铜挂锁的一把钥匙",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "自己柜台下抽屉的布袋",
+          "condition": "一把；未试开"
+        },
+        "reader_known": "老邵交来，林禾装袋保存",
+        "character_known": {
+          "林禾": "知道存放位置，尚未开箱",
+          "老邵": "知道已交钥匙给林禾"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "林禾把钥匙装进一只空布袋，放进自己柜台下的抽屉。"
+          }
+        ]
+      },
+      "O_BOOK": {
+        "type": "object",
+        "statement": "老邵留下的旧借物簿",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "柜台下抽屉右边",
+          "condition": "薄簿；尚未翻读"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "旧借物簿另搁在抽屉右边，跟她的寄存本隔开。"
+          }
+        ]
+      },
+      "OBS_BLUE": {
+        "type": "observation",
+        "statement": "箱底外侧有蓝布补住左边缺角",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "tags": [
+          "蓝布",
+          "木箱"
+        ],
+        "reader_known": "可见蓝布，来源未知",
+        "character_known": {
+          "林禾": "亲眼看到，没扯布",
+          "老邵": "见着时已有，不记得谁补"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "黄漆掉得斑驳，箱底外侧钉着一块蓝布，补住了左边的缺角。"
+          }
+        ]
+      },
+      "T_CLAIM": {
+        "type": "thread",
+        "statement": "旧箱等人认领，外观与记忆是否足够尚待查问",
+        "status": "pending",
+        "cast": [
+          "林禾",
+          "老邵",
+          "周梅"
+        ],
+        "due_unit": 4,
+        "reader_known": "老邵要求认领先叫他",
+        "character_known": {
+          "林禾": "不能急着送人",
+          "老邵": "明天从县里回来",
+          "周梅": "仅在门口看见箱子"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "她没有开锁，老邵也没催，只叮嘱有人认领先叫他来一趟。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

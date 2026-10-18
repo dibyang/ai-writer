@@ -1,0 +1,3307 @@
+{
+  "total": 75,
+  "success": 71,
+  "nonzero": [
+    {
+      "label": "native-four-hundred-preview-unreviewed",
+      "exit_code": 1,
+      "reason": "expected replay review gate"
+    },
+    {
+      "label": "native-four-hundred-final-doctor",
+      "exit_code": 1,
+      "reason": "expected legacy copy incompatibility diagnostic"
+    },
+    {
+      "label": "native-four-fresh-init",
+      "exit_code": 2,
+      "reason": "caller mistake: init does not accept --project; corrected without changing product"
+    },
+    {
+      "label": "native-four-fresh-preview-old-quote",
+      "exit_code": 1,
+      "reason": "expected stale full quote gate"
+    }
+  ],
+  "state_changed_calls": 21,
+  "all_primary_bin": true,
+  "all_capture": true,
+  "by_command": {
+    "status": 3,
+    "--help": 1,
+    "revision": 16,
+    "rewind": 2,
+    "record-template": 5,
+    "record-preview": 6,
+    "record": 4,
+    "review-template": 4,
+    "review": 4,
+    "workflow": 5,
+    "check": 2,
+    "doctor": 4,
+    "tool": 3,
+    "export": 2,
+    "init": 2,
+    "volume": 1,
+    "plan": 2,
+    "context": 2,
+    "review-issues": 7
+  },
+  "note": "init --path has no --project, so capture has no state path; fresh-init-state.json immediately preserves its resulting state. All project-bearing calls preserve complete before/after state in capture.",
+  "commands": [
+    {
+      "label": "native-four-hundred-status-start",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:59:39.487Z",
+      "elapsed_ms": 241,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "after_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 6029,
+      "stdout_sha256": "60f8de873db785210ed532dc1b5380c534ff8e6001e95749c6c64c802e35089a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-status-start",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-help",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:59:39.817Z",
+      "elapsed_ms": 95,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 7522,
+      "stdout_sha256": "5e9d119f4162162e2e901d290f2793234f8016d55eef0a897ad7c2de1d2ca05e",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-help",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-revision-help",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "--help",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:00.686Z",
+      "elapsed_ms": 104,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "after_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 895,
+      "stdout_sha256": "3be5ace469c40b9eb429582ce245a6d00a34c115769c514ca01f9706758f50a8",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-revision-help",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-begin",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "begin",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-begin.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:16.583Z",
+      "elapsed_ms": 1933,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-begin.json",
+        "sha256": "2f3d4fcead6e2ea917e915021217cda9049442e5adc30f60eb24ecc7dd356c90"
+      },
+      "before_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "after_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 673,
+      "stdout_sha256": "f8de18c64e3d7ea2947a0c381e3de4a591436bd61768824e15d21946450c4742",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-begin",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-rewind",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "rewind",
+        "--from",
+        "100",
+        "--expected-revision",
+        "375",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:28.306Z",
+      "elapsed_ms": 158,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 380,
+      "stdout_sha256": "fa093cebeaa42b1e66ae359fc80654768d4bdad8929bd3ca06f308d8bcc34e26",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-rewind",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-template-1",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "100",
+        "--draft",
+        "正文/0100-念到这一页的末尾.md",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:28.577Z",
+      "elapsed_ms": 379,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1540,
+      "stdout_sha256": "fd53e30117316fcefc25422aa202337dfe6c0fa62ee2d04dbf8a087aae129c4b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-template-1",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-template-2",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "100",
+        "--draft",
+        "正文/0100-念到这一页的末尾.md",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:29.057Z",
+      "elapsed_ms": 390,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1540,
+      "stdout_sha256": "fd53e30117316fcefc25422aa202337dfe6c0fa62ee2d04dbf8a087aae129c4b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-template-2",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-template-3",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "100",
+        "--draft",
+        "正文/0100-念到这一页的末尾.md",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:29.554Z",
+      "elapsed_ms": 422,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1540,
+      "stdout_sha256": "fd53e30117316fcefc25422aa202337dfe6c0fa62ee2d04dbf8a087aae129c4b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-template-3",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-replay-1",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "100",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:30.104Z",
+      "elapsed_ms": 469,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 98427,
+      "stdout_sha256": "99c8836d3519e8b63f3075b9cae028099580c0fc9c9ed7ffd39942dbb04b6f85",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-replay-1",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-replay-2",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "100",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:30.741Z",
+      "elapsed_ms": 491,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 98427,
+      "stdout_sha256": "99c8836d3519e8b63f3075b9cae028099580c0fc9c9ed7ffd39942dbb04b6f85",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-replay-2",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-replay-3",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "100",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:00:31.343Z",
+      "elapsed_ms": 478,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 98427,
+      "stdout_sha256": "99c8836d3519e8b63f3075b9cae028099580c0fc9c9ed7ffd39942dbb04b6f85",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-replay-3",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-preview-unreviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-preview-unreviewed.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:01:43.046Z",
+      "elapsed_ms": 416,
+      "exit_code": 1,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-preview-unreviewed.json",
+        "sha256": "99c8836d3519e8b63f3075b9cae028099580c0fc9c9ed7ffd39942dbb04b6f85"
+      },
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 407,
+      "stdout_sha256": "9d400f788da26d44f6fc013ddfaa57036dddf1ddecb903b568c30143f8213c18",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [
+        {
+          "code": "REPLAY_REVIEW_REQUIRED",
+          "message": "重登草案尚未完成摘要、人物、时间线、账本、引文及下游复核；需真实报告和checked_fields，不自动确认无变化"
+        }
+      ],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-preview-unreviewed",
+      "outcome": "expected replay review gate"
+    },
+    {
+      "label": "native-four-hundred-preview-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-preview-reviewed.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:02:38.209Z",
+      "elapsed_ms": 417,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-preview-reviewed.json",
+        "sha256": "4cfbc4110debe4e9c93c6f7738331ac585569d277f8220652ad0e803ab9e6453"
+      },
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 168635,
+      "stdout_sha256": "c9759e93e15e30b92aaf108a025c2cc08a6c6ce308f8ffb54c981f8c69644a0d",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-preview-reviewed",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-record",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-record.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:02:38.728Z",
+      "elapsed_ms": 432,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-record.json",
+        "sha256": "4cfbc4110debe4e9c93c6f7738331ac585569d277f8220652ad0e803ab9e6453"
+      },
+      "before_state_sha256": "a22da475b6e1742ceb1d1c5b6a155e33d8ed199753a286cd302af931124f36b1",
+      "after_state_sha256": "da0a9b583077b8eccd04ca208aee1b9859e7db62e8ab74cee31d2ee172c12b1d",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 193,
+      "stdout_sha256": "8d5ec1e71978faa9bede913fc1ff470b437482a4dedbc111454993f7c1f83f44",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-record",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-review-template",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-template",
+        "--from",
+        "95",
+        "--to",
+        "100",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:02:39.277Z",
+      "elapsed_ms": 338,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "da0a9b583077b8eccd04ca208aee1b9859e7db62e8ab74cee31d2ee172c12b1d",
+      "after_state_sha256": "da0a9b583077b8eccd04ca208aee1b9859e7db62e8ab74cee31d2ee172c12b1d",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 3879,
+      "stdout_sha256": "759680bbb32edb854468dabbe72a7c8cff10db523f87c8602978752ee6cac821",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-review-template",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-review",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review",
+        "--revision-token",
+        "4f7b6f6b29a364493e686d4db3064a90cb002351844023e0c8a7ec9e4dad8c46",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work\\.writer\\revisions\\323ed851-1d39-4925-8620-24c5addbf1bd\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-review.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:06.442Z",
+      "elapsed_ms": 388,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-review.json",
+        "sha256": "9bf004b873f6cc18237461ef91d70b48ec77df280e4fa16deed4aafca44abff0"
+      },
+      "before_state_sha256": "da0a9b583077b8eccd04ca208aee1b9859e7db62e8ab74cee31d2ee172c12b1d",
+      "after_state_sha256": "9e5ec342861e68fddbfb2884e5cfe22877ace548eecc71eebc8dfb526de3eae8",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 209,
+      "stdout_sha256": "130ce09dc3c687f12f01aee87d8c00fd77e5509f891583260d4ee0b2fb3d99b6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-review",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-prepare",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "prepare",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-prepare.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:06.929Z",
+      "elapsed_ms": 1232,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-prepare.json",
+        "sha256": "6c1b7ee89996dc6b586595630323b1e17009e38a2c1e9e321a81f376ccde66c7"
+      },
+      "before_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "after_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 3176,
+      "stdout_sha256": "0b85dd1e59c051abe3adfd639b7256001d218a0e0f1a904280d567bb5b52ccc9",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-prepare",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-commit",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "commit",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-commit.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:08.308Z",
+      "elapsed_ms": 1182,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-commit.json",
+        "sha256": "6c1b7ee89996dc6b586595630323b1e17009e38a2c1e9e321a81f376ccde66c7"
+      },
+      "before_state_sha256": "52d9a1b22b6db26b5d3b4c3a9c7a297221ce896b55428f0b21ad54d6d4d5e213",
+      "after_state_sha256": "5b618bde05b768c36fd7beba1fc84de0e76f2a58aed3d189923b100757a647fd",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 206,
+      "stdout_sha256": "cd2ae0f472e04ee9c19f908e426b11b792d2cc9244ac4e98e66af5b3e0fab50f",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-commit",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-commit-idempotent",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "commit",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-commit-idempotent.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:09.615Z",
+      "elapsed_ms": 120,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-commit-idempotent.json",
+        "sha256": "6c1b7ee89996dc6b586595630323b1e17009e38a2c1e9e321a81f376ccde66c7"
+      },
+      "before_state_sha256": "5b618bde05b768c36fd7beba1fc84de0e76f2a58aed3d189923b100757a647fd",
+      "after_state_sha256": "5b618bde05b768c36fd7beba1fc84de0e76f2a58aed3d189923b100757a647fd",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 146,
+      "stdout_sha256": "f3c54d2998e476ddfb2d1ece32fc02865a87a58724cda8f364b96f067dbcc3f6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-commit-idempotent",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-pause",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-pause.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:09.849Z",
+      "elapsed_ms": 142,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\hundred-pause.json",
+        "sha256": "1b23233b5f23472ecbbffbff0a0962bc81ccffc9271aeba8df40a18fbf118fbe"
+      },
+      "before_state_sha256": "5b618bde05b768c36fd7beba1fc84de0e76f2a58aed3d189923b100757a647fd",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 254,
+      "stdout_sha256": "a7bf473cbdc2d0775ddba9d33ba2b48e8e61d6f343844726879bb83f4b8ffebd",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-pause",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-final-check",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:10.087Z",
+      "elapsed_ms": 452,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 489,
+      "stdout_sha256": "139e9750af583e7baf6921a94c08581135e5953db65229e582cde21808b5456b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-final-check",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-final-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:10.650Z",
+      "elapsed_ms": 289,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 6954,
+      "stdout_sha256": "308f7563e62e142cc7de6eeb3168aaf7437846043f45c88181a728b553030dff",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-final-status",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-final-doctor",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:11.038Z",
+      "elapsed_ms": 143,
+      "exit_code": 1,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 10251,
+      "stdout_sha256": "cec7e24ce2c9aff45abd8f5b564d209488e69e50b5e61686c34176e9da203459",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [
+        "随附工具版本/清单未声明支持当前 state schema 5；从新主项目入口操作。本批不自动更新随附工具，不要手改 state 或只复制 CLI。"
+      ],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-final-doctor",
+      "outcome": "expected legacy copy incompatibility diagnostic"
+    },
+    {
+      "label": "native-four-main-doctor",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "doctor"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:20.078Z",
+      "elapsed_ms": 542,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 11328,
+      "stdout_sha256": "501d0af280fa38c0e3784af3f04dc8b7c6c38a95b4b84e1aef307865121841b3",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-main-doctor",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-final-compare",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "tool",
+        "compare",
+        "--other",
+        "D:\\work\\other\\ai-writer",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:20.716Z",
+      "elapsed_ms": 573,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 25867,
+      "stdout_sha256": "bf664cb65dc469147a131684236605b81fd19d3347d9f0d1b9ca2825b5856915",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-final-compare",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-export",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "export",
+        "--out",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\hundred-export",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:04:21.389Z",
+      "elapsed_ms": 741,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 127491,
+      "stdout_sha256": "44249e5c0174132f01711b98fc3f5e86172c49bac5aa91100d296799c2d1e133",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-export",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-init",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--kind",
+        "novel",
+        "--title",
+        "关门以前",
+        "--mode",
+        "long",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:28.446Z",
+      "elapsed_ms": 100,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 261,
+      "stderr_sha256": "64180b2977b749c75c08e8f2d57e7775c572a4a7f95f4726531414d2943a7477",
+      "findings": [],
+      "code": "COMMAND_FAILED",
+      "raw_dir": "../commands/native-four-fresh-init",
+      "outcome": "caller mistake: init does not accept --project; corrected without changing product"
+    },
+    {
+      "label": "native-four-fresh-init-corrected",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--kind",
+        "novel",
+        "--title",
+        "关门以前",
+        "--mode",
+        "long"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:39.697Z",
+      "elapsed_ms": 696,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 420,
+      "stdout_sha256": "b4a8e1868540145c6a593d1aebc7f380483c6fbc397111d8268d27b24d72fe2c",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-init-corrected",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-authorize-draft",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-authorize-draft.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:40.496Z",
+      "elapsed_ms": 108,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-authorize-draft.json",
+        "sha256": "c1b4e91f4d7a8e24046c28566012b8742bc1f00b148bda22f76a0fedd5c40fc6"
+      },
+      "before_state_sha256": "44ef1f2c2430e56da00e6c22a93a6990d18d7a44142323e1a197e393f917cde3",
+      "after_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 256,
+      "stdout_sha256": "dc2cec354f84d427bf2e9e43a46a13fc3a1e41d991331d045693e08173c904a0",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-authorize-draft",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-volume",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "volume",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-volume.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:40.694Z",
+      "elapsed_ms": 118,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-volume.json",
+        "sha256": "2989669daf749abb764fb49e0c535db386434da7233f9f8ac3ebef71dd5baf6d"
+      },
+      "before_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "after_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 76,
+      "stdout_sha256": "92825ceff61d16f7502e1dde150574f018fa1ed0d59b69b54e2812bc76a94b3c",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-volume",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-plan-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "plan",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-plan-one.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:40.903Z",
+      "elapsed_ms": 163,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-plan-one.json",
+        "sha256": "97c06faecfc38e8af18a9a4cecf75352d88fe4959594814fdc052a6c7d14c340"
+      },
+      "before_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "after_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 69,
+      "stdout_sha256": "f10c6a592bf89e1c2aef5375c2f284ebc270a7b46ae5aff1b28a944823308ffa",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-plan-one",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-context-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "1",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:41.167Z",
+      "elapsed_ms": 112,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "after_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 6569,
+      "stdout_sha256": "bae203d0a0355392557abcfdbfa8ce0fe43ac64aae1b6b1e0de5e9391aa54949",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-context-one",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-template-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-还有一箱.md",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:05:41.375Z",
+      "elapsed_ms": 116,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "after_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1209,
+      "stdout_sha256": "9aa515e1eb25d3272d942214fd4315a3805aed6c83a9d434c9fe68f39ac9fe7c",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-template-one",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-preview-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-one.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:07:10.000Z",
+      "elapsed_ms": 120,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-one.json",
+        "sha256": "9a5de4d43ecf35b8c4d1b729b2c5fd94d4f6cb79c4d2da2658aae96a22b0f6df"
+      },
+      "before_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "after_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 5957,
+      "stdout_sha256": "08cd832c5a3f987a440d21c478a247f9ff853716f2ace81c87417d5a9a8633c9",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-preview-one",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-record-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-record-one.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:07:10.220Z",
+      "elapsed_ms": 129,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-record-one.json",
+        "sha256": "9a5de4d43ecf35b8c4d1b729b2c5fd94d4f6cb79c4d2da2658aae96a22b0f6df"
+      },
+      "before_state_sha256": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+      "after_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 189,
+      "stdout_sha256": "0744d54742b51e22906eac1a54fa2beec4ca2d64ed91f2bb3f0b23b38910cba1",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-record-one",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-plan-two",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "plan",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-plan-two.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:07:10.448Z",
+      "elapsed_ms": 109,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-plan-two.json",
+        "sha256": "27f3d2a846473bdf019a35f4cf818d1a1861dacc7ddd8a0aa0962afcb9cb4782"
+      },
+      "before_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "after_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 69,
+      "stdout_sha256": "5c980f23c7bcc5a033691468a245ff7d8c584df00edb0519e7065919eb0b4de6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-plan-two",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-context-two",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "2",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:07:10.655Z",
+      "elapsed_ms": 113,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "after_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 14287,
+      "stdout_sha256": "8e56b2438bcc5d09976c330576711b7c87a5cff9a012c20c32140f62bee5fb30",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-context-two",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-template-two",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002-空车归你.md",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:07:10.869Z",
+      "elapsed_ms": 125,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "after_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1312,
+      "stdout_sha256": "ceb64b8780d4bcf25d392fe265b1897dfd0a084251e56ec0ff92bbfac6bca41f",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-template-two",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-preview-two",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-two.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:08:43.697Z",
+      "elapsed_ms": 143,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-two.json",
+        "sha256": "352ce56acde33a54be2e508794c89af36fd2314ca20ec7c01be6cfd5534b975c"
+      },
+      "before_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "after_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 10224,
+      "stdout_sha256": "7bd0d14fbb4a40ec835e1adf8d5589499c3141066fbaedbdff9a6a1743b45ab0",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-preview-two",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-record-two",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-record-two.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:08:43.940Z",
+      "elapsed_ms": 136,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-record-two.json",
+        "sha256": "352ce56acde33a54be2e508794c89af36fd2314ca20ec7c01be6cfd5534b975c"
+      },
+      "before_state_sha256": "63d7b5cd9acdc22c9e10a3e8f8065367e350dc402c33c5ae8e144d09a0875fe5",
+      "after_state_sha256": "c979e04432bcc369800aa74515b272c8f23d856ada0fce18f98602f9a4b523aa",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 189,
+      "stdout_sha256": "f3141481c9a0a8dacd56915d37629d5c18dd2524747731f9babfcfdb5d4fc20a",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-record-two",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-pause-for-review",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-pause-for-review.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:08:44.173Z",
+      "elapsed_ms": 119,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-pause-for-review.json",
+        "sha256": "345e6dd5ad2f0cdfaa79f9dcca07a2ad126555c70ee84d825fb6deaee9fe72cc"
+      },
+      "before_state_sha256": "c979e04432bcc369800aa74515b272c8f23d856ada0fce18f98602f9a4b523aa",
+      "after_state_sha256": "c67bde37215fea803bc3fe8b851fd6d43a23a9e45ead1972d382517b37793278",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 261,
+      "stdout_sha256": "4640a70571d5ddf61dc085e9f2f9589a813e763f3a0d37a3c8fe0980aa248b64",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-pause-for-review",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-initial-review-template",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-template",
+        "--from",
+        "1",
+        "--to",
+        "2",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:08:44.381Z",
+      "elapsed_ms": 109,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c67bde37215fea803bc3fe8b851fd6d43a23a9e45ead1972d382517b37793278",
+      "after_state_sha256": "c67bde37215fea803bc3fe8b851fd6d43a23a9e45ead1972d382517b37793278",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1668,
+      "stdout_sha256": "6f9de48187d71ed01cbb04d65edcd4e0e315ed716943024b15ff700cdc27a27e",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-initial-review-template",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-initial-review",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-initial-review.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:54.772Z",
+      "elapsed_ms": 139,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-initial-review.json",
+        "sha256": "579e186d0474d0493606d672e071c25758660cb59d9dd15820ae316aeaa4ed40"
+      },
+      "before_state_sha256": "c67bde37215fea803bc3fe8b851fd6d43a23a9e45ead1972d382517b37793278",
+      "after_state_sha256": "c0e193242661771eb65b56332d38f5696285bee517180d8071b540e73178b816",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 247,
+      "stdout_sha256": "0f5256bfe4e06913a24f99e10e45ebaf7a01750702c4bd360c5db1b348579ec8",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-initial-review",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-authorize-revision",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-authorize-revision.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:55.011Z",
+      "elapsed_ms": 116,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-authorize-revision.json",
+        "sha256": "92a4329ac80c6187fef840de1bb4684703cf47cbaecc8a59fbe2ab7471febd1a"
+      },
+      "before_state_sha256": "c0e193242661771eb65b56332d38f5696285bee517180d8071b540e73178b816",
+      "after_state_sha256": "e5669f5d5513ecd646aca317f0fe6ac2be8453eae3718dac87e2daf737f7faed",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 257,
+      "stdout_sha256": "48fad73931e6e93f0ac08aec3278a3599455fd48cd283fab0b9766e88dc29ffc",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-authorize-revision",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-adopt-typo",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "resolve",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-adopt-typo.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:55.213Z",
+      "elapsed_ms": 121,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-adopt-typo.json",
+        "sha256": "adf4b0431952b0a79b73f7e660458beb5f5101e0f7b49950d38a7546c323bf7c"
+      },
+      "before_state_sha256": "e5669f5d5513ecd646aca317f0fe6ac2be8453eae3718dac87e2daf737f7faed",
+      "after_state_sha256": "88f452fcda33f0d7fa89380ce1be77aebe74b202215fe2515c46c0eea67d1a30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 252,
+      "stdout_sha256": "a1c23aa3819a7124def9ea84fb14c4d59511be17eb34b1e0bbc99d3466ebecc4",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-adopt-typo",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-retain-style",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "resolve",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-retain-style.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:55.432Z",
+      "elapsed_ms": 123,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-retain-style.json",
+        "sha256": "d3029dccaa2aafeadb28dc878714b4871f719c5ed0b0d494d84b02de60323d30"
+      },
+      "before_state_sha256": "88f452fcda33f0d7fa89380ce1be77aebe74b202215fe2515c46c0eea67d1a30",
+      "after_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 254,
+      "stdout_sha256": "05f8ba1be60cc0e2fa59d604161a642adb34d0481e3f886a628e91b74d53e318",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-retain-style",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-begin",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "begin",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-begin.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:55.639Z",
+      "elapsed_ms": 238,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-begin.json",
+        "sha256": "c1797f1da200e2530661f96c98ce5f748a0e5f21715583b01d91596d5838667a"
+      },
+      "before_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "after_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 686,
+      "stdout_sha256": "3db03c0c8c0db9f66ecbb834c84a9570dff477e523a52bc52a3bcbeff4183bb0",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-begin",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-rewind",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "rewind",
+        "--from",
+        "2",
+        "--expected-revision",
+        "8",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:55.973Z",
+      "elapsed_ms": 132,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "after_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 362,
+      "stdout_sha256": "ea63a523dd16fe786d56cfa2a7a9739bd4c4e384a25d361e4d26691fc5025c0b",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-rewind",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-replay-before-edit",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "2",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:09:56.195Z",
+      "elapsed_ms": 190,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "after_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 6663,
+      "stdout_sha256": "234f97df75cf68c721d36255887be7b5f8c15978c8fd92c7b03c3c4ea09a98c7",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-replay-before-edit",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-replay-after-edit",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "2",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:10:17.188Z",
+      "elapsed_ms": 165,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "after_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 6663,
+      "stdout_sha256": "9af27a26b95ca88a58749f19ebac1c64c17226b8131687aa68603088d2a03057",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-replay-after-edit",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-preview-old-quote",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-old-quote.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:10:56.941Z",
+      "elapsed_ms": 126,
+      "exit_code": 1,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-old-quote.json",
+        "sha256": "90d0ef94603c7c87bdc953e6d6a8e29d8681d02a44ad7cf8080cb887bc08d329"
+      },
+      "before_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "after_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 295,
+      "stdout_sha256": "0585af3e472856ca77400de12ff6632b45a95ad7dde047b0b20d68065c101aff",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [
+        {
+          "code": "RECORD_INPUT_INVALID",
+          "message": "正文找不到证据引文：单元 2"
+        }
+      ],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-preview-old-quote",
+      "outcome": "expected stale full quote gate"
+    },
+    {
+      "label": "native-four-fresh-preview-corrected",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-corrected.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:10:57.165Z",
+      "elapsed_ms": 143,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-preview-corrected.json",
+        "sha256": "5a86a7049610ffd4f0fad3430288499241c3b8f23ae1408ede41da5d0795d92b"
+      },
+      "before_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "after_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 10245,
+      "stdout_sha256": "f5a813f60af6e1d00277f0619a16e0aa097e43f2b7cc683085a123ce82c38ad8",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-preview-corrected",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-rerecord",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "record",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-rerecord.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:10:57.399Z",
+      "elapsed_ms": 153,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-rerecord.json",
+        "sha256": "5a86a7049610ffd4f0fad3430288499241c3b8f23ae1408ede41da5d0795d92b"
+      },
+      "before_state_sha256": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+      "after_state_sha256": "80f76183b7e98dbf2d454d1ca9cfbcc3d1b5a68e5509567a1e4ba025e1426de6",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 190,
+      "stdout_sha256": "c46badc4bce814f85e63393345dd9f7dfe3d08db0625a59c4819211c849eecaa",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-rerecord",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-tail-review-template",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-template",
+        "--from",
+        "2",
+        "--to",
+        "2",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:10:57.639Z",
+      "elapsed_ms": 119,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "80f76183b7e98dbf2d454d1ca9cfbcc3d1b5a68e5509567a1e4ba025e1426de6",
+      "after_state_sha256": "80f76183b7e98dbf2d454d1ca9cfbcc3d1b5a68e5509567a1e4ba025e1426de6",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1135,
+      "stdout_sha256": "805c6735f2464b19632bb4b3bb067b1c9b11c2135e263fba68356a9057baf285",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-tail-review-template",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-tail-review",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review",
+        "--revision-token",
+        "ff20c1e83c3f502c5f60bdcf76298ac44163808e91aed5fcb3376e17ce498020",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work\\.writer\\revisions\\5fc51cf6-7274-4b5f-9dc9-b5749de27832\\workspace",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-tail-review.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:11:37.630Z",
+      "elapsed_ms": 138,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-tail-review.json",
+        "sha256": "bc0cc0acf18dcb63e226c621bcf20ae7f35bf92e2728a4f157f5a54e68b333ba"
+      },
+      "before_state_sha256": "80f76183b7e98dbf2d454d1ca9cfbcc3d1b5a68e5509567a1e4ba025e1426de6",
+      "after_state_sha256": "782a911917469d8e5dfa15ee1bf50fe90d917cb789be5e6a0f9aa3d270648abc",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 205,
+      "stdout_sha256": "6289c5c033c5a64c7595b4b0b7163ee04d520ccb6fbb98bea4e40f6509166e5d",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-tail-review",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-prepare",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "prepare",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-prepare.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:11:37.864Z",
+      "elapsed_ms": 269,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-prepare.json",
+        "sha256": "1ff36900429de801bd8be176473f7efd9c8deaa60232313a61a9718e2dab02b6"
+      },
+      "before_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "after_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 2260,
+      "stdout_sha256": "dbee191d6406e236ef04ca0254fe7d01ba26bbdca9bf3c020cec391fc7c4e8e6",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-prepare",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-commit",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "commit",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-commit.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:11:38.235Z",
+      "elapsed_ms": 263,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-commit.json",
+        "sha256": "1ff36900429de801bd8be176473f7efd9c8deaa60232313a61a9718e2dab02b6"
+      },
+      "before_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "after_state_sha256": "a5ae1450c75a8f8c3735797db961f27f55d08b54a2e0b5e7395250e43c40c445",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 204,
+      "stdout_sha256": "de12f830e0fb5d31eff8c88ecf08fd5927301432867018b02344ef7a3b90c29f",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-commit",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-commit-idempotent",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "commit",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-commit-idempotent.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:11:38.599Z",
+      "elapsed_ms": 109,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-commit-idempotent.json",
+        "sha256": "1ff36900429de801bd8be176473f7efd9c8deaa60232313a61a9718e2dab02b6"
+      },
+      "before_state_sha256": "a5ae1450c75a8f8c3735797db961f27f55d08b54a2e0b5e7395250e43c40c445",
+      "after_state_sha256": "a5ae1450c75a8f8c3735797db961f27f55d08b54a2e0b5e7395250e43c40c445",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 146,
+      "stdout_sha256": "82e054315abb082f251c617e7eb4bfc7e5d51efb8a3591377fb4aac59474cd26",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-commit-idempotent",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-apply-typo",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "apply",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-apply-typo.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:11:38.813Z",
+      "elapsed_ms": 142,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-apply-typo.json",
+        "sha256": "9b8920fba475efc7026fd9461021f9d93f81e57a8a794519ae5c0b899ef6c85b"
+      },
+      "before_state_sha256": "a5ae1450c75a8f8c3735797db961f27f55d08b54a2e0b5e7395250e43c40c445",
+      "after_state_sha256": "6ff3129d1ee56b2c2931f6bfa3c9debe5bf5114d0e07d523968f3365356f87bd",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 253,
+      "stdout_sha256": "15e4a988d9d6612a2603d001a134bea0844627f423f2e340bb7daaf48229b476",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-apply-typo",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-current-review-template",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-template",
+        "--from",
+        "1",
+        "--to",
+        "2",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:11:39.041Z",
+      "elapsed_ms": 150,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "6ff3129d1ee56b2c2931f6bfa3c9debe5bf5114d0e07d523968f3365356f87bd",
+      "after_state_sha256": "6ff3129d1ee56b2c2931f6bfa3c9debe5bf5114d0e07d523968f3365356f87bd",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 1670,
+      "stdout_sha256": "7a3adcdbade557bd3f275931b013dfaf70108fa8afe2631bb33b3a33cce997c3",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-current-review-template",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-current-review",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-current-review.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:10.949Z",
+      "elapsed_ms": 176,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-current-review.json",
+        "sha256": "f1d18670b6afd7da010e361ea0695890767121ac88462937ba42d784e566a88f"
+      },
+      "before_state_sha256": "6ff3129d1ee56b2c2931f6bfa3c9debe5bf5114d0e07d523968f3365356f87bd",
+      "after_state_sha256": "23d7b373654c7e881cb28bb45b10b53e1be33ef77176c00c3a73848b5718cb55",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 205,
+      "stdout_sha256": "d8519738f47f29c5102e110dfc0bcfe29a05308dade6cc96166790db69445ace",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-current-review",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-verify-typo",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "verify",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-verify-typo.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:11.234Z",
+      "elapsed_ms": 152,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-verify-typo.json",
+        "sha256": "3ef194f15f5a473790504dc2aae6bf63cce68e126e3d1252553d4d53e732af0a"
+      },
+      "before_state_sha256": "23d7b373654c7e881cb28bb45b10b53e1be33ef77176c00c3a73848b5718cb55",
+      "after_state_sha256": "9dde1f049854f75a9c66aeb87b882aaef12b8d1aac9e3cc2589f1f60179ed262",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 254,
+      "stdout_sha256": "50f68da44b72ac4a86242e6ed930ac827f7ebab95b3a960e173c3bb16c3cf346",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-verify-typo",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-pause",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-final-pause.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:11.485Z",
+      "elapsed_ms": 137,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\inputs\\fresh-final-pause.json",
+        "sha256": "6ab7b71f7814059109c6eeba8b2955c861c85e74ff4ea0d445dd4c2f1da2bffb"
+      },
+      "before_state_sha256": "9dde1f049854f75a9c66aeb87b882aaef12b8d1aac9e3cc2589f1f60179ed262",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 257,
+      "stdout_sha256": "790a97434b49344c3e91cc62bce5556ac0599d9cbf412b7e940eb67e688ec063",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-pause",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-check",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:11.724Z",
+      "elapsed_ms": 133,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 481,
+      "stdout_sha256": "79310ef5ab13d27b895b5bfb687080ef2f9e0fc1b9b4cb07a5c51882af409472",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-check",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:11.962Z",
+      "elapsed_ms": 147,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 4407,
+      "stdout_sha256": "3c7853c6d8a94fb87e43d36b586dad37b67d237f248fe357a654ddde99b0131e",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-status",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-doctor",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:12.210Z",
+      "elapsed_ms": 142,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 11601,
+      "stdout_sha256": "5465121fb9821bcfcc78e86c86f6c553dfc4133b05d056a32b0f9dc1375fd42f",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-doctor",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-compare",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "tool",
+        "compare",
+        "--other",
+        "D:\\work\\other\\ai-writer",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:12.463Z",
+      "elapsed_ms": 724,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 22714,
+      "stdout_sha256": "81a8550e6330fb26a23d34d7a845a7897b64d254bd0a281632f0705d74130440",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-compare",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-issues",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:13.294Z",
+      "elapsed_ms": 124,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 10340,
+      "stdout_sha256": "5db6c0365f1bd69ad38931cc2d50c078d58a25c918ad3ec074898cdea3961757",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-issues",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-typo-detail",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "list",
+        "--id",
+        "FRESH_C_TYPO",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:13.515Z",
+      "elapsed_ms": 127,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 18463,
+      "stdout_sha256": "7f7a4a7da8ffcd3eec1b535cc39392a7dfedfa5ce6ea880053efce47d01a3fdb",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-typo-detail",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-style-detail",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "review-issues",
+        "list",
+        "--id",
+        "FRESH_C_STYLE",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:13.736Z",
+      "elapsed_ms": 124,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 5654,
+      "stdout_sha256": "7cd329b2970b58302b118f5d708ba8eb611bac022065af4840011824ed9c22be",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-style-detail",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-export",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "export",
+        "--out",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-export",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:12:13.958Z",
+      "elapsed_ms": 152,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 2516,
+      "stdout_sha256": "60d8bd8822a63202c5fbbfdfb31a5f3cf512f166becff091f093aea349dca920",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-export",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-hundred-final-revisions",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\scale-hundred\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:13:50.886Z",
+      "elapsed_ms": 102,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "after_state_sha256": "037513eff7c37d7e5691b2471a2c91bace900bb38c6ba7a7ec02b76c6ed86b30",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 953,
+      "stdout_sha256": "936759357cb7efc53b808925e2bddf63ac37bb0f5c4f157242ea9376f5e42078",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-hundred-final-revisions",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-fresh-final-revisions",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-hundred-replay\\fresh-work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:13:51.084Z",
+      "elapsed_ms": 102,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "after_state_sha256": "db25b74788259612ad36d8048edab02ae8956138618af35beffad3ffe2481795",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 954,
+      "stdout_sha256": "81dab84c8e9c8e2d0ea885dcd518cfe4fe520cd15043b8266a122e3f274c1107",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-fresh-final-revisions",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-final-main-doctor",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "doctor"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:13:51.276Z",
+      "elapsed_ms": 567,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 11328,
+      "stdout_sha256": "501d0af280fa38c0e3784af3f04dc8b7c6c38a95b4b84e1aef307865121841b3",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-final-main-doctor",
+      "outcome": "success"
+    },
+    {
+      "label": "native-four-final-main-identify",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+        "tool",
+        "identify"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T05:13:51.954Z",
+      "elapsed_ms": 602,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "stdout_bytes": 10481,
+      "stdout_sha256": "dad03cd21fd8c76da826bb83dd4bc36765bcdb66eedd5ea224a36f64c40aed11",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "findings": [],
+      "code": null,
+      "raw_dir": "../commands/native-four-final-main-identify",
+      "outcome": "success"
+    }
+  ]
+}

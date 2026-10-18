@@ -1,0 +1,59 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T05:05:40.590Z",
+  "operation_id": "native-four-fresh-draft-scope",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "顺序完成两章短篇合成验收，到第2章停止并复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 2
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "两章完成立即暂停，不写第三章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/模拟创作授权.md",
+    "source_sha256": "0b3db8a4d22574a773ffbafd16e97a284ee157c9ce848484663caa5da0772924",
+    "quote": "只授权虚构作品《关门以前》两章，每章700–1000正文汉字，人物最多3人",
+    "locator": "全文授权段",
+    "recorded_by": "Codex native-four; synthetic acceptance author",
+    "frozen_ref": ".writer/objects/0b3db8a4d22574a773ffbafd16e97a284ee157c9ce848484663caa5da0772924.txt"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_CHECK",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001.md",
+          "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/b0292e2c-f1de-4cec-a439-6f5e53f1cfdc.json",
+        "review_sha256": "a599e740e42349edd98ef6a1a77d5671a4b33ed54607daa569ab23131b8905f5",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "e5dec09964cff5dd801ca45ce80c9a9882677edbb9cde469e9bc9ac141b52b0e"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/c37a3a49-f75e-4e61-8ed2-b1c8fdab3ebb.json",
+          "sha256": "c3ce63c45f1cd2d41e3d55a2a4e13a5728092ac4b6b3a862f270caeceb90abb0"
+        },
+        {
+          "ref": ".writer/objects/84a32115-6580-450a-9584-0bb79a2e036f.json",
+          "sha256": "f1bc46bd45828d0d68f25a6c9b639f28402f2aad50f6e1ee0f50b5013b2a7fc5"
+        },
+        {
+          "ref": ".writer/objects/ff7fec4f-92bd-4062-8b15-fbefe346557f.json",
+          "sha256": "8d6641a39faa6ef4935b999a953ea6eaf620642238b987acf529795e2a66de8f"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/3b5ab721-a923-441c-b7a7-bfd8b82a2bcf.json",
+          "sha256": "9be594ce026698509c9b7d0c7f0cce9091847927c5bff8738c60b93cb0dbb1a2"
+        },
+        "reason": "合成处置，不冒充作者逐条决定",
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "e5dec09964cff5dd801ca45ce80c9a9882677edbb9cde469e9bc9ac141b52b0e"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "81a8cbd1-dd5f-4b15-ac34-785dcaea556b",
+        "commit_binding": {
+          "ref": ".writer/objects/81a8cbd1-dd5f-4b15-ac34-785dcaea556b.json",
+          "sha256": "5569e529aa6fc69a99a04fc9561d8177bdd2531dbed3718c18507f0b7612d137"
+        },
+        "transaction_id": "6712654e-d879-4b0d-9b99-da912ea39c67",
+        "reason": "实际事务字节变化已绑定",
+        "changes": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "before": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "after": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee",
+            "dependency": "02a4226e4965aeb8a0ea85f572572df89dfcb60d01cde809d7215cf9a2e468b5"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/83442720-f1fa-485c-b776-da616061c303.json",
+        "review_sha256": "d6524b099fea16def7cd16fd9d16b01d1d9a2dcd3e7a007f44a7fd997dbbc0c0",
+        "reviewer": "mechanical-fixture-not-model-reading",
+        "conclusion": "resolved",
+        "reason": "仅验证状态流，不作语义修复声明",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee",
+            "dependency": "02a4226e4965aeb8a0ea85f572572df89dfcb60d01cde809d7215cf9a2e468b5"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "dependency": "9bde2f8ccb90850822b3e917fc9cb85f51335fc60eda4fe238a958aa35e40e19"
+          }
+        ]
+      }
+    }
+  }
+}

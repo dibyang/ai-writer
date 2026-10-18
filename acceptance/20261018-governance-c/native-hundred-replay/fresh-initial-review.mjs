@@ -1,0 +1,14 @@
+import {run,put,read,state,fresh,stage,evidence} from './harness.mjs';import path from 'node:path';import {populate,reportText} from './fresh-review-data.mjs';
+const r=populate(read(path.join(stage,'fresh-initial-review-template.json')),{id:'native-four-fresh-initial-review',report:'审查/native-four-初始两章.md',typo:true,issues:true,phase:'初始创作完成后完整实读'});
+put(path.join(fresh,r.report),reportText(r,'初稿含控制样本'));put(path.join(stage,'fresh-initial-functions.json'),r);
+put(path.join(stage,'fresh-initial-review-result.json'),run('fresh-initial-review',['review'],fresh,r));
+const quote='采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。';
+put(path.join(fresh,'研究/模拟作者修订原话.md'),'# 合成验收模拟作者新原话\n\n以下为本次用户提供、用于验收的模拟作者取舍，不是真实作品作者决策。\n\n'+quote+'\n');
+const ev=evidence(fresh,'研究/模拟作者修订原话.md',quote),wf=state(fresh).governance;wf.stage='revision';wf.task='仅删除第2章受控重复字，保留第1章可选表达，提交及当前复核后暂停';wf.authorization={allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:2,to:2},stop_conditions:['只删重复的一字，不变事实和声音，不写第三章；提交复核后暂停']};
+run('fresh-authorize-revision',['workflow','set'],fresh,{expected_revision:state(fresh).revision,operation_id:'native-four-fresh-revise-scope',author_evidence:ev,workflow:wf});
+run('fresh-adopt-typo',['review-issues','resolve'],fresh,{expected_revision:state(fresh).revision,operation_id:'native-four-fresh-adopt-typo',id:'FRESH_C_TYPO',disposition:'adopted',reason:'模拟作者明确采用，仅删第2章这一重复字；非代理擅自扩大。',decision_actor:'author',author_evidence:ev});
+run('fresh-retain-style',['review-issues','resolve'],fresh,{expected_revision:state(fresh).revision,operation_id:'native-four-fresh-retain-style',id:'FRESH_C_STYLE',disposition:'retained',reason:'模拟作者明确要求第1章原样保留，语义正确的偏好不作已修复。',decision_actor:'author',author_evidence:ev});
+put(path.join(stage,'fresh-before-revision-state.json'),state(fresh));
+const b=run('fresh-begin',['revision','begin'],fresh,{expected_revision:state(fresh).revision,owner:'native-four-fresh-one-character',from:2,through:2});put(path.join(stage,'fresh-session.json'),b);
+run('fresh-rewind',['rewind','--from','2','--expected-revision',String(state(b.workspace).revision),'--revision-token',b.token],b.workspace);
+put(path.join(stage,'fresh-replay-before-edit.json'),run('fresh-replay-before-edit',['revision','replay-input','--unit','2','--revision-token',b.token],b.workspace));

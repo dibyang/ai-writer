@@ -1,0 +1,259 @@
+{
+  "schema_version": 5,
+  "revision": 2,
+  "project_id": "4071add7-fc74-4dfa-af9f-873250d40a7e",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "顾宁": "18:42后推许姨的小车及自己最后一箱书往街口柜；选择12元寄存、放弃带肉面，但尚未付款，车未归还。知道许姨今晚要运扇/明天歇，明确承诺19点前还。",
+      "许姨": "修补店内套好旧电扇布袋，等顾宁19点前还车；明天歇、今晚自用车运扇。不因顾宁迟到和请求放弃自己的安排。"
+    },
+    "threads": [],
+    "timeline": [
+      "周五18:42顾宁到修补店，请再借一晚遭拒，选择到街口柜存书并19点前还车；仍推车出门未存。"
+    ],
+    "ledger": {
+      "P_CART": {
+        "type": "object",
+        "statement": "许姨唯一折叠小推车，顾宁已借两天，六点半原约未兑现。",
+        "status": "active",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "借物"
+        ],
+        "custody": {
+          "holder": "顾宁",
+          "location": "修补店往街口寄存柜路上",
+          "condition": "车轴头发已扯掉，轮子原有轻响，仍载顾宁书箱"
+        },
+        "reader_known": "顾宁仍持车，承诺19点前还，未完成。",
+        "character_known": {
+          "顾宁": "知道车属许姨及今晚自用需求。",
+          "许姨": "知道顾宁带箱再去寄存，自己仅等到19点。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 39,
+            "quote": "许姨扶住门，让她连车带箱先出去。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_BOOKS": {
+        "type": "object",
+        "statement": "顾宁搬家最后一箱书。",
+        "status": "active",
+        "cast": [
+          "顾宁"
+        ],
+        "tags": [
+          "寄存代价"
+        ],
+        "custody": {
+          "holder": "顾宁",
+          "location": "自己推着的小车上",
+          "condition": "书角已按回箱，箱已居中，尚未寄存"
+        },
+        "reader_known": "12元是看过的价钱，还未支付。",
+        "character_known": {
+          "顾宁": "知道价钱，选择付费而不借许姨一晚。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 39,
+            "quote": "她把书角按回箱里，两手托住箱底，将它在车板上往中间挪了挪。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "顾宁要在19点以前归还借车。",
+        "status": "pending",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "本篇主事件"
+        ],
+        "due_unit": 2,
+        "reader_known": "已接受许姨拒绝续借，最后一箱尚待寄存、车待还。",
+        "character_known": {
+          "顾宁": "明确答应七点，不再只说今天。",
+          "许姨": "接受等待至七点，没有许顾宁过夜使用。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 37,
+            "quote": "“七点。”许姨说，“不是今天。”"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "R_DIRECT": {
+        "type": "relationship",
+        "statement": "顾宁怕欠人情而常用客气包裹请求，许姨能直接说自己的需要。",
+        "status": "active",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "有限关系"
+        ],
+        "reader_known": "顾宁当面接受对方不再续借，但是否真正履行仍待做。",
+        "character_known": {
+          "顾宁": "明白许姨今晚也想省力，自己迟到应担代价。",
+          "许姨": "知道顾宁想再借，已明确自己用处。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 23,
+            "quote": "我今晚也想省这点力气。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-还有一箱.md",
+      "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+      "summary": "周五18:42顾宁迟到修补店，借来的唯一小车仍载最后一箱书。想再借一晚，许姨明确今晚要运自家旧电扇、明天歇；顾宁接受拒绝，选择付12元存书，答应19点前空车回来。连车带箱出门，尚未付款存书或归还。",
+      "source_hashes": {
+        "writer.json": "8e030547bf3a815cbfd82285aa7ae44626d153a086987cd26272afbd44aa3f73",
+        ".writer/state.json": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+        "大纲/单元/0001.json": "d0b8515c32ced767e26dd3ebb79361243e344eb1850ed183be55a6c15948e7cc",
+        "设定/作品定位.md": "182dcab59335bd547a31ed93bc1a9bf78675cdd3fd33d1e04ca96fc8b8f8f15d",
+        "设定/文风.md": "2ca40837d9094ca71e463bfef41889d2433ea52baf26beaf26346308f3809e04",
+        "设定/权威规则.md": "572914b24a059517e94d5a4026dc78f75ed25c8373a33e5fa16f2a936effa2c1",
+        "大纲/全书大纲.md": "d5168ad9a086eec0770f4d2e4921960d91d7ab5726b81071c964a4a90ab69aae",
+        "大纲/分卷/V1.json": "2989669daf749abb764fb49e0c535db386434da7233f9f8ac3ebef71dd5baf6d"
+      },
+      "fingerprint": "7b3ef183b963a900c6685d922fa6ef1d10555677b549e2887c3587c8760768be",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+          "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+      "journal": ".writer/journal/51c60b0b-3be7-43ca-a98c-d23df16772bc.json",
+      "journal_sha256": "560ef26645b191e43245341c7f99a057eae57934173fbe874479e0053edc70dc"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "顺序完成两章短篇合成验收，到第2章停止并复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 2
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "两章完成立即暂停，不写第三章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+      "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+    }
+  ],
+  "operations": {
+    "native-four-fresh-draft-scope": {
+      "input_sha256": "4a7ac868f2f2a3d6cb6548ce2ea02419356e7df81cc8b0132d33529785b3a7b0",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-four-fresh-draft-scope",
+        "event": {
+          "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+          "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+    "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+  }
+}

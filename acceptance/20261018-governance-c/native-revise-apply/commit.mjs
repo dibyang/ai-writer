@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { stage, work, load, state, put, sha, cli, input } from './helpers.mjs';
+const a=load(path.join(stage,'session-access.json'));
+const ref=input('commit',{id:a.id,token:a.token});
+const committed=cli('native-two-23-commit',['revision','commit','--input',ref]);
+put(path.join(stage,'commit-result.json'),committed);
+assert.equal(state().revision,a.base_revision+1);
+const before=sha(fs.readFileSync(path.join(work,'.writer/state.json')));
+const repeat=cli('native-two-24-commit-idempotent',['revision','commit','--input',ref]);
+assert.equal(sha(fs.readFileSync(path.join(work,'.writer/state.json'))),before);
+put(path.join(stage,'repeat-commit-result.json'),repeat);
+put(path.join(stage,'after-commit-state.json'),state());
+cli('native-two-25-list-committed',['revision','list']);

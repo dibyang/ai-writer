@@ -1,0 +1,2055 @@
+{
+  "nature": "actual capture records; stdout/stderr are product output; result.json is recorder metadata",
+  "entry": "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+  "cwd": "D:\\work\\other\\ai-writer",
+  "count": 32,
+  "commands": [
+    {
+      "label": "native-two-01-identify",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:30:10.089Z",
+      "elapsed_ms": 620,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-01-identify/result.json",
+          "bytes": 886,
+          "sha256": "97c6727b67d8f7edded6256e48d18f12d4963dac2c58c44af682a7755a3dab33"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-01-identify/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-01-identify/stdout.raw.txt",
+          "bytes": 10481,
+          "sha256": "dad03cd21fd8c76da826bb83dd4bc36765bcdb66eedd5ea224a36f64c40aed11"
+        }
+      }
+    },
+    {
+      "label": "native-two-02-status",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261018-governance-c/native-create-review/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:30:10.088Z",
+      "elapsed_ms": 160,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562",
+      "after_state_sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-02-status/after-state.json",
+          "bytes": 48064,
+          "sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-02-status/before-state.json",
+          "bytes": 48064,
+          "sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-02-status/result.json",
+          "bytes": 1079,
+          "sha256": "a202a3d73e2dbb11170eb249f326b741fa1cc785bf6f9234502b01ac3f874500"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-02-status/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-02-status/stdout.raw.txt",
+          "bytes": 4959,
+          "sha256": "64d6b203d813498edc9592a049e67ade33e9cc57b9d5c1eaeac29246fe457fa6"
+        }
+      }
+    },
+    {
+      "label": "native-two-03-compare",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--project",
+        "acceptance/20261018-governance-c/native-create-review/work",
+        "--other",
+        "."
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:30:11.209Z",
+      "elapsed_ms": 715,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562",
+      "after_state_sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-03-compare/after-state.json",
+          "bytes": 48064,
+          "sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-03-compare/before-state.json",
+          "bytes": 48064,
+          "sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-03-compare/result.json",
+          "bytes": 1116,
+          "sha256": "d6529444cffbcf5fc621ec9e398e2f92874c4eded1ec83a461ec58ed469badda"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-03-compare/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-03-compare/stdout.raw.txt",
+          "bytes": 23749,
+          "sha256": "2a2f29fb1c5633e7279e244c12d0b10aec07befd171bbda0d0c099def49e9050"
+        }
+      }
+    },
+    {
+      "label": "native-two-04-revision-help",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:30:12.331Z",
+      "elapsed_ms": 105,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-04-revision-help/result.json",
+          "bytes": 888,
+          "sha256": "8e0a1969acde66fa25990c1c742cb3ba7e9f96be5df3de611a9cb3d4a05d022e"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-04-revision-help/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-04-revision-help/stdout.raw.txt",
+          "bytes": 895,
+          "sha256": "3be5ace469c40b9eb429582ce245a6d00a34c115769c514ca01f9706758f50a8"
+        }
+      }
+    },
+    {
+      "label": "native-two-05-workflow-revise",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\workflow-revise.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:23.106Z",
+      "elapsed_ms": 202,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\workflow-revise.json",
+        "sha256": "2a79f91287ed9ff84e963eb9aa1b97c25eebe1a9bc4fb5f747d9d25c96ab8916"
+      },
+      "before_state_sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562",
+      "after_state_sha256": "34a1d791c19b65d2ad767e6e43989ce042a420542c88be96f36dde5bfaf6e3a4",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-05-workflow-revise/after-state.json",
+          "bytes": 48815,
+          "sha256": "34a1d791c19b65d2ad767e6e43989ce042a420542c88be96f36dde5bfaf6e3a4"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-05-workflow-revise/before-state.json",
+          "bytes": 48064,
+          "sha256": "4b33a5877f7fea52db9d1581080a0e8e23850173fd4a3b0861fd5704b3371562"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-05-workflow-revise/input.raw.json",
+          "bytes": 2226,
+          "sha256": "2a79f91287ed9ff84e963eb9aa1b97c25eebe1a9bc4fb5f747d9d25c96ab8916"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-05-workflow-revise/result.json",
+          "bytes": 1499,
+          "sha256": "6781f1e77d5518ff18263d1fac68a6124d77442ae5901568709f7934f5e460cd"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-05-workflow-revise/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-05-workflow-revise/stdout.raw.txt",
+          "bytes": 256,
+          "sha256": "6820ac174637828690e5ee39ab164e68b270b241912f4cea1815b10b7d98dc92"
+        }
+      }
+    },
+    {
+      "label": "native-two-06-resolve-adopted",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review-issues",
+        "resolve",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\06-resolve-adopted.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:23.418Z",
+      "elapsed_ms": 144,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\06-resolve-adopted.json",
+        "sha256": "4334f586c5815ecd9c16d95f400511a7b5edec2af845df8355620efa358a21fb"
+      },
+      "before_state_sha256": "34a1d791c19b65d2ad767e6e43989ce042a420542c88be96f36dde5bfaf6e3a4",
+      "after_state_sha256": "3f8e35e01a73c0c3091a32929ba097f2613e72866da9b423502d1acfac94c0e3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-06-resolve-adopted/after-state.json",
+          "bytes": 52642,
+          "sha256": "3f8e35e01a73c0c3091a32929ba097f2613e72866da9b423502d1acfac94c0e3"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-06-resolve-adopted/before-state.json",
+          "bytes": 48815,
+          "sha256": "34a1d791c19b65d2ad767e6e43989ce042a420542c88be96f36dde5bfaf6e3a4"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-06-resolve-adopted/input.raw.json",
+          "bytes": 1256,
+          "sha256": "4334f586c5815ecd9c16d95f400511a7b5edec2af845df8355620efa358a21fb"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-06-resolve-adopted/result.json",
+          "bytes": 1514,
+          "sha256": "558238decdb7efd30346df55b467ae8da62d89c27bb77560d6d9fcc291d0e436"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-06-resolve-adopted/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-06-resolve-adopted/stdout.raw.txt",
+          "bytes": 264,
+          "sha256": "b5238903618f80261f61f91a5a61a6230f7554d644043ab64c8876045a74ad4c"
+        }
+      }
+    },
+    {
+      "label": "native-two-07-resolve-retained",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review-issues",
+        "resolve",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\07-resolve-retained.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:23.660Z",
+      "elapsed_ms": 137,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\07-resolve-retained.json",
+        "sha256": "fb94999f15be7e646b6b94f97f0df12c71453c65adf7f975d106e866a101e5da"
+      },
+      "before_state_sha256": "3f8e35e01a73c0c3091a32929ba097f2613e72866da9b423502d1acfac94c0e3",
+      "after_state_sha256": "137cb677fa72bf2403005cb038c0fc37de5c9aac9a6c520f9eeb26bf4e05e9da",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-07-resolve-retained/after-state.json",
+          "bytes": 56442,
+          "sha256": "137cb677fa72bf2403005cb038c0fc37de5c9aac9a6c520f9eeb26bf4e05e9da"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-07-resolve-retained/before-state.json",
+          "bytes": 52642,
+          "sha256": "3f8e35e01a73c0c3091a32929ba097f2613e72866da9b423502d1acfac94c0e3"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-07-resolve-retained/input.raw.json",
+          "bytes": 1223,
+          "sha256": "fb94999f15be7e646b6b94f97f0df12c71453c65adf7f975d106e866a101e5da"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-07-resolve-retained/result.json",
+          "bytes": 1516,
+          "sha256": "ac89778dbf4a8a58bffe56d411774de9b4b561dcc2d8d63f2086f0fbb95586ec"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-07-resolve-retained/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-07-resolve-retained/stdout.raw.txt",
+          "bytes": 259,
+          "sha256": "dfd31bf729c14a7f35f43daf1912246b1b76ebd49b6f8ebece6229af835f7e23"
+        }
+      }
+    },
+    {
+      "label": "native-two-08-resolve-deferred",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review-issues",
+        "resolve",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\08-resolve-deferred.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:23.953Z",
+      "elapsed_ms": 165,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\08-resolve-deferred.json",
+        "sha256": "ca1e006a66f4daef9aac63c82a8694fee23696da6ae8888ebe7622021a99ff57"
+      },
+      "before_state_sha256": "137cb677fa72bf2403005cb038c0fc37de5c9aac9a6c520f9eeb26bf4e05e9da",
+      "after_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-08-resolve-deferred/after-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-08-resolve-deferred/before-state.json",
+          "bytes": 56442,
+          "sha256": "137cb677fa72bf2403005cb038c0fc37de5c9aac9a6c520f9eeb26bf4e05e9da"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-08-resolve-deferred/input.raw.json",
+          "bytes": 1264,
+          "sha256": "ca1e006a66f4daef9aac63c82a8694fee23696da6ae8888ebe7622021a99ff57"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-08-resolve-deferred/result.json",
+          "bytes": 1516,
+          "sha256": "49053f8d82327e704a668bcd372f8344e215cfe2057f55ea5ea06b62d7cc2b89"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-08-resolve-deferred/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-08-resolve-deferred/stdout.raw.txt",
+          "bytes": 260,
+          "sha256": "20f1b7f707e3c8953a910063dd444488afceb06de9a7f3d528839e253f9f4139"
+        }
+      }
+    },
+    {
+      "label": "native-two-09-issues-before-begin",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review-issues",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:24.244Z",
+      "elapsed_ms": 150,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "after_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-09-issues-before-begin/after-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-09-issues-before-begin/before-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-09-issues-before-begin/result.json",
+          "bytes": 1160,
+          "sha256": "f4ec2edf01bb5ec6d6935683a194c3ecb089c07bad514dc2643bbcd2babac663"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-09-issues-before-begin/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-09-issues-before-begin/stdout.raw.txt",
+          "bytes": 16268,
+          "sha256": "0b8f83aca53e0412af6f679626dca3ba91877e2e024d4ef7966d419ce5adb779"
+        }
+      }
+    },
+    {
+      "label": "native-two-10-revision-begin",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "begin",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\revision-begin.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:46.737Z",
+      "elapsed_ms": 348,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\revision-begin.json",
+        "sha256": "e611c3a7f4b276309eee326e897ca119a063a208f343e8af0196135d51612afc"
+      },
+      "before_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "after_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-10-revision-begin/after-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-10-revision-begin/before-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-10-revision-begin/input.raw.json",
+          "bytes": 124,
+          "sha256": "e611c3a7f4b276309eee326e897ca119a063a208f343e8af0196135d51612afc"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-10-revision-begin/result.json",
+          "bytes": 1499,
+          "sha256": "8bc63006fb59c78f412ddcdbcd0c7d5f442135039952ab431f7d4fa4ddc137d2"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-10-revision-begin/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-10-revision-begin/stdout.raw.txt",
+          "bytes": 699,
+          "sha256": "58e52f7d14e5c7a00f163049eefcb3c1d9ce304e0e38f3aaeeb5869c58fabaec"
+        }
+      }
+    },
+    {
+      "label": "native-two-11-rewind-5",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "rewind",
+        "--from",
+        "5",
+        "--expected-revision",
+        "13",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:33:47.246Z",
+      "elapsed_ms": 168,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "after_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-11-rewind-5/after-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-11-rewind-5/before-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-11-rewind-5/result.json",
+          "bytes": 1366,
+          "sha256": "823fbc3a0de731d30b40d99f1b0dd809181b9acf99b489133ad327db7db63657"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-11-rewind-5/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-11-rewind-5/stdout.raw.txt",
+          "bytes": 532,
+          "sha256": "4a2f172d51b6801dbdd9dedd605d381acf37382ce57ddd6f58943114cc535458"
+        }
+      }
+    },
+    {
+      "label": "native-two-12-plan-5-sync",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\plan-5-scope-sync.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:34:19.810Z",
+      "elapsed_ms": 140,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\plan-5-scope-sync.json",
+        "sha256": "00c1d45e502666fe87e534685872680f81a4f37ba9c2559736bff3fa000c52e0"
+      },
+      "before_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "after_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-12-plan-5-sync/after-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-12-plan-5-sync/before-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-12-plan-5-sync/input.raw.json",
+          "bytes": 920,
+          "sha256": "00c1d45e502666fe87e534685872680f81a4f37ba9c2559736bff3fa000c52e0"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-12-plan-5-sync/result.json",
+          "bytes": 1653,
+          "sha256": "661123b3c688d57bea55550071d3b369a995725f7c898f1788c9e21247968703"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-12-plan-5-sync/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-12-plan-5-sync/stdout.raw.txt",
+          "bytes": 69,
+          "sha256": "07f45a02365990d7c56229755e157057460807e5240a44e1f04cbf8aace6ac46"
+        }
+      }
+    },
+    {
+      "label": "native-two-13-replay-input-5",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "5",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--out",
+        ".writer/drafts/native-two-replay-5-pending.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:34:20.046Z",
+      "elapsed_ms": 203,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "after_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-13-replay-input-5/after-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-13-replay-input-5/before-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-13-replay-input-5/result.json",
+          "bytes": 1419,
+          "sha256": "e3f5b0a280b99808f40cd5cf0c52a6e6d8659a8c2360534c4de11a9f65927b21"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-13-replay-input-5/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-13-replay-input-5/stdout.raw.txt",
+          "bytes": 8202,
+          "sha256": "9997b237f886ee565865e054576d9b6598959501d9a0ed44040bf6d80351eb5c"
+        }
+      }
+    },
+    {
+      "label": "native-two-14-preview-5-unfinished-denied",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-5-pending.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:34:20.342Z",
+      "elapsed_ms": 137,
+      "exit_code": 1,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-5-pending.json",
+        "sha256": "fbf58c3f2f418aef9e48323b7c0151a13588d14eb14cccb1c4e5d8b02ef3a34a"
+      },
+      "before_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "after_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-14-preview-5-unfinished-denied/after-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-14-preview-5-unfinished-denied/before-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-14-preview-5-unfinished-denied/input.raw.json",
+          "bytes": 8139,
+          "sha256": "fbf58c3f2f418aef9e48323b7c0151a13588d14eb14cccb1c4e5d8b02ef3a34a"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-14-preview-5-unfinished-denied/result.json",
+          "bytes": 1853,
+          "sha256": "a06c1e2324e21311a0c39513b274887d68351039b5a5f4a0fbe832eb54242f40"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-14-preview-5-unfinished-denied/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-14-preview-5-unfinished-denied/stdout.raw.txt",
+          "bytes": 296,
+          "sha256": "936f3bc878818afde8472432981903870dac10df1d1c625190a171e464b254eb"
+        }
+      }
+    },
+    {
+      "label": "native-two-15-preview-5-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-5-reviewed.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:35:04.081Z",
+      "elapsed_ms": 178,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-5-reviewed.json",
+        "sha256": "fd227ee0a375813e159e1f7f6d8859fda804afd820414cd8847343384b947324"
+      },
+      "before_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "after_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-15-preview-5-reviewed/after-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-15-preview-5-reviewed/before-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-15-preview-5-reviewed/input.raw.json",
+          "bytes": 8332,
+          "sha256": "fd227ee0a375813e159e1f7f6d8859fda804afd820414cd8847343384b947324"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-15-preview-5-reviewed/result.json",
+          "bytes": 1855,
+          "sha256": "52aaaec38d6aa9774a4b0c02267398874911e4b84956e0a8aae3f7f952dcda2b"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-15-preview-5-reviewed/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-15-preview-5-reviewed/stdout.raw.txt",
+          "bytes": 9946,
+          "sha256": "f6bc02b05aecb71bf30f78cb83a187f7d11edf36c020139a4c82761f77e064d8"
+        }
+      }
+    },
+    {
+      "label": "native-two-16-record-5",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-5-reviewed.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:35:04.363Z",
+      "elapsed_ms": 190,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-5-reviewed.json",
+        "sha256": "fd227ee0a375813e159e1f7f6d8859fda804afd820414cd8847343384b947324"
+      },
+      "before_state_sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead",
+      "after_state_sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-16-record-5/after-state.json",
+          "bytes": 55598,
+          "sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-16-record-5/before-state.json",
+          "bytes": 49833,
+          "sha256": "0f7e5861d370ec11c7b22bad888722f5c0ef4ab0da9062ed84a3d90866d6fead"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-16-record-5/input.raw.json",
+          "bytes": 8332,
+          "sha256": "fd227ee0a375813e159e1f7f6d8859fda804afd820414cd8847343384b947324"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-16-record-5/result.json",
+          "bytes": 1847,
+          "sha256": "b8b4c50d2f030117a57e0e7fdf638427401c39cb3cf9b3f2afb37a3ca9285a23"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-16-record-5/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-16-record-5/stdout.raw.txt",
+          "bytes": 190,
+          "sha256": "c8f655777b57c83787140ca0d5f00a35d37b43763ddfb4f1c51c9d7e405cea3a"
+        }
+      }
+    },
+    {
+      "label": "native-two-17-replay-input-6",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "replay-input",
+        "--unit",
+        "6",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--out",
+        ".writer/drafts/native-two-replay-6-pending.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:35:04.647Z",
+      "elapsed_ms": 201,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697",
+      "after_state_sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-17-replay-input-6/after-state.json",
+          "bytes": 55598,
+          "sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-17-replay-input-6/before-state.json",
+          "bytes": 55598,
+          "sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-17-replay-input-6/result.json",
+          "bytes": 1419,
+          "sha256": "0362b9aabe64429b2deeac60b65317fa3d87daa2fd0a738427caad947d2fd2fa"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-17-replay-input-6/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-17-replay-input-6/stdout.raw.txt",
+          "bytes": 9521,
+          "sha256": "80a321c96199b7a87002dd3acf302e5ca893de4b00e87e8f6149c2f2a256ef3f"
+        }
+      }
+    },
+    {
+      "label": "native-two-18-preview-6-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-6-reviewed.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:35:51.059Z",
+      "elapsed_ms": 184,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-6-reviewed.json",
+        "sha256": "0890f1e33a635f5be3814dedb2060652541ab47da23c0d8d71e5982b5b88ab8e"
+      },
+      "before_state_sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697",
+      "after_state_sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-18-preview-6-reviewed/after-state.json",
+          "bytes": 55598,
+          "sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-18-preview-6-reviewed/before-state.json",
+          "bytes": 55598,
+          "sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-18-preview-6-reviewed/input.raw.json",
+          "bytes": 9690,
+          "sha256": "0890f1e33a635f5be3814dedb2060652541ab47da23c0d8d71e5982b5b88ab8e"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-18-preview-6-reviewed/result.json",
+          "bytes": 1855,
+          "sha256": "15f71730811c6c5ad2f4da0b1cb57c71bfb11014c9f98b87fe39b71a0844f3b3"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-18-preview-6-reviewed/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-18-preview-6-reviewed/stdout.raw.txt",
+          "bytes": 15803,
+          "sha256": "10e00e3f019b6e64139b49f1a6fa116271332f8d6733c89b17475e17f3a94565"
+        }
+      }
+    },
+    {
+      "label": "native-two-19-record-6",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "record",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-6-reviewed.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:35:51.349Z",
+      "elapsed_ms": 190,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace\\.writer\\drafts\\native-two-replay-6-reviewed.json",
+        "sha256": "0890f1e33a635f5be3814dedb2060652541ab47da23c0d8d71e5982b5b88ab8e"
+      },
+      "before_state_sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697",
+      "after_state_sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-19-record-6/after-state.json",
+          "bytes": 63160,
+          "sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-19-record-6/before-state.json",
+          "bytes": 55598,
+          "sha256": "b9deabca359dac91b2b65417b8dd65e6cf9f68d055df2d3d1984624104040697"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-19-record-6/input.raw.json",
+          "bytes": 9690,
+          "sha256": "0890f1e33a635f5be3814dedb2060652541ab47da23c0d8d71e5982b5b88ab8e"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-19-record-6/result.json",
+          "bytes": 1847,
+          "sha256": "79aaf081da5e4ffd6f943b9916f694f95a81f48795fabeed093f40dcc85aad86"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-19-record-6/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-19-record-6/stdout.raw.txt",
+          "bytes": 190,
+          "sha256": "c5c320aab0db1fef364dd03aaa92c543055e91fe6867c0a8c41639f3b3f2f9a0"
+        }
+      }
+    },
+    {
+      "label": "native-two-20-check-branch",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:35:51.635Z",
+      "elapsed_ms": 140,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af",
+      "after_state_sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-20-check-branch/after-state.json",
+          "bytes": 63160,
+          "sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-20-check-branch/before-state.json",
+          "bytes": 63160,
+          "sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-20-check-branch/result.json",
+          "bytes": 1305,
+          "sha256": "2f374a7f8086fef9e24d60f2259d91bc10e21394d6c8323c682cae9b14c807da"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-20-check-branch/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-20-check-branch/stdout.raw.txt",
+          "bytes": 537,
+          "sha256": "a4a65a8d69f60576d7f14def2fb31e090704febb37a5ebd0c8ef1782788258b2"
+        }
+      }
+    },
+    {
+      "label": "native-two-21-review-final-5-6",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\review-final-5-6.json",
+        "--revision-token",
+        "97ceb59ddd88980e26669db6e692c885ba8f6efad65741b0f19e9bf371a9bcc5",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\revisions\\db1d9ffb-dd55-4216-81a1-769eb76e40fe\\workspace"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:01.710Z",
+      "elapsed_ms": 165,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\review-final-5-6.json",
+        "sha256": "9ab42f4a3a9caf2266ecad5dbd94a1df0f85ca436760557aa9cbfacc32aa8f06"
+      },
+      "before_state_sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af",
+      "after_state_sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-21-review-final-5-6/after-state.json",
+          "bytes": 63160,
+          "sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-21-review-final-5-6/before-state.json",
+          "bytes": 63160,
+          "sha256": "1f8acb4d00b2d032630ec5dd439b1d47828d5d179002ab020d31e04c9bfae5af"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-21-review-final-5-6/input.raw.json",
+          "bytes": 356,
+          "sha256": "9ab42f4a3a9caf2266ecad5dbd94a1df0f85ca436760557aa9cbfacc32aa8f06"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-21-review-final-5-6/result.json",
+          "bytes": 1653,
+          "sha256": "8dade715d79591a88c6adbfd2f2ca48dbd20c46f31858054f767143a5bcc7859"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-21-review-final-5-6/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-21-review-final-5-6/stdout.raw.txt",
+          "bytes": 168,
+          "sha256": "b369f02d1415db210d241183ac019539b1751ed179949bb6fd51bea21fb8a692"
+        }
+      }
+    },
+    {
+      "label": "native-two-22-prepare",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "prepare",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\prepare.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:01.990Z",
+      "elapsed_ms": 343,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\prepare.json",
+        "sha256": "7046d6cb9d35c25aa4d5826d3d9f3d053e0c20e613d5724eb6a8f9370f919ba0"
+      },
+      "before_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "after_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-22-prepare/after-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-22-prepare/before-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-22-prepare/input.raw.json",
+          "bytes": 130,
+          "sha256": "7046d6cb9d35c25aa4d5826d3d9f3d053e0c20e613d5724eb6a8f9370f919ba0"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-22-prepare/result.json",
+          "bytes": 1487,
+          "sha256": "f18f987bbdcc1ca4fe80ec8cf4518f956105c54b8815c0034b4b32c06cb951d7"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-22-prepare/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-22-prepare/stdout.raw.txt",
+          "bytes": 2637,
+          "sha256": "c5cd529629597c2dc0706f8f64ce9d51853a11ef35b1c0805e5f237e35dc23b5"
+        }
+      }
+    },
+    {
+      "label": "native-two-23-commit",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "commit",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\commit.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:14.655Z",
+      "elapsed_ms": 334,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\commit.json",
+        "sha256": "7046d6cb9d35c25aa4d5826d3d9f3d053e0c20e613d5724eb6a8f9370f919ba0"
+      },
+      "before_state_sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5",
+      "after_state_sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-23-commit/after-state.json",
+          "bytes": 63332,
+          "sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-23-commit/before-state.json",
+          "bytes": 60879,
+          "sha256": "b5da02472d0c850f6a5fcc3356d502e5a782fd0984a2fae74268a14249c1d6a5"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-23-commit/input.raw.json",
+          "bytes": 130,
+          "sha256": "7046d6cb9d35c25aa4d5826d3d9f3d053e0c20e613d5724eb6a8f9370f919ba0"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-23-commit/result.json",
+          "bytes": 1484,
+          "sha256": "777ab92bd3d0720497eb70422755908061c58c9f7c6e5ce3ef10a54b2b00df63"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-23-commit/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-23-commit/stdout.raw.txt",
+          "bytes": 205,
+          "sha256": "d0fe6fe502452c09241d2a113ad1537af35b52426688eb1c007348e1359f4df0"
+        }
+      }
+    },
+    {
+      "label": "native-two-24-commit-idempotent",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "commit",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\commit.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:15.086Z",
+      "elapsed_ms": 109,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\commit.json",
+        "sha256": "7046d6cb9d35c25aa4d5826d3d9f3d053e0c20e613d5724eb6a8f9370f919ba0"
+      },
+      "before_state_sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38",
+      "after_state_sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-24-commit-idempotent/after-state.json",
+          "bytes": 63332,
+          "sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-24-commit-idempotent/before-state.json",
+          "bytes": 63332,
+          "sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-24-commit-idempotent/input.raw.json",
+          "bytes": 130,
+          "sha256": "7046d6cb9d35c25aa4d5826d3d9f3d053e0c20e613d5724eb6a8f9370f919ba0"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-24-commit-idempotent/result.json",
+          "bytes": 1484,
+          "sha256": "608cc2da6f07cf96add7d92d453de7ea4f50d1d651ba70033459beb4113e999d"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-24-commit-idempotent/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-24-commit-idempotent/stdout.raw.txt",
+          "bytes": 146,
+          "sha256": "e2f6c3db94bd0e35789a2377806eab79db7e50ce940381c849f701122a85fe5a"
+        }
+      }
+    },
+    {
+      "label": "native-two-25-list-committed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:15.295Z",
+      "elapsed_ms": 110,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38",
+      "after_state_sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-25-list-committed/after-state.json",
+          "bytes": 63332,
+          "sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-25-list-committed/before-state.json",
+          "bytes": 63332,
+          "sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-25-list-committed/result.json",
+          "bytes": 1155,
+          "sha256": "a25d971faeaf98285b63506f063158c468a7b34fb0500ae7807d88fe2f4b0027"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-25-list-committed/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-25-list-committed/stdout.raw.txt",
+          "bytes": 973,
+          "sha256": "8ac131c8ee58ff39fb8281d2d763f0023637bfdb9d902650aed0c66168f496d4"
+        }
+      }
+    },
+    {
+      "label": "native-two-26-apply-adopted",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review-issues",
+        "apply",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\apply-adopted.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:40.317Z",
+      "elapsed_ms": 179,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\apply-adopted.json",
+        "sha256": "4ee362f000c9c616a78573503cf62ccb62250a6cd5a1c096050dffbc9f574827"
+      },
+      "before_state_sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38",
+      "after_state_sha256": "4dd8dd2618d232f58e0d1cb2aa0dd6a3296fd14ba287eb4dd3e5942ca981a969",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-26-apply-adopted/after-state.json",
+          "bytes": 65470,
+          "sha256": "4dd8dd2618d232f58e0d1cb2aa0dd6a3296fd14ba287eb4dd3e5942ca981a969"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-26-apply-adopted/before-state.json",
+          "bytes": 63332,
+          "sha256": "ee420613893681b2327470d494c797e40360871687547a19a8cd4b2e14b87a38"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-26-apply-adopted/input.raw.json",
+          "bytes": 419,
+          "sha256": "4ee362f000c9c616a78573503cf62ccb62250a6cd5a1c096050dffbc9f574827"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-26-apply-adopted/result.json",
+          "bytes": 1502,
+          "sha256": "b94640572df23db55b69131507f2f4d963d18dac312e0eee068faa43876167f0"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-26-apply-adopted/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-26-apply-adopted/stdout.raw.txt",
+          "bytes": 264,
+          "sha256": "0841fc06563eb806fadb2f64ee09ee3519f63e6d7e98c94af855755fca24d5c0"
+        }
+      }
+    },
+    {
+      "label": "native-two-27-pause",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\workflow-pause.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:40.596Z",
+      "elapsed_ms": 147,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-revise-apply\\inputs\\workflow-pause.json",
+        "sha256": "ca02ba43aaa3bf2c358b5043abb5281fb62ce9e74cb62e7bfcc4e3d2fbcd0ff7"
+      },
+      "before_state_sha256": "4dd8dd2618d232f58e0d1cb2aa0dd6a3296fd14ba287eb4dd3e5942ca981a969",
+      "after_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-27-pause/after-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-27-pause/before-state.json",
+          "bytes": 65470,
+          "sha256": "4dd8dd2618d232f58e0d1cb2aa0dd6a3296fd14ba287eb4dd3e5942ca981a969"
+        },
+        "input.raw.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-27-pause/input.raw.json",
+          "bytes": 2219,
+          "sha256": "ca02ba43aaa3bf2c358b5043abb5281fb62ce9e74cb62e7bfcc4e3d2fbcd0ff7"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-27-pause/result.json",
+          "bytes": 1497,
+          "sha256": "ea9a315509eac894e95e658da893aab9bfefb0d2d630e6b2e2d3b50a9d9bbcd0"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-27-pause/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-27-pause/stdout.raw.txt",
+          "bytes": 256,
+          "sha256": "7dcad1a5f5f66f513671f006218b13632a07646bd84d0fc75ba21f2aa17553a3"
+        }
+      }
+    },
+    {
+      "label": "native-two-28-issues-applied",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "review-issues",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:40.846Z",
+      "elapsed_ms": 136,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "after_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-28-issues-applied/after-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-28-issues-applied/before-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-28-issues-applied/result.json",
+          "bytes": 1160,
+          "sha256": "e7c6a2aeb776ae2ce0b62862744113c2025d8d8322bc5cbff14afe7a98da3d18"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-28-issues-applied/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-28-issues-applied/stdout.raw.txt",
+          "bytes": 17664,
+          "sha256": "b4aff126b1b2ecf7c77459bf9787dca84b34a1356da9e16bf0ffc15fe0f0af05"
+        }
+      }
+    },
+    {
+      "label": "native-two-29-final-check",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:41.077Z",
+      "elapsed_ms": 145,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "after_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-29-final-check/after-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-29-final-check/before-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-29-final-check/result.json",
+          "bytes": 1140,
+          "sha256": "b9f749553ee973f0395bc882411dbf016d757388abf13eed97e9c6a3f422a071"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-29-final-check/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-29-final-check/stdout.raw.txt",
+          "bytes": 537,
+          "sha256": "e6888d72ff3d8985339b958f6891fe572e492dc5d4926dd30985089898ca7a2b"
+        }
+      }
+    },
+    {
+      "label": "native-two-30-final-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:41.318Z",
+      "elapsed_ms": 157,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "after_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-30-final-status/after-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-30-final-status/before-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-30-final-status/result.json",
+          "bytes": 1141,
+          "sha256": "fbcadd7c9fffc3011679752425d81870463780e7904c927a78fc5ebee377dce9"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-30-final-status/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-30-final-status/stdout.raw.txt",
+          "bytes": 5894,
+          "sha256": "3df43d0189d73ff5d185378cb4dfa10c4ca215e01fe110a66cea0813bd2da534"
+        }
+      }
+    },
+    {
+      "label": "native-two-31-next-discussion",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:41.573Z",
+      "elapsed_ms": 157,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "after_state_sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "after-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-31-next-discussion/after-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "before-state.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-31-next-discussion/before-state.json",
+          "bytes": 66087,
+          "sha256": "51abac397d9928eaa2df460646d67128ac956ed9cc0f427bf20711840220c523"
+        },
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-31-next-discussion/result.json",
+          "bytes": 1177,
+          "sha256": "47e7374333861b0692451446b33a537e716aaf67ec29e0011e06d6e488f8e2ee"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-31-next-discussion/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-31-next-discussion/stdout.raw.txt",
+          "bytes": 3562,
+          "sha256": "14298a9aa1e6679f17179fdc9e62d19dabf1dc033aa26bbd32d3c70f01bf2590"
+        }
+      }
+    },
+    {
+      "label": "native-two-32-identify-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T04:37:41.827Z",
+      "elapsed_ms": 675,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.6.0",
+        "runtime_guard_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "files": {
+        "result.json": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-32-identify-final/result.json",
+          "bytes": 917,
+          "sha256": "9fd74537219e5043de40b742f404c8fc214faab8947903d7f6926c62976709bb"
+        },
+        "stderr.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-32-identify-final/stderr.raw.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout.raw.txt": {
+          "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/commands/native-two-32-identify-final/stdout.raw.txt",
+          "bytes": 10481,
+          "sha256": "dad03cd21fd8c76da826bb83dd4bc36765bcdb66eedd5ea224a36f64c40aed11"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "FRESH_C_TYPO",
+      "type": "correctness",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+      "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-空车归你.md",
+          "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+          "line": 15,
+          "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+        "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+          "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "author",
+        "author_evidence": {
+          "local_source": "研究/模拟作者修订原话.md",
+          "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+          "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+          "locator": "全文授权段",
+          "recorded_by": "Codex native-four; synthetic acceptance author",
+          "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+        },
+        "disposition": "adopted",
+        "reason": "模拟作者明确采用，仅删第2章这一重复字；非代理擅自扩大。",
+        "author_choice": {
+          "disposition": "adopted",
+          "evidence": {
+            "local_source": "研究/模拟作者修订原话.md",
+            "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+            "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+            "locator": "全文授权段",
+            "recorded_by": "Codex native-four; synthetic acceptance author",
+            "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+          }
+        },
+        "basis_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    },
+    "author_evidence": {
+      "local_source": "研究/模拟作者修订原话.md",
+      "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+      "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+      "locator": "全文授权段",
+      "recorded_by": "Codex native-four; synthetic acceptance author",
+      "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+    }
+  }
+}

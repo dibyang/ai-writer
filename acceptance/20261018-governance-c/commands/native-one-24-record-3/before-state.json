@@ -1,0 +1,412 @@
+{
+  "schema_version": 5,
+  "revision": 3,
+  "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "林禾": "便民处；看过周梅家清单，仍不能确认归属；把抄纸夹在寄存本，承诺明早叫周梅；钥匙未取",
+      "老邵": "离开便民处；知道从仓房移来旧箱，不记得蓝布谁补，要求认领时在场",
+      "周梅": "回家；说明母亲在箱中放剪刀布头的记忆，不记得箱底；原清单带回，留下抄纸与现用电话；感到被怀疑但约好再来"
+    },
+    "threads": [],
+    "timeline": [
+      "初秋第一天下午：老邵从渡口仓房把旧箱和簿册交林禾暂存，钥匙进林禾柜台抽屉。",
+      "第一天傍晚：周梅认领，林禾未凭清单和黄漆交箱；双方约第二天等老邵到场。"
+    ],
+    "ledger": {
+      "O_BOX": {
+        "type": "object",
+        "statement": "从渡口仓房送来的一只锁着的半米长黄漆木箱",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵",
+          "周梅"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "便民处木架上层",
+          "condition": "旧黄漆；左底缺角有蓝布，挂锁未开"
+        },
+        "reader_known": "老邵送来，等待认领",
+        "character_known": {
+          "林禾": "暂存物，归属未知",
+          "老邵": "来自仓房，认领时要在场",
+          "周梅": "看见黄漆，尚未说明认领依据"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-木架空着一层.md",
+            "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+            "line": 15,
+            "quote": "放稳前，老邵托住箱头，让她看底下。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "O_KEY": {
+        "type": "object",
+        "statement": "木箱小铜挂锁的一把钥匙",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "自己柜台下抽屉的布袋",
+          "condition": "一把；未试开"
+        },
+        "reader_known": "老邵交来，林禾装袋保存",
+        "character_known": {
+          "林禾": "知道存放位置，尚未开箱",
+          "老邵": "知道已交钥匙给林禾"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-木架空着一层.md",
+            "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+            "line": 29,
+            "quote": "林禾把钥匙装进一只空布袋，放进自己柜台下的抽屉。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "O_BOOK": {
+        "type": "object",
+        "statement": "老邵留下的旧借物簿",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "柜台下抽屉右边",
+          "condition": "薄簿；尚未翻读"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-木架空着一层.md",
+            "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+            "line": 29,
+            "quote": "旧借物簿另搁在抽屉右边，跟她的寄存本隔开。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "OBS_BLUE": {
+        "type": "observation",
+        "statement": "箱底外侧有蓝布补住左边缺角",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "老邵"
+        ],
+        "tags": [
+          "蓝布",
+          "木箱"
+        ],
+        "reader_known": "可见蓝布，来源未知",
+        "character_known": {
+          "林禾": "亲眼看到，没扯布",
+          "老邵": "见着时已有，不记得谁补"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-木架空着一层.md",
+            "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+            "line": 15,
+            "quote": "黄漆掉得斑驳，箱底外侧钉着一块蓝布，补住了左边的缺角。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_CLAIM": {
+        "type": "thread",
+        "statement": "旧箱等人认领，外观与记忆是否足够尚待查问",
+        "status": "partial",
+        "cast": [
+          "林禾",
+          "老邵",
+          "周梅"
+        ],
+        "due_unit": 4,
+        "reader_known": "周梅清单有黄漆木箱，但无年月地点；认领尚未完成",
+        "character_known": {
+          "林禾": "见到清单，不足以独自交箱；等老邵",
+          "老邵": "明天从县里回来",
+          "周梅": "明天见老邵，不记得箱底"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-木架空着一层.md",
+            "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+            "line": 29,
+            "quote": "她没有开锁，老邵也没催，只叮嘱有人认领先叫他来一趟。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 7,
+            "quote": "没有年月，也没写箱子后来放在哪里。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      },
+      "OBS_LIST": {
+        "type": "observation",
+        "statement": "周梅家清单最下面写黄漆木箱，字旁有小钩，无年月和去处",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "reader_known": "清单文字可见，不能单凭它确认此箱",
+        "character_known": {
+          "林禾": "在灯下读过原件",
+          "周梅": "提供家存原件并带回"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 7,
+            "quote": "纸上写着米缸、棉被，最下面是黄漆木箱，字旁有个小钩。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      },
+      "O_COPY": {
+        "type": "object",
+        "statement": "周梅抄写认领描述并留下联系方式的纸",
+        "status": "active",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "custody": {
+          "holder": "林禾",
+          "location": "寄存本夹页",
+          "condition": "抄纸，非原清单"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 47,
+            "quote": "她走后，林禾把抄纸夹进寄存本，没压在箱上。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      },
+      "R_LISTEN": {
+        "type": "relationship",
+        "statement": "林禾承认自己可能想错，周梅仍愿次日再来",
+        "status": "partial",
+        "cast": [
+          "林禾",
+          "周梅"
+        ],
+        "reader_known": "有小幅缓和，未和好",
+        "character_known": {
+          "林禾": "知道周梅不想被当成捡便宜",
+          "周梅": "听见林禾承认自己也不了解箱子"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-先放一夜.md",
+            "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+            "line": 37,
+            "quote": "“也可能是我想错了。你知道这箱，我不知道。”"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-木架空着一层.md",
+      "sha256": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d",
+      "summary": "初秋下午老邵从渡口仓房送来锁着的黄漆木箱和旧借物簿，林禾暂收、分别保管钥匙与箱子；箱底有蓝布补角，来历未知。周梅路过认出黄漆但未提出正式认领。",
+      "source_hashes": {
+        "writer.json": "39ad8a9044270cb949b008e7604c3f0307049ea9ac8c2377935a2d1a4904a306",
+        ".writer/state.json": "41cb53b66a4bd5fdf708c16e988b6ba28106d252e3ba882e24ac253c56eac3d1",
+        "大纲/单元/0001.json": "d70716146ef82664e6dd57f0f1a8badc3e0f6e2b0b728ff2809cc1424b5e896f",
+        "设定/作品定位.md": "2c7f72f92e2f1dce19ecf5e7fe4ea47f42f72cd2e67bc20af224d699c7762d93",
+        "设定/文风.md": "9cc72195683be519f0013f5c54a53e1510e4782fef462f4e96a23b82521fb14d",
+        "设定/权威规则.md": "99e43c5485358fa1a1fafd1049e10cf982886669740eed4fcda16837b15cfe68",
+        "设定/人物声音.md": "281de5bb32dcbf6e30a8f116cfc82476ca4ff5dd9bf7090b79903e70f6a4e609",
+        "大纲/全书骨架.md": "8a7a4b17e731e5ca5cf704b0cbc00ae5d2b52c2d8c531464d7dc05d05f170249",
+        "大纲/分卷/V1.json": "a36ec51d9e4fb700f36237c6f031362b4ad01e40df7b72a177a846dc614221a4"
+      },
+      "fingerprint": "6c0c6f55ed8f8ba1fd5abb4a13ad2a05ee52faafb7ced20ed7958e02928bb432",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/eb39c2d7-4c90-4d7b-90cd-c61cc6102c7b.json",
+          "sha256": "adf792aaf6c7a1d49e4fafb23b7fae8b6165cf66a6fabc99fab3ac256e57d5f9"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "bafba65483cbae67215ee3cfabcc3c00868889407731ce886204e3a4cfacff2b",
+      "journal": ".writer/journal/8bf98cb8-8b8a-4940-be41-3651e9ee0c40.json",
+      "journal_sha256": "db737715e41b9db053aa3a0346a059f52c00e22ed67e2ac9eae7b9495a01c0b1"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-先放一夜.md",
+      "sha256": "0978361349090596f1c408fadca208715ffc95b438c5f48c7245a8303fd805e0",
+      "summary": "周梅凭母亲清单和黄漆记忆认领，承认不记得箱底。林禾守约等老邵，承认自己也可能想错；周梅带回原清单，留下抄纸和联系方式，约明早再看。",
+      "source_hashes": {
+        "writer.json": "39ad8a9044270cb949b008e7604c3f0307049ea9ac8c2377935a2d1a4904a306",
+        ".writer/state.json": "2a362262bb8f580f269444e95f33a3bcc0be0bb9e6b818c61d3539a213a92c11",
+        "大纲/单元/0002.json": "c4c88098fe083c130558137021744c9325b5bbe6ff56cc15f9ddd617304c5cef",
+        "设定/作品定位.md": "2c7f72f92e2f1dce19ecf5e7fe4ea47f42f72cd2e67bc20af224d699c7762d93",
+        "设定/文风.md": "9cc72195683be519f0013f5c54a53e1510e4782fef462f4e96a23b82521fb14d",
+        "设定/权威规则.md": "99e43c5485358fa1a1fafd1049e10cf982886669740eed4fcda16837b15cfe68",
+        "设定/人物声音.md": "281de5bb32dcbf6e30a8f116cfc82476ca4ff5dd9bf7090b79903e70f6a4e609",
+        "大纲/全书骨架.md": "8a7a4b17e731e5ca5cf704b0cbc00ae5d2b52c2d8c531464d7dc05d05f170249",
+        "大纲/分卷/V1.json": "a36ec51d9e4fb700f36237c6f031362b4ad01e40df7b72a177a846dc614221a4",
+        "正文/0001-木架空着一层.md": "81d72c44c8da25b67f4597d758b01dc53eb5c6e89c3431bc044cd02261a3c41d"
+      },
+      "fingerprint": "5e6a3c3e398fd31e71873857e4dfe4fe36925c60e345798da3f54467b648246f",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/eb39c2d7-4c90-4d7b-90cd-c61cc6102c7b.json",
+          "sha256": "adf792aaf6c7a1d49e4fafb23b7fae8b6165cf66a6fabc99fab3ac256e57d5f9"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "bafba65483cbae67215ee3cfabcc3c00868889407731ce886204e3a4cfacff2b",
+      "journal": ".writer/journal/8ddbd45d-f738-45ca-9655-97b709b3e4cc.json",
+      "journal_sha256": "1d69bf665a5c66d8f293d22a6d5b3fd6d1b8067113943ccf8944772b6d78d575"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "先规划后有限试写1–6，完成后暂停正文，只做结构审查",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "六章登记完成后暂停正文，做完整六章结构连读，不写7"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/eb39c2d7-4c90-4d7b-90cd-c61cc6102c7b.json",
+      "sha256": "adf792aaf6c7a1d49e4fafb23b7fae8b6165cf66a6fabc99fab3ac256e57d5f9"
+    }
+  ],
+  "operations": {
+    "native-one-trial-1-6": {
+      "input_sha256": "59fb417ae70ef0390cc0e047964ac8c6929c9845d6f09ad32e9bc799ada831e3",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-one-trial-1-6",
+        "event": {
+          "ref": ".writer/objects/eb39c2d7-4c90-4d7b-90cd-c61cc6102c7b.json",
+          "sha256": "adf792aaf6c7a1d49e4fafb23b7fae8b6165cf66a6fabc99fab3ac256e57d5f9"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/eb39c2d7-4c90-4d7b-90cd-c61cc6102c7b.json",
+    "sha256": "adf792aaf6c7a1d49e4fafb23b7fae8b6165cf66a6fabc99fab3ac256e57d5f9"
+  }
+}

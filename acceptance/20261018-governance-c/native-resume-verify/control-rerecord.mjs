@@ -1,0 +1,15 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {call,read,write,dir,work,state,sha} from './helpers.mjs';
+const s=read(path.join(dir,'session-access.json'));
+write(path.join(dir,'aux-error-clarification.md'),'# 辅助错误及候选报告表述更正\n\n首次control-record.mjs误取oldJournal.changes。原journal结构实际为schema_version/patch，不是changes或delta。完整重复执行错误已存原样stderr；首次工具返回有截断，二者不混称。失败发生在任何产品调用之前，state未变。\n\n修正后与第二阶段原reviewed输入的changes逐字段比较，并阅读原journal.patch确认实际差量。候选首份replay报告中“summary/changes与base-state原登记及原journal深度相等”措辞过宽：journal不是同形对象。保留首份报告和登记，正式rewind6/replay/preview/record，以新报告v2精确说明比较对象，不手改旧报告、索引或冻结哈希。\n');
+call('native-three-23-rewind6-report-clarification',['rewind','--from','6','--expected-revision',String(state(s.workspace).revision),'--revision-token',s.token],{project:s.workspace});
+call('native-three-24-replay6-v2',['revision','replay-input','--unit','6','--revision-token',s.token,'--out','.writer/drafts/native-three-replay6-v2-pending.json'],{project:s.workspace});
+const input=read(path.join(s.workspace,'.writer/drafts/native-three-replay6-v2-pending.json'));
+assert.deepEqual(input.changes,read(path.join(dir,'../native-revise-apply/inputs/replay-6-reviewed.json')).changes);
+const old=fs.readFileSync(path.join(s.workspace,'审查/native-three-第6章重登核读.md'),'utf8');
+const report='审查/native-three-第6章重登核读-v2.md';
+write(path.join(s.workspace,report),old.replace('候选summary/changes与base-state原登记及原journal深度相等。','候选summary与base-state第6章原summary相等；changes与第二阶段冻结留存的原reviewed输入changes逐字段相等。原journal是patch结构，已实读其人物/时间/物件差量，不能把它与changes称为同形对象深度相等。首份候选报告措辞在此更正，原报告/登记保留；本次正式rewind/replay/record绑定此v2报告。'));
+input.replay_review={reviewer:'native-three independent Codex; informed actual chapter reading; synthetic-acceptance',report,draft_sha256:sha(fs.readFileSync(path.join(s.workspace,input.draft))),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+call('native-three-25-preview6-v2',['record-preview','--revision-token',s.token],{project:s.workspace,input});
+call('native-three-26-record6-v2',['record','--revision-token',s.token],{project:s.workspace,input});
+call('native-three-27-branch-check-v2',['check','--revision-token',s.token],{project:s.workspace});

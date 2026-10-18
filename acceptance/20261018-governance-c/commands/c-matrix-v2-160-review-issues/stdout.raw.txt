@@ -1,0 +1,257 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 12,
+  "counts": {
+    "verified": 1,
+    "retained": 1,
+    "deferred": 1
+  },
+  "issues": [
+    {
+      "id": "I_CHECK",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001.md",
+          "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+        "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/34c292f0-ca13-4ab9-83fc-72e1cde13ec8.json",
+          "sha256": "6a429d98b062a4e4272e8d11c6fb649abf517cd1e38ad080058088a2d438f4fc"
+        },
+        {
+          "ref": ".writer/objects/5955657c-9815-403b-b69f-e95d3fe11b36.json",
+          "sha256": "c7c2f9b4abe941250273ad71060d145d1bcd6fd5a1c7bd61b30e47cc57ea9b70"
+        },
+        {
+          "ref": ".writer/objects/b3553ce6-e7d9-461b-b58a-49b66dbf7759.json",
+          "sha256": "1b2bb3ea8bcb05cd780b73ced12a2bc8caa835b9530767632e3b225780f9c265"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+          "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+        },
+        "disposition": "adopted",
+        "reason": "合成处置，不冒充作者逐条决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "ad560c64-9e75-4f26-895b-1fe2c3239ab2",
+        "commit_binding": {
+          "ref": ".writer/objects/ad560c64-9e75-4f26-895b-1fe2c3239ab2.json",
+          "sha256": "c4a229c4ca592534570290cebf5ca33cbc7fde34f5424c2db9f2223758fb92ef"
+        },
+        "transaction_id": "db4671a6-3436-4545-9696-f6ce3d8d6df9",
+        "reason": "实际事务字节变化已绑定",
+        "changes": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "before": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "after": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee",
+            "dependency": "37bc117a31c5c43e62a8998b7f07bbb773661292eda7167f58e276472867d2fb"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/e52eb9bc-8349-4a39-9677-e3cbf5654807.json",
+        "review_sha256": "d9480979c4952addd37fd019c78f56291454a7169d40576c1b48c746f9dfa511",
+        "reviewer": "mechanical-fixture-not-model-reading",
+        "conclusion": "resolved",
+        "reason": "仅验证状态流，不作语义修复声明",
+        "rechecked_context": false,
+        "application_commit_id": "ad560c64-9e75-4f26-895b-1fe2c3239ab2",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee",
+            "dependency": "37bc117a31c5c43e62a8998b7f07bbb773661292eda7167f58e276472867d2fb"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "dependency": "962825406d51e0fa88f679b8c541e8d58b2a0f3c9455625ee78fbda8317958c3"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/0468db09-54aa-44d4-8d00-ce4e16269dcc.json",
+        "sha256": "9274c0c77cd98fabb77e6bfa6b813dc845e140f8fd5ac317fc569f43b62cab0a"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_STYLE",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001.md",
+          "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "retained",
+      "origin": {
+        "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+        "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/6c20f4db-12ae-468f-809f-d1aaeebc1eee.json",
+          "sha256": "21dc92c08c95f09608d5b6d800bd3888572728ba8450736da68b25b6f474e247"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+          "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+        },
+        "disposition": "retained",
+        "reason": "合成处置，不冒充作者逐条决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/d14f2bce-414d-41fa-bfb3-f648ff3aaa29.json",
+        "sha256": "0225dadd33462c95e34cfd54db8c59550b8a03b4623cad843e5d8e3b1e464f13"
+      },
+      "effective_status": "retained",
+      "context_changed": true,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_WAIT",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002.md",
+          "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "deferred",
+      "origin": {
+        "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+        "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "dependency": "d0b00e7e1e354ab274e26e60a7e774e2f00c620aab647a7b559c98798cd7f16f"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/e675fcd9-5bf2-450b-8771-3f199491db19.json",
+          "sha256": "8da1b2ba873bd667dd1c7469aeffcda56fd72ea30e75d667d4b77b7d881db4da"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+          "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+        },
+        "disposition": "deferred",
+        "reason": "合成处置，不冒充作者逐条决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "dependency": "d0b00e7e1e354ab274e26e60a7e774e2f00c620aab647a7b559c98798cd7f16f"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/15d203a2-16c4-4d0d-938b-927e4b7edf69.json",
+        "sha256": "a6e68a8bc5dae7d4ede39c99671e4c30cfc8d4524c73009eb96ee273aa456b95"
+      },
+      "effective_status": "deferred",
+      "context_changed": true,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

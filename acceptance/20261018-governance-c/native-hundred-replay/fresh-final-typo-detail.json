@@ -1,0 +1,370 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 13,
+  "counts": {
+    "verified": 1
+  },
+  "issues": [
+    {
+      "id": "FRESH_C_TYPO",
+      "type": "correctness",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+      "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-空车归你.md",
+          "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+          "line": 15,
+          "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+        "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+          "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+        },
+        {
+          "ref": ".writer/objects/23145ec4-2933-441a-bca5-d110e3721163.json",
+          "sha256": "a5c53d86f01d7ebbe2f0813e47c8adcde785710b9c6e35ad2b5da725efa8ba57"
+        },
+        {
+          "ref": ".writer/objects/6b14a620-1958-4a3b-8466-47b0e23501dd.json",
+          "sha256": "6e03f1bcaf51d2729e1856133d8d88b74760191a1f4549f79199b109190278ae"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "author",
+        "author_evidence": {
+          "local_source": "研究/模拟作者修订原话.md",
+          "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+          "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+          "locator": "全文授权段",
+          "recorded_by": "Codex native-four; synthetic acceptance author",
+          "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+        },
+        "disposition": "adopted",
+        "reason": "模拟作者明确采用，仅删第2章这一重复字；非代理擅自扩大。",
+        "author_choice": {
+          "disposition": "adopted",
+          "evidence": {
+            "local_source": "研究/模拟作者修订原话.md",
+            "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+            "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+            "locator": "全文授权段",
+            "recorded_by": "Codex native-four; synthetic acceptance author",
+            "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+          }
+        },
+        "basis_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+        "commit_binding": {
+          "ref": ".writer/objects/a79e8eaf-5211-45e0-8123-7f7308fc40ad.json",
+          "sha256": "86d70e31d3b9e23eb32b2300fc607f76afab8ba0230aacef9433a407e66b2aac"
+        },
+        "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577",
+        "reason": "实际主作品事务已提交，2章正文只删一个车，绑定采用时旧稿和当前新稿；不是分支候选。",
+        "changes": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "before": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "after": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "dependency": "161bb66354d277a7a0940ab84bfbe62d08d7afa0f27c4a5d2c413bf9b44fbaba"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/b586eb2f-216b-467f-a574-19b3ef046b2f.json",
+        "review_sha256": "6fea9786a050c6daec3d5a081302093a926ad8d6df5eeee1a0c5bcee11d258bc",
+        "reviewer": "Codex native-four informed self-review",
+        "conclusion": "resolved",
+        "reason": "实际事务提交并apply之后重新完整读当前两章；第2章全文仅删除一个车，新完整引文在当前稿，第1章保留不称修复。",
+        "rechecked_context": false,
+        "application_commit_id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "dependency": "645f6493039bd8cbba513f118967396eea6b65230f6cfff72cbe39f3e6d87560"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "dependency": "161bb66354d277a7a0940ab84bfbe62d08d7afa0f27c4a5d2c413bf9b44fbaba"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/259182ab-41ac-44b5-976f-f4e939e3ea0b.json",
+        "sha256": "45d913373b3aa9ff2ff9295aae879cad59fba41be87c9466f593879b8060225d"
+      },
+      "history_events": [
+        {
+          "binding": {
+            "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+            "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+          },
+          "issue": {
+            "id": "FRESH_C_TYPO",
+            "type": "correctness",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+            "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+            "evidence": [
+              {
+                "unit": 2,
+                "draft": "正文/0002-空车归你.md",
+                "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                "line": 15,
+                "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+              }
+            ],
+            "status": "open",
+            "origin": {
+              "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+              "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+              "units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                  "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+                }
+              ]
+            },
+            "history": []
+          }
+        },
+        {
+          "binding": {
+            "ref": ".writer/objects/23145ec4-2933-441a-bca5-d110e3721163.json",
+            "sha256": "a5c53d86f01d7ebbe2f0813e47c8adcde785710b9c6e35ad2b5da725efa8ba57"
+          },
+          "issue": {
+            "id": "FRESH_C_TYPO",
+            "type": "correctness",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+            "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+            "evidence": [
+              {
+                "unit": 2,
+                "draft": "正文/0002-空车归你.md",
+                "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                "line": 15,
+                "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+              }
+            ],
+            "status": "adopted",
+            "origin": {
+              "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+              "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+              "units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                  "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+                }
+              ]
+            },
+            "history": [
+              {
+                "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+                "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+              }
+            ],
+            "resolution": {
+              "decision_actor": "author",
+              "author_evidence": {
+                "local_source": "研究/模拟作者修订原话.md",
+                "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+                "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+                "locator": "全文授权段",
+                "recorded_by": "Codex native-four; synthetic acceptance author",
+                "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+              },
+              "disposition": "adopted",
+              "reason": "模拟作者明确采用，仅删第2章这一重复字；非代理擅自扩大。",
+              "author_choice": {
+                "disposition": "adopted",
+                "evidence": {
+                  "local_source": "研究/模拟作者修订原话.md",
+                  "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+                  "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+                  "locator": "全文授权段",
+                  "recorded_by": "Codex native-four; synthetic acceptance author",
+                  "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+                }
+              },
+              "basis_units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                  "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+                }
+              ]
+            },
+            "application": null,
+            "verification": null
+          },
+          "author_evidence": {
+            "local_source": "研究/模拟作者修订原话.md",
+            "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+            "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+            "locator": "全文授权段",
+            "recorded_by": "Codex native-four; synthetic acceptance author",
+            "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+          }
+        },
+        {
+          "binding": {
+            "ref": ".writer/objects/6b14a620-1958-4a3b-8466-47b0e23501dd.json",
+            "sha256": "6e03f1bcaf51d2729e1856133d8d88b74760191a1f4549f79199b109190278ae"
+          },
+          "issue": {
+            "id": "FRESH_C_TYPO",
+            "type": "correctness",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+            "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+            "evidence": [
+              {
+                "unit": 2,
+                "draft": "正文/0002-空车归你.md",
+                "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                "line": 15,
+                "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+              }
+            ],
+            "status": "applied",
+            "origin": {
+              "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+              "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+              "units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                  "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+                }
+              ]
+            },
+            "history": [
+              {
+                "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+                "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+              },
+              {
+                "ref": ".writer/objects/23145ec4-2933-441a-bca5-d110e3721163.json",
+                "sha256": "a5c53d86f01d7ebbe2f0813e47c8adcde785710b9c6e35ad2b5da725efa8ba57"
+              }
+            ],
+            "resolution": {
+              "decision_actor": "author",
+              "author_evidence": {
+                "local_source": "研究/模拟作者修订原话.md",
+                "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+                "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+                "locator": "全文授权段",
+                "recorded_by": "Codex native-four; synthetic acceptance author",
+                "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+              },
+              "disposition": "adopted",
+              "reason": "模拟作者明确采用，仅删第2章这一重复字；非代理擅自扩大。",
+              "author_choice": {
+                "disposition": "adopted",
+                "evidence": {
+                  "local_source": "研究/模拟作者修订原话.md",
+                  "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+                  "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+                  "locator": "全文授权段",
+                  "recorded_by": "Codex native-four; synthetic acceptance author",
+                  "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+                }
+              },
+              "basis_units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                  "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+                }
+              ]
+            },
+            "application": {
+              "commit_id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+              "commit_binding": {
+                "ref": ".writer/objects/a79e8eaf-5211-45e0-8123-7f7308fc40ad.json",
+                "sha256": "86d70e31d3b9e23eb32b2300fc607f76afab8ba0230aacef9433a407e66b2aac"
+              },
+              "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577",
+              "reason": "实际主作品事务已提交，2章正文只删一个车，绑定采用时旧稿和当前新稿；不是分支候选。",
+              "changes": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "before": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+                  "after": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+                }
+              ],
+              "after_units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-空车归你.md",
+                  "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+                  "dependency": "161bb66354d277a7a0940ab84bfbe62d08d7afa0f27c4a5d2c413bf9b44fbaba"
+                }
+              ]
+            },
+            "verification": null
+          }
+        }
+      ],
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

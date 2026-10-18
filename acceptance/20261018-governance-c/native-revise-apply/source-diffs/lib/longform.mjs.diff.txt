@@ -1,0 +1,28 @@
+diff --git "a/D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\tool\\lib\\longform.mjs" "b/D:\\work\\other\\ai-writer\\lib\\longform.mjs"
+index 72fd43b6..019e6b72 100644
+--- "a/D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\tool\\lib\\longform.mjs"
++++ "b/D:\\work\\other\\ai-writer\\lib\\longform.mjs"
+@@ -194,7 +194,9 @@ export function createLongform(api) {
+   function dependency(u) { return hash(JSON.stringify({ source_hashes: u.source_hashes, source_bindings: u.source_bindings ?? {}, decision_bindings: u.decision_bindings ?? [] })); }
+   function reviewStatus(p, includeRecords = false) {
+     const dir = safe(p.root, '.writer/reviews'), records = fs.existsSync(dir) ? fs.readdirSync(dir).filter(x => x.endsWith('.json')).map(x => ({...json(safe(p.root, `.writer/reviews/${x}`)),ref:`.writer/reviews/${x}`})) : [];
+-    const valid = records.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
++    const unpublished = records.filter(r => r.structured && p.state.review_workflow?.reports?.[r.ref] !== hash(fs.readFileSync(safe(p.root,r.ref))));
++    const indexed = records.filter(r => !unpublished.includes(r));
++    const valid = indexed.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
+       && fs.existsSync(safe(p.root, r.report)) && hash(fs.readFileSync(safe(p.root, r.report))) === r.report_sha256
+       && r.units.every(u => p.state.units[u.unit - 1]?.sha256 === u.sha256 && (!r.dependencies || r.dependencies[u.unit] === dependency(p.state.units[u.unit - 1])) && fs.existsSync(safe(p.root, u.draft)) && hash(fs.readFileSync(safe(p.root, u.draft))) === u.sha256)
+       && (r.dependencies || !(p.state.committed_revisions ?? []).some(binding => { const c = json(safe(p.root, binding.ref)); return c.scope.from <= r.to && c.scope.through >= r.from; })));
+@@ -203,10 +205,10 @@ export function createLongform(api) {
+       const from = Math.max(1, end - 5);
+       if (!valid.some(r => r.from <= from && r.to >= end)) windows.push({ from, to: end });
+     }
+-    const current = new Set(valid), stale = records.filter(r => !current.has(r));
++    const current = new Set(valid), stale = indexed.filter(r => !current.has(r));
+     // One current report must cover the whole old reading range; separate fragments do not count as a continuous reread.
+     const covered = stale.filter(r => valid.some(v => v.from <= r.from && v.to >= r.to)).length;
+-    return { valid: valid.length, stale: stale.length, stale_with_current_coverage: covered,
++    return { valid: valid.length, stale: stale.length, unpublished_records:unpublished.map(r=>r.ref), stale_with_current_coverage: covered,
+       stale_without_current_coverage: stale.length - covered, pending_windows: windows, ...(includeRecords ? { current_records: valid } : {}), nature: 'coverage-only-not-literary-pass' };
+   }
+   function importIndex(root, input) {

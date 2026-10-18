@@ -1,0 +1,119 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "渡口旧箱",
+  "kind": "novel",
+  "revision": 16,
+  "next_unit": 7,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "synthetic-acceptance：5–6修订已commit并仅采用意见applied；正式暂停，下一独立会话先完整连读全六章新稿再复核意见；不verify，不写7",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持暂停；全六章新稿复核交下一独立会话，本会话不verify、不写第7章；任何后续修订须新授权"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "db1d9ffb-dd55-4216-81a1-769eb76e40fe",
+        "owner": "native-two independent Codex; synthetic-acceptance",
+        "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+        "build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "scope": {
+          "from": 5,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "2856bb48a973be6db851e9c984d92c62eaf4c062ccd168be53f8667a6a8de699",
+        "created_at": "2026-10-18T04:33:47.044Z",
+        "transaction_id": "99ce3f6b-c1b2-492a-84e0-a46c9af92732",
+        "session_sha256": "4d8577cc1b3907fcd2ae0fecb68516452df4ddd65df1b3950267dbcef1ad2e09"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "99ce3f6b-c1b2-492a-84e0-a46c9af92732",
+        "session_id": "db1d9ffb-dd55-4216-81a1-769eb76e40fe",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 16,
+    "counts": {
+      "applied": 1,
+      "retained": 1,
+      "deferred": 1
+    },
+    "pending": [
+      {
+        "id": "NATIVE_C_READABILITY_01",
+        "type": "readability",
+        "status": "applied",
+        "context_changed": false
+      },
+      {
+        "id": "NATIVE_C_PACING_03",
+        "type": "readability",
+        "status": "deferred",
+        "context_changed": true
+      }
+    ],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

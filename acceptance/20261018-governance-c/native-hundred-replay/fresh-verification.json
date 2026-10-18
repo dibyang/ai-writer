@@ -1,0 +1,198 @@
+{
+  "ok": true,
+  "title": "关门以前",
+  "nature": "Original two-chapter fictional synthetic acceptance; current 0.6/V2 from init; long mode tests registration entry only.",
+  "init_schema": 5,
+  "init_long_form": true,
+  "chapters": [
+    {
+      "unit": 1,
+      "initial_sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+      "final_sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+      "initial_bytes": 2744,
+      "final_bytes": 2744,
+      "initial_body_han": 767,
+      "final_body_han": 767
+    },
+    {
+      "unit": 2,
+      "initial_sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+      "final_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+      "initial_bytes": 2586,
+      "final_bytes": 2583,
+      "initial_body_han": 717,
+      "final_body_han": 716
+    }
+  ],
+  "cast": [
+    "顾宁",
+    "许姨"
+  ],
+  "sequential_creation": true,
+  "chapter_one_full_registration_preserved": true,
+  "style_quote_preserved": true,
+  "change": {
+    "removed_char": "车",
+    "deleted_codepoints": 1,
+    "deleted_utf8_bytes": 3,
+    "old_full_quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。",
+    "new_full_quote": "顾宁把小车推到许姨手边，松开了握着车把的手。",
+    "quote_replacements_in_ledger": 2,
+    "all_other_text_bytes_preserved": true
+  },
+  "fact_semantics_equal_ignoring_evidence_versions": true,
+  "fact_semantics_sha256": "324941dc01e18b701bd4657933562df7dcbdc6f3bf5f188a7484a4db80ba340c",
+  "initial_snapshot_sha256": "0bb91eb1ff32ebfbb523b179b40015146d6d61d00646a676f980a528cd5cf961",
+  "final_snapshot_sha256": "cff2a7c3477af706297951780942b53d3829dc156af5f787bc8a982011a2c328",
+  "evidence_version_note": "Whole snapshot changes because unit2 SHA/quote anchors change. Fact fields are exactly equal after removing ledger evidence; this is an auditable structural equality plus model reading, not semantic proof by hash.",
+  "ledger": {
+    "entries": 4,
+    "evidence_anchors": 10,
+    "all_anchors_valid": true,
+    "audit": "fresh-ledger-anchor-audit.json"
+  },
+  "author_source": "研究/模拟作者修订原话.md",
+  "commit": {
+    "ok": true,
+    "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577",
+    "status": "completed",
+    "session_id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+    "revision": 9,
+    "backups_preserved": true
+  },
+  "repeat_commit": {
+    "ok": true,
+    "unchanged": true,
+    "id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+    "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577"
+  },
+  "publication": {
+    "id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+    "session_id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+    "base_revision": 8,
+    "branch_revision": 11,
+    "branch_head_sha256": "782a911917469d8e5dfa15ee1bf50fe90d917cb789be5e6a0f9aa3d270648abc",
+    "scope": {
+      "from": 2,
+      "through": 2
+    },
+    "build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+    "nature": "revision-commit-not-literary-acceptance"
+  },
+  "application": {
+    "commit_id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+    "commit_binding": {
+      "ref": ".writer/objects/a79e8eaf-5211-45e0-8123-7f7308fc40ad.json",
+      "sha256": "86d70e31d3b9e23eb32b2300fc607f76afab8ba0230aacef9433a407e66b2aac"
+    },
+    "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577",
+    "reason": "实际主作品事务已提交，2章正文只删一个车，绑定采用时旧稿和当前新稿；不是分支候选。",
+    "changes": [
+      {
+        "unit": 2,
+        "draft": "正文/0002-空车归你.md",
+        "before": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+        "after": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+      }
+    ],
+    "after_units": [
+      {
+        "unit": 2,
+        "draft": "正文/0002-空车归你.md",
+        "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+        "dependency": "161bb66354d277a7a0940ab84bfbe62d08d7afa0f27c4a5d2c413bf9b44fbaba"
+      }
+    ]
+  },
+  "typo_effective_status": "verified",
+  "style_effective_status": "retained",
+  "current_review": {
+    "ok": true,
+    "revision": 11,
+    "ref": ".writer/reviews/b586eb2f-216b-467f-a574-19b3ef046b2f.json",
+    "coverage": [
+      1,
+      2
+    ],
+    "issue_ids": [],
+    "quality": "review-recorded-not-acceptance"
+  },
+  "replay_review": {
+    "reviewer": "Codex native-four informed self-review",
+    "report": "审查/native-four-第2章一字回放.md",
+    "draft_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+    "checked_fields": [
+      "summary",
+      "characters",
+      "timeline",
+      "ledger",
+      "evidence",
+      "downstream"
+    ],
+    "base": {
+      "session_id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+      "base_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+      "old_unit_sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+      "old_journal_sha256": "99fb251c59bf57c9a78bf7d706e835f5a4aa1c273611d0ad4caa5d46338348bf",
+      "draft_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+    },
+    "frozen_ref": ".writer/objects/18eb2980952c4c3704276bd5beb7460985cc68802a341dd41a5b6d4c5ba31d63.replay-review",
+    "report_sha256": "18eb2980952c4c3704276bd5beb7460985cc68802a341dd41a5b6d4c5ba31d63",
+    "frozen_sha256": "18eb2980952c4c3704276bd5beb7460985cc68802a341dd41a5b6d4c5ba31d63",
+    "entry_sha256": "18eb2980952c4c3704276bd5beb7460985cc68802a341dd41a5b6d4c5ba31d63",
+    "draft_matches": true
+  },
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 2,
+    "revision": 13,
+    "findings": [],
+    "draft_inventory": {
+      "registered_count": 2,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 2,
+      "stale": 1,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 1,
+      "stale_without_current_coverage": 0,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "doctor_ok": true,
+  "export": {
+    "included_units": [
+      1,
+      2
+    ],
+    "excluded_drafts": [],
+    "warnings": [],
+    "status": "draft-export",
+    "quality_review": "required",
+    "bytes": 5333,
+    "sha256": "f23ee52a1bdab1261464933186ac26b3df26de3ef8df9a12763b89bcec3a5b67",
+    "manifest_sha_matches": true,
+    "exact_text_matches_trim_recipe": true,
+    "unit_sources_match": true,
+    "note": "Each chapter is trimmed at both ends, joined by LF LF --- LF LF, plus final LF. Not original concatenated bytes."
+  },
+  "final_revision": 13,
+  "paused": {
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "draft_range": null,
+    "revise_range": null,
+    "stop_conditions": [
+      "没有新授权不改正文、不写第三章"
+    ]
+  },
+  "no_third_chapter": true,
+  "build_observation": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec"
+}

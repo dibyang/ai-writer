@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {runner,BASE,readState,write,sha} from './cli-support.mjs';
+const r=runner(process.argv[2]),root=path.join(BASE,'scale-hundred/work'),original=readState(root),copy=JSON.parse(fs.readFileSync(path.join(BASE,'scale-hundred/copy-manifest.json')));
+assert.equal(original.schema_version,2);assert.equal(original.units.length,100);assert.equal(sha(fs.readFileSync(path.join(root,'.writer/state.json'))),copy.state_sha256);
+const bodies=original.units.map(u=>({unit:u.unit,draft:u.draft,sha256:sha(fs.readFileSync(path.join(root,u.draft)))}));
+write(path.join(r.dest,'original-state.json'),fs.readFileSync(path.join(root,'.writer/state.json')));r.authorFile(root);
+function samples(label){const rows=[];for(let i=0;i<3;i++){const status=r.run(root,['status']);rows.push({sample:i+1,elapsed_ms:r.rows.at(-1).elapsed_ms,output_chars:JSON.stringify(status).length,state_bytes:fs.statSync(path.join(root,'.writer/state.json')).size});}return {label,rows};}
+const old=samples('same-0.6-runtime-schema2-100-original-units');
+r.run(root,['long-enable-preview']);r.run(root,['governance','preview']);r.run(root,['governance','migrate'],{expected_revision:readState(root).revision,operation_id:'c-hundred-governance',author_evidence:r.evidence(root)});
+r.run(root,['protection','preview']);r.run(root,['protection','enable'],{expected_revision:readState(root).revision,author_evidence:r.evidence(root)});
+r.run(root,['review-workflow','preview']);r.run(root,['review-workflow','enable'],{expected_revision:readState(root).revision,author_evidence:r.evidence(root)});
+assert.equal(readState(root).schema_version,5);assert.deepEqual(readState(root).snapshot,original.snapshot);assert.deepEqual(readState(root).units,original.units);
+r.workflow(root,true,100,100);const modern=samples('same-runtime-schema5-100-original-units');assert.equal(r.run(root,['check']).ok,true);
+for(const b of bodies)assert.equal(sha(fs.readFileSync(path.join(root,b.draft))),b.sha256);
+const main=readState(root);write(path.join(BASE,'scale-hundred/handoff.json'),{root,original_revision:original.revision,original_state_sha256:copy.state_sha256,original_snapshot_sha256:sha(JSON.stringify(original.snapshot)),before_bodies:bodies,baseline_revision:main.revision,baseline_state_sha256:sha(fs.readFileSync(path.join(root,'.writer/state.json'))),scope:{from:100,through:100},note:'Only explicit migrations and finite revision authorization on independent copy; no branch, no rewritten body, no new chapter101, no new model reading. Native phase must actually read95–100, begin100, rewind100, compare fresh template/replay drafts, fill real replay review, record and final review, prepare/commit. Keep prior99 registrations and all100 bodies exactly.'});
+write(path.join(BASE,'scale-hundred/before-native-state.json'),fs.readFileSync(path.join(root,'.writer/state.json')));
+const summary=r.summary({units:100,original_bodies_preserved:true,original_fact_snapshot_preserved:true,original_registrations_preserved:true,old_protocol_samples:old,new_protocol_samples:modern,caveat:'Three fresh-process samples only, includes CLI startup and observed IO contention; not a speedup or literary acceptance claim. No active revision candidate yet.'});
+console.log(JSON.stringify({ok:true,calls:summary.calls,schema:main.schema_version,revision:main.revision,body_changes:0,fact_changes:0}));

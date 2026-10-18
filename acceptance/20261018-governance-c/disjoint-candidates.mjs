@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { runner, readState, sha } from './cli-support.mjs';
+const r = runner(process.argv[2]), root = path.join(r.dest, 'work'); r.setup(root);
+const original = readState(root).units.map(u => ({ draft: u.draft, sha256: u.sha256 })), baselineRevision = readState(root).revision;
+const a = r.begin(root, 1, 2), b = r.begin(root, 2, 2, { parallel_candidate: true });
+r.run(a.workspace, ['rewind', '--from', '1', '--expected-revision', String(readState(a.workspace).revision), '--revision-token', a.token]); r.unit(a.workspace, 1, a.token, '甲只改第1章'); r.unit(a.workspace, 2, a.token); r.review(a, 1, 2);
+r.run(b.workspace, ['rewind', '--from', '2', '--expected-revision', String(readState(b.workspace).revision), '--revision-token', b.token]); r.unit(b.workspace, 2, b.token, '乙只改第2章'); r.review(b, 2, 2);
+assert.equal(sha(fs.readFileSync(path.join(a.workspace, original[1].draft))), original[1].sha256); assert.equal(sha(fs.readFileSync(path.join(b.workspace, original[0].draft))), original[0].sha256);
+r.prepare(root, a); r.prepare(root, b); r.commit(root, a); const failure = r.commit(root, b, 2); assert.equal(failure.code, 'BASELINE_CONFLICT'); assert.equal(readState(root).revision, baselineRevision + 1);
+assert.equal(sha(fs.readFileSync(path.join(root, original[1].draft))), original[1].sha256); assert.match(fs.readFileSync(path.join(b.workspace, original[1].draft), 'utf8'), /乙只改第2章/);
+const result = r.summary({ same_base_revision: baselineRevision, direct_body_changes: { A: [original[0].draft], B: [original[1].draft] }, dependent_replay_ranges: { A: a.scope, B: b.scope }, B_refusal: failure, both_candidates_preserved: true, note: 'Different direct chapter edits still require global state CAS; no automatic semantic merge' });
+console.log(JSON.stringify({ ok: true, calls: result.calls, disjoint_direct_edits: true, loser_retained: true }));

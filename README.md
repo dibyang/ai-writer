@@ -2,13 +2,13 @@
 
 通过 Codex 创作中文小说、剧本、历史散文，以及散文和一般非虚构。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究和追踪各有职责；新会话可以从文件恢复创作。
 
-当前版本：**0.5.0 本地候选版**。新增设定按章版本、保守影响分析、独立修订区与可恢复提交；新作品默认 schema 4，继续使用阶段/有限授权、作者决策和 changes 差量追踪。旧作品不自动迁移。包含 7 个 Codex skills、去 AI 味流程及 story-gate-studio 质量引擎；分卷、线索召回、旧稿导入和哈希保护继续复用。文学质量、史实真伪和作者验收仍由实际阅读与核验裁定。
+当前版本：**0.6.0 本地候选版**。新增跨章功能/差异复核、登记预览/原changes重登草案、审查意见的取舍—实改—复核闭环。新作品默认schema5，复用阶段/有限授权、作者决策、设定版本、独立修订事务与增量账本。旧作品不自动迁移。包含7个Codex skills、去AI味流程和原有质量引擎；文学重复、史实与作者验收仍由实际阅读核验裁定。
 
 ## 开始使用
 
 需要已经可以使用的 Codex，以及 Node.js 20 或以上。工具不需要安装 npm 依赖，也不单独调用模型 API；写作使用当前 Codex 会话及其模型。
 
-第一次使用看 [快速入门](docs/quickstart.md)；日常任务看 [使用手册](docs/user-guide.md)；版本与并行修改看 [设定版本和修订](docs/revision-and-sources.md)；修订表达看 [去 AI 味流程](docs/deslop.md)；命令与 JSON 看 [技术手册](docs/workflow.md)。这些指南都会随新作品复制。
+第一次使用看[快速入门](docs/quickstart.md)；日常任务看[使用手册](docs/user-guide.md)；跨章/登记/意见看[专项手册](docs/review-and-registration.md)；版本与并行修改看[设定版本和修订](docs/revision-and-sources.md)；表达看[去AI味流程](docs/deslop.md)；命令与JSON看[技术手册](docs/workflow.md)。指南随新作品复制。
 
 在 Codex 中打开本项目，直接说：
 
@@ -79,7 +79,7 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 命令和 JSON 见 [完整工作流](docs/workflow.md)，自然语言例子见 [创作任务示例](examples/prompts.md)。
 
-长篇按 [长篇流程](docs/long-form.md) 显式启用分卷契约，schema 4 保留原增量链。未来设定先冻结真实旧输入再按章发布；旧章修改在独立区重读、重登、复核后提交，冲突保留双方，中断事务显式恢复。旧 1/2/3 不自动启用新保护。安全更新、自动合并、跨机协作和意见级闭环未实施，锁外编辑仍有边界；见 [治理设计](docs/authoring-governance-design.md)及[第二批实现约束](docs/authoring-governance-b-implementation.md)。
+长篇按[长篇流程](docs/long-form.md)启用分卷契约，保持原增量链。未来设定固定旧输入后按章发布；旧章在独立区实读、重登、复核后提交，冲突保留双方，中断事务显式恢复。详见[治理设计](docs/authoring-governance-design.md)及[第三批实现约束](docs/authoring-governance-c-implementation.md)。安全更新、自动合并、跨机保证仍未实施，锁外编辑有边界。
 
 ## 吸收与复用
 
@@ -91,7 +91,7 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 ## 验证
 
-0.5.0 B 批实现、失败修复、独立 Codex 实跑与终版验证见[本轮记录](acceptance/20261018-governance-b/README.md)，以其最终状态和封存清单为准。0.4.0 A 批记录见[首批记录](acceptance/20261018-governance-a/README.md)，历史记录不改写为本轮结果；C/D 未交付。
+0.6.0 C批实现及实跑状态见[本轮记录](acceptance/20261018-governance-c/README.md)，以最终结果和封存清单为准。此前[0.5.0 B批](acceptance/20261018-governance-b/README.md)、[0.4.0 A批](acceptance/20261018-governance-a/README.md)保持原记录，不计作本轮结果；D仍未实施。
 
 ```powershell
 npm test

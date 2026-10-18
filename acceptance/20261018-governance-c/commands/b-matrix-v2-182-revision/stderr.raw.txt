@@ -1,0 +1,56 @@
+{
+  "ok": false,
+  "error": "主作品业务或相关文件/工具已变化；双方稿件保留，实读新基线后另建会话，不自动合并",
+  "code": "BASELINE_CONFLICT",
+  "next_action": "按报错核对输入，查看本命令帮助。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' revision '--help'",
+  "recovery": {
+    "session_id": "e58e1ea9-058d-4b3c-9c5e-d4b0b93f1df8",
+    "base_revision": 4,
+    "current_revision": 5,
+    "conflict_ref": ".writer/revisions/e58e1ea9-058d-4b3c-9c5e-d4b0b93f1df8/conflict-c0aef90d-29ec-4451-a5a8-3a6e246b1be1.json",
+    "omitted_changes": 0
+  },
+  "conflicts": [
+    {
+      "file": ".writer/state.json",
+      "expected_sha256": "81844363a68ec628e37478823125f16f8d35b608aeb7113d803a22f87641f059",
+      "actual_sha256": "f431d12d4f8e37485e96be26178923d56d54792e065b6f6db745a990b35094f9"
+    },
+    {
+      "file": "正文/0001.md",
+      "expected_sha256": "3d3cf86d9447e9dede338a4fef5e836febc5bdac31f8bc369f3bd61102e6f890",
+      "actual_sha256": "4acba9078fe33ac93262e190e1b3f9f9dbd637a58509e65aac89b37822d90b38"
+    },
+    {
+      "file": "正文/0002.md",
+      "expected_sha256": "274549ab6b7dc929b88bfe56a171c8a2e983658feb44887df63c35ff39c7bb4f",
+      "actual_sha256": "9ab6bbd000ea697add77ecc112e4ae2243596e3dd3ce5d3ecb1a1af299a1691e"
+    },
+    {
+      "file": ".writer/journal/5216b8d4-bbae-430c-8ec0-68cc5201c4b7.json",
+      "expected_sha256": null,
+      "actual_sha256": "4f50ec403b310f8a187508ef9f793a6d1d7c75fdab95211cbbe8e56c6e7fab3f"
+    },
+    {
+      "file": ".writer/journal/da9c9da8-699b-47de-b3f5-ffde2a9c29a0.json",
+      "expected_sha256": null,
+      "actual_sha256": "19db9bd34501f2a3d2d6bafb74ad3f835f7f547bfacca84ee3a0a924ee8a07ec"
+    },
+    {
+      "file": ".writer/objects/44e4873e-b550-40a0-af3d-cf137bbf3706.json",
+      "expected_sha256": null,
+      "actual_sha256": "e3cebaf6cf2bece6920b43e90bd2b7564f0fce5f859739fcfeaad1f694212604"
+    },
+    {
+      "file": ".writer/reviews/8fc07079-30c9-4c43-838e-91e8fa6d93f9.json",
+      "expected_sha256": null,
+      "actual_sha256": "b2b5197f2988e2af4533a89954f5d75e830b7d9723ce5fb2338547680b393c77"
+    },
+    {
+      "file": "审查/合成复核.md",
+      "expected_sha256": null,
+      "actual_sha256": "ea6de6e029f63cca56abd127dfdd8051ee1a7ea8093616405dcd066063aa6b02"
+    }
+  ]
+}

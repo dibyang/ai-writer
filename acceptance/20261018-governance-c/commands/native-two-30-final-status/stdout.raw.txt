@@ -1,0 +1,160 @@
+{
+  "ok": true,
+  "title": "渡口旧箱",
+  "kind": "novel",
+  "revision": 16,
+  "schema_version": 5,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "synthetic-acceptance：5–6修订已commit并仅采用意见applied；正式暂停，下一独立会话先完整连读全六章新稿再复核意见；不verify，不写7",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持暂停；全六章新稿复核交下一独立会话，本会话不verify、不写第7章；任何后续修订须新授权"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "FUTURE_STAY",
+          "FUTURE_COST",
+          "FUTURE_PATTERN"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 7,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "db1d9ffb-dd55-4216-81a1-769eb76e40fe",
+        "owner": "native-two independent Codex; synthetic-acceptance",
+        "project_id": "7058c440-da0c-4807-84fb-8ec00cedb127",
+        "build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+        "scope": {
+          "from": 5,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "2856bb48a973be6db851e9c984d92c62eaf4c062ccd168be53f8667a6a8de699",
+        "created_at": "2026-10-18T04:33:47.044Z",
+        "transaction_id": "99ce3f6b-c1b2-492a-84e0-a46c9af92732",
+        "session_sha256": "4d8577cc1b3907fcd2ae0fecb68516452df4ddd65df1b3950267dbcef1ad2e09"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "99ce3f6b-c1b2-492a-84e0-a46c9af92732",
+        "session_id": "db1d9ffb-dd55-4216-81a1-769eb76e40fe",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 16,
+    "counts": {
+      "applied": 1,
+      "retained": 1,
+      "deferred": 1
+    },
+    "pending": [
+      {
+        "id": "NATIVE_C_READABILITY_01",
+        "type": "readability",
+        "status": "applied",
+        "context_changed": false
+      },
+      {
+        "id": "NATIVE_C_PACING_03",
+        "type": "readability",
+        "status": "deferred",
+        "context_changed": true
+      }
+    ],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 6,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 7,
+    "plan_exists": false,
+    "action": "synthetic-acceptance：5–6修订已commit并仅采用意见applied；正式暂停，下一独立会话先完整连读全六章新稿再复核意见；不verify，不写7",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 3,
+    "ledger_count": 16,
+    "recent": [
+      {
+        "unit": 4,
+        "summary": "老邵解释徐兰把自有箱存入仓房，承认与另一只黄箱记混。三人开箱，周梅辨认回针和余料裁口，蓝布线索有了有限解释；纸样无名字、用途未定。周梅决定先留箱晾修，老邵取走旧簿，钥匙仍归林禾暂管。"
+      },
+      {
+        "unit": 5,
+        "summary": "第二天下午周梅拧紧箱底松螺丝，二人装纸样回箱。林禾把清点方式交周梅决定，划掉本属周梅的工具，只记待领物。周梅明确钥匙今夜仍由林禾保管，约次日十点连箱交接。"
+      },
+      {
+        "unit": 6,
+        "summary": "第三天十点周梅签清单，林禾把箱钥匙实际交给她，两人把箱搬到改衣摊；纸样和余料随箱。林禾承认旧日丢伞曾误怪周梅，周梅说自己没全忘但给伞柄重缠，两人吃面。留镇、费用和纸样复制都未定。"
+      }
+    ],
+    "timeline_tail": [
+      "初秋第一天下午：老邵从渡口仓房把旧箱和簿册交林禾暂存，钥匙进林禾柜台抽屉。",
+      "第一天傍晚：周梅认领，林禾未凭清单和黄漆交箱；双方约第二天等老邵到场。",
+      "第一天雨夜：林禾周梅共同移箱防潮，读借物簿并电话约见老邵，准备分饭。",
+      "第二天上午：老邵到场说明混箱与存放来历，林禾开锁，周梅核蓝布余料并决定晾修；旧簿还老邵。",
+      "第二天下午：木条拧紧，纸样回箱；周梅决定清点方式，钥匙仍林禾暂管，约第三天十点交箱。",
+      "第三天十点至午间：周梅签单、接钥匙并锁箱，与林禾搬箱到改衣摊；林禾承认旧伞误怪，伞柄重缠后拿回，两人吃面。"
+    ]
+  }
+}

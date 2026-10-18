@@ -1,0 +1,5 @@
+# 辅助错误及候选报告表述更正
+
+首次control-record.mjs误取oldJournal.changes。原journal结构实际为schema_version/patch，不是changes或delta。完整重复执行错误已存原样stderr；首次工具返回有截断，二者不混称。失败发生在任何产品调用之前，state未变。
+
+修正后与第二阶段原reviewed输入的changes逐字段比较，并阅读原journal.patch确认实际差量。候选首份replay报告中“summary/changes与base-state原登记及原journal深度相等”措辞过宽：journal不是同形对象。保留首份报告和登记，正式rewind6/replay/preview/record，以新报告v2精确说明比较对象，不手改旧报告、索引或冻结哈希。

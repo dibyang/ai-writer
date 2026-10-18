@@ -1,0 +1,12 @@
+import {run,put,read,state,fresh,stage,evidence,repo} from './harness.mjs';import fs from 'node:fs';import path from 'node:path';import {populate,reportText} from './fresh-review-data.mjs';
+const r=populate(read(path.join(stage,'fresh-current-review-template.json')),{id:'native-four-fresh-current-review',report:'审查/native-four-提交后当前两章.md',phase:'实际commit与apply之后重新完整连读1–2'});
+put(path.join(fresh,r.report),reportText(r,'主作品提交/应用后的当前稿'));put(path.join(stage,'fresh-current-functions.json'),r);
+const review=run('fresh-current-review',['review'],fresh,r);put(path.join(stage,'fresh-current-review-result.json'),review);
+put(path.join(stage,'fresh-verify-result.json'),run('fresh-verify-typo',['review-issues','verify'],fresh,{expected_revision:state(fresh).revision,operation_id:'native-four-fresh-verify-typo',id:'FRESH_C_TYPO',review_ref:review.ref,reviewer:'Codex native-four informed self-review',conclusion:'resolved',reason:'实际事务提交并apply之后重新完整读当前两章；第2章全文仅删除一个车，新完整引文在当前稿，第1章保留不称修复。'}));
+const wf=state(fresh).governance;wf.stage='structure';wf.task='一字修订已实际提交并当前两章复核，暂停，仅讨论和规划';wf.authorization={allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['没有新授权不改正文、不写第三章']};
+run('fresh-final-pause',['workflow','set'],fresh,{expected_revision:state(fresh).revision,operation_id:'native-four-fresh-final-pause',author_evidence:evidence(fresh,'研究/模拟作者修订原话.md','真实提交及当前版本复核后暂停。'),workflow:wf});
+for(const [n,args] of [['check',['check']],['status',['status']],['doctor',['doctor']],['compare',['tool','compare','--other',repo]],['issues',['review-issues','list']],['typo-detail',['review-issues','list','--id','FRESH_C_TYPO']],['style-detail',['review-issues','list','--id','FRESH_C_STYLE']]])put(path.join(stage,'fresh-final-'+n+'.json'),run('fresh-final-'+n,args,fresh));
+put(path.join(stage,'fresh-export-result.json'),run('fresh-export',['export','--out',path.join(stage,'fresh-export')],fresh));
+put(path.join(stage,'fresh-final-state.json'),state(fresh));
+for(const u of state(fresh).units)put(path.join(stage,'fresh-final',u.unit===1?'chapter-one.md':'chapter-two.md'),fs.readFileSync(path.join(fresh,u.draft),'utf8'));
+console.log({finalRevision:state(fresh).revision,issues:state(fresh).review_workflow.issues.FRESH_C_TYPO.status});

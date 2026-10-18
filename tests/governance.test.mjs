@@ -41,7 +41,7 @@ function chapter(root, unit) {
 function d(id, topic, status, adopted_items, unresolved_items = []) { return { id, topic, status, options: ['候选方向，仅供讨论'], adopted_items, excluded_items: [], unresolved_items, effective_range: { from: 1, to: null } }; }
 
 test('新作品默认治理：讨论无需细纲，正文/模板/登记未授权不能写', t => {
-  const { root } = fixture(t); assert.equal(JSON.parse(state(root)).schema_version, 4);
+  const { root } = fixture(t); assert.equal(JSON.parse(state(root)).schema_version, 5);
   const before = state(root), discussion = cli(root, ['context', '--purpose', 'discussion']); assert.equal(discussion.next_unit, 1); assert.equal(discussion.governance.enabled, true);
   denied(root, ['context', '--unit', '1'], 'ACTION_OUT_OF_SCOPE'); denied(root, ['record-template', '--unit', '1', '--draft', '正文/0001.md'], 'ACTION_OUT_OF_SCOPE');
   file(root, '.writer/no-record.json', { unit: 1 }); denied(root, ['record', '--input', path.join(root, '.writer/no-record.json')], 'ACTION_OUT_OF_SCOPE'); assert.deepEqual(state(root), before);
@@ -113,7 +113,7 @@ test('操作和决策保留键在写前拒绝；普通原型同名ID不被误当
   const { root } = fixture(t), workflow = cli(root, ['workflow', 'show']).workflow;
   for (const id of ['prototype', 'constructor', '__proto__']) {
     const op = input(root, { workflow }); op.operation_id = id; file(root, '.writer/bad-id.json', op); const before = state(root);
-    denied(root, ['workflow', 'set', '--input', path.join(root, '.writer/bad-id.json')], 'INVALID_INPUT'); assert.deepEqual(state(root), before); assert.equal(cli(root, ['status']).schema_version, 4);
+    denied(root, ['workflow', 'set', '--input', path.join(root, '.writer/bad-id.json')], 'INVALID_INPUT'); assert.deepEqual(state(root), before); assert.equal(cli(root, ['status']).schema_version, 5);
     const dec = input(root, { decision: d(id, '保留键测试', 'candidate', [], ['未决']) }); file(root, '.writer/bad-id.json', dec);
     denied(root, ['decision', 'set', '--input', path.join(root, '.writer/bad-id.json')], 'INVALID_INPUT'); assert.deepEqual(state(root), before);
   }
@@ -169,7 +169,7 @@ test('只读构建：同版本不同模块可见，重复识别稳定，副本�
 test('doctor不把完整但未声明支持当前schema的旧副本报为可用', t => {
   const { root } = fixture(t), tool = fs.realpathSync(path.join(root, '.writer/tool'));
   assert.equal(path.dirname(tool), path.join(fs.realpathSync(root), '.writer')); fs.rmSync(tool, { recursive: true, force: true }); fs.cpSync(path.join(ROOT, 'tests/fixtures/tool-0.3'), tool, { recursive: true });
-  const before = state(root), r = raw(root, ['doctor']); assert.equal(r.status, 1); const d = JSON.parse(r.stdout); assert.equal(d.build.ok, true); assert.equal(d.ok, false); assert.ok(d.errors.some(x => /schema 4/.test(x))); assert.deepEqual(state(root), before);
+  const before = state(root), r = raw(root, ['doctor']); assert.equal(r.status, 1); const d = JSON.parse(r.stdout); assert.equal(d.build.ok, true); assert.equal(d.ok, false); assert.ok(d.errors.some(x => /schema 5/.test(x))); assert.deepEqual(state(root), before);
 });
 test('旧包元数据诊断保留可选文档/模块边界，不冒充旧0.1/0.2真实运行验收', t => {
   const { root } = fixture(t, true), tool = path.join(root, '.writer/tool');
@@ -179,8 +179,8 @@ test('旧包元数据诊断保留可选文档/模块边界，不冒充旧0.1/0.2
   pkg.version = '0.2.0'; file(tool, 'package.json', pkg); for (const name of ['help.mjs', 'style.mjs']) fs.unlinkSync(path.join(tool, 'lib', name));
   const second = raw(root, ['doctor']); assert.equal(second.status, 0, second.stderr); assert.deepEqual(JSON.parse(second.stdout).build.supported_state_schemas, [1, 2]);
 });
-test('随附新工具可独立恢复schema4，旧0.3解析器明确拒绝且不改状态', t => {
-  const { root, dir } = fixture(t); const embedded = path.join(root, '.writer/tool/bin/ai-writer.mjs'); assert.equal(cli(root, ['status'], embedded).schema_version, 4);
+test('随附新工具可独立恢复schema5，旧0.3解析器明确拒绝且不改状态', t => {
+  const { root, dir } = fixture(t); const embedded = path.join(root, '.writer/tool/bin/ai-writer.mjs'); assert.equal(cli(root, ['status'], embedded).schema_version, 5);
   // Run the actual checked-in old module chain from the last delivered commit, not a mock rejection.
   const old = path.join(dir, 'old-tool'); fs.cpSync(path.join(ROOT, 'tests/fixtures/tool-0.3'), old, { recursive: true });
   const before = state(root), r = raw(root, ['status'], path.join(old, 'bin/ai-writer.mjs')); assert.equal(r.status, 2); assert.match(r.stderr, /追踪状态损坏/); assert.deepEqual(state(root), before);

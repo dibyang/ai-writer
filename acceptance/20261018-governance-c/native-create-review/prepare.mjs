@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import {base,project,write,json,sha,readJson,state,cli} from './helpers.mjs';
+// Only newly initialized work planning files are replaced, before any consumption.
+const planning={
+ '设定/作品定位.md':`# 渡口旧箱\n\n合成验收新作，现实小镇小说，两卷六章有限试写。初秋停航后的柳河渡口，林禾替母亲看便民寄存处，想把一只无人认领的木箱交对人。她怕担错责任，习惯用登记挡住难堪；邻居周梅想取回亡母留下的旧缝纫物，却也怕被人认作贪便宜。故事收益在于人怎样承认误认、重新把东西交到对方手里。\n\n亲近、自然，第三人称贴近林禾；旧渡口生活有烟火气。无系统、超常能力、大阴谋、暴力升级。误会不靠拒绝一句能说清的话延长；核查有不同目的与后果。计划不是既成事实，人物所知和物件保管以实际正文登记。控制重复字仅供验收，未修前不是读者定稿。\n`,
+ '设定/文风.md':`# 文风\n\n叙述贴近林禾，看见人做的小事，再容纳短促感受；允许一处有文气的比喻，不在之后解释寓意。对白带熟人之间的省略和小心，避免人人说完整判断。林禾说话先问细节，紧张时掸纸边；周梅常先说价钱和吃饭，真在意的事说得晚；老邵习惯讲具体年月，遇记不清处直接承认。每章正文800–1100个Unicode Script=Han字符（去标题），不含账本或审查。\n`,
+ '设定/权威规则.md':`# 权威边界\n\n本作仅用于合成验收。当前授权见研究/验证授权原话.md及正式workflow。设定约束题材，骨架/卷契约/细纲只是计划；正文发生的动作、观察与人物明确听到的信息才能进事实追踪。角色怀疑、旧记忆和物件特征不直接等于归属证明。观察不逆改，后续解释另建关联条目。钥匙每次换手须有真实动作及previous_holder。\n\n1–6写完立即暂停，只讨论结构，不写第7章；next=7不是授权。第五章人为控制句保留，不修稿不采用意见。\n`,
+ '设定/人物声音.md':`# 人物与声音\n\n林禾，三十岁，暂回镇上帮母亲照看寄存处。想做好交接也想早些回县城接活；怕担责任，先留东西再找人。面对周梅会想到十年前借伞没还的争执，但不会凭别人的沉默认定她有错。\n\n周梅，四十多岁，改衣摊经营者。想找回母亲的缝纫旧物，不愿欠下人情；说话常从价钱、饭和实际用处入手。不是每次退让，能提出自己的保管办法。\n\n老邵，退休渡工，托林禾清理渡口仓房。愿意帮忙又想保住记性好的体面；说错时有犹疑，不被写成全知证人。母亲林秀只在远处生活和来电话，不承担幕后真相。\n`,
+ '大纲/全书骨架.md':`# 全书骨架（计划，不是已发生事实）\n\n第一卷《留一夜》1–3：旧木箱从渡口仓房进寄存处。周梅凭黄漆和旧记忆认领，林禾暂不交；旧借据证实箱子曾供周梅母亲放缝纫物，但归属尚需老邵到场说明。钥匙独立保管，雨夜移箱不是领箱。第3章低压合作结束，留下蓝布补角与一张未送出的纸样。\n\n第二卷《交到手里》4–6：老邵承认当年把两家相近的箱子记混，蓝布补角由周梅实际辨认、试合纸样得到有限兑现；不是用外观排他定主。周梅先不运走受潮箱，选择共同晾修。第5章在清点钥匙与归还工具时练习交出控制；第6章约定使用与保管，完成这次交接，关系只修复到能一起吃一碗面。\n\n未决：林禾是否留镇常住、寄存处长期费用怎样分担、纸样是否复制给更多人。只留未来讨论条目；第6章不能把这些写成已作决定，更不生成第7章。结构讨论可考虑第3和第5章的桌边核对是否需压缩，但先保留不同选择与后果，等实际文本后判断。\n`,
+ '研究/控制样本说明.md':`# 人为控制样本\n\n第五章须保留且仅保留一次“布袋里里”。完整句暂计划为“林禾把钥匙放回布袋里里，收紧袋口，搁进自己柜台下的抽屉。”实际登记须以最终正文原句为准。该句是O_KEY本章证据，实际动作是林禾保管钥匙，非空引文或虚构事实。第一阶段只报告，不修正。不是拟交付读者的定稿。\n`
+};
+for(const [ref,content] of Object.entries(planning)){const f=`${project}/${ref}`;fs.mkdirSync(f.slice(0,f.lastIndexOf('/')),{recursive:true});if(['设定/作品定位.md','设定/文风.md','设定/权威规则.md'].includes(ref))fs.writeFileSync(f,content,'utf8');else write(f,content);}
+cli('native-one-03-status',['status','--project',project]);
+const quote='创建独立小说《渡口旧箱》，现实小镇题材，失物交接、误认与修复关系，不设系统或大阴谋。计划两卷六章，每卷三章，先组织定位、人物声音、全书骨架、卷契约与滚动细纲。本轮只授权试写1–6，完成后暂停正文，只做结构审查，不写7。每章正文800–1100汉字，保持亲近、自然，不把审核结论写进对白或旁白。对象、物证、人物所知和伏笔以正文登记。';
+json(`${base}/inputs/trial-workflow.json`,{expected_revision:state().revision,operation_id:'native-one-trial-1-6',author_evidence:{quote,local_source:'研究/验证授权原话.md',source_sha256:sha(fs.readFileSync(`${project}/研究/验证授权原话.md`)),locator:'合成验收授权原话第一段，用户本次提供；没有可用消息ID',recorded_by:'native Codex primary session'},workflow:{stage:'trial',task:'先规划后有限试写1–6，完成后暂停正文，只做结构审查',authorization:{allowed_actions:['discuss','plan','draft'],draft_range:{from:1,to:6},revise_range:null,stop_conditions:['六章登记完成后暂停正文，做完整六章结构连读，不写7']},planning:{positioning:{status:'draft',refs:['设定/作品定位.md','设定/人物声音.md'],unresolved_ids:[]},structure:{status:'draft',refs:['大纲/全书骨架.md'],unresolved_ids:['FUTURE_STAY','FUTURE_COST','FUTURE_PATTERN']},volume:{status:'draft',refs:[],unresolved_ids:[]},outline:{status:'draft',refs:[],unresolved_ids:[]}}}});
+cli('native-one-04-trial-workflow',['workflow','set','--project',project,'--input',`${base}/inputs/trial-workflow.json`]);
+for(const v of [
+ {id:'V1',title:'留一夜',start:1,end:3,promises:['旧箱暂存，澄清认领尚缺什么','建立木箱和钥匙的分别保管'],constraints:['记忆与观察不等于归属证据','不增大阴谋'],reserved:['蓝布补角的有限解释','正式交接'],arcs:[{id:'A1',start:1,end:3,goal:'从拒绝贸然交箱到共同保护旧物',payoff:'雨夜合作并约见老邵',forbidden:['直接认定周梅所有权','把纸样来源解释当观察']} ]},
+ {id:'V2',title:'交到手里',start:4,end:6,promises:['兑现前卷蓝布补角线索','完成有保管约定的旧箱交接'],constraints:['不扩大题材冲突','第五章控制句保留'],reserved:['留镇与费用的未来计划'],arcs:[{id:'A2',start:4,end:6,goal:'确认来历后学习有限信任并完成交接',payoff:'周梅接箱，林禾不再独自决定保管',forbidden:['强行决定林禾留镇','把关系写成全然和好','写第7章']} ]}
+]){const f=`${base}/inputs/volume-${v.id}.json`;json(f,v);cli(`native-one-0${v.id==='V1'?5:6}-volume-${v.id.toLowerCase()}`,['volume','--project',project,'--input',f]);}
+json(`${base}/environment.json`,{cwd:process.cwd(),node:process.version,platform:process.platform,kind:'synthetic-native-primary-session',entry:'bin/ai-writer.mjs',tool_identify_output:'../commands/native-one-02-tool-identify/stdout.raw.txt',memory_used:'Only generic reminder that record-template/check are hash-bound; all protocol facts verified in current source and docs.'});

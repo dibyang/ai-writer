@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import assert from 'node:assert/strict';
+import {runner,readState,write,sha} from './cli-support.mjs';
+const r=runner(process.argv[2]),mode=process.argv[3];if(!['before','after'].includes(mode))throw Error('Explicit before/after expectation required');
+const root=path.join(r.dest,'work');r.setup(root);r.workflow(root,false,1,3);r.unit(root,3);
+const s=readState(root),before=fs.readFileSync(path.join(root,'.writer/state.json')),report='审查/发布失败接口.md';write(path.join(root,report),'# 故障注入接口\n本报告不是模型实读，不能计文学验收。\n');
+const value={expected_revision:s.revision,operation_id:'orphan-publication',from:1,to:3,kind:'model-self-review',report,source_hashes:Object.fromEntries(s.units.map(u=>[u.draft,u.sha256])),issues:[]};
+const shim=path.join(r.dest,'fault-loader.mjs');write(shim,"import fs from 'node:fs';\nimport path from 'node:path';\nif(process.env.AI_WRITER_C_TEST_FAULT==='1'&&/(?:^|[\\\\/])bin[\\\\/]ai-writer\\.mjs$/.test(process.argv[1]??'')){const rename=fs.renameSync;fs.renameSync=(from,to)=>{if(path.resolve(to)===path.resolve(process.env.AI_WRITER_C_TEST_TARGET)){const e=new Error('Injected ENOSPC before review state publication');e.code='ENOSPC';throw e;}return rename(from,to);};}\n");
+const fault=r.run(root,['review'],value,2,{NODE_OPTIONS:`--import=${pathToFileURL(shim).href}`,AI_WRITER_C_TEST_FAULT:'1',AI_WRITER_C_TEST_TARGET:path.join(root,'.writer/state.json')});assert.equal(fault.code,'ENOSPC');assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),before);assert.equal(Object.keys(readState(root).review_workflow.reports).length,0);
+const observed=r.run(root,['check']);assert.equal(observed.rolling_review.valid,mode==='before'?1:0);assert.equal(observed.rolling_review.pending_windows.length,mode==='before'?0:1);
+if(mode==='after')assert.equal(observed.rolling_review.unpublished_records.length,1);
+const retry=r.run(root,['review'],value);assert.equal(retry.ok,true);assert.equal(readState(root).revision,s.revision+1);const checked=r.run(root,['check']);assert.equal(checked.rolling_review.valid,mode==='before'?2:1);if(mode==='after')assert.equal(checked.rolling_review.unpublished_records.length,1);
+const summary=r.summary({expectation:mode==='before'?'known-bug-demonstration-not-acceptance':'fixed-publication-boundary',state_preserved_on_failure:true,observed_failed_publication_coverage:observed.rolling_review,after_retry_coverage:checked.rolling_review,final_state_sha256:sha(fs.readFileSync(path.join(root,'.writer/state.json'))),injection:'actual CLI with process-local fs rename ENOSPC injection; not a real full disk'});
+console.log(JSON.stringify({mode,calls:summary.calls,demonstrated:mode==='before',fixed:mode==='after',original_state_preserved_on_failure:true}));

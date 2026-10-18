@@ -1,0 +1,29 @@
+*** Begin Patch
+*** Update File: D:/work/other/ai-writer/lib/review-workflow.mjs
+@@
+   function enabled(p){if(p.state.schema_version<5)fail('REVIEW_WORKFLOW_REQUIRED','结构化复核和意见闭环需要schema 5；先review-workflow preview，再按作者授权显式enable。旧作品不自动迁移');}
++  function issueScope(p,units){const scope=revisionInfo(p.root)?.scope;if(scope&&units.some(unit=>unit<scope.from||unit>scope.through))fail('REVISION_SCOPE_INVALID','意见新增或处置超出独立修订会话范围；扩展实读不等于扩大处置范围');}
+@@
+-      const ref=`.writer/reviews/${crypto.randomUUID()}.json`;fs.mkdirSync(safe(root,'.writer/reviews'),{recursive:true});
++      issueScope(p,issues.flatMap(issue=>issue.evidence.map(e=>e.unit)));
++      const ref=`.writer/reviews/${crypto.randomUUID()}.json`;fs.mkdirSync(safe(root,'.writer/reviews'),{recursive:true});
+@@
+-  function mutate(root,input,kind,allowed,build){keys(input,['expected_revision','operation_id','id',...allowed],kind);return withLock(root,()=>{const p=project(root);enabled(p);const op=operation(p,input);if(op.old)return {...op.old,unchanged:true};fresh(p);if(!id(input.id)||!Object.hasOwn(p.state.review_workflow.issues,input.id))fail('REVIEW_ISSUE_UNKNOWN','意见ID不存在');const previous=p.state.review_workflow.issues[input.id],{binding,...old}=previous;const update=build(p,old),issue={...old,...update,history:[...old.history,binding]};const next=event(p,{issue,...(update.resolution?.author_evidence?{author_evidence:update.resolution.author_evidence}:{})});p.state.review_workflow.issues[input.id]={...issue,binding:next};return save(p,input,op,{id:input.id,status:issue.status,event:next});});}
++  function mutate(root,input,kind,allowed,build){keys(input,['expected_revision','operation_id','id',...allowed],kind);return withLock(root,()=>{const p=project(root);enabled(p);const op=operation(p,input);if(op.old)return {...op.old,unchanged:true};fresh(p);if(!id(input.id)||!Object.hasOwn(p.state.review_workflow.issues,input.id))fail('REVIEW_ISSUE_UNKNOWN','意见ID不存在');const previous=p.state.review_workflow.issues[input.id],{binding,...old}=previous;issueScope(p,old.evidence.map(e=>e.unit));const update=build(p,old),issue={...old,...update,history:[...old.history,binding]};const next=event(p,{issue,...(update.resolution?.author_evidence?{author_evidence:update.resolution.author_evidence}:{})});p.state.review_workflow.issues[input.id]={...issue,binding:next};return save(p,input,op,{id:input.id,status:issue.status,event:next});});}
+*** Update File: D:/work/other/ai-writer/lib/workspace.mjs
+@@
+   if(!object(value))return {ok:false,scope:'record-input-preview',findings:[{code:'INVALID_INPUT',field:'input',message:'登记输入须是对象'}]};
++  if(Number.isSafeInteger(value.unit)&&value.unit>=1){try{governance.gate(p,governance.unitAction(p,value.unit),value.unit);}catch(error){findings.push({code:error.code??'ACTION_OUT_OF_SCOPE',message:error.message});}}
+*** Update File: D:/work/other/ai-writer/lib/longform.mjs
+@@
+-    const valid = records.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
++    const unpublished = records.filter(r => r.structured && p.state.review_workflow?.reports?.[r.ref] !== hash(fs.readFileSync(safe(p.root,r.ref))));
++    const indexed = records.filter(r => !unpublished.includes(r));
++    const valid = indexed.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
+@@
+-    const current = new Set(valid), stale = records.filter(r => !current.has(r));
++    const current = new Set(valid), stale = indexed.filter(r => !current.has(r));
+@@
+-    return { valid: valid.length, stale: stale.length, stale_with_current_coverage: covered,
++    return { valid: valid.length, stale: stale.length, unpublished_records:unpublished.map(r=>r.ref), stale_with_current_coverage: covered,
+*** End Patch

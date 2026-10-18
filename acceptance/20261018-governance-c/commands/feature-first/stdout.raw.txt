@@ -1,0 +1,141 @@
+✖ 功能比较绑定全部实读章节和引文，保留未知与差异，结构化记录不可被覆盖 (1089.9402ms)
+✔ 缺功能行、假引文、错误哈希和可选建议升级硬问题均拒绝且不发布状态 (1687.4594ms)
+✖ 只有审查或试写授权不能借采用意见获得修订权，保留和延期不冒充修复 (1153.1119ms)
+✖ 采用、实际修改、当前版本复核分开，重改后旧verified显示needs-recheck且保留历史 (1133.3361ms)
+✖ 意见处置CAS、操作ID和复核范围保护不能由重复请求绕过 (1241.3163ms)
+✔ record-preview共用正式校验但不写状态，不替空摘要或坏证据补值 (1350.2761ms)
+✔ 重登草案恢复真实changes，强制核查报告，正文变更后不能只抄旧哈希 (2892.3943ms)
+✔ 内部可读入口不覆盖、不推进业务revision、不作为正式设定来源并受会话占用保护 (973.4622ms)
+✔ 长篇迁移预览只读，schema1实际迁移保持事实及正文原字节 (1785.9202ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 5
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13420.3335
+
+✖ failing tests:
+
+test at tests\review-workflow.test.mjs:28:1
+✖ 功能比较绑定全部实读章节和引文，保留未知与差异，结构化记录不可被覆盖 (1089.9402ms)
+  AssertionError [ERR_ASSERTION]: D:\work\other\ai-writer\bin\ai-writer.mjs review --project D:\work\other\ai-writer\.tmp\protection-VhdAPb\work --input D:\work\other\ai-writer\.tmp\protection-VhdAPb\work\.writer\review-test-3.json
+  
+  {
+    "ok": false,
+    "error": "longform.review is not a function",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' review '--help'"
+  }
+  
+  
+  2 !== 0
+  
+      at cli (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:12:108)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:29:87)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\review-workflow.test.mjs:40:1
+✖ 只有审查或试写授权不能借采用意见获得修订权，保留和延期不冒充修复 (1153.1119ms)
+  AssertionError [ERR_ASSERTION]: D:\work\other\ai-writer\bin\ai-writer.mjs review --project D:\work\other\ai-writer\.tmp\protection-X1Zttv\work --input D:\work\other\ai-writer\.tmp\protection-X1Zttv\work\.writer\review-test-13.json
+  
+  {
+    "ok": false,
+    "error": "longform.review is not a function",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' review '--help'"
+  }
+  
+  
+  2 !== 0
+  
+      at cli (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:12:108)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:41:29)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\review-workflow.test.mjs:46:1
+✖ 采用、实际修改、当前版本复核分开，重改后旧verified显示needs-recheck且保留历史 (1133.3361ms)
+  AssertionError [ERR_ASSERTION]: D:\work\other\ai-writer\bin\ai-writer.mjs review --project D:\work\other\ai-writer\.tmp\protection-xS3Zpt\work --input D:\work\other\ai-writer\.tmp\protection-xS3Zpt\work\.writer\review-test-16.json
+  
+  {
+    "ok": false,
+    "error": "longform.review is not a function",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' review '--help'"
+  }
+  
+  
+  2 !== 0
+  
+      at cli (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:12:108)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:47:29)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\review-workflow.test.mjs:58:1
+✖ 意见处置CAS、操作ID和复核范围保护不能由重复请求绕过 (1241.3163ms)
+  AssertionError [ERR_ASSERTION]: D:\work\other\ai-writer\bin\ai-writer.mjs review --project D:\work\other\ai-writer\.tmp\protection-18iiuy\work --input D:\work\other\ai-writer\.tmp\protection-18iiuy\work\.writer\review-test-19.json
+  
+  {
+    "ok": false,
+    "error": "longform.review is not a function",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' review '--help'"
+  }
+  
+  
+  2 !== 0
+  
+      at cli (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:12:108)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:59:29)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

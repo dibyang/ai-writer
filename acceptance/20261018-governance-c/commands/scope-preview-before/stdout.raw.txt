@@ -1,0 +1,66 @@
+✖ 修订分支不能在更宽讨论授权下处置声明范围外的旧意见 (1634.3174ms)
+✖ 可在分支扩展连读范围，但不能借该报告新增范围外意见 (1425.1992ms)
+✖ 登记预览在空摘要时也先呈现当前暂停范围，不诱导越权补写下一章 (1188.2562ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4353.4642
+
+✖ failing tests:
+
+test at tests\review-scope.test.mjs:12:1
+✖ 修订分支不能在更宽讨论授权下处置声明范围外的旧意见 (1634.3174ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:17:1
+✖ 可在分支扩展连读范围，但不能借该报告新增范围外意见 (1425.1992ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:19:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:22:1
+✖ 登记预览在空摘要时也先呈现当前暂停范围，不诱导越权补写下一章 (1188.2562ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.findings.some(f=>f.code==='ACTION_OUT_OF_SCOPE'))
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:26:35)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

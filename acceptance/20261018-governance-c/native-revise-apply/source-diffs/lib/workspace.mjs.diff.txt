@@ -1,0 +1,12 @@
+diff --git "a/D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\tool\\lib\\workspace.mjs" "b/D:\\work\\other\\ai-writer\\lib\\workspace.mjs"
+index 0aac2d35..b2926ffa 100644
+--- "a/D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-c\\native-create-review\\work\\.writer\\tool\\lib\\workspace.mjs"
++++ "b/D:\\work\\other\\ai-writer\\lib\\workspace.mjs"
+@@ -382,6 +382,7 @@ function validateReplay(p,value,draftSha){
+ export function recordPreview(root,value){
+   const p=project(root),findings=[];
+   if(!object(value))return {ok:false,scope:'record-input-preview',findings:[{code:'INVALID_INPUT',field:'input',message:'登记输入须是对象'}]};
++  if(Number.isSafeInteger(value.unit)&&value.unit>=1){try{governance.gate(p,governance.unitAction(p,value.unit),value.unit);}catch(error){findings.push({code:error.code??'ACTION_OUT_OF_SCOPE',message:error.message});}}
+   for(const key of ['unit','expected_revision','draft','summary','source_hashes'])if(value[key]===undefined||value[key]==='')findings.push({code:'REQUIRED_FIELD',field:key,message:`请按实际正文填写${key}`});
+   if(findings.length)return {ok:false,scope:'record-input-preview',revision:p.state.revision,findings,note:'未写入状态或正文；自动填路径和哈希不代表事实已核'};
+   try{

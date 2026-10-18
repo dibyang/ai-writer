@@ -1,0 +1,56 @@
+{
+  "expected_revision": 5,
+  "operation_id": "native-four-fresh-revise-scope",
+  "author_evidence": {
+    "local_source": "研究/模拟作者修订原话.md",
+    "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+    "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+    "locator": "全文授权段",
+    "recorded_by": "Codex native-four; synthetic acceptance author"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "仅删除第2章受控重复字，保留第1章可选表达，提交及当前复核后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 2
+      },
+      "stop_conditions": [
+        "只删重复的一字，不变事实和声音，不写第三章；提交复核后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

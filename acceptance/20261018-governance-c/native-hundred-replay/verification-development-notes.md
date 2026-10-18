@@ -1,0 +1,3 @@
+# 派生审计说明
+
+verify.mjs首次运行将幂等commit结果误当作含revision字段而断言失败。真实原始返回为ok/unchanged/id/transaction_id。修正派生审计为核unchanged=true及捕获前后state同SHA；原产品调用没有重复改写、撤销或篡改。派生审计可重建，commands内原始证据从未覆盖。

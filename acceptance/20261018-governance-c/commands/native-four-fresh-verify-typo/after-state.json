@@ -1,0 +1,727 @@
+{
+  "schema_version": 5,
+  "revision": 12,
+  "project_id": "4071add7-fc74-4dfa-af9f-873250d40a7e",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "顾宁": "19点后独往右侧新屋方向，家钥匙自持，12元已付；书柜存、车还许姨。只计划明日分袋背书与下周二五点左右问茶，未做。",
+      "许姨": "19点锁修补店，自己推车载布袋旧电扇向左；已接空车，仅听顾宁付12元存书，不是寄存现场见证。接受来前问的一次茶约，不承诺常在。"
+    },
+    "threads": [],
+    "timeline": [
+      "周五18:42顾宁到修补店，请再借一晚遭拒，选择到街口柜存书并19点前还车；仍推车出门未存。",
+      "周五顾宁实际付12元存书保留取件码，18:56空车交许姨，19点许关门各向左右离；下周二茶约待确认履行。"
+    ],
+    "ledger": {
+      "P_CART": {
+        "type": "object",
+        "statement": "许姨唯一折叠小推车，顾宁已借两天，六点半原约未兑现。",
+        "status": "active",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "借物"
+        ],
+        "custody": {
+          "holder": "许姨",
+          "location": "19点修补店门前向左的路上",
+          "condition": "空车已接回，现绑布袋旧电扇，轮子未改修"
+        },
+        "reader_known": "实际归还完成，顾宁不再持车；未见许姨已经到家。",
+        "character_known": {
+          "顾宁": "亲手还车并帮扶扇，随后自己向右。",
+          "许姨": "本人接车装扇、推走。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 39,
+            "quote": "许姨扶住门，让她连车带箱先出去。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "line": 15,
+            "quote": "顾宁把小车推到许姨手边，松开了握着车把的手。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2,
+        "previous_holder": "顾宁"
+      },
+      "P_BOOKS": {
+        "type": "object",
+        "statement": "顾宁搬家最后一箱书。",
+        "status": "active",
+        "cast": [
+          "顾宁"
+        ],
+        "tags": [
+          "寄存代价"
+        ],
+        "custody": {
+          "holder": "顾宁",
+          "location": "水果店外墙寄存柜最下空格",
+          "condition": "整箱已存，柜号取件码在本人手机，未取出"
+        },
+        "reader_known": "12元已付，仅存一夜；明日搬运仍待。",
+        "character_known": {
+          "顾宁": "亲付12元并存书、保存取件码。",
+          "许姨": "仅听顾宁说存了十二块，未亲见柜号和存放。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 39,
+            "quote": "她把书角按回箱里，两手托住箱底，将它在车板上往中间挪了挪。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "line": 5,
+            "quote": "她点下付款，听见柜锁轻轻弹开，才将纸箱从车上抱下来。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "line": 39,
+            "quote": "那箱书留在柜里，车已经归人，明早的重量明早再背。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2,
+        "previous_holder": "顾宁"
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "顾宁要在19点以前归还借车。",
+        "status": "resolved",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "本篇主事件"
+        ],
+        "due_unit": 2,
+        "reader_known": "18:56空车归许姨，19点许推车各走，兑现本次归还；明日取书不在已完成范围。",
+        "character_known": {
+          "顾宁": "本人已还，不再要求许姨续借。",
+          "许姨": "亲收车并用于自己运扇，已完成本次借车收回。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 37,
+            "quote": "“七点。”许姨说，“不是今天。”"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "line": 15,
+            "quote": "顾宁把小车推到许姨手边，松开了握着车把的手。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      },
+      "R_DIRECT": {
+        "type": "relationship",
+        "statement": "顾宁怕欠人情而常用客气包裹请求，许姨能直接说自己的需要。",
+        "status": "active",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "有限关系"
+        ],
+        "reader_known": "顾宁实际承担费用后直接提出喝茶；许姨能答应也保留来前问。没有转成全天照顾。",
+        "character_known": {
+          "顾宁": "知道自己能只为喝茶来，仍需先问许是否在店。",
+          "许姨": "知道顾宁想下周二五点左右来，自己未承诺一定在。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 23,
+            "quote": "我今晚也想省这点力气。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "line": 27,
+            "quote": "下次不搬东西，我还能来喝茶吗？"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+            "line": 33,
+            "quote": "来以前问一句。我未必在店里。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-还有一箱.md",
+      "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+      "summary": "周五18:42顾宁迟到修补店，借来的唯一小车仍载最后一箱书。想再借一晚，许姨明确今晚要运自家旧电扇、明天歇；顾宁接受拒绝，选择付12元存书，答应19点前空车回来。连车带箱出门，尚未付款存书或归还。",
+      "source_hashes": {
+        "writer.json": "8e030547bf3a815cbfd82285aa7ae44626d153a086987cd26272afbd44aa3f73",
+        ".writer/state.json": "813d1a3013a6160a2b48b940c0280887a18bcfff0a637ede22db397ab65b68ed",
+        "大纲/单元/0001.json": "d0b8515c32ced767e26dd3ebb79361243e344eb1850ed183be55a6c15948e7cc",
+        "设定/作品定位.md": "182dcab59335bd547a31ed93bc1a9bf78675cdd3fd33d1e04ca96fc8b8f8f15d",
+        "设定/文风.md": "2ca40837d9094ca71e463bfef41889d2433ea52baf26beaf26346308f3809e04",
+        "设定/权威规则.md": "572914b24a059517e94d5a4026dc78f75ed25c8373a33e5fa16f2a936effa2c1",
+        "大纲/全书大纲.md": "d5168ad9a086eec0770f4d2e4921960d91d7ab5726b81071c964a4a90ab69aae",
+        "大纲/分卷/V1.json": "2989669daf749abb764fb49e0c535db386434da7233f9f8ac3ebef71dd5baf6d"
+      },
+      "fingerprint": "7b3ef183b963a900c6685d922fa6ef1d10555677b549e2887c3587c8760768be",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+          "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+      "journal": ".writer/journal/51c60b0b-3be7-43ca-a98c-d23df16772bc.json",
+      "journal_sha256": "560ef26645b191e43245341c7f99a057eae57934173fbe874479e0053edc70dc"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-空车归你.md",
+      "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+      "summary": "顾宁找到街口空柜、付12元存书并保存柜号取件码，18:56将空车交许姨，许收车装旧扇。顾宁明日分袋背书仍是计划；两人约下周二五点左右喝茶但来前须问，不等到访。19点许姨关门，推车左行，顾宁右行返家方向，归还完成。",
+      "source_hashes": {
+        "writer.json": "8e030547bf3a815cbfd82285aa7ae44626d153a086987cd26272afbd44aa3f73",
+        ".writer/state.json": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+        "大纲/单元/0002.json": "311811c6468551230b96c7f3d5f5665f40e2d86e363d9be104fe0367477cf8c8",
+        "设定/作品定位.md": "182dcab59335bd547a31ed93bc1a9bf78675cdd3fd33d1e04ca96fc8b8f8f15d",
+        "设定/文风.md": "2ca40837d9094ca71e463bfef41889d2433ea52baf26beaf26346308f3809e04",
+        "设定/权威规则.md": "572914b24a059517e94d5a4026dc78f75ed25c8373a33e5fa16f2a936effa2c1",
+        "大纲/全书大纲.md": "d5168ad9a086eec0770f4d2e4921960d91d7ab5726b81071c964a4a90ab69aae",
+        "大纲/分卷/V1.json": "2989669daf749abb764fb49e0c535db386434da7233f9f8ac3ebef71dd5baf6d",
+        "正文/0001-还有一箱.md": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622"
+      },
+      "fingerprint": "fe63e7e03c66692ff079fd6bebe7ef7ccf690de75720ed44b5e8385baaf5d911",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "revision",
+        "event": {
+          "ref": ".writer/objects/c865df4c-89b3-4105-9288-b0584ade956d.json",
+          "sha256": "931a359949736bce568b45b3f973c1dd9b4c27e4162cdc3041b9fe159d773ae8"
+        },
+        "action": "revise"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "c9c6ca170c19b518a26782e6aae044c27c84f4ca0c5d88830aba1a44ddc7e0ec",
+      "replay_review": {
+        "reviewer": "Codex native-four informed self-review",
+        "report": "审查/native-four-第2章一字回放.md",
+        "draft_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ],
+        "base": {
+          "session_id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+          "base_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+          "old_unit_sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+          "old_journal_sha256": "99fb251c59bf57c9a78bf7d706e835f5a4aa1c273611d0ad4caa5d46338348bf",
+          "draft_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+        },
+        "frozen_ref": ".writer/objects/18eb2980952c4c3704276bd5beb7460985cc68802a341dd41a5b6d4c5ba31d63.replay-review",
+        "report_sha256": "18eb2980952c4c3704276bd5beb7460985cc68802a341dd41a5b6d4c5ba31d63"
+      },
+      "journal": ".writer/journal/00833306-f78a-4c21-b5ea-9053c77a8240.json",
+      "journal_sha256": "acc20cb1f31966cf9cc86cd626832ff2f44ba41638ce448a072c96b8f9d11b5f"
+    }
+  ],
+  "governance": {
+    "stage": "revision",
+    "task": "仅删除第2章受控重复字，保留第1章可选表达，提交及当前复核后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 2
+      },
+      "stop_conditions": [
+        "只删重复的一字，不变事实和声音，不写第三章；提交复核后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+      "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+    },
+    {
+      "ref": ".writer/objects/a97a8167-2bc5-4986-9174-074f337670a7.json",
+      "sha256": "85877429ce6d7f4c8e7122749bc2d737e0bbf123159d2168037971eac21bc4f6"
+    },
+    {
+      "ref": ".writer/objects/c865df4c-89b3-4105-9288-b0584ade956d.json",
+      "sha256": "931a359949736bce568b45b3f973c1dd9b4c27e4162cdc3041b9fe159d773ae8"
+    }
+  ],
+  "operations": {
+    "native-four-fresh-draft-scope": {
+      "input_sha256": "4a7ac868f2f2a3d6cb6548ce2ea02419356e7df81cc8b0132d33529785b3a7b0",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-four-fresh-draft-scope",
+        "event": {
+          "ref": ".writer/objects/c57ca0b9-43fe-4210-972e-df183c27b0bc.json",
+          "sha256": "ad835d8874a6ea9dd7e6a71c42eb5d3e7bad8d7226ae83970377ecbf3661ae81"
+        }
+      }
+    },
+    "native-four-fresh-pause-for-review": {
+      "input_sha256": "2622be56e0703973a74f2e0dbb0f54158e6e7189cb5a86885fcd9b1ac80d11c7",
+      "result": {
+        "ok": true,
+        "revision": 4,
+        "operation_id": "native-four-fresh-pause-for-review",
+        "event": {
+          "ref": ".writer/objects/a97a8167-2bc5-4986-9174-074f337670a7.json",
+          "sha256": "85877429ce6d7f4c8e7122749bc2d737e0bbf123159d2168037971eac21bc4f6"
+        }
+      }
+    },
+    "native-four-fresh-revise-scope": {
+      "input_sha256": "0d1e7d720a9545998b28c126cf040a8d24cd6e9421ddda2fada240ae89400ac0",
+      "result": {
+        "ok": true,
+        "revision": 6,
+        "operation_id": "native-four-fresh-revise-scope",
+        "event": {
+          "ref": ".writer/objects/c865df4c-89b3-4105-9288-b0584ade956d.json",
+          "sha256": "931a359949736bce568b45b3f973c1dd9b4c27e4162cdc3041b9fe159d773ae8"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [
+    {
+      "ref": ".writer/objects/a79e8eaf-5211-45e0-8123-7f7308fc40ad.json",
+      "sha256": "86d70e31d3b9e23eb32b2300fc607f76afab8ba0230aacef9433a407e66b2aac"
+    }
+  ],
+  "review_workflow": {
+    "reports": {
+      ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+      ".writer/reviews/3e0cbf6e-69b2-4cd9-a18b-d0998f5da7b8.json": "f2d6e63864bd6cfff34ce98d5be5bf99ca6d085fe97aa134ff935c83390d2b02",
+      ".writer/reviews/b586eb2f-216b-467f-a574-19b3ef046b2f.json": "6fea9786a050c6daec3d5a081302093a926ad8d6df5eeee1a0c5bcee11d258bc"
+    },
+    "issues": {
+      "FRESH_C_TYPO": {
+        "id": "FRESH_C_TYPO",
+        "type": "correctness",
+        "severity": "minor",
+        "confidence": "high",
+        "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+        "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "line": 15,
+            "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+          }
+        ],
+        "status": "verified",
+        "origin": {
+          "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+          "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+          "units": [
+            {
+              "unit": 2,
+              "draft": "正文/0002-空车归你.md",
+              "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+              "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+            }
+          ]
+        },
+        "history": [
+          {
+            "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+            "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+          },
+          {
+            "ref": ".writer/objects/23145ec4-2933-441a-bca5-d110e3721163.json",
+            "sha256": "a5c53d86f01d7ebbe2f0813e47c8adcde785710b9c6e35ad2b5da725efa8ba57"
+          },
+          {
+            "ref": ".writer/objects/6b14a620-1958-4a3b-8466-47b0e23501dd.json",
+            "sha256": "6e03f1bcaf51d2729e1856133d8d88b74760191a1f4549f79199b109190278ae"
+          }
+        ],
+        "resolution": {
+          "decision_actor": "author",
+          "author_evidence": {
+            "local_source": "研究/模拟作者修订原话.md",
+            "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+            "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+            "locator": "全文授权段",
+            "recorded_by": "Codex native-four; synthetic acceptance author",
+            "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+          },
+          "disposition": "adopted",
+          "reason": "模拟作者明确采用，仅删第2章这一重复字；非代理擅自扩大。",
+          "author_choice": {
+            "disposition": "adopted",
+            "evidence": {
+              "local_source": "研究/模拟作者修订原话.md",
+              "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+              "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+              "locator": "全文授权段",
+              "recorded_by": "Codex native-four; synthetic acceptance author",
+              "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+            }
+          },
+          "basis_units": [
+            {
+              "unit": 2,
+              "draft": "正文/0002-空车归你.md",
+              "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+              "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+            }
+          ]
+        },
+        "application": {
+          "commit_id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+          "commit_binding": {
+            "ref": ".writer/objects/a79e8eaf-5211-45e0-8123-7f7308fc40ad.json",
+            "sha256": "86d70e31d3b9e23eb32b2300fc607f76afab8ba0230aacef9433a407e66b2aac"
+          },
+          "transaction_id": "c3009152-f31a-4744-955d-7b37de9f3577",
+          "reason": "实际主作品事务已提交，2章正文只删一个车，绑定采用时旧稿和当前新稿；不是分支候选。",
+          "changes": [
+            {
+              "unit": 2,
+              "draft": "正文/0002-空车归你.md",
+              "before": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+              "after": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+            }
+          ],
+          "after_units": [
+            {
+              "unit": 2,
+              "draft": "正文/0002-空车归你.md",
+              "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+              "dependency": "161bb66354d277a7a0940ab84bfbe62d08d7afa0f27c4a5d2c413bf9b44fbaba"
+            }
+          ]
+        },
+        "verification": {
+          "review_ref": ".writer/reviews/b586eb2f-216b-467f-a574-19b3ef046b2f.json",
+          "review_sha256": "6fea9786a050c6daec3d5a081302093a926ad8d6df5eeee1a0c5bcee11d258bc",
+          "reviewer": "Codex native-four informed self-review",
+          "conclusion": "resolved",
+          "reason": "实际事务提交并apply之后重新完整读当前两章；第2章全文仅删除一个车，新完整引文在当前稿，第1章保留不称修复。",
+          "rechecked_context": false,
+          "application_commit_id": "a79e8eaf-5211-45e0-8123-7f7308fc40ad",
+          "revision_session": null,
+          "units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001-还有一箱.md",
+              "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+              "dependency": "645f6493039bd8cbba513f118967396eea6b65230f6cfff72cbe39f3e6d87560"
+            },
+            {
+              "unit": 2,
+              "draft": "正文/0002-空车归你.md",
+              "sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+              "dependency": "161bb66354d277a7a0940ab84bfbe62d08d7afa0f27c4a5d2c413bf9b44fbaba"
+            }
+          ]
+        },
+        "binding": {
+          "ref": ".writer/objects/259182ab-41ac-44b5-976f-f4e939e3ea0b.json",
+          "sha256": "45d913373b3aa9ff2ff9295aae879cad59fba41be87c9466f593879b8060225d"
+        }
+      },
+      "FRESH_C_STYLE": {
+        "id": "FRESH_C_STYLE",
+        "type": "optional_style",
+        "severity": "suggestion",
+        "confidence": "low",
+        "statement": "个人表达偏好：可将过门槛与响声合成更紧的一句，原句语义正确，无必须修改的理解代价。",
+        "suggestion": "如作者偏好可考虑“车轮过门槛时响了一声”；原样保留同样成立。",
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-还有一箱.md",
+            "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+            "line": 41,
+            "quote": "轮子越过门槛，响了一声。"
+          }
+        ],
+        "status": "retained",
+        "origin": {
+          "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+          "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+          "units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001-还有一箱.md",
+              "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+              "dependency": "645f6493039bd8cbba513f118967396eea6b65230f6cfff72cbe39f3e6d87560"
+            }
+          ]
+        },
+        "history": [
+          {
+            "ref": ".writer/objects/52af5fb2-de49-47a4-a2e8-67b710186eb2.json",
+            "sha256": "825ea3ed1f73ab1f58a3d3323943577d2d8bfbea7a19cb5bc9955767bdc676a2"
+          }
+        ],
+        "resolution": {
+          "decision_actor": "author",
+          "author_evidence": {
+            "local_source": "研究/模拟作者修订原话.md",
+            "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+            "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+            "locator": "全文授权段",
+            "recorded_by": "Codex native-four; synthetic acceptance author",
+            "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+          },
+          "disposition": "retained",
+          "reason": "模拟作者明确要求第1章原样保留，语义正确的偏好不作已修复。",
+          "author_choice": {
+            "disposition": "retained",
+            "evidence": {
+              "local_source": "研究/模拟作者修订原话.md",
+              "source_sha256": "bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01",
+              "quote": "采用第2章重复字，只删这一字；第1章可选表达原样保留。只授权 revise2–2，正文不续写第三章，不改变事实或人物声音；真实提交及当前版本复核后暂停。",
+              "locator": "全文授权段",
+              "recorded_by": "Codex native-four; synthetic acceptance author",
+              "frozen_ref": ".writer/objects/bc93fd9aaca0f0d3f2db6312e4194e4f8ed27467dbc1d2c1a50856723722bf01.txt"
+            }
+          },
+          "basis_units": [
+            {
+              "unit": 1,
+              "draft": "正文/0001-还有一箱.md",
+              "sha256": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622",
+              "dependency": "645f6493039bd8cbba513f118967396eea6b65230f6cfff72cbe39f3e6d87560"
+            }
+          ]
+        },
+        "application": null,
+        "verification": null,
+        "binding": {
+          "ref": ".writer/objects/521e53c1-bfdc-4e98-9ab4-40a99c289540.json",
+          "sha256": "a8d63f3d097d95a997e3ff8161989434fc2ec78b140a55ce287fde13247b6bf8"
+        }
+      }
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/d7946fe8-e89b-4771-9b95-15d8490ca75f.json",
+        "sha256": "9c94b6533eee9af40c043a1c90bd86bab7615e562436ae04069275dce44123f8"
+      },
+      {
+        "ref": ".writer/objects/52af5fb2-de49-47a4-a2e8-67b710186eb2.json",
+        "sha256": "825ea3ed1f73ab1f58a3d3323943577d2d8bfbea7a19cb5bc9955767bdc676a2"
+      },
+      {
+        "ref": ".writer/objects/23145ec4-2933-441a-bca5-d110e3721163.json",
+        "sha256": "a5c53d86f01d7ebbe2f0813e47c8adcde785710b9c6e35ad2b5da725efa8ba57"
+      },
+      {
+        "ref": ".writer/objects/521e53c1-bfdc-4e98-9ab4-40a99c289540.json",
+        "sha256": "a8d63f3d097d95a997e3ff8161989434fc2ec78b140a55ce287fde13247b6bf8"
+      },
+      {
+        "ref": ".writer/objects/6b14a620-1958-4a3b-8466-47b0e23501dd.json",
+        "sha256": "6e03f1bcaf51d2729e1856133d8d88b74760191a1f4549f79199b109190278ae"
+      },
+      {
+        "ref": ".writer/objects/259182ab-41ac-44b5-976f-f4e939e3ea0b.json",
+        "sha256": "45d913373b3aa9ff2ff9295aae879cad59fba41be87c9466f593879b8060225d"
+      }
+    ],
+    "operations": {
+      "native-four-fresh-initial-review": {
+        "input_sha256": "43e572daca48de208c7274f73583344c0db05aaa21dc5759ed3f69c0de7a2dae",
+        "result": {
+          "ok": true,
+          "revision": 5,
+          "ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+          "coverage": [
+            1,
+            2
+          ],
+          "issue_ids": [
+            "FRESH_C_TYPO",
+            "FRESH_C_STYLE"
+          ],
+          "quality": "review-recorded-not-acceptance"
+        }
+      },
+      "native-four-fresh-adopt-typo": {
+        "input_sha256": "4767e69ef294e8ab35d1c94fb2a3ce01aab3563b1be1d8b7b41b6ef9d796e73b",
+        "result": {
+          "ok": true,
+          "revision": 7,
+          "id": "FRESH_C_TYPO",
+          "status": "adopted",
+          "event": {
+            "ref": ".writer/objects/23145ec4-2933-441a-bca5-d110e3721163.json",
+            "sha256": "a5c53d86f01d7ebbe2f0813e47c8adcde785710b9c6e35ad2b5da725efa8ba57"
+          }
+        }
+      },
+      "native-four-fresh-retain-style": {
+        "input_sha256": "7d7442b0b72d4f28cea740d7bfb8a94dbadb6e09a8e36ffccde98f5d8af9ceab",
+        "result": {
+          "ok": true,
+          "revision": 8,
+          "id": "FRESH_C_STYLE",
+          "status": "retained",
+          "event": {
+            "ref": ".writer/objects/521e53c1-bfdc-4e98-9ab4-40a99c289540.json",
+            "sha256": "a8d63f3d097d95a997e3ff8161989434fc2ec78b140a55ce287fde13247b6bf8"
+          }
+        }
+      },
+      "native-four-fresh-tail-review": {
+        "input_sha256": "9d3ab21b11dbf48f69f3c5db0cad035461a466eaed9fdc2395c69b3d4f429fe2",
+        "result": {
+          "ok": true,
+          "revision": 11,
+          "ref": ".writer/reviews/3e0cbf6e-69b2-4cd9-a18b-d0998f5da7b8.json",
+          "coverage": [
+            2,
+            2
+          ],
+          "issue_ids": [],
+          "quality": "review-recorded-not-acceptance"
+        }
+      },
+      "native-four-fresh-apply-typo": {
+        "input_sha256": "f1a35c65025e32068b1e02e39afde346a28d9e4a53d1086185b53ed8e78fa203",
+        "result": {
+          "ok": true,
+          "revision": 10,
+          "id": "FRESH_C_TYPO",
+          "status": "applied",
+          "event": {
+            "ref": ".writer/objects/6b14a620-1958-4a3b-8466-47b0e23501dd.json",
+            "sha256": "6e03f1bcaf51d2729e1856133d8d88b74760191a1f4549f79199b109190278ae"
+          }
+        }
+      },
+      "native-four-fresh-current-review": {
+        "input_sha256": "5ec55bddaa6e7b6472eb25882cc7f175ed7e15f2ae389705cf2db30fd84a9115",
+        "result": {
+          "ok": true,
+          "revision": 11,
+          "ref": ".writer/reviews/b586eb2f-216b-467f-a574-19b3ef046b2f.json",
+          "coverage": [
+            1,
+            2
+          ],
+          "issue_ids": [],
+          "quality": "review-recorded-not-acceptance"
+        }
+      },
+      "native-four-fresh-verify-typo": {
+        "input_sha256": "5c690436261db6a2c1df7b66db85a6437c1bc59d6e0e2c912def789400525b79",
+        "result": {
+          "ok": true,
+          "revision": 12,
+          "id": "FRESH_C_TYPO",
+          "status": "verified",
+          "event": {
+            "ref": ".writer/objects/259182ab-41ac-44b5-976f-f4e939e3ea0b.json",
+            "sha256": "45d913373b3aa9ff2ff9295aae879cad59fba41be87c9466f593879b8060225d"
+          }
+        }
+      }
+    }
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/c865df4c-89b3-4105-9288-b0584ade956d.json",
+    "sha256": "931a359949736bce568b45b3f973c1dd9b4c27e4162cdc3041b9fe159d773ae8"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "unit": 2,
+  "expected_revision": 9,
+  "source_hashes": {
+    "writer.json": "8e030547bf3a815cbfd82285aa7ae44626d153a086987cd26272afbd44aa3f73",
+    ".writer/state.json": "c159078ef34fe8bb35d0322de6a9d804a62f6d955ecb8faab6a63a837ebdf97b",
+    "大纲/单元/0002.json": "311811c6468551230b96c7f3d5f5665f40e2d86e363d9be104fe0367477cf8c8",
+    "设定/作品定位.md": "182dcab59335bd547a31ed93bc1a9bf78675cdd3fd33d1e04ca96fc8b8f8f15d",
+    "设定/文风.md": "2ca40837d9094ca71e463bfef41889d2433ea52baf26beaf26346308f3809e04",
+    "设定/权威规则.md": "572914b24a059517e94d5a4026dc78f75ed25c8373a33e5fa16f2a936effa2c1",
+    "大纲/全书大纲.md": "d5168ad9a086eec0770f4d2e4921960d91d7ab5726b81071c964a4a90ab69aae",
+    "大纲/分卷/V1.json": "2989669daf749abb764fb49e0c535db386434da7233f9f8ac3ebef71dd5baf6d",
+    "正文/0001-还有一箱.md": "d90689cfe8e2dc6f31b8bf095772a27288f0f0f8413b9b62f2236d2e44f49622"
+  },
+  "draft": "正文/0002-空车归你.md",
+  "source_bindings": {},
+  "summary": "顾宁找到街口空柜、付12元存书并保存柜号取件码，18:56将空车交许姨，许收车装旧扇。顾宁明日分袋背书仍是计划；两人约下周二五点左右喝茶但来前须问，不等到访。19点许姨关门，推车左行，顾宁右行返家方向，归还完成。",
+  "changes": {
+    "characters": {
+      "顾宁": "19点后独往右侧新屋方向，家钥匙自持，12元已付；书柜存、车还许姨。只计划明日分袋背书与下周二五点左右问茶，未做。",
+      "许姨": "19点锁修补店，自己推车载布袋旧电扇向左；已接空车，仅听顾宁付12元存书，不是寄存现场见证。接受来前问的一次茶约，不承诺常在。"
+    },
+    "timeline_append": [
+      "周五顾宁实际付12元存书保留取件码，18:56空车交许姨，19点许关门各向左右离；下周二茶约待确认履行。"
+    ],
+    "ledger": {
+      "P_CART": {
+        "type": "object",
+        "statement": "许姨唯一折叠小推车，顾宁已借两天，六点半原约未兑现。",
+        "status": "active",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "借物"
+        ],
+        "reader_known": "实际归还完成，顾宁不再持车；未见许姨已经到家。",
+        "character_known": {
+          "顾宁": "亲手还车并帮扶扇，随后自己向右。",
+          "许姨": "本人接车装扇、推走。"
+        },
+        "custody": {
+          "holder": "许姨",
+          "location": "19点修补店门前向左的路上",
+          "condition": "空车已接回，现绑布袋旧电扇，轮子未改修"
+        },
+        "previous_holder": "顾宁",
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+          }
+        ]
+      },
+      "P_BOOKS": {
+        "type": "object",
+        "statement": "顾宁搬家最后一箱书。",
+        "status": "active",
+        "cast": [
+          "顾宁"
+        ],
+        "tags": [
+          "寄存代价"
+        ],
+        "reader_known": "12元已付，仅存一夜；明日搬运仍待。",
+        "character_known": {
+          "顾宁": "亲付12元并存书、保存取件码。",
+          "许姨": "仅听顾宁说存了十二块，未亲见柜号和存放。"
+        },
+        "custody": {
+          "holder": "顾宁",
+          "location": "水果店外墙寄存柜最下空格",
+          "condition": "整箱已存，柜号取件码在本人手机，未取出"
+        },
+        "previous_holder": "顾宁",
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "她点下付款，听见柜锁轻轻弹开，才将纸箱从车上抱下来。"
+          },
+          {
+            "unit": 2,
+            "quote": "那箱书留在柜里，车已经归人，明早的重量明早再背。"
+          }
+        ]
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "顾宁要在19点以前归还借车。",
+        "status": "resolved",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "本篇主事件"
+        ],
+        "due_unit": 2,
+        "reader_known": "18:56空车归许姨，19点许推车各走，兑现本次归还；明日取书不在已完成范围。",
+        "character_known": {
+          "顾宁": "本人已还，不再要求许姨续借。",
+          "许姨": "亲收车并用于自己运扇，已完成本次借车收回。"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+          }
+        ]
+      },
+      "R_DIRECT": {
+        "type": "relationship",
+        "statement": "顾宁怕欠人情而常用客气包裹请求，许姨能直接说自己的需要。",
+        "status": "active",
+        "cast": [
+          "顾宁",
+          "许姨"
+        ],
+        "tags": [
+          "有限关系"
+        ],
+        "reader_known": "顾宁实际承担费用后直接提出喝茶；许姨能答应也保留来前问。没有转成全天照顾。",
+        "character_known": {
+          "顾宁": "知道自己能只为喝茶来，仍需先问许是否在店。",
+          "许姨": "知道顾宁想下周二五点左右来，自己未承诺一定在。"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "下次不搬东西，我还能来喝茶吗？"
+          },
+          {
+            "unit": 2,
+            "quote": "来以前问一句。我未必在店里。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "恢复的是原登记事实草案；路径、当前context哈希和未变项自动填入。必须实读新正文与承接，修正摘要/changes/失效引文，填写replay_review真实报告及六项checked_fields；先record-preview，再record。不能把自动草案当无变化结论。",
+  "_replay": {
+    "session_id": "5fc51cf6-7274-4b5f-9dc9-b5749de27832",
+    "base_state_sha256": "ab49fc5209ca91eeac298ff8f3c57ef73c66ef1695310dffe4e7ca517ac83b96",
+    "old_unit_sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+    "old_journal_sha256": "99fb251c59bf57c9a78bf7d706e835f5a4aa1c273611d0ad4caa5d46338348bf",
+    "draft_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410"
+  },
+  "replay_review": {
+    "reviewer": "Codex native-four informed self-review",
+    "report": "审查/native-four-第2章一字回放.md",
+    "draft_sha256": "9e9f6467807491dda490e40bb3729101f383e4cf1c0cd8ae45713a2c10a87410",
+    "checked_fields": [
+      "summary",
+      "characters",
+      "timeline",
+      "ledger",
+      "evidence",
+      "downstream"
+    ]
+  }
+}

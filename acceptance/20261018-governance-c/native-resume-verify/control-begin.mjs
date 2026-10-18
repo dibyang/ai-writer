@@ -1,0 +1,17 @@
+import fs from 'node:fs';import path from 'node:path';
+import {call,read,write,dir,work,state,sha} from './helpers.mjs';
+const quote='先复核已修好的第五章重复字，保留已有可选风格原句，结构复演疑问仍延期。为验证新版本失效，只授权第六章一处极小等价措辞作为工程控制变化，不改变事实、人物所知、物件、情节和第一章原句，不写第七章。将此变化标为验收控制，不冒充已经证明的文学优化；再完整连读六章，验证旧意见需重核并绑定当前版本。完成后暂停正文。';
+const ref='研究/第三阶段模拟授权.md';
+write(path.join(work,ref),'# 第三阶段模拟授权\n\n本文件为synthetic-acceptance合成验收文本，不是真实作品作者决定。来源：本轮用户指定模拟原话；无消息ID，不伪造身份认证。\n\n'+quote+'\n');
+const evidence={quote,local_source:ref,source_sha256:sha(fs.readFileSync(path.join(work,ref))),locator:'第三阶段模拟授权.md 第5行完整模拟原话；本轮用户指定，无消息ID',recorded_by:'native-three independent Codex; synthetic-acceptance recorder'};
+write(path.join(dir,'authorization-evidence.json'),evidence);
+call('native-three-16-authorize-control6',['workflow','set'],{input:{expected_revision:state().revision,operation_id:'native-three-authorize-control6',author_evidence:evidence,workflow:{stage:'revision',task:'synthetic-acceptance：仅第6章一字等价措辞的工程控制变化；无draft，不改1–5和作者保留项；重登并全六章复核后暂停',authorization:{allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:6,to:6},stop_conditions:['第6章一处验收控制变化完成实际提交后完整复核六章、重核原重复字意见并暂停；不写第7章，不作新文学取舍']},planning:state().governance.planning}}});
+const s=call('native-three-17-begin6',['revision','begin'],{input:{expected_revision:state().revision,owner:'native-three independent Codex; synthetic-acceptance',from:6,through:6}});write(path.join(dir,'session-access.json'),s);
+call('native-three-18-rewind6',['rewind','--from','6','--expected-revision',String(state(s.workspace).revision),'--revision-token',s.token],{project:s.workspace});
+const draft=state().units[5].draft, file=path.join(s.workspace,draft), original=fs.readFileSync(file,'utf8');
+const before='林禾先把柜台前的凳子搬开，免得出门时又卡一下。', after='林禾先把柜台前的凳子搬开，免得出门时再卡一下。';
+if(original.split(before).length!==2)throw Error('control sentence not unique');
+const next=original.replace(before,after);fs.writeFileSync(file,next,'utf8');
+write(path.join(dir,'control-change.json'),{nature:'engineering acceptance control; not proven literary improvement',unit:6,draft,before,after,before_sha256:sha(Buffer.from(original)),after_sha256:sha(Buffer.from(next)),reason:'又/再在免得引出的未然句中都指防止搬运再次卡住；只换此一字，不发生新的卡住事件，动作仍是预先搬开凳子，时点、人物知识、物件位置、事件及情节均相同。非第1章保留句，也不触及3/5/6生活收束取舍。',replacement_count:1});
+call('native-three-19-replay6',['revision','replay-input','--unit','6','--revision-token',s.token,'--out','.writer/drafts/native-three-replay6-pending.json'],{project:s.workspace});
+console.log(JSON.stringify({workspace:s.workspace,token:s.token,branch_revision:state(s.workspace).revision,main_revision:state().revision}));

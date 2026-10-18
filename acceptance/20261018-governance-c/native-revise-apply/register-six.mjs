@@ -1,0 +1,46 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { stage, load, state, put, sha, cli } from './helpers.mjs';
+const a=load(path.join(stage,'session-access.json')), w=a.workspace;
+const pending=load(path.join(w,'.writer/drafts/native-two-replay-6-pending.json'));
+const body=fs.readFileSync(path.join(w,pending.draft));
+assert.equal(sha(body),pending._replay.old_unit_sha256);
+assert.deepEqual(body,fs.readFileSync(path.join(stage,'before/work',pending.draft)));
+const report='审查/native-two-第6章等价重登核读.md';
+put(path.join(w,report),`# 第6章等价重登核读（synthetic-acceptance）
+
+审查者：第二个独立原生Codex进程，知情模型核读。实际以FastCtx完整读取候选第6章1–44行，已读候选第5章1–34行及旧1–6、旧snapshot/units/意见、产品恢复的第6章原summary与全部changes。不是真人盲读、市场验证或作者定稿。
+
+第6章旧/新完整字节SHA256均为${sha(body)}，3013字节；字节与修前备份相等。旧journal SHA256为${pending._replay.old_journal_sha256}。本次不改正文，不另改摘要或changes，来源哈希由产品replay-input取得，其中前章已指向新第5章，不手动刷新SHA。
+
+## 六项实际核查
+
+1. summary：原摘要完整对应第三天十点签清单、真实交钥匙与搬箱、旧伞认错、周梅有限回应及吃面；留镇/费用/复制均未定，原样保留。
+2. characters：林禾交箱钥匙纸样，保留签单，承认误怪，尚未定回县；周梅接物并修伞，只约“若在”帮十分钟摊；老邵离场后未新增所知。原两条人物变化原样保留。
+3. timeline：第三天十点至午间顺序与第5章明早十点约定相符；签单→递钥匙/试锁→两人搬箱→串圈→伞柄与旧歉→吃面；原timeline_append原样保留。
+4. ledger：逐项核O_BOX在周梅矮架且箱底不挨地、O_KEY在她围裙小钩钥匙圈，两项previous_holder=林禾；O_PATTERN宽纸套随箱归周梅且未摊平，previous_holder=林禾；T_CLAIM本次交接resolved但原due_unit=4不改；R_LISTEN仍partial；T_PATTERN与T_FUTURE仍intentional-open；O_RECEIPT有划痕/日期改笔留林禾柜台。八项changes保持产品恢复内容；其余8项ledger及观察statement均继承，不誊写全snapshot，不删未知。
+5. evidence：O_BOX第13行、O_KEY第11/15行、T_CLAIM第13行、R_LISTEN第33行、O_PATTERN第11行、T_PATTERN第9行、O_RECEIPT第5行、T_FUTURE第39行全部逐条与本章核对。九条第6章引文与全文SHA不变；第5章六条证据已绑定新全文，其中仅O_KEY删一重复字。没有逆改历史观察或让旧证据静默指向新字节。
+6. downstream：这是现有末章，无第7章也无续写授权。结尾有限修复与未来未定完整保留，不根据next_unit=7推断下一章；第5章钥匙入抽屉与本章取布袋实交衔接一致，清单划痕与纸套承托继续存在。本阶段提交/apply后按模拟原话暂停；新全六章复核及意见verify留给下一独立会话。
+
+## 真人语言别扭句
+
+有没有哪句话意思能够看懂，却让你觉得别扭、像为了写得漂亮硬拼出来，或者不像一个人当面会这样说？
+
+### 真人语言硬问题
+
+没有
+
+四项检查沿本书叙述声音核读：熟人对白保留回避及省略，搬箱/拿伞/递钥匙的动宾和空间清楚，劳动与时间明确，逐句节奏核查不产生本次范围内的新增修正。不声称真人发声或把个人风格偏好升为错误。“我也没全忘”和吃面收束均保留。
+
+本报告用于第6章等价重登，最终5–6完整尾段review另作。
+`);
+const reviewed=structuredClone(pending);
+reviewed.replay_review={reviewer:'native-two independent Codex; informed model reread; synthetic-acceptance',report,draft_sha256:sha(body),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+assert.deepEqual(reviewed.changes,pending.changes); assert.equal(reviewed.summary,pending.summary);
+const ref=path.join(w,'.writer/drafts/native-two-replay-6-reviewed.json'); put(ref,reviewed);
+put(path.join(stage,'inputs/replay-6-reviewed.json'),reviewed);
+const pv=cli('native-two-18-preview-6-reviewed',['record-preview','--input',ref,'--revision-token',a.token],w); assert.equal(pv.ok,true);
+cli('native-two-19-record-6',['record','--input',ref,'--revision-token',a.token],w);
+put(path.join(stage,'after-record-6-state.json'),state(w));
+cli('native-two-20-check-branch',['check','--revision-token',a.token],w);

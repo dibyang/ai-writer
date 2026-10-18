@@ -6,7 +6,9 @@
 
 先读定位、文风、权威规则和全书大纲。按阶段讨论、卷纲、章纲、正文、修订，只完成作者要求的阶段；已有连续创作授权时不中途逐章索要确认。当前请求优先于本书风格，本书风格优先于通用技法。风格不能改变事实和人物信息边界，不因缺对标阻断原创。
 
-1. `status` 先恢复当前任务和允许范围，再取 revision。`long-enable --expected-revision N` 对旧 schema 1 备份迁移为 schema 2；对 schema 3/4 仅启用分卷契约，保持原版本。schema 3/4 初始已有 changes 差量追踪，但默认未授权正文；阶段/决策用法见 docs/user-guide.md 与 docs/workflow.md。不手改 state；旧 schema 1/2 不自动启用治理。长篇status默认只给进度和最近摘要，不载入全量追踪；明确排障才用 `status --view full`，正常续写取context/recall。
+明确新长篇可用init --mode long。旧作先long-enable-preview，不应用即保持原状；迁移仍须实际作品授权。
+
+1. `status` 先恢复当前任务和允许范围，再取 revision。`long-enable --expected-revision N` 对旧 schema 1 备份迁移为 schema 2；对 schema 3/4/5 仅启用分卷契约，保持原版本。schema 3/4/5 初始已有 changes 差量追踪，但默认未授权正文；阶段/决策用法见 docs/user-guide.md 与 docs/workflow.md。不手改 state；旧 schema 1/2 不自动启用治理。长篇status默认只给进度和最近摘要，不载入全量追踪；明确排障才用 `status --view full`，正常续写取context/recall。
 2. 保存分卷 JSON，用 `volume --input 文件`。范围用全书连续单元号；卷之间不重叠，每卷 arcs 连续覆盖卷范围。未来卷可粗排，近期细化。分卷契约是计划，不建立已经发生的追踪。
 
 ```json
@@ -22,7 +24,7 @@
 }
 ```
 
-3. 章纲沿用 `plan`，增加 `arc_id`（可选）和 `recall_ids`（可选稳定线索 ID）。`outline --unit N` 查看本章卷契约与剧情单元；`context --unit N` 自动携带切片。卷纲的未来补充先固定真实旧版本，再按单元发布新版本；历史改动先实读影响、stage，再在独立修订区 rewind 和重登。schema 4 不在主稿直接回退，详见 docs/revision-and-sources.md。
+3. 章纲沿用 `plan`，增加 `arc_id`（可选）和 `recall_ids`（可选稳定线索 ID）。`outline --unit N` 查看本章卷契约与剧情单元；`context --unit N` 自动携带切片。卷纲的未来补充先固定真实旧版本，再按单元发布新版本；历史改动先实读影响、stage，再在独立修订区 rewind 和重登。schema 4/5 不在主稿直接回退，详见 docs/revision-and-sources.md。
 
 ## 写作和登记
 
@@ -53,6 +55,8 @@
 }
 ```
 
+登记前record-preview列缺项与实际差量，不写状态。schema5历史修订在独立区rewind后用revision replay-input恢复旧变化，不誊写全快照；必须核对新稿、原引文与下游，填写真实replay_review，改稿使旧草案失效。
+
 这是模板中 `changes` 的内容，不替换外层 unit/revision/source_hashes/draft/summary。引文必须在真实正文出现，证据至少一条指向本章。工具自动记录正文哈希和行号；它只证明引文存在，不能证明推论成立。
 
 ledger 类型：fact / thread / object / relationship / observation；状态：active / pending / partial / resolved / intentional-open。未明确的状态可写 pending，说明已知边界、下一步与回查时机，不能为“全部完成”强行结案。到期但未收的条目继续召回，不会自动标 resolved。observation 已记录的 statement/author_truth 不可逆改，新解释另建条目并关联旧 ID。作者尚未确认的秘密不要编入 author_truth。
@@ -77,7 +81,9 @@ ledger 类型：fact / thread / object / relationship / observation；状态：a
 {"from":1,"to":3,"kind":"model-self-review","report":"审查/1-3连读.md","source_hashes":{"正文/0001.md":"真实SHA256","正文/0002.md":"真实SHA256","正文/0003.md":"真实SHA256"}}
 ```
 
-先读正文再填真实哈希；CLI 不会替你审稿。`check.rolling_review` 给欠审窗口和过期报告数量。旧报告随正文或报告文件变动失效；仅审查不动正文，已授权修订可直接修高置信问题，并在 schema 4 独立修订区 rewind 重登；尾段复核后 prepare/commit。
+先读正文再填真实哈希；CLI 不会替你审稿。`check.rolling_review` 给欠审窗口和过期报告数量。旧报告随正文或报告文件变动失效；仅审查不动正文，已授权修订可直接修高置信问题，并在 schema 4/5 独立修订区 rewind 重登；尾段复核后 prepare/commit。
+
+跨章相似结构复核和意见闭环用schema5的review-template、review-issues，详见docs/review-and-registration.md。模型逐章比较目标/阻力/选择/后果/关系变化，保留不同收益和作者声音；脚本不判断文学重复。可选意见不自动成必改，只有真实已提交修改才applied，绑定当前实读报告才verified。
 
 ## 自有旧稿导入
 
@@ -85,6 +91,6 @@ ledger 类型：fact / thread / object / relationship / observation；状态：a
 
 `import-status` 显示冻结副本、原文件漂移、已登记和未登记范围。`import-next` 复制下一章（重复执行同章内容一致则复用），实际完整读该章，反推已发生的事件与信息边界，保存章纲，取 context/template，再登记真实 summary/changes。未登记前下一次仍返回这一章。把读取覆盖和不确定项记入研究/审查文件，导入范围超过当前能读的范围时如实停在断点，不宣称全文深读完成。
 
-导入旧稿是本书续写基线，不放进对标库，不套成别书素材。完整导入后才正常续写下一章；若需要修订，先冻结基线登记，再按协议使用独立区（schema 4）或原 rewind（旧协议）修订，原稿副本继续保留。
+导入旧稿是本书续写基线，不放进对标库，不套成别书素材。完整导入后才正常续写下一章；若需要修订，先冻结基线登记，再按协议使用独立区（schema 4/5）或原 rewind（旧协议）修订，原稿副本继续保留。
 
 原文件仅移动目录时，import-status 的 can_continue/blockers 给出当前阻断。准备 `{"files":[{"unit":1,"path":"D:/新位置/第一章.md"}]}`，用 `import-relink --input 文件 --expected-revision 当前号` 重定位；新文件哈希必须与冻结副本相同。全部映射通过后才写独立的 import-locations.json 并保留历史；不修改 import.json、state 或正文。内容改变属于版本变更，不能通过重定位接受。已完整导入后 phase=complete，继续正常规划，不再反复 import-next。

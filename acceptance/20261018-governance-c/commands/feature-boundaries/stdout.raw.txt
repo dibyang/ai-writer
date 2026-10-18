@@ -1,0 +1,60 @@
+✔ 功能比较绑定全部实读章节和引文，保留未知与差异，结构化记录不可被覆盖 (1327.6595ms)
+✔ 缺功能行、假引文、错误哈希和可选建议升级硬问题均拒绝且不发布状态 (1823.6082ms)
+✔ 只有审查或试写授权不能借采用意见获得修订权，保留和延期不冒充修复 (2008.2433ms)
+✔ 采用、实际修改、当前版本复核分开，重改后旧verified显示needs-recheck且保留历史 (7139.2666ms)
+✔ 意见处置CAS、操作ID和复核范围保护不能由重复请求绕过 (2044.2454ms)
+✔ record-preview共用正式校验但不写状态，不替空摘要或坏证据补值 (1305.3773ms)
+✔ 重登草案恢复真实changes，强制核查报告，正文变更后不能只抄旧哈希 (2870.2979ms)
+✔ 内部可读入口不覆盖、不推进业务revision、不作为正式设定来源并受会话占用保护 (972.7147ms)
+✔ 长篇迁移预览只读，schema1实际迁移保持事实及正文原字节 (1733.4177ms)
+✔ 实际旧0.5可读schema4，显式启用5后拒绝；旧事实和消费绑定完全保留 (1699.0491ms)
+✔ 重登草案在正文改字后拒绝旧绑定；新稿引文失效仍要求实际修正 (1820.487ms)
+✔ 等价重登没有对应原文修改，不能把采用意见标为applied (3000.798ms)
+✔ 按稳定意见ID直接展开取舍历史，普通原型名称不被误当既有操作 (1401.4852ms)
+✖ 结构化功能表在旧章实改后失效，冻结原文和原判断仍可核 (2949.7954ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32206.0629
+
+✖ failing tests:
+
+test at tests\review-workflow.test.mjs:113:1
+✖ 结构化功能表在旧章实改后失效，冻结原文和原判断仍可核 (2949.7954ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      characters: {
+        '阿禾': '位于第2处桥头'
+      },
+      ledger: {
+  ...
+              quote: '林衡把铜片交给阿禾。',
+  +           sha256: '95e12eec08b06c9ae3b049b310a58884d711f28653c32c36f8bd6d1dfe186c47',
+  -           sha256: 'e3f3613ff140936d7f4f962b0176e14126315b285e898e1c7caee506f4521f5f',
+              unit: 1
+            }
+          ],
+          introduced_unit: 1,
+          statement: '铜片由阿禾保管',
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:115:77)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { characters: { '阿禾': '位于第2处桥头' }, threads: [], timeline: [ '交接1', '交接2' ], ledger: { O_COPPER: [Object] } },
+    expected: { characters: { '阿禾': '位于第2处桥头' }, threads: [], timeline: [ '交接1', '交接2' ], ledger: { O_COPPER: [Object] } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

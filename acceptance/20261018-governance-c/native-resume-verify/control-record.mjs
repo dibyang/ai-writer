@@ -1,0 +1,15 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {call,read,write,dir,work,state,sha} from './helpers.mjs';
+const s=read(path.join(dir,'session-access.json')), change=read(path.join(dir,'control-change.json'));
+const input=read(path.join(s.workspace,'.writer/drafts/native-three-replay6-pending.json'));
+const base=read(path.join(work,'.writer/revisions',s.id,'base-state.json')), oldJournal=read(path.join(work,base.units[5].journal));
+assert.equal(input.summary,base.units[5].summary);assert.deepEqual(input.changes,read(path.join(dir,'../native-revise-apply/inputs/replay-6-reviewed.json')).changes);assert.ok(Array.isArray(oldJournal.patch));
+const ref='审查/native-three-第6章重登核读.md';
+write(path.join(s.workspace,ref),`# 第6章控制措辞重登核读\n\n第三独立原生Codex，知情模型实读，synthetic-acceptance。完整读第6章1–44行，回读当前第5章及原journal、base-state和人物/骨架/卷契约/细纲。\n\n唯一变化：${change.before} → ${change.after}\n\n理由：${change.reason}\n\n当前正文SHA256：${change.after_sha256}。这是工程验收控制，不是已证明的文学优化。\n\n- summary：原摘要逐句对照签单、交钥匙、搬箱、旧伞承认、缠柄和吃面，全部仍在，无须改摘要。\n- characters：林禾、周梅在场行动及当前所知未变；老邵不在场，不增加5–6后续知识。\n- timeline：第三天十点至午间，事件先后不变；又/再都仅表达预防重卡，没有新增卡住事件。\n- ledger：箱和纸样归周梅改衣摊，钥匙在她围裙内钥匙圈，旧簿归老邵，签单留林禾。16项事实及观察statement不变；R_LISTEN partial，T_PATTERN/T_FUTURE intentional-open。\n- evidence：本章9条原引文逐条在真实正文出现，未涉及唯一改字句；旧引文文字不动，record自动绑定第6章新全文SHA。O_KEY第5章正确新句仍是b819ba...第25行，1–5证据不改。正文/来源原哈希由replay-input获取，没有手动刷新消费哈希。\n- downstream：6是已登记末章，无第7章；完整尾段就是本章。第5章委托暂存到第6章真实递接的承接不变。主稿完整六章还需提交后重新连读，旧verified不能自动有效。\n\n主稿仍保持旧字节，候选summary/changes与base-state原登记及原journal深度相等。六项checked_fields是本次实际核查记录，不是自动草案带来的结论。卷契约/权威旧控制保留文字属于历史授权，后阶段正式取舍已正式修复，不改原设定来掩盖历史。\n\n真人语言别扭句：真人语言硬问题：没有。四项自然度核读未发现新增摩擦；等价措辞没有提升或降低关系状态。仅模型自检，不是盲读、市场或产品发布验收。\n`);
+input.replay_review={reviewer:'native-three independent Codex; informed actual chapter reading; synthetic-acceptance',report:ref,draft_sha256:sha(fs.readFileSync(path.join(s.workspace,input.draft))),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+write(path.join(s.workspace,'.writer/drafts/native-three-replay6-reviewed.json'),input);
+const preview=call('native-three-20-preview6',['record-preview','--revision-token',s.token],{project:s.workspace,input});
+assert.equal(preview.ok,true);
+call('native-three-21-record6',['record','--revision-token',s.token],{project:s.workspace,input});
+call('native-three-22-branch-check',['check','--revision-token',s.token],{project:s.workspace});
+console.log(JSON.stringify({main:state().revision,branch:state(s.workspace).revision}));

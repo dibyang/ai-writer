@@ -4,7 +4,32 @@
 
 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
 
-**协议选择：** 0.5 新作品默认 schema 4，用 changes 差量登记；schema 2/3 同样用 changes，schema 1 才用完整 snapshot。下方 snapshot 和主稿 rewind 示例是旧协议兼容说明。schema 4 分卷仍需 long-enable；历史修订须独立区和事务提交。新作品初始仅允许讨论/规划，正文须有限授权。版本/影响/修订的输入及恢复说明见 [专项手册](revision-and-sources.md)。
+**协议选择：** 0.6新作品默认schema5，2/3/4/5均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4/5历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)及[跨章/登记/意见手册](review-and-registration.md)。
+
+## 本批C：预览、跨章复核和意见
+
+```powershell
+node bin/ai-writer.mjs long-enable-preview --project "作品目录"
+node bin/ai-writer.mjs record-preview --project "作品目录" --input "实际登记输入.json"
+node bin/ai-writer.mjs review-template --project "作品目录" --from 1 --to 6 --out .writer/drafts/review-1-6.json
+node bin/ai-writer.mjs review-issues list --project "作品目录"
+```
+
+上例1–6须确有六章；模板不是模型判断。完成实际连读后填report、operation_id、chapter_functions与comparison及可选issues，再把该JSON传review。原单位SHA已生成，不能手填假值。功能字段observed用text/evidence，unknown或none用reason；比较每章均有引文。意见类型correctness/continuity/readability/optional_style，后者只能severity=suggestion。
+
+resolve需expected_revision、operation_id、id、disposition（adopted/retained/deferred）、reason、decision_actor。author沿用本页完整author_evidence；agent-within-authorized-scope传当前workflow事件的authorization={ref,sha256}，采用须revise覆盖意见范围。只是记录意见不改变正文授权。
+
+按授权在独立区完成实改和完整尾段复核并提交，apply再传expected_revision、operation_id、id、实际commit_id和reason；verify再传当前有效review_ref、reviewer、conclusion=resolved/not-resolved及reason。保留不能标修复，无实际对应改稿不能applied，原文/依赖再变后显示needs-recheck并保留旧链。各意见动作都会推进revision，不复用旧context哈希。
+
+schema5独立区rewind后生成修订草案：
+
+```powershell
+node bin/ai-writer.mjs revision replay-input --project "实际独立workspace" --unit 5 --revision-token "本地令牌" --out .writer/drafts/replay-5.json
+```
+
+恢复旧summary/changes并填当前路径和来源；须实读新稿、旧证据及下游，修正失效引文，填写replay_review的reviewer、审查/下report、draft_sha256和六项checked_fields：summary/characters/timeline/ledger/evidence/downstream。模板保持待核，不自动确认无变化。out只写新内部JSON，不覆盖，不作正式来源，不改变state；活跃主修订时应在所属独立区带令牌操作。不同会话凭status、可读草案和意见ID恢复，不手查UUID材料。
+
+已有schema4只读review-workflow preview；enable须expected_revision和author_evidence，备份升5后旧0.5解析器拒绝，新主入口继续操作；1/2/3先按已有治理/保护流程。本批不更新随附工具。
 
 ## 初始化
 

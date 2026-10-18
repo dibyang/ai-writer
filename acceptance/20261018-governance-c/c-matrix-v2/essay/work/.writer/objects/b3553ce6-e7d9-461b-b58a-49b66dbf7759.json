@@ -1,0 +1,89 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_CHECK",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001.md",
+          "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/8dff14c1-377b-4a5e-b019-61df260fbb44.json",
+        "review_sha256": "696dfcca75efb63085c42c8640e0036d7ecdcc4ac0f414f137ffd98a4433e5ff",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/34c292f0-ca13-4ab9-83fc-72e1cde13ec8.json",
+          "sha256": "6a429d98b062a4e4272e8d11c6fb649abf517cd1e38ad080058088a2d438f4fc"
+        },
+        {
+          "ref": ".writer/objects/5955657c-9815-403b-b69f-e95d3fe11b36.json",
+          "sha256": "c7c2f9b4abe941250273ad71060d145d1bcd6fd5a1c7bd61b30e47cc57ea9b70"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6ef3e7ba-52e9-4324-b458-ecda81b51799.json",
+          "sha256": "9de4a18658183c1fd8b519b3ea42f339afe7ad593ddc5e29d629ef6cf1f5d482"
+        },
+        "disposition": "adopted",
+        "reason": "合成处置，不冒充作者逐条决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "5cbead8fd41bdb3f0dd00132dd0fef660751d36b98bf1dd4e7de8af0245a27e8"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "ad560c64-9e75-4f26-895b-1fe2c3239ab2",
+        "commit_binding": {
+          "ref": ".writer/objects/ad560c64-9e75-4f26-895b-1fe2c3239ab2.json",
+          "sha256": "c4a229c4ca592534570290cebf5ca33cbc7fde34f5424c2db9f2223758fb92ef"
+        },
+        "transaction_id": "db4671a6-3436-4545-9696-f6ce3d8d6df9",
+        "reason": "实际事务字节变化已绑定",
+        "changes": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "before": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "after": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "d503bb1472dc084de2f5bf5e4b43d387f1e44e5c841deb9438b5437839e629ee",
+            "dependency": "37bc117a31c5c43e62a8998b7f07bbb773661292eda7167f58e276472867d2fb"
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}

@@ -1,0 +1,54 @@
+*** Begin Patch
+*** Update File: D:/work/other/ai-writer/lib/review-workflow.mjs
+@@
+   function enabled(p){if(p.state.schema_version<5)fail('REVIEW_WORKFLOW_REQUIRED','结构化复核和意见闭环需要schema 5；先review-workflow preview，再按作者授权显式enable。旧作品不自动迁移');}
++  function issueScope(p,units){const scope=revisionInfo(p.root)?.scope;if(scope&&units.some(unit=>unit<scope.from||unit>scope.through))fail('REVISION_SCOPE_INVALID','意见新增或处置超出独立修订会话范围；扩展实读不等于扩大处置范围');}
+@@
+-      const ref=`.writer/reviews/${crypto.randomUUID()}.json`;fs.mkdirSync(safe(root,'.writer/reviews'),{recursive:true});
++      issueScope(p,issues.flatMap(issue=>issue.evidence.map(e=>e.unit)));
++      const ref=`.writer/reviews/${crypto.randomUUID()}.json`;fs.mkdirSync(safe(root,'.writer/reviews'),{recursive:true});
+@@
+-  function mutate(root,input,kind,allowed,build){keys(input,['expected_revision','operation_id','id',...allowed],kind);return withLock(root,()=>{const p=project(root);enabled(p);const op=operation(p,input);if(op.old)return {...op.old,unchanged:true};fresh(p);if(!id(input.id)||!Object.hasOwn(p.state.review_workflow.issues,input.id))fail('REVIEW_ISSUE_UNKNOWN','意见ID不存在');const previous=p.state.review_workflow.issues[input.id],{binding,...old}=previous;const update=build(p,old),issue={...old,...update,history:[...old.history,binding]};const next=event(p,{issue,...(update.resolution?.author_evidence?{author_evidence:update.resolution.author_evidence}:{})});p.state.review_workflow.issues[input.id]={...issue,binding:next};return save(p,input,op,{id:input.id,status:issue.status,event:next});});}
++  function mutate(root,input,kind,allowed,build){keys(input,['expected_revision','operation_id','id',...allowed],kind);return withLock(root,()=>{const p=project(root);enabled(p);const op=operation(p,input);if(op.old)return {...op.old,unchanged:true};fresh(p);if(!id(input.id)||!Object.hasOwn(p.state.review_workflow.issues,input.id))fail('REVIEW_ISSUE_UNKNOWN','意见ID不存在');const previous=p.state.review_workflow.issues[input.id],{binding,...old}=previous;issueScope(p,old.evidence.map(e=>e.unit));const update=build(p,old),issue={...old,...update,history:[...old.history,binding]};const next=event(p,{issue,...(update.resolution?.author_evidence?{author_evidence:update.resolution.author_evidence}:{})});p.state.review_workflow.issues[input.id]={...issue,binding:next};return save(p,input,op,{id:input.id,status:issue.status,event:next});});}
+@@
+-  function resolve(root,input){return mutate(root,input,'resolve',['disposition','reason','decision_actor','author_evidence','authorization'],(p,issue)=>{if(!['adopted','retained','deferred'].includes(input.disposition))fail('REVIEW_TRANSITION_INVALID','处置须adopted/retained/deferred');string(input.reason,'reason');const who=actor(p,input,issue);return {status:input.disposition,resolution:{...who,reason:input.reason,basis_units:basis(p,issue.evidence.map(e=>e.unit))},application:null,verification:null};});}
++  function resolve(root,input){
++    return mutate(root,input,'resolve',['disposition','reason','decision_actor','author_evidence','authorization'],(p,issue)=>{
++      if(!['adopted','retained','deferred'].includes(input.disposition))fail('REVIEW_TRANSITION_INVALID','处置须adopted/retained/deferred');
++      string(input.reason,'reason');
++      const previousChoice=issue.resolution?.author_choice??(issue.resolution?.decision_actor==='author'?{disposition:issue.resolution.disposition??(['retained','deferred'].includes(issue.status)?issue.status:'adopted'),evidence:issue.resolution.author_evidence}:null);
++      if(input.decision_actor==='agent-within-authorized-scope'&&previousChoice&&input.disposition!==previousChoice.disposition)fail('REVIEW_AUTHOR_CHOICE_REQUIRED','作者明确采用/保留/延期不能被一般修订授权替换；沿用原选择或登记作者的新明确原话');
++      const who=actor(p,input,issue),author_choice=who.decision_actor==='author'?{disposition:input.disposition,evidence:who.author_evidence}:previousChoice;
++      return {status:input.disposition,resolution:{...who,disposition:input.disposition,reason:input.reason,author_choice,basis_units:basis(p,issue.evidence.map(e=>e.unit))},application:null,verification:null};
++    });
++  }
+@@
+-  function verify(root,input){return mutate(root,input,'verify',['review_ref','reviewer','conclusion','reason'],(p,issue)=>{if(!['applied','verified','needs-recheck'].includes(issue.status)||!issue.application)fail('REVIEW_TRANSITION_INVALID','须先绑定实际修改，再核查新版本');if(!current(p,issue.application.after_units))fail('REVIEW_VERSION_CHANGED','应用后正文或来源又变化，先按新基线重新处置/修订');if(!['resolved','not-resolved'].includes(input.conclusion))fail('REVIEW_INPUT_INVALID','复核结论须resolved/not-resolved');string(input.reviewer,'reviewer');string(input.reason,'reason');const r=reviewStatus(p,true).current_records.find(r=>r.ref===input.review_ref);if(!r||issue.application.after_units.some(u=>u.unit<r.from||u.unit>r.to))fail('REVIEW_CURRENT_READING_REQUIRED','需要覆盖意见章节的当前有效模型实读记录，不拼接旧短评');return {status:input.conclusion==='resolved'?'verified':'needs-recheck',verification:{review_ref:input.review_ref,review_sha256:digest(p.root,input.review_ref),reviewer:input.reviewer,conclusion:input.conclusion,reason:input.reason,units:basis(p,r.units.map(u=>u.unit))}};});}
++  function verify(root,input){
++    return mutate(root,input,'verify',['review_ref','reviewer','conclusion','reason'],(p,issue)=>{
++      if(!['applied','verified','needs-recheck'].includes(issue.status)||!issue.application)fail('REVIEW_TRANSITION_INVALID','须先绑定实际修改，再核查新版本');
++      if(!p.state.committed_revisions.some(binding=>same(binding,issue.application.commit_binding)))fail('REVIEW_PUBLICATION_UNKNOWN','原实际修改提交已不在当前作品历史中，不能凭意见状态虚构修复');
++      if(!['resolved','not-resolved'].includes(input.conclusion))fail('REVIEW_INPUT_INVALID','复核结论须resolved/not-resolved');
++      string(input.reviewer,'reviewer');string(input.reason,'reason');
++      const r=reviewStatus(p,true).current_records.find(r=>r.ref===input.review_ref);
++      if(!r||issue.application.after_units.some(u=>u.unit<r.from||u.unit>r.to))fail('REVIEW_CURRENT_READING_REQUIRED','需要覆盖意见章节的当前有效模型实读记录，不拼接旧短评');
++      return {status:input.conclusion==='resolved'?'verified':'needs-recheck',verification:{review_ref:input.review_ref,review_sha256:digest(p.root,input.review_ref),reviewer:input.reviewer,conclusion:input.conclusion,reason:input.reason,rechecked_context:!current(p,issue.application.after_units),application_commit_id:issue.application.commit_id,revision_session:revisionInfo(p.root)?.id??null,units:basis(p,r.units.map(u=>u.unit))}};
++    });
++  }
+*** Update File: D:/work/other/ai-writer/lib/workspace.mjs
+@@
+   if(!object(value))return {ok:false,scope:'record-input-preview',findings:[{code:'INVALID_INPUT',field:'input',message:'登记输入须是对象'}]};
++  if(Number.isSafeInteger(value.unit)&&value.unit>=1){try{governance.gate(p,governance.unitAction(p,value.unit),value.unit);}catch(error){findings.push({code:error.code??'ACTION_OUT_OF_SCOPE',message:error.message});}}
+*** Update File: D:/work/other/ai-writer/lib/longform.mjs
+@@
+-    const valid = records.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
++    const unpublished = records.filter(r => r.structured && p.state.review_workflow?.reports?.[r.ref] !== hash(fs.readFileSync(safe(p.root,r.ref))));
++    const indexed = records.filter(r => !unpublished.includes(r));
++    const valid = indexed.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
+@@
+-    const current = new Set(valid), stale = records.filter(r => !current.has(r));
++    const current = new Set(valid), stale = indexed.filter(r => !current.has(r));
+@@
+-    return { valid: valid.length, stale: stale.length, stale_with_current_coverage: covered,
++    return { valid: valid.length, stale: stale.length, unpublished_records:unpublished.map(r=>r.ref), stale_with_current_coverage: covered,
+*** End Patch

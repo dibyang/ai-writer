@@ -1,0 +1,61 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_WAIT",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002.md",
+          "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "deferred",
+      "origin": {
+        "review_ref": ".writer/reviews/e405588e-ca17-4ea6-8afe-3cc7b4c3e55e.json",
+        "review_sha256": "0de9cbbf4fbb8e28d40faba832d7a059d4e1aee17cd04036f173a85315f7c12a",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "dependency": "9ce3e6d5317e1b6111aff909fa2fdadb0147a0bb41bc99b6a3929b200d904579"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/2f0820e9-2986-4699-82c4-1d55b40cb73d.json",
+          "sha256": "1df6effdda93e3d7a1c10d38d148daaa1da5d4b62567a4b3b9d5f8b47dea31d0"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6f8087e7-ecd4-443f-82fb-a45184eb4512.json",
+          "sha256": "ea1d937546b8cea695cb80b5e1c4fbb85e0690b901e8370f285e6ed053b7f6ce"
+        },
+        "disposition": "deferred",
+        "reason": "合成处置，不冒充作者逐条决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002.md",
+            "sha256": "94ae6ff9a3278f51461eda98731bd8a6f37403e5909fa0a92434f7d19a5462d7",
+            "dependency": "9ce3e6d5317e1b6111aff909fa2fdadb0147a0bb41bc99b6a3929b200d904579"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

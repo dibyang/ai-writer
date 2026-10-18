@@ -1,0 +1,14 @@
+{
+  "line": 217,
+  "event": {
+    "type": "item.completed",
+    "item": {
+      "id": "item_111",
+      "type": "command_execution",
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"import fs from 'node:fs';import assert from 'node:assert/strict';import {read,dir,work,sha} from './acceptance/20261018-governance-c/native-resume-verify/helpers.mjs';const m=read(dir+'/delivery-manifest.json');for(const f of m.files){assert.equal(sha(fs.readFileSync(f.path)),f.sha256,f.path);}const h=read(dir+'/handoff.json');assert.equal(sha(fs.readFileSync(h.state.path)),h.state.sha256);for(const k of ['verification','command_index'])assert.equal(sha(fs.readFileSync(h[k].path)),h[k].sha256);console.log(JSON.stringify({delivery_files_verified:m.files.length,state_sha256:h.state.sha256,revision:h.revision,body_han:h.total_body_han,issues:h.issues.map(i=>({id:i.id,status:i.effective_status})),no_chapter7:h.no_chapter7}));\\\"\"",
+      "aggregated_output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: D:/work/other/ai-writer/acceptance/20261018-governance-c/native-resume-verify/events.jsonl\r\n+ actual - expected\r\n\r\n+ '1ae54b8739d792cd8141cd961fbbe658d6d0e5c6ed96d8813906ddd1e2906042'\r\n- '0c2986c1cb1d7dafa40954e5718911003f3241b6e3a778fb61e52606fcc653d7'\r\n\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:243\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: '1ae54b8739d792cd8141cd961fbbe658d6d0e5c6ed96d8813906ddd1e2906042',\r\n  expected: '0c2986c1cb1d7dafa40954e5718911003f3241b6e3a778fb61e52606fcc653d7',\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n",
+      "exit_code": 1,
+      "status": "failed"
+    }
+  }
+}

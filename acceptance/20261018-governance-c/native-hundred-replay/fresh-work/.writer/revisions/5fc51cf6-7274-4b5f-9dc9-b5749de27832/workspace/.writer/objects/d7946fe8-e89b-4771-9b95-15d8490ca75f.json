@@ -1,0 +1,36 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "FRESH_C_TYPO",
+      "type": "correctness",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "受控样本：小车车多了一个车，正文只需删除一次重复字。",
+      "suggestion": "只删连续两个车中的一个；保留完整句义、人物和全部其他字节。",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-空车归你.md",
+          "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+          "line": 15,
+          "quote": "顾宁把小车车推到许姨手边，松开了握着车把的手。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/19aadfde-3618-4a56-a0cf-7bb00a09256a.json",
+        "review_sha256": "c0357f6fb5599c2c0eee4bd50003735763efdba8553f751cc44435623e26b3a5",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-空车归你.md",
+            "sha256": "6ac6517c7f7b314666d8db3aeff75a72649cc0cdc97e61c206786e618007315f",
+            "dependency": "c586c74a54302e085becceb9ebd1cf1d2a45e6fe000c70377059897670d6f5ef"
+          }
+        ]
+      },
+      "history": []
+    }
+  }
+}

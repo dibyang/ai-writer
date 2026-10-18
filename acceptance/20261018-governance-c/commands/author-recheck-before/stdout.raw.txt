@@ -1,0 +1,123 @@
+✖ 修订分支不能在更宽讨论授权下处置声明范围外的旧意见 (1542.4491ms)
+✖ 可在分支扩展连读范围，但不能借该报告新增范围外意见 (1435.7976ms)
+✖ 登记预览在空摘要时也先呈现当前暂停范围，不诱导越权补写下一章 (1024.2781ms)
+✖ 结构化审查state发布失败留下的孤儿记录不能计作已完成覆盖 (1328.2656ms)
+✖ 作者明确保留不能被代理同名重记后借一般润色授权改成采用 (1226.197ms)
+✖ 新版本实读可重新复核已修复意见，不为登记闭环再制造一次正文改动 (5738.1598ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12393.6325
+
+✖ failing tests:
+
+test at tests\review-scope.test.mjs:12:1
+✖ 修订分支不能在更宽讨论授权下处置声明范围外的旧意见 (1542.4491ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:17:1
+✖ 可在分支扩展连读范围，但不能借该报告新增范围外意见 (1435.7976ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:19:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:22:1
+✖ 登记预览在空摘要时也先呈现当前暂停范围，不诱导越权补写下一章 (1024.2781ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.findings.some(f=>f.code==='ACTION_OUT_OF_SCOPE'))
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:26:35)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:28:1
+✖ 结构化审查state发布失败留下的孤儿记录不能计作已完成覆盖 (1328.2656ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:34:43)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:36:1
+✖ 作者明确保留不能被代理同名重记后借一般润色授权改成采用 (1226.197ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:40:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\review-scope.test.mjs:43:1
+✖ 新版本实读可重新复核已修复意见，不为登记闭环再制造一次正文改动 (5738.1598ms)
+  Error: 应用后正文或来源又变化，先按新基线重新处置/修订
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:56:68)
+      at fail (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:11:37)
+      at file:///D:/work/other/ai-writer/lib/review-workflow.mjs:97:308
+      at file:///D:/work/other/ai-writer/lib/review-workflow.mjs:88:468
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:95:161)
+      at mutate (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:88:127)
+      at Object.verify (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:97:38)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:614:180)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at rereadAndVerify (file:///D:/work/other/ai-writer/tests/review-scope.test.mjs:47:290) {
+    code: 'REVIEW_VERSION_CHANGED'
+  }

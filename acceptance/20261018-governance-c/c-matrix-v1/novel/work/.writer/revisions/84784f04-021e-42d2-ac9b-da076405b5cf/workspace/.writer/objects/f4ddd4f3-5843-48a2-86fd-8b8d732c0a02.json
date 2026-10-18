@@ -1,0 +1,59 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_STYLE",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "合成流程意见，不是实际读稿发现",
+      "suggestion": "只验证取舍和版本绑定",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001.md",
+          "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+          "line": 3,
+          "quote": "本页只演练合成输入的字段边界。"
+        }
+      ],
+      "status": "retained",
+      "origin": {
+        "review_ref": ".writer/reviews/28e16689-2ae9-4993-9d7f-2c8192d7e90f.json",
+        "review_sha256": "440d107c55bc7eb817be584104f008ce83112862dfbdad8338121b0d29d33258",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "e3643cac6cb937cb275bdf22eb5a64e10f971e2fbe849ae039180920064d7341"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/5eb81a46-78be-4e94-9ad7-8e79d58919e9.json",
+          "sha256": "3228f1b432747fceb8ecb3bf7df54912c321628e3d481121a8c6abd2465f0e06"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/9916c41d-7361-40c0-8a97-1df45a66389d.json",
+          "sha256": "eb55be53c2435cfb3fec0b7a6af015c2cf46625a2de40798e37c4a49c257f1d0"
+        },
+        "reason": "合成处置，不冒充作者逐条决定",
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "08ba0d91c7016629945686b3a8b9bce7581eb727464f741799fc96e353941f37",
+            "dependency": "e3643cac6cb937cb275bdf22eb5a64e10f971e2fbe849ae039180920064d7341"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

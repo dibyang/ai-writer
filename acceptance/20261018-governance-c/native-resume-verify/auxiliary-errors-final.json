@@ -1,0 +1,33 @@
+{
+  "helper": {
+    "source_event_line": 154,
+    "source_item_id": "item_78",
+    "original_output": {
+      "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/native-resume-verify/aux-error-original-aggregated-output.raw.txt",
+      "bytes": 13996,
+      "sha256": "80e68ac1d92ef7201936469bed07d335888ffd0176c28a7990104db70bc61eef"
+    },
+    "full_original_recovered": true,
+    "reproduction_exact_bytes_equal": true,
+    "reproduction": {
+      "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/native-resume-verify/aux-error-reproduction.stderr.raw.txt",
+      "bytes": 13996,
+      "sha256": "80e68ac1d92ef7201936469bed07d335888ffd0176c28a7990104db70bc61eef"
+    },
+    "product_calls_before_failure": 0,
+    "cause": "Auxiliary comparison incorrectly accessed journal.changes; actual journal has patch array",
+    "remedy": "No product changes; read original patch and compare original reviewed changes; formal rewind/replay/preview/record binds v2 report, old records kept"
+  },
+  "final_audit": {
+    "original_output": {
+      "path": "D:/work/other/ai-writer/acceptance/20261018-governance-c/native-resume-verify/aux-live-log-audit-error.raw.txt",
+      "bytes": 997,
+      "sha256": "c3be76900346c293b92611e7ff5c2e347d19af4b16ed3de86960189713104991"
+    },
+    "source_event_line": 217,
+    "cause": "Outer process events.jsonl is append-only while this process runs; it changed after provisional manifest observation",
+    "product_state_unchanged": true,
+    "remedy": "Retain provisional manifest, exclude runtime-owned live streams from static manifest, preserve observed byte prefixes and hashes separately"
+  },
+  "note": "events.jsonl is this current process transcript, read from file; no messages sent to another session or subagent."
+}

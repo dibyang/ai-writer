@@ -1,0 +1,14 @@
+import {run,put,read,state,fresh,stage} from './harness.mjs';import path from 'node:path';import {populate} from './fresh-review-data.mjs';
+const b=read(path.join(stage,'fresh-session.json')),p=b.workspace;
+const r=populate(read(path.join(stage,'fresh-tail-review-template.json')),{id:'native-four-fresh-tail-review',report:'审查/native-four-修订尾段2.md',phase:'重登后完整实读第2章'});
+r.chapter_functions=r.chapter_functions.filter(x=>x.unit===2);r.comparison.similar_structures=[];r.comparison.distinct_gains=['第2章完整实读：12元真实支付，车还许姨；一字删除不改变任何行动、时间、人物所知和关系。'];r.comparison.limits='修订后重登之后再次完整实读第2章，覆盖尾段2–2；第1章按此前完整实读对照且正文不改。本分支只登记2章功能，不登记/处置第1章意见。';
+put(path.join(p,r.report),'# 修订区第2章完整尾段实读\n\n'+JSON.stringify(r,null,2)+'\n\n已逐段再次实读：柜内纸、12元支付、存码、18:56回店、修正后的完整交车句、装扇、袜跟、茶约、19点分路与末段家钥匙/挂面。与旧增量逐项相符。真人语言别扭句：真人语言硬问题：没有；可选第1章表达不在本分支处置。控制重复字只删一字，未来计划未被登记成已做。\n');
+put(path.join(stage,'fresh-tail-functions.json'),r);
+run('fresh-tail-review',['review','--revision-token',b.token],p,r);
+run('fresh-prepare',['revision','prepare'],fresh,{id:b.id,token:b.token});
+put(path.join(stage,'fresh-commit.json'),run('fresh-commit',['revision','commit'],fresh,{id:b.id,token:b.token}));
+put(path.join(stage,'fresh-commit-repeat.json'),run('fresh-commit-idempotent',['revision','commit'],fresh,{id:b.id,token:b.token}));
+const binding=state(fresh).committed_revisions.at(-1),proof=read(path.join(fresh,binding.ref));put(path.join(stage,'fresh-publication.json'),proof);
+console.log(JSON.stringify(proof));
+put(path.join(stage,'fresh-apply-result.json'),run('fresh-apply-typo',['review-issues','apply'],fresh,{expected_revision:state(fresh).revision,operation_id:'native-four-fresh-apply-typo',id:'FRESH_C_TYPO',commit_id:proof.id,reason:'实际主作品事务已提交，2章正文只删一个车，绑定采用时旧稿和当前新稿；不是分支候选。'}));
+put(path.join(stage,'fresh-current-review-template.json'),run('fresh-current-review-template',['review-template','--from','1','--to','2'],fresh));
