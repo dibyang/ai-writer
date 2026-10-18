@@ -1,0 +1,9 @@
+本轮只读辅助脚本第一次核验失败，非产品调用失败。
+命令：node acceptance/20261018-governance-b/native-four/export-audit.mjs
+退出码：1
+报错：TypeError: Cannot read properties of undefined (reading 'slice')
+位置：export-audit.mjs 原第11行 JSON.stringify(raw.manifest).slice(0,1000)
+原因：辅助脚本误把原生stdout返回当作带manifest嵌套字段；实际完整清单在units，manifest.json另存于导出目录。
+影响：无作品状态或产品文件修改；失败前只读产品stdout并打印观测。
+修复：只改本阶段export-audit.mjs，完整解析raw与manifest.json，逐项核对所有返回字段/100个units及source_hashes、总稿hash、100篇正文和原始字节补充导出。
+重试：同名辅助脚本成功，证据为export-verification.json；没有重跑/覆盖已保存的产品调用native-four-29-export。

@@ -1,0 +1,58 @@
+✔ 默认schema4且真实旧0.4解析器拒绝，原状态不变 (566.5749ms)
+✔ 固定旧版本后未来新增不废旧章，下一章消费新版本及冻结输入 (995.4096ms)
+✔ 不能将当前变化的来源追认为旧输入，旧未绑定消费者仍阻断 (712.6252ms)
+✔ 从真实旧字节补绑保留原哈希，影响预览只读且过期/未决报告不发布 (726.1462ms)
+✔ 会话隔离、旁路写拒绝、错误所有者拒绝；命令恢复不刷新基线 (1917.8802ms)
+✔ 并行候选A提交后B全局CAS冲突，双方稿件保留 (2965.6282ms)
+✔ prepare后锁外改候选被拒绝；主稿第三方字节冲突不覆盖 (1663.3142ms)
+✔ 历史影响stage持久阻断，取消保留版本及历史，不伪造已修复 (1034.287ms)
+✔ 实际进程提交中断：普通读写拒绝，明确授权处理遗留锁后完整恢复 (2166.2757ms)
+✔ 中断恢复遇第三方字节保留三方，并可在未改目标时回滚原集 (2033.2613ms)
+✔ 历史版本在隔离区发布并完整重登：旧章前缀仍旧版，模型复核后一次业务提交 (3374.6058ms)
+✖ 已冻结的细纲从版本读取，活动入口删除不伪造来源漂移 (546.2544ms)
+✖ 显式移交只改协作元数据，不制造主基线漂移；旧所有者令牌失效 (1332.2824ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 11
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20137.0278
+
+✖ failing tests:
+
+test at tests\protection.test.mjs:95:1
+✖ 已冻结的细纲从版本读取，活动入口删除不伪造来源漂移 (546.2544ms)
+  Error: 第 1 单元还没有细纲：大纲/单元/0001.json
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:51:68)
+      at contextPacket (file:///D:/work/other/ai-writer/lib/workspace.mjs:295:52)
+      at context (file:///D:/work/other/ai-writer/lib/workspace.mjs:288:10)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:560:28)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/protection.test.mjs:99:59)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12) {
+    code: 'PLAN_REQUIRED',
+    file: '大纲/单元/0001.json',
+    next_action: '先按 plan --help 准备细纲 JSON，保存细纲后再读取 context。',
+    next_command: "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' plan '--project' 'D:\\work\\other\\ai-writer\\.tmp\\protection-GPEg4G\\work' '--input' 'D:\\work\\other\\ai-writer\\.tmp\\protection-GPEg4G\\work\\.writer\\plan-input.json'"
+  }
+
+test at tests\protection.test.mjs:101:1
+✖ 显式移交只改协作元数据，不制造主基线漂移；旧所有者令牌失效 (1332.2824ms)
+  Error: 主作品业务或相关文件/工具已变化；保留本分支和新主稿，须实读新基线后另建会话，不自动合并
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:51:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at parentUnchanged (file:///D:/work/other/ai-writer/lib/revisions.mjs:88:54)
+      at withLock.coordination (file:///D:/work/other/ai-writer/lib/revisions.mjs:160:46)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:161)
+      at Object.prepare (file:///D:/work/other/ai-writer/lib/revisions.mjs:158:42)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:533:126)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at prepare (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:52:48)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/protection.test.mjs:106:44) {
+    code: 'BASELINE_CONFLICT'
+  }

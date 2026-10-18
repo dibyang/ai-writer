@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "published": "VOLUME2_V2_FROM2",
+  "from": 2,
+  "analysis": {
+    "schema_version": 1,
+    "revision": 35,
+    "state_sha256": "1d67f3a653d209635bd243c090ae7402fbc3e7ba4a734c1bfc9e29541e2480cc",
+    "version_id": "VOLUME2_V2_FROM2",
+    "ref": "大纲/分卷/V2.json",
+    "from": 2,
+    "mode": "future",
+    "candidate_sha256": "1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a",
+    "direct_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "大纲/分卷/V2.json",
+        "version_id": "VOLUME2_V1",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": null,
+    "possible_indirect_through": null,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a.source": "1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+    "review": {
+      "report": "审查/第二会话-计划版本-volume2.md",
+      "report_sha256": "3dabb9372ada00530f6442cd9a46eccd0ff8b4b98574bc70d8fb7e3e1b61f363",
+      "readings": {
+        ".writer/objects/1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a.source": "1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a"
+      },
+      "conclusion": "实读旧V2与候选：4–6范围、印痕解释与私信回收不变；第5章退三枚、禁止逆改1章。旧V2事件保留；候选从2生效，4–6尚待实际修改重登，不作事实。",
+      "unresolved": [],
+      "frozen_report": ".writer/objects/3dabb9372ada00530f6442cd9a46eccd0ff8b4b98574bc70d8fb7e3e1b61f363.txt"
+    }
+  },
+  "original_hashes_preserved": true,
+  "revision": 36,
+  "event": {
+    "ref": ".writer/objects/d7744219-15ad-4603-8558-2be2ebedd962.json",
+    "sha256": "0d893cd691d37ef812ca6d0e97248cef59dff0ee6661cf527bb13fb2fce40356"
+  }
+}

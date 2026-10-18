@@ -1,0 +1,127 @@
+{
+  "ok": true,
+  "calls": 8,
+  "rows": [
+    {
+      "label": "hundred-rebuild-v2-1-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 3935,
+      "environment": {},
+      "code": "BASELINE_CONFLICT"
+    },
+    {
+      "label": "hundred-rebuild-v2-2-revision",
+      "args": [
+        "revision",
+        "abort"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 160,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "hundred-rebuild-v2-3-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 14497,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "hundred-rebuild-v2-4-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "100",
+        "--expected-revision",
+        "376",
+        "--revision-token",
+        "556242bfcf4e665d78500ac174fb7a3edc764a8adc2c657cbe2c5b8bff91fb87"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work\\.writer\\revisions\\ba9e9e55-5aab-49f7-a6bc-c29b0ab4d8bd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 1137,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "hundred-rebuild-v2-5-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "100",
+        "--draft",
+        "正文/0100-念到这一页的末尾.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work\\.writer\\revisions\\ba9e9e55-5aab-49f7-a6bc-c29b0ab4d8bd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 5379,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "hundred-rebuild-v2-6-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "556242bfcf4e665d78500ac174fb7a3edc764a8adc2c657cbe2c5b8bff91fb87"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work\\.writer\\revisions\\ba9e9e55-5aab-49f7-a6bc-c29b0ab4d8bd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 4137,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "hundred-rebuild-v2-7-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "556242bfcf4e665d78500ac174fb7a3edc764a8adc2c657cbe2c5b8bff91fb87"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work\\.writer\\revisions\\ba9e9e55-5aab-49f7-a6bc-c29b0ab4d8bd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 3220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "hundred-rebuild-v2-8-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\scale-hundred\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 15130,
+      "environment": {},
+      "code": null
+    }
+  ],
+  "old_build_refused": true,
+  "previous_candidate_preserved": true,
+  "parent_state_unchanged": true,
+  "body_changes": 0,
+  "fact_changes": 0,
+  "prepared_changes": 5,
+  "prepare_ms": 15130
+}

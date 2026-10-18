@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { fileURLToPath } from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const before=JSON.parse(fs.readFileSync(path.join(base,'protected-before.json')));
+const final=JSON.parse(fs.readFileSync(path.join(base,'protected-final.json')));
+assert.equal(before.root,final.root); assert.deepEqual(before.files,final.files);
+const result={ok:true,scope:'after all four native Codex processes completed; every regular file including .git',root:final.root,before_files:before.files.length,final_files:final.files.length,differences:[]};
+fs.writeFileSync(path.join(base,'protected-final-comparison.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));

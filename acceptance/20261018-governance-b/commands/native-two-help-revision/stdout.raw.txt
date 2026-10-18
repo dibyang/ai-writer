@@ -1,0 +1,11 @@
+ai-writer 0.5.0 / revision
+独立修订区覆盖实读、改稿和重登；begin 不推进业务修订号。候选写命令带 --revision-token 所有者令牌。prepare 要完整尾段重登及一次模型实读复核；commit 全局 CAS、多文件事务、state 最后替换。中断后普通读写暂停，显式 recover；第三方字节冲突保留三方。不自动抢锁；unlock 仅处理有明确授权与匹配哈希、且原进程已结束的遗留锁。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' revision list|begin|resume|abort|transfer|prepare|commit|recover|unlock --project 主作品目录 [--input 修订.json]
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

@@ -1,0 +1,71 @@
+{
+  "ok": false,
+  "error": "本轮任务“六章三枚押钱修订、完整尾段复核及事务提交已完成；暂停正文，仅讨论后续结构，等待新的有限正文授权，不写第七章”不允许 draft 7–7；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' record-template '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "六章三枚押钱修订、完整尾段复核及事务提交已完成；暂停正文，仅讨论后续结构，等待新的有限正文授权，不写第七章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "完成本轮六章修订后暂停正文；第七章及以后没有正文授权",
+        "后续具体剧情仍待作者选择；不因next_unit=7自动续写"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "第七章起具体剧情与新借验是否出现"
+        ],
+        "reason": "六章已完成，后续剧情待讨论，不以规则发布代替剧情选择"
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

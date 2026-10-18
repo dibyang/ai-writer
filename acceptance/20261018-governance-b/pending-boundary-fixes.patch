@@ -1,0 +1,61 @@
+*** Begin Patch
+*** Update File: D:/work/other/ai-writer/lib/sources.mjs
+@@
+   function resolve(p, ref, unit) {
++    assertReference(p, ref);
+@@
+   function validate(p) {
+@@
+-    for (const row of p.state.units) for (const [ref, binding] of Object.entries(row.source_bindings ?? {})) { if (!binding || !Object.hasOwn(row.source_hashes, ref)) fail('SOURCE_CORRUPT', '消费来源缺少原哈希'); consumedFile(p, row, ref, row.source_hashes[ref]); }
++    for (const row of p.state.units) {
++      for (const ref of Object.keys(row.source_hashes ?? {})) assertReference(p, ref);
++      for (const [ref, binding] of Object.entries(row.source_bindings ?? {})) { if (!binding || !Object.hasOwn(row.source_hashes, ref)) fail('SOURCE_CORRUPT', '消费来源缺少原哈希'); consumedFile(p, row, ref, row.source_hashes[ref]); }
++    }
++    const commits = new Set();
++    for (const binding of p.state.committed_revisions) {
++      const c = readEvent(p, binding);
++      if (!c.id || commits.has(c.id) || c.nature !== 'revision-commit-not-literary-acceptance' || !/^[a-f0-9]{64}$/.test(c.branch_head_sha256 ?? '')) fail('SOURCE_CORRUPT', '修订提交清单损坏或重复');
++      integer(c.base_revision, 'base_revision', 0); integer(c.scope?.from, 'scope.from'); integer(c.scope?.through, 'scope.through', c.scope.from); commits.add(c.id);
++    }
+   }
++  function assertReference(p, ref) {
++    if (p.state.schema_version === 4 && /^\.writer\/(?:revisions|transactions|lock-recoveries)(?:\/|$)|^\.writer\/(?:revision-workspace\.json|write\.lock)$/i.test(ref)) fail('REVISION_PRIVATE_REFERENCE', '内部修订/事务路径不能成为正式消费来源；材料移至作品研究或设定目录，禁止发布分支路径');
++  }
+*** Update File: D:/work/other/ai-writer/lib/revisions.mjs
+@@
+-  function baseline(root, s) { const base = json(safe(root, `.writer/revisions/${s.id}/base.json`), stateLimit); if (base.project_id !== s.project_id || base.build_id !== s.build_id) fail('REVISION_CORRUPT', '基线身份不符'); return base; }
++  function baseline(root, s) { const base = json(safe(root, `.writer/revisions/${s.id}/base.json`), stateLimit); if (base.project_id !== s.project_id || base.build_id !== s.build_id || !same(base.scope, s.scope)) fail('REVISION_CORRUPT', '基线身份或声明范围不符'); return base; }
+@@
+-    keys(input, ['expected_revision', 'owner', 'from', 'through', 'parallel_candidate']);
++    keys(input, ['expected_revision', 'owner', 'from', 'through', 'parallel_candidate', 'adopt_existing_changes', 'author_evidence']);
+@@
+-      gate(p, 'revise', input.from, through); fresh(p, { allowImpact: true }); string(input.owner, 'owner', 300);
++      gate(p, 'revise', input.from, through); string(input.owner, 'owner', 300);
++      if (input.adopt_existing_changes !== undefined && typeof input.adopt_existing_changes !== 'boolean') fail('REVISION_INPUT_INVALID', 'adopt_existing_changes 必须是布尔值');
++      const existing = api.inspectIntegrity(p); let adoptionProof = null;
++      if (input.adopt_existing_changes === true) {
++        journal.verify(root, p.state);
++        const earliest = Math.min(...existing.stale_units, ...existing.changed_sources.map(x => x.unit));
++        if (input.from > earliest) fail('REVISION_SCOPE_INVALID', '声明范围未覆盖已发生修改的最早消费者');
++        adoptionProof = input.author_evidence; keys(adoptionProof, ['quote', 'local_source', 'source_sha256', 'locator', 'recorded_by']);
++        string(adoptionProof.quote, 'quote'); string(adoptionProof.locator, 'locator'); string(adoptionProof.recorded_by, 'recorded_by');
++        const file = safe(root, adoptionProof.local_source);
++        if (digest(root, adoptionProof.local_source) !== adoptionProof.source_sha256 || !text(file).includes(adoptionProof.quote)) fail('AUTHOR_EVIDENCE_MISMATCH', '收纳已有修改的授权与本地来源不符');
++      } else fresh(p, { allowImpact: true });
+@@
+-      const base = { project_id: p.state.project_id, revision: p.state.revision, build_id: loadedBuild, scope: { from: input.from, through }, extra, files: inventory(root, extra) };
++      const base = { project_id: p.state.project_id, revision: p.state.revision, build_id: loadedBuild, scope: { from: input.from, through }, extra, existing_changes: existing, files: inventory(root, extra) };
+@@
+       metadata(root, `${directory}/base.json`, base, true); storeBytes(root, `${directory}/base-state.json`, bytes(root, '.writer/state.json'), true);
++      if (adoptionProof) {
++        storeBytes(root, `${directory}/adoption-author.txt`, bytes(root, adoptionProof.local_source), true);
++        metadata(root, `${directory}/adoption.json`, { evidence: adoptionProof, existing_changes: existing, note: '当前字节与原追踪分别保留；不宣称找回或追认旧输入' }, true);
++      }
+@@
+-      saveSession(root, s); return { ok: true, id, token, owner: s.owner, scope: s.scope, workspace: safe(root, workspaceRef), base_revision: base.revision,
++      saveSession(root, s); return { ok: true, id, token, owner: s.owner, scope: s.scope, workspace: safe(root, workspaceRef), base_revision: base.revision, existing_changes: existing,
+*** Update File: D:/work/other/ai-writer/lib/workspace.mjs
+@@
+-  runtimeFiles: RUNTIME_FILES, toolRoot: ROOT, getToken: () => revisionAccessToken, reviewStatus: p => longform.reviewStatus(p, true) });
++  runtimeFiles: RUNTIME_FILES, toolRoot: ROOT, getToken: () => revisionAccessToken, reviewStatus: p => longform.reviewStatus(p, true), inspectIntegrity: p => ({ stale_units: drift(p), changed_sources: changedSources(p) }) });
+*** End Patch

@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const stage=path.resolve('acceptance/20261018-governance-b/native-four');
+const base=path.dirname(stage),root=path.join(base,'scale-hundred/work');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const state=read(path.join(root,'.writer/state.json'));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const write=(name,v)=>fs.writeFileSync(path.join(stage,name+'.json'),JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const evidenceRef='研究/native-four-模拟验证授权.md';
+const author_evidence={quote:'本场景模拟作者授权：允许在这个独立百章副本做工具版本/修订验证，只对第100章进行字节和事实等价重登；不写第101章，不改变既有剧情或前99章。',local_source:evidenceRef,source_sha256:sha(fs.readFileSync(path.join(root,evidenceRef))),locator:'本轮任务本地转录，第6行',recorded_by:'Codex native-four（模拟验证）'};
+const [mode]=process.argv.slice(2);
+if(mode==='freeze')write('freeze',{expected_revision:state.revision,operation_id:'native-four-freeze-rules',ref:'设定/权威规则.md',version_id:'HUNDRED_RULES_NATIVE_FOUR_100',previous:'HUNDRED_RULES_BASE'});
+else if(mode==='workflow')write('workflow',{expected_revision:state.revision,operation_id:'native-four-scope-100-only',author_evidence,workflow:{...state.governance,stage:'outline',task:'模拟验证：只对第100章字节与事实等价重登；不写101',authorization:{allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:100,to:100},stop_conditions:['只对100–100等价重登；正文和事实不变','完成后暂停，不写101']}}});
+else if(mode==='impact')write('impact',{version_id:'HUNDRED_RULES_NATIVE_FOUR_100',from:100,mode:'historical'});
+else if(mode==='stage') {
+ const impact=read(path.join(base,'commands/native-four-09-impact/stdout.raw.txt')).impact;
+ const report='审查/native-four-规则同字节历史影响.md';
+ for(const [ref,h]of Object.entries(impact.required_readings))if(sha(fs.readFileSync(path.join(root,ref)))!==h)throw Error('reading changed: '+ref);
+ write('stage',{expected_revision:state.revision,operation_id:'native-four-stage-historical-100',author_evidence,impact,review:{report,report_sha256:sha(fs.readFileSync(path.join(root,report))),readings:impact.required_readings,conclusion:'已实读旧新同字节规则及95–100；仅安排新版身份从100生效，无事实变化，100–100等价重登；不代表全百章文学通过。',unresolved:[]}});
+} else if(mode==='begin')write('begin',{expected_revision:state.revision,owner:'native-four-real-model',from:100,through:100});
+else throw Error(mode);

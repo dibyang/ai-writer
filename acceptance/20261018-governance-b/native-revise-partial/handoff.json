@@ -1,0 +1,829 @@
+{
+  "validation_session": "native-two-independent-codex-session",
+  "synthetic_authorization": true,
+  "project": "D:/work/other/ai-writer/acceptance/20261018-governance-b/works/铜桥来信",
+  "phase_directory": "D:/work/other/ai-writer/acceptance/20261018-governance-b/native-revise-partial",
+  "kind": "novel",
+  "title": "铜桥来信",
+  "schema_version": 4,
+  "stop_status": "partial-revision-stopped-after-unit-3-no-prepare-no-commit",
+  "id": "b035e525-797d-4f5f-8d7d-fffa8113cfb6",
+  "token": "661d0fa72744ec658d3e8b157acf7afe063d667aba0a37eda5a9adb3f1e7c5d8",
+  "workspace": "D:/work/other/ai-writer/acceptance/20261018-governance-b/works/铜桥来信/.writer/revisions/b035e525-797d-4f5f-8d7d-fffa8113cfb6/workspace",
+  "base_revision": 28,
+  "session_status": "editing",
+  "session_sha256": "20ea6a630e71b81835e8e976b5eb9a88995911669235f4bc5788725bd9bcc1e9",
+  "main_revision": 28,
+  "main_state_sha256": "ad49c0d50c2e79c1f3c0342ae91b67c29483304e9aedd25e57150f7480a46596",
+  "main_start_revision": 24,
+  "main_start_state_sha256": "71acee060b057f38cd31b9a075163e6b6297839d577fb54f74a4f63238e13c18",
+  "branch_revision": 39,
+  "branch_state_sha256": "1ba4518afcced838deb33f96a9f36ca518ec977945b1efb65c22fc90b64ba54d",
+  "semantic_change_range": {
+    "from": 2,
+    "through": 6
+  },
+  "revision_scope": {
+    "from": 1,
+    "through": 6
+  },
+  "conservative_prefix": {
+    "from": 1,
+    "through": 1,
+    "reason": "stage根据同一规则最早直接消费者要求1–6；依用户消费关系指令保守复核，正文与RULES_V1保留",
+    "issue": "stage-scope-reproduction.md"
+  },
+  "reregistered_range": {
+    "from": 1,
+    "through": 3
+  },
+  "actually_changed_body_units": [
+    2,
+    3
+  ],
+  "next_unit": 4,
+  "unregistered_old_tail": [
+    4,
+    5,
+    6
+  ],
+  "author_evidence": {
+    "quote": "本次修改仅限独立作品《铜桥来信》：从第二章开始，押钱改为三枚，第五章退回三枚，核对所有提及和后果；第一章仍保留当时旧规则。授权从实际最早影响章至第六章建立独立修订区，处理人物所知、铜片和缺角印的连续性，保持核心情节、人物声音和原有伏笔回收，不加新阴谋。本次会话只完成修订前半程，到第三章登记后停止并交接；主稿保留到下一会话完成全部尾段复核与事务提交。完成整轮修订后暂停正文，不写第七章。",
+    "local_source": "研究/第二会话-合成作者修订原话.md",
+    "source_sha256": "3d200eff63ef0aad6d767776f47851ff722c7954c235c9303de94e47e76cebb3",
+    "locator": "本次用户消息中“本验证场景的模拟作者新指令”的完整引文；无可用消息ID，不编造",
+    "recorded_by": "native-two-independent-codex-session"
+  },
+  "parent_pending": [
+    {
+      "id": "7a56e371-5a27-42e1-81fa-aa2b9522a520",
+      "version_id": "RULES_V3_FROM2",
+      "from": 1,
+      "through": 6,
+      "requested_from": 2,
+      "analysis_binding": {
+        "ref": ".writer/objects/7ede9623-ce49-43c6-b730-2db74f04104f.json",
+        "sha256": "9916acc2211d454291cc247e73633d63589d5fd119783407fe317078c3d451cd"
+      }
+    }
+  ],
+  "branch_pending_display": [],
+  "branch_pending_meaning": "区内publish仅分支解决；主pending持续至完整尾段事务提交，不得cancel",
+  "main_versions": {
+    "POSITION_V1": {
+      "id": "POSITION_V1",
+      "ref": "设定/作品定位.md",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+      "previous": null,
+      "format": "md"
+    },
+    "STYLE_V1": {
+      "id": "STYLE_V1",
+      "ref": "设定/文风.md",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+      "previous": null,
+      "format": "md"
+    },
+    "RULES_V1": {
+      "id": "RULES_V1",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+      "previous": null,
+      "format": "md"
+    },
+    "VOLUME1_V1": {
+      "id": "VOLUME1_V1",
+      "ref": "大纲/分卷/V1.json",
+      "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+      "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+      "previous": null,
+      "format": "json"
+    },
+    "VOLUME2_V1": {
+      "id": "VOLUME2_V1",
+      "ref": "大纲/分卷/V2.json",
+      "object_ref": ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source",
+      "sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+      "previous": null,
+      "format": "json"
+    },
+    "RULES_V2_FROM7": {
+      "id": "RULES_V2_FROM7",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source",
+      "sha256": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+      "previous": "RULES_V1",
+      "format": "md"
+    },
+    "RULES_V3_FROM2": {
+      "id": "RULES_V3_FROM2",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15.source",
+      "sha256": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+      "previous": "RULES_V2_FROM7",
+      "format": "md"
+    }
+  },
+  "main_effective_ranges": [
+    {
+      "ref": "设定/作品定位.md",
+      "version_id": "POSITION_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/文风.md",
+      "version_id": "STYLE_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "version_id": "RULES_V1",
+      "from": 1,
+      "to": 6
+    },
+    {
+      "ref": "大纲/分卷/V1.json",
+      "version_id": "VOLUME1_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "大纲/分卷/V2.json",
+      "version_id": "VOLUME2_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "version_id": "RULES_V2_FROM7",
+      "from": 7,
+      "to": null
+    }
+  ],
+  "branch_versions": {
+    "POSITION_V1": {
+      "id": "POSITION_V1",
+      "ref": "设定/作品定位.md",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+      "previous": null,
+      "format": "md"
+    },
+    "STYLE_V1": {
+      "id": "STYLE_V1",
+      "ref": "设定/文风.md",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+      "previous": null,
+      "format": "md"
+    },
+    "RULES_V1": {
+      "id": "RULES_V1",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+      "previous": null,
+      "format": "md"
+    },
+    "VOLUME1_V1": {
+      "id": "VOLUME1_V1",
+      "ref": "大纲/分卷/V1.json",
+      "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+      "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+      "previous": null,
+      "format": "json"
+    },
+    "VOLUME2_V1": {
+      "id": "VOLUME2_V1",
+      "ref": "大纲/分卷/V2.json",
+      "object_ref": ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source",
+      "sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+      "previous": null,
+      "format": "json"
+    },
+    "RULES_V2_FROM7": {
+      "id": "RULES_V2_FROM7",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source",
+      "sha256": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+      "previous": "RULES_V1",
+      "format": "md"
+    },
+    "RULES_V3_FROM2": {
+      "id": "RULES_V3_FROM2",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15.source",
+      "sha256": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+      "previous": "RULES_V2_FROM7",
+      "format": "md"
+    },
+    "SKELETON_V2_FROM2": {
+      "id": "SKELETON_V2_FROM2",
+      "ref": "大纲/全书大纲.md",
+      "object_ref": ".writer/objects/0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb.source",
+      "sha256": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb",
+      "previous": null,
+      "format": "md"
+    },
+    "VOLUME1_V2_FROM2": {
+      "id": "VOLUME1_V2_FROM2",
+      "ref": "大纲/分卷/V1.json",
+      "object_ref": ".writer/objects/124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb.source",
+      "sha256": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb",
+      "previous": "VOLUME1_V1",
+      "format": "json"
+    },
+    "VOLUME2_V2_FROM2": {
+      "id": "VOLUME2_V2_FROM2",
+      "ref": "大纲/分卷/V2.json",
+      "object_ref": ".writer/objects/1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a.source",
+      "sha256": "1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a",
+      "previous": "VOLUME2_V1",
+      "format": "json"
+    }
+  },
+  "branch_effective_ranges": [
+    {
+      "ref": "设定/作品定位.md",
+      "version_id": "POSITION_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/文风.md",
+      "version_id": "STYLE_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "version_id": "RULES_V1",
+      "from": 1,
+      "to": 1
+    },
+    {
+      "ref": "大纲/分卷/V1.json",
+      "version_id": "VOLUME1_V1",
+      "from": 1,
+      "to": 1
+    },
+    {
+      "ref": "大纲/分卷/V2.json",
+      "version_id": "VOLUME2_V1",
+      "from": 1,
+      "to": 1
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "version_id": "RULES_V3_FROM2",
+      "from": 2,
+      "to": null
+    },
+    {
+      "ref": "大纲/全书大纲.md",
+      "version_id": "SKELETON_V2_FROM2",
+      "from": 2,
+      "to": null
+    },
+    {
+      "ref": "大纲/分卷/V1.json",
+      "version_id": "VOLUME1_V2_FROM2",
+      "from": 2,
+      "to": null
+    },
+    {
+      "ref": "大纲/分卷/V2.json",
+      "version_id": "VOLUME2_V2_FROM2",
+      "from": 2,
+      "to": null
+    }
+  ],
+  "version_interval_summary": {
+    "parent": [
+      "RULES_V1:1–6=两枚",
+      "RULES_V2_FROM7:7起=三枚（仍是主稿未来安排）",
+      "RULES_V3_FROM2仅已freeze/stage，主稿未生效"
+    ],
+    "branch": [
+      "RULES_V1:1–1，旧报价两枚",
+      "RULES_V3_FROM2:2起持续三枚",
+      "原RULES_V2_FROM7未来生效区间被v3替代，但旧版本和事件保留"
+    ]
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-铜片的耳.md",
+      "original_sha256": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+      "current_branch_sha256": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+      "current_branch_body_han": 657,
+      "registered_in_branch": true,
+      "source_hashes": {
+        "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+        ".writer/state.json": "63fec9f2e722656d6064949870af2f43397ef4a670ca9d0f959e25ecbeb23178",
+        "大纲/单元/0001.json": "70c6df8a34c27b3636245ba0f371087b7384999089460cba04b3e6c4ce8f3fc8",
+        "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+        "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+        "设定/权威规则.md": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "大纲/全书大纲.md": "c99f90e27ec8804790bda4cfedc4a22649e8ecab6fe8562be97d4b9d06846bec",
+        "大纲/分卷/V1.json": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+      },
+      "source_bindings": {
+        "设定/作品定位.md": {
+          "version_id": "POSITION_V1",
+          "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+          "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+        },
+        "设定/文风.md": {
+          "version_id": "STYLE_V1",
+          "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+          "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+        },
+        "设定/权威规则.md": {
+          "version_id": "RULES_V1",
+          "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+          "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+        },
+        "大纲/分卷/V1.json": {
+          "version_id": "VOLUME1_V1",
+          "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+          "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+        }
+      }
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-两枚押钱.md",
+      "original_sha256": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553",
+      "current_branch_sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+      "current_branch_body_han": 769,
+      "registered_in_branch": true,
+      "source_hashes": {
+        "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+        ".writer/state.json": "045c7b9c9bdc8ae30bebdbd2cb618e9d9a9260a0fac29dd7adc2f2c14d4214e8",
+        "大纲/单元/0002.json": "8c37a42eb901ebf95c680f1e4cb348fcbf066274a15351c0001fbe82692b2e5b",
+        "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+        "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+        "设定/权威规则.md": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+        "大纲/全书大纲.md": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb",
+        "大纲/分卷/V1.json": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb",
+        "正文/0001-铜片的耳.md": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176"
+      },
+      "source_bindings": {
+        "设定/作品定位.md": {
+          "version_id": "POSITION_V1",
+          "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+          "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+        },
+        "设定/文风.md": {
+          "version_id": "STYLE_V1",
+          "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+          "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+        },
+        "设定/权威规则.md": {
+          "version_id": "RULES_V3_FROM2",
+          "object_ref": ".writer/objects/c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15.source",
+          "sha256": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15"
+        },
+        "大纲/全书大纲.md": {
+          "version_id": "SKELETON_V2_FROM2",
+          "object_ref": ".writer/objects/0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb.source",
+          "sha256": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb"
+        },
+        "大纲/分卷/V1.json": {
+          "version_id": "VOLUME1_V2_FROM2",
+          "object_ref": ".writer/objects/124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb.source",
+          "sha256": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb"
+        }
+      }
+    },
+    {
+      "unit": 3,
+      "draft": "正文/0003-缺掉的一角.md",
+      "original_sha256": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9",
+      "current_branch_sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+      "current_branch_body_han": 652,
+      "registered_in_branch": true,
+      "source_hashes": {
+        "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+        ".writer/state.json": "86fbb6cd53263bea6719d8bad8d9a24e22c4a5fb62210b5af105971921be13c8",
+        "大纲/单元/0003.json": "eaadc55f737997a3e77aeb63c345a8121155923d645ea85b60e6d55f28d2086c",
+        "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+        "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+        "设定/权威规则.md": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+        "大纲/全书大纲.md": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb",
+        "大纲/分卷/V1.json": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb",
+        "正文/0002-两枚押钱.md": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828"
+      },
+      "source_bindings": {
+        "设定/作品定位.md": {
+          "version_id": "POSITION_V1",
+          "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+          "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+        },
+        "设定/文风.md": {
+          "version_id": "STYLE_V1",
+          "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+          "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+        },
+        "设定/权威规则.md": {
+          "version_id": "RULES_V3_FROM2",
+          "object_ref": ".writer/objects/c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15.source",
+          "sha256": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15"
+        },
+        "大纲/全书大纲.md": {
+          "version_id": "SKELETON_V2_FROM2",
+          "object_ref": ".writer/objects/0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb.source",
+          "sha256": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb"
+        },
+        "大纲/分卷/V1.json": {
+          "version_id": "VOLUME1_V2_FROM2",
+          "object_ref": ".writer/objects/124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb.source",
+          "sha256": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb"
+        }
+      }
+    },
+    {
+      "unit": 4,
+      "draft": "正文/0004-柳婆的抽屉.md",
+      "original_sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+      "current_branch_sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+      "current_branch_body_han": 601,
+      "registered_in_branch": false
+    },
+    {
+      "unit": 5,
+      "draft": "正文/0005-旧印归柜.md",
+      "original_sha256": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+      "current_branch_sha256": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+      "current_branch_body_han": 686,
+      "registered_in_branch": false
+    },
+    {
+      "unit": 6,
+      "draft": "正文/0006-信纸背面.md",
+      "original_sha256": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+      "current_branch_sha256": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+      "current_branch_body_han": 674,
+      "registered_in_branch": false
+    }
+  ],
+  "preservation": {
+    "same_main_units": true,
+    "same_main_snapshot": true,
+    "same_main_since_begin": true,
+    "main_six_body_bytes_unchanged": true,
+    "branch_1_4_5_6_body_bytes_unchanged": true,
+    "branch_registered_units": [
+      1,
+      2,
+      3
+    ]
+  },
+  "cas_baseline": {
+    "checked": 102,
+    "all_match": true,
+    "changed": []
+  },
+  "current_ledger_file": "current-ledger.json",
+  "branch_current_ledger_ids": [
+    "OBJ_COPPER",
+    "THREAD_LETTER",
+    "FACT_DEPOSIT",
+    "OBS_NOTCH",
+    "THREAD_NOTCH"
+  ],
+  "branch_current_facts": {
+    "copper": {
+      "type": "object",
+      "statement": "母亲旧棉袄中发现的折耳、浅划痕铜凭",
+      "status": "active",
+      "cast": [
+        "阿禾",
+        "周叔"
+      ],
+      "tags": [
+        "铜片",
+        "物证"
+      ],
+      "custody": {
+        "holder": "周叔",
+        "location": "旧库旧柜上层借验匣，已扣锁",
+        "condition": "连原净布暂存；折耳浅痕未改；未结清归档"
+      },
+      "reader_known": "由阿禾交周叔锁匣暂存，未带去柳婆处",
+      "character_known": {
+        "阿禾": "亲交铜片并试锁，知道仅暂存、押钱仍未退",
+        "周叔": "亲接铜片锁匣，须等验印再结归档"
+      },
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-铜片的耳.md",
+          "sha256": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+          "line": 3,
+          "quote": "铜片的耳向内折着，正面有一条斜斜的浅划痕"
+        },
+        {
+          "unit": 1,
+          "draft": "正文/0001-铜片的耳.md",
+          "sha256": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+          "line": 31,
+          "quote": "阿禾重新包好铜片，放进贴身衣袋。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 19,
+          "quote": "周叔接过铜片，放在柜内的白布上。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 27,
+          "quote": "周叔把铜片交还阿禾，让她当面对照。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 27,
+          "quote": "她用原来的净布包好，系进腰间的小布袋，收紧袋口。"
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-缺掉的一角.md",
+          "sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+          "line": 27,
+          "quote": "阿禾把铜片交给周叔。"
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-缺掉的一角.md",
+          "sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+          "line": 27,
+          "quote": "周叔连净布收入旧柜上层的借验匣，写下暂存，扣锁后让她试拉了一下。"
+        }
+      ],
+      "introduced_unit": 1,
+      "updated_unit": 3,
+      "previous_holder": "阿禾"
+    },
+    "deposit": {
+      "type": "fact",
+      "statement": "本次借验押钱为三枚，归凭退还三枚",
+      "status": "active",
+      "cast": [
+        "阿禾",
+        "周叔"
+      ],
+      "tags": [
+        "押钱"
+      ],
+      "due_unit": 5,
+      "reader_known": "本次借验实缴三枚；铜片仅锁匣暂存，三枚尚未退，须归档结清",
+      "character_known": {
+        "阿禾": "持三枚收条，亲交铜片并试锁，知道暂存尚不结清，未退三枚",
+        "周叔": "收过三枚并开条，铜片已锁匣暂存，未作归档或退款"
+      },
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 7,
+          "quote": "写着“借验押钱三枚”。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 13,
+          "quote": "她把钱绳又解开，另取一枚，和洗净的两枚并排放到窗台上。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 13,
+          "quote": "周叔将三枚押钱逐枚数过"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 13,
+          "quote": "写明“收押三枚，归凭退还”。"
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-缺掉的一角.md",
+          "sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+          "line": 27,
+          "quote": "铜片还没算归档，收条上的三枚押钱也仍在柜面等着结清。"
+        }
+      ],
+      "introduced_unit": 2,
+      "updated_unit": 3
+    },
+    "observation": {
+      "type": "observation",
+      "statement": "待核封套方印右下角缺一块，旧页印样也右下缺角，大小相近",
+      "status": "active",
+      "cast": [
+        "阿禾",
+        "周叔"
+      ],
+      "tags": [
+        "缺角印"
+      ],
+      "reader_known": "实见两处右下缺角，相似不能证明仿印或揭封",
+      "character_known": {
+        "阿禾": "亲见两处相似缺角；描样取自旧页，不是封套拓印",
+        "周叔": "亲见封套及旧页印样，暂不能断缺角成因"
+      },
+      "evidence": [
+        {
+          "unit": 3,
+          "draft": "正文/0003-缺掉的一角.md",
+          "sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+          "line": 7,
+          "quote": "封口压着方印，右下角空了一块，露出纸本来的黄。"
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-缺掉的一角.md",
+          "sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+          "line": 13,
+          "quote": "印样的右下也缺了一小块，大小相近。"
+        }
+      ],
+      "introduced_unit": 3,
+      "updated_unit": 3
+    },
+    "notch": {
+      "type": "thread",
+      "statement": "查清缺角印来由以及待核封套能否领取",
+      "status": "pending",
+      "cast": [
+        "阿禾",
+        "周叔"
+      ],
+      "tags": [
+        "缺角印"
+      ],
+      "due_unit": 5,
+      "reader_known": "拟问修过印匣的柳婆，尚无解释",
+      "character_known": {
+        "阿禾": "知道可找柳婆问印；不知道修补或仿印缘由",
+        "周叔": "知道旧包曾因疑仿印搁置，只建议问柳婆"
+      },
+      "evidence": [
+        {
+          "unit": 3,
+          "draft": "正文/0003-缺掉的一角.md",
+          "sha256": "2632f35bbe947ef9f7c5873104952f0e126cc9616df7af84bc8298b5b23fa880",
+          "line": 19,
+          "quote": "柳婆修过柜锁，也修过印匣。她还留着旧东西，能问问。"
+        }
+      ],
+      "introduced_unit": 3,
+      "updated_unit": 3
+    },
+    "letter": {
+      "type": "thread",
+      "statement": "母亲名下候领的迟信",
+      "status": "pending",
+      "cast": [
+        "阿禾",
+        "周叔"
+      ],
+      "due_unit": 6,
+      "reader_known": "旧簿有候字，信件尚未领取",
+      "character_known": {
+        "阿禾": "见母亲名下候字，不知道信的内容",
+        "周叔": "知道旧柜号，尚未现场查信"
+      },
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-铜片的耳.md",
+          "sha256": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+          "line": 23,
+          "quote": "母亲的名字后头添着一个小小的“候”字，旁边还有旧柜号。"
+        }
+      ],
+      "tags": [],
+      "introduced_unit": 1,
+      "updated_unit": 1
+    }
+  },
+  "remaining_work": [
+    {
+      "unit": 4,
+      "draft": "正文/0004-柳婆的抽屉.md",
+      "original_sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+      "locations": [
+        "全文保留候选旧稿，逐章实读后重新登记；不因没有金额字样跳过"
+      ],
+      "required": "柳婆只见旧页描样、听阿禾转述封套；不得预知三枚押钱、铜片保管或修印已确证。试纸由柳婆自己拿。"
+    },
+    {
+      "unit": 5,
+      "draft": "正文/0005-旧印归柜.md",
+      "original_sha256": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+      "locations": [
+        {
+          "line": 23,
+          "quote": "从原借验号木格取出两枚押钱",
+          "proposed": "改为三枚押钱"
+        },
+        {
+          "line": 23,
+          "quote": "写下“二枚已退”",
+          "proposed": "改为三枚已退"
+        },
+        {
+          "line": 23,
+          "quote": "她数过，正好两枚",
+          "proposed": "改为正好三枚"
+        },
+        {
+          "line": 23,
+          "quote": "交出去时洗亮的孔边",
+          "proposed": "限定为原先洗净的两枚；第2章新增第三枚未洗，不能当三枚都洗亮"
+        }
+      ],
+      "required": "保留原印封回柜底、周叔布囊带封套上坡；铜片从暂存转归档留锁匣。OBS_NOTCH statement不可改；用FACT_STAMP_REPAIR记录复验结论。FACT_DEPOSIT三枚退款结清，柳婆本章才亲见退款。"
+    },
+    {
+      "unit": 6,
+      "draft": "正文/0006-信纸背面.md",
+      "original_sha256": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+      "locations": [
+        {
+          "line": 3,
+          "quote": "把退回的两枚钱放进米缸旁的小碟",
+          "proposed": "改为三枚钱"
+        }
+      ],
+      "required": "人物状态、摘要、时间线及FACT_DEPOSIT同步三枚。铜片仍留旧柜；私信仅阿禾知道，周叔柳婆不知内容；鞋样夹旧册，回信放敞盒未寄。"
+    }
+  ],
+  "already_updated_planning": [
+    "全书骨架候选从2生效（第1章仍读旧入口）",
+    "V1/V2候选版本从2生效，JSON卷范围仍为1–3/4–6",
+    "第2/5/6章细纲通过真实plan修改；5/6为计划，正文尚未改/重登"
+  ],
+  "unfinished_tasks": [
+    "实际复读第4–6章原稿及已更新细纲和冻结卷契约，再逐章必要修改、context/template/record；不复用旧模板",
+    "在新候选完整登记至6后，再完整连读修订尾段1–6，核对人物知情、所有金额、铜片交接及缺角印回收",
+    "保存并正式review新报告；当前3份旧审查已失效，1–3滚动复核也未正式登记",
+    "全部复核后才在主作品prepare/commit原session；不得刷新CAS基线或复制主state进分支",
+    "事务完成后按既有明确指令将主任务转为暂停正文/结构讨论，不写第7章"
+  ],
+  "next_session_recovery": [
+    "先读本handoff、阶段report、原根handoff/report以及实际正文与输入，不用摘要代读",
+    "从主项目CLI明确--project主作品，先status、revision list核对session为editing、revision28和主state哈希",
+    "使用本地resume-input.json通过真实revision resume恢复同一id/token/workspace；不要新begin、transfer、更新随附工具或改base",
+    "主稿或工具变化时保留候选，按产品冲突流程处理，不手改哈希或基线",
+    "恢复后所有正文/章纲/账本写入只在workspace并带--revision-token；从4继续，不写7"
+  ],
+  "resume_input": "resume-input.json",
+  "actual_reading_evidence": [
+    "readings/parent-six-original.md",
+    "readings/old-consumed-inputs.md",
+    "readings/historical-required-readings.md",
+    "readings/branch-before-rewind-six.md",
+    "readings/branch-required-skeleton.md",
+    "readings/branch-required-volume1.md",
+    "readings/branch-required-volume2.md",
+    "readings/chapter2-after-edit.md",
+    "readings/branch-final-1-3.md"
+  ],
+  "raw_evidence": {
+    "command_index": "command-index.json",
+    "denials": "denial-invariance.json",
+    "body_before": "parent-before-body-fingerprints.json",
+    "body_after": "parent-after-body-fingerprints.json",
+    "branch_status": "branch-status.json",
+    "parent_cas": "parent-cas-baseline-check.json",
+    "old_versions": "old-version-preservation.json"
+  },
+  "unresolved_author_choices": [
+    "第7章后具体剧情及新借验是否出现仍未选，本轮无正文授权"
+  ],
+  "limitations": [
+    "模型同会话知情实读，不是文学或真人验收",
+    "本轮有计划/协议保守范围行为需复核，未改源码",
+    "分支check ok只覆盖3章且有未登记4–6及失效审查，不表示整轮可提交",
+    "未测试跨机/共享盘、断电/中断恢复或发布平台，未执行Git操作"
+  ]
+}

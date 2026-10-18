@@ -1,0 +1,105 @@
+{
+  "unit": 2,
+  "expected_revision": 14,
+  "source_hashes": {
+    "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+    ".writer/state.json": "1f1ed833739ae1cbee21ed46c72809d3738cfa08e243dc9d57a4f041ea562fc1",
+    "大纲/单元/0002.json": "aeabc3f6099abfbdfc9442f07f6402811e4648d63905f327feceddb7f5995876",
+    "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+    "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+    "设定/权威规则.md": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+    "大纲/全书大纲.md": "c99f90e27ec8804790bda4cfedc4a22649e8ecab6fe8562be97d4b9d06846bec",
+    "大纲/分卷/V1.json": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+    "正文/0001-铜片的耳.md": "90f06c062f6eff70a20d3465b7be9fe6fb2c8a03a283851181d1d186153c6a77"
+  },
+  "draft": "正文/0002-两枚押钱.md",
+  "source_bindings": {
+    "设定/作品定位.md": {
+      "version_id": "POSITION_V1",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+    },
+    "设定/文风.md": {
+      "version_id": "STYLE_V1",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+    },
+    "设定/权威规则.md": {
+      "version_id": "RULES_V1",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+    },
+    "大纲/分卷/V1.json": {
+      "version_id": "VOLUME1_V1",
+      "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+      "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+    }
+  },
+  "summary": "次晨阿禾缴两枚押钱，取得归凭退还二枚的收条。周叔接铜片在白布上核折耳浅痕、登记后交回；阿禾包好系腰袋，与带簿钥匙的周叔下坡查旧柜，得知母亲曾来询信并替周叔缝钥匙绳。",
+  "changes": {
+    "characters": {
+      "阿禾": "下坡去旧柜；持铜片和二枚押钱收条；知道归凭即退钱、母亲曾来问信，未见旧信",
+      "周叔": "陪阿禾下坡；持旧簿钥匙；经手登记铜片后已交还阿禾"
+    },
+    "timeline_append": [
+      "次晨：阿禾缴押二枚；铜片阿禾交周叔验记后交回阿禾；两人下坡查柜"
+    ],
+    "ledger": {
+      "OBJ_COPPER": {
+        "custody": {
+          "holder": "阿禾",
+          "location": "腰间系紧的小布袋",
+          "condition": "原净布包裹；折耳浅痕核对未改"
+        },
+        "reader_known": "周叔柜内白布核验并画样后交还，铜片正带往旧柜",
+        "character_known": {
+          "阿禾": "看见周叔验记且接回，铜片折耳浅痕未改",
+          "周叔": "亲自验记后交还阿禾，知道她系入腰袋"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "周叔接过铜片，放在柜内的白布上。"
+          },
+          {
+            "unit": 2,
+            "quote": "周叔把铜片交还阿禾，让她当面对照。"
+          },
+          {
+            "unit": 2,
+            "quote": "她用原来的净布包好，系进腰间的小布袋，收紧袋口。"
+          }
+        ]
+      },
+      "FACT_DEPOSIT": {
+        "type": "fact",
+        "statement": "本次借验押钱为两枚，归凭退还两枚",
+        "status": "active",
+        "cast": [
+          "阿禾",
+          "周叔"
+        ],
+        "tags": [
+          "押钱"
+        ],
+        "due_unit": 5,
+        "reader_known": "已缴二枚，收条明确归凭退还；尚未退款",
+        "character_known": {
+          "阿禾": "亲缴两枚并持收条，知道归凭即退，领信另记",
+          "周叔": "亲收两枚入借验号木格，已开二枚收条"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "quote": "她把两枚押钱逐枚放到窗台上。"
+          },
+          {
+            "unit": 2,
+            "quote": "写明“收押二枚，归凭退还”。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

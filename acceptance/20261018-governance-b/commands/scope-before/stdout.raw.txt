@@ -1,0 +1,26 @@
+✖ 声明修订会话范围不得借更宽作者授权越界回退 (910.6848ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1006.1641
+
+✖ failing tests:
+
+test at tests\revision-boundaries.test.mjs:37:1
+✖ 声明修订会话范围不得借更宽作者授权越界回退 (910.6848ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-boundaries.test.mjs:40:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

@@ -1,0 +1,5643 @@
+{
+  "ok": true,
+  "calls": 378,
+  "rows": [
+    {
+      "label": "exhaustive-v2-1-init",
+      "args": [
+        "init",
+        "--path",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+        "--kind",
+        "novel",
+        "--title",
+        "机械断点验证"
+      ],
+      "root": null,
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 882,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-2-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 210,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-3-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 171,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-4-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 191,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-5-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 261,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-6-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 221,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-7-plan",
+      "args": [
+        "plan"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 188,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-8-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 452,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-9-record",
+      "args": [
+        "record"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 293,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-10-workflow",
+      "args": [
+        "workflow",
+        "show"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 143,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-11-workflow",
+      "args": [
+        "workflow",
+        "set"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\seed",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 213,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-12-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 802,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-13-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "f51d7a8d5874ab3f377fbc3b5aab5c9ee1c210efcbcfbc328dd9a9eb3c66182e"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 246,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-14-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "f51d7a8d5874ab3f377fbc3b5aab5c9ee1c210efcbcfbc328dd9a9eb3c66182e"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 260,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-15-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 266,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-16-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "f51d7a8d5874ab3f377fbc3b5aab5c9ee1c210efcbcfbc328dd9a9eb3c66182e"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 256,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-17-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "f51d7a8d5874ab3f377fbc3b5aab5c9ee1c210efcbcfbc328dd9a9eb3c66182e"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 206,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-18-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 248,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-19-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "f51d7a8d5874ab3f377fbc3b5aab5c9ee1c210efcbcfbc328dd9a9eb3c66182e"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 319,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-20-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "f51d7a8d5874ab3f377fbc3b5aab5c9ee1c210efcbcfbc328dd9a9eb3c66182e"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work\\.writer\\revisions\\f064e29a-6f7f-4dba-b1b7-1381a9431de8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 265,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-21-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 748,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-22-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 873,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "1"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-23-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 133,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-24-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 141,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-25-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 411,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-26-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 193,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-27-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 167,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-28-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 673,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-29-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "40f5a48ade6c4fbd658bce727ebc5ea0becce8e9e14d400094f3e8a8dc8e64f1"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 225,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-30-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "40f5a48ade6c4fbd658bce727ebc5ea0becce8e9e14d400094f3e8a8dc8e64f1"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 198,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-31-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 248,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-32-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "40f5a48ade6c4fbd658bce727ebc5ea0becce8e9e14d400094f3e8a8dc8e64f1"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 259,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-33-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "40f5a48ade6c4fbd658bce727ebc5ea0becce8e9e14d400094f3e8a8dc8e64f1"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 209,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-34-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 374,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-35-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "40f5a48ade6c4fbd658bce727ebc5ea0becce8e9e14d400094f3e8a8dc8e64f1"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 508,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-36-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "40f5a48ade6c4fbd658bce727ebc5ea0becce8e9e14d400094f3e8a8dc8e64f1"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work\\.writer\\revisions\\44771b73-08ac-46aa-8740-0892ea5284ea\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 246,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-37-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 787,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-38-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 921,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "2"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-39-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 152,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-40-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 139,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-41-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 537,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-42-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 338,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-43-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 155,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-44-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 550,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-45-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "3b2948f916c6dc75622144c698dcee9896041cd0f6057bcea6367e7f2e831abd"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 274,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-46-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "3b2948f916c6dc75622144c698dcee9896041cd0f6057bcea6367e7f2e831abd"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 193,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-47-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 230,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-48-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "3b2948f916c6dc75622144c698dcee9896041cd0f6057bcea6367e7f2e831abd"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 251,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-49-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "3b2948f916c6dc75622144c698dcee9896041cd0f6057bcea6367e7f2e831abd"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 234,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-50-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 248,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-51-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "3b2948f916c6dc75622144c698dcee9896041cd0f6057bcea6367e7f2e831abd"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 258,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-52-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "3b2948f916c6dc75622144c698dcee9896041cd0f6057bcea6367e7f2e831abd"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work\\.writer\\revisions\\e179ffa6-178d-4371-a932-0cece3445b47\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 204,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-53-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 542,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-54-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 675,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "3"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-55-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 123,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-56-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 125,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-57-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 291,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-58-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 172,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-59-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 180,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-60-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 510,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-61-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "50e6ad3cc0af2a60a489baf077437f2050ff1706c729cafedec1c837f180a656"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 244,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-62-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "50e6ad3cc0af2a60a489baf077437f2050ff1706c729cafedec1c837f180a656"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 178,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-63-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 242,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-64-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "50e6ad3cc0af2a60a489baf077437f2050ff1706c729cafedec1c837f180a656"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 248,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-65-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "50e6ad3cc0af2a60a489baf077437f2050ff1706c729cafedec1c837f180a656"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 185,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-66-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 232,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-67-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "50e6ad3cc0af2a60a489baf077437f2050ff1706c729cafedec1c837f180a656"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 226,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-68-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "50e6ad3cc0af2a60a489baf077437f2050ff1706c729cafedec1c837f180a656"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work\\.writer\\revisions\\492dfa2a-ea14-49a4-8929-616c39977fe5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 212,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-69-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 625,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-70-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 673,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "4"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-71-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 125,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-72-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 124,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-73-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 280,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-74-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 167,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-75-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 176,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-76-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 481,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-77-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "1f9a36625475cd21f46b978f27910a3e9cbbb4ae03605cc3d6eb64ce734592b3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-78-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "1f9a36625475cd21f46b978f27910a3e9cbbb4ae03605cc3d6eb64ce734592b3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 280,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-79-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 354,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-80-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "1f9a36625475cd21f46b978f27910a3e9cbbb4ae03605cc3d6eb64ce734592b3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 275,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-81-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "1f9a36625475cd21f46b978f27910a3e9cbbb4ae03605cc3d6eb64ce734592b3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 207,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-82-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 257,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-83-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "1f9a36625475cd21f46b978f27910a3e9cbbb4ae03605cc3d6eb64ce734592b3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 315,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-84-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "1f9a36625475cd21f46b978f27910a3e9cbbb4ae03605cc3d6eb64ce734592b3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work\\.writer\\revisions\\c6d5e3c7-996d-4844-9e8b-6c15a2ada633\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 214,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-85-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 575,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-86-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 755,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "5"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-87-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 117,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-88-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 120,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-89-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 305,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-90-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 151,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-91-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 125,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-92-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 470,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-93-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "a19f0146a6ff8edbf0f4c67d13c259f1812cdd4b5df16fcf8b33b4752890c1a6"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-94-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "a19f0146a6ff8edbf0f4c67d13c259f1812cdd4b5df16fcf8b33b4752890c1a6"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 167,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-95-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 193,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-96-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "a19f0146a6ff8edbf0f4c67d13c259f1812cdd4b5df16fcf8b33b4752890c1a6"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 215,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-97-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "a19f0146a6ff8edbf0f4c67d13c259f1812cdd4b5df16fcf8b33b4752890c1a6"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 156,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-98-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 188,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-99-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "a19f0146a6ff8edbf0f4c67d13c259f1812cdd4b5df16fcf8b33b4752890c1a6"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 219,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-100-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "a19f0146a6ff8edbf0f4c67d13c259f1812cdd4b5df16fcf8b33b4752890c1a6"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work\\.writer\\revisions\\bad5f64b-12c9-4855-837d-1b9b5e72bb81\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 227,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-101-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 458,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-102-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 624,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "6"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-103-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 110,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-104-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 114,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-105-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 241,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-106-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 162,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-107-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 147,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-108-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 457,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-109-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "8eea490053269a1d216d5f41d486f647b2e7f5a6ceac6151b34a863b2aa94e84"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 234,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-110-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "8eea490053269a1d216d5f41d486f647b2e7f5a6ceac6151b34a863b2aa94e84"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 234,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-111-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 202,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-112-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "8eea490053269a1d216d5f41d486f647b2e7f5a6ceac6151b34a863b2aa94e84"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 228,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-113-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "8eea490053269a1d216d5f41d486f647b2e7f5a6ceac6151b34a863b2aa94e84"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 178,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-114-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 244,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-115-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "8eea490053269a1d216d5f41d486f647b2e7f5a6ceac6151b34a863b2aa94e84"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 210,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-116-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "8eea490053269a1d216d5f41d486f647b2e7f5a6ceac6151b34a863b2aa94e84"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work\\.writer\\revisions\\9d4829ff-fad8-4534-bb2f-b16f91ed2808\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-117-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 528,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-118-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 851,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "7"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-119-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 164,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-120-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 138,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-121-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 279,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-122-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 179,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-123-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 137,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-124-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 447,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-125-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "74cf43ec12efb355d9e6452878748bd5ccd358ae8ec40fe241bb0c695f2fee4a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-126-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "74cf43ec12efb355d9e6452878748bd5ccd358ae8ec40fe241bb0c695f2fee4a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 192,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-127-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 195,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-128-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "74cf43ec12efb355d9e6452878748bd5ccd358ae8ec40fe241bb0c695f2fee4a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 251,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-129-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "74cf43ec12efb355d9e6452878748bd5ccd358ae8ec40fe241bb0c695f2fee4a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 199,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-130-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-131-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "74cf43ec12efb355d9e6452878748bd5ccd358ae8ec40fe241bb0c695f2fee4a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 237,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-132-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "74cf43ec12efb355d9e6452878748bd5ccd358ae8ec40fe241bb0c695f2fee4a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work\\.writer\\revisions\\369d6b79-d97b-4d45-9026-e733e6349b3e\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 191,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-133-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 554,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-134-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 567,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "8"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-135-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 122,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-136-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 163,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-137-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 270,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-138-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 149,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-139-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\complete-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 143,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-140-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 532,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-141-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "9621c942c4f10e9cde5e4f6eac24a4ec204d8f84c52c531aac43a67b02f51fea"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 177,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-142-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "9621c942c4f10e9cde5e4f6eac24a4ec204d8f84c52c531aac43a67b02f51fea"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 168,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-143-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 204,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-144-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "9621c942c4f10e9cde5e4f6eac24a4ec204d8f84c52c531aac43a67b02f51fea"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 205,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-145-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "9621c942c4f10e9cde5e4f6eac24a4ec204d8f84c52c531aac43a67b02f51fea"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 166,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-146-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 212,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-147-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "9621c942c4f10e9cde5e4f6eac24a4ec204d8f84c52c531aac43a67b02f51fea"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 263,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-148-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "9621c942c4f10e9cde5e4f6eac24a4ec204d8f84c52c531aac43a67b02f51fea"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work\\.writer\\revisions\\b77ee52d-447e-4fa9-8dd0-0f41c550b8be\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 184,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-149-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 497,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-150-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 567,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "1"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-151-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 105,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-152-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 121,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-153-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 245,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-154-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 148,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-155-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-1\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 151,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-156-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 467,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-157-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "7067d447ebc082cbdd5e1fbf7b62a270c4e2d254f7de827ca8caf3ac9e5a42c0"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 179,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-158-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "7067d447ebc082cbdd5e1fbf7b62a270c4e2d254f7de827ca8caf3ac9e5a42c0"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-159-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 207,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-160-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "7067d447ebc082cbdd5e1fbf7b62a270c4e2d254f7de827ca8caf3ac9e5a42c0"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 281,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-161-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "7067d447ebc082cbdd5e1fbf7b62a270c4e2d254f7de827ca8caf3ac9e5a42c0"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 242,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-162-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 241,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-163-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "7067d447ebc082cbdd5e1fbf7b62a270c4e2d254f7de827ca8caf3ac9e5a42c0"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 221,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-164-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "7067d447ebc082cbdd5e1fbf7b62a270c4e2d254f7de827ca8caf3ac9e5a42c0"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work\\.writer\\revisions\\59c58f8d-a25a-4ae8-9bda-306f3e586b4b\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 205,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-165-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 445,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-166-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 608,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "2"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-167-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 127,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-168-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 116,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-169-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 248,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-170-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 179,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-171-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-2\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 130,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-172-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 397,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-173-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "6e7e24214907aefd1fcf9bde7100746546b2e2a83b3a20c93156b45ffb28c2e4"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 177,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-174-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "6e7e24214907aefd1fcf9bde7100746546b2e2a83b3a20c93156b45ffb28c2e4"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 153,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-175-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 197,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-176-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "6e7e24214907aefd1fcf9bde7100746546b2e2a83b3a20c93156b45ffb28c2e4"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 210,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-177-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "6e7e24214907aefd1fcf9bde7100746546b2e2a83b3a20c93156b45ffb28c2e4"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 164,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-178-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 202,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-179-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "6e7e24214907aefd1fcf9bde7100746546b2e2a83b3a20c93156b45ffb28c2e4"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 196,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-180-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "6e7e24214907aefd1fcf9bde7100746546b2e2a83b3a20c93156b45ffb28c2e4"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work\\.writer\\revisions\\b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 207,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-181-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 546,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-182-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 534,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "3"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-183-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 115,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-184-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 141,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-185-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 247,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-186-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 144,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-187-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-3\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 135,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-188-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 482,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-189-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "1252366f7229a775a1110ce1d9682454aa0c1e9955bf1a447272e601132edf67"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 184,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-190-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "1252366f7229a775a1110ce1d9682454aa0c1e9955bf1a447272e601132edf67"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 160,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-191-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 179,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-192-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "1252366f7229a775a1110ce1d9682454aa0c1e9955bf1a447272e601132edf67"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 208,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-193-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "1252366f7229a775a1110ce1d9682454aa0c1e9955bf1a447272e601132edf67"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 161,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-194-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 222,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-195-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "1252366f7229a775a1110ce1d9682454aa0c1e9955bf1a447272e601132edf67"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 249,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-196-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "1252366f7229a775a1110ce1d9682454aa0c1e9955bf1a447272e601132edf67"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work\\.writer\\revisions\\54ae134f-af98-451f-9726-94616291526c\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 207,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-197-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 510,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-198-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 585,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "4"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-199-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 108,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-200-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 114,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-201-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 249,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-202-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 152,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-203-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-4\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 145,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-204-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 636,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-205-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "45b3d20842ebb8d19da5e5235516ef559813004eae161055b5aaaf972e9b4da9"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 202,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-206-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "45b3d20842ebb8d19da5e5235516ef559813004eae161055b5aaaf972e9b4da9"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 201,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-207-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 201,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-208-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "45b3d20842ebb8d19da5e5235516ef559813004eae161055b5aaaf972e9b4da9"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 245,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-209-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "45b3d20842ebb8d19da5e5235516ef559813004eae161055b5aaaf972e9b4da9"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 181,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-210-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 213,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-211-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "45b3d20842ebb8d19da5e5235516ef559813004eae161055b5aaaf972e9b4da9"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 265,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-212-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "45b3d20842ebb8d19da5e5235516ef559813004eae161055b5aaaf972e9b4da9"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work\\.writer\\revisions\\7b65de68-63cc-4f0a-9729-dd0ba4b656fc\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 221,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-213-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 544,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-214-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 622,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "5"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-215-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 118,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-216-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 124,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-217-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 249,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-218-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 148,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-219-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-5\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 131,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-220-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 463,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-221-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "d56302bca1ae2a50494266d34c01f85157cdffbc615a6f7ebc5d27de8cd14dd2"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 171,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-222-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "d56302bca1ae2a50494266d34c01f85157cdffbc615a6f7ebc5d27de8cd14dd2"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 187,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-223-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 196,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-224-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "d56302bca1ae2a50494266d34c01f85157cdffbc615a6f7ebc5d27de8cd14dd2"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 206,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-225-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "d56302bca1ae2a50494266d34c01f85157cdffbc615a6f7ebc5d27de8cd14dd2"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 163,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-226-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 188,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-227-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "d56302bca1ae2a50494266d34c01f85157cdffbc615a6f7ebc5d27de8cd14dd2"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 197,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-228-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "d56302bca1ae2a50494266d34c01f85157cdffbc615a6f7ebc5d27de8cd14dd2"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work\\.writer\\revisions\\80eea3b6-e487-4289-ab63-6675eb310b24\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-229-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 529,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-230-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 587,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "6"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-231-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 135,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-232-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 115,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-233-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 237,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-234-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 149,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-235-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-6\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 144,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-236-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 474,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-237-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "0a2efa1d99d92eb81df7ce0d5e1bd18051edf1358b48ce1f313a1cbcd4ff146a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 171,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-238-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "0a2efa1d99d92eb81df7ce0d5e1bd18051edf1358b48ce1f313a1cbcd4ff146a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 157,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-239-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 202,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-240-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "0a2efa1d99d92eb81df7ce0d5e1bd18051edf1358b48ce1f313a1cbcd4ff146a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 187,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-241-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "0a2efa1d99d92eb81df7ce0d5e1bd18051edf1358b48ce1f313a1cbcd4ff146a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 164,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-242-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 223,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-243-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "0a2efa1d99d92eb81df7ce0d5e1bd18051edf1358b48ce1f313a1cbcd4ff146a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 205,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-244-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "0a2efa1d99d92eb81df7ce0d5e1bd18051edf1358b48ce1f313a1cbcd4ff146a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work\\.writer\\revisions\\90e83806-6dcb-4313-be74-ae345514d3a2\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 209,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-245-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 619,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-246-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 1186,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "7"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-247-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 154,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-248-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 139,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-249-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 405,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-250-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 185,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-251-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-7\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 157,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-252-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 551,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-253-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "6dc8e379f508cf50bf6bd68f73ac2b80900f4051d34affbee28592d7e4377775"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 228,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-254-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "6dc8e379f508cf50bf6bd68f73ac2b80900f4051d34affbee28592d7e4377775"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 187,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-255-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 196,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-256-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "6dc8e379f508cf50bf6bd68f73ac2b80900f4051d34affbee28592d7e4377775"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 217,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-257-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "6dc8e379f508cf50bf6bd68f73ac2b80900f4051d34affbee28592d7e4377775"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 169,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-258-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 207,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-259-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "6dc8e379f508cf50bf6bd68f73ac2b80900f4051d34affbee28592d7e4377775"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 201,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-260-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "6dc8e379f508cf50bf6bd68f73ac2b80900f4051d34affbee28592d7e4377775"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work\\.writer\\revisions\\9b452ed5-a209-4f3d-9e56-6f1f2852fed5\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-261-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 464,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-262-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 91,
+      "exit_code": 91,
+      "elapsed_ms": 679,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_AFTER": "8"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-263-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 122,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-264-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 128,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-265-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 282,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-266-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 211,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-267-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rollback-8\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 145,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-268-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 440,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-269-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "31ebad797d490db55afef062d5eda65c8464cd7ef7d2ab25d04ba70a7365575f"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 278,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-270-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "31ebad797d490db55afef062d5eda65c8464cd7ef7d2ab25d04ba70a7365575f"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 216,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-271-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 218,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-272-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "31ebad797d490db55afef062d5eda65c8464cd7ef7d2ab25d04ba70a7365575f"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 214,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-273-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "31ebad797d490db55afef062d5eda65c8464cd7ef7d2ab25d04ba70a7365575f"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 205,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-274-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 199,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-275-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "31ebad797d490db55afef062d5eda65c8464cd7ef7d2ab25d04ba70a7365575f"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 222,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-276-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "31ebad797d490db55afef062d5eda65c8464cd7ef7d2ab25d04ba70a7365575f"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work\\.writer\\revisions\\4b54dcb4-5a72-4c4f-9561-5ac120731ec8\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-277-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 498,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-278-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 93,
+      "exit_code": 93,
+      "elapsed_ms": 549,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_PHASE": "transaction-prepared"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-279-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 112,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-280-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 110,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-281-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 256,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-282-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 160,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-283-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 147,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-284-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 485,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-285-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "e6e1e5f7ec2f099a56f35d4b73a8b595e78006033c4d50484b78f50b48d01ea3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 309,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-286-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "e6e1e5f7ec2f099a56f35d4b73a8b595e78006033c4d50484b78f50b48d01ea3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 199,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-287-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 205,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-288-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "e6e1e5f7ec2f099a56f35d4b73a8b595e78006033c4d50484b78f50b48d01ea3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 236,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-289-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "e6e1e5f7ec2f099a56f35d4b73a8b595e78006033c4d50484b78f50b48d01ea3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 184,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-290-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 194,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-291-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "e6e1e5f7ec2f099a56f35d4b73a8b595e78006033c4d50484b78f50b48d01ea3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 225,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-292-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "e6e1e5f7ec2f099a56f35d4b73a8b595e78006033c4d50484b78f50b48d01ea3"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work\\.writer\\revisions\\6ac4b6e4-b7cc-4476-b30d-63daeff874dd\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 212,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-293-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 579,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-294-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 93,
+      "exit_code": 93,
+      "elapsed_ms": 504,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_PHASE": "transaction-prepared"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-295-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 110,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-296-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 144,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-297-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 235,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-298-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 161,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-299-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\prepared-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 142,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-300-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 560,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-301-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "4ea28fe180efd35026f572c19864231c7119c100829496e6eac25f940ef03526"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-302-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "4ea28fe180efd35026f572c19864231c7119c100829496e6eac25f940ef03526"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 165,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-303-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 222,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-304-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "4ea28fe180efd35026f572c19864231c7119c100829496e6eac25f940ef03526"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 204,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-305-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "4ea28fe180efd35026f572c19864231c7119c100829496e6eac25f940ef03526"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 171,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-306-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 214,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-307-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "4ea28fe180efd35026f572c19864231c7119c100829496e6eac25f940ef03526"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 255,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-308-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "4ea28fe180efd35026f572c19864231c7119c100829496e6eac25f940ef03526"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work\\.writer\\revisions\\7aa5254b-0992-4d0d-a2db-9b69bfc16f00\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 197,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-309-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 485,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-310-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 609,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_RENAME_TARGET": ".writer/journal/825b70e3-5a2e-4149-8591-0ac6bcf5b1fa.json",
+        "AI_WRITER_TEST_RENAME_ERROR": "ENOSPC"
+      },
+      "code": "ENOSPC"
+    },
+    {
+      "label": "exhaustive-v2-311-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 124,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-312-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 117,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-313-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 243,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-314-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 161,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-315-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 139,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-316-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 515,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-317-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "81e22c802fb7f8f196d12f9295a3a3ddb5a4ff5e07450d1fea5dd2aa2b89048b"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 175,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-318-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "81e22c802fb7f8f196d12f9295a3a3ddb5a4ff5e07450d1fea5dd2aa2b89048b"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 191,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-319-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 219,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-320-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "81e22c802fb7f8f196d12f9295a3a3ddb5a4ff5e07450d1fea5dd2aa2b89048b"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 204,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-321-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "81e22c802fb7f8f196d12f9295a3a3ddb5a4ff5e07450d1fea5dd2aa2b89048b"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 199,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-322-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 194,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-323-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "81e22c802fb7f8f196d12f9295a3a3ddb5a4ff5e07450d1fea5dd2aa2b89048b"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 211,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-324-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "81e22c802fb7f8f196d12f9295a3a3ddb5a4ff5e07450d1fea5dd2aa2b89048b"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work\\.writer\\revisions\\bb210f0b-8ec2-46ee-995d-e0d616d5e0cb\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 201,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-325-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 539,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-326-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 762,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_RENAME_TARGET": ".writer/journal/393b59ec-4e52-488d-a0a7-70114887ce91.json",
+        "AI_WRITER_TEST_RENAME_ERROR": "ENOSPC"
+      },
+      "code": "ENOSPC"
+    },
+    {
+      "label": "exhaustive-v2-327-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 183,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-328-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 145,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-329-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-330-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 151,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-331-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-first-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 142,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-332-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 404,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-333-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "bff211e187ec341fdfb191c02b183f3cb739b71518aa8134650ef174c121f270"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 200,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-334-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "bff211e187ec341fdfb191c02b183f3cb739b71518aa8134650ef174c121f270"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 178,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-335-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 226,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-336-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "bff211e187ec341fdfb191c02b183f3cb739b71518aa8134650ef174c121f270"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 235,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-337-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "bff211e187ec341fdfb191c02b183f3cb739b71518aa8134650ef174c121f270"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 161,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-338-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 229,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-339-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "bff211e187ec341fdfb191c02b183f3cb739b71518aa8134650ef174c121f270"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 256,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-340-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "bff211e187ec341fdfb191c02b183f3cb739b71518aa8134650ef174c121f270"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work\\.writer\\revisions\\f7c2c65f-882b-4460-b8f3-fe45f41e4465\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 212,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-341-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 541,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-342-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 582,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_RENAME_TARGET": ".writer/state.json",
+        "AI_WRITER_TEST_RENAME_ERROR": "ENOSPC"
+      },
+      "code": "ENOSPC"
+    },
+    {
+      "label": "exhaustive-v2-343-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 119,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-344-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 122,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-345-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 220,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-346-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 154,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-347-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-complete\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 129,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-348-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 451,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-349-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "0cd91bfbeb6411d7cfb592de89b357cdf5c363cd6fbe2efc592110b2d7c27eaf"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 175,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-350-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "0cd91bfbeb6411d7cfb592de89b357cdf5c363cd6fbe2efc592110b2d7c27eaf"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 189,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-351-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 179,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-352-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "0cd91bfbeb6411d7cfb592de89b357cdf5c363cd6fbe2efc592110b2d7c27eaf"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 225,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-353-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "0cd91bfbeb6411d7cfb592de89b357cdf5c363cd6fbe2efc592110b2d7c27eaf"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 191,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-354-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 201,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-355-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "0cd91bfbeb6411d7cfb592de89b357cdf5c363cd6fbe2efc592110b2d7c27eaf"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 255,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-356-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "0cd91bfbeb6411d7cfb592de89b357cdf5c363cd6fbe2efc592110b2d7c27eaf"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work\\.writer\\revisions\\acd85724-ce87-4bc6-b24c-ceba7ff76923\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 188,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-357-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 468,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-358-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 602,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_RENAME_TARGET": ".writer/state.json",
+        "AI_WRITER_TEST_RENAME_ERROR": "ENOSPC"
+      },
+      "code": "ENOSPC"
+    },
+    {
+      "label": "exhaustive-v2-359-status",
+      "args": [
+        "status"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "elapsed_ms": 115,
+      "environment": {},
+      "code": "TRANSACTION_PENDING"
+    },
+    {
+      "label": "exhaustive-v2-360-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 119,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-361-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 286,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-362-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 155,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-363-revision",
+      "args": [
+        "revision",
+        "recover"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\rename-state-rollback\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 128,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-364-revision",
+      "args": [
+        "revision",
+        "begin"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 496,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-365-rewind",
+      "args": [
+        "rewind",
+        "--from",
+        "1",
+        "--expected-revision",
+        "4",
+        "--revision-token",
+        "a3629961e9e7c43fb4a21327b3fb9dce24213fbb10e4ac280b2848a1c01bc18a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 215,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-366-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "a3629961e9e7c43fb4a21327b3fb9dce24213fbb10e4ac280b2848a1c01bc18a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 168,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-367-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 185,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-368-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "a3629961e9e7c43fb4a21327b3fb9dce24213fbb10e4ac280b2848a1c01bc18a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 224,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-369-plan",
+      "args": [
+        "plan",
+        "--revision-token",
+        "a3629961e9e7c43fb4a21327b3fb9dce24213fbb10e4ac280b2848a1c01bc18a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 238,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-370-record-template",
+      "args": [
+        "record-template",
+        "--unit",
+        "2",
+        "--draft",
+        "正文/0002.md"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 335,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-371-record",
+      "args": [
+        "record",
+        "--revision-token",
+        "a3629961e9e7c43fb4a21327b3fb9dce24213fbb10e4ac280b2848a1c01bc18a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 232,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-372-review",
+      "args": [
+        "review",
+        "--revision-token",
+        "a3629961e9e7c43fb4a21327b3fb9dce24213fbb10e4ac280b2848a1c01bc18a"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work\\.writer\\revisions\\502591cf-43d4-476f-9c5a-646a5cc75681\\workspace",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 208,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-373-revision",
+      "args": [
+        "revision",
+        "prepare"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 527,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-374-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 94,
+      "exit_code": 94,
+      "elapsed_ms": 461,
+      "environment": {
+        "AI_WRITER_TEST_FAULT": "1",
+        "AI_WRITER_TEST_STOP_PHASE": "transaction-backups"
+      },
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-375-revision",
+      "args": [
+        "revision",
+        "list"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 132,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-376-revision",
+      "args": [
+        "revision",
+        "unlock"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 188,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-377-revision",
+      "args": [
+        "revision",
+        "commit"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 814,
+      "environment": {},
+      "code": null
+    },
+    {
+      "label": "exhaustive-v2-378-check",
+      "args": [
+        "check"
+      ],
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\exhaustive-v2\\cases\\backups-before-manifest\\work",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "elapsed_ms": 222,
+      "environment": {},
+      "code": null
+    }
+  ],
+  "published_file_boundaries": 8,
+  "cases": 23,
+  "outcomes": [
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 1,
+      "file": ".writer/journal/99c46f8d-29eb-4ef8-8bb1-e2558166d93c.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "c0bbcf50-10b3-47d7-a6de-0e17ede9c4be",
+        "status": "completed",
+        "session_id": "f064e29a-6f7f-4dba-b1b7-1381a9431de8",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 2,
+      "file": ".writer/journal/fb251a05-3ca2-4e8b-b004-5df7f7e10647.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "f053ab5f-2a16-44ea-a9aa-ef74065d1272",
+        "status": "completed",
+        "session_id": "44771b73-08ac-46aa-8740-0892ea5284ea",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 3,
+      "file": ".writer/objects/44494190-b68e-41d8-b6ab-47428616e84c.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "40ec626f-6249-4afe-b086-49279b0d17fc",
+        "status": "completed",
+        "session_id": "e179ffa6-178d-4371-a932-0cece3445b47",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 4,
+      "file": ".writer/reviews/2852a23a-c5e0-4971-9cb1-77c2a06fe5e6.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "31ce5bb3-0c0d-49d8-b8ba-185dff8d2d0f",
+        "status": "completed",
+        "session_id": "492dfa2a-ea14-49a4-8929-616c39977fe5",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 5,
+      "file": "审查/exhaustive-v2-mechanical.md",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "089b69cb-08fa-46ba-82da-8bf7f2178b11",
+        "status": "completed",
+        "session_id": "c6d5e3c7-996d-4844-9e8b-6c15a2ada633",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 6,
+      "file": "正文/0001.md",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "a5c2d70d-a689-49e9-9882-cdb664311308",
+        "status": "completed",
+        "session_id": "bad5f64b-12c9-4855-837d-1b9b5e72bb81",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 7,
+      "file": "正文/0002.md",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "73f200ae-5253-4fea-b532-e4065da92dd6",
+        "status": "completed",
+        "session_id": "9d4829ff-fad8-4534-bb2f-b16f91ed2808",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 8,
+      "file": ".writer/state.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "742cb10c-cdf2-4f70-8db4-24bc1936f032",
+        "status": "completed",
+        "session_id": "369d6b79-d97b-4d45-9026-e733e6349b3e",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 1,
+      "file": ".writer/journal/072fbf9a-d159-4b01-8047-8da7d1b01265.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "1feb2a3f-4595-4b15-93a3-e4052c4f30b2",
+        "status": "rolled-back",
+        "session_id": "b77ee52d-447e-4fa9-8dd0-0f41c550b8be",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 2,
+      "file": ".writer/journal/d7ab84b8-4b6b-46ac-b93b-c291d26152d0.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "ed019d85-4d42-418f-8fbf-422cb9409370",
+        "status": "rolled-back",
+        "session_id": "59c58f8d-a25a-4ae8-9bda-306f3e586b4b",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 3,
+      "file": ".writer/objects/7e8b74a6-ba46-4039-9824-ece37a5378cb.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "a7665f5d-6f2f-49d8-aa87-f22efed37a17",
+        "status": "rolled-back",
+        "session_id": "b4e5b3d9-0a8a-4cca-bb8d-58fc2e02c51f",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 4,
+      "file": ".writer/reviews/f495590e-8dee-42d0-b599-89f9329526a5.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "7f368ca3-7bc4-4582-a351-f486fe8f4170",
+        "status": "rolled-back",
+        "session_id": "54ae134f-af98-451f-9726-94616291526c",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 5,
+      "file": "审查/exhaustive-v2-mechanical.md",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "fcf49d22-4adb-414e-85b0-4bb5b79c28dc",
+        "status": "rolled-back",
+        "session_id": "7b65de68-63cc-4f0a-9729-dd0ba4b656fc",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 6,
+      "file": "正文/0001.md",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "61f429ce-a574-4916-9635-c9a968dbd3dc",
+        "status": "rolled-back",
+        "session_id": "80eea3b6-e487-4289-ab63-6675eb310b24",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 7,
+      "file": "正文/0002.md",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "1ea5b5a4-0b0d-4145-92af-193c0ca0bb6c",
+        "status": "rolled-back",
+        "session_id": "90e83806-6dcb-4313-be74-ae345514d3a2",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "each-published-file-boundary",
+      "after": 8,
+      "file": ".writer/state.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "d39c391d-ec45-4b1d-bed0-72748cbe1f97",
+        "status": "rolled-back",
+        "session_id": "9b452ed5-a209-4f3d-9e56-6f1f2852fed5",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "durable-plan-before-first-publish",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "c8dadbf1-2f15-492e-8177-c06acc57d59f",
+        "status": "completed",
+        "session_id": "4b54dcb4-5a72-4c4f-9561-5ac120731ec8",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "durable-plan-before-first-publish",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "ec351440-2187-43e0-be10-115d379f15ae",
+        "status": "rolled-back",
+        "session_id": "6ac4b6e4-b7cc-4476-b30d-63daeff874dd",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "injected-rename-error-not-real-disk-exhaustion",
+      "target": "first",
+      "file": ".writer/journal/825b70e3-5a2e-4149-8591-0ac6bcf5b1fa.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "1e6a6769-4416-4b9b-a9b8-a34522d38837",
+        "status": "completed",
+        "session_id": "7aa5254b-0992-4d0d-a2db-9b69bfc16f00",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "injected-rename-error-not-real-disk-exhaustion",
+      "target": "first",
+      "file": ".writer/journal/393b59ec-4e52-488d-a0a7-70114887ce91.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "3d78b91e-8be4-458b-a770-25f74eacc808",
+        "status": "rolled-back",
+        "session_id": "bb210f0b-8ec2-46ee-995d-e0d616d5e0cb",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "injected-rename-error-not-real-disk-exhaustion",
+      "target": "state",
+      "file": ".writer/state.json",
+      "direction": "complete",
+      "result": {
+        "ok": true,
+        "transaction_id": "d2407dca-1f4f-49d2-8406-1cde30824143",
+        "status": "completed",
+        "session_id": "f7c2c65f-882b-4460-b8f3-fe45f41e4465",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "injected-rename-error-not-real-disk-exhaustion",
+      "target": "state",
+      "file": ".writer/state.json",
+      "direction": "rollback",
+      "result": {
+        "ok": true,
+        "transaction_id": "913ea6e0-ff71-4829-a9fb-62c2579b3f85",
+        "status": "rolled-back",
+        "session_id": "acd85724-ce87-4bc6-b24c-ceba7ff76923",
+        "revision": 4,
+        "backups_preserved": true
+      }
+    },
+    {
+      "scenario": "orphan-backups-before-authority",
+      "result": {
+        "ok": true,
+        "transaction_id": "131ccc80-4a01-4a42-a2aa-967fb6758bcc",
+        "status": "completed",
+        "session_id": "502591cf-43d4-476f-9c5a-646a5cc75681",
+        "revision": 5,
+        "backups_preserved": true
+      }
+    }
+  ],
+  "nature": "mechanical real-CLI/process fault matrix; no literary acceptance"
+}

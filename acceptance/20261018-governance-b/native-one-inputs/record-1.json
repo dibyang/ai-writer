@@ -1,0 +1,104 @@
+{
+  "unit": 1,
+  "expected_revision": 13,
+  "source_hashes": {
+    "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+    ".writer/state.json": "b6dfb8b882d4329c4ebbb25077f80621121306c1434111321c949d7ed97fafa7",
+    "大纲/单元/0001.json": "70c6df8a34c27b3636245ba0f371087b7384999089460cba04b3e6c4ce8f3fc8",
+    "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+    "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+    "设定/权威规则.md": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+    "大纲/全书大纲.md": "c99f90e27ec8804790bda4cfedc4a22649e8ecab6fe8562be97d4b9d06846bec",
+    "大纲/分卷/V1.json": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+  },
+  "draft": "正文/0001-铜片的耳.md",
+  "source_bindings": {
+    "设定/作品定位.md": {
+      "version_id": "POSITION_V1",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+    },
+    "设定/文风.md": {
+      "version_id": "STYLE_V1",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+    },
+    "设定/权威规则.md": {
+      "version_id": "RULES_V1",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+    },
+    "大纲/分卷/V1.json": {
+      "version_id": "VOLUME1_V1",
+      "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+      "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+    }
+  },
+  "summary": "阿禾拆母亲旧棉袄发现铜片和‘桥头问信’纸条，凭折耳浅痕铜凭向周叔问信；旧簿记母亲名字为候，约次晨交两枚押钱借验。铜片未交柜，仍在阿禾贴身衣袋。",
+  "changes": {
+    "characters": {
+      "阿禾": "回家途中；铜片在贴身衣袋；已见母亲旧柜候字记录，知道借验须两枚押钱，未知信件内容",
+      "周叔": "桥头驿柜；已见铜凭和纸条，认得母亲字迹；尚未对验旧柜"
+    },
+    "timeline_append": [
+      "秋日雨后傍晚：阿禾发现铜片并到桥头问信，约次晨借验"
+    ],
+    "ledger": {
+      "OBJ_COPPER": {
+        "type": "object",
+        "statement": "母亲旧棉袄中发现的折耳、浅划痕铜凭",
+        "status": "active",
+        "cast": [
+          "阿禾",
+          "周叔"
+        ],
+        "tags": [
+          "铜片",
+          "物证"
+        ],
+        "custody": {
+          "holder": "阿禾",
+          "location": "贴身衣袋",
+          "condition": "净布包裹；折耳与浅划痕未改"
+        },
+        "reader_known": "铜凭可查旧柜，尚未核验",
+        "character_known": {
+          "阿禾": "亲自发现铜片；周叔称其为旧柜铜凭，需对旧簿",
+          "周叔": "已当面见折耳浅痕铜片，知道阿禾称其出自母亲旧袄"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "铜片的耳向内折着，正面有一条斜斜的浅划痕"
+          },
+          {
+            "unit": 1,
+            "quote": "阿禾重新包好铜片，放进贴身衣袋。"
+          }
+        ]
+      },
+      "THREAD_LETTER": {
+        "type": "thread",
+        "statement": "母亲名下候领的迟信",
+        "status": "pending",
+        "cast": [
+          "阿禾",
+          "周叔"
+        ],
+        "due_unit": 6,
+        "reader_known": "旧簿有候字，信件尚未领取",
+        "character_known": {
+          "阿禾": "见母亲名下候字，不知道信的内容",
+          "周叔": "知道旧柜号，尚未现场查信"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "母亲的名字后头添着一个小小的“候”字，旁边还有旧柜号。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

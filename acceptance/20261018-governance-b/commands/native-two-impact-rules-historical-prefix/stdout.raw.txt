@@ -1,0 +1,73 @@
+{
+  "ok": true,
+  "impact": {
+    "schema_version": 1,
+    "revision": 27,
+    "state_sha256": "4dedffee66e15d974fa5347f0cab5d0a93ca19adac99cabf369112ec8bb8e406",
+    "version_id": "RULES_V3_FROM2",
+    "ref": "设定/权威规则.md",
+    "from": 2,
+    "mode": "historical",
+    "candidate_sha256": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+    "direct_consumers": [
+      {
+        "unit": 1,
+        "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "bound": true
+      },
+      {
+        "unit": 2,
+        "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "bound": true
+      },
+      {
+        "unit": 3,
+        "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "bound": true
+      },
+      {
+        "unit": 4,
+        "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "bound": true
+      },
+      {
+        "unit": 5,
+        "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "bound": true
+      },
+      {
+        "unit": 6,
+        "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "bound": true
+      }
+    ],
+    "replaced_ranges": [
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "RULES_V1",
+        "from": 1,
+        "to": 6
+      },
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "RULES_V2_FROM7",
+        "from": 7,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": 1,
+    "possible_indirect_through": 6,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15.source": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+      "正文/0001-铜片的耳.md": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+      "正文/0002-两枚押钱.md": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553",
+      "正文/0003-缺掉的一角.md": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9",
+      "正文/0004-柳婆的抽屉.md": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+      "正文/0005-旧印归柜.md": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+      "正文/0006-信纸背面.md": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+      ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  }
+}

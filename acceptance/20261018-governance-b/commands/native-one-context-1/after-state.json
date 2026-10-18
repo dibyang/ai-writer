@@ -1,0 +1,552 @@
+{
+  "schema_version": 4,
+  "revision": 13,
+  "project_id": "9807cab7-5a87-432d-9ac3-56180aca0376",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "trial",
+    "task": "仅试写并登记第1至6章；每三章实读复盘；第六章后停止正文",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "每三章连读最近六章，未解决问题进入独立修订",
+        "第六章完成后停止正文，不写第七章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/cc27c789-4046-4913-b06b-bbd471427ef6.json",
+      "sha256": "2b51b299d92b50d93f13af934e7ea3cf90b03ea043d0b7ca391555c913b0ec49"
+    },
+    {
+      "ref": ".writer/objects/03c2c043-7202-4d8a-a9c0-ab843ec577d4.json",
+      "sha256": "fbb2b3208ec890a7dde454f9440d43319352df36437f7d11ac4760a4791d094d"
+    }
+  ],
+  "operations": {
+    "native-one-planning": {
+      "input_sha256": "e1d50f3586b307192366a4839ade5a4ab7a54492a4abf2621522abd539911a02",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "native-one-planning",
+        "event": {
+          "ref": ".writer/objects/cc27c789-4046-4913-b06b-bbd471427ef6.json",
+          "sha256": "2b51b299d92b50d93f13af934e7ea3cf90b03ea043d0b7ca391555c913b0ec49"
+        }
+      }
+    },
+    "native-one-trial-six-ready": {
+      "input_sha256": "129d7a51c018f77515168bc81139683fe9fb976a91d5a147ad8954ee9225cfe5",
+      "result": {
+        "ok": true,
+        "revision": 13,
+        "operation_id": "native-one-trial-six-ready",
+        "event": {
+          "ref": ".writer/objects/03c2c043-7202-4d8a-a9c0-ab843ec577d4.json",
+          "sha256": "fbb2b3208ec890a7dde454f9440d43319352df36437f7d11ac4760a4791d094d"
+        }
+      }
+    }
+  },
+  "source_versions": {
+    "POSITION_V1": {
+      "id": "POSITION_V1",
+      "ref": "设定/作品定位.md",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+      "previous": null,
+      "format": "md"
+    },
+    "STYLE_V1": {
+      "id": "STYLE_V1",
+      "ref": "设定/文风.md",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+      "previous": null,
+      "format": "md"
+    },
+    "RULES_V1": {
+      "id": "RULES_V1",
+      "ref": "设定/权威规则.md",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+      "previous": null,
+      "format": "md"
+    },
+    "VOLUME1_V1": {
+      "id": "VOLUME1_V1",
+      "ref": "大纲/分卷/V1.json",
+      "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+      "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+      "previous": null,
+      "format": "json"
+    },
+    "VOLUME2_V1": {
+      "id": "VOLUME2_V1",
+      "ref": "大纲/分卷/V2.json",
+      "object_ref": ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source",
+      "sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+      "previous": null,
+      "format": "json"
+    }
+  },
+  "source_ranges": [
+    {
+      "ref": "设定/作品定位.md",
+      "version_id": "POSITION_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/文风.md",
+      "version_id": "STYLE_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "version_id": "RULES_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "大纲/分卷/V1.json",
+      "version_id": "VOLUME1_V1",
+      "from": 1,
+      "to": null
+    },
+    {
+      "ref": "大纲/分卷/V2.json",
+      "version_id": "VOLUME2_V1",
+      "from": 1,
+      "to": null
+    }
+  ],
+  "source_events": [
+    {
+      "ref": ".writer/objects/bf376eb9-5375-458b-9f23-724d85af23fd.json",
+      "sha256": "ea5ba19a44ed6aa94bf5d4bdc967d657c51ca5aad567848dc1694ecb0eed6fa6"
+    },
+    {
+      "ref": ".writer/objects/73c3fec8-4807-4db1-af3c-10bf8694238d.json",
+      "sha256": "a62a4f12a845352243b91a8c6d0b6bc2b0ce7915f6c17773ec34adf8de17de3f"
+    },
+    {
+      "ref": ".writer/objects/f1787a2d-31f8-44da-9e4b-fa3fca09eeb8.json",
+      "sha256": "5a66f9a937653c27dcd12f101d4004867e1ac6ded8d1944429b4303b0303ce36"
+    },
+    {
+      "ref": ".writer/objects/2e049f0a-c398-4dbf-a724-c15e94e4e841.json",
+      "sha256": "8b3890efdacb9c4e62237d632a100617866702eff24c71ff2d49f1dc9b5ea25d"
+    },
+    {
+      "ref": ".writer/objects/ea823903-abe2-4c2c-82ab-16104c13b826.json",
+      "sha256": "8908e6f3d147f55a63e6a237378d5d18fd59590cab3056501eeb41c7e93662bb"
+    },
+    {
+      "ref": ".writer/objects/833ff418-520d-4d12-9d17-7053c90d6de5.json",
+      "sha256": "0b228583a081aeace45e94f74dc89d88d97a5b5b44d91856f55354ed7bcec5c9"
+    },
+    {
+      "ref": ".writer/objects/967b5720-3318-469f-9850-855af1c170da.json",
+      "sha256": "4a9be86b878d3b87f00293d4665fd1dc2870206b45bc76ab915158c9092f52f6"
+    },
+    {
+      "ref": ".writer/objects/8cec6f6d-fd7b-424e-a0f4-355e19f6ef54.json",
+      "sha256": "23a8b7c49579bba1dac740db7f4de63ba4bef87646f680641a67eae5768c3cd9"
+    },
+    {
+      "ref": ".writer/objects/ad571d8e-1a08-41f3-a840-7e4f36537e28.json",
+      "sha256": "3ddcb1894afc85cbf4aaf4b2a87b345edf247725e11f5305cd201e00beff13c1"
+    },
+    {
+      "ref": ".writer/objects/6620c35e-5215-45de-9d38-08861640a008.json",
+      "sha256": "2e13d3c042eeff54d7f17c07e37a99bcdaf69f060b5fe302f99f35e23cde1a35"
+    }
+  ],
+  "source_operations": {
+    "native-one-freeze-position": {
+      "input_sha256": "33bc72271577ea81f48b9e9ad4c808d3c0319160436b8d6b770620d111f4481a",
+      "result": {
+        "ok": true,
+        "version": {
+          "id": "POSITION_V1",
+          "ref": "设定/作品定位.md",
+          "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+          "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+          "previous": null,
+          "format": "md"
+        },
+        "status": "proposal-only-not-published",
+        "revision": 3,
+        "event": {
+          "ref": ".writer/objects/bf376eb9-5375-458b-9f23-724d85af23fd.json",
+          "sha256": "ea5ba19a44ed6aa94bf5d4bdc967d657c51ca5aad567848dc1694ecb0eed6fa6"
+        }
+      }
+    },
+    "native-one-publish-position": {
+      "input_sha256": "e6071be39faaa52e94e11c458669fc99c5c33adca89968343fafa82a009c9edc",
+      "result": {
+        "ok": true,
+        "published": "POSITION_V1",
+        "from": 1,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 3,
+          "state_sha256": "c00410d34f0384059212068767bbd82ffc711c59d728e7fe2df7038430401e85",
+          "version_id": "POSITION_V1",
+          "ref": "设定/作品定位.md",
+          "from": 1,
+          "mode": "baseline",
+          "candidate_sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+          "direct_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": null,
+          "possible_indirect_through": null,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/基线-position.md",
+            "report_sha256": "cba0452696bcf9a100d002b95bffcf63eccb93744de1780864fc317a7330f28f",
+            "readings": {
+              ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+            },
+            "conclusion": "首次基线与六章测试范围一致；当前两枚押钱；不代表剧情已经发生",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/cba0452696bcf9a100d002b95bffcf63eccb93744de1780864fc317a7330f28f.txt"
+          }
+        },
+        "original_hashes_preserved": true,
+        "revision": 4,
+        "event": {
+          "ref": ".writer/objects/73c3fec8-4807-4db1-af3c-10bf8694238d.json",
+          "sha256": "a62a4f12a845352243b91a8c6d0b6bc2b0ce7915f6c17773ec34adf8de17de3f"
+        }
+      }
+    },
+    "native-one-freeze-style": {
+      "input_sha256": "f41afa7859dfc608a3fff0e55339cf8a1d29c97e3af6acc8bbe6e2addac5d235",
+      "result": {
+        "ok": true,
+        "version": {
+          "id": "STYLE_V1",
+          "ref": "设定/文风.md",
+          "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+          "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+          "previous": null,
+          "format": "md"
+        },
+        "status": "proposal-only-not-published",
+        "revision": 5,
+        "event": {
+          "ref": ".writer/objects/f1787a2d-31f8-44da-9e4b-fa3fca09eeb8.json",
+          "sha256": "5a66f9a937653c27dcd12f101d4004867e1ac6ded8d1944429b4303b0303ce36"
+        }
+      }
+    },
+    "native-one-publish-style": {
+      "input_sha256": "c9e52bd9d4fc3b9c73656cef8e098d33948b001fcbc8babc32d32df41649ac30",
+      "result": {
+        "ok": true,
+        "published": "STYLE_V1",
+        "from": 1,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 5,
+          "state_sha256": "0869e7643f3dfaa94e1e45b8f927433aa2636ae7e0fde127ec207813075578a8",
+          "version_id": "STYLE_V1",
+          "ref": "设定/文风.md",
+          "from": 1,
+          "mode": "baseline",
+          "candidate_sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+          "direct_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": null,
+          "possible_indirect_through": null,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/基线-style.md",
+            "report_sha256": "33bd3aa6e42d8b0b5f5b63d59c8498ecfa2787076c4aa6dff474cb4ca9d97fd6",
+            "readings": {
+              ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+            },
+            "conclusion": "首次基线与六章测试范围一致；当前两枚押钱；不代表剧情已经发生",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/33bd3aa6e42d8b0b5f5b63d59c8498ecfa2787076c4aa6dff474cb4ca9d97fd6.txt"
+          }
+        },
+        "original_hashes_preserved": true,
+        "revision": 6,
+        "event": {
+          "ref": ".writer/objects/2e049f0a-c398-4dbf-a724-c15e94e4e841.json",
+          "sha256": "8b3890efdacb9c4e62237d632a100617866702eff24c71ff2d49f1dc9b5ea25d"
+        }
+      }
+    },
+    "native-one-freeze-rules": {
+      "input_sha256": "a8b388484118f326f2b050d07dc45d24453cd4b71f2f5e68037a5dc5338cb0ca",
+      "result": {
+        "ok": true,
+        "version": {
+          "id": "RULES_V1",
+          "ref": "设定/权威规则.md",
+          "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+          "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "previous": null,
+          "format": "md"
+        },
+        "status": "proposal-only-not-published",
+        "revision": 7,
+        "event": {
+          "ref": ".writer/objects/ea823903-abe2-4c2c-82ab-16104c13b826.json",
+          "sha256": "8908e6f3d147f55a63e6a237378d5d18fd59590cab3056501eeb41c7e93662bb"
+        }
+      }
+    },
+    "native-one-publish-rules": {
+      "input_sha256": "6beea245236d09d0012a14f2073d487df2812429a998fde4e652f6545389974c",
+      "result": {
+        "ok": true,
+        "published": "RULES_V1",
+        "from": 1,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 7,
+          "state_sha256": "18ac9c3cf34cbe44c1e84e189829072134260b9bb18aa3c256dbce222c72ae28",
+          "version_id": "RULES_V1",
+          "ref": "设定/权威规则.md",
+          "from": 1,
+          "mode": "baseline",
+          "candidate_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "direct_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": null,
+          "possible_indirect_through": null,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/基线-rules.md",
+            "report_sha256": "d7c9f2b6f0af74bd5ce8a5211f072b262b7886d9e1955bb3f45239930c417b8c",
+            "readings": {
+              ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+            },
+            "conclusion": "首次基线与六章测试范围一致；当前两枚押钱；不代表剧情已经发生",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/d7c9f2b6f0af74bd5ce8a5211f072b262b7886d9e1955bb3f45239930c417b8c.txt"
+          }
+        },
+        "original_hashes_preserved": true,
+        "revision": 8,
+        "event": {
+          "ref": ".writer/objects/833ff418-520d-4d12-9d17-7053c90d6de5.json",
+          "sha256": "0b228583a081aeace45e94f74dc89d88d97a5b5b44d91856f55354ed7bcec5c9"
+        }
+      }
+    },
+    "native-one-freeze-v1": {
+      "input_sha256": "7cc272ff63a210b6df0ede2f1712c3f440539c559c5b7f592b3551e45c643f50",
+      "result": {
+        "ok": true,
+        "version": {
+          "id": "VOLUME1_V1",
+          "ref": "大纲/分卷/V1.json",
+          "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+          "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+          "previous": null,
+          "format": "json"
+        },
+        "status": "proposal-only-not-published",
+        "revision": 9,
+        "event": {
+          "ref": ".writer/objects/967b5720-3318-469f-9850-855af1c170da.json",
+          "sha256": "4a9be86b878d3b87f00293d4665fd1dc2870206b45bc76ab915158c9092f52f6"
+        }
+      }
+    },
+    "native-one-publish-v1": {
+      "input_sha256": "67b71564678be4bb71f29f7e8b99ec7ddb6cf3c787a2fdb60364d5b3bf3e6c2b",
+      "result": {
+        "ok": true,
+        "published": "VOLUME1_V1",
+        "from": 1,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 9,
+          "state_sha256": "a62a94769a9b91d604ae84626728c407bf3786b7e0aa49f242f3d991e684eaef",
+          "version_id": "VOLUME1_V1",
+          "ref": "大纲/分卷/V1.json",
+          "from": 1,
+          "mode": "baseline",
+          "candidate_sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+          "direct_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": null,
+          "possible_indirect_through": null,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/基线-v1.md",
+            "report_sha256": "f66ca739c69970ccffe737440070e58fffd6797ee31ed65178e58588c935a33d",
+            "readings": {
+              ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+            },
+            "conclusion": "首次基线与六章测试范围一致；当前两枚押钱；不代表剧情已经发生",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/f66ca739c69970ccffe737440070e58fffd6797ee31ed65178e58588c935a33d.txt"
+          }
+        },
+        "original_hashes_preserved": true,
+        "revision": 10,
+        "event": {
+          "ref": ".writer/objects/8cec6f6d-fd7b-424e-a0f4-355e19f6ef54.json",
+          "sha256": "23a8b7c49579bba1dac740db7f4de63ba4bef87646f680641a67eae5768c3cd9"
+        }
+      }
+    },
+    "native-one-freeze-v2": {
+      "input_sha256": "ab29ac26a6de7b37646ea3d15f16efcd89fce928190f4c783093bae7336a07c3",
+      "result": {
+        "ok": true,
+        "version": {
+          "id": "VOLUME2_V1",
+          "ref": "大纲/分卷/V2.json",
+          "object_ref": ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source",
+          "sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+          "previous": null,
+          "format": "json"
+        },
+        "status": "proposal-only-not-published",
+        "revision": 11,
+        "event": {
+          "ref": ".writer/objects/ad571d8e-1a08-41f3-a840-7e4f36537e28.json",
+          "sha256": "3ddcb1894afc85cbf4aaf4b2a87b345edf247725e11f5305cd201e00beff13c1"
+        }
+      }
+    },
+    "native-one-publish-v2": {
+      "input_sha256": "dc4abca42d748ab3bdb733b721b0c782daa961d6ade48e3c9965d83d6716b13d",
+      "result": {
+        "ok": true,
+        "published": "VOLUME2_V1",
+        "from": 1,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 11,
+          "state_sha256": "fc9f8b7c86d80c325ecfe0b120d1c1a2cb97f9f55630de7e0b6dc10e6b398a24",
+          "version_id": "VOLUME2_V1",
+          "ref": "大纲/分卷/V2.json",
+          "from": 1,
+          "mode": "baseline",
+          "candidate_sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+          "direct_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": null,
+          "possible_indirect_through": null,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/基线-v2.md",
+            "report_sha256": "ef7905b46ea3da467441ac5fbcdce1907a5f0fbb1004beef5c21e11552860f89",
+            "readings": {
+              ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f"
+            },
+            "conclusion": "首次基线与六章测试范围一致；当前两枚押钱；不代表剧情已经发生",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/ef7905b46ea3da467441ac5fbcdce1907a5f0fbb1004beef5c21e11552860f89.txt"
+          }
+        },
+        "original_hashes_preserved": true,
+        "revision": 12,
+        "event": {
+          "ref": ".writer/objects/6620c35e-5215-45de-9d38-08861640a008.json",
+          "sha256": "2e13d3c042eeff54d7f17c07e37a99bcdaf69f060b5fe302f99f35e23cde1a35"
+        }
+      }
+    }
+  },
+  "impact_pending": {},
+  "committed_revisions": [],
+  "governance_binding": {
+    "ref": ".writer/objects/03c2c043-7202-4d8a-a9c0-ab843ec577d4.json",
+    "sha256": "fbb2b3208ec890a7dde454f9440d43319352df36437f7d11ac4760a4791d094d"
+  },
+  "long_form": true,
+  "source_binding": {
+    "ref": ".writer/objects/6620c35e-5215-45de-9d38-08861640a008.json",
+    "sha256": "2e13d3c042eeff54d7f17c07e37a99bcdaf69f060b5fe302f99f35e23cde1a35"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "unit": 5,
+  "expected_revision": 43,
+  "source_hashes": {
+    "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+    ".writer/state.json": "7aa1346c21ec57b8b0d4ed474aa07e75994f88aea31bc461f2c11b9c2e6fbf1d",
+    "大纲/单元/0005.json": "156392dd85da60ae87e3b58714b82ec35b8a78d2be001f6218ed78aeafcef7e8",
+    "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+    "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+    "设定/权威规则.md": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15",
+    "大纲/全书大纲.md": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb",
+    "大纲/分卷/V2.json": "1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a",
+    "正文/0004-柳婆的抽屉.md": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3"
+  },
+  "draft": "正文/0005-旧印归柜.md",
+  "source_bindings": {
+    "设定/作品定位.md": {
+      "version_id": "POSITION_V1",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+    },
+    "设定/文风.md": {
+      "version_id": "STYLE_V1",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+    },
+    "设定/权威规则.md": {
+      "version_id": "RULES_V3_FROM2",
+      "object_ref": ".writer/objects/c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15.source",
+      "sha256": "c24d666e7a5bc20b2128431a169dcff533a745756dda7065403af3e92151bd15"
+    },
+    "大纲/全书大纲.md": {
+      "version_id": "SKELETON_V2_FROM2",
+      "object_ref": ".writer/objects/0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb.source",
+      "sha256": "0cd5e4db8db16ce87c3015e6c1356b1ac142180ba2e5e7b9b6d04b0b236c82cb"
+    },
+    "大纲/分卷/V2.json": {
+      "version_id": "VOLUME2_V2_FROM2",
+      "object_ref": ".writer/objects/1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a.source",
+      "sha256": "1fed343385c58cb373b68786b638dd7cb7058eafc53571f3a68e3f4d6e970b0a"
+    }
+  },
+  "summary": "三人开封旧印匣，以原印补角高差、软硬垫试印及字内短缺口对验旧页和封套，确认缺角来自旧印修补；查出迁柜九号误誊六号，根票姓名、铜片背号画样及姨母地址核领。铜片仍归周叔锁匣归档；回驿柜退三枚押钱并交未拆信，柳婆带回试纸。",
+  "changes": {
+    "characters": {
+      "阿禾": "驿柜窗外；持未拆信封及退回三枚押钱；知道修印解释与误誊缘由，已知寄件地址为姨母，未知信内文字",
+      "周叔": "驿柜；完成原印复验、铜凭归档、三枚退款和信件交付；不知道信内文字",
+      "柳婆": "驿柜附近；自持旧试纸；现场见原印复验及三枚退款，知道铜片已留旧柜"
+    },
+    "timeline_append": [
+      "次日午前：原印复验解释缺角，核根票与九号误誊；铜片留旧柜归档；回驿柜退三枚并交信"
+    ],
+    "ledger": {
+      "OBJ_COPPER": {
+        "status": "resolved",
+        "custody": {
+          "holder": "周叔",
+          "location": "旧库旧柜上层借验匣，归档扣锁",
+          "condition": "连原净布归档；折耳浅痕不变；背九号核过根票"
+        },
+        "reader_known": "铜片从暂存转为归档，未再交阿禾带走",
+        "character_known": {
+          "阿禾": "亲见折耳浅痕与背号核验并签归档，铜片留柜",
+          "周叔": "亲自开匣核验、放回归档扣锁",
+          "柳婆": "在场见铜片核验留柜归档"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "周叔从借验匣取出铜片，摊布让阿禾看过折耳浅痕，再翻背面的旧号。"
+          },
+          {
+            "unit": 5,
+            "quote": "周叔点头，把铜片连净布放回旧柜上层借验匣，登记归档并扣锁。"
+          }
+        ]
+      },
+      "FACT_DEPOSIT": {
+        "status": "resolved",
+        "reader_known": "第二章交三枚，第五章已原数退三枚并记收条",
+        "character_known": {
+          "阿禾": "亲收三枚，数过穿回钱绳，押钱已结清",
+          "周叔": "按原借验号退三枚并写收条，已结清",
+          "柳婆": "在驿柜亲见三枚退还"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "从原借验号木格取出三枚押钱，平放在阿禾掌心，写下“三枚已退”。"
+          },
+          {
+            "unit": 5,
+            "quote": "她数过，正好三枚，穿回钱绳。"
+          },
+          {
+            "unit": 5,
+            "quote": "两枚钱的孔边原先洗得亮，如今沾了木格里的细灰；另一枚孔里还带着黑垢。"
+          }
+        ]
+      },
+      "THREAD_NOTCH": {
+        "status": "resolved",
+        "reader_known": "原印补角低导致硬纸上不吃色，旧页与封套字内短缺口也相合，误誊九为六造成核领搁置",
+        "character_known": {
+          "阿禾": "亲看补角高差、软硬试印及四处字内短缺口相合，知道缺角非独立仿印依据；另见误誊",
+          "周叔": "亲自复验原印及旧簿，承认接柜时未多核一页",
+          "柳婆": "亲认原印修补，三人现场复验后确认缘由"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "头一印缺右下，第二印那一角浅浅显了出来。"
+          },
+          {
+            "unit": 5,
+            "quote": "印内小字左边还有一道短缺口，四处都对得上。"
+          },
+          {
+            "unit": 5,
+            "quote": "发现封套号是九，誊到待核栏却成了六。"
+          }
+        ]
+      },
+      "FACT_STAMP_REPAIR": {
+        "type": "fact",
+        "statement": "原柜印右下补铜略低，硬纸缺印、软垫可显；旧页、封套、旧试纸和原印复验内字短缺口相合",
+        "status": "resolved",
+        "cast": [
+          "阿禾",
+          "周叔",
+          "柳婆"
+        ],
+        "tags": [
+          "缺角印",
+          "解释"
+        ],
+        "reader_known": "新解释不更改第三章右下缺角观察",
+        "character_known": {
+          "阿禾": "在场观察并说出低处碰不着硬纸",
+          "周叔": "当场操印复验并记经过",
+          "柳婆": "认出自己补角并在场复验"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "竹签下露出一线空隙，正在补角那里。"
+          },
+          {
+            "unit": 5,
+            "quote": "头一印缺右下，第二印那一角浅浅显了出来。"
+          }
+        ]
+      },
+      "OBJ_TESTPRINT": {
+        "custody": {
+          "holder": "柳婆",
+          "location": "随身篮中",
+          "condition": "旧试纸现场比对后收回，原件未交柜"
+        },
+        "character_known": {
+          "阿禾": "见旧试纸与原印复验比对，知道柳婆收回",
+          "周叔": "见柳婆旧试纸，与旧页封套分开比对",
+          "柳婆": "试纸经比对后自己收回"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "柳婆也签了复验那一栏，将自己的旧试纸收回篮里。"
+          }
+        ]
+      },
+      "THREAD_LETTER": {
+        "status": "partial",
+        "reader_known": "信已签领未拆，寄件地址与姨母相合",
+        "character_known": {
+          "阿禾": "对过姨母地址并领未拆信，尚未读内容",
+          "周叔": "核根票、问答并交信，未读私信",
+          "柳婆": "见核领与交信过程，不知私信内容"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "根票另记着母亲全名和寄件人的住址。"
+          },
+          {
+            "unit": 5,
+            "quote": "周叔双手把未拆的封套交给阿禾"
+          }
+        ]
+      },
+      "OBS_NOTCH": {
+        "reader_known": "第三章所见右下缺角和相似大小保留；第五章以原印高差、软硬试印及字内短缺口查明修补缘由，单凭缺角相似仍不能认定仿印或揭封",
+        "character_known": {
+          "阿禾": "亲见封套及旧页缺角；已在场核原印补角高差与软硬试印，知道修补造成缺印，原描样仍出自旧页",
+          "周叔": "亲见封套及旧页缺角；已亲自操作原印复验并记经过，知道补角低处造成缺印",
+          "柳婆": "本章亲看原印、旧页和封套，与自存试纸及现场试印比对，确认自己补角未磨齐"
+        },
+        "evidence": [
+          {
+            "unit": 5,
+            "quote": "头一印缺右下，第二印那一角浅浅显了出来。"
+          },
+          {
+            "unit": 5,
+            "quote": "周叔在旧簿上写下复验经过，没再写仿印。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

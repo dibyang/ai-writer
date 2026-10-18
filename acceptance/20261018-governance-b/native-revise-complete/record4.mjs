@@ -1,0 +1,10 @@
+import path from 'node:path';
+import {phase,root,branch,json,input,run} from './session.mjs';
+const t=json(path.join(root,'commands/native-three-chapter4-template/stdout.raw.txt'));
+const old=json(path.join(phase,'original-record-4.json'));
+t.summary=old.summary;
+t.changes=old.changes;
+t.changes.characters['阿禾']='与柳婆去旧柜；持旧页描样和三枚押钱收条；见试纸，知道补铜可能造成缺印，尚待原印核验；铜片仍由周叔锁匣暂存';
+run('chapter4-record',['record','--input',input('record4',t)],branch);
+run('chapter5-context',['context','--unit','5','--purpose','revision'],branch);
+run('chapter5-template',['record-template','--unit','5','--draft','正文/0005-旧印归柜.md'],branch);

@@ -1,0 +1,29 @@
+✖ 历史生效起点与回读前缀分开：从第2章发布不强迫回退已固定的第1章 (1179.3406ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1277.9954
+
+✖ failing tests:
+
+test at tests\revision-boundaries.test.mjs:47:1
+✖ 历史生效起点与回读前缀分开：从第2章发布不强迫回退已固定的第1章 (1179.3406ms)
+  Error: 本轮任务“验证专用尾段修订”不允许 revise 1–3；不得自行扩大作者授权
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:51:68)
+      at reject (file:///D:/work/other/ai-writer/lib/governance.mjs:19:59)
+      at Object.gate (file:///D:/work/other/ai-writer/lib/governance.mjs:94:126)
+      at gate (file:///D:/work/other/ai-writer/lib/workspace.mjs:452:33)
+      at file:///D:/work/other/ai-writer/lib/sources.mjs:190:7
+      at file:///D:/work/other/ai-writer/lib/sources.mjs:96:22
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:161)
+      at mutate (file:///D:/work/other/ai-writer/lib/sources.mjs:90:12)
+      at Object.stage (file:///D:/work/other/ai-writer/lib/sources.mjs:186:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:528:110) {
+    code: 'ACTION_OUT_OF_SCOPE',
+    next_action: '按当前任务和范围执行允许动作（discuss、plan、revise）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。',
+    scope: { enabled: true, stage: 'revision', task: '验证专用尾段修订', authorization: { allowed_actions: [Array], draft_range: null, revise_range: [Object], stop_conditions: [Array] }, planning: { positioning: [Object], structure: [Object], volume: [Object], outline: [Object] }, decisions: { current: [], candidates: [], history_count: 0 }, note: '作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。' }
+  }

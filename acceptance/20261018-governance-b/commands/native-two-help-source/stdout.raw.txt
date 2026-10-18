@@ -1,0 +1,11 @@
+ai-writer 0.5.0 / source
+冻结设定/细纲/卷纲/事实卡，按章生效；impact 只读，publish 必须绑定实际预览、实读报告和作者授权。历史变更先 stage，进入持久阻断，再在独立修订区发布和重登。原 source_hashes 不改写。详见手册。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' source list|freeze|impact|bind|publish|stage|cancel --project 作品目录 [--input 来源.json] [--unit 7]
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

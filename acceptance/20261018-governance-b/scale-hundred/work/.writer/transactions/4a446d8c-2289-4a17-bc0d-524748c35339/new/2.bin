@@ -1,0 +1,64 @@
+{
+  "action": "publish",
+  "at": "2026-10-18T02:18:20.530Z",
+  "evidence": {
+    "quote": "本场景模拟作者授权：允许在这个独立百章副本做工具版本/修订验证，只对第100章进行字节和事实等价重登；不写第101章，不改变既有剧情或前99章。",
+    "local_source": "研究/native-four-模拟验证授权.md",
+    "source_sha256": "f85b5d5106f6c9775f482972d35b7162861e476afd9b680003663d27d16d79b3",
+    "locator": "本轮任务本地转录，第6行",
+    "recorded_by": "Codex native-four（模拟验证）",
+    "frozen_ref": ".writer/objects/f85b5d5106f6c9775f482972d35b7162861e476afd9b680003663d27d16d79b3.txt"
+  },
+  "input": {
+    "expected_revision": 380,
+    "operation_id": "native-four-branch-publish-100",
+    "author_evidence": {
+      "quote": "本场景模拟作者授权：允许在这个独立百章副本做工具版本/修订验证，只对第100章进行字节和事实等价重登；不写第101章，不改变既有剧情或前99章。",
+      "local_source": "研究/native-four-模拟验证授权.md",
+      "source_sha256": "f85b5d5106f6c9775f482972d35b7162861e476afd9b680003663d27d16d79b3",
+      "locator": "本轮任务本地转录，第6行",
+      "recorded_by": "Codex native-four（模拟验证）"
+    },
+    "impact_id": "cfec1fa2-9302-4edd-8255-bda004093399"
+  },
+  "result": {
+    "published": "HUNDRED_RULES_NATIVE_FOUR_100",
+    "from": 100,
+    "pending_resolution": "branch-only-until-transaction-commit"
+  },
+  "current": {
+    "source_versions": {
+      "HUNDRED_RULES_BASE": {
+        "id": "HUNDRED_RULES_BASE",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2.source",
+        "sha256": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+        "previous": null,
+        "format": "md"
+      },
+      "HUNDRED_RULES_NATIVE_FOUR_100": {
+        "id": "HUNDRED_RULES_NATIVE_FOUR_100",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2.source",
+        "sha256": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+        "previous": "HUNDRED_RULES_BASE",
+        "format": "md"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "HUNDRED_RULES_BASE",
+        "from": 1,
+        "to": 99
+      },
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "HUNDRED_RULES_NATIVE_FOUR_100",
+        "from": 100,
+        "to": null
+      }
+    ],
+    "impact_pending": {}
+  }
+}

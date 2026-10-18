@@ -4,7 +4,7 @@
 
 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
 
-**协议选择：** 0.4 新作品默认 schema 3，用 changes 差量登记；schema 2 同样用 changes，schema 1 才用完整 snapshot。下方 snapshot 示例仅为旧作品兼容说明。schema 3 的分卷契约仍需 long-enable；其余来源核验、回退、审查与导出保护继续有效。新作品初始仅允许讨论/规划，正文须先登记有限授权。
+**协议选择：** 0.5 新作品默认 schema 4，用 changes 差量登记；schema 2/3 同样用 changes，schema 1 才用完整 snapshot。下方 snapshot 和主稿 rewind 示例是旧协议兼容说明。schema 4 分卷仍需 long-enable；历史修订须独立区和事务提交。新作品初始仅允许讨论/规划，正文须有限授权。版本/影响/修订的输入及恢复说明见 [专项手册](revision-and-sources.md)。
 
 ## 初始化
 
@@ -174,7 +174,7 @@ node bin/ai-writer.mjs status --project "works/示例"
 node bin/ai-writer.mjs rewind --project "works/示例" --from 1 --expected-revision 1
 ```
 
-回退保存旧状态至 `.writer/rewind-*.json`，正文不动；从该单元起的追踪全部失效。重新检查设定、前文和后续影响，逐章生成 context、修改并登记。不要把旧报告的结论挪到新哈希上。
+回退保存旧状态至 `.writer/rewind-*.json`，正文不动；从该单元起的追踪失效。schema 4 必须先 revision begin，再把 --project 指向返回的 workspace、带 --revision-token 运行上述命令；不能在主稿直接 rewind。逐章实读重登，完整尾段复核后回主项目 prepare/commit。新版本依赖也会使旧报告待复核，不只比较正文哈希。
 
 `status` 同时返回 `stale_units`（正文变化）和 `changed_sources`（已消费资料变化）。规则、被引用的大纲、事实卡等改变或缺失，`check` 会报 `CONTEXT_SOURCE_CHANGED`，续写和导出都会阻断。按最早消费者回退并重新评估；这是保守的文件依赖检查，不是史实或语义裁定。状态文件本身在登记时必然更新，不按旧输入哈希判过期。
 

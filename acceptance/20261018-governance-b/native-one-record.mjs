@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {base,project,read,input,cli,put,hash} from './native-one-helper.mjs';
+const n=Number(process.argv[2]);
+const template=read(base+'/native-one-inputs/template-'+n+'.json');
+const content=read(base+'/native-one-inputs/content-'+n+'.json');
+const text=fs.readFileSync(project+'/'+template.draft,'utf8');
+const han=(text.replace(/^#.*\r?\n/,'').match(/\p{Script=Han}/gu)||[]).length;
+console.log(JSON.stringify({unit:n,body_han:han,sha256:hash(project+'/'+template.draft)}));
+if(han<600||han>900)throw Error('Body out of requested range');
+cli('record-'+n,['record','--input',input('record-'+n,{...template,...content})]);

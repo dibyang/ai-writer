@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {phase,root,project,branch,token,id,json,sha,input,run,state,put,fingerprint} from './session.mjs';
+const report='审查/第三会话-修订尾段1-6模型复核.md';
+put(path.join(phase,'model-review-final.md'),fs.readFileSync(path.join(branch,report)));
+const s=state(branch);
+const review={from:1,to:6,kind:'model-self-review',report,source_hashes:Object.fromEntries(s.units.map(u=>[u.draft,sha(fs.readFileSync(path.join(branch,u.draft)))]))};
+run('final-tail-review',['review','--input',input('review-final',review)],branch);
+run('branch-check-after-review',['check'],branch);
+put(path.join(phase,'main-before-prepare-fingerprints.json'),fingerprint(project));
+put(path.join(phase,'branch-before-prepare-state.raw.json'),fs.readFileSync(path.join(branch,'.writer/state.json')));
+const b=json(path.join(phase,'session-before/base.json'));
+const actual=json(path.join(project,'.writer/revisions',id,'base.json'));
+put(path.join(phase,'pre-prepare-verification.json'),{main_revision:state().revision,base_revision:b.revision,unchanged_base:JSON.stringify(b)===JSON.stringify(actual),main_state_unchanged:sha(fs.readFileSync(path.join(phase,'main-before-state.raw.json')))===sha(fs.readFileSync(path.join(project,'.writer/state.json'))),baseline_differences:Object.entries(b.files).flatMap(([ref,wanted])=>{const f=path.join(project,ref),got=fs.existsSync(f)?sha(fs.readFileSync(f)):null;return got===wanted?[]:[{ref,wanted,got}];}),candidate_revision:state(branch).revision,units:state(branch).units.map(u=>u.unit),author_evidence_sha256:sha(fs.readFileSync(path.join(project,'研究/第二会话-合成作者修订原话.md'))),observation_statement_unchanged:state(branch).snapshot.ledger.OBS_NOTCH.statement===json(path.join(phase,'branch-before-state.raw.json')).snapshot.ledger.OBS_NOTCH.statement});
+run('revision-prepare',['revision','prepare','--input',input('revision-prepare',{id,token})]);

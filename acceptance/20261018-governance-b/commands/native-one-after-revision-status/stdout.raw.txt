@@ -1,0 +1,139 @@
+{
+  "ok": true,
+  "title": "铜桥来信",
+  "kind": "novel",
+  "revision": 21,
+  "schema_version": 4,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "独立修订第1至6章已发现的语言与物证动作问题，核全部后续追踪；不写新章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 6
+      },
+      "stop_conditions": [
+        "只修本六章，完成尾段实读重登后prepare/commit",
+        "不写第七章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 7,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "1f285fde-68f7-4e3b-a369-dc72f43180d1",
+        "owner": "native-one-independent-cli",
+        "project_id": "9807cab7-5a87-432d-9ac3-56180aca0376",
+        "build_id": "1a395ddff7c2a72d53b0acedfb3870e1ee999363c0eff6a5fe843e7469a05b5f",
+        "scope": {
+          "from": 1,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "a72b13b9befee9b72b212d4152830558f4104f0bbda81759602abeed8de579bf",
+        "created_at": "2026-10-18T01:19:38.607Z",
+        "transaction_id": "973b08a1-5dc9-43c9-b3a8-eaf8f3e2f916",
+        "session_sha256": "7b378d84f867895aed6491392c8c4aceca0598c4a0fa5a5843ee6aeb55e73c1d"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "973b08a1-5dc9-43c9-b3a8-eaf8f3e2f916",
+        "session_id": "1f285fde-68f7-4e3b-a369-dc72f43180d1",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 6,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 7,
+    "plan_exists": false,
+    "action": "独立修订第1至6章已发现的语言与物证动作问题，核全部后续追踪；不写新章",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261018-governance-b\\works\\铜桥来信' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 3,
+    "ledger_count": 8,
+    "recent": [
+      {
+        "unit": 4,
+        "summary": "阿禾携旧页描样问柳婆，说明封套与描样不同来源。柳婆出示旧柜修印工钱旁试纸，称右下补铜未磨齐，要求亲看原印，带自己的试印纸与阿禾下坡；目前仅有可复验解释，尚未确证。"
+      },
+      {
+        "unit": 5,
+        "summary": "三人开封旧印匣，以原印补角高差、软硬垫试印及字内短缺口对验旧页和封套，确认缺角来自旧印修补；查出迁柜九号误誊六号，根票姓名、铜片背号画样及姨母地址核领。铜片仍归周叔锁匣归档；回驿柜退两枚押钱并交未拆信，柳婆带回试纸。"
+      },
+      {
+        "unit": 6,
+        "summary": "阿禾回家将退回二枚放小碟，记得铜片留柜。她拆迟信，读到两年前姨母应母亲托请寄来的鞋样与日常劝语，重新理解母亲。她夹好鞋样，在姨母信背写下请来吃饭的回信句，正文在本章停止。"
+      }
+    ],
+    "timeline_tail": [
+      "秋日雨后傍晚：阿禾发现铜片并到桥头问信，约次晨借验",
+      "次晨：阿禾缴押二枚；铜片阿禾交周叔验记后交回阿禾；两人下坡查柜",
+      "次日上午：旧库发现封套与旧页缺角印，阿禾带描样问柳婆；铜片交周叔锁匣暂存",
+      "次日近午：柳婆出示修印旧试纸，带纸亲往旧柜核验，阿禾同行",
+      "次日午前：原印复验解释缺角，核根票与九号误誊；铜片留旧柜归档；回驿柜退二枚并交信",
+      "次日午后：阿禾回家收妥二枚退款，拆读迟信并在信背起草邀姨母来吃饭；回信尚未寄出"
+    ]
+  }
+}

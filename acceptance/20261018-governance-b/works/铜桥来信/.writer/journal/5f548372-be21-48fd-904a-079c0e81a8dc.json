@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "patch": [
+    {
+      "at": [
+        "characters",
+        "阿禾"
+      ],
+      "had": true,
+      "has": true,
+      "before": "回家途中；铜片在贴身衣袋；已见母亲旧柜候字记录，知道借验须两枚押钱，未知信件内容",
+      "after": "下坡去旧柜；持铜片和三枚押钱收条；次晨见新告示、听周叔说明后从钱绳另添一枚；知道归凭退三枚、母亲曾来问信，未见旧信"
+    },
+    {
+      "at": [
+        "characters",
+        "周叔"
+      ],
+      "had": true,
+      "has": true,
+      "before": "桥头驿柜；已见铜凭和纸条，认得母亲字迹；尚未对验旧柜",
+      "after": "陪阿禾下坡；持旧簿钥匙；当面说明今早改三枚并收足开条；铜片验记后已交还阿禾"
+    },
+    {
+      "at": [
+        "timeline"
+      ],
+      "append": [
+        "次晨：阿禾由新告示和周叔说明获知三枚，按昨夜旧报价备两枚后补一枚缴足；铜片阿禾交周叔验记后交回腰袋；两人下坡查柜"
+      ],
+      "length": 1
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "custody",
+        "location"
+      ],
+      "had": true,
+      "has": true,
+      "before": "贴身衣袋",
+      "after": "腰间系紧的小布袋"
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "custody",
+        "condition"
+      ],
+      "had": true,
+      "has": true,
+      "before": "净布包裹；折耳与浅划痕未改",
+      "after": "原净布包裹；折耳浅痕核对未改"
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "reader_known"
+      ],
+      "had": true,
+      "has": true,
+      "before": "铜凭可查旧柜，尚未核验",
+      "after": "周叔柜内白布核验并画样后交还，铜片正带往旧柜"
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "character_known",
+        "阿禾"
+      ],
+      "had": true,
+      "has": true,
+      "before": "亲自发现铜片；周叔称其为旧柜铜凭，需对旧簿",
+      "after": "看见周叔验记且接回，铜片折耳浅痕未改"
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "character_known",
+        "周叔"
+      ],
+      "had": true,
+      "has": true,
+      "before": "已当面见折耳浅痕铜片，知道阿禾称其出自母亲旧袄",
+      "after": "亲自验记后交还阿禾，知道她系入腰袋"
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "evidence"
+      ],
+      "append": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 19,
+          "quote": "周叔接过铜片，放在柜内的白布上。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 27,
+          "quote": "周叔把铜片交还阿禾，让她当面对照。"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-两枚押钱.md",
+          "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+          "line": 27,
+          "quote": "她用原来的净布包好，系进腰间的小布袋，收紧袋口。"
+        }
+      ],
+      "length": 2
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_COPPER",
+        "updated_unit"
+      ],
+      "had": true,
+      "has": true,
+      "before": 1,
+      "after": 2
+    },
+    {
+      "at": [
+        "ledger",
+        "FACT_DEPOSIT"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "type": "fact",
+        "statement": "本次借验押钱为三枚，归凭退还三枚",
+        "status": "active",
+        "cast": [
+          "阿禾",
+          "周叔"
+        ],
+        "tags": [
+          "押钱"
+        ],
+        "due_unit": 5,
+        "reader_known": "阿禾次晨才知三枚，按旧报价带来的两枚之外另添一枚；已缴三枚，收条明确归凭退还，尚未退款",
+        "character_known": {
+          "阿禾": "次晨亲见新告示并听周叔说明，补足一枚，亲缴三枚持收条；知道归凭全退、领信另记",
+          "周叔": "当面说明今早改三枚，亲收三枚入借验号木格，开三枚收条"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-两枚押钱.md",
+            "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+            "line": 7,
+            "quote": "写着“借验押钱三枚”。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-两枚押钱.md",
+            "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+            "line": 13,
+            "quote": "她把钱绳又解开，另取一枚，和洗净的两枚并排放到窗台上。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-两枚押钱.md",
+            "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+            "line": 13,
+            "quote": "周叔将三枚押钱逐枚数过"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-两枚押钱.md",
+            "sha256": "e96be51cb52bd8fb6c436dc9b29ae8fed75a8120e8d087c0d2b5906d7486f828",
+            "line": 13,
+            "quote": "写明“收押三枚，归凭退还”。"
+          }
+        ],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      }
+    }
+  ]
+}

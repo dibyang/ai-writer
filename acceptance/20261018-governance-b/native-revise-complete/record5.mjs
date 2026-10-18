@@ -1,0 +1,11 @@
+import path from 'node:path';
+import {phase,root,branch,json,input,run,bundle} from './session.mjs';
+const t=json(path.join(root,'commands/native-three-chapter5-template/stdout.raw.txt'));
+const old=json(path.join(phase,'original-record-5.json'));
+t.summary=old.summary.replace('两枚押钱','三枚押钱');
+t.changes=JSON.parse(JSON.stringify(old.changes).replaceAll('二枚','三枚').replaceAll('两枚','三枚'));
+t.changes.ledger.FACT_DEPOSIT.evidence.push({unit:5,quote:'两枚钱的孔边原先洗得亮，如今沾了木格里的细灰；另一枚孔里还带着黑垢。'});
+run('chapter5-record',['record','--input',input('record5',t)],branch);
+bundle('chapter5-after',branch,[t.draft]);
+run('chapter6-context',['context','--unit','6','--purpose','revision'],branch);
+run('chapter6-template',['record-template','--unit','6','--draft','正文/0006-信纸背面.md'],branch);

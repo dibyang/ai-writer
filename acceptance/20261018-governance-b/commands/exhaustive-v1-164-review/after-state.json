@@ -1,0 +1,168 @@
+{
+  "schema_version": 4,
+  "revision": 7,
+  "project_id": "d0f9c4c7-e205-4333-99ae-6e6f1e155733",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": [
+      "机械1",
+      "机械2"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001.md",
+      "sha256": "809637879125a428617279465546a11ecc7bdc3a2337381935d0ad5a922ca932",
+      "summary": "机械1rollback-2",
+      "source_hashes": {
+        "writer.json": "afb8714c80a2453767834a51b50084617ba659453da0777c33e67db1cd0a8e49",
+        ".writer/state.json": "b18dd232dba8405db8d78081630597f1df7d18331a012e1d2f725147a8ade81b",
+        "大纲/单元/0001.json": "3425935a0e86e8a815edf4695ec49a13f5cc37578ee91f78537797bc16ffbe1d",
+        "设定/作品定位.md": "de9a9fa77e5184d891175aade78b1678e982409053325bcc351c5af9a672d154",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "a63a4d41d3c846e9e54c9895a600f383fc620f86b2070fb407bd91cd6286fa06",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "revision",
+        "event": {
+          "ref": ".writer/objects/36667e3e-b47a-4975-a878-e0304f076b9b.json",
+          "sha256": "4ea732c51bcb72f541dff48f390e4f243e28fd03927b8d8055eb8919abf32563"
+        },
+        "action": "revise"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "29133638f6c840c8d6c0886712b293b212907bac2edbd200be3cacadb81594df",
+      "journal": ".writer/journal/ae65271d-0f66-460d-bfcf-b75d5b411a27.json",
+      "journal_sha256": "53d49b3830f28d65cbd641a637f61daa5e17ae5b823961841c4940c8a613b888"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002.md",
+      "sha256": "78331909509a54957b4e0a5c2a77be40a13cc2fc71d68c8d72c4c199363dc457",
+      "summary": "机械2rollback-2",
+      "source_hashes": {
+        "writer.json": "afb8714c80a2453767834a51b50084617ba659453da0777c33e67db1cd0a8e49",
+        ".writer/state.json": "23c0781a1cfdb4abf4b32388aaa9c97b6514d498112b3ebe618d1383c0c7639d",
+        "大纲/单元/0002.json": "53be0765ce4fcf72560f140096ad76cf5c763e6d67f6474a052f9eb05cf028c3",
+        "设定/作品定位.md": "de9a9fa77e5184d891175aade78b1678e982409053325bcc351c5af9a672d154",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "正文/0001.md": "809637879125a428617279465546a11ecc7bdc3a2337381935d0ad5a922ca932"
+      },
+      "fingerprint": "32682c14490a5ce2e69f7e77172616335323031b9e36af9b3755269ecce1c3ea",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "revision",
+        "event": {
+          "ref": ".writer/objects/36667e3e-b47a-4975-a878-e0304f076b9b.json",
+          "sha256": "4ea732c51bcb72f541dff48f390e4f243e28fd03927b8d8055eb8919abf32563"
+        },
+        "action": "revise"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "29133638f6c840c8d6c0886712b293b212907bac2edbd200be3cacadb81594df",
+      "journal": ".writer/journal/bfb701fc-40ef-4f40-a6d0-ad09ad92dfe8.json",
+      "journal_sha256": "a680bce04a7de91bcc47d98ca6db65b4400f95445f32f64048c3a7f17ccfb992"
+    }
+  ],
+  "governance": {
+    "stage": "revision",
+    "task": "独立机械验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/4d7ee8e9-bfdd-4910-a689-ea516805eba3.json",
+      "sha256": "ed7f3a33e55564b6a7d43219c055485f5ee577171976f9b0baccdc0980a30a71"
+    },
+    {
+      "ref": ".writer/objects/36667e3e-b47a-4975-a878-e0304f076b9b.json",
+      "sha256": "4ea732c51bcb72f541dff48f390e4f243e28fd03927b8d8055eb8919abf32563"
+    }
+  ],
+  "operations": {
+    "exhaustive-v1-workflow-2": {
+      "input_sha256": "74fc15faa6211ccae9feca749666c02acd67c2458643c55ca3ccf1b1b0a1a3c7",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "exhaustive-v1-workflow-2",
+        "event": {
+          "ref": ".writer/objects/4d7ee8e9-bfdd-4910-a689-ea516805eba3.json",
+          "sha256": "ed7f3a33e55564b6a7d43219c055485f5ee577171976f9b0baccdc0980a30a71"
+        }
+      }
+    },
+    "exhaustive-v1-workflow-10": {
+      "input_sha256": "5f95c1d4e8c13ab34498bfb60e515bf9589cd84071e0a1bdc34a0af9ad6ca077",
+      "result": {
+        "ok": true,
+        "revision": 4,
+        "operation_id": "exhaustive-v1-workflow-10",
+        "event": {
+          "ref": ".writer/objects/36667e3e-b47a-4975-a878-e0304f076b9b.json",
+          "sha256": "4ea732c51bcb72f541dff48f390e4f243e28fd03927b8d8055eb8919abf32563"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "governance_binding": {
+    "ref": ".writer/objects/36667e3e-b47a-4975-a878-e0304f076b9b.json",
+    "sha256": "4ea732c51bcb72f541dff48f390e4f243e28fd03927b8d8055eb8919abf32563"
+  }
+}

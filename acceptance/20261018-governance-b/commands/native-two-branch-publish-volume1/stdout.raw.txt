@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "published": "VOLUME1_V2_FROM2",
+  "from": 2,
+  "analysis": {
+    "schema_version": 1,
+    "revision": 33,
+    "state_sha256": "1b83b121c6df6f82fd7d083f06b4dc00a4146960d2750c14f105e76446fd1d4a",
+    "version_id": "VOLUME1_V2_FROM2",
+    "ref": "大纲/分卷/V1.json",
+    "from": 2,
+    "mode": "future",
+    "candidate_sha256": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb",
+    "direct_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "大纲/分卷/V1.json",
+        "version_id": "VOLUME1_V1",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": null,
+    "possible_indirect_through": null,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb.source": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+    "review": {
+      "report": "审查/第二会话-计划版本-volume1.md",
+      "report_sha256": "36f9786f988af2cbe7beb745be970198af045dd522165e6b0cce6d4d8936b13f",
+      "readings": {
+        ".writer/objects/124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb.source": "124244bcc27e0bccae452f3bcbb7bab8a502bcfd9996356028ce0190d71f99fb"
+      },
+      "conclusion": "实读旧V1与候选：1–3范围和查问柳婆回收不变，押钱承诺改为第一章两枚旧报价、第二章三枚。旧VOLUME1_V1仍供1章，候选从2生效。",
+      "unresolved": [],
+      "frozen_report": ".writer/objects/36f9786f988af2cbe7beb745be970198af045dd522165e6b0cce6d4d8936b13f.txt"
+    }
+  },
+  "original_hashes_preserved": true,
+  "revision": 34,
+  "event": {
+    "ref": ".writer/objects/ed2ca286-9a34-4f6c-8187-aa4b404f97c1.json",
+    "sha256": "edf3de5d40620cb6622a69dcd3911bd75e013aa02e087268068abbfc02fb1977"
+  }
+}

@@ -2,13 +2,13 @@
 
 通过 Codex 创作中文小说、剧本、历史散文，以及散文和一般非虚构。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究和追踪各有职责；新会话可以从文件恢复创作。
 
-当前版本：**0.4.0 本地候选版**。新增只读构建识别、创作阶段与有限授权、基础作者决策管理；新作品默认 schema 3 差量追踪，先规划并明确范围再写正文，旧作品不自动迁移。包含 7 个 Codex skills、去 AI 味流程及 story-gate-studio 质量引擎。长篇分卷、线索召回、旧稿导入和来源哈希保护继续保留。文学质量、史实真伪和作者验收仍由实际阅读与核验裁定。
+当前版本：**0.5.0 本地候选版**。新增设定按章版本、保守影响分析、独立修订区与可恢复提交；新作品默认 schema 4，继续使用阶段/有限授权、作者决策和 changes 差量追踪。旧作品不自动迁移。包含 7 个 Codex skills、去 AI 味流程及 story-gate-studio 质量引擎；分卷、线索召回、旧稿导入和哈希保护继续复用。文学质量、史实真伪和作者验收仍由实际阅读与核验裁定。
 
 ## 开始使用
 
 需要已经可以使用的 Codex，以及 Node.js 20 或以上。工具不需要安装 npm 依赖，也不单独调用模型 API；写作使用当前 Codex 会话及其模型。
 
-第一次使用看 [快速入门](docs/quickstart.md)；日常任务看 [使用手册](docs/user-guide.md)；修订表达看 [去 AI 味流程](docs/deslop.md)；命令与 JSON 看 [技术手册](docs/workflow.md)。这些指南都会随新作品复制。
+第一次使用看 [快速入门](docs/quickstart.md)；日常任务看 [使用手册](docs/user-guide.md)；版本与并行修改看 [设定版本和修订](docs/revision-and-sources.md)；修订表达看 [去 AI 味流程](docs/deslop.md)；命令与 JSON 看 [技术手册](docs/workflow.md)。这些指南都会随新作品复制。
 
 在 Codex 中打开本项目，直接说：
 
@@ -72,14 +72,14 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 - 正文变化后，旧追踪不能继续用于续写或导出；回退会保留正文和旧状态备份。
 - 登记绑定设定、细纲、研究和前文哈希，拒绝过期上下文；顺序写入带锁，失败不自动抢锁。
-- 已登记来源变更会定位最早消费者并阻断过期续写、导出；写前登记模板自动保留真实哈希和完整快照。
+- 实际消费输入变化会定位最早消费者并阻断过期续写、导出；冻结对象继续校验，活动入口的编辑不替换旧输入。写前模板保留真实哈希，差量协议自动保留未变项。
 - 研究 verified 只表示填写者声明已核验，程序不能证明史实正确。
 - 初始化和导出不覆盖已存在目录；正文不会自动上传或发布。
 - `check` 只检查有限的机械问题，不是 AI 检测器或文学质量评分器。
 
 命令和 JSON 见 [完整工作流](docs/workflow.md)，自然语言例子见 [创作任务示例](examples/prompts.md)。
 
-长篇按 [长篇流程](docs/long-form.md) 显式启用分卷契约。新 schema 3 已有差量追踪；原 schema 1/2 保持兼容。本批不含设定版本发布、独立修订区、跨会话提交事务或随附工具安全更新；不要把范围/CAS 保护视为已解决全部并行改稿问题。设计及分批边界见 [治理设计](docs/authoring-governance-design.md)。
+长篇按 [长篇流程](docs/long-form.md) 显式启用分卷契约，schema 4 保留原增量链。未来设定先冻结真实旧输入再按章发布；旧章修改在独立区重读、重登、复核后提交，冲突保留双方，中断事务显式恢复。旧 1/2/3 不自动启用新保护。安全更新、自动合并、跨机协作和意见级闭环未实施，锁外编辑仍有边界；见 [治理设计](docs/authoring-governance-design.md)及[第二批实现约束](docs/authoring-governance-b-implementation.md)。
 
 ## 吸收与复用
 
@@ -91,7 +91,7 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 ## 验证
 
-0.4.0 最小首批 A 的构建识别、阶段/范围与作者决策实跑见[本轮记录](acceptance/20261018-governance-a/README.md)，实际完成范围、最终构建、失败重试及未覆盖项以该记录最终状态为准；不将其计为 B—D 已交付。
+0.5.0 B 批实现、失败修复、独立 Codex 实跑与终版验证见[本轮记录](acceptance/20261018-governance-b/README.md)，以其最终状态和封存清单为准。0.4.0 A 批记录见[首批记录](acceptance/20261018-governance-a/README.md)，历史记录不改写为本轮结果；C/D 未交付。
 
 ```powershell
 npm test

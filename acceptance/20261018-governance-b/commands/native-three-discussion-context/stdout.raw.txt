@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "铜桥来信",
+  "kind": "novel",
+  "revision": 30,
+  "next_unit": 7,
+  "governance": {
+    "enabled": true,
+    "stage": "structure",
+    "task": "六章三枚押钱修订、完整尾段复核及事务提交已完成；暂停正文，仅讨论后续结构，等待新的有限正文授权，不写第七章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "完成本轮六章修订后暂停正文；第七章及以后没有正文授权",
+        "后续具体剧情仍待作者选择；不因next_unit=7自动续写"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "第七章起具体剧情与新借验是否出现"
+        ],
+        "reason": "六章已完成，后续剧情待讨论，不以规则发布代替剧情选择"
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "1f285fde-68f7-4e3b-a369-dc72f43180d1",
+        "owner": "native-one-independent-cli",
+        "project_id": "9807cab7-5a87-432d-9ac3-56180aca0376",
+        "build_id": "1a395ddff7c2a72d53b0acedfb3870e1ee999363c0eff6a5fe843e7469a05b5f",
+        "scope": {
+          "from": 1,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "a72b13b9befee9b72b212d4152830558f4104f0bbda81759602abeed8de579bf",
+        "created_at": "2026-10-18T01:19:38.607Z",
+        "transaction_id": "973b08a1-5dc9-43c9-b3a8-eaf8f3e2f916",
+        "session_sha256": "7b378d84f867895aed6491392c8c4aceca0598c4a0fa5a5843ee6aeb55e73c1d"
+      },
+      {
+        "id": "b035e525-797d-4f5f-8d7d-fffa8113cfb6",
+        "owner": "native-two-independent-codex-session",
+        "project_id": "9807cab7-5a87-432d-9ac3-56180aca0376",
+        "build_id": "c479c3f5485a2f937197cc9459d70cf95df58741cadb07e81668a1b0e28e568b",
+        "scope": {
+          "from": 1,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "5d57384b0340720fcb1a7a36232a906546043651cc90145a8f13dfb432cc59c5",
+        "created_at": "2026-10-18T01:42:31.609Z",
+        "transaction_id": "e1433cbb-4344-4870-a5bd-5f3e9f3cbfbd",
+        "session_sha256": "8436fc3a60768bfe9691dc211d0966a34bb00e353a25df9d23c3182c89c81e99"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "973b08a1-5dc9-43c9-b3a8-eaf8f3e2f916",
+        "session_id": "1f285fde-68f7-4e3b-a369-dc72f43180d1",
+        "status": "completed"
+      },
+      {
+        "id": "e1433cbb-4344-4870-a5bd-5f3e9f3cbfbd",
+        "session_id": "b035e525-797d-4f5f-8d7d-fffa8113cfb6",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

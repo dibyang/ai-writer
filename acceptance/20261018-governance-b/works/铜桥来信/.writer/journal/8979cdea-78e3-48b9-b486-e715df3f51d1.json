@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "patch": [
+    {
+      "at": [
+        "characters",
+        "阿禾"
+      ],
+      "had": true,
+      "has": true,
+      "before": "离旧库去问柳婆；持注明来自旧页的描样与押钱收条；不持铜片；只知缺角相似而非仿印定论",
+      "after": "与柳婆去旧柜；仍持旧页描样和收条；见试纸，知道补铜可能造成缺印，尚待原印核验"
+    },
+    {
+      "at": [
+        "characters",
+        "柳婆"
+      ],
+      "had": false,
+      "has": true,
+      "after": "持竹杖和装试印纸的篮；从阿禾听说疑母亲封套、水渍、右下缺印；不知道铜片保管与押钱事项"
+    },
+    {
+      "at": [
+        "timeline"
+      ],
+      "append": [
+        "次日近午：柳婆出示修印旧试纸，带纸亲往旧柜核验，阿禾同行"
+      ],
+      "length": 3
+    },
+    {
+      "at": [
+        "ledger",
+        "THREAD_NOTCH",
+        "status"
+      ],
+      "had": true,
+      "has": true,
+      "before": "pending",
+      "after": "partial"
+    },
+    {
+      "at": [
+        "ledger",
+        "THREAD_NOTCH",
+        "reader_known"
+      ],
+      "had": true,
+      "has": true,
+      "before": "拟问修过印匣的柳婆，尚无解释",
+      "after": "柳婆称修过右下角，旧试纸有相似缺角，尚须验原印"
+    },
+    {
+      "at": [
+        "ledger",
+        "THREAD_NOTCH",
+        "character_known",
+        "阿禾"
+      ],
+      "had": true,
+      "has": true,
+      "before": "知道可找柳婆问印；不知道修补或仿印缘由",
+      "after": "见柳婆试纸并听补角解释；尚未见原印，不作最终结论"
+    },
+    {
+      "at": [
+        "ledger",
+        "THREAD_NOTCH",
+        "character_known",
+        "柳婆"
+      ],
+      "had": false,
+      "has": true,
+      "after": "见旧页描样并听封套描述，觉得可能是自己修过的旧印，须亲看原印"
+    },
+    {
+      "at": [
+        "ledger",
+        "THREAD_NOTCH",
+        "evidence"
+      ],
+      "append": [
+        {
+          "unit": 4,
+          "draft": "正文/0004-柳婆的抽屉.md",
+          "sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+          "line": 17,
+          "quote": "旧柜的印跌过，右下崩了。我补过铜，怕磨坏字口，没敢磨齐。"
+        },
+        {
+          "unit": 4,
+          "draft": "正文/0004-柳婆的抽屉.md",
+          "sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+          "line": 25,
+          "quote": "要不是这一方，也当我走了趟路。"
+        }
+      ],
+      "length": 1
+    },
+    {
+      "at": [
+        "ledger",
+        "THREAD_NOTCH",
+        "updated_unit"
+      ],
+      "had": true,
+      "has": true,
+      "before": 3,
+      "after": 4
+    },
+    {
+      "at": [
+        "ledger",
+        "OBJ_TESTPRINT"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "type": "object",
+        "statement": "柳婆保存的修印工钱旁三枚试印纸",
+        "status": "active",
+        "cast": [
+          "柳婆",
+          "阿禾"
+        ],
+        "tags": [
+          "缺角印",
+          "试印"
+        ],
+        "custody": {
+          "holder": "柳婆",
+          "location": "随身篮中的硬纸夹",
+          "condition": "三枚旧试印，旁记修补工钱；与阿禾描样分放"
+        },
+        "reader_known": "实见纸上头两印缺右下、末印稍全",
+        "character_known": {
+          "阿禾": "亲见三个试印，知道柳婆自称原修印者",
+          "柳婆": "自己留存并带往柜面核验，不能凭描样确认原印"
+        },
+        "evidence": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-柳婆的抽屉.md",
+            "sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+            "line": 19,
+            "quote": "纸条上排着三个方印，头两个都缺右下角，最后一个稍完整。"
+          },
+          {
+            "unit": 4,
+            "draft": "正文/0004-柳婆的抽屉.md",
+            "sha256": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+            "line": 27,
+            "quote": "她把试印纸放进硬纸夹，搁在自己篮里，没让阿禾代拿。"
+          }
+        ],
+        "introduced_unit": 4,
+        "updated_unit": 4
+      }
+    }
+  ]
+}

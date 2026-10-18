@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {phase,root,project,branch,token,id,json,sha,put,input,state,run} from './session.mjs';
+const sessionDir=path.join(project,'.writer/revisions',id);
+const before=json(path.join(sessionDir,'session.json'));
+const wrong=input('resume-wrong-token',{id,token:'invalid-native-three-token'});
+run('resume-wrong-token',['revision','resume','--input',wrong],project,{expect:2});
+const correct=input('resume-same-session',{id,token});
+run('resume-same-session',['revision','resume','--input',correct]);
+run('main-bypass-style-scan',['style-scan','--draft','正文/0001-铜片的耳.md','--out',path.join(phase,'must-not-exist-style.md')],project,{expect:2});
+const after=json(path.join(sessionDir,'session.json'));
+const base=json(path.join(sessionDir,'base.json'));
+const diffs=Object.entries(base.files).flatMap(([ref,wanted])=>{const f=path.join(project,ref),actual=fs.existsSync(f)?sha(fs.readFileSync(f)):null;return actual===wanted?[]:[{ref,wanted,actual}];});
+put(path.join(phase,'restore-invariance.json'),{same_metadata:JSON.stringify(before)===JSON.stringify(after),same_session_bytes:sha(fs.readFileSync(path.join(phase,'session-before/session.json')))===sha(fs.readFileSync(path.join(sessionDir,'session.json'))),base_revision:base.revision,same_base_bytes:sha(fs.readFileSync(path.join(phase,'session-before/base.json')))===sha(fs.readFileSync(path.join(sessionDir,'base.json'))),main_state_unchanged:sha(fs.readFileSync(path.join(phase,'main-before-state.raw.json')))===sha(fs.readFileSync(path.join(project,'.writer/state.json'))),baseline_files_checked:Object.keys(base.files).length,baseline_differences:diffs,style_output_created:fs.existsSync(path.join(phase,'must-not-exist-style.md'))});

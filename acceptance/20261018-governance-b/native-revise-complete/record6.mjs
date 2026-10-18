@@ -1,0 +1,11 @@
+import path from 'node:path';
+import {phase,root,branch,json,input,run,bundle,state,put} from './session.mjs';
+const t=json(path.join(root,'commands/native-three-chapter6-template/stdout.raw.txt'));
+const old=json(path.join(phase,'original-record-6.json'));
+t.summary=old.summary.replaceAll('二枚','三枚');
+t.changes=JSON.parse(JSON.stringify(old.changes).replaceAll('二枚','三枚').replaceAll('两枚','三枚'));
+t.changes.ledger.FACT_DEPOSIT={reader_known:'本次三枚押钱已在第五章退清，现由阿禾收在家中米缸旁小碟',character_known:{'阿禾':'已将三枚退款放在米缸旁小碟；本次押钱已结清'},evidence:[{unit:6,quote:'把退回的三枚钱放进米缸旁的小碟。'}]};
+run('chapter6-record',['record','--input',input('record6',t)],branch);
+bundle('final-six-before-review',branch,state(branch).units.map(u=>u.draft));
+put(path.join(phase,'ledger-after-six.json'),state(branch).snapshot);
+run('branch-check-before-review',['check'],branch);

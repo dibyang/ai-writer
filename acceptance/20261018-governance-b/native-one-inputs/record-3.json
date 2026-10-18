@@ -1,0 +1,125 @@
+{
+  "unit": 3,
+  "expected_revision": 15,
+  "source_hashes": {
+    "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+    ".writer/state.json": "dd3470c27bf45abf5f00516be31087c9b30d8b60f99774cd1c43fdd8621812b6",
+    "大纲/单元/0003.json": "eaadc55f737997a3e77aeb63c345a8121155923d645ea85b60e6d55f28d2086c",
+    "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+    "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+    "设定/权威规则.md": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+    "大纲/全书大纲.md": "c99f90e27ec8804790bda4cfedc4a22649e8ecab6fe8562be97d4b9d06846bec",
+    "大纲/分卷/V1.json": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+    "正文/0002-两枚押钱.md": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553"
+  },
+  "draft": "正文/0003-缺掉的一角.md",
+  "source_bindings": {
+    "设定/作品定位.md": {
+      "version_id": "POSITION_V1",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+    },
+    "设定/文风.md": {
+      "version_id": "STYLE_V1",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+    },
+    "设定/权威规则.md": {
+      "version_id": "RULES_V1",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+    },
+    "大纲/分卷/V1.json": {
+      "version_id": "VOLUME1_V1",
+      "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+      "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246"
+    }
+  },
+  "summary": "阿禾与周叔在旧库待核包见疑似母亲的水渍封套，右下缺角方印与旧页印样相近，不能判揭封或仿印。阿禾描旧页印样、获柳婆修过印匣的线索；铜片交周叔锁旧柜借验匣暂存，未归档未退款。",
+  "changes": {
+    "characters": {
+      "阿禾": "离旧库去问柳婆；持注明来自旧页的描样与押钱收条；不持铜片；只知缺角相似而非仿印定论",
+      "周叔": "旧库；保管铜片、待核封套和旧页；知道柳婆修过锁和印匣，未知缺角缘由"
+    },
+    "timeline_append": [
+      "次日上午：旧库发现封套与旧页缺角印，阿禾带描样问柳婆；铜片交周叔锁匣暂存"
+    ],
+    "ledger": {
+      "OBJ_COPPER": {
+        "previous_holder": "阿禾",
+        "custody": {
+          "holder": "周叔",
+          "location": "旧库旧柜上层借验匣，已扣锁",
+          "condition": "连原净布暂存；折耳浅痕未改；未结清归档"
+        },
+        "reader_known": "由阿禾交周叔锁匣暂存，未带去柳婆处",
+        "character_known": {
+          "阿禾": "亲交铜片并试锁，知道仅暂存、押钱仍未退",
+          "周叔": "亲接铜片锁匣，须等验印再结归档"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "阿禾把铜片交给周叔。"
+          },
+          {
+            "unit": 3,
+            "quote": "周叔连净布收入旧柜上层的借验匣，写下暂存，扣锁后让她试拉了一下。"
+          }
+        ]
+      },
+      "OBS_NOTCH": {
+        "type": "observation",
+        "statement": "待核封套方印右下角缺一块，旧页印样也右下缺角，大小相近",
+        "status": "active",
+        "cast": [
+          "阿禾",
+          "周叔"
+        ],
+        "tags": [
+          "缺角印"
+        ],
+        "reader_known": "实见两处右下缺角，相似不能证明仿印或揭封",
+        "character_known": {
+          "阿禾": "亲见两处相似缺角；描样取自旧页，不是封套拓印",
+          "周叔": "亲见封套及旧页印样，暂不能断缺角成因"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "封口压着方印，右下角空了一块，露出纸本来的黄。"
+          },
+          {
+            "unit": 3,
+            "quote": "印样的右下也缺了一小块，大小相近。"
+          }
+        ]
+      },
+      "THREAD_NOTCH": {
+        "type": "thread",
+        "statement": "查清缺角印来由以及待核封套能否领取",
+        "status": "pending",
+        "cast": [
+          "阿禾",
+          "周叔"
+        ],
+        "tags": [
+          "缺角印"
+        ],
+        "due_unit": 5,
+        "reader_known": "拟问修过印匣的柳婆，尚无解释",
+        "character_known": {
+          "阿禾": "知道可找柳婆问印；不知道修补或仿印缘由",
+          "周叔": "知道旧包曾因疑仿印搁置，只建议问柳婆"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "柳婆修过柜锁，也修过印匣。她还留着旧东西，能问问。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

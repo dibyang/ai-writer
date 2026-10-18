@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\admin\.codex\skills\.system\skill-creator\scripts\quick_validate.py", line 125, in <module>
+    valid, message = validate_skill(sys.argv[1])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\.codex\skills\.system\skill-creator\scripts\quick_validate.py", line 23, in validate_skill
+    content = skill_md.read_text()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa8 in position 40: illegal multibyte sequence

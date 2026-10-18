@@ -1,0 +1,102 @@
+{
+  "unit": 4,
+  "expected_revision": 24,
+  "source_hashes": {
+    "writer.json": "811161300d562bc325a9ed0f925ee3a8dc358f27cd99e75904773a069a782b31",
+    ".writer/state.json": "7a50bf85fef53b0cc2b4520d7ece7f31209fa134993fe7764c3e6f1217d30284",
+    "大纲/单元/0004.json": "76bb746dc897267f9c92a58a93b8520250d714b43baf50fbcd19d4937b7c71ab",
+    "设定/作品定位.md": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+    "设定/文风.md": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+    "设定/权威规则.md": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+    "大纲/全书大纲.md": "c99f90e27ec8804790bda4cfedc4a22649e8ecab6fe8562be97d4b9d06846bec",
+    "大纲/分卷/V2.json": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+    "正文/0003-缺掉的一角.md": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9"
+  },
+  "draft": "正文/0004-柳婆的抽屉.md",
+  "source_bindings": {
+    "设定/作品定位.md": {
+      "version_id": "POSITION_V1",
+      "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+      "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367"
+    },
+    "设定/文风.md": {
+      "version_id": "STYLE_V1",
+      "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+      "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e"
+    },
+    "设定/权威规则.md": {
+      "version_id": "RULES_V1",
+      "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+      "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+    },
+    "大纲/分卷/V2.json": {
+      "version_id": "VOLUME2_V1",
+      "object_ref": ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source",
+      "sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f"
+    }
+  },
+  "summary": "阿禾携旧页描样问柳婆，说明封套与描样不同来源。柳婆出示旧柜修印工钱旁试纸，称右下补铜未磨齐，要求亲看原印，带自己的试印纸与阿禾下坡；目前仅有可复验解释，尚未确证。",
+  "changes": {
+    "characters": {
+      "阿禾": "与柳婆去旧柜；仍持旧页描样和收条；见试纸，知道补铜可能造成缺印，尚待原印核验",
+      "柳婆": "持竹杖和装试印纸的篮；从阿禾听说疑母亲封套、水渍、右下缺印；不知道铜片保管与押钱事项"
+    },
+    "timeline_append": [
+      "次日近午：柳婆出示修印旧试纸，带纸亲往旧柜核验，阿禾同行"
+    ],
+    "ledger": {
+      "THREAD_NOTCH": {
+        "status": "partial",
+        "reader_known": "柳婆称修过右下角，旧试纸有相似缺角，尚须验原印",
+        "character_known": {
+          "阿禾": "见柳婆试纸并听补角解释；尚未见原印，不作最终结论",
+          "柳婆": "见旧页描样并听封套描述，觉得可能是自己修过的旧印，须亲看原印"
+        },
+        "evidence": [
+          {
+            "unit": 4,
+            "quote": "旧柜的印跌过，右下崩了。我补过铜，怕磨坏字口，没敢磨齐。"
+          },
+          {
+            "unit": 4,
+            "quote": "要不是这一方，也当我走了趟路。"
+          }
+        ]
+      },
+      "OBJ_TESTPRINT": {
+        "type": "object",
+        "statement": "柳婆保存的修印工钱旁三枚试印纸",
+        "status": "active",
+        "cast": [
+          "柳婆",
+          "阿禾"
+        ],
+        "tags": [
+          "缺角印",
+          "试印"
+        ],
+        "custody": {
+          "holder": "柳婆",
+          "location": "随身篮中的硬纸夹",
+          "condition": "三枚旧试印，旁记修补工钱；与阿禾描样分放"
+        },
+        "reader_known": "实见纸上头两印缺右下、末印稍全",
+        "character_known": {
+          "阿禾": "亲见三个试印，知道柳婆自称原修印者",
+          "柳婆": "自己留存并带往柜面核验，不能凭描样确认原印"
+        },
+        "evidence": [
+          {
+            "unit": 4,
+            "quote": "纸条上排着三个方印，头两个都缺右下角，最后一个稍完整。"
+          },
+          {
+            "unit": 4,
+            "quote": "她把试印纸放进硬纸夹，搁在自己篮里，没让阿禾代拿。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}

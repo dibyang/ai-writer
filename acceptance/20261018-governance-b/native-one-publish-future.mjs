@@ -1,0 +1,11 @@
+import {base,project,read,put,input,rev,cli,evidence,hash} from './native-one-helper.mjs';
+const impact=read(base+'/commands/native-one-impact-rules-future/stdout.raw.txt').impact;
+const report='审查/规则v2-第7章起-影响实读.md';
+cli('publish-rules-future',['source','publish','--input',input('publish-rules-future',{expected_revision:rev(),operation_id:'native-one-rules-v2-publish',author_evidence:evidence('本轮允许在这个独立作品固定真实旧输入、实读影响后发布第七章起的规则新版本，但不写第七章。'),impact,review:{report,report_sha256:hash(project+'/'+report),readings:impact.required_readings,conclusion:'实读新旧规则及六章，既有借验二枚已结清；仅第7章起新借验三枚，历史文本及知识不变',unresolved:[]}})]);
+cli('future-check',['check']);
+cli('source-current-six',['source','list','--unit','6']);
+cli('source-future-seven',['source','list','--unit','7']);
+const before=read(base+'/native-one-before-future-consumption.json'),after=read(project+'/.writer/state.json').units;
+const rows=before.map(b=>{const a=after.find(x=>x.unit===b.unit);return {unit:b.unit,body_unchanged:hash(project+'/'+b.draft)===b.sha256,registered_hash_unchanged:a.sha256===b.sha256,source_hashes_unchanged:JSON.stringify(a.source_hashes)===JSON.stringify(b.source_hashes),source_bindings_unchanged:JSON.stringify(a.source_bindings)===JSON.stringify(b.source_bindings)};});
+put(base+'/native-one-future-preservation.json',{revision:rev(),comparison:rows,all_preserved:rows.every(r=>Object.entries(r).filter(([k])=>k!=='unit').every(([,v])=>v))});
+console.log(JSON.stringify({preservation:rows}));

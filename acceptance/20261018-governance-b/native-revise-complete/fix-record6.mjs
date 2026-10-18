@@ -1,0 +1,10 @@
+import path from 'node:path';
+import {phase,root,branch,json,input,run,bundle,state,put} from './session.mjs';
+const t=json(path.join(root,'commands/native-three-fix-knowledge-template6/stdout.raw.txt'));
+const prior=json(path.join(phase,'inputs/record6.json'));
+t.summary=prior.summary;t.changes=prior.changes;
+run('fix-knowledge-record6',['record','--input',input('record6-knowledge-fixed',t)],branch);
+bundle('final-six-after-reregister',branch,state(branch).units.map(u=>u.draft));
+put(path.join(phase,'ledger-final-candidate.json'),state(branch).snapshot);
+run('tool-identify-main',['tool','identify']);
+run('tool-compare-copy',['tool','compare','--other','D:/work/other/ai-writer']);

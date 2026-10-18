@@ -1,0 +1,60 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T01:12:02.881Z",
+  "operation_id": "native-one-planning",
+  "base_revision": 0,
+  "payload": {
+    "stage": "structure",
+    "task": "为六章试写补齐定位、权威规则、全书骨架及两卷契约；尚不写正文",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "规划与来源基线完成后再登记有限正文授权"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "滚动章纲"
+        ],
+        "reason": "仅细化近期三章"
+      }
+    }
+  },
+  "evidence": {
+    "quote": "先规划后登记有限授权，到第六章停止。",
+    "local_source": "研究/测试授权原话.md",
+    "source_sha256": "d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d",
+    "locator": "本独立验证用户指令；合成测试授权，无外部作者消息ID",
+    "recorded_by": "独立 Codex CLI 验证会话 native-one",
+    "frozen_ref": ".writer/objects/d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d.txt"
+  }
+}

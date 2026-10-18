@@ -1,0 +1,195 @@
+{
+  "ok": true,
+  "at": "2026-10-18T02:28:03.252Z",
+  "source_version": "0.5.0",
+  "runtime_guard_id": "fd93a368c02475da18c9ea8baf1b5836d28e330edf817d47cbca15e969f79acb",
+  "checks": [
+    {
+      "name": "final source exactly matches tested frozen candidate",
+      "result": {
+        "files": 103,
+        "manifest_sha256": "f4ba7bb063e2f9481cdd86036f16def12d79fb1fa792fe74d0e718dde1609915"
+      }
+    },
+    {
+      "name": "final checks successful",
+      "result": [
+        "final-regression",
+        "final-doctor",
+        "final-smoke",
+        "final-boundaries",
+        "exhaustive-final-run",
+        "matrix-final-run",
+        "disjoint-final-run",
+        "skills-final-validate"
+      ]
+    },
+    {
+      "name": "final real CLI matrices",
+      "result": {
+        "exhaustive-final-run": {
+          "ok": true,
+          "calls": 378,
+          "cases": 23,
+          "published_file_boundaries": 8
+        },
+        "matrix-final-run": {
+          "ok": true,
+          "calls": 182,
+          "fault_scenarios": 4,
+          "parallel_conflict": true
+        },
+        "disjoint-final-run": {
+          "ok": true,
+          "calls": 30,
+          "disjoint_direct_edits": true,
+          "loser_retained": true
+        }
+      }
+    },
+    {
+      "name": "four independent actual Codex processes completed",
+      "result": [
+        {
+          "phase": "native-create",
+          "thread_id": "01a14c8f-08e2-7bb2-b849-8130478aab21",
+          "elapsed_s": 984,
+          "events": 247,
+          "command_events": 52,
+          "codex_version": "codex-cli 0.163.0-alpha.10.2"
+        },
+        {
+          "phase": "native-revise-partial",
+          "thread_id": "01a14ca8-688b-7731-aaa8-d491f95d4291",
+          "elapsed_s": 794,
+          "events": 239,
+          "command_events": 43,
+          "codex_version": "codex-cli 0.163.0-alpha.10.2"
+        },
+        {
+          "phase": "native-resume-commit",
+          "thread_id": "01a14cb7-6a7f-71d3-91f0-bb9750e1ffb3",
+          "elapsed_s": 704,
+          "events": 175,
+          "command_events": 17,
+          "codex_version": "codex-cli 0.163.0-alpha.10.2"
+        },
+        {
+          "phase": "native-hundred-final",
+          "thread_id": "01a14cc7-bb3f-7380-be49-90358e414633",
+          "elapsed_s": 954,
+          "events": 285,
+          "command_events": 55,
+          "codex_version": "codex-cli 0.163.0-alpha.10.2"
+        }
+      ]
+    },
+    {
+      "name": "six chapters, actual interrupted session and resumed transaction",
+      "result": {
+        "chapters": 6,
+        "body_han": 4051,
+        "revision": 30,
+        "session_id": "b035e525-797d-4f5f-8d7d-fffa8113cfb6",
+        "evidence_anchors": 41,
+        "actual_reading": "six chapters in native phases 1, 2, 3; final source subsequently rechecks data, no claim of final-source new six-chapter drafting"
+      }
+    },
+    {
+      "name": "100 chapter frozen-copy final-source equivalence and precise scope",
+      "result": {
+        "chapters": 100,
+        "preserved_prefix_rows": 99,
+        "preserved_body_files": 100,
+        "preserved_fact_snapshot": true,
+        "source_ranges": [
+          {
+            "ref": "设定/权威规则.md",
+            "version_id": "HUNDRED_RULES_BASE",
+            "from": 1,
+            "to": 99
+          },
+          {
+            "ref": "设定/权威规则.md",
+            "version_id": "HUNDRED_RULES_NATIVE_FOUR_100",
+            "from": 100,
+            "to": null
+          }
+        ],
+        "scope": {
+          "from": 100,
+          "through": 100
+        },
+        "base_revision": 379,
+        "commit_revision": 380,
+        "paused_revision": 381,
+        "evidence_anchors": 1157,
+        "actual_literary_reading": [
+          95,
+          100
+        ],
+        "not_new_100_chapter_writing": true
+      }
+    },
+    {
+      "name": "no protected existing work files changed",
+      "result": {
+        "root": "D:/work/小说/dzkxqxx",
+        "before_files": 516,
+        "after_files": 516,
+        "differences": [],
+        "content_unchanged": true,
+        "scope": "full tree including .git; content_unchanged excludes only Git metadata, all differences listed"
+      }
+    },
+    {
+      "name": "native export text correct; byte-exact archive separately identified",
+      "result": {
+        "native_normalization": "per chapter trim; existing consolidated export behavior, not byte-exact",
+        "native_manuscript_sha256": "f579c2cb65c88864e93271c317021c6d49c5e10d4d7bbc916bd9e7ab70f7b3ab",
+        "supplemental_archive": "native-four/export-byte-preserved; campaign helper output, not new product feature"
+      }
+    },
+    {
+      "name": "old actual 0.4 source fixture preserved",
+      "result": {
+        "files": 9,
+        "source_head": "80c74f6ac725ea164c54bf42c361a053f58af903"
+      }
+    },
+    {
+      "name": "recorded command inputs and process observations intact",
+      "result": {
+        "calls": 1862,
+        "exit_counts": {
+          "0": 1677,
+          "1": 13,
+          "2": 106,
+          "91": 54,
+          "92": 2,
+          "93": 6,
+          "94": 3,
+          "null": 1
+        },
+        "notes": "Some earlier recorder versions have no build observation; no retroactive claim. Old source snapshots retained."
+      }
+    },
+    {
+      "name": "git changes remain local and unstaged",
+      "result": {
+        "head": "80c74f6ac725ea164c54bf42c361a053f58af903",
+        "status": "M .agents/skills/writer-project/SKILL.md\n M .agents/skills/writer-project/references/long-form.md\n M .agents/skills/writer-review/references/deslop.md\n M README.md\n M docs/authoring-governance-design.md\n M docs/long-form.md\n M docs/quickstart.md\n M docs/user-guide.md\n M docs/workflow.md\n M lib/governance.mjs\n M lib/help.mjs\n M lib/journal.mjs\n M lib/longform.mjs\n M lib/tool-build.mjs\n M lib/workspace.mjs\n M package.json\n M tests/governance.test.mjs\n?? .idea/\n?? acceptance/20261018-governance-b/\n?? docs/authoring-governance-b-implementation.md\n?? docs/revision-and-sources.md\n?? lib/revisions.mjs\n?? lib/sources.mjs\n?? tests/fixtures/tool-0.4/\n?? tests/protection-fixture.mjs\n?? tests/protection.test.mjs\n?? tests/revision-boundaries.test.mjs",
+        "no_commit": true,
+        "no_push": true
+      }
+    }
+  ],
+  "limits": [
+    "Windows local filesystem only",
+    "Model informed reading, not independent human or market acceptance",
+    "100 chapters are an unchanged frozen-copy structural test; only 95–100 reread here",
+    "Remaining stale uncovered whole-book reviews are retained, not literary acceptance",
+    "No engine change, engine tests not claimed",
+    "No automatic migration or tool update of original works"
+  ]
+}

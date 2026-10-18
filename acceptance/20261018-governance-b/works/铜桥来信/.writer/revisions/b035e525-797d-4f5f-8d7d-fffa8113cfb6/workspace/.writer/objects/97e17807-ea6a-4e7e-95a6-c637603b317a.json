@@ -1,0 +1,77 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T01:41:47.257Z",
+  "operation_id": "native-two-consumption-prefix-1-through-6",
+  "base_revision": 26,
+  "payload": {
+    "stage": "revision",
+    "task": "按规则消费关系保守复核1–6；第1章原字节和旧设定保留，新三枚只从2生效；本会话仅重登至第3章停止交接；不写第7章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 6
+      },
+      "stop_conditions": [
+        "第1章仅保守复核及原字节重登，保留RULES_V1、旧报价两枚；历史改价从2开始",
+        "本会话第3章登记后立即停止并交接；不重登4–6，不prepare/commit",
+        "主稿保留到下一会话完成全部尾段复核和事务提交",
+        "完成整轮修订后暂停正文，不写第7章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "第七章起具体剧情与新借验是否出现"
+        ],
+        "reason": "六章已完成，后续剧情待讨论，不以规则发布代替剧情选择"
+      }
+    }
+  },
+  "evidence": {
+    "quote": "本次修改仅限独立作品《铜桥来信》：从第二章开始，押钱改为三枚，第五章退回三枚，核对所有提及和后果；第一章仍保留当时旧规则。授权从实际最早影响章至第六章建立独立修订区，处理人物所知、铜片和缺角印的连续性，保持核心情节、人物声音和原有伏笔回收，不加新阴谋。本次会话只完成修订前半程，到第三章登记后停止并交接；主稿保留到下一会话完成全部尾段复核与事务提交。完成整轮修订后暂停正文，不写第七章。",
+    "local_source": "研究/第二会话-合成作者修订原话.md",
+    "source_sha256": "3d200eff63ef0aad6d767776f47851ff722c7954c235c9303de94e47e76cebb3",
+    "locator": "本次用户消息中“本验证场景的模拟作者新指令”的完整引文；无可用消息ID，不编造",
+    "recorded_by": "native-two-independent-codex-session",
+    "frozen_ref": ".writer/objects/3d200eff63ef0aad6d767776f47851ff722c7954c235c9303de94e47e76cebb3.txt"
+  }
+}

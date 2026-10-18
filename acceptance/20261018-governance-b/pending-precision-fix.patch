@@ -1,0 +1,19 @@
+*** Begin Patch
+*** Update File: D:/work/other/ai-writer/lib/sources.mjs
+@@
+     const earliest = direct.length ? Math.min(input.from, ...direct.map(u => u.unit)) : input.from;
++    const reviewFrom = input.mode === 'historical' ? Math.max(1, input.from - 1) : earliest;
+@@
+-    for (const u of p.state.units.filter(u => u.unit >= earliest)) required[u.draft] = u.sha256;
++    for (const u of p.state.units.filter(u => u.unit >= reviewFrom)) required[u.draft] = u.sha256;
+@@
+-      candidate_sha256: v.sha256, direct_consumers: direct.map(u => ({ unit: u.unit, consumed_sha256: u.source_hashes[v.ref], bound: Boolean(u.source_bindings?.[v.ref]) })),
++      candidate_sha256: v.sha256, direct_consumers: direct.map(u => ({ unit: u.unit, consumed_sha256: u.source_hashes[v.ref], bound: Boolean(u.source_bindings?.[v.ref]), affected_by_publication: u.unit >= input.from })),
++      revision_from: input.from, review_from: reviewFrom, retained_prefix_consumers: direct.filter(u => u.unit < input.from).map(u => u.unit),
+@@
+-      possible_indirect_from: direct.length ? earliest : null, possible_indirect_through: direct.length ? p.state.units.length : null,
++      possible_indirect_from: input.mode === 'historical' ? input.from : direct.length ? earliest : null, possible_indirect_through: direct.length ? p.state.units.length : null,
+@@
+-      const from = Math.min(analysis.from, analysis.possible_indirect_from ?? analysis.from), through = p.state.units.length;
++      const from = analysis.revision_from, through = p.state.units.length;
+*** End Patch

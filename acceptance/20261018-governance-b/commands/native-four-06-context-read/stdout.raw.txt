@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "潮汐信号",
+  "kind": "novel",
+  "revision": 376,
+  "next_unit": 101,
+  "governance": {
+    "enabled": true,
+    "stage": "drafting",
+    "task": "独立机械验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 101,
+        "to": 101
+      },
+      "revise_range": {
+        "from": 100,
+        "to": 100
+      },
+      "stop_conditions": [
+        "范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "ba9e9e55-5aab-49f7-a6bc-c29b0ab4d8bd",
+        "owner": "hundred-rebuild-v2",
+        "project_id": "cbbb0f43-6c0b-46f3-8e7d-be5927736d95",
+        "build_id": "c479c3f5485a2f937197cc9459d70cf95df58741cadb07e81668a1b0e28e568b",
+        "scope": {
+          "from": 100,
+          "through": 100
+        },
+        "status": "aborted",
+        "base_sha256": "8e67bfd27cee22fddfd33622ba4f5b2f03ef0347fa48db800e0a89e5a290e5a7",
+        "created_at": "2026-10-18T01:36:10.538Z",
+        "prepared_sha256": "d75da200c58788836f79c0481ca335ae7cb5343035e28a260b79a6e721c5bdda",
+        "conflict": {
+          "ref": ".writer/revisions/ba9e9e55-5aab-49f7-a6bc-c29b0ab4d8bd/conflict-e181db32-c101-4ff0-a8c1-e6c4f1217935.json",
+          "sha256": "ba823b7ce13cb124bc2d830a5643c35600b8d5ec13954545379701b3f1154330"
+        },
+        "reason": "native-four 模拟验证：当前构建已包含历史生效边界修复，旧 prepared 候选按 BASELINE_CONFLICT 拒绝；保留旧会话及冲突证据，另建当前构建基线。",
+        "session_sha256": "35afc4c4ffd0e0d21112f1f1cf323c1f09281294e6c9b128ff17a5ea92b54703"
+      },
+      {
+        "id": "db066ec9-0979-41ba-a9f5-28051cd757b5",
+        "owner": "hundred-prepare-v1",
+        "project_id": "cbbb0f43-6c0b-46f3-8e7d-be5927736d95",
+        "build_id": "29133638f6c840c8d6c0886712b293b212907bac2edbd200be3cacadb81594df",
+        "scope": {
+          "from": 100,
+          "through": 100
+        },
+        "status": "aborted",
+        "base_sha256": "5b00b533213fb6d5af061c2516b1927386be17af7d3053d8ea74c1475ffad833",
+        "created_at": "2026-10-18T01:30:49.158Z",
+        "prepared_sha256": "68c612de1f24423194d6a9e6ce21bd2e30bf8206f4a9953cacee91298784952d",
+        "conflict": {
+          "ref": ".writer/revisions/db066ec9-0979-41ba-a9f5-28051cd757b5/conflict-fe696e72-769e-4f78-9b58-5467a1df225d.json",
+          "sha256": "d058b2171c7f8c2a32c76b6d39a2bbc0266a70bfd3d2c043381e3282f8e3b54c"
+        },
+        "reason": "主项目修复构建已改变，原候选/准备记录保留；按新构建新建等价尾段修订",
+        "session_sha256": "09f00b12720143d664d5f8abd6b3e22c9bf781246ad827d93ef6a6f99a69e3ee"
+      }
+    ],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

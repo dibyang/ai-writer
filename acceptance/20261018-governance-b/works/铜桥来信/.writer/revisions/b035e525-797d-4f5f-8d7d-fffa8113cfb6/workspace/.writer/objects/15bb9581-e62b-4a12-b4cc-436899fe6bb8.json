@@ -1,0 +1,71 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T01:23:57.492Z",
+  "operation_id": "native-one-pause-at-six",
+  "base_revision": 23,
+  "payload": {
+    "stage": "structure",
+    "task": "六章试写与独立修订已完成；仅讨论后续结构与新规则衔接，等待新的有限正文授权，不写第七章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "第七章正文暂停；新的作者指令前只讨论结构",
+        "本轮到此停止，不自动推进其他验证场景"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "第七章起具体剧情与新借验是否出现"
+        ],
+        "reason": "六章已完成，后续剧情待讨论，不以规则发布代替剧情选择"
+      }
+    }
+  },
+  "evidence": {
+    "quote": "六章及未来规则版本完成后，将当前任务转为结构讨论/暂停正文，draft_range=null；next_unit 应为7但行动不应让写第七章。",
+    "local_source": "研究/测试授权原话.md",
+    "source_sha256": "d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d",
+    "locator": "本独立验证用户指令；合成测试授权，无外部作者消息ID",
+    "recorded_by": "独立 Codex CLI 验证会话 native-one",
+    "frozen_ref": ".writer/objects/d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d.txt"
+  }
+}

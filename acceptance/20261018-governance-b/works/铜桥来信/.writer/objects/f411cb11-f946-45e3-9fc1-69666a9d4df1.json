@@ -1,0 +1,280 @@
+{
+  "action": "publish",
+  "at": "2026-10-18T01:23:34.381Z",
+  "evidence": {
+    "quote": "本轮允许在这个独立作品固定真实旧输入、实读影响后发布第七章起的规则新版本，但不写第七章。",
+    "local_source": "研究/测试授权原话.md",
+    "source_sha256": "d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d",
+    "locator": "本独立验证用户指令；合成测试授权，无外部作者消息ID",
+    "recorded_by": "独立 Codex CLI 验证会话 native-one",
+    "frozen_ref": ".writer/objects/d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d.txt"
+  },
+  "input": {
+    "expected_revision": 22,
+    "operation_id": "native-one-rules-v2-publish",
+    "author_evidence": {
+      "quote": "本轮允许在这个独立作品固定真实旧输入、实读影响后发布第七章起的规则新版本，但不写第七章。",
+      "local_source": "研究/测试授权原话.md",
+      "source_sha256": "d6ca1a1801ba685ce4934102af2a5990df964dba66fceecf62cd84b36b4c8d7d",
+      "locator": "本独立验证用户指令；合成测试授权，无外部作者消息ID",
+      "recorded_by": "独立 Codex CLI 验证会话 native-one"
+    },
+    "impact": {
+      "schema_version": 1,
+      "revision": 22,
+      "state_sha256": "2160f970fbb3739b39136104987b790b325e1da05f64b694a69988f893156a45",
+      "version_id": "RULES_V2_FROM7",
+      "ref": "设定/权威规则.md",
+      "from": 7,
+      "mode": "future",
+      "candidate_sha256": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+      "direct_consumers": [
+        {
+          "unit": 1,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 2,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 3,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 4,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 5,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 6,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        }
+      ],
+      "replaced_ranges": [
+        {
+          "ref": "设定/权威规则.md",
+          "version_id": "RULES_V1",
+          "from": 1,
+          "to": null
+        }
+      ],
+      "possible_indirect_from": 1,
+      "possible_indirect_through": 6,
+      "possible_indirect_impact": "unknown-requires-reading",
+      "required_readings": {
+        ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+        "正文/0001-铜片的耳.md": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+        "正文/0002-两枚押钱.md": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553",
+        "正文/0003-缺掉的一角.md": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9",
+        "正文/0004-柳婆的抽屉.md": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+        "正文/0005-旧印归柜.md": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+        "正文/0006-信纸背面.md": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+        ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+      },
+      "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+    },
+    "review": {
+      "report": "审查/规则v2-第7章起-影响实读.md",
+      "report_sha256": "7f29b5dd9c54f133ee7662bcae70caf4244cf54e69904cc9dcda438b32efc6e1",
+      "readings": {
+        ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+        "正文/0001-铜片的耳.md": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+        "正文/0002-两枚押钱.md": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553",
+        "正文/0003-缺掉的一角.md": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9",
+        "正文/0004-柳婆的抽屉.md": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+        "正文/0005-旧印归柜.md": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+        "正文/0006-信纸背面.md": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+        ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+      },
+      "conclusion": "实读新旧规则及六章，既有借验二枚已结清；仅第7章起新借验三枚，历史文本及知识不变",
+      "unresolved": []
+    }
+  },
+  "result": {
+    "published": "RULES_V2_FROM7",
+    "from": 7,
+    "analysis": {
+      "schema_version": 1,
+      "revision": 22,
+      "state_sha256": "2160f970fbb3739b39136104987b790b325e1da05f64b694a69988f893156a45",
+      "version_id": "RULES_V2_FROM7",
+      "ref": "设定/权威规则.md",
+      "from": 7,
+      "mode": "future",
+      "candidate_sha256": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+      "direct_consumers": [
+        {
+          "unit": 1,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 2,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 3,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 4,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 5,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        },
+        {
+          "unit": 6,
+          "consumed_sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+          "bound": true
+        }
+      ],
+      "replaced_ranges": [
+        {
+          "ref": "设定/权威规则.md",
+          "version_id": "RULES_V1",
+          "from": 1,
+          "to": null
+        }
+      ],
+      "possible_indirect_from": 1,
+      "possible_indirect_through": 6,
+      "possible_indirect_impact": "unknown-requires-reading",
+      "required_readings": {
+        ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+        "正文/0001-铜片的耳.md": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+        "正文/0002-两枚押钱.md": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553",
+        "正文/0003-缺掉的一角.md": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9",
+        "正文/0004-柳婆的抽屉.md": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+        "正文/0005-旧印归柜.md": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+        "正文/0006-信纸背面.md": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+        ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+      },
+      "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+      "review": {
+        "report": "审查/规则v2-第7章起-影响实读.md",
+        "report_sha256": "7f29b5dd9c54f133ee7662bcae70caf4244cf54e69904cc9dcda438b32efc6e1",
+        "readings": {
+          ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+          "正文/0001-铜片的耳.md": "74f64a83a6b2f63893c5fa461be7d3074f006f25c22ae3029d63c067da0d3176",
+          "正文/0002-两枚押钱.md": "aa4bcf6be609a27d4a97ba2b1e84f11e76919d2e311ad8e5781bfd7e738de553",
+          "正文/0003-缺掉的一角.md": "7806bfb35ce112dc4a9055af5469f4d3c2472e98a6bc6c1f93169731f07db7b9",
+          "正文/0004-柳婆的抽屉.md": "730651b6d1126bfb8261fcaf8b22ca836a239cf6810148225be3e4f00b0136e3",
+          "正文/0005-旧印归柜.md": "4e656de3fb3823d28b65568f68ca088bd8dfb64a8ab2dc7657dce3a67cfcfc8f",
+          "正文/0006-信纸背面.md": "9133da724a2fd1658192254b4e1c2af3be625cc30d82c5958033e5231b83cd2f",
+          ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06"
+        },
+        "conclusion": "实读新旧规则及六章，既有借验二枚已结清；仅第7章起新借验三枚，历史文本及知识不变",
+        "unresolved": [],
+        "frozen_report": ".writer/objects/7f29b5dd9c54f133ee7662bcae70caf4244cf54e69904cc9dcda438b32efc6e1.txt"
+      }
+    },
+    "original_hashes_preserved": true
+  },
+  "current": {
+    "source_versions": {
+      "POSITION_V1": {
+        "id": "POSITION_V1",
+        "ref": "设定/作品定位.md",
+        "object_ref": ".writer/objects/6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367.source",
+        "sha256": "6b6060034d9056202dd7eb505be6fef4e9f40aeff50c5fc3004c7eebb71bf367",
+        "previous": null,
+        "format": "md"
+      },
+      "STYLE_V1": {
+        "id": "STYLE_V1",
+        "ref": "设定/文风.md",
+        "object_ref": ".writer/objects/e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e.source",
+        "sha256": "e4ed871d94d51a3c312a65d16417999a53c6745d0d3a412848b130f32a703b8e",
+        "previous": null,
+        "format": "md"
+      },
+      "RULES_V1": {
+        "id": "RULES_V1",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06.source",
+        "sha256": "92bfd781270dbb2c6e66c3a5cc6edf76f2d0191863c3f2e96137364257078e06",
+        "previous": null,
+        "format": "md"
+      },
+      "VOLUME1_V1": {
+        "id": "VOLUME1_V1",
+        "ref": "大纲/分卷/V1.json",
+        "object_ref": ".writer/objects/0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246.source",
+        "sha256": "0b020637de918f3a3cf2d1cf6e8bddd54eec0f561a6539bacca6d146e7331246",
+        "previous": null,
+        "format": "json"
+      },
+      "VOLUME2_V1": {
+        "id": "VOLUME2_V1",
+        "ref": "大纲/分卷/V2.json",
+        "object_ref": ".writer/objects/e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f.source",
+        "sha256": "e197f7a25a9afbf984dd2d5714016bcdb50cc57f691036858d2952cfbf23565f",
+        "previous": null,
+        "format": "json"
+      },
+      "RULES_V2_FROM7": {
+        "id": "RULES_V2_FROM7",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f.source",
+        "sha256": "ec5021cc8a213492a094d051b950b4ef2a9700ef07e39824c5f6efa4c1c3c73f",
+        "previous": "RULES_V1",
+        "format": "md"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "设定/作品定位.md",
+        "version_id": "POSITION_V1",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "设定/文风.md",
+        "version_id": "STYLE_V1",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "RULES_V1",
+        "from": 1,
+        "to": 6
+      },
+      {
+        "ref": "大纲/分卷/V1.json",
+        "version_id": "VOLUME1_V1",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/分卷/V2.json",
+        "version_id": "VOLUME2_V1",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "RULES_V2_FROM7",
+        "from": 7,
+        "to": null
+      }
+    ],
+    "impact_pending": {}
+  }
+}

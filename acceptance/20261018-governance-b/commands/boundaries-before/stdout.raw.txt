@@ -1,0 +1,61 @@
+✖ 提交清单对象的哈希继续受保护，不能只验证账本和正文 (2147.428ms)
+✖ 已发生的锁外主稿修改可经明确授权保守收纳，原追踪及候选分别保留 (698.8832ms)
+✖ 内部协作目录不能成为正式细纲消费来源，分支路径不发布为作品依赖 (524.8963ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3479.9203
+
+✖ failing tests:
+
+test at tests\revision-boundaries.test.mjs:8:1
+✖ 提交清单对象的哈希继续受保护，不能只验证账本和正文 (2147.428ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-boundaries.test.mjs:11:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\revision-boundaries.test.mjs:13:1
+✖ 已发生的锁外主稿修改可经明确授权保守收纳，原追踪及候选分别保留 (698.8832ms)
+  Error: 修订输入含未知字段或不是对象
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:51:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at keys (file:///D:/work/other/ai-writer/lib/revisions.mjs:19:172)
+      at Object.begin (file:///D:/work/other/ai-writer/lib/revisions.mjs:109:5)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:533:136)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-boundaries.test.mjs:17:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18) {
+    code: 'REVISION_INPUT_INVALID'
+  }
+
+test at tests\revision-boundaries.test.mjs:21:1
+✖ 内部协作目录不能成为正式细纲消费来源，分支路径不发布为作品依赖 (524.8963ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-boundaries.test.mjs:23:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

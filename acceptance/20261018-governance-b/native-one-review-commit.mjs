@@ -1,0 +1,10 @@
+import {base,project,put,read,input,cli,hash} from './native-one-helper.mjs';
+import {drafts} from './native-one-drafting.mjs';
+import {session,branch} from './native-one-revision-steps.mjs';
+const body=`# 独立修订后1–6章完整尾段复核\n\n性质：独立 Codex 本会话知情自检，不是真人盲读或作者定稿。完整阅读候选六章，阅读副本位于阶段目录 native-one-readings/branch-final.md，各章真实哈希与本次 review 输入绑定。\n\n已修：第一章“再落到别人手里”改为“你的信，我更不能随便交出去”，消除未发生转手暗示；第三章“蹲下去扶正”改为“将碎砖拨到墙根，腾出落脚处”，无需移动承重砖；第五章补原印封回留柜及周叔布囊带封套上坡；第六章补“她把信搁回盒中”，OBJ_LETTER 位置同步为敞盒内。第二、四章正文保持原字节，其余只改上述局部。\n\n逐章核查：1铜片在阿禾衣袋、信仅候领；2实交二枚，铜片柜内白布经周叔验记后还腰袋；3实见缺角，不证明仿印，铜片交周叔锁匣、阿禾仅带旧页描样；4柳婆依转述给可能解释，未越权知道押钱，试纸自己带着；5三人在原印前复验，缺角解释以新 FACT_STAMP_REPAIR 保存，OBS_NOTCH 原观察不变；归档与退二枚、信件交出均有动作；6阿禾收二枚于小碟，明确铜片留柜，独自读信，回信尚未寄出。\n\n人物信息：柳婆第4章才听封套情况，第5章才见铜片归档及退款；周叔和柳婆只知道交信，不知道信内鞋样家话；第6章只更新阿禾的私信知识，不抹去两人的旧已知。旧章原引文保留并由产品重锚到候选哈希。最早影响章1至末章6已全部重登，修订后 source_hashes 中旧两枚规则仍为 RULES_V1 的原SHA。\n\n真人语言别扭句\n\n真人语言硬问题：没有\n\n逐句用当面复述、动宾关系、具体落地、文字节奏检查；原第三章宾语歧义已消除。保留旧袄、钥匙绳、红线与母亲曾爱红色的联结，保留阿禾不急于宽宥周叔、柳婆认手艺的个人态度。第四章末与第五章查簿对白有收束感，属于风格偏好，未产生共同指向理解损害的语言证据，不作整段重写。无实际人声朗读、真人或独立代理参与。\n\n结论：本次四处局部修订达到所述目的，未发现需阻断本轮试写交接的新问题。仍是3936汉字六章草稿；检查只证机械范围。未覆盖真人阅读、出版定稿、跨机协作、断电或事务中断恢复。第七章无细纲、无正文授权，不继续。\n`;
+const report='审查/独立修订1-6-复核.md';put(branch+'/'+report,body);
+cli('rev-review-1-6',['review','--revision-token',session.token,'--input',input('rev-review-1-6',{from:1,to:6,kind:'model-self-review',report,source_hashes:Object.fromEntries(drafts.slice(1).map(r=>[r,hash(branch+'/'+r)]))})],{p:branch});
+cli('rev-check',['check'],{p:branch});
+const initial=read(base+'/commands/native-one-revision-begin/before-state.json');
+put(base+'/native-one-main-before-commit.json',{all_six_unchanged:initial.units.every(u=>hash(project+'/'+u.draft)===u.sha256),main_state_sha256:hash(project+'/.writer/state.json'),main_revision:initial.revision});
+cli('revision-prepare',['revision','prepare','--input',input('revision-prepare',{id:session.id,token:session.token})]);

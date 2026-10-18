@@ -1,0 +1,16 @@
+import {base,project,read,put,input,rev,cli,evidence,hash} from './native-one-helper.mjs';
+const workflow=read(base+'/native-one-inputs/workflow-revision.json').workflow;
+workflow.stage='structure';workflow.task='六章试写与独立修订已完成；仅讨论后续结构与新规则衔接，等待新的有限正文授权，不写第七章';
+workflow.authorization={allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['第七章正文暂停；新的作者指令前只讨论结构','本轮到此停止，不自动推进其他验证场景']};
+workflow.planning.outline={status:'draft',refs:[1,2,3,4,5,6].map(n=>'大纲/单元/'+String(n).padStart(4,'0')+'.json'),unresolved_ids:['第七章起具体剧情与新借验是否出现'],reason:'六章已完成，后续剧情待讨论，不以规则发布代替剧情选择'};
+cli('workflow-structure-pause',['workflow','set','--input',input('workflow-structure-pause',{expected_revision:rev(),operation_id:'native-one-pause-at-six',author_evidence:evidence('六章及未来规则版本完成后，将当前任务转为结构讨论/暂停正文，draft_range=null；next_unit 应为7但行动不应让写第七章。'),workflow})]);
+cli('paused-status',['status']);
+const before=hash(project+'/.writer/state.json');
+const context=cli('denied-context-seven',['context','--unit','7'],{allow:true});
+const afterContext=hash(project+'/.writer/state.json');
+const template=cli('denied-template-seven',['record-template','--unit','7','--draft','正文/0007-禁止生成.md'],{allow:true});
+const afterTemplate=hash(project+'/.writer/state.json');
+put(base+'/native-one-denial-invariance.json',{before,after_context:afterContext,after_template:afterTemplate,unchanged:before===afterContext&&before===afterTemplate,context,template});
+if(context.ok!==false||template.ok!==false||before!==afterTemplate)throw Error('Expected authorization refusal and unchanged state');
+cli('discussion-context',['context','--purpose','discussion']);
+cli('final-check',['check']);

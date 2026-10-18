@@ -1,0 +1,19 @@
+*** Begin Patch
+*** Update File: D:/work/other/ai-writer/lib/sources.mjs
+@@
+       for (const [ref, binding] of Object.entries(row.source_bindings ?? {})) { if (!binding || !Object.hasOwn(row.source_hashes, ref)) fail('SOURCE_CORRUPT', '消费来源缺少原哈希'); consumedFile(p, row, ref, row.source_hashes[ref]); }
++      if (row.tool_build_id !== undefined && (!/^[a-f0-9]{64}$/.test(row.tool_build_id) || !row.authorization?.event)) fail('SOURCE_CORRUPT', '新登记缺少有效的运行构建或历史授权引用');
++      if (row.authorization?.event) {
++        const event = readEvent(p, row.authorization.event), a = event.payload?.authorization, action = row.authorization.action;
++        const range = action === 'draft' ? a?.draft_range : action === 'revise' ? a?.revise_range : null;
++        if (event.payload?.stage !== row.authorization.stage || !a?.allowed_actions?.includes(action) || !range || row.unit < range.from || row.unit > range.to) fail('SOURCE_CORRUPT', '登记的历史授权与当时动作/单元范围不符');
++      }
++      if (row.decision_bindings !== undefined && !Array.isArray(row.decision_bindings)) fail('SOURCE_CORRUPT', '作者决策消费引用不是数组');
++      const selected = new Set();
++      for (const b of row.decision_bindings ?? []) {
++        if (!validId(b.id) || selected.has(b.id)) fail('SOURCE_CORRUPT', '作者决策消费ID损坏或重复');
++        const event = readEvent(p, { ref: b.event_ref, sha256: b.event_sha256 }), d = event.payload;
++        if (event.kind !== 'decision' || d?.id !== b.id || d.status !== 'confirmed' || row.unit < d.effective_range.from || (d.effective_range.to !== null && row.unit > d.effective_range.to)) fail('SOURCE_CORRUPT', '消费决策与当时确认及生效范围不符');
++        selected.add(b.id);
++      }
+*** End Patch
