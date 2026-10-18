@@ -1,0 +1,74 @@
+{
+  "expected_revision": 3,
+  "operation_id": "e-finish-planning-and-stop",
+  "author_evidence": {
+    "quote": "本轮只讨论/规划，不写正文，不授权试写。",
+    "local_source": "研究/作者任务原话.md",
+    "source_sha256": "0d8b9d1e2974620a4d3c6cfa424f9d616ef7b21fbae3050d359db71d5f77ecb0",
+    "locator": "实际用户原话：新用户任务段；本会话未提供消息ID",
+    "recorded_by": "Codex / native-e / agent transcription of actual user request"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "规划已交付：十二章三卷粗骨架、人物/文风及前三章细纲；本轮只规划，不写正文。完成恢复取证后停止；下一会话须取得实际有限写作授权才可更新权限。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+        "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+        "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+        "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      }
+    }
+  }
+}

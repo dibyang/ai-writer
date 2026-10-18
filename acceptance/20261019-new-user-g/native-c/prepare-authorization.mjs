@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),base=path.dirname(here),project=path.join(base,'作品','雾港 来信');
+const source='研究/C隔离修订授权.md';
+const quote='本验证授权：只对第2章进行必要的小范围表达修订，保留剧情、事实及人物声音；允许从第2章至当前末章6章实读重登以核下游。第3–6章正文无确证问题保持原字节；如需另改核心情节先报告，不自行扩大。不得写第7章。原作者人类仅授权隔离验证，文学选择和意见处置标agent-within-authorized-scope，不伪造真人逐项确认。测试实施要求不等同真人文学定稿。';
+const stop='**本进程完成重登第3章后停下，不prepare/commit，也不自行登记4–6章**。为真实跨会话恢复留一个未完成但可恢复的独立区；主稿6章的正文、units与snapshot保持，只允许必要的治理和意见元数据推进。保存根主稿/独立区状态、正文哈希以及本次实际变化。新进程下一阶段会从同ID、原基线继续4–6，完成最终尾段复读再提交。仅C进程临时进度不是完整修订验收。';
+const text='# C进程真实任务授权摘录\n\n来源：本次用户任务“G轮新用户实跑C：实际意见、独立修订与中途交接”。未获得消息ID，不伪造会话或真人文学逐项确认。以下为用户原话摘录，非代理新增授权。\n\n'+quote+'\n\n'+stop+'\n\n仅在D:/work/other/ai-writer/acceptance/20261019-new-user-g/内写入；不修改主源码/技能、旧档案或其他作品，不联网、提交、推送或发布。\n';
+fs.writeFileSync(path.join(project,source),text,{flag:'wx'});
+const hash=crypto.createHash('sha256').update(Buffer.from(text)).digest('hex');
+const old=JSON.parse(fs.readFileSync(path.join(base,'commands/c-status-initial/stdout.raw.txt'),'utf8'));
+const workflow={expected_revision:16,operation_id:'c-authorized-revision-2-6-stop-3',author_evidence:{quote,local_source:source,source_sha256:hash,locator:'本次用户任务本验证授权段；研究/C隔离修订授权.md全文摘录',recorded_by:'native-c-agent'},workflow:{stage:'revision',task:'G轮C：仅在独立区澄清第2章问修理费方向，保留剧情事实声音；2–6为实读重登范围，C完成2–3后停止并交接，不prepare/commit、不重登4–6、不写第7章。文学取舍为agent-within-authorized-scope。',authorization:{allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:2,to:6},stop_conditions:['C进程正式重登第3章后立即停止产品写动作；不得重登4–6或prepare/commit。','只允许第2章必要小范围表达调整；3–6无确证问题保持原字节，核心情节另报。','主稿1–6正文、units与snapshot保持；下一进程凭原ID、令牌及base_revision续做4–6和最终尾段连读。','不写第7章；采用不等于已应用，测试实施不等于真人文学定稿。']},planning:old.governance.planning}};
+fs.writeFileSync(path.join(here,'inputs/workflow-revision.json'),JSON.stringify(workflow,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source,source_sha256:hash,expected_revision:16}));

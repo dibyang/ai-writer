@@ -1,0 +1,56 @@
+✖ 当前主稿漂移的恢复指引先列独立修订，不推荐被保护规则拒绝的主稿rewind (2188.3495ms)
+✖ 独立修订区内漂移继续指向所属分支回退，主稿和状态不被诊断改写 (2504.0194ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4789.1218
+
+✖ failing tests:
+
+test at tests\new-user-recovery.test.mjs:10:1
+✖ 当前主稿漂移的恢复指引先列独立修订，不推荐被保护规则拒绝的主稿rewind (2188.3495ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'revision-workspace-required'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/new-user-recovery.test.mjs:13:89)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'revision-workspace-required',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\new-user-recovery.test.mjs:19:1
+✖ 独立修订区内漂移继续指向所属分支回退，主稿和状态不被诊断改写 (2504.0194ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'rewind-in-workspace'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/new-user-recovery.test.mjs:21:205)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'rewind-in-workspace',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

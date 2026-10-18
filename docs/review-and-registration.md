@@ -10,6 +10,37 @@
 
 review可带chapter_functions、comparison及issues，须expected_revision、稳定operation_id。完整正文及报告按原字节冻结，记录复用.writer/reviews，不另造文学评分器。修改正文或依赖后旧报告失效，重新连读范围应如实记录，不拼接零散短评充当六章连读。
 
+### 命令输入：comparison的准确形状
+
+先用review-template保留当前from/to、source_hashes和逐章功能表，再填写比较。下面仅是comparison片段，文字和引文均为占位说明，不能原样登记或当作已读结论：
+
+```json
+{
+  "similar_structures": [
+    {
+      "units": [1, 2],
+      "judgment": "填写这两章实际相似的结构；不等于自动判重复",
+      "differences": "填写两章不同的选择、后果和阅读收益",
+      "preserve": "填写应保留的差异与声音",
+      "optional_adjustments": ["填写确有阅读收益的可选调整；没有则用空数组"],
+      "uncertainty": "填写本次判断的具体边界",
+      "evidence": [
+        {"unit": 1, "quote": "替换为第1章实际原句"},
+        {"unit": 2, "quote": "替换为第2章实际原句"}
+      ]
+    }
+  ],
+  "distinct_gains": ["填写逐章不同的实际收益"],
+  "preserve": ["填写整体应保留的内容"],
+  "optional_adjustments": [],
+  "limits": "填写实际完整读过的范围、版本与未能证明的内容"
+}
+```
+
+外层distinct_gains、preserve、optional_adjustments均为**字符串数组**，不是按章对象或对象数组；外层limits是非空字符串。similar_structures是对象数组，可以为空；每项只允许示例中的七个字段，units至少两个不同实读章号，evidence必须分别覆盖这些章。其内judgment、differences、preserve、uncertainty是非空**字符串**，只有optional_adjustments是字符串数组。不要自造pattern、description等字段，不要混淆内外两种preserve类型。
+
+没有实际相似结构就保留空数组，不为填表制造文学重复。格式拒绝时保留原输入，按所报字段准备修正版；不改正文/来源哈希，不缩小实际声明范围来规避验证。普通作者不填这些字段，由Codex根据真实阅读准备。
+
 ## 登记减负
 
 明确长篇或跨卷的新作可用init --mode long，先安排骨架、卷契约、近期细纲、试写范围和复盘点。旧作先long-enable-preview；不执行long-enable即不迁移。实际启用备份并验证原事实链。record-template自动填路径、revision、来源与版本绑定，未变事实不用重复誊写。

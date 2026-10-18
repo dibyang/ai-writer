@@ -1,0 +1,632 @@
+diff --git a/README.md b/README.md
+index 87ae9ded..1b9af327 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ 通过 Codex 创作中文小说、剧本、历史散文，以及散文和一般非虚构。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究和追踪各有职责；新会话可以从文件恢复创作。
+ 
+-当前版本：**0.7.3 本地候选版**。修复独立修订区的工具诊断路径，并支持在现有1MiB文件保护内完整登记长篇审查报告。继续提供完整轻量工具包的本地更新计划、显式协议启用、文件事务发布/恢复与代次保护。新作品默认schema6，复用阶段/有限授权、作者决策、设定版本、独立修订、增量账本、跨章复核和意见闭环。旧作品不自动迁移或替换工具。包含7个Codex skills、去AI味流程和主项目原有质量引擎；文学重复、史实与作者验收仍由实际阅读核验裁定。
++当前版本：**0.7.4 本地候选版**。新用户入口按首次写作、恢复、审修与导出组织，长篇提供从全书骨架到独立修订的完整路径；修复主稿漂移与缺细纲时的下一步指引。继续提供阶段/有限授权、作者决策、设定版本、分卷与增量账本、独立修订、跨章复核、意见闭环及可恢复本地工具更新。新作品默认schema6，旧作品不自动迁移或替换工具。包含7个Codex skills、去AI味流程和原有质量引擎；文学判断仍需实际阅读，当前候选验证结果以对应记录为准。
+ 
+ ## 开始使用
+ 
+@@ -93,6 +93,8 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "
+ 
+ 八项创作治理需求的已确认范围均已实现。当前能力、分批证据、原设计的实现细化，以及明确暂缓/尚未验收/未迁移现有作品的边界，统一见[当前实现与验证状态](docs/authoring-governance-status.md)。历史设计与封存报告中的阶段性状态不作为当前未实现清单。
+ 
++0.7.4 G轮完成新用户路径审查和10项易用性改进，通过5个独立Codex进程实跑两卷六章、跨会话修订、工具更新与导出，并验证另一新作品“有细纲但只规划”时拒绝正文。最终回归154通过、0失败、1项环境跳过，doctor通过；完整输入输出、失败纠正、实读版本及封存见[新用户完整流程记录](acceptance/20261019-new-user-g/README.md)。本轮六章流程不冒称再次完成百章压力验证，现有作品未修改，尚未发布。
++
+ 0.7.0 D批实现及实跑状态见[本轮记录](acceptance/20261018-governance-d/README.md)，以最终结果和封存清单为准。此前[0.6.0 C批](acceptance/20261018-governance-c/README.md)、[0.5.0 B批](acceptance/20261018-governance-b/README.md)、[0.4.0 A批](acceptance/20261018-governance-a/README.md)保持原记录，不计作本轮结果。
+ 
+ 0.7.1 E轮补强清单缺失、已安装完整内容保护与恢复再中断验证，见[实现边界](docs/recovery-hardening-e.md)和[最终验证记录](acceptance/20261018-recovery-e/README.md)。
+diff --git a/docs/authoring-governance-b-implementation.md b/docs/authoring-governance-b-implementation.md
+index de5ac0f9..9b0f50bb 100644
+--- a/docs/authoring-governance-b-implementation.md
++++ b/docs/authoring-governance-b-implementation.md
+@@ -1,6 +1,6 @@
+ # 设定版本与跨会话修订：第二批实现约束
+ 
+-更新日期：2026-10-19。**B批AW-03/AW-04已实现并完成本批本地验证**，原交付版本0.5.0；当前产品0.7.3继续包含这些能力。八项均已实现的范围、最终验证和暂缓项见[当前状态总览](authoring-governance-status.md)，本批原始结果见[B批记录](../acceptance/20261018-governance-b/README.md)。以下保留B批实现决策与协议4的兼容依据，不表示当前只支持4或仍等待实现；现有作品不自动迁移。
++更新日期：2026-10-19。**B批AW-03/AW-04已实现并完成本批本地验证**，原交付版本0.5.0；当前产品0.7.4继续包含这些能力。八项均已实现的范围、最终验证和暂缓项见[当前状态总览](authoring-governance-status.md)，本批原始结果见[B批记录](../acceptance/20261018-governance-b/README.md)。以下保留B批实现决策与协议4的兼容依据，不表示当前只支持4或仍等待实现；现有作品不自动迁移。
+ 
+ ## 协议与权威
+ 
+diff --git a/docs/authoring-governance-c-implementation.md b/docs/authoring-governance-c-implementation.md
+index 6a05719e..da0b9971 100644
+--- a/docs/authoring-governance-c-implementation.md
++++ b/docs/authoring-governance-c-implementation.md
+@@ -1,6 +1,6 @@
+ # 第三批C：跨章复核、登记减负与意见闭环实现约束
+ 
+-更新日期：2026-10-19。**C批AW-05/06/08已实现并完成本批本地验证**，原交付版本0.6.0；当前0.7.3继续包含这些能力。见[C批最终记录](../acceptance/20261018-governance-c/README.md)及[当前状态总览](authoring-governance-status.md)。以下保留C批实现细化和schema5兼容依据；D的工具更新后续已交付，不再作为当前未实现项。现有作品不自动迁移或改稿。
++更新日期：2026-10-19。**C批AW-05/06/08已实现并完成本批本地验证**，原交付版本0.6.0；当前0.7.4继续包含这些能力。见[C批最终记录](../acceptance/20261018-governance-c/README.md)及[当前状态总览](authoring-governance-status.md)。以下保留C批实现细化和schema5兼容依据；D的工具更新后续已交付，不再作为当前未实现项。现有作品不自动迁移或改稿。
+ 
+ ## 背景、目标与非目标
+ 
+@@ -8,7 +8,7 @@
+ 
+ ## 协议和兼容性
+ 
+-C批0.6新作品当时默认schema5；当前0.7.3新作默认schema6，保留本段的baseline/journal、旧source_hashes、来源版本和review_workflow索引。0.5会忽略新索引，故实际旧解析器拒绝5；旧作品不自动迁移，已有4仍可review-workflow preview/enable，保存原state字节、核原事实链、提升schema和revision并建立空索引，不补造历史意见。1/2先治理迁移3，再protection enable4；5→6及完整随附工具更新分别按[更新手册](tool-updates.md)显式执行。
++C批0.6新作品当时默认schema5；当前0.7.4新作默认schema6，保留本段的baseline/journal、旧source_hashes、来源版本和review_workflow索引。0.5会忽略新索引，故实际旧解析器拒绝5；旧作品不自动迁移，已有4仍可review-workflow preview/enable，保存原state字节、核原事实链、提升schema和revision并建立空索引，不补造历史意见。1/2先治理迁移3，再protection enable4；5→6及完整随附工具更新分别按[更新手册](tool-updates.md)显式执行。
+ 
+ ## 模块、接口与权威
+ 
+diff --git a/docs/authoring-governance-d-implementation.md b/docs/authoring-governance-d-implementation.md
+index 98e98c7e..8dbd44db 100644
+--- a/docs/authoring-governance-d-implementation.md
++++ b/docs/authoring-governance-d-implementation.md
+@@ -1,6 +1,6 @@
+ # D批：随附工具安全更新与最终整合
+ 
+-更新日期2026-10-19。**D批AW-07完整安全更新已实现并完成本批本地验证**，原交付0.7.0、基线257c08ad；E/F继续补强，当前为0.7.3本地候选，未发布。见[D批最终记录](../acceptance/20261018-governance-d/README.md)及[当前状态总览](authoring-governance-status.md)。以下是已落地的实现约束，不是待实现清单；验证仅使用另建作品或隔离副本，现有作品不自动更新。
++更新日期2026-10-19。**D批AW-07完整安全更新已实现并完成本批本地验证**，原交付0.7.0、基线257c08ad；E/F继续补强，当前为0.7.4本地候选，未发布。见[D批最终记录](../acceptance/20261018-governance-d/README.md)及[当前状态总览](authoring-governance-status.md)。以下是已落地的实现约束，不是待实现清单；验证仅使用另建作品或隔离副本，现有作品不自动更新。
+ 
+ ## 背景、目标和非目标
+ 
+diff --git a/docs/authoring-governance-design.md b/docs/authoring-governance-design.md
+index 5cbc686d..1888e723 100644
+--- a/docs/authoring-governance-design.md
++++ b/docs/authoring-governance-design.md
+@@ -1,6 +1,6 @@
+ # 创作规划、作者决策与修订管理：落地设计及验收方案
+ 
+-更新日期：2026-10-19。当前状态：**八项需求的已确认范围已实现，已完成Windows本地验证；当前0.7.3为本地候选，未对外发布**。八项对应能力、实际验证结果、实现细化和暂缓范围统一见[当前状态总览](authoring-governance-status.md)。本次只维护说明，不修改现有作品或既有封存档案。
++更新日期：2026-10-19。当前状态：**八项需求的已确认范围已实现，已完成Windows本地验证；当前0.7.4为本地候选，未对外发布**。八项对应能力、实际验证结果、实现细化和暂缓范围统一见[当前状态总览](authoring-governance-status.md)。本次只维护说明，不修改现有作品或既有封存档案。
+ 
+ 作者已分批授权并完成A→B→C→D。A见[0.4.0首批记录](../acceptance/20261018-governance-a/README.md)，B见[第二批实现说明](authoring-governance-b-implementation.md)及[版本修订手册](revision-and-sources.md)。C见[第三批约束](authoring-governance-c-implementation.md)及[专项手册](review-and-registration.md)。D见[D批约束](authoring-governance-d-implementation.md)、[更新手册](tool-updates.md)和[D批验证记录](../acceptance/20261018-governance-d/README.md)。E/F补强及最终0.7.3百章流程见[当前状态总览](authoring-governance-status.md)。以下需求缺口、字段草图和验收矩阵保留设计时点的依据，均有历史语境；它们不表示当前尚无对应功能，也不替代已细化的实际协议与分版本证据。
+ 
+diff --git a/docs/authoring-governance-status.md b/docs/authoring-governance-status.md
+index 179c6934..352eaffb 100644
+--- a/docs/authoring-governance-status.md
++++ b/docs/authoring-governance-status.md
+@@ -1,6 +1,6 @@
+ # 八项创作治理需求：当前实现与验证状态
+ 
+-更新日期：2026-10-19。**八项需求的已确认本地工作流范围均已实现**，A→B→C→D分批落地，E/F完成恢复、诊断和长篇报告补强。当前产品版本为 **0.7.3 本地候选版，尚未对外发布**。功能交付提交为`47ba40e9`；本页及同轮修改仅统一说明，不新增功能、不迁移或改写现有作品。
++更新日期：2026-10-19。**八项需求的已确认本地工作流范围均已实现**，A→B→C→D分批落地，E/F完成恢复、诊断和长篇报告补强。原功能验收基准0.7.3已提交为`47ba40e9`，状态说明维护提交为`1a23bcc8`。当前产品为 **0.7.4本地候选，已完成G轮本地验证，尚未对外发布**；G轮完成新用户路径和恢复指引等10项改进、5个独立Codex进程实跑与最终回归，见[G轮记录](../acceptance/20261019-new-user-g/README.md)。该轮证据对应最终g4包，不借用旧F结果。现有作品不自动迁移或改写，本轮未Git提交或推送。
+ 
+ 本页是当前状态入口。[总设计](authoring-governance-design.md)保留原需求、设计依据与验收矩阵；各批说明记录实现细化；`acceptance/`中的原始报告、源码快照和封存清单保留各自时点，不因本次说明更新而改写。历史报告中的“本轮未提交”等只描述当时行为，当前Git提交情况以实际仓库历史为准。
+ 
+@@ -28,14 +28,15 @@
+ 
+ | 范围 | 结果与证据边界 |
+ | --- | --- |
++| 当前候选回归与新用户流程 | G轮0.7.4最终g4：155项中154通过、0失败、1项环境跳过，doctor通过；5个独立Codex进程完成两卷六章7471正文汉字、跨会话修订/意见闭环、正式包更新及草稿导出，另建仅规划作品验证正文门禁。206次捕获产品调用含15次非零，保留预期拒绝和纠正后的错误；六章流程不替代百章或真人验收。见[G轮记录](../acceptance/20261019-new-user-g/README.md) |
+ | 分批程序与流程验证 | A覆盖阶段/决策/构建，B覆盖版本与修订事务，C覆盖功能表/登记/意见，D覆盖完整更新与故障恢复，E补强清单缺失、完整安装身份及回滚再中断；各批源码、失败与最终结果分别留存，不相加为单次最终测试 |
+-| 最终功能版回归 | F轮0.7.3：npm test共152项，151通过、0失败、1项环境跳过；npm run doctor成功。见[测试原始结果](../acceptance/20261018-hundred-f/commands/final-tests-v3/result.json)、[诊断结果](../acceptance/20261018-hundred-f/commands/final-doctor-v3/result.json) |
++| F轮功能版回归 | F轮0.7.3：npm test共152项，151通过、0失败、1项环境跳过；npm run doctor成功。见[测试原始结果](../acceptance/20261018-hundred-f/commands/final-tests-v3/result.json)、[诊断结果](../acceptance/20261018-hundred-f/commands/final-doctor-v3/result.json) |
+ | 实际Codex长篇流程 | F轮13个真实CLI进程，以原100章必要文件副本恢复并续写至106章；新6章共19,827正文汉字，单章3049–3548。四轮重登48–106章，再由D进程完整复读最终59章；最终更新进程另读98–106，不冒称再次全读59章 |
+ | 原始证据与封存 | F轮综合审计通过，595次捕获的产品调用含16次非零（预期拒绝及纠正后的调用错误），不是595次全成功；13,897个证据文件逐字节封存复验通过，清单自身另计。见[总报告](../acceptance/20261018-hundred-f/README.md)、[外部凭据](../acceptance/20261018-hundred-f-seal-verification.json) |
+ 
+ F轮旧100章正文仅四处单字符指代澄清，另修正58章派生知情登记；不是大幅重写旧情节的压力测试。模型阅读覆盖与语义判断分别留证，脚本不能证明文学连续性绝对无误。该轮未修改内置引擎，不借用旧引擎测试数。
+ 
+-本次文档统一不重跑或冒充新的13进程创作验收；文档检查及回归记录另存[本次说明更新记录](../acceptance/20261018-doc-status/README.md)。文档变化可能使主项目包的内容ID变化，F轮冻结包与测试身份仍只对应其原始交付字节，不能改写成说明更新后的新内容身份。
++此前`1a23bcc8`文档统一没有重跑或冒充新的13进程创作验收，其检查及回归见[说明更新记录](../acceptance/20261018-doc-status/README.md)。本轮G另有5进程和最终候选测试。文档变化可能使包内容ID变化：F轮冻结包仍只对应其原始字节，G轮四阶段也分别冻结，最终g4内容ID以G轮清单为准，不改写历史身份。旧F封存已在G轮末只读复验。
+ 
+ ## 暂缓、不承诺及未执行范围
+ 
+diff --git a/docs/long-form.md b/docs/long-form.md
+index 2abd48d5..e509ae37 100644
+--- a/docs/long-form.md
++++ b/docs/long-form.md
+@@ -1,8 +1,34 @@
+-# 长篇工具用法
++# 长篇创作：从规划到恢复、修订和导出
+ 
+-完整命令、分卷 JSON、增量登记、证据、滚动审查与旧作导入示例保存在随作品复制的 [长篇流程](../.agents/skills/writer-project/references/long-form.md)。作者任务入口见 [使用手册](user-guide.md)，具体命令帮助支持 `命令 --help`。
++这是一条面向作者的完整路径；第一次先看[快速入门](quickstart.md)。以十二章、两卷小说为例，远期只留骨架，近期滚动细化。篇幅和章数由作者决定，示例不是对所有长篇的固定门槛。
+ 
+-已有作品先运行 `node bin/ai-writer.mjs status --project 目录`。尚未启用长篇追踪的 schema 1 作品可用 `long-enable --expected-revision 当前号` 迁移，工具保留旧状态备份；已是 schema 2 的直接恢复续写。schema 1 仍兼容，schema 2 增加分卷和差量 journal；不要手改 `.writer/state.json` 或删除 journal。
++## 作者的完整路径
++
++| 阶段 | 可以直接告诉Codex | 本阶段完成后应留下 |
++| --- | --- | --- |
++| 1. 建作品和上层规划 | 新建小说到明确目录，计划十二章两卷，先定位/人物/全书骨架和两卷目标；只细化近期三章，先不写正文 | 作品路径、有效任务/范围、已选与未决、两卷连续范围和近期章纲；文件存在不等于作者确认 |
++| 2. 有限试写 | 本轮只写第1章或1–3章，完成自检、登记和必要回读后暂停；普通细节自行处理 | 正文、真实摘要与变化、当前人物知识/物件/伏笔证据、复盘点 |
++| 3. 换会话恢复 | 只凭作品文件恢复；先报告阶段、范围、未登记稿、待回收伏笔和活跃修订，这轮先不写 | 可执行的下一步；无授权不因next_unit自动续写 |
++| 4. 继续和跨卷 | 授权下一有限范围；换卷前回读首次伏笔、最近变化及本次兑现处，核人物知情和原物保管 | 接续前文的正文与登记、兑现或仍待核的具体边界；新卷不擅自改旧卷事实 |
++| 5. 滚动复核 | 每写三章完整回读当前三章及前三章；比较目标、选择、后果和关系变化，只审查时不改稿 | 真实阅读范围与当前版本报告，区别硬问题、可选建议和应保留内容 |
++| 6. 修订旧章 | 明确改动章节和可改内容，同时授权从最早影响章至当前末章实读重登；独立区执行并保留原稿 | 候选、交接、真实修改、后续语义核查、完整尾段复读和正式提交；意见采用/应用/复核分开 |
++| 7. 暂停和导出 | 保存当前任务及未完成项，导出已登记草稿到作品目录外的新目录；说明排除稿和审查边界 | 可恢复的本地交接、manuscript.md和manifest.json；仍是草稿 |
++
++例如已有六章，需要改第2章的地点指代，可说：
++
++> 只修第2章这处地点表达，保留剧情和人物声音；授权在独立区从第2章到第6章完整实读重登并核查连续性。如发现需要另改核心情节，先报告；不借这次授权重写其余章节。结束前完整复读尾段，正式提交并保存供新会话恢复的记录。
++
++修订中换会话，先凭本地交接恢复原ID、令牌和基线，不重新begin来覆盖旧候选。完整尾段复核要求最终字节上的实际连读；此前零散短评不能拼成一次完整连读。审查后正文再变，应按新版本补读、重新绑定。
++
++每轮给作者的交付应简短：作品/正文位置、已登记范围、实际审查范围、未登记稿或阻断、下一步。详细哈希、JSON和令牌保存在本地，不要求作者重复誊写。若本轮尚未结束，交接还应列独立区路径、读稿/重登进度及未完成项。
++
++建书时分清两类材料：长期设定记录故事承诺、世界规则和文风；本轮章数、暂停点、下一会话权限记录在workflow及交接。后者不要混进三份默认设定来源。已写章节的旧任务证据继续保留，当前行动按正式任务和实际最新授权恢复；不能为了消除文字冲突直接覆盖历史来源。
++
++## 命令使用者与旧协议
++
++完整JSON、证据及旧稿导入例子在随附[技术参考](../.agents/skills/writer-project/references/long-form.md)，其中schema2/3/4/5等说明按相应历史协议理解；当前新作schema6，同样使用增量账本和独立修订保护。当前参数以`命令 --help`及本手册为准。
++
++在主项目运行`node bin/ai-writer.mjs status --project "作品完整路径"`；独立目录使用`node .writer/tool/bin/ai-writer.mjs status`。已有schema1/2只继续原流程，不自动获得新治理能力；需迁移或更新时按[安全更新](tool-updates.md)单独授权，不手改state或删除journal。
+ 
+ 0.7新作品默认schema6，先恢复任务/授权/作者选择、版本、意见与活跃修订。2–6共用changes/journal；明确新长篇可init --mode long，旧作先long-enable-preview，实际启用3及以上不降级，散文不强制卷纲。旧作不自动迁移，随附工具另按[安全更新流程](tool-updates.md)显式处理。规划context discussion无需下一章细纲。版本修订见[原专项](revision-and-sources.md)，复核/登记减负/意见闭环见[复核专项](review-and-registration.md)，不另造账本。
+ 
+@@ -24,7 +50,7 @@ Windows 本机既有实跑中，Codex CLI 以嵌套作品目录为 cwd 时曾遇
+ 
+ 修改多处旧章时，保留修前正文、状态和输入，核最早影响范围再在独立区回退。未绑定的全局live规则可能使最早消费者早于正文改动；已经版本固定的历史发布则区分生效起点与回读前缀，不仅因读前一章强迫重登它。比较稳定ID、观察、到期、证据与知识，未变事实及旧证据保留，不靠推迟到期或删未知项清零。
+ 
+-正文和资料同时漂移时，`context`、`export` 返回 `CONTEXT_CHANGED`，`recovery.from` 汇总两类文件影响的最早单元，`recovery.expected_revision` 和 `next_command` 给出可核对的恢复指引。先看 `status` 的全部 `stale_units`、`changed_sources` 并备份，再按核定范围一次回退、逐章重登；回退保留正文，不会自动修好后续语义。只改追踪摘要中的错误而正文、资料字节未变时，状态检查可能正常，仍应从首次错误的单元正式回退修正，不能在后章添加新告知来掩盖早章本不可能听到的话。
++正文和资料同时漂移时，context、export返回CONTEXT_CHANGED，recovery.from汇总最早影响单元，through列原末章。schema4及以上主稿的mode为revision-workspace-required，next_command先列修订会话，再按真实授权进入独立区；不直接在主稿rewind。独立区mode为rewind-in-workspace，携原令牌回退。旧协议仍保留legacy-rewind。核全部stale_units、changed_sources并备份，逐章实读重登；回退不会自动修好语义。若错误仅在登记摘要而正文/资料字节未变，机械检查可能正常，仍从首次错误处正式修订，不在后章新增告知来掩盖早章不可能的知情。
+ 
+ | 变化类型 | 当前和历史怎样记录 |
+ | --- | --- |
+diff --git a/docs/quickstart.md b/docs/quickstart.md
+index 963100e4..2227d2fb 100644
+--- a/docs/quickstart.md
++++ b/docs/quickstart.md
+@@ -1,118 +1,78 @@
+-# 快速入门：在 Codex 中开始写作
++# 快速入门：先完成第一章
+ 
+-0.7.3支持长篇完整审查报告：普通审查与旧章重登报告可使用不超过1 MiB的UTF-8文本，不再误用普通短字段的20,000字符限制。仍须实际阅读声明范围，并由Codex绑定当前正文与来源；报告变长不等于自动完成文学复核。
++ai-writer在Codex中使用：你说明任务，Codex阅读文件、写作和登记；正文与追踪都保存在本地。准备好可以使用的Codex和Node.js 20或以上，无须安装npm依赖。第一次先用一个新目录，已有作品的导入或升级另走专项流程。
+ 
+-准备好能正常使用的 Codex 和 Node.js 20 或以上。不需要安装 npm 依赖。模型由当前 Codex 会话提供。
++## 1. 打开ai-writer，发出第一条任务
+ 
+-## 1. 打开主项目，检查环境
++在Codex中打开ai-writer主项目目录，将下面的作品名和要求换成自己的：
+ 
+-在 Codex 打开 ai-writer 项目目录。在终端运行一次：
++> 创建小说 works/雨夜来信，面向普通读者，计划十二章、两卷。先完成定位、人物、核心谜面、全书骨架和两卷目标，只细化近期前三章。本轮仅授权试写第1章，写完暂停复盘。请正式保存这次任务和范围；完成自检、登记与检查后，告诉我作品完整路径、正文位置、已登记范围、未登记稿和下一步。不要自动写第2章。
+ 
+-```powershell
+-node bin/ai-writer.mjs doctor
+-```
+-
+-看到 `ok: true` 表示文件与工具检查正常，不代表作品已经通过文学审查。
+-
+-## 2. 直接说要写什么
+-
+-将下面的作品名、题材和要求换成自己的，发给 Codex：
+-
+-> 创建小说 works/雨夜来信，面向普通读者，计划十二章。启用长篇分卷，先完成定位、人物、核心谜面和故事骨架，再细化前三章。本轮仅授权试写第1章，写完暂停复盘。请把我的任务和范围正式登记，语言自然，不提前揭底；完成自检、登记和检查后，告诉我正文位置与下一步。
+-
+-剧本可以说：
+-
+-> 创建 screenplay 作品 works/最后一班车，写一部十五分钟短片。先完成梗概、人物和场次规划，再写前两场。动作可表演，各人物说话有区别。完成登记和检查。
+-
+-历史散文可以说：
+-
+-> 创建 history 作品 works/城与河，主题是我指定的历史事件。先阅读核验史料、建立事实卡，区分记载与推断，再写第一篇。不要编造对白、心理或现场细节，完成登记和检查。
+-
+-历史小说选择 novel；讨论真实历史的非虚构选择 history。散文和一般非虚构选择 essay，并提供真实经历或素材。
+-
+-0.7.1新作品默认schema6，复用changes、设定版本、独立修订区、跨章功能表与意见闭环，并加入工具更新代次保护。明确长篇时Codex可用init --mode long提前组织分卷。初始只允许讨论/规划；Codex据真实原话登记任务，你无需填写JSON或重复确认已授权细节。文件存在不等于已获正文授权。
+-
+-## 3. 看结果，继续写
++这是发给Codex的创作任务，不是终端命令。想先讨论，可把“试写第1章”改为“只讨论规划，不写正文”。远期允许保留骨架，无需先写完十二章细纲；初始化说明文件存在，不代表规划已完成。
+ 
+-作品在 `works/作品名/`。正文在 `正文/`，下一步和未登记稿可让 Codex 查看：
++本轮写到哪章、何时暂停等临时范围，应由Codex保存到正式任务状态和本地交接；不要写进作品定位、文风或权威世界规则。长期设定只放稳定的故事约束，避免下次续写时还读到“只许写第1章”的旧任务。
+ 
+-> 恢复 works/雨夜来信 的当前任务、允许范围、作者选择和待登记正文。本轮授权写第2章，请据这条指令更新范围；按文件恢复人物所知和未收线索，完成后暂停并更新追踪。
++若尚未确认环境，可先在主项目终端执行：
+ 
+-换会话也可以使用同一句话。保留整个作品目录，包括隐藏的 `.writer/` 和 `.agents/`；只保留正文无法完整恢复追踪。
+-
+-暂停写作可直接说：
+-
+-> 暂停正文，先讨论全书总纲。保存这次任务，下一会话也只讨论，不写下一章。青岚宗方向和炼器先行已选；首件法器仍未定，小盾仅为推荐，请逐项登记，不采纳附带数字。
+-
+-此时 status.next_unit 仍显示登记顺序，next.action 应指向总纲。context --purpose discussion 无需下一章细纲；decision current 区分已确认与候选。试写范围结束后先复盘，不默认无限续写。
+-
+-跨卷或改过旧章后，可以说：
+-
+-> 从当前文件恢复这部作品，回读将要回收的伏笔及最近变化，核对每个人实际知道什么、原物由谁保管。若旧章已修改，先处理后续受影响的知识和追踪，再续写；不要把约定当作已经发生。完成登记和当前版本的审查报告。
+-
+-收到正文或资料改变的提示时，让Codex核对共同影响。schema4及以上先建独立修订区，在区内回退、逐章实读重登，完整尾段复核后prepare/commit。schema5可用replay-input恢复旧changes草案；新稿、引文及下游仍须核读，先record-preview核待补项，不直接补哈希。
++```powershell
++node bin/ai-writer.mjs doctor
++```
+ 
+-未来补设定可以说：
++`ok: true`表示工具文件检查正常，不表示文学质量通过。首次使用不用填写JSON、哈希、schema或修订令牌，Codex会依据你的实际指令准备必要输入。
+ 
+-> 固定前六章真正使用的旧规则，实读新规则与相关正文。若只影响未来，从第七章发布；存在历史矛盾就建立影响待办和独立修订，不把“未来生效”当作无影响证明。
++## 2. 看交付，再决定下一步
+ 
+-跨会话修订可说：
++每次结束应收到：作品完整路径、实际正文路径、已登记范围、实际审查范围、未登记稿或阻断，以及当前允许的下一步。先读正文；“文件已写”“已登记”“已审查”“作者定稿”是不同状态。
+ 
+-> 先 revision list，用本地交接的修订 ID 和令牌恢复原分支。核对主稿是否变化；如有冲突，保留双方候选，按新基线重新组织，不自动覆盖或刷新旧基线。
++看完第一章后，继续在同一会话或新会话说：
+ 
+-具体恢复、令牌移交及中断处理见 [设定版本与修订](revision-and-sources.md)。
++> 恢复作品 works/雨夜来信，先核对当前任务、已登记章数、未登记稿和待回收线索。本轮授权写第2章，完成后暂停；不要覆盖已有正文，不把约定当作已发生事实。
+ 
+-0.7.2起可从主项目新入口运行 `doctor --project 修订区完整路径`。独立区有意不复制运行包，doctor复用父作品安装资源，并列出会话绑定和当前执行构建；不要在分支里补装工具或重新初始化。构建不匹配时保留候选，使用原绑定入口或按新基线另建会话。
++也可以只恢复而不续写：
+ 
+-详细步骤见 [长篇用法](long-form.md)。
++> 恢复作品 works/雨夜来信，只报告当前阶段、允许范围、作者已选与未决项、活跃修订和下一步；这轮不新增正文。
+ 
+-## 4. 审查或直接润色
++暂停规划可以说：
+ 
+-只想先看问题：
++> 暂停正文，先讨论全书总纲并保存这次任务。投递员的身份已经确定，寄件动机仍待讨论；请分别记录已选和未决内容，下一会话不要自动续写。
+ 
+-> 审查这两章的 AI 味，只报告问题。逐处区分模板表达、情绪空转、对白趋同与过度解释，同时列出应保留的声音和有效修辞。
++保留整个作品目录，包括隐藏的`.writer/`和`.agents/`。只复制正文不能完整恢复状态。长篇后续按[从规划到导出的完整路径](long-form.md)走，跨会话只凭文件恢复，不依赖聊天记忆。
+ 
+-已决定修改：
++## 3. 审查、修订和导出
+ 
+-> 对这两章去 AI 味并直接润色，保留情节、事实、人物口气与有效修辞。先保存原稿，按实际阅读代价定点修改，给出改前改后对照，并处理回退、重新登记和后续影响。
++只审查：
+ 
+-详见 [去 AI 味用法](deslop.md)。
++> 完整阅读这两章，检查连续性、重复解释与人物口气，只报告具体问题和应保留的表达，不修改正文。
+ 
+-跨章读起来反复时可以说：
++授权修改已登记章节：
+ 
+-> 完整连读最近六章，比较各章目标、阻力、人物选择、后果和关系变化。指出“失败—解释—再试”是否重复，但保留真正不同的因果和人物声音。用当前版本功能表、原文证据和具体意见记录；这轮只审查，不改正文。
++> 在独立修订区润色第1章，保留情节、事实和人物声音；先核对需要重登的后续范围，如超出这次授权则先报告。完成实际修改、后续追踪复核和提交，保留原稿与改前改后对照。
+ 
+-随后可按实际意见ID说明：
++旧章修改可能影响后续登记；“只改第1章”不自动授权改写所有后续情节。让Codex说明影响并使用已有授权，不直接改主稿或补哈希。去味方法见[去AI味流程](deslop.md)，意见处置见[复核手册](review-and-registration.md)。
+ 
+-> 采用I_ADDRESS，在原授权范围修订；I_STYLE保留原声，I_PACING延期。分清我的选择和你按既有授权处理的内容；实际提交后再绑定修改，并实读新稿复核，不把“采用”直接记成“已修复”。
++导出：
+ 
+-ID以本次报告为准。可选建议不自动成必改；再次改稿会显示需重核。见[跨章复核与登记减负](review-and-registration.md)。
++> 导出 works/雨夜来信 当前已登记草稿到作品目录外的新目录，核对未登记稿、回退留稿与审查覆盖，说明纳入和排除范围，不覆盖旧版本。
+ 
+-## 5. 导出完整草稿
++结果为`manuscript.md`和`manifest.json`；检查清单中的范围、排除项和警告。导出仍是草稿，不自动上传或发布。
+ 
+-> 导出 works/雨夜来信 的当前已登记草稿。先核对未登记正文、回退留稿和审查覆盖，说明哪些纳入、哪些排除。输出到一个新的导出目录，不覆盖旧版本。
++## 其他文体与独立目录
+ 
+-导出包含 `manuscript.md` 和 `manifest.json`。先看排除清单，确认没有漏掉要交付的稿件。导出仍是草稿。
++| 任务 | 如何说明 |
++| --- | --- |
++| 剧本 | 创建screenplay作品，说明短片/剧集、预计时长，先梗概和场次规划，仅写指定场次；动作可表演 |
++| 历史散文 | 创建history作品，提供明确历史主题，先核验史料和事实卡，再写指定篇；不编造对白、心理和现场 |
++| 散文/非虚构 | 创建essay作品，提供真实经历或素材，说明声音与篇幅，区分事实、记忆和观点 |
+ 
+-## 独立作品的入口
++历史小说属于novel，非虚构历史才是history。不要将小说的谜面、强压或章末门槛套给所有文体。
+ 
+-初始化会把技能、轻量工具和本套手册复制进作品。可以直接在 Codex 打开作品目录；在该目录的终端运行：
++新作品自带轻量工具、技能和手册。直接打开作品目录时，在该目录终端运行：
+ 
+ ```powershell
+ node .writer/tool/bin/ai-writer.mjs doctor
+ node .writer/tool/bin/ai-writer.mjs status
+ ```
+ 
+-只有当前目录包含 `writer.json` 时才能省略 `--project`。其他位置须传作品完整路径。
+-
+-只读识别构建可用 `node bin/ai-writer.mjs tool identify`；比较随附工具用 `node bin/ai-writer.mjs tool compare --project "作品路径" --other "主项目路径"`。版本号相同不一定内容相同。这些命令不会升级工具。
+-
+-旧schema1–5继续按原协议运行。需要新能力先只读预览；1/2显式governance migrate至3，再protection enable至4、review-workflow enable至5，均须对应作品授权和备份。需要更新作品随附工具时，告诉Codex：“从指定本地主项目检查这个作品的更新计划，保留我的规则、技能和手册笔记。”Codex先运行tool update-plan，说明差异；schema5另行显式tool enable至6，旧0.6会拒绝6。然后重新计划并执行可恢复更新。先在独立副本验证，不自动迁移实际旧作。
+-
+-更新必须从被替换包之外运行，不能只复制CLI或改版本号。新版完整资源位于.writer/tool；作品根AGENTS、技能和手册默认原样保留，新入口help指向包内新手册。中断时保留现场，用外部入口tool updates查看，再按作者明确选择tool recover完成或回滚。详见[工具更新](tool-updates.md)。
+-
+-恢复途中再次中断也保留原事务，从外部入口按实际锁和明确方向重试。0.7随附包若丢失清单或与安装记录不同，先保留现场检查，不自行重建清单、改state指纹或冒充旧无清单包。
+-
+-在本机 Windows 的既有验证中，Codex CLI 使用嵌套作品目录作为 cwd 曾出现 `helper_unknown_error`，而从主项目目录启动并明确指定作品路径可以完成任务。遇到这类错误，返回 ai-writer 主项目会话，提供作品当前完整路径后继续；不要把宿主启动失败当成正文损坏，也不要为此关闭全局安全设置。独立 Node 工具可作为状态诊断入口。
++主项目用`node bin/ai-writer.mjs`并传`--project "作品完整路径"`；独立作品用上述随附入口，当前目录含`writer.json`时可省略`--project`。更新后以该入口`--help`显示的包内手册为准，作品根手册可能保留作者笔记。
+ 
+-更多任务见 [使用手册](user-guide.md)，具体参数见 [命令说明](workflow.md)。
++若Codex在嵌套作品目录出现`helper_unknown_error`，返回主项目会话并明确作品完整路径；不要重新初始化或修改全局安全设置。已有作品导入、版本变化、修订恢复和工具升级分别见[使用手册](user-guide.md)、[版本与修订](revision-and-sources.md)及[本地安全更新](tool-updates.md)。
+diff --git a/docs/recovery-hardening-e.md b/docs/recovery-hardening-e.md
+index e51a7cfc..19153b64 100644
+--- a/docs/recovery-hardening-e.md
++++ b/docs/recovery-hardening-e.md
+@@ -1,6 +1,6 @@
+ # E轮：更新恢复与完整构建保护
+ 
+-更新日期2026-10-19。**E轮补强已实现并完成本轮本地验证**，原交付0.7.1；当前0.7.3保留这些保护，F轮进一步修复独立修订区诊断和长篇报告容量。见[E轮最终记录](../acceptance/20261018-recovery-e/README.md)及[当前状态总览](authoring-governance-status.md)。本文保留E轮范围，不表示当前版本仍为0.7.1；现有作品不自动升级。
++更新日期2026-10-19。**E轮补强已实现并完成本轮本地验证**，原交付0.7.1；当前0.7.4保留这些保护，F轮进一步修复独立修订区诊断和长篇报告容量。见[E轮最终记录](../acceptance/20261018-recovery-e/README.md)及[当前状态总览](authoring-governance-status.md)。本文保留E轮范围，不表示当前版本仍为0.7.1；现有作品不自动升级。
+ 
+ 八项治理设计的A—D实现后，本轮检查更新恢复的剩余边界，不引入新的创作协议。新作仍schema6，原分卷、增量账本、来源哈希、修订与作者授权规则继续使用。
+ 
+diff --git a/docs/review-and-registration.md b/docs/review-and-registration.md
+index dbe3f8d1..b074d886 100644
+--- a/docs/review-and-registration.md
++++ b/docs/review-and-registration.md
+@@ -10,6 +10,37 @@
+ 
+ review可带chapter_functions、comparison及issues，须expected_revision、稳定operation_id。完整正文及报告按原字节冻结，记录复用.writer/reviews，不另造文学评分器。修改正文或依赖后旧报告失效，重新连读范围应如实记录，不拼接零散短评充当六章连读。
+ 
++### 命令输入：comparison的准确形状
++
++先用review-template保留当前from/to、source_hashes和逐章功能表，再填写比较。下面仅是comparison片段，文字和引文均为占位说明，不能原样登记或当作已读结论：
++
++```json
++{
++  "similar_structures": [
++    {
++      "units": [1, 2],
++      "judgment": "填写这两章实际相似的结构；不等于自动判重复",
++      "differences": "填写两章不同的选择、后果和阅读收益",
++      "preserve": "填写应保留的差异与声音",
++      "optional_adjustments": ["填写确有阅读收益的可选调整；没有则用空数组"],
++      "uncertainty": "填写本次判断的具体边界",
++      "evidence": [
++        {"unit": 1, "quote": "替换为第1章实际原句"},
++        {"unit": 2, "quote": "替换为第2章实际原句"}
++      ]
++    }
++  ],
++  "distinct_gains": ["填写逐章不同的实际收益"],
++  "preserve": ["填写整体应保留的内容"],
++  "optional_adjustments": [],
++  "limits": "填写实际完整读过的范围、版本与未能证明的内容"
++}
++```
++
++外层distinct_gains、preserve、optional_adjustments均为**字符串数组**，不是按章对象或对象数组；外层limits是非空字符串。similar_structures是对象数组，可以为空；每项只允许示例中的七个字段，units至少两个不同实读章号，evidence必须分别覆盖这些章。其内judgment、differences、preserve、uncertainty是非空**字符串**，只有optional_adjustments是字符串数组。不要自造pattern、description等字段，不要混淆内外两种preserve类型。
++
++没有实际相似结构就保留空数组，不为填表制造文学重复。格式拒绝时保留原输入，按所报字段准备修正版；不改正文/来源哈希，不缩小实际声明范围来规避验证。普通作者不填这些字段，由Codex根据真实阅读准备。
++
+ ## 登记减负
+ 
+ 明确长篇或跨卷的新作可用init --mode long，先安排骨架、卷契约、近期细纲、试写范围和复盘点。旧作先long-enable-preview；不执行long-enable即不迁移。实际启用备份并验证原事实链。record-template自动填路径、revision、来源与版本绑定，未变事实不用重复誊写。
+diff --git a/docs/revision-and-sources.md b/docs/revision-and-sources.md
+index 0ee7faf0..8e65655e 100644
+--- a/docs/revision-and-sources.md
++++ b/docs/revision-and-sources.md
+@@ -4,7 +4,7 @@
+ 
+ 本页原schema4保护同样适用于schema5/6；重登草案、登记预览及意见闭环见[复核专项手册](review-and-registration.md)。0.7新作品默认6，旧作品仅显式启用，不自动迁移；随附工具另按[本地安全更新](tool-updates.md)处理。
+ 
+-当前适用0.7.3本地候选，新作品默认state schema6；版本与独立修订保护自0.5.0/schema4引入，后续协议继续复用。普通作者用自然语言说明任务，由Codex准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
++当前适用0.7.4本地候选，新作品默认state schema6；版本与独立修订保护自0.5.0/schema4引入，后续协议继续复用。普通作者用自然语言说明任务，由Codex准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
+ 
+ ## 从任务开始
+ 
+diff --git a/docs/user-guide.md b/docs/user-guide.md
+index 4dc30889..bd23a537 100644
+--- a/docs/user-guide.md
++++ b/docs/user-guide.md
+@@ -1,13 +1,25 @@
+ # ai-writer 使用手册
+ 
+-## 长篇报告容量（0.7.3）
+-
+-完整尾段审查与重登复核报告采用同一文件边界：非空UTF-8文本，单文件最多1 MiB，按实际字节计；普通摘要、角色状态及比较字段仍保持原短字段限制。有效长报告可以完整登记和冻结，修改报告或依赖后仍须重新核读、登记，不改旧哈希追认。超过文件上限时保留原文，整理覆盖同一实际阅读范围的重点报告，不通过缩小范围或填表冒充完整复核。文学判断仍由实读者负责。
+-
+ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追踪、来源和导出。日常使用可以直接说任务，无需手工编辑追踪 JSON。
+ 
+ 首次使用按 [快速入门](quickstart.md)。命令使用者另看 [命令说明](workflow.md)。
+ 
++## 先选择入口
++
++| 我在哪里 | 正常入口 | 路径怎样填写 |
++| --- | --- | --- |
++| ai-writer主项目的Codex会话 | 直接说明任务；诊断用`node bin/ai-writer.mjs` | 始终明确目标作品；终端命令加`--project "作品完整路径"` |
++| 已初始化的独立作品目录 | 直接说明任务；终端用`node .writer/tool/bin/ai-writer.mjs` | 当前目录含writer.json可省略--project；手册位置以入口--help为准 |
++| 尚未初始化的新目录 | 在主项目说“创建新作品到这里” | init使用--path，不对已有作品重新init |
++
++作品路径含空格时在终端加引号；JSON中的作品内引用使用正斜杠相对路径，Codex负责填写。作品根AGENTS/技能/手册可能保留作者定制，更新工具不自动覆盖；不要因旧笔记与新帮助不一致就删除定制。
++
++## 每轮应该交付什么
++
++结束时让Codex给出五项：作品完整路径与正文位置、已登记范围、实际读稿/审查范围、未登记稿或阻断、当前任务与下一步。多会话未完成修订还应保存本地交接，包含修订ID、独立区路径、原基线、进度、令牌所在文件和未完成项；不要靠聊天回忆或从列表猜令牌。
++
++示例：“这轮写到第3章即停，保存供下个会话恢复的说明，报告哪些已登记、哪些仍待处理，不自动写第4章。”具体长篇阶段及可复制任务见[完整长篇路径](long-form.md)。
++
+ ## 任务入口
+ 
+ | 我想做什么 | 可以直接告诉 Codex | 主要结果 |
+@@ -49,6 +61,8 @@ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追
+ 
+ 阶段包括方向、全书结构、分卷、章纲、试写、正式写作、修订与暂停，可以从正文返回规划。工具记录 stage/task/allowed_actions/draft_range/revise_range/stop_conditions/planning；阶段是工作中心，动作和有限区间决定能否登记。试写必须有末章和复盘条件；条件文字由代理落实，程序不能自动判断任意自然语言条件已发生。
+ 
++临时任务放在workflow及交接/研究记录，长期定位、文风和权威规则只放稳定的世界与表达约束。不要把“这轮只写1–3章”写进这三份默认消费的设定文件，否则下一轮会同时读到旧范围。若旧文件已混入阶段性文字，保留原字节与证据，先核对当前正式任务和作者实际新指令，说明哪段是历史任务；确需改来源时走版本/影响流程，不直接覆盖已消费来源或改哈希。
++
+ 例如六章后你说“暂停正文，先讨论总纲”，Codex 应保存该指令并正式登记；status 显示 next_unit=7，同时建议处理总纲。context --purpose discussion 不需要第七章细纲；正文 context、record-template、record 会拒绝越权。更晚的新授权可更新范围；不根据过去写过章节推断无限授权。
+ 
+ 重要选择使用稳定 ID，逐项列已确认、候选、排除和未决内容，保存真实作者原话与本地来源哈希。可以说“宗门只选青岚宗方向，技艺先炼器；经名和住舍人数未定，小盾仅推荐”。decision current 应分别展示这些状态，decision list 查取代与原话记录。确认决策取代仍限同主题、同范围；设定文件的按章版本通过 source 管理，两者不要混淆。
+@@ -83,11 +97,11 @@ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追
+ 
+ ## 修订和去 AI 味
+ 
+-明确希望“只报告”还是“直接润色”。修改已登记章节前查看修订号、核实最早影响范围；schema 4 先 revision begin，在独立区实读、rewind、修改和逐章重登，完整尾段复核后 prepare/commit。主稿不提前覆盖，旧报告不能直接套新正文或依赖。
++明确希望“只报告”还是“直接润色”。修改已登记章节前查看修订号、核实最早影响范围；schema4及以上（含当前6）先revision begin，在独立区实读、rewind、修改和逐章重登，完整尾段复核后prepare/commit。主稿不提前覆盖，旧报告不能直接套新正文或依赖。
+ 
+ 去味流程见 [专项指南](deslop.md)。它关注可观察的阅读问题，不追求检测器分数。单个词、比喻、长句或议论不是自动错误；不同文体使用不同标准。
+ 
+-revise_range 须覆盖最早影响章至原末章，代理不能自行扩权。schema 3 保留原回退兼容；schema 4 主稿不允许直接 rewind。跨会话用 ID/令牌恢复；并行候选提交冲突时保留双方，不能自动合并。设定改动先固定真实旧字节，未来版本按章发布；历史变化持久阻断，随完整修订一次提交。详见 [设定版本、影响分析与修订手册](revision-and-sources.md)。
++revise_range须覆盖最早影响章至原末章，但直接改写情节与后续实读重登是两种范围：只授权改第2章，不能据此随意重写第3章以后的剧情。确需扩大原指令范围时先报告，已有明确授权不重复索取。schema3保留原回退兼容；schema4及以上主稿不允许直接rewind。跨会话用ID/令牌恢复；并行冲突保留双方，不自动合并。设定改动先固定真实旧字节，未来版按章发布；历史变化持久阻断，随完整修订一次提交。详见[版本与修订手册](revision-and-sources.md)。
+ 
+ ## 跨章复核、登记预览和意见闭环
+ 
+@@ -111,6 +125,7 @@ context、record-template、record-preview、review-template、replay-input可
+ | REVISION_OCCUPIED | 先 revision list，恢复原所有者分支或显式另建并行候选，不覆盖主稿 |
+ | BASELINE_CONFLICT | 读 conflicts/conflict_ref，保留双方，按新基线另开会话，不重置旧基线 |
+ | TRANSACTION_PENDING | 普通读写暂停；revision list 定位事务，明确选择 recover 补完或回滚 |
++| TOOL_UPDATE_PENDING | 保留现场，从被替换包之外的入口tool updates查看更新事务，再按实际授权tool recover；不要用revision recover代替 |
+ | 不知道参数 | 使用 `命令 --help`，可获得用途、参数、输入示例和本地手册路径 |
+ | JSON 错误 | 按文件名与行列修正，双引号属性名、无尾逗号，UTF-8 保存 |
+ | 目标目录已存在 | 使用新目录；初始化和导出不会覆盖旧内容 |
+@@ -134,6 +149,8 @@ context、record-template、record-preview、review-template、replay-input可
+ 
+ ## 保留与备份
+ 
++关闭会话前保存正文、登记结果和未完成事项即可，不必为了“清零”删除候选、旧报告或未收伏笔。新会话若只获恢复/讨论授权，先报告当前任务，不能因next_unit存在而写下一章。
++
+ 独立修订区不含随附工具包。0.7.2的doctor识别其合法父作品，检查父包并报告revision_context，读取诊断不需要所有者令牌，也不会修改正文或状态。父包损坏、协议不符或执行构建与会话绑定不匹配仍失败；不能为了通过诊断向分支复制工具、改构建ID或覆盖state。旧0.7.1在合法修订区可能报缺少.writer/tool，从新主项目入口诊断并核实际绑定，不将该报错当成稿件丢失。
+ 
+ 保留整个作品目录，以及需要留存的外部原稿和导出目录。 `.writer/` 保存权威状态、差量记录和回退备份；`.agents/` 保存随作品使用的技能。原稿与审查报告建议按版本另存，不覆盖已经绑定哈希的材料。
+@@ -147,3 +164,7 @@ tool identify/compare只读报告内容指纹、版本号、模块/文档/技能
+ 0.7.1还核对已安装的完整内容身份，重建清单不能追认变化。发现清单丢失或TOOL_INSTALLED_BUILD_MISMATCH时，保留原包、state与备份，从外部入口核原版，不能修改指纹绕过。恢复途中再次中断，继续使用原事务，核实际遗留锁后明确complete或rollback；完成后同方向重试不重复增加revision/generation。实际旧作品升级须有范围明确的授权，查看doctor不会自动执行。
+ 
+ 随作品保留的许可、来源清单与原文哈希见 [来源与许可](attribution.md)。历史来源清单不表示清单中所有主项目组件都已随作品复制。
++
++## 命令使用者：报告与输入容量
++
++普通审查与旧章重登报告使用非空UTF-8文本，单文件最多1 MiB，按实际字节计；普通摘要、角色状态及比较字段保持原短字段限制。修改已登记报告或依赖后须重新核读并登记。超上限时保留原文，整理覆盖同一实际阅读范围的重点报告，不缩小声称范围或填表冒充完整复核。该限制由Codex准备输入时处理，新作者无需手工计算哈希或拼接报告。
+diff --git a/docs/verification.md b/docs/verification.md
+index 518bd4bf..1bdd5100 100644
+--- a/docs/verification.md
++++ b/docs/verification.md
+@@ -1,8 +1,8 @@
+ # 验证结果入口与早期历史记录
+ 
+-当前产品为**0.7.3本地候选**，八项治理需求的确认范围已实现。当前结果与暂缓范围统一见[状态总览](authoring-governance-status.md)；最终功能版见[F轮完整验证](../acceptance/20261018-hundred-f/README.md)：13个真实Codex进程、106章隔离副本、59章重登及完整复读，最终工具测试151通过/0失败/1项环境跳过，doctor成功。各项证据只证明报告所列版本与范围，未对外发布，也不代表真人文学验收。
++当前产品为**0.7.4本地候选，已完成G轮本地验证**，八项治理需求的确认范围已实现。[G轮记录](../acceptance/20261019-new-user-g/README.md)保存10项易用性改进、5个真实Codex进程、两卷六章7471正文汉字、跨会话修订/意见闭环、工具更新/导出和仅规划门禁；最终g4回归154通过、0失败、1项环境跳过，doctor通过。[F轮0.7.3验证](../acceptance/20261018-hundred-f/README.md)保留13个进程、106章副本、59章重登及完整复读，以及当轮151通过/0失败/1项环境跳过和doctor结果。不同候选的测试不混用；本轮六章流程不代替百章压力测试，具体范围与暂缓项见[状态总览](authoring-governance-status.md)。未发布，也不代表真人文学验收，现有作品未修改。
+ 
+-以下按版本保留早期记录。“当时未验收”不表示后续仍无对应实跑；旧测试数、未提交/远端情况及verification.json均只记录相应历史时点，不能作为当前仓库状态或最终测试结果。本次说明更新的检查与回归另见[维护记录](../acceptance/20261018-doc-status/README.md)。
++以下按版本保留早期记录。“当时未验收”不表示后续仍无对应实跑；旧测试数、未提交/远端情况及verification.json均只记录相应历史时点，不能作为当前仓库状态或最终测试结果。此前说明统一的检查与回归另见[维护记录](../acceptance/20261018-doc-status/README.md)，本轮结果以页首G轮入口为准。
+ 
+ 2026-10-16 扩大长篇实跑见 [24章完整记录](../acceptance/20261016-expanded/README.md)：4卷24章、38542正文汉字，9个独立Codex进程，覆盖两轮多处旧章修改与后续恢复。r63机械通过后又发现人物知情陈旧，经正式回退重登到r67修复；原稿、失败、差异和核验记录保留。该报告与最终候选回归记录为本轮依据，不代表百章长篇、真人盲读或市场验收。
+ 
+diff --git a/docs/workflow.md b/docs/workflow.md
+index faff0524..956347c1 100644
+--- a/docs/workflow.md
++++ b/docs/workflow.md
+@@ -17,6 +17,8 @@ node bin/ai-writer.mjs review-issues list --project "作品目录"
+ 
+ 上例1–6须确有六章；模板不是模型判断。完成实际连读后填report、operation_id、chapter_functions与comparison及可选issues，再把该JSON传review。原单位SHA已生成，不能手填假值。功能字段observed用text/evidence，unknown或none用reason；比较每章均有引文。意见类型correctness/continuity/readability/optional_style，后者只能severity=suggestion。
+ 
++结构化comparison的数组、对象与内外字段类型见[准确形状与示例](review-and-registration.md)。尤其distinct_gains是字符串数组，similar_structures中的judgment/differences/preserve/uncertainty是字符串；不能从字段名称猜成另一套对象结构。普通review帮助中的source_hashes示例不代替结构化输入，使用review-template及专项手册准备。
++
+ resolve需expected_revision、operation_id、id、disposition（adopted/retained/deferred）、reason、decision_actor。author沿用本页完整author_evidence；agent-within-authorized-scope传当前workflow事件的authorization={ref,sha256}，采用须revise覆盖意见范围。只是记录意见不改变正文授权。
+ 
+ 按授权在独立区完成实改和完整尾段复核并提交，apply再传expected_revision、operation_id、id、实际commit_id和reason；verify再传当前有效review_ref、reviewer、conclusion=resolved/not-resolved及reason。保留不能标修复，无实际对应改稿不能applied，原文/依赖再变后显示needs-recheck并保留旧链。各意见动作都会推进revision，不复用旧context哈希。
+diff --git a/lib/help.mjs b/lib/help.mjs
+index 0b773e11..adfb9b24 100644
+--- a/lib/help.mjs
++++ b/lib/help.mjs
+@@ -10,9 +10,9 @@ export const COMMANDS = {
+   record: { flags: ['project', 'input'], usage: '--project 作品目录 --input 登记.json', purpose: '填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。' },
+   status: { flags: ['project', 'view'], usage: '--project 作品目录 [--view compact|full]', purpose: '查看进度、过期来源、未登记正文和建议下一步。' },
+   check: { flags: ['project'], usage: '--project 作品目录', purpose: '检查机械一致性与未登记正文；不裁定文学质量。' },
+-  rewind: { flags: ['project', 'from', 'expected-revision'], usage: '--project 作品目录 --from 1 --expected-revision 当前修订号', purpose: '备份并作废指定单元及后续追踪，保留正文。先 status 获取当前修订号。' },
++  rewind: { flags: ['project', 'from', 'expected-revision'], usage: '--project 作品目录 --from 1 --expected-revision 当前修订号', purpose: '备份并作废指定单元及后续追踪，保留正文。schema4及以上须先建立独立修订区，在该区带revision-token回退；不在主稿直接执行。旧协议兼容原路径。' },
+   export: { flags: ['project', 'out'], usage: '--project 作品目录 --out 作品目录外的新目录', purpose: '导出已登记草稿，列出未纳入的正文；不覆盖旧导出。' },
+-  'long-enable': { flags: ['project', 'expected-revision'], usage: '--project 作品目录 --expected-revision 当前修订号', purpose: '备份迁移到长篇协议，再用 volume 建分卷计划。' },
++  'long-enable': { flags: ['project', 'expected-revision'], usage: '--project 作品目录 --expected-revision 当前修订号', purpose: '显式启用分卷契约，再用volume建卷计划；schema1备份迁移2，当前治理协议保持原版本。新长篇可直接init --mode long。先long-enable-preview只读预览。' },
+   volume: { flags: ['project', 'input'], usage: '--project 作品目录 --input 分卷.json', purpose: '保存连续覆盖的分卷与剧情单元计划。', input: { id: 'V1', title: '来信', start: 1, end: 3, promises: ['找到寄件人'], constraints: [], reserved: [], arcs: [{ id: 'A1', start: 1, end: 3, goal: '核实来源', payoff: '排除误认', forbidden: [] }] } },
+   outline: { flags: ['project', 'unit'], usage: '--project 作品目录 [--unit 1]', purpose: '查看长篇当前卷与剧情单元契约。' },
+   recall: { flags: ['project', 'query', 'limit'], usage: '--project 作品目录 --query 关键词 [--limit 20]', purpose: '查找线索与证据位置；完整账本ID匹配优先，空白分词为AND。默认20条，limit允许1—100；根据结果回读正文。' },
+diff --git a/lib/revisions.mjs b/lib/revisions.mjs
+index f495fb3c..9dd515fb 100644
+--- a/lib/revisions.mjs
++++ b/lib/revisions.mjs
+@@ -62,7 +62,7 @@ export function createRevisions(api) {
+   }
+   function assertReady(root) {
+     const parent = marker(root)?.parent ?? root, pending = transactions(parent).filter(t => !['completed', 'rolled-back'].includes(t.status));
+-    if (pending.length) {const tool=pending.some(t=>t.kind==='tool-update');fail(tool?'TOOL_UPDATE_PENDING':'TRANSACTION_PENDING', tool?'存在未完成工具更新，普通读写暂停；从外部新入口tool list/recover。':'存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。', { transactions: pending.map(t => ({ id: t.id, kind:t.kind??'revision', session_id: t.session_id, status: t.status })) });}
++    if (pending.length) {const tool=pending.some(t=>t.kind==='tool-update');fail(tool?'TOOL_UPDATE_PENDING':'TRANSACTION_PENDING', tool?'存在未完成工具更新，普通读写暂停；从外部新入口tool updates查看，再按明确方向tool recover。':'存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。', { transactions: pending.map(t => ({ id: t.id, kind:t.kind??'revision', session_id: t.session_id, status: t.status })) });}
+   }
+   function guardLoaded(){if(runtime()!==loadedBuild)fail('TOOL_BUILD_CHANGED','本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入');}
+   function guardWrite(root) {
+diff --git a/lib/workspace.mjs b/lib/workspace.mjs
+index 233eb9cf..b3d80a74 100644
+--- a/lib/workspace.mjs
++++ b/lib/workspace.mjs
+@@ -132,6 +132,16 @@ function changedSources(p) {
+   }
+   return changed;
+ }
++function driftRecovery(p, from) {
++  if (p.state.schema_version >= 4 && !revisions.info(p.root)) {
++    return { mode: 'revision-workspace-required',
++      action: `先查看修订会话；核实第 ${from} 至 ${p.state.units.length} 单元的影响和已有授权，在独立修订区回退并实读重登。主稿不直接 rewind；收纳已发生的锁外修改须按实际授权使用 adopt_existing_changes。`,
++      command: invocation(ROOT, 'revision list', ['--project', p.root]) };
++  }
++  return { mode: p.state.schema_version >= 4 ? 'rewind-in-workspace' : 'legacy-rewind',
++    action: `核实变更后，从第 ${from} 单元回退并逐单元实读重登；回退会保留正文。${p.state.schema_version >= 4 ? '在所属独立修订区操作并携带原 revision-token。' : ''}`,
++    command: invocation(ROOT, 'rewind', ['--project', p.root, '--from', from, '--expected-revision', p.state.revision]) };
++}
+ function fresh(p, options = {}) {
+   if (!options.allowImpact) sources.guardPending(p);
+   if (p.state.schema_version >= 2) journal.verify(p.root, p.state);
+@@ -142,11 +152,12 @@ function fresh(p, options = {}) {
+     const reasons = [];
+     if (stale.length) reasons.push(`正文已变化或缺失，旧追踪失效：${stale.join(', ')}。`);
+     if (changed.length) reasons.push(`创作来源已变化或缺失：${changed.map(row => `${row.ref}（单元 ${row.unit}）`).join(', ')}。`);
+-    throw userError(`${reasons.join('')}先核实影响，再 rewind --from ${from} 并重新核对登记；哈希只能发现变更，不能判断语义影响`, {
++    const recovery = driftRecovery(p, from);
++    throw userError(`${reasons.join('')}${recovery.action}哈希只能发现变更，不能判断语义影响`, {
+       code: 'CONTEXT_CHANGED',
+-      next_action: `核实变更后，从第 ${from} 单元回退并逐单元实读重登；回退会保留正文。`,
+-      next_command: invocation(ROOT, 'rewind', ['--project', p.root, '--from', from, '--expected-revision', p.state.revision]),
+-      recovery: { from, expected_revision: p.state.revision, stale_units: stale, changed_sources: changed }
++      next_action: recovery.action,
++      next_command: recovery.command,
++      recovery: { from, through: p.state.units.length, mode: recovery.mode, expected_revision: p.state.revision, stale_units: stale, changed_sources: changed }
+     });
+   }
+ }
+@@ -293,7 +304,7 @@ function contextPacket(p, unit, budget) {
+   governance.gate(p, governance.unitAction(p, unit), unit);
+   if (unit !== p.state.units.length + 1) fail(`续写应从单元 ${p.state.units.length + 1} 开始；修订请先 rewind`);
+   const planRef = `大纲/单元/${id(unit)}.json`;
+-  if (!fs.existsSync(sources.resolve(p, planRef, unit).file)) throw userError(`第 ${unit} 单元还没有细纲：${planRef}`, { code: 'PLAN_REQUIRED', file: planRef, next_action: '先按 plan --help 准备细纲 JSON，保存细纲后再读取 context。', next_command: invocation(ROOT, 'plan', ['--project', p.root, '--input', path.join(p.root, '.writer/plan-input.json')]) });
++  if (!fs.existsSync(sources.resolve(p, planRef, unit).file)) throw userError(`第 ${unit} 单元还没有细纲：${planRef}`, { code: 'PLAN_REQUIRED', file: planRef, next_action: '让 Codex 根据本轮目标准备并保存该单元细纲，再读取 context；命令输入格式见 plan --help，不直接使用尚未创建的输入文件。', next_command: invocation(ROOT, 'plan', ['--help']) });
+   const plan = planData(p, json(sources.resolve(p, planRef, unit).file));
+   if (plan.unit !== unit) fail('细纲 unit 与文件名不一致');
+   const settingRefs = [...new Set(['设定/作品定位.md', '设定/文风.md', '设定/权威规则.md', ...plan.setting_refs])];
+@@ -668,7 +679,8 @@ export function main(argv) {
+       if (!['compact', 'full'].includes(view)) fail('view 必须是 compact 或 full');
+       const stale = drift(p), changed = changedSources(p), inventory = draftInventory(p), unit = p.state.units.length + 1;
+       const affected = [...stale, ...changed.map(row => row.unit)], planExists = fs.existsSync(safe(p.root, `大纲/单元/${id(unit)}.json`));
+-      let next = affected.length ? { action: '核实来源变更，按最早受影响单元回退并逐单元核对登记', command: invocation(ROOT, 'rewind', ['--project', p.root, '--from', Math.min(...affected), '--expected-revision', p.state.revision]) }
++      const recovery = affected.length ? driftRecovery(p, Math.min(...affected)) : null;
++      let next = recovery ? { action: recovery.action, command: recovery.command }
+         : { action: planExists ? '先核对未登记正文，再读取下一单元上下文' : '先准备下一单元细纲；已有正文时先实读再建立细纲', command: invocation(ROOT, planExists ? 'context' : 'plan', planExists ? ['--project', p.root, '--unit', unit] : ['--help']) };
+       const governed = governance.view(p, unit);
+       const revisionState = revisions.list(p.root), impacts = sources.pendingSummary(p);
+diff --git a/package.json b/package.json
+index acb6b810..90f80105 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "ai-writer",
+-  "version": "0.7.3",
++  "version": "0.7.4",
+   "private": true,
+   "description": "Codex 驱动的中文小说、剧本、历史散文与非虚构写作工作区",
+   "type": "module",
+diff --git a/scripts/codex-acceptance.mjs b/scripts/codex-acceptance.mjs
+index 9092268a..558dd894 100644
+--- a/scripts/codex-acceptance.mjs
++++ b/scripts/codex-acceptance.mjs
+@@ -2,6 +2,7 @@ import fs from 'node:fs';
+ import path from 'node:path';
+ import { spawn, spawnSync } from 'node:child_process';
+ import { StringDecoder } from 'node:string_decoder';
++import crypto from 'node:crypto';
+ import { ROOT } from '../lib/workspace.mjs';
+ 
+ // Explicitly invoked real-session acceptance; never part of npm test or doctor.
+@@ -12,6 +13,10 @@ if (!phase || !/^[a-z][a-z0-9-]*$/.test(phase) || !launcher || !path.isAbsolute(
+ }
+ const directory = path.join(ROOT, 'acceptance', campaign, phase);
+ const request = fs.readFileSync(path.join(directory, 'request.md'), 'utf8');
++// Freeze the exact stdin at launch; later notes must not rewrite the request used by this process.
++const requestBytes = Buffer.from(request, 'utf8');
++const requestSha256 = crypto.createHash('sha256').update(requestBytes).digest('hex');
++fs.writeFileSync(path.join(directory, 'request.raw.md'), requestBytes, { flag: 'wx' });
+ const eventsFile = path.join(directory, 'events.jsonl');
+ // Preserve previous evidence on retries; use a new phase name instead.
+ const events = fs.openSync(eventsFile, 'wx');
+@@ -47,8 +52,8 @@ child.on('close', (code, signal) => {
+   clearInterval(timer); fs.closeSync(events); fs.closeSync(stderr);
+   const result = { phase, launcher, codex_version: version.stdout?.trim(), node: process.version, platform: process.platform,
+     exit_code: code, signal, elapsed_s: Math.round((Date.now() - started) / 1000),
+-    events: eventCount, commands, messages, directory, args };
++    events: eventCount, commands, messages, directory, args, request_sha256: requestSha256, request_snapshot: 'request.raw.md' };
+   fs.writeFileSync(path.join(directory, 'process-result.json'), JSON.stringify(result, null, 2) + '\n', 'utf8');
+   console.log(JSON.stringify(result)); process.exitCode = code ?? 1;
+ });
+-child.stdin.end(request);
++child.stdin.end(requestBytes);

@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-18T17:16:52.650Z",
+  "errors": [],
+  "state_sha256": "c0b2ca987d72bdee373f116127de2f36d61194cb8fb0ff64028d6d684971f958",
+  "registered_report_sha256": "717a8aa245101139a9ec38371e070f498ddb40447a9dc4e48e5802761e1101e2",
+  "chapter_functions": 6,
+  "capture_limitations": {
+    "unscoped_help_commands": [
+      "b-help-workflow",
+      "b-help-volume",
+      "b-help-plan",
+      "b-help-workflow-set",
+      "b-help-decision",
+      "b-help-record-preview",
+      "b-help-review-template",
+      "b-help-review"
+    ],
+    "note": "8次help未带--project，capture状态字段为null，未逐次保存作品状态副本；原argv/stdout/stderr/exit/build均保留。带--project的33次操作（含全部状态变更、边界拒绝及上下文/登记/审查/核验）均保存实际state原字节。不得宣称41次都有作品状态副本。"
+  },
+  "core_files": [
+    "REPORT.md",
+    "results.json",
+    "handoff.md",
+    "handoff.json",
+    "readings.json",
+    "recovery-checkpoint.md",
+    "recovery-checkpoint.json"
+  ]
+}

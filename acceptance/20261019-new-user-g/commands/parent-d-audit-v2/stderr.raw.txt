@@ -1,0 +1,59 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: /ledger/OBS_CLOCK_FACE
++ actual - expected
+
+  [
+    'type',
+    'statement',
+    'status',
+    'cast',
+-   'tags',
+    'reader_known',
+    'character_known',
+    'evidence',
++   'tags',
+    'introduced_unit',
+    'updated_unit'
+  ]
+
+    at compareFacts (file:///D:/work/other/ai-writer/acceptance/20261019-new-user-g/verify-d-parent.mjs:12:261)
+    at compareFacts (file:///D:/work/other/ai-writer/acceptance/20261019-new-user-g/verify-d-parent.mjs:12:338)
+    at compareFacts (file:///D:/work/other/ai-writer/acceptance/20261019-new-user-g/verify-d-parent.mjs:12:338)
+    at file:///D:/work/other/ai-writer/acceptance/20261019-new-user-g/verify-d-parent.mjs:12:555
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'type',
+    'statement',
+    'status',
+    'cast',
+    'reader_known',
+    'character_known',
+    'evidence',
+    'tags',
+    'introduced_unit',
+    'updated_unit'
+  ],
+  expected: [
+    'type',
+    'statement',
+    'status',
+    'cast',
+    'tags',
+    'reader_known',
+    'character_known',
+    'evidence',
+    'introduced_unit',
+    'updated_unit'
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

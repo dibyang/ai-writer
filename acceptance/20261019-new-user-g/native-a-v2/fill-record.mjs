@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const unit=Number(process.argv[2]);if(![1,2,3].includes(unit))throw Error('unit');
+const base=path.resolve('acceptance/20261019-new-user-g');
+const project=path.join(base,'作品/雾港 来信');
+const template=JSON.parse(fs.readFileSync(path.join(project,`.writer/drafts/record-${unit}.json`),'utf8'));
+const content=JSON.parse(fs.readFileSync(path.join(base,`native-a-v2/inputs/content-${unit}.json`),'utf8'));
+template.summary=content.summary;template.changes=content.changes;
+delete template._instructions;delete template.output;
+const out=path.join(base,`native-a-v2/inputs/record-${unit}.json`);
+fs.writeFileSync(out,JSON.stringify(template,null,2)+'\n',{flag:'wx'});
+console.log(out);

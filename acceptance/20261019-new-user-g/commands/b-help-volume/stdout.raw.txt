@@ -1,0 +1,34 @@
+ai-writer 0.7.4 / volume
+保存连续覆盖的分卷与剧情单元计划。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' volume --project 作品目录 --input 分卷.json
+
+输入示例（UTF-8 JSON）：
+{
+  "id": "V1",
+  "title": "来信",
+  "start": 1,
+  "end": 3,
+  "promises": [
+    "找到寄件人"
+  ],
+  "constraints": [],
+  "reserved": [],
+  "arcs": [
+    {
+      "id": "A1",
+      "start": 1,
+      "end": 3,
+      "goal": "核实来源",
+      "payoff": "排除误认",
+      "forbidden": []
+    }
+  ]
+}
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

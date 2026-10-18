@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),root=path.dirname(here),h=JSON.parse(fs.readFileSync(path.join(root,'native-c/handoff.json')));
+const x=JSON.parse(fs.readFileSync(path.join(root,'commands/d-032-update-plan/stdout.raw.txt'))),g=JSON.parse(fs.readFileSync(path.join(root,'source-build-g4.json')));
+if(!x.can_update||x.blockers.length||x.source.content_id!==g.observed_content_id||JSON.stringify(x.source.files)!==JSON.stringify(g.files)||x.local_content.some(r=>r.action!=='preserve'))throw Error('Plan mismatch or unapproved root change');
+const ref='研究/D恢复更新与暂停授权.md',b=fs.readFileSync(path.join(h.project_path,ref)),quote='在当前修订已提交或中止、没有活跃会话之后，本G轮隔离验证允许更新本新作品完整工具包以匹配g4交付资源：从主项目外部入口tool update-plan，source为D:/work/other/ai-writer的当前最终源码，核对source-build-g4身份后按真实作者任务/代理执行范围准备update输入。保留根AGENTS、技能、手册笔记和全部文学事实，不暗做schema迁移，不重建清单追认；只走正式tool update流程。';
+if(!b.toString('utf8').includes(quote))throw Error('quote mismatch');
+const request={...x.request,author_evidence:{quote,local_source:ref,source_sha256:crypto.createHash('sha256').update(b).digest('hex'),locator:'D用户任务最终资源一致性段，研究/D恢复更新与暂停授权.md第5段摘录',recorded_by:'native-d-agent'}};
+fs.writeFileSync(path.join(here,'inputs/tool-update.json'),JSON.stringify(request,null,2)+'\n',{flag:'wx'});
+const result={revision:x.revision,generation:x.generation,source:x.source.content_id,target:x.target.content_id,source_files_match_g4:true,preserved_root_resources:x.local_content.length,documents:x.documents,blockers:x.blockers,request:request};
+fs.writeFileSync(path.join(here,'update-plan-reviewed.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({...result,request:undefined},null,2));

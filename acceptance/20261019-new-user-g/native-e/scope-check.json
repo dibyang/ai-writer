@@ -1,0 +1,82 @@
+{
+  "mechanical_patterns": "本轮|下一会话|只规划|不写正文|不授权试写|draft_range|stop_conditions|allowed_actions",
+  "stable_sources": [
+    {
+      "ref": "设定/作品定位.md",
+      "bytes": 1747,
+      "sha256": "2c3a522c53118bcc35ff10ff6cdf58500e4127785852eea8238508987a4258f9",
+      "temporary_scope_match": false
+    },
+    {
+      "ref": "设定/文风.md",
+      "bytes": 1288,
+      "sha256": "96440f32c78817f3498c3fbe67e282eec747bbe90ff8fcb38f3be3527e8b2948",
+      "temporary_scope_match": false
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "bytes": 1389,
+      "sha256": "dc9ff8cfb72e280f06bb86e1d2c7c3daee148606e10483f3e01a40e1e32102b6",
+      "temporary_scope_match": false
+    }
+  ],
+  "semantic_inspection": "Codex fully read all three final sources; only durable story/world/expression constraints found. Regex is supporting evidence, not the semantic conclusion.",
+  "task_locations": [
+    ".writer/state.json:governance",
+    ".writer/objects/a5dacb13-4593-4b01-a157-99172ff104ec.json",
+    "研究/作者任务原话.md",
+    "研究/本轮任务与交接.md"
+  ],
+  "rejections": [
+    {
+      "label": "e-draft-context-1-rejected",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "state_bytes_equal": true,
+      "matches_final_state": true,
+      "scope": {
+        "allowed_actions": [
+          "discuss",
+          "plan"
+        ],
+        "draft_range": null,
+        "revise_range": null,
+        "stop_conditions": [
+          "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+          "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+          "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+          "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+        ]
+      },
+      "raw_error": "commands\\e-draft-context-1-rejected\\stderr.raw.txt"
+    },
+    {
+      "label": "e-record-template-1-rejected",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "state_bytes_equal": true,
+      "matches_final_state": true,
+      "scope": {
+        "allowed_actions": [
+          "discuss",
+          "plan"
+        ],
+        "draft_range": null,
+        "revise_range": null,
+        "stop_conditions": [
+          "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+          "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+          "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+          "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+        ]
+      },
+      "raw_error": "commands\\e-record-template-1-rejected\\stderr.raw.txt"
+    }
+  ],
+  "body_directory": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/正文",
+  "body_entries": []
+}

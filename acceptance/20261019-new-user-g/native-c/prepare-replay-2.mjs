@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),base=path.dirname(here),local=JSON.parse(fs.readFileSync(path.join(here,'session-local.json'))),w=local.workspace;
+const input=JSON.parse(fs.readFileSync(path.join(base,'commands/c-replay-input-2/stdout.raw.txt')));
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+const b=fs.readFileSync(path.join(w,input.draft)),old=fs.readFileSync(path.join(here,'baseline-original',input.draft));
+const before='你是不是问他欠多少修理费了？',after='你问过他修理费要多少吗？';
+if(old.toString('utf8').replace(before,after)!==b.toString('utf8')) throw Error('Not the intended exact single change');
+const quotes=[];
+for(const [id,v] of Object.entries(input.changes.ledger))for(const e of v.evidence){if(!b.toString('utf8').includes(e.quote))throw Error('quote '+id);quotes.push({id,unit:e.unit,quote:e.quote,retained:true});}
+const report='审查/0002-C重登语义复核.md';
+const text=`# 第2章候选重登语义复核\n\n审查者native-c-agent，知情模型实读，agent-within-authorized-scope。基线18，独立区回退后revision19。正文实际全文1–84行，旧SHA ${sha(old)}，新SHA ${sha(b)}。唯一字节改动是39行问句“${before}”变为“${after}”，其余逐字节一致。已完整读当前候选2–6，另完整读根稿1–6、B当前报告、父意见与全部原基线语义投影（6摘要、3人物、完整时间线、19项ledger及全部引文），读本见native-c/read-versions。\n\n## 六项核查\n\n- summary：旧摘要准确描述口述、清点空格、合影、当晚会合与看房延后。本次未新增报价、债务或支付，摘要原样保留。\n- characters：林只读过原信并转述，陶未读原信未见牌，钟没有收到陶的回话；林只见合影和空格未见钟；五点五十约等与晚电话为未来约定。林挪后看房和葱的生活细节保留。旧人物变化原样保留，不把3–6章未来所知提前放进2章。\n- timeline：同日下午送报、出示合影、记今晚核实、林继续新码头邮路两项原事件均未变，未把周五核对或周六实测写成已完成。\n- ledger：O_LETTER、O_TAG27仍钟铺原物，陶只听说；T_SENDER仍无身份；T_TEST15仍只是已听请求并约晚间先认物；O_REGISTER是陶的原旧簿与合影；OBS_CLOCK_PHOTO仍右下掉漆且钟盘看不清。继承OBS_TAG_NOTCH的孔边缺口原观察不变。六项变化及此前事实不删除、不提前兑现。\n- evidence：逐条实读核对本次六项ledger的7处原引句，都未用39行旧问句，分别为21、17、43、67、45行等；引文语义与当前新正文相同，无需为了改问句创造新证据。保留引文文本与旧第1章证据，通过正式record绑定当前第2章新版本；原旧SHA及原证据在基线、rewind备份和原journal保留。不是仅改哈希认定语义没变。\n- downstream：3章23行师傅回忆第一句问欠钱，与2章陶承认先问价可相容；3章47行旧材料钱查账、4章19/25行旧账与工时分开、5章39/61行没有本次收款/数目、6章67行钱仍待账，均未被询价句新增金额或付款。3章借牌、4章还牌接钟、5章有限实测、6章原件抄件分流与各自知情仍成立；3–6正文未改。\n\n## 真人语言别扭句\n\n### 真人语言硬问题\n\n没有\n\n新问句当面复述和动宾拆分都明确向修者问价，仍是林的简短询问；保留抹平钞票的观察和陶“总不能让人白修”。未做真人出声朗读或逐项定稿。意见仍只是adopted，候选未提交、未标applied/verified。当前下游核查不能替代4–6重登后的一次完整最终尾段复读。\n`;
+fs.writeFileSync(path.join(w,report),text,{flag:'wx'});
+input.replay_review={reviewer:'native-c-agent-informed-reading',report,draft_sha256:sha(b),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+delete input._instructions;delete input.output;
+fs.writeFileSync(path.join(here,'inputs/record-2-reviewed.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(here,'replay-2-evidence-audit.json'),JSON.stringify({old_sha256:sha(old),new_sha256:sha(b),exact_single_replacement:true,semantic_payload_preserved:true,quotes,report:path.join(w,report)},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({input:path.join(here,'inputs/record-2-reviewed.json'),report,quotes:quotes.length,summary_characters_timeline_ledger_preserved:true}));

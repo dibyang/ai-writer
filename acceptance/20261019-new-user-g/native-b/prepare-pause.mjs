@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const base=path.resolve('acceptance/20261019-new-user-g/native-b'),project=path.resolve(base,'../作品/雾港 来信');
+const source='研究/G轮B用户请求.md';
+const sha=crypto.createHash('sha256').update(fs.readFileSync(path.join(project,source))).digest('hex');
+const original=JSON.parse(fs.readFileSync(path.join(base,'inputs/workflow-4-6.json'),'utf8'));
+const planning=original.workflow.planning;
+planning.volume.refs.push('大纲/第二卷执行契约-B.md');
+planning.outline.refs=[1,2,3,4,5,6].map(n=>`大纲/单元/${String(n).padStart(4,'0')}.json`);
+const input={expected_revision:14,operation_id:'b-pause-after-six',author_evidence:{quote:'完成后暂停正文，仅讨论/规划，不写第7章。',local_source:source,source_sha256:sha,locator:'本次用户请求最后一段首句；本地逐字保存，无虚构消息ID',recorded_by:'G轮native-b Codex执行代理'},workflow:{stage:'paused',task:'第4–6章有限续写与最终1–6完整连读已完成；暂停正文，仅讨论/规划，保存本地交接，不写第7章。',authorization:{allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['无新的明确有限正文授权不得写第7章；next_unit=7仅为登记顺序','仅讨论规划，不改已登记正文或凭旧候选推进身份结论']},planning}};
+fs.writeFileSync(path.join(base,'inputs/workflow-paused.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});

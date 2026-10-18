@@ -17,6 +17,8 @@ node bin/ai-writer.mjs review-issues list --project "作品目录"
 
 上例1–6须确有六章；模板不是模型判断。完成实际连读后填report、operation_id、chapter_functions与comparison及可选issues，再把该JSON传review。原单位SHA已生成，不能手填假值。功能字段observed用text/evidence，unknown或none用reason；比较每章均有引文。意见类型correctness/continuity/readability/optional_style，后者只能severity=suggestion。
 
+结构化comparison的数组、对象与内外字段类型见[准确形状与示例](review-and-registration.md)。尤其distinct_gains是字符串数组，similar_structures中的judgment/differences/preserve/uncertainty是字符串；不能从字段名称猜成另一套对象结构。普通review帮助中的source_hashes示例不代替结构化输入，使用review-template及专项手册准备。
+
 resolve需expected_revision、operation_id、id、disposition（adopted/retained/deferred）、reason、decision_actor。author沿用本页完整author_evidence；agent-within-authorized-scope传当前workflow事件的authorization={ref,sha256}，采用须revise覆盖意见范围。只是记录意见不改变正文授权。
 
 按授权在独立区完成实改和完整尾段复核并提交，apply再传expected_revision、operation_id、id、实际commit_id和reason；verify再传当前有效review_ref、reviewer、conclusion=resolved/not-resolved及reason。保留不能标修复，无实际对应改稿不能applied，原文/依赖再变后显示needs-recheck并保留旧链。各意见动作都会推进revision，不复用旧context哈希。

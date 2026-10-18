@@ -1,0 +1,1422 @@
+{
+  "case": "G/native-e",
+  "status": "cli-planning-and-recovery-passed-with-existing-audit-file-drift-observed",
+  "checked_at": "2026-10-18T22:54:50.197Z",
+  "project": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+  "version": "0.7.4",
+  "source_manifest": "source-build-g4.json",
+  "content_id": "828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f",
+  "runtime_id": "2caacf37df3842559663ef2ea380baaa33b85cd6bf29637e5ae45fe8e4cd1628",
+  "revision": 4,
+  "registered_count": 0,
+  "unregistered_count": 0,
+  "body_entries": [],
+  "planning_only": true,
+  "agent_details_human_adopted": false,
+  "checks": [
+    {
+      "name": "g4-source-and-copy-resources",
+      "pass": true
+    },
+    {
+      "name": "g4-cli-identity",
+      "pass": true
+    },
+    {
+      "name": "g3-delta-documents-only",
+      "pass": true
+    },
+    {
+      "name": "bundled-doctor-help",
+      "pass": true
+    },
+    {
+      "name": "fresh-file-recovery",
+      "pass": true
+    },
+    {
+      "name": "planning-only-authorization",
+      "pass": true
+    },
+    {
+      "name": "planning-material-not-adopted",
+      "pass": true
+    },
+    {
+      "name": "three-contiguous-volumes",
+      "pass": true
+    },
+    {
+      "name": "three-real-detailed-plans",
+      "pass": true
+    },
+    {
+      "name": "agent-proposal-is-candidate",
+      "pass": true
+    },
+    {
+      "name": "stable-sources-have-no-task-scope",
+      "pass": true
+    },
+    {
+      "name": "draft-context-and-template-denied-with-byte-identity",
+      "pass": true
+    },
+    {
+      "name": "no-rejection-output-artifacts",
+      "pass": true
+    },
+    {
+      "name": "zero-registered-and-empty-body",
+      "pass": true
+    },
+    {
+      "name": "existing-g-files-except-observed-audit-drift-unchanged",
+      "pass": true
+    },
+    {
+      "name": "all-e-captures-expected-exits-and-build",
+      "pass": true
+    }
+  ],
+  "rejections": [
+    {
+      "label": "e-draft-context-1-rejected",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "state_bytes_equal": true,
+      "matches_final_state": true,
+      "scope": {
+        "allowed_actions": [
+          "discuss",
+          "plan"
+        ],
+        "draft_range": null,
+        "revise_range": null,
+        "stop_conditions": [
+          "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+          "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+          "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+          "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+        ]
+      },
+      "raw_error": "commands\\e-draft-context-1-rejected\\stderr.raw.txt"
+    },
+    {
+      "label": "e-record-template-1-rejected",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "state_bytes_equal": true,
+      "matches_final_state": true,
+      "scope": {
+        "allowed_actions": [
+          "discuss",
+          "plan"
+        ],
+        "draft_range": null,
+        "revise_range": null,
+        "stop_conditions": [
+          "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+          "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+          "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+          "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+        ]
+      },
+      "raw_error": "commands\\e-record-template-1-rejected\\stderr.raw.txt"
+    }
+  ],
+  "protected_files_checked": 2263,
+  "command_count": 37,
+  "commands": [
+    {
+      "label": "e-bundled-compare",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--other",
+        "D:/work/other/ai-writer",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:47.641Z",
+      "elapsed_ms": 1056,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-bundled-compare"
+    },
+    {
+      "label": "e-bundled-doctor",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:44:21.872Z",
+      "elapsed_ms": 130,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "d8afb8d05ba3a12d2e03227b966f5a13b017411609519db10c7a652bb00b4966",
+      "after_state_sha256": "d8afb8d05ba3a12d2e03227b966f5a13b017411609519db10c7a652bb00b4966",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-bundled-doctor"
+    },
+    {
+      "label": "e-bundled-help",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:44:24.009Z",
+      "elapsed_ms": 120,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-bundled-help"
+    },
+    {
+      "label": "e-bundled-identify",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:46.510Z",
+      "elapsed_ms": 153,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-bundled-identify"
+    },
+    {
+      "label": "e-check-final",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:45.245Z",
+      "elapsed_ms": 125,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-check-final"
+    },
+    {
+      "label": "e-decision-candidate",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/decision-candidate.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:47:54.684Z",
+      "elapsed_ms": 289,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\decision-candidate.json",
+        "sha256": "7b0ca9534ee6cea7ef85f3fe65c84d8c4ad2164473af0aeff55e53a006be65e5"
+      },
+      "before_state_sha256": "931fb880747228c89f88d120e6e6146f0b499859781e18a9e694d5f893f813de",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-decision-candidate"
+    },
+    {
+      "label": "e-decision-final",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:44.026Z",
+      "elapsed_ms": 122,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-decision-final"
+    },
+    {
+      "label": "e-decision-requirements",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "set",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/decision-requirements.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:47:50.827Z",
+      "elapsed_ms": 137,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\decision-requirements.json",
+        "sha256": "b56960df668ec0c1580295810eb16074d5be60b1dc9e2c42d0c17fc4439f7bff"
+      },
+      "before_state_sha256": "d323802db46e94ece370ec2a08a177958cbe1316372e5ad261a1ce69d8fff353",
+      "after_state_sha256": "931fb880747228c89f88d120e6e6146f0b499859781e18a9e694d5f893f813de",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-decision-requirements"
+    },
+    {
+      "label": "e-discussion-final",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:42.655Z",
+      "elapsed_ms": 138,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-discussion-final"
+    },
+    {
+      "label": "e-doctor-final",
+      "exe": "node",
+      "args": [
+        ".writer/tool/bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "."
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划",
+      "started_at": "2026-10-18T22:51:04.707Z",
+      "elapsed_ms": 150,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-doctor-final"
+    },
+    {
+      "label": "e-draft-context-1-rejected",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--purpose",
+        "draft",
+        "--unit",
+        "1",
+        "--out",
+        ".writer/drafts/e-draft-context-1.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:58.268Z",
+      "elapsed_ms": 135,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-draft-context-1-rejected"
+    },
+    {
+      "label": "e-help",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:12.239Z",
+      "elapsed_ms": 113,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help"
+    },
+    {
+      "label": "e-help-context",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "context",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:22.307Z",
+      "elapsed_ms": 108,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-context"
+    },
+    {
+      "label": "e-help-decision",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "decision",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:18.552Z",
+      "elapsed_ms": 108,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-decision"
+    },
+    {
+      "label": "e-help-final",
+      "exe": "node",
+      "args": [
+        ".writer/tool/bin/ai-writer.mjs",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划",
+      "started_at": "2026-10-18T22:51:05.592Z",
+      "elapsed_ms": 101,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-final"
+    },
+    {
+      "label": "e-help-init",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:17.587Z",
+      "elapsed_ms": 124,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-init"
+    },
+    {
+      "label": "e-help-plan",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:21.031Z",
+      "elapsed_ms": 117,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-plan"
+    },
+    {
+      "label": "e-help-record-template",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "record-template",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:23.569Z",
+      "elapsed_ms": 133,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-record-template"
+    },
+    {
+      "label": "e-help-tool",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:24.806Z",
+      "elapsed_ms": 109,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-tool"
+    },
+    {
+      "label": "e-help-volume",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "volume",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:19.764Z",
+      "elapsed_ms": 114,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-volume"
+    },
+    {
+      "label": "e-help-workflow",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:17.586Z",
+      "elapsed_ms": 125,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-help-workflow"
+    },
+    {
+      "label": "e-init",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "init",
+        "--path",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--kind",
+        "novel",
+        "--title",
+        "纸桥书店",
+        "--mode",
+        "long"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:49.856Z",
+      "elapsed_ms": 1747,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-init"
+    },
+    {
+      "label": "e-plan-1",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/plan-1.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:18.770Z",
+      "elapsed_ms": 116,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\plan-1.json",
+        "sha256": "2c9e3e699557b181651e3f7d80939f65d3017227a6951ae559f318c27cbab033"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-plan-1"
+    },
+    {
+      "label": "e-plan-2",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/plan-2.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:20.797Z",
+      "elapsed_ms": 129,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\plan-2.json",
+        "sha256": "f12003d2f389897e7e719d4c912eae5dc7c68377aaef593c8ea0006a5584131a"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-plan-2"
+    },
+    {
+      "label": "e-plan-3",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/plan-3.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:22.891Z",
+      "elapsed_ms": 131,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\plan-3.json",
+        "sha256": "e8df4fe6bea1a30ecf8b81ac087506612e38802eae6296f400836f8161c75a32"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-plan-3"
+    },
+    {
+      "label": "e-record-template-1-rejected",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--unit",
+        "1",
+        "--draft",
+        "正文/0001-寄存架.md",
+        "--out",
+        ".writer/drafts/e-record-1.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:49:00.201Z",
+      "elapsed_ms": 154,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-record-template-1-rejected"
+    },
+    {
+      "label": "e-source-identify",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "tool",
+        "identify"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:43:44.920Z",
+      "elapsed_ms": 826,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-source-identify"
+    },
+    {
+      "label": "e-status-after-refusals",
+      "exe": "node",
+      "args": [
+        ".writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "."
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划",
+      "started_at": "2026-10-18T22:51:04.707Z",
+      "elapsed_ms": 138,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-status-after-refusals"
+    },
+    {
+      "label": "e-status-final",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:40.418Z",
+      "elapsed_ms": 126,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-status-final"
+    },
+    {
+      "label": "e-status-initial",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:44:22.912Z",
+      "elapsed_ms": 119,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "d8afb8d05ba3a12d2e03227b966f5a13b017411609519db10c7a652bb00b4966",
+      "after_state_sha256": "d8afb8d05ba3a12d2e03227b966f5a13b017411609519db10c7a652bb00b4966",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-status-initial"
+    },
+    {
+      "label": "e-status-planned",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:25.263Z",
+      "elapsed_ms": 121,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-status-planned"
+    },
+    {
+      "label": "e-volume-1",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "volume",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/volume-1.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:06.396Z",
+      "elapsed_ms": 118,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\volume-1.json",
+        "sha256": "dd9d5b624aae901c01414ffad3e81eb91fd0c5570442fc018ef7b838face6c48"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-volume-1"
+    },
+    {
+      "label": "e-volume-2",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "volume",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/volume-2.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:08.228Z",
+      "elapsed_ms": 126,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\volume-2.json",
+        "sha256": "db290a8a304182e05db1924cd9ade99fb0962b129512b77da4b485b0d960059c"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-volume-2"
+    },
+    {
+      "label": "e-volume-3",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "volume",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/volume-3.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:10.344Z",
+      "elapsed_ms": 215,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\volume-3.json",
+        "sha256": "bc5dfcc64ee97de45b868518fb79b1c780ad29b96c1f36e4b58c8c73360476c2"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-volume-3"
+    },
+    {
+      "label": "e-workflow-final",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:41.348Z",
+      "elapsed_ms": 128,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-workflow-final"
+    },
+    {
+      "label": "e-workflow-finish",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/workflow-final.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:48:33.238Z",
+      "elapsed_ms": 139,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\workflow-final.json",
+        "sha256": "c1ec8ef6a211c17ceaa133ee95d3b5ff77e145b2216330e04e8527a517942987"
+      },
+      "before_state_sha256": "2f084ecc53bf5701f6ff5d592ca46bc9eed25cd491b1f24b9ab2f8d7be49519f",
+      "after_state_sha256": "cffe2f5f3128792f104fc14b153b35667e55b445e6985068db0862aab9c4a437",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-workflow-finish"
+    },
+    {
+      "label": "e-workflow-start",
+      "exe": "node",
+      "args": [
+        "bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-new-user-g/作品/纸桥书店 规划",
+        "--input",
+        "acceptance/20261019-new-user-g/native-e/inputs/workflow-start.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T22:47:38.947Z",
+      "elapsed_ms": 137,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-e\\inputs\\workflow-start.json",
+        "sha256": "648da2cf9c2f596b79675ad8df6c9f8e3ec54e474e47cbcc86e7f0ae55ab4698"
+      },
+      "before_state_sha256": "d8afb8d05ba3a12d2e03227b966f5a13b017411609519db10c7a652bb00b4966",
+      "after_state_sha256": "d323802db46e94ece370ec2a08a177958cbe1316372e5ad261a1ce69d8fff353",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence_dir": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/commands/e-workflow-start"
+    }
+  ],
+  "scope": {
+    "long_term": [
+      "设定/作品定位.md",
+      "设定/文风.md",
+      "设定/权威规则.md"
+    ],
+    "temporary": [
+      ".writer/state.json:governance",
+      ".writer/objects/a5dacb13-4593-4b01-a157-99172ff104ec.json",
+      "研究/本轮任务与交接.md"
+    ]
+  },
+  "next_step": "先恢复并讨论。必须取得用户实际的新有限写作授权与停止点，正式更新workflow后才可写正文；本交接不预授权限。",
+  "readings": "readings.json",
+  "handoff": "handoff.json",
+  "other_rounds_evaluated": [],
+  "limitations": [
+    "仅本次E真实CLI规划与文件恢复",
+    "没有正文生成或正文文学审查",
+    "没有真人新手/盲读/市场研究",
+    "未运行主项目测试套件：未修改工具源码、技能或引擎",
+    "文件指纹是磁盘观测，不是供应链签名或模块加载证明"
+  ],
+  "writes": "仅G轮/native-e、新作品和commands/e-*；无提交、推送、联网或发布",
+  "boundary_observations": [
+    {
+      "path": "D:/work/other/ai-writer/acceptance/20261019-new-user-g/final-audit.mjs",
+      "bytes": 6292,
+      "sha256": "9b526b04663b53d29e8437cac3d635165862aaf01be6b9878af014b23e9faa3b",
+      "actual_sha256": "83b1f31f85872b5f5c98d920cb5760a1bbb835545b7bf9f296f7f77d7c6251b0",
+      "actual_bytes": 7789
+    }
+  ],
+  "protected_files_identical": 2262,
+  "warnings": [
+    "既存final-audit.mjs在运行期间与基线不同；本执行未对其发出写操作，不归因、不覆盖。原严格检查失败保留在checks-failure.json。"
+  ]
+}

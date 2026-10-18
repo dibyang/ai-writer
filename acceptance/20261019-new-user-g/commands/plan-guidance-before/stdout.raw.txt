@@ -1,0 +1,35 @@
+✖ 缺细纲时给可执行的帮助入口，不让新用户读取一个尚不存在的输入文件 (1975.3668ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2080.7428
+
+✖ failing tests:
+
+test at tests\new-user-recovery.test.mjs:24:1
+✖ 缺细纲时给可执行的帮助入口，不让新用户读取一个尚不存在的输入文件 (1975.3668ms)
+  AssertionError [ERR_ASSERTION]: {
+    "ok": false,
+    "error": "第 1 单元还没有细纲：大纲/单元/0001.json",
+    "code": "PLAN_REQUIRED",
+    "file": "大纲/单元/0001.json",
+    "next_action": "先按 plan --help 准备细纲 JSON，保存细纲后再读取 context。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'",
+    "next_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' plan '--project' 'D:\\work\\other\\ai-writer\\.tmp\\protection-0GoUuQ\\work' '--input' 'D:\\work\\other\\ai-writer\\.tmp\\protection-0GoUuQ\\work\\.writer\\plan-input.json'"
+  }
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/new-user-recovery.test.mjs:25:239)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' plan '--project' 'D:\\work\\other\\ai-writer\\.tmp\\protection-0GoUuQ\\work' '--input' 'D:\\work\\other\\ai-writer\\.tmp\\protection-0GoUuQ\\work\\.writer\\plan-input.json'",
+    expected: /plan.*--help/,
+    operator: 'match',
+    diff: 'simple'
+  }

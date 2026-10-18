@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const base=path.resolve('acceptance/20261019-new-user-g/native-b'), project=path.resolve(base,'../作品/雾港 来信');
+const unit=Number(process.argv[2]);
+const template=JSON.parse(fs.readFileSync(path.join(project,`.writer/drafts/b-record${unit}-template.json`),'utf8'));
+const changes=JSON.parse(fs.readFileSync(path.join(base,`inputs/changes-${unit}.json`),'utf8'));
+template.summary=changes.summary;template.changes=changes.changes;delete template._instructions;
+fs.writeFileSync(path.join(base,`inputs/record-${unit}.json`),JSON.stringify(template,null,2)+'\n',{flag:'wx'});
+const text=fs.readFileSync(path.join(project,template.draft),'utf8').replace(/^#[^\n]*\r?\n/,'');
+console.log(JSON.stringify({unit,body_han:(text.match(/\p{Script=Han}/gu)||[]).length,draft:template.draft}));

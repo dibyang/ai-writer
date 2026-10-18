@@ -1,0 +1,71 @@
+{
+  "expected_revision": 22,
+  "operation_id": "d-pause-six-chapters-discussion-only",
+  "author_evidence": {
+    "quote": "最后正式暂停正文，仅讨论/规划，验证第7章context和record-template都被拒绝。导出当前已登记6章到G轮目录内、作品目录外的新导出目录，不覆盖旧版本；核manifest纳入、排除和警告，仍是草稿。不称全书文学无误、人类盲读或作者定稿。",
+    "local_source": "研究/D恢复更新与暂停授权.md",
+    "source_sha256": "972e4c9100de1e3883cfbdbe335c3757de9591e69e7ead8fc3827fe1ac4128e3",
+    "locator": "D用户任务最后暂停与导出原话段",
+    "recorded_by": "native-d-agent"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "六章修订已提交且随附工具更新至g4；现在正式暂停正文，仅讨论/规划，保留未知和候选，不写第7章；可导出已登记六章草稿。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "无新的明确有限正文授权前不得写作或登记第7章。",
+        "不新增寄件者身份、金额、付款、周一搬运完成或月底已取阅事实。",
+        "模型复核与草稿导出不代表真人盲读、作者定稿或发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/第二卷执行契约-B.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

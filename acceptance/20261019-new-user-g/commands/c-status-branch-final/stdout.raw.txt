@@ -1,0 +1,243 @@
+{
+  "ok": true,
+  "title": "雾港来信",
+  "kind": "novel",
+  "revision": 21,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "G轮C：仅在独立区澄清第2章问修理费方向，保留剧情事实声音；2–6为实读重登范围，C完成2–3后停止并交接，不prepare/commit、不重登4–6、不写第7章。文学取舍为agent-within-authorized-scope。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 6
+      },
+      "stop_conditions": [
+        "C进程正式重登第3章后立即停止产品写动作；不得重登4–6或prepare/commit。",
+        "只允许第2章必要小范围表达调整；3–6无确证问题保持原字节，核心情节另报。",
+        "主稿1–6正文、units与snapshot保持；下一进程凭原ID、令牌及base_revision续做4–6和最终尾段连读。",
+        "不写第7章；采用不等于已应用，测试实施不等于真人文学定稿。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/第二卷执行契约-B.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_USER_SCOPE_B",
+          "topic": "本轮作品明确要求",
+          "status": "confirmed",
+          "supersedes": "D_USER_SCOPE",
+          "options": [
+            "本次验证代理续写4–6，随后暂停"
+          ],
+          "adopted_items": [
+            "原创小说《雾港来信》；普通读者、日常悬疑",
+            "林柯、钟师傅、陶芷各有利益与声音",
+            "无超自然、谋杀或终局阴谋",
+            "本次验证仅续写第4–6章，完成后暂停；不超过第6章",
+            "全1–6实读审查，剧情细节为代理授权内选择"
+          ],
+          "excluded_items": [
+            "第7章正文",
+            "把代理自检当真人文学定稿",
+            "直接修改已登记正文或补旧哈希"
+          ],
+          "unresolved_items": [
+            "寄件者身份动机与后续安排不要求全部结案",
+            "普通情节细节无真人逐项采纳"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/e565b8f5-58d7-47a2-b47d-b5a183d1e809.json",
+          "event_sha256": "15f5bb764b49bd860b843167e46efdd3d56fd92aa0f1365546a2728fffd5d608"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_AGENT_SCHEME",
+          "topic": "代理试写方案与未决",
+          "status": "candidate",
+          "options": [
+            "旧阅览室挂钟、二十七号牌与无回址信；本次授权内选用"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "钟守义本名及挂钟方案由代理选用，未获真人逐项采纳",
+            "寄件者当面出现方式、材料费金额、搬迁后的开放分工未定"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/08b31d6a-64f9-4b74-9ddb-74beeddd1e32.json",
+          "event_sha256": "b5f42b017e8a1496587c86608daaefb375fda695fff2d23504e85e15e558c537"
+        }
+      ],
+      "history_count": 1
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 4,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "42162d65-14b2-46fa-89ea-c9cb66bbfb0b",
+        "owner": "native-c-g-authorized-agent",
+        "project_id": "59386696-2512-4407-a425-cb47a421c771",
+        "build_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "scope": {
+          "from": 2,
+          "through": 6
+        },
+        "status": "editing",
+        "base_sha256": "e8046c3a51ecea97f95d41371c726cc6d0f4bb03f1dc2ec539078c2552c10ab1",
+        "created_at": "2026-10-18T17:24:30.012Z",
+        "session_sha256": "b0f486e6170c750e92530e62919ce92e67ba386550999584b92b78d27266f06d"
+      }
+    ],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 21,
+    "counts": {
+      "adopted": 1
+    },
+    "pending": [
+      {
+        "id": "I_C_CH2_REPAIR_FEE_DIRECTION",
+        "type": "readability",
+        "status": "adopted",
+        "context_changed": true
+      }
+    ],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 3,
+    "unregistered": [
+      {
+        "draft": "正文/0004-推车上的钟.md",
+        "reason": "unregistered",
+        "possible_unit": 4,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0005-十五分钟以后.md",
+        "reason": "unregistered",
+        "possible_unit": 5,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0006-留给回来的人.md",
+        "reason": "unregistered",
+        "possible_unit": 6,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 4,
+    "plan_exists": true,
+    "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace'"
+  },
+  "current": {
+    "character_count": 3,
+    "ledger_count": 13,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "林柯把无回址普通信交给钟守义，后者当面开封，取出二十七号旧修理牌与无署名信纸。信请求在周六闭馆前知道旧钟能否走满一刻钟。钟守义将信与牌留在铺内，请林柯向旧阅览室陶姓管理员传话；林柯只答应传话，未见挂钟。"
+      },
+      {
+        "unit": 2,
+        "summary": "同日下午林柯送报并向陶芷口述来信，原件未带出钟铺。陶芷出示接收信息空白的挂钟清点单和旧簿所夹合影，照片钟壳右下掉漆。她同意当晚与林柯去钟铺认实物，清点单只记今晚核实未签收；林柯挪后看房安排。"
+      },
+      {
+        "unit": 3,
+        "summary": "当晚林柯会合前电话告知迟到，转到钟铺与陶芷会合。三人核对旧簿领牌二十七及顾姓、挂钟右下掉漆与盘背铅笔27；陶芷读信并拍照。钟短摆即停，三人约周六九点阅览室实测十五分钟并留结果。陶芷签借条后，钟将铜牌交陶入拉链袋，旧簿合影由陶收好；钟留墙钩，信及借条留钟铺右抽屉。寄件者未定。"
+      }
+    ],
+    "timeline_tail": [
+      "当日12:06后，林柯答应下午向旧阅览室传话后离开；信与牌留钟铺。",
+      "同日下午，林柯送报并口述来信；陶芷出示清点单和旧簿所夹合影。",
+      "陶芷把今晚核实写在清点单旁，与林柯约定下班会合；林柯仍先完成新码头邮路。",
+      "当日17:52林柯交完信袋后给陶芷电话，随后到钟铺会合。",
+      "三人在钟铺核信、牌、旧簿与挂钟；钟手拨短摆后停，未完成一刻钟实测。",
+      "当晚铜牌签借交陶芷，钟留铺墙钩，信与借条收钟铺右抽屉；周六9点实测与留结果为约定。"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),base=path.dirname(here),local=JSON.parse(fs.readFileSync(path.join(here,'session-local.json'))),w=local.workspace;
+const input=JSON.parse(fs.readFileSync(path.join(base,'commands/c-replay-input-3/stdout.raw.txt'))),original=structuredClone(input);
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+const b=fs.readFileSync(path.join(w,input.draft)),old=fs.readFileSync(path.join(here,'baseline-original',input.draft));
+if(!old.equals(b)) throw Error('Chapter 3 text changed');
+const quotes=[];
+for(const [id,v] of Object.entries(input.changes.ledger))for(const e of v.evidence){if(!b.toString('utf8').includes(e.quote))throw Error('quote '+id);quotes.push({id,unit:e.unit,quote:e.quote,retained:true});}
+input.summary=input.summary.replace('铜牌由钟签借交陶入拉链袋','陶芷签借条后，钟将铜牌交陶入拉链袋');
+if(input.summary===original.summary)throw Error('Expected actual old summary');
+const report='审查/0003-C重登语义复核.md';
+const text=`# 第3章候选重登语义复核\n\n审查者native-c-agent，知情模型实读，agent-within-authorized-scope。原base_revision18不变，第2章正式重登后branch_revision20。第3章全文1–76行，旧新SHA均为${sha(b)}，正文逐字节未改。已完整读候选2–6与根稿1–6，旧摘要、人物、时间线、19项ledger和全部旧引文另完整读过，原字节在native-c/readings.json/read-versions与baseline-original保留。\n\n## 六项核查\n\n- summary：核对17:52电话、当面核物、顾姓未定、短摆停、周六约定及保管链。发现旧摘要“铜牌由钟签借交陶入拉链袋”压缩后容易把签字者错接到钟；65行明确是陶写便笺签名、钟交牌。仅在本次新登记摘要改为“陶芷签借条后，钟将铜牌交陶入拉链袋”，澄清已有事实，不改正文、旧摘要或原证据。其余摘要原样。\n- characters：林亲见原物却未看陶手机照片，陶本章才读信拍照并持牌，钟持原信借条和钟、仍不知道寄件者。三人的明天核对/问海堤和周六测试均为计划，不借2章询价改成报价付款。旧characters原样保留。\n- timeline：三条原事件为17:52电话、当晚核物短摆停、借牌和保管及周六约定；均符合3章正文。时间线“签借交陶”未指定错误签名者，保留原文。\n- ledger：O_LETTER亲读后返钟；O_TAG27钟交陶并有借条；OBS_TAG_NOTCH原孔边缺口；T_SENDER顾姓非寄信结论；T_TEST15只约定非已实测；O_REGISTER仍陶原簿合影；OBS_CLOCK_PHOTO原看不清盘时不逆改；O_CLOCK仍钟铺墙钩未清洗；OBS_CLOCK_FACE盘背27横线；OBS_REGISTER27顾姓空白；OBS_SHORT_SWING不到半分钟；O_RECEIPT27陶签借条归钟；O_TEST_PHOTOS只陶手机三类内容、张数未知。13项changes与未变事实原样保留，没有删除旧观察、改due_unit或把未来知情提前。\n- evidence：逐条核13项changes的${quotes.length}处原引句，含31、65、67、27、39、61、51、55、57、19、33、43、45、37行；所有引文与当前第3章全文一致，仍支持原事实，无需改引文文字。继承第1章和新第2章当前证据，旧版第2章证据保留于基线/备份/旧journal；新登记来源由replay-input在第2章登记后给出，未手填或重刷旧绑定。\n- downstream：2章新问句与3章23行师傅对先问欠钱、再问还钟的不满相容；3章47行估工查旧材料账，到4章19/25行分账，5章仍无付款数额，6章67行旧账未齐，均未改变。3借牌—4还牌、3暂存—4接回待试—5观察—6暂存锁屋与结果抄件流转逐段复读；知情先后、照片未展示和月底回访边界未变。第4–6章已为下游核查实读但未重登，本进程完成3章后停下。\n\n## 真人语言别扭句\n\n### 真人语言硬问题\n\n没有\n\n第3章保留师傅反问、陶有限提案及林迟到声口，未为呼应第2章而改任何原句。实际唯一正文修改仍只在第2章39行。摘要澄清是登记语义核对所得，非新增文学问题、非真人逐项选择。意见仍adopted且未应用；完整尾段最终复读、review、prepare/commit均未做。\n`;
+fs.writeFileSync(path.join(w,report),text,{flag:'wx'});
+input.replay_review={reviewer:'native-c-agent-informed-reading',report,draft_sha256:sha(b),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+delete input._instructions;delete input.output;
+fs.writeFileSync(path.join(here,'inputs/record-3-reviewed.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(here,'replay-3-evidence-audit.json'),JSON.stringify({old_sha256:sha(old),new_sha256:sha(b),body_unchanged:true,summary_before:original.summary,summary_after:input.summary,characters_timeline_ledger_equal:JSON.stringify(original.changes)===JSON.stringify(input.changes),quotes,report:path.join(w,report)},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({input:path.join(here,'inputs/record-3-reviewed.json'),report,quote_count:quotes.length,ledger_items:Object.keys(input.changes.ledger).length,summary_clarifies_signer:true}));

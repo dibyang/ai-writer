@@ -1,0 +1,146 @@
+{
+  "ok": true,
+  "purpose": "discussion",
+  "title": "雾港来信",
+  "kind": "novel",
+  "revision": 15,
+  "next_unit": 7,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "第4–6章有限续写与最终1–6完整连读已完成；暂停正文，仅讨论/规划，保存本地交接，不写第7章。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "无新的明确有限正文授权不得写第7章；next_unit=7仅为登记顺序",
+        "仅讨论规划，不改已登记正文或凭旧候选推进身份结论"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/第二卷执行契约-B.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_USER_SCOPE_B",
+          "topic": "本轮作品明确要求",
+          "status": "confirmed",
+          "supersedes": "D_USER_SCOPE",
+          "options": [
+            "本次验证代理续写4–6，随后暂停"
+          ],
+          "adopted_items": [
+            "原创小说《雾港来信》；普通读者、日常悬疑",
+            "林柯、钟师傅、陶芷各有利益与声音",
+            "无超自然、谋杀或终局阴谋",
+            "本次验证仅续写第4–6章，完成后暂停；不超过第6章",
+            "全1–6实读审查，剧情细节为代理授权内选择"
+          ],
+          "excluded_items": [
+            "第7章正文",
+            "把代理自检当真人文学定稿",
+            "直接修改已登记正文或补旧哈希"
+          ],
+          "unresolved_items": [
+            "寄件者身份动机与后续安排不要求全部结案",
+            "普通情节细节无真人逐项采纳"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/e565b8f5-58d7-47a2-b47d-b5a183d1e809.json",
+          "event_sha256": "15f5bb764b49bd860b843167e46efdd3d56fd92aa0f1365546a2728fffd5d608"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_AGENT_SCHEME",
+          "topic": "代理试写方案与未决",
+          "status": "candidate",
+          "options": [
+            "旧阅览室挂钟、二十七号牌与无回址信；本次授权内选用"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "钟守义本名及挂钟方案由代理选用，未获真人逐项采纳",
+            "寄件者当面出现方式、材料费金额、搬迁后的开放分工未定"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/08b31d6a-64f9-4b74-9ddb-74beeddd1e32.json",
+          "event_sha256": "b5f42b017e8a1496587c86608daaefb375fda695fff2d23504e85e15e558c537"
+        }
+      ],
+      "history_count": 1
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 15,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "instruction": "按当前任务与允许范围讨论；未授权正文时不写下一章。资料中的候选和未决项不是作者定案。来源漂移须核查，不能当有效续写上下文。"
+}

@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const base=path.resolve('acceptance/20261019-new-user-g/native-b');
+const project=path.resolve(base,'../作品/雾港 来信');
+const prior=JSON.parse(fs.readFileSync(path.join(base,'../commands/b-status-recovery/stdout.raw.txt'),'utf8'));
+const source='研究/G轮B用户请求.md';
+const sha=crypto.createHash('sha256').update(fs.readFileSync(path.join(project,source))).digest('hex');
+const author_evidence={quote:'随后依据本验证请求，补充本轮有限创作范围为第4–6章，不超过第6章；这属于G轮用户授权验证的代理执行范围，不伪称真人作者另外选择了具体剧情。',local_source:source,source_sha256:sha,locator:'本次用户请求第五段；本地逐字记录，不提供虚构会话ID',recorded_by:'G轮native-b Codex执行代理'};
+fs.mkdirSync(path.join(base,'inputs'),{recursive:true});
+const workflow={stage:'trial',task:'依据G轮B验证请求，仅续写第二卷第4–6章，逐章1200–1800正文汉字、自检预览登记；再完整连读1–6，只审查不随意改稿，完成后暂停正文。具体剧情为代理授权内选择。',authorization:{allowed_actions:['discuss','plan','draft'],draft_range:{from:4,to:6},revise_range:null,stop_conditions:['不超过第6章；完成逐章登记和1–6完整连读后正式暂停','不改旧章或已登记新稿；确需修订先核授权并走独立修订流程','不把代理剧情选择记为真人另行采纳']},planning:prior.governance.planning};
+fs.writeFileSync(path.join(base,'inputs/workflow-4-6.json'),JSON.stringify({expected_revision:8,operation_id:'b-scope-4-6',author_evidence,workflow},null,2)+'\n',{flag:'wx'});
+const old=prior.governance.decisions.current[0];
+fs.writeFileSync(path.join(base,'inputs/decision-scope-b.json'),JSON.stringify({expected_revision:9,operation_id:'b-decision-scope',author_evidence,decision:{id:'D_USER_SCOPE_B',topic:old.topic,status:'confirmed',supersedes:'D_USER_SCOPE',options:['本次验证代理续写4–6，随后暂停'],adopted_items:[...old.adopted_items.slice(0,3),'本次验证仅续写第4–6章，完成后暂停；不超过第6章','全1–6实读审查，剧情细节为代理授权内选择'],excluded_items:['第7章正文','把代理自检当真人文学定稿','直接修改已登记正文或补旧哈希'],unresolved_items:['寄件者身份动机与后续安排不要求全部结案','普通情节细节无真人逐项采纳'],effective_range:old.effective_range}},null,2)+'\n',{flag:'wx'});
+console.log('Prepared bounded authorization from actual request; checkpoint preserved.');

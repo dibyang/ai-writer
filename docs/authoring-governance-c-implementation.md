@@ -1,6 +1,6 @@
 # 第三批C：跨章复核、登记减负与意见闭环实现约束
 
-更新日期：2026-10-19。**C批AW-05/06/08已实现并完成本批本地验证**，原交付版本0.6.0；当前0.7.3继续包含这些能力。见[C批最终记录](../acceptance/20261018-governance-c/README.md)及[当前状态总览](authoring-governance-status.md)。以下保留C批实现细化和schema5兼容依据；D的工具更新后续已交付，不再作为当前未实现项。现有作品不自动迁移或改稿。
+更新日期：2026-10-19。**C批AW-05/06/08已实现并完成本批本地验证**，原交付版本0.6.0；当前0.7.4继续包含这些能力。见[C批最终记录](../acceptance/20261018-governance-c/README.md)及[当前状态总览](authoring-governance-status.md)。以下保留C批实现细化和schema5兼容依据；D的工具更新后续已交付，不再作为当前未实现项。现有作品不自动迁移或改稿。
 
 ## 背景、目标与非目标
 
@@ -8,7 +8,7 @@
 
 ## 协议和兼容性
 
-C批0.6新作品当时默认schema5；当前0.7.3新作默认schema6，保留本段的baseline/journal、旧source_hashes、来源版本和review_workflow索引。0.5会忽略新索引，故实际旧解析器拒绝5；旧作品不自动迁移，已有4仍可review-workflow preview/enable，保存原state字节、核原事实链、提升schema和revision并建立空索引，不补造历史意见。1/2先治理迁移3，再protection enable4；5→6及完整随附工具更新分别按[更新手册](tool-updates.md)显式执行。
+C批0.6新作品当时默认schema5；当前0.7.4新作默认schema6，保留本段的baseline/journal、旧source_hashes、来源版本和review_workflow索引。0.5会忽略新索引，故实际旧解析器拒绝5；旧作品不自动迁移，已有4仍可review-workflow preview/enable，保存原state字节、核原事实链、提升schema和revision并建立空索引，不补造历史意见。1/2先治理迁移3，再protection enable4；5→6及完整随附工具更新分别按[更新手册](tool-updates.md)显式执行。
 
 ## 模块、接口与权威
 

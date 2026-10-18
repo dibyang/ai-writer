@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-18T16:43:37.666Z",
+  "attempt": "native-a-v2; separate restart; earlier native-a host permission failure untouched",
+  "outcome": "bounded_run_requirements_observed",
+  "conditions": {
+    "registered_only_1_3": true,
+    "han_lengths_in_requested_range": true,
+    "paused_discuss_plan_only": true,
+    "fourth_context_rejected": true,
+    "fourth_record_template_rejected": true,
+    "rejected_commands_did_not_change_state": true,
+    "no_fourth_draft_or_detail_plan": true,
+    "no_unregistered_manuscripts": true,
+    "no_source_drift_or_active_revision": true,
+    "mechanical_check": true,
+    "review_current_1_3": true,
+    "own_full_read_versions": true,
+    "frozen_files_unique_and_named_by_hash": true,
+    "doctor": true,
+    "runtime_observations_consistent": true,
+    "no_unexpected_unresolved_cli_failure": true
+  },
+  "observed_revision": 8,
+  "stage": "paused",
+  "tool_version": "0.7.4",
+  "node": "v24.15.0",
+  "manuscripts": [
+    {
+      "unit": 1,
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文\\0001-没有回址.md",
+      "sha256": "c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a",
+      "body_han": 1225
+    },
+    {
+      "unit": 2,
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文\\0002-清点单外.md",
+      "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+      "body_han": 1261
+    },
+    {
+      "unit": 3,
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文\\0003-先走一刻.md",
+      "sha256": "71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1",
+      "body_han": 1272
+    }
+  ],
+  "total_body_han": 3758,
+  "registered_range": {
+    "from": 1,
+    "to": 3
+  },
+  "read_sessions": 8,
+  "file_read_entries": 10,
+  "frozen_versions": [
+    {
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-versions\\4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58.md",
+      "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58"
+    },
+    {
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-versions\\71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1.md",
+      "sha256": "71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1"
+    },
+    {
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-versions\\8bd7d00f5d3e09379ffab9ab962fe9117609880662ac51a17640658ccd9debce.md",
+      "sha256": "8bd7d00f5d3e09379ffab9ab962fe9117609880662ac51a17640658ccd9debce"
+    },
+    {
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-versions\\bd7e6fa92a9c16274ed821dd2d4b8041654dc608122348e756d86daf636b1cff.md",
+      "sha256": "bd7e6fa92a9c16274ed821dd2d4b8041654dc608122348e756d86daf636b1cff"
+    },
+    {
+      "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-versions\\c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a.md",
+      "sha256": "c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a"
+    }
+  ],
+  "command_count": 46,
+  "commands": [
+    {
+      "label": "a-v2-check-final",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-check-final",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:41:11.069Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-context-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-context-1",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:55.551Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-context-2",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-context-2",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:31:04.504Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-context-3",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-context-3",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:34:03.300Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-context-4-rejected",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-context-4-rejected",
+      "exit_code": 2,
+      "ok": false,
+      "error_code": "ACTION_OUT_OF_SCOPE",
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:41:09.158Z",
+      "expected_rejection": true,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-decision-agent",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-decision-agent",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:27:32.496Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-decision-requirements",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-decision-requirements",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:27:23.046Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-discussion-paused",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-discussion-paused",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:41:48.108Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-doctor-final",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-doctor-final",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:41:11.935Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:10.559Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-context",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-context",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:48.045Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-decision",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-decision",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:31.336Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-init",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-init",
+      "exit_code": 2,
+      "ok": false,
+      "error_code": "COMMAND_FAILED",
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:24.667Z",
+      "expected_rejection": false,
+      "actual_failure": true
+    },
+    {
+      "label": "a-v2-help-init-corrected",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-init-corrected",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:22:04.603Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-plan",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-plan",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:36.524Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-record",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-record",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:37.938Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-record-preview",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-record-preview",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:30:51.945Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-record-template",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-record-template",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:48.016Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-review",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-review",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:40.024Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-review-template",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-review-template",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:38:34.616Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-volume",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-volume",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:33.599Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-help-workflow",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-help-workflow",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:21:27.666Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-init",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-init",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:22:13.721Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-outline-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-outline-1",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:48.958Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-plan-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-plan-1",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:37.730Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-plan-2",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-plan-2",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:39.479Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-plan-3",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-plan-3",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:41.342Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-preview-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-preview-1",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:30:53.650Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-preview-2",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-preview-2",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:33:48.328Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-preview-3",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-preview-3",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:37:39.473Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-preview-3-corrected",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-preview-3-corrected",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:38:22.644Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-record-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-record-1",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:31:02.595Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-record-2",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-record-2",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:34:01.560Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-record-3",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-record-3",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:38:32.858Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-review-1-3",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-review-1-3",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:40:43.739Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-review-template",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-review-template",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:38:36.319Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-status-final",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-status-final",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:41:47.036Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-status-initial",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-status-initial",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:22:34.434Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-template-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-template-1",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:57.543Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-template-2",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-template-2",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:31:06.285Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-template-3",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-template-3",
+      "exit_code": 0,
+      "ok": null,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:34:05.040Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-template-4-rejected",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-template-4-rejected",
+      "exit_code": 2,
+      "ok": false,
+      "error_code": "ACTION_OUT_OF_SCOPE",
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:41:10.104Z",
+      "expected_rejection": true,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-volume-1",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-volume-1",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:34.244Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-volume-2",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-volume-2",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": true,
+      "started_at": "2026-10-18T16:27:35.965Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-workflow-paused",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-workflow-paused",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:41:00.928Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    },
+    {
+      "label": "a-v2-workflow-trial",
+      "directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands\\a-v2-workflow-trial",
+      "exit_code": 0,
+      "ok": true,
+      "error_code": null,
+      "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+      "runtime_files_stable": true,
+      "state_unchanged": false,
+      "started_at": "2026-10-18T16:27:06.430Z",
+      "expected_rejection": false,
+      "actual_failure": false
+    }
+  ],
+  "runtime_guard_ids": [
+    "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d"
+  ],
+  "runtime_guard_limit": "Recorder disk-byte observations around fresh CLI processes; not loaded-module attestation or source cleanliness proof",
+  "review": {
+    "valid": 1,
+    "stale": 0,
+    "unpublished_records": [],
+    "stale_with_current_coverage": 0,
+    "stale_without_current_coverage": 0,
+    "pending_windows": [],
+    "nature": "coverage-only-not-literary-pass"
+  },
+  "paths": {
+    "project": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信",
+    "manuscript_directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文",
+    "manuscripts": [
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文\\0001-没有回址.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文\\0002-清点单外.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文\\0003-先走一刻.md"
+    ],
+    "author_evidence": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\研究\\本轮作者依据.md",
+    "plan_source": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\研究\\G轮PLAN原件.md",
+    "positioning": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\设定\\作品定位.md",
+    "characters": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\人物\\主要人物.md",
+    "voice": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\设定\\文风.md",
+    "rules": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\设定\\权威规则.md",
+    "book_outline": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\全书大纲.md",
+    "promises": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\核心承诺.md",
+    "volumes": [
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\分卷\\V1.json",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\分卷\\V2.json"
+    ],
+    "plans": [
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\单元\\0001.json",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\单元\\0002.json",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\大纲\\单元\\0003.json"
+    ],
+    "author_only_planning": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\研究\\作者秘密-仅供规划.md",
+    "self_reviews": [
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0001-实读自检.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0002-实读自检.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0003-实读自检.md"
+    ],
+    "rolling_report": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0001-0003-整段连读.md",
+    "review_registration": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\reviews\\c830380e-15d6-4c09-a9ed-a503a4fa35a1.json",
+    "state": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\state.json",
+    "readings": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\readings.json",
+    "read_versions": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-versions",
+    "read_outputs": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\read-outputs",
+    "inputs": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\inputs",
+    "commands": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\commands",
+    "report": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\REPORT.md",
+    "handoff_markdown": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\handoff.md",
+    "handoff_json": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\handoff.json",
+    "results": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\results.json",
+    "audit_script": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-a-v2\\finalize-audit.mjs",
+    "all_review_reports": [
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0001-0003-整段连读.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0001-实读自检.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0002-v1-实读未达篇幅.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0002-实读自检.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0003-v1-实读知情修正.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0003-实读自检.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0003-登记预览语义修正.md",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\续写前原文回读.md"
+    ]
+  },
+  "unresolved": [
+    {
+      "id": "T_TEST15",
+      "last_confirmed": "第3章51–61行：周六9点阅览室十五分钟实测与留结果的约定，未实际执行",
+      "next": "只有新授权后，回读第1章首次请求、第3章最近约定和交接，再规划兑现；不要求长期走准"
+    },
+    {
+      "id": "T_SENDER",
+      "last_confirmed": "第1章海堤九月十二日邮戳；第3章27行旧簿顾姓，39行明确不能认定寄件人",
+      "next": "讨论回话方式和身份揭示边界；未查访代办所，不得宣称查明"
+    },
+    {
+      "id": "O_TAG27",
+      "last_confirmed": "第3章65行，陶芷帆布袋拉链内袋，借条留钟",
+      "next": "后续仍须核借牌归还，原牌与照片/借条分开"
+    },
+    {
+      "id": "O_CLOCK",
+      "last_confirmed": "第3章67行钟铺柜台后墙钩；短摆后停，未上弦清洗",
+      "next": "运钟、估工与材料钱、周五暂存核对和周六实测均待后续；不把计划当完成"
+    },
+    {
+      "id": "PLAN_OPEN",
+      "last_confirmed": "作者秘密-仅供规划.md中的代理候选，未获真人逐项采纳",
+      "next": "寄件者是否当面出现、材料费金额、搬迁后开放分工仍只讨论"
+    }
+  ],
+  "failures_and_corrections": [
+    {
+      "kind": "CLI parameter error",
+      "label": "a-v2-help-init",
+      "correction": "a-v2-help-init-corrected uses --path; failed result retained"
+    },
+    {
+      "kind": "underlength first manuscript",
+      "unit": 2,
+      "first_body_han": 1183,
+      "final_body_han": 1261,
+      "old_read": "self-2",
+      "corrected_read": "self-2-corrected"
+    },
+    {
+      "kind": "unsupported gender in first manuscript",
+      "unit": 3,
+      "old_read": "self-3",
+      "corrected_read": "self-3-corrected",
+      "correction": "Only 顾 surname known; no gender/identity inference"
+    },
+    {
+      "kind": "preview semantic overstatement",
+      "label": "a-v2-preview-3",
+      "correction": "a-v2-preview-3-corrected: corrected phone timing, no invented estimate date or photo count; original retained"
+    }
+  ],
+  "not_done": [
+    "仅三章有限试写和两卷粗骨架，小规模流程验证",
+    "第二卷未写未兑现；无六章、百章、跨新Codex会话恢复、修订提交或导出验收",
+    "无真人作者逐项文学采纳、真人盲读、市场或专业机芯核验",
+    "本轮未改工具，无Git提交/推送/联网/发布"
+  ],
+  "original_attempt_note": "No events or product calls from earlier native-a were rewritten or attributed to this run."
+}

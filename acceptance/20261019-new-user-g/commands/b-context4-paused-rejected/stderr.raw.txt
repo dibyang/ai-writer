@@ -1,0 +1,118 @@
+{
+  "ok": false,
+  "error": "本轮任务“第1–3章有限试写与整段连读已完成，正式暂停正文；仅讨论/规划，保存交接，不写第4章”不允许 draft 4–4；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "第1–3章有限试写与整段连读已完成，正式暂停正文；仅讨论/规划，保存交接，不写第4章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "没有新的明确正文授权，不得写第4章或修改已登记正文",
+        "next_unit=4只表示顺序；讨论规划不得自动扩权"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_USER_SCOPE",
+          "topic": "本轮作品明确要求",
+          "status": "confirmed",
+          "options": [
+            "两卷六章的小规模方法验证"
+          ],
+          "adopted_items": [
+            "原创小说《雾港来信》；普通读者、日常悬疑",
+            "林柯、钟师傅、陶芷各有利益与声音",
+            "无超自然、谋杀或终局阴谋",
+            "仅写1–3章，完成后暂停正文"
+          ],
+          "excluded_items": [
+            "本轮第4章正文",
+            "把方法验证当真人文学定稿"
+          ],
+          "unresolved_items": [
+            "普通细节由代理实施，非真人逐项确认"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/585959c8-9a32-405d-b28a-d56a53b1d36d.json",
+          "event_sha256": "1efb64dd6b1ee7d343a2816aeb60ce68cae91e8d85f5fabcc6acaa0ed7c02ded"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_AGENT_SCHEME",
+          "topic": "代理试写方案与未决",
+          "status": "candidate",
+          "options": [
+            "旧阅览室挂钟、二十七号牌与无回址信；本次授权内选用"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "钟守义本名及挂钟方案由代理选用，未获真人逐项采纳",
+            "寄件者当面出现方式、材料费金额、搬迁后的开放分工未定"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/08b31d6a-64f9-4b74-9ddb-74beeddd1e32.json",
+          "event_sha256": "b5f42b017e8a1496587c86608daaefb375fda695fff2d23504e85e15e558c537"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

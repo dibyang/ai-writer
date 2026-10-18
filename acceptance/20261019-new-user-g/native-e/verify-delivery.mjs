@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url));
+const read=n=>JSON.parse(fs.readFileSync(path.join(here,n),'utf8'));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const manifest=read('readings.json'),result=read('results.json'),handoff=read('handoff.json');
+const rows=[...manifest.initial,...manifest.final,...manifest.additional];
+const mismatches=rows.flatMap(r=>{const b=fs.readFileSync(path.join(here,r.snapshot));return b.length===r.bytes&&sha(b)===r.sha256?[]:[r.snapshot];});
+const finalSourceMismatches=manifest.final.flatMap(r=>sha(fs.readFileSync(r.path))===r.sha256?[]:[r.path]);
+const stateBytes=fs.readFileSync(path.join(handoff.project,'.writer/state.json'));
+const checks={snapshots_match:mismatches.length===0,final_source_bytes_match:finalSourceMismatches.length===0,state_unchanged:sha(stateBytes)===handoff.state_sha256,zero_registered:JSON.parse(stateBytes).units.length===0&&result.registered_count===0,body_empty:fs.readdirSync(handoff.body_directory).length===0,checks_passed:result.checks.every(c=>c.pass),required_artifacts_present:['REPORT.md','readings.json','handoff.md','handoff.json','results.json','checks-output.json','audit-drift-note.json'].every(n=>fs.existsSync(path.join(here,n))),other_rounds_not_evaluated:result.other_rounds_evaluated.length===0};
+const artifacts=['REPORT.md','readings.json','handoff.md','handoff.json','results.json','checks-output.json','audit-drift-note.json'].map(n=>{const b=fs.readFileSync(path.join(here,n));return {path:n,bytes:b.length,sha256:sha(b)};});
+const output={ok:Object.values(checks).every(Boolean),verified_at:new Date().toISOString(),snapshots_checked:rows.length,checks,mismatches,final_source_mismatches:finalSourceMismatches,artifacts,limits:'Delivery integrity check only; no product API imports, state writes or new acceptance claims.'};
+fs.writeFileSync(path.join(here,'delivery-check.json'),JSON.stringify(output,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(output));if(!output.ok)process.exitCode=1;

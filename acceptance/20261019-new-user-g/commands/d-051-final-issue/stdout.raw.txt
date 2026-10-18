@@ -1,0 +1,372 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 23,
+  "counts": {
+    "verified": 1
+  },
+  "issues": [
+    {
+      "id": "I_C_CH2_REPAIR_FEE_DIRECTION",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "medium",
+      "statement": "第2章39行问他欠多少修理费可能短暂读成钟师傅欠费；41行白修才能消除歧义。局部表达可澄清，不是重大剧情错误。",
+      "suggestion": "仅将问句改为“你问过他修理费要多少吗？”，不增金额、付款、债务确定性或其他事实，保留抹平钞票的观察和陶下一句。",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-清点单外.md",
+          "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+          "line": 39,
+          "quote": "你是不是问他欠多少修理费了？"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-清点单外.md",
+          "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+          "line": 41,
+          "quote": "我第一句就问了。总不能让人白修。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/e5220b78-48f5-4fd1-a1a0-761a5c63bcce.json",
+        "review_sha256": "c31b6f340d53d5880b8d6685f9782c6131d3f1f14db385b7b5bfa0619abeb6fb",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-清点单外.md",
+            "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+            "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/b3c07b42-adb2-43d8-a922-f29916813f1d.json",
+          "sha256": "cba366d13c93ab28684e7fec6498e6dbe6ee4e13a52b9ef53574c2195932a75c"
+        },
+        {
+          "ref": ".writer/objects/431b5a15-3096-464b-a4be-d7fda34e7e11.json",
+          "sha256": "1fb375fccc570c8b3b749b51c46985d1da9bda991164a725bb09ac85e503e1df"
+        },
+        {
+          "ref": ".writer/objects/9396de27-d4bd-4110-a9d4-17308c8eb903.json",
+          "sha256": "1df9ed4354d53b2eb70e617568cde2776d0b952d59a0a77f9e73ea06493679c9"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/49d7c889-7986-42a2-b3e6-890ae554e75c.json",
+          "sha256": "d30d3552273fc97d5694d75d535b96b214b40052b04261169bcc047b3bc1ffae"
+        },
+        "disposition": "adopted",
+        "reason": "C完整实读1–6后认同付款方向存在短暂歧义；按本次隔离验证授权，仅拟改第2章该问句。属于可澄清的小范围表达问题，不记重大剧情错；当前仅采用，尚未提交或应用。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-清点单外.md",
+            "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+            "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "56812ed3-72bb-4dfc-818e-fb0abea306b3",
+        "commit_binding": {
+          "ref": ".writer/objects/56812ed3-72bb-4dfc-818e-fb0abea306b3.json",
+          "sha256": "0b90a28d717a70d48b5afbf8f603a7caa8b7aee3e6a1d5883f02270d2f717135"
+        },
+        "transaction_id": "81dd7355-9b24-4be3-9a9c-33605b6288af",
+        "reason": "同一修订主事务已completed，主稿第2章39行已从问欠费澄清为问修理费要多少；正文有实际一行变化，未增加金额或付款。代理按原授权实施，不是真人逐项选择。",
+        "changes": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-清点单外.md",
+            "before": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+            "after": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-清点单外.md",
+            "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+            "dependency": "2cf6c4e7269bb6d8fa14af507523146f8e75a82118c300503a445d62631b1d27"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/3f6e87ca-6ffb-49c0-8611-fe51f774e898.json",
+        "review_sha256": "07141cdb250fe8234ac6a02443811ca77412b4859ef7c958751000e2146efb06",
+        "reviewer": "native-d-informed-agent",
+        "conclusion": "resolved",
+        "reason": "全部重登后对最终1–6章完整连读，报告现于主作品有效并覆盖第2章；39行问要多少与41行总不能白修方向一致，且不冲突第3章师傅对旧电话的说法。仅知情模型复核，不是作者定稿或真人盲读。",
+        "rechecked_context": false,
+        "application_commit_id": "56812ed3-72bb-4dfc-818e-fb0abea306b3",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-没有回址.md",
+            "sha256": "c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a",
+            "dependency": "913e6f28e02d51e73916f43d8f1eeaae1df9613c53a790d27e3b49d48a3b0b26"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-清点单外.md",
+            "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+            "dependency": "2cf6c4e7269bb6d8fa14af507523146f8e75a82118c300503a445d62631b1d27"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/0003-先走一刻.md",
+            "sha256": "71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1",
+            "dependency": "78ecdf0a42a0721ed5cf5a8dfef449315085c8b4b1a54d24fe02c183bc606387"
+          },
+          {
+            "unit": 4,
+            "draft": "正文/0004-推车上的钟.md",
+            "sha256": "f386c8b96f191708d873fea6700192cd845a7a8582453b4fcc13f69afd815539",
+            "dependency": "6ad77737d4fe88cef3f9b96d9b451c8fc57548d3e5f680eb57ff6459dcb490dc"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-十五分钟以后.md",
+            "sha256": "eb92d0cfb234bac1555395eebf8f9a168009e20341dd37ad7d86e886683de223",
+            "dependency": "1a7cc8735990aeab420ba8cdf8f4c75bc6631c3cca9e0fba99cebfc989b0d5c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-留给回来的人.md",
+            "sha256": "51e1e733fbf0c7768105444afce179d6c315445c154f35d4f37cd45a6c7b715d",
+            "dependency": "03b5450b2b7724d1a46cb263dc18e3507f95f4c50ee07a6e13dc6ccda56ab3e8"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/e8d3e0b4-114a-4568-9eec-90d50f05b846.json",
+        "sha256": "af9907c7de7c90cb6b2c6d20452713b764a405af58ed31912c4b97561f19f009"
+      },
+      "history_events": [
+        {
+          "binding": {
+            "ref": ".writer/objects/b3c07b42-adb2-43d8-a922-f29916813f1d.json",
+            "sha256": "cba366d13c93ab28684e7fec6498e6dbe6ee4e13a52b9ef53574c2195932a75c"
+          },
+          "issue": {
+            "id": "I_C_CH2_REPAIR_FEE_DIRECTION",
+            "type": "readability",
+            "severity": "minor",
+            "confidence": "medium",
+            "statement": "第2章39行问他欠多少修理费可能短暂读成钟师傅欠费；41行白修才能消除歧义。局部表达可澄清，不是重大剧情错误。",
+            "suggestion": "仅将问句改为“你问过他修理费要多少吗？”，不增金额、付款、债务确定性或其他事实，保留抹平钞票的观察和陶下一句。",
+            "evidence": [
+              {
+                "unit": 2,
+                "draft": "正文/0002-清点单外.md",
+                "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                "line": 39,
+                "quote": "你是不是问他欠多少修理费了？"
+              },
+              {
+                "unit": 2,
+                "draft": "正文/0002-清点单外.md",
+                "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                "line": 41,
+                "quote": "我第一句就问了。总不能让人白修。"
+              }
+            ],
+            "status": "open",
+            "origin": {
+              "review_ref": ".writer/reviews/e5220b78-48f5-4fd1-a1a0-761a5c63bcce.json",
+              "review_sha256": "c31b6f340d53d5880b8d6685f9782c6131d3f1f14db385b7b5bfa0619abeb6fb",
+              "units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                  "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+                }
+              ]
+            },
+            "history": []
+          }
+        },
+        {
+          "binding": {
+            "ref": ".writer/objects/431b5a15-3096-464b-a4be-d7fda34e7e11.json",
+            "sha256": "1fb375fccc570c8b3b749b51c46985d1da9bda991164a725bb09ac85e503e1df"
+          },
+          "issue": {
+            "id": "I_C_CH2_REPAIR_FEE_DIRECTION",
+            "type": "readability",
+            "severity": "minor",
+            "confidence": "medium",
+            "statement": "第2章39行问他欠多少修理费可能短暂读成钟师傅欠费；41行白修才能消除歧义。局部表达可澄清，不是重大剧情错误。",
+            "suggestion": "仅将问句改为“你问过他修理费要多少吗？”，不增金额、付款、债务确定性或其他事实，保留抹平钞票的观察和陶下一句。",
+            "evidence": [
+              {
+                "unit": 2,
+                "draft": "正文/0002-清点单外.md",
+                "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                "line": 39,
+                "quote": "你是不是问他欠多少修理费了？"
+              },
+              {
+                "unit": 2,
+                "draft": "正文/0002-清点单外.md",
+                "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                "line": 41,
+                "quote": "我第一句就问了。总不能让人白修。"
+              }
+            ],
+            "status": "adopted",
+            "origin": {
+              "review_ref": ".writer/reviews/e5220b78-48f5-4fd1-a1a0-761a5c63bcce.json",
+              "review_sha256": "c31b6f340d53d5880b8d6685f9782c6131d3f1f14db385b7b5bfa0619abeb6fb",
+              "units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                  "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+                }
+              ]
+            },
+            "history": [
+              {
+                "ref": ".writer/objects/b3c07b42-adb2-43d8-a922-f29916813f1d.json",
+                "sha256": "cba366d13c93ab28684e7fec6498e6dbe6ee4e13a52b9ef53574c2195932a75c"
+              }
+            ],
+            "resolution": {
+              "decision_actor": "agent-within-authorized-scope",
+              "authorization": {
+                "ref": ".writer/objects/49d7c889-7986-42a2-b3e6-890ae554e75c.json",
+                "sha256": "d30d3552273fc97d5694d75d535b96b214b40052b04261169bcc047b3bc1ffae"
+              },
+              "disposition": "adopted",
+              "reason": "C完整实读1–6后认同付款方向存在短暂歧义；按本次隔离验证授权，仅拟改第2章该问句。属于可澄清的小范围表达问题，不记重大剧情错；当前仅采用，尚未提交或应用。",
+              "author_choice": null,
+              "basis_units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                  "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+                }
+              ]
+            },
+            "application": null,
+            "verification": null
+          }
+        },
+        {
+          "binding": {
+            "ref": ".writer/objects/9396de27-d4bd-4110-a9d4-17308c8eb903.json",
+            "sha256": "1df9ed4354d53b2eb70e617568cde2776d0b952d59a0a77f9e73ea06493679c9"
+          },
+          "issue": {
+            "id": "I_C_CH2_REPAIR_FEE_DIRECTION",
+            "type": "readability",
+            "severity": "minor",
+            "confidence": "medium",
+            "statement": "第2章39行问他欠多少修理费可能短暂读成钟师傅欠费；41行白修才能消除歧义。局部表达可澄清，不是重大剧情错误。",
+            "suggestion": "仅将问句改为“你问过他修理费要多少吗？”，不增金额、付款、债务确定性或其他事实，保留抹平钞票的观察和陶下一句。",
+            "evidence": [
+              {
+                "unit": 2,
+                "draft": "正文/0002-清点单外.md",
+                "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                "line": 39,
+                "quote": "你是不是问他欠多少修理费了？"
+              },
+              {
+                "unit": 2,
+                "draft": "正文/0002-清点单外.md",
+                "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                "line": 41,
+                "quote": "我第一句就问了。总不能让人白修。"
+              }
+            ],
+            "status": "applied",
+            "origin": {
+              "review_ref": ".writer/reviews/e5220b78-48f5-4fd1-a1a0-761a5c63bcce.json",
+              "review_sha256": "c31b6f340d53d5880b8d6685f9782c6131d3f1f14db385b7b5bfa0619abeb6fb",
+              "units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                  "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+                }
+              ]
+            },
+            "history": [
+              {
+                "ref": ".writer/objects/b3c07b42-adb2-43d8-a922-f29916813f1d.json",
+                "sha256": "cba366d13c93ab28684e7fec6498e6dbe6ee4e13a52b9ef53574c2195932a75c"
+              },
+              {
+                "ref": ".writer/objects/431b5a15-3096-464b-a4be-d7fda34e7e11.json",
+                "sha256": "1fb375fccc570c8b3b749b51c46985d1da9bda991164a725bb09ac85e503e1df"
+              }
+            ],
+            "resolution": {
+              "decision_actor": "agent-within-authorized-scope",
+              "authorization": {
+                "ref": ".writer/objects/49d7c889-7986-42a2-b3e6-890ae554e75c.json",
+                "sha256": "d30d3552273fc97d5694d75d535b96b214b40052b04261169bcc047b3bc1ffae"
+              },
+              "disposition": "adopted",
+              "reason": "C完整实读1–6后认同付款方向存在短暂歧义；按本次隔离验证授权，仅拟改第2章该问句。属于可澄清的小范围表达问题，不记重大剧情错；当前仅采用，尚未提交或应用。",
+              "author_choice": null,
+              "basis_units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "sha256": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                  "dependency": "2290cd6550986dc1618e98fb86967432813b39bb8be2be4c8f4c3d759f55888f"
+                }
+              ]
+            },
+            "application": {
+              "commit_id": "56812ed3-72bb-4dfc-818e-fb0abea306b3",
+              "commit_binding": {
+                "ref": ".writer/objects/56812ed3-72bb-4dfc-818e-fb0abea306b3.json",
+                "sha256": "0b90a28d717a70d48b5afbf8f603a7caa8b7aee3e6a1d5883f02270d2f717135"
+              },
+              "transaction_id": "81dd7355-9b24-4be3-9a9c-33605b6288af",
+              "reason": "同一修订主事务已completed，主稿第2章39行已从问欠费澄清为问修理费要多少；正文有实际一行变化，未增加金额或付款。代理按原授权实施，不是真人逐项选择。",
+              "changes": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "before": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+                  "after": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d"
+                }
+              ],
+              "after_units": [
+                {
+                  "unit": 2,
+                  "draft": "正文/0002-清点单外.md",
+                  "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+                  "dependency": "2cf6c4e7269bb6d8fa14af507523146f8e75a82118c300503a445d62631b1d27"
+                }
+              ]
+            },
+            "verification": null
+          }
+        }
+      ],
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "81dd5da5-dd9a-4b6b-b7bd-fa5e0ebf8db0",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "structure",
+    "task": "新建《纸桥书店》十二章三卷规划，完成定位、人物与文风、全书粗骨架、分卷范围及前三章细纲；仅讨论/规划，不写正文，不授权试写。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+        "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+        "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+        "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_E_REQUIREMENTS": {
+      "id": "D_E_REQUIREMENTS",
+      "topic": "用户明确的作品规格",
+      "status": "confirmed",
+      "options": [
+        "题名《纸桥书店》，计划十二章三卷"
+      ],
+      "adopted_items": [
+        "题名《纸桥书店》",
+        "长篇小说规划",
+        "十二章三卷"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+      "event_sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/80be1f43-a7af-460d-8348-e6f74b03d4eb.json",
+      "sha256": "3c1919072266fc986aced64c0bec3b961840df32fdf5fa52df5266d6bb99c522"
+    },
+    {
+      "ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+      "sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+    }
+  ],
+  "operations": {
+    "e-workflow-planning-only": {
+      "input_sha256": "967f824f6139aa2490a6743ce6a2faa2cf2775e0a9454c6011a26816765f2a96",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "e-workflow-planning-only",
+        "event": {
+          "ref": ".writer/objects/80be1f43-a7af-460d-8348-e6f74b03d4eb.json",
+          "sha256": "3c1919072266fc986aced64c0bec3b961840df32fdf5fa52df5266d6bb99c522"
+        }
+      }
+    },
+    "e-record-actual-specification": {
+      "input_sha256": "0d507eb43df06ae1ac7ea57b4e450e96f8b0908963f2982003c178810a2e91f7",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "e-record-actual-specification",
+        "event": {
+          "ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+          "sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+        },
+        "decision_id": "D_E_REQUIREMENTS"
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/80be1f43-a7af-460d-8348-e6f74b03d4eb.json",
+    "sha256": "3c1919072266fc986aced64c0bec3b961840df32fdf5fa52df5266d6bb99c522"
+  }
+}

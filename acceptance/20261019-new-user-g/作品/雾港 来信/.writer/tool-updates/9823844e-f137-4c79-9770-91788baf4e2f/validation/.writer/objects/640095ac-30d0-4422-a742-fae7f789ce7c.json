@@ -1,0 +1,70 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T16:27:06.532Z",
+  "operation_id": "G_A_V2_TRIAL_1_3",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "代理在授权内规划两卷六章，仅试写1–3章；逐章自检登记、整段连读后暂停正文",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第3章自检登记与1–3整段连读完成后正式暂停，仅讨论/规划",
+        "不写第4章；普通创作细节是代理实施决定，不冒充真人作者采纳"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "本轮只授权写第1–3章",
+    "local_source": "研究/本轮作者依据.md",
+    "source_sha256": "918d1abf539dd26570ebe0aea0840223bf8972e4818f1ca0dfb348bd8d5c55f5",
+    "locator": "当前用户请求的本地转录；无消息ID；见本文件来源二",
+    "recorded_by": "Codex主代理，agent-within-authorized-scope",
+    "frozen_ref": ".writer/objects/918d1abf539dd26570ebe0aea0840223bf8972e4818f1ca0dfb348bd8d5c55f5.txt"
+  }
+}

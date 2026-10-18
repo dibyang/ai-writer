@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn, spawnSync } from 'node:child_process';
 import { StringDecoder } from 'node:string_decoder';
+import crypto from 'node:crypto';
 import { ROOT } from '../lib/workspace.mjs';
 
 // Explicitly invoked real-session acceptance; never part of npm test or doctor.
@@ -12,6 +13,10 @@ if (!phase || !/^[a-z][a-z0-9-]*$/.test(phase) || !launcher || !path.isAbsolute(
 }
 const directory = path.join(ROOT, 'acceptance', campaign, phase);
 const request = fs.readFileSync(path.join(directory, 'request.md'), 'utf8');
+// Freeze the exact stdin at launch; later notes must not rewrite the request used by this process.
+const requestBytes = Buffer.from(request, 'utf8');
+const requestSha256 = crypto.createHash('sha256').update(requestBytes).digest('hex');
+fs.writeFileSync(path.join(directory, 'request.raw.md'), requestBytes, { flag: 'wx' });
 const eventsFile = path.join(directory, 'events.jsonl');
 // Preserve previous evidence on retries; use a new phase name instead.
 const events = fs.openSync(eventsFile, 'wx');
@@ -47,8 +52,8 @@ child.on('close', (code, signal) => {
   clearInterval(timer); fs.closeSync(events); fs.closeSync(stderr);
   const result = { phase, launcher, codex_version: version.stdout?.trim(), node: process.version, platform: process.platform,
     exit_code: code, signal, elapsed_s: Math.round((Date.now() - started) / 1000),
-    events: eventCount, commands, messages, directory, args };
+    events: eventCount, commands, messages, directory, args, request_sha256: requestSha256, request_snapshot: 'request.raw.md' };
   fs.writeFileSync(path.join(directory, 'process-result.json'), JSON.stringify(result, null, 2) + '\n', 'utf8');
   console.log(JSON.stringify(result)); process.exitCode = code ?? 1;
 });
-child.stdin.end(request);
+child.stdin.end(requestBytes);

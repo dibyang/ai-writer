@@ -1,0 +1,120 @@
+{
+  "ok": false,
+  "error": "本轮任务“规划已交付：十二章三卷粗骨架、人物/文风及前三章细纲；本轮只规划，不写正文。完成恢复取证后停止；下一会话须取得实际有限写作授权才可更新权限。”不允许 draft 1–1；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\纸桥书店 规划\\.writer\\tool\\bin\\ai-writer.mjs' record-template '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "规划已交付：十二章三卷粗骨架、人物/文风及前三章细纲；本轮只规划，不写正文。完成恢复取证后停止；下一会话须取得实际有限写作授权才可更新权限。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+        "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+        "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+        "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_E_REQUIREMENTS",
+          "topic": "用户明确的作品规格",
+          "status": "confirmed",
+          "options": [
+            "题名《纸桥书店》，计划十二章三卷"
+          ],
+          "adopted_items": [
+            "题名《纸桥书店》",
+            "长篇小说规划",
+            "十二章三卷"
+          ],
+          "excluded_items": [],
+          "unresolved_items": [],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+          "event_sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_E_AGENT_PROPOSAL",
+          "topic": "代理原创方案，尚无人类作者逐项采纳",
+          "status": "candidate",
+          "options": [
+            "青汀镇纸桥书店的母女协作与有限社区经营方案，人物/视角/文风/情节详见设定及全书大纲"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "人物、镇名、具体活动与结局经营组合尚无人类作者逐项采纳",
+            "第4–12章仅粗骨架；具体场景、账目数字和书目未细化"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": null
+          },
+          "event_ref": ".writer/objects/d9362a06-0ccc-4794-9d74-bde4ef7a9e84.json",
+          "event_sha256": "b488f89c007d422538a366d70b3939007a5efef7c8722e08dd7bb75aae3f93d3"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

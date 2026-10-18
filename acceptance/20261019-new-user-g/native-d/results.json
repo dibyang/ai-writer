@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "status": "completed-isolated-local-workflow-not-publication",
+  "project_path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信",
+  "manuscript_directory": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\正文",
+  "revision": {
+    "id": "42162d65-14b2-46fa-89ea-c9cb66bbfb0b",
+    "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace",
+    "original_base_revision": 18,
+    "base_sha256": "e8046c3a51ecea97f95d41371c726cc6d0f4bb03f1dc2ec539078c2552c10ab1",
+    "main_start": 18,
+    "main_after_commit": 19,
+    "main_after_apply": 20,
+    "main_after_verify": 21,
+    "main_after_update": 22,
+    "main_final": 23,
+    "branch_start": 21,
+    "branch_after_register": 24,
+    "branch_final": 25,
+    "commit_id": "56812ed3-72bb-4dfc-818e-fb0abea306b3",
+    "transaction_id": "81dd7355-9b24-4be3-9a9c-33605b6288af",
+    "session_status": "committed",
+    "transaction_status": "completed",
+    "repeat_commit_unchanged": true,
+    "token_file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\native-d\\inputs\\session-operation.json",
+    "prior_C_initial_main_revision": 15
+  },
+  "registration": {
+    "main": [
+      1,
+      6
+    ],
+    "C_replayed": [
+      2,
+      3
+    ],
+    "D_replayed": [
+      4,
+      6
+    ],
+    "prefix1": "read-only; original unit record and original journal preserved",
+    "old_journals_preserved": true
+  },
+  "actual_changes": {
+    "body": {
+      "unit": 2,
+      "before": "你是不是问他欠多少修理费了？",
+      "after": "你问过他修理费要多少吗？",
+      "exactly_one_expression": true
+    },
+    "summary3": {
+      "reason": "C已依据第3章65行将签借条者澄清为陶芷，正式重登保留这项语义校正；原单位及journal保留。"
+    },
+    "body1_and_3_to_6_unchanged": true,
+    "snapshot": "Only seven chapter-2 evidence SHA bindings changed across six ledger entries; all quotes, observations, character knowledge, dates, custody, due fields, statuses and other literary facts preserved.",
+    "details": [
+      "commit-comparison.json",
+      "evidence-rebindings.json",
+      "update-comparison.json",
+      "pause-comparison.json"
+    ]
+  },
+  "issue": {
+    "id": "I_C_CH2_REPAIR_FEE_DIRECTION",
+    "status": "verified",
+    "effective_status": "verified",
+    "decision_actor": "agent-within-authorized-scope",
+    "author_choice": null,
+    "application": {
+      "commit_id": "56812ed3-72bb-4dfc-818e-fb0abea306b3",
+      "commit_binding": {
+        "ref": ".writer/objects/56812ed3-72bb-4dfc-818e-fb0abea306b3.json",
+        "sha256": "0b90a28d717a70d48b5afbf8f603a7caa8b7aee3e6a1d5883f02270d2f717135"
+      },
+      "transaction_id": "81dd7355-9b24-4be3-9a9c-33605b6288af",
+      "reason": "同一修订主事务已completed，主稿第2章39行已从问欠费澄清为问修理费要多少；正文有实际一行变化，未增加金额或付款。代理按原授权实施，不是真人逐项选择。",
+      "changes": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-清点单外.md",
+          "before": "4c54245ff4feeb08701df503cb9190f8f83b00382b90e22a22b61e2d6ed44d58",
+          "after": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d"
+        }
+      ],
+      "after_units": [
+        {
+          "unit": 2,
+          "draft": "正文/0002-清点单外.md",
+          "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+          "dependency": "2cf6c4e7269bb6d8fa14af507523146f8e75a82118c300503a445d62631b1d27"
+        }
+      ]
+    },
+    "verification": {
+      "review_ref": ".writer/reviews/3f6e87ca-6ffb-49c0-8611-fe51f774e898.json",
+      "review_sha256": "07141cdb250fe8234ac6a02443811ca77412b4859ef7c958751000e2146efb06",
+      "reviewer": "native-d-informed-agent",
+      "conclusion": "resolved",
+      "reason": "全部重登后对最终1–6章完整连读，报告现于主作品有效并覆盖第2章；39行问要多少与41行总不能白修方向一致，且不冲突第3章师傅对旧电话的说法。仅知情模型复核，不是作者定稿或真人盲读。",
+      "rechecked_context": false,
+      "application_commit_id": "56812ed3-72bb-4dfc-818e-fb0abea306b3",
+      "revision_session": null,
+      "units": [
+        {
+          "unit": 1,
+          "draft": "正文/0001-没有回址.md",
+          "sha256": "c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a",
+          "dependency": "913e6f28e02d51e73916f43d8f1eeaae1df9613c53a790d27e3b49d48a3b0b26"
+        },
+        {
+          "unit": 2,
+          "draft": "正文/0002-清点单外.md",
+          "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+          "dependency": "2cf6c4e7269bb6d8fa14af507523146f8e75a82118c300503a445d62631b1d27"
+        },
+        {
+          "unit": 3,
+          "draft": "正文/0003-先走一刻.md",
+          "sha256": "71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1",
+          "dependency": "78ecdf0a42a0721ed5cf5a8dfef449315085c8b4b1a54d24fe02c183bc606387"
+        },
+        {
+          "unit": 4,
+          "draft": "正文/0004-推车上的钟.md",
+          "sha256": "f386c8b96f191708d873fea6700192cd845a7a8582453b4fcc13f69afd815539",
+          "dependency": "6ad77737d4fe88cef3f9b96d9b451c8fc57548d3e5f680eb57ff6459dcb490dc"
+        },
+        {
+          "unit": 5,
+          "draft": "正文/0005-十五分钟以后.md",
+          "sha256": "eb92d0cfb234bac1555395eebf8f9a168009e20341dd37ad7d86e886683de223",
+          "dependency": "1a7cc8735990aeab420ba8cdf8f4c75bc6631c3cca9e0fba99cebfc989b0d5c8"
+        },
+        {
+          "unit": 6,
+          "draft": "正文/0006-留给回来的人.md",
+          "sha256": "51e1e733fbf0c7768105444afce179d6c315445c154f35d4f37cd45a6c7b715d",
+          "dependency": "03b5450b2b7724d1a46cb263dc18e3507f95f4c50ee07a6e13dc6ccda56ab3e8"
+        }
+      ]
+    }
+  },
+  "tool": {
+    "before_content_id": "d672568ec98345708756c40d7f1d490c301089b6134b429106dda2dfe62d7e1f",
+    "final_content_id": "828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f",
+    "runtime_id": "2caacf37df3842559663ef2ea380baaa33b85cd6bf29637e5ae45fe8e4cd1628",
+    "guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+    "version": "0.7.4",
+    "generation": 1
+  },
+  "readings": {
+    "final_range": {
+      "from": 1,
+      "to": 6
+    },
+    "final_phase": "final-tail-1-6",
+    "final_after_all_records": true,
+    "full_displayed_after_marker": true,
+    "version_hashes": [
+      {
+        "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace\\正文\\0001-没有回址.md",
+        "sha256": "c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a",
+        "version": "read-versions/022-c313ede3d6bc-0001-没有回址.md"
+      },
+      {
+        "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace\\正文\\0002-清点单外.md",
+        "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+        "version": "read-versions/023-6a2827ce2932-0002-清点单外.md"
+      },
+      {
+        "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace\\正文\\0003-先走一刻.md",
+        "sha256": "71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1",
+        "version": "read-versions/024-71024dc1bdcc-0003-先走一刻.md"
+      },
+      {
+        "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace\\正文\\0004-推车上的钟.md",
+        "sha256": "f386c8b96f191708d873fea6700192cd845a7a8582453b4fcc13f69afd815539",
+        "version": "read-versions/025-f386c8b96f19-0004-推车上的钟.md"
+      },
+      {
+        "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace\\正文\\0005-十五分钟以后.md",
+        "sha256": "eb92d0cfb234bac1555395eebf8f9a168009e20341dd37ad7d86e886683de223",
+        "version": "read-versions/026-eb92d0cfb234-0005-十五分钟以后.md"
+      },
+      {
+        "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\.writer\\revisions\\42162d65-14b2-46fa-89ea-c9cb66bbfb0b\\workspace\\正文\\0006-留给回来的人.md",
+        "sha256": "51e1e733fbf0c7768105444afce179d6c315445c154f35d4f37cd45a6c7b715d",
+        "version": "read-versions/027-51e1e733fbf0-0006-留给回来的人.md"
+      }
+    ],
+    "report": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\作品\\雾港 来信\\审查\\0001-0006-D最终完整连读.md",
+    "review_ref": ".writer/reviews/3f6e87ca-6ffb-49c0-8611-fe51f774e898.json",
+    "review_kind": "model-self-review",
+    "rolling_current": 1,
+    "old_stale_preserved": 3,
+    "pending_windows": [],
+    "proof_boundary": "Parent actual model events determine text exposure; readings.json alone does not prove reading or understanding."
+  },
+  "export": {
+    "path": "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\exports\\雾港来信-D-r23-草稿",
+    "manifest_sha256": "5bd093a67d086e8214aac0c149a6abf4c799dd03b3fbf309e06fe956eaab222d",
+    "manuscript_sha256": "11fc6e1caf72ae601bb8dfcb1626c4c98cb3fcff1767e04eb4cad0ece3aadfb5",
+    "rows": [
+      {
+        "unit": 1,
+        "sha256": "c313ede3d6bcfea908d632e35420989bae7657b68a7d218a34892df39f383c7a",
+        "manifest_matches": true,
+        "full_text_present_in_order": true
+      },
+      {
+        "unit": 2,
+        "sha256": "6a2827ce2932da487937df8829d84f0c05dd0354d1c5bf9327ec5d52b9d37e1d",
+        "manifest_matches": true,
+        "full_text_present_in_order": true
+      },
+      {
+        "unit": 3,
+        "sha256": "71024dc1bdcc7b8aa3143dbde8c84fb39e315a93f11e5c44fffcaef54459add1",
+        "manifest_matches": true,
+        "full_text_present_in_order": true
+      },
+      {
+        "unit": 4,
+        "sha256": "f386c8b96f191708d873fea6700192cd845a7a8582453b4fcc13f69afd815539",
+        "manifest_matches": true,
+        "full_text_present_in_order": true
+      },
+      {
+        "unit": 5,
+        "sha256": "eb92d0cfb234bac1555395eebf8f9a168009e20341dd37ad7d86e886683de223",
+        "manifest_matches": true,
+        "full_text_present_in_order": true
+      },
+      {
+        "unit": 6,
+        "sha256": "51e1e733fbf0c7768105444afce179d6c315445c154f35d4f37cd45a6c7b715d",
+        "manifest_matches": true,
+        "full_text_present_in_order": true
+      }
+    ],
+    "status": "draft-export",
+    "included_units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "excluded_drafts": [],
+    "warnings": []
+  },
+  "final_task": {
+    "stage": "paused",
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "next_unit": 7,
+    "chapter7_context_denied": "ACTION_OUT_OF_SCOPE",
+    "chapter7_record_template_denied": "ACTION_OUT_OF_SCOPE",
+    "unregistered": [],
+    "active_sessions": [],
+    "pending_transactions": []
+  },
+  "verification": {
+    "file": "verification-corrected.json",
+    "ok": true,
+    "guards": {
+      "original_base_revision_18": true,
+      "base_manifest_unchanged": true,
+      "main_state_preserved_until_commit": true,
+      "initial_main_and_branch_match_handoff": true,
+      "only_expected_old_paths_changed": true,
+      "tool_manifest_changed_by_completed_update": true,
+      "original_journals_preserved": true,
+      "ch2_exactly_one_expression": true,
+      "other_bodies_unchanged": true,
+      "chapter1_record_preserved": true,
+      "final_reading_versions_current": true,
+      "final_reading_after_all_records": true,
+      "commit_retry_unchanged_state": true,
+      "update_retry_unchanged_state": true,
+      "update_preserved_units_and_snapshot": true,
+      "update_preserved_root_resources": true,
+      "installed_exact_g4": true,
+      "external_source_61_resources_unchanged": true,
+      "runtime_guard_stable": true,
+      "no_schema_migration": true,
+      "active_sessions_none": true,
+      "all_transactions_complete": true,
+      "issue_verified_with_no_invented_author_choice": true,
+      "final_review_current": true,
+      "paused_discussion_only": true,
+      "chapter7_denied_without_state_changes": true,
+      "only_six_manuscripts": true,
+      "export_manifest_six_current": true,
+      "export_hash_matches": true,
+      "export_is_draft": true,
+      "export_no_exclusions_or_warnings": true,
+      "export_outside_project_inside_g": true
+    },
+    "failed_initial_report_preserved": "verification-final.json",
+    "source_build_g4": "../source-build-g4.json",
+    "pre_update": "before-update.json",
+    "post_update": "after-update.json"
+  },
+  "failures_and_corrections": [
+    {
+      "commands": [
+        "d-025-issue-apply",
+        "d-026-issue-verify"
+      ],
+      "reason": "Agent supplied transaction UUID instead of publication object commit_id, then tried expected revision20 while apply had not advanced19.",
+      "result": "Both rejected without state changes. Read publication binding and corrected input at d-028; only then d-029 verified with current valid report. Failed inputs and outputs preserved."
+    },
+    {
+      "artifact": "verification-final.json",
+      "reason": "Local audit originally omitted expected formal tool build-manifest replacement from allowed old-path changes.",
+      "result": "Original failed report preserved. Corrected audit additionally verifies old/new manifest SHA against completed update transaction; verification-corrected.json is current."
+    },
+    {
+      "artifact": "0004-D重登语义复核.md",
+      "reason": "First report draft counted 12 rather than 11 evidence quotes.",
+      "result": "Count corrected before record; record revalidated current report. No consumed report overwritten."
+    },
+    {
+      "outputs": "Several setup/build/preview/doctor/compare/issue outputs were display-truncated.",
+      "result": "Raw capture output remains complete. Necessary metadata was subsequently parsed and displayed in focused summaries; all final 1–6 body output was complete and untruncated. Initial source-build combined print alone is not claimed as complete display."
+    }
+  ],
+  "uncovered": [
+    "No human blind reading, author finalization, market test or professional clock-repair validation.",
+    "No chapter7; sender identity/motive, old materials account/amount/payment, Monday move/new wall/new-site opening and month-end recheck remain unresolved or unperformed.",
+    "No network research, upload, paid service, publication, Git commit or push.",
+    "No product modules changed; local audit scripts are evidence helpers, not product test coverage.",
+    "Root original manuals intentionally retained; installed entry help points to updated package manuals."
+  ],
+  "commands_file": "commands.json",
+  "source_inputs": [
+    "../native-c/handoff.md",
+    "../native-c/handoff.json",
+    "../native-c/inputs/resume-next-process.json",
+    "inputs/session-operation.json",
+    "inputs/record-4-reviewed.json",
+    "inputs/record-5-reviewed.json",
+    "inputs/record-6-reviewed.json",
+    "inputs/review-final-1-6.json",
+    "inputs/issue-apply.json",
+    "inputs/issue-apply-corrected.json",
+    "inputs/issue-verify.json",
+    "inputs/tool-update.json",
+    "inputs/pause.json"
+  ],
+  "outputs": [
+    "REPORT.md",
+    "readings.json",
+    "read-versions/",
+    "handoff.md",
+    "handoff.json",
+    "verification-final.json",
+    "verification-corrected.json",
+    "D:\\work\\other\\ai-writer\\acceptance\\20261019-new-user-g\\exports\\雾港来信-D-r23-草稿"
+  ]
+}

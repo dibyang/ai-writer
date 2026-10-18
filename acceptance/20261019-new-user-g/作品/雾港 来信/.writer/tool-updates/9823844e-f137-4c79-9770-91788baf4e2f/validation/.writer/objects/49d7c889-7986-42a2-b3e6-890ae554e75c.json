@@ -1,0 +1,79 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T17:23:54.831Z",
+  "operation_id": "c-authorized-revision-2-6-stop-3",
+  "base_revision": 16,
+  "payload": {
+    "stage": "revision",
+    "task": "G轮C：仅在独立区澄清第2章问修理费方向，保留剧情事实声音；2–6为实读重登范围，C完成2–3后停止并交接，不prepare/commit、不重登4–6、不写第7章。文学取舍为agent-within-authorized-scope。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 6
+      },
+      "stop_conditions": [
+        "C进程正式重登第3章后立即停止产品写动作；不得重登4–6或prepare/commit。",
+        "只允许第2章必要小范围表达调整；3–6无确证问题保持原字节，核心情节另报。",
+        "主稿1–6正文、units与snapshot保持；下一进程凭原ID、令牌及base_revision续做4–6和最终尾段连读。",
+        "不写第7章；采用不等于已应用，测试实施不等于真人文学定稿。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/第二卷执行契约-B.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "本验证授权：只对第2章进行必要的小范围表达修订，保留剧情、事实及人物声音；允许从第2章至当前末章6章实读重登以核下游。第3–6章正文无确证问题保持原字节；如需另改核心情节先报告，不自行扩大。不得写第7章。原作者人类仅授权隔离验证，文学选择和意见处置标agent-within-authorized-scope，不伪造真人逐项确认。测试实施要求不等同真人文学定稿。",
+    "local_source": "研究/C隔离修订授权.md",
+    "source_sha256": "41bba397f50df6b1d37a518662790bbb0be9338587d4359492280091f3f43504",
+    "locator": "本次用户任务本验证授权段；研究/C隔离修订授权.md全文摘录",
+    "recorded_by": "native-c-agent",
+    "frozen_ref": ".writer/objects/41bba397f50df6b1d37a518662790bbb0be9338587d4359492280091f3f43504.txt"
+  }
+}

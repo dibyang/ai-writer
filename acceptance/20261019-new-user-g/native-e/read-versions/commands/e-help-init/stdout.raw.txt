@@ -1,0 +1,13 @@
+ai-writer 0.7.4 / init
+建立作品和随附工具，不覆盖已有目录。明确长篇/跨卷时用long，提前组织全书骨架、卷契约和近期细纲。
+
+node 'D:\work\other\ai-writer\bin\ai-writer.mjs' init --path 新目录 --kind novel|screenplay|history|essay --title 作品名 [--mode long|standard]
+
+示例参数：--path 'works/雨夜来信' --kind novel --title '雨夜来信' --mode long
+
+init 使用 --path 指定新作品目录，不接受 --project。
+作者手册：D:\work\other\ai-writer\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\docs\workflow.md
+长篇：D:\work\other\ai-writer\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\docs\deslop.md
+创作与审修改写由 Codex 根据自然语言任务完成。

@@ -1,0 +1,216 @@
+{
+  "schema_version": 6,
+  "revision": 4,
+  "project_id": "81dd5da5-dd9a-4b6b-b7bd-fa5e0ebf8db0",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "paused",
+    "task": "规划已交付：十二章三卷粗骨架、人物/文风及前三章细纲；本轮只规划，不写正文。完成恢复取证后停止；下一会话须取得实际有限写作授权才可更新权限。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "规划材料与前三章细纲齐备后停止扩写，不细化第4–12章场景",
+        "新CLI回读status、workflow与discussion context，完整保存三份设定和任务记录证据",
+        "第1章draft context及record-template应拒绝，状态字节不变，正文目录为空",
+        "证据与交接完成即结束；下一会话继续正文须实际新授权，不由已有章纲或next_unit推定"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/人物.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": [
+          "D_E_AGENT_PROPOSAL"
+        ]
+      }
+    }
+  },
+  "decisions": {
+    "D_E_REQUIREMENTS": {
+      "id": "D_E_REQUIREMENTS",
+      "topic": "用户明确的作品规格",
+      "status": "confirmed",
+      "options": [
+        "题名《纸桥书店》，计划十二章三卷"
+      ],
+      "adopted_items": [
+        "题名《纸桥书店》",
+        "长篇小说规划",
+        "十二章三卷"
+      ],
+      "excluded_items": [],
+      "unresolved_items": [],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+      "event_sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+    },
+    "D_E_AGENT_PROPOSAL": {
+      "id": "D_E_AGENT_PROPOSAL",
+      "topic": "代理原创方案，尚无人类作者逐项采纳",
+      "status": "candidate",
+      "options": [
+        "青汀镇纸桥书店的母女协作与有限社区经营方案，人物/视角/文风/情节详见设定及全书大纲"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "人物、镇名、具体活动与结局经营组合尚无人类作者逐项采纳",
+        "第4–12章仅粗骨架；具体场景、账目数字和书目未细化"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/d9362a06-0ccc-4794-9d74-bde4ef7a9e84.json",
+      "event_sha256": "b488f89c007d422538a366d70b3939007a5efef7c8722e08dd7bb75aae3f93d3"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/80be1f43-a7af-460d-8348-e6f74b03d4eb.json",
+      "sha256": "3c1919072266fc986aced64c0bec3b961840df32fdf5fa52df5266d6bb99c522"
+    },
+    {
+      "ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+      "sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+    },
+    {
+      "ref": ".writer/objects/d9362a06-0ccc-4794-9d74-bde4ef7a9e84.json",
+      "sha256": "b488f89c007d422538a366d70b3939007a5efef7c8722e08dd7bb75aae3f93d3"
+    },
+    {
+      "ref": ".writer/objects/a5dacb13-4593-4b01-a157-99172ff104ec.json",
+      "sha256": "f4d97014de9715b053acbd58dd66014fca3d29d32e16c8173af0c8c65b4d26cf"
+    }
+  ],
+  "operations": {
+    "e-workflow-planning-only": {
+      "input_sha256": "967f824f6139aa2490a6743ce6a2faa2cf2775e0a9454c6011a26816765f2a96",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "e-workflow-planning-only",
+        "event": {
+          "ref": ".writer/objects/80be1f43-a7af-460d-8348-e6f74b03d4eb.json",
+          "sha256": "3c1919072266fc986aced64c0bec3b961840df32fdf5fa52df5266d6bb99c522"
+        }
+      }
+    },
+    "e-record-actual-specification": {
+      "input_sha256": "0d507eb43df06ae1ac7ea57b4e450e96f8b0908963f2982003c178810a2e91f7",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "e-record-actual-specification",
+        "event": {
+          "ref": ".writer/objects/81b0d9d4-4363-41e8-8e79-0318306277da.json",
+          "sha256": "ba18793bd6ec60247089a5b70ed341508fc6cfeecab3b605e7c89e8f72d9d703"
+        },
+        "decision_id": "D_E_REQUIREMENTS"
+      }
+    },
+    "e-record-agent-proposal": {
+      "input_sha256": "83866100d3816926544564f7d23287e6cab8ac90258ca3adf238a81e9dfaf25a",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "e-record-agent-proposal",
+        "event": {
+          "ref": ".writer/objects/d9362a06-0ccc-4794-9d74-bde4ef7a9e84.json",
+          "sha256": "b488f89c007d422538a366d70b3939007a5efef7c8722e08dd7bb75aae3f93d3"
+        },
+        "decision_id": "D_E_AGENT_PROPOSAL"
+      }
+    },
+    "e-finish-planning-and-stop": {
+      "input_sha256": "a132ddbd00fc918c9766a6e7ff5fd74bcb34f97c27bbd42482c960cce8b2ecac",
+      "result": {
+        "ok": true,
+        "revision": 4,
+        "operation_id": "e-finish-planning-and-stop",
+        "event": {
+          "ref": ".writer/objects/a5dacb13-4593-4b01-a157-99172ff104ec.json",
+          "sha256": "f4d97014de9715b053acbd58dd66014fca3d29d32e16c8173af0c8c65b4d26cf"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/a5dacb13-4593-4b01-a157-99172ff104ec.json",
+    "sha256": "f4d97014de9715b053acbd58dd66014fca3d29d32e16c8173af0c8c65b4d26cf"
+  }
+}

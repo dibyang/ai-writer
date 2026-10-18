@@ -1,0 +1,85 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),json=f=>JSON.parse(fs.readFileSync(path.join(base,f))),phases=['native-a-v2','native-b','native-c','native-d','native-e'].map(name=>({name,...json(name+'/process-result.json')})),d=json('parent-d-verification.json'),e=json('parent-e-verification.json');
+let calls=0,nonzero=0;for(const label of fs.readdirSync(path.join(base,'commands'))){const f=path.join(base,'commands',label,'result.json');if(!fs.existsSync(f))continue;const r=JSON.parse(fs.readFileSync(f));if(r.args?.some(x=>/(?:^|[\\/])ai-writer\.mjs$/.test(x))){calls++;if(r.exit_code!==0)nonzero++;}}
+const rows=phases.map(p=>`| ${p.name} | ${p.exit_code} | ${p.elapsed_s}秒 | ${p.events} / ${p.commands} |`).join('\n');
+const text=`# G轮：新用户使用路径与真实Codex验证
+
+日期2026-10-19（Asia/Shanghai）。**本轮修复和本地验证完成，未提交、未推送、未发布，现有作品未作为写入目标。** 基线提交1a23bcc8、原产品0.7.3；最终候选0.7.4。原始授权见[PLAN.md](PLAN.md)，逐项问题见[FINDINGS.md](FINDINGS.md)，最终核对见[final-verification.json](final-verification.json)，封存后的逐字节凭据在[目录外](../20261019-new-user-g-seal-verification.json)。这些文件记录各自实际时点，不将旧百章结果算作本轮六章验收。
+
+## 修复结果
+
+审查从新用户首次发任务、看交付、恢复、跨卷续写、实读复核、旧章修订、工具更新到草稿导出逐步进行，完成10项易用性改进：
+
+- 快速入门先给可直接发给Codex的任务和第一章路径；移走协议、容量等前置负担，统一示例题材。
+- 区分主项目和独立作品入口，明确保留整个作品目录、包内最新手册的定位方式。
+- 长篇手册加入七阶段完整作者路径、阶段产物、有限授权和固定交付说明。
+- 当前主稿漂移改为先查独立修订会话；分支和旧协议各给自己的恢复路径，停止建议会被保护拒绝的主稿直接rewind。
+- 缺细纲时给可执行plan --help，停止引用尚不存在的plan-input.json。
+- 修正pending更新指引中的不存在动作tool list；说明tool updates与按明确方向recover。
+- 临时任务范围只存workflow/交接，作品定位、文风、世界规则只放长期约束；A/B旧消费字节保留，E新建书检验预防效果。
+- 补齐结构化comparison的真实字段、类型、完整JSON片段和直接手册链接；保持原校验边界。
+
+新增3项真实CLI恢复回归，保留旧协议4项恢复验证。没有放宽授权、哈希、固定基线、CAS、占用或事务保护，没有用脚本判断文学重复，也没有修改引擎或技能。
+
+## 最终版本与程序回归
+
+| 检查 | 最终结果 |
+| --- | --- |
+| npm test（g4-tests） | 155项：154通过、0失败、1项环境跳过；进程266,556毫秒，测试框架265,250.9335毫秒 |
+| npm run doctor（g4-doctor） | 通过，进程6,648毫秒 |
+| 手册与说明检查 | 主项目/冻结随附包链接、UTF-8、comparison文档JSON类型及当前资源身份通过；收尾另核主项目状态说明 |
+| 修前/修后 | 原失败recovery-before、recovery-before-v2、plan-guidance-before保留；修后真实CLI及完整回归通过 |
+| 原百章档案 | prior-f-seal-final只读复验通过；13,897文件/1,584,115,328字节及原清单身份未变 |
+
+环境跳过是本机不能创建文件符号链接，不能算已通过该环境场景。未改内置引擎，本轮不借用历史引擎测试数。
+
+最终包内容ID：
+
+    828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f
+
+运行资源ID：
+
+    2caacf37df3842559663ef2ea380baaa33b85cd6bf29637e5ae45fe8e4cd1628
+
+来源和61项逐文件哈希在[source-build-g4.json](source-build-g4.json)与sources/g4-package。初包、历史名final-package、g3、g4全部保留，见[PACKAGE-STAGES.md](PACKAGE-STAGES.md)；四阶段运行模块相同，文档逐步补强，不能把它们说成同一内容包。D实际完成初包→g4更新，E直接使用最终g4；不是宣称A/B首次阅读了后来才补的说明。final-source-index.json和final-source.diff保存最终主项目修改，含未打入包的状态说明与验证启动器。
+
+## 真实Codex进程与作品结果
+
+正常启动器codex-cli 0.163.0-alpha.10.2，Windows/Node24.15.0。五个独立进程有不同实际thread_id，均exit0：
+
+| 阶段 | 退出码 | 进程墙钟耗时 | 事件 / 命令执行事件 |
+| --- | --- | --- | --- |
+${rows}
+
+D墙钟耗时约5小时，原始进度和事件完整保留；此数不代表连续模型计算时长，也不按先前估时缩短。另有首次native-a在会话启动前因宿主状态库权限失败：0事件、0产品调用，未写正文，不计成功进程。没有修改Codex全局配置。
+
+**《雾港来信》两卷六章，最终${d.body_han}正文汉字，单章1218–1272。** [正文目录](作品/雾港%20来信/正文)、[完整草稿](exports/雾港来信-D-r23-草稿/manuscript.md)、[导出清单](exports/雾港来信-D-r23-草稿/manifest.json)。正文汉字计数去除首个Markdown标题，仅统计Han字符，原始计数见parent-d-verification.json。
+
+A从零规划并写1–3，暂停后拒绝4；B新进程先只恢复并验证拒绝，再取得有限范围写4–6，完成跨卷物件和信息链，暂停后拒绝7。前3章正文和原登记保留。实际回收包括铜牌归还、钟移回旧阅览室、十五分钟有限观察、签字原记录收纳和回话抄件交付。观察只支持“十五分钟未见停摆、约慢一分钟”；不虚构寄件者已读、材料费金额/付款、周一搬运已经完成或新址开放。
+
+C完整实读原1–6，以新说明一次成功提交6章×5功能及2组完整结构比较对象；保留各章不同收益和可保留项。B原两次格式失败与空组替代方案是历史过程，不算B已验证完整对象。父审读发现第二章问句的付款方向可能短暂误读，C在代理授权范围采用minor意见，未冒充人类作者逐项确认。正文只把“你是不是问他欠多少修理费了？”澄清为“你问过他修理费要多少吗？”，第3章仅摘要明确陶芷签借条。
+
+C在同一独立修订内重登2–3后交接，D新进程按原token/ID、原base18和分支21恢复，重登4–6；没有换基线规避冲突。全部最终登记后才发G_FINAL_TAIL_BEGIN，随后完整显示并阅读最终1–6，按该版本登记报告、prepare/commit、相同输入重试。意见在主事务完成后apply，再以当前有效报告verify；旧报告保留历史。主最终r23、随附包generation1、schema6；更新前后正文/units/snapshot完全一致，根定制保留，重复更新unchanged。当前暂停，仅discuss/plan，无未登记稿、活跃修订或待恢复事务，第7章两个入口拒绝且state不变。导出6章，无排除/警告，仍为draft-export。
+
+**《纸桥书店》是另一个仅规划项目：${e.registered_units}章正文，十二章三卷计划。** [新规划目录](作品/纸桥书店%20规划)、[E报告](native-e/REPORT.md)。真实细纲存在仍不构成正文许可；第1章两个入口实际拒绝，状态字节保持，正文目录为空。父审读分别核对长期三份设定和临时任务记录，不把仅凭词匹配当作理解。E报告中本独立会话“用户指定”是指父执行者发给CLI的验证任务，不是本对话人类作者另行作出的文学选择；完整请求与代理候选状态均保留。
+
+## 失败、纠正与证据性质
+
+捕获实际产品CLI共${calls}次，其中${nonzero}次非零，不能写成全部成功。预期有限授权拒绝、init帮助传参错误、B比较对象格式错误、D把事务ID误当提交对象ID及随后旧revision的错误分别保留，重新核实正式输出后用新输入纠正。完整列表见final-verification.json。D的apply/verify仍遵循现有commit_id与CAS要求，没有为了操作者错误放松校验。
+
+辅助核验也保留原失败：C父审计曾把基线清单SHA当state SHA；读稿审计先漏计带行号CLI、冻结同字节副本和分行FILE/SHA头；D自有审计漏列正式更新的build-manifest，父审计又将第2章引文SHA换绑及JSON键序误判为事实变化。纠正均基于实际原始字节/事件，不修改作品或期望哈希求绿灯。D父审计只允许列出的7处第2章引文SHA换绑，其他事实/原句完全比较；升级前后snapshot则逐项严格相等。C自有采集检查曾把record --help当写入，也保留后再纠正。E证据汇总脚本的多余括号先由语法预检发现并纠正；E父核验首次未按skills分组解析清单路径，失败后按真实包目录修正，均未影响产品调用。E还正确检出父执行者同时完善final-audit.mjs所产生的辅助文件差异，保留首次严格检查失败；该变化由父流程本轮补充检查引起，未影响作品、包资源、请求或capture，不覆盖它，也不将E的保护检查误报成所有G文件未变。
+
+B启动后追加的包说明未进入实际stdin：另存request.after-launch-version-note.preserved.md并恢复原请求，request-provenance.json说明重建性质。A/B无启动时请求哈希就不倒填；启动器已为C/D/E在启动前冻结request.raw.md并记录SHA。每次调用保留真实输入、stdout/stderr、退出码、前后state及磁盘运行资源观测；部分help未传project，缺state快照如实列出。
+
+阅读证据来自实际模型事件的完整行号输出，按最终SHA逐行匹配；允许本轮内非链接且同SHA的冻结副本，路径和曝光事件留档，不能仅靠readings.json自声明。D最终证明另受标记后事件约束，不把C读稿拼进D。各阶段语义报告与这些机械证据分开，曝光不等于理解或真人盲读。
+
+## 范围与记录入口
+
+- [A报告](native-a-v2/REPORT.md)、[B报告](native-b/REPORT.md)、[C报告](native-c/REPORT.md)、[D报告](native-d/REPORT.md)、[E报告](native-e/REPORT.md)各附请求、原始events、失败和交接；令牌仅保存在本地必要材料，不在用户简报展示。
+- parent-a/b/c/d/e-verification.json为分阶段父核验；reading-audit保留旧失败及修正版；commands保留全部实际输入输出。
+- final-verification.json、final-source-index.json、evidence-manifest.json及目录外复验凭据对应最终记录，封存后不再补写内部文件。
+
+现有作品、旧验收档案未作为写入目标；F旧档案另有完整只读封存复验。操作路径证据不冒称对所有外部目录做过事前事后字节快照，其他会话的变化也不归因于本轮。此轮验证新用户完整生命周期，**不冒称本轮又新写百章、真人新手研究、全书文学无误、市场验证或作者定稿**。Linux/其他Node、共享盘/跨机和物理断电仍未验收。本轮未联网研究、付费、上传、Git提交/推送或发布；.idea为无关已有文件，不纳入修改范围。
+`;
+fs.writeFileSync(path.join(base,'README.md'),text,'utf8');
+const finding=path.join(base,'FINDINGS.md');let s=fs.readFileSync(finding,'utf8');s=s.replace('状态：候选修复已落地，真实流程验证进行中；不预填文学或新用户研究结论。','状态：本轮修复及五个独立Codex进程验证已完成；最终结果与边界见README，不等于真人新用户研究。');s=s.replace('最终实跑和未覆盖项在结束后汇总。','最终实跑与未覆盖范围见README。');s+='\n最终补充：D自有/父审计的工具清单、引文SHA和JSON键序误判，以及分行CLI读稿头漏计均保留原失败并按实际版本纠正；未修改业务状态规避审计。D的提交对象ID及revision操作错误通过核对正式CLI输出纠正，不扩大代理权限。最终三份手册的规划/任务分离在E新建书路径核验。\n';fs.writeFileSync(finding,s,'utf8');console.log(JSON.stringify({ok:true,phases:phases.length,product_calls:calls,nonzero,body_han:d.body_han}));

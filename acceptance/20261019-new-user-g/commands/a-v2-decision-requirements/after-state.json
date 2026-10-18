@@ -1,0 +1,162 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "59386696-2512-4407-a425-cb47a421c771",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "trial",
+    "task": "代理在授权内规划两卷六章，仅试写1–3章；逐章自检登记、整段连读后暂停正文",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第3章自检登记与1–3整段连读完成后正式暂停，仅讨论/规划",
+        "不写第4章；普通创作细节是代理实施决定，不冒充真人作者采纳"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "人物/主要人物.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/核心承诺.md"
+        ],
+        "unresolved_ids": [
+          "寄件人是否当面出现",
+          "材料费金额"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_USER_SCOPE": {
+      "id": "D_USER_SCOPE",
+      "topic": "本轮作品明确要求",
+      "status": "confirmed",
+      "options": [
+        "两卷六章的小规模方法验证"
+      ],
+      "adopted_items": [
+        "原创小说《雾港来信》；普通读者、日常悬疑",
+        "林柯、钟师傅、陶芷各有利益与声音",
+        "无超自然、谋杀或终局阴谋",
+        "仅写1–3章，完成后暂停正文"
+      ],
+      "excluded_items": [
+        "本轮第4章正文",
+        "把方法验证当真人文学定稿"
+      ],
+      "unresolved_items": [
+        "普通细节由代理实施，非真人逐项确认"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": null
+      },
+      "event_ref": ".writer/objects/585959c8-9a32-405d-b28a-d56a53b1d36d.json",
+      "event_sha256": "1efb64dd6b1ee7d343a2816aeb60ce68cae91e8d85f5fabcc6acaa0ed7c02ded"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/640095ac-30d0-4422-a742-fae7f789ce7c.json",
+      "sha256": "dc18b12618dc3c13b49eede89075b75d3aff631ed0d84bb1f601f8216385a5e9"
+    },
+    {
+      "ref": ".writer/objects/585959c8-9a32-405d-b28a-d56a53b1d36d.json",
+      "sha256": "1efb64dd6b1ee7d343a2816aeb60ce68cae91e8d85f5fabcc6acaa0ed7c02ded"
+    }
+  ],
+  "operations": {
+    "G_A_V2_TRIAL_1_3": {
+      "input_sha256": "cc45765ccb47f447d78f673913fead941bf0abbc7adff622a8111022ba6d0a85",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "G_A_V2_TRIAL_1_3",
+        "event": {
+          "ref": ".writer/objects/640095ac-30d0-4422-a742-fae7f789ce7c.json",
+          "sha256": "dc18b12618dc3c13b49eede89075b75d3aff631ed0d84bb1f601f8216385a5e9"
+        }
+      }
+    },
+    "G_A_V2_REQUIREMENTS": {
+      "input_sha256": "82b9fe6ca3b52ad162509abd8a74edac0f74d0d949b9bbaa858142429bf5752a",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "G_A_V2_REQUIREMENTS",
+        "event": {
+          "ref": ".writer/objects/585959c8-9a32-405d-b28a-d56a53b1d36d.json",
+          "sha256": "1efb64dd6b1ee7d343a2816aeb60ce68cae91e8d85f5fabcc6acaa0ed7c02ded"
+        },
+        "decision_id": "D_USER_SCOPE"
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/640095ac-30d0-4422-a742-fae7f789ce7c.json",
+    "sha256": "dc18b12618dc3c13b49eede89075b75d3aff631ed0d84bb1f601f8216385a5e9"
+  }
+}

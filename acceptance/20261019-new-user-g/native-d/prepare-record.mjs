@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)), h=JSON.parse(fs.readFileSync(path.join(here,'../native-c/handoff.json')));
+const n=Number(process.argv[2]);
+const x=JSON.parse(fs.readFileSync(path.join(h.workspace,`.writer/drafts/d-replay-${n}.json`)));
+delete x._instructions;
+x.replay_review={reviewer:'native-d-informed-agent',report:`审查/000${n}-D重登语义复核.md`,draft_sha256:x._replay.draft_sha256,checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+fs.writeFileSync(path.join(here,`inputs/record-${n}-reviewed.json`),JSON.stringify(x,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({unit:n,expected_revision:x.expected_revision,ledger_changes:Object.keys(x.changes.ledger),evidence_count:Object.values(x.changes.ledger).reduce((sum,v)=>sum+(v.evidence?.length??0),0),report:x.replay_review.report}));
