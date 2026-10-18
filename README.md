@@ -91,6 +91,8 @@ node bin/ai-writer.mjs init --path "works/雨夜来信" --kind novel --title "�
 
 ## 验证
 
+八项创作治理需求的已确认范围均已实现。当前能力、分批证据、原设计的实现细化，以及明确暂缓/尚未验收/未迁移现有作品的边界，统一见[当前实现与验证状态](docs/authoring-governance-status.md)。历史设计与封存报告中的阶段性状态不作为当前未实现清单。
+
 0.7.0 D批实现及实跑状态见[本轮记录](acceptance/20261018-governance-d/README.md)，以最终结果和封存清单为准。此前[0.6.0 C批](acceptance/20261018-governance-c/README.md)、[0.5.0 B批](acceptance/20261018-governance-b/README.md)、[0.4.0 A批](acceptance/20261018-governance-a/README.md)保持原记录，不计作本轮结果。
 
 0.7.1 E轮补强清单缺失、已安装完整内容保护与恢复再中断验证，见[实现边界](docs/recovery-hardening-e.md)和[最终验证记录](acceptance/20261018-recovery-e/README.md)。

@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(base,'../..');
+const name=process.argv[2],label=process.argv[3]??name;
+if(!/^[a-z][a-z0-9-]*$/.test(label))throw Error('Invalid output label');
+const tasks={test:['npm test'],doctor:['npm run doctor'],seal:[process.execPath,['acceptance/20261018-hundred-f/seal-evidence.mjs','verify']],docs:[process.execPath,['acceptance/20261018-doc-status/check-docs.mjs']]};
+if(!Object.hasOwn(tasks,name))throw Error('Use test/doctor/seal/docs');
+const args=tasks[name],isNpm=args.length===1,exe=isNpm?(process.env.ComSpec??'cmd.exe'):args[0],argv=isNpm?['/d','/s','/c',args[0]]:args[1];
+const out=fs.createWriteStream(path.join(base,label+'.stdout.log'),{flags:'wx'}),err=fs.createWriteStream(path.join(base,label+'.stderr.log'),{flags:'wx'}),start=new Date();
+const child=spawn(exe,argv,{cwd:root,windowsHide:true,stdio:['ignore','pipe','pipe']});
+child.stdout.pipe(out);child.stderr.pipe(err);
+child.on('error',error=>{console.error(error);process.exitCode=1;});
+child.on('close',async(code,signal)=>{await Promise.all([new Promise(r=>out.closed?r():out.on('close',r)),new Promise(r=>err.closed?r():err.on('close',r))]);const result={task:name,label,exe,args:argv,cwd:root,started_at:start.toISOString(),elapsed_ms:Date.now()-start.getTime(),exit_code:code,signal};fs.writeFileSync(path.join(base,label+'.result.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));process.exitCode=code??1;});

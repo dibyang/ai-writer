@@ -6,7 +6,7 @@
 
 **协议选择：** 0.7新作品默认schema6，2–6均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4及以上历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)、[跨章/登记/意见手册](review-and-registration.md)及[工具更新手册](tool-updates.md)。
 
-## 本批C：预览、跨章复核和意见
+## 预览、跨章复核和意见（自0.6.0支持）
 
 ```powershell
 node bin/ai-writer.mjs long-enable-preview --project "作品目录"
@@ -39,7 +39,7 @@ node bin/ai-writer.mjs init --path "works/示例" --kind novel --title "示例"
 
 目标必须不存在。初始化写入技能、工具和待完善的创作说明，不生成假正文。Codex 下一步按作者要求完善定位、文风和大纲。
 
-## 创作治理：阶段、范围与作者决策（最小首批 A）
+## 创作治理：阶段、范围与作者决策（自0.4.0支持）
 
 ```powershell
 node bin/ai-writer.mjs workflow show --project "works/示例"
