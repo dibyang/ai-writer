@@ -1,0 +1,35 @@
+{
+  "schema_version": "story-gate-rule-pack-schema@0.1.0",
+  "required_top_level_fields": [
+    "rule_pack",
+    "version",
+    "modes",
+    "modules",
+    "rules"
+  ],
+  "required_module_fields": [
+    "module_id",
+    "name",
+    "mode",
+    "source_refs"
+  ],
+  "required_rule_fields": [
+    "rule_id",
+    "module_id",
+    "severity",
+    "description",
+    "source_refs"
+  ],
+  "allowed_modes": [
+    "novel",
+    "visual",
+    "screenplay",
+    "short_drama"
+  ],
+  "allowed_severity": [
+    "low",
+    "medium",
+    "high",
+    "blocker"
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "reproduced": true,
+  "context_success_after_explicit_expansion": true,
+  "packet_chars": 1051101,
+  "max_source_bytes": 350036,
+  "state_unchanged": true,
+  "failures": [
+    {
+      "operation": "record-template",
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "message": "上下文超过 1000000 字符预算（实际 1051101）；不会静默截断",
+      "budget": {
+        "limit_chars": 1000000,
+        "required_chars": 1051101,
+        "over_by_chars": 51101,
+        "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+        "sections": [
+          {
+            "section": "settings",
+            "chars": 1050180
+          },
+          {
+            "section": "source_hashes",
+            "chars": 493
+          },
+          {
+            "section": "plan",
+            "chars": 136
+          },
+          {
+            "section": "instruction",
+            "chars": 69
+          },
+          {
+            "section": "snapshot",
+            "chars": 44
+          },
+          {
+            "section": "title",
+            "chars": 11
+          },
+          {
+            "section": "kind",
+            "chars": 7
+          },
+          {
+            "section": "ok",
+            "chars": 4
+          },
+          {
+            "section": "previous_ending",
+            "chars": 2
+          },
+          {
+            "section": "recent",
+            "chars": 2
+          },
+          {
+            "section": "research",
+            "chars": 2
+          },
+          {
+            "section": "revision",
+            "chars": 1
+          },
+          {
+            "section": "unit",
+            "chars": 1
+          }
+        ],
+        "largest_sources": [
+          {
+            "section": "settings",
+            "ref": "设定/权威规则.md",
+            "chars": 350060
+          },
+          {
+            "section": "settings",
+            "ref": "设定/作品定位.md",
+            "chars": 350060
+          },
+          {
+            "section": "settings",
+            "ref": "设定/文风.md",
+            "chars": 350056
+          }
+        ],
+        "omitted_source_count": 0,
+        "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+      }
+    },
+    {
+      "operation": "record",
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "message": "上下文超过 1000000 字符预算（实际 1051101）；不会静默截断",
+      "budget": {
+        "limit_chars": 1000000,
+        "required_chars": 1051101,
+        "over_by_chars": 51101,
+        "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+        "sections": [
+          {
+            "section": "settings",
+            "chars": 1050180
+          },
+          {
+            "section": "source_hashes",
+            "chars": 493
+          },
+          {
+            "section": "plan",
+            "chars": 136
+          },
+          {
+            "section": "instruction",
+            "chars": 69
+          },
+          {
+            "section": "snapshot",
+            "chars": 44
+          },
+          {
+            "section": "title",
+            "chars": 11
+          },
+          {
+            "section": "kind",
+            "chars": 7
+          },
+          {
+            "section": "ok",
+            "chars": 4
+          },
+          {
+            "section": "previous_ending",
+            "chars": 2
+          },
+          {
+            "section": "recent",
+            "chars": 2
+          },
+          {
+            "section": "research",
+            "chars": 2
+          },
+          {
+            "section": "revision",
+            "chars": 1
+          },
+          {
+            "section": "unit",
+            "chars": 1
+          }
+        ],
+        "largest_sources": [
+          {
+            "section": "settings",
+            "ref": "设定/权威规则.md",
+            "chars": 350060
+          },
+          {
+            "section": "settings",
+            "ref": "设定/作品定位.md",
+            "chars": 350060
+          },
+          {
+            "section": "settings",
+            "ref": "设定/文风.md",
+            "chars": 350056
+          }
+        ],
+        "omitted_source_count": 0,
+        "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+      }
+    }
+  ]
+}

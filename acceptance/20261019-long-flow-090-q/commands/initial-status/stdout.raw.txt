@@ -1,0 +1,104 @@
+{
+  "ok": true,
+  "title": "雨棚后的灯",
+  "kind": "novel",
+  "revision": 1,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "独立验证前两卷六章，第一和第四章分段合章，六章后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "完成第六章后暂停正文",
+        "未选路线不得写入已发生事实"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 1,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 1,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 0,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 1,
+    "plan_exists": true,
+    "action": "先核对未登记正文，再读取下一单元上下文",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261019-long-flow-090-q\\scenario\\雨棚后的灯' '--unit' '1'"
+  },
+  "current": {
+    "character_count": 0,
+    "ledger_count": 0,
+    "recent": [],
+    "timeline_tail": []
+  }
+}

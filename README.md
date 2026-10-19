@@ -16,6 +16,8 @@
 
 下一版本定为 **0.9.0，当前开发中、尚未发布**，包含上下文预算诊断、长章展开与纲文回对。三个新增参考项目的来源与取舍见[审查说明](docs/three-project-reference-audit.md)，方法验证见[N轮记录](acceptance/20261019-three-references-n/README.md)，0.9.0版本切换验证见[O轮记录](acceptance/20261019-version-090-o/README.md)。正式下载仍为上方v0.8.0；版本比较同时核对内容ID与资源配置。
 
+0.9.0完整流程的后续实跑与问题修复另见[Q轮记录](acceptance/20261019-long-flow-090-q/README.md)，覆盖长章中断恢复、纲文实读回对、预算扩容和登记；各项结论以该轮具体构建及实际覆盖为准。
+
 0.8.0 的方法来源、适配范围及验证结果见[J 轮记录](acceptance/20261019-webnovel-reference-j/README.md)，其中保留了完整回归、旧包更新和两次 Codex 实跑证据。H 轮进展另见[百章验证记录](acceptance/20261019-hundred-h/README.md)。
 
 使用前请准备好 Codex 和 Node.js 20 或更高版本。无须安装额外 npm 依赖；写作使用当前 Codex 会话及其模型，不单独调用模型 API。

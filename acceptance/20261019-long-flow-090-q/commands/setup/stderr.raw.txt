@@ -1,0 +1,24 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"label":"context-1","exe":"C:\\Program Files\\nodejs\\node.exe","args":["D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs","context","--project","D:\\work\\other\\ai-writer\\acceptance\\20261019-long-flow-090-q\\scenario\\雨棚后的灯","--unit","1","--max-chars","60000","--out",".writer/context-1.json"],"cwd":"D:\\work\\other\\ai-writer","started_at":"2026-10-19T13:19:13.697Z","elapsed_ms":113,"exit_code":2,"signal":null,"error":null,"stdout_bytes":0,"stderr_bytes":276,"input":null,"before_state_sha256":"bbc68cff9054be7a872cae21815eae6f0d32a546c8c96fc6a49f6abb337455c2","after_state_sha256":"bbc68cff9054be7a872cae21815eae6f0d32a546c8c96fc6a49f6abb337455c2"}
+
+
+
+2 !== 0
+
+    at command (file:///D:/work/other/ai-writer/acceptance/20261019-long-flow-090-q/setup.mjs:4:177)
+    at file:///D:/work/other/ai-writer/acceptance/20261019-long-flow-090-q/setup.mjs:31:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

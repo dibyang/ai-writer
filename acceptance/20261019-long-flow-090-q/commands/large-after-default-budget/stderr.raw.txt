@@ -1,0 +1,98 @@
+{
+  "ok": false,
+  "error": "上下文超过 40000 字符预算（实际 1051861）；不会静默截断",
+  "code": "CONTEXT_BUDGET_EXCEEDED",
+  "next_action": "先看context_budget的大项和来源：按本章相关性整理可选研究引用，或显式提高--max-chars。保留作者授权、核心设定、当前状态及必需线索；来源变化仍走原影响分析，不删除约束或改状态绕过保护。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\.tmp\\长篇 0.9.0 Q 最终解压\\ai-writer-0.9.0\\bin\\ai-writer.mjs' context '--help'",
+  "context_budget": {
+    "limit_chars": 40000,
+    "required_chars": 1051861,
+    "over_by_chars": 1011861,
+    "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+    "sections": [
+      {
+        "section": "settings",
+        "chars": 1050180
+      },
+      {
+        "section": "governance",
+        "chars": 570
+      },
+      {
+        "section": "source_hashes",
+        "chars": 493
+      },
+      {
+        "section": "plan",
+        "chars": 150
+      },
+      {
+        "section": "review_workflow",
+        "chars": 125
+      },
+      {
+        "section": "instruction",
+        "chars": 69
+      },
+      {
+        "section": "snapshot",
+        "chars": 44
+      },
+      {
+        "section": "title",
+        "chars": 8
+      },
+      {
+        "section": "kind",
+        "chars": 7
+      },
+      {
+        "section": "ok",
+        "chars": 4
+      },
+      {
+        "section": "previous_ending",
+        "chars": 2
+      },
+      {
+        "section": "recent",
+        "chars": 2
+      },
+      {
+        "section": "research",
+        "chars": 2
+      },
+      {
+        "section": "source_bindings",
+        "chars": 2
+      },
+      {
+        "section": "revision",
+        "chars": 1
+      },
+      {
+        "section": "unit",
+        "chars": 1
+      }
+    ],
+    "largest_sources": [
+      {
+        "section": "settings",
+        "ref": "设定/权威规则.md",
+        "chars": 350060
+      },
+      {
+        "section": "settings",
+        "ref": "设定/作品定位.md",
+        "chars": 350060
+      },
+      {
+        "section": "settings",
+        "ref": "设定/文风.md",
+        "chars": 350056
+      }
+    ],
+    "omitted_source_count": 0,
+    "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+  }
+}

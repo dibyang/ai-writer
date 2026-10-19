@@ -1,0 +1,38 @@
+✔ 上下文超限给出精确总量与大项，边界重试完整保留来源和禁揭内容 (2053.5292ms)
+✔ CLI超限不生成out，不改变状态，恢复提示保留保护边界 (2107.0452ms)
+✔ 讨论上下文同样报告预算，低预算不会绕过未授权正文门禁 (2030.3287ms)
+✔ 大量研究引用超限时明细有界，遗漏数可追溯且不输出来源正文 (2055.9211ms)
+✖ 合法上下文扩容超过百万字符后仍可取模板及登记，来源漂移保护继续生效 (2069.6588ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10419.3482
+
+✖ failing tests:
+
+test at tests\context-budget.test.mjs:37:1
+✖ 合法上下文扩容超过百万字符后仍可取模板及登记，来源漂移保护继续生效 (2069.6588ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - true
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/context-budget.test.mjs:48:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

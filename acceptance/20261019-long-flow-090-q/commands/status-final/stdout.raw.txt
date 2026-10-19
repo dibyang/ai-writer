@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "title": "雨棚后的灯",
+  "kind": "novel",
+  "revision": 15,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "前两卷六章实跑已完成；等待下一轮明确授权，未来六章仍只讨论规划",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "未获下一轮明确授权不写第七章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 7,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "90b53068-4f15-4a89-ada2-776d956e6afe",
+        "owner": "Codex-Q-associated-knowledge",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 4,
+          "through": 5
+        },
+        "status": "committed",
+        "base_sha256": "3be7bcfb99936ad1dac9cd69470b20ed7e1222635ed59e75601a9c8c98e7a56c",
+        "created_at": "2026-10-19T14:15:50.835Z",
+        "transaction_id": "4118f334-c693-4746-ac46-e32475c8f3cf",
+        "session_sha256": "515ed3130d8acfb084f4a8b1be6319503745e8e1bc3d8bb95c0ae7106ebe9edb"
+      },
+      {
+        "id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+        "owner": "Codex-Q-third-chapter-fix",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 3,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "e0e338d0832e52ef2b90f92f937053c3472db6fd4c015100a4ed7fc880a8af0b",
+        "created_at": "2026-10-19T14:03:10.273Z",
+        "transaction_id": "a0196448-df12-47dd-a770-40a304f8a452",
+        "session_sha256": "c7f0e86053b58d80aad7d0a5c63adf0b43e1f6d2e96abff854633bb509bede56"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "4118f334-c693-4746-ac46-e32475c8f3cf",
+        "session_id": "90b53068-4f15-4a89-ada2-776d956e6afe",
+        "status": "completed"
+      },
+      {
+        "id": "a0196448-df12-47dd-a770-40a304f8a452",
+        "session_id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+        "status": "completed"
+      },
+      {
+        "id": "b895db97-fad7-4231-ba0d-bd6545cd42c0",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 15,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 1,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "9e26ebbf6120c9b49d31bfeee56099da843618010e0451ee658c8adacb7f532c",
+      "runtime_id": "ca1e695ac69c42d893b6bc62f07f13be5216fa86caa88d48c2a6f6b75f1f8ea0"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/b895db97-fad7-4231-ba0d-bd6545cd42c0.json",
+        "sha256": "96c21fa41b7ed0c3fc537345cb9f13a6e58859192d6c03a5bebbd5324230586d"
+      }
+    ],
+    "operations": {
+      "010abba9-cdfc-4b1d-ac60-03988395e210": {
+        "input_hash": "26726aea536a40aa8b2f6dacacd9aaf9b40c81947b1d6a1302c4f907e8daf11f",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "b895db97-fad7-4231-ba0d-bd6545cd42c0",
+          "revision": 3,
+          "generation": 1,
+          "source_content_id": "9e26ebbf6120c9b49d31bfeee56099da843618010e0451ee658c8adacb7f532c",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 6,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 7,
+    "plan_exists": false,
+    "action": "前两卷六章实跑已完成；等待下一轮明确授权，未来六章仍只讨论规划",
+    "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\长篇 0.9.0 Q 最终解压\\ai-writer-0.9.0\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261019-long-flow-090-q\\scenario\\雨棚后的灯' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 4,
+    "ledger_count": 7,
+    "recent": [
+      {
+        "unit": 4,
+        "summary": "第四日下午，林照与周伯在原节目单前辨认校门、雨棚、渡口，听书写者说明三格记拟去地点而非三场已办成；部分先后日期仍记不准，旧片影像来历未明。何岚与许舟送货离场，返店后尚未获用途转述。三人收下干幕布，许舟实际领走，约次日午后拿回挂看。原节目单仍由林照随身保管。"
+      },
+      {
+        "unit": 5,
+        "summary": "第五日下午，许舟交还实际补过的幕布，主动指出可见补痕，何岚验看并接回保管。林照当面给何岚、许舟看自己的便笺，转述三格为拟去地点而非完成勾记，不把他们写成第四章的亲见者。三人现场拍摄本次小店筹备，试看后确认第六晚只放自摄短片的一场；幕布仍在何岚处。"
+      },
+      {
+        "unit": 6,
+        "summary": "第六晚，八个位置的小放映按约完成，七点半先归架并保留店内营业通路，所放为第五日现场自摄片段而非周伯原片。散场后何岚将补过的幕布收进后间柜，林照当面将原节目单和两只借夹归还周伯并送还稳凳。许舟与隔壁各取回自家凳子，没有续许更多晚次；旧片完整来历仍未核。"
+      }
+    ],
+    "timeline_tail": [
+      "第一晚：借场、搬货、晾布；周伯借出节目单，约白天再核。",
+      "第二日下午：看布未干，登门尊重原片借用限制；许舟用自带棉布试针。",
+      "第三日下午：实看渡口候船亭，保留候船用途；筹备改为先办一晚，借到两张凳子，约次日核字。",
+      "第四日下午：当面核三格用途但不推成三场既成历史；送货二人未听说明，幕布实际交许舟待补。",
+      "第五日下午至傍晚：许舟归还补布，林照向何岚许舟转述三格；三人现场拍摄自己的筹备片段，约次晚一场。",
+      "第六晚：按时归架并办成一场八座自摄片放映；散场归还节目单、借夹和借凳，幕布由何岚收柜，不续许场次。"
+    ]
+  }
+}

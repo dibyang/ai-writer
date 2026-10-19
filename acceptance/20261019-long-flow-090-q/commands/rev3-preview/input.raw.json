@@ -1,0 +1,131 @@
+{
+  "unit": 3,
+  "expected_revision": 7,
+  "source_hashes": {
+    "writer.json": "b9c814948e72e1b33c90e74a62477be85c7774fafe765e4c4f2eb97a1138f8b7",
+    ".writer/state.json": "9a41624b07cfbe6adfc96db35376be689a19a4c3371e52e96428a3703cc54f5b",
+    "大纲/单元/0003.json": "46c57d7ea41357b16fe331e35578a6e4187399bb19eb6b05a0b8258917c6451b",
+    "设定/作品定位.md": "96ff245b139051eb9d4cd90f2b931f860cbb62dc59e9fa9c4d8d1057d00b2f75",
+    "设定/文风.md": "5831f606de648615509487da18587f4e89a49411efdafd8d423c2af3e2f25d4c",
+    "设定/权威规则.md": "a26ee503c5332a7fb73830ba1749ece799c8312df5fa1e062e9792e31a33ed0f",
+    "设定/全书大纲.md": "24bbb9a01a70b33cb434d3570030c8076c3839fa22196ce7da3b0ffc988ac58d",
+    "大纲/分卷/V1.json": "396f01c60d497ca3552bbb1073021ebbf06ce370c1b0401549ea6b3dafc46e55",
+    "正文/0002.md": "e0404036cde165ea77a53a7287af6cc27e12ac7c22bf4dd4776033d022086787"
+  },
+  "draft": "正文/0003.md",
+  "source_bindings": {},
+  "summary": "林照与何岚实看渡口候船亭，发现空椅和通路都有日常用途，放弃容纳所有人或连办三晚的安排。接受先办一晚、八张凳子并留出门和过道，已借到两张凳子；约周伯第四天下午到店，在亮处核节目单。幕布已干但仍在何岚后间，许舟未在场。",
+  "changes": {
+    "characters": {
+      "林照": "在何岚店，接受有限一场而非连办多晚；持原节目单，约周伯明日下午核字。",
+      "何岚": "在小店，拒绝替林照连续多晚出力；同意按实际再定一晚，并留周伯伸腿的位置。；经林照当面告知，已知周伯第四日下午来店核字。",
+      "许舟": "本章未到店，仍未接幕布，也未获三格说明。",
+      "周伯": "电话中答应第四日下午四点前后来店核纸；原片仍在自己家。"
+    },
+    "timeline_append": [
+      "第三日下午：实看渡口候船亭，保留候船用途；筹备改为先办一晚，借到两张凳子，约次日核字。"
+    ],
+    "ledger": {
+      "T_GRID": {
+        "type": "thread",
+        "statement": "核对节目单三格的旧用途。",
+        "status": "pending",
+        "cast": [
+          "林照",
+          "周伯"
+        ],
+        "tags": [
+          "三格",
+          "旧用途"
+        ],
+        "due_unit": 4,
+        "reader_known": "第二日因光线暗未核字，三格用途仍待核。",
+        "character_known": {
+          "林照": "约周伯第四日下午四点前后到店，自己带原节目单核字。",
+          "周伯": "电话答应第四日下午到店核纸，尚未现场辨认。",
+          "何岚": "第三日下午获林照当面告知：周伯第四日下午来店核字，尚未知道三格用途。"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "约明天下午到店里，在亮处看那张节目单。"
+          },
+          {
+            "unit": 3,
+            "quote": "把约在店里核字的时间告诉何岚。"
+          }
+        ]
+      },
+      "O_CURTAIN": {
+        "type": "object",
+        "statement": "从仓房取出的旧幕布。",
+        "status": "active",
+        "cast": [
+          "林照",
+          "何岚",
+          "许舟"
+        ],
+        "tags": [],
+        "reader_known": "第三日下午已干但仍由何岚保管。",
+        "character_known": {
+          "林照": "第二日下午确认中间仍潮，未取走。",
+          "何岚": "答应代管，取时须先从前门叫她。",
+          "许舟": "知道幕布尚未干，先用自带棉布试针，没有领走幕布。"
+        },
+        "custody": {
+          "holder": "何岚",
+          "location": "小店后间晾衣绳",
+          "condition": "已干，仍挂着，尚未交付修补"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "布的中间摸上去已经没有凉意，何岚仍让它挂着"
+          }
+        ]
+      },
+      "F_LIMIT": {
+        "type": "fact",
+        "statement": "本轮筹备只先办一晚小范围放映，不已承诺连办多晚。",
+        "status": "active",
+        "cast": [
+          "林照",
+          "何岚"
+        ],
+        "tags": [],
+        "reader_known": "拟用八张凳子留出通道，只实际借到两张，日期未定。",
+        "character_known": {
+          "林照": "接受一晚；八张凳子是安排，当前只借到两张。",
+          "何岚": "只答应一晚，不接受被代许三晚。"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "“好，一晚。”"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "恢复的是原登记事实草案；路径、当前context哈希和未变项自动填入。必须实读新正文与承接，修正摘要/changes/失效引文，填写replay_review真实报告及六项checked_fields；先record-preview，再record。不能把自动草案当无变化结论。",
+  "_replay": {
+    "session_id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+    "base_state_sha256": "ef49f6835d58fc020b22f052b16094bc0c4e077c0faab0c6f985be4a5b9b4cc0",
+    "old_unit_sha256": "3901fdf4960d87394fb49fed6d38c944ea2c1b63671babbc1b973dc379217109",
+    "old_journal_sha256": "19ab654538d5c833a05e9d5fb24f742a4a7ed21fe473410b2d8619c186f2c614",
+    "draft_sha256": "c95951887db5d557a144238483c71d0c412f208842516e84e44368b6f5cc549d"
+  },
+  "replay_review": {
+    "reviewer": "current Codex informed full reread",
+    "report": "审查/0003-重登复核.md",
+    "draft_sha256": "c95951887db5d557a144238483c71d0c412f208842516e84e44368b6f5cc549d",
+    "checked_fields": [
+      "summary",
+      "characters",
+      "timeline",
+      "ledger",
+      "evidence",
+      "downstream"
+    ]
+  }
+}

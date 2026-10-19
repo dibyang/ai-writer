@@ -1,0 +1,176 @@
+{
+  "root": "D:\\work\\other\\ai-writer",
+  "work": "D:\\work\\other\\ai-writer\\acceptance\\20261019-long-flow-090-q\\scenario\\雨棚后的灯",
+  "cli": "D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs",
+  "embedded": "D:\\work\\other\\ai-writer\\acceptance\\20261019-long-flow-090-q\\scenario\\雨棚后的灯\\.writer\\tool\\bin\\ai-writer.mjs",
+  "evidence": {
+    "local_source": "研究/本轮验证范围.md",
+    "source_sha256": "34a3915788a8cdbd54054d1b272112ed8a6eeb86d2c48711c19c561c3a871ff9",
+    "quote": "写前两卷六章",
+    "locator": "synthetic-scope-for-user-test",
+    "recorded_by": "Codex Q verification"
+  },
+  "plans": [
+    {
+      "unit": 1,
+      "title": "借来的雨棚",
+      "goal": "为试映借到一个可用的地方",
+      "change": "从独自收拾变成有边界的合作，留住旧节目单",
+      "beats": [
+        "林照与何岚协商雨棚使用时间并承担搬回货架的责任",
+        "许舟帮忙搬货，旧幕布留在何岚处晾干，尚未交给他修补",
+        "周伯把旧节目单交给林照，背面只有三格方框可观察，含义未明"
+      ],
+      "cast": [
+        "林照",
+        "何岚",
+        "许舟",
+        "周伯"
+      ],
+      "forbidden": [
+        "不解释三格含义",
+        "何岚不掌握周伯尚未说出的来历"
+      ],
+      "arc_id": "A1",
+      "setting_refs": [
+        "设定/全书大纲.md"
+      ],
+      "research_refs": [
+        "研究/场地备忘.md"
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "还没拆的纸套",
+      "goal": "确认能借用的材料与愿意出力的人",
+      "change": "接受周伯只借节目单不借旧片原件的限制",
+      "beats": [
+        "林照带节目单登门，周伯同意以后带来核对字样",
+        "许舟承认不懂修补先学习，放弃替长辈许诺"
+      ],
+      "cast": [
+        "林照",
+        "周伯",
+        "许舟"
+      ],
+      "arc_id": "A1",
+      "setting_refs": [
+        "设定/全书大纲.md"
+      ],
+      "research_refs": [],
+      "forbidden": [
+        "不揭晓旧片完整来历"
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "渡口的空椅",
+      "goal": "确认雨棚放不下的人怎样参加",
+      "change": "林照放弃一次接纳所有人的方案，保留只办一场小放映",
+      "beats": [
+        "林照和何岚实看候船亭而非凭图定场地",
+        "何岚拒绝连续多晚闭店，林照接受有限场次并约周伯下次核对"
+      ],
+      "cast": [
+        "林照",
+        "何岚",
+        "周伯"
+      ],
+      "arc_id": "A1",
+      "setting_refs": [
+        "设定/全书大纲.md"
+      ],
+      "research_refs": [],
+      "forbidden": [
+        "不揭晓旧片完整来历"
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "听见停顿",
+      "goal": "让三格的含义有当面可核的来历并推进修补",
+      "change": "理解旧时三处放映而不偷解旧片来源，将幕布实际交给许舟",
+      "beats": [
+        "林照带原节目单与周伯逐项辨认校门、雨棚和渡口三格的旧字样",
+        "何岚离场后周伯才讲三格的旧用途，许舟仍未听见说明",
+        "林照把晾干的幕布从何岚处取来并交到许舟手里，约好补完归还"
+      ],
+      "cast": [
+        "林照",
+        "周伯",
+        "何岚",
+        "许舟"
+      ],
+      "recall_ids": [
+        "O_GRID",
+        "O_PROGRAM",
+        "T_GRID"
+      ],
+      "arc_id": "A2",
+      "setting_refs": [
+        "设定/全书大纲.md"
+      ],
+      "research_refs": [],
+      "forbidden": [
+        "不揭晓旧片完整来历"
+      ]
+    },
+    {
+      "unit": 5,
+      "title": "帘上那一针",
+      "goal": "把借物承诺变成可用的幕布",
+      "change": "许舟承认补痕能看见，何岚接受真实修补结果",
+      "beats": [
+        "许舟完成补缝后将幕布交还何岚保管",
+        "林照当面告诉何岚和许舟三格含义，区分转述与亲见原字"
+      ],
+      "cast": [
+        "林照",
+        "许舟",
+        "何岚"
+      ],
+      "recall_ids": [
+        "O_CURTAIN",
+        "T_GRID"
+      ],
+      "arc_id": "A2",
+      "setting_refs": [
+        "设定/全书大纲.md"
+      ],
+      "research_refs": [],
+      "forbidden": [
+        "不揭晓旧片完整来历"
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "开映以前",
+      "goal": "完成一次有限放映并妥善收回借物",
+      "change": "从替旧场地追完整过去，转为承认眼下能做成的小事",
+      "beats": [
+        "按约搬回货架并挂好幕布完成一次小范围放映",
+        "林照把原节目单交还周伯，旧片来历仍不知道",
+        "散场后何岚收好幕布，未替下一轮许下长期场地"
+      ],
+      "cast": [
+        "林照",
+        "许舟",
+        "何岚",
+        "周伯"
+      ],
+      "recall_ids": [
+        "O_PROGRAM",
+        "O_CURTAIN",
+        "T_GRID"
+      ],
+      "arc_id": "A2",
+      "setting_refs": [
+        "设定/全书大纲.md"
+      ],
+      "research_refs": [],
+      "forbidden": [
+        "不揭晓旧片完整来历"
+      ]
+    }
+  ]
+}

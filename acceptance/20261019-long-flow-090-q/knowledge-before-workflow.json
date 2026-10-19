@@ -1,0 +1,56 @@
+{
+  "stage": "trial",
+  "task": "独立验证前两卷六章，第一和第四章分段合章，六章后暂停",
+  "authorization": {
+    "allowed_actions": [
+      "discuss",
+      "plan",
+      "draft"
+    ],
+    "draft_range": {
+      "from": 1,
+      "to": 6
+    },
+    "revise_range": null,
+    "stop_conditions": [
+      "完成第六章后暂停正文",
+      "未选路线不得写入已发生事实"
+    ]
+  },
+  "planning": {
+    "positioning": {
+      "status": "draft",
+      "refs": [
+        "设定/作品定位.md"
+      ],
+      "unresolved_ids": []
+    },
+    "structure": {
+      "status": "draft",
+      "refs": [
+        "设定/全书大纲.md"
+      ],
+      "unresolved_ids": []
+    },
+    "volume": {
+      "status": "draft",
+      "refs": [
+        "大纲/分卷/V1.json",
+        "大纲/分卷/V2.json",
+        "大纲/分卷/V3.json",
+        "大纲/分卷/V4.json"
+      ],
+      "unresolved_ids": []
+    },
+    "outline": {
+      "status": "draft",
+      "refs": [
+        "大纲/单元/0001.json",
+        "大纲/单元/0002.json",
+        "大纲/单元/0003.json",
+        "大纲/单元/0004.json"
+      ],
+      "unresolved_ids": []
+    }
+  }
+}
