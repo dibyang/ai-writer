@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-19T10:16:18.374Z",
+  "operation_id": "n-trial",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "合成样例：仅试写第一章并复核登记",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一章完成后暂停"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "合成测试指令：仅在本轮隔离样例中规划并试写一章日常小说《归梯》，按需要分段展开再合章回对；本章解决借物归还，保持合作关系，不造阴谋或强悬念。登记和自检完成后暂停。此为工具验证样例，不是作者真实作品或定稿。",
+    "local_source": ".writer/synthetic-author.txt",
+    "source_sha256": "4671147dcc4cbcc09a6fbab2939f067ed08da03b6028d39c1bb36dde4fbb5282",
+    "locator": "合成验证指令全文，不代表真人作者选择",
+    "recorded_by": "Codex test fixture",
+    "frozen_ref": ".writer/objects/4671147dcc4cbcc09a6fbab2939f067ed08da03b6028d39c1bb36dde4fbb5282.txt"
+  }
+}

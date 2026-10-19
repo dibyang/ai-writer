@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
 import zlib from 'node:zlib';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {identifyBuild,writeBuildManifest} from '../lib/tool-build.mjs';
+import {currentProtocol,identifyBuild,writeBuildManifest} from '../lib/tool-build.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
@@ -59,8 +59,8 @@ function zip(root,prefix,rows){
 }
 export function buildRelease({root=ROOT,out}={}){
   root=path.resolve(root);const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));
-  if(pkg.version!=='0.8.0'||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected first release 0.8.0 with apache-2.0-v1 resources');
-  out=path.resolve(out??path.join(root,'dist','0.8.0'));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
+  if(!/^0\.(?:8|9)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x or 0.9.x package with apache-2.0-v1 resources');
+  out=path.resolve(out??path.join(root,'dist',pkg.version));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
   const build=identifyBuild(root);if(!build.ok)throw Error('Source build is incomplete');
   const spec=JSON.parse(fs.readFileSync(path.join(root,'release/distribution.json'))),seen=new Set(),sources=[];
   for(const item of spec.files){const ref=safeRef(item.file),key=ref.toLowerCase();if(seen.has(key))throw Error('Duplicate release path: '+ref);seen.add(key);const source=sourceFile(root,item.source??ref);sources.push({file:ref,source:item.source??ref,sha256:sha(fs.readFileSync(source))});}

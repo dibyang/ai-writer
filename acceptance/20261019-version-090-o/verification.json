@@ -1,0 +1,185 @@
+{
+  "ok": true,
+  "version": "0.9.0",
+  "release_status": "development-unreleased",
+  "tests": {
+    "total": 172,
+    "pass": 171,
+    "fail": 0,
+    "skipped": 1
+  },
+  "packaged_targeted_tests": {
+    "total": 6,
+    "pass": 6,
+    "fail": 0
+  },
+  "source_inputs_stable": 319,
+  "changed_shipped_inputs_since_n": [
+    "CHANGELOG.md",
+    "release/README.md",
+    "RELEASE_NOTES.md",
+    "docs/attribution.md",
+    "docs/release.md",
+    "docs/revision-and-sources.md",
+    "docs/tool-updates.md",
+    "lib/help.mjs",
+    "lib/tool-build.mjs",
+    "package.json",
+    "release/README.md",
+    "scripts/build-release.mjs",
+    "tests/package-protocol.test.mjs",
+    "tests/release.test.mjs"
+  ],
+  "content_id": "63e8daf34d85eccaef1a7bf327b6dacdc37207117c906bc1c1dc50903132cd13",
+  "archive_sha256": "0edc1baf0b454abed06abf12533fab94be8a7f0f405ceb61b7157c69df634d9e",
+  "archive_files": 321,
+  "managed_resources": 66,
+  "scenario": {
+    "ok": true,
+    "old_version": "0.8.0",
+    "new_version": "0.9.0",
+    "schema": 6,
+    "preserved_files": {
+      "AGENTS.md": "00e1144fbd5bab9b1c198b3bc4c0fca5a010406bbef29031120abee37c377bb7",
+      "docs/user-guide.md": "aa4b30eced2c2007aab33879a728017549d56ef5f1fc1e038886984be1656ea7",
+      "研究/验证授权.md": "bba4079dc0eb27b64a89cee1b683090995f1f8c0393bcbf2325b1801db2554af",
+      "writer.json": "a440553194b3e13238c3173a95d2cad623ebd8faf541c30d07968716bfb2daa8"
+    },
+    "content_id": "63e8daf34d85eccaef1a7bf327b6dacdc37207117c906bc1c1dc50903132cd13",
+    "replica_content_id": "63e8daf34d85eccaef1a7bf327b6dacdc37207117c906bc1c1dc50903132cd13",
+    "scope": "Independent empty synthetic workspace; verifies update protocol and preservation, not long-novel content continuity."
+  },
+  "commands": [
+    {
+      "label": "build",
+      "exit_code": 0,
+      "elapsed_ms": 5384
+    },
+    {
+      "label": "final-identify",
+      "exit_code": 0,
+      "elapsed_ms": 1562
+    },
+    {
+      "label": "git-diff",
+      "exit_code": 0,
+      "elapsed_ms": 127
+    },
+    {
+      "label": "git-diff-check",
+      "exit_code": 0,
+      "elapsed_ms": 920
+    },
+    {
+      "label": "n-seal",
+      "exit_code": 0,
+      "elapsed_ms": 663
+    },
+    {
+      "label": "new-check",
+      "exit_code": 0,
+      "elapsed_ms": 149
+    },
+    {
+      "label": "new-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 561
+    },
+    {
+      "label": "new-identify",
+      "exit_code": 0,
+      "elapsed_ms": 223
+    },
+    {
+      "label": "new-status",
+      "exit_code": 0,
+      "elapsed_ms": 362
+    },
+    {
+      "label": "node-version",
+      "exit_code": 0,
+      "elapsed_ms": 71
+    },
+    {
+      "label": "old-identify",
+      "exit_code": 0,
+      "elapsed_ms": 224
+    },
+    {
+      "label": "old-init",
+      "exit_code": 0,
+      "elapsed_ms": 2163
+    },
+    {
+      "label": "old-status",
+      "exit_code": 0,
+      "elapsed_ms": 137
+    },
+    {
+      "label": "package-default-build",
+      "exit_code": 0,
+      "elapsed_ms": 2905
+    },
+    {
+      "label": "package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 2089
+    },
+    {
+      "label": "package-protocol",
+      "exit_code": 0,
+      "elapsed_ms": 23723
+    },
+    {
+      "label": "replica-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 453
+    },
+    {
+      "label": "replica-identify",
+      "exit_code": 0,
+      "elapsed_ms": 257
+    },
+    {
+      "label": "replica-init",
+      "exit_code": 0,
+      "elapsed_ms": 2189
+    },
+    {
+      "label": "root-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 2883
+    },
+    {
+      "label": "root-tests",
+      "exit_code": 0,
+      "elapsed_ms": 471979
+    },
+    {
+      "label": "scenario",
+      "exit_code": 0,
+      "elapsed_ms": 17149
+    },
+    {
+      "label": "update",
+      "exit_code": 0,
+      "elapsed_ms": 7845
+    },
+    {
+      "label": "update-plan",
+      "exit_code": 0,
+      "elapsed_ms": 895
+    },
+    {
+      "label": "verify-zip",
+      "exit_code": 0,
+      "elapsed_ms": 553
+    },
+    {
+      "label": "works-status",
+      "exit_code": 0,
+      "elapsed_ms": 135
+    }
+  ],
+  "scope": "Windows Node24 local; source full regression, extracted-package targeted regression and actual upgrade CLI. No new cross-platform CI, no engine changes or new engine suite, no long-novel or literary validation, no existing works changed, no commit/push/tag/release."
+}

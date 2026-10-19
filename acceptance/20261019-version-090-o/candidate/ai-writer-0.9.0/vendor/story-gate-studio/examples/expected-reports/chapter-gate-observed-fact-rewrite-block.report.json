@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-observed-fact-rewrite-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-observed-fact-rewrite-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-DUAL-001-R002",
+      "severity": "blocker",
+      "location": "input.observed_fact_policy",
+      "recommendation": "Already observed facts such as photographed, recorded, measured, numbered, or archived evidence cannot retroactively change; new reveals must come from unobserved layers, new angles, tests, permissions, or changed interpretation.",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 014af018..3d9fe7ee 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,5 +1,12 @@
+ # 更新记录
+ 
++## 0.9.0 — 开发中，未发布
++
++- 新增上下文预算超限诊断，给出精确总量、分项和主要引用占用；保留不截断、授权及来源保护。
++- 按需补充长章分段合成、纲文实读回对和关键选择的短程推演，继续复用既有事实、修订与意见闭环。
++- 固定审查三个新增参考项目及Openwrite核心分支，保留来源、许可和原文哈希；未复制上游实现或作品。
++- 开发版本统一为0.9.0，沿用schema6和受管资源协议，兼容已支持的0.7/0.8来源；打包目录及文件名随版本生成。
++
+ ## 0.8.0 — 首个正式版本
+ 
+ - 在Codex中创建、恢复和审修中文小说、剧本、历史散文、散文与一般非虚构作品。
+diff --git a/README.md b/README.md
+index be4e2158..1c5936c3 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ 面向 Codex 的中文创作工具，支持小说、剧本、散文与非虚构写作。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究资料和创作状态分开管理；新会话可从文件恢复进度。
+ 
+-首个正式版本 **[0.8.0已发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，采用 Apache License 2.0。** 标签绑定提交`27a20edd`，提交与标签两轮跨平台CI均通过。此前0.8.0和0.8.1均为内部候选，保留原验证身份；首发包使用`apache-2.0-v1`资源配置及内容ID区分。[发行说明](RELEASE_NOTES.md)、[更新记录](CHANGELOG.md)与[发布流程](docs/release.md)说明下载、兼容和验收边界。历史创作方法、百章流程和许可验证分别见J/H/K轮记录。
++首个正式版本 **[0.8.0已发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，采用 Apache License 2.0。** 标签绑定提交`27a20edd`，提交与标签两轮跨平台CI均通过。此前0.8.0和0.8.1均为内部候选，保留原验证身份；首发包使用`apache-2.0-v1`资源配置及内容ID区分。[下一版发行说明草稿](RELEASE_NOTES.md)、[更新记录](CHANGELOG.md)与[发布流程](docs/release.md)说明下载、兼容和验收边界。历史创作方法、百章流程和许可验证分别见J/H/K轮记录。
+ 
+ 从作品定位和全书大纲开始，按分卷与近期章纲写作，在新会话中恢复进度，并在独立修订区修改旧稿、导出草稿。工具记录创作阶段、授权范围、作者决定和来源版本，支持增量追踪、跨章复核、审查意见处理和可恢复的本地更新；文学质量仍需实际读稿判断。
+ 
+@@ -10,10 +10,12 @@
+ 
+ ## 开始使用
+ 
+-下载[ai-writer-0.8.0.zip](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/ai-writer-0.8.0.zip)与[SHA256SUMS.txt](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/SHA256SUMS.txt)，校验后解压使用；源码维护者可运行`npm run release:build -- --out dist/0.8.0`构建新目录，拒绝覆盖已有产物。下载包只包含工具、技能、手册、引擎和测试，完整历史验收记录保留在源码仓库。Windows源码检出另见[说明](docs/source-checkout.md)，日常使用优先下载专门发行包。
++下载[ai-writer-0.8.0.zip](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/ai-writer-0.8.0.zip)与[SHA256SUMS.txt](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/SHA256SUMS.txt)，校验后解压使用；源码维护者可运行`npm run release:build -- --out dist/0.9.0`构建新目录，拒绝覆盖已有产物。下载包只包含工具、技能、手册、引擎和测试，完整历史验收记录保留在源码仓库。Windows源码检出另见[说明](docs/source-checkout.md)，日常使用优先下载专门发行包。
+ 
+ 首发的[M轮记录](acceptance/20261019-release-publish-m/README.md)保存CI故障修复、最终干净构建、标签及正式发布回执和匿名下载核验。Windows × Node20/24各167项全通过，Ubuntu × Node20/24各163通过、4项Windows专用测试跳过；四组doctor和引擎29/29均通过。最终解压包本地166通过、0失败、1项本机符号链接环境跳过，doctor、引擎和实际CLI流程通过。[L轮](acceptance/20261019-release-080-l/README.md)保留此前准备产物与失败修复，历史报告不改写。
+ 
++下一版本定为 **0.9.0，当前开发中、尚未发布**，包含上下文预算诊断、长章展开与纲文回对。三个新增参考项目的来源与取舍见[审查说明](docs/three-project-reference-audit.md)，方法验证见[N轮记录](acceptance/20261019-three-references-n/README.md)，0.9.0版本切换验证见[O轮记录](acceptance/20261019-version-090-o/README.md)。正式下载仍为上方v0.8.0；版本比较同时核对内容ID与资源配置。
++
+ 0.8.0 的方法来源、适配范围及验证结果见[J 轮记录](acceptance/20261019-webnovel-reference-j/README.md)，其中保留了完整回归、旧包更新和两次 Codex 实跑证据。H 轮进展另见[百章验证记录](acceptance/20261019-hundred-h/README.md)。
+ 
+ 使用前请准备好 Codex 和 Node.js 20 或更高版本。无须安装额外 npm 依赖；写作使用当前 Codex 会话及其模型，不单独调用模型 API。
+diff --git a/RELEASE_NOTES.md b/RELEASE_NOTES.md
+index 256bc24d..163e56fd 100644
+--- a/RELEASE_NOTES.md
++++ b/RELEASE_NOTES.md
+@@ -1,12 +1,12 @@
+-# ai-writer 0.8.0
++# ai-writer 0.9.0（开发中，未发布）
+ 
+-这是ai-writer的首个正式版本。发行标签为`v0.8.0`，下载资产附带SHA-256和逐文件清单。
++下一版本为0.9.0，本页为开发中的发行说明。当前正式下载仍是[v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，尚未创建或发布v0.9.0。
+ 
+-ai-writer是面向Codex的中文创作工具，支持小说、剧本、历史散文、散文与一般非虚构。本版包含七项技能、作品状态追踪、长篇分卷与增量账本、设定影响分析、跨会话保护修订、审查意见闭环、去AI味流程、本地工具更新及草稿导出。
++ai-writer是面向Codex的中文创作工具，支持小说、剧本、历史散文、散文与一般非虚构。0.9.0在已有长篇、修订与审查能力上增加上下文预算超限诊断、按需长章分段合成、纲文实读回对和关键选择的短程推演；来源核查与取舍保留在源码仓库。工具不自动截断必要上下文，文学判断仍需模型实读和作者确认。
+ 
+ ## 安装与开始
+ 
+-下载`ai-writer-0.8.0.zip`和`SHA256SUMS.txt`，核对SHA-256后解压到新目录。在Codex中打开解压后的`ai-writer-0.8.0`目录；需要Node.js 20或更高版本，无须安装npm依赖。
++本地构建命令为`npm run release:build -- --out dist/0.9.0`，生成开发候选`ai-writer-0.9.0.zip`和`SHA256SUMS.txt`，不等于正式发布。核对SHA-256后解压到新目录，在Codex中打开`ai-writer-0.9.0`；需要Node.js 20或更高版本，无须安装npm依赖。
+ 
+ ```powershell
+ node bin/ai-writer.mjs doctor
+@@ -14,16 +14,16 @@ node bin/ai-writer.mjs doctor
+ 
+ 然后说：“创建小说 works/雨夜来信，先规划两卷与近期前三章，本轮只试写第一章，写完暂停；完成审查、登记和检查。”详细流程见包内`docs/quickstart.md`和`docs/user-guide.md`。
+ 
+-## 已有作品与同号候选
++## 已有作品与版本兼容
+ 
+ 先备份，使用包内当前工具的`tool identify`、`tool compare`和`tool update-plan`核对，再按手册显式更新。不要覆盖现有作品目录，也不要只替换CLI。作品正文、作者规则和本地定制不因本次发行而自动改写。
+ 
+-首发包版本为0.8.0，`package.json`中`aiWriter.resourceProfile`为`apache-2.0-v1`，包含65项受管资源。此前内部0.8.0候选没有该标识，0.8.1也是内部许可候选；不能仅凭版本号判断内容相同，应核对内容ID与差异计划。内部候选的历史证据保留原版本。本版不自动联网升级，不自动发布作品。
++0.9.0沿用schema6和受管资源协议，识别完整0.7、0.8及0.9包，保留`apache-2.0-v1`资源配置。版本号变化不自动迁移或更新已有作品；活跃修订结束后再单独规划更新。历史内部0.8.0和0.8.1候选保留原验证身份；不能仅凭版本号判断内容相同，应核对内容ID与差异计划。
+ 
+ ## 许可与验证边界
+ 
+ 自有部分采用Apache License 2.0，见LICENSE.md和NOTICE；第三方参考资料保留各自许可。工具许可不改变作者作品与私有资料的权利归属。
+ 
+-此前Windows本地已验证百章副本的多轮恢复、跨卷承接、多处旧章修订及导出；它们分别对应原冻结构建。首发准备已完成源码和解压包的完整回归（各167项，166项通过、1项Windows符号链接场景跳过），以及诊断、29项引擎回归和实际CLI流程。跨平台CI和最终发布资产的核验记录见源码仓库的发布记录。模型复核不等于真人盲读或文学无误保证；其他系统和Node版本以实际CI结果为准。
++源码仓库的N轮记录保存新增方法的实际CLI流程和章节实读，O轮记录保存0.9.0版本切换验证。历史百章及首发跨平台结果分别绑定各自冻结构建；不能直接作为0.9.0的正式验收。模型复核不等于真人盲读或文学无误保证；正式发布仍需对选定提交、最终资产及跨平台CI重新核验。
+ 
+ 下载包排除现有作品、验收作品与本机配置；完整历史验证记录保留在源码仓库。普通问题请通过GitHub Issues反馈，安全问题按SECURITY.md处理；反馈时勿上传私有正文或令牌。
+diff --git a/docs/release.md b/docs/release.md
+index edd95896..908ac73f 100644
+--- a/docs/release.md
++++ b/docs/release.md
+@@ -1,9 +1,11 @@
+-# 首次正式发行：0.8.0
++# 发行准备与已发布版本
+ 
+ 0.8.0已于2026-10-19[正式发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`，完整执行与验证见[M轮记录](../acceptance/20261019-release-publish-m/README.md)。下文保留维护者操作流程；发布后补交的记录不移动标签，也不覆盖已验证资产。
+ 
+ 本页是维护者的本地准备流程，不自动创建标签、推送或发布。用户批准具体产物后，再执行对应Git和GitHub动作。
+ 
++下一版本为0.9.0，目前开发中、未发布。以下构建步骤针对当前package.json版本；0.8.0的发行记录和资产保持原身份。
++
+ ## 首发版本身份
+ 
+ 首个正式版本按作者要求统一为0.8.0。历史0.8.0和0.8.1候选保持封存记录；正式包通过`package.json`中的`aiWriter.resourceProfile=apache-2.0-v1`识别65项受管资源。版本号相同不表示内容相同，比较以内容ID、资源配置与清单为准。
+@@ -11,20 +13,20 @@
+ ## 构建与验证
+ 
+ ```powershell
+-npm run release:build -- --out dist/0.8.0
++npm run release:build -- --out dist/0.9.0
+ ```
+ 
+ 输出目录必须不存在。构建器按`release/distribution.json`的明确文件清单复制，拒绝不安全路径、重复路径、符号链接和覆盖已有产物；根README使用`release/README.md`作为下载包入口。不会扫描或打包作品、验收目录、.git、.idea或临时目录。失败时保留临时构建目录供诊断，不自动删除或覆盖。
+ 
+ 历史来源审计索引以`docs/oh-story-reference-inventory.json`镜像随源码包携带，只包含公开参考仓库的文件元数据，与原审计清单的SHA一致；回归不依赖未分发的验收目录。Git来源只在当前目录确为仓库根时记录，不借用父仓库；暂时读取失败会停止构建，不把不确定状态悄悄写成另一份成功产物。
+ 
+-产物包括`ai-writer-0.8.0.zip`、`SHA256SUMS.txt`、`release-manifest.json`、`RELEASE_NOTES.md`和便于检查的展开目录。ZIP使用固定条目时间；同一输入、同一来源状态下可复现。清单记录实际来源Git提交与dirty状态，不把未提交目录称为已打标签源码。包内`build-manifest.json`绑定受管资源；`RELEASE-MANIFEST.json`记录载荷哈希，外部SHA绑定最终ZIP。
++产物包括`ai-writer-0.9.0.zip`、`SHA256SUMS.txt`、`release-manifest.json`、`RELEASE_NOTES.md`和便于检查的展开目录；默认输出为`dist/<package.json版本>`。ZIP使用固定条目时间；同一输入、同一来源状态下可复现。清单记录实际来源Git提交与dirty状态，不把开发候选称为已发布版本。包内`build-manifest.json`绑定受管资源；`RELEASE-MANIFEST.json`记录载荷哈希，外部SHA绑定最终ZIP。
+ 
+ 以最终ZIP解压到新目录后，运行npm test、npm run doctor、npm run test:engine和真实CLI流程；核对隐藏技能、中文路径、来源许可、旧候选更新、幂等及暂停门禁。验证数据放在包外，保持下载资产原始哈希。Windows环境跳过不能算通过，也不能代替未取得结果的跨系统CI。
+ 
+ ## 正式发布前最后一步
+ 
+-核对具体提交、发布说明、ZIP SHA及对应验证记录；完成用户授权的提交后，从选定提交重新构建并核验产物来源，再创建v0.8.0标签、上传附件和发布。不要移动已有标签，不覆盖同名发布资产。准备时没有已存在的正式标签。
++核对具体提交、发布说明、ZIP SHA及对应验证记录；完成用户授权的提交后，从选定提交重新构建并核验产物来源，更新开发说明为正式发行说明，再按授权创建对应版本标签、上传附件和发布。不要移动已有v0.8.0标签或覆盖资产；0.9.0当前尚未执行这些发布动作。
+ 
+ 建议先保存GitHub Release草稿并附齐ZIP、SHA和发布说明，再在授权后发布为正式版本；不勾选预发布。GitHub生成的Source code归档来自整个标签树，可能包含历史验收记录，用户下载应优先选择专门的ai-writer ZIP。GitHub流程依据见[官方发行文档](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)。
+ 
+diff --git a/docs/revision-and-sources.md b/docs/revision-and-sources.md
+index 53c9d51c..ed0829d0 100644
+--- a/docs/revision-and-sources.md
++++ b/docs/revision-and-sources.md
+@@ -4,7 +4,7 @@
+ 
+ 本页原schema4保护同样适用于schema5/6；重登草案、登记预览及意见闭环见[复核专项手册](review-and-registration.md)。0.7新作品默认6，旧作品仅显式启用，不自动迁移；随附工具另按[本地安全更新](tool-updates.md)处理。
+ 
+-当前适用0.8.0本地候选，新作品默认state schema6，继续兼容0.7受管包协议；版本与独立修订保护自0.5.0/schema4引入，后续协议继续复用。普通作者用自然语言说明任务，由Codex准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
++当前适用0.9.0开发候选，新作品默认state schema6，继续兼容0.7/0.8受管包协议；版本与独立修订保护自0.5.0/schema4引入，后续协议继续复用。普通作者用自然语言说明任务，由Codex准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
+ 
+ ## 从任务开始
+ 
+diff --git a/docs/tool-updates.md b/docs/tool-updates.md
+index fedf51be..11070aa6 100644
+--- a/docs/tool-updates.md
++++ b/docs/tool-updates.md
+@@ -52,4 +52,4 @@ staging中的pre-transaction-candidate表示事务尚未发布，原工具和sta
+ 
+ doctor返回`skill_root`和`content_root`，分别是实际校验的技能与手册资源目录；`project_skill_root`指保留的作品根技能。0.7/0.8随附包的技能在`.writer/tool/.agents/skills`，修订区仍指向父作品安装包。校验通过只证明这些资源完整，不代表Codex已经阅读过它们；交接应记录本轮实际读取的位置与版本。工具流程参考不能覆盖作者约定，也不自动改变技能发现顺序或根文件。
+ 
+-0.8.0增加按需创作方法，沿用0.7的schema6、受管资源、清单和更新协议；新入口同时识别完整0.7与0.8包，不接受未声明支持的未来版本。版本号提升不自动迁移作品或更新旧包；活跃修订仍须使用其原绑定构建，结束后再单独规划正式更新。
++当前开发版本为0.9.0，沿用0.7起的schema6、受管资源、清单和更新协议；新入口同时识别完整0.7、0.8与0.9包，不接受未声明支持的未来版本。正式下载仍为v0.8.0。版本号提升不自动迁移作品或更新旧包；活跃修订仍须使用其原绑定构建，结束后再单独规划正式更新。
+diff --git a/lib/help.mjs b/lib/help.mjs
+index 8d1c10bb..ad74f495 100644
+--- a/lib/help.mjs
++++ b/lib/help.mjs
+@@ -3,7 +3,7 @@ import path from 'node:path';
+ export const COMMANDS = {
+   init: { flags: ['path', 'kind', 'title','mode'], usage: '--path 新目录 --kind novel|screenplay|history|essay --title 作品名 [--mode long|standard]', purpose: '建立作品和随附工具，不覆盖已有目录。明确长篇/跨卷时用long，提前组织全书骨架、卷契约和近期细纲。', example: "--path 'works/雨夜来信' --kind novel --title '雨夜来信' --mode long" },
+   plan: { flags: ['project', 'input'], usage: '--project 作品目录 --input 细纲.json', purpose: '保存下一章、场或篇的细纲。', input: { unit: 1, title: '来信', goal: '确认寄件人', change: '发现寄件时间不符', beats: ['核对邮戳'], cast: [], setting_refs: [], research_refs: [] } },
+-  context: { flags: ['project', 'unit', 'max-chars', 'purpose','out'], usage: '--project 作品目录 [--purpose discussion|draft|revision] [--unit 1] [--max-chars 40000] [--out .writer/drafts/context-1.json]', purpose: 'discussion恢复任务/范围/决策；draft及revision须有授权和细纲。超预算不截断。out可选，写新的内部JSON可读入口，不覆盖旧输入。' },
++  context: { flags: ['project', 'unit', 'max-chars', 'purpose','out'], usage: '--project 作品目录 [--purpose discussion|draft|revision] [--unit 1] [--max-chars 40000] [--out .writer/drafts/context-1.json]', purpose: 'discussion恢复任务/范围/决策；draft及revision须有授权和细纲。超预算不截断，返回总量、分项及主要引用占用；字符量不是模型token数。out可选，写新的内部JSON可读入口，不覆盖旧输入。' },
+   'record-template': { flags: ['project', 'unit', 'draft','out'], usage: '--project 作品目录 --unit 1 --draft 正文/0001-来信.md [--out .writer/drafts/record-1.json]', purpose: '动笔前取得登记模板。路径/哈希自动填，未变事实保留；按实际正文填摘要与changes，不誊写全快照。' },
+   'record-preview': {flags:['project','input','out'],usage:'--project 作品目录 --input 登记.json [--out .writer/drafts/preview-1.json]',purpose:'只读预检，复用record校验并展示实际事实差异、未变项和待补字段；不自动刷新过期哈希，不证明语义无变化。'},
+   'long-enable-preview':{flags:['project'],usage:'--project 作品目录',purpose:'只读预览长篇迁移与估计journal体积，不创建备份、不改状态；取消即停止，实际启用仍需授权及当前revision。'},
+@@ -41,7 +41,7 @@ export function invocation(root, command, args = []) {
+   return `node ${quote(path.join(root, 'bin/ai-writer.mjs'))} ${command}${args.length ? ' ' + args.map(quote).join(' ') : ''}`;
+ }
+ export function help(root, version, command) {
+-  const legacyEmbedded = path.basename(path.dirname(root)) === '.writer'&&!/^0\.[78]\./.test(version??'');
++  const legacyEmbedded = path.basename(path.dirname(root)) === '.writer'&&!/^0\.[789]\./.test(version??'');
+   const guides = legacyEmbedded ? path.resolve(root, '../../docs') : path.join(root, 'docs');
+   const skills = legacyEmbedded ? path.resolve(root, '../../.agents/skills') : path.join(root, '.agents/skills');
+   const projectHint = command === 'init' ? 'init 使用 --path 指定新作品目录，不接受 --project。'
+@@ -64,5 +64,5 @@ export function errorResult(error, argv, root) {
+     help_command: invocation(root, command, command === 'help' ? [] : ['--help']),
+     ...(error.next_command ? { next_command: error.next_command } : {}),
+     ...(error.recovery ? { recovery: error.recovery } : {}), ...(error.scope ? { scope: error.scope } : {}),
+-    ...Object.fromEntries(['transactions', 'sessions', 'conflicts', 'impacts','blockers','checks'].filter(key => error[key]).map(key => [key, error[key]])) };
++    ...Object.fromEntries(['transactions', 'sessions', 'conflicts', 'impacts','blockers','checks','context_budget'].filter(key => error[key]).map(key => [key, error[key]])) };
+ }
+diff --git a/lib/tool-build.mjs b/lib/tool-build.mjs
+index 981cf3e4..fd4a465b 100644
+--- a/lib/tool-build.mjs
++++ b/lib/tool-build.mjs
+@@ -19,8 +19,8 @@ export function attributionFiles(value) {
+ function packageContent(pkg) {
+   return [...PACKAGE_CONTENT, ...attributionFiles(pkg).filter(ref => !WORK_ATTRIBUTION.includes(ref))];
+ }
+-// 0.8 adds writing methods while retaining the 0.7 owned-resource/schema6 protocol.
+-export const currentProtocol = version => /^0\.[78]\./.test(version??'');
++// 0.8 and 0.9 retain the 0.7 owned-resource/schema6 protocol.
++export const currentProtocol = version => /^0\.[789]\./.test(version??'');
+ const sha = value => crypto.createHash('sha256').update(value).digest('hex');
+ function ordinary(file) {
+   const absolute = path.resolve(file); let cursor = path.parse(absolute).root;
+@@ -125,7 +125,7 @@ export function workspaceBaselines(root){
+   const rows=[];for(const ref of [...WORK_GUIDES.map(x=>`docs/${x}`),'AGENTS.md']){const f=path.join(work,ref);if(fs.existsSync(f))rows.push({file:ref,sha256:sha(fs.readFileSync(ordinary(f)))});}return rows;
+ }
+ export function packageFiles(value){
+-  const build=identifyBuild(value);if(!currentProtocol(build.tool_version)||!build.ok)throw userError('来源必须是完整0.7或0.8本地工具包；先核identify缺项或清单差异',{code:'TOOL_SOURCE_INVALID'});
++  const build=identifyBuild(value);if(!currentProtocol(build.tool_version)||!build.ok)throw userError('来源必须是完整0.7、0.8或0.9本地工具包；先核identify缺项或清单差异',{code:'TOOL_SOURCE_INVALID'});
+   const pkg = JSON.parse(fs.readFileSync(ordinary(path.join(build.tool_root, 'package.json')), 'utf8'));
+   const required=new Set([...RUNTIME_FILES,...packageContent(pkg),...['project','novel','screenplay','history','essay','review','research'].map(x=>`.agents/skills/writer-${x}/SKILL.md`)]);for(const r of build.files)required.delete(fileRef(r));
+   if(required.size)throw userError('更新来源缺少必需模块/手册/许可',{code:'TOOL_SOURCE_INCOMPLETE'});
+diff --git a/package.json b/package.json
+index 621c703d..2086c42d 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "ai-writer",
+-  "version": "0.8.0",
++  "version": "0.9.0",
+   "license": "Apache-2.0",
+   "aiWriter": {
+     "resourceProfile": "apache-2.0-v1"
+diff --git a/release/README.md b/release/README.md
+index 66351838..20ad1642 100644
+--- a/release/README.md
++++ b/release/README.md
+@@ -1,4 +1,4 @@
+-# ai-writer 0.8.0
++# ai-writer 0.9.0
+ 
+ 面向Codex的中文创作工具，支持小说、剧本、历史散文、散文与一般非虚构。作品保存在本地，支持长篇分卷、跨会话恢复、设定版本、保护修订、意见闭环和草稿导出。
+ 
+@@ -18,9 +18,9 @@ node bin/ai-writer.mjs doctor
+ 
+ ## 版本与更新
+ 
+-这是首发0.8.0下载包，资源配置为`apache-2.0-v1`；`build-manifest.json`记录受管内容ID，`RELEASE-MANIFEST.json`记录包内文件哈希。历史内部0.8.0和0.8.1候选可能与本包内容不同。更新已有作品前先备份、比较构建、生成更新计划，保留作者规则与定制；不要覆盖作品目录。
++本包为0.9.0开发候选，尚未正式发布，资源配置为`apache-2.0-v1`；`build-manifest.json`记录受管内容ID，`RELEASE-MANIFEST.json`记录包内文件哈希。沿用schema6及受管资源协议，兼容完整0.7/0.8来源。更新已有作品前先备份、比较构建、生成更新计划，保留作者规则与定制；不要覆盖作品目录。
+ 
+-[发行说明](RELEASE_NOTES.md)和[更新记录](CHANGELOG.md)介绍能力与边界。原0.8.0、0.8.1仅为内部候选；本包是否正式公开，以源码仓库的标签及Releases状态为准。机械检查不代替实读、真人阅读或作者定稿；导出仍为草稿。
++[发行说明](RELEASE_NOTES.md)和[更新记录](CHANGELOG.md)介绍能力与边界。当前正式版为v0.8.0，历史内部同号候选及0.8.1另有独立内容身份。机械检查不代替实读、真人阅读或作者定稿；导出仍为草稿。
+ 
+ ## 反馈与许可
+ 
+diff --git a/scripts/build-release.mjs b/scripts/build-release.mjs
+index 9e44e4b6..fa5ae22a 100644
+--- a/scripts/build-release.mjs
++++ b/scripts/build-release.mjs
+@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
+ import zlib from 'node:zlib';
+ import {spawnSync} from 'node:child_process';
+ import {fileURLToPath} from 'node:url';
+-import {identifyBuild,writeBuildManifest} from '../lib/tool-build.mjs';
++import {currentProtocol,identifyBuild,writeBuildManifest} from '../lib/tool-build.mjs';
+ 
+ const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+ const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+@@ -59,8 +59,8 @@ function zip(root,prefix,rows){
+ }
+ export function buildRelease({root=ROOT,out}={}){
+   root=path.resolve(root);const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));
+-  if(pkg.version!=='0.8.0'||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected first release 0.8.0 with apache-2.0-v1 resources');
+-  out=path.resolve(out??path.join(root,'dist','0.8.0'));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
++  if(!/^0\.(?:8|9)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x or 0.9.x package with apache-2.0-v1 resources');
++  out=path.resolve(out??path.join(root,'dist',pkg.version));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
+   const build=identifyBuild(root);if(!build.ok)throw Error('Source build is incomplete');
+   const spec=JSON.parse(fs.readFileSync(path.join(root,'release/distribution.json'))),seen=new Set(),sources=[];
+   for(const item of spec.files){const ref=safeRef(item.file),key=ref.toLowerCase();if(seen.has(key))throw Error('Duplicate release path: '+ref);seen.add(key);const source=sourceFile(root,item.source??ref);sources.push({file:ref,source:item.source??ref,sha256:sha(fs.readFileSync(source))});}
+diff --git a/tests/package-protocol.test.mjs b/tests/package-protocol.test.mjs
+index c894c261..0724a68d 100644
+--- a/tests/package-protocol.test.mjs
++++ b/tests/package-protocol.test.mjs
+@@ -6,8 +6,9 @@ import {spawnSync} from 'node:child_process';
+ import {currentProtocol} from '../lib/tool-build.mjs';
+ import {fixture,ROOT} from './protection-fixture.mjs';
+ 
+-test('0.8沿用受管资源协议，旧0.7兼容；随附诊断不回退到根作者资源',t=>{
+-  assert.equal(currentProtocol('0.7.6'),true);assert.equal(currentProtocol('0.8.0'),true);assert.equal(currentProtocol('0.6.0'),false);assert.equal(currentProtocol('0.9.0'),false);
++test('0.9沿用受管资源协议，旧0.7和0.8兼容；随附诊断不回退到根作者资源',t=>{
++  for(const version of ['0.7.6','0.8.0','0.9.0'])assert.equal(currentProtocol(version),true);
++  for(const version of ['0.6.0','0.10.0','1.0.0'])assert.equal(currentProtocol(version),false);
+   const {root}=fixture(t,0),entry=path.join(root,'.writer/tool/bin/ai-writer.mjs');
+   fs.unlinkSync(path.join(root,'docs/user-guide.md'));
+   const run=(args,tool=entry)=>{const r=spawnSync(process.execPath,[tool,...args],{cwd:root,encoding:'utf8',windowsHide:true});return {r,value:args.includes('doctor')?JSON.parse(r.stdout):r.stdout};};
+diff --git a/tests/release.test.mjs b/tests/release.test.mjs
+index 3312b759..3ddf27ed 100644
+--- a/tests/release.test.mjs
++++ b/tests/release.test.mjs
+@@ -12,8 +12,21 @@ test('发行包包含隐藏技能和完整许可，排除作品及证据，重
+   t.after(async()=>{assert.equal(path.dirname(fs.realpathSync(dir)),fs.realpathSync(path.join(ROOT,'.tmp')));await fs.promises.rm(dir,{recursive:true,force:true,maxRetries:12,retryDelay:150});});
+   const out=path.join(dir,'first'),a=buildRelease({out}),b=buildRelease({out:path.join(dir,'second')});
+   assert.equal(a.archive_sha256,b.archive_sha256,JSON.stringify({first:a.source_provenance,second:b.source_provenance}));assert.throws(()=>buildRelease({out}),/already exists/);
+-  const folder=path.join(out,'ai-writer-0.8.0'),manifest=JSON.parse(fs.readFileSync(path.join(folder,'RELEASE-MANIFEST.json')));
++  const version=JSON.parse(fs.readFileSync(path.join(ROOT,'package.json'))).version;
++  assert.equal(a.version,version);assert.equal(path.basename(a.archive),'ai-writer-'+version+'.zip');
++  const folder=path.join(out,'ai-writer-'+version),manifest=JSON.parse(fs.readFileSync(path.join(folder,'RELEASE-MANIFEST.json')));
++  assert.equal(manifest.version,version);assert.equal(JSON.parse(fs.readFileSync(path.join(folder,'package.json'))).version,version);
+   for(const row of manifest.files){assert.ok(!/(^|\/)(?:works|acceptance|\.git|\.idea|\.tmp|\.writer)(\/|$)/.test(row.file),row.file);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(folder,row.file))).digest('hex'),row.sha256);}
+   for(const ref of ['.agents/skills/writer-project/SKILL.md','NOTICE','LICENSE.md','SECURITY.md','docs/quickstart.md','vendor/story-gate-studio/NOTICE'])assert.ok(fs.existsSync(path.join(folder,ref)),ref);
+   const d=spawnSync(process.execPath,[path.join(folder,'bin/ai-writer.mjs'),'doctor'],{cwd:folder,encoding:'utf8',windowsHide:true});assert.equal(d.status,0,d.stderr);assert.equal(JSON.parse(d.stdout).resource_profile??manifest.resource_profile,'apache-2.0-v1');
+ });
++
++test('发行版本拒绝未来协议、路径字符和未知资源配置，拒绝时不创建产物',t=>{
++  fs.mkdirSync(path.join(ROOT,'.tmp'),{recursive:true});const dir=fs.mkdtempSync(path.join(ROOT,'.tmp/release-version-'));
++  t.after(async()=>{assert.equal(path.dirname(fs.realpathSync(dir)),fs.realpathSync(path.join(ROOT,'.tmp')));await fs.promises.rm(dir,{recursive:true,force:true,maxRetries:12,retryDelay:150});});
++  const out=path.join(dir,'output');
++  for(const [version,resourceProfile] of [['0.10.0','apache-2.0-v1'],['0.9.0/../../escape','apache-2.0-v1'],['0.9.0-rc.1','apache-2.0-v1'],['0.9.0','unknown']]){
++    fs.writeFileSync(path.join(dir,'package.json'),JSON.stringify({version,aiWriter:{resourceProfile}}));
++    assert.throws(()=>buildRelease({root:dir,out}),/Expected a supported/);assert.equal(fs.existsSync(out),false);
++  }
++});

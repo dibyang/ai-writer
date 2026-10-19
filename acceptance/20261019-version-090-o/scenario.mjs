@@ -1,0 +1,36 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(base,'../..');
+const capture=path.join(base,'capture.mjs'),old=path.join(root,'acceptance/20261019-release-publish-m/delivery-v2/ai-writer-0.8.0/bin/ai-writer.mjs');
+const source=JSON.parse(fs.readFileSync(path.join(base,'zip-verification.json'))).extracted,entry=path.join(source,'bin/ai-writer.mjs');
+const work=path.join(base,'scenario','旧版升级样例'),replica=path.join(base,'scenario','新版随附初始化');
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+function run(label,cli,args,project){const r=spawnSync(process.execPath,[capture,label,process.execPath,cli,...args,...(project?['--project',project]:[])],{cwd:root,encoding:'utf8',windowsHide:true,timeout:120000});assert.equal(r.status,0,r.stdout+'\n'+r.stderr);return JSON.parse(fs.readFileSync(path.join(base,'commands',label,'stdout.raw.txt')));}
+function input(name,value){const p=path.join(base,name+'.json');fs.writeFileSync(p,JSON.stringify(value,null,2)+'\n',{flag:'wx'});return p;}
+const readState=()=>JSON.parse(fs.readFileSync(path.join(work,'.writer/state.json')));
+run('old-init',old,['init','--path',work,'--kind','novel','--title','0.8到0.9更新验证']);
+fs.writeFileSync(path.join(work,'研究/验证授权.md'),'仅对本轮合成样例执行本地工具更新，保留作者定制。\n不代表现有作品授权。\n');
+const evidence={local_source:'研究/验证授权.md',source_sha256:sha(fs.readFileSync(path.join(work,'研究/验证授权.md'))),quote:'仅对本轮合成样例执行本地工具更新，保留作者定制。',locator:'synthetic-test-only',recorded_by:'Codex O verification'};
+fs.appendFileSync(path.join(work,'AGENTS.md'),'\n合成作者规则：保留铜铃设定。\n');
+fs.appendFileSync(path.join(work,'docs/user-guide.md'),'\n合成作者笔记：讨论后再动笔。\n');
+const preserved=['AGENTS.md','docs/user-guide.md','研究/验证授权.md','writer.json'];
+const beforeFiles=Object.fromEntries(preserved.map(ref=>[ref,sha(fs.readFileSync(path.join(work,ref)))]));
+const before=readState();fs.writeFileSync(path.join(base,'scenario-before-state.json'),JSON.stringify(before,null,2)+'\n');
+const observedOld=run('old-identify',entry,['tool','identify'],work);assert.equal(observedOld.tool_version,'0.8.0');
+run('old-status',old,['status'],work);
+const plan=run('update-plan',entry,['tool','update-plan','--input',input('update-plan-input',{source})],work);assert.equal(plan.can_update,true);assert.equal(plan.source.version,'0.9.0');assert.equal(plan.target.version,'0.8.0');
+run('update',entry,['tool','update','--input',input('update-input',{...plan.request,author_evidence:evidence})],work);
+const embedded=path.join(work,'.writer/tool/bin/ai-writer.mjs');
+const observedNew=run('new-identify',embedded,['tool','identify'],work);assert.equal(observedNew.tool_version,'0.9.0');assert.equal(observedNew.ok,true);
+run('new-status',embedded,['status'],work);run('new-check',embedded,['check'],work);run('new-doctor',embedded,['doctor'],work);
+const after=readState();assert.equal(after.schema_version,6);assert.equal(after.revision,before.revision+1);assert.deepEqual(after.units,before.units);assert.deepEqual(after.snapshot,before.snapshot);assert.equal(after.tool_control.generation,before.tool_control.generation+1);
+for(const ref of preserved)assert.equal(sha(fs.readFileSync(path.join(work,ref))),beforeFiles[ref],ref);
+run('replica-init',embedded,['init','--path',replica,'--kind','novel','--title','新版随附初始化']);
+const replicaEntry=path.join(replica,'.writer/tool/bin/ai-writer.mjs');
+const replicaId=run('replica-identify',replicaEntry,['tool','identify'],replica);assert.equal(replicaId.observed_content_id,observedNew.observed_content_id);run('replica-doctor',replicaEntry,['doctor'],replica);
+fs.writeFileSync(path.join(base,'scenario-verification.json'),JSON.stringify({ok:true,old_version:observedOld.tool_version,new_version:observedNew.tool_version,schema:after.schema_version,preserved_files:beforeFiles,content_id:observedNew.observed_content_id,replica_content_id:replicaId.observed_content_id,scope:'Independent empty synthetic workspace; verifies update protocol and preservation, not long-novel content continuity.'},null,2)+'\n',{flag:'wx'});
+console.log('0.8.0 -> 0.9.0 update and embedded initialization passed');

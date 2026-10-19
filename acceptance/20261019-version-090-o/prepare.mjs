@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(base,'../..');
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+const spec=JSON.parse(fs.readFileSync(path.join(root,'release/distribution.json')));
+const rows=spec.files.map(x=>{const ref=x.source??x.file;return {file:ref,sha256:sha(fs.readFileSync(path.join(root,ref)))};});
+fs.writeFileSync(path.join(base,'source-inputs-before.json'),JSON.stringify(rows,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({frozen_inputs:rows.length,version:JSON.parse(fs.readFileSync(path.join(root,'package.json'))).version}));

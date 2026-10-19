@@ -1,0 +1,8 @@
+{
+  "origin": "Original exec_command output in this conversation; this is a recorded observation, not a raw log or a replay",
+  "command": "node acceptance/20261019-three-references-n/collect-references.mjs",
+  "exit_code": 1,
+  "error": "TypeError: fetch failed; cause: read ECONNRESET",
+  "written_before_failure": "references/Openwrite/main/inventory.json",
+  "recovery": "fetch-references-v2.mjs reused the pinned inventory and read remaining files via GitHub Contents API with at most three attempts"
+}

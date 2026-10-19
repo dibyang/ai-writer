@@ -2,7 +2,7 @@
 
 面向 Codex 的中文创作工具，支持小说、剧本、散文与非虚构写作。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究资料和创作状态分开管理；新会话可从文件恢复进度。
 
-首个正式版本 **[0.8.0已发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，采用 Apache License 2.0。** 标签绑定提交`27a20edd`，提交与标签两轮跨平台CI均通过。此前0.8.0和0.8.1均为内部候选，保留原验证身份；首发包使用`apache-2.0-v1`资源配置及内容ID区分。[发行说明](RELEASE_NOTES.md)、[更新记录](CHANGELOG.md)与[发布流程](docs/release.md)说明下载、兼容和验收边界。历史创作方法、百章流程和许可验证分别见J/H/K轮记录。
+首个正式版本 **[0.8.0已发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，采用 Apache License 2.0。** 标签绑定提交`27a20edd`，提交与标签两轮跨平台CI均通过。此前0.8.0和0.8.1均为内部候选，保留原验证身份；首发包使用`apache-2.0-v1`资源配置及内容ID区分。[下一版发行说明草稿](RELEASE_NOTES.md)、[更新记录](CHANGELOG.md)与[发布流程](docs/release.md)说明下载、兼容和验收边界。历史创作方法、百章流程和许可验证分别见J/H/K轮记录。
 
 从作品定位和全书大纲开始，按分卷与近期章纲写作，在新会话中恢复进度，并在独立修订区修改旧稿、导出草稿。工具记录创作阶段、授权范围、作者决定和来源版本，支持增量追踪、跨章复核、审查意见处理和可恢复的本地更新；文学质量仍需实际读稿判断。
 
@@ -10,9 +10,11 @@
 
 ## 开始使用
 
-下载[ai-writer-0.8.0.zip](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/ai-writer-0.8.0.zip)与[SHA256SUMS.txt](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/SHA256SUMS.txt)，校验后解压使用；源码维护者可运行`npm run release:build -- --out dist/0.8.0`构建新目录，拒绝覆盖已有产物。下载包只包含工具、技能、手册、引擎和测试，完整历史验收记录保留在源码仓库。Windows源码检出另见[说明](docs/source-checkout.md)，日常使用优先下载专门发行包。
+下载[ai-writer-0.8.0.zip](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/ai-writer-0.8.0.zip)与[SHA256SUMS.txt](https://github.com/dibyang/ai-writer/releases/download/v0.8.0/SHA256SUMS.txt)，校验后解压使用；源码维护者可运行`npm run release:build -- --out dist/0.9.0`构建新目录，拒绝覆盖已有产物。下载包只包含工具、技能、手册、引擎和测试，完整历史验收记录保留在源码仓库。Windows源码检出另见[说明](docs/source-checkout.md)，日常使用优先下载专门发行包。
 
 首发的[M轮记录](acceptance/20261019-release-publish-m/README.md)保存CI故障修复、最终干净构建、标签及正式发布回执和匿名下载核验。Windows × Node20/24各167项全通过，Ubuntu × Node20/24各163通过、4项Windows专用测试跳过；四组doctor和引擎29/29均通过。最终解压包本地166通过、0失败、1项本机符号链接环境跳过，doctor、引擎和实际CLI流程通过。[L轮](acceptance/20261019-release-080-l/README.md)保留此前准备产物与失败修复，历史报告不改写。
+
+下一版本定为 **0.9.0，当前开发中、尚未发布**，包含上下文预算诊断、长章展开与纲文回对。三个新增参考项目的来源与取舍见[审查说明](docs/three-project-reference-audit.md)，方法验证见[N轮记录](acceptance/20261019-three-references-n/README.md)，0.9.0版本切换验证见[O轮记录](acceptance/20261019-version-090-o/README.md)。正式下载仍为上方v0.8.0；版本比较同时核对内容ID与资源配置。
 
 0.8.0 的方法来源、适配范围及验证结果见[J 轮记录](acceptance/20261019-webnovel-reference-j/README.md)，其中保留了完整回归、旧包更新和两次 Codex 实跑证据。H 轮进展另见[百章验证记录](acceptance/20261019-hundred-h/README.md)。
 

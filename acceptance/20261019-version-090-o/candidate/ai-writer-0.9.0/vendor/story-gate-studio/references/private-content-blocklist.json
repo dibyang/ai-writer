@@ -1,0 +1,26 @@
+{
+  "description": "Commercial release package blocklist. Docs may discuss project migration history, but distributable payload files must not contain these private project markers.",
+  "scan_roots": [
+    ".codex-plugin",
+    "skills",
+    "references",
+    "scripts",
+    "tests",
+    "examples"
+  ],
+  "allowed_files": [
+    "references/private-content-blocklist.json"
+  ],
+  "blocked_terms": [],
+  "blocked_term_codepoints": [
+    [38271, 23433, 22812, 39564, 24405],
+    [26519, 26202],
+    [26446, 29572],
+    [23435, 29031, 27700],
+    [38271, 23433, 39564, 23608, 24405],
+    [22905, 23601, 26159, 21382, 21490]
+  ],
+  "blocked_term_segments": [
+    ["LW", "-", "07"]
+  ]
+}

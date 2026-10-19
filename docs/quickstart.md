@@ -50,6 +50,8 @@ node bin/ai-writer.mjs doctor
 
 Codex从doctor返回的`skill_root`按需读取`writer-novel/references/story-development.md`（长篇方向）与`writer-novel/references/scene-connections.md`（局部诊断）。已有作品更新后仍保留根作者定制，新参考应从当前包读取，不能假定根技能目录已有新文件；其他文体继续使用自身规则。
 
+若长章总像剧情提要，可以说：“在已授权范围内，按已有细纲分段展开这一章，合章后完整复读，再回对本章目标、实际变化和禁止提前揭露项。不要增加新设定，别把中间段落当成新章登记。”Codex按需读取同一skill_root下的`writer-novel/references/chapter-delivery.md`；普通章不用额外做表。
+
 只审查：
 
 > 完整阅读这两章，检查连续性、重复解释与人物口气，只报告具体问题和应保留的表达，不修改正文。
@@ -88,5 +90,7 @@ node .writer/tool/bin/ai-writer.mjs status
 更新也会保留作品根技能。新会话按根作者规则恢复，并从help列出的“当前工具流程技能”读取新版流程；doctor的`skill_root`给出本次校验的技能目录，`project_skill_root`是保留的作者技能目录。包内说明用于补齐当前命令和保护流程，不自动替换作者定制。
 
 长篇的context可能超过Codex单次显示容量。可让Codex用`--out .writer/drafts/context-本次.json`保存新入口，检查预算和`omitted_ids`，再分段核读所需内容；该选项仍会返回完整JSON，不会自动缩短控制台输出。看到“输出截断”应保留原输出、补读未显示部分；声称完整读过的正文和必读来源必须实际读全，不能仅凭文件已保存认定读完。细节见[使用手册](user-guide.md)中的“长篇上下文”。
+
+若工具返回`CONTEXT_BUDGET_EXCEEDED`，查看`context_budget`里的实际总量、分项和主要引用占用，再让Codex按相关性整理可选研究或提高`--max-chars`重试。失败不会截断上下文或生成out文件；不要删除作者约束、手改状态或重新初始化。这里统计序列化字符量，不是模型token数。
 
 若Codex在嵌套作品目录出现`helper_unknown_error`，返回主项目会话并明确作品完整路径；不要重新初始化或修改全局安全设置。已有作品导入、版本变化、修订恢复和工具升级分别见[使用手册](user-guide.md)、[版本与修订](revision-and-sources.md)及[本地安全更新](tool-updates.md)。

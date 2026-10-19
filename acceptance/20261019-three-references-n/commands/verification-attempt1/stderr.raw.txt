@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- '235c1313dde6174491c343a4af608e905ad3002517893a224cea619d034d4be6'
+
+    at file:///D:/work/other/ai-writer/acceptance/20261019-three-references-n/verify-final.mjs:7:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: '235c1313dde6174491c343a4af608e905ad3002517893a224cea619d034d4be6',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

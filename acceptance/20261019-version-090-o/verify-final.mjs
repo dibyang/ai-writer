@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {identifyBuild} from '../../lib/tool-build.mjs';
+const base=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(base,'../..'),sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+const json=ref=>JSON.parse(fs.readFileSync(path.join(base,ref)));
+const inputs=json('source-inputs-before.json');for(const row of inputs)assert.equal(sha(fs.readFileSync(path.join(root,row.file))),row.sha256,row.file);
+const results=[];for(const label of fs.readdirSync(path.join(base,'commands')).sort()){const r=json('commands/'+label+'/result.json');assert.equal(r.exit_code,0,label);if(r.runtime_files_stable!==null)assert.equal(r.runtime_files_stable,true,label);results.push({label,exit_code:r.exit_code,elapsed_ms:r.elapsed_ms});}
+const rootLog=fs.readFileSync(path.join(base,'commands/root-tests/stdout.raw.txt'),'utf8');
+const count=key=>{const match=rootLog.match(new RegExp('(?:ℹ |# )'+key+' (\\d+)'));assert.ok(match,'Missing '+key);return Number(match[1]);};
+assert.equal(count('fail'),0);assert.equal(count('cancelled'),0);
+const zip=json('zip-verification.json'),scenario=json('scenario-verification.json'),build=json('commands/build/stdout.raw.txt'),observed=identifyBuild(root);
+assert.equal(observed.ok,true);assert.equal(observed.tool_version,'0.9.0');assert.equal(observed.observed_content_id,build.content_id);assert.equal(scenario.content_id,build.content_id);assert.equal(zip.archive_sha256,build.archive_sha256);
+const manifest=json('candidate/release-manifest.json');assert.equal(manifest.version,'0.9.0');assert.equal(manifest.content_id,observed.observed_content_id);
+const defaultBuild=json('commands/package-default-build/stdout.raw.txt');assert.equal(defaultBuild.version,'0.9.0');assert.equal(defaultBuild.output,path.join(zip.extracted,'dist','0.9.0'));assert.equal(defaultBuild.content_id,build.content_id);assert.equal(defaultBuild.source_provenance.source_commit,'unknown');
+const old=JSON.parse(fs.readFileSync(path.join(root,'acceptance/20261019-three-references-n/candidate-v2/release-manifest.json')));
+const oldHashes=new Map(old.sources.map(x=>[x.source,x.sha256]));const changed=manifest.sources.filter(x=>oldHashes.get(x.source)!==x.sha256).map(x=>x.source);
+const result={ok:true,version:'0.9.0',release_status:'development-unreleased',tests:{total:count('tests'),pass:count('pass'),fail:count('fail'),skipped:count('skipped')},packaged_targeted_tests:{total:6,pass:6,fail:0},source_inputs_stable:inputs.length,changed_shipped_inputs_since_n:changed,content_id:build.content_id,archive_sha256:zip.archive_sha256,archive_files:zip.entries,managed_resources:observed.files.length,scenario,commands:results,scope:'Windows Node24 local; source full regression, extracted-package targeted regression and actual upgrade CLI. No new cross-platform CI, no engine changes or new engine suite, no long-novel or literary validation, no existing works changed, no commit/push/tag/release.'};
+fs.writeFileSync(path.join(base,'verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result,null,2));

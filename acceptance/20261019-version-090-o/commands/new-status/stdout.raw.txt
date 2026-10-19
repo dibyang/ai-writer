@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "title": "0.8到0.9更新验证",
+  "kind": "novel",
+  "revision": 1,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "direction",
+    "task": "完善作品定位和故事骨架，明确本轮允许的创作范围",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 1,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [
+      {
+        "id": "1bf07672-7cff-4463-9b71-f8d969175833",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 1,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 1,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "63e8daf34d85eccaef1a7bf327b6dacdc37207117c906bc1c1dc50903132cd13",
+      "runtime_id": "eb4f62113be0de4d269d48ec2ff71e3ca89edddf6729d77ea88f44671b38f382"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/1bf07672-7cff-4463-9b71-f8d969175833.json",
+        "sha256": "72341d82bba1c1b6d7b995010fcf15303722b2c4e95ebc721e9f947d6f1a80f9"
+      }
+    ],
+    "operations": {
+      "3a99f832-afe1-4009-ae4d-1afc27388c27": {
+        "input_hash": "9e63b8936801c2029acd3d6f646642f9b2def7fc2721eb3b1e6705e941f0b500",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "1bf07672-7cff-4463-9b71-f8d969175833",
+          "revision": 1,
+          "generation": 1,
+          "source_content_id": "63e8daf34d85eccaef1a7bf327b6dacdc37207117c906bc1c1dc50903132cd13",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": false,
+    "suggestion": "跨卷或长篇创作先long-enable-preview，再按已授权范围启用、组织分卷与滚动细纲"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 0,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 1,
+    "plan_exists": false,
+    "action": "完善作品定位和故事骨架，明确本轮允许的创作范围",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261019-version-090-o\\scenario\\旧版升级样例\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261019-version-090-o\\scenario\\旧版升级样例' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 0,
+    "ledger_count": 0,
+    "recent": [],
+    "timeline_tail": []
+  }
+}
