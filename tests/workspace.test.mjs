@@ -186,8 +186,15 @@ test('长篇追踪超过正文的1MiB限额后仍可恢复、续写和导出', t
 test('CLI 拒绝拼错、重复及缺值参数', () => {
   for (const args of [['unknown'], ['doctor', '--force', 'yes'], ['init', '--path'], ['status', '--project', 'a', '--project', 'b']]) assert.throws(() => main(args));
 });
-test('完整来源快照哈希与许可证存在，参考原文不作为运行依赖', () => {
+test('原始导入哈希与授权迁移可追溯，第三方原文保持且不作为运行依赖', () => {
   const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/source-manifest.json'), 'utf8'));
-  for (const item of manifest.files) assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, item.file))).digest('hex'), item.sha256, item.file);
+  const transition = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/license-transition.json'), 'utf8'));
+  const changes = new Map(transition.modified_imports.map(row => [row.file, row]));
+  assert.equal(changes.size, transition.modified_imports.length);
+  for (const row of changes.values()) {
+    assert.ok(row.file.startsWith('vendor/story-gate-studio/'), row.file);
+    assert.equal(manifest.files.find(item => item.file === row.file)?.sha256, row.import_sha256, row.file);
+  }
+  for (const item of manifest.files) assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, item.file))).digest('hex'), changes.get(item.file)?.current_sha256 ?? item.sha256, item.file);
   assert.match(fs.readFileSync(path.join(ROOT, 'vendor/oh-story-reference/LICENSE'), 'utf8'), /MIT/);
 });

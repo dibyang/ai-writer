@@ -1,0 +1,46 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+const here=import.meta.dirname,root=path.resolve(here,'../..');
+const oldSource=path.join(root,'acceptance/20261019-webnovel-reference-j/sources/package-0.8.0-v2');
+const work=path.join(here,'update-work'),entry=path.join(root,'bin/ai-writer.mjs');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const stateBytes=()=>fs.readFileSync(path.join(work,'.writer/state.json'));
+const state=()=>JSON.parse(stateBytes());
+let n=0;
+function run(label,tool,args,input,expected=0){
+  if(input){const file=path.join(here,`input-${++n}-${label}.json`);fs.writeFileSync(file,JSON.stringify(input,null,2)+'\n',{flag:'wx'});args=[...args,'--input',file];}
+  const r=spawnSync(process.execPath,[path.join(here,'capture.mjs'),'update-'+label,process.execPath,tool,...args],{cwd:root,encoding:'utf8',windowsHide:true,timeout:180000,maxBuffer:2**20});
+  assert.equal(r.status,expected,r.stderr+'\n'+r.stdout);
+  const dir=path.join(here,'commands','update-'+label),value=JSON.parse(fs.readFileSync(path.join(dir,expected===0?'stdout.raw.txt':'stderr.raw.txt')));console.log(label+' OK');return value;
+}
+const oldEntry=path.join(oldSource,'bin/ai-writer.mjs'),args=['--project',work];
+run('init-old',oldEntry,['init','--path',work,'--kind','essay','--title','Apache授权更新隔离验证']);
+const identify=run('old-identify',entry,['tool','identify',...args]);assert.equal(identify.ok,true);assert.equal(identify.tool_version,'0.8.0');
+assert.equal(identify.observed_content_id,'3593faa0ea76085a63d788109f3ffbb1bbdf89565f7a012bde32cce437eaf40c');
+assert.equal(run('old-doctor-new-entry',entry,['doctor',...args]).ok,true);
+const author='研究/本轮隔离授权.md',quote='仅允许此隔离验证作品更新到Apache-2.0工具包，刷新快速入门与使用手册，保留根规则、技能、其他文档和状态；不授权正文写作。';
+fs.writeFileSync(path.join(work,author),quote+'\n',{flag:'wx'});
+const author_evidence={local_source:author,source_sha256:sha(fs.readFileSync(path.join(work,author))),quote,locator:'synthetic CLI validation authorization',recorded_by:'parent-verification'};
+const kept=['AGENTS.md','.agents/skills/writer-essay/SKILL.md','docs/attribution.md','LICENSE.md'];
+fs.appendFileSync(path.join(work,'AGENTS.md'),'\n作者定制：此次只做工具更新验证。\n');
+fs.appendFileSync(path.join(work,'.agents/skills/writer-essay/SKILL.md'),'\n作者定制：保留观察与叙述声音。\n');
+const hashes=Object.fromEntries(kept.map(ref=>[ref,sha(fs.readFileSync(path.join(work,ref)))])),before=state(),beforeSha=sha(stateBytes());
+const plan=run('plan',entry,['tool','update-plan',...args],{source:root,documents:['docs/quickstart.md','docs/user-guide.md']});assert.equal(plan.can_update,true,JSON.stringify(plan));
+const input={...plan.request,author_evidence},update=run('apply',entry,['tool','update',...args],input);assert.equal(update.status,'completed');
+const after=state();assert.equal(after.revision,before.revision+1);assert.equal(after.tool_control.generation,before.tool_control.generation+1);
+for(const key of ['schema_version','units','snapshot','governance','decisions'])assert.deepEqual(after[key],before[key],key);
+for(const [ref,hash] of Object.entries(hashes))assert.equal(sha(fs.readFileSync(path.join(work,ref))),hash,ref);
+const installed=path.join(work,'.writer/tool/bin/ai-writer.mjs');
+const doctor=run('installed-doctor',installed,['doctor',...args]);assert.equal(doctor.ok,true,JSON.stringify(doctor));assert.equal(doctor.tool_version,'0.8.1');
+for(const ref of ['LICENSE.md','NOTICE','docs/license-transition.json'])assert.deepEqual(fs.readFileSync(path.join(work,'.writer/tool',ref)),fs.readFileSync(path.join(root,ref)),ref);
+for(const name of ['quickstart.md','user-guide.md'])assert.deepEqual(fs.readFileSync(path.join(work,'docs',name)),fs.readFileSync(path.join(root,'docs',name)),name);
+assert.equal(run('repeat',entry,['tool','update',...args],input).unchanged,true);assert.deepEqual(state(),after);
+const refused=run('113-refused',installed,['context',...args,'--unit','113'],null,2);assert.equal(refused.code,'ACTION_OUT_OF_SCOPE');assert.deepEqual(state(),after);
+const nested=path.join(here,'nested-essay');run('nested-init',installed,['init','--path',nested,'--kind','essay','--title','授权随包二次初始化']);
+for(const ref of ['LICENSE.md','NOTICE','docs/license-transition.json'])for(const prefix of ['', '.writer/tool/'])assert.deepEqual(fs.readFileSync(path.join(nested,prefix,ref)),fs.readFileSync(path.join(root,ref)),prefix+ref);
+assert.equal(run('nested-doctor',path.join(nested,'.writer/tool/bin/ai-writer.mjs'),['doctor','--project',nested]).ok,true);
+assert.equal(run('check',installed,['check',...args]).ok,true);
+fs.writeFileSync(path.join(here,'update-verification.json'),JSON.stringify({ok:true,scope:'Isolated fresh CLI initialization and formal update; no manuscript or model authoring acceptance',old_version:'0.8.0',old_content_id:identify.observed_content_id,new_version:'0.8.1',old_state_sha256:beforeSha,final_state_sha256:sha(stateBytes()),revision_before:before.revision,revision_after:after.revision,generation_before:before.tool_control.generation,generation_after:after.tool_control.generation,root_customizations_and_old_attribution_preserved:hashes,installed_license_notices_current:true,optional_docs_refreshed:true,idempotent:true,draft_gate_refused:true,nested_initialization:true,existing_works_modified:false},null,2)+'\n',{flag:'wx'});

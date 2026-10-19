@@ -1,6 +1,6 @@
 # 创作规划、作者决策与修订管理：落地设计及验收方案
 
-更新日期：2026-10-19。当前状态：**八项需求的已确认范围已实现并已有Windows本地验证；当前0.8.0为本地候选，H轮百章副本的本地流程验证已完成，未对外发布**。八项对应能力、实际验证结果、实现细化和暂缓范围统一见[当前状态总览](authoring-governance-status.md)。新增创作方法及0.7/0.8兼容验证见[J轮记录](../acceptance/20261019-webnovel-reference-j/README.md)；112章副本恢复、修订、更新与导出范围见[H轮记录](../acceptance/20261019-hundred-h/README.md)。模型复核不代表真人文学验收。现有作品与既有封存档案不因说明维护而修改。
+更新日期：2026-10-19。当前状态：**八项需求的已确认范围已实现并已有Windows本地验证；当前0.8.1为Apache-2.0授权的本地候选，尚未正式发行**。八项对应能力、实际验证结果、实现细化和暂缓范围统一见[当前状态总览](authoring-governance-status.md)。新增创作方法及0.7/0.8兼容验证见[J轮记录](../acceptance/20261019-webnovel-reference-j/README.md)；0.8.0下112章副本恢复、修订、更新与导出范围见[H轮记录](../acceptance/20261019-hundred-h/README.md)；0.8.1许可及包兼容验证见[K轮记录](../acceptance/20261019-apache-license-k/README.md)。模型复核不代表真人文学验收。现有作品与既有封存档案不因说明维护而修改。
 
 作者已分批授权并完成A→B→C→D。A见[0.4.0首批记录](../acceptance/20261018-governance-a/README.md)，B见[第二批实现说明](authoring-governance-b-implementation.md)及[版本修订手册](revision-and-sources.md)。C见[第三批约束](authoring-governance-c-implementation.md)及[专项手册](review-and-registration.md)。D见[D批约束](authoring-governance-d-implementation.md)、[更新手册](tool-updates.md)和[D批验证记录](../acceptance/20261018-governance-d/README.md)。E/F补强及最终0.7.3百章流程见[当前状态总览](authoring-governance-status.md)。以下需求缺口、字段草图和验收矩阵保留设计时点的依据，均有历史语境；它们不表示当前尚无对应功能，也不替代已细化的实际协议与分版本证据。
 

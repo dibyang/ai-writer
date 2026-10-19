@@ -1,10 +1,12 @@
 {
   "schema_version": "story-gate-license-profile@0.1.0",
-  "activation": "local-file-and-documentation-only",
+  "software_license": "Apache-2.0",
+  "activation": "none-required-for-software-use",
+  "tiers_scope": "Optional support and service offerings only; Apache-2.0 permissions are identical for all users.",
   "tiers": [
     {
       "tier": "Trial",
-      "use_case": "private evaluation",
+      "use_case": "optional evaluation support",
       "offline": true,
       "support": "community or limited async support"
     },
@@ -33,8 +35,7 @@
     "support bundles must not copy manuscript prose"
   ],
   "future_extension_points": [
-    "signed local license file",
-    "offline activation code",
-    "optional enterprise license server"
+    "optional support agreement records",
+    "customer-specific integration services"
   ]
 }
