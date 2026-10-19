@@ -18,6 +18,8 @@
 
 0.9.0完整流程的后续实跑与问题修复另见[Q轮记录](acceptance/20261019-long-flow-090-q/README.md)，覆盖长章中断恢复、纲文实读回对、预算扩容和登记；各项结论以该轮具体构建及实际覆盖为准。
 
+增加章节与单章篇幅、多轮恢复、跨卷回收及旧章修订的过程见[S轮扩规模记录](acceptance/20261020-long-flow-090-s/README.md)。目标、实际完成量、失败重试与封存状态分别列明，不将规划规模当作已完成验证。
+
 0.8.0 的方法来源、适配范围及验证结果见[J 轮记录](acceptance/20261019-webnovel-reference-j/README.md)，其中保留了完整回归、旧包更新和两次 Codex 实跑证据。H 轮进展另见[百章验证记录](acceptance/20261019-hundred-h/README.md)。
 
 使用前请准备好 Codex 和 Node.js 20 或更高版本。无须安装额外 npm 依赖；写作使用当前 Codex 会话及其模型，不单独调用模型 API。

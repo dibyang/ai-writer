@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),results=[];
+for(const mode of ['seal','verify']){const p=spawnSync(process.execPath,[path.join(base,'seal-evidence.mjs'),mode],{encoding:'utf8',windowsHide:true});assert.equal(p.status,0,p.stderr);const result=JSON.parse(p.stdout);assert.equal(result.ok,true);results.push(result);}
+assert.equal(results[0].manifest_sha256,results[1].manifest_sha256);
+const verification=JSON.parse(fs.readFileSync(path.join(base,'verification.json'))),receipt={ok:true,verified_at:new Date().toISOString(),root:'acceptance/20261020-long-flow-090-s',...results[1],registered_units:verification.registered_units,content_id:verification.content_id,scope:'Independent tree verification after seal; receipt stays outside sealed directory. No files in S changed after sealing.'};
+const output=path.join(base,'../20261020-long-flow-090-s-seal-verification.json');fs.writeFileSync(output,JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({...receipt,receipt:output}));

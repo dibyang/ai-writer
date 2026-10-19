@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-dual-body-continuity-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-dual-body-continuity-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-DUAL-001-R001",
+      "severity": "blocker",
+      "location": "input.timeline_continuity",
+      "recommendation": "When a chapter uses a dual timeline, sleep trigger, exit, return, or body switch, record both bodies' locations, elapsed one-to-one time, post-exit care or movement, and the next wake position.",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "revision": 25,
+  "unit": 10,
+  "versions": {
+    "S_V3_ORIGINAL": {
+      "id": "S_V3_ORIGINAL",
+      "ref": "大纲/分卷/V3.json",
+      "object_ref": ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source",
+      "sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+      "previous": null,
+      "format": "json"
+    },
+    "S_V3_CLARIFIED": {
+      "id": "S_V3_CLARIFIED",
+      "ref": "大纲/分卷/V3.json",
+      "object_ref": ".writer/objects/eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936.source",
+      "sha256": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+      "previous": "S_V3_ORIGINAL",
+      "format": "json"
+    }
+  },
+  "ranges": [
+    {
+      "ref": "大纲/分卷/V3.json",
+      "version_id": "S_V3_ORIGINAL",
+      "from": 1,
+      "to": null
+    }
+  ],
+  "impact_pending": [
+    {
+      "id": "a4d61f36-19c3-4dcf-8f7b-323810411dad",
+      "version_id": "S_V3_CLARIFIED",
+      "from": 7,
+      "through": 9,
+      "requested_from": 7,
+      "analysis": {
+        "schema_version": 1,
+        "revision": 24,
+        "state_sha256": "20556d95afcd47cfe1a91b0276aaa7e1e2438bfaff674b2dedf2ea486ae571dc",
+        "version_id": "S_V3_CLARIFIED",
+        "ref": "大纲/分卷/V3.json",
+        "from": 7,
+        "mode": "historical",
+        "candidate_sha256": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+        "direct_consumers": [
+          {
+            "unit": 7,
+            "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+            "bound": true,
+            "affected_by_publication": true
+          },
+          {
+            "unit": 8,
+            "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+            "bound": true,
+            "affected_by_publication": true
+          },
+          {
+            "unit": 9,
+            "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+            "bound": true,
+            "affected_by_publication": true
+          }
+        ],
+        "revision_from": 7,
+        "review_from": 6,
+        "retained_prefix_consumers": [],
+        "replaced_ranges": [
+          {
+            "ref": "大纲/分卷/V3.json",
+            "version_id": "S_V3_ORIGINAL",
+            "from": 1,
+            "to": null
+          }
+        ],
+        "possible_indirect_from": 7,
+        "possible_indirect_through": 9,
+        "possible_indirect_impact": "unknown-requires-reading",
+        "required_readings": {
+          ".writer/objects/eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936.source": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+          "正文/0006.md": "e5e9e30c7526bff3a0b5381f431ef2772866aa2c20b83111e1629113f29a9941",
+          "正文/0007.md": "822b236676b390042c740eda993b07df37490163f089c0011f34f462b738e9f0",
+          "正文/0008.md": "0b81e0d5c79f66dc67fe634861a8879dd388b3bfd10aa00f1b79e836f5256f71",
+          "正文/0009.md": "d12f9832911f0e57440de60090947e2a7720984e031573071bb450207aeed85e",
+          ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d"
+        },
+        "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+        "review": {
+          "report": "审查/S-R1-新卷契约影响.md",
+          "report_sha256": "73c4f4d5ed3cbc54f3bb61bf2e0f3510e5819eb79e99a266cd4ab41752f035b7",
+          "readings": {
+            ".writer/objects/eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936.source": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+            "正文/0006.md": "e5e9e30c7526bff3a0b5381f431ef2772866aa2c20b83111e1629113f29a9941",
+            "正文/0007.md": "822b236676b390042c740eda993b07df37490163f089c0011f34f462b738e9f0",
+            "正文/0008.md": "0b81e0d5c79f66dc67fe634861a8879dd388b3bfd10aa00f1b79e836f5256f71",
+            "正文/0009.md": "d12f9832911f0e57440de60090947e2a7720984e031573071bb450207aeed85e",
+            ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d"
+          },
+          "conclusion": "见绑定报告；由原生Codex实读并说明原契约、新候选和旧文影响，不是脚本语义验收",
+          "unresolved": [],
+          "frozen_report": ".writer/objects/73c4f4d5ed3cbc54f3bb61bf2e0f3510e5819eb79e99a266cd4ab41752f035b7.txt"
+        }
+      }
+    }
+  ],
+  "entry_differences": [],
+  "pending_edits": []
+}

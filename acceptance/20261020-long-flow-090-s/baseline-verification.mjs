@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,root,sha,run} from './common.mjs';
+const start=JSON.parse(fs.readFileSync(path.join(base,'source-start.json')));
+for(const row of start.inputs)assert.equal(sha(fs.readFileSync(path.join(root,row.file))),row.sha256,row.file);
+const tests={};for(const label of ['source-test','package-tests']){const dir=path.join(base,'commands',label),result=JSON.parse(fs.readFileSync(path.join(dir,'result.json'))),stdout=fs.readFileSync(path.join(dir,'stdout.raw.txt'),'utf8');assert.equal(result.exit_code,0);for(const [name,value] of [['tests',173],['pass',172],['fail',0],['skipped',1]])assert.match(stdout,new RegExp('ℹ '+name+' '+value+'(?:\\r?\\n|$)'));tests[label]={tests:173,passed:172,failed:0,skipped:1,elapsed_ms:result.elapsed_ms,stdout_sha256:sha(Buffer.from(stdout))};}
+const identity=run('baseline-tool-identity',['tool','identify']);assert.equal(identity.observed_content_id,JSON.parse(fs.readFileSync(path.join(base,'candidate/release-manifest.json'))).content_id);
+run('baseline-work-check',['check']);run('baseline-work-doctor',['doctor']);
+const result={ok:true,frozen_inputs:start.inputs.length,tests,content_id:identity.observed_content_id,scope:'Current Windows local source and actual extracted ZIP; engine unchanged; not cross-platform CI or literary acceptance.'};fs.writeFileSync(path.join(base,'baseline-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));

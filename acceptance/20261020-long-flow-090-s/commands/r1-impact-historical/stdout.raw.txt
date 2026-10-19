@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "impact": {
+    "schema_version": 1,
+    "revision": 24,
+    "state_sha256": "20556d95afcd47cfe1a91b0276aaa7e1e2438bfaff674b2dedf2ea486ae571dc",
+    "version_id": "S_V3_CLARIFIED",
+    "ref": "大纲/分卷/V3.json",
+    "from": 7,
+    "mode": "historical",
+    "candidate_sha256": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+    "direct_consumers": [
+      {
+        "unit": 7,
+        "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 8,
+        "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 9,
+        "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 7,
+    "review_from": 6,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "大纲/分卷/V3.json",
+        "version_id": "S_V3_ORIGINAL",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": 7,
+    "possible_indirect_through": 9,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936.source": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+      "正文/0006.md": "e5e9e30c7526bff3a0b5381f431ef2772866aa2c20b83111e1629113f29a9941",
+      "正文/0007.md": "822b236676b390042c740eda993b07df37490163f089c0011f34f462b738e9f0",
+      "正文/0008.md": "0b81e0d5c79f66dc67fe634861a8879dd388b3bfd10aa00f1b79e836f5256f71",
+      "正文/0009.md": "d12f9832911f0e57440de60090947e2a7720984e031573071bb450207aeed85e",
+      ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  }
+}

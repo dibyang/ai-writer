@@ -1,0 +1,3595 @@
+{
+  "ok": true,
+  "completed_captured_commands": 427,
+  "captured_nonzero": [
+    {
+      "label": "budget-13-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1343
+    },
+    {
+      "label": "budget-13-short",
+      "exit_code": 2,
+      "elapsed_ms": 1383
+    },
+    {
+      "label": "budget-16-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 239
+    },
+    {
+      "label": "budget-16-short",
+      "exit_code": 2,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "budget-7-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 386
+    },
+    {
+      "label": "budget-7-short",
+      "exit_code": 2,
+      "elapsed_ms": 375
+    },
+    {
+      "label": "c-old-template-13-refused",
+      "exit_code": 2,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "c-old-template-15-refused",
+      "exit_code": 2,
+      "elapsed_ms": 187
+    },
+    {
+      "label": "codex-a-first",
+      "exit_code": 1,
+      "elapsed_ms": 119
+    },
+    {
+      "label": "d-manual-preview-16",
+      "exit_code": 1,
+      "elapsed_ms": 165
+    },
+    {
+      "label": "final-next-draft-refused",
+      "exit_code": 2,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "manuscript-verification-before-inherited-map-fix",
+      "exit_code": 1,
+      "elapsed_ms": 93
+    },
+    {
+      "label": "parent-preview-false-channel-check",
+      "exit_code": 1,
+      "elapsed_ms": 397
+    },
+    {
+      "label": "preview-12",
+      "exit_code": 1,
+      "elapsed_ms": 147
+    },
+    {
+      "label": "r1-main-plan-refused",
+      "exit_code": 2,
+      "elapsed_ms": 238
+    },
+    {
+      "label": "r1-old-nine-refused",
+      "exit_code": 2,
+      "elapsed_ms": 148
+    },
+    {
+      "label": "r1-publish-baseline",
+      "exit_code": 2,
+      "elapsed_ms": 131
+    },
+    {
+      "label": "r2-context-after-final-12",
+      "exit_code": 2,
+      "elapsed_ms": 339
+    },
+    {
+      "label": "r2-context-after-final-12-retry1",
+      "exit_code": 2,
+      "elapsed_ms": 238
+    },
+    {
+      "label": "r2-old-twelve-refused-retry1",
+      "exit_code": 2,
+      "elapsed_ms": 401
+    },
+    {
+      "label": "sparse-before",
+      "exit_code": 1,
+      "elapsed_ms": 13236
+    },
+    {
+      "label": "zip-verification",
+      "exit_code": 1,
+      "elapsed_ms": 515
+    },
+    {
+      "label": "zip-verification-retry",
+      "exit_code": 1,
+      "elapsed_ms": 216
+    }
+  ],
+  "native_clients": [
+    {
+      "label": "codex-a-first",
+      "thread_id": null,
+      "exit_code": 1,
+      "completed_items": 0,
+      "notices": [],
+      "failed_commands": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-a-native",
+      "thread_id": "01a154ef-0bd0-7fd3-ab2b-033308d9b4eb",
+      "exit_code": 0,
+      "completed_items": 46,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-a-resume",
+      "thread_id": "01a154ef-0bd0-7fd3-ab2b-033308d9b4eb",
+      "exit_code": 0,
+      "completed_items": 99,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_42",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@'\nconst fs=require('node:fs'),path=require('node:path');const p='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/scenario/雨棚后的灯';const t=[1,2,3].map(n=>fs.readFileSync(path.join(p,'分段/0008/part-0'+n+'.md'),'utf8'));const body=t.join('\\\\n\\\\n');const han=(body.replace(/\"'^#.*$/gm,'\"'').match(/\\\\p{Script=Han}/gu)||[]).length;if(han<3500||han>5000)throw Error('Length '+han);fs.writeFileSync(path.join(p,'正文/0008.md'),body,{flag:'wx',encoding:'utf8'});console.log(JSON.stringify({han,segments:3}));\n'@ | node -\"",
+          "output": "[stdin]:1\r\nconst fs=require('node:fs'),path=require('node:path');const p='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/scenario/雨棚后的灯';const t=[1,2,3].map(n=>fs.readFileSync(path.join(p,'分段/0008/part-0'+n+'.md'),'utf8'));const body=t.join('\\n\\n');const han=(body.replace(/^#.*$/gm,'').match(/\\p{Script=Han}/gu)||[]).length;if(han<3500||han>5000)throw Error('Length '+han);fs.writeFileSync(path.join(p,'正文/0008.md'),body,{flag:'wx',encoding:'utf8'});console.log(JSON.stringify({han,segments:3}));\r\n                                                                                                                                                                                                                                                                                                                                                             ^\r\n\r\nError: Length 3442\r\n    at [stdin]:1:356\r\n    at runScriptInThisContext (node:internal/vm:219:10)\r\n    at node:internal/process/execution:451:12\r\n    at [stdin]-wrapper:6:24\r\n    at runScriptInContext (node:internal/process/execution:449:60)\r\n    at evalFunction (node:internal/process/execution:283:30)\r\n    at evalTypeScript (node:internal/process/execution:295:3)\r\n    at node:internal/main/eval_stdin:51:5\r\n    at Socket.<anonymous> (node:internal/process/execution:205:5)\r\n    at Socket.emit (node:events:521:24)\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-b",
+      "thread_id": "01a1552a-33b9-72e3-ab8f-a3a268faeabf",
+      "exit_code": 0,
+      "completed_items": 146,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_42",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node scenario/雨棚后的灯/.writer/tool/bin/ai-writer.mjs outline --from 1 --to 9 --project scenario/雨棚后的灯'",
+          "output": "{\n  \"ok\": false,\n  \"error\": \"无效、重复或缺值参数：--from\",\n  \"code\": \"COMMAND_FAILED\",\n  \"next_action\": \"按报错核对输入，查看本命令帮助。\",\n  \"help_command\": \"node 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs' outline '--help'\"\n}\n"
+        },
+        {
+          "id": "item_112",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node flow.mjs record 12'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"preview-12\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"record-preview\",\"--input\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\preview-12.json\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-19T17:33:49.021Z\",\"elapsed_ms\":147,\"exit_code\":1,\"signal\":null,\"error\":null,\"stdout_bytes\":385,\"stderr_bytes\":0,\"input\":{\"file\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\preview-12.json\",\"sha256\":\"dc971ea090741d563811bb45ce363a4ca4d3846f6dbdac244f123a3721c54310\"},\"before_state_sha256\":\"1a62bfb799efa7d0e7eafb1466337452bcb419401efcfa088e36a5444e0965ff\",\"after_state_sha256\":\"1a62bfb799efa7d0e7eafb1466337452bcb419401efcfa088e36a5444e0965ff\"}\r\n\r\n\r\n\r\n1 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:264)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/flow.mjs:14:53\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 1,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-c-first",
+      "thread_id": "01a15556-0cb4-7823-a277-367ce8b8f139",
+      "exit_code": 0,
+      "completed_items": 58,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-c-resume",
+      "thread_id": "01a15556-0cb4-7823-a277-367ce8b8f139",
+      "exit_code": 0,
+      "completed_items": 95,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_22",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command '$compare = @'\"'\nimport fs from 'node:fs';\nimport path from 'node:path';\nimport assert from 'node:assert/strict';\nimport {base,work,run,read,json,sha,state} from './acceptance/20261020-long-flow-090-s/common.mjs';\nconst identity=run('c-tool-identify-after-update',['tool','identify']);\nconst old=json('.writer/drafts/s-context-13.json'),now=json('.writer/drafts/s-context-13-after-update.json');\nconst sameFields=['plan','settings','snapshot','recent','previous_ending','outline','continuity','governance','source_bindings'];\nconst same=Object.fromEntries(sameFields.map(k=>[k,JSON.stringify(old[k])===JSON.stringify(now[k])]));\nassert.ok(Object.values(same).every(Boolean));\nconst installed=JSON.parse(fs.readFileSync(path.join(base,'delivery-current.json')));\nconst bodyChecks=installed.bodies.map(e=>({ref:e.file,sha256:sha(read(e.file)),same:sha(read(e.file))===e.sha256}));\nassert.ok(bodyChecks.every(e=>e.same));\nconst oldState=JSON.parse(fs.readFileSync(path.join(base,'commands/template-13/before-state.json')));\nconst newState=state();\nconst equality={snapshot:JSON.stringify(oldState.snapshot)===JSON.stringify(newState.snapshot),governance:JSON.stringify(oldState.governance)===JSON.stringify(newState.governance)};\nassert.ok(Object.hasOwn(oldState,'snapshot')&&Object.hasOwn(newState,'snapshot'));\nassert.ok(equality.snapshot&&equality.governance);\nconst result={ok:true,old_revision:old.revision,current_revision:now.revision,old_generation:oldState.tool_control.generation,current_generation:newState.tool_control.generation,identity,same_context_fields:same,snapshot_and_governance_equal:equality,bodies:bodyChecks,old_template_sha:sha(read('.writer/drafts/s-record-13.json')),new_context_sha:sha(read('.writer/drafts/s-context-13-after-update.json')),new_template_sha:sha(read('.writer/drafts/s-record-13-after-update.json')),state_sha:sha(read('.writer/state.json'))};\nfs.writeFileSync(path.join(base,'c-resume-source-comparison.json'),JSON.stringify(result,null,2)+'\\\\n',{flag:'wx'});\nconsole.log(JSON.stringify(result,null,2));\n'@\nnode --input-type=module -e \"'$compare'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\r\n\r\n  assert.ok(equality.snapshot&&equality.governance)\r\n\r\n    at file:///D:/work/other/ai-writer/[eval1]:17:8\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_55",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command '$old13 = @'\"'\nimport assert from 'node:assert/strict';\nimport {read,json,input,run,sha} from './acceptance/20261020-long-flow-090-s/common.mjs';\nconst before=sha(read('.writer/state.json'));\nconst result=run('c-old-template-13-refused',['record','--input',input('c-old-template-13',{...json('.writer/drafts/s-record-13.json'),...json('交接/登记-0013.json')})],1);\nassert.equal(sha(read('.writer/state.json')),before);\nassert.ok(JSON.stringify(result).includes('追踪修订号已变化'));\nconsole.log(JSON.stringify({ok:true,refused:result,state_unchanged:true,old_template_sha:sha(read('.writer/drafts/s-record-13.json'))},null,2));\n'@\nnode --input-type=module -e \"'$old13'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"c-old-template-13-refused\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"record\",\"--input\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\c-old-template-13.json\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-19T18:48:01.928Z\",\"elapsed_ms\":176,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":351,\"input\":{\"file\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\c-old-template-13.json\",\"sha256\":\"f7dbe4323cd441d5cf7d42ddf1e3315d3559aa04c781bea5f7a3c1f3f7bb23c5\"},\"before_state_sha256\":\"d08300f4295836c7237e48da2f73a662299d13792d8750e970db1e36339c515c\",\"after_state_sha256\":\"d08300f4295836c7237e48da2f73a662299d13792d8750e970db1e36339c515c\"}\r\n\r\n\r\n\r\n2 !== 1\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:264)\r\n    at file:///D:/work/other/ai-writer/[eval1]:4:14\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 1,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "thread_id": "01a15556-0cb4-7823-a277-367ce8b8f139",
+      "exit_code": 0,
+      "completed_items": 72,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-d",
+      "thread_id": "01a155a7-fb2a-7da1-a70a-70e318638fd8",
+      "exit_code": 0,
+      "completed_items": 158,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_36",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"import fs from 'node:fs'; import {base,read,sha,run,state} from './acceptance/20261020-long-flow-090-s/common.mjs'; const files=Array.from({length:6},(_,i)=>'正文/'+String(i+10).padStart(4,'0')+'.md'); const rows=files.map(file=>({file,sha256:sha(read(file)),lines:read(file).toString('utf8').split('\\\\n').length})); fs.writeFileSync(base+'/d-r5-read-after.json',JSON.stringify(rows,null,2)+'\\\\n',{flag:'wx'}); console.log(JSON.stringify(rows)); console.log(JSON.stringify(run('d-recall-help',['recall','--help']))); console.log(JSON.stringify(state().snapshot));\\\"\"",
+          "output": "[{\"file\":\"正文/0010.md\",\"sha256\":\"a587b101da5770ddb4cbb4a0f31a3eea6468bc0d72e2c97933a355594a36df79\",\"lines\":132},{\"file\":\"正文/0011.md\",\"sha256\":\"97ed21ea76d9bea17f8558fc5de3d25c5efe64e2c1a8fd3d72236a7230199f80\",\"lines\":126},{\"file\":\"正文/0012.md\",\"sha256\":\"57fa55b36d603c6dfed34005caa7be902e2c27fa65064bcfec9f38b4499139c7\",\"lines\":126},{\"file\":\"正文/0013.md\",\"sha256\":\"84f8a57da060f7fcb7c48e9a69c833b93c4214acf220b261eacea4d06a5eeded\",\"lines\":319},{\"file\":\"正文/0014.md\",\"sha256\":\"6e242b479d7131791b9301b2c096426c0a7178313fbd2bd5d03bfaef09baaa57\",\"lines\":145},{\"file\":\"正文/0015.md\",\"sha256\":\"2afc6861aaf88772e4c4d0964e1621c496bcf8967f78a43108ce84999f38eda2\",\"lines\":167}]\n<anonymous_script>:1\r\nai-writer 0.9.0 / recall\r\n^\r\n\r\nSyntaxError: Unexpected token 'a', \"ai-writer \"... is not valid JSON\r\n    at JSON.parse (<anonymous>)\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:324)\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:470\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_76",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"import fs from 'node:fs';import path from 'node:path';import {work,read,json,input,run} from './acceptance/20261020-long-flow-090-s/common.mjs';fs.writeFileSync(path.join(work,'正文/0016.md'),[1,2,3].map(i=>read('分段/0016/part-0'+i+'.md').toString('utf8')).join('\\\\n\\\\n'));console.log(JSON.stringify(run('d-manual-preview-16',['record-preview','--input',input('d-manual-preview-16',{...json('.writer/drafts/s-record-16.json'),...json('交接/登记-0016.json')})])));\\\"\"",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"d-manual-preview-16\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"record-preview\",\"--input\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\d-manual-preview-16.json\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-19T19:42:08.113Z\",\"elapsed_ms\":165,\"exit_code\":1,\"signal\":null,\"error\":null,\"stdout_bytes\":324,\"stderr_bytes\":0,\"input\":{\"file\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\d-manual-preview-16.json\",\"sha256\":\"360b5c5bb0ddad6329f3d184c9b464f71bd5c3e18c38a0e09b3a9836452bd000\"},\"before_state_sha256\":\"c37f7c618504706a2f33b3327eab7b47eb855171185f3dcf0424d1b58f94d53a\",\"after_state_sha256\":\"c37f7c618504706a2f33b3327eab7b47eb855171185f3dcf0424d1b58f94d53a\"}\r\n\r\n\r\n\r\n1 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:264)\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:296\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 1,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-final-read",
+      "thread_id": "01a155ce-f6b7-78d2-b851-f8432b026c95",
+      "exit_code": 0,
+      "completed_items": 156,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-r1-first",
+      "thread_id": "01a15512-b0ca-7850-9cfc-8fb20e68aedd",
+      "exit_code": 0,
+      "completed_items": 105,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_39",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-s/revision-one.mjs baseline'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"r1-publish-baseline\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\bin\\\\ai-writer.mjs\",\"source\",\"publish\",\"--input\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\r1-publish-baseline.json\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-19T16:53:29.789Z\",\"elapsed_ms\":131,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":310,\"input\":{\"file\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\r1-publish-baseline.json\",\"sha256\":\"3f1444f44c4c276135045b48899ad6cbca409ad4c08c2aa8f0935820aa4614fb\"},\"before_state_sha256\":\"f0d04dfb738c27fd36decfc3e7d1e27504a482f11e2342850c2db5bd97e4c8ae\",\"after_state_sha256\":\"f0d04dfb738c27fd36decfc3e7d1e27504a482f11e2342850c2db5bd97e4c8ae\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:6:264)\r\n    at call (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/revision-one.mjs:3:72)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/revision-one.mjs:13:3\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-r1-resume",
+      "thread_id": "01a15512-b0ca-7850-9cfc-8fb20e68aedd",
+      "exit_code": 0,
+      "completed_items": 62,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-r2",
+      "thread_id": "01a15544-1b38-7c40-8b96-7ca85dfe23a0",
+      "exit_code": 0,
+      "completed_items": 130,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_95",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@'\nimport fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,run,sha} from './acceptance/20261020-long-flow-090-s/common.mjs';\nconst b=JSON.parse(fs.readFileSync(path.join(base,'r2-session.json'))),p=b.workspace,s=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json'))),rows=s.units.filter(u=>u.unit>=7).map(u=>({unit:u.unit,draft:u.draft,sha256:sha(fs.readFileSync(path.join(p,u.draft))),source_hashes:u.source_hashes,source_bindings:u.source_bindings})),previous=JSON.parse(fs.readFileSync(path.join(base,'r2-client-final-read-before.json')));for(let i=0;i<rows.length;i++)assert.equal(rows[i].sha256,previous.body[i].sha256);\nconst refs=new Set(rows.flatMap(u=>Object.keys(u.source_hashes)).filter(x=>x\"'!=='\"'.writer/state.json'));for(const u of rows)for(const v of Object.values(u.source_bindings??{}))refs.add(v.object_ref);const files=Object.fromEntries([...refs].map(ref=>[ref,sha(fs.readFileSync(path.join(p,ref)))]));\nconst out={at:new Date().toISOString(),revision:s.revision,state_sha256:sha(fs.readFileSync(path.join(p,'.writer/state.json'))),body:rows,actual_dependency_files:files};fs.writeFileSync(path.join(base,'r2-client-reread-before.json'),JSON.stringify(out,null,2)+'\\\\n',{flag:'wx'});\nconst ctx=run('r2-context-after-final-12',['context','--unit','12'],0,p);console.log({at:out.at,revision:s.revision,body_7_12_unchanged_from_prior_full_read:true,T_VISIT:s.snapshot.ledger.T_VISIT.character_known,T_RETURN:s.snapshot.ledger.T_RETURN.character_known,T_SHORT_ACCOUNT:s.snapshot.ledger.T_SHORT_ACCOUNT.character_known});\n'@ | node --input-type=module\"",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"r2-context-after-final-12\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"context\",\"--unit\",\"12\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\revisions\\\\a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0\\\\workspace\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-19T17:56:17.579Z\",\"elapsed_ms\":339,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":2249,\"input\":null,\"before_state_sha256\":\"0ac12a4fb7ff2d0126b01780c3aa63ff31e76604f683111327d969e7c7cc0455\",\"after_state_sha256\":\"0ac12a4fb7ff2d0126b01780c3aa63ff31e76604f683111327d969e7c7cc0455\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:264)\r\n    at file:///D:/work/other/ai-writer/[eval1]:5:11\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_98",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@'\nimport fs from 'node:fs';import path from 'node:path';import {base,run} from './acceptance/20261020-long-flow-090-s/common.mjs';const b=JSON.parse(fs.readFileSync(path.join(base,'r2-session.json')));const ctx=run('r2-context-after-final-12-retry1',['context','--unit','12','--purpose','revision','--revision-token',b.token],0,b.workspace);console.log({ok:ctx.ok,revision:ctx.revision,T_VISIT:ctx.snapshot.ledger.T_VISIT.character_known,T_RETURN:ctx.snapshot.ledger.T_RETURN.character_known,T_SHORT_ACCOUNT:ctx.snapshot.ledger.T_SHORT_ACCOUNT.character_known});\n'@ | node --input-type=module\"",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"r2-context-after-final-12-retry1\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"context\",\"--unit\",\"12\",\"--purpose\",\"revision\",\"--revision-token\",\"f808b9e3c898ea33fc03de4c86d40725feaed17cc12f9cb02e99f9bfef931b5f\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\revisions\\\\a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0\\\\workspace\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-19T17:56:37.853Z\",\"elapsed_ms\":238,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":413,\"input\":null,\"before_state_sha256\":\"0ac12a4fb7ff2d0126b01780c3aa63ff31e76604f683111327d969e7c7cc0455\",\"after_state_sha256\":\"0ac12a4fb7ff2d0126b01780c3aa63ff31e76604f683111327d969e7c7cc0455\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:264)\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:210\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_100",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@'\nimport fs from 'node:fs';import path from 'node:path';import {base,run} from './acceptance/20261020-long-flow-090-s/common.mjs';const b=JSON.parse(fs.readFileSync(path.join(base,'r2-session.json')));const ctx=run('r2-context-after-final-12-discussion',['context','--unit','12','--purpose','discussion'],0,b.workspace);console.log({ok:ctx.ok,revision:ctx.revision,T_VISIT:ctx.snapshot.ledger.T_VISIT.character_known,T_RETURN:ctx.snapshot.ledger.T_RETURN.character_known,T_SHORT_ACCOUNT:ctx.snapshot.ledger.T_SHORT_ACCOUNT.character_known});\n'@ | node --input-type=module\"",
+          "output": "file:///D:/work/other/ai-writer/[eval1]:1\r\nimport fs from 'node:fs';import path from 'node:path';import {base,run} from './acceptance/20261020-long-flow-090-s/common.mjs';const b=JSON.parse(fs.readFileSync(path.join(base,'r2-session.json')));const ctx=run('r2-context-after-final-12-discussion',['context','--unit','12','--purpose','discussion'],0,b.workspace);console.log({ok:ctx.ok,revision:ctx.revision,T_VISIT:ctx.snapshot.ledger.T_VISIT.character_known,T_RETURN:ctx.snapshot.ledger.T_RETURN.character_known,T_SHORT_ACCOUNT:ctx.snapshot.ledger.T_SHORT_ACCOUNT.character_known});\r\n                                                                                                                                                                                                                                                                                                                                                                                                ^\r\n\r\nTypeError: Cannot read properties of undefined (reading 'ledger')\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:385\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_114",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-s/revision-two.mjs finish'",
+          "output": "node:fs:561\r\n  return binding.open(\r\n                 ^\r\n\r\nError: ENOENT: no such file or directory, open 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-s\\inputs\\record-12.json'\r\n    at Object.openSync (node:fs:561:18)\r\n    at Object.readFileSync (node:fs:445:35)\r\n    at j (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/revision-two.mjs:2:110)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/revision-two.mjs:18:119\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-s\\\\inputs\\\\record-12.json'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_127",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"@'\nimport fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,read,state,sha} from './acceptance/20261020-long-flow-090-s/common.mjs';\nconst v=JSON.parse(fs.readFileSync(path.join(base,'r2-final-verification-retry1.json'))),s=state(),entry='交接/S-R2-修订后当前入口.md',text=read(entry).toString('utf8');assert.equal(s.revision,34);assert.equal(s.units.length,12);assert.equal(s.governance.workflow.stage,'trial');for(const body of v.body)assert.equal(sha(read(body.ref)),body.sha256);for(const op of JSON.parse(fs.readFileSync(path.join(base,'r2-edit-operations.json'))))assert.ok(text.includes(op.before)&&text.includes(op.after));\nconst completion={ok:true,at:new Date().toISOString(),main_revision:s.revision,registered:12,next_unit:13,transaction_id:v.transaction_id,transaction_status:v.transaction_status,state_sha256:sha(read('.writer/state.json')),current_entry:{ref:entry,sha256:sha(read(entry))},review:{ref:'审查/S-R2-0007-0012.md',sha256:sha(read('审查/S-R2-0007-0012.md'))},operations:{ref:'r2-edit-operations.json',sha256:sha(fs.readFileSync(path.join(base,'r2-edit-operations.json')))},body_operations:2,unchanged_body_units:v.body.filter(x=>x.unit\"'!==10).map(x=>x.unit),segment_derivation_done:false};\nfs.writeFileSync(path.join(base,'\"'r2-client-completion.json'),JSON.stringify(completion,null,2)+'\\\\n',{flag:'wx'});console.log(JSON.stringify(completion,null,2));\n'@ | node --input-type=module\"",
+          "output": "file:///D:/work/other/ai-writer/[eval1]:2\r\nconst v=JSON.parse(fs.readFileSync(path.join(base,'r2-final-verification-retry1.json'))),s=state(),entry='交接/S-R2-修订后当前入口.md',text=read(entry).toString('utf8');assert.equal(s.revision,34);assert.equal(s.units.length,12);assert.equal(s.governance.workflow.stage,'trial');for(const body of v.body)assert.equal(sha(read(body.ref)),body.sha256);for(const op of JSON.parse(fs.readFileSync(path.join(base,'r2-edit-operations.json'))))assert.ok(text.includes(op.before)&&text.includes(op.after));\r\n                                                                                                                                                                                                                                                               ^\r\n\r\nTypeError: Cannot read properties of undefined (reading 'stage')\r\n    at file:///D:/work/other/ai-writer/[eval1]:2:256\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-r3",
+      "thread_id": "01a15565-62c8-7853-bdbd-1b9df9546cfd",
+      "exit_code": 0,
+      "completed_items": 110,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_50",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"import fs from 'node:fs';import path from 'node:path';import {base,run} from './acceptance/20261020-long-flow-090-s/common.mjs';const b=JSON.parse(fs.readFileSync(path.join(base,'r3-session.json')));for(const id of ['O_PROGRAM','O_CURTAIN','O_GRID']){console.log(JSON.stringify(run('r3-client-recall-11-'+id.toLowerCase(),['recall','--query',id,'--limit','1'],0,b.workspace)));}\\\"\"",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: \r\nfile:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/run.mjs:4\r\r\nif(!/^[a-z][a-z0-9-]*$/.test(label??'')||!exe)throw Error('label [--stdin-file file] exe args');\r\r\n                                                    ^\r\r\n\r\r\nError: label [--stdin-file file] exe args\r\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/run.mjs:4:53\r\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\r\n    at async node:internal/modules/esm/loader:639:26\r\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\r\n\r\r\nNode.js v24.15.0\r\r\n\r\n\r\n1 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-s/common.mjs:7:264)\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:279\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 1,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_mcp": []
+    }
+  ],
+  "native_reported_file_changes": [
+    {
+      "label": "codex-a-native",
+      "item": "item_26",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-native",
+      "item": "item_26",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-native",
+      "item": "item_30",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-native",
+      "item": "item_30",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-native",
+      "item": "item_42",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-A-中断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_15",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_16",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_18",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-05.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_27",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_27",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_27",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0007/part-05.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_33",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0007.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_45",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_49",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_49",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_49",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0008/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_53",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0008.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0009/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0009/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0009/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_65",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0009/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_65",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0009/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_65",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0009/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0009.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_89",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-0004-0009.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_96",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-A-完成.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_47",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-0001-0009-修订后恢复复核.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_57",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_57",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_57",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_65",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0010/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_70",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0010.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_79",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_79",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_79",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_83",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_83",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_83",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_87",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_87",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_87",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0011/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_90",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0011.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_107",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_107",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0012/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_111",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0012.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_134",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-0007-0012.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_143",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-B-完成.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_46",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_46",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_49",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_53",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-C-中断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_54",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-C-中断.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_26",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-C-更新后恢复核查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_32",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_32",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_32",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-05.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_37",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0013/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0013.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_54",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-C-0013-关联未变回查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_67",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0014/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_67",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0014/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_67",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0014/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0014/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0014/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0014/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_77",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0014.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_81",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-C-0014-关联未变回查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_91",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-C-完成.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_91",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-C-0014-登记遗漏.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_22",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-C-R4后恢复核查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_25",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0015/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_26",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0015/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_27",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0015/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_47",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-C-0015-关联及字段回查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_63",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-0010-0015.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "item": "item_68",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-C-最终完成-0015.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_42",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-R5-0010-0015-当前复读.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_50",
+      "status": "completed",
+      "path": "plans.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_58",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0016/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_59",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0016/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0016/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_75",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0016.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_83",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0016.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_86",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-D-0016-写后及关联回查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_94",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0017/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_95",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0017/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_97",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0017/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_102",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0017.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_105",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-D-0017-写后及关联回查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_113",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0018/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_115",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0018/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_116",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0018/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_119",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0018/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_124",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0018/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_125",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/登记-0018.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_132",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-D-0018-写后及关联回查.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_146",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-D-待保护修订-0016-0018.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_147",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-0013-0018.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_155",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-D-完成.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_62",
+      "status": "completed",
+      "path": "bind-final-read.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_130",
+      "status": "completed",
+      "path": "final-support-audit.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_133",
+      "status": "completed",
+      "path": "write-final-report.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_149",
+      "status": "completed",
+      "path": "final-client-close.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_37",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-R1-原卷契约影响.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_37",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/研究/S-V3候选.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_48",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-R1-原卷契约影响-from1重试.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_59",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/S-R1-新卷契约影响.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/正文/0004.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_74",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-重登-0004.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_80",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-重登-0005.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_86",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-重登-0006.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_94",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-重登-0007.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_100",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-R1-中断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-first",
+      "item": "item_102",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-R1-中断.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r1-resume",
+      "item": "item_16",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/正文/0008.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r1-resume",
+      "item": "item_20",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-重登-0008.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-resume",
+      "item": "item_26",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-重登-0009.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-resume",
+      "item": "item_51",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/6258de87-149a-44e3-871a-2bfc4ef53e05/workspace/审查/S-R1-0004-0009.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r1-resume",
+      "item": "item_58",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-A-修订后当前入口.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_54",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0/workspace/正文/0010.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_62",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0/workspace/审查/S-R2-重登-0010.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_71",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0/workspace/审查/S-R2-重登-0011.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_78",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0/workspace/审查/S-R2-重登-0012.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_93",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0/workspace/审查/S-R2-重登-0012-retry1.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_113",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0/workspace/审查/S-R2-0007-0012.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_119",
+      "status": "completed",
+      "path": "r2-finish-retry1.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r2",
+      "item": "item_126",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-R2-修订后当前入口.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_48",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/34d109f3-5e8e-41ef-a3d1-df4d2726abb6/workspace/审查/S-R3-重登-0011.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_57",
+      "status": "completed",
+      "path": "r3-client-capture-label-error.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_57",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/34d109f3-5e8e-41ef-a3d1-df4d2726abb6/workspace/审查/S-R3-重登-0011.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/34d109f3-5e8e-41ef-a3d1-df4d2726abb6/workspace/审查/S-R3-重登-0012.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_66",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/34d109f3-5e8e-41ef-a3d1-df4d2726abb6/workspace/审查/S-R3-重登-0012.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_69",
+      "status": "completed",
+      "path": "r3-client-audit.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_94",
+      "status": "completed",
+      "path": "r3-client-audit.mjs",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_96",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/34d109f3-5e8e-41ef-a3d1-df4d2726abb6/workspace/审查/S-R3-0007-0012.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r3",
+      "item": "item_106",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/S-R3-新工具等价回放后当前入口.md",
+      "kind": "add"
+    }
+  ],
+  "scope": "Captured outer processes are counted separately from nested native command/tool failures. Nonzero records include intentionally refused guards and retained environment/probe errors; zero outer exit is not proof of zero nested failures. Native file_change events all stay inside S; shell writes are separately retained in raw command transcripts, so this event list alone is not a complete filesystem write audit.",
+  "commands": [
+    {
+      "label": "b-check-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 161
+    },
+    {
+      "label": "b-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "b-final-status",
+      "exit_code": 0,
+      "elapsed_ms": 173
+    },
+    {
+      "label": "b-prefix-review",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "b-preview-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "b-record-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 223
+    },
+    {
+      "label": "baseline-tool-identity",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "baseline-work-check",
+      "exit_code": 0,
+      "elapsed_ms": 248
+    },
+    {
+      "label": "baseline-work-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 249
+    },
+    {
+      "label": "budget-13-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1343
+    },
+    {
+      "label": "budget-13-exact",
+      "exit_code": 0,
+      "elapsed_ms": 1280
+    },
+    {
+      "label": "budget-13-full",
+      "exit_code": 0,
+      "elapsed_ms": 977
+    },
+    {
+      "label": "budget-13-short",
+      "exit_code": 2,
+      "elapsed_ms": 1383
+    },
+    {
+      "label": "budget-16-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 239
+    },
+    {
+      "label": "budget-16-exact",
+      "exit_code": 0,
+      "elapsed_ms": 241
+    },
+    {
+      "label": "budget-16-full",
+      "exit_code": 0,
+      "elapsed_ms": 220
+    },
+    {
+      "label": "budget-16-short",
+      "exit_code": 2,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "budget-7-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 386
+    },
+    {
+      "label": "budget-7-exact",
+      "exit_code": 0,
+      "elapsed_ms": 417
+    },
+    {
+      "label": "budget-7-full",
+      "exit_code": 0,
+      "elapsed_ms": 369
+    },
+    {
+      "label": "budget-7-short",
+      "exit_code": 2,
+      "elapsed_ms": 375
+    },
+    {
+      "label": "c-after-r4-context-15",
+      "exit_code": 0,
+      "elapsed_ms": 239
+    },
+    {
+      "label": "c-after-r4-identify",
+      "exit_code": 0,
+      "elapsed_ms": 114
+    },
+    {
+      "label": "c-after-r4-status",
+      "exit_code": 0,
+      "elapsed_ms": 186
+    },
+    {
+      "label": "c-after-r4-template-15",
+      "exit_code": 0,
+      "elapsed_ms": 262
+    },
+    {
+      "label": "c-context-13-after-update",
+      "exit_code": 0,
+      "elapsed_ms": 244
+    },
+    {
+      "label": "c-final-check-15",
+      "exit_code": 0,
+      "elapsed_ms": 175
+    },
+    {
+      "label": "c-final-status-15",
+      "exit_code": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "label": "c-manual-preview-13",
+      "exit_code": 0,
+      "elapsed_ms": 208
+    },
+    {
+      "label": "c-manual-preview-14",
+      "exit_code": 0,
+      "elapsed_ms": 203
+    },
+    {
+      "label": "c-manual-preview-15",
+      "exit_code": 0,
+      "elapsed_ms": 211
+    },
+    {
+      "label": "c-old-template-13-refused",
+      "exit_code": 2,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "c-old-template-15-refused",
+      "exit_code": 2,
+      "elapsed_ms": 187
+    },
+    {
+      "label": "c-recall-13-f-grid-reading",
+      "exit_code": 0,
+      "elapsed_ms": 152
+    },
+    {
+      "label": "c-recall-13-f-limit",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "c-recall-13-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "c-recall-13-o-grid",
+      "exit_code": 0,
+      "elapsed_ms": 145
+    },
+    {
+      "label": "c-recall-13-o-program",
+      "exit_code": 0,
+      "elapsed_ms": 153
+    },
+    {
+      "label": "c-recall-13-t-grid",
+      "exit_code": 0,
+      "elapsed_ms": 151
+    },
+    {
+      "label": "c-recall-13-t-return",
+      "exit_code": 0,
+      "elapsed_ms": 149
+    },
+    {
+      "label": "c-recall-13-t-short-account",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "c-recall-13-t-show",
+      "exit_code": 0,
+      "elapsed_ms": 151
+    },
+    {
+      "label": "c-recall-13-t-visit",
+      "exit_code": 0,
+      "elapsed_ms": 162
+    },
+    {
+      "label": "c-recall-14-f-chen-memory",
+      "exit_code": 0,
+      "elapsed_ms": 163
+    },
+    {
+      "label": "c-recall-14-f-grid-reading",
+      "exit_code": 0,
+      "elapsed_ms": 156
+    },
+    {
+      "label": "c-recall-14-f-limit",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "c-recall-14-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "c-recall-14-o-grid",
+      "exit_code": 0,
+      "elapsed_ms": 152
+    },
+    {
+      "label": "c-recall-14-o-program",
+      "exit_code": 0,
+      "elapsed_ms": 179
+    },
+    {
+      "label": "c-recall-14-t-grid",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "c-recall-14-t-return",
+      "exit_code": 0,
+      "elapsed_ms": 162
+    },
+    {
+      "label": "c-recall-14-t-show",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "c-recall-14-t-visit",
+      "exit_code": 0,
+      "elapsed_ms": 163
+    },
+    {
+      "label": "c-recall-15-f-grid-reading",
+      "exit_code": 0,
+      "elapsed_ms": 164
+    },
+    {
+      "label": "c-recall-15-f-letter-handoff",
+      "exit_code": 0,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "c-recall-15-f-limit",
+      "exit_code": 0,
+      "elapsed_ms": 159
+    },
+    {
+      "label": "c-recall-15-o-film",
+      "exit_code": 0,
+      "elapsed_ms": 151
+    },
+    {
+      "label": "c-recall-15-o-grid",
+      "exit_code": 0,
+      "elapsed_ms": 154
+    },
+    {
+      "label": "c-recall-15-o-letter",
+      "exit_code": 0,
+      "elapsed_ms": 183
+    },
+    {
+      "label": "c-recall-15-o-letter-text",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "c-recall-15-o-program",
+      "exit_code": 0,
+      "elapsed_ms": 150
+    },
+    {
+      "label": "c-recall-15-t-grid",
+      "exit_code": 0,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "c-recall-15-t-return",
+      "exit_code": 0,
+      "elapsed_ms": 151
+    },
+    {
+      "label": "c-recall-15-t-show",
+      "exit_code": 0,
+      "elapsed_ms": 152
+    },
+    {
+      "label": "c-recall-15-t-sort-invite",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "c-recall-15-t-visit",
+      "exit_code": 0,
+      "elapsed_ms": 154
+    },
+    {
+      "label": "c-stop-check",
+      "exit_code": 0,
+      "elapsed_ms": 170
+    },
+    {
+      "label": "c-stop-status",
+      "exit_code": 0,
+      "elapsed_ms": 188
+    },
+    {
+      "label": "c-template-13-after-update",
+      "exit_code": 0,
+      "elapsed_ms": 281
+    },
+    {
+      "label": "c-tool-identify-after-update",
+      "exit_code": 0,
+      "elapsed_ms": 115
+    },
+    {
+      "label": "c-workflow-after-update",
+      "exit_code": 0,
+      "elapsed_ms": 140
+    },
+    {
+      "label": "candidate-build",
+      "exit_code": 0,
+      "elapsed_ms": 3897
+    },
+    {
+      "label": "check-10",
+      "exit_code": 0,
+      "elapsed_ms": 163
+    },
+    {
+      "label": "check-11",
+      "exit_code": 0,
+      "elapsed_ms": 146
+    },
+    {
+      "label": "check-13",
+      "exit_code": 0,
+      "elapsed_ms": 169
+    },
+    {
+      "label": "check-14",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "check-15",
+      "exit_code": 0,
+      "elapsed_ms": 171
+    },
+    {
+      "label": "check-16",
+      "exit_code": 0,
+      "elapsed_ms": 184
+    },
+    {
+      "label": "check-17",
+      "exit_code": 0,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "check-18",
+      "exit_code": 0,
+      "elapsed_ms": 188
+    },
+    {
+      "label": "check-7",
+      "exit_code": 0,
+      "elapsed_ms": 129
+    },
+    {
+      "label": "check-8",
+      "exit_code": 0,
+      "elapsed_ms": 143
+    },
+    {
+      "label": "check-9",
+      "exit_code": 0,
+      "elapsed_ms": 134
+    },
+    {
+      "label": "codex-a-first",
+      "exit_code": 1,
+      "elapsed_ms": 119
+    },
+    {
+      "label": "codex-a-native",
+      "exit_code": 0,
+      "elapsed_ms": 619734
+    },
+    {
+      "label": "codex-a-resume",
+      "exit_code": 0,
+      "elapsed_ms": 1625798
+    },
+    {
+      "label": "codex-b",
+      "exit_code": 0,
+      "elapsed_ms": 1371154
+    },
+    {
+      "label": "codex-c-first",
+      "exit_code": 0,
+      "elapsed_ms": 629771
+    },
+    {
+      "label": "codex-c-resume",
+      "exit_code": 0,
+      "elapsed_ms": 1731770
+    },
+    {
+      "label": "codex-c-resume-after-r4",
+      "exit_code": 0,
+      "elapsed_ms": 949613
+    },
+    {
+      "label": "codex-d",
+      "exit_code": 0,
+      "elapsed_ms": 1589064
+    },
+    {
+      "label": "codex-final-read",
+      "exit_code": 0,
+      "elapsed_ms": 943711
+    },
+    {
+      "label": "codex-r1-first",
+      "exit_code": 0,
+      "elapsed_ms": 799223
+    },
+    {
+      "label": "codex-r1-resume",
+      "exit_code": 0,
+      "elapsed_ms": 573152
+    },
+    {
+      "label": "codex-r2",
+      "exit_code": 0,
+      "elapsed_ms": 1146714
+    },
+    {
+      "label": "codex-r3",
+      "exit_code": 0,
+      "elapsed_ms": 812704
+    },
+    {
+      "label": "codex-version",
+      "exit_code": 0,
+      "elapsed_ms": 61
+    },
+    {
+      "label": "context-10",
+      "exit_code": 0,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "context-11",
+      "exit_code": 0,
+      "elapsed_ms": 207
+    },
+    {
+      "label": "context-12",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "context-13",
+      "exit_code": 0,
+      "elapsed_ms": 1360
+    },
+    {
+      "label": "context-14",
+      "exit_code": 0,
+      "elapsed_ms": 224
+    },
+    {
+      "label": "context-15",
+      "exit_code": 0,
+      "elapsed_ms": 227
+    },
+    {
+      "label": "context-16",
+      "exit_code": 0,
+      "elapsed_ms": 234
+    },
+    {
+      "label": "context-17",
+      "exit_code": 0,
+      "elapsed_ms": 252
+    },
+    {
+      "label": "context-18",
+      "exit_code": 0,
+      "elapsed_ms": 263
+    },
+    {
+      "label": "context-7",
+      "exit_code": 0,
+      "elapsed_ms": 509
+    },
+    {
+      "label": "context-8",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "context-9",
+      "exit_code": 0,
+      "elapsed_ms": 161
+    },
+    {
+      "label": "current-candidate-build",
+      "exit_code": 0,
+      "elapsed_ms": 8693
+    },
+    {
+      "label": "current-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 887651
+    },
+    {
+      "label": "current-source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 913752
+    },
+    {
+      "label": "current-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 775
+    },
+    {
+      "label": "d-16-candidate-f-chen-memory",
+      "exit_code": 0,
+      "elapsed_ms": 169
+    },
+    {
+      "label": "d-16-candidate-f-letter-handoff",
+      "exit_code": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "label": "d-16-candidate-o-film",
+      "exit_code": 0,
+      "elapsed_ms": 169
+    },
+    {
+      "label": "d-16-candidate-o-letter",
+      "exit_code": 0,
+      "elapsed_ms": 175
+    },
+    {
+      "label": "d-16-candidate-o-letter-excerpt",
+      "exit_code": 0,
+      "elapsed_ms": 165
+    },
+    {
+      "label": "d-16-candidate-t-curtain-return",
+      "exit_code": 0,
+      "elapsed_ms": 168
+    },
+    {
+      "label": "d-16-candidate-t-letter-scope",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "d-16-candidate-t-short-account",
+      "exit_code": 0,
+      "elapsed_ms": 194
+    },
+    {
+      "label": "d-17-candidate-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 163
+    },
+    {
+      "label": "d-17-candidate-t-site-return",
+      "exit_code": 0,
+      "elapsed_ms": 162
+    },
+    {
+      "label": "d-18-candidate-f-chen-memory",
+      "exit_code": 0,
+      "elapsed_ms": 165
+    },
+    {
+      "label": "d-18-candidate-f-telling-correction",
+      "exit_code": 0,
+      "elapsed_ms": 163
+    },
+    {
+      "label": "d-18-candidate-o-program",
+      "exit_code": 0,
+      "elapsed_ms": 165
+    },
+    {
+      "label": "d-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 116
+    },
+    {
+      "label": "d-entry-recall-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 194
+    },
+    {
+      "label": "d-entry-recall-o-film",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "d-entry-recall-o-program",
+      "exit_code": 0,
+      "elapsed_ms": 175
+    },
+    {
+      "label": "d-entry-recall-o-short-draft",
+      "exit_code": 0,
+      "elapsed_ms": 167
+    },
+    {
+      "label": "d-entry-recall-t-curtain-return",
+      "exit_code": 0,
+      "elapsed_ms": 171
+    },
+    {
+      "label": "d-entry-recall-t-neighbor-telling",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "d-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 199
+    },
+    {
+      "label": "d-final-check-18",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "d-final-identify-18",
+      "exit_code": 0,
+      "elapsed_ms": 112
+    },
+    {
+      "label": "d-final-status-18",
+      "exit_code": 0,
+      "elapsed_ms": 206
+    },
+    {
+      "label": "d-manual-preview-16",
+      "exit_code": 1,
+      "elapsed_ms": 165
+    },
+    {
+      "label": "d-manual-preview-16-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 214
+    },
+    {
+      "label": "d-manual-preview-17",
+      "exit_code": 0,
+      "elapsed_ms": 215
+    },
+    {
+      "label": "d-manual-preview-18",
+      "exit_code": 0,
+      "elapsed_ms": 226
+    },
+    {
+      "label": "d-manual-preview-18-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 222
+    },
+    {
+      "label": "d-prefix-check-15",
+      "exit_code": 0,
+      "elapsed_ms": 189
+    },
+    {
+      "label": "d-prefix-review-10-15",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "d-recall-help",
+      "exit_code": 0,
+      "elapsed_ms": 92
+    },
+    {
+      "label": "delivery-build",
+      "exit_code": 0,
+      "elapsed_ms": 3779
+    },
+    {
+      "label": "delivery-diff-check",
+      "exit_code": 0,
+      "elapsed_ms": 512
+    },
+    {
+      "label": "delivery-helper-syntax",
+      "exit_code": 0,
+      "elapsed_ms": 524
+    },
+    {
+      "label": "delivery-package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 213
+    },
+    {
+      "label": "delivery-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 573187
+    },
+    {
+      "label": "delivery-source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 1073
+    },
+    {
+      "label": "delivery-source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 595619
+    },
+    {
+      "label": "delivery-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 368
+    },
+    {
+      "label": "derive-r1-segments",
+      "exit_code": 0,
+      "elapsed_ms": 99
+    },
+    {
+      "label": "derive-r2-segments",
+      "exit_code": 0,
+      "elapsed_ms": 138
+    },
+    {
+      "label": "environment",
+      "exit_code": 0,
+      "elapsed_ms": 326
+    },
+    {
+      "label": "final-candidate-build",
+      "exit_code": 0,
+      "elapsed_ms": 3684
+    },
+    {
+      "label": "final-current-review",
+      "exit_code": 0,
+      "elapsed_ms": 208
+    },
+    {
+      "label": "final-discussion-restore",
+      "exit_code": 0,
+      "elapsed_ms": 240
+    },
+    {
+      "label": "final-export",
+      "exit_code": 0,
+      "elapsed_ms": 277
+    },
+    {
+      "label": "final-next-draft-refused",
+      "exit_code": 2,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "final-package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 275
+    },
+    {
+      "label": "final-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 578660
+    },
+    {
+      "label": "final-pause",
+      "exit_code": 0,
+      "elapsed_ms": 177
+    },
+    {
+      "label": "final-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 107
+    },
+    {
+      "label": "final-source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 1015
+    },
+    {
+      "label": "final-source-test",
+      "exit_code": 0,
+      "elapsed_ms": 598680
+    },
+    {
+      "label": "final-work-check",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "final-work-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 158
+    },
+    {
+      "label": "final-work-identity",
+      "exit_code": 0,
+      "elapsed_ms": 132
+    },
+    {
+      "label": "final-work-status",
+      "exit_code": 0,
+      "elapsed_ms": 250
+    },
+    {
+      "label": "final-workflow-before",
+      "exit_code": 0,
+      "elapsed_ms": 144
+    },
+    {
+      "label": "final-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 336
+    },
+    {
+      "label": "initial-status",
+      "exit_code": 0,
+      "elapsed_ms": 283
+    },
+    {
+      "label": "install-final-tool",
+      "exit_code": 0,
+      "elapsed_ms": 9922
+    },
+    {
+      "label": "manuscript-verification-before-inherited-map-fix",
+      "exit_code": 1,
+      "elapsed_ms": 93
+    },
+    {
+      "label": "manuscript-verification-current",
+      "exit_code": 0,
+      "elapsed_ms": 302
+    },
+    {
+      "label": "manuscript-verification-current-final",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 607
+    },
+    {
+      "label": "package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 534960
+    },
+    {
+      "label": "parent-help-json-control",
+      "exit_code": 0,
+      "elapsed_ms": 174
+    },
+    {
+      "label": "parent-help-text-retry",
+      "exit_code": 0,
+      "elapsed_ms": 104
+    },
+    {
+      "label": "parent-preview-false-channel-check",
+      "exit_code": 1,
+      "elapsed_ms": 397
+    },
+    {
+      "label": "plan-10",
+      "exit_code": 0,
+      "elapsed_ms": 154
+    },
+    {
+      "label": "plan-11",
+      "exit_code": 0,
+      "elapsed_ms": 158
+    },
+    {
+      "label": "plan-12",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "plan-13",
+      "exit_code": 0,
+      "elapsed_ms": 721
+    },
+    {
+      "label": "plan-14",
+      "exit_code": 0,
+      "elapsed_ms": 159
+    },
+    {
+      "label": "plan-15",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "plan-16",
+      "exit_code": 0,
+      "elapsed_ms": 164
+    },
+    {
+      "label": "plan-17",
+      "exit_code": 0,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "plan-18",
+      "exit_code": 0,
+      "elapsed_ms": 174
+    },
+    {
+      "label": "plan-7",
+      "exit_code": 0,
+      "elapsed_ms": 283
+    },
+    {
+      "label": "plan-8",
+      "exit_code": 0,
+      "elapsed_ms": 118
+    },
+    {
+      "label": "plan-9",
+      "exit_code": 0,
+      "elapsed_ms": 124
+    },
+    {
+      "label": "preview-10",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "preview-11",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "preview-12",
+      "exit_code": 1,
+      "elapsed_ms": 147
+    },
+    {
+      "label": "preview-13",
+      "exit_code": 0,
+      "elapsed_ms": 200
+    },
+    {
+      "label": "preview-14",
+      "exit_code": 0,
+      "elapsed_ms": 209
+    },
+    {
+      "label": "preview-15",
+      "exit_code": 0,
+      "elapsed_ms": 218
+    },
+    {
+      "label": "preview-16",
+      "exit_code": 0,
+      "elapsed_ms": 214
+    },
+    {
+      "label": "preview-17",
+      "exit_code": 0,
+      "elapsed_ms": 219
+    },
+    {
+      "label": "preview-18",
+      "exit_code": 0,
+      "elapsed_ms": 214
+    },
+    {
+      "label": "preview-7",
+      "exit_code": 0,
+      "elapsed_ms": 150
+    },
+    {
+      "label": "preview-8",
+      "exit_code": 0,
+      "elapsed_ms": 164
+    },
+    {
+      "label": "preview-9",
+      "exit_code": 0,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "preview-candidate-build",
+      "exit_code": 0,
+      "elapsed_ms": 3614
+    },
+    {
+      "label": "preview-package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 217
+    },
+    {
+      "label": "preview-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 930369
+    },
+    {
+      "label": "preview-source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 1161
+    },
+    {
+      "label": "preview-source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 1009576
+    },
+    {
+      "label": "preview-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 333
+    },
+    {
+      "label": "q-seal-after",
+      "exit_code": 0,
+      "elapsed_ms": 993
+    },
+    {
+      "label": "q-seal-before",
+      "exit_code": 0,
+      "elapsed_ms": 837
+    },
+    {
+      "label": "r1-begin",
+      "exit_code": 0,
+      "elapsed_ms": 556
+    },
+    {
+      "label": "r1-bind-old",
+      "exit_code": 0,
+      "elapsed_ms": 137
+    },
+    {
+      "label": "r1-commit",
+      "exit_code": 0,
+      "elapsed_ms": 466
+    },
+    {
+      "label": "r1-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 145
+    },
+    {
+      "label": "r1-freeze-new",
+      "exit_code": 0,
+      "elapsed_ms": 129
+    },
+    {
+      "label": "r1-freeze-old",
+      "exit_code": 0,
+      "elapsed_ms": 234
+    },
+    {
+      "label": "r1-impact-baseline",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "r1-impact-baseline-retry-from1",
+      "exit_code": 0,
+      "elapsed_ms": 111
+    },
+    {
+      "label": "r1-impact-historical",
+      "exit_code": 0,
+      "elapsed_ms": 116
+    },
+    {
+      "label": "r1-initialization",
+      "exit_code": 0,
+      "elapsed_ms": 1264
+    },
+    {
+      "label": "r1-main-plan-refused",
+      "exit_code": 2,
+      "elapsed_ms": 238
+    },
+    {
+      "label": "r1-native-resume",
+      "exit_code": 0,
+      "elapsed_ms": 110
+    },
+    {
+      "label": "r1-old-nine-refused",
+      "exit_code": 2,
+      "elapsed_ms": 148
+    },
+    {
+      "label": "r1-post-commit-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 95
+    },
+    {
+      "label": "r1-post-commit-sources",
+      "exit_code": 0,
+      "elapsed_ms": 124
+    },
+    {
+      "label": "r1-post-commit-status",
+      "exit_code": 0,
+      "elapsed_ms": 152
+    },
+    {
+      "label": "r1-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 328
+    },
+    {
+      "label": "r1-preview-4",
+      "exit_code": 0,
+      "elapsed_ms": 242
+    },
+    {
+      "label": "r1-preview-5",
+      "exit_code": 0,
+      "elapsed_ms": 213
+    },
+    {
+      "label": "r1-preview-6",
+      "exit_code": 0,
+      "elapsed_ms": 221
+    },
+    {
+      "label": "r1-preview-7",
+      "exit_code": 0,
+      "elapsed_ms": 381
+    },
+    {
+      "label": "r1-preview-8",
+      "exit_code": 0,
+      "elapsed_ms": 190
+    },
+    {
+      "label": "r1-preview-9",
+      "exit_code": 0,
+      "elapsed_ms": 203
+    },
+    {
+      "label": "r1-publish-baseline",
+      "exit_code": 2,
+      "elapsed_ms": 131
+    },
+    {
+      "label": "r1-publish-baseline-retry-from1",
+      "exit_code": 0,
+      "elapsed_ms": 134
+    },
+    {
+      "label": "r1-publish-historical",
+      "exit_code": 0,
+      "elapsed_ms": 880
+    },
+    {
+      "label": "r1-record-4",
+      "exit_code": 0,
+      "elapsed_ms": 688
+    },
+    {
+      "label": "r1-record-5",
+      "exit_code": 0,
+      "elapsed_ms": 492
+    },
+    {
+      "label": "r1-record-6",
+      "exit_code": 0,
+      "elapsed_ms": 242
+    },
+    {
+      "label": "r1-record-7",
+      "exit_code": 0,
+      "elapsed_ms": 514
+    },
+    {
+      "label": "r1-record-8",
+      "exit_code": 0,
+      "elapsed_ms": 212
+    },
+    {
+      "label": "r1-record-9",
+      "exit_code": 0,
+      "elapsed_ms": 213
+    },
+    {
+      "label": "r1-replay-template-4",
+      "exit_code": 0,
+      "elapsed_ms": 481
+    },
+    {
+      "label": "r1-replay-template-4-after-edit",
+      "exit_code": 0,
+      "elapsed_ms": 483
+    },
+    {
+      "label": "r1-replay-template-5",
+      "exit_code": 0,
+      "elapsed_ms": 271
+    },
+    {
+      "label": "r1-replay-template-6",
+      "exit_code": 0,
+      "elapsed_ms": 308
+    },
+    {
+      "label": "r1-replay-template-7",
+      "exit_code": 0,
+      "elapsed_ms": 318
+    },
+    {
+      "label": "r1-replay-template-8",
+      "exit_code": 0,
+      "elapsed_ms": 292
+    },
+    {
+      "label": "r1-replay-template-8-after-edit",
+      "exit_code": 0,
+      "elapsed_ms": 249
+    },
+    {
+      "label": "r1-replay-template-9",
+      "exit_code": 0,
+      "elapsed_ms": 243
+    },
+    {
+      "label": "r1-restore-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 141
+    },
+    {
+      "label": "r1-resume-revisions-main",
+      "exit_code": 0,
+      "elapsed_ms": 94
+    },
+    {
+      "label": "r1-resume-status-main",
+      "exit_code": 0,
+      "elapsed_ms": 153
+    },
+    {
+      "label": "r1-resume-status-workspace",
+      "exit_code": 0,
+      "elapsed_ms": 168
+    },
+    {
+      "label": "r1-review",
+      "exit_code": 0,
+      "elapsed_ms": 158
+    },
+    {
+      "label": "r1-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 660
+    },
+    {
+      "label": "r1-stage",
+      "exit_code": 0,
+      "elapsed_ms": 164
+    },
+    {
+      "label": "r1-stop-revisions-main",
+      "exit_code": 0,
+      "elapsed_ms": 117
+    },
+    {
+      "label": "r1-stop-sources-main",
+      "exit_code": 0,
+      "elapsed_ms": 218
+    },
+    {
+      "label": "r1-stop-sources-workspace",
+      "exit_code": 0,
+      "elapsed_ms": 421
+    },
+    {
+      "label": "r1-stop-status-main",
+      "exit_code": 0,
+      "elapsed_ms": 264
+    },
+    {
+      "label": "r1-stop-status-workspace",
+      "exit_code": 0,
+      "elapsed_ms": 668
+    },
+    {
+      "label": "r1-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 240
+    },
+    {
+      "label": "r1-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 169
+    },
+    {
+      "label": "r2-begin",
+      "exit_code": 0,
+      "elapsed_ms": 1504
+    },
+    {
+      "label": "r2-commit",
+      "exit_code": 0,
+      "elapsed_ms": 1556
+    },
+    {
+      "label": "r2-context-11",
+      "exit_code": 0,
+      "elapsed_ms": 674
+    },
+    {
+      "label": "r2-context-12",
+      "exit_code": 0,
+      "elapsed_ms": 639
+    },
+    {
+      "label": "r2-context-after-final-12",
+      "exit_code": 2,
+      "elapsed_ms": 339
+    },
+    {
+      "label": "r2-context-after-final-12-discussion",
+      "exit_code": 0,
+      "elapsed_ms": 780
+    },
+    {
+      "label": "r2-context-after-final-12-retry1",
+      "exit_code": 2,
+      "elapsed_ms": 238
+    },
+    {
+      "label": "r2-final-check-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 547
+    },
+    {
+      "label": "r2-final-revisions-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 454
+    },
+    {
+      "label": "r2-final-status-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 503
+    },
+    {
+      "label": "r2-initialization",
+      "exit_code": 0,
+      "elapsed_ms": 3213
+    },
+    {
+      "label": "r2-old-twelve-refused-retry1",
+      "exit_code": 2,
+      "elapsed_ms": 401
+    },
+    {
+      "label": "r2-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 1479
+    },
+    {
+      "label": "r2-preview-10",
+      "exit_code": 0,
+      "elapsed_ms": 389
+    },
+    {
+      "label": "r2-preview-11",
+      "exit_code": 0,
+      "elapsed_ms": 695
+    },
+    {
+      "label": "r2-preview-12",
+      "exit_code": 0,
+      "elapsed_ms": 353
+    },
+    {
+      "label": "r2-preview-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 840
+    },
+    {
+      "label": "r2-record-10",
+      "exit_code": 0,
+      "elapsed_ms": 819
+    },
+    {
+      "label": "r2-record-11",
+      "exit_code": 0,
+      "elapsed_ms": 1038
+    },
+    {
+      "label": "r2-record-12",
+      "exit_code": 0,
+      "elapsed_ms": 885
+    },
+    {
+      "label": "r2-record-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 1000
+    },
+    {
+      "label": "r2-replay-after-edit-10",
+      "exit_code": 0,
+      "elapsed_ms": 482
+    },
+    {
+      "label": "r2-restore",
+      "exit_code": 0,
+      "elapsed_ms": 694
+    },
+    {
+      "label": "r2-resume",
+      "exit_code": 0,
+      "elapsed_ms": 220
+    },
+    {
+      "label": "r2-review",
+      "exit_code": 0,
+      "elapsed_ms": 480
+    },
+    {
+      "label": "r2-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 399
+    },
+    {
+      "label": "r2-rewind-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 1189
+    },
+    {
+      "label": "r2-template-10",
+      "exit_code": 0,
+      "elapsed_ms": 287
+    },
+    {
+      "label": "r2-template-11",
+      "exit_code": 0,
+      "elapsed_ms": 1002
+    },
+    {
+      "label": "r2-template-12",
+      "exit_code": 0,
+      "elapsed_ms": 1317
+    },
+    {
+      "label": "r2-template-12-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 1334
+    },
+    {
+      "label": "r2-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 355
+    },
+    {
+      "label": "r2-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 237
+    },
+    {
+      "label": "r3-begin",
+      "exit_code": 0,
+      "elapsed_ms": 1680
+    },
+    {
+      "label": "r3-client-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 100
+    },
+    {
+      "label": "r3-client-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "r3-client-final-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 111
+    },
+    {
+      "label": "r3-client-final-status",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "r3-client-preflight-preview-11",
+      "exit_code": 0,
+      "elapsed_ms": 206
+    },
+    {
+      "label": "r3-client-preflight-preview-12",
+      "exit_code": 0,
+      "elapsed_ms": 220
+    },
+    {
+      "label": "r3-client-recall-11-o-curtain-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "r3-client-recall-11-o-grid-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 152
+    },
+    {
+      "label": "r3-client-recall-11-o-program-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 156
+    },
+    {
+      "label": "r3-client-recall-12-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 154
+    },
+    {
+      "label": "r3-client-recall-12-o-program",
+      "exit_code": 0,
+      "elapsed_ms": 160
+    },
+    {
+      "label": "r3-client-scope-status",
+      "exit_code": 0,
+      "elapsed_ms": 194
+    },
+    {
+      "label": "r3-client-tool-identify",
+      "exit_code": 0,
+      "elapsed_ms": 130
+    },
+    {
+      "label": "r3-commit",
+      "exit_code": 0,
+      "elapsed_ms": 483
+    },
+    {
+      "label": "r3-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 173
+    },
+    {
+      "label": "r3-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 478
+    },
+    {
+      "label": "r3-preview-11",
+      "exit_code": 0,
+      "elapsed_ms": 213
+    },
+    {
+      "label": "r3-preview-12",
+      "exit_code": 0,
+      "elapsed_ms": 222
+    },
+    {
+      "label": "r3-record-11",
+      "exit_code": 0,
+      "elapsed_ms": 249
+    },
+    {
+      "label": "r3-record-12",
+      "exit_code": 0,
+      "elapsed_ms": 264
+    },
+    {
+      "label": "r3-restore",
+      "exit_code": 0,
+      "elapsed_ms": 171
+    },
+    {
+      "label": "r3-review",
+      "exit_code": 0,
+      "elapsed_ms": 215
+    },
+    {
+      "label": "r3-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 420
+    },
+    {
+      "label": "r3-template-11",
+      "exit_code": 0,
+      "elapsed_ms": 315
+    },
+    {
+      "label": "r3-template-12",
+      "exit_code": 0,
+      "elapsed_ms": 309
+    },
+    {
+      "label": "r3-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 390
+    },
+    {
+      "label": "r3-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 235
+    },
+    {
+      "label": "r4-begin",
+      "exit_code": 0,
+      "elapsed_ms": 1859
+    },
+    {
+      "label": "r4-commit",
+      "exit_code": 0,
+      "elapsed_ms": 2207
+    },
+    {
+      "label": "r4-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 451
+    },
+    {
+      "label": "r4-parent-recall-memory",
+      "exit_code": 0,
+      "elapsed_ms": 440
+    },
+    {
+      "label": "r4-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 2170
+    },
+    {
+      "label": "r4-preview-14",
+      "exit_code": 0,
+      "elapsed_ms": 713
+    },
+    {
+      "label": "r4-record-14",
+      "exit_code": 0,
+      "elapsed_ms": 836
+    },
+    {
+      "label": "r4-restore",
+      "exit_code": 0,
+      "elapsed_ms": 405
+    },
+    {
+      "label": "r4-review",
+      "exit_code": 0,
+      "elapsed_ms": 644
+    },
+    {
+      "label": "r4-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 446
+    },
+    {
+      "label": "r4-template-14",
+      "exit_code": 0,
+      "elapsed_ms": 1170
+    },
+    {
+      "label": "r4-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 380
+    },
+    {
+      "label": "r4-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 243
+    },
+    {
+      "label": "r5-begin",
+      "exit_code": 0,
+      "elapsed_ms": 1949
+    },
+    {
+      "label": "r5-commit",
+      "exit_code": 0,
+      "elapsed_ms": 2335
+    },
+    {
+      "label": "r5-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 501
+    },
+    {
+      "label": "r5-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 2327
+    },
+    {
+      "label": "r5-preview-15",
+      "exit_code": 0,
+      "elapsed_ms": 752
+    },
+    {
+      "label": "r5-record-15",
+      "exit_code": 0,
+      "elapsed_ms": 884
+    },
+    {
+      "label": "r5-restore",
+      "exit_code": 0,
+      "elapsed_ms": 423
+    },
+    {
+      "label": "r5-review",
+      "exit_code": 0,
+      "elapsed_ms": 607
+    },
+    {
+      "label": "r5-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 455
+    },
+    {
+      "label": "r5-template-15",
+      "exit_code": 0,
+      "elapsed_ms": 1209
+    },
+    {
+      "label": "r5-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 421
+    },
+    {
+      "label": "r5-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 261
+    },
+    {
+      "label": "r6-begin",
+      "exit_code": 0,
+      "elapsed_ms": 2297
+    },
+    {
+      "label": "r6-commit",
+      "exit_code": 0,
+      "elapsed_ms": 2649
+    },
+    {
+      "label": "r6-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 542
+    },
+    {
+      "label": "r6-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 2606
+    },
+    {
+      "label": "r6-preview-16",
+      "exit_code": 0,
+      "elapsed_ms": 769
+    },
+    {
+      "label": "r6-preview-17",
+      "exit_code": 0,
+      "elapsed_ms": 786
+    },
+    {
+      "label": "r6-preview-18",
+      "exit_code": 0,
+      "elapsed_ms": 801
+    },
+    {
+      "label": "r6-record-16",
+      "exit_code": 0,
+      "elapsed_ms": 1005
+    },
+    {
+      "label": "r6-record-17",
+      "exit_code": 0,
+      "elapsed_ms": 936
+    },
+    {
+      "label": "r6-record-18",
+      "exit_code": 0,
+      "elapsed_ms": 945
+    },
+    {
+      "label": "r6-restore",
+      "exit_code": 0,
+      "elapsed_ms": 429
+    },
+    {
+      "label": "r6-review",
+      "exit_code": 0,
+      "elapsed_ms": 660
+    },
+    {
+      "label": "r6-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 471
+    },
+    {
+      "label": "r6-template-16",
+      "exit_code": 0,
+      "elapsed_ms": 1321
+    },
+    {
+      "label": "r6-template-17",
+      "exit_code": 0,
+      "elapsed_ms": 1324
+    },
+    {
+      "label": "r6-template-18",
+      "exit_code": 0,
+      "elapsed_ms": 1303
+    },
+    {
+      "label": "r6-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 425
+    },
+    {
+      "label": "r6-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 280
+    },
+    {
+      "label": "record-10",
+      "exit_code": 0,
+      "elapsed_ms": 217
+    },
+    {
+      "label": "record-11",
+      "exit_code": 0,
+      "elapsed_ms": 215
+    },
+    {
+      "label": "record-13",
+      "exit_code": 0,
+      "elapsed_ms": 236
+    },
+    {
+      "label": "record-14",
+      "exit_code": 0,
+      "elapsed_ms": 236
+    },
+    {
+      "label": "record-15",
+      "exit_code": 0,
+      "elapsed_ms": 242
+    },
+    {
+      "label": "record-16",
+      "exit_code": 0,
+      "elapsed_ms": 256
+    },
+    {
+      "label": "record-17",
+      "exit_code": 0,
+      "elapsed_ms": 264
+    },
+    {
+      "label": "record-18",
+      "exit_code": 0,
+      "elapsed_ms": 253
+    },
+    {
+      "label": "record-7",
+      "exit_code": 0,
+      "elapsed_ms": 167
+    },
+    {
+      "label": "record-8",
+      "exit_code": 0,
+      "elapsed_ms": 187
+    },
+    {
+      "label": "record-9",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "related-preview-regression",
+      "exit_code": 0,
+      "elapsed_ms": 12270
+    },
+    {
+      "label": "related-preview-tests",
+      "exit_code": 0,
+      "elapsed_ms": 4949
+    },
+    {
+      "label": "review-12",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "review-15",
+      "exit_code": 0,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "review-18",
+      "exit_code": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "label": "review-9",
+      "exit_code": 0,
+      "elapsed_ms": 148
+    },
+    {
+      "label": "source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 1075
+    },
+    {
+      "label": "source-test",
+      "exit_code": 0,
+      "elapsed_ms": 639898
+    },
+    {
+      "label": "sparse-after",
+      "exit_code": 0,
+      "elapsed_ms": 16142
+    },
+    {
+      "label": "sparse-before",
+      "exit_code": 1,
+      "elapsed_ms": 13236
+    },
+    {
+      "label": "sparse-main-regression",
+      "exit_code": 0,
+      "elapsed_ms": 13192
+    },
+    {
+      "label": "template-10",
+      "exit_code": 0,
+      "elapsed_ms": 219
+    },
+    {
+      "label": "template-11",
+      "exit_code": 0,
+      "elapsed_ms": 228
+    },
+    {
+      "label": "template-12",
+      "exit_code": 0,
+      "elapsed_ms": 244
+    },
+    {
+      "label": "template-13",
+      "exit_code": 0,
+      "elapsed_ms": 1755
+    },
+    {
+      "label": "template-14",
+      "exit_code": 0,
+      "elapsed_ms": 249
+    },
+    {
+      "label": "template-15",
+      "exit_code": 0,
+      "elapsed_ms": 253
+    },
+    {
+      "label": "template-16",
+      "exit_code": 0,
+      "elapsed_ms": 271
+    },
+    {
+      "label": "template-17",
+      "exit_code": 0,
+      "elapsed_ms": 275
+    },
+    {
+      "label": "template-18",
+      "exit_code": 0,
+      "elapsed_ms": 289
+    },
+    {
+      "label": "template-7",
+      "exit_code": 0,
+      "elapsed_ms": 425
+    },
+    {
+      "label": "template-8",
+      "exit_code": 0,
+      "elapsed_ms": 170
+    },
+    {
+      "label": "template-9",
+      "exit_code": 0,
+      "elapsed_ms": 170
+    },
+    {
+      "label": "tool-current-before-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 125
+    },
+    {
+      "label": "tool-current-identity",
+      "exit_code": 0,
+      "elapsed_ms": 185
+    },
+    {
+      "label": "tool-current-plan",
+      "exit_code": 0,
+      "elapsed_ms": 705
+    },
+    {
+      "label": "tool-current-update",
+      "exit_code": 0,
+      "elapsed_ms": 8666
+    },
+    {
+      "label": "tool-current-work-check",
+      "exit_code": 0,
+      "elapsed_ms": 399
+    },
+    {
+      "label": "tool-current-work-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 316
+    },
+    {
+      "label": "tool-final-before-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 115
+    },
+    {
+      "label": "tool-final-identity",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "tool-final-plan",
+      "exit_code": 0,
+      "elapsed_ms": 623
+    },
+    {
+      "label": "tool-final-update",
+      "exit_code": 0,
+      "elapsed_ms": 7811
+    },
+    {
+      "label": "tool-final-work-check",
+      "exit_code": 0,
+      "elapsed_ms": 324
+    },
+    {
+      "label": "tool-final-work-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 288
+    },
+    {
+      "label": "volume-4-clarified",
+      "exit_code": 0,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "volume-5",
+      "exit_code": 0,
+      "elapsed_ms": 207
+    },
+    {
+      "label": "volume-6",
+      "exit_code": 0,
+      "elapsed_ms": 207
+    },
+    {
+      "label": "workflow-draft",
+      "exit_code": 0,
+      "elapsed_ms": 209
+    },
+    {
+      "label": "workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 168
+    },
+    {
+      "label": "zip-verification",
+      "exit_code": 1,
+      "elapsed_ms": 515
+    },
+    {
+      "label": "zip-verification-final",
+      "exit_code": 0,
+      "elapsed_ms": 569
+    },
+    {
+      "label": "zip-verification-retry",
+      "exit_code": 1,
+      "elapsed_ms": 216
+    }
+  ]
+}

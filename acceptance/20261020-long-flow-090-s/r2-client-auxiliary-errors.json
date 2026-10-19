@@ -1,0 +1,35 @@
+{
+  "nature": "Self-recorded auxiliary error index; original CLI captures and session tool outputs remain authoritative.",
+  "events": [
+    {
+      "command": "context --unit 12",
+      "label": "r2-context-after-final-12",
+      "error": "ACTION_OUT_OF_SCOPE",
+      "state_unchanged": true
+    },
+    {
+      "command": "context --unit 12 --purpose revision --revision-token <original>",
+      "label": "r2-context-after-final-12-retry1",
+      "error": "REVISION_REWIND_REQUIRED",
+      "state_unchanged": true
+    },
+    {
+      "command": "context --purpose discussion",
+      "label": "r2-context-after-final-12-discussion",
+      "cli_exit": 0,
+      "local_print_error": "TypeError: discussion result has no snapshot; corrected by reading canonical state",
+      "state_unchanged": true
+    },
+    {
+      "command": "revision-two.mjs finish",
+      "error": "ENOENT inputs/record-12.json",
+      "phase": "after successful review/prepare/commit/restore",
+      "correction": "r2-finish-retry1.mjs uses original inputs/b-record-12-retry1.json with new labels; succeeded"
+    },
+    {
+      "command": "final local read-only delivery assertion",
+      "error": "TypeError reading s.governance.workflow.stage",
+      "correction": "Checked actual captured status.governance.stage; no state mutations or completion file produced by failed assertion"
+    }
+  ]
+}

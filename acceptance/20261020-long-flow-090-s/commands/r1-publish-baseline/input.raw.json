@@ -1,0 +1,67 @@
+{
+  "expected_revision": 21,
+  "author_evidence": {
+    "local_source": "研究/S轮验证授权.md",
+    "source_sha256": "08c32d3c4fa6fb917d04bfd033c27cc65bee70a86019f399b7be4183df0bbc59",
+    "quote": "发现问题直接修复",
+    "locator": "user-task-2026-10-20-and-synthetic-scope",
+    "recorded_by": "Codex S agent-within-authorized-scope"
+  },
+  "impact": {
+    "schema_version": 1,
+    "revision": 21,
+    "state_sha256": "f0d04dfb738c27fd36decfc3e7d1e27504a482f11e2342850c2db5bd97e4c8ae",
+    "version_id": "S_V3_ORIGINAL",
+    "ref": "大纲/分卷/V3.json",
+    "from": 7,
+    "mode": "baseline",
+    "candidate_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+    "direct_consumers": [
+      {
+        "unit": 7,
+        "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "bound": false,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 8,
+        "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "bound": false,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 9,
+        "consumed_sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "bound": false,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 7,
+    "review_from": 7,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [],
+    "possible_indirect_from": 7,
+    "possible_indirect_through": 9,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+      "正文/0007.md": "822b236676b390042c740eda993b07df37490163f089c0011f34f462b738e9f0",
+      "正文/0008.md": "0b81e0d5c79f66dc67fe634861a8879dd388b3bfd10aa00f1b79e836f5256f71",
+      "正文/0009.md": "d12f9832911f0e57440de60090947e2a7720984e031573071bb450207aeed85e"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  },
+  "review": {
+    "report": "审查/S-R1-原卷契约影响.md",
+    "report_sha256": "52eb02f2ac23aa453a194be7e919d38feae96dd032c4192281fdd08619732003",
+    "readings": {
+      ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+      "正文/0007.md": "822b236676b390042c740eda993b07df37490163f089c0011f34f462b738e9f0",
+      "正文/0008.md": "0b81e0d5c79f66dc67fe634861a8879dd388b3bfd10aa00f1b79e836f5256f71",
+      "正文/0009.md": "d12f9832911f0e57440de60090947e2a7720984e031573071bb450207aeed85e"
+    },
+    "conclusion": "见绑定报告；由原生Codex实读并说明原契约、新候选和旧文影响，不是脚本语义验收",
+    "unresolved": []
+  },
+  "operation_id": "s-r1-publish-baseline"
+}

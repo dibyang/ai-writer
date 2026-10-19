@@ -1,0 +1,252 @@
+{
+  "ok": true,
+  "title": "雨棚后的灯",
+  "kind": "novel",
+  "revision": 31,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "独立副本续写7—18章，长章分段及多轮恢复；完成18章后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 7,
+        "to": 18
+      },
+      "revise_range": {
+        "from": 1,
+        "to": 6
+      },
+      "stop_conditions": [
+        "完成18章后暂停",
+        "发现旧章影响先建立正式修订，不直接改主稿"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 13,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "6258de87-149a-44e3-871a-2bfc4ef53e05",
+        "owner": "Codex-S-volume-and-dialogue",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 4,
+          "through": 9
+        },
+        "status": "committed",
+        "base_sha256": "f75a3ffeb33e427297a8ef0b3f028b770e5e0cdfca714c6784aa5b96e9d687af",
+        "created_at": "2026-10-19T16:56:04.788Z",
+        "transaction_id": "0c39ee84-28d5-45fd-84dd-678b5564fafd",
+        "session_sha256": "80af433132922714c430d89f57e41b29d1bf46045e6d8ab09f5555886fb57f5c"
+      },
+      {
+        "id": "90b53068-4f15-4a89-ada2-776d956e6afe",
+        "owner": "Codex-Q-associated-knowledge",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 4,
+          "through": 5
+        },
+        "status": "committed",
+        "base_sha256": "3be7bcfb99936ad1dac9cd69470b20ed7e1222635ed59e75601a9c8c98e7a56c",
+        "created_at": "2026-10-19T14:15:50.835Z",
+        "transaction_id": "4118f334-c693-4746-ac46-e32475c8f3cf",
+        "session_sha256": "515ed3130d8acfb084f4a8b1be6319503745e8e1bc3d8bb95c0ae7106ebe9edb"
+      },
+      {
+        "id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+        "owner": "Codex-Q-third-chapter-fix",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 3,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "e0e338d0832e52ef2b90f92f937053c3472db6fd4c015100a4ed7fc880a8af0b",
+        "created_at": "2026-10-19T14:03:10.273Z",
+        "transaction_id": "a0196448-df12-47dd-a770-40a304f8a452",
+        "session_sha256": "c7f0e86053b58d80aad7d0a5c63adf0b43e1f6d2e96abff854633bb509bede56"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "0c39ee84-28d5-45fd-84dd-678b5564fafd",
+        "session_id": "6258de87-149a-44e3-871a-2bfc4ef53e05",
+        "status": "completed"
+      },
+      {
+        "id": "34814c7b-0269-4f61-b7da-26557035f513",
+        "status": "completed"
+      },
+      {
+        "id": "4118f334-c693-4746-ac46-e32475c8f3cf",
+        "session_id": "90b53068-4f15-4a89-ada2-776d956e6afe",
+        "status": "completed"
+      },
+      {
+        "id": "a0196448-df12-47dd-a770-40a304f8a452",
+        "session_id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+        "status": "completed"
+      },
+      {
+        "id": "b895db97-fad7-4231-ba0d-bd6545cd42c0",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 31,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 2,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "2fccbf8acb1b68c91733fbbcea5ece952384b2a5131624a57202ea97b1f7664e",
+      "runtime_id": "ca1e695ac69c42d893b6bc62f07f13be5216fa86caa88d48c2a6f6b75f1f8ea0"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/b895db97-fad7-4231-ba0d-bd6545cd42c0.json",
+        "sha256": "96c21fa41b7ed0c3fc537345cb9f13a6e58859192d6c03a5bebbd5324230586d"
+      },
+      {
+        "ref": ".writer/objects/34814c7b-0269-4f61-b7da-26557035f513.json",
+        "sha256": "07dedc9d4b94e8669d75ff2e8a48117be036dc3a4b54b0d6efc6c069920bf54a"
+      }
+    ],
+    "operations": {
+      "010abba9-cdfc-4b1d-ac60-03988395e210": {
+        "input_hash": "26726aea536a40aa8b2f6dacacd9aaf9b40c81947b1d6a1302c4f907e8daf11f",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "b895db97-fad7-4231-ba0d-bd6545cd42c0",
+          "revision": 3,
+          "generation": 1,
+          "source_content_id": "9e26ebbf6120c9b49d31bfeee56099da843618010e0451ee658c8adacb7f532c",
+          "backups_preserved": true
+        }
+      },
+      "84528970-3379-44e8-b2d1-0487b0eaf4c2": {
+        "input_hash": "55806591d0a8a80b12ec8e2f5295676cdd094d387dcdc761b43ca99c94149c4d",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "34814c7b-0269-4f61-b7da-26557035f513",
+          "revision": 28,
+          "generation": 2,
+          "source_content_id": "2fccbf8acb1b68c91733fbbcea5ece952384b2a5131624a57202ea97b1f7664e",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 12,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 13,
+    "plan_exists": false,
+    "action": "先准备下一单元细纲；已有正文时先实读再建立细纲",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-s\\scenario\\雨棚后的灯\\.writer\\tool\\bin\\ai-writer.mjs' plan '--help'"
+  },
+  "current": {
+    "character_count": 5,
+    "ledger_count": 14,
+    "recent": [
+      {
+        "unit": 10,
+        "summary": "仍接第九日下午陈家门廊，周伯起身后陈阿姨收回靠垫。四点刚过何岚电话求助搬送来的水，林照先说五点前可到，雨势及桥头积水迫使改北口出巷、绕新桥，他及时电话撤回赶场承诺，何岚自行议价让送货人抬进门。周伯自己决定先等雨再走，中途歇脚；林照陪车、送上楼、逐项结算往返并退余款，向陈与何报已到家。旧物柜未动，回住处换湿袜吃面，有限记忆尚未抄清。"
+      },
+      {
+        "unit": 11,
+        "summary": "第十日上午林照在住处抄短稿，午后按电话约定到周家，在剥豆和实际等待中让周听稿。周只愿负责送碗，林在获准免提的电话中让陈听全文；陈纠正抄短造成父亲一直在后屋的错觉，并拒绝写旧职和地址。林删纸底并列周伯署名，将送碗单列周伯补述，仍不外给；陈约第十二日上午十点左右先电话再听。离周家后林到修理铺实际告诉许舟回程已完成及有限后屋记忆，未交稿，许仍守工作。林晚回住处另抄订正稿、保存旧改稿及现场笔记，等待再核。"
+      },
+      {
+        "unit": 12,
+        "summary": "第十一日只洗衣买菜未催听，第十二日上午林照按约在住处电话念订正短稿，陈确认本人回忆范围，准林周各留一份并可改撤，拒绝外传和写地址，仅允向何许口头说明已有一小段、原片来历未清。午后林按约到周家，周再认送碗句并留原清稿于独立文件袋/桌边抽屉，林当桌另抄自存。周主动邀请第十三日午后整理旧信与纸套，由自己开、只看外观不播放；实际通话约陈十三日两点来、到楼下电话由林接，复制抄信另问。林到店向何实际转述有限结果并买两张大纸，何守营业无借布；再向许传有限邀请，许待工作答复，林电话报周未约成。末回自己住处，不开套、不取信。"
+      }
+    ],
+    "timeline_tail": [
+      "第七日上午至午后：林照到店取回外衣并带走，在营业中帮忙后去周家；周伯提出先询问陈阿姨是否愿意见面，约第八日十点半打电话，原片与节目单留家。林照实际陪买菜上楼、查本地公交站并午间短暂替何岚看店，末尾回住处；第九日走访尚未约成。",
+      "第八日上午至午后：林照先向许舟转述周伯的引见意愿，许舟保留次日下午工作，仅应承短时接送。十点半在周家电话取得陈阿姨对第九日下午两点、榆树巷六号两人见面的同意；林照当面向许舟带回约定，何岚仅获知出门见朋友。原物留周家，林照准备自有用品及预付车钱，走访尚未发生。",
+      "第九日下午：许舟帮周伯下楼后离开赴修理铺；林照叫车陪过桥，在巷口付去程车钱，按门牌到榆树巷六号见陈阿姨。仅核对姓邵者的一段回忆，删去日期及赴约推断，旧片全史仍未知。章末仍在陈家门廊歇坐，回程、临时靠垫归还和车钱结算待办，短抄稿及再核字只是后续约定。",
+      "第九日下午四点刚过至晚间：陈家收回靠垫，暴雨及旧桥头积水使回程改北口、绕新桥；林照电话撤回五点前回店搬水之约，何岚另付搬费解决。周伯等雨、途中歇脚后乘车，五点后回楼口，由林照陪上楼并结清车钱退余款；陈和何实际收到到家电话，许舟未获转述。林照晚回住处，短稿未抄清。",
+      "第十日：林上午在住处初抄，午后按周同意到周家听核；陈先要求等待半小时，再通过获准免提实际听稿，纠正父亲在前屋、限制署名/旧职/地址，不许当日外给。林撤并列周名、送碗单列，约第十二日上午十点左右先电话。林随后当面向许舟报告回程和有限讲述，晚回住处另抄订正稿，旧改稿和现场本子分开保存。",
+      "第十一日：林洗衣买菜、翻纸夹未添稿，未催陈提前听。第十二日上午近十点：在住处电话念订正稿，陈确认本人小段、准林周暂留可改撤而不外传。午后按约到周家再核送碗，周留原清稿于桌边抽屉独立袋，林另抄自存；实际通话约陈十三日下午两点来周家整理，楼下电话由林接，今日未开柜取物。林实际向何许转述有限范围，买两张纸回住处，许待工作答复未约成。"
+    ]
+  }
+}

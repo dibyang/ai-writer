@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "at": "2026-10-19T18:00:49.949Z",
+  "main": "D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-s\\scenario\\雨棚后的灯",
+  "session_id": "a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0",
+  "transaction_id": "142c9f33-d5e0-4656-8e7d-587f3bc1c115",
+  "transaction_status": "completed",
+  "commit_revision": 33,
+  "main_revision": 34,
+  "registered": 12,
+  "next_unit": 13,
+  "workflow": "trial",
+  "old_input_ref": "inputs/b-record-12-retry1.json",
+  "old_input_sha256": "b1982cabefbcaa2e14a66f92ccad43b2a37ebce1781392b6deb710d221128dc3",
+  "old_input_refused": "追踪修订号已变化，请重新生成 context",
+  "old_input_state_unchanged": true,
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 12,
+    "revision": 34,
+    "findings": [],
+    "draft_inventory": {
+      "registered_count": 12,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 4,
+      "stale": 4,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 4,
+      "stale_without_current_coverage": 0,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "changed_old_assets": [
+    "正文/0010.md"
+  ],
+  "body": [
+    {
+      "unit": 1,
+      "ref": "正文/0001.md",
+      "sha256": "2e7e59a7b9df45fb007c994f5df755dc5924b34a5c1193c7712bb697537a0996"
+    },
+    {
+      "unit": 2,
+      "ref": "正文/0002.md",
+      "sha256": "e0404036cde165ea77a53a7287af6cc27e12ac7c22bf4dd4776033d022086787"
+    },
+    {
+      "unit": 3,
+      "ref": "正文/0003.md",
+      "sha256": "c95951887db5d557a144238483c71d0c412f208842516e84e44368b6f5cc549d"
+    },
+    {
+      "unit": 4,
+      "ref": "正文/0004.md",
+      "sha256": "6d10e3b0d5ea503b4b46bf5076b99258a62b3832bdcecab9ee9b0645916c197d"
+    },
+    {
+      "unit": 5,
+      "ref": "正文/0005.md",
+      "sha256": "3d9abc901b3e6d59f9f36c6fdb4e0ed962e2e697f1bb7ba6bc01edfcb6ad8b1b"
+    },
+    {
+      "unit": 6,
+      "ref": "正文/0006.md",
+      "sha256": "e5e9e30c7526bff3a0b5381f431ef2772866aa2c20b83111e1629113f29a9941"
+    },
+    {
+      "unit": 7,
+      "ref": "正文/0007.md",
+      "sha256": "822b236676b390042c740eda993b07df37490163f089c0011f34f462b738e9f0"
+    },
+    {
+      "unit": 8,
+      "ref": "正文/0008.md",
+      "sha256": "6e33cf5651e15b6f5a6a6d0ec804e7a306adc7a7c29f7a515416af76e33586a9"
+    },
+    {
+      "unit": 9,
+      "ref": "正文/0009.md",
+      "sha256": "d12f9832911f0e57440de60090947e2a7720984e031573071bb450207aeed85e"
+    },
+    {
+      "unit": 10,
+      "ref": "正文/0010.md",
+      "sha256": "a587b101da5770ddb4cbb4a0f31a3eea6468bc0d72e2c97933a355594a36df79"
+    },
+    {
+      "unit": 11,
+      "ref": "正文/0011.md",
+      "sha256": "97ed21ea76d9bea17f8558fc5de3d25c5efe64e2c1a8fd3d72236a7230199f80"
+    },
+    {
+      "unit": 12,
+      "ref": "正文/0012.md",
+      "sha256": "57fa55b36d603c6dfed34005caa7be902e2c27fa65064bcfec9f38b4499139c7"
+    }
+  ],
+  "segment_derivation": "not performed; parent session follow-up",
+  "finish_failure": {
+    "phase": "after commit and workflow restore, before old-input rejection",
+    "error": "ENOENT inputs/record-12.json",
+    "correction": "inputs/b-record-12-retry1.json"
+  },
+  "note": "Local work transaction committed. Mechanical/process checks are not literary acceptance."
+}

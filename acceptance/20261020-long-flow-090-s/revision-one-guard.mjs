@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,work,read,input,run,sha} from './common.mjs';
+const b=JSON.parse(fs.readFileSync(path.join(base,'r1-session.json'))),before=read('.writer/state.json'),planPath=path.join(work,'大纲/单元/0010.json');assert.equal(fs.existsSync(planPath),false);
+const next=JSON.parse(fs.readFileSync(path.join(base,'plans.json'))).find(p=>p.unit===10),error=run('r1-main-plan-refused',['plan','--input',input('r1-main-plan-refused',{...next,arc_id:'A4',setting_refs:['设定/S轮续篇骨架.md'],research_refs:[]})],2);
+assert.equal(error.code,'REVISION_OCCUPIED');assert.deepEqual(read('.writer/state.json'),before);assert.equal(fs.existsSync(planPath),false);
+const result={ok:true,session:b.id,main_state_unchanged:true,plan_output_absent:true,refusal_code:error.code,branch_has_segments:fs.existsSync(path.join(b.workspace,'分段')),branch_has_handoff:fs.existsSync(path.join(b.workspace,'交接')),observed_at:new Date().toISOString(),scope:'Active revision refuses a concurrent otherwise-authorized plan write; intermediate directories are not automatically copied.'};
+fs.writeFileSync(path.join(base,'r1-guard-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));

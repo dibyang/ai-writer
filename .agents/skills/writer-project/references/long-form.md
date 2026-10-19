@@ -57,6 +57,10 @@
 
 登记前record-preview列缺项与实际差量，不写状态。schema5历史修订在独立区rewind后用revision replay-input恢复旧变化，不誊写全快照；必须核对新稿、原引文与下游，填写真实replay_review，改稿使旧草案失效。
 
+预览的`related_unchanged_ledger`按本次显式变更角色及条目的角色关联列出最多8个未变条目，余量用omitted_count标明。这是回查候选，不是判错或自动补值；按ID召回并实读，核当前知情与明确历史时点。完成回程等行动后，另一个已闭合线索仍可能保留“尚未回家”的旧知情；一条变化不会自动刷新其他条目或未改子字段。只按实际发生更新，有据的历史说明保留，不改不可变观察。
+
+重登草案只恢复原登记真正变化的ledger字段，character_known按人取差量，保留前章已修但原后章没有改动的知识。该结构恢复不替代语义核查；整段人物状态、变化说明与物证交接仍核当前正文，不能只抄原草案或手改旧哈希。
+
 这是模板中 `changes` 的内容，不替换外层 unit/revision/source_hashes/draft/summary。引文必须在真实正文出现，证据至少一条指向本章。工具自动记录正文哈希和行号；它只证明引文存在，不能证明推论成立。
 
 ledger 类型：fact / thread / object / relationship / observation；状态：active / pending / partial / resolved / intentional-open。未明确的状态可写 pending，说明已知边界、下一步与回查时机，不能为“全部完成”强行结案。到期但未收的条目继续召回，不会自动标 resolved。observation 已记录的 statement/author_truth 不可逆改，新解释另建条目并关联旧 ID。作者尚未确认的秘密不要编入 author_truth。

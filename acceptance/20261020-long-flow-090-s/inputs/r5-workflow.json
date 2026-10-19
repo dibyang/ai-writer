@@ -1,0 +1,70 @@
+{
+  "expected_revision": 44,
+  "operation_id": "s-r5-prose-word",
+  "author_evidence": {
+    "local_source": "研究/S轮验证授权.md",
+    "source_sha256": "08c32d3c4fa6fb917d04bfd033c27cc65bee70a86019f399b7be4183df0bbc59",
+    "quote": "发现问题直接修复",
+    "locator": "user-task-2026-10-20-and-synthetic-scope",
+    "recorded_by": "Codex S agent-within-authorized-scope"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "只修15一句空手/腾手搭配，不改既有剧情事实及借期",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 15,
+        "to": 15
+      },
+      "stop_conditions": [
+        "一处措辞修正并完整实读15",
+        "当前10—15范围由下一会话先补连续复读",
+        "不写16"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

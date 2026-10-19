@@ -47,6 +47,10 @@ review可带chapter_functions、comparison及issues，须expected_revision、稳
 
 record-preview与record共用校验，显示缺项、实际事实差异和未变项，预览不登记、不生成journal、不刷新过期来源。空摘要或坏引文仍拒绝。可选--out .writer/drafts/名称.json写新可读入口，不覆盖旧文件；它是草案，不能作正式设定来源。
 
+0.9预览另有related_unchanged_ledger：按输入显式更新的角色，以及变化条目里的角色，列出有共同知情角色、但本次未更新的条目；最近证据优先，最多8条，附总量和遗漏数。它不读懂“尚未”等语句，不判语义错误，不要求补齐所有候选。模型应按ID召回、实读正文，区分当前知情和带明确日期的历史描述；一项约定兑现不自动刷新另一项或同项未改子字段。需要更新时另存真实changes和引文后再预览，不换来源哈希；无变化有据可保留。
+
+0.9重登草案按原登记前后的结构差异恢复ledger变化字段，character_known逐人保留真正变化的项；原本未变的知识不再整表写回，避免覆盖前章刚修好的字段。新条目仍给完整必要内容，物证换手仍核完整custody及previous_holder。结构差量不是语义合并：角色整段状态、实际变化的说明和物证去向仍须实读核查，不自动认定原差量在新上下文中正确。
+
 历史小修仍使用revision begin，独立区rewind后调用revision replay-input --unit N --revision-token TOKEN，恢复原摘要、原changes和引文，填入本次当前context哈希。实际核读新正文、旧事实与下游承接后修正草案，填写replay_review：reviewer、审查/下report、draft_sha256及checked_fields六项summary/characters/timeline/ledger/evidence/downstream。报告真实记录核查内容，不能凭勾选字段宣称无变化。先record-preview，再record；完成整个尾段复核后prepare/commit。改稿后旧草案hash失效，应重新生成并核对。
 
 ## 意见闭环

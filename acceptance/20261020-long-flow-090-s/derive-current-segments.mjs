@@ -1,0 +1,16 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,work,read,state,sha} from './common.mjs';
+const session=JSON.parse(fs.readFileSync(path.join(base,'r1-session.json'))),meta=JSON.parse(fs.readFileSync(path.join(work,`.writer/revisions/${session.id}/session.json`)));assert.equal(meta.status,'committed');
+const before=read('.writer/state.json'),result=[];
+for(const n of [4,8]){
+  const pad=String(n).padStart(4,'0'),refs=[1,2,3].map(i=>n===4?`分段/0004-0${i}.md`:`分段/0008/part-0${i}.md`),original=refs.map(ref=>read(ref).toString('utf8'));
+  const parts=n===4?original.map(x=>x.trim()):original.slice();if(n===4){parts[0]='# 第四章 听见停顿\n\n'+parts[0];parts[2]+='\n';}
+  const old=parts.join('\n\n'),current=read(`正文/${pad}.md`).toString('utf8'),expected=n===4?JSON.parse(fs.readFileSync(path.join(base,'source-start.json'))).inherited_bodies.find(x=>x.unit===4).sha256:JSON.parse(fs.readFileSync(path.join(base,'chapter-8-metrics.json'))).sha256;
+  assert.equal(sha(Buffer.from(old)),expected,'Historical segments must bind actual old complete chapter');assert.notEqual(current,old);
+  let prefix=0,suffix=0;while(prefix<old.length&&prefix<current.length&&old[prefix]===current[prefix])prefix++;while(suffix<old.length-prefix&&suffix<current.length-prefix&&old[old.length-1-suffix]===current[current.length-1-suffix])suffix++;
+  let offset=0,changed=false;for(let i=0;i<parts.length;i++){const end=offset+parts[i].length;if(prefix>=offset&&old.length-suffix<=end){parts[i]=parts[i].slice(0,prefix-offset)+current.slice(prefix,current.length-suffix)+parts[i].slice(old.length-suffix-offset);changed=true;break;}offset=end+2;}
+  assert.equal(changed,true,'Changed region spans segmentation boundary; requires explicit new segmentation');assert.equal(parts.join('\n\n'),current);
+  const dir=`分段/${pad}-r1`;fs.mkdirSync(path.join(work,dir),{recursive:false});const currentParts=parts.map((text,i)=>{const ref=dir+`/part-0${i+1}.md`;fs.writeFileSync(path.join(work,ref),text,{flag:'wx'});return{ref,sha256:sha(Buffer.from(text))};});
+  refs.forEach((ref,i)=>assert.equal(read(ref).toString('utf8'),original[i]));result.push({unit:n,historical_sha256:expected,current_sha256:sha(Buffer.from(current)),source_parts:refs.map(ref=>({ref,sha256:sha(read(ref))})),current_parts:currentParts,assembly:'join two LF, no trimming; first segment includes chapter title',current_assembly_exact:true,historical_parts_unchanged:true});
+}
+assert.deepEqual(read('.writer/state.json'),before);const report={ok:true,revision:state().revision,session:session.id,state_unchanged:true,chapters:result};fs.writeFileSync(path.join(base,'r1-current-segments.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});
+const handoff='# S-R1修后分段当前版本\n\n以正式提交后的正文为当前依据，修订号r'+state().revision+'。原分段、旧交接保留历史，不能拼回主稿。\n\n'+result.map(x=>`- 第${x.unit}章当前正文SHA256：${x.current_sha256}；当前分段：${x.current_parts.map(p=>p.ref).join('、')}。已核合章字节完全一致；旧SHA256 ${x.historical_sha256}的原分段保持不变。`).join('\n')+'\n\n本步只派生中间稿，没有再次登记、修改已提交正文或state。详细来源哈希在S根r1-current-segments.json，恢复主任务另读S-A-修订后当前入口.md。\n';fs.writeFileSync(path.join(work,'交接/S-R1-分段当前版本.md'),handoff,{flag:'wx'});console.log(JSON.stringify({ok:true,revision:report.revision,chapters:result.map(x=>({unit:x.unit,current_sha256:x.current_sha256}))}));

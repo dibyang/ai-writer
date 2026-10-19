@@ -1,0 +1,202 @@
+diff --git a/.agents/skills/writer-novel/references/chapter-delivery.md b/.agents/skills/writer-novel/references/chapter-delivery.md
+index 6e8bea8a..d4142f70 100644
+--- a/.agents/skills/writer-novel/references/chapter-delivery.md
++++ b/.agents/skills/writer-novel/references/chapter-delivery.md
+@@ -16,6 +16,8 @@
+ 
+ 需要中断时，把分段放在明确的中间稿目录（例如`分段/`），在本地交接中列出实际路径、版本或哈希、已完成事件、人物/物件现状、下一段未完事项、最终章路径及写前模板路径。`status`的正文清单不等于全项目中间稿清单；未看到未登记正文不能推断没有分段。恢复时核对当前任务和修订，再实读交接与实际片段；模板来源或修订已变时保留旧输入，核查新旧影响并重读后另取新模板，不只刷新哈希。只登记最后完整合章，分段和旧模板保留为过程证据。
+ 
++已登记长章经正式修订提交后，修后正文是当前依据；`分段/`及旧交接不在修订事务的默认复制、发布范围，不能假定它们同步更新。保留原分段和交接并明确其旧版本，新建指向当前正文哈希的交接。确需从分段继续时，以修后完整章另存分段版本，核对按序合章与当前正文逐字节一致后再续写；不要覆盖历史分段，也不要拿旧段稿拼回已修掉的内容。
++
+ 合章后完整连读：时间和空间能否衔接，人物何时得知信息，物件和伤情怎样延续，重复介绍能否删去，语气和视角是否相容。保留必要定位与自然省略，不为拼接一律补过渡句。只有实际改过且复读的最终文件才作为本章正文。
+ 
+ ## 先看正文，再回对计划
+diff --git a/.agents/skills/writer-project/references/long-form.md b/.agents/skills/writer-project/references/long-form.md
+index bb5ec588..0d83ff76 100644
+--- a/.agents/skills/writer-project/references/long-form.md
++++ b/.agents/skills/writer-project/references/long-form.md
+@@ -57,6 +57,10 @@
+ 
+ 登记前record-preview列缺项与实际差量，不写状态。schema5历史修订在独立区rewind后用revision replay-input恢复旧变化，不誊写全快照；必须核对新稿、原引文与下游，填写真实replay_review，改稿使旧草案失效。
+ 
++预览的`related_unchanged_ledger`按本次显式变更角色及条目的角色关联列出最多8个未变条目，余量用omitted_count标明。这是回查候选，不是判错或自动补值；按ID召回并实读，核当前知情与明确历史时点。完成回程等行动后，另一个已闭合线索仍可能保留“尚未回家”的旧知情；一条变化不会自动刷新其他条目或未改子字段。只按实际发生更新，有据的历史说明保留，不改不可变观察。
++
++重登草案只恢复原登记真正变化的ledger字段，character_known按人取差量，保留前章已修但原后章没有改动的知识。该结构恢复不替代语义核查；整段人物状态、变化说明与物证交接仍核当前正文，不能只抄原草案或手改旧哈希。
++
+ 这是模板中 `changes` 的内容，不替换外层 unit/revision/source_hashes/draft/summary。引文必须在真实正文出现，证据至少一条指向本章。工具自动记录正文哈希和行号；它只证明引文存在，不能证明推论成立。
+ 
+ ledger 类型：fact / thread / object / relationship / observation；状态：active / pending / partial / resolved / intentional-open。未明确的状态可写 pending，说明已知边界、下一步与回查时机，不能为“全部完成”强行结案。到期但未收的条目继续召回，不会自动标 resolved。observation 已记录的 statement/author_truth 不可逆改，新解释另建条目并关联旧 ID。作者尚未确认的秘密不要编入 author_truth。
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 31838c68..57ff6d96 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -2,6 +2,12 @@
+ 
+ ## 0.9.0 — 开发中，未发布
+ 
++- 修复重登草案展开整条旧知识可能覆盖前章修正的问题；按原登记结构差异恢复ledger字段和逐人知情，保留实读与物证保护。
++
++- 登记预览增加有上限的关联未变条目候选，帮助回查跨条目知情漏更新；不自动判语义冲突、改账本或阻断有据的未变项。
++
++- 补充旧章正式修订后的分段版本与交接管理：保留修前中间稿，以当前正文另存并核对新分段，避免跨会话拼回旧内容。
++
+ - 修复合法大上下文显式扩容后，取模板和登记仍被内部固定预算阻断；保持完整来源、授权及哈希核验，并补充长章中断交接与恢复说明。
+ 
+ - 新增上下文预算超限诊断，给出精确总量、分项和主要引用占用；保留不截断、授权及来源保护。
+diff --git a/README.md b/README.md
+index 1b1636ce..4b23e8e0 100644
+--- a/README.md
++++ b/README.md
+@@ -18,6 +18,8 @@
+ 
+ 0.9.0完整流程的后续实跑与问题修复另见[Q轮记录](acceptance/20261019-long-flow-090-q/README.md)，覆盖长章中断恢复、纲文实读回对、预算扩容和登记；各项结论以该轮具体构建及实际覆盖为准。
+ 
++增加章节与单章篇幅、多轮恢复、跨卷回收及旧章修订的过程见[S轮扩规模记录](acceptance/20261020-long-flow-090-s/README.md)。目标、实际完成量、失败重试与封存状态分别列明，不将规划规模当作已完成验证。
++
+ 0.8.0 的方法来源、适配范围及验证结果见[J 轮记录](acceptance/20261019-webnovel-reference-j/README.md)，其中保留了完整回归、旧包更新和两次 Codex 实跑证据。H 轮进展另见[百章验证记录](acceptance/20261019-hundred-h/README.md)。
+ 
+ 使用前请准备好 Codex 和 Node.js 20 或更高版本。无须安装额外 npm 依赖；写作使用当前 Codex 会话及其模型，不单独调用模型 API。
+diff --git a/RELEASE_NOTES.md b/RELEASE_NOTES.md
+index 3402e321..5cc36753 100644
+--- a/RELEASE_NOTES.md
++++ b/RELEASE_NOTES.md
+@@ -6,6 +6,12 @@ ai-writer是面向Codex的中文创作工具，支持小说、剧本、历史散
+ 
+ 后续流程实跑修复了显式扩容后的大上下文仍被内部登记预算阻断的问题，并补充未完成长章的交接和恢复指引；文件容量、完整来源及授权核验继续保留。具体修复前后证据及实际范围见源码仓库Q轮记录。
+ 
++扩规模流程进一步补充正式修订后的中间稿管理：分段和普通交接不会随修订事务自动同步，恢复时以当前完整正文为准，另存并核对新分段版本，保留旧入口为历史。实际验证进度及范围见源码仓库S轮记录。
++
++登记预览增加按角色关联的未变条目候选，最多8条并标明遗漏数，帮助实读者发现其他线索中的知情漏更新。它不自动理解文字、判错或补账本；来源、修订号和不可变观察保护继续生效。
++
++重登草案改为恢复原登记真正变化的字段和逐人知识差量，避免整张旧表覆盖前章修正；新条目、物证换手、来源绑定与实际尾段复核仍按原保护执行，不把结构差量当自动语义合并。
++
+ ## 安装与开始
+ 
+ 本地构建命令为`npm run release:build -- --out dist/0.9.0`，生成开发候选`ai-writer-0.9.0.zip`和`SHA256SUMS.txt`，不等于正式发布。核对SHA-256后解压到新目录，在Codex中打开`ai-writer-0.9.0`；需要Node.js 20或更高版本，无须安装npm依赖。
+diff --git a/docs/quickstart.md b/docs/quickstart.md
+index a16d6699..8f3985df 100644
+--- a/docs/quickstart.md
++++ b/docs/quickstart.md
+@@ -54,6 +54,8 @@ Codex从doctor返回的`skill_root`按需读取`writer-novel/references/story-de
+ 
+ 分段写到一半要换会话时，让Codex保存实际片段路径、写前模板和未完行动到本地交接。新会话先核对任务状态，再读取交接及原片段；没有完整章可登记时，不因正文清单为空就重写或跳到下一章。
+ 
++已登记章节修订后，可以说：“以正式修订后的完整章恢复，保留旧分段和旧交接作为历史。需要继续分段时另存当前版本，核对合章与修后正文一致，并新建当前交接。”工具不会自动同步`分段/`和旧交接；不要直接用旧片段覆盖修后正文。
++
+ 只审查：
+ 
+ > 完整阅读这两章，检查连续性、重复解释与人物口气，只报告具体问题和应保留的表达，不修改正文。
+@@ -64,6 +66,8 @@ Codex从doctor返回的`skill_root`按需读取`writer-novel/references/story-de
+ 
+ 旧章修改可能影响后续登记；“只改第1章”不自动授权改写所有后续情节。让Codex说明影响并使用已有授权，不直接改主稿或补哈希。去味方法见[去AI味流程](deslop.md)，意见处置见[复核手册](review-and-registration.md)。
+ 
++登记前可以说：“看预览里的关联未变项，按实际正文检查人物所知是否仍有效。保留有日期的历史说明，只补真正变化的字段和引文。”关联提示是有上限的回查候选，不能代替模型实读或自动判错。
++
+ 导出：
+ 
+ > 导出 works/雨夜来信 当前已登记草稿到作品目录外的新目录，核对未登记稿、回退留稿与审查覆盖，说明纳入和排除范围，不覆盖旧版本。
+diff --git a/docs/review-and-registration.md b/docs/review-and-registration.md
+index b074d886..e3f91358 100644
+--- a/docs/review-and-registration.md
++++ b/docs/review-and-registration.md
+@@ -47,6 +47,10 @@ review可带chapter_functions、comparison及issues，须expected_revision、稳
+ 
+ record-preview与record共用校验，显示缺项、实际事实差异和未变项，预览不登记、不生成journal、不刷新过期来源。空摘要或坏引文仍拒绝。可选--out .writer/drafts/名称.json写新可读入口，不覆盖旧文件；它是草案，不能作正式设定来源。
+ 
++0.9预览另有related_unchanged_ledger：按输入显式更新的角色，以及变化条目里的角色，列出有共同知情角色、但本次未更新的条目；最近证据优先，最多8条，附总量和遗漏数。它不读懂“尚未”等语句，不判语义错误，不要求补齐所有候选。模型应按ID召回、实读正文，区分当前知情和带明确日期的历史描述；一项约定兑现不自动刷新另一项或同项未改子字段。需要更新时另存真实changes和引文后再预览，不换来源哈希；无变化有据可保留。
++
++0.9重登草案按原登记前后的结构差异恢复ledger变化字段，character_known逐人保留真正变化的项；原本未变的知识不再整表写回，避免覆盖前章刚修好的字段。新条目仍给完整必要内容，物证换手仍核完整custody及previous_holder。结构差量不是语义合并：角色整段状态、实际变化的说明和物证去向仍须实读核查，不自动认定原差量在新上下文中正确。
++
+ 历史小修仍使用revision begin，独立区rewind后调用revision replay-input --unit N --revision-token TOKEN，恢复原摘要、原changes和引文，填入本次当前context哈希。实际核读新正文、旧事实与下游承接后修正草案，填写replay_review：reviewer、审查/下report、draft_sha256及checked_fields六项summary/characters/timeline/ledger/evidence/downstream。报告真实记录核查内容，不能凭勾选字段宣称无变化。先record-preview，再record；完成整个尾段复核后prepare/commit。改稿后旧草案hash失效，应重新生成并核对。
+ 
+ ## 意见闭环
+diff --git a/docs/user-guide.md b/docs/user-guide.md
+index 20d7b0ed..2ae25a0c 100644
+--- a/docs/user-guide.md
++++ b/docs/user-guide.md
+@@ -57,6 +57,8 @@ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追
+ 
+ 中途换会话时，将分段路径和版本、已写事件与人物/物件现状、下一未完段、最终章路径、写前模板及当前任务保存为本地交接。分段可放`分段/`等明确目录，别混作下一章；status只列正文库存，不能据此判断所有中间稿是否存在。恢复时实读原片段而非重写开头；若模板来源或修订已变，保留旧输入，核查影响并重读后另取新模板，不能只把旧输入的哈希换成新的。
+ 
++旧章完成正式修订后，先以已提交的完整正文恢复。`分段/`和普通交接文件不在修订事务的默认复制、发布范围，旧片段可能仍是修前字节；它们保留作历史，不代表当前稿。让Codex新建绑定当前修订号和正文哈希的交接，列明旧入口已过时。确需从分段继续，再以修后完整章另存一套分段版本，按原顺序合章核对字节一致，并实读确认承接；不覆盖旧分段、不重复登记已提交章节，也不将旧段稿拼回主稿。
++
+ 确有关键路线难选时，可以短推演各自一两步的选择、代价和后果，复用decision记录作者选择。推演和未选路线不是已发生事实；已选方向不反复重开。纲文回对写在已有审查报告中，记有效计划版本和实际稿哈希；仅审查时不改计划，已登记稿继续走保护修订，不新增一套事实权威或自动评分。
+ 
+ ## 如何理解“已完成”
+@@ -127,6 +129,10 @@ revise_range须覆盖最早影响章至原末章，但直接改写情节与后
+ 
+ record-preview列缺项和实际差量，不登记、不生成journal、不补空摘要、不刷新来源哈希。新稿用写前record-template；schema5及以上历史修订在独立区回退后用revision replay-input恢复旧摘要、changes与引文草案。路径、当前context哈希自动填，未变项保留；实际读稿核承接后填写replay_review真实报告及六项checked_fields，先preview再record。旧引文消失或正文再次变更仍拒绝，草案不能当“无变化”结论。
+ 
++预览还会列出与本次变化角色有关、但尚未更新的知情条目，最多8个并标明遗漏数。让Codex按需回查：例如人已送回家，另一个已闭合线索里却可能还写着等待回程。关联只是复读候选，不自动证明有错；明确的历史说明可保留，当前知情变化则按实际正文补差量和引文，不重抄全快照，也不改不可变观察。
++
++重登草案会按原来的真实变化恢复字段和逐人的知情差量，避免后章整张旧知识表覆盖前章修正。它仍是待核草案：实际变过的整段说明、人物状态及物证去向，要由Codex实读新旧正文后决定如何承接，工具不会自动合并剧情含义。
++
+ context、record-template、record-preview、review-template、replay-input可选--out保存.writer/drafts下新JSON，不覆盖旧输入，不作正式设定来源。活跃修订的输出在所属独立区带令牌完成，正常作者无需查找UUID或手填哈希。
+ 
+ 意见区分correctness/continuity/readability/optional_style、严重度、置信度及原句建议。review-issues resolve分别记adopted/retained/deferred与真实作者原话或代理既有授权；代理不冒充作者逐项确认，仅审查不能借采用获得改稿权，可选风格只作suggestion。
+diff --git a/lib/workspace.mjs b/lib/workspace.mjs
+index c9ecc300..78b3d58e 100644
+--- a/lib/workspace.mjs
++++ b/lib/workspace.mjs
+@@ -406,6 +406,23 @@ function validateReplay(p,value,draftSha){
+   if(!object(review)||Object.keys(review).some(k=>!['reviewer','report','draft_sha256','checked_fields'].includes(k))||review.draft_sha256!==draftSha||!Array.isArray(review.checked_fields)||review.checked_fields.length!==REPLAY_FIELDS.length||REPLAY_FIELDS.some(k=>!review.checked_fields.includes(k)))throw userError('重登草案尚未完成摘要、人物、时间线、账本、引文及下游复核；需真实报告和checked_fields，不自动确认无变化',{code:'REPLAY_REVIEW_REQUIRED'});
+   string(review.reviewer,'replay_review.reviewer');if(!review.report?.startsWith('审查/'))fail('重登复核报告须位于审查/');string(text(safe(p.root,review.report)),'重登复核报告',LIMIT);
+ }
++function relatedUnchangedLedger(p,value,next) {
++  const changed=value.changes?.ledger??{},actors=new Set(Object.keys(value.changes?.characters??{}));
++  for(const id of Object.keys(changed)){
++    const entry=next.ledger?.[id];
++    for(const name of [...(entry?.cast??[]),...Object.keys(entry?.character_known??{})])actors.add(name);
++  }
++  const candidates=[];
++  for(const [id,entry] of Object.entries(p.state.snapshot.ledger??{})){
++    if(Object.hasOwn(changed,id)||JSON.stringify(entry)!==JSON.stringify(next.ledger?.[id]))continue;
++    const names=Object.keys(entry.character_known??{}).filter(name=>actors.has(name)).sort();
++    if(!names.length)continue;
++    candidates.push({id,type:entry.type,status:entry.status,characters:names.slice(0,8),omitted_character_count:Math.max(0,names.length-8),last_evidence_unit:(entry.evidence??[]).reduce((latest,e)=>Math.max(latest,e.unit),0)});
++  }
++  candidates.sort((a,b)=>b.last_evidence_unit-a.last_evidence_unit||(a.id<b.id?-1:a.id>b.id?1:0));
++  return {scope:'manual-related-ledger-review',candidates:candidates.slice(0,8),candidate_count:candidates.length,omitted_count:Math.max(0,candidates.length-8),semantic_judgment:'not-performed',
++    note:'仅按角色关联列出未变条目，不表示它们有错。请实读核对当前知情、历史时点及条目内未改字段；有据可保留，不自动改账本或不可变观察。'};
++}
+ export function recordPreview(root,value){
+   const p=project(root),findings=[];
+   if(!object(value))return {ok:false,scope:'record-input-preview',findings:[{code:'INVALID_INPUT',field:'input',message:'登记输入须是对象'}]};
+@@ -416,6 +433,7 @@ export function recordPreview(root,value){
+     const prepared=prepareRecord(p,value);if(prepared.unchanged)return {...prepared.unchanged,scope:'record-input-preview',writes:false};
+     return {ok:true,scope:'record-input-preview',revision:p.state.revision,unit:prepared.unit,writes:false,summary:value.summary,
+       changes:delta(p.state.snapshot,prepared.snapshot),unchanged:{characters:Object.keys(p.state.snapshot.characters).filter(k=>JSON.stringify(p.state.snapshot.characters[k])===JSON.stringify(prepared.snapshot.characters[k])).length,ledger:Object.keys(p.state.snapshot.ledger??{}).filter(k=>JSON.stringify(p.state.snapshot.ledger[k])===JSON.stringify(prepared.snapshot.ledger?.[k])).length},
++      related_unchanged_ledger:relatedUnchangedLedger(p,value,prepared.snapshot),
+       source_hashes:'matched-current-context',replay_review:value._replay?'bound-model-report-not-semantic-proof':'not-replay',findings:[],note:'与record共用验证；仅机械准备就绪，不是文学或作者验收'};
+   }catch(error){return {ok:false,scope:'record-input-preview',revision:p.state.revision,writes:false,findings:[{code:error.code??'RECORD_INPUT_INVALID',message:error.message}],note:'保持原登记和来源保护，不自动修补哈希或事实'};}
+ }
+@@ -431,7 +449,11 @@ export function replayInput(root,unit){
+   const fields=['type','statement','status','cast','tags','due_unit','pinned','author_truth','reader_known','character_known','custody','previous_holder'];
+   for(const [key,entry]of Object.entries(after.ledger??{})){
+     const old=before.ledger?.[key];if(JSON.stringify(entry)===JSON.stringify(old))continue;
+-    const value=Object.fromEntries(fields.filter(k=>entry[k]!==undefined).map(k=>[k,structuredClone(entry[k])]));
++    const value=Object.fromEntries(fields.filter(k=>entry[k]!==undefined&&(!old||JSON.stringify(entry[k])!==JSON.stringify(old[k]))).map(k=>[k,structuredClone(entry[k])]));
++    if(old&&value.character_known){
++      value.character_known=Object.fromEntries(Object.entries(value.character_known).filter(([name,known])=>JSON.stringify(old.character_known?.[name])!==JSON.stringify(known)));
++      if(!Object.keys(value.character_known).length)delete value.character_known;
++    }
+     value.evidence=entry.evidence.filter(e=>!(old?.evidence??[]).some(x=>JSON.stringify(x)===JSON.stringify(e))).map(e=>({unit:e.unit,quote:e.quote}));
+     if(entry.type==='object'&&old?.custody&&old.custody.holder!==entry.custody.holder)value.previous_holder=old.custody.holder;
+     changes.ledger[key]=value;
+diff --git a/release/distribution.json b/release/distribution.json
+index 70c48247..62d4d0df 100644
+--- a/release/distribution.json
++++ b/release/distribution.json
+@@ -2,6 +2,12 @@
+   "format": "ai-writer-distribution@1",
+   "description": "Explicit source allowlist; excludes works, acceptance, machine settings and generated output.",
+   "files": [
++    {
++      "file": "tests/replay-sparse.test.mjs"
++    },
++    {
++      "file": "tests/record-preview-related.test.mjs"
++    },
+     {
+       "file": "tests/context-budget.test.mjs"
+     },

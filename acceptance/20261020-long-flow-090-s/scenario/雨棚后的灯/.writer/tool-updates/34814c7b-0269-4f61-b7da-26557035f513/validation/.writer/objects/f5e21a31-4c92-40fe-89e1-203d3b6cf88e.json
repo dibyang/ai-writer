@@ -1,0 +1,67 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-19T14:27:30.371Z",
+  "operation_id": "q-final-pause",
+  "base_revision": 14,
+  "payload": {
+    "stage": "paused",
+    "task": "前两卷六章实跑已完成；等待下一轮明确授权，未来六章仍只讨论规划",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "未获下一轮明确授权不写第七章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/本轮验证范围.md",
+    "source_sha256": "34a3915788a8cdbd54054d1b272112ed8a6eeb86d2c48711c19c561c3a871ff9",
+    "quote": "写前两卷六章",
+    "locator": "synthetic-scope-for-user-test",
+    "recorded_by": "Codex Q verification",
+    "frozen_ref": ".writer/objects/34a3915788a8cdbd54054d1b272112ed8a6eeb86d2c48711c19c561c3a871ff9.txt"
+  }
+}

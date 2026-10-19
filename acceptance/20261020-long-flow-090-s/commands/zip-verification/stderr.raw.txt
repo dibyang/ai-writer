@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\work\other\ai-writer\acceptance\20261020-long-flow-090-s\verify-zip.py", line 16, in <module>
+    manifest = json.loads(z.read('ai-writer-0.9.0/release-manifest.json'))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\zipfile\__init__.py", line 1585, in read
+    with self.open(name, "r", pwd) as fp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\zipfile\__init__.py", line 1622, in open
+    zinfo = self.getinfo(name)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\zipfile\__init__.py", line 1550, in getinfo
+    raise KeyError(
+KeyError: "There is no item named 'ai-writer-0.9.0/release-manifest.json' in the archive"

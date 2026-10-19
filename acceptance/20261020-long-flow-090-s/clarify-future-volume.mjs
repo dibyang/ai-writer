@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,work,read,state,input,run,sha} from './common.mjs';
+const before=read('.writer/state.json'),old=read('大纲/分卷/V4.json');assert.ok(state().units.every(u=>!Object.hasOwn(u.source_hashes,'大纲/分卷/V4.json')));assert.ok(state().units.length<=9);
+fs.writeFileSync(path.join(base,'volume-4-inherited.json'),old,{flag:'wx'});
+const value={id:'V4',title:'只写能负责的部分',start:10,end:12,promises:['完成一份可由讲述者订正、可撤回的有限抄稿','兑现走访回程与照料承诺'],constraints:['旧片完整来历仍保留','按实际角色知情和借物动作登记'],reserved:['原片影像及完整历史'],arcs:[{id:'A4',start:10,end:12,goal:'面对回程代价和讲述范围，落实有限整理',payoff:'完成订正抄稿，是否整理纸套留给实际同意',forbidden:['不揭晓旧片完整来历','不提前拆开或播放原片']}]};
+run('volume-4-clarified',['volume','--input',input('volume-4-clarified',value)]);assert.deepEqual(read('.writer/state.json'),before);
+const template=JSON.parse(read('.writer/drafts/s-record-9.json'));for(const [ref,expected]of Object.entries(template.source_hashes))assert.equal(sha(read(ref)),expected,ref);
+fs.writeFileSync(path.join(base,'volume-4-clarification.json'),JSON.stringify({ok:true,old_sha256:sha(old),new_sha256:sha(read('大纲/分卷/V4.json')),no_registered_consumer:true,state_unchanged:true,unit_9_template_sources_unchanged:true,scope:'Harness planning correction; no edits to consumed V3 or ongoing chapter 9.'},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,state_unchanged:true,unit_9_template_sources_unchanged:true}));

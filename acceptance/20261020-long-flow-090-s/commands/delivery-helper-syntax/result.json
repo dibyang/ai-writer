@@ -1,0 +1,19 @@
+{
+  "label": "delivery-helper-syntax",
+  "exe": "node",
+  "args": [
+    "-e",
+    "const cp=require('child_process'),p='acceptance/20261020-long-flow-090-s/';for(const n of ['install-current-tool','verify-delivery-build','revision-three','progress','audit-commands','finish-flow','verify-native-read','verify-current-manuscript']){const r=cp.spawnSync(process.execPath,['--check',p+n+'.mjs'],{encoding:'utf8'});if(r.status!==0)throw Error(n+': '+r.stderr);}console.log('8 S helpers parse successfully; no manuscript or state changes');"
+  ],
+  "cwd": "D:\\work\\other\\ai-writer",
+  "started_at": "2026-10-19T18:47:11.254Z",
+  "elapsed_ms": 524,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "stdout_bytes": 63,
+  "stderr_bytes": 0,
+  "input": null,
+  "before_state_sha256": null,
+  "after_state_sha256": null
+}
