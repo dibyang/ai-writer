@@ -1,0 +1,46 @@
+{
+  "report_id": "TEST-BLIND-ISOLATION-BLOCK-REPORT",
+  "module_id": "SGM-BLIND-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/blind-read-isolation-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-BLIND-001",
+    "references/blind-read-review-rules.md"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-BLIND-001-R002",
+      "severity": "blocker",
+      "location": "input.readers",
+      "recommendation": "Separate human blind tickets, isolated agent tickets, and informed review; do not merge them into one vote count or count informed review as blind reading.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R003",
+      "severity": "blocker",
+      "location": "input.isolation",
+      "recommendation": "Blind readers may only receive the locked text, neutral task text, and questionnaire; they must not see outlines, settings, prior comments, other answers, author concerns, or later chapters.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R005",
+      "severity": "blocker",
+      "location": "input.readers",
+      "recommendation": "Formal blind-read decisions require at least two qualifying isolated agent or human tickets; one screening ticket may only discover problems, not prove pass.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    }
+  ]
+}

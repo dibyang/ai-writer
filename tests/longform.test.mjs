@@ -242,7 +242,7 @@ test('物证交接拒绝错认原保管人，知识增量保留另一人物，�
 test('新增参考快照与清单绑定固定提交和MIT许可，原文不进入运行依赖', () => {
   const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/oh-story-audit-manifest.json'), 'utf8'));
   assert.equal(manifest.commit, '6d72f70e5fe3de110b457fd6bc81ede6ea614702');
-  assert.equal(sha(fs.readFileSync(path.join(ROOT, manifest.source_inventory))), manifest.inventory_sha256);
+  assert.equal(sha(fs.readFileSync(path.join(ROOT, 'docs/oh-story-reference-inventory.json'))), manifest.inventory_sha256);
   for (const row of manifest.retained) assert.equal(sha(fs.readFileSync(path.join(ROOT, row.file))), row.sha256);
   assert.match(fs.readFileSync(path.join(ROOT, 'vendor/oh-story-reference-20261015/LICENSE'), 'utf8'), /MIT License/);
 });

@@ -1,0 +1,66 @@
+{
+  "fixture_id": "TEST-BLIND-ISOLATION-BLOCK",
+  "mode": "novel",
+  "expected_report": "blind-read-isolation-block.report.json",
+  "expected_report_id": "TEST-BLIND-ISOLATION-BLOCK-REPORT",
+  "input": {
+    "review_scope": "single",
+    "decision_level": "agent_formal",
+    "claim": "single_basic",
+    "version_lock": {
+      "date": "2026-07-14",
+      "files": [
+        {
+          "path": "chapters/chapter-010.md",
+          "order": 10,
+          "word_count": 3100
+        }
+      ],
+      "git_ref": "abc1234",
+      "includes": {
+        "title": true,
+        "chapter_title": true,
+        "appendix": true
+      },
+      "questionnaire_version": "blind-read@1.0"
+    },
+    "isolation": {
+      "prompt_neutral": false,
+      "reader_answers_isolated": false,
+      "supplemental_explanations": true,
+      "prohibited_materials_seen": [
+        "outline",
+        "prior_reader_answer"
+      ]
+    },
+    "readers": [
+      {
+        "reader_id": "A",
+        "ticket_type": "isolated_agent",
+        "isolated": false,
+        "saw_other_answers": true,
+        "complete": true,
+        "retell_accurate": true,
+        "continue_score": 4,
+        "immediate_continue": true
+      },
+      {
+        "reader_id": "B",
+        "ticket_type": "informed_review",
+        "counted_as_blind": true,
+        "isolated": true,
+        "complete": true,
+        "retell_accurate": true,
+        "continue_score": 4,
+        "immediate_continue": true
+      }
+    ],
+    "execution": {
+      "runner": "internal_temporary_agent",
+      "creates_preview_task": false,
+      "inherits_current_context": false,
+      "result_discarded_after_read": true,
+      "sidebar_entry_retained": false
+    }
+  }
+}

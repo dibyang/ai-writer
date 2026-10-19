@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "baseline_archive_sha256": "75c7b154b95ca64c6639f066f14eb0790c48522994fce3fc20b1bb5e4902f7a0",
+  "variants": [
+    {
+      "provenance": {
+        "source_commit": "50bbead67a4def0e68b62294953af9b1b7261765",
+        "dirty": true
+      },
+      "archive_sha256": "75c7b154b95ca64c6639f066f14eb0790c48522994fce3fc20b1bb5e4902f7a0",
+      "matches_root_failure": false
+    },
+    {
+      "provenance": {
+        "source_commit": "50bbead67a4def0e68b62294953af9b1b7261765",
+        "dirty": "unknown"
+      },
+      "archive_sha256": "e2d6c9c0029eba1e579e29f762bb1b2d568e765079ed4abc380b5df1c5930b25",
+      "matches_root_failure": true
+    },
+    {
+      "provenance": {
+        "source_commit": "unknown",
+        "dirty": "unknown"
+      },
+      "archive_sha256": "3386f6461c225676747b633355c05e1b5f4245d18eb9cd8147e560dd51e7a2cc",
+      "matches_root_failure": false
+    }
+  ],
+  "cause": "Exact failed archive hash reconstructed by changing only observed Git provenance; ZIP payload compression is deterministic."
+}

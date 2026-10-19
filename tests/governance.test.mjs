@@ -14,7 +14,7 @@ function state(root) { return fs.readFileSync(path.join(root, '.writer/state.jso
 function file(root, ref, body) { fs.mkdirSync(path.dirname(path.join(root, ref)), { recursive: true }); fs.writeFileSync(path.join(root, ref), typeof body === 'string' || Buffer.isBuffer(body) ? body : JSON.stringify(body)); }
 function fixture(t, legacy = false, kind = 'novel') {
   const tmp = path.join(ROOT, '.tmp'); fs.mkdirSync(tmp, { recursive: true }); const dir = fs.mkdtempSync(path.join(tmp, 'governance-')), root = path.join(dir, '中文 空格作品');
-  t.after(() => { assert.equal(path.dirname(fs.realpathSync(dir)), fs.realpathSync(tmp)); fs.rmSync(dir, { recursive: true, force: true }); });
+  t.after(async () => { assert.equal(path.dirname(fs.realpathSync(dir)), fs.realpathSync(tmp)); await fs.promises.rm(dir, { recursive: true, force: true, maxRetries: 12, retryDelay: 150 }); });
   if (legacy) initProject(root, kind, '兼容测试', { legacy: true });
   else { const r = spawnSync(process.execPath, [CLI, 'init', '--path', root, '--kind', kind, '--title', '治理测试'], { encoding: 'utf8' }); assert.equal(r.status, 0, r.stderr); }
   file(root, '研究/作者要求.md', '作者测试指令：只按逐项选择；允许试写第一至六章，之后暂停正文，先讨论总纲；青岚宗方向，炼器先行，小盾只是推荐尚未选。允许在测试作品显式迁移。');

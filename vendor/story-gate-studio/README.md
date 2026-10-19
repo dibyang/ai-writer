@@ -4,7 +4,7 @@
 
 `story-gate-studio` 是从本小说项目抽象出的写作、审稿、发布门禁、爆款冷读、视觉资产和短剧试制插件包。
 
-本目录是插件的独立权威目录。小说项目 `资料/` 只保留历史入口和迁移说明；插件文档、未来代码、测试、fixture、报告模板和商业发布材料都应放在本目录下。
+本目录是ai-writer随附的引擎副本，包含通用门禁、匿名fixture、测试及相关文档。原小说项目和部分早期架构材料不随包分发。普通创作先使用ai-writer根目录的快速入门；需要引擎CLI时，从本目录运行`node scripts/story-gate.js --help`。
 
 ## 目录职责
 
@@ -21,7 +21,7 @@
 
 ## 权威文档
 
-- [架构设计](docs/architecture.md)
+- 早期架构设计保留在原开发项目，本随附包不包含该文件。
 - [规则映射追踪表](docs/traceability.md)
 - [商业化与分发策略](docs/commercialization.md)
 - [v0.1 详细设计](docs/v0.1-design.md)
@@ -36,12 +36,12 @@
 
 ## 第一版快速使用
 
-本仓库已经提供本地 marketplace：`.agents/plugins/marketplace.json`，指向 `./plugins/story-gate-studio`。在 Codex 插件界面选择该 marketplace 后即可安装试用。
+ai-writer下载包不提供原项目的独立marketplace入口；可直接使用随附CLI。需要独立插件分发时，应按本包文档另行准备与核验安装元数据，不把旧目录路径当成已安装插件。
 
 命令行试用：
 
 ```powershell
-cd plugins/story-gate-studio
+cd vendor/story-gate-studio
 node scripts/story-gate.js --help
 node scripts/story-gate.js validate
 node scripts/story-gate.js release-check

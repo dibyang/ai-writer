@@ -1,0 +1,70 @@
+
+> ai-writer@0.8.0 smoke
+> node scripts/smoke.mjs
+
+{
+  "ok": true,
+  "workflow": "real CLI: init-workflow-plan-context-template-changes-record-check-export",
+  "project": "D:\\work\\other\\ai-writer\\.tmp\\首发解压 验证-L-v2\\ai-writer-0.8.0\\.tmp\\smoke-gACFXb\\匿名作品",
+  "recorded": {
+    "ok": true,
+    "unit": 1,
+    "revision": 2,
+    "sha256": "40cf992362148757143f903b529392dc12b837228806857d7827ca6c7d4c28fb",
+    "status": "draft-recorded",
+    "quality_review": "required"
+  },
+  "mechanical": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 1,
+    "revision": 2,
+    "findings": [],
+    "draft_inventory": {
+      "registered_count": 1,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 0,
+      "stale": 0,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 0,
+      "stale_without_current_coverage": 0,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "exported": {
+    "ok": true,
+    "output": "D:\\work\\other\\ai-writer\\.tmp\\首发解压 验证-L-v2\\ai-writer-0.8.0\\.tmp\\smoke-gACFXb\\导出",
+    "title": "没寄出的信",
+    "kind": "novel",
+    "revision": 2,
+    "status": "draft-export",
+    "quality_review": "required",
+    "included_units": [
+      1
+    ],
+    "excluded_drafts": [],
+    "warnings": [],
+    "sha256": "40cf992362148757143f903b529392dc12b837228806857d7827ca6c7d4c28fb",
+    "units": [
+      {
+        "unit": 1,
+        "draft": "正文/0001-没寄出的信.md",
+        "sha256": "40cf992362148757143f903b529392dc12b837228806857d7827ca6c7d4c28fb",
+        "source_hashes": {
+          "writer.json": "977b736656b6b378367abfa97a5784287842b1145116c8283edf03163c8172b4",
+          ".writer/state.json": "83539f06183fa94a6d0c9403897ac954b8f6570c40610246f051bcb040c35b37",
+          "大纲/单元/0001.json": "8ce16e2f1e4344ea3c77a674f556bfada1972f99d56e201e9248235edc41e678",
+          "设定/作品定位.md": "90b877297496aa840dc803d62719d2fc9a9464146fa7104a6a72b514358f571d",
+          "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+          "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+        }
+      }
+    ]
+  },
+  "literary_review": "unreviewed; 匿名示例只验证文件流程"
+}

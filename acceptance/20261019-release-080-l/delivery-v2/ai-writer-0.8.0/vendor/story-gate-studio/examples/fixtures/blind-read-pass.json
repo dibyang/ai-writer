@@ -1,0 +1,144 @@
+{
+  "fixture_id": "TEST-BLIND-PASS",
+  "mode": "novel",
+  "expected_report": "blind-read-pass.report.json",
+  "expected_report_id": "TEST-BLIND-PASS-REPORT",
+  "input": {
+    "review_scope": "continuous",
+    "decision_level": "human_formal",
+    "claim": "publish_ready",
+    "thresholds": {
+      "continuous_reader_count": 2,
+      "single_pass_score": 4,
+      "formal_pass_score": 90,
+      "page_turner_pass_score": 90,
+      "continuous_min_chapters": 3
+    },
+    "version_lock": {
+      "date": "2026-07-14",
+      "files": [
+        {
+          "path": "chapters/chapter-001.md",
+          "order": 1,
+          "word_count": 3200
+        },
+        {
+          "path": "chapters/chapter-002.md",
+          "order": 2,
+          "word_count": 3300
+        },
+        {
+          "path": "chapters/chapter-003.md",
+          "order": 3,
+          "word_count": 3250
+        }
+      ],
+      "git_ref": "abc1234",
+      "includes": {
+        "title": true,
+        "chapter_title": true,
+        "appendix": false
+      },
+      "questionnaire_version": "blind-read@1.0"
+    },
+    "isolation": {
+      "prompt_neutral": true,
+      "reader_answers_isolated": true,
+      "supplemental_explanations": false,
+      "prohibited_materials_seen": []
+    },
+    "revision": {
+      "substantive_after_lock": false,
+      "reused_prior_votes": false
+    },
+    "readers": [
+      {
+        "reader_id": "A",
+        "ticket_type": "human",
+        "isolated": true,
+        "complete": true,
+        "sequential_reading": true,
+        "retell_accurate": true,
+        "critical_misread": false,
+        "logical_hard_issue": false,
+        "continue_score": 5,
+        "immediate_continue": true,
+        "quality_score": 94,
+        "page_turner_score": 93,
+        "pursuit_reason": {
+          "concrete_character": true,
+          "unresolved_event": true
+        },
+        "chapters": [
+          {
+            "chapter": "001",
+            "continue_score": 5,
+            "immediate_continue": true
+          },
+          {
+            "chapter": "002",
+            "continue_score": 4,
+            "immediate_continue": true
+          },
+          {
+            "chapter": "003",
+            "continue_score": 5,
+            "immediate_continue": true
+          }
+        ],
+        "fatigue": {
+          "first_slow": "none",
+          "first_skim": "none",
+          "stable_fatigue": "none"
+        }
+      },
+      {
+        "reader_id": "B",
+        "ticket_type": "human",
+        "isolated": true,
+        "complete": true,
+        "sequential_reading": true,
+        "retell_accurate": true,
+        "critical_misread": false,
+        "logical_hard_issue": false,
+        "continue_score": 4,
+        "immediate_continue": true,
+        "quality_score": 91,
+        "page_turner_score": 90,
+        "pursuit_reason": {
+          "concrete_character": true,
+          "unresolved_event": true
+        },
+        "chapters": [
+          {
+            "chapter": "001",
+            "continue_score": 4,
+            "immediate_continue": true
+          },
+          {
+            "chapter": "002",
+            "continue_score": 4,
+            "immediate_continue": true
+          },
+          {
+            "chapter": "003",
+            "continue_score": 4,
+            "immediate_continue": true
+          }
+        ],
+        "fatigue": {
+          "first_slow": "none",
+          "first_skim": "none",
+          "stable_fatigue": "none"
+        }
+      }
+    ],
+    "execution": {
+      "runner": "internal_temporary_agent",
+      "creates_preview_task": false,
+      "inherits_current_context": false,
+      "result_discarded_after_read": true,
+      "sidebar_entry_retained": false
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "at": "2026-10-19T09:07:51.629Z",
+  "stage": "local-release-preparation-complete",
+  "version": "0.8.0",
+  "resource_profile": "apache-2.0-v1",
+  "content_id": "1a9b7e8edcf0fb0b5bcd2c6b7e6ed732b61de78d65e6167e8f11660e34b052f8",
+  "resources": 65,
+  "zip_sha256": "9d0452e6d19914024880b18f9cd99ef9017f4b56337d1fc48c6961007e207eb7",
+  "zip_bytes": 1063016,
+  "zip_files": 318,
+  "source_provenance": {
+    "source_commit": "50bbead67a4def0e68b62294953af9b1b7261765",
+    "dirty": true
+  },
+  "root_regression": {
+    "tests": 167,
+    "pass": 166,
+    "fail": 0,
+    "skipped": 1
+  },
+  "extracted_package_regression": {
+    "tests": 167,
+    "pass": 166,
+    "fail": 0,
+    "skipped": 1
+  },
+  "engine_regression": {
+    "tests": 29,
+    "pass": 29,
+    "fail": 0,
+    "skipped": 0
+  },
+  "engine_bytes_unchanged_since_actual_engine_runs": 138,
+  "doctor": true,
+  "extracted_cli_smoke": true,
+  "independent_zip_reader": "Python stdlib zipfile; CRC and all SHA verified",
+  "old_candidate_updates": [
+    {
+      "old_version": "0.8.0",
+      "old_content_id": "3593faa0ea76085a63d788109f3ffbb1bbdf89565f7a012bde32cce437eaf40c",
+      "new_version": "0.8.0",
+      "new_content_id": "1a9b7e8edcf0fb0b5bcd2c6b7e6ed732b61de78d65e6167e8f11660e34b052f8",
+      "resource_profile": "apache-2.0-v1",
+      "generation_before": 0,
+      "generation_after": 1,
+      "state_sha256": "2780c0afbcb4d1467095fc0a35bcea7d661df151324540ee1b03b87b62030d96",
+      "root_customizations_preserved": {
+        "AGENTS.md": "0218d7da663cac54532652f4983fe86ba3ed242b13111f62d6f255170c392cc2",
+        ".agents/skills/writer-novel/SKILL.md": "e1d2ef351ffe88c1ecaeda54de94dfe1a749b39bc0db7ccf11df59415786a09f",
+        "docs/user-guide.md": "ea5a67fea65344a43f2c0b42c0f34792c36c5d5d24e14dbad91ee22d85d62311",
+        "LICENSE.md": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+      },
+      "idempotent": true,
+      "planning_only_gates_refused": true,
+      "resumed_actual_update": "commands/old080-apply"
+    },
+    {
+      "old_version": "0.8.1",
+      "old_content_id": "efbdf6f4055979e21eb7a3339adf0b88f9c058d5d8137c09b122259f4ad94618",
+      "new_version": "0.8.0",
+      "new_content_id": "1a9b7e8edcf0fb0b5bcd2c6b7e6ed732b61de78d65e6167e8f11660e34b052f8",
+      "resource_profile": "apache-2.0-v1",
+      "generation_before": 0,
+      "generation_after": 1,
+      "state_sha256": "4dece0c1e3f6bb156432e8df6aab1ffcda6d9d09fab04490f2348b1391f27f15",
+      "root_customizations_preserved": {
+        "AGENTS.md": "14f99b46a14c7d6c3741a956a98bdb91be40aaf5242844068945415978615bd3",
+        ".agents/skills/writer-essay/SKILL.md": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb",
+        "docs/user-guide.md": "8827897a862ecf3d2a4966be416c376bbe35d9bbc79e41e892a912cc74bc3fce",
+        "LICENSE.md": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      "idempotent": true,
+      "planning_only_gates_refused": true
+    }
+  ],
+  "update_proof_scope": "Actual v1-extracted CLI updates; all 65 runtime/resources byte-identical to final v2, checked above. Final v2 separately fully regressed/diagnosed/smoked.",
+  "links_checked": 61,
+  "prior_H_J_K_seals_verified": true,
+  "failures_preserved": [
+    "initial root regression: transient cleanup EPERM and Git provenance mismatch",
+    "initial extracted regression: omitted historical inventory dependency",
+    "upgrade-smoke v1 missing --draft"
+  ],
+  "pending": [
+    "User-authorized commit and push",
+    "Selected final commit rebuild/provenance check",
+    "v0.8.0 tag and GitHub Release publication",
+    "Actual cross-system/Node matrix CI results"
+  ],
+  "existing_works_modified": false,
+  "git_committed": false,
+  "tag_created": false,
+  "published": false,
+  "scope": "Windows Node 24 local final-ZIP and source verification; not new hundred-chapter literature or human/market acceptance"
+}

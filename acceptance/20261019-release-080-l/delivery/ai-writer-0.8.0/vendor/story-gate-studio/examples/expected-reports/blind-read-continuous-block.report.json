@@ -1,0 +1,56 @@
+{
+  "report_id": "TEST-BLIND-CONTINUOUS-BLOCK-REPORT",
+  "module_id": "SGM-BLIND-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/blind-read-continuous-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-BLIND-001",
+    "references/blind-read-review-rules.md"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-BLIND-001-R006",
+      "severity": "blocker",
+      "location": "input.review_scope",
+      "recommendation": "Single-chapter blind read and continuous blind read are different gates; a single-chapter pass cannot stand in for continuous pass, publication readiness, or strong commercial stickiness.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R007",
+      "severity": "blocker",
+      "location": "input.scores",
+      "recommendation": "Formal quality score and page-turner/commercial stickiness score must be recorded separately; do not merge them into one average.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R010",
+      "severity": "blocker",
+      "location": "input.readers",
+      "recommendation": "Continuous blind reading must cover at least three ordered chapters, record each chapter immediately, track first slow-down, first skim, and stable fatigue, and avoid shared time misread, result pre-spoiling, hard chapter breaks, or stable skip zones.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    },
+    {
+      "rule_id": "SGM-BLIND-001-R012",
+      "severity": "blocker",
+      "location": "input.readers",
+      "recommendation": "Continuous strong page-turner pass requires every qualifying ticket to meet the page-turner threshold, keep each chapter at least 4, immediately continue, avoid shared stable fatigue, and cite both a concrete character and unresolved event.",
+      "source_refs": [
+        "docs/traceability.md#SGM-BLIND-001",
+        "references/blind-read-review-rules.md"
+      ]
+    }
+  ]
+}

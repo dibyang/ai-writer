@@ -1,0 +1,18 @@
+{
+  "exe": "C:/Users/admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "args": [
+    "-c",
+    "import yaml,json,pathlib; files=[pathlib.Path('.github/ISSUE_TEMPLATE/bug_report.yml'),pathlib.Path('.github/ISSUE_TEMPLATE/config.yml')]; docs=[yaml.safe_load(p.read_text(encoding='utf-8')) for p in files]; assert len(docs[0]['body'])>=6; assert 'blank_issues_enabled' in docs[1]; print(json.dumps({'ok':True,'issue_forms_yaml':len(files)}))"
+  ],
+  "cwd": "D:\\work\\other\\ai-writer",
+  "started_at": "2026-10-19T09:05:08.319Z",
+  "elapsed_ms": 685,
+  "exit_code": 0,
+  "signal": null,
+  "input": null,
+  "before_state_sha256": null,
+  "after_state_sha256": null,
+  "build_before": null,
+  "build_after": null,
+  "runtime_files_stable": null
+}

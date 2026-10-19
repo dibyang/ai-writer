@@ -3,12 +3,21 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   workspace:
     strategy:
+      fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest]
         node: [20, 24]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Immutable historical evidence contains Windows-reserved path names.
+          # Product tests use tests/fixtures and the checked-in reference inventory.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/acceptance/
+            !/works/
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}

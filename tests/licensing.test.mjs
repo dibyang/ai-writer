@@ -30,7 +30,7 @@ test('新版识别器保留旧0.7与0.8.0资源形状，不反向要求新增NOT
   for(const ref of ['NOTICE','docs/license-transition.json']) fs.unlinkSync(path.join(tool,ref));
   for(const version of ['0.7.6','0.8.0']){
     fs.unlinkSync(path.join(tool,'build-manifest.json'));
-    const pkg=JSON.parse(fs.readFileSync(path.join(tool,'package.json')));pkg.version=version;
+    const pkg=JSON.parse(fs.readFileSync(path.join(tool,'package.json')));pkg.version=version;delete pkg.aiWriter;
     fs.writeFileSync(path.join(tool,'package.json'),JSON.stringify(pkg,null,2)+'\n');
     writeBuildManifest(tool);
     const build=packageFiles(tool);assert.equal(build.ok,true);
@@ -43,4 +43,16 @@ test('新版识别器保留旧0.7与0.8.0资源形状，不反向要求新增NOT
   const pkg=JSON.parse(fs.readFileSync(path.join(tool,'package.json')));pkg.version='0.8.1';
   fs.writeFileSync(path.join(tool,'package.json'),JSON.stringify(pkg,null,2)+'\n');
   assert.equal(identifyBuild(tool).ok,false);
+});
+
+test('正式0.8.0显式资源配置不可丢NOTICE，未知配置拒绝而非降级解释',t=>{
+  const {root}=fixture(t,0),tool=path.join(root,'.writer/tool');
+  assert.equal(identifyBuild(tool).resource_profile,'apache-2.0-v1');
+  fs.unlinkSync(path.join(tool,'build-manifest.json'));
+  fs.unlinkSync(path.join(tool,'NOTICE'));
+  assert.ok(identifyBuild(tool).missing.some(row=>row.file==='NOTICE'));
+  assert.throws(()=>packageFiles(tool),e=>e.code==='TOOL_SOURCE_INVALID');
+  const pkg=JSON.parse(fs.readFileSync(path.join(tool,'package.json')));pkg.aiWriter.resourceProfile='unknown';
+  fs.writeFileSync(path.join(tool,'package.json'),JSON.stringify(pkg,null,2)+'\n');
+  assert.throws(()=>identifyBuild(tool),e=>e.code==='BUILD_UNSUPPORTED_PROFILE');
 });

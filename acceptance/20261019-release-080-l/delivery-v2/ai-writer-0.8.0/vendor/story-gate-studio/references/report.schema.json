@@ -1,0 +1,38 @@
+{
+  "schema_version": "story-gate-report-schema@0.1.0",
+  "required_top_level_fields": [
+    "report_id",
+    "module_id",
+    "mode",
+    "rule_pack",
+    "target_refs",
+    "source_refs",
+    "verdict",
+    "findings"
+  ],
+  "required_finding_fields": [
+    "rule_id",
+    "severity",
+    "location",
+    "recommendation",
+    "source_refs"
+  ],
+  "allowed_modes": [
+    "novel",
+    "visual",
+    "screenplay",
+    "short_drama"
+  ],
+  "allowed_severity": [
+    "low",
+    "medium",
+    "high",
+    "blocker"
+  ],
+  "allowed_verdicts": [
+    "pass",
+    "blocked",
+    "needs_polish",
+    "review_only"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "rule_pack": "sample-project",
+  "version": "0.1.0",
+  "modes": [
+    "novel"
+  ],
+  "modules": [
+    {
+      "module_id": "SAMPLE-PROJ-001",
+      "name": "Sample project boundary",
+      "mode": "novel",
+      "source_refs": [
+        "examples/project-rule-packs/sample-project-rule-pack.json"
+      ]
+    },
+    {
+      "module_id": "SAMPLE-PHYSICAL-001",
+      "name": "Sample project physical constraints",
+      "mode": "novel",
+      "source_refs": [
+        "examples/project-rule-packs/sample-project-rule-pack.json"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "SAMPLE-PROJ-001-R001",
+      "module_id": "SAMPLE-PROJ-001",
+      "severity": "high",
+      "description": "Project-specific rules must stay outside the distributable universal rule pack unless deliberately anonymized.",
+      "source_refs": [
+        "examples/project-rule-packs/sample-project-rule-pack.json"
+      ]
+    },
+    {
+      "rule_id": "SAMPLE-PHYSICAL-001-R001",
+      "module_id": "SAMPLE-PHYSICAL-001",
+      "severity": "high",
+      "description": "Project-local physical constraints should define evidence forms, scene procedures, and reveal mechanics without copying private plot chains into the plugin.",
+      "source_refs": [
+        "examples/project-rule-packs/sample-project-rule-pack.json"
+      ]
+    }
+  ]
+}
