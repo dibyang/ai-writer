@@ -18,6 +18,8 @@ description: 审查小说、剧本、历史散文和非虚构的结构、语言�
 
 小说发布判断任务再读 publication-gate、final-publication-review；逐句校对任务读 proofreading-language-quality。常规全稿自检完整连读并记录覆盖，不自动引入发布评分。商业追读目标再读 page-turner、readability-accessibility，情绪杀伤力任务再读 knife-emotional-impact。只加载当前任务需要的模块，不把整套规则全塞进上下文。
 
+小说的开篇、转场、对白或章末承接专项审查，按需读[小说局部诊断](../writer-novel/references/scene-connections.md)；长篇供给与卷末兑现问题读[长篇方向](../writer-novel/references/story-development.md)。报告保留有效慢热、合作对白与余韵，不把偏好升级为硬伤；未来章未写只核计划，不声称承接已经落实。
+
 ## 报告
 
 保存到 `审查/范围-日期.md`，包含范围、文件哈希、审查者性质（知情自检/隔离代理/真人）、结论、问题列表和未覆盖项。每条问题给原句/位置、可复现的阅读代价、证据及最小修改方向；将硬问题、整体文风风险、风格偏好观察分栏，并列文气/人物资产。没有确认问题可直接写“没有必要修改”。

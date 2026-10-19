@@ -1,0 +1,8 @@
+{
+  "purpose": "Preserved failure before correction; original failure was also returned by the preceding exec call. This reproduction uses the unchanged v1 verifier and original boundary-comparison.json.",
+  "chunk_id": "d41d48",
+  "wall_time_seconds": 3.1716638,
+  "exit_code": 1,
+  "original_token_count": 165,
+  "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\nfalse !== true\r\n\r\n    at file:///D:/work/other/ai-writer/acceptance/20261019-webnovel-reference-j/method-smoke/verify-method-smoke.mjs:99:8\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+}

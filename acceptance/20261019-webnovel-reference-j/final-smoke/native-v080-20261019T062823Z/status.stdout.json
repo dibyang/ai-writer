@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "title": "方法更新隔离验证",
+  "kind": "novel",
+  "revision": 1,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "direction",
+    "task": "完善作品定位和故事骨架，明确本轮允许的创作范围",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": []
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 1,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [
+      {
+        "id": "bbe4d985-7235-44fa-a0e7-c1d0696235c1",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 1,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 1,
+    "installed": {
+      "version": "0.8.0",
+      "source_content_id": "3593faa0ea76085a63d788109f3ffbb1bbdf89565f7a012bde32cce437eaf40c",
+      "runtime_id": "03177aa11e0ba584e3bbe32e48aeaae871ecf825795fbfea764846b8a9427b67"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/bbe4d985-7235-44fa-a0e7-c1d0696235c1.json",
+        "sha256": "305c434db465735105f3e8e933d07ce8403aabcbbdfd308f989c4b82917da5e2"
+      }
+    ],
+    "operations": {
+      "83af63c4-0de7-45ea-a8b0-4518cb177450": {
+        "input_hash": "c2f82b4e7840acc8585f9082785774a10d13d0664296dc39fe3713b9f1679d79",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "bbe4d985-7235-44fa-a0e7-c1d0696235c1",
+          "revision": 1,
+          "generation": 1,
+          "source_content_id": "3593faa0ea76085a63d788109f3ffbb1bbdf89565f7a012bde32cce437eaf40c",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 0,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 1,
+    "plan_exists": false,
+    "action": "完善作品定位和故事骨架，明确本轮允许的创作范围",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261019-webnovel-reference-j\\sources\\package-0.8.0-v2\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261019-webnovel-reference-j\\update-work-v2' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 0,
+    "ledger_count": 0,
+    "recent": [],
+    "timeline_tail": []
+  }
+}

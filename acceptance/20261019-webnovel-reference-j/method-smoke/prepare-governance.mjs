@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const phase = path.dirname(fileURLToPath(import.meta.url));
+const work = path.join(phase, 'work');
+const evidence = JSON.parse(fs.readFileSync(path.join(phase, 'author-evidence.json'), 'utf8'));
+const revision = JSON.parse(fs.readFileSync(path.join(phase, 'evidence/decision-author-direction/stdout.txt'), 'utf8')).revision;
+const write = (name, value) => fs.writeFileSync(path.join(work, '.writer', name), JSON.stringify(value, null, 2) + '\n', { flag: 'wx' });
+write('method-candidate-input.json', { expected_revision: revision, operation_id: 'method-j-stage-candidates', author_evidence: evidence, decision: { id: 'D_STAGE_CANDIDATES', topic: '阶段供给与篇幅的模型候选', status: 'candidate', options: ['有限维修后承担复查，再协商可履行的工时与合作安排', '首项维修兑现后收束短篇', '两个阶段完成一次安排后收束中篇'], adopted_items: [], excluded_items: [], unresolved_items: ['作者尚未选择是否持续长篇或缩短', '卷界1–6及7–12仅工具占位，不是总篇幅决定', '林遥、余青和第三人称视角是可撤回工作细节', '产权、年代、师傅状况、经济规模与终局不补定'], effective_range: { from: 1, to: null } } });
+write('method-workflow-input.json', { expected_revision: revision + 1, operation_id: 'method-j-discuss-plan-only', author_evidence: evidence, workflow: { stage: 'structure', task: '《补帆人》隔离方法实跑：只讨论规划、允许discuss/plan、不写正文；推演两个阶段、审查研究样本并验证正式门禁后交接', authorization: { allowed_actions: ['discuss', 'plan'], draft_range: null, revise_range: null, stop_conditions: ['完成两个阶段讨论、仅近期三章方向及A/B/C报告后停止', '不得写聊天正文、正文文件或制造待登记稿', '新核心设定、历史结论或终局不代作者确认', '下一卷兑现只留计划，不进入事实账本'] }, planning: { positioning: { status: 'draft', refs: ['设定/作品定位.md', '设定/文风.md', '设定/权威规则.md'], unresolved_ids: ['D_STAGE_CANDIDATES'] }, structure: { status: 'draft', refs: ['大纲/全书大纲.md'], unresolved_ids: ['D_STAGE_CANDIDATES'] }, volume: { status: 'draft', refs: ['大纲/分卷/V1.json', '大纲/分卷/V2.json'], unresolved_ids: ['D_STAGE_CANDIDATES'] }, outline: { status: 'draft', refs: ['大纲/单元/0001.json', '大纲/单元/0002.json', '大纲/单元/0003.json'], unresolved_ids: ['D_STAGE_CANDIDATES'] } } } });
+process.stdout.write(JSON.stringify({ candidate_expected_revision: revision, workflow_expected_revision: revision + 1 }) + '\n');

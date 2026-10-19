@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+
+const phase = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(.:\/)/, '$1'));
+const entry = path.resolve(phase, '../sources/package-0.7.7/bin/ai-writer.mjs');
+const work = path.join(phase, 'work');
+const [label, ...args] = process.argv.slice(2);
+if (!/^[a-z0-9-]+$/.test(label ?? '')) throw new Error('A unique evidence label is required');
+const output = path.join(phase, 'evidence', label);
+fs.mkdirSync(output, { recursive: true });
+const state = path.join(work, '.writer/state.json');
+const hash = file => fs.existsSync(file) ? crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex') : null;
+const start = new Date().toISOString();
+const before = hash(state);
+fs.writeFileSync(path.join(output, 'invocation.json'), JSON.stringify({ start, cwd: phase, executable: process.execPath, entry, args, state_sha256_before: before }, null, 2) + '\n', { flag: 'wx' });
+const result = spawnSync(process.execPath, [entry, ...args], { cwd: phase, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024, windowsHide: true });
+fs.writeFileSync(path.join(output, 'stdout.txt'), result.stdout ?? '', { flag: 'wx' });
+fs.writeFileSync(path.join(output, 'stderr.txt'), result.stderr ?? '', { flag: 'wx' });
+const metadata = { start, end: new Date().toISOString(), exit_code: result.status, signal: result.signal, spawn_error: result.error ? { code: result.error.code, message: result.error.message } : null, state_sha256_before: before, state_sha256_after: hash(state) };
+fs.writeFileSync(path.join(output, 'result.json'), JSON.stringify(metadata, null, 2) + '\n', { flag: 'wx' });
+process.stdout.write(JSON.stringify({ label, ...metadata }, null, 2) + '\n');
+process.stdout.write(result.stdout ?? '');
+process.stderr.write(result.stderr ?? '');
+process.exitCode = result.status ?? 2;

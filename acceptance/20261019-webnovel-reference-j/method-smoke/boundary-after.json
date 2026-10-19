@@ -1,0 +1,2191 @@
+{
+  "at": "2026-10-19T06:19:27.664Z",
+  "scope": "Existing J acceptance tree excluding method-smoke; repository bin/lib/tests/.agents/docs/works/package files",
+  "file_count": 546,
+  "files": {
+    "bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "lib/governance.mjs": {
+      "bytes": 18912,
+      "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+    },
+    "lib/help.mjs": {
+      "bytes": 13467,
+      "sha256": "b146c2b037a3b78917e03821a4777ff0d1062e5eb5999e4d39170c2c3fa7a311"
+    },
+    "lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "lib/longform.mjs": {
+      "bytes": 28563,
+      "sha256": "4bee586a8d09b9589fb8d6b7e96a991f442edec8c8c7a1b8cfb2e1e68595fbec"
+    },
+    "lib/review-workflow.mjs": {
+      "bytes": 22240,
+      "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+    },
+    "lib/revisions.mjs": {
+      "bytes": 39206,
+      "sha256": "c4d1361c72e291c8a28ce7b1d8db3244161d4ddebdc82b8a60a52b4af8c9bcce"
+    },
+    "lib/sources.mjs": {
+      "bytes": 22797,
+      "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+    },
+    "lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "lib/tool-build.mjs": {
+      "bytes": 12229,
+      "sha256": "3a38fec3a8998db71ec7668ac847d6c74067394577cc0880e7e7efe55ae489de"
+    },
+    "lib/tool-update.mjs": {
+      "bytes": 27625,
+      "sha256": "cbcd633a9d57ed07de4c0e95219f0952a01719513adb7d7733ff4dfcfef9a7fa"
+    },
+    "lib/workspace.mjs": {
+      "bytes": 63858,
+      "sha256": "c81bd9410253e195b3e6b992cb4424ff1c5af10ae1a0aab7faf0a1951398edfa"
+    },
+    "tests/fixtures/tool-0.3/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "tests/fixtures/tool-0.3/lib/help.mjs": {
+      "bytes": 7868,
+      "sha256": "a3aae536b7b48e5268768414812287ffc548b4fdd7d32e0dc9a8e07ab1dc455b"
+    },
+    "tests/fixtures/tool-0.3/lib/journal.mjs": {
+      "bytes": 5913,
+      "sha256": "b44af9afee48e755d1e6082614d7890b4cd5b8cd17616e6157329a31b33e4d6a"
+    },
+    "tests/fixtures/tool-0.3/lib/longform.mjs": {
+      "bytes": 26506,
+      "sha256": "b8dc2143bfbef82beaabf8362a0c8ddee554f81f9506ec12c24b84966eac497d"
+    },
+    "tests/fixtures/tool-0.3/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "tests/fixtures/tool-0.3/lib/workspace.mjs": {
+      "bytes": 37353,
+      "sha256": "2061fe8f68f05c875cfed430e55e48cf28de42a19e5114167ca36574ed9489b1"
+    },
+    "tests/fixtures/tool-0.3/package.json": {
+      "bytes": 490,
+      "sha256": "950a06cb47e665a0e9eb3515f5a94de70ba5b2e6cab528818f18afc446d3dc26"
+    },
+    "tests/fixtures/tool-0.3/source-manifest.json": {
+      "bytes": 1060,
+      "sha256": "4d7c00aee198f3d31bf53dd21b20d7aea8c71ffe055a76e1f67c100a12930d9a"
+    },
+    "tests/fixtures/tool-0.4/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "tests/fixtures/tool-0.4/lib/governance.mjs": {
+      "bytes": 18557,
+      "sha256": "361731881688509df07cd071cb4f85e9857f542709bd1b8b43e5b8abb16d88f9"
+    },
+    "tests/fixtures/tool-0.4/lib/help.mjs": {
+      "bytes": 9382,
+      "sha256": "10d7dbf2a8fa0f92ce8f9cdac8f0d9b5fab29d385eb99c9cf704aa5fe2f0f030"
+    },
+    "tests/fixtures/tool-0.4/lib/journal.mjs": {
+      "bytes": 6311,
+      "sha256": "a0c32f3ad8d3db886d2e86e6017fa30e920371c08f6d2f22ddc0d292546a7393"
+    },
+    "tests/fixtures/tool-0.4/lib/longform.mjs": {
+      "bytes": 26793,
+      "sha256": "38c85f3ea4535a5f8447eb1ba9ffb91dbdfe91b8a442577b15efcb46e7ada2d0"
+    },
+    "tests/fixtures/tool-0.4/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "tests/fixtures/tool-0.4/lib/tool-build.mjs": {
+      "bytes": 7551,
+      "sha256": "f6749a20559dc168a8de3475ae549ae47d03c87ce41bb4c9cd6195f8dd0d03f5"
+    },
+    "tests/fixtures/tool-0.4/lib/workspace.mjs": {
+      "bytes": 43889,
+      "sha256": "135ec6b635c95c94567a79d7573f5f218fa1c5b1b35419d56d34146f1dc81da0"
+    },
+    "tests/fixtures/tool-0.4/package.json": {
+      "bytes": 490,
+      "sha256": "fd10812f08afe86157694131ec0d7c2e7cbf88e491f982fda074faf24bfed49c"
+    },
+    "tests/fixtures/tool-0.4/source-manifest.json": {
+      "bytes": 1247,
+      "sha256": "2459044988a7e6bcaabc4a27c5d0b650c4b85603105639a6815cf257024fce79"
+    },
+    "tests/fixtures/tool-0.5/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "tests/fixtures/tool-0.5/lib/governance.mjs": {
+      "bytes": 18913,
+      "sha256": "3d4396645f5eb6c83f9aebd80ced47d03d8cc8a3bb365f8b0ec9bf168aad5ede"
+    },
+    "tests/fixtures/tool-0.5/lib/help.mjs": {
+      "bytes": 10912,
+      "sha256": "e18dd0f8a4fd60b8b196c8c02834c7d47cf12dfface343011a4179d2dd73cfcd"
+    },
+    "tests/fixtures/tool-0.5/lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "tests/fixtures/tool-0.5/lib/longform.mjs": {
+      "bytes": 27955,
+      "sha256": "8f895a1e441507a624f634bfc6d11475b5f69106f1dd6d7e1ee92652909ae99e"
+    },
+    "tests/fixtures/tool-0.5/lib/revisions.mjs": {
+      "bytes": 33423,
+      "sha256": "b3c0feb2c0fb446f7eb87c28cb740f7ef5240070ba2d4575d01514240998056c"
+    },
+    "tests/fixtures/tool-0.5/lib/sources.mjs": {
+      "bytes": 22786,
+      "sha256": "4941ae0becce2a10edba66d4ff1d875fa76f694da252ba061cdec9e8fa5d58e0"
+    },
+    "tests/fixtures/tool-0.5/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "tests/fixtures/tool-0.5/lib/tool-build.mjs": {
+      "bytes": 7845,
+      "sha256": "21b34f750ae573381ac8925f625516c0073bf4a9df655d9d42a8f0c61c012193"
+    },
+    "tests/fixtures/tool-0.5/lib/workspace.mjs": {
+      "bytes": 48505,
+      "sha256": "72943a36c266ec567baeb54b76055779b7df580e8ee9e75c647fdf8112dfb2bc"
+    },
+    "tests/fixtures/tool-0.5/package.json": {
+      "bytes": 490,
+      "sha256": "2fdabe72b6bee90dd2cc767bc888c3396d6ae38ed37e5322f5db1953cb395c6a"
+    },
+    "tests/fixtures/tool-0.5/source-manifest.json": {
+      "bytes": 1573,
+      "sha256": "8cff6e6492ad4b3026b5664a06a4c1c96a103cbb443481ba0cd63b52976b1bdd"
+    },
+    "tests/fixtures/tool-0.6/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "tests/fixtures/tool-0.6/lib/governance.mjs": {
+      "bytes": 18912,
+      "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+    },
+    "tests/fixtures/tool-0.6/lib/help.mjs": {
+      "bytes": 12597,
+      "sha256": "132656d5c272efe452d5b76d80972bd244499d2e579fceebddb8929baca11a81"
+    },
+    "tests/fixtures/tool-0.6/lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "tests/fixtures/tool-0.6/lib/longform.mjs": {
+      "bytes": 28523,
+      "sha256": "31af3f56bc491cef64a80995b6499c63fa9f5a13e6181cb733fda8dfc68c7b50"
+    },
+    "tests/fixtures/tool-0.6/lib/review-workflow.mjs": {
+      "bytes": 22240,
+      "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+    },
+    "tests/fixtures/tool-0.6/lib/revisions.mjs": {
+      "bytes": 35464,
+      "sha256": "37c45d60f28a761dc42777514821780c6ce3ac5e8c9943f37260a81e23ad0efb"
+    },
+    "tests/fixtures/tool-0.6/lib/sources.mjs": {
+      "bytes": 22797,
+      "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+    },
+    "tests/fixtures/tool-0.6/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "tests/fixtures/tool-0.6/lib/tool-build.mjs": {
+      "bytes": 8127,
+      "sha256": "556d6e2da07924cd39ca382e57d318217fd041545a3a5bdcd09d2e18c58ae366"
+    },
+    "tests/fixtures/tool-0.6/lib/workspace.mjs": {
+      "bytes": 60159,
+      "sha256": "89db6cfbaad8664b007f1723364673bb3acb0029705ab63694a9d48977b6349c"
+    },
+    "tests/fixtures/tool-0.6/package.json": {
+      "bytes": 490,
+      "sha256": "31c9e8f7032e113d07f0a9120456dfe9fa481d865d14979ce0649f1223f5e02d"
+    },
+    "tests/fixtures/tool-0.6/source-manifest.json": {
+      "bytes": 1468,
+      "sha256": "55d84cdc4101666061ec99b10459bc3359c2c160d77e1abb6254d90ce8a32171"
+    },
+    "tests/governance.test.mjs": {
+      "bytes": 23009,
+      "sha256": "30d9ddf6cc89fee130a03c793b91e43e7bc1c394c693fd815be512dbb5bf6874"
+    },
+    "tests/longform.test.mjs": {
+      "bytes": 21144,
+      "sha256": "55d741ac5334517bec92c242395e179de662fe933d8f3f168509cd55d1242f2c"
+    },
+    "tests/new-user-recovery.test.mjs": {
+      "bytes": 3188,
+      "sha256": "92972c078e19334889cd8aff0b25cb650c9dc0929083286a941782d05ace9426"
+    },
+    "tests/package-protocol.test.mjs": {
+      "bytes": 1542,
+      "sha256": "1c76f4e853afd2d7867b1b227f3183d2cfde443e44cf66a1fa0a849e5eecbc33"
+    },
+    "tests/protection-fixture.mjs": {
+      "bytes": 6117,
+      "sha256": "86ed582e1e2b8d90b73b7b073ecfad7fc575d65719a9c60c04b6f8e03504f3f7"
+    },
+    "tests/protection.test.mjs": {
+      "bytes": 23305,
+      "sha256": "5d094d5107dd801e817def0e725ee697198fb4cc07cc354aed02f99b05199b2a"
+    },
+    "tests/recovery-guidance.test.mjs": {
+      "bytes": 4517,
+      "sha256": "91ca93ca1084ecd3da0df7dec2e4e230447f59dd3e370fdff6a2c9b26a911f93"
+    },
+    "tests/review-report-capacity.test.mjs": {
+      "bytes": 5084,
+      "sha256": "b80aedb35f9d11aa675a1d8e464e6e2b650b818c3d92f53ea547b40dc4da3066"
+    },
+    "tests/review-scope.test.mjs": {
+      "bytes": 9101,
+      "sha256": "f5654874db8bd191748169133d050e3f61a58934172e2bc151199121f8734c1b"
+    },
+    "tests/review-workflow.test.mjs": {
+      "bytes": 17415,
+      "sha256": "db1085074e429fac4b7ebbf84df782fbd4b092cb230171a7fa65ca72f2c4b7f8"
+    },
+    "tests/revision-boundaries.test.mjs": {
+      "bytes": 9320,
+      "sha256": "264c100269e1df158c07311c8dcbbbd8523923c3957a7109f2972706dfba1004"
+    },
+    "tests/revision-dependencies.test.mjs": {
+      "bytes": 7121,
+      "sha256": "34d06dfeaf74d9a6d7d52d908d088725988d34678961e9e1e8a5976f0d059195"
+    },
+    "tests/skill-resource-guidance.test.mjs": {
+      "bytes": 1868,
+      "sha256": "81635af83bf54cbf3224b2360d860bf4fa3896e7808bc820e83b6935256de3fe"
+    },
+    "tests/tool-update.test.mjs": {
+      "bytes": 11916,
+      "sha256": "77794a36fe9407366d9ede9f75b2aa000d44d7e1ebc3acb2452131fce46c0183"
+    },
+    "tests/usability.test.mjs": {
+      "bytes": 14600,
+      "sha256": "a98b9ec5cca6fb414b654435d2703e2e21b5aea6d7c11f4f620411770905118f"
+    },
+    "tests/windows-rename.test.mjs": {
+      "bytes": 4259,
+      "sha256": "14ce837caa6611e05e3494edaad0fb40882c7f4e14ed3b1f4976d69ad71b5fe1"
+    },
+    "tests/workspace.test.mjs": {
+      "bytes": 13769,
+      "sha256": "c9c21563bbb8b5851e5bd8c491c534a39704694d76719077d8c9e7f09511d4a5"
+    },
+    ".agents/skills/writer-essay/SKILL.md": {
+      "bytes": 1596,
+      "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+    },
+    ".agents/skills/writer-history/SKILL.md": {
+      "bytes": 2339,
+      "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+    },
+    ".agents/skills/writer-history/references/history-method.md": {
+      "bytes": 2919,
+      "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+    },
+    ".agents/skills/writer-novel/SKILL.md": {
+      "bytes": 4043,
+      "sha256": "248a2438172ad7dbad5b2461b37d4cda03054ec394d7cfc97ae040684851a938"
+    },
+    ".agents/skills/writer-novel/references/scene-connections.md": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    ".agents/skills/writer-novel/references/story-development.md": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    ".agents/skills/writer-novel/references/suspense-continuity.md": {
+      "bytes": 1946,
+      "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+    },
+    ".agents/skills/writer-project/SKILL.md": {
+      "bytes": 8487,
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+    },
+    ".agents/skills/writer-project/references/long-form.md": {
+      "bytes": 9112,
+      "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+    },
+    ".agents/skills/writer-research/SKILL.md": {
+      "bytes": 2665,
+      "sha256": "a8c4bb711b7ed0d5e049f0d1c736d2c7d4251f7879d0eeddf7e1565438988756"
+    },
+    ".agents/skills/writer-review/SKILL.md": {
+      "bytes": 5664,
+      "sha256": "b2ef9a8131c24526d00d217fd77361bdcdf3418a78c88562091a7c947fc64891"
+    },
+    ".agents/skills/writer-review/references/action-scene-review.md": {
+      "bytes": 4500,
+      "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+    },
+    ".agents/skills/writer-review/references/architecture-continuity-review.md": {
+      "bytes": 10047,
+      "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+    },
+    ".agents/skills/writer-review/references/character-emotion-consistency.md": {
+      "bytes": 5379,
+      "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+    },
+    ".agents/skills/writer-review/references/deslop.md": {
+      "bytes": 5393,
+      "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+    },
+    ".agents/skills/writer-review/references/dual-world-review.md": {
+      "bytes": 2703,
+      "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+    },
+    ".agents/skills/writer-review/references/final-publication-review.md": {
+      "bytes": 8833,
+      "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+    },
+    ".agents/skills/writer-review/references/general-review.md": {
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    ".agents/skills/writer-review/references/historical-review.md": {
+      "bytes": 3495,
+      "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+    },
+    ".agents/skills/writer-review/references/knife-emotional-impact.md": {
+      "bytes": 9218,
+      "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+    },
+    ".agents/skills/writer-review/references/natural-language-authenticity.md": {
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    ".agents/skills/writer-review/references/page-turner-review.md": {
+      "bytes": 17958,
+      "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+    },
+    ".agents/skills/writer-review/references/physical-logic-operability.md": {
+      "bytes": 3317,
+      "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+    },
+    ".agents/skills/writer-review/references/proofreading-language-quality.md": {
+      "bytes": 2205,
+      "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+    },
+    ".agents/skills/writer-review/references/psychology-readability.md": {
+      "bytes": 14297,
+      "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+    },
+    ".agents/skills/writer-review/references/publication-gate.md": {
+      "bytes": 5380,
+      "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+    },
+    ".agents/skills/writer-review/references/readability-accessibility.md": {
+      "bytes": 4564,
+      "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+    },
+    ".agents/skills/writer-review/references/suspense-review.md": {
+      "bytes": 3151,
+      "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+    },
+    ".agents/skills/writer-review/references/transmigration-review.md": {
+      "bytes": 3108,
+      "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+    },
+    ".agents/skills/writer-review/references/xianxia-review.md": {
+      "bytes": 2836,
+      "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+    },
+    ".agents/skills/writer-screenplay/SKILL.md": {
+      "bytes": 2317,
+      "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+    },
+    "docs/architecture.md": {
+      "bytes": 5724,
+      "sha256": "6c4d0e2d80fe219bf3288b10f636baf984c984f0f99fa943d85a2e27acb2cb63"
+    },
+    "docs/attribution.md": {
+      "bytes": 2457,
+      "sha256": "70ee88982f602306f898b6dd598cbe016debc2614fe433304795b94fca661b93"
+    },
+    "docs/authoring-governance-b-implementation.md": {
+      "bytes": 5701,
+      "sha256": "a8740516e81fd914de06db0de2997c7a62de92fde37abce21c2a7465de3dd95e"
+    },
+    "docs/authoring-governance-baseline-20261018.json": {
+      "bytes": 2451,
+      "sha256": "51b38672dfc5bf60363edcfe48ed367be6a70ba9782d769c4a19a4a13b9b07d4"
+    },
+    "docs/authoring-governance-c-implementation.md": {
+      "bytes": 7650,
+      "sha256": "3bcc0ec770e78688f02c1c616ebe9da01ced928b3e4a20e1ab653125b9708f09"
+    },
+    "docs/authoring-governance-d-implementation.md": {
+      "bytes": 8123,
+      "sha256": "f71a921da9bb96827fa89b86cddcae1fa1ca42db7e4516d76c3149a1681f927c"
+    },
+    "docs/authoring-governance-design.md": {
+      "bytes": 52649,
+      "sha256": "8a2cba5cf1e4aabb16cd22e777b287c1a4374f314d72d96dee263eaf73a97fc7"
+    },
+    "docs/authoring-governance-status.md": {
+      "bytes": 8701,
+      "sha256": "38287a1edf787680a853726a1825fc01e2488ced0646019efd8ca4bcd310c5bd"
+    },
+    "docs/deslop.md": {
+      "bytes": 4274,
+      "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+    },
+    "docs/long-form-design.md": {
+      "bytes": 4176,
+      "sha256": "63e2403a94e638af938ac55e63d2b513043eeb0ecfdc5ddb609b9927e514a46a"
+    },
+    "docs/long-form.md": {
+      "bytes": 14322,
+      "sha256": "e64427c6de2eda0b186ce299ddfdaa30ee4580d06c160e700bb1e575c1801b31"
+    },
+    "docs/oh-story-audit-manifest.json": {
+      "bytes": 27367,
+      "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+    },
+    "docs/quickstart.md": {
+      "bytes": 7097,
+      "sha256": "6b5258dbaf5209d177dfe225c8564aafa17bb1452607b08583b57071af3325c7"
+    },
+    "docs/recovery-hardening-e.md": {
+      "bytes": 3079,
+      "sha256": "dd4d951d2995e8ed7a49d084b639a767c2763d1f5875dbfbf1a97d534c796fe9"
+    },
+    "docs/reference-audit.md": {
+      "bytes": 9467,
+      "sha256": "fa687fd47fd32502224685baedff6fc1ceae42c81ccde52955cb094cc81fa92b"
+    },
+    "docs/review-and-registration.md": {
+      "bytes": 7257,
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+    },
+    "docs/revision-and-sources.md": {
+      "bytes": 16431,
+      "sha256": "2ab9563fd95196633caa51d99678046f118e4faadbfa2eeb464e190d7cb447e5"
+    },
+    "docs/source-manifest.json": {
+      "bytes": 43269,
+      "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+    },
+    "docs/sources.md": {
+      "bytes": 6968,
+      "sha256": "22983b4261c72ce82166e94993f98ba8482129c15482482e3d0ed9a4eee7b6d5"
+    },
+    "docs/tool-updates.md": {
+      "bytes": 7409,
+      "sha256": "471a9d6cf021848292e20fff4ca4f7b42b57fb7c0b9d0023b8baa26ac85ff912"
+    },
+    "docs/usability-sources.json": {
+      "bytes": 6348,
+      "sha256": "e22488b71bbdbea2252f1095854090a956829c913fca04af7b7559b19b81e08f"
+    },
+    "docs/user-guide.md": {
+      "bytes": 23147,
+      "sha256": "4ae681d42cce70d65eb7663fbcfd561297b3cdf269abd91c4ee4c958540cd4a0"
+    },
+    "docs/verification-doctor.log": {
+      "bytes": 93,
+      "sha256": "719b9d45a70913885324de911ddfd5519bb0e253996063faa8a7c3db8e0bcd07"
+    },
+    "docs/verification-engine.log": {
+      "bytes": 1959,
+      "sha256": "067506c6426b6652bf4ae90e14e917cbe9a52760fabeb64849b9cc16db014d4c"
+    },
+    "docs/verification-smoke.log": {
+      "bytes": 1110,
+      "sha256": "56e0c444efdf7484f1e9e63458928a6dde0d75ae84b1e55461b36abd8957b67d"
+    },
+    "docs/verification-workspace.log": {
+      "bytes": 1514,
+      "sha256": "d15a2389e21ed223ea141928ef95609745e9d015a485544a6c8e2e604216972f"
+    },
+    "docs/verification.json": {
+      "bytes": 3252,
+      "sha256": "2fa91984e1751ea0e7faee7333e1b2fde7e745e6587e91cea8b5f99cfff6baa2"
+    },
+    "docs/verification.md": {
+      "bytes": 5548,
+      "sha256": "e7f5b7043b83c340b1fe5cef59ac67449c19cb5ce4224b5bca477e5c2a064930"
+    },
+    "docs/workflow.md": {
+      "bytes": 20639,
+      "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+    },
+    "package.json": {
+      "bytes": 502,
+      "sha256": "20651f57959530acc37b0d5b997b9a153833187bb5654541b01930f21b0d7878"
+    },
+    "acceptance/20261019-webnovel-reference-j/.gitattributes": {
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    "acceptance/20261019-webnovel-reference-j/PLAN.md": {
+      "bytes": 1944,
+      "sha256": "082d1e58070b0c212c30afb8466338c3ec791c201afefc5d34dbe5b121ce29ff"
+    },
+    "acceptance/20261019-webnovel-reference-j/README.md": {
+      "bytes": 2281,
+      "sha256": "bc5d0d8ad50590d76727533ab6b77b027c93407ffa16b4fb8e250b0c2ae7d6e4"
+    },
+    "acceptance/20261019-webnovel-reference-j/apply-skill-changes.mjs": {
+      "bytes": 2170,
+      "sha256": "d81e946926d1c7d02a66d51bd3d132da31261e2328ccb774c90111ad3e6bd8ca"
+    },
+    "acceptance/20261019-webnovel-reference-j/audit-method-readings.mjs": {
+      "bytes": 2170,
+      "sha256": "f5db2b17f227b27fc0844917d61a4bb6d45c48862a16df60c188e02863fca316"
+    },
+    "acceptance/20261019-webnovel-reference-j/capture.mjs": {
+      "bytes": 3430,
+      "sha256": "c17b2d12b676933c7ded89a5ec7fc8ecd68d4ea37a7acf7054688ab6f5046e93"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/doctor/result.json": {
+      "bytes": 363,
+      "sha256": "64627c822ed8d4895a0fdb7f8544beb021a95646cf3d2f1e3f7315e086d3cd2d"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/doctor/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/doctor/stdout.raw.txt": {
+      "bytes": 14588,
+      "sha256": "271206ca20f21f8e4cff7e6522fec364ec849eea36f1dc5a94a2099c14433391"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/doctor-080/result.json": {
+      "bytes": 363,
+      "sha256": "8debdba354dfd85004a374c844598611847641fb8532317ab9fe7021a37ace1e"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/doctor-080/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/doctor-080/stdout.raw.txt": {
+      "bytes": 14588,
+      "sha256": "8def4be3bc3248ff75267f38485f4879c5b0fe3eb52086e14a02fa4640613828"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/full-tests/result.json": {
+      "bytes": 351,
+      "sha256": "afb9dc6030f3c5ccc7d804f934c63f739eacd0c44183091ccc31f5af6a443af9"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/full-tests/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/full-tests/stdout.raw.txt": {
+      "bytes": 16529,
+      "sha256": "f4e571a0f5c384cbd98f29c028439536643fbd1c3991953e15ba10fd80096e9d"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/protocol-080/result.json": {
+      "bytes": 433,
+      "sha256": "b75fd795e99eecd72087d164029fc99c6faf91ba962f750c6b04bfbd3ffb741b"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/protocol-080/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/protocol-080/stdout.raw.txt": {
+      "bytes": 1162,
+      "sha256": "74c323b314a33b3b6ae6b74a2c2e7845c3d68b4aac439f1d027a034df672c83f"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/protocol-080-v2/result.json": {
+      "bytes": 433,
+      "sha256": "dfedd99036c7d8a8a25f4b21ca33842f8600d8f368a8ffc9bc224cf565695c8d"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/protocol-080-v2/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/protocol-080-v2/stdout.raw.txt": {
+      "bytes": 329,
+      "sha256": "24ab53d0b6ba07c788b3e5b92bcc579326fd1a9e8fdaf6538f64481ea6c1dfd3"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-apply/after-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-apply/before-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-apply/input.raw.json": {
+      "bytes": 914,
+      "sha256": "74017bb36084e5fb8fc9b082c82bc1f5cb5a0c6961788db41c844cb49bef7b9b"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-apply/result.json": {
+      "bytes": 1739,
+      "sha256": "e93dab7c1d8f62d7f1ab646f804f8888eba5933a906095be82b0b37b2b445d24"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-apply/stderr.raw.txt": {
+      "bytes": 644,
+      "sha256": "c0b91174cf1b945cbbd3ef113e6ad2fa94a24d8c96cb9a77b84a82f30d7c7877"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-apply/stdout.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-identify-old/after-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-identify-old/before-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-identify-old/result.json": {
+      "bytes": 1379,
+      "sha256": "e0fdb1597dd7e5087425b834f948194d0c65b63b1b4d90856fa1ff70d9144658"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-identify-old/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-identify-old/stdout.raw.txt": {
+      "bytes": 12820,
+      "sha256": "adfdc833e4b7583c5796631f3323214285c12fd277dec805ebc941de44bd9d6c"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-init-old/result.json": {
+      "bytes": 1337,
+      "sha256": "8cd31a0e259bf94173b0471f30d76a0395d091aa96f3533e2a61d3adacc7ae85"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-init-old/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-init-old/stdout.raw.txt": {
+      "bytes": 418,
+      "sha256": "6aa2c33b487303c69c05789567f50c0562865fadb10bf6b15dbc194c102d25f6"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-pending/after-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-pending/before-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-pending/result.json": {
+      "bytes": 1284,
+      "sha256": "5833de286996562ffec2168c4cb5dc1c1633a26453d2837392ad155fc546bf01"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-pending/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-pending/stdout.raw.txt": {
+      "bytes": 349,
+      "sha256": "259246819e24b9d2d351c77ef80640a8c1c8b159882e3d28995d9937eb96316d"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-plan/after-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-plan/before-state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-plan/result.json": {
+      "bytes": 1500,
+      "sha256": "444728812ad136bb20eb712746f2b116ca9f38eb3f59961b53aec080dcb557d1"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-plan/stderr.raw.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "acceptance/20261019-webnovel-reference-j/commands/upgrade-plan/stdout.raw.txt": {
+      "bytes": 34711,
+      "sha256": "6ff8651d77e6a5892395bbc723270a79189dfc2d430f9e2a77b5e6e57f0f5119"
+    },
+    "acceptance/20261019-webnovel-reference-j/freeze-final.mjs": {
+      "bytes": 893,
+      "sha256": "14b35565f05e3ea9c231a1480db3dbfe97e29bf126c7ed5473cf8e7e920ab95d"
+    },
+    "acceptance/20261019-webnovel-reference-j/freeze.mjs": {
+      "bytes": 889,
+      "sha256": "575a783553508df1e9dca8a0090769559d624a165aa668511eaa220a864085af"
+    },
+    "acceptance/20261019-webnovel-reference-j/h-checkpoint-before.json": {
+      "bytes": 1088,
+      "sha256": "d91a8eb4a30a252defc618641d6ccbbec518848c254edc800be18b622b3f237e"
+    },
+    "acceptance/20261019-webnovel-reference-j/reference-manifest.json": {
+      "bytes": 4128,
+      "sha256": "72d0ffb278b1ced02307babc4377931f488f13dc7b2102cd49fbb6d40ec1651a"
+    },
+    "acceptance/20261019-webnovel-reference-j/skill-changes/scene-connections.md": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    "acceptance/20261019-webnovel-reference-j/skill-changes/story-development.md": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    "acceptance/20261019-webnovel-reference-j/source-build-080.json": {
+      "bytes": 13069,
+      "sha256": "d69f4e57d0ef13796db2fcfe78f16b411d21e32a06d4b7ee739db59b874f6cfe"
+    },
+    "acceptance/20261019-webnovel-reference-j/source-build.json": {
+      "bytes": 13069,
+      "sha256": "43166b6082560a52b0b480cc7a050fcabf040d5ee4a985ebc60ee839725a826c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-essay/SKILL.md": {
+      "bytes": 1596,
+      "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-history/SKILL.md": {
+      "bytes": 2339,
+      "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-history/references/history-method.md": {
+      "bytes": 2919,
+      "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-novel/SKILL.md": {
+      "bytes": 4043,
+      "sha256": "248a2438172ad7dbad5b2461b37d4cda03054ec394d7cfc97ae040684851a938"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-novel/references/scene-connections.md": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-novel/references/story-development.md": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-novel/references/suspense-continuity.md": {
+      "bytes": 1946,
+      "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-project/SKILL.md": {
+      "bytes": 8487,
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-project/references/long-form.md": {
+      "bytes": 9112,
+      "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-research/SKILL.md": {
+      "bytes": 2665,
+      "sha256": "a8c4bb711b7ed0d5e049f0d1c736d2c7d4251f7879d0eeddf7e1565438988756"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/SKILL.md": {
+      "bytes": 5664,
+      "sha256": "b2ef9a8131c24526d00d217fd77361bdcdf3418a78c88562091a7c947fc64891"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/action-scene-review.md": {
+      "bytes": 4500,
+      "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/architecture-continuity-review.md": {
+      "bytes": 10047,
+      "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/character-emotion-consistency.md": {
+      "bytes": 5379,
+      "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/deslop.md": {
+      "bytes": 5393,
+      "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/dual-world-review.md": {
+      "bytes": 2703,
+      "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/final-publication-review.md": {
+      "bytes": 8833,
+      "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/general-review.md": {
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/historical-review.md": {
+      "bytes": 3495,
+      "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/knife-emotional-impact.md": {
+      "bytes": 9218,
+      "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/natural-language-authenticity.md": {
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/page-turner-review.md": {
+      "bytes": 17958,
+      "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/physical-logic-operability.md": {
+      "bytes": 3317,
+      "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/proofreading-language-quality.md": {
+      "bytes": 2205,
+      "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/psychology-readability.md": {
+      "bytes": 14297,
+      "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/publication-gate.md": {
+      "bytes": 5380,
+      "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/readability-accessibility.md": {
+      "bytes": 4564,
+      "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/suspense-review.md": {
+      "bytes": 3151,
+      "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/transmigration-review.md": {
+      "bytes": 3108,
+      "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-review/references/xianxia-review.md": {
+      "bytes": 2836,
+      "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/.agents/skills/writer-screenplay/SKILL.md": {
+      "bytes": 2317,
+      "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/LICENSE.md": {
+      "bytes": 809,
+      "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/attribution.md": {
+      "bytes": 2457,
+      "sha256": "70ee88982f602306f898b6dd598cbe016debc2614fe433304795b94fca661b93"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/deslop.md": {
+      "bytes": 4274,
+      "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/long-form.md": {
+      "bytes": 14322,
+      "sha256": "e64427c6de2eda0b186ce299ddfdaa30ee4580d06c160e700bb1e575c1801b31"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/oh-story-audit-manifest.json": {
+      "bytes": 27367,
+      "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/quickstart.md": {
+      "bytes": 7097,
+      "sha256": "6b5258dbaf5209d177dfe225c8564aafa17bb1452607b08583b57071af3325c7"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/review-and-registration.md": {
+      "bytes": 7257,
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/revision-and-sources.md": {
+      "bytes": 16398,
+      "sha256": "3409f77fb13755fcb3afe44fe71c9ff59043db73483a5f6132622e17f96b0d7d"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/source-manifest.json": {
+      "bytes": 43269,
+      "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/tool-updates.md": {
+      "bytes": 7088,
+      "sha256": "e7d3022d5569ab04e46c12a470ab69e6418b2da9a270f9eb673b161b97e42f52"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/usability-sources.json": {
+      "bytes": 6348,
+      "sha256": "e22488b71bbdbea2252f1095854090a956829c913fca04af7b7559b19b81e08f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/user-guide.md": {
+      "bytes": 23147,
+      "sha256": "4ae681d42cce70d65eb7663fbcfd561297b3cdf269abd91c4ee4c958540cd4a0"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/docs/workflow.md": {
+      "bytes": 20639,
+      "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/examples/history-fact-card.json": {
+      "bytes": 593,
+      "sha256": "cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/examples/prompts.md": {
+      "bytes": 3588,
+      "sha256": "a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/governance.mjs": {
+      "bytes": 18912,
+      "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/help.mjs": {
+      "bytes": 13464,
+      "sha256": "054b6aab3b2b0aab0c3a82901b3cae1a03980a2e92fc3cbae53af679c5d5eca5"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/longform.mjs": {
+      "bytes": 28563,
+      "sha256": "4bee586a8d09b9589fb8d6b7e96a991f442edec8c8c7a1b8cfb2e1e68595fbec"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/review-workflow.mjs": {
+      "bytes": 22240,
+      "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/revisions.mjs": {
+      "bytes": 39206,
+      "sha256": "c4d1361c72e291c8a28ce7b1d8db3244161d4ddebdc82b8a60a52b4af8c9bcce"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/sources.mjs": {
+      "bytes": 22797,
+      "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/tool-build.mjs": {
+      "bytes": 12135,
+      "sha256": "6078db16155880ed335e24636d0f53cae732bbfea0b7eecee3a20a11c8a7bcf9"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/tool-update.mjs": {
+      "bytes": 27625,
+      "sha256": "cbcd633a9d57ed07de4c0e95219f0952a01719513adb7d7733ff4dfcfef9a7fa"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/lib/workspace.mjs": {
+      "bytes": 63786,
+      "sha256": "d12aed1ad7baa42fee8a1fad50ec78c5ca066159cdbe945b91ef6af1818509bb"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/package.json": {
+      "bytes": 502,
+      "sha256": "9170b56cbea8b1e92931b544685fbd4b6c5a0b24820891f08600a4307b5e3be8"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/vendor/oh-story-deslop-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md": {
+      "bytes": 5092,
+      "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/vendor/oh-story-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.7.7/vendor/oh-story-reference-20261015/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-essay/SKILL.md": {
+      "bytes": 1596,
+      "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-history/SKILL.md": {
+      "bytes": 2339,
+      "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-history/references/history-method.md": {
+      "bytes": 2919,
+      "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-novel/SKILL.md": {
+      "bytes": 4043,
+      "sha256": "248a2438172ad7dbad5b2461b37d4cda03054ec394d7cfc97ae040684851a938"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-novel/references/scene-connections.md": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-novel/references/story-development.md": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-novel/references/suspense-continuity.md": {
+      "bytes": 1946,
+      "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-project/SKILL.md": {
+      "bytes": 8487,
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-project/references/long-form.md": {
+      "bytes": 9112,
+      "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-research/SKILL.md": {
+      "bytes": 2665,
+      "sha256": "a8c4bb711b7ed0d5e049f0d1c736d2c7d4251f7879d0eeddf7e1565438988756"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/SKILL.md": {
+      "bytes": 5664,
+      "sha256": "b2ef9a8131c24526d00d217fd77361bdcdf3418a78c88562091a7c947fc64891"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/action-scene-review.md": {
+      "bytes": 4500,
+      "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/architecture-continuity-review.md": {
+      "bytes": 10047,
+      "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/character-emotion-consistency.md": {
+      "bytes": 5379,
+      "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/deslop.md": {
+      "bytes": 5393,
+      "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/dual-world-review.md": {
+      "bytes": 2703,
+      "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/final-publication-review.md": {
+      "bytes": 8833,
+      "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/general-review.md": {
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/historical-review.md": {
+      "bytes": 3495,
+      "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/knife-emotional-impact.md": {
+      "bytes": 9218,
+      "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/natural-language-authenticity.md": {
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/page-turner-review.md": {
+      "bytes": 17958,
+      "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/physical-logic-operability.md": {
+      "bytes": 3317,
+      "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/proofreading-language-quality.md": {
+      "bytes": 2205,
+      "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/psychology-readability.md": {
+      "bytes": 14297,
+      "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/publication-gate.md": {
+      "bytes": 5380,
+      "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/readability-accessibility.md": {
+      "bytes": 4564,
+      "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/suspense-review.md": {
+      "bytes": 3151,
+      "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/transmigration-review.md": {
+      "bytes": 3108,
+      "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-review/references/xianxia-review.md": {
+      "bytes": 2836,
+      "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/.agents/skills/writer-screenplay/SKILL.md": {
+      "bytes": 2317,
+      "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/LICENSE.md": {
+      "bytes": 809,
+      "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/attribution.md": {
+      "bytes": 2457,
+      "sha256": "70ee88982f602306f898b6dd598cbe016debc2614fe433304795b94fca661b93"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/deslop.md": {
+      "bytes": 4274,
+      "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/long-form.md": {
+      "bytes": 14322,
+      "sha256": "e64427c6de2eda0b186ce299ddfdaa30ee4580d06c160e700bb1e575c1801b31"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/oh-story-audit-manifest.json": {
+      "bytes": 27367,
+      "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/quickstart.md": {
+      "bytes": 7097,
+      "sha256": "6b5258dbaf5209d177dfe225c8564aafa17bb1452607b08583b57071af3325c7"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/review-and-registration.md": {
+      "bytes": 7257,
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/revision-and-sources.md": {
+      "bytes": 16431,
+      "sha256": "2ab9563fd95196633caa51d99678046f118e4faadbfa2eeb464e190d7cb447e5"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/source-manifest.json": {
+      "bytes": 43269,
+      "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/tool-updates.md": {
+      "bytes": 7409,
+      "sha256": "471a9d6cf021848292e20fff4ca4f7b42b57fb7c0b9d0023b8baa26ac85ff912"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/usability-sources.json": {
+      "bytes": 6348,
+      "sha256": "e22488b71bbdbea2252f1095854090a956829c913fca04af7b7559b19b81e08f"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/user-guide.md": {
+      "bytes": 23147,
+      "sha256": "4ae681d42cce70d65eb7663fbcfd561297b3cdf269abd91c4ee4c958540cd4a0"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/docs/workflow.md": {
+      "bytes": 20639,
+      "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/examples/history-fact-card.json": {
+      "bytes": 593,
+      "sha256": "cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/examples/prompts.md": {
+      "bytes": 3588,
+      "sha256": "a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/governance.mjs": {
+      "bytes": 18912,
+      "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/help.mjs": {
+      "bytes": 13467,
+      "sha256": "b146c2b037a3b78917e03821a4777ff0d1062e5eb5999e4d39170c2c3fa7a311"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/longform.mjs": {
+      "bytes": 28563,
+      "sha256": "4bee586a8d09b9589fb8d6b7e96a991f442edec8c8c7a1b8cfb2e1e68595fbec"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/review-workflow.mjs": {
+      "bytes": 22240,
+      "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/revisions.mjs": {
+      "bytes": 39206,
+      "sha256": "c4d1361c72e291c8a28ce7b1d8db3244161d4ddebdc82b8a60a52b4af8c9bcce"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/sources.mjs": {
+      "bytes": 22797,
+      "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/tool-build.mjs": {
+      "bytes": 12229,
+      "sha256": "3a38fec3a8998db71ec7668ac847d6c74067394577cc0880e7e7efe55ae489de"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/tool-update.mjs": {
+      "bytes": 27625,
+      "sha256": "cbcd633a9d57ed07de4c0e95219f0952a01719513adb7d7733ff4dfcfef9a7fa"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/lib/workspace.mjs": {
+      "bytes": 63858,
+      "sha256": "c81bd9410253e195b3e6b992cb4424ff1c5af10ae1a0aab7faf0a1951398edfa"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/package.json": {
+      "bytes": 502,
+      "sha256": "20651f57959530acc37b0d5b997b9a153833187bb5654541b01930f21b0d7878"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/vendor/oh-story-deslop-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md": {
+      "bytes": 5092,
+      "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/vendor/oh-story-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/sources/package-0.8.0/vendor/oh-story-reference-20261015/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-smoke.mjs": {
+      "bytes": 4920,
+      "sha256": "2d7873766890cf8b4b5424120995a747732d2488b606f275f305b9c1bbd6da5b"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-essay/SKILL.md": {
+      "bytes": 1596,
+      "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-history/SKILL.md": {
+      "bytes": 2339,
+      "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-history/references/history-method.md": {
+      "bytes": 2919,
+      "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-novel/SKILL.md": {
+      "bytes": 3683,
+      "sha256": "7f138125627f46062454e4aff5c8d35723f254b2961b42a49657a9dda14114a3"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-novel/references/suspense-continuity.md": {
+      "bytes": 1946,
+      "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-project/SKILL.md": {
+      "bytes": 8487,
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-project/references/long-form.md": {
+      "bytes": 9112,
+      "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-research/SKILL.md": {
+      "bytes": 2213,
+      "sha256": "427add709c5d0c101ecde2d92735e8af85af80c5a9ac11ed1c631d37b8d620d0"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/SKILL.md": {
+      "bytes": 5275,
+      "sha256": "77e69491130f6c5983d8ff9504d7596477ded17132bc51deeb0a39b3f6cb5621"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/action-scene-review.md": {
+      "bytes": 4500,
+      "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/architecture-continuity-review.md": {
+      "bytes": 10047,
+      "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/character-emotion-consistency.md": {
+      "bytes": 5379,
+      "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/deslop.md": {
+      "bytes": 5393,
+      "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/dual-world-review.md": {
+      "bytes": 2703,
+      "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/final-publication-review.md": {
+      "bytes": 8833,
+      "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/general-review.md": {
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/historical-review.md": {
+      "bytes": 3495,
+      "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/knife-emotional-impact.md": {
+      "bytes": 9218,
+      "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/natural-language-authenticity.md": {
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/page-turner-review.md": {
+      "bytes": 17958,
+      "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/physical-logic-operability.md": {
+      "bytes": 3317,
+      "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/proofreading-language-quality.md": {
+      "bytes": 2205,
+      "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/psychology-readability.md": {
+      "bytes": 14297,
+      "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/publication-gate.md": {
+      "bytes": 5380,
+      "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/readability-accessibility.md": {
+      "bytes": 4564,
+      "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/suspense-review.md": {
+      "bytes": 3151,
+      "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/transmigration-review.md": {
+      "bytes": 3108,
+      "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-review/references/xianxia-review.md": {
+      "bytes": 2836,
+      "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.agents/skills/writer-screenplay/SKILL.md": {
+      "bytes": 2317,
+      "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/drafts/update-smoke-1.json": {
+      "bytes": 914,
+      "sha256": "74017bb36084e5fb8fc9b082c82bc1f5cb5a0c6961788db41c844cb49bef7b9b"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/state.json": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-essay/SKILL.md": {
+      "bytes": 1596,
+      "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-history/SKILL.md": {
+      "bytes": 2339,
+      "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-history/references/history-method.md": {
+      "bytes": 2919,
+      "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-novel/SKILL.md": {
+      "bytes": 4043,
+      "sha256": "248a2438172ad7dbad5b2461b37d4cda03054ec394d7cfc97ae040684851a938"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-novel/references/scene-connections.md": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-novel/references/story-development.md": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-novel/references/suspense-continuity.md": {
+      "bytes": 1946,
+      "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-project/SKILL.md": {
+      "bytes": 8487,
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-project/references/long-form.md": {
+      "bytes": 9112,
+      "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-research/SKILL.md": {
+      "bytes": 2665,
+      "sha256": "a8c4bb711b7ed0d5e049f0d1c736d2c7d4251f7879d0eeddf7e1565438988756"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/SKILL.md": {
+      "bytes": 5664,
+      "sha256": "b2ef9a8131c24526d00d217fd77361bdcdf3418a78c88562091a7c947fc64891"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/action-scene-review.md": {
+      "bytes": 4500,
+      "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/architecture-continuity-review.md": {
+      "bytes": 10047,
+      "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/character-emotion-consistency.md": {
+      "bytes": 5379,
+      "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/deslop.md": {
+      "bytes": 5393,
+      "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/dual-world-review.md": {
+      "bytes": 2703,
+      "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/final-publication-review.md": {
+      "bytes": 8833,
+      "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/general-review.md": {
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/historical-review.md": {
+      "bytes": 3495,
+      "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/knife-emotional-impact.md": {
+      "bytes": 9218,
+      "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/natural-language-authenticity.md": {
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/page-turner-review.md": {
+      "bytes": 17958,
+      "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/physical-logic-operability.md": {
+      "bytes": 3317,
+      "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/proofreading-language-quality.md": {
+      "bytes": 2205,
+      "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/psychology-readability.md": {
+      "bytes": 14297,
+      "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/publication-gate.md": {
+      "bytes": 5380,
+      "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/readability-accessibility.md": {
+      "bytes": 4564,
+      "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/suspense-review.md": {
+      "bytes": 3151,
+      "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/transmigration-review.md": {
+      "bytes": 3108,
+      "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-review/references/xianxia-review.md": {
+      "bytes": 2836,
+      "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/.agents/skills/writer-screenplay/SKILL.md": {
+      "bytes": 2317,
+      "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/LICENSE.md": {
+      "bytes": 809,
+      "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/build-manifest.json": {
+      "bytes": 13782,
+      "sha256": "d27278a69926d44e78fb2ae085af75997aaff9ee108df5e88f5ccf1bb678cace"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/attribution.md": {
+      "bytes": 2457,
+      "sha256": "70ee88982f602306f898b6dd598cbe016debc2614fe433304795b94fca661b93"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/deslop.md": {
+      "bytes": 4274,
+      "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/long-form.md": {
+      "bytes": 14322,
+      "sha256": "e64427c6de2eda0b186ce299ddfdaa30ee4580d06c160e700bb1e575c1801b31"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/oh-story-audit-manifest.json": {
+      "bytes": 27367,
+      "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/quickstart.md": {
+      "bytes": 7097,
+      "sha256": "6b5258dbaf5209d177dfe225c8564aafa17bb1452607b08583b57071af3325c7"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/review-and-registration.md": {
+      "bytes": 7257,
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/revision-and-sources.md": {
+      "bytes": 16431,
+      "sha256": "2ab9563fd95196633caa51d99678046f118e4faadbfa2eeb464e190d7cb447e5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/source-manifest.json": {
+      "bytes": 43269,
+      "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/tool-updates.md": {
+      "bytes": 7409,
+      "sha256": "471a9d6cf021848292e20fff4ca4f7b42b57fb7c0b9d0023b8baa26ac85ff912"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/usability-sources.json": {
+      "bytes": 6348,
+      "sha256": "e22488b71bbdbea2252f1095854090a956829c913fca04af7b7559b19b81e08f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/user-guide.md": {
+      "bytes": 23147,
+      "sha256": "4ae681d42cce70d65eb7663fbcfd561297b3cdf269abd91c4ee4c958540cd4a0"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/docs/workflow.md": {
+      "bytes": 20639,
+      "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/examples/history-fact-card.json": {
+      "bytes": 593,
+      "sha256": "cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/examples/prompts.md": {
+      "bytes": 3588,
+      "sha256": "a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/governance.mjs": {
+      "bytes": 18912,
+      "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/help.mjs": {
+      "bytes": 13467,
+      "sha256": "b146c2b037a3b78917e03821a4777ff0d1062e5eb5999e4d39170c2c3fa7a311"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/longform.mjs": {
+      "bytes": 28563,
+      "sha256": "4bee586a8d09b9589fb8d6b7e96a991f442edec8c8c7a1b8cfb2e1e68595fbec"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/review-workflow.mjs": {
+      "bytes": 22240,
+      "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/revisions.mjs": {
+      "bytes": 39206,
+      "sha256": "c4d1361c72e291c8a28ce7b1d8db3244161d4ddebdc82b8a60a52b4af8c9bcce"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/sources.mjs": {
+      "bytes": 22797,
+      "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/tool-build.mjs": {
+      "bytes": 12229,
+      "sha256": "3a38fec3a8998db71ec7668ac847d6c74067394577cc0880e7e7efe55ae489de"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/tool-update.mjs": {
+      "bytes": 27625,
+      "sha256": "cbcd633a9d57ed07de4c0e95219f0952a01719513adb7d7733ff4dfcfef9a7fa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/lib/workspace.mjs": {
+      "bytes": 63858,
+      "sha256": "c81bd9410253e195b3e6b992cb4424ff1c5af10ae1a0aab7faf0a1951398edfa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/package.json": {
+      "bytes": 502,
+      "sha256": "1af168be7d561484d5177fb3abed0fe555de92e334744a094c7e3648df880c3d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/vendor/oh-story-deslop-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md": {
+      "bytes": 5092,
+      "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/vendor/oh-story-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool/vendor/oh-story-reference-20261015/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/prepared-checks.json": {
+      "bytes": 34495,
+      "sha256": "483572210817b5cefb13057419aeff1d1877d22691d8438a125c134a32cb3c36"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/objects/5172e6db8602858daa09cdac820df704f53b65cb3b876faab39d66e2c2977734.txt": {
+      "bytes": 109,
+      "sha256": "5172e6db8602858daa09cdac820df704f53b65cb3b876faab39d66e2c2977734"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/objects/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6.json": {
+      "bytes": 9170,
+      "sha256": "f8fb11b22213499c587fa0c862aea077b9b463b5d7c085eadb85c295778b8e3d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/state.json": {
+      "bytes": 2402,
+      "sha256": "2c12f9600e4f5de78574af8a56b315bb9657d74b0478ba54824ebf7c118650eb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-essay/SKILL.md": {
+      "bytes": 1596,
+      "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-history/SKILL.md": {
+      "bytes": 2339,
+      "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-history/references/history-method.md": {
+      "bytes": 2919,
+      "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-novel/SKILL.md": {
+      "bytes": 4043,
+      "sha256": "248a2438172ad7dbad5b2461b37d4cda03054ec394d7cfc97ae040684851a938"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-novel/references/scene-connections.md": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-novel/references/story-development.md": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-novel/references/suspense-continuity.md": {
+      "bytes": 1946,
+      "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-project/SKILL.md": {
+      "bytes": 8487,
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-project/references/long-form.md": {
+      "bytes": 9112,
+      "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-research/SKILL.md": {
+      "bytes": 2665,
+      "sha256": "a8c4bb711b7ed0d5e049f0d1c736d2c7d4251f7879d0eeddf7e1565438988756"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/SKILL.md": {
+      "bytes": 5664,
+      "sha256": "b2ef9a8131c24526d00d217fd77361bdcdf3418a78c88562091a7c947fc64891"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/action-scene-review.md": {
+      "bytes": 4500,
+      "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/architecture-continuity-review.md": {
+      "bytes": 10047,
+      "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/character-emotion-consistency.md": {
+      "bytes": 5379,
+      "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/deslop.md": {
+      "bytes": 5393,
+      "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/dual-world-review.md": {
+      "bytes": 2703,
+      "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/final-publication-review.md": {
+      "bytes": 8833,
+      "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/general-review.md": {
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/historical-review.md": {
+      "bytes": 3495,
+      "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/knife-emotional-impact.md": {
+      "bytes": 9218,
+      "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/natural-language-authenticity.md": {
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/page-turner-review.md": {
+      "bytes": 17958,
+      "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/physical-logic-operability.md": {
+      "bytes": 3317,
+      "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/proofreading-language-quality.md": {
+      "bytes": 2205,
+      "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/psychology-readability.md": {
+      "bytes": 14297,
+      "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/publication-gate.md": {
+      "bytes": 5380,
+      "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/readability-accessibility.md": {
+      "bytes": 4564,
+      "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/suspense-review.md": {
+      "bytes": 3151,
+      "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/transmigration-review.md": {
+      "bytes": 3108,
+      "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-review/references/xianxia-review.md": {
+      "bytes": 2836,
+      "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/.agents/skills/writer-screenplay/SKILL.md": {
+      "bytes": 2317,
+      "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/LICENSE.md": {
+      "bytes": 809,
+      "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/bin/ai-writer.mjs": {
+      "bytes": 417,
+      "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/build-manifest.json": {
+      "bytes": 13782,
+      "sha256": "d27278a69926d44e78fb2ae085af75997aaff9ee108df5e88f5ccf1bb678cace"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/attribution.md": {
+      "bytes": 2457,
+      "sha256": "70ee88982f602306f898b6dd598cbe016debc2614fe433304795b94fca661b93"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/deslop.md": {
+      "bytes": 4274,
+      "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/long-form.md": {
+      "bytes": 14322,
+      "sha256": "e64427c6de2eda0b186ce299ddfdaa30ee4580d06c160e700bb1e575c1801b31"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/oh-story-audit-manifest.json": {
+      "bytes": 27367,
+      "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/quickstart.md": {
+      "bytes": 7097,
+      "sha256": "6b5258dbaf5209d177dfe225c8564aafa17bb1452607b08583b57071af3325c7"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/review-and-registration.md": {
+      "bytes": 7257,
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/revision-and-sources.md": {
+      "bytes": 16431,
+      "sha256": "2ab9563fd95196633caa51d99678046f118e4faadbfa2eeb464e190d7cb447e5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/source-manifest.json": {
+      "bytes": 43269,
+      "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/tool-updates.md": {
+      "bytes": 7409,
+      "sha256": "471a9d6cf021848292e20fff4ca4f7b42b57fb7c0b9d0023b8baa26ac85ff912"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/usability-sources.json": {
+      "bytes": 6348,
+      "sha256": "e22488b71bbdbea2252f1095854090a956829c913fca04af7b7559b19b81e08f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/user-guide.md": {
+      "bytes": 23147,
+      "sha256": "4ae681d42cce70d65eb7663fbcfd561297b3cdf269abd91c4ee4c958540cd4a0"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/docs/workflow.md": {
+      "bytes": 20639,
+      "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/examples/history-fact-card.json": {
+      "bytes": 593,
+      "sha256": "cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/examples/prompts.md": {
+      "bytes": 3588,
+      "sha256": "a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/governance.mjs": {
+      "bytes": 18912,
+      "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/help.mjs": {
+      "bytes": 13467,
+      "sha256": "b146c2b037a3b78917e03821a4777ff0d1062e5eb5999e4d39170c2c3fa7a311"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/journal.mjs": {
+      "bytes": 6328,
+      "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/longform.mjs": {
+      "bytes": 28563,
+      "sha256": "4bee586a8d09b9589fb8d6b7e96a991f442edec8c8c7a1b8cfb2e1e68595fbec"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/review-workflow.mjs": {
+      "bytes": 22240,
+      "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/revisions.mjs": {
+      "bytes": 39206,
+      "sha256": "c4d1361c72e291c8a28ce7b1d8db3244161d4ddebdc82b8a60a52b4af8c9bcce"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/sources.mjs": {
+      "bytes": 22797,
+      "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/style.mjs": {
+      "bytes": 3990,
+      "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/tool-build.mjs": {
+      "bytes": 12229,
+      "sha256": "3a38fec3a8998db71ec7668ac847d6c74067394577cc0880e7e7efe55ae489de"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/tool-update.mjs": {
+      "bytes": 27625,
+      "sha256": "cbcd633a9d57ed07de4c0e95219f0952a01719513adb7d7733ff4dfcfef9a7fa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/lib/workspace.mjs": {
+      "bytes": 63858,
+      "sha256": "c81bd9410253e195b3e6b992cb4424ff1c5af10ae1a0aab7faf0a1951398edfa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/package.json": {
+      "bytes": 502,
+      "sha256": "20651f57959530acc37b0d5b997b9a153833187bb5654541b01930f21b0d7878"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/vendor/oh-story-deslop-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md": {
+      "bytes": 5092,
+      "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/vendor/oh-story-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/.writer/tool/vendor/oh-story-reference-20261015/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/writer.json": {
+      "bytes": 107,
+      "sha256": "afcbd60abac3fe8ff8f63a16e3e24130f438fc34f599374020b05611aca233a4"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/大纲/全书大纲.md": {
+      "bytes": 96,
+      "sha256": "ca7a1e1d4d19ff9a2c54b4afeca55688e5d5237ebc4d805c2a6f88b774262550"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/研究/工具更新验证授权.md": {
+      "bytes": 109,
+      "sha256": "5172e6db8602858daa09cdac820df704f53b65cb3b876faab39d66e2c2977734"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/设定/作品定位.md": {
+      "bytes": 152,
+      "sha256": "bbdb751cca2c5343c9d7fe5740419d0d6db7b92e12d6cce0c3ccdc0fdcc19915"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/设定/文风.md": {
+      "bytes": 189,
+      "sha256": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/tool-updates/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/validation/设定/权威规则.md": {
+      "bytes": 201,
+      "sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/0.bin": {
+      "bytes": 4043,
+      "sha256": "248a2438172ad7dbad5b2461b37d4cda03054ec394d7cfc97ae040684851a938"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/1.bin": {
+      "bytes": 4457,
+      "sha256": "be1275e4e482f71f85bf584a86dd146c3c097db031ef4d127d78310f59d8a589"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/10.bin": {
+      "bytes": 7409,
+      "sha256": "471a9d6cf021848292e20fff4ca4f7b42b57fb7c0b9d0023b8baa26ac85ff912"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/11.bin": {
+      "bytes": 6348,
+      "sha256": "e22488b71bbdbea2252f1095854090a956829c913fca04af7b7559b19b81e08f"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/12.bin": {
+      "bytes": 23147,
+      "sha256": "4ae681d42cce70d65eb7663fbcfd561297b3cdf269abd91c4ee4c958540cd4a0"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/13.bin": {
+      "bytes": 13467,
+      "sha256": "b146c2b037a3b78917e03821a4777ff0d1062e5eb5999e4d39170c2c3fa7a311"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/14.bin": {
+      "bytes": 12229,
+      "sha256": "3a38fec3a8998db71ec7668ac847d6c74067394577cc0880e7e7efe55ae489de"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/15.bin": {
+      "bytes": 63858,
+      "sha256": "c81bd9410253e195b3e6b992cb4424ff1c5af10ae1a0aab7faf0a1951398edfa"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/16.bin": {
+      "bytes": 502,
+      "sha256": "20651f57959530acc37b0d5b997b9a153833187bb5654541b01930f21b0d7878"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/17.bin": {
+      "bytes": 109,
+      "sha256": "5172e6db8602858daa09cdac820df704f53b65cb3b876faab39d66e2c2977734"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/18.bin": {
+      "bytes": 9170,
+      "sha256": "f8fb11b22213499c587fa0c862aea077b9b463b5d7c085eadb85c295778b8e3d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/19.bin": {
+      "bytes": 2402,
+      "sha256": "2c12f9600e4f5de78574af8a56b315bb9657d74b0478ba54824ebf7c118650eb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/2.bin": {
+      "bytes": 3016,
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/3.bin": {
+      "bytes": 2665,
+      "sha256": "a8c4bb711b7ed0d5e049f0d1c736d2c7d4251f7879d0eeddf7e1565438988756"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/4.bin": {
+      "bytes": 5664,
+      "sha256": "b2ef9a8131c24526d00d217fd77361bdcdf3418a78c88562091a7c947fc64891"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/5.bin": {
+      "bytes": 13782,
+      "sha256": "d27278a69926d44e78fb2ae085af75997aaff9ee108df5e88f5ccf1bb678cace"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/6.bin": {
+      "bytes": 2457,
+      "sha256": "70ee88982f602306f898b6dd598cbe016debc2614fe433304795b94fca661b93"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/7.bin": {
+      "bytes": 14322,
+      "sha256": "e64427c6de2eda0b186ce299ddfdaa30ee4580d06c160e700bb1e575c1801b31"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/8.bin": {
+      "bytes": 7097,
+      "sha256": "6b5258dbaf5209d177dfe225c8564aafa17bb1452607b08583b57071af3325c7"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/new/9.bin": {
+      "bytes": 16431,
+      "sha256": "2ab9563fd95196633caa51d99678046f118e4faadbfa2eeb464e190d7cb447e5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/0.bin": {
+      "bytes": 3630,
+      "sha256": "e8e46e9af84ed2417a5c74cffb3d07c381115314bcaa20eb76e091e2d66664fc"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/10.bin": {
+      "bytes": 7088,
+      "sha256": "e7d3022d5569ab04e46c12a470ab69e6418b2da9a270f9eb673b161b97e42f52"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/11.bin": {
+      "bytes": 982,
+      "sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/12.bin": {
+      "bytes": 21779,
+      "sha256": "265637cde3b4cf921b63f611eb478e3c2273e186bcb83e674c9ad03fa71a387c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/13.bin": {
+      "bytes": 13464,
+      "sha256": "054b6aab3b2b0aab0c3a82901b3cae1a03980a2e92fc3cbae53af679c5d5eca5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/14.bin": {
+      "bytes": 12135,
+      "sha256": "6078db16155880ed335e24636d0f53cae732bbfea0b7eecee3a20a11c8a7bcf9"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/15.bin": {
+      "bytes": 63786,
+      "sha256": "d12aed1ad7baa42fee8a1fad50ec78c5ca066159cdbe945b91ef6af1818509bb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/16.bin": {
+      "bytes": 502,
+      "sha256": "1af168be7d561484d5177fb3abed0fe555de92e334744a094c7e3648df880c3d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/19.bin": {
+      "bytes": 1518,
+      "sha256": "15f143e9df82db80201166378542b6d26db3f1b747ebfe2e0c46cd9ef6698418"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/3.bin": {
+      "bytes": 2213,
+      "sha256": "427add709c5d0c101ecde2d92735e8af85af80c5a9ac11ed1c631d37b8d620d0"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/4.bin": {
+      "bytes": 5275,
+      "sha256": "77e69491130f6c5983d8ff9504d7596477ded17132bc51deeb0a39b3f6cb5621"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/5.bin": {
+      "bytes": 13510,
+      "sha256": "2dc3a3e86212669b1d39d8cf10359536ee5721149238aa0bf0615a446f5073fc"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/6.bin": {
+      "bytes": 1515,
+      "sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/7.bin": {
+      "bytes": 13741,
+      "sha256": "8bf6849792fac72f2441416e29365434bba442d814402c146d0d423a535fb636"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/8.bin": {
+      "bytes": 6328,
+      "sha256": "7f9ebd40f6abc20c99878c88cb3eb72d0b181b0f63347db8b019b58deb93aa77"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/old/9.bin": {
+      "bytes": 16398,
+      "sha256": "3409f77fb13755fcb3afe44fe71c9ff59043db73483a5f6132622e17f96b0d7d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/.writer/transactions/cb9c202f-1ff4-4c31-b0d3-0d68173a73b6/transaction.json": {
+      "bytes": 25643,
+      "sha256": "5e70acb8a2751f75720d9bb0eb1c078db954323b2d71b718d405d45c285d58ce"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/AGENTS.md": {
+      "bytes": 716,
+      "sha256": "8b649a1416fb106c02252629c5b78b645b0c4a879d1e4c8568b5a5f462127887"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/LICENSE.md": {
+      "bytes": 809,
+      "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/README.md": {
+      "bytes": 1040,
+      "sha256": "73f889e89dd60f2cc5d6637bc76d0ec358be57485c9c399ec99ead586680a3d0"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/attribution.md": {
+      "bytes": 1515,
+      "sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/deslop.md": {
+      "bytes": 4274,
+      "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/long-form.md": {
+      "bytes": 13741,
+      "sha256": "8bf6849792fac72f2441416e29365434bba442d814402c146d0d423a535fb636"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/oh-story-audit-manifest.json": {
+      "bytes": 27367,
+      "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/quickstart.md": {
+      "bytes": 6328,
+      "sha256": "7f9ebd40f6abc20c99878c88cb3eb72d0b181b0f63347db8b019b58deb93aa77"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/review-and-registration.md": {
+      "bytes": 7257,
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/revision-and-sources.md": {
+      "bytes": 16398,
+      "sha256": "3409f77fb13755fcb3afe44fe71c9ff59043db73483a5f6132622e17f96b0d7d"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/source-manifest.json": {
+      "bytes": 43269,
+      "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/tool-updates.md": {
+      "bytes": 7088,
+      "sha256": "e7d3022d5569ab04e46c12a470ab69e6418b2da9a270f9eb673b161b97e42f52"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/usability-sources.json": {
+      "bytes": 982,
+      "sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/user-guide.md": {
+      "bytes": 21826,
+      "sha256": "dc2b68740a365a20fa3ea4e17816e8846df76111f94ecee170a2a476704c6941"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/docs/workflow.md": {
+      "bytes": 20639,
+      "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/examples/history-fact-card.json": {
+      "bytes": 593,
+      "sha256": "cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/examples/prompts.md": {
+      "bytes": 3588,
+      "sha256": "a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/vendor/oh-story-deslop-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md": {
+      "bytes": 5092,
+      "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/vendor/oh-story-reference/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/vendor/oh-story-reference-20261015/LICENSE": {
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/writer.json": {
+      "bytes": 107,
+      "sha256": "afcbd60abac3fe8ff8f63a16e3e24130f438fc34f599374020b05611aca233a4"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/大纲/全书大纲.md": {
+      "bytes": 96,
+      "sha256": "ca7a1e1d4d19ff9a2c54b4afeca55688e5d5237ebc4d805c2a6f88b774262550"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/研究/工具更新验证授权.md": {
+      "bytes": 109,
+      "sha256": "5172e6db8602858daa09cdac820df704f53b65cb3b876faab39d66e2c2977734"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/设定/作品定位.md": {
+      "bytes": 152,
+      "sha256": "bbdb751cca2c5343c9d7fe5740419d0d6db7b92e12d6cce0c3ccdc0fdcc19915"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/设定/文风.md": {
+      "bytes": 189,
+      "sha256": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab"
+    },
+    "acceptance/20261019-webnovel-reference-j/update-work/设定/权威规则.md": {
+      "bytes": 201,
+      "sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+    }
+  }
+}

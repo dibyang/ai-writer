@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-19T06:21:08.975Z",
+  "scope": "read-only reachability after actual 0.7.6 to 0.8 update; root documents have not been replaced",
+  "rows": [
+    {
+      "name": "story-development.md",
+      "author_root_has_reference": false,
+      "current_package_has_reference": true
+    },
+    {
+      "name": "scene-connections.md",
+      "author_root_has_reference": false,
+      "current_package_has_reference": true
+    }
+  ],
+  "issue": "If new root guides are explicitly selected during update, ../.agents links would target preserved old author skills without the new references. Resolve method paths via doctor.skill_root rather than assuming author root."
+}

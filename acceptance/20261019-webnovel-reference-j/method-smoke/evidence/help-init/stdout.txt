@@ -1,0 +1,15 @@
+ai-writer 0.7.7 / init
+建立作品和随附工具，不覆盖已有目录。明确长篇/跨卷时用long，提前组织全书骨架、卷契约和近期细纲。
+
+node 'D:\work\other\ai-writer\acceptance\20261019-webnovel-reference-j\sources\package-0.7.7\bin\ai-writer.mjs' init --path 新目录 --kind novel|screenplay|history|essay --title 作品名 [--mode long|standard]
+
+示例参数：--path 'works/雨夜来信' --kind novel --title '雨夜来信' --mode long
+
+init 使用 --path 指定新作品目录，不接受 --project。
+作者手册：D:\work\other\ai-writer\acceptance\20261019-webnovel-reference-j\sources\package-0.7.7\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\acceptance\20261019-webnovel-reference-j\sources\package-0.7.7\docs\workflow.md
+长篇：D:\work\other\ai-writer\acceptance\20261019-webnovel-reference-j\sources\package-0.7.7\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\acceptance\20261019-webnovel-reference-j\sources\package-0.7.7\docs\deslop.md
+当前工具流程技能：D:\work\other\ai-writer\acceptance\20261019-webnovel-reference-j\sources\package-0.7.7\.agents\skills\writer-project\SKILL.md
+按文体继续读取该技能目录中的对应技能；作品根作者规则与定制技能仍需遵守，更新不自动替换它们。
+创作与审修改写由 Codex 根据自然语言任务完成。
