@@ -9,6 +9,11 @@ jobs:
         node: [20, 24]
     runs-on: ${{ matrix.os }}
     steps:
+      # This ephemeral runner never materializes the excluded historical paths.
+      - if: runner.os == 'Windows'
+        run: |
+          git config --global core.protectNTFS false
+          git config --global core.longpaths true
       - uses: actions/checkout@v4
         with:
           # Immutable historical evidence contains Windows-reserved path names.
