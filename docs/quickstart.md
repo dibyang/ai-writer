@@ -75,4 +75,8 @@ node .writer/tool/bin/ai-writer.mjs status
 
 主项目用`node bin/ai-writer.mjs`并传`--project "作品完整路径"`；独立作品用上述随附入口，当前目录含`writer.json`时可省略`--project`。更新后以该入口`--help`显示的包内手册为准，作品根手册可能保留作者笔记。
 
+更新也会保留作品根技能。新会话按根作者规则恢复，并从help列出的“当前工具流程技能”读取新版流程；doctor的`skill_root`给出本次校验的技能目录，`project_skill_root`是保留的作者技能目录。包内说明用于补齐当前命令和保护流程，不自动替换作者定制。
+
+长篇的context可能超过Codex单次显示容量。可让Codex用`--out .writer/drafts/context-本次.json`保存新入口，检查预算和`omitted_ids`，再分段核读所需内容；该选项仍会返回完整JSON，不会自动缩短控制台输出。看到“输出截断”应保留原输出、补读未显示部分；声称完整读过的正文和必读来源必须实际读全，不能仅凭文件已保存认定读完。细节见[使用手册](user-guide.md)中的“长篇上下文”。
+
 若Codex在嵌套作品目录出现`helper_unknown_error`，返回主项目会话并明确作品完整路径；不要重新初始化或修改全局安全设置。已有作品导入、版本变化、修订恢复和工具升级分别见[使用手册](user-guide.md)、[版本与修订](revision-and-sources.md)及[本地安全更新](tool-updates.md)。

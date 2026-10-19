@@ -1,0 +1,20 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const h=path.resolve('acceptance/20261019-hundred-h'),phase=path.join(h,'draft-a-recover'),work=path.join(h,'work');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),write=(p,x)=>fs.writeFileSync(p,typeof x==='string'?x:JSON.stringify(x,null,2)+'\n',{flag:'wx'});
+const before=fs.readFileSync(path.join(h,'commands/draft-a-recover-status-start/before-state.json'));
+write(path.join(phase,'start-state.bin'),before);
+const state=JSON.parse(before),parent=JSON.parse(fs.readFileSync(path.join(h,'draft-a/parent-interruption.json')));
+if(sha(before)!==parent.state_sha256)throw Error('parent mismatch');
+write(path.join(phase,'start-measures.json'),{at:new Date().toISOString(),state_sha256:sha(before),revision:state.revision,units:state.units.length,schema:state.schema_version,snapshot_keys:Object.keys(state.snapshot??{}),unit_files:state.units.map(u=>({unit:u.unit,draft:u.draft,sha256:sha(fs.readFileSync(path.join(work,u.draft)))})),unregistered108:{draft:parent.unregistered108.draft,sha256:sha(fs.readFileSync(path.join(work,parent.unregistered108.draft)))}});
+const raw='workflow原stop_conditions只列前一过程目录；在恢复后依据真实H任务及PLAN-AMENDMENTS正式登记恢复说明和新过程目录、保留相同107–108范围与作者规划draft属性，不能创建109正文授权。原107的授权历史保持。';
+const auth='# H轮draft-a-recover授权来源\n\n记录者：本次实际Codex恢复进程；无可用消息ID，不编造。下列为当前用户本轮恢复任务的实际原句。\n\n'+raw+'\n\n最后正式pause，仅discuss/plan，draft/revise范围清空；109 context和record-template均需真实ACTION_OUT_OF_SCOPE且state前后相同，无109正文和未登记稿。\n\n本轮代理有限安排依据H/PLAN、PLAN-AMENDMENTS第17–23行、parent-planning-and-scope及当前用户恢复任务。107与108原创归原draft-a，当前进程仅恢复、实读、必要时修未登记108、正式登记与复核。\n';
+write(path.join(phase,'author-evidence.md'),auth);write(path.join(work,'研究/H轮draft-a-recover授权原话.md'),auth);
+const old=JSON.parse(fs.readFileSync(path.join(h,'commands/draft-a-recover-workflow-start/stdout.raw.txt')));
+const workflow=old.workflow;workflow.task='H轮draft-a-recover：恢复draft-a容量中断；保留原107和108原创归属，实读并完成108登记、103–108连读复核，结束暂停。';
+workflow.authorization.stop_conditions=['108完成后暂停，仅discuss/plan，draft/revise范围清空；109 context和record-template须ACTION_OUT_OF_SCOPE。','业务仅H/work；本进程材料仅H/draft-a-recover及H/commands；原draft-a与H其他报告只读；不联网/子代理/提交/推送/发布，不切模型或安全设置。','原1–106正文/units、107登记对象及原授权历史、原154ledger身份与旧timeline前缀保持；107计数候选只报告待保护批，不锁外改。','两卷及作者规划保持draft；不新增109正文授权；未来112和旧章保护阶段未执行。'];
+write(path.join(phase,'workflow-recover.json'),{expected_revision:old.revision,operation_id:'h-draft-a-recover-open-107-108-v1',author_evidence:{quote:raw,local_source:'研究/H轮draft-a-recover授权原话.md',source_sha256:sha(auth),locator:'本次用户恢复任务「新进程先恢复」段原句；H/PLAN-AMENDMENTS第17–23行独立保留',recorded_by:'actual-Codex-H-draft-a-recover; agent implementation within current authorized scope'},workflow});
+const commands=fs.readdirSync(path.join(h,'commands')).filter(n=>n.startsWith('draft-a-')&&!n.startsWith('draft-a-recover-')).map(label=>({label,...JSON.parse(fs.readFileSync(path.join(h,'commands',label,'result.json')))}));
+write(path.join(phase,'original-product-command-inventory.json'),commands);
+console.log(JSON.stringify({state_keys:Object.keys(state),snapshot_keys:Object.keys(state.snapshot??{}),original_commands:commands.map(x=>({label:x.label,args:x.args.slice(1),exit_code:x.exit_code,before:x.before_state_sha256,after:x.after_state_sha256})),input_created:'workflow-recover.json'},null,2));
+const events=fs.readFileSync(path.join(h,'draft-a/events.jsonl'),'utf8').trim().split(/\r?\n/).map(s=>JSON.parse(s));
+console.log('ORIGINAL ACTUAL PROCESS COMMANDS');for(const e of events){if(e.type==='item.completed'&&e.item?.type==='command_execution')console.log(JSON.stringify({id:e.item.id,command:e.item.command,exit_code:e.item.exit_code}));if(/error|failed/.test(e.type))console.log(JSON.stringify(e));}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const phase=path.dirname(fileURLToPath(import.meta.url)),h=path.dirname(phase),work=path.join(h,'work');
+const [label,...args]=process.argv.slice(2);
+if(!/^draft-a-recover-[a-z0-9-]+$/.test(label??'')) throw Error('recover label required');
+const r=spawnSync(process.execPath,[path.join(h,'capture.mjs'),label,process.execPath,path.join(work,'.writer/tool/bin/ai-writer.mjs'),...args],{encoding:'utf8',windowsHide:true,maxBuffer:64*1024*1024});
+console.log(r.stdout);if(r.stderr) console.error(r.stderr);
+const dir=path.join(h,'commands',label);
+if(fs.existsSync(path.join(dir,'stdout.raw.txt'))) console.log(fs.readFileSync(path.join(dir,'stdout.raw.txt'),'utf8'));
+if(fs.existsSync(path.join(dir,'stderr.raw.txt'))) console.error(fs.readFileSync(path.join(dir,'stderr.raw.txt'),'utf8'));
+process.exitCode=r.status??1;

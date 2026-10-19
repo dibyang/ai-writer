@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 421,
+  "counts": {
+    "open": 1
+  },
+  "issues": [
+    {
+      "id": "H107_RETAINED_VOICE_COUNT_CANDIDATE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "未采用候选：107站读中止与坐读留下另一段可读成四次录制尝试，后文录的三段可能专指留用三段。数量对象未明分，部分读者会回数；不构成已确认硬错。",
+      "suggestion": "留后续正式保护批核实；如有净收益可把录的三段澄清为留下的三段试声，并核正式summary/changes的数量含义。本阶段无revise范围，正文/state原107语义不改。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 25,
+          "quote": "她停了录音，朝空屋说你先坐"
+        },
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 27,
+          "quote": "改将它留作另一段：人在动的时候，声音会变。"
+        },
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 71,
+          "quote": "她录的三段也都有不好听的地方。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/dbe88f09-0f52-449b-90e7-22c39ba22d30.json",
+        "review_sha256": "608f6affa2724087561cfca8ff4ebca4c42fa9c1ce52b93c16d3461b82506323",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          }
+        ]
+      },
+      "history": [],
+      "binding": {
+        "ref": ".writer/objects/bfdaaea4-f524-47f0-833d-2de9140590d7.json",
+        "sha256": "5a7e8c59dd14bbf818327b91e97d549e03d0044c1eb0420e598fc465f36464a8"
+      },
+      "history_events": [],
+      "effective_status": "open",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

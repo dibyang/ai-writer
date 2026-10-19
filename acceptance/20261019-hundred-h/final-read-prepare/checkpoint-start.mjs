@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url)), H=path.dirname(dir);
+const read=p=>JSON.parse(fs.readFileSync(p)), sha=x=>crypto.createHash('sha256').update(x).digest('hex'), hash=p=>sha(fs.readFileSync(p));
+const hand=read(path.join(H,'revise-d/handoff.json')), W=path.join(H,'work'), B=hand.workspace, R=path.dirname(B);
+const ready=read(path.join(H,'parent-revision-setup/READY.json'));
+for(const phase of ['a','b','c','d']){assert.equal(read(path.join(H,`revise-${phase}/process-result.json`)).exit_code,0);assert.equal(read(path.join(H,`revise-${phase}/parent-verification-v1.json`)).ok,true);}
+assert.equal(hash(path.join(W,'.writer/state.json')),ready.main_state_sha256);
+assert.equal(hash(path.join(B,'.writer/state.json')),hand.branch.state_sha256);
+assert.equal(hash(path.join(R,'base-state.json')),hand.base_state_sha256);
+assert.equal(hash(path.join(R,'base.json')),hand.base_manifest_sha256);
+assert.equal(hash(path.join(R,'session.json')),hand.session_sha256);
+const session=read(path.join(R,'session.json'));assert.equal(sha(hand.token),session.token_sha256);assert.equal(session.id,hand.session_id);assert.equal(session.status,'editing');
+const main=read(path.join(W,'.writer/state.json')), branch=read(path.join(B,'.writer/state.json'));
+assert.equal(main.revision,440);assert.equal(main.units.length,112);assert.equal(branch.revision,488);assert.equal(branch.units.length,112);
+const bodies=ready.registered_units.map(u=>{const candidate=ready.planned_candidates.find(c=>c.unit===u.unit)?.planned_after_sha256??u.sha256;assert.equal(hash(path.join(W,u.draft)),u.sha256);assert.equal(hash(path.join(B,u.draft)),candidate);return {unit:u.unit,draft:u.draft,main_sha256:u.sha256,branch_sha256:candidate};});
+for(const label of ['main-status','main-doctor','main-list','branch-status','branch-doctor','discussion','check-initial'])assert.equal(read(path.join(H,`commands/final-read-${label}/stdout.raw.txt`)).ok,true);
+const check=read(path.join(H,'commands/final-read-check-initial/stdout.raw.txt')), pending=check.rolling_review.pending_windows;
+const from=Math.min(72,...pending.map(w=>w.from));assert.equal(from,72);
+const checkpoint={at:new Date().toISOString(),session_id:session.id,workspace:B,base_revision:440,main_state_sha256:ready.main_state_sha256,branch_revision:branch.revision,branch_state_sha256:hand.branch.state_sha256,base_state_sha256:hand.base_state_sha256,base_manifest_sha256:hand.base_manifest_sha256,session_sha256:hand.session_sha256,token_sha256:session.token_sha256,bodies,snapshot_sha256:sha(JSON.stringify(branch.snapshot)),units_sha256:sha(JSON.stringify(branch.units))};
+fs.writeFileSync(path.join(dir,'initial-checkpoint.json'),JSON.stringify(checkpoint,null,2)+'\n',{flag:'wx'});
+fs.copyFileSync(path.join(B,'.writer/state.json'),path.join(dir,'branch-start-state.json'),fs.constants.COPYFILE_EXCL);
+fs.writeFileSync(path.join(dir,'resume.json'),JSON.stringify({id:session.id,token:hand.token},null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(dir,'final-reading-plan.json'),JSON.stringify({at:checkpoint.at,from,to:112,branch_state_sha256:checkpoint.branch_state_sha256,pending_windows:pending,range_reason:'Fresh actual check has no pending windows. Fixed revision scope begins72; earlier already-covered windows are not reopened. Personally read stable72–112 after the agent marker; causal sources27/31/36/71/42 are separate pre-tail readings and do not claim intervening chapters.',necessary_source_units:[27,31,36,42,71],same_revision_session:session.id,base_revision:440,planned_chapters:41,formal_tail_started:false},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,at:checkpoint.at,main_revision:440,branch_revision:488,units:112,from,to:112,pending_windows:pending,bodies_verified:112,same_session:session.id}));

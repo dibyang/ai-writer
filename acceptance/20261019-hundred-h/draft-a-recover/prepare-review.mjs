@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+const h=path.resolve('acceptance/20261019-hundred-h'),p=path.join(h,'draft-a-recover'),work=path.join(h,'work');
+const x=JSON.parse(fs.readFileSync(path.join(work,'.writer/drafts/h-recover-review-103-108.json'))),content=JSON.parse(fs.readFileSync(path.join(p,'review-content.json'))),readings=JSON.parse(fs.readFileSync(path.join(p,'readings.json')));
+for(let n=103;n<=108;n++){const row=readings.find(r=>r.unit===n&&r.purpose==='post108-continuous-103-108');assert.ok(row);assert.equal(x.source_hashes[path.relative(work,row.file).replaceAll('\\','/')],row.sha256);}
+for(const f of content.chapter_functions)for(const field of ['goal','obstacle','choice','consequence','relationship_change'])for(const e of f[field].evidence??[]){const r=readings.find(r=>r.unit===e.unit&&r.purpose==='post108-continuous-103-108');assert.ok(fs.readFileSync(r.file,'utf8').includes(e.quote),e.quote);}
+Object.assign(x,content,{operation_id:'h-draft-a-recover-review-103-108-r419',report:'审查/H轮recover-103-108连读.md'});delete x.output;
+fs.writeFileSync(path.join(p,'review-103-108.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({from:x.from,to:x.to,revision:x.expected_revision,functions:x.chapter_functions.length,comparisons:x.comparison.similar_structures.length,issues:x.issues,report:x.report}));

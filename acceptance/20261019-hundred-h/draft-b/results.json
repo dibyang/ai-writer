@@ -1,0 +1,215 @@
+{
+  "at": "2026-10-19T02:18:12.033Z",
+  "phase": "draft-b",
+  "task_status": "completed-local-stage-awaiting-parent-audit",
+  "process_exit_status": "This process has not yet exited; parent launcher must record actual exit.",
+  "request_sha256": "88c88055d22b824c2202bccfc8d7a4e014e3f2d9faa1ff9f0f919b943b6c31e1",
+  "before": {
+    "revision": 421,
+    "units": 108,
+    "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33"
+  },
+  "after": {
+    "revision": 426,
+    "units": 110,
+    "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+    "stage": "paused",
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "draft_range": null,
+    "revise_range": null
+  },
+  "package": {
+    "version": "0.7.5",
+    "identity": "package-v2 unchanged; v3 failed offline-link regression and v4 candidate are parent tool work, not this batch literary evidence",
+    "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+    "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+    "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+    "generation": 6,
+    "schema": 6
+  },
+  "attribution": {
+    "draft_a": {
+      "elapsed_s": 851,
+      "exit_code": 1,
+      "reason": "Selected model is at capacity. Please try a different model.",
+      "original_and_registered": [
+        107
+      ],
+      "original_unregistered_at_exit": [
+        108
+      ],
+      "handoff": "not completed, not reconstructed"
+    },
+    "draft_a_recover": {
+      "elapsed_s": 890,
+      "exit_code": 0,
+      "original": [],
+      "registered": [
+        108
+      ],
+      "continuous_read": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "parent_verification": "draft-a-recover/parent-verification-v1.json ok=true"
+    },
+    "draft_b": {
+      "original_and_registered": [
+        109,
+        110
+      ],
+      "continuous_read": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "actual_exit": "pending parent launcher after this process exits"
+    }
+  },
+  "chapters": [
+    {
+      "unit": 109,
+      "draft": "正文/0109-两百四十买到什么.md",
+      "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+      "bytes": 11994,
+      "body_han": 3444
+    },
+    {
+      "unit": 110,
+      "draft": "正文/0110-坐下以后还想说话.md",
+      "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+      "bytes": 11948,
+      "body_han": 3409
+    }
+  ],
+  "new_body_han": 6853,
+  "payoff_chains": [
+    {
+      "line": "自留工作说明与报价例子",
+      "seeds": [
+        106,
+        107,
+        108
+      ],
+      "new_unit": 109,
+      "new_quote": "改意见一次换成可就这份意见问一轮",
+      "result": "67日9:30–10:30真实劳动、顾实际试用反馈、沈修示例；240为一小时自用例价，无新订单/定金/收入。",
+      "limit": "顾未看回家修后版，新本人页仍私有。"
+    },
+    {
+      "line": "靠背坐处与有限陪伴",
+      "seeds": [
+        30,
+        76,
+        98,
+        104
+      ],
+      "new_unit": 110,
+      "new_quote": "我坐一会儿。等下还得做午前那盘。",
+      "result": "葛自清原椅、素姐不消费实坐、葛真正短谈后装袋变慢/饭未完，回生产不能持续听；陶11实离。",
+      "limit": "原老人未回场，非过去缺座的补偿或续固定时段，沈不常驻，眼镜结果未知。"
+    }
+  ],
+  "review": {
+    "ref": ".writer/reviews/38b68e40-6cff-42bd-af1a-6993c21be425.json",
+    "report": "审查/H轮draft-b-103-110连读.md",
+    "from": 103,
+    "to": 110,
+    "reading_purpose": "post110-continuous103-110",
+    "nature": "knowledgeable-model-self-review",
+    "new_issues": [],
+    "retained_candidate": "H107_RETAINED_VOICE_COUNT_CANDIDATE remains open, unadopted and unapplied; 72/79/83 not changed",
+    "style_observation": "104/110 share return-to-shop and11 departure ending; future111 should choose different main event."
+  },
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "findings": [],
+    "draft_inventory": {
+      "registered_count": 110,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 23,
+      "stale": 105,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 102,
+      "stale_without_current_coverage": 3,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "doctor": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "gates": [
+    {
+      "label": "draft-b-deny-111-context",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba"
+    },
+    {
+      "label": "draft-b-deny-111-template",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba"
+    }
+  ],
+  "no111Body": true,
+  "protection": {
+    "first108_unit_records_equal_start": true,
+    "all160_prior_ledger_type_statement_author_truth_unchanged": true,
+    "old_timeline_prefix_unchanged": true,
+    "baseline_and_tool_control_unchanged": true,
+    "basis": "Small comparison of start/end captured state plus real check/doctor; no new file-exposure auditor or full-tree inventory. Parent independently checks originals after actual exit."
+  },
+  "active_revisions": [],
+  "pending_transactions": [],
+  "product_command_count": 33,
+  "reading_exposures": 21,
+  "unique_read_versions": 13,
+  "errors_and_corrections": {
+    "unexpected_product_errors": [],
+    "intentional_gate_rejections": 2,
+    "preview109_v2": "First preview was mechanically valid; second retained explicit prior sample/output knowledge. Both inputs captured, no state mutation in either preview.",
+    "draft_repairs": "See current review report and frozen pre-record full-read versions; no registered body edited."
+  },
+  "next_direction": "111–112粗建议仅见review报告/交接；先恢复并取得新阶段有限workflow，勿重复返铺/11点交班节拍，不强迫返客或买单，不提前续期。",
+  "unexecuted": [
+    "111–112正文/细纲",
+    "72/79/83和107保护修改",
+    "全H最终112尾段/prepare/commit/export",
+    "联网/子代理/Git提交推送发布"
+  ],
+  "evidence": {
+    "commands": "command-inventory.json",
+    "readings": "readings.json",
+    "versions": "versions.json and read-versions/",
+    "context": "context-review.json",
+    "review_input": "review-input.json",
+    "start_state": "start-state.bin",
+    "end_state": "end-state.bin"
+  },
+  "limits": [
+    "This is manuscript-only local process work; no source/tool updates or npm regression in this phase.",
+    "Not independent blind reading, human/market validation, author final draft or formal release acceptance.",
+    "No claim of current process exit0 before parent records real exit."
+  ]
+}

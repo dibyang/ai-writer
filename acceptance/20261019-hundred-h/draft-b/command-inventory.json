@@ -1,0 +1,1126 @@
+{
+  "phase": "draft-b",
+  "scope": "Captured product CLI calls only; reads and metadata helpers are in actual events.jsonl, not invented as product calls.",
+  "count": 33,
+  "commands": [
+    {
+      "label": "draft-b-help",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "--help"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:27.473Z",
+      "elapsed_ms": 150,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-status-restore",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--view",
+        "full",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:41.320Z",
+      "elapsed_ms": 1403,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-workflow-restore",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:43.367Z",
+      "elapsed_ms": 350,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-context-restore",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:46.468Z",
+      "elapsed_ms": 1046,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-doctor-restore",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:47.746Z",
+      "elapsed_ms": 362,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-decision-current",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "decision",
+        "current",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:49.642Z",
+      "elapsed_ms": 569,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-decision-list",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "decision",
+        "list",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:57:51.732Z",
+      "elapsed_ms": 916,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-recall-work",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "recall",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--query",
+        "报价",
+        "--limit",
+        "30"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:59:19.090Z",
+      "elapsed_ms": 453,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-recall-seat",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "recall",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--query",
+        "靠背",
+        "--limit",
+        "30"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T01:59:21.558Z",
+      "elapsed_ms": 667,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-workflow-open",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/workflow-open.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:01:09.390Z",
+      "elapsed_ms": 307,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\workflow-open.json",
+        "sha256": "7f54dbf0b9d5c9ec406d52a2f92d53ae87f64fae0980066be458702f33395f28"
+      },
+      "before_state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+      "after_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-plan-109",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/plan-109.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:01:29.738Z",
+      "elapsed_ms": 321,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\plan-109.json",
+        "sha256": "7b268f997754833f9daaaefab2506cc20638335b8d0dd51e4bce7bfe6694d883"
+      },
+      "before_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "after_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-context-109",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--unit",
+        "109",
+        "--max-chars",
+        "80000"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:01:31.839Z",
+      "elapsed_ms": 692,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "after_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-template-109",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--unit",
+        "109",
+        "--draft",
+        "正文/0109-两百四十买到什么.md"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:02:10.671Z",
+      "elapsed_ms": 606,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "after_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-preview-109",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-preview",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/record-109.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:05:59.588Z",
+      "elapsed_ms": 582,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\record-109.json",
+        "sha256": "0db45dea2b5bbaa045f930d5c8489a308a5ec938b754a0327b0136b99ef9ffc6"
+      },
+      "before_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "after_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-preview-109-v2",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-preview",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/record-109-v2.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:06:25.417Z",
+      "elapsed_ms": 548,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\record-109-v2.json",
+        "sha256": "bf077c2acc0d5b0f2a495a683dfc9dff91f37b3feb14f6235c09e3ac636e28fd"
+      },
+      "before_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "after_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-record-109",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/record-109-v2.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:06:35.084Z",
+      "elapsed_ms": 589,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\record-109-v2.json",
+        "sha256": "bf077c2acc0d5b0f2a495a683dfc9dff91f37b3feb14f6235c09e3ac636e28fd"
+      },
+      "before_state_sha256": "a7a8e28facf71c03f1b7e04923311289d66bbc7a2a946bb6ed05864bd114f23f",
+      "after_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-recall-seat-week",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "recall",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--query",
+        "T_SHOP_SEAT_WEEK_86",
+        "--limit",
+        "5"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:06:37.666Z",
+      "elapsed_ms": 604,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "after_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-plan-110",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "plan",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/plan-110.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:07:23.713Z",
+      "elapsed_ms": 307,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\plan-110.json",
+        "sha256": "629b289f414928825786dde490a95d633ddd21d7a98606b33e9ae58ba12d023b"
+      },
+      "before_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "after_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-context-110",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--unit",
+        "110",
+        "--max-chars",
+        "90000"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:07:26.082Z",
+      "elapsed_ms": 551,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "after_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-template-110",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--unit",
+        "110",
+        "--draft",
+        "正文/0110-坐下以后还想说话.md"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:07:42.456Z",
+      "elapsed_ms": 615,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "after_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-preview-110",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-preview",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/record-110.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:11:57.148Z",
+      "elapsed_ms": 594,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\record-110.json",
+        "sha256": "92f3f519e23e6cac76a7309a8006bcc313156a9ac9ae4e656207939232f7fc9f"
+      },
+      "before_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "after_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-record-110",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/record-110.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:12:11.352Z",
+      "elapsed_ms": 581,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\record-110.json",
+        "sha256": "92f3f519e23e6cac76a7309a8006bcc313156a9ac9ae4e656207939232f7fc9f"
+      },
+      "before_state_sha256": "ce468620c09b848ef64d23a526f7c452e3daa374b8944ca478afcd6727866cbf",
+      "after_state_sha256": "9797c8195a096d0b3150f50bb519c4fa36d803cafc8211a1ecd1792bc73b3eb7",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-check-before-review",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:12:13.698Z",
+      "elapsed_ms": 787,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9797c8195a096d0b3150f50bb519c4fa36d803cafc8211a1ecd1792bc73b3eb7",
+      "after_state_sha256": "9797c8195a096d0b3150f50bb519c4fa36d803cafc8211a1ecd1792bc73b3eb7",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-review-template",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "review-template",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--from",
+        "103",
+        "--to",
+        "110"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:12:16.326Z",
+      "elapsed_ms": 566,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9797c8195a096d0b3150f50bb519c4fa36d803cafc8211a1ecd1792bc73b3eb7",
+      "after_state_sha256": "9797c8195a096d0b3150f50bb519c4fa36d803cafc8211a1ecd1792bc73b3eb7",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-review103-110",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "review",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/review-input.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:15:23.625Z",
+      "elapsed_ms": 491,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\review-input.json",
+        "sha256": "4b200c69f3d6e9c8e6f4c2eb4f15d6d7450a2fd46ac87d9882737b189cfa5f2b"
+      },
+      "before_state_sha256": "9797c8195a096d0b3150f50bb519c4fa36d803cafc8211a1ecd1792bc73b3eb7",
+      "after_state_sha256": "0a75d5280fd419743e4402b6b53ac7a39f3ee4fcb0c1bfd6d2071d18c8ed75e7",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-check-after-review",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:15:48.892Z",
+      "elapsed_ms": 607,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "0a75d5280fd419743e4402b6b53ac7a39f3ee4fcb0c1bfd6d2071d18c8ed75e7",
+      "after_state_sha256": "0a75d5280fd419743e4402b6b53ac7a39f3ee4fcb0c1bfd6d2071d18c8ed75e7",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-workflow-pause",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--input",
+        "acceptance/20261019-hundred-h/draft-b/workflow-pause.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:15:53.858Z",
+      "elapsed_ms": 542,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\draft-b\\workflow-pause.json",
+        "sha256": "d01d3d73e863c364c85744ebfe32c5b73ec304e1ac19591d32aa21523c2ede4d"
+      },
+      "before_state_sha256": "0a75d5280fd419743e4402b6b53ac7a39f3ee4fcb0c1bfd6d2071d18c8ed75e7",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-deny-111-context",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "111",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:16:03.838Z",
+      "elapsed_ms": 353,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-deny-111-template",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "111",
+        "--draft",
+        "正文/0111-未授权门禁占位.md",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:16:05.238Z",
+      "elapsed_ms": 276,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-status-final",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:16:06.474Z",
+      "elapsed_ms": 507,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-workflow-final",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:16:07.784Z",
+      "elapsed_ms": 277,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-check-final",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "check",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:16:09.287Z",
+      "elapsed_ms": 906,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    {
+      "label": "draft-b-doctor-final",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T02:16:10.542Z",
+      "elapsed_ms": 302,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "after_state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.5",
+        "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    }
+  ]
+}

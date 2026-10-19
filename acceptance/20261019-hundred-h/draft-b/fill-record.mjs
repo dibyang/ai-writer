@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const n=Number(process.argv[2]),h='acceptance/20261019-hundred-h',d=h+'/draft-b';
+const t=JSON.parse(fs.readFileSync(h+'/commands/draft-b-template-'+n+'/stdout.raw.txt'));
+const a=JSON.parse(fs.readFileSync(d+'/changes-'+n+'.json'));
+const state=JSON.parse(fs.readFileSync(h+'/work/.writer/state.json'));
+if(state.revision!==t.expected_revision)throw Error('template stale');
+const before=state.snapshot?.characters ?? state.current?.characters;
+if(!before)throw Error('Inspect actual state snapshot shape before using helper');
+t.summary=a.summary;
+t.changes={characters:Object.fromEntries(Object.entries(a.character_updates).map(([k,v])=>[k,v+'；此前有效状态/知识按原章时点保留：'+(before[k]??'此前无热状态条目，不据此推断知识。')])),timeline_append:a.timeline_append,ledger:a.ledger};
+fs.writeFileSync(d+'/record-'+n+(process.argv[3]??'')+'.json',JSON.stringify(t,null,2)+'\n',{flag:'wx'});
+console.log({unit:n,expected_revision:t.expected_revision,changed_characters:Object.keys(t.changes.characters),ledger:Object.keys(a.ledger)});

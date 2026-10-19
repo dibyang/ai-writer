@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-19T01:53:16Z",
+  "actor": "parent executor",
+  "activity": "Correct offline guide link after v3 regression; preserve failed candidate and freeze v4",
+  "changed_from_v3": ["docs/quickstart.md"],
+  "source_build": "source-build-v4.json",
+  "content_id": "396c9fa806d7055a0676183cac55187831417158ba8c531acfced0def2c3f5c2",
+  "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+  "installed_work_package": "package-v2 unchanged",
+  "checks": {"targeted_original_guide_test": "commands/v4-guide-links:exit0", "doctor": "commands/v4-doctor:exit0", "source_compare": "commands/parent-v4-package-compare:exit0,same_content=true", "full_tests": "commands/v4-tests running at checkpoint"},
+  "scope": "No runtime code changes, test weakening, candidate overwrite, live tool replacement, or campaign completion assertion. Actual installation and final result still pending."
+}

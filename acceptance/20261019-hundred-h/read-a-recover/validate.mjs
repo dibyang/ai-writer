@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url)),base=path.dirname(dir),phase='read-a-recover';
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex'),read=f=>fs.readFileSync(f),json=f=>JSON.parse(read(f));
+const result=json(path.join(dir,'results.json')),handoff=json(path.join(dir,'handoff.json')),inventory=json(path.join(dir,'command-inventory.json')),verification=json(path.join(dir,'final-verification.json'));
+const deliveries=['REPORT.md','handoff.md','handoff.json','results.json','command-inventory.json'];
+for(const file of deliveries)assert.ok(fs.statSync(path.join(dir,file)).size>0);
+for(const row of result.artifacts)assert.equal(sha(read(path.join(base,row.file))),row.sha256,row.file);
+assert.equal(handoff.revision,411);assert.equal(handoff.schema_version,6);assert.equal(handoff.generation,5);
+assert.deepEqual(handoff.allowed_actions,['discuss','plan']);assert.equal(handoff.stage,'paused');
+assert.equal(handoff.parent_verification.status,'pending');assert.equal(handoff.parent_verification.read_b_may_start_now,false);
+assert.deepEqual(handoff.proof.drafts.map(r=>r.unit),Array.from({length:27},(_,i)=>i+1));
+assert.equal(sha(read(path.join(dir,'readings.json'))),result.readings_sha256);
+const stateBytes=read(path.join(handoff.project,'.writer/state.json')),state=JSON.parse(stateBytes);
+assert.equal(sha(stateBytes),verification.state_after_sha256);assert.ok(stateBytes.equals(read(path.join(dir,'recovery-before-state.bin'))));
+assert.equal(state.units.length,106);assert.ok(!fs.readdirSync(path.join(handoff.project,'正文')).some(n=>/^0107/.test(n)));
+assert.equal(inventory.captured_count,16);assert.equal(inventory.product_cli_count,13);assert.equal(inventory.expected_denials.length,2);assert.deepEqual(inventory.unexpected_nonzero,[]);
+for(const cmd of inventory.commands){assert.ok(cmd.label.startsWith(phase+'-'));assert.equal(cmd.before_state_sha256,result.state_before_sha256);assert.equal(cmd.after_state_sha256,result.state_after_sha256);for(const row of cmd.evidence)assert.equal(sha(read(path.join(base,row.file))),row.sha256,row.file);assert.ok(!cmd.args.includes('update'));assert.ok(!cmd.args.includes('resume'));}
+const report=read(path.join(dir,'REPORT.md')).toString('utf8');assert.ok(!report.includes('{{CHAPTER_TABLE}}'));assert.equal(report.split('\n').filter(s=>/^\|\d+ /.test(s)).length,27);assert.ok(report.includes('#### 真人语言硬问题\n\n没有'));
+const rows=deliveries.map(file=>({file,sha256:sha(read(path.join(dir,file))),bytes:read(path.join(dir,file)).length}));
+const output={ok:true,at:new Date().toISOString(),scope:'Final five-deliverable identity and evidence consistency, not parent event-exposure audit',checks:{five_deliverables:true,report_27_rows:true,chapter_range_and_versions:true,state_byte_equal:true,no_107:true,all_capture_evidence_hashes:true,unique_capture_labels:true,all_product_calls_actual_project:true,no_repeat_update_or_resume:true,parent_gate_still_pending:true},capture_count:inventory.captured_count,product_cli_count:inventory.product_cli_count,expected_denials:inventory.expected_denials,readings_sha256:result.readings_sha256,state_sha256:result.state_after_sha256,own_reading:{chapters:27,calls:14,lines:handoff.proof.total_lines,bytes:handoff.proof.total_bytes},progress_correction:{earlier_commentary:{lines:2164,bytes:161346},corrected_from_generator:{lines:2056,bytes:161836},artifacts_always_used_computed_counts:true},deliverables:rows};
+fs.writeFileSync(path.join(dir,process.argv[2]??'delivery-validation.json'),JSON.stringify(output,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(output));

@@ -1,0 +1,129 @@
+{
+  "ok": true,
+  "status": "local-work-complete-awaiting-process-exit-and-parent-verification",
+  "phase": "read-b",
+  "title": "潮汐信号",
+  "revision": 413,
+  "schema_version": 6,
+  "generation": 6,
+  "tool_version": "0.7.5",
+  "registered_count": 106,
+  "next_unit": 107,
+  "read_range": {
+    "from": 23,
+    "through": 54
+  },
+  "overlap": {
+    "from": 23,
+    "through": 27
+  },
+  "new_coverage": {
+    "from": 28,
+    "through": 54,
+    "chapters": 27
+  },
+  "helper_calls": 16,
+  "total_lines": 2584,
+  "total_bytes": 270672,
+  "truncated_outputs": 0,
+  "real_update": true,
+  "retry_unchanged": true,
+  "resource_routing_actual_reads": 10,
+  "root_old_skills_separate_reads": 3,
+  "source_resources_match": 61,
+  "original_root_files_preserved": 478,
+  "units_snapshot_sources_unchanged": true,
+  "reading_state_unchanged": true,
+  "confirmed_hard_issues": 0,
+  "selected_revision_candidates": 0,
+  "optional_candidates": 3,
+  "gates": [
+    {
+      "label": "read-b-draft-107-denied",
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160"
+    },
+    {
+      "label": "read-b-template-107-denied",
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160"
+    }
+  ],
+  "parent_verification": {
+    "status": "pending",
+    "requires": [
+      "Actual read-b process exits 0",
+      "Parent audit-reading-stage.mjs read-b 23 54 v1 source-build-v2.json passes against actual events and frozen SHA"
+    ],
+    "read_c_may_start_now": false
+  },
+  "files": [
+    {
+      "file": "read-b/REPORT.md",
+      "sha256": "11cd0c2be16149c626c3e9c0ee2da0b29aeb825317f61362c68213bed539bc8b",
+      "bytes": 33282
+    },
+    {
+      "file": "read-b/handoff.md",
+      "sha256": "cc85b029d4ef9311e55e796da4f98bb1e63757f4618f642b833041123fd4e8f4",
+      "bytes": 2752
+    },
+    {
+      "file": "read-b/handoff.json",
+      "sha256": "1fdaa42f60765374d0f0b513274cda7a56f2b848a2ef880fbbc872fd3f002608",
+      "bytes": 19720
+    },
+    {
+      "file": "read-b/reading-notes.md",
+      "sha256": "8534d8654823e64b4044be02e8e739ec2ae409a0394044ea9e0ef47137d479f9",
+      "bytes": 18653
+    },
+    {
+      "file": "read-b/command-inventory.json",
+      "sha256": "f4fb47b77656ab1d4917d1d90757b057e6e4ec4807ad633a8a1c6ac4ef421863",
+      "bytes": 63065
+    },
+    {
+      "file": "read-b/resource-routing-proof.json",
+      "sha256": "cc01aecb921ca3418df24437c570cc3bae09be4512b4a7668e641e4ac4b6b367",
+      "bytes": 10367
+    },
+    {
+      "file": "read-b/reading-verification.json",
+      "sha256": "7a00f038ffc3f590a414d0cf28598612d9ed89c6e233f14af533749263d92c5f",
+      "bytes": 14813
+    },
+    {
+      "file": "read-b/support-verification.json",
+      "sha256": "ed3da354b07964e5cddff427ee534fc66b4ad4887905c24ef9e443b86f16654e",
+      "bytes": 256191
+    },
+    {
+      "file": "read-b/final-verification.json",
+      "sha256": "e957e53a9b178426962c7a378b3ff621b22425d85f23370429e40ee257682ca5",
+      "bytes": 2453443
+    }
+  ],
+  "limitations": [
+    "Actual process exit and parent exposure audit pending",
+    "Informed model review, not independent blind reading/human/market acceptance",
+    "Not read whole 106 chapters by this process",
+    "No text revision, new chapter, public export or release"
+  ],
+  "next_phase": {
+    "name": "read-c",
+    "read_range": {
+      "from": 50,
+      "through": 81
+    },
+    "overlap": {
+      "from": 50,
+      "through": 54
+    },
+    "new_coverage": {
+      "from": 55,
+      "through": 81
+    },
+    "not_started_by_this_process": true
+  }
+}

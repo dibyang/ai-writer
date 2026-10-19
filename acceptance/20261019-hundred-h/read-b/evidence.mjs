@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url)), base=path.dirname(dir), project=path.join(base,'work'), source=path.join(base,'sources/package-v2');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const read=f=>JSON.parse(fs.readFileSync(f));
+const write=(f,v)=>fs.writeFileSync(path.join(dir,f),JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const cmd=tag=>read(path.join(base,'commands',tag,'stdout.raw.txt'));
+function files(root,rel=''){return fs.readdirSync(path.join(root,rel),{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name)).flatMap(e=>{const r=path.posix.join(rel,e.name);assert.ok(!e.isSymbolicLink());return e.isDirectory()?files(root,r):[{file:r,bytes:fs.statSync(path.join(root,r)).size,sha256:sha(fs.readFileSync(path.join(root,r)))}];});}
+function snapshot(name){const out=path.join(dir,name);fs.mkdirSync(out,{recursive:false});const bytes=fs.readFileSync(path.join(project,'.writer/state.json')),s=JSON.parse(bytes),rows=files(project);fs.writeFileSync(path.join(out,'state.bin'),bytes,{flag:'wx'});for(const k of ['units','snapshot'])fs.writeFileSync(path.join(out,k+'.json'),JSON.stringify(s[k],null,2)+'\n',{flag:'wx'});for(const u of s.units){const dest=path.join(out,'drafts',u.draft);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(project,u.draft),dest,fs.constants.COPYFILE_EXCL);}const v={at:new Date().toISOString(),state_sha256:sha(bytes),revision:s.revision,schema_version:s.schema_version,generation:s.tool_control.generation,installed:s.tool_control.installed,units_sha256:sha(JSON.stringify(s.units)),snapshot_sha256:sha(JSON.stringify(s.snapshot)),registered_count:s.units.length,files:rows,root_author_files:rows.filter(r=>!r.file.startsWith('.writer/'))};fs.writeFileSync(path.join(out,'inventory.json'),JSON.stringify(v,null,2)+'\n',{flag:'wx'});return v;}
+const action=process.argv[2];
+if(action==='pre'){
+ const h=read(path.join(base,'read-a-recover/handoff.json')),pv=read(path.join(base,'read-a-recover/parent-verification-v1.json')),pr=read(path.join(base,'read-a-recover/process-result.json')),audit=read(path.join(base,pv.reading_proof)),s=read(path.join(project,'.writer/state.json'));
+ assert.equal(pv.ok,true);assert.equal(pr.exit_code,0);assert.equal(pr.elapsed_s,831);assert.equal(sha(fs.readFileSync(path.join(base,'read-a-recover/request.raw.md'))),pr.request_sha256);assert.equal(audit.ok,true);assert.equal(audit.rows.length,27);
+ for(const r of audit.rows){assert.equal(r.full_matching_line_coverage,true);assert.equal(r.missing_lines.length,0);assert.equal(sha(fs.readFileSync(r.file)),r.sha256);}
+ assert.equal(sha(fs.readFileSync(path.join(project,'.writer/state.json'))),pv.state_sha256);assert.equal(s.revision,411);assert.equal(s.schema_version,6);assert.equal(s.units.length,106);assert.equal(s.tool_control.generation,5);assert.equal(s.tool_control.installed.version,'0.7.4');
+ assert.equal(sha(fs.readFileSync(path.join(base,h.proof.readings.file))),h.proof.readings.sha256);
+ const st=cmd('read-b-old-status');assert.equal(st.governance.stage,'paused');assert.deepEqual(st.governance.authorization.allowed_actions,['discuss','plan']);assert.ok(st.revisions.sessions.every(x=>['committed','aborted'].includes(x.status)));assert.ok(st.revisions.transactions.every(x=>x.status==='completed'));
+ const build=read(path.join(base,'source-build-v2.json'));for(const f of build.files){const loc=f.group==='skills'?path.join(source,'.agents/skills',f.file):path.join(source,f.file);assert.equal(sha(fs.readFileSync(loc)),f.sha256);}
+ const pre=snapshot('before-update');
+ const human='继续通过 Codex 做百章规模的长篇实跑验证，重点覆盖新版工具下的多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。';
+ const local='研究/H轮read-b任务与代理范围.md';const text='# H轮read-b任务依据\n\n人类原话（PLAN.md第7行）：\n'+human+'\n\n本次人类阶段任务：技能入口修复后实际更新并整读23–54章；0.7.4升级到0.7.5，相同输入重试不推进revision/generation；只讨论/规划，不能写107。\n\n代理有限测试安排：只在H/work副本更新完整工具包，根作者规则保留；23–27重读、28–54新增覆盖；报告与交接不等于作者文学采纳；不自动确证声音/编辑/私人原因，不resume历史revision。原0.7.4阶段身份保留。\n';fs.writeFileSync(path.join(project,local),text,{flag:'wx'});
+ const plan=cmd('read-b-source-plan');assert.equal(plan.can_update,true);assert.deepEqual(plan.blockers,[]);const input={...plan.request,author_evidence:{quote:human,local_source:local,source_sha256:sha(Buffer.from(text)),locator:'H轮PLAN.md第5–19行及本次read-b request.raw.md；人类授权为工具验证；阶段阅读范围为代理测试安排，不是新文学选择。',recorded_by:'Codex read-b actual process; parent-organized verification'}};write('update-input.json',input);
+ write('prerequisite-verification.json',{ok:true,at:new Date().toISOString(),process:pr,parent_record:'read-a-recover/parent-verification-v1.json',reading_audit:pv.reading_proof,actual_current_state_sha256:pre.state_sha256,parent_audit_rows_current_hash_verified:27,source_full_file_hashes_verified:build.files.length,source_content_id:build.observed_content_id,unregistered:st.unregistered,old_help_error:'commands/read-b-old-help; help does not accept --project; corrected under read-b-old-help-corrected',all_old_readonly_state_unchanged:true});console.log(JSON.stringify({ok:true,revision:s.revision,units:s.units.length,source_files:build.files.length,state:pre.state_sha256}));
+}else if(action==='post'||action==='final'){
+ const post=snapshot(action==='post'?'after-update':'final-state'),pre=read(path.join(dir,'before-update/inventory.json')),s=read(path.join(project,'.writer/state.json')),build=read(path.join(base,'source-build-v2.json'));
+ assert.equal(s.schema_version,6);assert.equal(s.tool_control.generation,6);assert.equal(s.units.length,106);assert.equal(post.units_sha256,pre.units_sha256);assert.equal(post.snapshot_sha256,pre.snapshot_sha256);
+ const now=new Map(post.files.map(x=>[x.file,x.sha256]));for(const f of pre.root_author_files)assert.equal(now.get(f.file),f.sha256,f.file);
+ for(const f of build.files){const loc=f.group==='skills'?path.join(project,'.writer/tool/.agents/skills',f.file):path.join(project,'.writer/tool',f.file);assert.equal(sha(fs.readFileSync(loc)),f.sha256);}
+ write(action==='post'?'update-verification.json':'final-verification.json',{ok:true,...post,root_original_count:pre.root_author_files.length,root_original_all_preserved:true,drafts_unchanged:106,units_unchanged:true,snapshot_unchanged:true,source_resources_match:build.files.length,source_content_id:build.observed_content_id});console.log(JSON.stringify({ok:true,revision:s.revision,generation:s.tool_control.generation,registered:106,root_preserved:pre.root_author_files.length,source_resources:build.files.length,state:post.state_sha256}));
+}else throw Error('pre|post|final');

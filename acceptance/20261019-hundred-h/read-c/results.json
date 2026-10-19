@@ -1,0 +1,515 @@
+{
+  "phase": "read-c",
+  "local_work_complete": true,
+  "awaits_real_process_exit_and_parent_audit": true,
+  "prerequisite": {
+    "previous_exit_code": 0,
+    "parent_verified": true,
+    "record": "read-b/parent-verification-v1.json"
+  },
+  "recovery": {
+    "read_only_state_unchanged": true,
+    "before": {
+      "file": "read-c/restore-before-state.bin",
+      "sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160",
+      "bytes": 1177682
+    },
+    "after": {
+      "file": "read-c/restore-after-state.bin",
+      "sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160",
+      "bytes": 1177682
+    },
+    "tool_version": "0.7.5",
+    "generation": 6,
+    "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+    "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+    "update_repeated": false
+  },
+  "workflow": {
+    "revision_before": 413,
+    "revision_after": 414,
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "author_evidence": "work/研究/H轮read-c任务与代理范围.md"
+  },
+  "reading": {
+    "read_range": {
+      "from": 50,
+      "through": 81
+    },
+    "overlap_range": {
+      "from": 50,
+      "through": 54
+    },
+    "new_coverage": {
+      "from": 55,
+      "through": 81,
+      "chapters": 27
+    },
+    "helper_calls": 16,
+    "truncated_outputs": 0,
+    "total_lines": 2534,
+    "nonterminal_lines": 2502,
+    "total_bytes": 275008,
+    "readings": {
+      "file": "read-c/readings.json",
+      "sha256": "916a83ff97bdc26bd0a1ba953c185b204af2a4e6a463ad14961d4a6d74d26b97",
+      "bytes": 18624
+    },
+    "state_before": {
+      "file": "read-c/reading-before-state.bin",
+      "sha256": "ed9fb7df5c62d2023152386ab7178e65059a4a8a906be17b141fe8e226213b90",
+      "bytes": 1178273
+    },
+    "state_after": {
+      "file": "read-c/reading-after-state.bin",
+      "sha256": "ed9fb7df5c62d2023152386ab7178e65059a4a8a906be17b141fe8e226213b90",
+      "bytes": 1178273
+    },
+    "restore_before": {
+      "file": "read-c/restore-before-state.bin",
+      "sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160",
+      "bytes": 1177682
+    },
+    "restore_after": {
+      "file": "read-c/restore-after-state.bin",
+      "sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160",
+      "bytes": 1177682
+    },
+    "drafts": [
+      {
+        "unit": 50,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0050-六十块里的一早上.md",
+        "sha256": "32ba875789af5ae405fd38de3341c7b403058020a512acb5d7af2f2615bd784f",
+        "bytes": 8733,
+        "from_line": 1,
+        "to_line": 76,
+        "version": "read-versions/32ba875789af5ae405fd38de3341c7b403058020a512acb5d7af2f2615bd784f.md"
+      },
+      {
+        "unit": 51,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0051-给那一口气留地方.md",
+        "sha256": "7b5049108bcc44ccac29a64b92cbff6cd5d905817729f89367b37d391d985a7f",
+        "bytes": 8477,
+        "from_line": 1,
+        "to_line": 66,
+        "version": "read-versions/7b5049108bcc44ccac29a64b92cbff6cd5d905817729f89367b37d391d985a7f.md"
+      },
+      {
+        "unit": 52,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0052-棋盘不能占整张桌.md",
+        "sha256": "d8c7962c3d8bfdb245a2cb2c5a73d84b83ce784c92a9791c0975eeb9bbdf5b4a",
+        "bytes": 9033,
+        "from_line": 1,
+        "to_line": 76,
+        "version": "read-versions/d8c7962c3d8bfdb245a2cb2c5a73d84b83ce784c92a9791c0975eeb9bbdf5b4a.md"
+      },
+      {
+        "unit": 53,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0053-先把袖子放下来.md",
+        "sha256": "08edfa7281d9f639621e43e4cd4dd720e5e257980e6ff320aac894bad6753768",
+        "bytes": 8561,
+        "from_line": 1,
+        "to_line": 90,
+        "version": "read-versions/08edfa7281d9f639621e43e4cd4dd720e5e257980e6ff320aac894bad6753768.md"
+      },
+      {
+        "unit": 54,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0054-放得下菜袋的地方.md",
+        "sha256": "dc06448b4b3cd657758c3381e56a8bd2b90fe7ff921b40d4b6f9283baf1a061d",
+        "bytes": 8566,
+        "from_line": 1,
+        "to_line": 74,
+        "version": "read-versions/dc06448b4b3cd657758c3381e56a8bd2b90fe7ff921b40d4b6f9283baf1a061d.md"
+      },
+      {
+        "unit": 55,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0055-先把早饭吃完.md",
+        "sha256": "ca9b6307cf61a9455d6d90e73e66abbe1c2cf7598a1830033fd3cf12a077dad1",
+        "bytes": 8842,
+        "from_line": 1,
+        "to_line": 92,
+        "version": "read-versions/ca9b6307cf61a9455d6d90e73e66abbe1c2cf7598a1830033fd3cf12a077dad1.md"
+      },
+      {
+        "unit": 56,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0056-不再往后填.md",
+        "sha256": "d647e4c8f45ec8725e5039eb66c1c2ddf8871dbead9a311e36f627394d8640ea",
+        "bytes": 8552,
+        "from_line": 1,
+        "to_line": 84,
+        "version": "read-versions/d647e4c8f45ec8725e5039eb66c1c2ddf8871dbead9a311e36f627394d8640ea.md"
+      },
+      {
+        "unit": 57,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0057-两间房之间.md",
+        "sha256": "565d27ef9dac69b138528d5d91f97f8bb8c99cffa78f0b9e39a857424f63b3e1",
+        "bytes": 8571,
+        "from_line": 1,
+        "to_line": 94,
+        "version": "read-versions/565d27ef9dac69b138528d5d91f97f8bb8c99cffa78f0b9e39a857424f63b3e1.md"
+      },
+      {
+        "unit": 58,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0058-先试自己的线.md",
+        "sha256": "53f53d4ecb1a4a6ac1d7728fce1957614f1e07e58ccf3769607e0a58a902a521",
+        "bytes": 8462,
+        "from_line": 1,
+        "to_line": 78,
+        "version": "read-versions/53f53d4ecb1a4a6ac1d7728fce1957614f1e07e58ccf3769607e0a58a902a521.md"
+      },
+      {
+        "unit": 59,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0059-鱼放得下的盘子.md",
+        "sha256": "da933f7b33edfebfa33016e376563b8e5185b5c5db8577ce3054249b0bf9224d",
+        "bytes": 8553,
+        "from_line": 1,
+        "to_line": 82,
+        "version": "read-versions/da933f7b33edfebfa33016e376563b8e5185b5c5db8577ce3054249b0bf9224d.md"
+      },
+      {
+        "unit": 60,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0060-带走的那只袋子.md",
+        "sha256": "f6c9b3642d133ef88c91e1b514fa92f4c23a2cba363f45c95f2e95bc09da8a6c",
+        "bytes": 8450,
+        "from_line": 1,
+        "to_line": 72,
+        "version": "read-versions/f6c9b3642d133ef88c91e1b514fa92f4c23a2cba363f45c95f2e95bc09da8a6c.md"
+      },
+      {
+        "unit": 61,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0061-先在这里吃一顿.md",
+        "sha256": "2c2a59b004cea360244a25622b8f367917d5bde6bcf7e4415e0ed1d4e3fbe207",
+        "bytes": 8614,
+        "from_line": 1,
+        "to_line": 92,
+        "version": "read-versions/2c2a59b004cea360244a25622b8f367917d5bde6bcf7e4415e0ed1d4e3fbe207.md"
+      },
+      {
+        "unit": 62,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0062-等那张照片出来.md",
+        "sha256": "4e29f8de09be28371418f21d9f32295674b02b3c2728efdaccaeba2dee5a6e90",
+        "bytes": 8746,
+        "from_line": 1,
+        "to_line": 74,
+        "version": "read-versions/4e29f8de09be28371418f21d9f32295674b02b3c2728efdaccaeba2dee5a6e90.md"
+      },
+      {
+        "unit": 63,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0063-腾出来的那把椅子.md",
+        "sha256": "5d6d65c8d7e7cd2ed48cbec1d9f7fe72a97453e9f072a500350e6868a2f27801",
+        "bytes": 8531,
+        "from_line": 1,
+        "to_line": 72,
+        "version": "read-versions/5d6d65c8d7e7cd2ed48cbec1d9f7fe72a97453e9f072a500350e6868a2f27801.md"
+      },
+      {
+        "unit": 64,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0064-盒子回到谁手里.md",
+        "sha256": "93ae46be7f52d7846d6cfb2c42191d89de434408871b9d38a523c6cc600021be",
+        "bytes": 8323,
+        "from_line": 1,
+        "to_line": 66,
+        "version": "read-versions/93ae46be7f52d7846d6cfb2c42191d89de434408871b9d38a523c6cc600021be.md"
+      },
+      {
+        "unit": 65,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0065-两只都走一遍.md",
+        "sha256": "cb0f37b85d4e4160d276bc3833e44f46cf4dd89102edb035c51a33784771e3f3",
+        "bytes": 8572,
+        "from_line": 1,
+        "to_line": 74,
+        "version": "read-versions/cb0f37b85d4e4160d276bc3833e44f46cf4dd89102edb035c51a33784771e3f3.md"
+      },
+      {
+        "unit": 66,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0066-这把椅子先给人坐.md",
+        "sha256": "6838679c0afa7ddac4b95fd4a5bd0243b586ad3a3835cc11b8bdb7cbb1250f43",
+        "bytes": 8660,
+        "from_line": 1,
+        "to_line": 72,
+        "version": "read-versions/6838679c0afa7ddac4b95fd4a5bd0243b586ad3a3835cc11b8bdb7cbb1250f43.md"
+      },
+      {
+        "unit": 67,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0067-晚饭以前的两小时.md",
+        "sha256": "4445b91f02b2b505cbdbf933a328d490c93416575103ef14dd7b6124cd29ea53",
+        "bytes": 8533,
+        "from_line": 1,
+        "to_line": 86,
+        "version": "read-versions/4445b91f02b2b505cbdbf933a328d490c93416575103ef14dd7b6124cd29ea53.md"
+      },
+      {
+        "unit": 68,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0068-不用点开的菜单.md",
+        "sha256": "40922ca763847253ae9f7c3a92dcc8807a6af6b837bdd2bcbe01336819db2ca9",
+        "bytes": 8765,
+        "from_line": 1,
+        "to_line": 84,
+        "version": "read-versions/40922ca763847253ae9f7c3a92dcc8807a6af6b837bdd2bcbe01336819db2ca9.md"
+      },
+      {
+        "unit": 69,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0069-照片出来的那一刻.md",
+        "sha256": "eeabf2dc6472c861275f432e939a36f344fc6cc1c20721492a88abde5c76646e",
+        "bytes": 8339,
+        "from_line": 1,
+        "to_line": 72,
+        "version": "read-versions/eeabf2dc6472c861275f432e939a36f344fc6cc1c20721492a88abde5c76646e.md"
+      },
+      {
+        "unit": 70,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0070-这一顿有两个人做.md",
+        "sha256": "007df7f0684078e9759b72d2dbf7daaec4a55a5e7a2f1478e83e9f216879ef12",
+        "bytes": 8608,
+        "from_line": 1,
+        "to_line": 86,
+        "version": "read-versions/007df7f0684078e9759b72d2dbf7daaec4a55a5e7a2f1478e83e9f216879ef12.md"
+      },
+      {
+        "unit": 71,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0071-雨还没走到沟口.md",
+        "sha256": "3663dcb219a72ba50a6f322b55d1061600a1c3dab8ae3d72240e3b8f8dbb2038",
+        "bytes": 8526,
+        "from_line": 1,
+        "to_line": 70,
+        "version": "read-versions/3663dcb219a72ba50a6f322b55d1061600a1c3dab8ae3d72240e3b8f8dbb2038.md"
+      },
+      {
+        "unit": 72,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0072-把空出来的地方留着.md",
+        "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+        "bytes": 8535,
+        "from_line": 1,
+        "to_line": 76,
+        "version": "read-versions/8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185.md"
+      },
+      {
+        "unit": 73,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0073-先把车停下来.md",
+        "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+        "bytes": 8852,
+        "from_line": 1,
+        "to_line": 90,
+        "version": "read-versions/276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6.md"
+      },
+      {
+        "unit": 74,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0074-空着的晚上也算数.md",
+        "sha256": "2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3",
+        "bytes": 8431,
+        "from_line": 1,
+        "to_line": 86,
+        "version": "read-versions/2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3.md"
+      },
+      {
+        "unit": 75,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0075-车筐转过来以后.md",
+        "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+        "bytes": 8693,
+        "from_line": 1,
+        "to_line": 78,
+        "version": "read-versions/a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0.md"
+      },
+      {
+        "unit": 76,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0076-不必买那壶茶.md",
+        "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+        "bytes": 8453,
+        "from_line": 1,
+        "to_line": 84,
+        "version": "read-versions/b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c.md"
+      },
+      {
+        "unit": 77,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0077-这回不是等她来.md",
+        "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+        "bytes": 8419,
+        "from_line": 1,
+        "to_line": 74,
+        "version": "read-versions/45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498.md"
+      },
+      {
+        "unit": 78,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0078-下雨也出门.md",
+        "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+        "bytes": 8530,
+        "from_line": 1,
+        "to_line": 80,
+        "version": "read-versions/3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a.md"
+      },
+      {
+        "unit": 79,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0079-换了一个开车的人.md",
+        "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+        "bytes": 8786,
+        "from_line": 1,
+        "to_line": 82,
+        "version": "read-versions/dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125.md"
+      },
+      {
+        "unit": 80,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0080-十点半以后.md",
+        "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+        "bytes": 8819,
+        "from_line": 1,
+        "to_line": 84,
+        "version": "read-versions/da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee.md"
+      },
+      {
+        "unit": 81,
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0081-先把桌子放稳.md",
+        "sha256": "655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b",
+        "bytes": 8473,
+        "from_line": 1,
+        "to_line": 68,
+        "version": "read-versions/655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b.md"
+      }
+    ],
+    "basis": "Actual numbered session-io outputs; local completed-event matching passed. Parent exit/audit remains required; exposure does not prove understanding."
+  },
+  "protection": {
+    "units_unchanged": 106,
+    "snapshot_unchanged": true,
+    "source_versions_and_ranges_unchanged": true,
+    "original_files": 9850,
+    "existing_nonstate_files_byte_equal": 9849,
+    "reading_state_bytes_equal": true,
+    "no_manuscript_edit": true,
+    "no_new_outline_or_volume": true
+  },
+  "literary_review": {
+    "reviewer": "informed-model-this-process",
+    "confirmed_hard_issues": [],
+    "selected_revision_candidates": [],
+    "optional_candidates": [
+      {
+        "id": "C72",
+        "unit": 72,
+        "volume": "V10",
+        "type": "optional_style",
+        "severity": "suggestion",
+        "confidence": "medium",
+        "applied": false
+      },
+      {
+        "id": "C79",
+        "unit": 79,
+        "volume": "V11",
+        "type": "continuity/readability",
+        "severity": "suggestion",
+        "confidence": "high-for-ambiguity-only",
+        "applied": false
+      }
+    ],
+    "metadata_observations": [
+      {
+        "id": "M80",
+        "unit": 80,
+        "type": "filename-title-mismatch",
+        "confidence": "high",
+        "applied": false
+      }
+    ],
+    "counts_as_three_net_benefit_revisions": false,
+    "no_manuscript_changes": true,
+    "not_human_or_market_acceptance": true
+  },
+  "product_commands": {
+    "count": 14,
+    "successes": 12,
+    "failures_preserved": [
+      {
+        "label": "read-c-discussion-context",
+        "exit_code": 2,
+        "unchanged_state": true
+      },
+      {
+        "label": "read-c-help",
+        "exit_code": 2,
+        "unchanged_state": true
+      }
+    ],
+    "inventory": {
+      "file": "read-c/command-inventory.json",
+      "sha256": "e776cc50c03db9c9b0b95b7ac2b8897fa2cc762a3bbcd9890b0803675723ebea",
+      "bytes": 20670
+    }
+  },
+  "deliverables": {
+    "report": {
+      "file": "read-c/REPORT.md",
+      "sha256": "7988fa3bb0fd512205b2e51c853cca7a7dee74d1cae7dac55c85171161a64015",
+      "bytes": 20913
+    },
+    "notes": {
+      "file": "read-c/reading-notes.md",
+      "sha256": "55539aad467c90a70a62c9c03c86ca1b0c44b24eedc2ca58d4de04232d360551",
+      "bytes": 17297
+    },
+    "commands": {
+      "file": "read-c/command-inventory.json",
+      "sha256": "e776cc50c03db9c9b0b95b7ac2b8897fa2cc762a3bbcd9890b0803675723ebea",
+      "bytes": 20670
+    },
+    "command_text": {
+      "file": "read-c/COMMANDS.md",
+      "sha256": "2f5637bb8551eff2a35060a3206a73f3c7f75a731dd914985525119d4d10463e",
+      "bytes": 5118
+    },
+    "file_identity": {
+      "file": "read-c/final-verification.json",
+      "sha256": "79d8d991429647ab881b8e43109ca3c59e0dbc2765f86bdd7b234c6d62d1b533",
+      "bytes": 1834
+    },
+    "support": {
+      "file": "read-c/support-verification.json",
+      "sha256": "f3debf56463305a398231d9f5893c617c034fa62eff18a611853e8446573ae75",
+      "bytes": 5235
+    },
+    "reading": {
+      "file": "read-c/local-event-exposure-proof.json",
+      "sha256": "e9eb0bac8d0761874e760b520cc476fa9765f1e542cd7f319dabaee38cef5ec0",
+      "bytes": 21668
+    },
+    "resource_routing": {
+      "file": "read-c/resource-routing-proof.json",
+      "sha256": "16dd0e65875314ccd3c41887c81c2322cd8a2ee8ea1349ae55f4dedffffc93ea",
+      "bytes": 10206
+    },
+    "handoff": {
+      "file": "read-c/handoff.json",
+      "sha256": "3a15574f4a9ac32ea6d5995d4a75adc1bc0be5f5899637be56c6bb7f70b574f8",
+      "bytes": 21470
+    },
+    "handoff_text": {
+      "file": "read-c/handoff.md",
+      "sha256": "9f60ef9f45c3c3ffb021fa93e70f60eb456dc5536f221ea08c950e2dc28e3d2f",
+      "bytes": 4310
+    }
+  },
+  "next_phase": {
+    "name": "read-d",
+    "read_range": {
+      "from": 77,
+      "through": 106
+    },
+    "overlap": {
+      "from": 77,
+      "through": 81
+    },
+    "new_coverage": {
+      "from": 82,
+      "through": 106,
+      "chapters": 25
+    },
+    "not_started_by_this_process": true
+  },
+  "limits": [
+    "No complete reading beyond81; recent summaries are not manuscript reading",
+    "No parent verification claim for current process",
+    "No human blind-read, market or release acceptance claim"
+  ]
+}

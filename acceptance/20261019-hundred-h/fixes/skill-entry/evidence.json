@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-19T00:15:15.053Z",
+  "actual_model_reads": [
+    {
+      "event_id": "item_11",
+      "file": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.agents/skills/writer-project/SKILL.md"
+    },
+    {
+      "event_id": "item_13",
+      "file": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.agents/skills/writer-review/SKILL.md"
+    },
+    {
+      "event_id": "item_14",
+      "file": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.agents/skills/writer-review/references/general-review.md"
+    },
+    {
+      "event_id": "item_15",
+      "file": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.agents/skills/writer-review/references/natural-language-authenticity.md"
+    }
+  ],
+  "root_preserved_skill": {
+    "file": "acceptance/20261019-hundred-h/work/.agents/skills/writer-project/SKILL.md",
+    "bytes": 5792,
+    "sha256": "4f26723225d0d03ac46bd0dcb6bd7fcdf38e2f6508b6e4b00b139337b7121bd6"
+  },
+  "current_tool_reference": {
+    "file": "acceptance/20261019-hundred-h/sources/package-v2/.agents/skills/writer-project/SKILL.md",
+    "bytes": 8487,
+    "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+  },
+  "versions": {
+    "before": {
+      "version": "0.7.4",
+      "content_id": "828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f",
+      "runtime_id": "2caacf37df3842559663ef2ea380baaa33b85cd6bf29637e5ae45fe8e4cd1628"
+    },
+    "candidate": {
+      "version": "0.7.5",
+      "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+      "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed"
+    }
+  },
+  "reproduction": "commands/skill-paths-before",
+  "corrected_targeted_test": "commands/skill-paths-after-v2",
+  "auxiliary_failures": [
+    "commands/skill-paths-after: test parsed plain-text help as JSON",
+    "commands/freeze-v2: parent freeze script expected tool_version undefined"
+  ],
+  "scope": "Observed root-skill reads plus new CLI resource routing; root preservation is intended, automatic author override is not introduced."
+}

@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-19T00:17:05.870Z",
+  "actor": "parent executor",
+  "activity": "User-authorized root tool fix while native recovery executes its frozen 0.7.4 installed package",
+  "reason": "Actual recovery used preserved old root skills; add current-package skill path guidance and preserve author roots",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "7e0d09c79fa0f5122c44a870342ad95e66da6dd71a133be7070dbebfa02aeba5"
+    },
+    {
+      "file": "docs/authoring-governance-status.md",
+      "sha256": "a096e2dd0eb297fa26f502aeebdffa16557a9a6e0378f0577753ba0abdc94742"
+    },
+    {
+      "file": "docs/quickstart.md",
+      "sha256": "c2f7b23a551efb84a7061eb4503c6365677dd9e2cac8882e785ea393a3e5b769"
+    },
+    {
+      "file": "docs/tool-updates.md",
+      "sha256": "29e9e299979c7006c2a629779268fb5571abe335773cebb7abdb2a1fa9fd1b1b"
+    },
+    {
+      "file": "docs/user-guide.md",
+      "sha256": "827e55f866f567211bfcb9323390a45c7df812c6deffdc6425ff1de3a422b32e"
+    },
+    {
+      "file": "docs/verification.md",
+      "sha256": "0e1c6308399b9d30942367fbad1f4664581b84f7d1d057d5099e54b1d62f7e9b"
+    },
+    {
+      "file": "lib/help.mjs",
+      "sha256": "054b6aab3b2b0aab0c3a82901b3cae1a03980a2e92fc3cbae53af679c5d5eca5"
+    },
+    {
+      "file": "lib/workspace.mjs",
+      "sha256": "d12aed1ad7baa42fee8a1fad50ec78c5ca066159cdbe945b91ef6af1818509bb"
+    },
+    {
+      "file": "package.json",
+      "sha256": "6b30ab4e33315971dc5727cb77f97cab679b3a0534c875fbf672bd7589876d31"
+    },
+    {
+      "file": "tests/skill-resource-guidance.test.mjs",
+      "sha256": "81635af83bf54cbf3224b2360d860bf4fa3896e7808bc820e83b6935256de3fe"
+    }
+  ],
+  "source_content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+  "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+  "package": "sources/package-v2",
+  "native_recovery_project_package": "0.7.4 remains unchanged until its phase ends",
+  "scope": "Native recovery correctly records repository drift as unknown to that process. Parent apply_patch actions and versioned source/test records provide attribution; do not rewrite its historical report."
+}

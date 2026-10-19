@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import crypto from 'node:crypto';
+const h=path.resolve('acceptance/20261019-hundred-h'),p=path.join(h,'draft-a-recover'),work=path.join(h,'work'),read=f=>JSON.parse(fs.readFileSync(f));
+const template=read(path.join(h,'commands/draft-a-recover-template-108/stdout.raw.txt')),ctx=read(path.join(h,'commands/draft-a-recover-context-108/stdout.raw.txt')),content=read(path.join(p,'record-108-content.json')),state=read(path.join(work,'.writer/state.json'));
+assert.deepEqual(template.source_hashes,ctx.source_hashes);assert.equal(template.expected_revision,state.revision);assert.equal(template.unit,108);
+const bytes=fs.readFileSync(path.join(work,template.draft)),draft=bytes.toString('utf8'),sha256=crypto.createHash('sha256').update(bytes).digest('hex');assert.equal(sha256,'54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12');
+for(const v of Object.values(content.ledger))for(const e of v.evidence)assert.ok(draft.includes(e.quote),'bad quote '+e.quote);
+const characters=Object.fromEntries(Object.entries(content.characters).map(([k,v])=>[k,v+'；此前有效状态（按原章时点保留）：'+state.snapshot.characters[k]]));
+template.summary=content.summary;template.changes={characters,timeline_append:content.timeline_append,ledger:content.ledger};
+fs.writeFileSync(path.join(p,'record-108.json'),JSON.stringify(template,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({body_han:(draft.replace(/^#.*\r?\n/,'').match(/\p{Script=Han}/gu)??[]).length,sha256,template},null,2));

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {packageFiles} from '../../lib/tool-build.mjs';
+const base=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(base,'../..');
+const j=ref=>JSON.parse(fs.readFileSync(path.join(base,ref)));
+const expected=j('source-build-v4.json'),main=packageFiles(root),frozen=packageFiles(path.join(base,'sources/package-v4'));
+assert.equal(main.observed_content_id,expected.observed_content_id);assert.equal(frozen.observed_content_id,expected.observed_content_id);assert.equal(main.runtime_id,expected.runtime_id);
+const checks=['v4-guide-links','v4-doctor','v4-tests'].map(label=>{const result=j('commands/'+label+'/result.json');assert.equal(result.exit_code,0,label);return {label,exit_code:result.exit_code,elapsed_ms:result.elapsed_ms};});
+const stdout=fs.readFileSync(path.join(base,'commands/v4-tests/stdout.raw.txt'),'utf8');
+const metric=name=>{const match=stdout.match(new RegExp('^ℹ '+name+' (\\d+)','m'));assert.ok(match,name);return Number(match[1]);};
+assert.equal(metric('tests'),156);assert.equal(metric('pass'),155);assert.equal(metric('fail'),0);assert.equal(metric('skipped'),1);
+const result={ok:true,at:new Date().toISOString(),source_build:'source-build-v4.json',version:expected.tool_version,content_id:expected.observed_content_id,runtime_id:expected.runtime_id,resources:expected.files.length,main_and_frozen_resources_equal_after_tests:true,checks,tests:{total:156,passed:155,failed:0,skipped:1,skip_reason:'Current Windows environment cannot create a file symlink; the symlink-input rejection case did not execute.'},installed:false,scope:'Program tests and doctor ran against main source whose managed resources match frozen v4 exactly. Frozen lightweight source omits test infrastructure. This does not attest loaded module bytes, complete the long-form campaign, validate prose, or authorize installation during active revisions.'};
+fs.writeFileSync(path.join(base,'source-v4-program-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,content_id:result.content_id,tests:result.tests,resources:result.resources}));

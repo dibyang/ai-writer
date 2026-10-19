@@ -1,0 +1,365 @@
+{
+  "ok": true,
+  "title": "潮汐信号",
+  "kind": "novel",
+  "revision": 412,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "H轮 read-a-update：现在只恢复、阅读原正文1–27章和规划，不写107。按冻结0.7.4验证副本；父执行者代理安排不冒充作者文学选择。下一阶段新进程读23–54。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持106章；107与任何新章均未授权，不创建正文或新细纲。",
+        "只写H轮目录；旧revision只读且不resume/transfer、不改绑定。",
+        "不改已消费来源/ledger/人物事实；旧24章和只写1–4字样保留为历史。",
+        "不联网、不子代理、不提交推送发布；本次只声称1–27实读。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 107,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "1243c96a-85ea-4f88-8a56-1697e962b2fc",
+        "owner": "actual-Codex-draft-e-authorized-local-language-fix",
+        "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+        "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+        "scope": {
+          "from": 102,
+          "through": 103
+        },
+        "status": "committed",
+        "base_sha256": "6e936a6c662ad4ed2acbe1c61f29d8fc4a30d99152ce81fb77f88a8fc99b8979",
+        "created_at": "2026-10-18T12:11:31.275Z",
+        "transaction_id": "37e2507e-5011-4d82-aed5-e0055af488ad",
+        "session_sha256": "634f7638f27bf786686335663e35753fa14487bc7684a00a150e367570cb7753"
+      },
+      {
+        "id": "16d38509-69a6-42ef-8766-7a8f88a2ca0d",
+        "owner": "actual-Codex-F-revise-a-20261018-unique-48-106",
+        "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+        "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+        "scope": {
+          "from": 48,
+          "through": 106
+        },
+        "status": "committed",
+        "base_sha256": "f33e849ffc48b52509ce7e65f2636e44d6537edf6da56db62fbe6c0bef6bdee7",
+        "created_at": "2026-10-18T12:57:32.366Z",
+        "transaction_id": "915b8b83-4a9c-4aad-afa9-422d838773b6",
+        "session_sha256": "d3cf1473ee17098f3634183dec81d578d3b12cc7a18b54e6d082bc0f81ae43bf"
+      },
+      {
+        "id": "7fc0be19-6e2f-4822-a3b5-8eafb88c8429",
+        "owner": "actual-Codex-repair-upgrade no-text-change diagnostic",
+        "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+        "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+        "scope": {
+          "from": 100,
+          "through": 100
+        },
+        "status": "aborted",
+        "base_sha256": "534d85a874dbca94ab3ff1e30bc5c44175f770e6530dd65dd058130c43983784",
+        "created_at": "2026-10-18T11:46:04.071Z",
+        "reason": "F轮0.7.2独立修订区doctor和令牌恢复诊断完成；未修改任何正文，未rewind、未record。本候选仅诊断，明确abort并保留全部分支/备份，不作正式提交。",
+        "session_sha256": "0ad53be33a3da23e6e687547eb50cb6ab5553e20856812a436250d5367873307"
+      },
+      {
+        "id": "b3c54255-7c04-4285-9407-e1e2a775c638",
+        "owner": "actual-Codex-upgrade-final-no-text-106-only",
+        "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+        "build_id": "b59ca1e5696d037721bd4278acbca78a5af77335dd227345fac0c0f62fb92e20",
+        "scope": {
+          "from": 106,
+          "through": 106
+        },
+        "status": "aborted",
+        "base_sha256": "a85c14c22e7b24bdb0a53db2420ec631d180483de7516fbfa301c89eb73f82fd",
+        "created_at": "2026-10-18T15:08:18.376Z",
+        "reason": "最终0.7.3无正文变化106接口演练完成。已实读/rewind/replay六项长报告/preview/record，原D附录精确保存；错误令牌拒绝/正确令牌恢复同分支同base。仅诊断候选，明确abort保留全部材料，不prepare或commit、不标意见applied。",
+        "session_sha256": "8b1fb6131c324b62b8102a0b77d2b08ddbae39ec8130b8b693c8ce6a7972defa"
+      },
+      {
+        "id": "d7698919-3375-4b8c-9155-a040c1057e36",
+        "owner": "actual-Codex-draft-f-local-confirmed-fixes",
+        "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+        "build_id": "14639e86b1dce2ed6033f3a3c661517ebb4223ed1ec5db8b9e644ee62f9f02bf",
+        "scope": {
+          "from": 104,
+          "through": 106
+        },
+        "status": "committed",
+        "base_sha256": "e1850acba53993faa0696a2d79968fd5e534aab17f6b2cb91ace19f37c054f60",
+        "created_at": "2026-10-18T12:44:25.709Z",
+        "transaction_id": "2730926b-4eaf-4bea-9716-194ad2b847c5",
+        "session_sha256": "b68309027f4ef258b5a7852ba70f11b5c4fac0c2743f031558ac8818a179fd2c"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "2730926b-4eaf-4bea-9716-194ad2b847c5",
+        "session_id": "d7698919-3375-4b8c-9155-a040c1057e36",
+        "status": "completed"
+      },
+      {
+        "id": "2c7a6023-5247-41dc-acaf-6317fb70e884",
+        "status": "completed"
+      },
+      {
+        "id": "37e2507e-5011-4d82-aed5-e0055af488ad",
+        "session_id": "1243c96a-85ea-4f88-8a56-1697e962b2fc",
+        "status": "completed"
+      },
+      {
+        "id": "5c3cbcf6-560c-4460-942c-376d2b999c44",
+        "status": "completed"
+      },
+      {
+        "id": "6a50e403-4bcc-4007-a40f-b9e303783fbc",
+        "status": "completed"
+      },
+      {
+        "id": "82326b4d-13f3-4377-bc2d-5f168d01c165",
+        "status": "completed"
+      },
+      {
+        "id": "915b8b83-4a9c-4aad-afa9-422d838773b6",
+        "session_id": "16d38509-69a6-42ef-8766-7a8f88a2ca0d",
+        "status": "completed"
+      },
+      {
+        "id": "d1c1d73c-9df7-4271-8101-85da87686cc0",
+        "status": "completed"
+      },
+      {
+        "id": "f05e0cda-7280-403b-a622-ebabb67d6351",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 412,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 6,
+    "installed": {
+      "version": "0.7.5",
+      "source_content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+      "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/825322c6-f169-4540-9e46-1912267366eb.json",
+        "sha256": "ea00dd1baec6aef838e98a79b861fc75d6c3edc15ceccc9eac84e1d46afe19e7"
+      },
+      {
+        "ref": ".writer/objects/82326b4d-13f3-4377-bc2d-5f168d01c165.json",
+        "sha256": "610ddbe5396610fe4bfeda52b7523268b21d55d93af388fd510ef80efec9b1ee"
+      },
+      {
+        "ref": ".writer/objects/d1c1d73c-9df7-4271-8101-85da87686cc0.json",
+        "sha256": "8a1e10996a48d326314da4743941ae3a165a453563d7c4bfa12617514700390f"
+      },
+      {
+        "ref": ".writer/objects/2c7a6023-5247-41dc-acaf-6317fb70e884.json",
+        "sha256": "3e2e7272d9c75bac6f3ed295640a767d166a532e35c6d47a0a939c149fcf6adf"
+      },
+      {
+        "ref": ".writer/objects/6a50e403-4bcc-4007-a40f-b9e303783fbc.json",
+        "sha256": "f5f3b8e111e280efb34e83b54d79a122b9e332ffbe449b9f05bbc2e75c117e1b"
+      },
+      {
+        "ref": ".writer/objects/f05e0cda-7280-403b-a622-ebabb67d6351.json",
+        "sha256": "2de72a690863a2ccc5beae836d63d8b1a740cd022c5760fdd541fadee2e9e0ae"
+      },
+      {
+        "ref": ".writer/objects/5c3cbcf6-560c-4460-942c-376d2b999c44.json",
+        "sha256": "f76488ae42d1d09f543bc7d18298678eb359dec7dfcfcc3fc02438dee61564d9"
+      }
+    ],
+    "operations": {
+      "native-d-hundred-enable-schema6-v1": {
+        "input_hash": "0691c0cc4119814b243b41313f8827c2d030c42a2960f3b097fb440deaa9b23b",
+        "result": {
+          "ok": true,
+          "schema_version": 6,
+          "revision": 376,
+          "generation": 0,
+          "enable_id": "825322c6-f169-4540-9e46-1912267366eb",
+          "backup": ".writer/tool-enables/825322c6-f169-4540-9e46-1912267366eb/before-state.bin",
+          "tool_unchanged": true
+        }
+      },
+      "a70c9b3b-88fe-412e-8ebd-1d57577406e4": {
+        "input_hash": "c97ee68f92e10bfe50a6b4e2fc2eab7b79cb8bc55d29a0e60a6f40fdade1424c",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "82326b4d-13f3-4377-bc2d-5f168d01c165",
+          "revision": 377,
+          "generation": 1,
+          "source_content_id": "8a9e937e5942887d25339fe5189a8f96374df389215721d82f0a6aac9e974167",
+          "backups_preserved": true
+        }
+      },
+      "b64e23f9-9308-4e8a-a480-81ceb2a995e6": {
+        "input_hash": "b5635d8fe55ebca6d3f4c2d240b31aad725f5c84f9924d782dbfd8a456d744f6",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "d1c1d73c-9df7-4271-8101-85da87686cc0",
+          "revision": 379,
+          "generation": 2,
+          "source_content_id": "da84d3333ead0d33189feefa3f693fdf7e3324ad9e7f4ef9376b1f24bf4b7f5b",
+          "backups_preserved": true
+        }
+      },
+      "a3a9ebdc-b137-44d4-8962-b0f504c06d19": {
+        "input_hash": "f1e5c5d7adc3e3ffb68bd915cd8d5b0c47e49c17dd8fd0ee66725ad542b14e06",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "2c7a6023-5247-41dc-acaf-6317fb70e884",
+          "revision": 380,
+          "generation": 3,
+          "source_content_id": "8f406f43e2e1bb3ee1a865fa77b947fecf39c8bed4d29c1fb3e20c8f07f71cc8",
+          "backups_preserved": true
+        }
+      },
+      "4465a919-d64d-4ca1-ad2e-1bb67f140a96": {
+        "input_hash": "aa3d6870d741b1934243bdaf0f10523f9c81d58b4575c3d8da24d57110599af4",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "6a50e403-4bcc-4007-a40f-b9e303783fbc",
+          "revision": 406,
+          "generation": 4,
+          "source_content_id": "35b08ad04d03b52b7ea496db49864bb7ed93c4826000004e12b5b6fca3634cca",
+          "backups_preserved": true
+        }
+      },
+      "41cc19bf-1d09-465d-99af-a864510b338f": {
+        "input_hash": "63440f92e22eb65f1743b65a7495988b2a7381bf7f0e381ca7c3ddba2fc19031",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "f05e0cda-7280-403b-a622-ebabb67d6351",
+          "revision": 410,
+          "generation": 5,
+          "source_content_id": "828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f",
+          "backups_preserved": true
+        }
+      },
+      "6a105671-c17e-49f3-8f8d-cb4605dcc3b3": {
+        "input_hash": "b12396e9f84281719dc9bcb64c77632c8a90cddf802527104855df453816247c",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "5c3cbcf6-560c-4460-942c-376d2b999c44",
+          "revision": 412,
+          "generation": 6,
+          "source_content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": "825322c6-f169-4540-9e46-1912267366eb"
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 106,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 107,
+    "plan_exists": false,
+    "action": "H轮 read-a-update：现在只恢复、阅读原正文1–27章和规划，不写107。按冻结0.7.4验证副本；父执行者代理安排不冒充作者文学选择。下一阶段新进程读23–54。",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 34,
+    "ledger_count": 154,
+    "recent": [
+      {
+        "unit": 104,
+        "summary": "64日晚周实际电话听沈说未接追加后的不甘，双方约65日18:30周家吃饭沈带清炒菜；65日9:35后葛铺原椅堆盒/后架整理冲突，老人不等先往药铺方向。葛亲自拒临加一份、交原两份，承担失当次加份/整理重放成本；沈有限按纸但拒每天顺路清位。葛收出当日椅，另一面客坐，老人未回；陶11实离。沈实买洗涤液/咸糕离，长期服务不续。"
+      },
+      {
+        "unit": 105,
+        "summary": "65日午后沈新纸先借老人/葛当日场面证明自己终于学会，实际长线划掉，另写本人63日看球想被谢/64日未接720仍盼挽留；草稿漏水联想被本人否定不带入新页，不改旧95半面。实付6元买油麦菜，打印铺遇何独立改菜单/与客户核双份实为合装，沈只读眼前十八，不给何看新稿。何新样发图仅获正在看、本人付打印费并自持新旧样离，未全单通过/获款。沈重抄自读，原草稿与新页前后入独立窄夹、小包干层，愿带今晚未获周答看。"
+      },
+      {
+        "unit": 106,
+        "summary": "65日18:28沈按约到周家，带6元已洗油麦菜与独立窄夹；共同做完吃饭，周只口述当日数箱失误，未转史证。新页推至桌中央仍沈手中，周说今日不想看字想听她说，未接未读；沈实际拉回入原窄夹包，坦承失望/想被谢，周怕一拒看饭约也结束。双方谈眼下需要，饭后碗留桌不立刻洗，选择同坐牵手至20:10，20:18沈自带纸离，20:37家消息到。窄夹归干处与95半面分开；记实花6元/其余实付，不重复计昨天480，次晨9—11自理工作说明无客户/定金，106停止。"
+      }
+    ],
+    "timeline_tail": [
+      "第63日18:27—20:24后：实际看球、输局后不顺与谈话、19:28到点交场、各付晚饭并各归。",
+      "第64日8:22—午饭后：收到并完成当前12分新改版意见480，另报720追加未接、梁转别人；10:51后尾240实际到账。",
+      "第64日晚：沈周实际短电聊未接追加，约65日18:30周家吃饭沈带菜。",
+      "第65日9:35—11点后：葛铺原椅/后架与接单相撞，老人先往药铺；葛不接临加份并自整理，沈不接每天清位，椅后供另一面客；陶11实离。",
+      "第65日午后—17点后：沈划掉新稿借人开头并重写/自读新本人页；6元买油麦菜，打印铺见何独立做菜单样；新页与原稿独立窄夹准备自带赴晚约，尚未给周。",
+      "第65日18:28—20:37后：沈按约周家饭，新页只推桌中央未交手；周不想当场读，沈收回仍愿留坐，双方牵手后20:18各归、20:37沈家消息到。新窄夹归干处；账仅实际花用，次晨自理说明不作新单。"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "ok": false,
+  "error": "本轮任务“H轮 read-b：真实0.7.4→0.7.5更新后，只恢复、完整阅读原正文23–54章并讨论/规划；23–27是重读，28–54为本进程新增覆盖。下一真实进程读50–81。代理测试范围不代表作者新增文学采纳。”不允许 draft 107–107；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "H轮 read-b：真实0.7.4→0.7.5更新后，只恢复、完整阅读原正文23–54章并讨论/规划；23–27是重读，28–54为本进程新增覆盖。下一真实进程读50–81。代理测试范围不代表作者新增文学采纳。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持106章；107与任何新章未授权，不创建正文、细纲或新卷契约。",
+        "旧revision仅只读，不resume/transfer或刷新构建绑定。",
+        "正文/units/snapshot与已消费来源保留；临时阅读范围不写入长期设定。",
+        "只写H目录；不联网、不子代理、不提交推送发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

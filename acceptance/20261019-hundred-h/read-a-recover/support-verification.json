@@ -1,0 +1,345 @@
+{
+  "at": "2026-10-19T00:14:43.832Z",
+  "ok": true,
+  "source_manifest": [
+    {
+      "file": "work/AGENTS.md",
+      "sha256": "491ec208476f0d789afc73dccab9000bc0800b28223f1713c995a597dfe6d139",
+      "bytes": 534
+    },
+    {
+      "file": "work/writer.json",
+      "sha256": "e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3",
+      "bytes": 95
+    },
+    {
+      "file": "work/设定/作品定位.md",
+      "sha256": "1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94",
+      "bytes": 968
+    },
+    {
+      "file": "work/设定/文风.md",
+      "sha256": "2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c",
+      "bytes": 795
+    },
+    {
+      "file": "work/设定/权威规则.md",
+      "sha256": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+      "bytes": 2631
+    },
+    {
+      "file": "work/设定/角色卡.md",
+      "sha256": "944495ced492696613e970d574e1ea07dd636cb38c56170a2bf9d80f7041e21e",
+      "bytes": 1646
+    },
+    {
+      "file": "work/大纲/全书大纲.md",
+      "sha256": "0f936435e2b4946d4abe9607d53c9e903c097623490ae248ad228cbaa67d8ef9",
+      "bytes": 1387
+    },
+    {
+      "file": "work/大纲/续部总纲.md",
+      "sha256": "27f2ddcc74d5b46a1ecdf5e99e9f22f94b8d954f7dd8ed3b9c8a92d79c6ee440",
+      "bytes": 5912
+    },
+    {
+      "file": "work/.agents/skills/writer-project/SKILL.md",
+      "sha256": "4f26723225d0d03ac46bd0dcb6bd7fcdf38e2f6508b6e4b00b139337b7121bd6",
+      "bytes": 5792
+    },
+    {
+      "file": "work/.agents/skills/writer-review/SKILL.md",
+      "sha256": "9c080711515a4a01f9debdfd8eef166596377d065ff5016e77f20d171ef9369a",
+      "bytes": 4359
+    },
+    {
+      "file": "work/.agents/skills/writer-review/references/general-review.md",
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23",
+      "bytes": 8251
+    },
+    {
+      "file": "work/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df",
+      "bytes": 6546
+    },
+    {
+      "file": "work/.writer/tool/.agents/skills/writer-project/SKILL.md",
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879",
+      "bytes": 8487
+    },
+    {
+      "file": "work/.writer/tool/.agents/skills/writer-review/SKILL.md",
+      "sha256": "77e69491130f6c5983d8ff9504d7596477ded17132bc51deeb0a39b3f6cb5621",
+      "bytes": 5275
+    },
+    {
+      "file": "work/.writer/tool/docs/review-and-registration.md",
+      "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126",
+      "bytes": 7257
+    }
+  ],
+  "original_update_owner": "read-a-update",
+  "recovery_update_executions": 0,
+  "original_input": {
+    "execute": {
+      "file": "commands/ra-update-execute/input.raw.json",
+      "sha256": "be446391f0620c81eca71d20171bb35056a77a1884ff91ae8b90068ca747d032",
+      "bytes": 1192
+    },
+    "retry": {
+      "file": "commands/ra-update-retry/input.raw.json",
+      "sha256": "be446391f0620c81eca71d20171bb35056a77a1884ff91ae8b90068ca747d032",
+      "bytes": 1192
+    },
+    "byte_equal": true,
+    "operation_id": "41cc19bf-1d09-465d-99af-a864510b338f"
+  },
+  "original_captures": {
+    "execute": {
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/sources/package-v1/bin/ai-writer.mjs",
+        "tool",
+        "update",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work",
+        "--input",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/read-a-update/update-input.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T23:55:12.984Z",
+      "elapsed_ms": 18308,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\read-a-update\\update-input.json",
+        "sha256": "be446391f0620c81eca71d20171bb35056a77a1884ff91ae8b90068ca747d032"
+      },
+      "before_state_sha256": "4a4ef3a5d356172b5f2a7cb5241d3b2d5fa39dc95edc9d661039debdf056509f",
+      "after_state_sha256": "562ba38a174a1642e8e1ca4509a0153965c6b0d60219ab49a9f9293503322ae3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\sources\\package-v1",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\sources\\package-v1",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    "retry": {
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/sources/package-v1/bin/ai-writer.mjs",
+        "tool",
+        "update",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work",
+        "--input",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/read-a-update/update-input.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T23:55:38.704Z",
+      "elapsed_ms": 725,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\read-a-update\\update-input.json",
+        "sha256": "be446391f0620c81eca71d20171bb35056a77a1884ff91ae8b90068ca747d032"
+      },
+      "before_state_sha256": "562ba38a174a1642e8e1ca4509a0153965c6b0d60219ab49a9f9293503322ae3",
+      "after_state_sha256": "562ba38a174a1642e8e1ca4509a0153965c6b0d60219ab49a9f9293503322ae3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\sources\\package-v1",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\sources\\package-v1",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    },
+    "workflow": {
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "set",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work",
+        "--input",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/read-a-update/workflow-input.json"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-18T23:56:12.427Z",
+      "elapsed_ms": 311,
+      "exit_code": 0,
+      "signal": null,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\read-a-update\\workflow-input.json",
+        "sha256": "c09a3a4b33813392f9b85e45afdb768f0501cd31810d2dd8137ad40ca02f2c91"
+      },
+      "before_state_sha256": "562ba38a174a1642e8e1ca4509a0153965c6b0d60219ab49a9f9293503322ae3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true
+    }
+  },
+  "original_retry_state_unchanged": true,
+  "interrupted_reading_proof": {
+    "file": "reading-audit/read-a-interrupted-1-27.json",
+    "sha256": "bd2341b9697847a7df1a653f2ff06c4da68099bcb1c85a1a5cebddf776c7a471",
+    "bytes": 17889,
+    "ok": true,
+    "owner": "read-a-update",
+    "not_current_phase_reading": true
+  },
+  "compare": {
+    "ok": true,
+    "same_version": true,
+    "same_content": true,
+    "differences": []
+  },
+  "identify": {
+    "ok": true,
+    "tool_version": "0.7.4",
+    "content_id": "828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f"
+  },
+  "doctor": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "revisions": {
+    "count": 5,
+    "statuses": [
+      {
+        "id": "1243c96a-85ea-4f88-8a56-1697e962b2fc",
+        "status": "committed"
+      },
+      {
+        "id": "16d38509-69a6-42ef-8766-7a8f88a2ca0d",
+        "status": "committed"
+      },
+      {
+        "id": "7fc0be19-6e2f-4822-a3b5-8eafb88c8429",
+        "status": "aborted"
+      },
+      {
+        "id": "b3c54255-7c04-4285-9407-e1e2a775c638",
+        "status": "aborted"
+      },
+      {
+        "id": "d7698919-3375-4b8c-9155-a040c1057e36",
+        "status": "committed"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "2730926b-4eaf-4bea-9716-194ad2b847c5",
+        "session_id": "d7698919-3375-4b8c-9155-a040c1057e36",
+        "status": "completed"
+      },
+      {
+        "id": "2c7a6023-5247-41dc-acaf-6317fb70e884",
+        "status": "completed"
+      },
+      {
+        "id": "37e2507e-5011-4d82-aed5-e0055af488ad",
+        "session_id": "1243c96a-85ea-4f88-8a56-1697e962b2fc",
+        "status": "completed"
+      },
+      {
+        "id": "6a50e403-4bcc-4007-a40f-b9e303783fbc",
+        "status": "completed"
+      },
+      {
+        "id": "82326b4d-13f3-4377-bc2d-5f168d01c165",
+        "status": "completed"
+      },
+      {
+        "id": "915b8b83-4a9c-4aad-afa9-422d838773b6",
+        "session_id": "16d38509-69a6-42ef-8766-7a8f88a2ca0d",
+        "status": "completed"
+      },
+      {
+        "id": "d1c1d73c-9df7-4271-8101-85da87686cc0",
+        "status": "completed"
+      },
+      {
+        "id": "f05e0cda-7280-403b-a622-ebabb67d6351",
+        "status": "completed"
+      }
+    ]
+  },
+  "updates": {
+    "ok": true,
+    "transactions": [
+      {
+        "id": "2c7a6023-5247-41dc-acaf-6317fb70e884",
+        "status": "completed",
+        "operation_id": "a3a9ebdc-b137-44d4-8962-b0f504c06d19",
+        "conflicts": []
+      },
+      {
+        "id": "6a50e403-4bcc-4007-a40f-b9e303783fbc",
+        "status": "completed",
+        "operation_id": "4465a919-d64d-4ca1-ad2e-1bb67f140a96",
+        "conflicts": []
+      },
+      {
+        "id": "82326b4d-13f3-4377-bc2d-5f168d01c165",
+        "status": "completed",
+        "operation_id": "a70c9b3b-88fe-412e-8ebd-1d57577406e4",
+        "conflicts": []
+      },
+      {
+        "id": "d1c1d73c-9df7-4271-8101-85da87686cc0",
+        "status": "completed",
+        "operation_id": "b64e23f9-9308-4e8a-a480-81ceb2a995e6",
+        "conflicts": []
+      },
+      {
+        "id": "f05e0cda-7280-403b-a622-ebabb67d6351",
+        "status": "completed",
+        "operation_id": "41cc19bf-1d09-465d-99af-a864510b338f",
+        "conflicts": []
+      }
+    ],
+    "staging": [],
+    "note": "仅列更新协调记录，不把pending作品当可用状态；恢复需外部入口和明确依据"
+  },
+  "denied": [
+    {
+      "tag": "read-a-recover-draft-107-denied",
+      "code": "ACTION_OUT_OF_SCOPE",
+      "product_exit_code": 2,
+      "state_unchanged": true
+    },
+    {
+      "tag": "read-a-recover-template-107-denied",
+      "code": "ACTION_OUT_OF_SCOPE",
+      "product_exit_code": 2,
+      "state_unchanged": true
+    }
+  ]
+}

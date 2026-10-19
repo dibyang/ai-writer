@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "phase": "final-read-prepare",
+  "thread_id": "01a15275-9e32-79a3-9f22-bdab6169689a",
+  "session_id": "79205b65-a787-466f-a5d9-39906315aafc",
+  "status": "prepared",
+  "master_state_sha256": "cc7fca8f4e5af736a9eec339c2ac38584b5b4a770b6f756879422c88a0dd8b22",
+  "base_revision": 440,
+  "branch_state_sha256": "19e995fe508511b333d6318c250796eed42521f32059a3eaf80120211104d412",
+  "branch_revision": 489,
+  "final_read_from": 72,
+  "final_read_to": 112,
+  "reading_proof": "reading-audit/final-stable-tail-v1.json",
+  "body_unit_snapshot_unchanged_since_revise_d": true,
+  "prepared_sha256": "a4502277e603b69526885179173533b49759ea46a2dcc49a902d550326169355",
+  "planned_commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+  "target_revision": 441,
+  "body_changes": [
+    {
+      "file": "正文/0072-把空出来的地方留着.md",
+      "before": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+      "after": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d"
+    },
+    {
+      "file": "正文/0079-换了一个开车的人.md",
+      "before": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+      "after": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf"
+    },
+    {
+      "file": "正文/0083-柜里那一格.md",
+      "before": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+      "after": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f"
+    },
+    {
+      "file": "正文/0107-九点到十一点.md",
+      "before": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+      "after": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6"
+    },
+    {
+      "file": "正文/0109-两百四十买到什么.md",
+      "before": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+      "after": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9"
+    }
+  ],
+  "full_tail_reviews": [
+    {
+      "ref": ".writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json",
+      "sha256": "e496f4a7d8692b1fa3dcb49ff33c83ad4ab96e86b81cb76bcfa3a7ba97d62531",
+      "from": 72,
+      "to": 112,
+      "report": "审查/H-final-read-72-112稳定尾段.md",
+      "report_sha256": "16ab689096fa90018632610577d3dda4495304b4111d38fe27088ff25107155a",
+      "kind": "model-self-review"
+    }
+  ],
+  "actual_prepare_commands": [
+    "final-read-prepare-main"
+  ],
+  "scope": "Actual new native process, post-marker complete current-byte exposure, fixed candidate and CLI prepare. Semantic conclusions remain model self-review; not publication, human or market acceptance."
+}

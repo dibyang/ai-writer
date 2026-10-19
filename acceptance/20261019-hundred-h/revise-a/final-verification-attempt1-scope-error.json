@@ -1,0 +1,147 @@
+{
+  "at": "2026-10-19T03:33:52.436Z",
+  "attempt": "compare-current81-triples-to-original106-all-present-ledger",
+  "status": "failed-assertion-comparison-scope-error",
+  "first_error": "T_VOICE_CONSENT statement differs",
+  "differences": [
+    {
+      "id": "T_VOICE_CONSENT",
+      "type": "thread",
+      "field": "statement",
+      "original_updated_unit": 100,
+      "original_value": "公开讲述旧站材料须让当事人选择可说范围：罗拒坐听形象作引子，只愿先看工作与完整灯语修正稿；邱原有限试读，89明确后续撤回不匿名。92实核27留邱单页并由邱确认同样不讲/另收上柜，与31缺名两页下柜盒分开；此前未知中途去向不伪补。罗归宿说明不同37沈自页；92时后续待核，94亲见罗从票夹取认后按原痕折回内层、夹回原抽屉，仍由罗保管，沈未接走。此前翻票日期与以后流转未核。",
+      "current81_value": "公开讲述旧站材料须让当事人选择可说范围：罗拒以自己坐听形象作引子，只愿先看工作与完整灯语修正稿；邱允许有限无观众试读不网上放。长期允许限制和撤回的做法尚待落实。"
+    },
+    {
+      "id": "T_PAGE_PAIR",
+      "type": "thread",
+      "field": "statement",
+      "original_updated_unit": 100,
+      "original_value": "工作说明放大成两页后，第二页无姓名可脱离当事人范围；邱用细夹先保成对。公开版本分拆撤回须跟实际流转；90以前27单页实体后续未核，92才实问实见另收上柜私册，31两页仍下柜盒，本次未开；罗归宿纸另张不由37沈自页推定。",
+      "current81_value": "工作说明放大成两页后，第二页无姓名可脱离当事人范围；邱用细夹先保成对。以后公开版本、分拆及撤回怎样跟随纸页实际流转，尚需实践，不能将电子稿改好视作所有纸已同步。"
+    }
+  ],
+  "future_entries_not_yet_introduced": [
+    {
+      "id": "O_HOME_CUT_82",
+      "introduced_unit": 82
+    },
+    {
+      "id": "P_CUP_SKETCH_84",
+      "introduced_unit": 84
+    },
+    {
+      "id": "T_SHARED_EVENING_84",
+      "introduced_unit": 84
+    },
+    {
+      "id": "O_ROUTE_PREP_85",
+      "introduced_unit": 85
+    },
+    {
+      "id": "T_SHOP_SEAT_WEEK_86",
+      "introduced_unit": 86
+    },
+    {
+      "id": "P_BOWL_SKETCH_87",
+      "introduced_unit": 87
+    },
+    {
+      "id": "I_ROUTE_DELAY_ACCOUNT_88",
+      "introduced_unit": 88
+    },
+    {
+      "id": "P_HE_HOME_STOOL_88",
+      "introduced_unit": 88
+    },
+    {
+      "id": "P_QIU_MARKED_SAMPLE_89",
+      "introduced_unit": 89
+    },
+    {
+      "id": "P_QIU_TEXT_FILES_89",
+      "introduced_unit": 89
+    },
+    {
+      "id": "T_QIU_WITHDRAWAL_89",
+      "introduced_unit": 89
+    },
+    {
+      "id": "P_QIU_SINGLE_27",
+      "introduced_unit": 92
+    },
+    {
+      "id": "T_RO_VISIT_93",
+      "introduced_unit": 93
+    },
+    {
+      "id": "P_RO_LOCATION_NOTE_27",
+      "introduced_unit": 94
+    },
+    {
+      "id": "P_SELF_PAGE_95",
+      "introduced_unit": 95
+    },
+    {
+      "id": "T_SELF_USE_95",
+      "introduced_unit": 95
+    },
+    {
+      "id": "T_DINNER_61_96",
+      "introduced_unit": 96
+    },
+    {
+      "id": "I_AUDIO_INDEX_101",
+      "introduced_unit": 101
+    },
+    {
+      "id": "P_AUDIO_INDEX_101",
+      "introduced_unit": 101
+    },
+    {
+      "id": "T_BALL_VISIT_101",
+      "introduced_unit": 101
+    },
+    {
+      "id": "R_BALL_AFTER_102",
+      "introduced_unit": 102
+    },
+    {
+      "id": "T_REV_LISTEN_103",
+      "introduced_unit": 103
+    },
+    {
+      "id": "O_REVCUT_103",
+      "introduced_unit": 103
+    },
+    {
+      "id": "P_REVIEWCOPY_103",
+      "introduced_unit": 103
+    },
+    {
+      "id": "I_ADDON_NOT_TAKEN_103",
+      "introduced_unit": 103
+    },
+    {
+      "id": "T_DINNER65_104",
+      "introduced_unit": 104
+    },
+    {
+      "id": "O_CHAIR_DAY65_104",
+      "introduced_unit": 104
+    },
+    {
+      "id": "P_SELF_PAGE_105",
+      "introduced_unit": 105
+    },
+    {
+      "id": "O_MENU_LABOR65_105",
+      "introduced_unit": 105
+    },
+    {
+      "id": "R_UNREAD_EVENING65_106",
+      "introduced_unit": 106
+    }
+  ],
+  "explanation": "Current81 replays historical statements before later89/92/94/97/100 etc updates; do not inject those future statements into81. Validate original per-unit replay fields unchanged and immutable observations against original snapshot instead. No product or baseline mutation by this failed verification."
+}

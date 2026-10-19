@@ -1,0 +1,376 @@
+{
+  "phase": "read-d",
+  "scope": "Only proposals in H reports; no author adoption or manuscript modification",
+  "minimum_three_volumes_met_as_proposals_only": true,
+  "confirmed_mandatory_hard_errors": [],
+  "candidates": [
+    {
+      "id": "D72",
+      "previous_candidate": "read-c C72, personally re-read and concretized here",
+      "volume": {
+        "id": "V10",
+        "title": "有人付钱",
+        "from": 65,
+        "to": 72
+      },
+      "unit": 72,
+      "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0072-把空出来的地方留着.md",
+      "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+      "line": 23,
+      "quote": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说那自己今日才听见滑页和两夹的经过，不是上次在电话里已经都知道，也不跑去邱铺说要看夹得牢不牢。",
+      "version": "read-versions/8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185.md",
+      "classification": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "mandatory": false,
+      "reading_cost": "19行何已说未听夹子，21行沈刚把经过讲全；23行再核今日才知道/上次并非都知，朋友分饼的场面延后回到当下，新增知识未增加。",
+      "evidence": [
+        {
+          "unit": 72,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0072-把空出来的地方留着.md",
+          "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+          "line": 19,
+          "quote": "何看向她：“原两张三十日回她那里，这个上回电话我听清了。你没说过夹子。”",
+          "version": "read-versions/8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185.md"
+        },
+        {
+          "unit": 72,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0072-把空出来的地方留着.md",
+          "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+          "line": 21,
+          "quote": "“是，我那时只说保管。纸当场收齐了，没有给别人看。旧细夹没断，我另拿宽夹合住，细的留在原袋角，只在袋外写停用。三十日送回时，两个夹同原纸原袋一起给她，她自己收进透明盒。”",
+          "version": "read-versions/8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185.md"
+        },
+        {
+          "unit": 72,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0072-把空出来的地方留着.md",
+          "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+          "line": 25,
+          "quote": "“她拿回去，又不是替我们开个柜台。”她说。",
+          "version": "read-versions/8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185.md"
+        },
+        {
+          "unit": 83,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 65,
+          "quote": "“记着。上回我在家同她讲过，原来的两张没补字，细夹松那回，还有两只夹一起还你的经过。她那时才听全。”",
+          "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md"
+        }
+      ],
+      "language_tests": [
+        {
+          "test": "当面说话/复述",
+          "result": "19的你没说过夹子与21的完整回答已让何获得新消息，再复述知情日期不是对话必需；它仍可自然成立，不能据此判硬错。"
+        },
+        {
+          "test": "具体落地",
+          "result": "移除第三次知情自证，滑页回收动作及不验夹的选择仍完整，读者更快回到27收自样、29分饼和旧钱。"
+        },
+        {
+          "test": "动宾/指代",
+          "result": "搭配可读，原句无确定语法错；该项不支持必改。"
+        },
+        {
+          "test": "文本节奏改口",
+          "result": "压缩能少一次重复解释；这是模型文本复述判断，无真人朗读证据。"
+        }
+      ],
+      "proposed_text": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说自己不跑去邱铺看夹得牢不牢。",
+      "preserve": [
+        "19行此前未获夹子消息",
+        "21行滑页/收齐/保旧夹/宽夹/原袋及30日实交全部经过",
+        "23行原纸未补名与不获开柜验证权",
+        "何自己的试样、鞋、旧钱和做客声音"
+      ],
+      "downstream": [
+        "83:65对72次补全的转述仍成立",
+        "95/98后续获告时刻不变",
+        "若父选修改，须独立区从72至112实读重登；原语义也要核，不能只按哈希宣布不变"
+      ],
+      "related_old_units": [
+        60,
+        72,
+        83
+      ],
+      "benefit": "可选减少同场重复自证，保留第一次实际知识交接。",
+      "risk": "长篇间隔阅读时原句有恢复功能，父可选择保留；本建议不升级为硬伤。",
+      "status": "proposed-only-not-adopted-not-applied",
+      "original_quote": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说那自己今日才听见滑页和两夹的经过，不是上次在电话里已经都知道，也不跑去邱铺说要看夹得牢不牢。"
+    },
+    {
+      "id": "D79",
+      "previous_candidate": "read-c C79, original observation personally verified here",
+      "volume": {
+        "id": "V11",
+        "title": "潮线以内",
+        "from": 73,
+        "to": 80
+      },
+      "unit": 79,
+      "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0079-换了一个开车的人.md",
+      "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+      "line": 33,
+      "quote": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖的半月缺口仍朝围挡，白罩在里面，没有亮。",
+      "version": "read-versions/dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125.md",
+      "classification": "continuity/readability-clarification",
+      "severity": "suggestion",
+      "confidence": "high-for-reference-ambiguity; insufficient-for-physical-contradiction",
+      "mandatory": false,
+      "reading_cost": "两块砖的半月缺口容易被初次接触该段者想成两块各一缺口，或不能定位车道侧哪块；可以按一组砖的简写理解，所以不宣告物体真变。",
+      "evidence": [
+        {
+          "unit": 36,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0036-雨水经过的地方.md",
+          "sha256": "62cf78914a3afd5b167f16235d3c50ef0dea64a188f8d00594cba2d24c04f400",
+          "line": 39,
+          "quote": "正对灯柱的外路上，两块暗红方砖并排，临车道那块靠围挡的一角缺一个半月口。雨水从围挡底一条缝流出来，在两砖接缝留下一道细泥，水过了砖才往路边沟走。沈禾没有蹲到车轮前面，等女人将车刹住，才从旁边看那道泥。",
+          "version": "read-versions/62cf78914a3afd5b167f16235d3c50ef0dea64a188f8d00594cba2d24c04f400.md"
+        },
+        {
+          "unit": 71,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0071-雨还没走到沟口.md",
+          "sha256": "3663dcb219a72ba50a6f322b55d1061600a1c3dab8ae3d72240e3b8f8dbb2038",
+          "line": 13,
+          "quote": "那两块暗红砖并排，临车道那块的半月缺口仍朝围挡。砖缝里有水，水往沟口去了一小段，便在一片泡软的纸隔板前兜回来。薄灰泥沿纸边积着，纸上原来印的黑字已经看不清，不能从这一团灰里认出它哪天落下。",
+          "version": "read-versions/3663dcb219a72ba50a6f322b55d1061600a1c3dab8ae3d72240e3b8f8dbb2038.md"
+        },
+        {
+          "unit": 73,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0073-先把车停下来.md",
+          "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+          "line": 7,
+          "quote": "范没说来了便是，先将空下来的垫木捡回门内。昨夜的雨留在墙脚，朝外的地面晒出一截浅色，两块暗红砖之间仍深着，临车道那块的半月缺口朝围挡。她没有站上去。白灯罩在里面，门没开，光从罩侧移过去，也没有亮。",
+          "version": "read-versions/276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6.md"
+        },
+        {
+          "unit": 85,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0085-先别把架子抬出去.md",
+          "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+          "line": 11,
+          "quote": "沈停到靠墙的一侧，给他们留出门前。两块暗红砖今天干着，临车道那块的半月缺口仍朝围挡。沟边有一点新落的细叶，水没有漫上来，里面的白灯罩没亮。她听见乔对电话说先别发车，对方声音很响，隔着几步也能听到那句车已经装好了。",
+          "version": "read-versions/68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5.md"
+        },
+        {
+          "unit": 88,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0088-走过去再坐一会儿.md",
+          "sha256": "28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073",
+          "line": 45,
+          "quote": "何答那自己只记今天这辆，别问她哪批板长。范听见，笑着把扫帚靠好，说大家赶紧走，站这一圈，自己刚腾的地方又全是人。两人让开，沿外路过去。临车道那块红砖的半月缺口仍朝围挡，白罩没亮，何手里的凳脚没有往里探。",
+          "version": "read-versions/28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073.md"
+        }
+      ],
+      "language_tests": [
+        {
+          "test": "动宾与领属拆分",
+          "result": "两块暗红砖的作为领属没有限定缺口在哪一块；原36明确临车道那块。"
+        },
+        {
+          "test": "具体落地/空间复述",
+          "result": "要据此在两块砖中找有缺口的一块需回查；补回临车道限定直接定位。"
+        },
+        {
+          "test": "当面复述",
+          "result": "熟悉前文者可说这两块砖的缺口，原简写不是必然错误。"
+        },
+        {
+          "test": "文本节奏改口",
+          "result": "加入限定后一次能复述空间，代价只是少量字；未做真人朗读测试。"
+        }
+      ],
+      "proposed_text": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡，白罩在里面，没有亮。",
+      "preserve": [
+        "两块砖/单块半月缺口朝围挡的初始观察",
+        "白罩在内未亮、砖缝泥与水仍外流",
+        "车在外路通过，不踏缺口、不进检查位置",
+        "47清叶半句不证全日未堵"
+      ],
+      "downstream": [
+        "85/88仍按原单缺口定位；不添或删物证",
+        "75/77/79两车通过仍仅当次，不许全雨季通",
+        "正式采用须从79实读重登至112并核相关前缀36/71/73"
+      ],
+      "related_old_units": [
+        36,
+        71,
+        73,
+        75,
+        79,
+        85,
+        88
+      ],
+      "benefit": "以明确空间标记减少误构图，不改情节事实。",
+      "risk": "不能将措辞歧义说成已确认两处缺口，亦不能逆改初始观察。",
+      "status": "proposed-only-not-adopted-not-applied",
+      "original_quote": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖的半月缺口仍朝围挡，白罩在里面，没有亮。"
+    },
+    {
+      "id": "D83",
+      "previous_candidate": null,
+      "volume": {
+        "id": "V12",
+        "title": "各自的日子",
+        "from": 81,
+        "to": 88
+      },
+      "unit": 83,
+      "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+      "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+      "line": 83,
+      "quote": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。今天何已经在家，只听过这通电话，刚才邱搬盒的动作、柜格里铺的布和原袋外字，都没到她眼前。",
+      "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md",
+      "classification": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "mandatory": false,
+      "reading_cost": "71行何接电话已说到家，73行沈明确我在这儿看着收的，81行何复述所听范围；83再列布/袋字都未到她眼前，短暂把做客与买线场景变成重复取证。",
+      "evidence": [
+        {
+          "unit": 83,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 71,
+          "quote": "何接起时，先问沈是不是还没买成。那边有碟碰桌的声音，她说已经到家，母亲嫌饼底那点葱少，偏又一口都不肯剩。沈笑过，告诉她邱就在旁边，问能不能开免提，何答能，自己先将眼镜戴上，别光顾找布漏听。",
+          "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md"
+        },
+        {
+          "unit": 83,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 73,
+          "quote": "“原来那袋仍是邱姨收着。刚才她把扣好的透明盒从柜上收进柜里，没开，也没重新看纸。”沈说，“我在这儿看着收的。你不用再照从前答柜上。”",
+          "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md"
+        },
+        {
+          "unit": 83,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 75,
+          "quote": "何说那以后就答邱自己收着，不说谁来都能在台面看。邱朝电话说对，随后问她今天买什么了，何答擦镜布，自己原来那块越擦越白，差点怪眼镜又得换。",
+          "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md"
+        },
+        {
+          "unit": 83,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 81,
+          "quote": "沈在旁边笑，等两人说完，才补一句，后来使用的两页、大字四页、标过的试样仍在自己家各袋，先不用没有变。何答知道，自己这次听的是盒换了放处，不是又要去印一套；不把想看的人带去邱铺，也不因屋子以后可能再开，就把旧纸拿出来等着。",
+          "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md"
+        },
+        {
+          "unit": 83,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 85,
+          "quote": "邱重新穿针，试了两回才过。沈想将自己手里线头递去，又看颜色不是她正用的，便收回，让那根白线自己从针孔慢慢出来。邱踩了一下踏板，机针落在原先停的那一处，手掌将布向前推，不再回头看刚收空的柜面。",
+          "version": "read-versions/3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71.md"
+        },
+        {
+          "unit": 97,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0097-两张仍在一起.md",
+          "sha256": "a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9",
+          "line": 31,
+          "quote": "“这回我拿出来。不是你上回来时已经看过里面。”邱说。",
+          "version": "read-versions/a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9.md"
+        }
+      ],
+      "language_tests": [
+        {
+          "test": "具体落地",
+          "result": "删最后一句后免提地点、沈亲见/何转述、未开盒的动作均在，仍能独立核实何未目击。"
+        },
+        {
+          "test": "当面复述/本书叙述声音",
+          "result": "向熟人复述这一电话只需说明沈在现场告何；再逐项排除没见布/袋字不增信息。有限第三人称仍合本书，故只是解释密度可选。"
+        },
+        {
+          "test": "动宾/指代",
+          "result": "原句搭配及指代正确，不能判语言硬错。"
+        },
+        {
+          "test": "文本节奏改口",
+          "result": "停在不请复述的具体选择后，更快接邱穿针与沈买线离开；无真人朗读证据。"
+        }
+      ],
+      "proposed_text": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。",
+      "preserve": [
+        "71–81完整免提授权和实际内容",
+        "邱亲收扣盒/不打开/不领人看",
+        "何在家仅获转述，不知柜格布和袋字的视觉细节",
+        "85邱独立穿针不被沈抢做"
+      ],
+      "downstream": [
+        "90何未见盒内和原页仍成立",
+        "97首次实开盒不能被83倒灌",
+        "98何首次获97开盒消息不变",
+        "正式采用须从83至112重核，不改summary/knowledge为亲见"
+      ],
+      "related_old_units": [
+        72,
+        83,
+        90,
+        97,
+        98
+      ],
+      "benefit": "可选删掉已由实际电话充分建立的一次重复说明，保留人物当下劳动。",
+      "risk": "若父认为长篇恢复提示仍必要，可整句保留；不凭词频通删同类句。",
+      "status": "proposed-only-not-adopted-not-applied",
+      "original_quote": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。今天何已经在家，只听过这通电话，刚才邱搬盒的动作、柜格里铺的布和原袋外字，都没到她眼前。"
+    }
+  ],
+  "metadata": [
+    {
+      "id": "M80",
+      "unit": 80,
+      "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0080-十点半以后.md",
+      "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+      "line": 1,
+      "quote": "# 第八十章 十点四十五以后",
+      "version": "read-versions/da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee.md",
+      "classification": "historical-filename-difference-retain",
+      "severity": "observation",
+      "mandatory": false,
+      "status": "retained-no-path-migration",
+      "original_quote": "# 第八十章 十点四十五以后",
+      "proposed_text": null,
+      "plan_file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\大纲\\单元\\0080.json",
+      "plan_sha256": "c4f03b9533b08d4de71db081a55256b02cabdc3e8b88d27dab798090be8ea13c",
+      "plan_title": "十点四十五以后",
+      "evidence": [
+        {
+          "unit": 76,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0076-不必买那壶茶.md",
+          "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+          "line": 65,
+          "quote": "“早上那会儿还不满。”葛说，“先试明天到四十八日，九点半到十点四十五，这把我开门时清。你来能坐就坐，不用点茶。过了点，碰上能坐仍能坐，不能写成这一上午全归你。”",
+          "version": "read-versions/b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c.md"
+        },
+        {
+          "unit": 80,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 39,
+          "quote": "十点四十五，葛看过墙上的钟，走到椅边，老人先将报合起来。她却朝椅旁桌角伸手，取走垫杯的空碟，问要不要洗一下杯外边，他说不用，自己回去洗。老人起身时腰没有立刻伸直，站在椅旁慢慢动两下，手仍扶着椅背。",
+          "version": "read-versions/da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee.md"
+        },
+        {
+          "unit": 80,
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\正文\\0080-十点半以后.md",
+          "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+          "line": 71,
+          "quote": "沈问她后头怎么想。葛说先接着留到五十四日，还是早上九点半到十点四十五自己开门清；五十一日要去进货，上午不营业，那天不能让人等。她朝门看，像刚想起这句还只在屋里，便找来一张没字的纸，写五十一日上午不开门，下午照常。",
+          "version": "read-versions/da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee.md"
+        }
+      ],
+      "reading_cost": "按文件名搜十点半与正文H1不合，定位需对照；正文实际10:45时刻清楚。",
+      "disposition": "报告可读定位为第80章《十点四十五以后》（历史路径正文/0080-十点半以后.md）。保留已登记路径；不改正确正文凑旧文件名，不宣称不支持的路径迁移已修复。",
+      "preserve": [
+        "全部原正文/原登记draft路径/source哈希",
+        "当前章纲题名十点四十五以后",
+        "10:45实际到点动作"
+      ],
+      "possible_later_effect": "如将来真需路径迁移，父另核产品支持及全部协议引用；本轮不提出直接改名动作。"
+    }
+  ],
+  "distinction_from_F": "F轮同→那为既有修订，不重复计算。本次D72与D83为整段说明压缩，D79为初始空间定位澄清；均未实施。"
+}

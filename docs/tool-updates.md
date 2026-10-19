@@ -10,6 +10,8 @@
 
 出现pending时停止普通读写，从外部新入口 `tool updates` 查事务，使用 `tool recover --input ...` 明确complete或rollback。遗留锁必须核原进程、锁SHA及作者恢复依据，不能按超时删除。恢复遇第三方字节保留旧/新/外部并停止。备份与失败材料不会自动清理。
 
+若pending属于修订事务，应使用revision recover而非tool recover。0.7.3目录外固定依赖被提交校验误拒时，先按[修订手册](revision-and-sources.md)从已验证的外部0.7.6入口恢复原事务；不要在活跃修订期间覆盖旧包来修复，也不要重写清单或基线。兼容恢复不安装新包、不改变schema或工具generation。
+
 0.7.1起，0.7随附包缺少build-manifest.json视为损坏，不能降为“无清单旧包”继续写入。安装后的完整资源身份还须与state中的安装记录一致：只重建清单不能追认变化。先用外部主入口运行doctor和tool identify，保留现场并核对原版或原事务备份；不要改state指纹、重建清单或使用legacy_target_acknowledged绕过。未更新过的旧无清单0.1–0.6副本仍按原观察基线处理。
 
 complete或rollback执行途中再次中断时，原事务仍为pending，普通入口应继续拒绝。保留原事务和备份，核实新遗留锁后，从外部入口再次明确恢复方向；无需重新生成更新计划，也不要重跑enable。恢复完成后同方向重试不再推进revision/generation；终态不能反向回填。中途改变恢复方向也必须显式给出，且逐文件仍须属于原事务的旧/新字节；第三方改动会阻断两种方向。
@@ -43,3 +45,9 @@ staging中的pre-transaction-candidate表示事务尚未发布，原工具和sta
 回滚恢复旧工具及更新前state；若旧工具不支持已启用的6，继续使用主项目新入口重试。只有当前state精确等于enable后的原字节、generation仍0、没有其他业务写入，才可另行授权 `tool undo-enable` 恢复原5；不能在有新数据后改schema数字。成功更新后的撤销须创建新的兼容更新。
 
 完成后实际从作品 `.writer/tool/bin/ai-writer.mjs` 执行help、doctor、status、discussion context，再按原授权创作或修订。pending检查、代次和运行文件检查保护同机协作；它们不是作者身份认证，也不能绝对拦住任意编辑器的锁外写入。
+
+## 更新后新会话读取的技能
+
+根AGENTS和`.agents/skills`可能保留旧流程或作者修改。新会话先遵守这些作者规则，再从随附入口help列出的“当前工具流程技能”读取当前包的writer-project，并按文体与任务读取同目录中的writer-novel、writer-review等；不要仅凭根技能文件存在，就认为它与新版工具相同。
+
+doctor返回`skill_root`和`content_root`，分别是实际校验的技能与手册资源目录；`project_skill_root`指保留的作品根技能。0.7随附包的技能在`.writer/tool/.agents/skills`，修订区仍指向父作品安装包。校验通过只证明这些资源完整，不代表Codex已经阅读过它们；交接应记录本轮实际读取的位置与版本。工具流程参考不能覆盖作者约定，也不自动改变技能发现顺序或根文件。

@@ -1,0 +1,65 @@
+[
+  {
+    "kind": "product-command",
+    "label": "revise-c-discussion",
+    "exit_code": 2,
+    "reason": "未知命令discussion；更正为context --purpose discussion",
+    "state_unchanged": true
+  },
+  {
+    "kind": "product-command",
+    "label": "revise-c-help",
+    "exit_code": 2,
+    "reason": "通用help被包装器附加--project；使用revision --help读取所需帮助",
+    "state_unchanged": true
+  },
+  {
+    "kind": "product-command",
+    "label": "revise-c-resume",
+    "exit_code": 2,
+    "reason": "误用--id/--token选项；正确JSON输入resume-v2 exit0",
+    "state_unchanged": true
+  },
+  {
+    "kind": "auxiliary-read-parameter",
+    "reason": "session-io传--index报ENOENT，读取前失败；改其位置参数后92完整读取",
+    "product_call": false,
+    "manuscript_changed": false
+  },
+  {
+    "kind": "auxiliary-token-assertion",
+    "reason": "本地辅助核验误写session.token_hash，实际为token_sha256；按原输入token与正确哈希/ID/base核过。不是产品resume失败",
+    "product_call": false,
+    "product_resume_exit_code": 0
+  },
+  {
+    "kind": "auxiliary-review-quote",
+    "file": "build-review-88-101-attempt1.mjs",
+    "reason": "90功能表目标误引用89原句，生成输入前本地校验拒绝；改90真实原句",
+    "state_changed": false
+  },
+  {
+    "kind": "auxiliary-review-quote",
+    "file": "build-review-88-101-attempt2.mjs",
+    "reason": "94原句我/自己逐字差异，生成输入前本地校验拒绝；纠正后正式review首次调用exit0",
+    "state_changed": false
+  },
+  {
+    "kind": "resource-path",
+    "reason": "architecture-continuity.md不存在，按工具建议完整读取architecture-continuity-review.md",
+    "state_changed": false
+  },
+  {
+    "kind": "console-clipping",
+    "reason": "历史结果组合及92/95/96长历史草案初次输出截断；补读相关当前字段和结果；没有把截断当完整阅读",
+    "state_changed": false
+  },
+  {
+    "kind": "local-token-display",
+    "reason": "首次历史results组合未对所有文件统一脱敏；后续读取按原本地token脱敏，交付摘要不展示token，未转移原会话。原事件保留"
+  },
+  {
+    "kind": "progress-timing",
+    "reason": "早期口述耗时估计偏高，之后按系统时刻校准，实际总运行由父process-result记录"
+  }
+]

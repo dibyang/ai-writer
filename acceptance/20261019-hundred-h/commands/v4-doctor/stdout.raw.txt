@@ -1,0 +1,416 @@
+
+> ai-writer@0.7.5 doctor
+> node bin/ai-writer.mjs doctor
+
+{
+  "ok": true,
+  "node": "v24.15.0",
+  "tool_version": "0.7.5",
+  "tool_root": "D:\\work\\other\\ai-writer",
+  "project_root": null,
+  "resource_project_root": null,
+  "skill_root": "D:\\work\\other\\ai-writer\\.agents\\skills",
+  "content_root": "D:\\work\\other\\ai-writer",
+  "project_skill_root": null,
+  "resource_note": "skill_root和content_root是本次实际校验的资源目录；恢复工具流程时读取其中当前版本说明，作品根作者规则与定制技能仍需遵守，更新不自动替换它们。",
+  "revision_context": null,
+  "build": {
+    "ok": true,
+    "tool_root": "D:\\work\\other\\ai-writer",
+    "tool_version": "0.7.5",
+    "profile": "main",
+    "observed_content_id": "396c9fa806d7055a0676183cac55187831417158ba8c531acfced0def2c3f5c2",
+    "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+    "attestation": "observed-source-tree",
+    "declared_build_id": null,
+    "provenance": {
+      "source_commit": "403693f65b1d9f292ddd480a7011b35085259e32",
+      "dirty": "unknown"
+    },
+    "supported_state_schemas": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "schema_support_basis": "known-version-protocol; not a semantic execution probe",
+    "files": [
+      {
+        "group": "content",
+        "file": "LICENSE.md",
+        "bytes": 809,
+        "sha256": "b5dc27dfa9f5a9dc7c88223efd2199dcf8445447d1fe898f5fb17ebf848f3f9c"
+      },
+      {
+        "group": "content",
+        "file": "docs/attribution.md",
+        "bytes": 1515,
+        "sha256": "94e3d32373acedd102e4208e285ec4b4888565c2a721dabae45d57ccdd46d5a5"
+      },
+      {
+        "group": "content",
+        "file": "docs/deslop.md",
+        "bytes": 4274,
+        "sha256": "d8dbc69935c025c73c0478fe6b0e9d445def531bc5da4ce01109f7cf2eba5339"
+      },
+      {
+        "group": "content",
+        "file": "docs/long-form.md",
+        "bytes": 13741,
+        "sha256": "8bf6849792fac72f2441416e29365434bba442d814402c146d0d423a535fb636"
+      },
+      {
+        "group": "content",
+        "file": "docs/oh-story-audit-manifest.json",
+        "bytes": 27367,
+        "sha256": "d4f1d5f842ea424e7fb78a699d86fc3b60ce12025904cc62eeda179256323591"
+      },
+      {
+        "group": "content",
+        "file": "docs/quickstart.md",
+        "bytes": 6328,
+        "sha256": "7f9ebd40f6abc20c99878c88cb3eb72d0b181b0f63347db8b019b58deb93aa77"
+      },
+      {
+        "group": "content",
+        "file": "docs/review-and-registration.md",
+        "bytes": 7257,
+        "sha256": "d7bfc1f4f7d5d8b3656ba36bee51dc3d521dfe6bcf0a08b731a96931b8cde126"
+      },
+      {
+        "group": "content",
+        "file": "docs/revision-and-sources.md",
+        "bytes": 14833,
+        "sha256": "02731258a1c297aa1cf3b57eb98b5a7486ba5825caa10389145e624fe5e782c4"
+      },
+      {
+        "group": "content",
+        "file": "docs/source-manifest.json",
+        "bytes": 43269,
+        "sha256": "b60f5cd482f184a17a4ebfdfa4775f0ecfde4be64bffbed4e8f9026e4a175fcb"
+      },
+      {
+        "group": "content",
+        "file": "docs/tool-updates.md",
+        "bytes": 6710,
+        "sha256": "29e9e299979c7006c2a629779268fb5571abe335773cebb7abdb2a1fa9fd1b1b"
+      },
+      {
+        "group": "content",
+        "file": "docs/usability-sources.json",
+        "bytes": 982,
+        "sha256": "5f56f3da0514b5c4a352abcedb256465afa396ed790acdf35832248c363cd188"
+      },
+      {
+        "group": "content",
+        "file": "docs/user-guide.md",
+        "bytes": 21779,
+        "sha256": "265637cde3b4cf921b63f611eb478e3c2273e186bcb83e674c9ad03fa71a387c"
+      },
+      {
+        "group": "content",
+        "file": "docs/workflow.md",
+        "bytes": 20639,
+        "sha256": "a145603f717dc91e185f784cab336e1068021b9475ca48c66b0db50ab006b62e"
+      },
+      {
+        "group": "content",
+        "file": "examples/history-fact-card.json",
+        "bytes": 593,
+        "sha256": "cd942c6f8fb8bc1807f22bd72736d084f2eb8a9cd4e220dd68010279865c8e72"
+      },
+      {
+        "group": "content",
+        "file": "examples/prompts.md",
+        "bytes": 3588,
+        "sha256": "a97eefda73bf7374eff3728f14e9185abc02946fa87d6ec8eabda88eb1f9db41"
+      },
+      {
+        "group": "content",
+        "file": "vendor/oh-story-deslop-reference/LICENSE",
+        "bytes": 1102,
+        "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+      },
+      {
+        "group": "content",
+        "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md",
+        "bytes": 5092,
+        "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+      },
+      {
+        "group": "content",
+        "file": "vendor/oh-story-reference-20261015/LICENSE",
+        "bytes": 1102,
+        "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+      },
+      {
+        "group": "content",
+        "file": "vendor/oh-story-reference/LICENSE",
+        "bytes": 1102,
+        "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+      },
+      {
+        "group": "runtime",
+        "file": "bin/ai-writer.mjs",
+        "bytes": 417,
+        "sha256": "23c9d66254bceec377c348dcaa3e0c12160526d44771ef9302318fc1b3a4986b"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/governance.mjs",
+        "bytes": 18912,
+        "sha256": "4b4120feb6ddadbbe230bc73c9520d4105339bbf2c376212ed7e8b9b1a9e5299"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/help.mjs",
+        "bytes": 13464,
+        "sha256": "054b6aab3b2b0aab0c3a82901b3cae1a03980a2e92fc3cbae53af679c5d5eca5"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/journal.mjs",
+        "bytes": 6328,
+        "sha256": "590220142c6918b901544f419e80066a57e0d8886195ae23e8eff74d177fde5d"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/longform.mjs",
+        "bytes": 28563,
+        "sha256": "4bee586a8d09b9589fb8d6b7e96a991f442edec8c8c7a1b8cfb2e1e68595fbec"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/review-workflow.mjs",
+        "bytes": 22240,
+        "sha256": "977a3fb5facebb82b7c6f3496207c561985737fd763a69a573419aa4f767e4d5"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/revisions.mjs",
+        "bytes": 36349,
+        "sha256": "23ce4736ebedff6607adff670e884182f29fe29ca17dbb3c70e3d0cea386a0e0"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/sources.mjs",
+        "bytes": 22797,
+        "sha256": "39f0ce126b301b94d5609d47dde824a4f2fec2236823a0721377ddef32196853"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/style.mjs",
+        "bytes": 3990,
+        "sha256": "711b5d988ad39b04e7259db089978a08d7a6995ddbc3ae17a6c6953ae3f0dcc9"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/tool-build.mjs",
+        "bytes": 12135,
+        "sha256": "6078db16155880ed335e24636d0f53cae732bbfea0b7eecee3a20a11c8a7bcf9"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/tool-update.mjs",
+        "bytes": 27625,
+        "sha256": "cbcd633a9d57ed07de4c0e95219f0952a01719513adb7d7733ff4dfcfef9a7fa"
+      },
+      {
+        "group": "runtime",
+        "file": "lib/workspace.mjs",
+        "bytes": 63786,
+        "sha256": "d12aed1ad7baa42fee8a1fad50ec78c5ca066159cdbe945b91ef6af1818509bb"
+      },
+      {
+        "group": "runtime",
+        "file": "package.json",
+        "bytes": 502,
+        "sha256": "6b30ab4e33315971dc5727cb77f97cab679b3a0534c875fbf672bd7589876d31"
+      },
+      {
+        "group": "skills",
+        "file": "writer-essay/SKILL.md",
+        "bytes": 1596,
+        "sha256": "465c7c59fa6b2721fe00b60c1d58733aa843aac9b945bab7ad7d515b672912fb"
+      },
+      {
+        "group": "skills",
+        "file": "writer-history/SKILL.md",
+        "bytes": 2339,
+        "sha256": "64b123a10cbcbc74aef66c3745c818bcd4de943328c124c12d83b187a4f719e6"
+      },
+      {
+        "group": "skills",
+        "file": "writer-history/references/history-method.md",
+        "bytes": 2919,
+        "sha256": "b33a16eb512f85991b3b50bff3b291abc28b6e7d5421576b4c16bc7122660961"
+      },
+      {
+        "group": "skills",
+        "file": "writer-novel/SKILL.md",
+        "bytes": 3630,
+        "sha256": "e8e46e9af84ed2417a5c74cffb3d07c381115314bcaa20eb76e091e2d66664fc"
+      },
+      {
+        "group": "skills",
+        "file": "writer-novel/references/suspense-continuity.md",
+        "bytes": 1946,
+        "sha256": "a527784720809bb42b7384eafb194339142498f1534969f0affab07bf0b111b6"
+      },
+      {
+        "group": "skills",
+        "file": "writer-project/SKILL.md",
+        "bytes": 8487,
+        "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879"
+      },
+      {
+        "group": "skills",
+        "file": "writer-project/references/long-form.md",
+        "bytes": 9112,
+        "sha256": "77155632582568834580ef0c897b2b48b37dee66f4c5224a7155117e4d7dd42f"
+      },
+      {
+        "group": "skills",
+        "file": "writer-research/SKILL.md",
+        "bytes": 2213,
+        "sha256": "427add709c5d0c101ecde2d92735e8af85af80c5a9ac11ed1c631d37b8d620d0"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/SKILL.md",
+        "bytes": 5275,
+        "sha256": "77e69491130f6c5983d8ff9504d7596477ded17132bc51deeb0a39b3f6cb5621"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/action-scene-review.md",
+        "bytes": 4500,
+        "sha256": "274c0e986d5cf564f8d4a1d1d0f973aee0ac95744383c99089025361ae6258aa"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/architecture-continuity-review.md",
+        "bytes": 10047,
+        "sha256": "efed403f541d900ca0cb7ef6f1858983cb3b5f48634d5c82b3f86b39da66ec7f"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/character-emotion-consistency.md",
+        "bytes": 5379,
+        "sha256": "3e4ca72a8602801dc3b7ae1155b5abdd6a7627e15b91345d9a1371cb340e4621"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/deslop.md",
+        "bytes": 5393,
+        "sha256": "9a1d17663f40bf589cb74940e68bd1af30cff4316b4fc077e14722e652acde90"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/dual-world-review.md",
+        "bytes": 2703,
+        "sha256": "48f1bff8440cc23d11286a5614bddc52d4a98a743a0891b2bd218a3daee98c22"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/final-publication-review.md",
+        "bytes": 8833,
+        "sha256": "943e7759129056bb11128c12818a64fb6687f4850cd63577e2abce4239a9bac5"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/general-review.md",
+        "bytes": 8251,
+        "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/historical-review.md",
+        "bytes": 3495,
+        "sha256": "79539e7181880812f25b8b8adac7212e35e1229a8894d044a2a076b6bc020082"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/knife-emotional-impact.md",
+        "bytes": 9218,
+        "sha256": "416fc52f7b7206e1446857fcc3deb8cf038aea10412aec809324cff9931c5bd7"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/natural-language-authenticity.md",
+        "bytes": 6546,
+        "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/page-turner-review.md",
+        "bytes": 17958,
+        "sha256": "8aa4eaff20df19b7c84695884bddd2d663c799edcc44296dfbd393bb5372d929"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/physical-logic-operability.md",
+        "bytes": 3317,
+        "sha256": "0ad7dcec044b58be976b807e5774c603dc12b629eef4da6c4e4c65fde6fcd64c"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/proofreading-language-quality.md",
+        "bytes": 2205,
+        "sha256": "2bce7ede8c77eb7f5b0e00cde1d61badcd2c45ced2763709d67cc38f4cef489c"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/psychology-readability.md",
+        "bytes": 14297,
+        "sha256": "6439ce0963b3bc3686801de507474c88eaf786ff16513f409aea7cd9678fde2f"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/publication-gate.md",
+        "bytes": 5380,
+        "sha256": "610c5414e2d438247d0731e33594466bde1dc789d4553ada6de41b4da508cc58"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/readability-accessibility.md",
+        "bytes": 4564,
+        "sha256": "9d72171270ef249167a5a397bc7ba462051d97df8f68ed4148f9affc4f6db57f"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/suspense-review.md",
+        "bytes": 3151,
+        "sha256": "2259b3e9a9e2338b929ff47ab4bcbdf97e0ba837a0bd48e4d7e779a18f7f85d4"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/transmigration-review.md",
+        "bytes": 3108,
+        "sha256": "7ec318a17a05970d319fcfbfee26ebbc02e5843f6f8a54c88f93c0860ac21aec"
+      },
+      {
+        "group": "skills",
+        "file": "writer-review/references/xianxia-review.md",
+        "bytes": 2836,
+        "sha256": "daaf6f21d7275dc4bc0610b2b517382fa73605ffd3dbac1b051b1d76c36b642c"
+      },
+      {
+        "group": "skills",
+        "file": "writer-screenplay/SKILL.md",
+        "bytes": 2317,
+        "sha256": "a2f716f9e1f3227a5d275fa621dbb1f060afa6b97804249c2b581b816078c376"
+      }
+    ],
+    "missing": [],
+    "mismatches": [],
+    "content_scope": "tool-root",
+    "note": "内容指纹为本次磁盘观测，非作者身份或供应链签名；识别/比较不升级工具。轻量包有意省略引擎，新包资源在tool-root，作品根定制另行保留。"
+  },
+  "skills": 7,
+  "engine": "bundled",
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,221 @@
+{
+  "phase": "draft-a-recover",
+  "work": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work",
+  "task_status": "completed-local-stage-awaiting-parent-audit",
+  "process_exit_status": "current process has not exited; parent launcher will record actual exit",
+  "request_sha256": "f36618d9e40fad8e85768febf0e1bd2412953a1a7b0c1dfc245edc3be44b824b",
+  "before": {
+    "revision": 417,
+    "units": 107,
+    "state_sha256": "cf15bc9027ff8f75a40d7ade94889645aa34588727956b62aec7bf64abf7960f"
+  },
+  "after": {
+    "revision": 421,
+    "units": 108,
+    "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+    "stage": "paused",
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "draft_range": null,
+    "revise_range": null
+  },
+  "package": {
+    "version": "0.7.5",
+    "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+    "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+    "runtime_guard_id": "65d5281999432e68fa75185024d7b6d412334f3f940c754acc23b5d9dce114f3",
+    "generation": 6,
+    "schema": 6,
+    "identity": "package-v2 matches source-build-v2.json; full doctor files unchanged"
+  },
+  "attribution": {
+    "original": {
+      "phase": "draft-a",
+      "exit_code": 1,
+      "elapsed_s": 851,
+      "reason": "Selected model is at capacity. Please try a different model.",
+      "wrote_and_recorded": [
+        107
+      ],
+      "wrote_not_recorded": [
+        108
+      ],
+      "handoff": "not completed; not reconstructed"
+    },
+    "recover": {
+      "original_new_chapters": [],
+      "rewritten_chapters": [],
+      "registered": [
+        108
+      ],
+      "full_read_before_record": [
+        107,
+        108
+      ],
+      "continuous_read_after_record": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "review_ref": ".writer/reviews/dbe88f09-0f52-449b-90e7-22c39ba22d30.json"
+    }
+  },
+  "chapters": [
+    {
+      "unit": 103,
+      "draft": "正文/0103-这笔没有接下的钱.md",
+      "body_han": 3188,
+      "sha256": "75e4d23f9b35abfebe8a3daca30d275dd978d4a4b95a872adbd267666d3f552e",
+      "bytes": 10948
+    },
+    {
+      "unit": 104,
+      "draft": "正文/0104-椅子今天放不下.md",
+      "body_han": 3386,
+      "sha256": "f0faab7bbbe4fa334f43cc65097a8791da0414b99ace37fb569cfb750b2660ea",
+      "bytes": 11802
+    },
+    {
+      "unit": 105,
+      "draft": "正文/0105-开头划掉以后.md",
+      "body_han": 3492,
+      "sha256": "8f8c80b30b9e117e6e0f60bd065459890426b81b1f032ef68dd17fafb32a691b",
+      "bytes": 12029
+    },
+    {
+      "unit": 106,
+      "draft": "正文/0106-先坐一会儿.md",
+      "body_han": 3548,
+      "sha256": "fc7793413ef2e51d8f1cfa72d8020445fb5ad0b9b2a908002b6a921ed81d0008",
+      "bytes": 12395
+    },
+    {
+      "unit": 107,
+      "draft": "正文/0107-九点到十一点.md",
+      "body_han": 3396,
+      "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+      "bytes": 11581
+    },
+    {
+      "unit": 108,
+      "draft": "正文/0108-先陪你走这一趟.md",
+      "body_han": 3287,
+      "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+      "bytes": 11467
+    }
+  ],
+  "review": {
+    "ref": ".writer/reviews/dbe88f09-0f52-449b-90e7-22c39ba22d30.json",
+    "report": "审查/H轮recover-103-108连读.md",
+    "read_units": [
+      103,
+      104,
+      105,
+      106,
+      107,
+      108
+    ],
+    "issue": {
+      "id": "H107_RETAINED_VOICE_COUNT_CANDIDATE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "status": "open",
+      "adopted": false,
+      "applied": false
+    }
+  },
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 108,
+    "revision": 421,
+    "findings": [],
+    "draft_inventory": {
+      "registered_count": 108,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 22,
+      "stale": 105,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 102,
+      "stale_without_current_coverage": 3,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "gates": [
+    {
+      "label": "draft-a-recover-deny-109-context",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33"
+    },
+    {
+      "label": "draft-a-recover-deny-109-template",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33"
+    }
+  ],
+  "protection": {
+    "original_106_units_equal_baseline": true,
+    "registered_107_unit_and_authorization_unchanged": true,
+    "first107_bodies_unchanged": true,
+    "unregistered108_bytes_unchanged": true,
+    "original_154_ledger_identity_fields_equal": true,
+    "old_evidence_prefixes_preserved": true,
+    "old_character_names_and_knowledge_entries_retained": true,
+    "old_timeline_prefix_equal": true,
+    "work_scope107_entire_entry_unchanged": true,
+    "planning_still_draft": true,
+    "old_governance_events_prefix_equal": true,
+    "tool_control_unchanged": true,
+    "baseline_unchanged": true
+  },
+  "planning": {
+    "status": "draft-agent-proposal",
+    "volumes": [
+      {
+        "path": "大纲/分卷/V15.json",
+        "from": 107,
+        "to": 109,
+        "title": "留给自己的上午"
+      },
+      {
+        "path": "大纲/分卷/V16.json",
+        "from": 110,
+        "to": 112,
+        "title": "能留一会儿的地方"
+      }
+    ],
+    "outline": "大纲/H轮107-112续部粗规划.md",
+    "last_unit_plan": "大纲/单元/0108.json",
+    "next109_direction": "候选接67日9:30–10:30报价例子实际劳动/未完后果，或新页暂留后的不同生活结果；不再原样第三次邀读，不预认新客户收入；须后续新授权。"
+  },
+  "unexecuted": [
+    "109–112正文",
+    "72/79/83及107保护修改",
+    "最终112尾段复核/prepare/commit/export",
+    "提交/推送/发布"
+  ],
+  "evidence": {
+    "report": "REPORT.md",
+    "results": "results.json",
+    "product_commands": "command-inventory.json",
+    "process_commands_at_cutoff": "auxiliary-command-inventory.json",
+    "readings": "readings.json",
+    "versions": "read-versions",
+    "start_state": "start-state-raw.bin",
+    "end_state": "end-state.bin",
+    "helper_error": "helper-diagnostics.md"
+  }
+}

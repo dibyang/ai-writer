@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "phase": "draft-b",
+  "registered_units": 110,
+  "request_startup_hash_verified": true,
+  "revision": 426,
+  "generation": 6,
+  "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+  "original106_bodies_and_unit_records_unchanged": true,
+  "original_nonstate_nontool_files_preserved": 7796,
+  "original154_ledger_identity_fields_preserved": true,
+  "old_timeline_prefix_preserved": true,
+  "new_chapters": [
+    {
+      "unit": 107,
+      "draft": "正文/0107-九点到十一点.md",
+      "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+      "body_han": 3396,
+      "above_target": false
+    },
+    {
+      "unit": 108,
+      "draft": "正文/0108-先陪你走这一趟.md",
+      "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+      "body_han": 3287,
+      "above_target": false
+    },
+    {
+      "unit": 109,
+      "draft": "正文/0109-两百四十买到什么.md",
+      "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+      "body_han": 3444,
+      "above_target": false
+    },
+    {
+      "unit": 110,
+      "draft": "正文/0110-坐下以后还想说话.md",
+      "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+      "body_han": 3409,
+      "above_target": false
+    }
+  ],
+  "new_body_han": 13536,
+  "stage": "paused",
+  "gates": [
+    {
+      "label": "draft-b-deny-111-context",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--unit",
+        "111",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba"
+    },
+    {
+      "label": "draft-b-deny-111-template",
+      "args": [
+        "acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "111",
+        "--draft",
+        "正文/0111-未授权门禁占位.md",
+        "--project",
+        "acceptance/20261019-hundred-h/work"
+      ],
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba"
+    }
+  ],
+  "reading_proof": "reading-audit/draft-b-new-chapters-v1.json",
+  "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba",
+  "scope": "Mechanical CLI checkpoint plus actual current-version text exposure. Goal/payoff, characters and literary judgments remain in model reports, not inferred from hash or length."
+}

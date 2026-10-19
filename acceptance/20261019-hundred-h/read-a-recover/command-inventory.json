@@ -1,0 +1,1048 @@
+{
+  "phase": "read-a-recover",
+  "scope": "All read-a-recover-* capture results, including expected denied calls; original ra-* remain original process",
+  "commands": [
+    {
+      "label": "read-a-recover-baseline-evidence",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/read-a-recover/evidence.mjs",
+        "baseline",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:06:46.815Z",
+      "elapsed_ms": 1346,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": null,
+      "build_after": null,
+      "runtime_files_stable": null,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-baseline-evidence/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-baseline-evidence/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-baseline-evidence/result.json",
+          "sha256": "8739be4a92badfbb9c008a11f04abbec120ffa6ab10e324e250cedb54dc0eb7d",
+          "bytes": 622
+        },
+        {
+          "file": "commands/read-a-recover-baseline-evidence/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-baseline-evidence/stdout.raw.txt",
+          "sha256": "48381e329841eb1522d282d0801e00bbbf2b5d1fdec9b572abff5a93f444874c",
+          "bytes": 855
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-build-deliverables",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/read-a-recover/finalize.mjs",
+        "build",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:14:42.632Z",
+      "elapsed_ms": 1301,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": null,
+      "build_after": null,
+      "runtime_files_stable": null,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-build-deliverables/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-build-deliverables/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-build-deliverables/result.json",
+          "sha256": "9f992591ed0e02903f638aad2ca4a4253a0ce0f5678cf4c9a53e47445d35262d",
+          "bytes": 619
+        },
+        {
+          "file": "commands/read-a-recover-build-deliverables/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-build-deliverables/stdout.raw.txt",
+          "sha256": "e688eb3c53f90b70c2659d52080318345dfae6afb5d16312880dcbb5761df505",
+          "bytes": 931
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-compare",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "compare",
+        "--other",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/sources/package-v1",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:24.666Z",
+      "elapsed_ms": 970,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-compare/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-compare/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-compare/result.json",
+          "sha256": "12518f47cbf86c410058a6451021f9bafd57b28c255190e4456f0812a0c2ad18",
+          "bytes": 1365
+        },
+        {
+          "file": "commands/read-a-recover-compare/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-compare/stdout.raw.txt",
+          "sha256": "dea3ddb835861b3326b78481e44837bba96c53ab20fd4a8e92d2a459563ddfa6",
+          "bytes": 27391
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-discussion",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:06.243Z",
+      "elapsed_ms": 459,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-discussion/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-discussion/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-discussion/result.json",
+          "sha256": "fae8824322c932eb3f21073711602ea6a3e3358c3bd27b812adb96944236adf4",
+          "bytes": 1293
+        },
+        {
+          "file": "commands/read-a-recover-discussion/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-discussion/stdout.raw.txt",
+          "sha256": "ec2d5f9b569ffe6687469b4682a9e95a4a17858e60e5c7e8a07a7f482ab9e25e",
+          "bytes": 7497
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-doctor",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:02.429Z",
+      "elapsed_ms": 267,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-doctor/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-doctor/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-doctor/result.json",
+          "sha256": "621fa63d82eb7518b2b50e3479bc002ae27edce65953003613c4c868277a1a27",
+          "bytes": 1257
+        },
+        {
+          "file": "commands/read-a-recover-doctor/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-doctor/stdout.raw.txt",
+          "sha256": "929688d626ecfe29de2ea8d5611255f032f0616b78d29d4d810be61724c6415a",
+          "bytes": 14061
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-draft-107-denied",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "107",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:27.312Z",
+      "elapsed_ms": 304,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-draft-107-denied/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-draft-107-denied/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-draft-107-denied/result.json",
+          "sha256": "f6fa12a020ad451f2de4a67726d6b9e77f7aea5ed74d3a2ab3c4a503229b1256",
+          "bytes": 1313
+        },
+        {
+          "file": "commands/read-a-recover-draft-107-denied/stderr.raw.txt",
+          "sha256": "f98d1fe52913f53701cde1f6fd909a136ac540c7195268809e1a97083f7f7ac4",
+          "bytes": 2428
+        },
+        {
+          "file": "commands/read-a-recover-draft-107-denied/stdout.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-final-files",
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/read-a-recover/evidence.mjs",
+        "final",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:10:53.690Z",
+      "elapsed_ms": 1230,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": null,
+      "build_after": null,
+      "runtime_files_stable": null,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-final-files/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-final-files/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-final-files/result.json",
+          "sha256": "bb7d419f850859581faedeb7e0db40c969c383c23655a301b1b97c676350d97c",
+          "bytes": 619
+        },
+        {
+          "file": "commands/read-a-recover-final-files/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-final-files/stdout.raw.txt",
+          "sha256": "48edf3b0c2b5ed907198e752a41f92c916a2c6981f9903bf0372096ebe2ba13d",
+          "bytes": 7271
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-help",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "--help",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:01.446Z",
+      "elapsed_ms": 115,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-help/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-help/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-help/result.json",
+          "sha256": "f4dffb66729c349b3bbd521b999b10da2726ce149f30694a0a3514bf70c6c6aa",
+          "bytes": 1257
+        },
+        {
+          "file": "commands/read-a-recover-help/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-help/stdout.raw.txt",
+          "sha256": "fbbe522153c0ea8aea15d669a21ff672338bd0c84dce6858395de2be61219d8d",
+          "bytes": 8191
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-identify",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:24.664Z",
+      "elapsed_ms": 149,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-identify/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-identify/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-identify/result.json",
+          "sha256": "490b9825e9d39d1bf7e8b0f2011a2477408c4da379073db22a014d3072505ca6",
+          "bytes": 1271
+        },
+        {
+          "file": "commands/read-a-recover-identify/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-identify/stdout.raw.txt",
+          "sha256": "a2a4fff54fb36fe5e156498ae89938cbcbb6e808cf0793e80caabc42a4bd7e80",
+          "bytes": 12797
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-revisions",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:07.393Z",
+      "elapsed_ms": 131,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-revisions/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-revisions/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-revisions/result.json",
+          "sha256": "8a2b1849b4c1316596e064ea44ad86ad8cb725d677712188c35073c7b1d89894",
+          "bytes": 1271
+        },
+        {
+          "file": "commands/read-a-recover-revisions/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-revisions/stdout.raw.txt",
+          "sha256": "38741cb82521aa52b79627da16fb345d1954b331b0715c2ff6d7a611e2c9892a",
+          "bytes": 4796
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-status-after",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:10:51.252Z",
+      "elapsed_ms": 485,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-status-after/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-status-after/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-status-after/result.json",
+          "sha256": "0fe1a45896f086dbb497081d26bf596a67933dc19915a41252ae84257e8e9fe4",
+          "bytes": 1257
+        },
+        {
+          "file": "commands/read-a-recover-status-after/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-status-after/stdout.raw.txt",
+          "sha256": "2c518b2a6bbc8af0f6cc08eae97df34e651bbc75424c70d9af050bbea0e9a9ec",
+          "bytes": 15354
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-status-before",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "status",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:04:49.324Z",
+      "elapsed_ms": 420,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-status-before/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-status-before/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-status-before/result.json",
+          "sha256": "6e0194b84dbe9a420a21089a5ae177589bd5ef1dcc2fdfa9e5cae5ebb4011950",
+          "bytes": 1257
+        },
+        {
+          "file": "commands/read-a-recover-status-before/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-status-before/stdout.raw.txt",
+          "sha256": "2c518b2a6bbc8af0f6cc08eae97df34e651bbc75424c70d9af050bbea0e9a9ec",
+          "bytes": 15354
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-template-107-denied",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "107",
+        "--draft",
+        "正文/0107-H未授权不得创建.md",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:28.437Z",
+      "elapsed_ms": 302,
+      "exit_code": 2,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-template-107-denied/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-template-107-denied/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-template-107-denied/result.json",
+          "sha256": "edb888c738f7d7139cc957ea3d54f4202d1773077c280d51db3d33cae920fd20",
+          "bytes": 1351
+        },
+        {
+          "file": "commands/read-a-recover-template-107-denied/stderr.raw.txt",
+          "sha256": "9193186f18a8032d955b6dd6de1c4704209743809f687ac69c8cc85bda1c2b1a",
+          "bytes": 2436
+        },
+        {
+          "file": "commands/read-a-recover-template-107-denied/stdout.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-tool-help",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "--help",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:03.659Z",
+      "elapsed_ms": 114,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-tool-help/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-tool-help/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-tool-help/result.json",
+          "sha256": "327e3c3033efb8336c2b4d6326dc41c383e12e837e1a9fc9f369795cf2e2b674",
+          "bytes": 1269
+        },
+        {
+          "file": "commands/read-a-recover-tool-help/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-tool-help/stdout.raw.txt",
+          "sha256": "4ade9348d3f499a623ce1b56b2230100e3ff0aea7a1d4d98ad5585e17c1f128d",
+          "bytes": 1152
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-tool-updates",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "tool",
+        "updates",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:26.155Z",
+      "elapsed_ms": 136,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-tool-updates/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-tool-updates/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-tool-updates/result.json",
+          "sha256": "b5eb2105fcfec0ec6a456cb989f7700a8b0cdc6f0fc2755e57156cee3572aeb3",
+          "bytes": 1270
+        },
+        {
+          "file": "commands/read-a-recover-tool-updates/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-tool-updates/stdout.raw.txt",
+          "sha256": "16cb95f068036c4adff6605b551fe242c3c81e2700d344d7ab54d08bbd5b142c",
+          "bytes": 1062
+        }
+      ]
+    },
+    {
+      "label": "read-a-recover-workflow",
+      "exe": "node",
+      "args": [
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work/.writer/tool/bin/ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-19T00:05:04.969Z",
+      "elapsed_ms": 259,
+      "exit_code": 0,
+      "signal": null,
+      "input": null,
+      "before_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "after_state_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+      "build_before": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "build_after": {
+        "root": "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool",
+        "version": "0.7.4",
+        "runtime_guard_id": "4c0268a2544685766c1073987f3b158f9c17843244b9207f08c9c0e7d5523f5d",
+        "basis": "disk bytes observed around a fresh CLI process; not module-byte attestation"
+      },
+      "runtime_files_stable": true,
+      "evidence": [
+        {
+          "file": "commands/read-a-recover-workflow/after-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-workflow/before-state.json",
+          "sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+          "bytes": 1176363
+        },
+        {
+          "file": "commands/read-a-recover-workflow/result.json",
+          "sha256": "7df95318df9bfef6fab6b8d24944473ea9831d294c7a093c4fd1cd5d6f6e7dfc",
+          "bytes": 1271
+        },
+        {
+          "file": "commands/read-a-recover-workflow/stderr.raw.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "file": "commands/read-a-recover-workflow/stdout.raw.txt",
+          "sha256": "01e6a596902dcd5cc0c71c99a56d9aa5e5e0570d59d2e8fb44c1b5cc486e805b",
+          "bytes": 3319
+        }
+      ]
+    }
+  ],
+  "captured_count": 16,
+  "product_cli_count": 13,
+  "expected_denials": [
+    "read-a-recover-draft-107-denied",
+    "read-a-recover-template-107-denied"
+  ],
+  "unexpected_nonzero": [],
+  "reading_helper": {
+    "phase": "read-a-recover",
+    "calls": [
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 1 2 recovery-rereading",
+        "from": 1,
+        "to": 2,
+        "max_output_tokens": 13000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 3 4 recovery-rereading",
+        "from": 3,
+        "to": 4,
+        "max_output_tokens": 13000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 5 6 recovery-rereading",
+        "from": 5,
+        "to": 6,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 7 8 recovery-rereading",
+        "from": 7,
+        "to": 8,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 9 10 recovery-rereading",
+        "from": 9,
+        "to": 10,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 11 12 recovery-rereading",
+        "from": 11,
+        "to": 12,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 13 14 recovery-rereading",
+        "from": 13,
+        "to": 14,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 15 16 recovery-rereading",
+        "from": 15,
+        "to": 16,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 17 18 recovery-rereading",
+        "from": 17,
+        "to": 18,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 19 20 recovery-rereading",
+        "from": 19,
+        "to": 20,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 21 22 recovery-rereading",
+        "from": 21,
+        "to": 22,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 23 24 recovery-rereading",
+        "from": 23,
+        "to": 24,
+        "max_output_tokens": 14000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 25 26 recovery-rereading",
+        "from": 25,
+        "to": 26,
+        "max_output_tokens": 18000
+      },
+      {
+        "command": "node acceptance/20261019-hundred-h/session-io.mjs read-a-recover read D:/work/other/ai-writer/acceptance/20261019-hundred-h/work 27 27 recovery-rereading",
+        "from": 27,
+        "to": 27,
+        "max_output_tokens": 16000
+      }
+    ],
+    "basis": "Read-only shared reading helper explicitly required by request; original stdout lives in current process events, exact bytes frozen before emission",
+    "readings": {
+      "file": "read-a-recover/readings.json",
+      "sha256": "760209855ee452185eb0bd912f23f2a69e5239c1237fce870c239459bfaa4362",
+      "bytes": 15623
+    }
+  },
+  "non_product_artifact_commands": [
+    "node acceptance/20261019-hundred-h/read-a-recover/finalize.mjs inventory",
+    "node acceptance/20261019-hundred-h/read-a-recover/validate.mjs",
+    "node acceptance/20261019-hundred-h/read-a-recover/record-boundary.mjs",
+    "node acceptance/20261019-hundred-h/read-a-recover/validate.mjs delivery-validation-v2.json",
+    "node acceptance/20261019-hundred-h/read-a-recover/close-inventory.mjs",
+    "node acceptance/20261019-hundred-h/read-a-recover/validate.mjs delivery-validation-final.json"
+  ],
+  "failures_retained": [
+    "Expected ACTION_OUT_OF_SCOPE refusals: product exit2; host wrapper return1",
+    "Missing tool/skills path lookup corrected to tool/.agents/skills; actual tool event retained"
+  ],
+  "original_operation_support": "read-a-recover/support-verification.json",
+  "other_read_only_observations": {
+    "git_status_before_and_after": "git status --short",
+    "clock": "Get-Date -Format o",
+    "boundary_script_git": [
+      "git status --short",
+      "git diff --stat"
+    ],
+    "local_inspection": "FastCtx read/glob/grep; missing tool/skills path corrected; no source writes",
+    "evidence": "Current process tool events; workspace-boundary-observation.json"
+  },
+  "progress_correction": "One commentary count corrected immediately from generator: 2056 lines / 161836 bytes. Artifact counts always computed; delivery-validation retains both values."
+}

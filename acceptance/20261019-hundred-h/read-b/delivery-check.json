@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "state_sha256": "147395450103c875cb27aeabfb2d2650bfa951ab69bb71731efd8c2f4da19160",
+  "revision": 413,
+  "registered_count": 106,
+  "chapter_exposure_local_match": 32,
+  "resource_exposure_local_match": 13,
+  "parent_audit_pending": true,
+  "files": [
+    {
+      "file": "results.json",
+      "sha256": "ef7353bb2afa4283c531503adb38ec6150290510c7105b4a12b798019d618c44"
+    },
+    {
+      "file": "handoff.json",
+      "sha256": "1fdaa42f60765374d0f0b513274cda7a56f2b848a2ef880fbbc872fd3f002608"
+    },
+    {
+      "file": "handoff.md",
+      "sha256": "cc85b029d4ef9311e55e796da4f98bb1e63757f4618f642b833041123fd4e8f4"
+    },
+    {
+      "file": "REPORT.md",
+      "sha256": "11cd0c2be16149c626c3e9c0ee2da0b29aeb825317f61362c68213bed539bc8b"
+    },
+    {
+      "file": "resource-routing-proof.json",
+      "sha256": "cc01aecb921ca3418df24437c570cc3bae09be4512b4a7668e641e4ac4b6b367"
+    },
+    {
+      "file": "local-event-exposure-proof.json",
+      "sha256": "f3fa8408af1d0692c4e4a31d2a9281db67577dc1c5f638ceb50fa4dd2c96a7f0"
+    },
+    {
+      "file": "command-inventory.json",
+      "sha256": "f4fb47b77656ab1d4917d1d90757b057e6e4ec4807ad633a8a1c6ac4ef421863"
+    },
+    {
+      "file": "COMMANDS.md",
+      "sha256": "0a82eb375b19f37fc3b4ac52244e05afab6705b3d4200f761fab1ec9d6dd7119"
+    }
+  ],
+  "auxiliary_commands_after_inventory": [
+    {
+      "exe": "node",
+      "args": [
+        "acceptance/20261019-hundred-h/read-b/local-exposure-check.mjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "exe": "git",
+      "args": [
+        "status",
+        "--short"
+      ],
+      "purpose": "Read-only boundary check; matches initial tracked changes"
+    }
+  ],
+  "note": "Mandatory parent process-exit and exposure audit remain separate; no parent aggregate/audit helper modified"
+}

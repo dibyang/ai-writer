@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "scope": "This process local recovery, complete rereading and handoff only",
+  "phase": "read-a-recover",
+  "phase_status": "local-work-complete-awaiting-process-exit-and-parent-verification",
+  "project": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work",
+  "source": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/sources/package-v1",
+  "title": "潮汐信号",
+  "kind": "novel",
+  "revision": 411,
+  "schema_version": 6,
+  "generation": 5,
+  "tool_version": "0.7.4",
+  "content_id": "828109ec3ed7cd40564059ab42cc0fba82d72aa88ead15d880a6fda79406a71f",
+  "runtime_id": "2caacf37df3842559663ef2ea380baaa33b85cd6bf29637e5ae45fe8e4cd1628",
+  "allowed_actions": [
+    "discuss",
+    "plan"
+  ],
+  "stage": "paused",
+  "registered_count": 106,
+  "read_range": [
+    1,
+    27
+  ],
+  "readings_sha256": "760209855ee452185eb0bd912f23f2a69e5239c1237fce870c239459bfaa4362",
+  "state_before_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+  "state_after_sha256": "c74544dec665a5708e0567df6da621a54c63f4b04d1ef9dd869c479aada0d7b3",
+  "own_helper_calls": 14,
+  "own_total_lines": 2056,
+  "own_total_bytes": 161836,
+  "own_reading_versions_match": true,
+  "project_files_unchanged": true,
+  "project_file_count": 8857,
+  "root_history_preserved": true,
+  "units_and_snapshot_unchanged": true,
+  "original_update_attribution": {
+    "original_failed_process": {
+      "phase": "read-a-update",
+      "exit_code": 1,
+      "elapsed_s": 569,
+      "commands": 43,
+      "reason": "Selected model is at capacity",
+      "product_update_success": true,
+      "update_and_retry_owner": "read-a-update",
+      "update_transaction_id": "f05e0cda-7280-403b-a622-ebabb67d6351",
+      "original_update_revision": 410,
+      "generation": 5,
+      "workflow_revision": 411,
+      "original_reading_range": [
+        1,
+        27
+      ],
+      "original_notes_not_used_as_current_reading": true,
+      "evidence": [
+        "read-a-update/process-result.json",
+        "read-a-update/events.jsonl",
+        "commands/ra-update-execute",
+        "commands/ra-update-retry",
+        "commands/parent-capacity-status",
+        "commands/parent-interrupted-reading-proof",
+        "reading-audit/read-a-interrupted-1-27.json"
+      ]
+    },
+    "current_process": {
+      "phase": "read-a-recover",
+      "performed_update": false,
+      "performed_retry": false,
+      "performed_resume": false,
+      "performed_workflow_set": false,
+      "own_read_range": [
+        1,
+        27
+      ],
+      "purpose": "Read-only current final-state verification, independent rereading and handoff"
+    }
+  },
+  "no_repeat_update": true,
+  "no_resume": true,
+  "no_active_or_pending": true,
+  "denied_107": [
+    {
+      "tag": "read-a-recover-draft-107-denied",
+      "code": "ACTION_OUT_OF_SCOPE",
+      "product_exit_code": 2,
+      "state_unchanged": true
+    },
+    {
+      "tag": "read-a-recover-template-107-denied",
+      "code": "ACTION_OUT_OF_SCOPE",
+      "product_exit_code": 2,
+      "state_unchanged": true
+    }
+  ],
+  "confirmed_hard_issues": [],
+  "selected_revision_candidates": [],
+  "parent_verification": {
+    "status": "pending",
+    "requires": [
+      "Actual read-a-recover process exits 0",
+      "Parent audit-reading-stage read-a-recover 1 27 v1 passes against actual events and frozen SHA"
+    ],
+    "read_b_may_start_now": false
+  },
+  "artifacts": [
+    {
+      "file": "read-a-recover/REPORT.md",
+      "sha256": "428e8c191d70e775f3af70b8da706ff7a77c7259b8bd320f47b6df7d714684e0",
+      "bytes": 23182
+    },
+    {
+      "file": "read-a-recover/handoff.md",
+      "sha256": "8c19887ec3c6ed8ff61ab804f2d47f63d12b8a382e5b3d3e5b973bae149dc285",
+      "bytes": 3441
+    },
+    {
+      "file": "read-a-recover/handoff.json",
+      "sha256": "0eb6042a9ae23f81ca048ad6d190635c110c4458648b0473e10548b2b172def8",
+      "bytes": 16862
+    },
+    {
+      "file": "read-a-recover/reading-notes.md",
+      "sha256": "ab967c855e60b3471564702229244ae9dc94976b24378248a152bf3895467b9e",
+      "bytes": 11594
+    },
+    {
+      "file": "read-a-recover/final-verification.json",
+      "sha256": "bbafeed266059d22b9be7a9618738918c22fddda8c7863bc5189be9eb042013a",
+      "bytes": 9114
+    },
+    {
+      "file": "read-a-recover/support-verification.json",
+      "sha256": "958d3b8116767263df362ebc26f4abf9e916df299f3f01a6d47f88df62a91386",
+      "bytes": 12158
+    }
+  ],
+  "command_inventory": "read-a-recover/command-inventory.json",
+  "next_phase": {
+    "name": "read-b",
+    "read_range": {
+      "from": 23,
+      "through": 54
+    },
+    "prerequisite": [
+      "Actual read-a-recover process exits 0",
+      "Parent audit-reading-stage read-a-recover 1 27 v1 passes against actual events and frozen SHA"
+    ],
+    "not_started_by_this_process": true
+  },
+  "limits": [
+    "No claim of current-process 28–106 reading",
+    "No human blind-reading or market/literary acceptance",
+    "No new drafting or product changes",
+    "Process exit and parent event audit must be observed externally"
+  ],
+  "workspace_boundary_observation": {
+    "file": "read-a-recover/workspace-boundary-observation.json",
+    "new_main_repository_changes_observed": true,
+    "ownership": "unknown",
+    "acted_on": false
+  }
+}

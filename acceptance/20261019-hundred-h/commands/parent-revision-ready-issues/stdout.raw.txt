@@ -1,0 +1,392 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 440,
+  "counts": {
+    "adopted": 5
+  },
+  "issues": [
+    {
+      "id": "H107_RETAINED_VOICE_COUNT_CANDIDATE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "未采用候选：107站读中止与坐读留下另一段可读成四次录制尝试，后文录的三段可能专指留用三段。数量对象未明分，部分读者会回数；不构成已确认硬错。",
+      "suggestion": "留后续正式保护批核实；如有净收益可把录的三段澄清为留下的三段试声，并核正式summary/changes的数量含义。本阶段无revise范围，正文/state原107语义不改。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 25,
+          "quote": "她停了录音，朝空屋说你先坐"
+        },
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 27,
+          "quote": "改将它留作另一段：人在动的时候，声音会变。"
+        },
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 71,
+          "quote": "她录的三段也都有不好听的地方。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/dbe88f09-0f52-449b-90e7-22c39ba22d30.json",
+        "review_sha256": "608f6affa2724087561cfca8ff4ebca4c42fa9c1ce52b93c16d3461b82506323",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/bfdaaea4-f524-47f0-833d-2de9140590d7.json",
+          "sha256": "5a7e8c59dd14bbf818327b91e97d549e03d0044c1eb0420e598fc465f36464a8"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用同句数量对象澄清为留下的三段试声，区分留用素材与尝试次数；不添加删除站读或四个成品事实。保护重登时据原文核summary/changes，代理选择不冒充作者确认。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/9c4e59b0-d3e7-4e5c-8cf0-91d73aa1c667.json",
+        "sha256": "a966ccd32841126b2733356b5318e72d72501ffe1035ae3459893a589b4a5669"
+      },
+      "effective_status": "adopted",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H109_RELATIVE_DAY_DRIFT",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "109在第67日三次用前天回指107第66日同批自录/未完报价及处理，确应指昨天；父先独立发现，本人回查并在十章连读确认，未修。",
+      "suggestion": "后续独立保护批仅将三处相应前天改为昨天，保66日源录音日期；核summary/changes及108–112承接，不锁外改已登记正文或刷新来源哈希。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 3,
+          "quote": "第六十六日八点五十七"
+        },
+        {
+          "unit": 108,
+          "draft": "正文/0108-先陪你走这一趟.md",
+          "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+          "line": 113,
+          "quote": "将报价例子排到第六十七日上午九点半到十点半"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 5,
+          "quote": "前天那段车声盖住后半句的试声"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 7,
+          "quote": "前天没有做完的事"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 113,
+          "quote": "前天处理过的声音"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/fed76e84-65b1-4d06-b30b-9d5446c0a4ab.json",
+        "review_sha256": "d998f51136ea61e301d9029a63ac67485aceca1951e8da0437db1fb579d9d1ff",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/41e5e5e4-c03f-4ea3-9bba-c34ece25e827.json",
+          "sha256": "06678a28cea378be14983736dc7692a66ef68a1b4846a36930d9c9099f904b76"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用已确认连续性修正：第67日回指第66日的三处前天均改昨天；原66日自录与原67日计划不改，不编65日隐形录音。仅实读证据支持的日期和必要派生登记在保护区修正。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/89a0982b-29d6-4c88-a2fd-a6a2b69d65bc.json",
+        "sha256": "d439a1e0f23ad7702cb00c65cd6eb97a567e6d921577108aecd2b1b0a5c0ed8f"
+      },
+      "effective_status": "adopted",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H72_REPEATED_KNOWLEDGE",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "19行何已说未听夹子，21行沈刚讲完经过，23行再解释今日才知/上次未全知，做客的当下延后；原知情链正确，是可选压缩而非硬错。",
+      "suggestion": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说自己不跑去邱铺看夹得牢不牢。",
+      "evidence": [
+        {
+          "unit": 72,
+          "draft": "正文/0072-把空出来的地方留着.md",
+          "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+          "line": 23,
+          "quote": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说那自己今日才听见滑页和两夹的经过，不是上次在电话里已经都知道，也不跑去邱铺说要看夹得牢不牢。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/58393250-2f80-4705-85e0-3c66393e00e7.json",
+        "review_sha256": "364d039da8bb0cf251bec709ada55058e0eb7ab6d52ffee3222aad6005bb770f",
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+            "dependency": "1d9db8bd73f25776f0df9431d73f55bf8f12375f32990f95e4da68bda06cc608"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/17cb75ad-6385-4a14-901a-0401bbdf7228.json",
+          "sha256": "218a60614742505a1dc23e6dccd7a6032857e5914b16bec2475663c2a23f0563"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "代理在用户已授权的隔离副本修复范围内采用D72最小压缩；保留19/21真实消息传递及何不去验夹的选择。仍属可选风格suggestion，不冒充作者逐条确认。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+            "dependency": "1d9db8bd73f25776f0df9431d73f55bf8f12375f32990f95e4da68bda06cc608"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/2742420c-883c-4451-86ca-d9ea352bd222.json",
+        "sha256": "79cee10696eb158814adc5616be090d729902a7ee6aecaa1fe2164c16750b97d"
+      },
+      "effective_status": "adopted",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H79_SINGLE_BRICK_REFERENCE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "两块砖的半月缺口可以按一组砖的简写理解，但缺少临车道那块的限定，容易误构成两处缺口；补定位有净收益，不宣判实体已变。",
+      "suggestion": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡，白罩在里面，没有亮。",
+      "evidence": [
+        {
+          "unit": 79,
+          "draft": "正文/0079-换了一个开车的人.md",
+          "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+          "line": 33,
+          "quote": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖的半月缺口仍朝围挡，白罩在里面，没有亮。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/12de63b5-95d5-4a38-b700-009d7c5082a8.json",
+        "review_sha256": "ce441544b9a0b9f3b817f073eca971801bf63633df794805813c0ff8957c7e43",
+        "units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "dependency": "ccde34ebb348b6ba0b691b8186ae0075fb37a7565533c9318223c5d66ecb1a99"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/46ea965b-2463-40b7-88e5-a2ee741a74de.json",
+          "sha256": "fd0b79b395c253c310990a84f4b500222b3bdf3a446d05db145473ccd8037965"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用D79定位澄清，恢复36/71既有临车道单砖限定；不把歧义宣判成实体变更，不改变两砖/缺口/白罩/通行原观察。代理在本轮范围组织，不改变作者取舍。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "dependency": "ccde34ebb348b6ba0b691b8186ae0075fb37a7565533c9318223c5d66ecb1a99"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/24dd3444-d47d-411e-b5dd-29ed41eaa651.json",
+        "sha256": "ac0a4a6f23dd88c4982480075d0700c5a4601bb184334094fde6e0e11882a1e4"
+      },
+      "effective_status": "adopted",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H83_REPEATED_PHONE_EXCLUSION",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "71/73/75/81已用真实电话明确何在家、沈亲见后转述、没开盒和范围；83再列何没见布/袋字是可选解释压缩，不是原文知识错。",
+      "suggestion": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。",
+      "evidence": [
+        {
+          "unit": 83,
+          "draft": "正文/0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 83,
+          "quote": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。今天何已经在家，只听过这通电话，刚才邱搬盒的动作、柜格里铺的布和原袋外字，都没到她眼前。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/130e5e1d-552a-4ed3-a5dd-e36644d0048e.json",
+        "review_sha256": "ecf95596d31a7a3aeebf4842a0629e8bee59fac95b4cc1f76b033723689769ba",
+        "units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "dependency": "8342dd8e02e318b52a31dda3462e567d921079c431c974369666ab73868abab4"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/23793154-485f-4d9c-8451-9a9a8ca247fe.json",
+          "sha256": "d74a3a629653bc66b63667789b9f63efa7ec7d7b30bca6208b96c8eedefef2cf"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用D83仅删末次视觉排除句，71–81免提内容、何在家只获转述和不得领人看完整保留；这是可选解释压缩，不升级为必改语言错。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "dependency": "8342dd8e02e318b52a31dda3462e567d921079c431c974369666ab73868abab4"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/5dc69f30-be4e-4e64-8f18-a002cb70f6b1.json",
+        "sha256": "a5cf0e0fb00a05f5c97e0d083de4ac45557741e310b1ab1a15a977fb83840c35"
+      },
+      "effective_status": "adopted",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

@@ -1,0 +1,259 @@
+{
+  "at": "2026-10-19T02:44:53.455Z",
+  "phase": "draft-c",
+  "task_status": "completed-local-stage-awaiting-parent-audit",
+  "process_exit_status": "Parent must record actual exit after this process ends; not prefilled.",
+  "request_sha256": "f305bc2a247806728f69bd8b5d0c79e5326b1f8ff49d47b7c5e397064f8db5f7",
+  "before": {
+    "revision": 426,
+    "units": 110,
+    "state_sha256": "9a5d5d8800e25348e985967e5e2cb0ea599736119e7f273b54bbe328f120f5ba"
+  },
+  "after": {
+    "revision": 431,
+    "units": 112,
+    "state_sha256": "b6dcda8f61054456ba7380f1a0dea39c5bce44a393faf00b1265a40cee5494c2",
+    "stage": "paused",
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "draft_range": null,
+    "revise_range": null,
+    "stop_conditions": [
+      "112后暂停，仅discuss/plan，draft/revise=null；113两门禁实拒。",
+      "业务仅H/work，过程仅H/draft-c和H/commands；不联网、子代理、Git提交推送、发布、包更新或旧修订恢复。",
+      "原110正文/units、原154ledger身份、旧timeline前缀和旧知情保留；109三处日期与107候选、72/79/83留后续保护批。",
+      "不强结历史/私人原因，不把顾试用当订单，不扩张110一次使用为永久服务；新本人页保持私有。"
+    ]
+  },
+  "package": {
+    "version": "0.7.5",
+    "identity": "package-v2 unchanged; parent source-v4 regression not substituted for current work package",
+    "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+    "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+    "generation": 6,
+    "schema": 6
+  },
+  "chapters": [
+    {
+      "unit": 111,
+      "draft": "正文/0111-先吃这一碗.md",
+      "sha256": "cbc97a650146b666a82778ae04ea4922d7a508c8e05ed8aaa2e74c2fa75fc0e1",
+      "bytes": 11771,
+      "body_han": 3340
+    },
+    {
+      "unit": 112,
+      "draft": "正文/0112-后颈上的风.md",
+      "sha256": "3a6b74df44cfe9747e0b60e7351195a9364beeb31b5c76578c8ba2543f8a7c84",
+      "bytes": 12019,
+      "body_han": 3437
+    }
+  ],
+  "new_body_han": 6777,
+  "review": {
+    "ok": true,
+    "revision": 430,
+    "ref": ".writer/reviews/fed76e84-65b1-4d06-b30b-9d5446c0a4ab.json",
+    "coverage": [
+      103,
+      112
+    ],
+    "issue_ids": [
+      "H109_RELATIVE_DAY_DRIFT"
+    ],
+    "quality": "review-recorded-not-acceptance",
+    "report": "审查/H轮draft-c-103-112连读.md",
+    "purpose": "post112-continuous103-112",
+    "nature": "knowledgeable-model-self-review",
+    "literary_status": "109 confirmed date drift still needs protected correction; not publication-ready",
+    "similarity_risks": [
+      "108/112 accompanied-consumption and home-return ending rhythm",
+      "107/109/112 revisiting work description;112 adds no new professional success"
+    ]
+  },
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 112,
+    "revision": 431,
+    "findings": [],
+    "draft_inventory": {
+      "registered_count": 112,
+      "unregistered": [],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 24,
+      "stale": 105,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 102,
+      "stale_without_current_coverage": 3,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "doctor": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "gates": [
+    {
+      "label": "draft-c-deny-113-context",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "before_state_sha256": "b6dcda8f61054456ba7380f1a0dea39c5bce44a393faf00b1265a40cee5494c2",
+      "after_state_sha256": "b6dcda8f61054456ba7380f1a0dea39c5bce44a393faf00b1265a40cee5494c2"
+    },
+    {
+      "label": "draft-c-deny-113-template",
+      "exit_code": 2,
+      "code": "ACTION_OUT_OF_SCOPE",
+      "before_state_sha256": "b6dcda8f61054456ba7380f1a0dea39c5bce44a393faf00b1265a40cee5494c2",
+      "after_state_sha256": "b6dcda8f61054456ba7380f1a0dea39c5bce44a393faf00b1265a40cee5494c2"
+    }
+  ],
+  "no113Body": true,
+  "active_revisions": [],
+  "pending_transactions": [],
+  "protection": {
+    "prefix_unit_objects_unchanged": 110,
+    "prefix_bodies_basis": "Final real check validates current registered-body hashes; all first110 unit objects including hashes equal start. No duplicate full-file inventory.",
+    "all_prior_ledger_entries_unchanged": 163,
+    "prior_named_knowledge_slots_unchanged": 585,
+    "original154_type_statement_author_truth_preserved": true,
+    "old_timeline_prefix_unchanged": 125,
+    "tool_control_unchanged": true,
+    "scope": "Small start/end state comparison only; parent independently audits other original files after actual exit."
+  },
+  "product_command_count": 35,
+  "reading_exposures": 24,
+  "continuous_read_chapters": 10,
+  "unique_read_versions": 17,
+  "payoff_chains": [
+    {
+      "line": "Private work explanation",
+      "seeds": [
+        106,
+        107,
+        108
+      ],
+      "result109": "67日自用240一小时例子、顾实际使用反馈、用途/交付修改，无成交定金收入。",
+      "result112": "69日15:30本人重新使用现版，自录缺音/咳声保留，无新单款；未来自走仅日历安排。",
+      "limit": "Not a third technical payoff or new order; new personal page remains private."
+    },
+    {
+      "line": "Seat and finite companionship",
+      "seeds": [
+        30,
+        76,
+        98,
+        104
+      ],
+      "result110": "葛自己清椅，素姐不消费实坐/短谈，经营变慢饭未完。",
+      "result111": "葛亲热饭吃完、日用盒仍可拿、不添一盘自锁店出门；昨日倒饭只当前口述。",
+      "result112": "葛本人完成洗剪并付35元，14:49分路；开店/销售未知。",
+      "limit": "Original elder absent; no permanent service, Tao extra shift, Shen caretaker or retrospective compensation."
+    }
+  ],
+  "information_boundaries": [
+    "何周顾均未读105新本人页；95半面另夹，105漏水否定和720未接保持。",
+    "顾只当次试用说明/自录，未读回家修后版，无待修录音订单。",
+    "110素姐10:30后离是葛述，眼镜结果未知；原老人未因新座位再来。",
+    "葛只听沈111说没有新活，不知240和私稿；理发师仅知当次剪发要求与葛说要回店。",
+    "Unknown voice/editor/private absence reasons intentionally open; no author_truth invented."
+  ],
+  "unresolved": [
+    {
+      "id": "H109_RELATIVE_DAY_DRIFT",
+      "status": "open-not-adopted-not-fixed",
+      "direction": "1095/7/113行三处前天应指昨天；保10766日自录。后续保护批核summary/changes/下游。",
+      "first_observer": "Parent independent reading; B report left unchanged."
+    },
+    {
+      "id": "H107_RETAINED_VOICE_COUNT_CANDIDATE",
+      "status": "open-unadopted-unapplied"
+    },
+    {
+      "id": "H109_SHOE_EVENING_OPTIONAL",
+      "status": "lower-confidence optional, not implemented"
+    },
+    {
+      "id": "72/79/83",
+      "status": "not implemented"
+    }
+  ],
+  "errors_and_corrections": {
+    "input_validation_rejection": "draft-c-preview-111 exit1: one quote used 她把钥匙 vs actual 葛把钥匙; old input retained, correctedv2 preview/record succeed, both previews state unchanged.",
+    "pre_record_draft_work": "1112527 Han draft expanded with actual hair-choice interaction and changed reminder;1123120 expanded with blue-shirt image vs own hairstyle choice; before-record fixes/complete rereads and versions retained.",
+    "literary_miss_preserved": "109 error not claimed repaired or known by original B reviewer."
+  },
+  "attribution": {
+    "read_a_update": {
+      "elapsed_s": 569,
+      "exit_code": 1,
+      "reason": "service model capacity; original remains failed"
+    },
+    "read_a_recover": {
+      "elapsed_s": 831,
+      "exit_code": 0
+    },
+    "draft_a": {
+      "elapsed_s": 851,
+      "exit_code": 1,
+      "original_registered": [
+        107
+      ],
+      "original_unregistered_at_exit": [
+        108
+      ],
+      "reason": "service model capacity; original remains failed"
+    },
+    "draft_a_recover": {
+      "elapsed_s": 890,
+      "exit_code": 0,
+      "registered": [
+        108
+      ],
+      "original": []
+    },
+    "draft_b": {
+      "elapsed_s": 1411,
+      "exit_code": 0,
+      "parent_verification": "parent-verification-v1 and parent-prefix-verification-v1 passed"
+    },
+    "draft_c": {
+      "original_registered": [
+        111,
+        112
+      ],
+      "continuous_read": [
+        103,
+        112
+      ],
+      "actual_exit": "pending parent launcher"
+    }
+  },
+  "unexecuted": [
+    "revision begin/prepare/commit, old chapter edits or re-registration",
+    "113 body or export",
+    "tool/source update or npm regressions (no tool edit in this phase)",
+    "network, subagents, Git commit/push, external publish"
+  ],
+  "evidence": {
+    "commands": "command-inventory.json",
+    "readings": "readings.json",
+    "versions": "versions.json and read-versions/",
+    "context": "context-review.json",
+    "review_input": "review-input.json",
+    "start_state": "start-state.bin",
+    "end_state": "end-state.bin"
+  },
+  "limits": [
+    "Local manuscript workflow and knowledgeable-model self-review only, not independent blind reading, human/market validation, author final draft or release acceptance.",
+    "Only small checkpoint preservation comparison here; parent full original-file/exposure audit follows process exit."
+  ]
+}

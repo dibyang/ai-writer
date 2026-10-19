@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const B=path.dirname(fileURLToPath(import.meta.url)),n=Number(process.argv[2]),p=JSON.parse(fs.readFileSync(path.join(path.dirname(B),`commands/revise-b-preview-${n}/stdout.raw.txt`)));
+console.log(JSON.stringify({ok:p.ok,revision:p.revision,unit:p.unit,writes:p.writes,findings:p.findings,source_hashes:p.source_hashes,replay_review:p.replay_review,unchanged:p.unchanged,changes:p.changes?.map(x=>({at:x.at.join('.'),...(x.at.at(-1)==='status'?{before:x.before,after:x.after}:{}),...(x.append?{append_count:x.append.length}:{}),...(x.had===false?{new:true}:{})}))}));

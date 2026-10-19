@@ -1,0 +1,117 @@
+{
+  "updated_at": "2026-10-19T02:22:50.738Z",
+  "purpose": "Parent execution tracker, never business-state authority",
+  "task": "新版百章实跑，现有作品不动，不提交/推送",
+  "baseline_commit": "403693f65b1d9f292ddd480a7011b35085259e32",
+  "project": "D:/work/other/ai-writer/acceptance/20261019-hundred-h/work",
+  "frozen_package": "acceptance/20261019-hundred-h/sources/package-v2",
+  "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+  "completed": [
+    "full-copy-and-identity-freeze",
+    "baseline-tests-154-pass-1-environment-skip",
+    "baseline-doctor",
+    "partial-real-reading-proof-1-12",
+    "interrupted-original-phase-full-reading-proof-1-27",
+    "read-a-recover-exit0-and-parent-audit",
+    "skill-entry-fix-v2-full-tests-and-doctor",
+    "actual-new-installed-skill-exposure-proof:resource-reading-audit/read-b.json",
+    "read-b-exit0-and-parent-audit-23-54",
+    "read-c-exit0-and-parent-audit-50-81",
+    "read-d-exit0-and-parent-audit-77-106",
+    "initial-four-independent-processes-106-chapter-exposure-audit",
+    "draft-a-recover-exit0-and-parent-audit-108",
+    "new-chapter103-108-review-paused109-gates",
+    "v4-program-tests-155-pass-1-environment-skip-and-doctor",
+    "draft-b-exit0-1411s-and-parent-audit-110",
+    "prefix108-and574-knowledge-slot-guards"
+  ],
+  "current_phase": "draft-c",
+  "active_exec_session": 86747,
+  "next_checkpoint": "draft-c111-112 creation and review103-112; pause113 gates; exit0 then continuation audit with previous110",
+  "planned_next": [
+    "read-b:23-54",
+    "read-c:50-81",
+    "read-d:77-106",
+    "draft-a:107-108",
+    "draft-b:109-110",
+    "draft-c:111-112",
+    "revise-a/b/c/d",
+    "final-read-prepare",
+    "final-commit-export"
+  ],
+  "source_archive": "acceptance/20261018-hundred-f/work",
+  "existing_real_works": "not a target",
+  "helper_sha256": "44ef1a8779e57bdd6624026c7a4841ed6f86872771e310bc8457c61723930b2e",
+  "prepared_next_requests": [
+    "read-b",
+    "read-c",
+    "read-d"
+  ],
+  "failed_processes": [
+    {
+      "phase": "read-a-update",
+      "exit_code": 1,
+      "reason": "Selected model is at capacity",
+      "elapsed_s": 569
+    },
+    {
+      "phase": "draft-a",
+      "exit_code": 1,
+      "reason": "Selected model is at capacity",
+      "elapsed_s": 851
+    }
+  ],
+  "parent_activity": "PARENT-ACTIVITY.json",
+  "pending_candidate": {
+    "version": "0.7.5",
+    "package": "sources/package-v2",
+    "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+    "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+    "tests": "passed:commands/v2-tests",
+    "doctor": "passed:commands/v2-doctor"
+  },
+  "last_parent_check": "draft-b/parent-prefix-verification-v1.json",
+  "audited_original_coverage": [
+    {
+      "phase": "read-a-recover",
+      "from": 1,
+      "to": 27
+    },
+    {
+      "phase": "read-b",
+      "from": 23,
+      "to": 54
+    },
+    {
+      "phase": "read-c",
+      "from": 50,
+      "to": 81
+    },
+    {
+      "phase": "read-d",
+      "from": 77,
+      "to": 106
+    }
+  ],
+  "finalization_todo": [
+    "Unify remaining current patch documentation headers; do not edit frozen v2 identity. If packaged revision guide changes, freeze new final source and validate its exact resources.",
+    "Any final package update only after protected revision is closed; current bindings must stay immutable.",
+    "Full reading, draft, multi-session revision, final tail reading, commit/export, source and old-seal verification remain pending."
+  ],
+  "original_unique_covered": 106,
+  "project_version": "0.7.5",
+  "project_generation": 6,
+  "project_revision": 426,
+  "registered_units": 110,
+  "known_unregistered_unit": null,
+  "final_source": "sources/package-v4",
+  "final_source_build": "source-build-v4.json",
+  "background_checks": {
+    "tests": "passed:commands/v4-tests",
+    "doctor": "passed:commands/v4-doctor",
+    "source_comparison": "passed:commands/parent-v4-package-compare",
+    "final_program_proof": "source-v4-program-verification.json"
+  },
+  "final_source_content_id": "396c9fa806d7055a0676183cac55187831417158ba8c531acfced0def2c3f5c2",
+  "semantic_gate": "parent-draft-b-semantic-checkpoint.json:109 three relative-day corrections required before final publication"
+}

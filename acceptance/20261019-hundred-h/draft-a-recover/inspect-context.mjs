@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+const h=path.resolve('acceptance/20261019-hundred-h'),read=n=>JSON.parse(fs.readFileSync(path.join(h,'commands',n,'stdout.raw.txt'))),old=read('draft-a-context-108'),now=read('draft-a-recover-context-108');
+const same={};for(const k of ['plan','settings','snapshot','recent','previous_ending','continuity']){same[k]=JSON.stringify(old[k])===JSON.stringify(now[k]);assert.equal(same[k],true,k+' unexpectedly changed');}
+const state=JSON.parse(fs.readFileSync(path.join(h,'work/.writer/state.json'))),ids=['P_SELF_PAGE_105','P_SELF_PAGE_95','O_MENU_LABOR65_105','T_PAGE_REQUEST_107','P_WORK_SCOPE_107','R_UNREAD_EVENING65_106','T_SHOES_39','T_SELF_USE_95'];
+console.log(JSON.stringify({original_context_semantic_payload_equal:same,budget:now.budget,context_keys:Object.keys(now),continuity_keys:Object.keys(now.continuity),related_ledger:Object.fromEntries(ids.map(id=>[id,state.snapshot.ledger[id]])),recall:now.continuity.recall,source_hashes:now.source_hashes},null,2));
+fs.writeFileSync(path.join(h,'draft-a-recover/context-comparison.json'),JSON.stringify({original_context_semantic_payload_equal:same,original_revision:old.revision,current_revision:now.revision,unchanged_business_payload:true,recall:now.continuity.recall},null,2)+'\n',{flag:'wx'});

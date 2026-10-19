@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const [phase,toText,attempt='v1',buildRef='source-build-v2.json',previousRef]=process.argv.slice(2),to=Number(toText);
+assert.match(phase??'',/^draft-[a-z0-9-]+$/);assert.match(attempt,/^[a-z0-9-]+$/);
+assert.match(previousRef??'',/^[a-z][a-z0-9-]*\/parent-state\.bin$/);
+const previousBytes=fs.readFileSync(path.join(base,previousRef)),previous=JSON.parse(previousBytes);
+const current=JSON.parse(fs.readFileSync(path.join(base,'work/.writer/state.json')));
+assert.equal(previous.units.length,to-2);assert.equal(current.units.length,to);
+assert.deepEqual(current.units.slice(0,previous.units.length),previous.units,'Previously registered prefix changed');
+const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+for(const unit of previous.units)assert.equal(sha(fs.readFileSync(path.join(base,'work',unit.draft))),unit.sha256,unit.draft);
+let knowledgeSlots=0;for(const [id,item]of Object.entries(previous.snapshot.ledger??{})){const actual=current.snapshot.ledger[id];assert.ok(actual,id);for(const person of Object.keys(item.character_known??{})){assert.ok(Object.hasOwn(actual.character_known??{},person),'Missing prior knowledge slot '+id+'/'+person);assert.ok(typeof actual.character_known[person]==='string'&&actual.character_known[person].trim());knowledgeSlots++;}}
+await import('./audit-draft-stage.mjs');
+const result={ok:true,phase,previous_checkpoint:previousRef,previous_state_sha256:sha(previousBytes),previous_revision:previous.revision,registered_prefix_units_preserved:previous.units.length,all_prefix_unit_objects_and_bodies_unchanged:true,prior_named_ledger_knowledge_slots_retained:knowledgeSlots,generic_parent_verification:phase+'/parent-verification-'+attempt+'.json',build_reference:buildRef,scope:'Additional cross-session prefix and named knowledge-slot preservation check; slot presence does not prove semantic knowledge retained. The generic parent audit separately verifies current text exposure, old identities, package and paused gates. No literary comprehension inferred.'};
+fs.writeFileSync(path.join(base,phase,'parent-prefix-verification-'+attempt+'.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,phase,prefix_preserved:previous.units.length}));

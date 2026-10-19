@@ -1,0 +1,32 @@
+✖ 随附帮助和诊断定位当前包技能，根作者定制保留，修订区仍指向父包 (3246.5641ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3362.4233
+
+✖ failing tests:
+
+test at tests\skill-resource-guidance.test.mjs:8:1
+✖ 随附帮助和诊断定位当前包技能，根作者定制保留，修订区仍指向父包 (3246.5641ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'D:\\work\\other\\ai-writer\\.tmp\\protection-uV3Miz\\work\\.writer\\tool\\.agents\\skills'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/skill-resource-guidance.test.mjs:15:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'D:\\work\\other\\ai-writer\\.tmp\\protection-uV3Miz\\work\\.writer\\tool\\.agents\\skills',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "at": "2026-10-19T02:00:16.884Z",
+  "source_build": "source-build-v4.json",
+  "version": "0.7.5",
+  "content_id": "396c9fa806d7055a0676183cac55187831417158ba8c531acfced0def2c3f5c2",
+  "runtime_id": "bae4d0c639f53316fe927c8a7e12cbc5cc2521f1a924c582ee1e856673efa1ed",
+  "resources": 61,
+  "main_and_frozen_resources_equal_after_tests": true,
+  "checks": [
+    {
+      "label": "v4-guide-links",
+      "exit_code": 0,
+      "elapsed_ms": 5168
+    },
+    {
+      "label": "v4-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 8409
+    },
+    {
+      "label": "v4-tests",
+      "exit_code": 0,
+      "elapsed_ms": 353290
+    }
+  ],
+  "tests": {
+    "total": 156,
+    "passed": 155,
+    "failed": 0,
+    "skipped": 1,
+    "skip_reason": "Current Windows environment cannot create a file symlink; the symlink-input rejection case did not execute."
+  },
+  "installed": false,
+  "scope": "Program tests and doctor ran against main source whose managed resources match frozen v4 exactly. Frozen lightweight source omits test infrastructure. This does not attest loaded module bytes, complete the long-form campaign, validate prose, or authorize installation during active revisions."
+}

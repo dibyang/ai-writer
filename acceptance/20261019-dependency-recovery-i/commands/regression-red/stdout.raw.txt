@@ -1,0 +1,92 @@
+✖ 修订复制明确规划引用的目录外伴随文件，首次回退无需手补 (2413.8483ms)
+✖ 已固定的人物/架构依赖随正常修订提交，保留未消费文件并幂等 (3273.3744ms)
+✖ 目录外依赖的prepared事务可完成并幂等，旧基线/计划不改 (3307.2706ms)
+✖ 已部分替换目录外依赖的事务可回滚，恢复原状态和来源 (3969.6676ms)
+✔ 自校验清单不能授权非消费同目录文件、保留区、未准备的受管文件或重复目标 (4120.9064ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17188.7005
+
+✖ failing tests:
+
+test at tests\revision-dependencies.test.mjs:30:1
+✖ 修订复制明确规划引用的目录外伴随文件，首次回退无需手补 (2413.8483ms)
+  Error: ENOENT: no such file or directory, open 'D:\work\other\ai-writer\.tmp\protection-gn54Gv\work\.writer\revisions\cca0ebff-5163-461f-8293-560844b913e9\workspace\人物\规划伴随.md'
+      at Object.openSync (node:fs:561:18)
+      at Object.readFileSync (node:fs:445:35)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-dependencies.test.mjs:31:45)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'D:\\work\\other\\ai-writer\\.tmp\\protection-gn54Gv\\work\\.writer\\revisions\\cca0ebff-5163-461f-8293-560844b913e9\\workspace\\人物\\规划伴随.md'
+  }
+
+test at tests\revision-dependencies.test.mjs:34:1
+✖ 已固定的人物/架构依赖随正常修订提交，保留未消费文件并幂等 (3273.3744ms)
+  Error: 事务目标重复或越界
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:58:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.validateTx [as validate] (file:///D:/work/other/ai-writer/lib/revisions.mjs:227:130)
+      at publishFiles (file:///D:/work/other/ai-writer/lib/revisions.mjs:237:11)
+      at apply (file:///D:/work/other/ai-writer/lib/revisions.mjs:262:12)
+      at withLock.coordination (file:///D:/work/other/ai-writer/lib/revisions.mjs:289:14)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:94:67)
+      at Object.commit (file:///D:/work/other/ai-writer/lib/revisions.mjs:268:42)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:639:136)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59) {
+    code: 'TRANSACTION_CORRUPT'
+  }
+
+test at tests\revision-dependencies.test.mjs:39:1
+✖ 目录外依赖的prepared事务可完成并幂等，旧基线/计划不改 (3307.2706ms)
+  Error: 事务目标重复或越界
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:58:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at validateTx (file:///D:/work/other/ai-writer/lib/revisions.mjs:227:130)
+      at Object.recover (file:///D:/work/other/ai-writer/lib/revisions.mjs:295:203)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:639:136)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-dependencies.test.mjs:41:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18) {
+    code: 'TRANSACTION_CORRUPT'
+  }
+
+test at tests\revision-dependencies.test.mjs:45:1
+✖ 已部分替换目录外依赖的事务可回滚，恢复原状态和来源 (3969.6676ms)
+  AssertionError [ERR_ASSERTION]: {
+    "ok": false,
+    "error": "事务目标重复或越界",
+    "code": "TRANSACTION_CORRUPT",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' revision '--help'"
+  }
+  
+  
+  2 !== 91
+  
+      at interrupt (file:///D:/work/other/ai-writer/tests/revision-dependencies.test.mjs:26:10)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/revision-dependencies.test.mjs:46:11)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 91,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

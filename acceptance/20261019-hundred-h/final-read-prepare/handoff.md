@@ -1,0 +1,28 @@
+# final-read-prepare → 下一新进程
+
+状态prepared，未commit。先等本进程实际exit0和父独立审计；此交接不代替它们。
+
+ID 79205b65-a787-466f-a5d9-39906315aafc
+原token只见本地handoff.json/resume.json，不转移会话。
+workspace D:\work\other\ai-writer\acceptance\20261019-hundred-h\work\.writer\revisions\79205b65-a787-466f-a5d9-39906315aafc\workspace
+
+主r440/112 SHA cc7fca8f4e5af736a9eec339c2ac38584b5b4a770b6f756879422c88a0dd8b22
+原base440，base-state同主SHA；base.json 6989eadd19ff2f360cbe80eb22c5fbea8e66b6bbf6fd22a842e4743759736f5d
+prepared session SHA 5bb0483f9ed74fbe6ed0b272708a29b8a9d00b87356268da267b3dc76ce886e9
+prepared.json SHA a4502277e603b69526885179173533b49759ea46a2dcc49a902d550326169355
+分支r489/112，head SHA 19e995fe508511b333d6318c250796eed42521f32059a3eaf80120211104d412
+计划commit.id df781cd8-75c9-4a34-aa29-65a6d34e179c；目标revision441（未发布）
+
+正式review .writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json，范围72–112/41章/14比较，revision_session=79205b65-a787-466f-a5d9-39906315aafc，报告SHA 16ab689096fa90018632610577d3dda4495304b4111d38fe27088ff25107155a。check pending=[]，原unit/派生snapshot与正文从本批起不变。详REPORT.md/results.json及原始capture。
+
+下一进程只读主status/revision list与prepared原件后核同一ID/token/base/全部SHA，**不要resume prepared**，否则取消准备。不改候选。实际commit属于下一进程；本进程没有执行。提交后apply必须用实际publication.commit_id，verify用当前有效完整报告并逐次新CAS；不能拿本次prepare计划ID冒充已应用。
+
+|文件|原SHA|候选SHA|
+|---|---|---|
+|正文/0072-把空出来的地方留着.md|8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185|dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d|
+|正文/0079-换了一个开车的人.md|dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125|e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf|
+|正文/0083-柜里那一格.md|3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71|da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f|
+|正文/0107-九点到十一点.md|416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748|d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6|
+|正文/0109-两百四十买到什么.md|b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf|6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9|
+
+五意见仍adopted、author_choice=null；暂无application/verification。未知声/私因与109昨晚画鞋保留。105新本人页未被何周顾读，无新认可/客户/定金。完整语义边界和可选风格见正式报告。

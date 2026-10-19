@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "phase": "draft-a-recover",
+  "registered_units": 108,
+  "request_startup_hash_verified": true,
+  "revision": 421,
+  "generation": 6,
+  "content_id": "c3c8634edcb80eb91794c5fe6a86f2c2dc27d05139dd124fa309ee309e3c2f24",
+  "original106_bodies_and_unit_records_unchanged": true,
+  "original_nonstate_nontool_files_preserved": 7796,
+  "original154_ledger_identity_fields_preserved": true,
+  "old_timeline_prefix_preserved": true,
+  "new_chapters": [
+    {
+      "unit": 107,
+      "draft": "正文/0107-九点到十一点.md",
+      "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+      "body_han": 3396,
+      "above_target": false
+    },
+    {
+      "unit": 108,
+      "draft": "正文/0108-先陪你走这一趟.md",
+      "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+      "body_han": 3287,
+      "above_target": false
+    }
+  ],
+  "new_body_han": 6683,
+  "stage": "paused",
+  "gates": [
+    {
+      "label": "draft-a-recover-deny-109-context",
+      "args": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--unit",
+        "109"
+      ],
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33"
+    },
+    {
+      "label": "draft-a-recover-deny-109-template",
+      "args": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-template",
+        "--project",
+        "acceptance/20261019-hundred-h/work",
+        "--unit",
+        "109",
+        "--draft",
+        "正文/0109-未授权门禁占位.md"
+      ],
+      "code": "ACTION_OUT_OF_SCOPE",
+      "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33"
+    }
+  ],
+  "reading_proof": "reading-audit/draft-a-recover-new-chapters-v1.json",
+  "state_sha256": "5a913ff9d77d53e6464f64521336e2f1c8578b69d6ba97dc70b59c30c17d5b33",
+  "scope": "Mechanical CLI checkpoint plus actual current-version text exposure. Goal/payoff, characters and literary judgments remain in model reports, not inferred from hash or length."
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "H109_RELATIVE_DAY_DRIFT",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "109在第67日三次用前天回指107第66日同批自录/未完报价及处理，确应指昨天；父先独立发现，本人回查并在十章连读确认，未修。",
+      "suggestion": "后续独立保护批仅将三处相应前天改为昨天，保66日源录音日期；核summary/changes及108–112承接，不锁外改已登记正文或刷新来源哈希。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 3,
+          "quote": "第六十六日八点五十七"
+        },
+        {
+          "unit": 108,
+          "draft": "正文/0108-先陪你走这一趟.md",
+          "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+          "line": 113,
+          "quote": "将报价例子排到第六十七日上午九点半到十点半"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 5,
+          "quote": "前天那段车声盖住后半句的试声"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 7,
+          "quote": "前天没有做完的事"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 113,
+          "quote": "前天处理过的声音"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/fed76e84-65b1-4d06-b30b-9d5446c0a4ab.json",
+        "review_sha256": "d998f51136ea61e301d9029a63ac67485aceca1951e8da0437db1fb579d9d1ff",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "history": []
+    }
+  }
+}
