@@ -1,0 +1,63 @@
+{
+  "ok": false,
+  "error": "本轮任务“H本批五章受保护修订已正式提交、五意见verified，三次包更新至0.8.0并完成107–112知情复读；暂停正文，仅讨论当前结果和后续计划。113未授权，不因next_unit或未写细纲启动正文。”不允许 draft 113–113；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261019-hundred-h\\work\\.writer\\tool\\bin\\ai-writer.mjs' record-template '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "H本批五章受保护修订已正式提交、五意见verified，三次包更新至0.8.0并完成107–112知情复读；暂停正文，仅讨论当前结果和后续计划。113未授权，不因next_unit或未写细纲启动正文。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持暂停，仅discuss/plan；draft_range/revise_range均null，113正文与登记未授权。",
+        "只导出当前已登记112章草稿到本轮新目录，不上传、不发布、不Git提交推送。",
+        "五意见真实历史和作者取舍保留；未知声/私因不结案，低置信风格不升级必改。",
+        "整个H最终F/G/J只读核验、主源码验证索引与封存由父另做，本批不标整个H完成。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

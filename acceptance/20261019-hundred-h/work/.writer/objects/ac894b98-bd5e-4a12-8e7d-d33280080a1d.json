@@ -1,0 +1,165 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "H109_RELATIVE_DAY_DRIFT",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "109在第67日三次用前天回指107第66日同批自录/未完报价及处理，确应指昨天；父先独立发现，本人回查并在十章连读确认，未修。",
+      "suggestion": "后续独立保护批仅将三处相应前天改为昨天，保66日源录音日期；核summary/changes及108–112承接，不锁外改已登记正文或刷新来源哈希。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 3,
+          "quote": "第六十六日八点五十七"
+        },
+        {
+          "unit": 108,
+          "draft": "正文/0108-先陪你走这一趟.md",
+          "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+          "line": 113,
+          "quote": "将报价例子排到第六十七日上午九点半到十点半"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 5,
+          "quote": "前天那段车声盖住后半句的试声"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 7,
+          "quote": "前天没有做完的事"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 113,
+          "quote": "前天处理过的声音"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/fed76e84-65b1-4d06-b30b-9d5446c0a4ab.json",
+        "review_sha256": "d998f51136ea61e301d9029a63ac67485aceca1951e8da0437db1fb579d9d1ff",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/41e5e5e4-c03f-4ea3-9bba-c34ece25e827.json",
+          "sha256": "06678a28cea378be14983736dc7692a66ef68a1b4846a36930d9c9099f904b76"
+        },
+        {
+          "ref": ".writer/objects/89a0982b-29d6-4c88-a2fd-a6a2b69d65bc.json",
+          "sha256": "d439a1e0f23ad7702cb00c65cd6eb97a567e6d921577108aecd2b1b0a5c0ed8f"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用已确认连续性修正：第67日回指第66日的三处前天均改昨天；原66日自录与原67日计划不改，不编65日隐形录音。仅实读证据支持的日期和必要派生登记在保护区修正。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "107第六十六日自录、108把报价排到第六十七日晨、109第67日现三句“昨天那段车声盖住后半句的试声”“昨天没有做完的事”“昨天处理过的声音”相接。净收益为消除三处相对日期错指；保原66日/不造65日录音，保低置信“昨晚画的鞋”、240自用例价及顾非客户。完整72–112正式报告覆盖107/108/109全部证据单位。",
+        "changes": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "before": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "after": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "before": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "after": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "before": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "after": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}

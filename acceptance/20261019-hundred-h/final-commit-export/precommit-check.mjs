@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const H=path.resolve('acceptance/20261019-hundred-h'), D=path.join(H,'final-commit-export'), W=path.join(H,'work');
+const read=f=>JSON.parse(fs.readFileSync(f)), sha=b=>crypto.createHash('sha256').update(b).digest('hex'), hash=f=>sha(fs.readFileSync(f));
+const R=read(path.join(H,'parent-revision-setup/READY.json')), P=read(path.join(H,'final-read-prepare/parent-verification-v1.json')), F=read(path.join(H,'final-read-prepare/results.json')), hand=read(path.join(H,'final-read-prepare/handoff.json'));
+assert.equal(read(path.join(H,'final-read-prepare/process-result.json')).exit_code,0);assert.equal(P.ok,true);
+const S=path.join(W,'.writer/revisions',P.session_id), B=path.join(S,'workspace'), st=read(path.join(W,'.writer/state.json')), session=read(path.join(S,'session.json')), prepared=read(path.join(S,'prepared.json')), base=read(path.join(S,'base.json'));
+assert.equal(st.revision,440);assert.equal(st.units.length,112);assert.equal(st.schema_version,6);assert.equal(st.tool_control.generation,6);assert.equal(st.tool_control.installed.source_content_id,read(path.join(H,'source-build-v2.json')).observed_content_id);
+assert.equal(hash(path.join(W,'.writer/state.json')),R.main_state_sha256);assert.equal(hash(path.join(S,'base-state.json')),R.main_state_sha256);assert.equal(hash(path.join(S,'base.json')),F.base_manifest_sha256);
+assert.equal(session.status,'prepared');assert.equal(hash(path.join(S,'session.json')),F.session_sha256);assert.equal(hash(path.join(S,'prepared.json')),P.prepared_sha256);assert.equal(hash(path.join(B,'.writer/state.json')),P.branch_state_sha256);assert.equal(prepared.base_revision,440);assert.equal(prepared.commit.id,P.planned_commit_id);assert.equal(prepared.branch_head_sha256,P.branch_state_sha256);assert.equal(sha(hand.token),session.token_sha256);
+const baselineFiles=Object.entries(base.files);for(const [file,expected] of baselineFiles)assert.equal(hash(path.join(W,file)),expected,'baseline '+file);
+for(const [file,expected] of Object.entries(prepared.tree))assert.equal(hash(path.join(B,file)),expected,'candidate '+file);
+const bodies=R.registered_units.map(u=>{const after=R.planned_candidates.find(c=>c.unit===u.unit)?.planned_after_sha256??u.sha256;assert.equal(hash(path.join(W,u.draft)),u.sha256);assert.equal(hash(path.join(B,u.draft)),after);return {unit:u.unit,draft:u.draft,before:u.sha256,after};});
+const source=read(path.join(H,'source-build-v2.json'));for(const x of source.files){const file=x.group==='skills'?'.agents/skills/'+x.file:x.file;assert.equal(hash(path.join(W,'.writer/tool',file)),x.sha256,file);}
+const status=read(path.join(H,'commands/final-commit-restore-status/stdout.raw.txt')), list=read(path.join(H,'commands/final-commit-restore-list/stdout.raw.txt')), doctor=read(path.join(H,'commands/final-commit-restore-doctor/stdout.raw.txt'));
+assert.equal(status.revision,440);assert.equal(doctor.ok,true);assert.ok(list.transactions.every(t=>t.status==='completed'||t.status==='rolled_back'));assert.equal(list.sessions.filter(s=>!['committed','aborted'].includes(s.status)).length,1);
+fs.copyFileSync(path.join(W,'.writer/state.json'),path.join(D,'initial-state.bin'),fs.constants.COPYFILE_EXCL);
+const custom=baselineFiles.filter(([f])=>!f.startsWith('.writer/')&&!f.startsWith('正文/'));
+const result={ok:true,at:new Date().toISOString(),revision:440,units:112,schema:6,generation:6,session_id:session.id,status:session.status,prepared_sha256:P.prepared_sha256,branch_head_sha256:P.branch_state_sha256,base_sha256:F.base_manifest_sha256,main_state_sha256:R.main_state_sha256,planned_commit_id:prepared.commit.id,baseline_files_checked:baselineFiles.length,candidate_files_checked:Object.keys(prepared.tree).length,resources_checked:source.files.length,bodies,retained_root_files:custom,token_verified_without_display:true,no_resume:true};
+fs.writeFileSync(path.join(D,'precommit-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(D,'commit.input.json'),JSON.stringify({id:session.id,token:hand.token},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({...result,bodies:result.bodies.length,retained_root_files:custom.length}));

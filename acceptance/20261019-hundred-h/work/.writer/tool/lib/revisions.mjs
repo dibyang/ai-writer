@@ -87,7 +87,13 @@ export function createRevisions(api) {
     for (const ref of [...TREES, ...SINGLE, ...extra]) visit(ref);
     return Object.fromEntries(Object.entries(result).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0));
   }
-  function extras(p) { return [...new Set(p.state.units.flatMap(u => Object.keys(u.source_hashes ?? {})))].filter(ref => ref !== '.writer/state.json'); }
+  function dependencies(state) {
+    return [...new Set([...state.units.flatMap(u => Object.keys(u.source_hashes ?? {})),
+      ...Object.values(state.governance?.planning ?? {}).flatMap(entry => entry.refs ?? [])])].filter(ref => ref !== '.writer/state.json');
+  }
+  function extras(p) { return dependencies(p.state); }
+  function managed(ref) { return ref === '.writer/state.json' || TREES.some(prefix => ref.startsWith(`${prefix}/`)); }
+  function externalDependency(ref) { return !['.writer', '.git', '.agents', '.codex', '.aws'].includes(ref.split('/')[0].toLowerCase()); }
   function toolFiles(root) { return [...runtimeFiles.map(ref => `.writer/tool/${ref}`), '.writer/tool/build-manifest.json'].filter(ref => fs.existsSync(safe(root, ref))); }
   function baseline(root, s) { const base = json(safe(root, `.writer/revisions/${s.id}/base.json`), stateLimit); if (base.project_id !== s.project_id || base.build_id !== s.build_id || !same(base.scope, s.scope)) fail('REVISION_CORRUPT', '基线身份或声明范围不符'); return base; }
   function parentUnchanged(root, s, base) {
@@ -197,6 +203,7 @@ export function createRevisions(api) {
       if (!same(p.state.governance, old.governance) || !same(p.state.decisions, old.decisions) || !same(p.config, main.config)) fail('REVISION_SCOPE_INVALID', '本批修订区不能更改作品配置、阶段授权或作者决策；应在主作品先登记范围');
       if (p.state.units.some((u, i) => u.draft !== old.units[i].draft)) fail('REVISION_SCOPE_INVALID', '本批须保留原章节相对路径，不自动改名或合并');
       const reviews = reviewStatus(p); if (!reviews.current_records.some(r => r.from <= s.scope.from && r.to >= s.scope.through && r.revision_session === s.id)) fail('REVISION_REVIEW_REQUIRED', '需在独立区按最终字节实读整个修订尾段，并用 review 登记一次完整模型复核');
+      for (const ref of extras(p)) if (!managed(ref) && (!externalDependency(ref) || !base.extra.includes(ref) || !Object.hasOwn(base.files, ref))) fail('REVISION_SCOPE_INVALID', `目录外来源未在本次基线固定，不能漏发或扩大修订：${ref}`);
       const target = structuredClone(p.state), branchHead = digest(workspace, '.writer/state.json');
       const commitId = crypto.randomUUID(), ref = `.writer/objects/${commitId}.json`;
       const record = { id: commitId, session_id: s.id, base_revision: base.revision, branch_revision: p.state.revision, branch_head_sha256: branchHead, scope: s.scope, build_id: loadedBuild, nature: 'revision-commit-not-literary-acceptance' };
@@ -222,9 +229,19 @@ export function createRevisions(api) {
   function saveTx(root, tx) { metadata(root, txFile(tx), tx); }
   function validateTx(root, tx) {
     if (tx.schema_version !== 1 || !UUID.test(tx.id ?? '') || !UUID.test(tx.session_id ?? '') || !Array.isArray(tx.plan) || hash(JSON.stringify(tx.plan)) !== tx.plan_sha256) fail('TRANSACTION_CORRUPT', '事务清单损坏');
+    const s = session(root, tx.session_id), base = baseline(root, s), originalRef = `.writer/revisions/${s.id}/base-state.json`;
+    if (digest(root, originalRef) !== base.files['.writer/state.json']) fail('TRANSACTION_CORRUPT', '事务原状态与固定基线不符');
+    const original = json(safe(root, originalRef), stateLimit);
+    if (original.project_id !== base.project_id || original.revision !== base.revision || !Array.isArray(base.extra)) fail('TRANSACTION_CORRUPT', '事务基线身份损坏');
+    // A baseline inventory is not a directory grant: only explicitly consumed/planned files qualify.
+    const fixed = new Set(dependencies(original).filter(ref => externalDependency(ref) && base.extra.includes(ref) && Object.hasOwn(base.files, ref)));
     const seen = new Set();
     for (const [i, row] of tx.plan.entries()) {
-      if (seen.has(row.file) || (row.file !== '.writer/state.json' && !TREES.some(prefix => row.file.startsWith(`${prefix}/`)))) fail('TRANSACTION_CORRUPT', '事务目标重复或越界'); seen.add(row.file); safe(root, row.file);
+      if (!row || typeof row.file !== 'string') fail('TRANSACTION_CORRUPT', '事务目标损坏');
+      if (!managed(row.file) && !fixed.has(row.file)) fail('TRANSACTION_CORRUPT', '事务目标重复或越界');
+      const target = safe(root, row.file), identity = process.platform === 'win32' ? target.toLowerCase() : target;
+      if (seen.has(identity)) fail('TRANSACTION_CORRUPT', '事务目标重复或越界'); seen.add(identity);
+      if (row.before !== (base.files[row.file] ?? null)) fail('TRANSACTION_CORRUPT', '事务原字节与固定基线不符');
       for (const side of ['old', 'new']) {
         if (side === 'old' && row.before === null) continue;
         const expectedRef = `.writer/transactions/${tx.id}/${side}/${i}.bin`;
@@ -232,6 +249,14 @@ export function createRevisions(api) {
       }
     }
     if (tx.plan.at(-1)?.file !== '.writer/state.json') fail('TRANSACTION_CORRUPT', '事务必须最后替换 state');
+    // Terminal retries never publish again; an interrupted rollback may already have a newer prepare.
+    if (!['completed', 'rolled-back'].includes(tx.status)) {
+      const ref = `.writer/revisions/${s.id}/prepared.json`;
+      const bound = s.prepared_sha256 ? digest(root, ref) === s.prepared_sha256 : ['committed', 'interrupted'].includes(s.status) && s.transaction_id === tx.id;
+      if (!bound) fail('TRANSACTION_CORRUPT', '事务缺少原准备清单绑定');
+      const prepared = json(safe(root, ref), stateLimit);
+      if (prepared.session_id !== s.id || prepared.project_id !== base.project_id || prepared.base_revision !== base.revision || !same(prepared.commit?.scope, s.scope) || prepared.commit?.build_id !== base.build_id || !same(tx.plan.map(({file,before,after}) => ({file,before,after})), prepared.changes) || hash(encoded(prepared.target_state)) !== tx.plan.at(-1).after) fail('TRANSACTION_CORRUPT', '事务目标或状态与原准备清单不符');
+    }
   }
   function publishFiles(root, tx, direction, hooks) {
     hooks.validate(root, tx); const conflicts = [];
@@ -292,7 +317,7 @@ export function createRevisions(api) {
   function recover(root, input) {
     keys(input, ['transaction_id', 'token', 'direction', 'lock_sha256', 'author_evidence']);
     if (!UUID.test(input.transaction_id ?? '') || !['complete', 'rollback'].includes(input.direction)) fail('REVISION_INPUT_INVALID', '恢复需有效事务 ID 与 complete/rollback');
-    const tx = json(safe(root, `.writer/transactions/${input.transaction_id}/transaction.json`), stateLimit);if(tx.kind==='tool-update')fail('TOOL_RECOVERY_REQUIRED','工具事务需由外部tool recover恢复，不用修订所有者令牌');validateTx(root, tx); owner(session(root, tx.session_id), input.token);
+    const tx = json(safe(root, `.writer/transactions/${input.transaction_id}/transaction.json`), stateLimit);if(tx.id!==input.transaction_id)fail('TRANSACTION_CORRUPT','事务ID与所在目录不符');if(tx.kind==='tool-update')fail('TOOL_RECOVERY_REQUIRED','工具事务需由外部tool recover恢复，不用修订所有者令牌');validateTx(root, tx); owner(session(root, tx.session_id), input.token);
     if (['completed', 'rolled-back'].includes(tx.status)) {
       if ((tx.status === 'completed') !== (input.direction === 'complete')) fail('TRANSACTION_TERMINAL', '终态不能反向回填；已提交撤销须新建修订');
       return { ok: true, unchanged: true, transaction_id: tx.id, status: tx.status };

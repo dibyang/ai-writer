@@ -8,7 +8,8 @@ export const RUNTIME_FILES = ['package.json', 'bin/ai-writer.mjs', 'lib/workspac
 export const WORK_GUIDES = ['quickstart.md', 'user-guide.md', 'workflow.md', 'long-form.md', 'deslop.md', 'attribution.md', 'revision-and-sources.md', 'review-and-registration.md', 'tool-updates.md'];
 export const WORK_ATTRIBUTION = ['LICENSE.md', 'docs/source-manifest.json', 'docs/oh-story-audit-manifest.json', 'docs/usability-sources.json', 'vendor/oh-story-reference/LICENSE', 'vendor/oh-story-reference-20261015/LICENSE', 'vendor/oh-story-deslop-reference/LICENSE', 'vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md'];
 export const PACKAGE_CONTENT = [...WORK_GUIDES.map(x=>`docs/${x}`), ...WORK_ATTRIBUTION, 'examples/prompts.md', 'examples/history-fact-card.json'];
-export const currentProtocol = version => /^0\.7\./.test(version??'');
+// 0.8 adds writing methods while retaining the 0.7 owned-resource/schema6 protocol.
+export const currentProtocol = version => /^0\.[78]\./.test(version??'');
 const sha = value => crypto.createHash('sha256').update(value).digest('hex');
 function ordinary(file) {
   const absolute = path.resolve(file); let cursor = path.parse(absolute).root;
@@ -113,7 +114,7 @@ export function workspaceBaselines(root){
   const rows=[];for(const ref of [...WORK_GUIDES.map(x=>`docs/${x}`),'AGENTS.md']){const f=path.join(work,ref);if(fs.existsSync(f))rows.push({file:ref,sha256:sha(fs.readFileSync(ordinary(f)))});}return rows;
 }
 export function packageFiles(value){
-  const build=identifyBuild(value);if(!currentProtocol(build.tool_version)||!build.ok)throw userError('来源必须是完整0.7本地工具包；先核identify缺项或清单差异',{code:'TOOL_SOURCE_INVALID'});
+  const build=identifyBuild(value);if(!currentProtocol(build.tool_version)||!build.ok)throw userError('来源必须是完整0.7或0.8本地工具包；先核identify缺项或清单差异',{code:'TOOL_SOURCE_INVALID'});
   const required=new Set([...RUNTIME_FILES,...PACKAGE_CONTENT,...['project','novel','screenplay','history','essay','review','research'].map(x=>`.agents/skills/writer-${x}/SKILL.md`)]);for(const r of build.files)required.delete(fileRef(r));
   if(required.size)throw userError('更新来源缺少必需模块/手册/许可',{code:'TOOL_SOURCE_INCOMPLETE'});
   for(const r of build.files)if(r.bytes>1024*1024||fs.statSync(ordinary(path.join(build.tool_root,fileRef(r)))).nlink!==1)throw userError('更新包含硬链接或单文件超过1MiB',{code:'TOOL_SOURCE_INVALID'});

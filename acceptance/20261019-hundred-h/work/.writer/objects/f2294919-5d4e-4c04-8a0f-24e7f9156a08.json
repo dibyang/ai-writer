@@ -1,0 +1,89 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "H79_SINGLE_BRICK_REFERENCE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "两块砖的半月缺口可以按一组砖的简写理解，但缺少临车道那块的限定，容易误构成两处缺口；补定位有净收益，不宣判实体已变。",
+      "suggestion": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡，白罩在里面，没有亮。",
+      "evidence": [
+        {
+          "unit": 79,
+          "draft": "正文/0079-换了一个开车的人.md",
+          "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+          "line": 33,
+          "quote": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖的半月缺口仍朝围挡，白罩在里面，没有亮。"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/12de63b5-95d5-4a38-b700-009d7c5082a8.json",
+        "review_sha256": "ce441544b9a0b9f3b817f073eca971801bf63633df794805813c0ff8957c7e43",
+        "units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "dependency": "ccde34ebb348b6ba0b691b8186ae0075fb37a7565533c9318223c5d66ecb1a99"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/46ea965b-2463-40b7-88e5-a2ee741a74de.json",
+          "sha256": "fd0b79b395c253c310990a84f4b500222b3bdf3a446d05db145473ccd8037965"
+        },
+        {
+          "ref": ".writer/objects/24dd3444-d47d-411e-b5dd-29ed41eaa651.json",
+          "sha256": "ac0a4a6f23dd88c4982480075d0700c5a4601bb184334094fde6e0e11882a1e4"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用D79定位澄清，恢复36/71既有临车道单砖限定；不把歧义宣判成实体变更，不改变两砖/缺口/白罩/通行原观察。代理在本轮范围组织，不改变作者取舍。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "dependency": "ccde34ebb348b6ba0b691b8186ae0075fb37a7565533c9318223c5d66ecb1a99"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "79现句“两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡”；限定单块避免回数缺口和误构图，接36/71原观察。两砖/白罩未亮及各次通行时点保留，不宣判原句造成实体变更，仍suggestion。",
+        "changes": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "before": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "after": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}

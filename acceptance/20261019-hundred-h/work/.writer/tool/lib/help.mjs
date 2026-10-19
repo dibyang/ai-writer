@@ -41,7 +41,7 @@ export function invocation(root, command, args = []) {
   return `node ${quote(path.join(root, 'bin/ai-writer.mjs'))} ${command}${args.length ? ' ' + args.map(quote).join(' ') : ''}`;
 }
 export function help(root, version, command) {
-  const legacyEmbedded = path.basename(path.dirname(root)) === '.writer'&&!/^0\.7\./.test(version??'');
+  const legacyEmbedded = path.basename(path.dirname(root)) === '.writer'&&!/^0\.[78]\./.test(version??'');
   const guides = legacyEmbedded ? path.resolve(root, '../../docs') : path.join(root, 'docs');
   const skills = legacyEmbedded ? path.resolve(root, '../../.agents/skills') : path.join(root, '.agents/skills');
   const projectHint = command === 'init' ? 'init 使用 --path 指定新作品目录，不接受 --project。'

@@ -13,7 +13,7 @@ import { createSources, initialSources } from './sources.mjs';
 import { createRevisions } from './revisions.mjs';
 import { createReviewWorkflow, initialReviewWorkflow } from './review-workflow.mjs';
 import { createToolUpdates, initialToolControl } from './tool-update.mjs';
-import { RUNTIME_FILES, WORK_GUIDES, WORK_ATTRIBUTION, packageFiles, fileRef, identifyBuild, compareBuilds, writeBuildManifest, sourceProvenance } from './tool-build.mjs';
+import { RUNTIME_FILES, WORK_GUIDES, WORK_ATTRIBUTION, packageFiles, fileRef, identifyBuild, compareBuilds, writeBuildManifest, sourceProvenance, currentProtocol } from './tool-build.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const KINDS = ['novel', 'screenplay', 'history', 'essay'];
@@ -559,15 +559,16 @@ function doctor(target) {
   let contentRoot = resourceProjectRoot ?? CONTENT_ROOT;
   const errors = [], warnings = [], packageFile = path.join(toolRoot, 'package.json');
   const version = fs.existsSync(packageFile) ? json(packageFile).version : null;
-  if(version?.startsWith('0.7.')) {skillRoot=path.join(toolRoot,'.agents/skills');contentRoot=toolRoot;}
+  const ownedResources = currentProtocol(version);
+  if(ownedResources) {skillRoot=path.join(toolRoot,'.agents/skills');contentRoot=toolRoot;}
   if (!version) errors.push('缺少工具版本 package.json');
   for (const name of SKILLS) if (!fs.existsSync(path.join(skillRoot, name, 'SKILL.md'))) errors.push(`缺少 skill ${name}`);
   const legacy = typeof version === 'string' && /^0\.[12]\./.test(version);
   if (legacy) warnings.push('这是旧版作品工具；可从当前主项目显式传作品路径操作，或备份后完整升级随附工具与手册。');
-  if (!legacy) for (const name of WORK_GUIDES.filter(name => name==='tool-updates.md'?version?.startsWith('0.7.'):name==='review-and-registration.md'?/^0\.[67]\./.test(version??''):name!=='revision-and-sources.md'||/^0\.[567]\./.test(version??''))) if (!fs.existsSync(path.join(contentRoot, 'docs', name))) errors.push(`缺少用户文档 ${name}`);
+  if (!legacy) for (const name of WORK_GUIDES.filter(name => ownedResources || (name==='tool-updates.md'?false:name==='review-and-registration.md'?version?.startsWith('0.6.'):name!=='revision-and-sources.md'||/^0\.[56]\./.test(version??'')))) if (!fs.existsSync(path.join(contentRoot, 'docs', name))) errors.push(`缺少用户文档 ${name}`);
   if (!legacy) for (const ref of WORK_ATTRIBUTION) if (!fs.existsSync(path.join(contentRoot, ref))) errors.push(`缺少来源或许可资料 ${ref}`);
-  if(resourceProjectRoot&&version?.startsWith('0.7.')) for(const ref of WORK_ATTRIBUTION) if(!fs.existsSync(path.join(resourceProjectRoot,ref))) warnings.push(`作品根缺少原来源或许可副本 ${ref}；随附包仍保留原文`);
-  const modules = version?.startsWith('0.1.') ? ['workspace.mjs'] : legacy ? ['workspace.mjs', 'journal.mjs', 'longform.mjs'] : ['workspace.mjs', 'journal.mjs', 'longform.mjs', 'help.mjs', 'style.mjs', ...(/^0\.[4567]\./.test(version ?? '') ? ['governance.mjs', 'tool-build.mjs'] : []), ...(/^0\.[567]\./.test(version??'') ? ['sources.mjs', 'revisions.mjs'] : []), ...(/^0\.[67]\./.test(version??'')?['review-workflow.mjs']:[]), ...(version?.startsWith('0.7.')?['tool-update.mjs']:[])];
+  if(resourceProjectRoot&&ownedResources) for(const ref of WORK_ATTRIBUTION) if(!fs.existsSync(path.join(resourceProjectRoot,ref))) warnings.push(`作品根缺少原来源或许可副本 ${ref}；随附包仍保留原文`);
+  const modules = ownedResources ? RUNTIME_FILES.filter(ref=>ref.startsWith('lib/')).map(ref=>path.basename(ref)) : version?.startsWith('0.1.') ? ['workspace.mjs'] : legacy ? ['workspace.mjs', 'journal.mjs', 'longform.mjs'] : ['workspace.mjs', 'journal.mjs', 'longform.mjs', 'help.mjs', 'style.mjs', ...(/^0\.[456]\./.test(version ?? '') ? ['governance.mjs', 'tool-build.mjs'] : []), ...(/^0\.[56]\./.test(version??'') ? ['sources.mjs', 'revisions.mjs'] : []), ...(version?.startsWith('0.6.')?['review-workflow.mjs']:[])];
   for (const name of modules) if (!fs.existsSync(path.join(toolRoot, 'lib', name))) errors.push(`缺少工具模块 ${name}`);
   const embedded = path.basename(path.dirname(toolRoot)) === '.writer';
   const engine = fs.existsSync(path.join(toolRoot, 'vendor/story-gate-studio/scripts/story-gate.js'));

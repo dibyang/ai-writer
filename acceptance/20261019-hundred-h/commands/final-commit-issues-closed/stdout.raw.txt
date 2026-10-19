@@ -1,0 +1,1861 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 451,
+  "counts": {
+    "verified": 5
+  },
+  "issues": [
+    {
+      "id": "H107_RETAINED_VOICE_COUNT_CANDIDATE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "未采用候选：107站读中止与坐读留下另一段可读成四次录制尝试，后文录的三段可能专指留用三段。数量对象未明分，部分读者会回数；不构成已确认硬错。",
+      "suggestion": "留后续正式保护批核实；如有净收益可把录的三段澄清为留下的三段试声，并核正式summary/changes的数量含义。本阶段无revise范围，正文/state原107语义不改。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 25,
+          "quote": "她停了录音，朝空屋说你先坐"
+        },
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 27,
+          "quote": "改将它留作另一段：人在动的时候，声音会变。"
+        },
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 71,
+          "quote": "她录的三段也都有不好听的地方。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/dbe88f09-0f52-449b-90e7-22c39ba22d30.json",
+        "review_sha256": "608f6affa2724087561cfca8ff4ebca4c42fa9c1ce52b93c16d3461b82506323",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/bfdaaea4-f524-47f0-833d-2de9140590d7.json",
+          "sha256": "5a7e8c59dd14bbf818327b91e97d549e03d0044c1eb0420e598fc465f36464a8"
+        },
+        {
+          "ref": ".writer/objects/9c4e59b0-d3e7-4e5c-8cf0-91d73aa1c667.json",
+          "sha256": "a966ccd32841126b2733356b5318e72d72501ffe1035ae3459893a589b4a5669"
+        },
+        {
+          "ref": ".writer/objects/e19c4369-162e-4871-85a8-8058e04d3ca4.json",
+          "sha256": "2e351a52e5f0b256f7e8d091fb86f824f2e625c75135b82ee232a14742eef160"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用同句数量对象澄清为留下的三段试声，区分留用素材与尝试次数；不添加删除站读或四个成品事实。保护重登时据原文核summary/changes，代理选择不冒充作者确认。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "107现句“留下的三段试声也都有不好听的地方。”；明确三段是留用素材，避免由站读中止/坐读留用回数尝试。保留录制尝试与留用区别、错误输出另留，不补删除或第四完整成品；数量澄清仍suggestion。",
+        "changes": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "before": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "after": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json",
+        "review_sha256": "e496f4a7d8692b1fa3dcb49ff33c83ad4ab96e86b81cb76bcfa3a7ba97d62531",
+        "reviewer": "actual-Codex-H-final-read-prepare-informed-model-current-72-112",
+        "conclusion": "resolved",
+        "reason": "107现句“留下的三段试声也都有不好听的地方。”；明确三段是留用素材，避免由站读中止/坐读留用回数尝试。保留录制尝试与留用区别、错误输出另留，不补删除或第四完整成品；数量澄清仍suggestion。",
+        "rechecked_context": false,
+        "application_commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d",
+            "dependency": "fd542ba59365d40eca95f2e276218e762971ececca60b9eabf64d53c0900228d"
+          },
+          {
+            "unit": 73,
+            "draft": "正文/0073-先把车停下来.md",
+            "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+            "dependency": "7790c8303a3e013ce9df6841eb8959ea8f01d66f9b7d259a4d488103a67465e1"
+          },
+          {
+            "unit": 74,
+            "draft": "正文/0074-空着的晚上也算数.md",
+            "sha256": "2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3",
+            "dependency": "480311212a4586fa2c635326b7144610df0c6fee68edd8037cc8c5f79add685e"
+          },
+          {
+            "unit": 75,
+            "draft": "正文/0075-车筐转过来以后.md",
+            "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+            "dependency": "3ef154337438ac0426e2e7d5bd224f8ce75017316ed7a572121c1bb6232ef964"
+          },
+          {
+            "unit": 76,
+            "draft": "正文/0076-不必买那壶茶.md",
+            "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+            "dependency": "8fd0777735a4664096e41316141a11ba1c2fca89b9db6bd893af05aba76971f5"
+          },
+          {
+            "unit": 77,
+            "draft": "正文/0077-这回不是等她来.md",
+            "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+            "dependency": "191e72304f8b1754152ca6cd4ba9094086381de18dc1cf3aaae7660ddc9eaba8"
+          },
+          {
+            "unit": 78,
+            "draft": "正文/0078-下雨也出门.md",
+            "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+            "dependency": "4bbcf293b80be4929efe421702b7ff3c618e1aca8cd3e14c65317b2edf7180e0"
+          },
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          },
+          {
+            "unit": 80,
+            "draft": "正文/0080-十点半以后.md",
+            "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+            "dependency": "99ad24dff98e3f9a98d59ccc260ff6e7ad4cc247ec7cc29c04dcfb3a67901030"
+          },
+          {
+            "unit": 81,
+            "draft": "正文/0081-先把桌子放稳.md",
+            "sha256": "655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b",
+            "dependency": "e2c8d90f32aa9249ef327141b644a153d0b615f318dd1d91569346548e017d8e"
+          },
+          {
+            "unit": 82,
+            "draft": "正文/0082-这一声不是从窗外来.md",
+            "sha256": "be2d385e1e680914051cdd08977384b8ff6d800236bacdde99970173d5436b91",
+            "dependency": "ca80eb842f82123b2845612219a57f79279ee1bec16c5199ac479e2d86eae073"
+          },
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          },
+          {
+            "unit": 84,
+            "draft": "正文/0084-杯子画歪了也能喝水.md",
+            "sha256": "d6f8cd88e78b6ecbc6b9c0eb08327c0028f5e4771e3a59e02b41409db838a2eb",
+            "dependency": "56ace966f62cfc1076264cc20289a981af0bc26afb781b451b0355ecdc2ddccb"
+          },
+          {
+            "unit": 85,
+            "draft": "正文/0085-先别把架子抬出去.md",
+            "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+            "dependency": "b8eaafd716eb7681419a4f450d9d976f24d04651415d4354bfbeacdddca9c205"
+          },
+          {
+            "unit": 86,
+            "draft": "正文/0086-椅子上不放篮子.md",
+            "sha256": "69c3841a17e2a90a5b7c2ece9f033fc3caeb2e6c3886b15dc4d41583d6f8f4d0",
+            "dependency": "1e67cb3aa892ba287453071d1fd009596ab0f75a5f98f0336853bb59ef6bd206"
+          },
+          {
+            "unit": 87,
+            "draft": "正文/0087-八点半以前.md",
+            "sha256": "15987f44ad52df66d777ebba16e9b101ddeb5b952cced4dc1ea9ef17e04d9d0e",
+            "dependency": "ed90c743eece69173dfc2d1931abd58a4884ef1a9ddd93f74ebed96c48d52882"
+          },
+          {
+            "unit": 88,
+            "draft": "正文/0088-走过去再坐一会儿.md",
+            "sha256": "28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073",
+            "dependency": "d65bf235f13d46ded17c8f56a97527c4d4e089b4b8d5a25682c390f4189ae94b"
+          },
+          {
+            "unit": 89,
+            "draft": "正文/0089-这回不留下一次.md",
+            "sha256": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160",
+            "dependency": "29caf1ff2483524b7ebb4694509ba1e1a7fb212faa19c1745de70c6f99db70f2"
+          },
+          {
+            "unit": 90,
+            "draft": "正文/0090-把话带到以后.md",
+            "sha256": "b28d09e947878cfcbcbc0405cc23dc174fb23514da69de5fd2f166bfb1a7006f",
+            "dependency": "293b9815fb65b11bf3256461e5c6022b3da8a5ea13156204cc199833f3793afa"
+          },
+          {
+            "unit": 91,
+            "draft": "正文/0091-报纸翻到另一面.md",
+            "sha256": "326bdf0c79bd1ea82f6aecd00d3211491680788bf82867c8e65a1634693864ec",
+            "dependency": "a5464edf80e4fd84fa9d04a2cc9471bfec4d4104b83c4efdb71e5d610e47333c"
+          },
+          {
+            "unit": 92,
+            "draft": "正文/0092-上柜里的一张纸.md",
+            "sha256": "47478655d3d2fe4cd4bff8e70e2a99ce34a5276fac38af988f9ea3bb47e8e785",
+            "dependency": "b1f6531e82a1f6403698a33a75a8a1510bd533a9dd6ed1a14b8893eecbcc2e31"
+          },
+          {
+            "unit": 93,
+            "draft": "正文/0093-菜还没有买完.md",
+            "sha256": "a3f5ee964181cb42554a120e59f4a513522ec59b419704d5127bd9e5e3ea33d8",
+            "dependency": "abe9a9f2ac339dcd684f7040815834c0ff9ecbdf3a4f6d85abdee6c9f941c145"
+          },
+          {
+            "unit": 94,
+            "draft": "正文/0094-票夹不用交给你.md",
+            "sha256": "18424487db5beedf1c047b28377a9f35332612bbc802cef5dcc7b21886d194a5",
+            "dependency": "bf999b167e89319a2a4fdf9948a0dfa4ad01df95448afa262a2130709d9a2ddd"
+          },
+          {
+            "unit": 95,
+            "draft": "正文/0095-先写今天这一页.md",
+            "sha256": "93eb336cc249745f32b3884fbb4b79a9899cf3e767c85ac4744f3f0f0c5f5f01",
+            "dependency": "0897217f9e666b7a53050b745fb081a2244a60ab9a809a71c63b88e62385df1f"
+          },
+          {
+            "unit": 96,
+            "draft": "正文/0096-听完以后出门.md",
+            "sha256": "1c7aaa5031a6021cbea55dc59feb3912833154f7c141dec114499458dc860532",
+            "dependency": "001fe7132d0686058e40c687a375f5b44e256f8155fb4c0f3afd919cc38f4449"
+          },
+          {
+            "unit": 97,
+            "draft": "正文/0097-两张仍在一起.md",
+            "sha256": "a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9",
+            "dependency": "f000a611d79aff0d6143aa39e8ac72f64a0f9ef663a886fde3e8b0a92d888d73"
+          },
+          {
+            "unit": 98,
+            "draft": "正文/0098-到点以后椅子还在.md",
+            "sha256": "0ba33184f1b846a0c06b405017e31c8bb81917e1d4d422cf3f6fdec44f97ab1b",
+            "dependency": "e50c4bba7db24122676ec58490e4404f2031bfe3c4889df7b7c4dc20a30b2454"
+          },
+          {
+            "unit": 99,
+            "draft": "正文/0099-饭后还有一会儿.md",
+            "sha256": "390ab02ebfce519741c02cff1c633c65c55b74b4ddec75fa32561f87f3c490a4",
+            "dependency": "2c22e42b0c0eae093dc27cc2c5bfb0fa441bcd1c6da5da4c7b433f6447e357b3"
+          },
+          {
+            "unit": 100,
+            "draft": "正文/0100-念到这一页的末尾.md",
+            "sha256": "6f7f439a1adf22655fc76510906bb88c9dd450a0051ea795d446485cae35c89e",
+            "dependency": "83301ec3609e5e693473541110724a860cb6c8b5bff1ecc942ff51e8292675d9"
+          },
+          {
+            "unit": 101,
+            "draft": "正文/0101-下次从这里找.md",
+            "sha256": "81547abfa4da96569119bd4ad43bd701a4f71df9244502407fe2dbd05acd5e7f",
+            "dependency": "cc6a1e7d481ea946a32b33f6ff1a559f67600302a03b17349bc74693f9a48141"
+          },
+          {
+            "unit": 102,
+            "draft": "正文/0102-球没有进的时候.md",
+            "sha256": "024a110095e5220a0d2020ce04279a7f7282177110af77934b13149c357fced0",
+            "dependency": "370d3e9a72800fd59e7106c8c3efec0b9b6adc23e215bea2dd3155b4fa0363a2"
+          },
+          {
+            "unit": 103,
+            "draft": "正文/0103-这笔没有接下的钱.md",
+            "sha256": "75e4d23f9b35abfebe8a3daca30d275dd978d4a4b95a872adbd267666d3f552e",
+            "dependency": "ef11c55121122145cb481e30c560afa63be0fb1476ba6420e37f04013ee3b3fe"
+          },
+          {
+            "unit": 104,
+            "draft": "正文/0104-椅子今天放不下.md",
+            "sha256": "f0faab7bbbe4fa334f43cc65097a8791da0414b99ace37fb569cfb750b2660ea",
+            "dependency": "438db2f21c7ad314a280e2d7eb785788e3dd9f8b28c2fbd10939ead93af8c429"
+          },
+          {
+            "unit": 105,
+            "draft": "正文/0105-开头划掉以后.md",
+            "sha256": "8f8c80b30b9e117e6e0f60bd065459890426b81b1f032ef68dd17fafb32a691b",
+            "dependency": "b2957d441c56937679b53231fd9213d1ab23fb521d8508504bbe902ee055f83d"
+          },
+          {
+            "unit": 106,
+            "draft": "正文/0106-先坐一会儿.md",
+            "sha256": "fc7793413ef2e51d8f1cfa72d8020445fb5ad0b9b2a908002b6a921ed81d0008",
+            "dependency": "24e94b7bd6ce2cce3507b90fa9fc6782a7022b846c2d3e33cc8baffd787c3bcb"
+          },
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          },
+          {
+            "unit": 110,
+            "draft": "正文/0110-坐下以后还想说话.md",
+            "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+            "dependency": "75f4f63b8e8d403ed0f48ecfe335487d366db09fdbc8030f8d546d655b98a153"
+          },
+          {
+            "unit": 111,
+            "draft": "正文/0111-先吃这一碗.md",
+            "sha256": "cbc97a650146b666a82778ae04ea4922d7a508c8e05ed8aaa2e74c2fa75fc0e1",
+            "dependency": "2bbdd7d19052c493ee07c6ae2b1468a8d8a0e2bedcf29dc65256d15971de9c56"
+          },
+          {
+            "unit": 112,
+            "draft": "正文/0112-后颈上的风.md",
+            "sha256": "3a6b74df44cfe9747e0b60e7351195a9364beeb31b5c76578c8ba2543f8a7c84",
+            "dependency": "c6936d71f0531e02d0701c73d927a57a0837cb12c48d7748d8f992601fc8b486"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/ad6a7182-52a1-44d5-a5bc-c06eda10e600.json",
+        "sha256": "a7c01cdea116125c47d9313da1fab2a67e9a22b2acb67892d13a538644f078aa"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H109_RELATIVE_DAY_DRIFT",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "109在第67日三次用前天回指107第66日同批自录/未完报价及处理，确应指昨天；父先独立发现，本人回查并在十章连读确认，未修。",
+      "suggestion": "后续独立保护批仅将三处相应前天改为昨天，保66日源录音日期；核summary/changes及108–112承接，不锁外改已登记正文或刷新来源哈希。",
+      "evidence": [
+        {
+          "unit": 107,
+          "draft": "正文/0107-九点到十一点.md",
+          "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+          "line": 3,
+          "quote": "第六十六日八点五十七"
+        },
+        {
+          "unit": 108,
+          "draft": "正文/0108-先陪你走这一趟.md",
+          "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+          "line": 113,
+          "quote": "将报价例子排到第六十七日上午九点半到十点半"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 5,
+          "quote": "前天那段车声盖住后半句的试声"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 7,
+          "quote": "前天没有做完的事"
+        },
+        {
+          "unit": 109,
+          "draft": "正文/0109-两百四十买到什么.md",
+          "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+          "line": 113,
+          "quote": "前天处理过的声音"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/fed76e84-65b1-4d06-b30b-9d5446c0a4ab.json",
+        "review_sha256": "d998f51136ea61e301d9029a63ac67485aceca1951e8da0437db1fb579d9d1ff",
+        "units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/41e5e5e4-c03f-4ea3-9bba-c34ece25e827.json",
+          "sha256": "06678a28cea378be14983736dc7692a66ef68a1b4846a36930d9c9099f904b76"
+        },
+        {
+          "ref": ".writer/objects/89a0982b-29d6-4c88-a2fd-a6a2b69d65bc.json",
+          "sha256": "d439a1e0f23ad7702cb00c65cd6eb97a567e6d921577108aecd2b1b0a5c0ed8f"
+        },
+        {
+          "ref": ".writer/objects/ac894b98-bd5e-4a12-8e7d-d33280080a1d.json",
+          "sha256": "2dbd4ff7defd7aae717e0792afaa23df52a6ef4e372e974a6a18cf9ce3285390"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用已确认连续性修正：第67日回指第66日的三处前天均改昨天；原66日自录与原67日计划不改，不编65日隐形录音。仅实读证据支持的日期和必要派生登记在保护区修正。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "dependency": "09d6c82f789da6bffcc9d024efc613a90ffeab944df716193dcacb654349ac8c"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "941b8b9f3701f7ae625c9bd2789db0c87fd02cacd9511230cd4cdd7015c114ed"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "dependency": "f2ec2bf02cb43401f6743b0eece5ebd8b75b0180d7d85ba6d86380353546c073"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "107第六十六日自录、108把报价排到第六十七日晨、109第67日现三句“昨天那段车声盖住后半句的试声”“昨天没有做完的事”“昨天处理过的声音”相接。净收益为消除三处相对日期错指；保原66日/不造65日录音，保低置信“昨晚画的鞋”、240自用例价及顾非客户。完整72–112正式报告覆盖107/108/109全部证据单位。",
+        "changes": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "before": "416b3737d0186451c42d7971c85812de56d3af099c7c037bfb6d8c30cc0c9748",
+            "after": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "before": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "after": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "before": "b67ca34562dac1f8c2aef1fa9b03c0c65fa23ba4280d76c40b422b2216e4fcbf",
+            "after": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json",
+        "review_sha256": "e496f4a7d8692b1fa3dcb49ff33c83ad4ab96e86b81cb76bcfa3a7ba97d62531",
+        "reviewer": "actual-Codex-H-final-read-prepare-informed-model-current-72-112",
+        "conclusion": "resolved",
+        "reason": "107第六十六日自录、108把报价排到第六十七日晨、109第67日现三句“昨天那段车声盖住后半句的试声”“昨天没有做完的事”“昨天处理过的声音”相接。净收益为消除三处相对日期错指；保原66日/不造65日录音，保低置信“昨晚画的鞋”、240自用例价及顾非客户。完整72–112正式报告覆盖107/108/109全部证据单位。",
+        "rechecked_context": false,
+        "application_commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d",
+            "dependency": "fd542ba59365d40eca95f2e276218e762971ececca60b9eabf64d53c0900228d"
+          },
+          {
+            "unit": 73,
+            "draft": "正文/0073-先把车停下来.md",
+            "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+            "dependency": "7790c8303a3e013ce9df6841eb8959ea8f01d66f9b7d259a4d488103a67465e1"
+          },
+          {
+            "unit": 74,
+            "draft": "正文/0074-空着的晚上也算数.md",
+            "sha256": "2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3",
+            "dependency": "480311212a4586fa2c635326b7144610df0c6fee68edd8037cc8c5f79add685e"
+          },
+          {
+            "unit": 75,
+            "draft": "正文/0075-车筐转过来以后.md",
+            "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+            "dependency": "3ef154337438ac0426e2e7d5bd224f8ce75017316ed7a572121c1bb6232ef964"
+          },
+          {
+            "unit": 76,
+            "draft": "正文/0076-不必买那壶茶.md",
+            "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+            "dependency": "8fd0777735a4664096e41316141a11ba1c2fca89b9db6bd893af05aba76971f5"
+          },
+          {
+            "unit": 77,
+            "draft": "正文/0077-这回不是等她来.md",
+            "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+            "dependency": "191e72304f8b1754152ca6cd4ba9094086381de18dc1cf3aaae7660ddc9eaba8"
+          },
+          {
+            "unit": 78,
+            "draft": "正文/0078-下雨也出门.md",
+            "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+            "dependency": "4bbcf293b80be4929efe421702b7ff3c618e1aca8cd3e14c65317b2edf7180e0"
+          },
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          },
+          {
+            "unit": 80,
+            "draft": "正文/0080-十点半以后.md",
+            "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+            "dependency": "99ad24dff98e3f9a98d59ccc260ff6e7ad4cc247ec7cc29c04dcfb3a67901030"
+          },
+          {
+            "unit": 81,
+            "draft": "正文/0081-先把桌子放稳.md",
+            "sha256": "655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b",
+            "dependency": "e2c8d90f32aa9249ef327141b644a153d0b615f318dd1d91569346548e017d8e"
+          },
+          {
+            "unit": 82,
+            "draft": "正文/0082-这一声不是从窗外来.md",
+            "sha256": "be2d385e1e680914051cdd08977384b8ff6d800236bacdde99970173d5436b91",
+            "dependency": "ca80eb842f82123b2845612219a57f79279ee1bec16c5199ac479e2d86eae073"
+          },
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          },
+          {
+            "unit": 84,
+            "draft": "正文/0084-杯子画歪了也能喝水.md",
+            "sha256": "d6f8cd88e78b6ecbc6b9c0eb08327c0028f5e4771e3a59e02b41409db838a2eb",
+            "dependency": "56ace966f62cfc1076264cc20289a981af0bc26afb781b451b0355ecdc2ddccb"
+          },
+          {
+            "unit": 85,
+            "draft": "正文/0085-先别把架子抬出去.md",
+            "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+            "dependency": "b8eaafd716eb7681419a4f450d9d976f24d04651415d4354bfbeacdddca9c205"
+          },
+          {
+            "unit": 86,
+            "draft": "正文/0086-椅子上不放篮子.md",
+            "sha256": "69c3841a17e2a90a5b7c2ece9f033fc3caeb2e6c3886b15dc4d41583d6f8f4d0",
+            "dependency": "1e67cb3aa892ba287453071d1fd009596ab0f75a5f98f0336853bb59ef6bd206"
+          },
+          {
+            "unit": 87,
+            "draft": "正文/0087-八点半以前.md",
+            "sha256": "15987f44ad52df66d777ebba16e9b101ddeb5b952cced4dc1ea9ef17e04d9d0e",
+            "dependency": "ed90c743eece69173dfc2d1931abd58a4884ef1a9ddd93f74ebed96c48d52882"
+          },
+          {
+            "unit": 88,
+            "draft": "正文/0088-走过去再坐一会儿.md",
+            "sha256": "28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073",
+            "dependency": "d65bf235f13d46ded17c8f56a97527c4d4e089b4b8d5a25682c390f4189ae94b"
+          },
+          {
+            "unit": 89,
+            "draft": "正文/0089-这回不留下一次.md",
+            "sha256": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160",
+            "dependency": "29caf1ff2483524b7ebb4694509ba1e1a7fb212faa19c1745de70c6f99db70f2"
+          },
+          {
+            "unit": 90,
+            "draft": "正文/0090-把话带到以后.md",
+            "sha256": "b28d09e947878cfcbcbc0405cc23dc174fb23514da69de5fd2f166bfb1a7006f",
+            "dependency": "293b9815fb65b11bf3256461e5c6022b3da8a5ea13156204cc199833f3793afa"
+          },
+          {
+            "unit": 91,
+            "draft": "正文/0091-报纸翻到另一面.md",
+            "sha256": "326bdf0c79bd1ea82f6aecd00d3211491680788bf82867c8e65a1634693864ec",
+            "dependency": "a5464edf80e4fd84fa9d04a2cc9471bfec4d4104b83c4efdb71e5d610e47333c"
+          },
+          {
+            "unit": 92,
+            "draft": "正文/0092-上柜里的一张纸.md",
+            "sha256": "47478655d3d2fe4cd4bff8e70e2a99ce34a5276fac38af988f9ea3bb47e8e785",
+            "dependency": "b1f6531e82a1f6403698a33a75a8a1510bd533a9dd6ed1a14b8893eecbcc2e31"
+          },
+          {
+            "unit": 93,
+            "draft": "正文/0093-菜还没有买完.md",
+            "sha256": "a3f5ee964181cb42554a120e59f4a513522ec59b419704d5127bd9e5e3ea33d8",
+            "dependency": "abe9a9f2ac339dcd684f7040815834c0ff9ecbdf3a4f6d85abdee6c9f941c145"
+          },
+          {
+            "unit": 94,
+            "draft": "正文/0094-票夹不用交给你.md",
+            "sha256": "18424487db5beedf1c047b28377a9f35332612bbc802cef5dcc7b21886d194a5",
+            "dependency": "bf999b167e89319a2a4fdf9948a0dfa4ad01df95448afa262a2130709d9a2ddd"
+          },
+          {
+            "unit": 95,
+            "draft": "正文/0095-先写今天这一页.md",
+            "sha256": "93eb336cc249745f32b3884fbb4b79a9899cf3e767c85ac4744f3f0f0c5f5f01",
+            "dependency": "0897217f9e666b7a53050b745fb081a2244a60ab9a809a71c63b88e62385df1f"
+          },
+          {
+            "unit": 96,
+            "draft": "正文/0096-听完以后出门.md",
+            "sha256": "1c7aaa5031a6021cbea55dc59feb3912833154f7c141dec114499458dc860532",
+            "dependency": "001fe7132d0686058e40c687a375f5b44e256f8155fb4c0f3afd919cc38f4449"
+          },
+          {
+            "unit": 97,
+            "draft": "正文/0097-两张仍在一起.md",
+            "sha256": "a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9",
+            "dependency": "f000a611d79aff0d6143aa39e8ac72f64a0f9ef663a886fde3e8b0a92d888d73"
+          },
+          {
+            "unit": 98,
+            "draft": "正文/0098-到点以后椅子还在.md",
+            "sha256": "0ba33184f1b846a0c06b405017e31c8bb81917e1d4d422cf3f6fdec44f97ab1b",
+            "dependency": "e50c4bba7db24122676ec58490e4404f2031bfe3c4889df7b7c4dc20a30b2454"
+          },
+          {
+            "unit": 99,
+            "draft": "正文/0099-饭后还有一会儿.md",
+            "sha256": "390ab02ebfce519741c02cff1c633c65c55b74b4ddec75fa32561f87f3c490a4",
+            "dependency": "2c22e42b0c0eae093dc27cc2c5bfb0fa441bcd1c6da5da4c7b433f6447e357b3"
+          },
+          {
+            "unit": 100,
+            "draft": "正文/0100-念到这一页的末尾.md",
+            "sha256": "6f7f439a1adf22655fc76510906bb88c9dd450a0051ea795d446485cae35c89e",
+            "dependency": "83301ec3609e5e693473541110724a860cb6c8b5bff1ecc942ff51e8292675d9"
+          },
+          {
+            "unit": 101,
+            "draft": "正文/0101-下次从这里找.md",
+            "sha256": "81547abfa4da96569119bd4ad43bd701a4f71df9244502407fe2dbd05acd5e7f",
+            "dependency": "cc6a1e7d481ea946a32b33f6ff1a559f67600302a03b17349bc74693f9a48141"
+          },
+          {
+            "unit": 102,
+            "draft": "正文/0102-球没有进的时候.md",
+            "sha256": "024a110095e5220a0d2020ce04279a7f7282177110af77934b13149c357fced0",
+            "dependency": "370d3e9a72800fd59e7106c8c3efec0b9b6adc23e215bea2dd3155b4fa0363a2"
+          },
+          {
+            "unit": 103,
+            "draft": "正文/0103-这笔没有接下的钱.md",
+            "sha256": "75e4d23f9b35abfebe8a3daca30d275dd978d4a4b95a872adbd267666d3f552e",
+            "dependency": "ef11c55121122145cb481e30c560afa63be0fb1476ba6420e37f04013ee3b3fe"
+          },
+          {
+            "unit": 104,
+            "draft": "正文/0104-椅子今天放不下.md",
+            "sha256": "f0faab7bbbe4fa334f43cc65097a8791da0414b99ace37fb569cfb750b2660ea",
+            "dependency": "438db2f21c7ad314a280e2d7eb785788e3dd9f8b28c2fbd10939ead93af8c429"
+          },
+          {
+            "unit": 105,
+            "draft": "正文/0105-开头划掉以后.md",
+            "sha256": "8f8c80b30b9e117e6e0f60bd065459890426b81b1f032ef68dd17fafb32a691b",
+            "dependency": "b2957d441c56937679b53231fd9213d1ab23fb521d8508504bbe902ee055f83d"
+          },
+          {
+            "unit": 106,
+            "draft": "正文/0106-先坐一会儿.md",
+            "sha256": "fc7793413ef2e51d8f1cfa72d8020445fb5ad0b9b2a908002b6a921ed81d0008",
+            "dependency": "24e94b7bd6ce2cce3507b90fa9fc6782a7022b846c2d3e33cc8baffd787c3bcb"
+          },
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          },
+          {
+            "unit": 110,
+            "draft": "正文/0110-坐下以后还想说话.md",
+            "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+            "dependency": "75f4f63b8e8d403ed0f48ecfe335487d366db09fdbc8030f8d546d655b98a153"
+          },
+          {
+            "unit": 111,
+            "draft": "正文/0111-先吃这一碗.md",
+            "sha256": "cbc97a650146b666a82778ae04ea4922d7a508c8e05ed8aaa2e74c2fa75fc0e1",
+            "dependency": "2bbdd7d19052c493ee07c6ae2b1468a8d8a0e2bedcf29dc65256d15971de9c56"
+          },
+          {
+            "unit": 112,
+            "draft": "正文/0112-后颈上的风.md",
+            "sha256": "3a6b74df44cfe9747e0b60e7351195a9364beeb31b5c76578c8ba2543f8a7c84",
+            "dependency": "c6936d71f0531e02d0701c73d927a57a0837cb12c48d7748d8f992601fc8b486"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/3c6ddbef-edc2-4a59-945d-91e9ca09e17f.json",
+        "sha256": "75e4f50b8c041f0ca64555f21b3949cfb0113286d3469a5dd4ff9cd96c1eebcc"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H72_REPEATED_KNOWLEDGE",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "19行何已说未听夹子，21行沈刚讲完经过，23行再解释今日才知/上次未全知，做客的当下延后；原知情链正确，是可选压缩而非硬错。",
+      "suggestion": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说自己不跑去邱铺看夹得牢不牢。",
+      "evidence": [
+        {
+          "unit": 72,
+          "draft": "正文/0072-把空出来的地方留着.md",
+          "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+          "line": 23,
+          "quote": "何低头摸了一下自己的夹，没让沈现在取哪一套来比。她问第二页后来补名字没有，沈答原纸没补，电脑改过不等那张自己改了。何说那自己今日才听见滑页和两夹的经过，不是上次在电话里已经都知道，也不跑去邱铺说要看夹得牢不牢。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/58393250-2f80-4705-85e0-3c66393e00e7.json",
+        "review_sha256": "364d039da8bb0cf251bec709ada55058e0eb7ab6d52ffee3222aad6005bb770f",
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+            "dependency": "1d9db8bd73f25776f0df9431d73f55bf8f12375f32990f95e4da68bda06cc608"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/17cb75ad-6385-4a14-901a-0401bbdf7228.json",
+          "sha256": "218a60614742505a1dc23e6dccd7a6032857e5914b16bec2475663c2a23f0563"
+        },
+        {
+          "ref": ".writer/objects/2742420c-883c-4451-86ca-d9ea352bd222.json",
+          "sha256": "79cee10696eb158814adc5616be090d729902a7ee6aecaa1fe2164c16750b97d"
+        },
+        {
+          "ref": ".writer/objects/438d0534-79c1-44a8-9bbf-974de62819fd.json",
+          "sha256": "1f26f8885e22b0fb7834cccaa61df5568dd2c516cb0516a01b5ed4eb52833de0"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "代理在用户已授权的隔离副本修复范围内采用D72最小压缩；保留19/21真实消息传递及何不去验夹的选择。仍属可选风格suggestion，不冒充作者逐条确认。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+            "dependency": "1d9db8bd73f25776f0df9431d73f55bf8f12375f32990f95e4da68bda06cc608"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "72现句“何说自己不跑去邱铺看夹得牢不牢。”；19/21首次听全滑页和两夹仍在，少一次同段重复自证，保留不验夹的选择、非亲见及无取看权。属于可选风格suggestion，不改作者取舍。",
+        "changes": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "before": "8ed63a27af31a8c329b55e7d1d65439001b63d4038adc076bb44794426011185",
+            "after": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d",
+            "dependency": "fd542ba59365d40eca95f2e276218e762971ececca60b9eabf64d53c0900228d"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json",
+        "review_sha256": "e496f4a7d8692b1fa3dcb49ff33c83ad4ab96e86b81cb76bcfa3a7ba97d62531",
+        "reviewer": "actual-Codex-H-final-read-prepare-informed-model-current-72-112",
+        "conclusion": "resolved",
+        "reason": "72现句“何说自己不跑去邱铺看夹得牢不牢。”；19/21首次听全滑页和两夹仍在，少一次同段重复自证，保留不验夹的选择、非亲见及无取看权。属于可选风格suggestion，不改作者取舍。",
+        "rechecked_context": false,
+        "application_commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d",
+            "dependency": "fd542ba59365d40eca95f2e276218e762971ececca60b9eabf64d53c0900228d"
+          },
+          {
+            "unit": 73,
+            "draft": "正文/0073-先把车停下来.md",
+            "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+            "dependency": "7790c8303a3e013ce9df6841eb8959ea8f01d66f9b7d259a4d488103a67465e1"
+          },
+          {
+            "unit": 74,
+            "draft": "正文/0074-空着的晚上也算数.md",
+            "sha256": "2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3",
+            "dependency": "480311212a4586fa2c635326b7144610df0c6fee68edd8037cc8c5f79add685e"
+          },
+          {
+            "unit": 75,
+            "draft": "正文/0075-车筐转过来以后.md",
+            "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+            "dependency": "3ef154337438ac0426e2e7d5bd224f8ce75017316ed7a572121c1bb6232ef964"
+          },
+          {
+            "unit": 76,
+            "draft": "正文/0076-不必买那壶茶.md",
+            "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+            "dependency": "8fd0777735a4664096e41316141a11ba1c2fca89b9db6bd893af05aba76971f5"
+          },
+          {
+            "unit": 77,
+            "draft": "正文/0077-这回不是等她来.md",
+            "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+            "dependency": "191e72304f8b1754152ca6cd4ba9094086381de18dc1cf3aaae7660ddc9eaba8"
+          },
+          {
+            "unit": 78,
+            "draft": "正文/0078-下雨也出门.md",
+            "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+            "dependency": "4bbcf293b80be4929efe421702b7ff3c618e1aca8cd3e14c65317b2edf7180e0"
+          },
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          },
+          {
+            "unit": 80,
+            "draft": "正文/0080-十点半以后.md",
+            "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+            "dependency": "99ad24dff98e3f9a98d59ccc260ff6e7ad4cc247ec7cc29c04dcfb3a67901030"
+          },
+          {
+            "unit": 81,
+            "draft": "正文/0081-先把桌子放稳.md",
+            "sha256": "655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b",
+            "dependency": "e2c8d90f32aa9249ef327141b644a153d0b615f318dd1d91569346548e017d8e"
+          },
+          {
+            "unit": 82,
+            "draft": "正文/0082-这一声不是从窗外来.md",
+            "sha256": "be2d385e1e680914051cdd08977384b8ff6d800236bacdde99970173d5436b91",
+            "dependency": "ca80eb842f82123b2845612219a57f79279ee1bec16c5199ac479e2d86eae073"
+          },
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          },
+          {
+            "unit": 84,
+            "draft": "正文/0084-杯子画歪了也能喝水.md",
+            "sha256": "d6f8cd88e78b6ecbc6b9c0eb08327c0028f5e4771e3a59e02b41409db838a2eb",
+            "dependency": "56ace966f62cfc1076264cc20289a981af0bc26afb781b451b0355ecdc2ddccb"
+          },
+          {
+            "unit": 85,
+            "draft": "正文/0085-先别把架子抬出去.md",
+            "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+            "dependency": "b8eaafd716eb7681419a4f450d9d976f24d04651415d4354bfbeacdddca9c205"
+          },
+          {
+            "unit": 86,
+            "draft": "正文/0086-椅子上不放篮子.md",
+            "sha256": "69c3841a17e2a90a5b7c2ece9f033fc3caeb2e6c3886b15dc4d41583d6f8f4d0",
+            "dependency": "1e67cb3aa892ba287453071d1fd009596ab0f75a5f98f0336853bb59ef6bd206"
+          },
+          {
+            "unit": 87,
+            "draft": "正文/0087-八点半以前.md",
+            "sha256": "15987f44ad52df66d777ebba16e9b101ddeb5b952cced4dc1ea9ef17e04d9d0e",
+            "dependency": "ed90c743eece69173dfc2d1931abd58a4884ef1a9ddd93f74ebed96c48d52882"
+          },
+          {
+            "unit": 88,
+            "draft": "正文/0088-走过去再坐一会儿.md",
+            "sha256": "28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073",
+            "dependency": "d65bf235f13d46ded17c8f56a97527c4d4e089b4b8d5a25682c390f4189ae94b"
+          },
+          {
+            "unit": 89,
+            "draft": "正文/0089-这回不留下一次.md",
+            "sha256": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160",
+            "dependency": "29caf1ff2483524b7ebb4694509ba1e1a7fb212faa19c1745de70c6f99db70f2"
+          },
+          {
+            "unit": 90,
+            "draft": "正文/0090-把话带到以后.md",
+            "sha256": "b28d09e947878cfcbcbc0405cc23dc174fb23514da69de5fd2f166bfb1a7006f",
+            "dependency": "293b9815fb65b11bf3256461e5c6022b3da8a5ea13156204cc199833f3793afa"
+          },
+          {
+            "unit": 91,
+            "draft": "正文/0091-报纸翻到另一面.md",
+            "sha256": "326bdf0c79bd1ea82f6aecd00d3211491680788bf82867c8e65a1634693864ec",
+            "dependency": "a5464edf80e4fd84fa9d04a2cc9471bfec4d4104b83c4efdb71e5d610e47333c"
+          },
+          {
+            "unit": 92,
+            "draft": "正文/0092-上柜里的一张纸.md",
+            "sha256": "47478655d3d2fe4cd4bff8e70e2a99ce34a5276fac38af988f9ea3bb47e8e785",
+            "dependency": "b1f6531e82a1f6403698a33a75a8a1510bd533a9dd6ed1a14b8893eecbcc2e31"
+          },
+          {
+            "unit": 93,
+            "draft": "正文/0093-菜还没有买完.md",
+            "sha256": "a3f5ee964181cb42554a120e59f4a513522ec59b419704d5127bd9e5e3ea33d8",
+            "dependency": "abe9a9f2ac339dcd684f7040815834c0ff9ecbdf3a4f6d85abdee6c9f941c145"
+          },
+          {
+            "unit": 94,
+            "draft": "正文/0094-票夹不用交给你.md",
+            "sha256": "18424487db5beedf1c047b28377a9f35332612bbc802cef5dcc7b21886d194a5",
+            "dependency": "bf999b167e89319a2a4fdf9948a0dfa4ad01df95448afa262a2130709d9a2ddd"
+          },
+          {
+            "unit": 95,
+            "draft": "正文/0095-先写今天这一页.md",
+            "sha256": "93eb336cc249745f32b3884fbb4b79a9899cf3e767c85ac4744f3f0f0c5f5f01",
+            "dependency": "0897217f9e666b7a53050b745fb081a2244a60ab9a809a71c63b88e62385df1f"
+          },
+          {
+            "unit": 96,
+            "draft": "正文/0096-听完以后出门.md",
+            "sha256": "1c7aaa5031a6021cbea55dc59feb3912833154f7c141dec114499458dc860532",
+            "dependency": "001fe7132d0686058e40c687a375f5b44e256f8155fb4c0f3afd919cc38f4449"
+          },
+          {
+            "unit": 97,
+            "draft": "正文/0097-两张仍在一起.md",
+            "sha256": "a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9",
+            "dependency": "f000a611d79aff0d6143aa39e8ac72f64a0f9ef663a886fde3e8b0a92d888d73"
+          },
+          {
+            "unit": 98,
+            "draft": "正文/0098-到点以后椅子还在.md",
+            "sha256": "0ba33184f1b846a0c06b405017e31c8bb81917e1d4d422cf3f6fdec44f97ab1b",
+            "dependency": "e50c4bba7db24122676ec58490e4404f2031bfe3c4889df7b7c4dc20a30b2454"
+          },
+          {
+            "unit": 99,
+            "draft": "正文/0099-饭后还有一会儿.md",
+            "sha256": "390ab02ebfce519741c02cff1c633c65c55b74b4ddec75fa32561f87f3c490a4",
+            "dependency": "2c22e42b0c0eae093dc27cc2c5bfb0fa441bcd1c6da5da4c7b433f6447e357b3"
+          },
+          {
+            "unit": 100,
+            "draft": "正文/0100-念到这一页的末尾.md",
+            "sha256": "6f7f439a1adf22655fc76510906bb88c9dd450a0051ea795d446485cae35c89e",
+            "dependency": "83301ec3609e5e693473541110724a860cb6c8b5bff1ecc942ff51e8292675d9"
+          },
+          {
+            "unit": 101,
+            "draft": "正文/0101-下次从这里找.md",
+            "sha256": "81547abfa4da96569119bd4ad43bd701a4f71df9244502407fe2dbd05acd5e7f",
+            "dependency": "cc6a1e7d481ea946a32b33f6ff1a559f67600302a03b17349bc74693f9a48141"
+          },
+          {
+            "unit": 102,
+            "draft": "正文/0102-球没有进的时候.md",
+            "sha256": "024a110095e5220a0d2020ce04279a7f7282177110af77934b13149c357fced0",
+            "dependency": "370d3e9a72800fd59e7106c8c3efec0b9b6adc23e215bea2dd3155b4fa0363a2"
+          },
+          {
+            "unit": 103,
+            "draft": "正文/0103-这笔没有接下的钱.md",
+            "sha256": "75e4d23f9b35abfebe8a3daca30d275dd978d4a4b95a872adbd267666d3f552e",
+            "dependency": "ef11c55121122145cb481e30c560afa63be0fb1476ba6420e37f04013ee3b3fe"
+          },
+          {
+            "unit": 104,
+            "draft": "正文/0104-椅子今天放不下.md",
+            "sha256": "f0faab7bbbe4fa334f43cc65097a8791da0414b99ace37fb569cfb750b2660ea",
+            "dependency": "438db2f21c7ad314a280e2d7eb785788e3dd9f8b28c2fbd10939ead93af8c429"
+          },
+          {
+            "unit": 105,
+            "draft": "正文/0105-开头划掉以后.md",
+            "sha256": "8f8c80b30b9e117e6e0f60bd065459890426b81b1f032ef68dd17fafb32a691b",
+            "dependency": "b2957d441c56937679b53231fd9213d1ab23fb521d8508504bbe902ee055f83d"
+          },
+          {
+            "unit": 106,
+            "draft": "正文/0106-先坐一会儿.md",
+            "sha256": "fc7793413ef2e51d8f1cfa72d8020445fb5ad0b9b2a908002b6a921ed81d0008",
+            "dependency": "24e94b7bd6ce2cce3507b90fa9fc6782a7022b846c2d3e33cc8baffd787c3bcb"
+          },
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          },
+          {
+            "unit": 110,
+            "draft": "正文/0110-坐下以后还想说话.md",
+            "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+            "dependency": "75f4f63b8e8d403ed0f48ecfe335487d366db09fdbc8030f8d546d655b98a153"
+          },
+          {
+            "unit": 111,
+            "draft": "正文/0111-先吃这一碗.md",
+            "sha256": "cbc97a650146b666a82778ae04ea4922d7a508c8e05ed8aaa2e74c2fa75fc0e1",
+            "dependency": "2bbdd7d19052c493ee07c6ae2b1468a8d8a0e2bedcf29dc65256d15971de9c56"
+          },
+          {
+            "unit": 112,
+            "draft": "正文/0112-后颈上的风.md",
+            "sha256": "3a6b74df44cfe9747e0b60e7351195a9364beeb31b5c76578c8ba2543f8a7c84",
+            "dependency": "c6936d71f0531e02d0701c73d927a57a0837cb12c48d7748d8f992601fc8b486"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/e2f18884-733d-41a7-9325-a643edefbbf4.json",
+        "sha256": "c3b32d220c59dc9e9812045e32db5d1619b8c236a95ab015292e4e080d7e35af"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H79_SINGLE_BRICK_REFERENCE",
+      "type": "readability",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "两块砖的半月缺口可以按一组砖的简写理解，但缺少临车道那块的限定，容易误构成两处缺口；补定位有净收益，不宣判实体已变。",
+      "suggestion": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡，白罩在里面，没有亮。",
+      "evidence": [
+        {
+          "unit": 79,
+          "draft": "正文/0079-换了一个开车的人.md",
+          "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+          "line": 33,
+          "quote": "她拿着面出来，乔正请丁把车开到门前。范站在门侧，先看车停稳，再将一块沾水的垫板收回高处，换干的放好。外路砖缝还深，泥贴着沟边，水往外走着；两块暗红砖的半月缺口仍朝围挡，白罩在里面，没有亮。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/12de63b5-95d5-4a38-b700-009d7c5082a8.json",
+        "review_sha256": "ce441544b9a0b9f3b817f073eca971801bf63633df794805813c0ff8957c7e43",
+        "units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "dependency": "ccde34ebb348b6ba0b691b8186ae0075fb37a7565533c9318223c5d66ecb1a99"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/46ea965b-2463-40b7-88e5-a2ee741a74de.json",
+          "sha256": "fd0b79b395c253c310990a84f4b500222b3bdf3a446d05db145473ccd8037965"
+        },
+        {
+          "ref": ".writer/objects/24dd3444-d47d-411e-b5dd-29ed41eaa651.json",
+          "sha256": "ac0a4a6f23dd88c4982480075d0700c5a4601bb184334094fde6e0e11882a1e4"
+        },
+        {
+          "ref": ".writer/objects/f2294919-5d4e-4c04-8a0f-24e7f9156a08.json",
+          "sha256": "40c01e1e35dc513678913075b711eee0e0dba1a24ea2634df7554d589bf5266a"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用D79定位澄清，恢复36/71既有临车道单砖限定；不把歧义宣判成实体变更，不改变两砖/缺口/白罩/通行原观察。代理在本轮范围组织，不改变作者取舍。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "dependency": "ccde34ebb348b6ba0b691b8186ae0075fb37a7565533c9318223c5d66ecb1a99"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "79现句“两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡”；限定单块避免回数缺口和误构图，接36/71原观察。两砖/白罩未亮及各次通行时点保留，不宣判原句造成实体变更，仍suggestion。",
+        "changes": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "before": "dc03ad4f85b27e2b2ca2c46a3548a20c653fd4fd7319da08d0ab5b7780474125",
+            "after": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json",
+        "review_sha256": "e496f4a7d8692b1fa3dcb49ff33c83ad4ab96e86b81cb76bcfa3a7ba97d62531",
+        "reviewer": "actual-Codex-H-final-read-prepare-informed-model-current-72-112",
+        "conclusion": "resolved",
+        "reason": "79现句“两块暗红砖仍并排，临车道那块的半月缺口仍朝围挡”；限定单块避免回数缺口和误构图，接36/71原观察。两砖/白罩未亮及各次通行时点保留，不宣判原句造成实体变更，仍suggestion。",
+        "rechecked_context": false,
+        "application_commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d",
+            "dependency": "fd542ba59365d40eca95f2e276218e762971ececca60b9eabf64d53c0900228d"
+          },
+          {
+            "unit": 73,
+            "draft": "正文/0073-先把车停下来.md",
+            "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+            "dependency": "7790c8303a3e013ce9df6841eb8959ea8f01d66f9b7d259a4d488103a67465e1"
+          },
+          {
+            "unit": 74,
+            "draft": "正文/0074-空着的晚上也算数.md",
+            "sha256": "2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3",
+            "dependency": "480311212a4586fa2c635326b7144610df0c6fee68edd8037cc8c5f79add685e"
+          },
+          {
+            "unit": 75,
+            "draft": "正文/0075-车筐转过来以后.md",
+            "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+            "dependency": "3ef154337438ac0426e2e7d5bd224f8ce75017316ed7a572121c1bb6232ef964"
+          },
+          {
+            "unit": 76,
+            "draft": "正文/0076-不必买那壶茶.md",
+            "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+            "dependency": "8fd0777735a4664096e41316141a11ba1c2fca89b9db6bd893af05aba76971f5"
+          },
+          {
+            "unit": 77,
+            "draft": "正文/0077-这回不是等她来.md",
+            "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+            "dependency": "191e72304f8b1754152ca6cd4ba9094086381de18dc1cf3aaae7660ddc9eaba8"
+          },
+          {
+            "unit": 78,
+            "draft": "正文/0078-下雨也出门.md",
+            "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+            "dependency": "4bbcf293b80be4929efe421702b7ff3c618e1aca8cd3e14c65317b2edf7180e0"
+          },
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          },
+          {
+            "unit": 80,
+            "draft": "正文/0080-十点半以后.md",
+            "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+            "dependency": "99ad24dff98e3f9a98d59ccc260ff6e7ad4cc247ec7cc29c04dcfb3a67901030"
+          },
+          {
+            "unit": 81,
+            "draft": "正文/0081-先把桌子放稳.md",
+            "sha256": "655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b",
+            "dependency": "e2c8d90f32aa9249ef327141b644a153d0b615f318dd1d91569346548e017d8e"
+          },
+          {
+            "unit": 82,
+            "draft": "正文/0082-这一声不是从窗外来.md",
+            "sha256": "be2d385e1e680914051cdd08977384b8ff6d800236bacdde99970173d5436b91",
+            "dependency": "ca80eb842f82123b2845612219a57f79279ee1bec16c5199ac479e2d86eae073"
+          },
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          },
+          {
+            "unit": 84,
+            "draft": "正文/0084-杯子画歪了也能喝水.md",
+            "sha256": "d6f8cd88e78b6ecbc6b9c0eb08327c0028f5e4771e3a59e02b41409db838a2eb",
+            "dependency": "56ace966f62cfc1076264cc20289a981af0bc26afb781b451b0355ecdc2ddccb"
+          },
+          {
+            "unit": 85,
+            "draft": "正文/0085-先别把架子抬出去.md",
+            "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+            "dependency": "b8eaafd716eb7681419a4f450d9d976f24d04651415d4354bfbeacdddca9c205"
+          },
+          {
+            "unit": 86,
+            "draft": "正文/0086-椅子上不放篮子.md",
+            "sha256": "69c3841a17e2a90a5b7c2ece9f033fc3caeb2e6c3886b15dc4d41583d6f8f4d0",
+            "dependency": "1e67cb3aa892ba287453071d1fd009596ab0f75a5f98f0336853bb59ef6bd206"
+          },
+          {
+            "unit": 87,
+            "draft": "正文/0087-八点半以前.md",
+            "sha256": "15987f44ad52df66d777ebba16e9b101ddeb5b952cced4dc1ea9ef17e04d9d0e",
+            "dependency": "ed90c743eece69173dfc2d1931abd58a4884ef1a9ddd93f74ebed96c48d52882"
+          },
+          {
+            "unit": 88,
+            "draft": "正文/0088-走过去再坐一会儿.md",
+            "sha256": "28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073",
+            "dependency": "d65bf235f13d46ded17c8f56a97527c4d4e089b4b8d5a25682c390f4189ae94b"
+          },
+          {
+            "unit": 89,
+            "draft": "正文/0089-这回不留下一次.md",
+            "sha256": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160",
+            "dependency": "29caf1ff2483524b7ebb4694509ba1e1a7fb212faa19c1745de70c6f99db70f2"
+          },
+          {
+            "unit": 90,
+            "draft": "正文/0090-把话带到以后.md",
+            "sha256": "b28d09e947878cfcbcbc0405cc23dc174fb23514da69de5fd2f166bfb1a7006f",
+            "dependency": "293b9815fb65b11bf3256461e5c6022b3da8a5ea13156204cc199833f3793afa"
+          },
+          {
+            "unit": 91,
+            "draft": "正文/0091-报纸翻到另一面.md",
+            "sha256": "326bdf0c79bd1ea82f6aecd00d3211491680788bf82867c8e65a1634693864ec",
+            "dependency": "a5464edf80e4fd84fa9d04a2cc9471bfec4d4104b83c4efdb71e5d610e47333c"
+          },
+          {
+            "unit": 92,
+            "draft": "正文/0092-上柜里的一张纸.md",
+            "sha256": "47478655d3d2fe4cd4bff8e70e2a99ce34a5276fac38af988f9ea3bb47e8e785",
+            "dependency": "b1f6531e82a1f6403698a33a75a8a1510bd533a9dd6ed1a14b8893eecbcc2e31"
+          },
+          {
+            "unit": 93,
+            "draft": "正文/0093-菜还没有买完.md",
+            "sha256": "a3f5ee964181cb42554a120e59f4a513522ec59b419704d5127bd9e5e3ea33d8",
+            "dependency": "abe9a9f2ac339dcd684f7040815834c0ff9ecbdf3a4f6d85abdee6c9f941c145"
+          },
+          {
+            "unit": 94,
+            "draft": "正文/0094-票夹不用交给你.md",
+            "sha256": "18424487db5beedf1c047b28377a9f35332612bbc802cef5dcc7b21886d194a5",
+            "dependency": "bf999b167e89319a2a4fdf9948a0dfa4ad01df95448afa262a2130709d9a2ddd"
+          },
+          {
+            "unit": 95,
+            "draft": "正文/0095-先写今天这一页.md",
+            "sha256": "93eb336cc249745f32b3884fbb4b79a9899cf3e767c85ac4744f3f0f0c5f5f01",
+            "dependency": "0897217f9e666b7a53050b745fb081a2244a60ab9a809a71c63b88e62385df1f"
+          },
+          {
+            "unit": 96,
+            "draft": "正文/0096-听完以后出门.md",
+            "sha256": "1c7aaa5031a6021cbea55dc59feb3912833154f7c141dec114499458dc860532",
+            "dependency": "001fe7132d0686058e40c687a375f5b44e256f8155fb4c0f3afd919cc38f4449"
+          },
+          {
+            "unit": 97,
+            "draft": "正文/0097-两张仍在一起.md",
+            "sha256": "a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9",
+            "dependency": "f000a611d79aff0d6143aa39e8ac72f64a0f9ef663a886fde3e8b0a92d888d73"
+          },
+          {
+            "unit": 98,
+            "draft": "正文/0098-到点以后椅子还在.md",
+            "sha256": "0ba33184f1b846a0c06b405017e31c8bb81917e1d4d422cf3f6fdec44f97ab1b",
+            "dependency": "e50c4bba7db24122676ec58490e4404f2031bfe3c4889df7b7c4dc20a30b2454"
+          },
+          {
+            "unit": 99,
+            "draft": "正文/0099-饭后还有一会儿.md",
+            "sha256": "390ab02ebfce519741c02cff1c633c65c55b74b4ddec75fa32561f87f3c490a4",
+            "dependency": "2c22e42b0c0eae093dc27cc2c5bfb0fa441bcd1c6da5da4c7b433f6447e357b3"
+          },
+          {
+            "unit": 100,
+            "draft": "正文/0100-念到这一页的末尾.md",
+            "sha256": "6f7f439a1adf22655fc76510906bb88c9dd450a0051ea795d446485cae35c89e",
+            "dependency": "83301ec3609e5e693473541110724a860cb6c8b5bff1ecc942ff51e8292675d9"
+          },
+          {
+            "unit": 101,
+            "draft": "正文/0101-下次从这里找.md",
+            "sha256": "81547abfa4da96569119bd4ad43bd701a4f71df9244502407fe2dbd05acd5e7f",
+            "dependency": "cc6a1e7d481ea946a32b33f6ff1a559f67600302a03b17349bc74693f9a48141"
+          },
+          {
+            "unit": 102,
+            "draft": "正文/0102-球没有进的时候.md",
+            "sha256": "024a110095e5220a0d2020ce04279a7f7282177110af77934b13149c357fced0",
+            "dependency": "370d3e9a72800fd59e7106c8c3efec0b9b6adc23e215bea2dd3155b4fa0363a2"
+          },
+          {
+            "unit": 103,
+            "draft": "正文/0103-这笔没有接下的钱.md",
+            "sha256": "75e4d23f9b35abfebe8a3daca30d275dd978d4a4b95a872adbd267666d3f552e",
+            "dependency": "ef11c55121122145cb481e30c560afa63be0fb1476ba6420e37f04013ee3b3fe"
+          },
+          {
+            "unit": 104,
+            "draft": "正文/0104-椅子今天放不下.md",
+            "sha256": "f0faab7bbbe4fa334f43cc65097a8791da0414b99ace37fb569cfb750b2660ea",
+            "dependency": "438db2f21c7ad314a280e2d7eb785788e3dd9f8b28c2fbd10939ead93af8c429"
+          },
+          {
+            "unit": 105,
+            "draft": "正文/0105-开头划掉以后.md",
+            "sha256": "8f8c80b30b9e117e6e0f60bd065459890426b81b1f032ef68dd17fafb32a691b",
+            "dependency": "b2957d441c56937679b53231fd9213d1ab23fb521d8508504bbe902ee055f83d"
+          },
+          {
+            "unit": 106,
+            "draft": "正文/0106-先坐一会儿.md",
+            "sha256": "fc7793413ef2e51d8f1cfa72d8020445fb5ad0b9b2a908002b6a921ed81d0008",
+            "dependency": "24e94b7bd6ce2cce3507b90fa9fc6782a7022b846c2d3e33cc8baffd787c3bcb"
+          },
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          },
+          {
+            "unit": 110,
+            "draft": "正文/0110-坐下以后还想说话.md",
+            "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+            "dependency": "75f4f63b8e8d403ed0f48ecfe335487d366db09fdbc8030f8d546d655b98a153"
+          },
+          {
+            "unit": 111,
+            "draft": "正文/0111-先吃这一碗.md",
+            "sha256": "cbc97a650146b666a82778ae04ea4922d7a508c8e05ed8aaa2e74c2fa75fc0e1",
+            "dependency": "2bbdd7d19052c493ee07c6ae2b1468a8d8a0e2bedcf29dc65256d15971de9c56"
+          },
+          {
+            "unit": 112,
+            "draft": "正文/0112-后颈上的风.md",
+            "sha256": "3a6b74df44cfe9747e0b60e7351195a9364beeb31b5c76578c8ba2543f8a7c84",
+            "dependency": "c6936d71f0531e02d0701c73d927a57a0837cb12c48d7748d8f992601fc8b486"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/b3fe913f-b9f6-44ba-a752-5b085d57d1b6.json",
+        "sha256": "255be8a51f324786b64f3b07c7ddf36235189b943d1a7290a7a0b81eb5840ac3"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "H83_REPEATED_PHONE_EXCLUSION",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "71/73/75/81已用真实电话明确何在家、沈亲见后转述、没开盒和范围；83再列何没见布/袋字是可选解释压缩，不是原文知识错。",
+      "suggestion": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。",
+      "evidence": [
+        {
+          "unit": 83,
+          "draft": "正文/0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 83,
+          "quote": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。今天何已经在家，只听过这通电话，刚才邱搬盒的动作、柜格里铺的布和原袋外字，都没到她眼前。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/130e5e1d-552a-4ed3-a5dd-e36644d0048e.json",
+        "review_sha256": "ecf95596d31a7a3aeebf4842a0629e8bee59fac95b4cc1f76b033723689769ba",
+        "units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "dependency": "8342dd8e02e318b52a31dda3462e567d921079c431c974369666ab73868abab4"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/23793154-485f-4d9c-8451-9a9a8ca247fe.json",
+          "sha256": "d74a3a629653bc66b63667789b9f63efa7ec7d7b30bca6208b96c8eedefef2cf"
+        },
+        {
+          "ref": ".writer/objects/5dc69f30-be4e-4e64-8f18-a002cb70f6b1.json",
+          "sha256": "a5cf0e0fb00a05f5c97e0d083de4ac45557741e310b1ab1a15a977fb83840c35"
+        },
+        {
+          "ref": ".writer/objects/1485407d-2a21-43fa-b494-b97bd1c5d9db.json",
+          "sha256": "3c5057e671af7cda41750338bf805732afc12c9ee92e9af5f1572ba4f4377d90"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用D83仅删末次视觉排除句，71–81免提内容、何在家只获转述和不得领人看完整保留；这是可选解释压缩，不升级为必改语言错。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "dependency": "8342dd8e02e318b52a31dda3462e567d921079c431c974369666ab73868abab4"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "83现结尾“沈没有请她把新旧位置再背一遍。”；71–81何在家接电话、沈亲见收存后转述和没开盒仍在，少一次重复视觉排除，较快回到邱穿针。何不目击/不获取看权仍保留；可选风格suggestion。",
+        "changes": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "before": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "after": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/b6d4ab4f-1976-4fe0-b1d8-81a478b5e91a.json",
+        "review_sha256": "e496f4a7d8692b1fa3dcb49ff33c83ad4ab96e86b81cb76bcfa3a7ba97d62531",
+        "reviewer": "actual-Codex-H-final-read-prepare-informed-model-current-72-112",
+        "conclusion": "resolved",
+        "reason": "83现结尾“沈没有请她把新旧位置再背一遍。”；71–81何在家接电话、沈亲见收存后转述和没开盒仍在，少一次重复视觉排除，较快回到邱穿针。何不目击/不获取看权仍保留；可选风格suggestion。",
+        "rechecked_context": false,
+        "application_commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 72,
+            "draft": "正文/0072-把空出来的地方留着.md",
+            "sha256": "dbc6d09418f93edc4406f7249059749ad74a9300b03a39878f6e575f5eb1c93d",
+            "dependency": "fd542ba59365d40eca95f2e276218e762971ececca60b9eabf64d53c0900228d"
+          },
+          {
+            "unit": 73,
+            "draft": "正文/0073-先把车停下来.md",
+            "sha256": "276cdef13f58dfa9113bb7abdb30565bde806409eb6140a546857c526a0ba7b6",
+            "dependency": "7790c8303a3e013ce9df6841eb8959ea8f01d66f9b7d259a4d488103a67465e1"
+          },
+          {
+            "unit": 74,
+            "draft": "正文/0074-空着的晚上也算数.md",
+            "sha256": "2ad51d273d7b3d017d0b298b06353ee6d739777823aba530b3cc000fabd1fad3",
+            "dependency": "480311212a4586fa2c635326b7144610df0c6fee68edd8037cc8c5f79add685e"
+          },
+          {
+            "unit": 75,
+            "draft": "正文/0075-车筐转过来以后.md",
+            "sha256": "a4e77ef0b2e383ef03069d84cf88c0eaa29ce31f43323a227532d0dad1af7df0",
+            "dependency": "3ef154337438ac0426e2e7d5bd224f8ce75017316ed7a572121c1bb6232ef964"
+          },
+          {
+            "unit": 76,
+            "draft": "正文/0076-不必买那壶茶.md",
+            "sha256": "b26bc25092bb1877ef7b769e0a9a07e47c207b7dc353b62d7deba9ec6c510f2c",
+            "dependency": "8fd0777735a4664096e41316141a11ba1c2fca89b9db6bd893af05aba76971f5"
+          },
+          {
+            "unit": 77,
+            "draft": "正文/0077-这回不是等她来.md",
+            "sha256": "45b58b60f494be209a7fc01000c14a5e15ec8ae78b604a4906dee9817f837498",
+            "dependency": "191e72304f8b1754152ca6cd4ba9094086381de18dc1cf3aaae7660ddc9eaba8"
+          },
+          {
+            "unit": 78,
+            "draft": "正文/0078-下雨也出门.md",
+            "sha256": "3898434e4969adc001c66662a9f16b042c8d646f89e0af76878c49bc63022d4a",
+            "dependency": "4bbcf293b80be4929efe421702b7ff3c618e1aca8cd3e14c65317b2edf7180e0"
+          },
+          {
+            "unit": 79,
+            "draft": "正文/0079-换了一个开车的人.md",
+            "sha256": "e5e1ae9216372310344d3e8befcab5738fb7b75aeb723d953465cd8f6e0ce0bf",
+            "dependency": "0feb32409e93ad9519253574ccaeb2325758108e04c87ce9e67b484c3b338801"
+          },
+          {
+            "unit": 80,
+            "draft": "正文/0080-十点半以后.md",
+            "sha256": "da486b8bfeb6e1bec0ed2866db16df8dafec6a14764aae9a68d40a6139b967ee",
+            "dependency": "99ad24dff98e3f9a98d59ccc260ff6e7ad4cc247ec7cc29c04dcfb3a67901030"
+          },
+          {
+            "unit": 81,
+            "draft": "正文/0081-先把桌子放稳.md",
+            "sha256": "655c6247850732a67d16febccc2661709a509498be8bcef66fb4976c02614c7b",
+            "dependency": "e2c8d90f32aa9249ef327141b644a153d0b615f318dd1d91569346548e017d8e"
+          },
+          {
+            "unit": 82,
+            "draft": "正文/0082-这一声不是从窗外来.md",
+            "sha256": "be2d385e1e680914051cdd08977384b8ff6d800236bacdde99970173d5436b91",
+            "dependency": "ca80eb842f82123b2845612219a57f79279ee1bec16c5199ac479e2d86eae073"
+          },
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          },
+          {
+            "unit": 84,
+            "draft": "正文/0084-杯子画歪了也能喝水.md",
+            "sha256": "d6f8cd88e78b6ecbc6b9c0eb08327c0028f5e4771e3a59e02b41409db838a2eb",
+            "dependency": "56ace966f62cfc1076264cc20289a981af0bc26afb781b451b0355ecdc2ddccb"
+          },
+          {
+            "unit": 85,
+            "draft": "正文/0085-先别把架子抬出去.md",
+            "sha256": "68137d2e9db71412905b5828fed5fc6f8c38f064bfb8ccbf4835d2b981f966a5",
+            "dependency": "b8eaafd716eb7681419a4f450d9d976f24d04651415d4354bfbeacdddca9c205"
+          },
+          {
+            "unit": 86,
+            "draft": "正文/0086-椅子上不放篮子.md",
+            "sha256": "69c3841a17e2a90a5b7c2ece9f033fc3caeb2e6c3886b15dc4d41583d6f8f4d0",
+            "dependency": "1e67cb3aa892ba287453071d1fd009596ab0f75a5f98f0336853bb59ef6bd206"
+          },
+          {
+            "unit": 87,
+            "draft": "正文/0087-八点半以前.md",
+            "sha256": "15987f44ad52df66d777ebba16e9b101ddeb5b952cced4dc1ea9ef17e04d9d0e",
+            "dependency": "ed90c743eece69173dfc2d1931abd58a4884ef1a9ddd93f74ebed96c48d52882"
+          },
+          {
+            "unit": 88,
+            "draft": "正文/0088-走过去再坐一会儿.md",
+            "sha256": "28e398f220bda2c2a7031517a5ee3d90e98f5785f5c2d72f1ad8389115766073",
+            "dependency": "d65bf235f13d46ded17c8f56a97527c4d4e089b4b8d5a25682c390f4189ae94b"
+          },
+          {
+            "unit": 89,
+            "draft": "正文/0089-这回不留下一次.md",
+            "sha256": "bdbd06718ff54821574d01e43d97f776f28b118ade9e2c914f347b10ef47c160",
+            "dependency": "29caf1ff2483524b7ebb4694509ba1e1a7fb212faa19c1745de70c6f99db70f2"
+          },
+          {
+            "unit": 90,
+            "draft": "正文/0090-把话带到以后.md",
+            "sha256": "b28d09e947878cfcbcbc0405cc23dc174fb23514da69de5fd2f166bfb1a7006f",
+            "dependency": "293b9815fb65b11bf3256461e5c6022b3da8a5ea13156204cc199833f3793afa"
+          },
+          {
+            "unit": 91,
+            "draft": "正文/0091-报纸翻到另一面.md",
+            "sha256": "326bdf0c79bd1ea82f6aecd00d3211491680788bf82867c8e65a1634693864ec",
+            "dependency": "a5464edf80e4fd84fa9d04a2cc9471bfec4d4104b83c4efdb71e5d610e47333c"
+          },
+          {
+            "unit": 92,
+            "draft": "正文/0092-上柜里的一张纸.md",
+            "sha256": "47478655d3d2fe4cd4bff8e70e2a99ce34a5276fac38af988f9ea3bb47e8e785",
+            "dependency": "b1f6531e82a1f6403698a33a75a8a1510bd533a9dd6ed1a14b8893eecbcc2e31"
+          },
+          {
+            "unit": 93,
+            "draft": "正文/0093-菜还没有买完.md",
+            "sha256": "a3f5ee964181cb42554a120e59f4a513522ec59b419704d5127bd9e5e3ea33d8",
+            "dependency": "abe9a9f2ac339dcd684f7040815834c0ff9ecbdf3a4f6d85abdee6c9f941c145"
+          },
+          {
+            "unit": 94,
+            "draft": "正文/0094-票夹不用交给你.md",
+            "sha256": "18424487db5beedf1c047b28377a9f35332612bbc802cef5dcc7b21886d194a5",
+            "dependency": "bf999b167e89319a2a4fdf9948a0dfa4ad01df95448afa262a2130709d9a2ddd"
+          },
+          {
+            "unit": 95,
+            "draft": "正文/0095-先写今天这一页.md",
+            "sha256": "93eb336cc249745f32b3884fbb4b79a9899cf3e767c85ac4744f3f0f0c5f5f01",
+            "dependency": "0897217f9e666b7a53050b745fb081a2244a60ab9a809a71c63b88e62385df1f"
+          },
+          {
+            "unit": 96,
+            "draft": "正文/0096-听完以后出门.md",
+            "sha256": "1c7aaa5031a6021cbea55dc59feb3912833154f7c141dec114499458dc860532",
+            "dependency": "001fe7132d0686058e40c687a375f5b44e256f8155fb4c0f3afd919cc38f4449"
+          },
+          {
+            "unit": 97,
+            "draft": "正文/0097-两张仍在一起.md",
+            "sha256": "a88211ff494bf6024bc9c44a1d0fa71dae77fbf3f1f6d018d35ef47b69002ca9",
+            "dependency": "f000a611d79aff0d6143aa39e8ac72f64a0f9ef663a886fde3e8b0a92d888d73"
+          },
+          {
+            "unit": 98,
+            "draft": "正文/0098-到点以后椅子还在.md",
+            "sha256": "0ba33184f1b846a0c06b405017e31c8bb81917e1d4d422cf3f6fdec44f97ab1b",
+            "dependency": "e50c4bba7db24122676ec58490e4404f2031bfe3c4889df7b7c4dc20a30b2454"
+          },
+          {
+            "unit": 99,
+            "draft": "正文/0099-饭后还有一会儿.md",
+            "sha256": "390ab02ebfce519741c02cff1c633c65c55b74b4ddec75fa32561f87f3c490a4",
+            "dependency": "2c22e42b0c0eae093dc27cc2c5bfb0fa441bcd1c6da5da4c7b433f6447e357b3"
+          },
+          {
+            "unit": 100,
+            "draft": "正文/0100-念到这一页的末尾.md",
+            "sha256": "6f7f439a1adf22655fc76510906bb88c9dd450a0051ea795d446485cae35c89e",
+            "dependency": "83301ec3609e5e693473541110724a860cb6c8b5bff1ecc942ff51e8292675d9"
+          },
+          {
+            "unit": 101,
+            "draft": "正文/0101-下次从这里找.md",
+            "sha256": "81547abfa4da96569119bd4ad43bd701a4f71df9244502407fe2dbd05acd5e7f",
+            "dependency": "cc6a1e7d481ea946a32b33f6ff1a559f67600302a03b17349bc74693f9a48141"
+          },
+          {
+            "unit": 102,
+            "draft": "正文/0102-球没有进的时候.md",
+            "sha256": "024a110095e5220a0d2020ce04279a7f7282177110af77934b13149c357fced0",
+            "dependency": "370d3e9a72800fd59e7106c8c3efec0b9b6adc23e215bea2dd3155b4fa0363a2"
+          },
+          {
+            "unit": 103,
+            "draft": "正文/0103-这笔没有接下的钱.md",
+            "sha256": "75e4d23f9b35abfebe8a3daca30d275dd978d4a4b95a872adbd267666d3f552e",
+            "dependency": "ef11c55121122145cb481e30c560afa63be0fb1476ba6420e37f04013ee3b3fe"
+          },
+          {
+            "unit": 104,
+            "draft": "正文/0104-椅子今天放不下.md",
+            "sha256": "f0faab7bbbe4fa334f43cc65097a8791da0414b99ace37fb569cfb750b2660ea",
+            "dependency": "438db2f21c7ad314a280e2d7eb785788e3dd9f8b28c2fbd10939ead93af8c429"
+          },
+          {
+            "unit": 105,
+            "draft": "正文/0105-开头划掉以后.md",
+            "sha256": "8f8c80b30b9e117e6e0f60bd065459890426b81b1f032ef68dd17fafb32a691b",
+            "dependency": "b2957d441c56937679b53231fd9213d1ab23fb521d8508504bbe902ee055f83d"
+          },
+          {
+            "unit": 106,
+            "draft": "正文/0106-先坐一会儿.md",
+            "sha256": "fc7793413ef2e51d8f1cfa72d8020445fb5ad0b9b2a908002b6a921ed81d0008",
+            "dependency": "24e94b7bd6ce2cce3507b90fa9fc6782a7022b846c2d3e33cc8baffd787c3bcb"
+          },
+          {
+            "unit": 107,
+            "draft": "正文/0107-九点到十一点.md",
+            "sha256": "d6c99f4523f1672f7a5335e5da4f185ecf2ef8fe2708af79864ba4e035c5eae6",
+            "dependency": "955d75251ac98182067e57c5b6630deb7528de98b69aa128b3565a6ebe056d18"
+          },
+          {
+            "unit": 108,
+            "draft": "正文/0108-先陪你走这一趟.md",
+            "sha256": "54d12e377d34feaf26afa3c58482d9dcc2997f59a073039f4dac1e557e164b12",
+            "dependency": "212027aff8069e621a2c9f14732d7d61e236c42444928e44638870f058cce4ce"
+          },
+          {
+            "unit": 109,
+            "draft": "正文/0109-两百四十买到什么.md",
+            "sha256": "6e5a548bab62681fceaef4a8e76329f6db1baa545750098a1675a98bd7cc38f9",
+            "dependency": "496c6a8039727dc3c265626b1d9782009766e3f7467fc9fec3e761a4568a6531"
+          },
+          {
+            "unit": 110,
+            "draft": "正文/0110-坐下以后还想说话.md",
+            "sha256": "09f98055cf78cb404189c6be9439d3198df216b0bd4522fe509ba643cb075da0",
+            "dependency": "75f4f63b8e8d403ed0f48ecfe335487d366db09fdbc8030f8d546d655b98a153"
+          },
+          {
+            "unit": 111,
+            "draft": "正文/0111-先吃这一碗.md",
+            "sha256": "cbc97a650146b666a82778ae04ea4922d7a508c8e05ed8aaa2e74c2fa75fc0e1",
+            "dependency": "2bbdd7d19052c493ee07c6ae2b1468a8d8a0e2bedcf29dc65256d15971de9c56"
+          },
+          {
+            "unit": 112,
+            "draft": "正文/0112-后颈上的风.md",
+            "sha256": "3a6b74df44cfe9747e0b60e7351195a9364beeb31b5c76578c8ba2543f8a7c84",
+            "dependency": "c6936d71f0531e02d0701c73d927a57a0837cb12c48d7748d8f992601fc8b486"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/e670e6ba-c901-4c2f-8a24-4b1932d63952.json",
+        "sha256": "e6f36d2706580ad096115ada1e83b629d429e33903088bc5f68b021b48acd1ee"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

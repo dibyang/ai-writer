@@ -1,0 +1,89 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "H83_REPEATED_PHONE_EXCLUSION",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "71/73/75/81已用真实电话明确何在家、沈亲见后转述、没开盒和范围；83再列何没见布/袋字是可选解释压缩，不是原文知识错。",
+      "suggestion": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。",
+      "evidence": [
+        {
+          "unit": 83,
+          "draft": "正文/0083-柜里那一格.md",
+          "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+          "line": 83,
+          "quote": "电话那头有人问话，何说母亲找水杯，先挂了。沈没有请她把新旧位置再背一遍。今天何已经在家，只听过这通电话，刚才邱搬盒的动作、柜格里铺的布和原袋外字，都没到她眼前。"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/130e5e1d-552a-4ed3-a5dd-e36644d0048e.json",
+        "review_sha256": "ecf95596d31a7a3aeebf4842a0629e8bee59fac95b4cc1f76b033723689769ba",
+        "units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "dependency": "8342dd8e02e318b52a31dda3462e567d921079c431c974369666ab73868abab4"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/23793154-485f-4d9c-8451-9a9a8ca247fe.json",
+          "sha256": "d74a3a629653bc66b63667789b9f63efa7ec7d7b30bca6208b96c8eedefef2cf"
+        },
+        {
+          "ref": ".writer/objects/5dc69f30-be4e-4e64-8f18-a002cb70f6b1.json",
+          "sha256": "a5cf0e0fb00a05f5c97e0d083de4ac45557741e310b1ab1a15a977fb83840c35"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/8ce4b6bf-09ef-4688-a13c-2a8a8a10d9d0.json",
+          "sha256": "7493eb0346836311fcb2ceec133197ff399e0106d85dbd56a77b38d7897bff37"
+        },
+        "disposition": "adopted",
+        "reason": "采用D83仅删末次视觉排除句，71–81免提内容、何在家只获转述和不得领人看完整保留；这是可选解释压缩，不升级为必改语言错。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "dependency": "8342dd8e02e318b52a31dda3462e567d921079c431c974369666ab73868abab4"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "df781cd8-75c9-4a34-aa29-65a6d34e179c",
+        "commit_binding": {
+          "ref": ".writer/objects/df781cd8-75c9-4a34-aa29-65a6d34e179c.json",
+          "sha256": "68ee5db3ea6cf7eb5116fb12cdbb164d2ef59bd8056e7cfad40b855b4eb73124"
+        },
+        "transaction_id": "b56a7d0c-0182-4544-a4f1-7543d09c8dd0",
+        "reason": "83现结尾“沈没有请她把新旧位置再背一遍。”；71–81何在家接电话、沈亲见收存后转述和没开盒仍在，少一次重复视觉排除，较快回到邱穿针。何不目击/不获取看权仍保留；可选风格suggestion。",
+        "changes": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "before": "3deb5cacd08b749372ecaacffba7babb2bb5a49fad51033d9fda4511deea7a71",
+            "after": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 83,
+            "draft": "正文/0083-柜里那一格.md",
+            "sha256": "da9158e259dd977a833bb0ec4ab816b727ad418f73759f872719db6a219abb7f",
+            "dependency": "ee5e44822ba81ff14d41a04e264c60c7049a3a0358a31d56bba9a5077e332aad"
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}
