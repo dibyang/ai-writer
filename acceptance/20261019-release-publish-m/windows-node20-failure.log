@@ -1,0 +1,152 @@
+﻿2026-10-19T09:28:39.2594878Z Current runner version: '2.337.0'
+2026-10-19T09:28:39.2615685Z ##[group]Runner Image Provisioner
+2026-10-19T09:28:39.2616324Z Hosted Compute Agent
+2026-10-19T09:28:39.2616794Z Version: 20261002.596
+2026-10-19T09:28:39.2617261Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-19T09:28:39.2617790Z Build Date: 2026-10-02T22:28:27Z
+2026-10-19T09:28:39.2618314Z Worker ID: {52764995-9149-4559-bc47-514b8a638709}
+2026-10-19T09:28:39.2618833Z Region: westus3
+2026-10-19T09:28:39.2619232Z Cloud: Azure
+2026-10-19T09:28:39.2619674Z ##[endgroup]
+2026-10-19T09:28:39.2620699Z ##[group]Operating System
+2026-10-19T09:28:39.2621224Z Microsoft Windows Server 2025
+2026-10-19T09:28:39.2621683Z 10.0.26100
+2026-10-19T09:28:39.2622084Z Datacenter
+2026-10-19T09:28:39.2622507Z ##[endgroup]
+2026-10-19T09:28:39.2622904Z ##[group]Runner Image
+2026-10-19T09:28:39.2623353Z Image: windows-2025-vs2026
+2026-10-19T09:28:39.2623867Z Version: 20261007.264.1
+2026-10-19T09:28:39.2625070Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261007.264/images/windows/Windows2025-VS2026-Readme.md
+2026-10-19T09:28:39.2626305Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261007.264
+2026-10-19T09:28:39.2627437Z ##[endgroup]
+2026-10-19T09:28:39.2628415Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T09:28:39.2630133Z Contents: read
+2026-10-19T09:28:39.2630575Z Metadata: read
+2026-10-19T09:28:39.2631028Z Packages: read
+2026-10-19T09:28:39.2631451Z ##[endgroup]
+2026-10-19T09:28:39.2633036Z Secret source: Actions
+2026-10-19T09:28:39.2633706Z Cache mode: write
+2026-10-19T09:28:39.2634220Z Prepare workflow directory
+2026-10-19T09:28:39.2921664Z Prepare all required actions
+2026-10-19T09:28:39.2976777Z Getting action download info
+2026-10-19T09:28:39.5749383Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T09:28:39.7561257Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-19T09:28:40.0146039Z Complete job name: workspace (windows-latest, 20)
+2026-10-19T09:28:40.1224690Z ##[group]Run git config --global core.protectNTFS false
+2026-10-19T09:28:40.1225561Z [36;1mgit config --global core.protectNTFS false[0m
+2026-10-19T09:28:40.1226165Z [36;1mgit config --global core.longpaths true[0m
+2026-10-19T09:28:40.1881471Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-19T09:28:40.1882364Z ##[endgroup]
+2026-10-19T09:28:41.3198320Z ##[group]Run actions/checkout@v4
+2026-10-19T09:28:41.3199254Z with:
+2026-10-19T09:28:41.3199903Z   sparse-checkout-cone-mode: false
+2026-10-19T09:28:41.3200824Z   sparse-checkout: /*
+!/acceptance/
+!/works/
+
+2026-10-19T09:28:41.3201756Z   repository: dibyang/ai-writer
+2026-10-19T09:28:41.3208789Z   token: ***
+2026-10-19T09:28:41.3209419Z   ssh-strict: true
+2026-10-19T09:28:41.3210066Z   ssh-user: git
+2026-10-19T09:28:41.3210710Z   persist-credentials: true
+2026-10-19T09:28:41.3211431Z   clean: true
+2026-10-19T09:28:41.3212052Z   fetch-depth: 1
+2026-10-19T09:28:41.3212665Z   fetch-tags: false
+2026-10-19T09:28:41.3213300Z   show-progress: true
+2026-10-19T09:28:41.3213935Z   lfs: false
+2026-10-19T09:28:41.3214521Z   submodules: false
+2026-10-19T09:28:41.3215462Z   set-safe-directory: true
+2026-10-19T09:28:41.3216262Z   allow-unsafe-pr-checkout: false
+2026-10-19T09:28:41.3217028Z ##[endgroup]
+2026-10-19T09:28:41.4371667Z Syncing repository: dibyang/ai-writer
+2026-10-19T09:28:41.4373761Z ##[group]Getting Git version info
+2026-10-19T09:28:41.4374662Z Working directory is 'D:\a\ai-writer\ai-writer'
+2026-10-19T09:28:41.4971745Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-19T09:28:41.5400709Z git version 2.56.0.windows.2
+2026-10-19T09:28:41.5437669Z ##[endgroup]
+2026-10-19T09:28:41.5448850Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\bb5116a3-1860-460b-82be-d6af5ceec5d2\.gitconfig'
+2026-10-19T09:28:41.5466250Z Temporarily overriding HOME='D:\a\_temp\bb5116a3-1860-460b-82be-d6af5ceec5d2' before making global git config changes
+2026-10-19T09:28:41.5469871Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T09:28:41.5474550Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ai-writer\ai-writer
+2026-10-19T09:28:41.5787236Z Deleting the contents of 'D:\a\ai-writer\ai-writer'
+2026-10-19T09:28:41.5792398Z ##[group]Initializing the repository
+2026-10-19T09:28:41.5799543Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\ai-writer\ai-writer
+2026-10-19T09:28:41.6661767Z Initialized empty Git repository in D:/a/ai-writer/ai-writer/.git/
+2026-10-19T09:28:41.6710995Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/dibyang/ai-writer
+2026-10-19T09:28:41.7473860Z ##[endgroup]
+2026-10-19T09:28:41.7474351Z ##[group]Disabling automatic garbage collection
+2026-10-19T09:28:41.7482551Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-19T09:28:41.7792203Z ##[endgroup]
+2026-10-19T09:28:41.7792677Z ##[group]Setting up auth
+2026-10-19T09:28:41.7801923Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T09:28:41.8116853Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-19T09:28:44.3620285Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T09:28:44.3916173Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-19T09:28:44.8365670Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T09:28:44.8654109Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-19T09:28:45.3243743Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-19T09:28:45.3604482Z ##[endgroup]
+2026-10-19T09:28:45.3605044Z ##[group]Fetching the repository
+2026-10-19T09:28:45.3616939Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +ef0c78670bac94634361b5fd72f0496f52b8b99d:refs/remotes/origin/codex/initial
+2026-10-19T09:28:48.4004001Z From https://github.com/dibyang/ai-writer
+2026-10-19T09:28:48.4005085Z  * [new ref]         ef0c78670bac94634361b5fd72f0496f52b8b99d -> origin/codex/initial
+2026-10-19T09:28:48.4041436Z ##[endgroup]
+2026-10-19T09:28:48.4042194Z ##[group]Determining the checkout info
+2026-10-19T09:28:48.4044273Z ##[endgroup]
+2026-10-19T09:28:48.4044820Z ##[group]Setting up sparse checkout
+2026-10-19T09:28:48.4052390Z [command]"C:\Program Files\Git\bin\git.exe" config core.sparseCheckout true
+2026-10-19T09:28:48.4355677Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse --git-path info/sparse-checkout
+2026-10-19T09:28:48.5263467Z .git/info/sparse-checkout
+2026-10-19T09:28:48.5299930Z ##[endgroup]
+2026-10-19T09:28:48.5300270Z ##[group]Checking out the ref
+2026-10-19T09:28:48.5307007Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B codex/initial refs/remotes/origin/codex/initial
+2026-10-19T09:28:50.2030835Z Switched to a new branch 'codex/initial'
+2026-10-19T09:28:50.2089740Z branch 'codex/initial' set up to track 'origin/codex/initial'.
+2026-10-19T09:28:50.4667459Z ##[endgroup]
+2026-10-19T09:28:50.4676347Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-19T09:28:50.4950339Z ef0c78670bac94634361b5fd72f0496f52b8b99d
+2026-10-19T09:28:50.5327479Z ##[group]Run actions/setup-node@v4
+2026-10-19T09:28:50.5328352Z with:
+2026-10-19T09:28:50.5328514Z   node-version: 20
+2026-10-19T09:28:50.5328693Z   always-auth: false
+2026-10-19T09:28:50.5328883Z   check-latest: false
+2026-10-19T09:28:50.5331334Z   token: ***
+2026-10-19T09:28:50.5331500Z ##[endgroup]
+2026-10-19T09:28:50.6803371Z Attempting to download 20...
+2026-10-19T09:28:50.6946432Z (node:6264) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T09:28:50.6947287Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T09:28:51.6544500Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-win32-x64.7z
+2026-10-19T09:28:52.0645139Z Extracting ...
+2026-10-19T09:28:54.0957171Z Adding to the cache ...
+2026-10-19T09:29:00.4315282Z ##[group]Environment details
+2026-10-19T09:29:02.1133073Z node: v20.20.2
+2026-10-19T09:29:02.1133472Z npm: 10.8.2
+2026-10-19T09:29:02.1133687Z yarn: 1.22.22
+2026-10-19T09:29:02.1134493Z ##[endgroup]
+2026-10-19T09:29:02.1363458Z ##[group]Run npm test
+2026-10-19T09:29:02.1363703Z [36;1mnpm test[0m
+2026-10-19T09:29:02.1421164Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-19T09:29:02.1421464Z ##[endgroup]
+2026-10-19T09:29:02.6203497Z 
+2026-10-19T09:29:02.6207937Z > ai-writer@0.8.0 test
+2026-10-19T09:29:02.6208231Z > node --test tests/*.test.mjs
+2026-10-19T09:29:02.6208407Z 
+2026-10-19T09:29:02.6722097Z Could not find 'D:\a\ai-writer\ai-writer\tests\*.test.mjs'
+2026-10-19T09:29:02.7691140Z ##[error]Process completed with exit code 1.
+2026-10-19T09:29:02.7881619Z Post job cleanup.
+2026-10-19T09:29:02.9294300Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-19T09:29:02.9575132Z git version 2.56.0.windows.2
+2026-10-19T09:29:02.9630663Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\0aa9b91c-7d4f-474b-9bc1-d06d660fad25\.gitconfig'
+2026-10-19T09:29:02.9647565Z Temporarily overriding HOME='D:\a\_temp\0aa9b91c-7d4f-474b-9bc1-d06d660fad25' before making global git config changes
+2026-10-19T09:29:02.9648708Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T09:29:02.9656603Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ai-writer\ai-writer
+2026-10-19T09:29:02.9983092Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T09:29:03.0301280Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-19T09:29:03.5451185Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T09:29:03.5719294Z http.https://github.com/.extraheader
+2026-10-19T09:29:03.5754240Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T09:29:03.6051846Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-19T09:29:04.0997570Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T09:29:04.1295986Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-19T09:29:04.6226871Z Cleaning up orphan processes
+2026-10-19T09:29:04.6259089Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

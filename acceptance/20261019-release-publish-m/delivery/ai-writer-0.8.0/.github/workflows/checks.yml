@@ -1,0 +1,31 @@
+name: checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  workspace:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        node: [20, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      # This ephemeral runner never materializes the excluded historical paths.
+      - if: runner.os == 'Windows'
+        run: |
+          git config --global core.protectNTFS false
+          git config --global core.longpaths true
+      - uses: actions/checkout@v4
+        with:
+          # Immutable historical evidence contains Windows-reserved path names.
+          # Product tests use tests/fixtures and the checked-in reference inventory.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/acceptance/
+            !/works/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: npm run doctor
+      - run: npm run test:engine

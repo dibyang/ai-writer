@@ -1,6 +1,6 @@
 # 创作规划、作者决策与修订管理：落地设计及验收方案
 
-更新日期：2026-10-19。当前状态：**八项需求的已确认范围已实现并已有Windows本地验证；当前准备首个正式版0.8.0，采用Apache-2.0，尚未打标签或发布**。八项对应能力、实际验证结果、实现细化和暂缓范围统一见[当前状态总览](authoring-governance-status.md)。首发准备见[L轮记录](../acceptance/20261019-release-080-l/README.md)；此前内部候选的创作方法、112章副本流程、许可及包兼容验证分别见[J轮](../acceptance/20261019-webnovel-reference-j/README.md)、[H轮](../acceptance/20261019-hundred-h/README.md)和[K轮](../acceptance/20261019-apache-license-k/README.md)。历史构建身份不改写，模型复核不代表真人文学验收，现有作品不因发布准备而修改。
+更新日期：2026-10-19。当前状态：**八项需求的已确认范围已实现；首个正式版0.8.0已采用Apache-2.0发布，Windows/Ubuntu × Node20/24四组CI通过**。八项对应能力、实际验证结果、实现细化和暂缓范围统一见[当前状态总览](authoring-governance-status.md)。正式标签、最终包和发布回执见[M轮记录](../acceptance/20261019-release-publish-m/README.md)，准备过程见[L轮记录](../acceptance/20261019-release-080-l/README.md)；此前内部候选的创作方法、112章副本流程、许可及包兼容验证分别见[J轮](../acceptance/20261019-webnovel-reference-j/README.md)、[H轮](../acceptance/20261019-hundred-h/README.md)和[K轮](../acceptance/20261019-apache-license-k/README.md)。历史构建身份不改写，模型复核不代表真人文学验收，现有作品未修改。
 
 作者已分批授权并完成A→B→C→D。A见[0.4.0首批记录](../acceptance/20261018-governance-a/README.md)，B见[第二批实现说明](authoring-governance-b-implementation.md)及[版本修订手册](revision-and-sources.md)。C见[第三批约束](authoring-governance-c-implementation.md)及[专项手册](review-and-registration.md)。D见[D批约束](authoring-governance-d-implementation.md)、[更新手册](tool-updates.md)和[D批验证记录](../acceptance/20261018-governance-d/README.md)。E/F补强及最终0.7.3百章流程见[当前状态总览](authoring-governance-status.md)。以下需求缺口、字段草图和验收矩阵保留设计时点的依据，均有历史语境；它们不表示当前尚无对应功能，也不替代已细化的实际协议与分版本证据。
 

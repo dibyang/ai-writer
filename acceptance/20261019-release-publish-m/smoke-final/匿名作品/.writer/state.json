@@ -1,0 +1,140 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "7ecd98c7-ee80-45d8-9c13-de6549c32daf",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "阿禾": "在邮局；知道多封信编号重复，不知道寄件人",
+      "值班员": "在邮局；持有第三封信，未说明来源"
+    },
+    "threads": [
+      "相同编号的原因",
+      "第三封信的寄件人和去向"
+    ],
+    "timeline": [
+      "第一夜：阿禾在末班车后抵达邮局"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-没寄出的信.md",
+      "sha256": "40cf992362148757143f903b529392dc12b837228806857d7827ca6c7d4c28fb",
+      "summary": "阿禾查已故父亲寄来的信，值班员取出同编号的第二封和没有邮戳的第三封。",
+      "source_hashes": {
+        "writer.json": "977b736656b6b378367abfa97a5784287842b1145116c8283edf03163c8172b4",
+        ".writer/state.json": "d9e11d8d3441fa4e76984d70903e1a2f02b0d954947d0da6ed650b7d4ab9a913",
+        "大纲/单元/0001.json": "8ce16e2f1e4344ea3c77a674f556bfada1972f99d56e201e9248235edc41e678",
+        "设定/作品定位.md": "90b877297496aa840dc803d62719d2fc9a9464146fa7104a6a72b514358f571d",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "f8d1cef6aa72ef0eb01d4f5d34c2d522ea342c4cb87394948d5588d154449fc1",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/3554e644-07e9-4a26-909d-7498c3393875.json",
+          "sha256": "18336b79dfd2bb563094b9cb5aab72fb7d3bb1d14a265314ab98302d2dbb2cb3"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "aced6e98693dd30dc370d2d15bb40fbf848b20b96ffcd7cb60dd7b10693f1ab0",
+      "journal": ".writer/journal/856cd0e9-79a6-4a99-985c-42438f59d4a0.json",
+      "journal_sha256": "57fd6d4837673b26b1e5cd49971f775b11b8d3a0b624566f8b4b699293c51d4d"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "仅重放本测试副本第1章，完成后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一章完成后复盘"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/3554e644-07e9-4a26-909d-7498c3393875.json",
+      "sha256": "18336b79dfd2bb563094b9cb5aab72fb7d3bb1d14a265314ab98302d2dbb2cb3"
+    }
+  ],
+  "operations": {
+    "smoke-trial": {
+      "input_sha256": "455d5d4a42575b85f5e91a49f30c37907ed9c9e173211d857c6a4c9aec09192e",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "smoke-trial",
+        "event": {
+          "ref": ".writer/objects/3554e644-07e9-4a26-909d-7498c3393875.json",
+          "sha256": "18336b79dfd2bb563094b9cb5aab72fb7d3bb1d14a265314ab98302d2dbb2cb3"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/3554e644-07e9-4a26-909d-7498c3393875.json",
+    "sha256": "18336b79dfd2bb563094b9cb5aab72fb7d3bb1d14a265314ab98302d2dbb2cb3"
+  }
+}

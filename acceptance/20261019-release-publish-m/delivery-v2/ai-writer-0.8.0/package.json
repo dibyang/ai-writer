@@ -1,0 +1,24 @@
+{
+  "name": "ai-writer",
+  "version": "0.8.0",
+  "license": "Apache-2.0",
+  "aiWriter": {
+    "resourceProfile": "apache-2.0-v1"
+  },
+  "private": true,
+  "description": "Codex 驱动的中文小说、剧本、历史散文与非虚构写作工作区",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "ai-writer": "bin/ai-writer.mjs"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs workspace",
+    "doctor": "node bin/ai-writer.mjs doctor",
+    "smoke": "node scripts/smoke.mjs",
+    "test:engine": "node scripts/test.mjs engine",
+    "release:build": "node scripts/build-release.mjs"
+  }
+}

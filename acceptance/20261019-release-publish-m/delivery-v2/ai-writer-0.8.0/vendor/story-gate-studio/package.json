@@ -1,0 +1,34 @@
+{
+  "name": "story-gate-studio",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "Traceable fiction writing and review plugin with automated quality gates.",
+  "type": "commonjs",
+  "bin": {
+    "story-gate": "scripts/story-gate.js"
+  },
+  "scripts": {
+    "story-gate": "node scripts/story-gate.js",
+    "test": "node --test tests/*.test.js",
+    "quality:gates": "node scripts/run-quality-gates.js",
+    "validate:rule-pack": "node scripts/validate-rule-pack.js references/rule-pack.json",
+    "validate:report": "node scripts/validate-report.js examples/expected-reports",
+    "validate:fixtures": "node scripts/validate-fixtures.js examples/fixtures examples/expected-reports",
+    "validate:design": "node scripts/validate-design-contracts.js",
+    "validate:tasks": "node scripts/validate-task-registry.js",
+    "project:init": "node scripts/story-gate.js init-project-rule-pack",
+    "validate:project-rule": "node scripts/story-gate.js project-rule-check examples/project-rule-packs/sample-project-rule-pack.json",
+    "metrics:sample": "node scripts/story-gate.js chapter-batch-metrics examples/fixtures/chapter-batch-metrics-sample.md",
+    "review:scorecard": "node scripts/story-gate.js review-scorecard examples/fixtures/review-scorecard-pass.md",
+    "host:smoke": "node scripts/story-gate.js host-run examples/host-adapter/review-scorecard-request.json",
+    "customer:pilot": "node scripts/story-gate.js customer-pilot --project examples/customer-pilot",
+    "support:bundle": "node scripts/story-gate.js support-bundle --project examples/customer-pilot --dry-run",
+    "commercial:check": "node scripts/commercial-release-check.js",
+    "release:check": "node scripts/story-gate.js release-check",
+    "commercial:readiness": "node scripts/story-gate.js commercial-readiness-check",
+    "package:check": "node scripts/story-gate.js private-package-check",
+    "package:build": "node scripts/story-gate.js build-private-package",
+    "package:archive": "node scripts/story-gate.js build-release-archive"
+  }
+}

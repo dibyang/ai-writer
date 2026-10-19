@@ -1,0 +1,958 @@
+{
+  "format": "ai-writer-distribution@1",
+  "description": "Explicit source allowlist; excludes works, acceptance, machine settings and generated output.",
+  "files": [
+    {
+      "file": "scripts/test.mjs"
+    },
+    {
+      "file": ".agents/skills/writer-essay/SKILL.md"
+    },
+    {
+      "file": ".agents/skills/writer-history/SKILL.md"
+    },
+    {
+      "file": ".agents/skills/writer-history/references/history-method.md"
+    },
+    {
+      "file": ".agents/skills/writer-novel/SKILL.md"
+    },
+    {
+      "file": ".agents/skills/writer-novel/references/scene-connections.md"
+    },
+    {
+      "file": ".agents/skills/writer-novel/references/story-development.md"
+    },
+    {
+      "file": ".agents/skills/writer-novel/references/suspense-continuity.md"
+    },
+    {
+      "file": ".agents/skills/writer-project/SKILL.md"
+    },
+    {
+      "file": ".agents/skills/writer-project/references/long-form.md"
+    },
+    {
+      "file": ".agents/skills/writer-research/SKILL.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/SKILL.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/action-scene-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/architecture-continuity-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/character-emotion-consistency.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/deslop.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/dual-world-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/final-publication-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/general-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/historical-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/knife-emotional-impact.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/natural-language-authenticity.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/page-turner-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/physical-logic-operability.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/proofreading-language-quality.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/psychology-readability.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/publication-gate.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/readability-accessibility.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/suspense-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/transmigration-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-review/references/xianxia-review.md"
+    },
+    {
+      "file": ".agents/skills/writer-screenplay/SKILL.md"
+    },
+    {
+      "file": ".gitattributes"
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/bug_report.yml"
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "file": ".github/workflows/checks.yml"
+    },
+    {
+      "file": ".gitignore"
+    },
+    {
+      "file": "AGENTS.md"
+    },
+    {
+      "file": "CHANGELOG.md"
+    },
+    {
+      "file": "CONTRIBUTING.md"
+    },
+    {
+      "file": "LICENSE.md"
+    },
+    {
+      "file": "NOTICE"
+    },
+    {
+      "file": "README.md",
+      "source": "release/README.md"
+    },
+    {
+      "file": "RELEASE_NOTES.md"
+    },
+    {
+      "file": "SECURITY.md"
+    },
+    {
+      "file": "bin/ai-writer.mjs"
+    },
+    {
+      "file": "docs/attribution.md"
+    },
+    {
+      "file": "docs/bug-reporting.md"
+    },
+    {
+      "file": "docs/deslop.md"
+    },
+    {
+      "file": "docs/en/CONTRIBUTING.md"
+    },
+    {
+      "file": "docs/en/SECURITY.md"
+    },
+    {
+      "file": "docs/en/bug-reporting.md"
+    },
+    {
+      "file": "docs/license-transition.json"
+    },
+    {
+      "file": "docs/long-form.md"
+    },
+    {
+      "file": "docs/oh-story-audit-manifest.json"
+    },
+    {
+      "file": "docs/oh-story-reference-inventory.json"
+    },
+    {
+      "file": "docs/quickstart.md"
+    },
+    {
+      "file": "docs/release.md"
+    },
+    {
+      "file": "docs/review-and-registration.md"
+    },
+    {
+      "file": "docs/revision-and-sources.md"
+    },
+    {
+      "file": "docs/source-manifest.json"
+    },
+    {
+      "file": "docs/tool-updates.md"
+    },
+    {
+      "file": "docs/usability-sources.json"
+    },
+    {
+      "file": "docs/user-guide.md"
+    },
+    {
+      "file": "docs/workflow.md"
+    },
+    {
+      "file": "examples/history-fact-card.json"
+    },
+    {
+      "file": "examples/novel-opening.md"
+    },
+    {
+      "file": "examples/prompts.md"
+    },
+    {
+      "file": "lib/governance.mjs"
+    },
+    {
+      "file": "lib/help.mjs"
+    },
+    {
+      "file": "lib/journal.mjs"
+    },
+    {
+      "file": "lib/longform.mjs"
+    },
+    {
+      "file": "lib/review-workflow.mjs"
+    },
+    {
+      "file": "lib/revisions.mjs"
+    },
+    {
+      "file": "lib/sources.mjs"
+    },
+    {
+      "file": "lib/style.mjs"
+    },
+    {
+      "file": "lib/tool-build.mjs"
+    },
+    {
+      "file": "lib/tool-update.mjs"
+    },
+    {
+      "file": "lib/workspace.mjs"
+    },
+    {
+      "file": "package.json"
+    },
+    {
+      "file": "release/README.md"
+    },
+    {
+      "file": "release/distribution.json"
+    },
+    {
+      "file": "scripts/build-release.mjs"
+    },
+    {
+      "file": "scripts/smoke.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/bin/ai-writer.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/lib/help.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/lib/journal.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/lib/longform.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/lib/style.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/lib/workspace.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/package.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.3/source-manifest.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/bin/ai-writer.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/governance.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/help.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/journal.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/longform.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/style.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/tool-build.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/lib/workspace.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/package.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.4/source-manifest.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/bin/ai-writer.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/governance.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/help.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/journal.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/longform.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/revisions.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/sources.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/style.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/tool-build.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/lib/workspace.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/package.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.5/source-manifest.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/bin/ai-writer.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/governance.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/help.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/journal.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/longform.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/review-workflow.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/revisions.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/sources.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/style.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/tool-build.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/lib/workspace.mjs"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/package.json"
+    },
+    {
+      "file": "tests/fixtures/tool-0.6/source-manifest.json"
+    },
+    {
+      "file": "tests/governance.test.mjs"
+    },
+    {
+      "file": "tests/licensing.test.mjs"
+    },
+    {
+      "file": "tests/longform.test.mjs"
+    },
+    {
+      "file": "tests/new-user-recovery.test.mjs"
+    },
+    {
+      "file": "tests/package-protocol.test.mjs"
+    },
+    {
+      "file": "tests/protection-fixture.mjs"
+    },
+    {
+      "file": "tests/protection.test.mjs"
+    },
+    {
+      "file": "tests/recovery-guidance.test.mjs"
+    },
+    {
+      "file": "tests/release.test.mjs"
+    },
+    {
+      "file": "tests/review-report-capacity.test.mjs"
+    },
+    {
+      "file": "tests/review-scope.test.mjs"
+    },
+    {
+      "file": "tests/review-workflow.test.mjs"
+    },
+    {
+      "file": "tests/revision-boundaries.test.mjs"
+    },
+    {
+      "file": "tests/revision-dependencies.test.mjs"
+    },
+    {
+      "file": "tests/skill-resource-guidance.test.mjs"
+    },
+    {
+      "file": "tests/tool-update.test.mjs"
+    },
+    {
+      "file": "tests/usability.test.mjs"
+    },
+    {
+      "file": "tests/windows-rename.test.mjs"
+    },
+    {
+      "file": "tests/workspace.test.mjs"
+    },
+    {
+      "file": "vendor/oh-story-deslop-reference/LICENSE"
+    },
+    {
+      "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/LICENSE"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/README.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/docs/architecture.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/docs/keep-ai-novel-consistent-over-100-chapters.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/browser-cdp/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-cover/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-deslop/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-import/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-analyze/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-scan/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/author-memory.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/benchmark-recall.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/style-resolution.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/tracking-transaction.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/workflow-daily.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/workflow-volume.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/scripts/build_writer_prompt.py"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/scripts/outline_view.py"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/scripts/tracking_commit.py"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-review/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-setup/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-short-analyze/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-short-scan/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story-short-write/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference-20261015/skills/story/SKILL.md"
+    },
+    {
+      "file": "vendor/oh-story-reference/LICENSE"
+    },
+    {
+      "file": "vendor/oh-story-reference/skills/story-deslop/references/deslop-gates.md"
+    },
+    {
+      "file": "vendor/oh-story-reference/skills/story-long-write/references/project-files.md"
+    },
+    {
+      "file": "vendor/oh-story-reference/skills/story-long-write/references/workflow-chapter.md"
+    },
+    {
+      "file": "vendor/oh-story-reference/skills/story-short-analyze/references/analysis-method.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/.codex-plugin/plugin.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/CHANGELOG.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/LICENSE.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/NOTICE"
+    },
+    {
+      "file": "vendor/story-gate-studio/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/RELEASE.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/commercial-operations.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/commercialization.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/customer-install.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/customer-pilot.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/help.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/host-adapter.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/implementation-plan.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/phased-roadmap.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/private-package.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/project-rule-pack-template.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/quickstart.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/release-management.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/review-capability-enhancement.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/support-playbook.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/traceability.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/docs/v0.1-design.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-pilot/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-pilot/chapter-gate.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-pilot/chapters/opening-page.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-pilot/host-request.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-pilot/reports/sample-review.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-pilot/rule-pack.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/customer-smoke/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/blind-read-average-mask-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/blind-read-context-leak-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/blind-read-continuous-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/blind-read-isolation-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/blind-read-pass.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-cross-artifact-lifecycle-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-dual-body-continuity-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-object-continuity-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-observed-fact-rewrite-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-pass.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-physical-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-physical-vague-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/chapter-gate-small-object-action-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/expected-reports/visual-selected-block.report.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/final-arc-live-cost/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/final-arc-live-cost/chapter-01.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/final-arc-live-cost/chapter-02.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/final-arc-live-cost/chapter-03.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/blind-read-average-mask-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/blind-read-context-leak-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/blind-read-continuous-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/blind-read-isolation-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/blind-read-pass.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-batch-metrics-sample.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-cross-artifact-lifecycle-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-dual-body-continuity-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-object-continuity-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-observed-fact-rewrite-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-pass.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-physical-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-physical-vague-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/chapter-gate-small-object-action-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/review-scorecard-needs-polish.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/review-scorecard-pass.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/fixtures/visual-selected-block.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/host-adapter/blind-read-gate-request.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/host-adapter/chapter-gate-request.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/host-adapter/review-scorecard-request.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/project-rule-packs/sample-project-rule-pack.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/requests/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/examples/requests/chapter-gate-request.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/marketplace.private.example.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/package.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/blind-read-review-rules.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/commercial-readiness.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/host-adapter.schema.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/license-profile.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/private-content-blocklist.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/private-package-manifest.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/quality-gate.schema.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/release-manifest.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/report.schema.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/request.schema.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/rule-pack.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/rule-pack.schema.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/task-registry.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/references/task-registry.schema.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/reports/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/reports/quality-gates/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/blind-read-gate.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/build-private-package.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/build-release-archive.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/chapter-batch-metrics.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/chapter-gate.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/commercial-readiness-check.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/commercial-release-check.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/customer-install-smoke.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/customer-pilot.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/host-adapter.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/init-project-rule-pack.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/install-local.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/lib.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/private-package-check.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/project-rule-pack-check.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/release-check.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/review-scorecard.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/run-quality-gates.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/story-gate-audit.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/story-gate.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/story-index.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/story-template-scan.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/support-bundle.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/validate-design-contracts.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/validate-fixtures.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/validate-plugin-structure.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/validate-report.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/validate-rule-pack.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/validate-task-registry.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/scripts/visual-asset-audit.js"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/blockbuster-review/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/chapter-workbench/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/feedback-triage/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/release-gate/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/screenplay-adapter/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/story-architect/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/third-party-review/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/skills/visual-asset-manager/SKILL.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/templates/project-rule-pack/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/templates/project-rule-pack/rule-pack.template.json"
+    },
+    {
+      "file": "vendor/story-gate-studio/tests/README.md"
+    },
+    {
+      "file": "vendor/story-gate-studio/tests/quality-gates.test.js"
+    }
+  ]
+}

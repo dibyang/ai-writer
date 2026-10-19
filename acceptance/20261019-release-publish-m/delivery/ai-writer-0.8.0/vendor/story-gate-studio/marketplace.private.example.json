@@ -1,0 +1,20 @@
+{
+  "name": "story-gate-private",
+  "interface": {
+    "displayName": "Story Gate Private"
+  },
+  "plugins": [
+    {
+      "name": "story-gate-studio",
+      "source": {
+        "source": "local",
+        "path": "./plugins/story-gate-studio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

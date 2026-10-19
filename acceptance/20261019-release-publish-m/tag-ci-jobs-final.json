@@ -1,0 +1,443 @@
+{
+  "at": "2026-10-19T09:43:21.679Z",
+  "method": "GET",
+  "url": "https://api.github.com/repos/dibyang/ai-writer/actions/runs/39231533859/jobs",
+  "status": 200,
+  "data": {
+    "total_count": 4,
+    "jobs": [
+      {
+        "id": 117990396109,
+        "run_id": 39231533859,
+        "workflow_name": "checks",
+        "head_branch": "v0.8.0",
+        "run_url": "https://api.github.com/repos/dibyang/ai-writer/actions/runs/39231533859",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVPP1i88AAAAbeMaQzQ",
+        "head_sha": "27a20edd7db6234a6651d647d5c626808e45cd24",
+        "url": "https://api.github.com/repos/dibyang/ai-writer/actions/jobs/117990396109",
+        "html_url": "https://github.com/dibyang/ai-writer/actions/runs/39231533859/job/117990396109",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-19T09:38:05Z",
+        "started_at": "2026-10-19T09:38:08Z",
+        "completed_at": "2026-10-19T09:39:52Z",
+        "name": "workspace (windows-latest, 20)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-19T09:38:09Z",
+            "completed_at": "2026-10-19T09:38:09Z"
+          },
+          {
+            "name": "Run git config --global core.protectNTFS false",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-19T09:38:09Z",
+            "completed_at": "2026-10-19T09:38:10Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-19T09:38:10Z",
+            "completed_at": "2026-10-19T09:38:16Z"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-19T09:38:16Z",
+            "completed_at": "2026-10-19T09:38:24Z"
+          },
+          {
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-19T09:38:24Z",
+            "completed_at": "2026-10-19T09:39:34Z"
+          },
+          {
+            "name": "Run npm run doctor",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-19T09:39:34Z",
+            "completed_at": "2026-10-19T09:39:34Z"
+          },
+          {
+            "name": "Run npm run test:engine",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-19T09:39:34Z",
+            "completed_at": "2026-10-19T09:39:49Z"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-19T09:39:49Z",
+            "completed_at": "2026-10-19T09:39:49Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-19T09:39:49Z",
+            "completed_at": "2026-10-19T09:39:51Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-19T09:39:51Z",
+            "completed_at": "2026-10-19T09:39:51Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/dibyang/ai-writer/check-runs/117990396109",
+        "labels": [
+          "windows-latest"
+        ],
+        "runner_id": 1000000189,
+        "runner_name": "GitHub Actions 1000000189",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117990396471,
+        "run_id": 39231533859,
+        "workflow_name": "checks",
+        "head_branch": "v0.8.0",
+        "run_url": "https://api.github.com/repos/dibyang/ai-writer/actions/runs/39231533859",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVPP1i88AAAAbeMaSNw",
+        "head_sha": "27a20edd7db6234a6651d647d5c626808e45cd24",
+        "url": "https://api.github.com/repos/dibyang/ai-writer/actions/jobs/117990396471",
+        "html_url": "https://github.com/dibyang/ai-writer/actions/runs/39231533859/job/117990396471",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-19T09:38:05Z",
+        "started_at": "2026-10-19T09:38:09Z",
+        "completed_at": "2026-10-19T09:40:33Z",
+        "name": "workspace (windows-latest, 24)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-19T09:38:10Z",
+            "completed_at": "2026-10-19T09:38:11Z"
+          },
+          {
+            "name": "Run git config --global core.protectNTFS false",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-19T09:38:11Z",
+            "completed_at": "2026-10-19T09:38:12Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-19T09:38:12Z",
+            "completed_at": "2026-10-19T09:38:21Z"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-19T09:38:21Z",
+            "completed_at": "2026-10-19T09:38:27Z"
+          },
+          {
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-19T09:38:27Z",
+            "completed_at": "2026-10-19T09:40:04Z"
+          },
+          {
+            "name": "Run npm run doctor",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-19T09:40:04Z",
+            "completed_at": "2026-10-19T09:40:05Z"
+          },
+          {
+            "name": "Run npm run test:engine",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-19T09:40:05Z",
+            "completed_at": "2026-10-19T09:40:29Z"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-19T09:40:29Z",
+            "completed_at": "2026-10-19T09:40:29Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-19T09:40:29Z",
+            "completed_at": "2026-10-19T09:40:32Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-19T09:40:32Z",
+            "completed_at": "2026-10-19T09:40:32Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/dibyang/ai-writer/check-runs/117990396471",
+        "labels": [
+          "windows-latest"
+        ],
+        "runner_id": 1000000190,
+        "runner_name": "GitHub Actions 1000000190",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117990396511,
+        "run_id": 39231533859,
+        "workflow_name": "checks",
+        "head_branch": "v0.8.0",
+        "run_url": "https://api.github.com/repos/dibyang/ai-writer/actions/runs/39231533859",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVPP1i88AAAAbeMaSXw",
+        "head_sha": "27a20edd7db6234a6651d647d5c626808e45cd24",
+        "url": "https://api.github.com/repos/dibyang/ai-writer/actions/jobs/117990396511",
+        "html_url": "https://github.com/dibyang/ai-writer/actions/runs/39231533859/job/117990396511",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-19T09:38:05Z",
+        "started_at": "2026-10-19T09:38:08Z",
+        "completed_at": "2026-10-19T09:39:09Z",
+        "name": "workspace (ubuntu-latest, 20)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-19T09:38:09Z",
+            "completed_at": "2026-10-19T09:38:10Z"
+          },
+          {
+            "name": "Run git config --global core.protectNTFS false",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 2,
+            "started_at": "2026-10-19T09:38:11Z",
+            "completed_at": "2026-10-19T09:38:11Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-19T09:38:11Z",
+            "completed_at": "2026-10-19T09:38:14Z"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-19T09:38:14Z",
+            "completed_at": "2026-10-19T09:38:19Z"
+          },
+          {
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-19T09:38:19Z",
+            "completed_at": "2026-10-19T09:38:56Z"
+          },
+          {
+            "name": "Run npm run doctor",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-19T09:38:56Z",
+            "completed_at": "2026-10-19T09:38:56Z"
+          },
+          {
+            "name": "Run npm run test:engine",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-19T09:38:56Z",
+            "completed_at": "2026-10-19T09:39:06Z"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-19T09:39:06Z",
+            "completed_at": "2026-10-19T09:39:06Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-19T09:39:06Z",
+            "completed_at": "2026-10-19T09:39:06Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-19T09:39:06Z",
+            "completed_at": "2026-10-19T09:39:06Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/dibyang/ai-writer/check-runs/117990396511",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000000191,
+        "runner_name": "GitHub Actions 1000000191",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117990396750,
+        "run_id": 39231533859,
+        "workflow_name": "checks",
+        "head_branch": "v0.8.0",
+        "run_url": "https://api.github.com/repos/dibyang/ai-writer/actions/runs/39231533859",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVPP1i88AAAAbeMaTTg",
+        "head_sha": "27a20edd7db6234a6651d647d5c626808e45cd24",
+        "url": "https://api.github.com/repos/dibyang/ai-writer/actions/jobs/117990396750",
+        "html_url": "https://github.com/dibyang/ai-writer/actions/runs/39231533859/job/117990396750",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-19T09:38:05Z",
+        "started_at": "2026-10-19T09:38:08Z",
+        "completed_at": "2026-10-19T09:38:57Z",
+        "name": "workspace (ubuntu-latest, 24)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-19T09:38:09Z",
+            "completed_at": "2026-10-19T09:38:10Z"
+          },
+          {
+            "name": "Run git config --global core.protectNTFS false",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 2,
+            "started_at": "2026-10-19T09:38:10Z",
+            "completed_at": "2026-10-19T09:38:10Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-19T09:38:10Z",
+            "completed_at": "2026-10-19T09:38:12Z"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-19T09:38:12Z",
+            "completed_at": "2026-10-19T09:38:13Z"
+          },
+          {
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-19T09:38:13Z",
+            "completed_at": "2026-10-19T09:38:46Z"
+          },
+          {
+            "name": "Run npm run doctor",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-19T09:38:46Z",
+            "completed_at": "2026-10-19T09:38:46Z"
+          },
+          {
+            "name": "Run npm run test:engine",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-19T09:38:46Z",
+            "completed_at": "2026-10-19T09:38:55Z"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-19T09:38:55Z",
+            "completed_at": "2026-10-19T09:38:55Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-19T09:38:55Z",
+            "completed_at": "2026-10-19T09:38:55Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-19T09:38:55Z",
+            "completed_at": "2026-10-19T09:38:55Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/dibyang/ai-writer/check-runs/117990396750",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000000192,
+        "runner_name": "GitHub Actions 1000000192",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  }
+}

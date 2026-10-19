@@ -1,5 +1,7 @@
 # 首次正式发行：0.8.0
 
+0.8.0已于2026-10-19[正式发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`，完整执行与验证见[M轮记录](../acceptance/20261019-release-publish-m/README.md)。下文保留维护者操作流程；发布后补交的记录不移动标签，也不覆盖已验证资产。
+
 本页是维护者的本地准备流程，不自动创建标签、推送或发布。用户批准具体产物后，再执行对应Git和GitHub动作。
 
 ## 首发版本身份
@@ -25,3 +27,5 @@ npm run release:build -- --out dist/0.8.0
 核对具体提交、发布说明、ZIP SHA及对应验证记录；完成用户授权的提交后，从选定提交重新构建并核验产物来源，再创建v0.8.0标签、上传附件和发布。不要移动已有标签，不覆盖同名发布资产。准备时没有已存在的正式标签。
 
 建议先保存GitHub Release草稿并附齐ZIP、SHA和发布说明，再在授权后发布为正式版本；不勾选预发布。GitHub生成的Source code归档来自整个标签树，可能包含历史验收记录，用户下载应优先选择专门的ai-writer ZIP。GitHub流程依据见[官方发行文档](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)。
+
+Windows完整历史树含aux等保留路径，常规源码检出或自动Source code归档解压可能失败；维护者按[稀疏检出说明](https://github.com/dibyang/ai-writer/blob/codex/initial/docs/source-checkout.md)获取产品输入。CI使用同一排除范围，源码测试不依赖历史acceptance目录。
