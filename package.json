@@ -15,10 +15,10 @@
     "ai-writer": "bin/ai-writer.mjs"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node scripts/test.mjs workspace",
     "doctor": "node bin/ai-writer.mjs doctor",
     "smoke": "node scripts/smoke.mjs",
-    "test:engine": "node --test vendor/story-gate-studio/tests/*.test.js",
+    "test:engine": "node scripts/test.mjs engine",
     "release:build": "node scripts/build-release.mjs"
   }
 }

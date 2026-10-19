@@ -7,3 +7,5 @@ L轮已封存的准备记录保持原始字节。本目录另记线上CI、最�
 首次核查发现此前线上工作流在Windows checkout阶段失败：历史记录路径含保留名aux；没有运行测试。修正为非cone稀疏检出产品源码、技能、文档和tests/fixtures，排除acceptance及works，历史证据仍保留在Git中。关闭矩阵fail-fast以取得全部四组结果。此问题与后续测试结果分开记录。
 
 首次修正后Ubuntu两组已进入测试，Windows仍拒绝把保留路径写入索引（即使不展开文件）。本机隔离工作树复现，并验证仅为稀疏检出的临时环境关闭protectNTFS、启用longpaths即可正常checkout；CI相同设置只应用于一次性Windows runner，仍排除历史路径。没有改动本机主仓库配置或历史文件。
+
+第二次CI发现Windows/Node20不会展开测试脚本通配符，原npm test在启动时失败。新增scripts/test.mjs显式枚举对应目录内的测试文件，主套件与内置引擎均通过同一入口调用Node测试器；该入口也列入发行清单。初版delivery及其包测试保留为修复前记录，最终发行另建delivery-v2。
