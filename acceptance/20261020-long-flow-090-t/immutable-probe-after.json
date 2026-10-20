@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "mode": "after",
+  "blocked": true,
+  "error": {
+    "code": "IMMUTABLE_OBSERVATION_CHANGED",
+    "message": "独立修订不能改写或删除既有观察 OBS；保留原记录，新增解释或修正条目"
+  },
+  "original": {
+    "type": "observation",
+    "statement": "纸上写着青。",
+    "author_truth": "原字是青，未被改写。",
+    "status": "active",
+    "cast": [
+      "林"
+    ],
+    "reader_known": "青字",
+    "character_known": {
+      "林": "看见青"
+    },
+    "evidence": [
+      {
+        "unit": 1,
+        "quote": "林看见纸上写着青。"
+      }
+    ]
+  },
+  "candidate": {
+    "type": "observation",
+    "statement": "纸上写着赤。",
+    "status": "active",
+    "cast": [
+      "林"
+    ],
+    "tags": [],
+    "author_truth": "原字是赤，未被改写。",
+    "reader_known": "赤字",
+    "character_known": {
+      "林": "看见赤"
+    },
+    "evidence": [
+      {
+        "unit": 1,
+        "draft": "正文/0001.md",
+        "sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+        "line": 3,
+        "quote": "林看见纸上写着赤。"
+      }
+    ],
+    "introduced_unit": 1,
+    "updated_unit": 1
+  },
+  "main_unchanged": true,
+  "main_before_workflow_sha256": "ecf9a8f524bfb9555fd7e0748a48dc7169a519408efcf76e7f0ce7cfdf7f0a3c",
+  "main_revision_sha256": "7c4819d6472f24e6ec4b494e355c30e4354433c662754411ecf216b204f12921",
+  "no_commit": true,
+  "own_session_aborted": true,
+  "events": [
+    {
+      "step": "initial-record",
+      "result": {
+        "ok": true,
+        "unit": 1,
+        "revision": 2,
+        "sha256": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+        "status": "draft-recorded",
+        "quality_review": "required"
+      }
+    },
+    {
+      "step": "changed-observation-record",
+      "result": {
+        "ok": true,
+        "unit": 1,
+        "revision": 5,
+        "sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+        "status": "draft-recorded",
+        "quality_review": "required"
+      }
+    },
+    {
+      "step": "structural-review-fixture",
+      "result": {
+        "ok": true,
+        "ref": ".writer/reviews/2c43ffdc-01c2-4912-810c-664ee906b08d.json",
+        "coverage": [
+          1,
+          1
+        ],
+        "quality": "review-recorded-not-acceptance"
+      }
+    },
+    {
+      "step": "changed-observation-prepare",
+      "error": {
+        "code": "IMMUTABLE_OBSERVATION_CHANGED",
+        "message": "独立修订不能改写或删除既有观察 OBS；保留原记录，新增解释或修正条目"
+      }
+    },
+    {
+      "step": "abort-own-probe",
+      "result": {
+        "ok": true,
+        "id": "ba99252f-be4c-4749-a002-719106432175",
+        "status": "aborted",
+        "candidate_preserved": true
+      }
+    }
+  ],
+  "scope": "Synthetic mechanical negative probe, not a novel chapter or literary acceptance. Actual T novel and existing author works not modified."
+}

@@ -1,0 +1,154 @@
+{
+  "ok": false,
+  "mode": "before",
+  "blocked": false,
+  "error": null,
+  "original": {
+    "type": "observation",
+    "statement": "纸上写着青。",
+    "author_truth": "原字是青，未被改写。",
+    "status": "active",
+    "cast": [
+      "林"
+    ],
+    "reader_known": "青字",
+    "character_known": {
+      "林": "看见青"
+    },
+    "evidence": [
+      {
+        "unit": 1,
+        "quote": "林看见纸上写着青。"
+      }
+    ]
+  },
+  "candidate": {
+    "type": "observation",
+    "statement": "纸上写着赤。",
+    "status": "active",
+    "cast": [
+      "林"
+    ],
+    "tags": [],
+    "author_truth": "原字是赤，未被改写。",
+    "reader_known": "赤字",
+    "character_known": {
+      "林": "看见赤"
+    },
+    "evidence": [
+      {
+        "unit": 1,
+        "draft": "正文/0001.md",
+        "sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+        "line": 3,
+        "quote": "林看见纸上写着赤。"
+      }
+    ],
+    "introduced_unit": 1,
+    "updated_unit": 1
+  },
+  "main_unchanged": true,
+  "main_before_workflow_sha256": "e34ea4bbbc2d18c95471bf908de105932604f74112bb694b8c02e67303864ef9",
+  "main_revision_sha256": "2c73abb6341aa66a27b4eca64b84de56f43ba4dee8d610244effb6d5d3559716",
+  "no_commit": true,
+  "own_session_aborted": true,
+  "events": [
+    {
+      "step": "initial-record",
+      "result": {
+        "ok": true,
+        "unit": 1,
+        "revision": 2,
+        "sha256": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+        "status": "draft-recorded",
+        "quality_review": "required"
+      }
+    },
+    {
+      "step": "changed-observation-record",
+      "result": {
+        "ok": true,
+        "unit": 1,
+        "revision": 5,
+        "sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+        "status": "draft-recorded",
+        "quality_review": "required"
+      }
+    },
+    {
+      "step": "structural-review-fixture",
+      "result": {
+        "ok": true,
+        "ref": ".writer/reviews/9f08cacf-b1f9-4b6b-a280-a8f96e4b2df0.json",
+        "coverage": [
+          1,
+          1
+        ],
+        "quality": "review-recorded-not-acceptance"
+      }
+    },
+    {
+      "step": "changed-observation-prepare",
+      "result": {
+        "ok": true,
+        "id": "094b7ab6-9f99-4150-a9cb-b82816bac74c",
+        "status": "prepared",
+        "base_revision": 3,
+        "target_revision": 4,
+        "changes": [
+          {
+            "file": ".writer/journal/724fe9a1-0391-4658-9348-113c162d0163.json",
+            "before": null,
+            "after": "6b47635857271a78cb46ae1818ce748a6482f65a71a6d3ba8ebb300026ac47bd"
+          },
+          {
+            "file": ".writer/objects/6f0a08a9-8145-4054-88a7-9d05b88b321d.json",
+            "before": null,
+            "after": "f7752b1bcb51fa63d2115920a231d510333b7722fe65c724dcf5fa4a982dcc96"
+          },
+          {
+            "file": ".writer/objects/8dc7b520f26109c5c536c00bd2f64c52574be941099972c954859a65b73bd887.replay-review",
+            "before": null,
+            "after": "8dc7b520f26109c5c536c00bd2f64c52574be941099972c954859a65b73bd887"
+          },
+          {
+            "file": ".writer/reviews/9f08cacf-b1f9-4b6b-a280-a8f96e4b2df0.json",
+            "before": null,
+            "after": "c770a8b8ddfae2e265f863276796668b58efe67ee9622e5a9d06a4c72ce2981d"
+          },
+          {
+            "file": "审查/尾段-10.md",
+            "before": null,
+            "after": "50eda0f4bbfed7632ee731a4be758d0695638bb8109dbe107d8e540fe4cd935f"
+          },
+          {
+            "file": "审查/纯接口反例.md",
+            "before": null,
+            "after": "8dc7b520f26109c5c536c00bd2f64c52574be941099972c954859a65b73bd887"
+          },
+          {
+            "file": "正文/0001.md",
+            "before": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+            "after": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494"
+          },
+          {
+            "file": ".writer/state.json",
+            "before": "2c73abb6341aa66a27b4eca64b84de56f43ba4dee8d610244effb6d5d3559716",
+            "after": "664022fac945cd12fdaefea4615a6b946b82c75c8a0c926a27af3b6370829fb9"
+          }
+        ],
+        "ready": "mechanical-and-process-only-not-literary-pass"
+      }
+    },
+    {
+      "step": "abort-own-probe",
+      "result": {
+        "ok": true,
+        "id": "094b7ab6-9f99-4150-a9cb-b82816bac74c",
+        "status": "aborted",
+        "candidate_preserved": true
+      }
+    }
+  ],
+  "scope": "Synthetic mechanical negative probe, not a novel chapter or literary acceptance. Actual T novel and existing author works not modified."
+}

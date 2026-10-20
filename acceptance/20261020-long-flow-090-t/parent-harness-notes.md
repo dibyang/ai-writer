@@ -1,0 +1,11 @@
+# T验证辅助边界补记
+
+原生D第28章登记前发现自己的合章辅助程序把Buffer交给T/common.write，后者按JSON对象序列化；该错误调用本身退出0，不能凭命令退出码宣称产物正确。D实际检查识别、保留异常文件，改用正确文本拼合并补正文后逐段/全章重新读；正式登记前报告绑定最终SHA，flow另外断言段数/Han/一章题/精确拼合。详见原生日志、D自身history与审查/T-0028-纲文回对.md。正式主稿在此时仍27章，无错误JSON稿登记。
+
+父随后才在execution-guide.md明确补充save/write只接文本字符串或JSON对象，Buffer须fs.writeFileSync或显式decode。不能把这条后加提示说成D最初已读到并遵守；D起初阅读的旧guide字节仍在其真实FastCtx返回日志中。未改变common函数语义或产品源码，未把辅助程序错误包装产品缺陷。
+
+完整验证记录还应保留章节补写与未登记稿内回读修正；它们不一定对应非零命令。最终command-audit只统计捕获到的退出码/工具与file_change失败，文学或产物内容问题需结合实际报告，不能仅计数为零就称无问题。
+
+原生F在完整当前1—30读完后生成的第一版command投影视图，错误读取record输入不存在的draft_sha256，使body_current_equal全部false；命令本身成功，不是实际漂移。F保留原f-command-evidence-view.json，再改取captured after-state中的对应unitSHA，f-command-evidence-view-v2.json正确区分原初登记与R1/R2后的当前稿。产品/state/来源期望未变，见F完整当前稿报告194—196行。这也是不能只统计非零退出码的实例。
+
+父第一次读F尚未登记的全稿报告200行时注意“R1裸ledger/help调用误用”这一合并措辞不够精确：ledger不存在以及C的workflow漏show属于用法错误；合法help附通用--project在旧实现被拒绝，是真实产品缺陷，已修复并在final-build-verification及原生C复验，不能归罪客户端。本轮最终README/verification/nonzero-classification按实际命令及修前修后证据明确分类。F在正式review前仍可自行校正报告；是否已改以实际最终冻结SHA为准，本说明保留当时观察，父不改写已登记的历史判断。

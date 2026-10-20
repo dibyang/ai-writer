@@ -1,0 +1,176 @@
+{
+  "schema_version": 6,
+  "revision": 3,
+  "project_id": "e05531d2-1858-429d-bb33-d53b5bfdbe74",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "林": "见过纸字"
+    },
+    "threads": [],
+    "timeline": [],
+    "ledger": {
+      "OBS": {
+        "type": "observation",
+        "statement": "纸上写着青。",
+        "author_truth": "原字是青，未被改写。",
+        "status": "active",
+        "cast": [
+          "林"
+        ],
+        "reader_known": "青字",
+        "character_known": {
+          "林": "看见青"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+            "line": 3,
+            "quote": "林看见纸上写着青。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001.md",
+      "sha256": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+      "summary": "看见青字",
+      "source_hashes": {
+        "writer.json": "145dcaedebc6d205a62e097cbd0f0f75f24c64a8260387e1ae0cc516676f7cc3",
+        ".writer/state.json": "4b872e96075a844898f67d8fda34cd630d599ba4963482f83177e51d280e9f7a",
+        "大纲/单元/0001.json": "744d818f3bf90f71c04f5a950df1cc4e9e33d39216f7936601b7038a66417e7a",
+        "设定/作品定位.md": "53671fd523841cf9a91b963827e2a70ecb17ec61ccc191dec0527514d63b9af5",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "4da16a771f9c1048fecf62344c967c675cc3f81c9a86163e3195860ce5471ecc",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/f85e226f-c04c-4a45-abad-4764c2aea054.json",
+          "sha256": "557036f14730c366ebace8ab1c686d2d9b083a2e032a0b911ef6e203387b2922"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "c012921c5617106f0b5dede61af532afee505016f207068a2d6910b5caef8505",
+      "journal": ".writer/journal/9769b0ba-f40c-44cf-b739-0e6c66094a98.json",
+      "journal_sha256": "95fa2f97a89c7692a5a0192b0036243ee6ee47c16450e89330aa8c268cc12850"
+    }
+  ],
+  "governance": {
+    "stage": "revision",
+    "task": "验证专用尾段修订",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 1
+      },
+      "stop_conditions": [
+        "到范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/f85e226f-c04c-4a45-abad-4764c2aea054.json",
+      "sha256": "557036f14730c366ebace8ab1c686d2d9b083a2e032a0b911ef6e203387b2922"
+    },
+    {
+      "ref": ".writer/objects/d8794f03-6d98-4a9d-a528-a0f29c855061.json",
+      "sha256": "53752219e4a2dd8089224d2f3ab6664fcd2bba8e8e38e5570c680f78daab34a2"
+    }
+  ],
+  "operations": {
+    "workflow-1": {
+      "input_sha256": "9165d18091d0f785ea2cdfed7ff2e883f2bca91ca169f9371a5b292c2fb17a65",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "workflow-1",
+        "event": {
+          "ref": ".writer/objects/f85e226f-c04c-4a45-abad-4764c2aea054.json",
+          "sha256": "557036f14730c366ebace8ab1c686d2d9b083a2e032a0b911ef6e203387b2922"
+        }
+      }
+    },
+    "workflow-5": {
+      "input_sha256": "224e0f369d13d5597d7615e2dc48420fd110fd0d7ec5131659d699ddeee04eca",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "workflow-5",
+        "event": {
+          "ref": ".writer/objects/d8794f03-6d98-4a9d-a528-a0f29c855061.json",
+          "sha256": "53752219e4a2dd8089224d2f3ab6664fcd2bba8e8e38e5570c680f78daab34a2"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/d8794f03-6d98-4a9d-a528-a0f29c855061.json",
+    "sha256": "53752219e4a2dd8089224d2f3ab6664fcd2bba8e8e38e5570c680f78daab34a2"
+  }
+}

@@ -133,6 +133,8 @@ record-preview列缺项和实际差量，不登记、不生成journal、不补�
 
 重登草案会按原来的真实变化恢复字段和逐人的知情差量，避免后章整张旧知识表覆盖前章修正。它仍是待核草案：实际变过的整段说明、人物状态及物证去向，要由Codex实读新旧正文后决定如何承接，工具不会自动合并剧情含义。
 
+独立修订发布还会与会话建立时的原始基线比较观察条目；即使回退到观察首次出现之前，整段重登也不能删除原观察或改其type、statement、author_truth。读者及人物所知、状态可据新文更新，解释或纠错另建条目。遇到IMMUTABLE_OBSERVATION_CHANGED，按错误中所列ID核对原记录与新解释，不改旧字或原哈希来通过；中断事务的complete也执行此核验，rollback仍可恢复原字节。
+
 context、record-template、record-preview、review-template、replay-input可选--out保存.writer/drafts下新JSON，不覆盖旧输入，不作正式设定来源。活跃修订的输出在所属独立区带令牌完成，正常作者无需查找UUID或手填哈希。
 
 意见区分correctness/continuity/readability/optional_style、严重度、置信度及原句建议。review-issues resolve分别记adopted/retained/deferred与真实作者原话或代理既有授权；代理不冒充作者逐项确认，仅审查不能借采用获得改稿权，可选风格只作suggestion。
@@ -150,7 +152,8 @@ context、record-template、record-preview、review-template、replay-input可�
 | BASELINE_CONFLICT | 读 conflicts/conflict_ref，保留双方，按新基线另开会话，不重置旧基线 |
 | TRANSACTION_PENDING | 普通读写暂停；revision list 定位事务，明确选择 recover 补完或回滚 |
 | TOOL_UPDATE_PENDING | 保留现场，从被替换包之外的入口tool updates查看更新事务，再按实际授权tool recover；不要用revision recover代替 |
-| 不知道参数 | 使用 `命令 --help`，可获得用途、参数、输入示例和本地手册路径 |
+| 不知道参数或命令不存在 | 使用当前入口的`help`查看命令清单，或`help record`、`record --help`查看单项；帮助接受通用`--project`和`--revision-token`参数，仅校验参数写法，不访问作品或执行写入。不要为查看帮助重新初始化作品 |
+| 独立修订区需要核对工具 | 新版`tool identify --project 修订区路径`与`doctor`复用经校验的父工具，并返回`resource_project_root`和`revision_context`；绑定不符或父包损坏仍失败，保留候选，核对原绑定或另建新基线，不向候选复制运行包 |
 | JSON 错误 | 按文件名与行列修正，双引号属性名、无尾逗号，UTF-8 保存 |
 | 目标目录已存在 | 使用新目录；初始化和导出不会覆盖旧内容 |
 | 原稿换目录 | 用 import-status 定位，再用 import-relink 核验同一内容 |

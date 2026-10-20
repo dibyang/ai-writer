@@ -1,0 +1,468 @@
+{
+  "ok": true,
+  "correction_to_v1": "v1 body_current_equal read a nonexistent input.draft_sha256 field; false was a helper projection error, not evidence of body drift. Retained v1 unchanged. This v2 uses the actual recorded unit from captured after-state, keeping expected formal R1/R2 changes distinct.",
+  "main_records_19_30": [
+    {
+      "unit": 19,
+      "label": "record-19",
+      "input_sha256": "3a8dbe9a9581a4876e058cca9bab55f464b84892c8c0b5d004aff6db4344f014",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 55,
+      "before_revision": 55,
+      "after_revision": 56,
+      "recorded_at_that_time_sha256": "ae336421e6e01ff5a9245aefbd4eef579396746c0fe731b64bbd73555995b9a0",
+      "current_sha256": "ae336421e6e01ff5a9245aefbd4eef579396746c0fe731b64bbd73555995b9a0",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "budget-19-exact",
+          "command": "context",
+          "started_at": "2026-10-19T22:54:38.636Z",
+          "before_state_sha256": "94649516433a72c88d288f47778d23e6d7fec923743eccebf0db2984bf4c88f2"
+        },
+        {
+          "label": "budget-19-full",
+          "command": "context",
+          "started_at": "2026-10-19T22:54:34.791Z",
+          "before_state_sha256": "94649516433a72c88d288f47778d23e6d7fec923743eccebf0db2984bf4c88f2"
+        },
+        {
+          "label": "context-19",
+          "command": "context",
+          "started_at": "2026-10-19T22:46:19.963Z",
+          "before_state_sha256": "94649516433a72c88d288f47778d23e6d7fec923743eccebf0db2984bf4c88f2"
+        },
+        {
+          "label": "plan-19",
+          "command": "plan",
+          "started_at": "2026-10-19T22:46:17.186Z",
+          "before_state_sha256": "94649516433a72c88d288f47778d23e6d7fec923743eccebf0db2984bf4c88f2"
+        },
+        {
+          "label": "template-19",
+          "command": "record-template",
+          "started_at": "2026-10-19T22:46:22.822Z",
+          "before_state_sha256": "94649516433a72c88d288f47778d23e6d7fec923743eccebf0db2984bf4c88f2"
+        }
+      ]
+    },
+    {
+      "unit": 20,
+      "label": "record-20",
+      "input_sha256": "f8417a57f81c32c949ba8a7fe431aeb83307183a35720e11043d1800eb423bcd",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 56,
+      "before_revision": 56,
+      "after_revision": 57,
+      "recorded_at_that_time_sha256": "f02b4f8ecdc61bc04255c55e40c03caab2ceddce64b66e6c5214d225bfc67dd6",
+      "current_sha256": "f02b4f8ecdc61bc04255c55e40c03caab2ceddce64b66e6c5214d225bfc67dd6",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "context-20",
+          "command": "context",
+          "started_at": "2026-10-19T23:05:55.938Z",
+          "before_state_sha256": "3f4ff504eda6f4733b7d3bf1809df581f482bfda9ae1abde3dccd9866af242e7"
+        },
+        {
+          "label": "plan-20",
+          "command": "plan",
+          "started_at": "2026-10-19T23:05:55.612Z",
+          "before_state_sha256": "3f4ff504eda6f4733b7d3bf1809df581f482bfda9ae1abde3dccd9866af242e7"
+        },
+        {
+          "label": "template-20",
+          "command": "record-template",
+          "started_at": "2026-10-19T23:05:56.322Z",
+          "before_state_sha256": "3f4ff504eda6f4733b7d3bf1809df581f482bfda9ae1abde3dccd9866af242e7"
+        }
+      ]
+    },
+    {
+      "unit": 21,
+      "label": "record-21",
+      "input_sha256": "8f67c76a1d25818ade2c9e52db8c1c02fa62dac19635a6ba1b1a296f9754e1a0",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 57,
+      "before_revision": 57,
+      "after_revision": 58,
+      "recorded_at_that_time_sha256": "68ac715d829eb0ff1181726ed50c6f13871e69248b5b67af0011fb1f8da57271",
+      "current_sha256": "4c467517d77f741f2e1f32a7ae4c2de45540d24ddf5917b6a68b93a7a38dcdae",
+      "initial_body_equals_current": false,
+      "revisions_if_changed": "T-R1 controlled formal revision",
+      "successful_preparations_before_record": [
+        {
+          "label": "context-21",
+          "command": "context",
+          "started_at": "2026-10-19T23:13:40.740Z",
+          "before_state_sha256": "b7cf1ddb8cecc3bb8c196aa9b5719a654b3805e38ddd53a115fb26dacbbf4f74"
+        },
+        {
+          "label": "plan-21",
+          "command": "plan",
+          "started_at": "2026-10-19T23:13:40.280Z",
+          "before_state_sha256": "b7cf1ddb8cecc3bb8c196aa9b5719a654b3805e38ddd53a115fb26dacbbf4f74"
+        },
+        {
+          "label": "template-21",
+          "command": "record-template",
+          "started_at": "2026-10-19T23:13:41.125Z",
+          "before_state_sha256": "b7cf1ddb8cecc3bb8c196aa9b5719a654b3805e38ddd53a115fb26dacbbf4f74"
+        }
+      ]
+    },
+    {
+      "unit": 22,
+      "label": "record-22",
+      "input_sha256": "f0bd622302baeea25e21e10fc197a29f263d2b623d7e9ca8f0c3a39a9700d6ba",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 59,
+      "before_revision": 59,
+      "after_revision": 60,
+      "recorded_at_that_time_sha256": "b9b0207287008ea14e01ad1b58f310da2cb0186d3dee1aa7886758e1f5ddf008",
+      "current_sha256": "dfd04c202c112d6604739453283c949c8c0a85ded6970f8980197c2b64b462e4",
+      "initial_body_equals_current": false,
+      "revisions_if_changed": "T-R1 controlled formal revision",
+      "successful_preparations_before_record": [
+        {
+          "label": "context-22",
+          "command": "context",
+          "started_at": "2026-10-19T23:40:22.276Z",
+          "before_state_sha256": "7facd887043e70aa8d8a445c54478cc9d3811356354dc66ea4817e9714a591e2"
+        },
+        {
+          "label": "plan-22",
+          "command": "plan",
+          "started_at": "2026-10-19T23:40:21.796Z",
+          "before_state_sha256": "7facd887043e70aa8d8a445c54478cc9d3811356354dc66ea4817e9714a591e2"
+        },
+        {
+          "label": "template-22",
+          "command": "record-template",
+          "started_at": "2026-10-19T23:40:22.660Z",
+          "before_state_sha256": "7facd887043e70aa8d8a445c54478cc9d3811356354dc66ea4817e9714a591e2"
+        }
+      ]
+    },
+    {
+      "unit": 23,
+      "label": "record-23",
+      "input_sha256": "512eaf7bed911a6facb7a696cbe57d2fb7bb80d3869aba2e06eb7f499e7dd4b8",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 60,
+      "before_revision": 60,
+      "after_revision": 61,
+      "recorded_at_that_time_sha256": "9568ad11fee663bd282cec76d259835f1dc6d20531075c601532de4522c53b14",
+      "current_sha256": "9568ad11fee663bd282cec76d259835f1dc6d20531075c601532de4522c53b14",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "context-23",
+          "command": "context",
+          "started_at": "2026-10-19T23:46:42.314Z",
+          "before_state_sha256": "717a6d3948438c04cccb557aa3df125e7a7c1ed5550f93883ca59fc930fc2059"
+        },
+        {
+          "label": "plan-23",
+          "command": "plan",
+          "started_at": "2026-10-19T23:46:42.057Z",
+          "before_state_sha256": "717a6d3948438c04cccb557aa3df125e7a7c1ed5550f93883ca59fc930fc2059"
+        },
+        {
+          "label": "template-23",
+          "command": "record-template",
+          "started_at": "2026-10-19T23:46:42.681Z",
+          "before_state_sha256": "717a6d3948438c04cccb557aa3df125e7a7c1ed5550f93883ca59fc930fc2059"
+        }
+      ]
+    },
+    {
+      "unit": 24,
+      "label": "record-24",
+      "input_sha256": "ddb7fb5587b1fcb9b1d7ddce5c31755ecd8afad4d9b50bdfa439c46ce51c8e9f",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 61,
+      "before_revision": 61,
+      "after_revision": 62,
+      "recorded_at_that_time_sha256": "adb0d5050589039ffc7679ea9f0d512c603ce0188a2617f571d6eeba88a8ec3a",
+      "current_sha256": "c3ca7b5b82c7c99958e730566bd89df98fe3ad9239b29f3bfa3d4c9170d33699",
+      "initial_body_equals_current": false,
+      "revisions_if_changed": "T-R1 controlled formal revision",
+      "successful_preparations_before_record": [
+        {
+          "label": "context-24",
+          "command": "context",
+          "started_at": "2026-10-19T23:53:25.930Z",
+          "before_state_sha256": "5d2d2663f9890a0233a71cf7999b8c2c5bdee53187e176eebc1f27bb2033c183"
+        },
+        {
+          "label": "plan-24",
+          "command": "plan",
+          "started_at": "2026-10-19T23:53:25.681Z",
+          "before_state_sha256": "5d2d2663f9890a0233a71cf7999b8c2c5bdee53187e176eebc1f27bb2033c183"
+        },
+        {
+          "label": "template-24",
+          "command": "record-template",
+          "started_at": "2026-10-19T23:53:26.288Z",
+          "before_state_sha256": "5d2d2663f9890a0233a71cf7999b8c2c5bdee53187e176eebc1f27bb2033c183"
+        }
+      ]
+    },
+    {
+      "unit": 25,
+      "label": "record-25-c-resume-r1",
+      "input_sha256": "9a4d8157d40f5378d156f399d896e584fed211a71d797c5836aaca3fb37530ee",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 66,
+      "before_revision": 66,
+      "after_revision": 67,
+      "recorded_at_that_time_sha256": "acde7e0bf7db9be44a3ad0f3b46ed138b001db45b4b559d3c113b82c85273a72",
+      "current_sha256": "acde7e0bf7db9be44a3ad0f3b46ed138b001db45b4b559d3c113b82c85273a72",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "budget-25-exact",
+          "command": "context",
+          "started_at": "2026-10-20T00:19:56.288Z",
+          "before_state_sha256": "fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2"
+        },
+        {
+          "label": "budget-25-full",
+          "command": "context",
+          "started_at": "2026-10-20T00:19:51.656Z",
+          "before_state_sha256": "fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2"
+        },
+        {
+          "label": "budget-25-post-r1-gen5-exact",
+          "command": "context",
+          "started_at": "2026-10-20T01:24:34.116Z",
+          "before_state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5"
+        },
+        {
+          "label": "budget-25-post-r1-gen5-full",
+          "command": "context",
+          "started_at": "2026-10-20T01:24:31.198Z",
+          "before_state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5"
+        },
+        {
+          "label": "context-25-c-first",
+          "command": "context",
+          "started_at": "2026-10-20T00:07:38.040Z",
+          "before_state_sha256": "fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2"
+        },
+        {
+          "label": "context-25-c-resume-r1",
+          "command": "context",
+          "started_at": "2026-10-20T01:23:41.961Z",
+          "before_state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5"
+        },
+        {
+          "label": "plan-25-c-first",
+          "command": "plan",
+          "started_at": "2026-10-20T00:07:37.766Z",
+          "before_state_sha256": "fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2"
+        },
+        {
+          "label": "plan-25-c-resume-r1",
+          "command": "plan",
+          "started_at": "2026-10-20T01:23:41.671Z",
+          "before_state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5"
+        },
+        {
+          "label": "template-25-c-first",
+          "command": "record-template",
+          "started_at": "2026-10-20T00:07:38.439Z",
+          "before_state_sha256": "fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2"
+        },
+        {
+          "label": "template-25-c-resume-r1",
+          "command": "record-template",
+          "started_at": "2026-10-20T01:23:42.369Z",
+          "before_state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5"
+        }
+      ]
+    },
+    {
+      "unit": 26,
+      "label": "record-26-c-resume-r1",
+      "input_sha256": "14b03329f304e8ef1e927da8416cc8967e67af67001d757af0fc995c34983e2a",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 67,
+      "before_revision": 67,
+      "after_revision": 68,
+      "recorded_at_that_time_sha256": "0b98360193a7526a457d6626eb111becd56d878dab48f026883d1d751f9d5d50",
+      "current_sha256": "0b98360193a7526a457d6626eb111becd56d878dab48f026883d1d751f9d5d50",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "context-26-c-resume-r1",
+          "command": "context",
+          "started_at": "2026-10-20T01:38:29.474Z",
+          "before_state_sha256": "7798989a28b3ff29b094535254fc9be37907e7fc77bb58b1000aa6a040a33d0a"
+        },
+        {
+          "label": "plan-26-c-resume-r1",
+          "command": "plan",
+          "started_at": "2026-10-20T01:38:29.196Z",
+          "before_state_sha256": "7798989a28b3ff29b094535254fc9be37907e7fc77bb58b1000aa6a040a33d0a"
+        },
+        {
+          "label": "template-26-c-resume-r1",
+          "command": "record-template",
+          "started_at": "2026-10-20T01:38:29.844Z",
+          "before_state_sha256": "7798989a28b3ff29b094535254fc9be37907e7fc77bb58b1000aa6a040a33d0a"
+        }
+      ]
+    },
+    {
+      "unit": 27,
+      "label": "record-27-c-resume-r1",
+      "input_sha256": "90e8a409810e36788c999f13cccfc6b340179d777766e43fed07ab384ccb1f17",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 68,
+      "before_revision": 68,
+      "after_revision": 69,
+      "recorded_at_that_time_sha256": "a775fcaf1f02f5aad9a66aee3d1a45de34b917a56de728d4be57dcbbb6e27b3e",
+      "current_sha256": "05daf2b72055707c46950e2483f20018acd58096f43d59dfa5a04f5ef6a8e41b",
+      "initial_body_equals_current": false,
+      "revisions_if_changed": "T-R2 formal semantic repair",
+      "successful_preparations_before_record": [
+        {
+          "label": "context-27-c-resume-r1",
+          "command": "context",
+          "started_at": "2026-10-20T01:50:45.849Z",
+          "before_state_sha256": "28ed6dbd9cfff8ba24a35acb4b231ec4679269457cd5b1f93107924c1627e125"
+        },
+        {
+          "label": "plan-27-c-resume-r1",
+          "command": "plan",
+          "started_at": "2026-10-20T01:50:45.573Z",
+          "before_state_sha256": "28ed6dbd9cfff8ba24a35acb4b231ec4679269457cd5b1f93107924c1627e125"
+        },
+        {
+          "label": "template-27-c-resume-r1",
+          "command": "record-template",
+          "started_at": "2026-10-20T01:50:46.224Z",
+          "before_state_sha256": "28ed6dbd9cfff8ba24a35acb4b231ec4679269457cd5b1f93107924c1627e125"
+        }
+      ]
+    },
+    {
+      "unit": 28,
+      "label": "record-28-d",
+      "input_sha256": "f369535411c155cef0d77e8f160205a340787a77e9079f0774dbd90d8450ffcf",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 72,
+      "before_revision": 72,
+      "after_revision": 73,
+      "recorded_at_that_time_sha256": "99b7a792a2a50709185aaed81a49187311e4afa29069fcc63e77a47619f889ea",
+      "current_sha256": "99b7a792a2a50709185aaed81a49187311e4afa29069fcc63e77a47619f889ea",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "context-28-d",
+          "command": "context",
+          "started_at": "2026-10-20T02:19:16.527Z",
+          "before_state_sha256": "7bc1a75d06142687de79036bb0aa722e0b4bac3894fd6fd169769cfdd3ed7ea5"
+        },
+        {
+          "label": "plan-28-d",
+          "command": "plan",
+          "started_at": "2026-10-20T02:19:16.207Z",
+          "before_state_sha256": "7bc1a75d06142687de79036bb0aa722e0b4bac3894fd6fd169769cfdd3ed7ea5"
+        },
+        {
+          "label": "template-28-d",
+          "command": "record-template",
+          "started_at": "2026-10-20T02:19:16.990Z",
+          "before_state_sha256": "7bc1a75d06142687de79036bb0aa722e0b4bac3894fd6fd169769cfdd3ed7ea5"
+        }
+      ]
+    },
+    {
+      "unit": 29,
+      "label": "record-29-d",
+      "input_sha256": "28b9a69f2dc64588b773208e26207be1fe5d8a18b41f7acde18b5d40d9910599",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 73,
+      "before_revision": 73,
+      "after_revision": 74,
+      "recorded_at_that_time_sha256": "ef8131a604b1f7db7f99484d5c3e276af9b28ff669d5edde232be13f5b85f307",
+      "current_sha256": "ef8131a604b1f7db7f99484d5c3e276af9b28ff669d5edde232be13f5b85f307",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "context-29-d",
+          "command": "context",
+          "started_at": "2026-10-20T02:26:04.756Z",
+          "before_state_sha256": "5f31b989fdc39e6bb11689a8e256826c6531f499a36b9c4445921d840c30fd48"
+        },
+        {
+          "label": "plan-29-d",
+          "command": "plan",
+          "started_at": "2026-10-20T02:26:04.457Z",
+          "before_state_sha256": "5f31b989fdc39e6bb11689a8e256826c6531f499a36b9c4445921d840c30fd48"
+        },
+        {
+          "label": "template-29-d",
+          "command": "record-template",
+          "started_at": "2026-10-20T02:26:05.159Z",
+          "before_state_sha256": "5f31b989fdc39e6bb11689a8e256826c6531f499a36b9c4445921d840c30fd48"
+        }
+      ]
+    },
+    {
+      "unit": 30,
+      "label": "record-30-d",
+      "input_sha256": "b98021bce03e36358fb55826e03241452e2e10692a4cbe91efea45227fdc390f",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 74,
+      "before_revision": 74,
+      "after_revision": 75,
+      "recorded_at_that_time_sha256": "6cb12b381d5072cc3001a5192258c723b46d9cb10be6a1fcb0440a21fe7ce26a",
+      "current_sha256": "6cb12b381d5072cc3001a5192258c723b46d9cb10be6a1fcb0440a21fe7ce26a",
+      "initial_body_equals_current": true,
+      "revisions_if_changed": null,
+      "successful_preparations_before_record": [
+        {
+          "label": "context-30-d",
+          "command": "context",
+          "started_at": "2026-10-20T02:32:43.256Z",
+          "before_state_sha256": "42ecc39bc7646e3445bc55e1324a2cf3fe64215b541d310c382c582b255f8913"
+        },
+        {
+          "label": "plan-30-d",
+          "command": "plan",
+          "started_at": "2026-10-20T02:32:42.947Z",
+          "before_state_sha256": "42ecc39bc7646e3445bc55e1324a2cf3fe64215b541d310c382c582b255f8913"
+        },
+        {
+          "label": "template-30-d",
+          "command": "record-template",
+          "started_at": "2026-10-20T02:32:43.735Z",
+          "before_state_sha256": "42ecc39bc7646e3445bc55e1324a2cf3fe64215b541d310c382c582b255f8913"
+        }
+      ]
+    }
+  ]
+}

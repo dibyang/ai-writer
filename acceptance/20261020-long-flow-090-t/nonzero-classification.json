@@ -1,0 +1,359 @@
+{
+  "ok": true,
+  "captured_nonzero": 29,
+  "all_captured_nonzero_accounted_for": true,
+  "commands": [
+    {
+      "label": "baseline-frozen-inputs",
+      "exit_code": 1,
+      "elapsed_ms": 103,
+      "expected_exit_code": 1,
+      "category": "helper-assumption",
+      "explanation": "基线核验误把完整开发测试集当嵌入runtime profile；改按发行profile检查，并非产品缺文件。",
+      "proof": [
+        "commands/baseline-frozen-inputs-retry/result.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "budget-19-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1403,
+      "expected_exit_code": 2,
+      "category": "expected-budget-refusal",
+      "explanation": "真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。",
+      "proof": [
+        "budget-19-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "budget-19-short",
+      "exit_code": 2,
+      "elapsed_ms": 1198,
+      "expected_exit_code": 2,
+      "category": "expected-budget-refusal",
+      "explanation": "真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。",
+      "proof": [
+        "budget-19-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "budget-25-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1552,
+      "expected_exit_code": 2,
+      "category": "expected-budget-refusal",
+      "explanation": "真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。",
+      "proof": [
+        "budget-25-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "budget-25-post-r1-gen5-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1010,
+      "expected_exit_code": 2,
+      "category": "expected-budget-refusal",
+      "explanation": "真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。",
+      "proof": [
+        "budget-25-post-r1-gen5-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "budget-25-post-r1-gen5-short",
+      "exit_code": 2,
+      "elapsed_ms": 854,
+      "expected_exit_code": 2,
+      "category": "expected-budget-refusal",
+      "explanation": "真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。",
+      "proof": [
+        "budget-25-post-r1-gen5-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "budget-25-short",
+      "exit_code": 2,
+      "elapsed_ms": 1647,
+      "expected_exit_code": 2,
+      "category": "expected-budget-refusal",
+      "explanation": "真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。",
+      "proof": [
+        "budget-25-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "c-resume-25-old-template-record-reject",
+      "exit_code": 2,
+      "elapsed_ms": 240,
+      "expected_exit_code": 2,
+      "category": "expected-stale-input-refusal",
+      "explanation": "已有真实25正文和非空摘要，旧r62输入在正式record因修订号过期拒绝，state不变。",
+      "proof": [
+        "c-old-guard-retry-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "c-resume-25-old-template-reject",
+      "exit_code": 1,
+      "elapsed_ms": 201,
+      "expected_exit_code": 1,
+      "category": "expected-soft-preview-refusal",
+      "explanation": "有效旧输入被preview按软失败1拒绝；辅助误预期2，保留该错误后用同payload正式record拒绝2。",
+      "proof": [
+        "c-old-guard-retry-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "c-resume-26-preflight-preview",
+      "exit_code": 1,
+      "elapsed_ms": 202,
+      "expected_exit_code": 1,
+      "category": "invalid-registration-input",
+      "explanation": "新增thread误写open状态，被preview拦下；改active、换新label重试，正式状态不变。",
+      "proof": [
+        "c-resume-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "c-resume-final-workflow",
+      "exit_code": 2,
+      "elapsed_ms": 92,
+      "expected_exit_code": 2,
+      "category": "command-usage-error",
+      "explanation": "漏写workflow的show子命令；使用新label workflow-show正确查询，state不变。",
+      "proof": [
+        "c-resume-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "c-resume-old-r-identity",
+      "exit_code": 1,
+      "elapsed_ms": 358,
+      "expected_exit_code": 1,
+      "category": "expected-old-revision-build-mismatch",
+      "explanation": "gen5父工具与已committed旧gen4 R候选绑定不符；返回校验诊断，无ENOENT/无改绑定。",
+      "proof": [
+        "final-tool-update-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "final-next-draft-refused",
+      "exit_code": 2,
+      "elapsed_ms": 222,
+      "expected_exit_code": 2,
+      "category": "expected-authorization-refusal",
+      "explanation": "最终pause仅discuss后，真实31模板请求ACTION_OUT_OF_SCOPE，state不变且无31输出/正文。",
+      "proof": [
+        "final-flow-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "guarded-build-proof",
+      "exit_code": 1,
+      "elapsed_ms": 101,
+      "expected_exit_code": 1,
+      "category": "helper-archive-source-map",
+      "explanation": "README发布别名源映射用错；保留原冻结输入，修正源到archive_file映射后重核ZIP，没有刷新原hash掩盖漂移。",
+      "proof": [
+        "commands/guarded-build-proof-retry/result.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "help-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 7038,
+      "expected_exit_code": 1,
+      "category": "product-defect-red-before-fix",
+      "explanation": "help带通用project参数的真实缺陷；最终修复并有3项帮助回归及原生C实际调用。",
+      "proof": [
+        "final-build-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "immutable-legacy-complete",
+      "exit_code": 2,
+      "elapsed_ms": 212,
+      "expected_exit_code": 2,
+      "category": "expected-immutable-recovery-refusal",
+      "explanation": "最终构建对旧prepared非法观察变更正式拒绝，未业务写入；rollback仍允许。",
+      "proof": [
+        "immutable-legacy-recovery-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "immutable-legacy-recovery-proof",
+      "exit_code": 1,
+      "elapsed_ms": 1061,
+      "expected_exit_code": 1,
+      "category": "helper-cli-field-assumption",
+      "explanation": "辅助断言错误要求CLI序列化ledger_id；改核真实code/error和回滚原字节，原失败保留。",
+      "proof": [
+        "commands/immutable-legacy-captured-verification/result.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "immutable-legacy-transaction",
+      "exit_code": 93,
+      "elapsed_ms": 6011,
+      "expected_exit_code": 93,
+      "category": "intentional-fault-injection",
+      "explanation": "旧构建prepared事务按注入点中断；最终构建拒绝非法complete后原字节rollback，未发布到T小说主稿。",
+      "proof": [
+        "immutable-legacy-recovery-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "immutable-probe-before",
+      "exit_code": 1,
+      "elapsed_ms": 4679,
+      "expected_exit_code": 1,
+      "category": "product-defect-red-before-fix",
+      "explanation": "旧实现允许rewind/replay改掉原观察；修后真实探针及新回归阻断，原始红结果保留。",
+      "proof": [
+        "final-build-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "immutable-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 29332,
+      "expected_exit_code": 1,
+      "category": "product-defect-red-before-fix",
+      "explanation": "旧实现允许rewind/replay改掉原观察；修后真实探针及新回归阻断，原始红结果保留。",
+      "proof": [
+        "final-build-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "parent-c-first-verify",
+      "exit_code": 1,
+      "elapsed_ms": 110,
+      "expected_exit_code": 1,
+      "category": "helper-checkpoint-contract",
+      "explanation": "错误要求子客户端自报尚未知的真实threadID；改由实际thread.started及进程结果独立绑定，不补造子交接。",
+      "proof": [
+        "parent-c-first-interruption-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "parent-r2-approve",
+      "exit_code": 1,
+      "elapsed_ms": 108,
+      "expected_exit_code": 1,
+      "category": "helper-prepared-field-assumption",
+      "explanation": "误把CLI响应target_revision当prepared字段；修为target_state.revision后原语义/8文件断言全执行，第一次未提交。",
+      "proof": [
+        "commands/parent-r2-approve-v2/result.json",
+        "r2-publish-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "parent-read-helper-before-fix-negative",
+      "exit_code": 1,
+      "elapsed_ms": 87,
+      "expected_exit_code": 1,
+      "category": "retained-helper-error-reproduction",
+      "explanation": "保留重现错误import别名语法的负向命令，发生在发现后，不冒充最初捕获；修后真实覆盖核验通过。",
+      "proof": [
+        "native-c-resume-window-read.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "r1-entry-help",
+      "exit_code": 2,
+      "elapsed_ms": 102,
+      "expected_exit_code": 2,
+      "category": "product-defect-observed-native",
+      "explanation": "真实R恢复时help --project触发只接受一个命令名；最终修复、重启后C实际复验成功。",
+      "proof": [
+        "c-resume-help-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "r1-entry-ledger",
+      "exit_code": 2,
+      "elapsed_ms": 248,
+      "expected_exit_code": 2,
+      "category": "command-usage-error",
+      "explanation": "ledger不是有效CLI子命令；后按实际接口和文件检查，不归为产品缺陷。",
+      "proof": [
+        "commands/codex-r-first/stdout.raw.txt"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "r1-mid-main-plan-refused",
+      "exit_code": 2,
+      "elapsed_ms": 267,
+      "expected_exit_code": 2,
+      "category": "expected-revision-occupancy-refusal",
+      "explanation": "R真实进程退出期间主稿仍被会话占用，plan被REVISION_OCCUPIED拒绝且state不变。",
+      "proof": [
+        "r1-midpoint-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "r1-ready-candidate-identify",
+      "exit_code": 2,
+      "elapsed_ms": 108,
+      "expected_exit_code": 2,
+      "category": "product-defect-observed-native",
+      "explanation": "真实R候选identify ENOENT；最终修复，当前R2活动候选实测正向成功，旧绑定负向仍拒绝。",
+      "proof": [
+        "r2-candidate-identity.json",
+        "final-build-verification.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "revision-identity-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 2985,
+      "expected_exit_code": 1,
+      "category": "product-defect-red-before-fix",
+      "explanation": "候选区缺嵌入工具导致identify ENOENT；最终继承经校验父资源，坏绑定/损坏仍拒绝。",
+      "proof": [
+        "final-build-verification.json",
+        "r2-candidate-identity.json"
+      ],
+      "accounted_for": true
+    },
+    {
+      "label": "tool-help-old-r1-identity",
+      "exit_code": 1,
+      "elapsed_ms": 608,
+      "expected_exit_code": 1,
+      "category": "expected-old-revision-build-mismatch",
+      "explanation": "gen5父工具与已committed旧gen4 R候选绑定不符；返回校验诊断，无ENOENT/无改绑定。",
+      "proof": [
+        "final-tool-update-verification.json"
+      ],
+      "accounted_for": true
+    }
+  ],
+  "scope": "Captured final command receipts only; no double counting these as distinct product defects. Native nested errors and successful-exit content mistakes remain separately audited in command-audit and narrative reports."
+}

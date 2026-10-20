@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {base,save,sha} from './common.mjs';
+const session=JSON.parse(fs.readFileSync(path.join(base,'r1-session.json')));
+const state=JSON.parse(fs.readFileSync(path.join(session.workspace,'.writer/state.json')));
+assert.equal(Object.keys(state.units).length,24);
+assert.equal(state.revision,74);
+const files=Array.from({length:10},(_,i)=>{const unit=i+15,ref=`正文/${String(unit).padStart(4,'0')}.md`,p=path.join(session.workspace,ref),v=fs.readFileSync(p);return {unit,ref,path:p,sha256:sha(v),bytes:v.length,lines:v.toString('utf8').split('\n').length};});
+save('r1-final-read-before.json',{session_id:session.id,revision:state.revision,state_sha256:sha(fs.readFileSync(path.join(session.workspace,'.writer/state.json'))),files});
+console.log(JSON.stringify({ok:true,revision:state.revision,files:files.length}));

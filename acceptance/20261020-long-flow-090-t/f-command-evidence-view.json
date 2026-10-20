@@ -1,0 +1,330 @@
+{
+  "scope": "Read-only index of existing captured command evidence; not a reconstruction of native reading logs or a new execution of historical commands.",
+  "command_count": 434,
+  "failures": [
+    {
+      "label": "baseline-frozen-inputs",
+      "started_at": "2026-10-19T22:43:40.876Z",
+      "exit_code": 1
+    },
+    {
+      "label": "budget-19-blocked",
+      "started_at": "2026-10-19T22:54:35.838Z",
+      "exit_code": 2,
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "error": "上下文超过 1000 字符预算（实际 22543）；不会静默截断"
+    },
+    {
+      "label": "budget-19-short",
+      "started_at": "2026-10-19T22:54:37.338Z",
+      "exit_code": 2,
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "error": "上下文超过 22542 字符预算（实际 22543）；不会静默截断"
+    },
+    {
+      "label": "budget-25-blocked",
+      "started_at": "2026-10-20T00:19:52.864Z",
+      "exit_code": 2,
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "error": "上下文超过 1000 字符预算（实际 31345）；不会静默截断"
+    },
+    {
+      "label": "budget-25-post-r1-gen5-blocked",
+      "started_at": "2026-10-20T01:24:32.071Z",
+      "exit_code": 2,
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "error": "上下文超过 1000 字符预算（实际 31614）；不会静默截断"
+    },
+    {
+      "label": "budget-25-post-r1-gen5-short",
+      "started_at": "2026-10-20T01:24:33.177Z",
+      "exit_code": 2,
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "error": "上下文超过 31613 字符预算（实际 31614）；不会静默截断"
+    },
+    {
+      "label": "budget-25-short",
+      "started_at": "2026-10-20T00:19:54.551Z",
+      "exit_code": 2,
+      "code": "CONTEXT_BUDGET_EXCEEDED",
+      "error": "上下文超过 31344 字符预算（实际 31345）；不会静默截断"
+    },
+    {
+      "label": "c-resume-25-old-template-record-reject",
+      "started_at": "2026-10-20T01:35:07.908Z",
+      "exit_code": 2,
+      "code": "COMMAND_FAILED",
+      "error": "追踪修订号已变化，请重新生成 context"
+    },
+    {
+      "label": "c-resume-25-old-template-reject",
+      "started_at": "2026-10-20T01:34:35.594Z",
+      "exit_code": 1
+    },
+    {
+      "label": "c-resume-26-preflight-preview",
+      "started_at": "2026-10-20T01:48:37.556Z",
+      "exit_code": 1
+    },
+    {
+      "label": "c-resume-final-workflow",
+      "started_at": "2026-10-20T02:03:27.479Z",
+      "exit_code": 2,
+      "code": "COMMAND_FAILED",
+      "error": "workflow 只支持 show/set"
+    },
+    {
+      "label": "c-resume-old-r-identity",
+      "started_at": "2026-10-20T01:20:52.862Z",
+      "exit_code": 1
+    },
+    {
+      "label": "guarded-build-proof",
+      "started_at": "2026-10-19T23:26:50.070Z",
+      "exit_code": 1
+    },
+    {
+      "label": "help-regression-before",
+      "started_at": "2026-10-20T00:24:07.288Z",
+      "exit_code": 1
+    },
+    {
+      "label": "immutable-legacy-complete",
+      "started_at": "2026-10-19T23:11:14.981Z",
+      "exit_code": 2,
+      "code": "IMMUTABLE_OBSERVATION_CHANGED",
+      "error": "独立修订不能改写或删除既有观察 OBS；保留原记录，新增解释或修正条目"
+    },
+    {
+      "label": "immutable-legacy-recovery-proof",
+      "started_at": "2026-10-19T23:11:14.812Z",
+      "exit_code": 1
+    },
+    {
+      "label": "immutable-legacy-transaction",
+      "started_at": "2026-10-19T23:06:57.488Z",
+      "exit_code": 93
+    },
+    {
+      "label": "immutable-probe-before",
+      "started_at": "2026-10-19T23:05:25.192Z",
+      "exit_code": 1
+    },
+    {
+      "label": "immutable-regression-before",
+      "started_at": "2026-10-19T23:08:48.253Z",
+      "exit_code": 1
+    },
+    {
+      "label": "parent-c-first-verify",
+      "started_at": "2026-10-20T00:16:47.883Z",
+      "exit_code": 1
+    },
+    {
+      "label": "parent-r2-approve",
+      "started_at": "2026-10-20T02:13:40.657Z",
+      "exit_code": 1
+    },
+    {
+      "label": "parent-read-helper-before-fix-negative",
+      "started_at": "2026-10-20T00:19:24.268Z",
+      "exit_code": 1
+    },
+    {
+      "label": "r1-entry-help",
+      "started_at": "2026-10-20T00:19:00.392Z",
+      "exit_code": 2,
+      "code": "COMMAND_FAILED",
+      "error": "help 只接受一个命令名"
+    },
+    {
+      "label": "r1-entry-ledger",
+      "started_at": "2026-10-20T00:18:49.482Z",
+      "exit_code": 2,
+      "code": "COMMAND_FAILED",
+      "error": "未知命令：ledger"
+    },
+    {
+      "label": "r1-mid-main-plan-refused",
+      "started_at": "2026-10-20T00:40:30.207Z",
+      "exit_code": 2,
+      "code": "REVISION_OCCUPIED",
+      "error": "作品有活跃修订会话；在独立区操作，或由所有者显式结束，不允许旁路写入"
+    },
+    {
+      "label": "r1-ready-candidate-identify",
+      "started_at": "2026-10-20T00:53:16.364Z",
+      "exit_code": 2,
+      "code": "ENOENT",
+      "error": "ENOENT: no such file or directory, lstat 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\scenario\\雨棚后的灯\\.writer\\revisions\\3a5aa320-92b5-4eb5-9b0d-159ce6f7beec\\workspace\\.writer\\tool'"
+    },
+    {
+      "label": "revision-identity-regression-before",
+      "started_at": "2026-10-20T00:58:14.941Z",
+      "exit_code": 1
+    },
+    {
+      "label": "tool-help-old-r1-identity",
+      "started_at": "2026-10-20T01:17:35.463Z",
+      "exit_code": 1
+    }
+  ],
+  "main_records_19_30": [
+    {
+      "unit": 19,
+      "label": "record-19",
+      "started_at": "2026-10-19T23:04:17.460Z",
+      "input_sha256": "3a8dbe9a9581a4876e058cca9bab55f464b84892c8c0b5d004aff6db4344f014",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 55,
+      "before_revision": 55,
+      "after_revision": 56,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0019-纲文回对.md"
+    },
+    {
+      "unit": 20,
+      "label": "record-20",
+      "started_at": "2026-10-19T23:12:11.547Z",
+      "input_sha256": "f8417a57f81c32c949ba8a7fe431aeb83307183a35720e11043d1800eb423bcd",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 56,
+      "before_revision": 56,
+      "after_revision": 57,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0020-纲文回对.md"
+    },
+    {
+      "unit": 21,
+      "label": "record-21",
+      "started_at": "2026-10-19T23:24:22.832Z",
+      "input_sha256": "8f67c76a1d25818ade2c9e52db8c1c02fa62dac19635a6ba1b1a296f9754e1a0",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 57,
+      "before_revision": 57,
+      "after_revision": 58,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0021-纲文回对.md"
+    },
+    {
+      "unit": 22,
+      "label": "record-22",
+      "started_at": "2026-10-19T23:46:26.549Z",
+      "input_sha256": "f0bd622302baeea25e21e10fc197a29f263d2b623d7e9ca8f0c3a39a9700d6ba",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 59,
+      "before_revision": 59,
+      "after_revision": 60,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0022-纲文回对.md"
+    },
+    {
+      "unit": 23,
+      "label": "record-23",
+      "started_at": "2026-10-19T23:53:05.595Z",
+      "input_sha256": "512eaf7bed911a6facb7a696cbe57d2fb7bb80d3869aba2e06eb7f499e7dd4b8",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 60,
+      "before_revision": 60,
+      "after_revision": 61,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0023-纲文回对.md"
+    },
+    {
+      "unit": 24,
+      "label": "record-24",
+      "started_at": "2026-10-19T23:58:28.524Z",
+      "input_sha256": "ddb7fb5587b1fcb9b1d7ddce5c31755ecd8afad4d9b50bdfa439c46ce51c8e9f",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 61,
+      "before_revision": 61,
+      "after_revision": 62,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0024-纲文回对.md"
+    },
+    {
+      "unit": 25,
+      "label": "record-25-c-resume-r1",
+      "started_at": "2026-10-20T01:37:08.643Z",
+      "input_sha256": "9a4d8157d40f5378d156f399d896e584fed211a71d797c5836aaca3fb37530ee",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 66,
+      "before_revision": 66,
+      "after_revision": 67,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0025-纲文回对.md"
+    },
+    {
+      "unit": 26,
+      "label": "record-26-c-resume-r1",
+      "started_at": "2026-10-20T01:49:33.268Z",
+      "input_sha256": "14b03329f304e8ef1e927da8416cc8967e67af67001d757af0fc995c34983e2a",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 67,
+      "before_revision": 67,
+      "after_revision": 68,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0026-纲文回对.md"
+    },
+    {
+      "unit": 27,
+      "label": "record-27-c-resume-r1",
+      "started_at": "2026-10-20T01:59:39.049Z",
+      "input_sha256": "90e8a409810e36788c999f13cccfc6b340179d777766e43fed07ab384ccb1f17",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 68,
+      "before_revision": 68,
+      "after_revision": 69,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0027-纲文回对.md"
+    },
+    {
+      "unit": 28,
+      "label": "record-28-d",
+      "started_at": "2026-10-20T02:25:56.145Z",
+      "input_sha256": "f369535411c155cef0d77e8f160205a340787a77e9079f0774dbd90d8450ffcf",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 72,
+      "before_revision": 72,
+      "after_revision": 73,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0028-纲文回对.md"
+    },
+    {
+      "unit": 29,
+      "label": "record-29-d",
+      "started_at": "2026-10-20T02:32:33.784Z",
+      "input_sha256": "28b9a69f2dc64588b773208e26207be1fe5d8a18b41f7acde18b5d40d9910599",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 73,
+      "before_revision": 73,
+      "after_revision": 74,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0029-纲文回对.md"
+    },
+    {
+      "unit": 30,
+      "label": "record-30-d",
+      "started_at": "2026-10-20T02:39:27.665Z",
+      "input_sha256": "b98021bce03e36358fb55826e03241452e2e10692a4cbe91efea45227fdc390f",
+      "captured_input_matches_result": true,
+      "source_state_matches_captured_before": true,
+      "expected_revision": 74,
+      "before_revision": 74,
+      "after_revision": 75,
+      "body_current_equal": false,
+      "report_ref": "审查/T-0030-纲文回对.md"
+    }
+  ]
+}

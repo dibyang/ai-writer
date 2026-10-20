@@ -65,6 +65,8 @@
 
 ledger 类型：fact / thread / object / relationship / observation；状态：active / pending / partial / resolved / intentional-open。未明确的状态可写 pending，说明已知边界、下一步与回查时机，不能为“全部完成”强行结案。到期但未收的条目继续召回，不会自动标 resolved。observation 已记录的 statement/author_truth 不可逆改，新解释另建条目并关联旧 ID。作者尚未确认的秘密不要编入 author_truth。
 
+正式修订发布仍比较会话原始基线的observation，不因rewind早于首次观察而重置保护；type、statement、author_truth及整条原观察均须保留，知情/状态可按新证据更新。prepare、commit或中断complete若报IMMUTABLE_OBSERVATION_CHANGED，保留原观察并另记解释/修正；rollback仍允许原字节恢复。
+
 更新 ledger 只交变化字段及本章 evidence，旧证据和其他人物所知自动保留；`character_known` 的文字应写截至当前的完整信息。物证换手时交新的完整 custody，加 `previous_holder` 与旧保管人一致，并核对正文动作和位置。退场角色可用 `retire_characters` 从热状态移除，旧章与证据保留；角色仍有关联未收线索时须安排回查。
 
 交接示例（放在 `changes.ledger` 下，previous_holder 与 custody 同级）：

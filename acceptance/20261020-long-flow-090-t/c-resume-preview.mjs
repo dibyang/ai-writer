@@ -1,0 +1,2 @@
+import {read,input,run,save} from './common.mjs';
+const [n,label]=process.argv.slice(2),pad=n.padStart(4,'0'),template=JSON.parse(read(`.writer/drafts/t-record-${n}-c-resume-r1.json`)),details=JSON.parse(read(`交接/T-登记-${pad}.json`));const result=run(label,['record-preview','--input',input(label+'-input',{...template,...details})]);save(label+'.json',result);console.log(JSON.stringify({ok:result.ok,revision:result.revision,unit:result.unit,findings:result.findings,related:result.related_unchanged_ledger},null,2));

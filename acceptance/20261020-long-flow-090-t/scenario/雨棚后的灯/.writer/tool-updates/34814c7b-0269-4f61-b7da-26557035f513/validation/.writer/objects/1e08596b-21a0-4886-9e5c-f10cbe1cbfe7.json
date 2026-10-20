@@ -1,0 +1,53 @@
+{
+  "action": "freeze",
+  "at": "2026-10-19T16:54:41.653Z",
+  "evidence": null,
+  "input": {
+    "expected_revision": 23,
+    "operation_id": "s-r1-freeze-new",
+    "ref": "大纲/分卷/V3.json",
+    "file": "研究/S-V3候选.json",
+    "version_id": "S_V3_CLARIFIED",
+    "previous": "S_V3_ORIGINAL"
+  },
+  "result": {
+    "version": {
+      "id": "S_V3_CLARIFIED",
+      "ref": "大纲/分卷/V3.json",
+      "object_ref": ".writer/objects/eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936.source",
+      "sha256": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+      "previous": "S_V3_ORIGINAL",
+      "format": "json"
+    },
+    "status": "proposal-only-not-published"
+  },
+  "current": {
+    "source_versions": {
+      "S_V3_ORIGINAL": {
+        "id": "S_V3_ORIGINAL",
+        "ref": "大纲/分卷/V3.json",
+        "object_ref": ".writer/objects/81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d.source",
+        "sha256": "81cc3a8c79c97c15d073150c8c5541deeff4c95dfc31305c478b6d9efed7780d",
+        "previous": null,
+        "format": "json"
+      },
+      "S_V3_CLARIFIED": {
+        "id": "S_V3_CLARIFIED",
+        "ref": "大纲/分卷/V3.json",
+        "object_ref": ".writer/objects/eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936.source",
+        "sha256": "eaf2bca6deca00b217843343f910dfc0722f8163ff16037c93a416da499ad936",
+        "previous": "S_V3_ORIGINAL",
+        "format": "json"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "大纲/分卷/V3.json",
+        "version_id": "S_V3_ORIGINAL",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "impact_pending": {}
+  }
+}

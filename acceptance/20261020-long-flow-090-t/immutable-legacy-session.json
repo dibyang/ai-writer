@@ -1,0 +1,41 @@
+{
+  "probe": "D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\scenario\\immutable-probe-legacy",
+  "branch": {
+    "ok": true,
+    "id": "d332a621-ca3a-4af8-a844-44849665556b",
+    "token": "a6e428b9984279098d08b0748b1d7c0706b241b494f661cb2d4336e7af91f082",
+    "owner": "test-7",
+    "scope": {
+      "from": 1,
+      "through": 1
+    },
+    "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\scenario\\immutable-probe-legacy\\.writer\\revisions\\d332a621-ca3a-4af8-a844-44849665556b\\workspace",
+    "base_revision": 3,
+    "existing_changes": {
+      "stale_units": [],
+      "changed_sources": []
+    },
+    "note": "令牌用于防误操作，不能对同用户文件访问提供强隔离；在独立区实读、修改、rewind 和顺序重登，再 prepare/commit"
+  },
+  "main_revision_sha256": "bb40be669f212d43610a38f315a3962e39100cc39d9d4fab50c9900f4923e41b",
+  "original": {
+    "type": "observation",
+    "statement": "纸上写着青。",
+    "author_truth": "原字是青，未被改写。",
+    "status": "active",
+    "cast": [
+      "林"
+    ],
+    "reader_known": "青字",
+    "character_known": {
+      "林": "看见青"
+    },
+    "evidence": [
+      {
+        "unit": 1,
+        "quote": "林看见纸上写着青。"
+      }
+    ]
+  },
+  "scope": "Old implementation generated this transaction, no handcrafted state. Deliberate exit93 after durable transaction prepare and before publishing."
+}

@@ -1,0 +1,74 @@
+{
+  "expected_revision": 54,
+  "operation_id": "t-trial-19-30",
+  "author_evidence": {
+    "local_source": "研究/T轮验证授权.md",
+    "source_sha256": "8c9205b8ceeecd7db527f60c99eb67fb73f367da085a9ed489865a3502f4f33a",
+    "quote": "增加章节数量和单章篇幅",
+    "locator": "user-task-2026-10-20-t-scope",
+    "recorded_by": "Codex T within authorized synthetic test scope"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "T轮独立副本续写19—30，扩大篇幅与多轮恢复、多点旧章修订；30后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 19,
+        "to": 30
+      },
+      "revise_range": {
+        "from": 1,
+        "to": 18
+      },
+      "stop_conditions": [
+        "到30停止正文并暂停",
+        "已登记旧章修改使用正式保护区",
+        "不触碰S/Q/R与作者现有作品"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

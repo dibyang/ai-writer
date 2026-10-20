@@ -51,6 +51,8 @@ record-preview与record共用校验，显示缺项、实际事实差异和未变
 
 0.9重登草案按原登记前后的结构差异恢复ledger变化字段，character_known逐人保留真正变化的项；原本未变的知识不再整表写回，避免覆盖前章刚修好的字段。新条目仍给完整必要内容，物证换手仍核完整custody及previous_holder。结构差量不是语义合并：角色整段状态、实际变化的说明和物证去向仍须实读核查，不自动认定原差量在新上下文中正确。
 
+重登不会重置原观察保护。prepare、commit及中断后的complete会核对原会话基线中已有的observation：不能删除、改为其他类型，或改写statement/author_truth（含向原来未填的author_truth补值）。知情、状态及另建的解释可按实际新稿记录；若因原观察不符而阻断，保留原记录并新增修正，不把退回首次出现之前当作覆盖入口。rollback仍按原备份恢复。
+
 历史小修仍使用revision begin，独立区rewind后调用revision replay-input --unit N --revision-token TOKEN，恢复原摘要、原changes和引文，填入本次当前context哈希。实际核读新正文、旧事实与下游承接后修正草案，填写replay_review：reviewer、审查/下report、draft_sha256及checked_fields六项summary/characters/timeline/ledger/evidence/downstream。报告真实记录核查内容，不能凭勾选字段宣称无变化。先record-preview，再record；完成整个尾段复核后prepare/commit。改稿后旧草案hash失效，应重新生成并核对。
 
 ## 意见闭环

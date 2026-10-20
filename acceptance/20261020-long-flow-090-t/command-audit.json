@@ -1,0 +1,4675 @@
+{
+  "ok": true,
+  "completed_captured_commands": 454,
+  "captured_nonzero": [
+    {
+      "label": "baseline-frozen-inputs",
+      "exit_code": 1,
+      "elapsed_ms": 103
+    },
+    {
+      "label": "budget-19-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1403
+    },
+    {
+      "label": "budget-19-short",
+      "exit_code": 2,
+      "elapsed_ms": 1198
+    },
+    {
+      "label": "budget-25-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1552
+    },
+    {
+      "label": "budget-25-post-r1-gen5-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1010
+    },
+    {
+      "label": "budget-25-post-r1-gen5-short",
+      "exit_code": 2,
+      "elapsed_ms": 854
+    },
+    {
+      "label": "budget-25-short",
+      "exit_code": 2,
+      "elapsed_ms": 1647
+    },
+    {
+      "label": "c-resume-25-old-template-record-reject",
+      "exit_code": 2,
+      "elapsed_ms": 240
+    },
+    {
+      "label": "c-resume-25-old-template-reject",
+      "exit_code": 1,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "c-resume-26-preflight-preview",
+      "exit_code": 1,
+      "elapsed_ms": 202
+    },
+    {
+      "label": "c-resume-final-workflow",
+      "exit_code": 2,
+      "elapsed_ms": 92
+    },
+    {
+      "label": "c-resume-old-r-identity",
+      "exit_code": 1,
+      "elapsed_ms": 358
+    },
+    {
+      "label": "final-next-draft-refused",
+      "exit_code": 2,
+      "elapsed_ms": 222
+    },
+    {
+      "label": "guarded-build-proof",
+      "exit_code": 1,
+      "elapsed_ms": 101
+    },
+    {
+      "label": "help-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 7038
+    },
+    {
+      "label": "immutable-legacy-complete",
+      "exit_code": 2,
+      "elapsed_ms": 212
+    },
+    {
+      "label": "immutable-legacy-recovery-proof",
+      "exit_code": 1,
+      "elapsed_ms": 1061
+    },
+    {
+      "label": "immutable-legacy-transaction",
+      "exit_code": 93,
+      "elapsed_ms": 6011
+    },
+    {
+      "label": "immutable-probe-before",
+      "exit_code": 1,
+      "elapsed_ms": 4679
+    },
+    {
+      "label": "immutable-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 29332
+    },
+    {
+      "label": "parent-c-first-verify",
+      "exit_code": 1,
+      "elapsed_ms": 110
+    },
+    {
+      "label": "parent-r2-approve",
+      "exit_code": 1,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "parent-read-helper-before-fix-negative",
+      "exit_code": 1,
+      "elapsed_ms": 87
+    },
+    {
+      "label": "r1-entry-help",
+      "exit_code": 2,
+      "elapsed_ms": 102
+    },
+    {
+      "label": "r1-entry-ledger",
+      "exit_code": 2,
+      "elapsed_ms": 248
+    },
+    {
+      "label": "r1-mid-main-plan-refused",
+      "exit_code": 2,
+      "elapsed_ms": 267
+    },
+    {
+      "label": "r1-ready-candidate-identify",
+      "exit_code": 2,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "revision-identity-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 2985
+    },
+    {
+      "label": "tool-help-old-r1-identity",
+      "exit_code": 1,
+      "elapsed_ms": 608
+    }
+  ],
+  "native_clients": [
+    {
+      "label": "codex-a-first",
+      "thread_id": "01a15654-8bd8-79b1-8f41-10d31671537d",
+      "exit_code": 0,
+      "completed_items": 74,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-a-resume",
+      "thread_id": "01a15654-8bd8-79b1-8f41-10d31671537d",
+      "exit_code": 0,
+      "completed_items": 136,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_42",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"const c=await import('./acceptance/20261020-long-flow-090-t/common.mjs');const fs=await import('node:fs');const before=JSON.parse(fs.readFileSync(c.base+'/a-resume-19-final-read-before.json'));c.save('a-resume-19-final-read-after.json',{...before,after_sha256:c.sha(c.read('正文/0019.md')),unchanged:before.sha256===c.sha(c.read('正文/0019.md')),ranges:[[1,120],[121,240],[241,353]],eof:true});c.write('审查/T-0019-纲文回对.md','# 19章纲文回对与登记前自检\\\\n\\\\n当前最终稿SHA '+c.sha(c.read('正文/0019.md'))+'；正式消费细纲SHA '+c.sha(c.read('大纲/单元/0019.json'))+'。首读1—120/121—240/241—353，修正后再次同范围完整读至EOF，最终读前后SHA一致。19两原段不变，六段按两个LF精确合章。\\\\n\\\\n|beat|实际引文/位置|结论|\\\\n|---|---|---|\\\\n|1|63“十一点十分得走”；23—29约陶及出工|落实|\\\\n|2|92垫砖轮悬、138“十一点十分”实际离店|落实，非师傅已到家|\\\\n|3|165—167“连出门二十二”及转款；183四点路过|落实，仅林家水止滴|\\\\n|4|218“六十多厘米”、220“得空了再量”；228纸巾实取|落实可见外宽，未另量通路精确数，主动省去无必要数字|\\\\n|5|283—301时刻、20元、何当面出钱；313架仍原处|落实，未拆未买|\\\\n|6|318货归位；338—344湿裤与另找裤；350短信|落实；衣物在林住处处理，非从何店带回|\\\\n\\\\n五处接点：接箱→落箱；11:10离店→回家；吃第二包→洗杯出门；陶车停→何叫靠柱；筐倒空晾→翻回收货，各有实际动作续接，无重开场。第6段主动较短，以当晚生活收束，完整章总Han达目标；不为平均段长重复说明。\\\\n\\\\n修正仅未登记3—6段：杯子去掉凭空归属、退货单不混顾客取纸巾、离场不全知何行踪、盆低台定位、屏幕操作、记页另抄、纸屑指代及炒菜动作。留稿/T-0019-首读候选.md保留修前。未改原两段、已登记1—18或已消费19纲。\\\\n\\\\n知识与物件：何知林付22是林午后实告；陶知道坏架是在林家实听，何店本人外看后才约检查。许周陈均未获新知；原片/信/清稿/私抄/幕布未改。何20元只预留未付、架未修，明18日14点检查待办。新条目O_RACK_WHEELS与T_RACK_INSPECTION依正文建立，不把新ID当第一章已有账本。\\\\n\\\\n硬问题：最终已读版本未见新高置信矛盾。可选：洗衣、吃饭及归货动作较密，后章转入拆空与选择，避免再演同日全面准备。未核：全书其余旧章、真人盲读、市场或百章验收。此为知情模型自检。\\\\n');console.log({han:before.han,final_sha:c.sha(c.read('正文/0019.md'))});\\\"\"",
+          "output": "file:///D:/work/other/ai-writer/[eval1]:1\r\nconst c=await import('./acceptance/20261020-long-flow-090-t/common.mjs');const fs=await import('node:fs');const before=JSON.parse(fs.readFileSync(c.base+'/a-resume-19-final-read-before.json'));c.save('a-resume-19-final-read-after.json',{...before,after_sha256:c.sha(c.read('正文/0019.md')),unchanged:before.sha256===c.sha(c.read('正文/0019.md')),ranges:[[1,120],[121,240],[241,353]],eof:true});c.write('审查/T-0019-纲文回对.md','# 19章纲文回对与登记前自检\\n\\n当前最终稿SHA '+c.sha(c.read('正文/0019.md'))+'；正式消费细纲SHA '+c.sha(c.read('大纲/单元/0019.json'))+'。首读1—120/121—240/241—353，修正后再次同范围完整读至EOF，最终读前后SHA一致。19两原段不变，六段按两个LF精确合章。\\n\\n|beat|实际引文/位置|结论|\\n|---|---|---|\\n|1|63\r\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nSyntaxError: Invalid or unexpected token\r\n    at compileSourceTextModule (node:internal/modules/esm/utils:318:16)\r\n    at ModuleLoader.createModuleWrap (node:internal/modules/esm/loader:231:12)\r\n    at ModuleLoader.eval (node:internal/modules/esm/loader:270:23)\r\n    at node:internal/process/execution:77:24\r\n    at asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:11)\r\n    at Object.runEntryPointWithESMLoader (node:internal/modules/run_main:123:19)\r\n    at evalModuleEntryPoint (node:internal/process/execution:76:47)\r\n    at node:internal/main/eval_string:37:3\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-b",
+      "thread_id": "01a15685-e97b-7770-b842-cca80a415e9f",
+      "exit_code": 0,
+      "completed_items": 187,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_51",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/b-plan.mjs'",
+          "output": "file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/b-plan.mjs:4\r\n{unit:22,title:'差着一只',goal:'在二十日约定时段实际试配，何在失败时决定停止当场凑装，承担原约二十元的损失。',change:'从仅见照片变成实物比对；计划一只孔合且高度相近，另一只供货混装孔错，整对不装；旧件复位，车实际助卸而未修架。以下均是待写计划。',beats:['二十日林先吃自己的午饭，13:30如约到何店；何保留营业货，两人先抬空车出槛，轻箱暂放车，水箱等陶来共同搬。许留铺不来。','14点陶带纸样及实到一对件，先协助卸净，架在垫布上侧放，林只扶架；一只实孔合且轮缘高度相近，另一底板明显不同，陶承认拿货没有逐只核。','何拒绝临时改孔或仅装一只；按原不合条件，20作此趟出工不退，80不付，轮由陶带回；陶承担自己去换错件的奔波，后续是否装由何另决定，不当场许必成。纸样仍陶收。','恢复旧轮与砖纸板、归营业货；车卸空后抬回后间。林按自己原有时间离开，晚许来买家用物才听何林明确转述本次结果和工钱，关系有不快也能说清。']],},\r\n                                                                                                                                                                                                                                                                                                                                                                                                                                               ^\r\n\r\nSyntaxError: Unexpected token ']'\r\n    at compileSourceTextModule (node:internal/modules/esm/utils:318:16)\r\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:90:18)\r\n    at #translate (node:internal/modules/esm/loader:451:20)\r\n    at afterLoad (node:internal/modules/esm/loader:507:29)\r\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:512:12)\r\n    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:555:36)\r\n    at afterResolve (node:internal/modules/esm/loader:603:52)\r\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:609:12)\r\n    at node:internal/modules/esm/loader:628:32\r\n    at TracingChannel.tracePromise (node:diagnostics_channel:362:14)\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_53",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"import fs from 'node:fs';import {base,save} from './acceptance/20261020-long-flow-090-t/common.mjs';import path from 'node:path'; const s=fs.readFileSync(path.join(base,'b-plan.mjs'),'utf8');save('b-plan-v2.mjs',s.replaceAll(\\\\\\\"']],},\\\\\\\",\\\\\\\"']},\\\\\\\"));save('b-plan-script-failure.md','# B规划辅助脚本失败\\\\n\\\\n第一次 node b-plan.mjs 退出1，SyntaxError Unexpected token ]，三项beats末尾多一个右括号。未运行至写入，不是CLI拒绝或产品故障。原脚本保留，新b-plan-v2.mjs仅修正该语法。\\\\n');\\\"\"",
+          "output": "ParserError: \r\nLine |\r\n   2 |  �� '),'utf8');save('b-plan-v2.mjs',s.replaceAll(\\\"']],},\\\",\\\"']},\\\"));sa ��\r\n     |                                                                ~\r\n     | Unexpected token '}' in expression or statement.\r\n"
+        },
+        {
+          "id": "item_54",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/b-plan-v2.mjs'",
+          "output": "node:internal/modules/cjs/loader:1479\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\b-plan-v2.mjs'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1262:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_55",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/flow.mjs prepare 22'",
+          "output": "node:fs:561\r\n  return binding.open(\r\n                 ^\r\n\r\nError: ENOENT: no such file or directory, open 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\scenario\\雨棚后的灯\\交接\\T-细纲-0022.json'\r\n    at Object.openSync (node:fs:561:18)\r\n    at Object.readFileSync (node:fs:445:35)\r\n    at read (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:3:86)\r\n    at json (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:3:141)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/flow.mjs:4:77\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\交接\\\\T-细纲-0022.json'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-c-first",
+      "thread_id": "01a1569f-05fa-7030-8585-9b93513f8f4c",
+      "exit_code": 0,
+      "completed_items": 95,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-c-resume",
+      "thread_id": "01a1569f-05fa-7030-8585-9b93513f8f4c",
+      "exit_code": 0,
+      "completed_items": 245,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_91",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/c-resume-probe-and-preview.mjs old-probe'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"c-resume-25-old-template-reject\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"record-preview\",\"--input\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\inputs\\\\c-resume-25-old-template-probe.json\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-20T01:34:35.594Z\",\"elapsed_ms\":201,\"exit_code\":1,\"signal\":null,\"error\":null,\"stdout_bytes\":308,\"stderr_bytes\":0,\"input\":{\"file\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\inputs\\\\c-resume-25-old-template-probe.json\",\"sha256\":\"882f77d13cfe1644876996a33d71071d4c8840232df110310c4ab8075a7c4452\"},\"before_state_sha256\":\"cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5\",\"after_state_sha256\":\"cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5\"}\r\n\r\n\r\n\r\n1 !== 2\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:7:274)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/c-resume-probe-and-preview.mjs:4:390\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 1,\r\n  expected: 2,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_144",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/c-resume-probe-and-preview.mjs preview 26'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"c-resume-26-preflight-preview\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"record-preview\",\"--input\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\inputs\\\\c-resume-26-preflight-input.json\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-20T01:48:37.556Z\",\"elapsed_ms\":202,\"exit_code\":1,\"signal\":null,\"error\":null,\"stdout_bytes\":278,\"stderr_bytes\":0,\"input\":{\"file\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\inputs\\\\c-resume-26-preflight-input.json\",\"sha256\":\"5d7e6b9805733cfdec4e081f3b8d0510415685c7007242389ae6844f7f3f510b\"},\"before_state_sha256\":\"7798989a28b3ff29b094535254fc9be37907e7fc77bb58b1000aa6a040a33d0a\",\"after_state_sha256\":\"7798989a28b3ff29b094535254fc9be37907e7fc77bb58b1000aa6a040a33d0a\"}\r\n\r\n\r\n\r\n1 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:7:274)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/c-resume-probe-and-preview.mjs:6:95\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 1,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_225",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/c-step.mjs c-resume-final-workflow workflow'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"c-resume-final-workflow\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"workflow\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-20T02:03:27.479Z\",\"elapsed_ms\":92,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":330,\"input\":null,\"before_state_sha256\":\"e96c83e887b370bac8bedd0bb878d0372782a38bdf257f98c5b145566f4b09d0\",\"after_state_sha256\":\"e96c83e887b370bac8bedd0bb878d0372782a38bdf257f98c5b145566f4b09d0\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:7:274)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/c-step.mjs:3:14\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-d",
+      "thread_id": "01a15717-019f-70f0-85d4-277d4fe9a3b6",
+      "exit_code": 0,
+      "completed_items": 161,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-final-read",
+      "thread_id": "01a15735-8bf0-7622-b9d2-1e30443427c7",
+      "exit_code": 0,
+      "completed_items": 144,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-r-first",
+      "thread_id": "01a156ac-1221-7c42-8e50-cdb08855559f",
+      "exit_code": 0,
+      "completed_items": 189,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_16",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/r1-entry.mjs'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"r1-entry-ledger\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"ledger\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-20T00:18:49.482Z\",\"elapsed_ms\":248,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":311,\"input\":null,\"before_state_sha256\":\"fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2\",\"after_state_sha256\":\"fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:7:274)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/r1-entry.mjs:7:287\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        },
+        {
+          "id": "item_19",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node --input-type=module -e \\\"import {run,save,state} from './acceptance/20261020-long-flow-090-t/common.mjs'; save('r1-entry-help.txt',run('r1-entry-help',['help']));\\\"\"",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"r1-entry-help\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"help\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-20T00:19:00.392Z\",\"elapsed_ms\":102,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":319,\"input\":null,\"before_state_sha256\":\"fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2\",\"after_state_sha256\":\"fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:7:274)\r\n    at file:///D:/work/other/ai-writer/[eval1]:1:107\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:246:26\r\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    },
+    {
+      "label": "codex-r-resume",
+      "thread_id": "01a156ac-1221-7c42-8e50-cdb08855559f",
+      "exit_code": 0,
+      "completed_items": 140,
+      "notices": [
+        {
+          "id": "item_0",
+          "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+        }
+      ],
+      "failed_commands": [
+        {
+          "id": "item_120",
+          "exit_code": 1,
+          "status": "failed",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-long-flow-090-t/r1-ready-checks.mjs'",
+          "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: {\"label\":\"r1-ready-candidate-identify\",\"exe\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"args\":[\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\tool\\\\bin\\\\ai-writer.mjs\",\"tool\",\"identify\",\"--revision-token\",\"ac265578e8ae1c8a1d8bef630f90cbad70379a62eda420b6f9b87f24996e822b\",\"--project\",\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261020-long-flow-090-t\\\\scenario\\\\雨棚后的灯\\\\.writer\\\\revisions\\\\3a5aa320-92b5-4eb5-9b0d-159ce6f7beec\\\\workspace\"],\"cwd\":\"D:\\\\work\\\\other\\\\ai-writer\",\"started_at\":\"2026-10-20T00:53:16.364Z\",\"elapsed_ms\":108,\"exit_code\":2,\"signal\":null,\"error\":null,\"stdout_bytes\":0,\"stderr_bytes\":509,\"input\":null,\"before_state_sha256\":\"4555698da4fa5d6b55acb2448876dd72163d0afea043a5b092fe789a54955f4c\",\"after_state_sha256\":\"4555698da4fa5d6b55acb2448876dd72163d0afea043a5b092fe789a54955f4c\"}\r\n\r\n\r\n\r\n2 !== 0\r\n\r\n    at run (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/common.mjs:7:274)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-t/r1-ready-checks.mjs:9:41\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 2,\r\n  expected: 0,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+        }
+      ],
+      "failed_file_changes": [],
+      "failed_mcp": []
+    }
+  ],
+  "native_reported_file_changes": [
+    {
+      "label": "codex-a-first",
+      "item": "item_38",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-0019-分段阶段.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_38",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0019.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_38",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0020.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_38",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0021.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_48",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_50",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_52",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_52",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_55",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_59",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-first",
+      "item": "item_66",
+      "status": "completed",
+      "path": "finalize-a-first.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_15",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_17",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_20",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_22",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_23",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-05.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_25",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-05.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_27",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-06.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_29",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-06.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_35",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_35",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_35",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-05.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_35",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0019/part-06.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_41",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0019.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_45",
+      "status": "completed",
+      "path": "a-resume-report-save-failure.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_45",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0019-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_49",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0020.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_57",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_58",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_60",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_63",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_65",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0020/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0020.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0020-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_78",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0021.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_85",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_86",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_89",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_91",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_93",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_98",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_98",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_98",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_98",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0021/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_101",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0021.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_101",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0021-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_121",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0016-0021.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-a-resume",
+      "item": "item_126",
+      "status": "completed",
+      "path": "finish-a-resume.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_50",
+      "status": "completed",
+      "path": "b-plan.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_65",
+      "status": "completed",
+      "path": "b-reading.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_65",
+      "status": "completed",
+      "path": "b-script-failures.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_68",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_68",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_68",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_68",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_73",
+      "status": "completed",
+      "path": "b-rejoin.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_78",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_78",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_78",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0022/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_84",
+      "status": "completed",
+      "path": "b-record-22.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_89",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0022-未变候选判断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_99",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_108",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_108",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_108",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_108",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0023/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_113",
+      "status": "completed",
+      "path": "b-record-23.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_119",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0023-未变候选判断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_131",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_131",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_131",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_131",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_135",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_135",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_140",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_140",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0024/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_147",
+      "status": "completed",
+      "path": "b-record-24.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_150",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0024-未变候选判断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_165",
+      "status": "completed",
+      "path": "b-rolling-report.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_177",
+      "status": "completed",
+      "path": "b-final-verify.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-b",
+      "item": "item_182",
+      "status": "completed",
+      "path": "b-handover.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_18",
+      "status": "completed",
+      "path": "c-step.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_25",
+      "status": "completed",
+      "path": "c-capture.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_47",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0025.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_47",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0026.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_47",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0027.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_47",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-C-入场阅读与事实恢复.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_58",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_62",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_67",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_72",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_76",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_84",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-C-中断0025.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_84",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-C-0025前两段自检.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_86",
+      "status": "completed",
+      "path": "c-checkpoint-facts.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-first",
+      "item": "item_86",
+      "status": "completed",
+      "path": "c-finalize.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_21",
+      "status": "completed",
+      "path": "c-resume-entry.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_46",
+      "status": "completed",
+      "path": "c-resume-archive.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_50",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0025.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_50",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0026.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_50",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0027.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_50",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-C-resume-来源影响核对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_58",
+      "status": "completed",
+      "path": "c-resume-verify-sources.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_61",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_65",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_67",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_71",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-05.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_74",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0025/part-06.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_78",
+      "status": "completed",
+      "path": "c-resume-assemble.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_90",
+      "status": "completed",
+      "path": "c-resume-probe-and-preview.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_90",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0025.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_90",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0025-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_94",
+      "status": "completed",
+      "path": "c-resume-old-probe-record.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_97",
+      "status": "completed",
+      "path": "c-resume-related.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_100",
+      "status": "completed",
+      "path": "c-resume-preview.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_100",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0025.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_100",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0025-未变候选判断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_103",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0025-未变候选判断.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_106",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0026.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_116",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_118",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_120",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_123",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_126",
+      "status": "completed",
+      "path": "c-resume-preserve.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_128",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_128",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_128",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_130",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0026/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_141",
+      "status": "completed",
+      "path": "c-resume-26-patch-failure.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_142",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0026.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_143",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0026-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_148",
+      "status": "completed",
+      "path": "c-resume-related.mjs",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_148",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0026.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_151",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0026-未变候选判断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_156",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0027.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_165",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_168",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_170",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_172",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_174",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_179",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_179",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_179",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_179",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_183",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0027/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_193",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0027.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_194",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0027-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_197",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0027-未变候选判断.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_218",
+      "status": "completed",
+      "path": "c-resume-registered-issue-27-h1.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_218",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-C-已登记问题-0027-H1.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_219",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0022-0027.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_237",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-C-完成0027.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-c-resume",
+      "item": "item_238",
+      "status": "completed",
+      "path": "c-resume-final-audit.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_13",
+      "status": "completed",
+      "path": "d-entry.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_25",
+      "status": "completed",
+      "path": "d-observe.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_46",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0028.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_46",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0029.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_46",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-细纲-0030.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_46",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-D-入口与旧稿实读.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_56",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_56",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_56",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_56",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_58",
+      "status": "completed",
+      "path": "d-assemble.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_62",
+      "status": "completed",
+      "path": "d-assemble.mjs",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_62",
+      "status": "completed",
+      "path": "d-helper-error.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_64",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_64",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_64",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_64",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_69",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0028/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_75",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0028.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_75",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0028-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_85",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_85",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_85",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_85",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_88",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_88",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_88",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_88",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_94",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_94",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_94",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0029/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_100",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0029.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_100",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0029-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_111",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-01.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_111",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-02.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_111",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-03.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_111",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-04.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_114",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_114",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_120",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-01.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_120",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-02.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_120",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-03.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_120",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/分段/0030/part-04.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_126",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-登记-0030.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_126",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0030-纲文回对.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_144",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/审查/T-0025-0030.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_147",
+      "status": "completed",
+      "path": "d-final-checks.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_149",
+      "status": "completed",
+      "path": "d-verify.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_153",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/交接/T-D-完成0030.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-d",
+      "item": "item_158",
+      "status": "completed",
+      "path": "d-completion.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_28",
+      "status": "completed",
+      "path": "f-entry.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_45",
+      "status": "completed",
+      "path": "f-read-01-06.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_55",
+      "status": "completed",
+      "path": "f-read-07-12.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_65",
+      "status": "completed",
+      "path": "f-read-13-18.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_72",
+      "status": "completed",
+      "path": "f-read-19-21.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_77",
+      "status": "completed",
+      "path": "f-read-22-24.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_85",
+      "status": "completed",
+      "path": "f-read-25-27.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_90",
+      "status": "completed",
+      "path": "f-after.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_90",
+      "status": "completed",
+      "path": "f-read-28-30.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_98",
+      "status": "completed",
+      "path": "f-evidence-audit.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_106",
+      "status": "completed",
+      "path": "f-audit-supplement.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_115",
+      "status": "completed",
+      "path": "f-report-prefix.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_115",
+      "status": "completed",
+      "path": "f-report-suffix.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_115",
+      "status": "completed",
+      "path": "f-save-report.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-final-read",
+      "item": "item_137",
+      "status": "completed",
+      "path": "f-export-and-handover.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_15",
+      "status": "completed",
+      "path": "r1-entry.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_36",
+      "status": "completed",
+      "path": "r1-inspect.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_60",
+      "status": "completed",
+      "path": "r1-ledger-inspect.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_68",
+      "status": "completed",
+      "path": "r1-controlled-plan.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_68",
+      "status": "completed",
+      "path": "r1-text-edits.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_74",
+      "status": "completed",
+      "path": "r1-apply-text.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_78",
+      "status": "completed",
+      "path": "r1-read-proof.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_83",
+      "status": "completed",
+      "path": "r1-read-review-15.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_83",
+      "status": "completed",
+      "path": "r1-record-edits-15.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_83",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0015.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_97",
+      "status": "completed",
+      "path": "r1-preview-view.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_97",
+      "status": "completed",
+      "path": "r1-read-review-16.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_97",
+      "status": "completed",
+      "path": "r1-record-edits-16.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_97",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0016.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_110",
+      "status": "completed",
+      "path": "r1-preview-compact.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_110",
+      "status": "completed",
+      "path": "r1-read-review-17.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_110",
+      "status": "completed",
+      "path": "r1-record-edits-17.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_110",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0017.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_124",
+      "status": "completed",
+      "path": "r1-read-review-18.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_124",
+      "status": "completed",
+      "path": "r1-record-edits-18.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_124",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0018.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_139",
+      "status": "completed",
+      "path": "r1-read-review-19.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_139",
+      "status": "completed",
+      "path": "r1-record-edits-19.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_139",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0019.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_153",
+      "status": "completed",
+      "path": "r1-actual-issues.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_153",
+      "status": "completed",
+      "path": "r1-read-review-20.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_153",
+      "status": "completed",
+      "path": "r1-record-edits-20.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_153",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0020.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_168",
+      "status": "completed",
+      "path": "r1-controlled-plan.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_168",
+      "status": "completed",
+      "path": "r1-text-edits.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_168",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/正文/0024.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_175",
+      "status": "completed",
+      "path": "r1-actual-issues.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_175",
+      "status": "completed",
+      "path": "r1-controlled-plan.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_175",
+      "status": "completed",
+      "path": "r1-pre-exit.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_177",
+      "status": "completed",
+      "path": "r1-checkpoint.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_184",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-中断0020.md",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-first",
+      "item": "item_186",
+      "status": "completed",
+      "path": "checkpoint-r-first.json",
+      "kind": "update"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_12",
+      "status": "completed",
+      "path": "r1-resume-entry.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_29",
+      "status": "completed",
+      "path": "r1-resumed-initial-reading.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_29",
+      "status": "completed",
+      "path": "r1-resumed-reading-proof.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_36",
+      "status": "completed",
+      "path": "r1-read-review-21.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_36",
+      "status": "completed",
+      "path": "r1-record-edits-21.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_36",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0021.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_48",
+      "status": "completed",
+      "path": "r1-read-review-22.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_48",
+      "status": "completed",
+      "path": "r1-record-edits-22.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_48",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0022.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_59",
+      "status": "completed",
+      "path": "r1-read-review-23.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_59",
+      "status": "completed",
+      "path": "r1-record-edits-23.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_59",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0023.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_70",
+      "status": "completed",
+      "path": "r1-read-review-24.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_70",
+      "status": "completed",
+      "path": "r1-record-edits-24.json",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_70",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-重登-0024.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_79",
+      "status": "completed",
+      "path": "r1-final-read-start.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_104",
+      "status": "completed",
+      "path": "r1-final-audit.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_108",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/审查/T-R1-0015-0024.md",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_119",
+      "status": "completed",
+      "path": "r1-ready-checks.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_123",
+      "status": "completed",
+      "path": "r1-ready-checks-v2.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_133",
+      "status": "completed",
+      "path": "r1-native-ready.mjs",
+      "kind": "add"
+    },
+    {
+      "label": "codex-r-resume",
+      "item": "item_133",
+      "status": "completed",
+      "path": "scenario/雨棚后的灯/.writer/revisions/3a5aa320-92b5-4eb5-9b0d-159ce6f7beec/workspace/交接/T-R1-待父审计.md",
+      "kind": "add"
+    }
+  ],
+  "scope": "Captured outer processes are counted separately from nested native command/tool failures. Nonzero records include intentionally refused guards and retained environment/probe errors; zero outer exit is not proof of zero nested failures. Native file_change events all stay inside T; shell writes are separately retained in raw command transcripts, so this event list alone is not a complete filesystem write audit.",
+  "commands": [
+    {
+      "label": "a-first-identify",
+      "exit_code": 0,
+      "elapsed_ms": 144
+    },
+    {
+      "label": "a-first-interruption-check",
+      "exit_code": 0,
+      "elapsed_ms": 102
+    },
+    {
+      "label": "a-first-interruption-status",
+      "exit_code": 0,
+      "elapsed_ms": 286
+    },
+    {
+      "label": "a-first-plan-help",
+      "exit_code": 0,
+      "elapsed_ms": 116
+    },
+    {
+      "label": "a-first-recall-help",
+      "exit_code": 0,
+      "elapsed_ms": 95
+    },
+    {
+      "label": "a-first-recall-wheel",
+      "exit_code": 0,
+      "elapsed_ms": 171
+    },
+    {
+      "label": "a-first-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 130
+    },
+    {
+      "label": "a-first-status",
+      "exit_code": 0,
+      "elapsed_ms": 352
+    },
+    {
+      "label": "a-first-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 420
+    },
+    {
+      "label": "a-origin-read-proof",
+      "exit_code": 0,
+      "elapsed_ms": 100
+    },
+    {
+      "label": "a-prefix-read-proof",
+      "exit_code": 0,
+      "elapsed_ms": 98
+    },
+    {
+      "label": "a-resume-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 272
+    },
+    {
+      "label": "a-resume-final-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 214
+    },
+    {
+      "label": "a-resume-final-identify",
+      "exit_code": 0,
+      "elapsed_ms": 289
+    },
+    {
+      "label": "a-resume-final-status",
+      "exit_code": 0,
+      "elapsed_ms": 262
+    },
+    {
+      "label": "a-resume-identify",
+      "exit_code": 0,
+      "elapsed_ms": 124
+    },
+    {
+      "label": "a-resume-read-proof",
+      "exit_code": 0,
+      "elapsed_ms": 106
+    },
+    {
+      "label": "a-resume-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 110
+    },
+    {
+      "label": "a-resume-status",
+      "exit_code": 0,
+      "elapsed_ms": 214
+    },
+    {
+      "label": "a-resume-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 144
+    },
+    {
+      "label": "b-22-related-f-chen-memory",
+      "exit_code": 0,
+      "elapsed_ms": 185
+    },
+    {
+      "label": "b-22-related-f-telling-correction",
+      "exit_code": 0,
+      "elapsed_ms": 274
+    },
+    {
+      "label": "b-22-related-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "b-22-related-o-short-draft",
+      "exit_code": 0,
+      "elapsed_ms": 173
+    },
+    {
+      "label": "b-22-related-t-curtain-return",
+      "exit_code": 0,
+      "elapsed_ms": 176
+    },
+    {
+      "label": "b-22-related-t-neighbor-telling",
+      "exit_code": 0,
+      "elapsed_ms": 199
+    },
+    {
+      "label": "b-22-related-t-rack-inspection",
+      "exit_code": 0,
+      "elapsed_ms": 185
+    },
+    {
+      "label": "b-22-related-t-site-return",
+      "exit_code": 0,
+      "elapsed_ms": 186
+    },
+    {
+      "label": "b-23-recall-replacement",
+      "exit_code": 0,
+      "elapsed_ms": 289
+    },
+    {
+      "label": "b-23-related-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 193
+    },
+    {
+      "label": "b-23-related-o-flat-cart",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "b-23-related-o-rack-wheels",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "b-23-related-o-short-draft",
+      "exit_code": 0,
+      "elapsed_ms": 260
+    },
+    {
+      "label": "b-23-related-t-curtain-return",
+      "exit_code": 0,
+      "elapsed_ms": 195
+    },
+    {
+      "label": "b-23-related-t-rack-inspection",
+      "exit_code": 0,
+      "elapsed_ms": 191
+    },
+    {
+      "label": "b-23-related-t-rack-sample-visit",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "b-23-related-t-rack-trial",
+      "exit_code": 0,
+      "elapsed_ms": 174
+    },
+    {
+      "label": "b-24-recall-o-flat-cart",
+      "exit_code": 0,
+      "elapsed_ms": 349
+    },
+    {
+      "label": "b-24-recall-o-rack-pair",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "b-24-recall-t-flat-cart-return",
+      "exit_code": 0,
+      "elapsed_ms": 195
+    },
+    {
+      "label": "b-24-recall-t-rack-install",
+      "exit_code": 0,
+      "elapsed_ms": 333
+    },
+    {
+      "label": "b-24-related-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 244
+    },
+    {
+      "label": "b-24-related-o-rack-wheels",
+      "exit_code": 0,
+      "elapsed_ms": 210
+    },
+    {
+      "label": "b-24-related-o-short-draft",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "b-24-related-t-curtain-return",
+      "exit_code": 0,
+      "elapsed_ms": 208
+    },
+    {
+      "label": "b-24-related-t-rack-inspection",
+      "exit_code": 0,
+      "elapsed_ms": 208
+    },
+    {
+      "label": "b-24-related-t-rack-replacement",
+      "exit_code": 0,
+      "elapsed_ms": 218
+    },
+    {
+      "label": "b-24-related-t-rack-sample-visit",
+      "exit_code": 0,
+      "elapsed_ms": 188
+    },
+    {
+      "label": "b-24-related-t-rack-trial",
+      "exit_code": 0,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "b-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 122
+    },
+    {
+      "label": "b-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 114
+    },
+    {
+      "label": "b-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 222
+    },
+    {
+      "label": "b-entry-updates",
+      "exit_code": 0,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "b-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 151
+    },
+    {
+      "label": "b-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 240
+    },
+    {
+      "label": "b-final-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 185
+    },
+    {
+      "label": "b-final-identify",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "b-final-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 140
+    },
+    {
+      "label": "b-final-status",
+      "exit_code": 0,
+      "elapsed_ms": 407
+    },
+    {
+      "label": "b-final-updates",
+      "exit_code": 0,
+      "elapsed_ms": 213
+    },
+    {
+      "label": "b-preflight-22",
+      "exit_code": 0,
+      "elapsed_ms": 299
+    },
+    {
+      "label": "b-preflight-23",
+      "exit_code": 0,
+      "elapsed_ms": 297
+    },
+    {
+      "label": "b-preflight-24",
+      "exit_code": 0,
+      "elapsed_ms": 376
+    },
+    {
+      "label": "b-recall-help",
+      "exit_code": 0,
+      "elapsed_ms": 107
+    },
+    {
+      "label": "b-recall-o-flat-cart",
+      "exit_code": 0,
+      "elapsed_ms": 180
+    },
+    {
+      "label": "b-recall-o-rack-pattern",
+      "exit_code": 0,
+      "elapsed_ms": 178
+    },
+    {
+      "label": "b-recall-o-rack-wheels",
+      "exit_code": 0,
+      "elapsed_ms": 219
+    },
+    {
+      "label": "b-recall-t-flat-cart-return",
+      "exit_code": 0,
+      "elapsed_ms": 179
+    },
+    {
+      "label": "b-recall-t-rack-trial",
+      "exit_code": 0,
+      "elapsed_ms": 175
+    },
+    {
+      "label": "baseline-frozen-inputs",
+      "exit_code": 1,
+      "elapsed_ms": 103
+    },
+    {
+      "label": "baseline-frozen-inputs-retry",
+      "exit_code": 0,
+      "elapsed_ms": 417
+    },
+    {
+      "label": "baseline-identity",
+      "exit_code": 0,
+      "elapsed_ms": 185
+    },
+    {
+      "label": "baseline-root-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 2750
+    },
+    {
+      "label": "budget-19-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1403
+    },
+    {
+      "label": "budget-19-exact",
+      "exit_code": 0,
+      "elapsed_ms": 1059
+    },
+    {
+      "label": "budget-19-full",
+      "exit_code": 0,
+      "elapsed_ms": 951
+    },
+    {
+      "label": "budget-19-short",
+      "exit_code": 2,
+      "elapsed_ms": 1198
+    },
+    {
+      "label": "budget-19-suite",
+      "exit_code": 0,
+      "elapsed_ms": 5101
+    },
+    {
+      "label": "budget-25-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1552
+    },
+    {
+      "label": "budget-25-exact",
+      "exit_code": 0,
+      "elapsed_ms": 1699
+    },
+    {
+      "label": "budget-25-full",
+      "exit_code": 0,
+      "elapsed_ms": 1105
+    },
+    {
+      "label": "budget-25-post-r1-gen5-blocked",
+      "exit_code": 2,
+      "elapsed_ms": 1010
+    },
+    {
+      "label": "budget-25-post-r1-gen5-exact",
+      "exit_code": 0,
+      "elapsed_ms": 1053
+    },
+    {
+      "label": "budget-25-post-r1-gen5-full",
+      "exit_code": 0,
+      "elapsed_ms": 781
+    },
+    {
+      "label": "budget-25-post-r1-gen5-short",
+      "exit_code": 2,
+      "elapsed_ms": 854
+    },
+    {
+      "label": "budget-25-short",
+      "exit_code": 2,
+      "elapsed_ms": 1647
+    },
+    {
+      "label": "c-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 128
+    },
+    {
+      "label": "c-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 105
+    },
+    {
+      "label": "c-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 247
+    },
+    {
+      "label": "c-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 148
+    },
+    {
+      "label": "c-exit-check",
+      "exit_code": 0,
+      "elapsed_ms": 250
+    },
+    {
+      "label": "c-exit-status",
+      "exit_code": 0,
+      "elapsed_ms": 249
+    },
+    {
+      "label": "c-exit-updates",
+      "exit_code": 0,
+      "elapsed_ms": 96
+    },
+    {
+      "label": "c-first-finalize",
+      "exit_code": 0,
+      "elapsed_ms": 826
+    },
+    {
+      "label": "c-recall-cart-return",
+      "exit_code": 0,
+      "elapsed_ms": 236
+    },
+    {
+      "label": "c-recall-help",
+      "exit_code": 0,
+      "elapsed_ms": 110
+    },
+    {
+      "label": "c-recall-inspection",
+      "exit_code": 0,
+      "elapsed_ms": 204
+    },
+    {
+      "label": "c-recall-install",
+      "exit_code": 0,
+      "elapsed_ms": 236
+    },
+    {
+      "label": "c-resume-25-old-template-record-reject",
+      "exit_code": 2,
+      "elapsed_ms": 240
+    },
+    {
+      "label": "c-resume-25-old-template-reject",
+      "exit_code": 1,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "c-resume-25-preflight-preview",
+      "exit_code": 0,
+      "elapsed_ms": 254
+    },
+    {
+      "label": "c-resume-25-preflight-v2",
+      "exit_code": 0,
+      "elapsed_ms": 272
+    },
+    {
+      "label": "c-resume-25-related-o-curtain",
+      "exit_code": 0,
+      "elapsed_ms": 187
+    },
+    {
+      "label": "c-resume-25-related-o-flat-cart",
+      "exit_code": 0,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "c-resume-25-related-o-short-draft",
+      "exit_code": 0,
+      "elapsed_ms": 195
+    },
+    {
+      "label": "c-resume-25-related-t-curtain-return",
+      "exit_code": 0,
+      "elapsed_ms": 207
+    },
+    {
+      "label": "c-resume-25-related-t-flat-cart-return",
+      "exit_code": 0,
+      "elapsed_ms": 191
+    },
+    {
+      "label": "c-resume-25-related-t-rack-inspection",
+      "exit_code": 0,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "c-resume-25-related-t-rack-replacement",
+      "exit_code": 0,
+      "elapsed_ms": 187
+    },
+    {
+      "label": "c-resume-25-related-t-rack-sample-visit",
+      "exit_code": 0,
+      "elapsed_ms": 188
+    },
+    {
+      "label": "c-resume-25-related-t-rack-trial",
+      "exit_code": 0,
+      "elapsed_ms": 209
+    },
+    {
+      "label": "c-resume-26-preflight-preview",
+      "exit_code": 1,
+      "elapsed_ms": 202
+    },
+    {
+      "label": "c-resume-26-preflight-v2",
+      "exit_code": 0,
+      "elapsed_ms": 263
+    },
+    {
+      "label": "c-resume-26-related-o-flat-cart",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "c-resume-26-related-o-rack-pair",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "c-resume-26-related-o-rack-pattern",
+      "exit_code": 0,
+      "elapsed_ms": 199
+    },
+    {
+      "label": "c-resume-26-related-t-flat-cart-return",
+      "exit_code": 0,
+      "elapsed_ms": 193
+    },
+    {
+      "label": "c-resume-26-related-t-rack-install",
+      "exit_code": 0,
+      "elapsed_ms": 188
+    },
+    {
+      "label": "c-resume-26-related-t-rack-replacement",
+      "exit_code": 0,
+      "elapsed_ms": 191
+    },
+    {
+      "label": "c-resume-26-related-t-rack-sample-visit",
+      "exit_code": 0,
+      "elapsed_ms": 196
+    },
+    {
+      "label": "c-resume-26-related-t-rack-trial",
+      "exit_code": 0,
+      "elapsed_ms": 200
+    },
+    {
+      "label": "c-resume-27-preflight-preview",
+      "exit_code": 0,
+      "elapsed_ms": 262
+    },
+    {
+      "label": "c-resume-27-related-o-flat-cart",
+      "exit_code": 0,
+      "elapsed_ms": 201
+    },
+    {
+      "label": "c-resume-27-related-o-rack-pair",
+      "exit_code": 0,
+      "elapsed_ms": 211
+    },
+    {
+      "label": "c-resume-27-related-o-rack-pattern",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "c-resume-27-related-o-rack-wheels",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "c-resume-27-related-t-flat-cart-return",
+      "exit_code": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "label": "c-resume-27-related-t-rack-install",
+      "exit_code": 0,
+      "elapsed_ms": 195
+    },
+    {
+      "label": "c-resume-27-related-t-rack-replacement",
+      "exit_code": 0,
+      "elapsed_ms": 193
+    },
+    {
+      "label": "c-resume-27-related-t-rack-sample-visit",
+      "exit_code": 0,
+      "elapsed_ms": 189
+    },
+    {
+      "label": "c-resume-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 130
+    },
+    {
+      "label": "c-resume-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 120
+    },
+    {
+      "label": "c-resume-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 274
+    },
+    {
+      "label": "c-resume-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 277
+    },
+    {
+      "label": "c-resume-final-audit",
+      "exit_code": 0,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "c-resume-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 221
+    },
+    {
+      "label": "c-resume-final-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 173
+    },
+    {
+      "label": "c-resume-final-identify",
+      "exit_code": 0,
+      "elapsed_ms": 119
+    },
+    {
+      "label": "c-resume-final-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "c-resume-final-status",
+      "exit_code": 0,
+      "elapsed_ms": 241
+    },
+    {
+      "label": "c-resume-final-workflow",
+      "exit_code": 2,
+      "elapsed_ms": 92
+    },
+    {
+      "label": "c-resume-final-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "c-resume-help",
+      "exit_code": 0,
+      "elapsed_ms": 215
+    },
+    {
+      "label": "c-resume-help-record",
+      "exit_code": 0,
+      "elapsed_ms": 107
+    },
+    {
+      "label": "c-resume-old-r-identity",
+      "exit_code": 1,
+      "elapsed_ms": 358
+    },
+    {
+      "label": "c-resume-post-review-check",
+      "exit_code": 0,
+      "elapsed_ms": 223
+    },
+    {
+      "label": "check-19",
+      "exit_code": 0,
+      "elapsed_ms": 247
+    },
+    {
+      "label": "check-20",
+      "exit_code": 0,
+      "elapsed_ms": 406
+    },
+    {
+      "label": "check-21",
+      "exit_code": 0,
+      "elapsed_ms": 307
+    },
+    {
+      "label": "check-22",
+      "exit_code": 0,
+      "elapsed_ms": 316
+    },
+    {
+      "label": "check-23",
+      "exit_code": 0,
+      "elapsed_ms": 437
+    },
+    {
+      "label": "check-24",
+      "exit_code": 0,
+      "elapsed_ms": 237
+    },
+    {
+      "label": "check-25-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 249
+    },
+    {
+      "label": "check-26-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 241
+    },
+    {
+      "label": "check-27-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 224
+    },
+    {
+      "label": "check-28-d",
+      "exit_code": 0,
+      "elapsed_ms": 254
+    },
+    {
+      "label": "check-29-d",
+      "exit_code": 0,
+      "elapsed_ms": 308
+    },
+    {
+      "label": "check-30-d",
+      "exit_code": 0,
+      "elapsed_ms": 262
+    },
+    {
+      "label": "codex-a-first",
+      "exit_code": 0,
+      "elapsed_ms": 705996
+    },
+    {
+      "label": "codex-a-resume",
+      "exit_code": 0,
+      "elapsed_ms": 2225013
+    },
+    {
+      "label": "codex-b",
+      "exit_code": 0,
+      "elapsed_ms": 1593307
+    },
+    {
+      "label": "codex-c-first",
+      "exit_code": 0,
+      "elapsed_ms": 745608
+    },
+    {
+      "label": "codex-c-resume",
+      "exit_code": 0,
+      "elapsed_ms": 2988339
+    },
+    {
+      "label": "codex-d",
+      "exit_code": 0,
+      "elapsed_ms": 1939791
+    },
+    {
+      "label": "codex-final-read",
+      "exit_code": 0,
+      "elapsed_ms": 1279128
+    },
+    {
+      "label": "codex-r-first",
+      "exit_code": 0,
+      "elapsed_ms": 1316657
+    },
+    {
+      "label": "codex-r-resume",
+      "exit_code": 0,
+      "elapsed_ms": 966592
+    },
+    {
+      "label": "codex-version",
+      "exit_code": 0,
+      "elapsed_ms": 80
+    },
+    {
+      "label": "context-19",
+      "exit_code": 0,
+      "elapsed_ms": 1707
+    },
+    {
+      "label": "context-20",
+      "exit_code": 0,
+      "elapsed_ms": 305
+    },
+    {
+      "label": "context-21",
+      "exit_code": 0,
+      "elapsed_ms": 304
+    },
+    {
+      "label": "context-22",
+      "exit_code": 0,
+      "elapsed_ms": 306
+    },
+    {
+      "label": "context-23",
+      "exit_code": 0,
+      "elapsed_ms": 283
+    },
+    {
+      "label": "context-24",
+      "exit_code": 0,
+      "elapsed_ms": 279
+    },
+    {
+      "label": "context-25-c-first",
+      "exit_code": 0,
+      "elapsed_ms": 310
+    },
+    {
+      "label": "context-25-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 319
+    },
+    {
+      "label": "context-26-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 283
+    },
+    {
+      "label": "context-27-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 295
+    },
+    {
+      "label": "context-28-d",
+      "exit_code": 0,
+      "elapsed_ms": 367
+    },
+    {
+      "label": "context-29-d",
+      "exit_code": 0,
+      "elapsed_ms": 319
+    },
+    {
+      "label": "context-30-d",
+      "exit_code": 0,
+      "elapsed_ms": 386
+    },
+    {
+      "label": "contextual-help-build-proof",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "contextual-help-package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 7585
+    },
+    {
+      "label": "contextual-help-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 515750
+    },
+    {
+      "label": "contextual-help-release-build",
+      "exit_code": 0,
+      "elapsed_ms": 32251
+    },
+    {
+      "label": "contextual-help-source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 16998
+    },
+    {
+      "label": "contextual-help-source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 658251
+    },
+    {
+      "label": "contextual-help-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 3081
+    },
+    {
+      "label": "d-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 116
+    },
+    {
+      "label": "d-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 113
+    },
+    {
+      "label": "d-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 255
+    },
+    {
+      "label": "d-entry-updates",
+      "exit_code": 0,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "d-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 166
+    },
+    {
+      "label": "d-final-check",
+      "exit_code": 0,
+      "elapsed_ms": 273
+    },
+    {
+      "label": "d-final-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 221
+    },
+    {
+      "label": "d-final-identify",
+      "exit_code": 0,
+      "elapsed_ms": 134
+    },
+    {
+      "label": "d-final-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "d-final-root-git-status",
+      "exit_code": 0,
+      "elapsed_ms": 816
+    },
+    {
+      "label": "d-final-status",
+      "exit_code": 0,
+      "elapsed_ms": 308
+    },
+    {
+      "label": "d-final-updates",
+      "exit_code": 0,
+      "elapsed_ms": 125
+    },
+    {
+      "label": "d-final-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 220
+    },
+    {
+      "label": "d-recall-before-plan",
+      "exit_code": 0,
+      "elapsed_ms": 203
+    },
+    {
+      "label": "f-entry-identity",
+      "exit_code": 0,
+      "elapsed_ms": 124
+    },
+    {
+      "label": "f-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 116
+    },
+    {
+      "label": "f-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 263
+    },
+    {
+      "label": "f-entry-updates",
+      "exit_code": 0,
+      "elapsed_ms": 106
+    },
+    {
+      "label": "f-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 171
+    },
+    {
+      "label": "f-final-root-git-status",
+      "exit_code": 0,
+      "elapsed_ms": 808
+    },
+    {
+      "label": "final-build-proof",
+      "exit_code": 0,
+      "elapsed_ms": 216
+    },
+    {
+      "label": "final-current-review",
+      "exit_code": 0,
+      "elapsed_ms": 265
+    },
+    {
+      "label": "final-discussion-restore",
+      "exit_code": 0,
+      "elapsed_ms": 293
+    },
+    {
+      "label": "final-export",
+      "exit_code": 0,
+      "elapsed_ms": 355
+    },
+    {
+      "label": "final-next-draft-refused",
+      "exit_code": 2,
+      "elapsed_ms": 222
+    },
+    {
+      "label": "final-package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 8133
+    },
+    {
+      "label": "final-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 512985
+    },
+    {
+      "label": "final-pause",
+      "exit_code": 0,
+      "elapsed_ms": 258
+    },
+    {
+      "label": "final-release-build",
+      "exit_code": 0,
+      "elapsed_ms": 4326
+    },
+    {
+      "label": "final-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 125
+    },
+    {
+      "label": "final-source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 16613
+    },
+    {
+      "label": "final-source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 613483
+    },
+    {
+      "label": "final-work-check",
+      "exit_code": 0,
+      "elapsed_ms": 258
+    },
+    {
+      "label": "final-work-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 199
+    },
+    {
+      "label": "final-work-identity",
+      "exit_code": 0,
+      "elapsed_ms": 172
+    },
+    {
+      "label": "final-work-status",
+      "exit_code": 0,
+      "elapsed_ms": 278
+    },
+    {
+      "label": "final-workflow-before",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "final-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 8688
+    },
+    {
+      "label": "guarded-build-proof",
+      "exit_code": 1,
+      "elapsed_ms": 101
+    },
+    {
+      "label": "guarded-build-proof-retry",
+      "exit_code": 0,
+      "elapsed_ms": 192
+    },
+    {
+      "label": "guarded-package-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 10633
+    },
+    {
+      "label": "guarded-package-tests",
+      "exit_code": 0,
+      "elapsed_ms": 408300
+    },
+    {
+      "label": "guarded-release-build",
+      "exit_code": 0,
+      "elapsed_ms": 19905
+    },
+    {
+      "label": "guarded-source-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 14966
+    },
+    {
+      "label": "guarded-source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 649238
+    },
+    {
+      "label": "guarded-zip-verification",
+      "exit_code": 0,
+      "elapsed_ms": 2492
+    },
+    {
+      "label": "help-regression-after",
+      "exit_code": 0,
+      "elapsed_ms": 7189
+    },
+    {
+      "label": "help-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 7038
+    },
+    {
+      "label": "immutable-legacy-abort",
+      "exit_code": 0,
+      "elapsed_ms": 254
+    },
+    {
+      "label": "immutable-legacy-captured-verification",
+      "exit_code": 0,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "immutable-legacy-complete",
+      "exit_code": 2,
+      "elapsed_ms": 212
+    },
+    {
+      "label": "immutable-legacy-recovery-proof",
+      "exit_code": 1,
+      "elapsed_ms": 1061
+    },
+    {
+      "label": "immutable-legacy-rollback",
+      "exit_code": 0,
+      "elapsed_ms": 217
+    },
+    {
+      "label": "immutable-legacy-transaction",
+      "exit_code": 93,
+      "elapsed_ms": 6011
+    },
+    {
+      "label": "immutable-probe-after",
+      "exit_code": 0,
+      "elapsed_ms": 5633
+    },
+    {
+      "label": "immutable-probe-before",
+      "exit_code": 1,
+      "elapsed_ms": 4679
+    },
+    {
+      "label": "immutable-regression-after",
+      "exit_code": 0,
+      "elapsed_ms": 32777
+    },
+    {
+      "label": "immutable-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 29332
+    },
+    {
+      "label": "initial-check",
+      "exit_code": 0,
+      "elapsed_ms": 599
+    },
+    {
+      "label": "initial-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 394
+    },
+    {
+      "label": "initial-status",
+      "exit_code": 0,
+      "elapsed_ms": 680
+    },
+    {
+      "label": "initial-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 348
+    },
+    {
+      "label": "install-final-tool",
+      "exit_code": 0,
+      "elapsed_ms": 21475
+    },
+    {
+      "label": "install-guarded-tool",
+      "exit_code": 0,
+      "elapsed_ms": 25599
+    },
+    {
+      "label": "node-version",
+      "exit_code": 0,
+      "elapsed_ms": 65
+    },
+    {
+      "label": "parent-b-verify-retry",
+      "exit_code": 0,
+      "elapsed_ms": 122
+    },
+    {
+      "label": "parent-budget-25-before-r1",
+      "exit_code": 0,
+      "elapsed_ms": 6530
+    },
+    {
+      "label": "parent-budget-25-post-r1-gen5",
+      "exit_code": 0,
+      "elapsed_ms": 4174
+    },
+    {
+      "label": "parent-build-at-close",
+      "exit_code": 0,
+      "elapsed_ms": 382
+    },
+    {
+      "label": "parent-c-first-verify",
+      "exit_code": 1,
+      "elapsed_ms": 110
+    },
+    {
+      "label": "parent-c-first-verify-retry",
+      "exit_code": 0,
+      "elapsed_ms": 118
+    },
+    {
+      "label": "parent-c-old-guard-retry-proof",
+      "exit_code": 0,
+      "elapsed_ms": 98
+    },
+    {
+      "label": "parent-c-prefix-read-retry",
+      "exit_code": 0,
+      "elapsed_ms": 111
+    },
+    {
+      "label": "parent-c-resume-verify",
+      "exit_code": 0,
+      "elapsed_ms": 121
+    },
+    {
+      "label": "parent-c-source-order",
+      "exit_code": 0,
+      "elapsed_ms": 96
+    },
+    {
+      "label": "parent-c-window-proof",
+      "exit_code": 0,
+      "elapsed_ms": 105
+    },
+    {
+      "label": "parent-d-baseline",
+      "exit_code": 0,
+      "elapsed_ms": 109
+    },
+    {
+      "label": "parent-d-origin-proof",
+      "exit_code": 0,
+      "elapsed_ms": 110
+    },
+    {
+      "label": "parent-d-verify",
+      "exit_code": 0,
+      "elapsed_ms": 125
+    },
+    {
+      "label": "parent-d-window-proof",
+      "exit_code": 0,
+      "elapsed_ms": 203
+    },
+    {
+      "label": "parent-final-invariants",
+      "exit_code": 0,
+      "elapsed_ms": 139
+    },
+    {
+      "label": "parent-final-native-proof",
+      "exit_code": 0,
+      "elapsed_ms": 123
+    },
+    {
+      "label": "parent-final-support",
+      "exit_code": 0,
+      "elapsed_ms": 215
+    },
+    {
+      "label": "parent-git-at-close",
+      "exit_code": 0,
+      "elapsed_ms": 2100
+    },
+    {
+      "label": "parent-r1-approve",
+      "exit_code": 0,
+      "elapsed_ms": 235
+    },
+    {
+      "label": "parent-r1-approve-prepared",
+      "exit_code": 0,
+      "elapsed_ms": 121
+    },
+    {
+      "label": "parent-r1-mid-verify",
+      "exit_code": 0,
+      "elapsed_ms": 713
+    },
+    {
+      "label": "parent-r1-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 14681
+    },
+    {
+      "label": "parent-r1-publish",
+      "exit_code": 0,
+      "elapsed_ms": 9174
+    },
+    {
+      "label": "parent-r1-publish-preflight",
+      "exit_code": 0,
+      "elapsed_ms": 552
+    },
+    {
+      "label": "parent-r1-semantic-audit",
+      "exit_code": 0,
+      "elapsed_ms": 527
+    },
+    {
+      "label": "parent-r2-approve",
+      "exit_code": 1,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "parent-r2-approve-v2",
+      "exit_code": 0,
+      "elapsed_ms": 113
+    },
+    {
+      "label": "parent-r2-begin",
+      "exit_code": 0,
+      "elapsed_ms": 8651
+    },
+    {
+      "label": "parent-r2-bind-current",
+      "exit_code": 0,
+      "elapsed_ms": 2333
+    },
+    {
+      "label": "parent-r2-preview",
+      "exit_code": 0,
+      "elapsed_ms": 1270
+    },
+    {
+      "label": "parent-r2-publish",
+      "exit_code": 0,
+      "elapsed_ms": 7405
+    },
+    {
+      "label": "parent-r2-read-after",
+      "exit_code": 0,
+      "elapsed_ms": 91
+    },
+    {
+      "label": "parent-r2-read-before",
+      "exit_code": 0,
+      "elapsed_ms": 95
+    },
+    {
+      "label": "parent-r2-record",
+      "exit_code": 0,
+      "elapsed_ms": 1463
+    },
+    {
+      "label": "parent-r2-review-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 5459
+    },
+    {
+      "label": "parent-read-helper-before-fix-negative",
+      "exit_code": 1,
+      "elapsed_ms": 87
+    },
+    {
+      "label": "parent-s-seal-at-close",
+      "exit_code": 0,
+      "elapsed_ms": 5504
+    },
+    {
+      "label": "plan-19",
+      "exit_code": 0,
+      "elapsed_ms": 1936
+    },
+    {
+      "label": "plan-20",
+      "exit_code": 0,
+      "elapsed_ms": 227
+    },
+    {
+      "label": "plan-21",
+      "exit_code": 0,
+      "elapsed_ms": 357
+    },
+    {
+      "label": "plan-22",
+      "exit_code": 0,
+      "elapsed_ms": 396
+    },
+    {
+      "label": "plan-23",
+      "exit_code": 0,
+      "elapsed_ms": 179
+    },
+    {
+      "label": "plan-24",
+      "exit_code": 0,
+      "elapsed_ms": 178
+    },
+    {
+      "label": "plan-25-c-first",
+      "exit_code": 0,
+      "elapsed_ms": 195
+    },
+    {
+      "label": "plan-25-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 208
+    },
+    {
+      "label": "plan-26-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 191
+    },
+    {
+      "label": "plan-27-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 196
+    },
+    {
+      "label": "plan-28-d",
+      "exit_code": 0,
+      "elapsed_ms": 208
+    },
+    {
+      "label": "plan-29-d",
+      "exit_code": 0,
+      "elapsed_ms": 215
+    },
+    {
+      "label": "plan-30-d",
+      "exit_code": 0,
+      "elapsed_ms": 225
+    },
+    {
+      "label": "preview-19",
+      "exit_code": 0,
+      "elapsed_ms": 243
+    },
+    {
+      "label": "preview-20",
+      "exit_code": 0,
+      "elapsed_ms": 498
+    },
+    {
+      "label": "preview-21",
+      "exit_code": 0,
+      "elapsed_ms": 699
+    },
+    {
+      "label": "preview-22",
+      "exit_code": 0,
+      "elapsed_ms": 330
+    },
+    {
+      "label": "preview-23",
+      "exit_code": 0,
+      "elapsed_ms": 435
+    },
+    {
+      "label": "preview-24",
+      "exit_code": 0,
+      "elapsed_ms": 285
+    },
+    {
+      "label": "preview-25-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 303
+    },
+    {
+      "label": "preview-26-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 259
+    },
+    {
+      "label": "preview-27-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 255
+    },
+    {
+      "label": "preview-28-d",
+      "exit_code": 0,
+      "elapsed_ms": 282
+    },
+    {
+      "label": "preview-29-d",
+      "exit_code": 0,
+      "elapsed_ms": 328
+    },
+    {
+      "label": "preview-30-d",
+      "exit_code": 0,
+      "elapsed_ms": 319
+    },
+    {
+      "label": "r1-begin",
+      "exit_code": 0,
+      "elapsed_ms": 1423
+    },
+    {
+      "label": "r1-commit",
+      "exit_code": 0,
+      "elapsed_ms": 6908
+    },
+    {
+      "label": "r1-entry-help",
+      "exit_code": 2,
+      "elapsed_ms": 102
+    },
+    {
+      "label": "r1-entry-help-v2",
+      "exit_code": 0,
+      "elapsed_ms": 102
+    },
+    {
+      "label": "r1-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 120
+    },
+    {
+      "label": "r1-entry-ledger",
+      "exit_code": 2,
+      "elapsed_ms": 248
+    },
+    {
+      "label": "r1-entry-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 113
+    },
+    {
+      "label": "r1-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 396
+    },
+    {
+      "label": "r1-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 156
+    },
+    {
+      "label": "r1-exit-candidate-status",
+      "exit_code": 0,
+      "elapsed_ms": 252
+    },
+    {
+      "label": "r1-exit-main-identify",
+      "exit_code": 0,
+      "elapsed_ms": 113
+    },
+    {
+      "label": "r1-exit-main-status",
+      "exit_code": 0,
+      "elapsed_ms": 273
+    },
+    {
+      "label": "r1-exit-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 113
+    },
+    {
+      "label": "r1-live-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 112
+    },
+    {
+      "label": "r1-mid-main-plan-refused",
+      "exit_code": 2,
+      "elapsed_ms": 267
+    },
+    {
+      "label": "r1-mid-sessions",
+      "exit_code": 0,
+      "elapsed_ms": 160
+    },
+    {
+      "label": "r1-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 14367
+    },
+    {
+      "label": "r1-preview-15",
+      "exit_code": 0,
+      "elapsed_ms": 285
+    },
+    {
+      "label": "r1-preview-16",
+      "exit_code": 0,
+      "elapsed_ms": 272
+    },
+    {
+      "label": "r1-preview-17",
+      "exit_code": 0,
+      "elapsed_ms": 2539
+    },
+    {
+      "label": "r1-preview-18",
+      "exit_code": 0,
+      "elapsed_ms": 2862
+    },
+    {
+      "label": "r1-preview-19",
+      "exit_code": 0,
+      "elapsed_ms": 1609
+    },
+    {
+      "label": "r1-preview-20",
+      "exit_code": 0,
+      "elapsed_ms": 1544
+    },
+    {
+      "label": "r1-preview-21",
+      "exit_code": 0,
+      "elapsed_ms": 279
+    },
+    {
+      "label": "r1-preview-22",
+      "exit_code": 0,
+      "elapsed_ms": 306
+    },
+    {
+      "label": "r1-preview-23",
+      "exit_code": 0,
+      "elapsed_ms": 340
+    },
+    {
+      "label": "r1-preview-24",
+      "exit_code": 0,
+      "elapsed_ms": 313
+    },
+    {
+      "label": "r1-published-check",
+      "exit_code": 0,
+      "elapsed_ms": 875
+    },
+    {
+      "label": "r1-published-identity",
+      "exit_code": 0,
+      "elapsed_ms": 233
+    },
+    {
+      "label": "r1-ready-candidate-identify",
+      "exit_code": 2,
+      "elapsed_ms": 108
+    },
+    {
+      "label": "r1-ready-candidate-status",
+      "exit_code": 0,
+      "elapsed_ms": 279
+    },
+    {
+      "label": "r1-ready-main-list",
+      "exit_code": 0,
+      "elapsed_ms": 111
+    },
+    {
+      "label": "r1-ready-main-status",
+      "exit_code": 0,
+      "elapsed_ms": 255
+    },
+    {
+      "label": "r1-ready-tool-identify-main-retry1",
+      "exit_code": 0,
+      "elapsed_ms": 116
+    },
+    {
+      "label": "r1-record-15",
+      "exit_code": 0,
+      "elapsed_ms": 347
+    },
+    {
+      "label": "r1-record-16",
+      "exit_code": 0,
+      "elapsed_ms": 308
+    },
+    {
+      "label": "r1-record-17",
+      "exit_code": 0,
+      "elapsed_ms": 2026
+    },
+    {
+      "label": "r1-record-18",
+      "exit_code": 0,
+      "elapsed_ms": 3234
+    },
+    {
+      "label": "r1-record-19",
+      "exit_code": 0,
+      "elapsed_ms": 1311
+    },
+    {
+      "label": "r1-record-20",
+      "exit_code": 0,
+      "elapsed_ms": 308
+    },
+    {
+      "label": "r1-record-21",
+      "exit_code": 0,
+      "elapsed_ms": 520
+    },
+    {
+      "label": "r1-record-22",
+      "exit_code": 0,
+      "elapsed_ms": 370
+    },
+    {
+      "label": "r1-record-23",
+      "exit_code": 0,
+      "elapsed_ms": 317
+    },
+    {
+      "label": "r1-record-24",
+      "exit_code": 0,
+      "elapsed_ms": 348
+    },
+    {
+      "label": "r1-restore-trial",
+      "exit_code": 0,
+      "elapsed_ms": 603
+    },
+    {
+      "label": "r1-resume",
+      "exit_code": 0,
+      "elapsed_ms": 148
+    },
+    {
+      "label": "r1-resume-help",
+      "exit_code": 0,
+      "elapsed_ms": 95
+    },
+    {
+      "label": "r1-resumed-entry-identify",
+      "exit_code": 0,
+      "elapsed_ms": 120
+    },
+    {
+      "label": "r1-resumed-entry-list",
+      "exit_code": 0,
+      "elapsed_ms": 148
+    },
+    {
+      "label": "r1-resumed-entry-status",
+      "exit_code": 0,
+      "elapsed_ms": 415
+    },
+    {
+      "label": "r1-resumed-entry-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "r1-resumed-resume",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "r1-review",
+      "exit_code": 0,
+      "elapsed_ms": 318
+    },
+    {
+      "label": "r1-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 225
+    },
+    {
+      "label": "r1-template-15",
+      "exit_code": 0,
+      "elapsed_ms": 413
+    },
+    {
+      "label": "r1-template-16",
+      "exit_code": 0,
+      "elapsed_ms": 603
+    },
+    {
+      "label": "r1-template-17",
+      "exit_code": 0,
+      "elapsed_ms": 433
+    },
+    {
+      "label": "r1-template-18",
+      "exit_code": 0,
+      "elapsed_ms": 2691
+    },
+    {
+      "label": "r1-template-19",
+      "exit_code": 0,
+      "elapsed_ms": 3682
+    },
+    {
+      "label": "r1-template-20",
+      "exit_code": 0,
+      "elapsed_ms": 2209
+    },
+    {
+      "label": "r1-template-21",
+      "exit_code": 0,
+      "elapsed_ms": 737
+    },
+    {
+      "label": "r1-template-22",
+      "exit_code": 0,
+      "elapsed_ms": 594
+    },
+    {
+      "label": "r1-template-23",
+      "exit_code": 0,
+      "elapsed_ms": 527
+    },
+    {
+      "label": "r1-template-24",
+      "exit_code": 0,
+      "elapsed_ms": 540
+    },
+    {
+      "label": "r1-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 246
+    },
+    {
+      "label": "r1-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 231
+    },
+    {
+      "label": "r2-begin",
+      "exit_code": 0,
+      "elapsed_ms": 3263
+    },
+    {
+      "label": "r2-candidate-identify",
+      "exit_code": 0,
+      "elapsed_ms": 535
+    },
+    {
+      "label": "r2-commit",
+      "exit_code": 0,
+      "elapsed_ms": 5377
+    },
+    {
+      "label": "r2-context",
+      "exit_code": 0,
+      "elapsed_ms": 1118
+    },
+    {
+      "label": "r2-prepare",
+      "exit_code": 0,
+      "elapsed_ms": 4283
+    },
+    {
+      "label": "r2-preview",
+      "exit_code": 0,
+      "elapsed_ms": 1072
+    },
+    {
+      "label": "r2-published-check",
+      "exit_code": 0,
+      "elapsed_ms": 774
+    },
+    {
+      "label": "r2-published-identify",
+      "exit_code": 0,
+      "elapsed_ms": 197
+    },
+    {
+      "label": "r2-record",
+      "exit_code": 0,
+      "elapsed_ms": 1271
+    },
+    {
+      "label": "r2-replay-current",
+      "exit_code": 0,
+      "elapsed_ms": 2133
+    },
+    {
+      "label": "r2-replay-input",
+      "exit_code": 0,
+      "elapsed_ms": 1672
+    },
+    {
+      "label": "r2-restore-trial",
+      "exit_code": 0,
+      "elapsed_ms": 553
+    },
+    {
+      "label": "r2-review",
+      "exit_code": 0,
+      "elapsed_ms": 878
+    },
+    {
+      "label": "r2-rewind",
+      "exit_code": 0,
+      "elapsed_ms": 561
+    },
+    {
+      "label": "r2-workflow-set",
+      "exit_code": 0,
+      "elapsed_ms": 499
+    },
+    {
+      "label": "r2-workflow-show",
+      "exit_code": 0,
+      "elapsed_ms": 325
+    },
+    {
+      "label": "record-19",
+      "exit_code": 0,
+      "elapsed_ms": 421
+    },
+    {
+      "label": "record-20",
+      "exit_code": 0,
+      "elapsed_ms": 298
+    },
+    {
+      "label": "record-21",
+      "exit_code": 0,
+      "elapsed_ms": 1167
+    },
+    {
+      "label": "record-22",
+      "exit_code": 0,
+      "elapsed_ms": 385
+    },
+    {
+      "label": "record-23",
+      "exit_code": 0,
+      "elapsed_ms": 303
+    },
+    {
+      "label": "record-24",
+      "exit_code": 0,
+      "elapsed_ms": 484
+    },
+    {
+      "label": "record-25-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 322
+    },
+    {
+      "label": "record-26-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 316
+    },
+    {
+      "label": "record-27-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 307
+    },
+    {
+      "label": "record-28-d",
+      "exit_code": 0,
+      "elapsed_ms": 324
+    },
+    {
+      "label": "record-29-d",
+      "exit_code": 0,
+      "elapsed_ms": 419
+    },
+    {
+      "label": "record-30-d",
+      "exit_code": 0,
+      "elapsed_ms": 444
+    },
+    {
+      "label": "review-21",
+      "exit_code": 0,
+      "elapsed_ms": 411
+    },
+    {
+      "label": "review-24",
+      "exit_code": 0,
+      "elapsed_ms": 218
+    },
+    {
+      "label": "review-27",
+      "exit_code": 0,
+      "elapsed_ms": 266
+    },
+    {
+      "label": "review-30",
+      "exit_code": 0,
+      "elapsed_ms": 292
+    },
+    {
+      "label": "revision-identity-regression-after",
+      "exit_code": 0,
+      "elapsed_ms": 3589
+    },
+    {
+      "label": "revision-identity-regression-before",
+      "exit_code": 1,
+      "elapsed_ms": 2985
+    },
+    {
+      "label": "root-whitespace-preflight",
+      "exit_code": 0,
+      "elapsed_ms": 638
+    },
+    {
+      "label": "s-seal-before",
+      "exit_code": 0,
+      "elapsed_ms": 1687
+    },
+    {
+      "label": "source-suite-verification",
+      "exit_code": 0,
+      "elapsed_ms": 157
+    },
+    {
+      "label": "source-tests",
+      "exit_code": 0,
+      "elapsed_ms": 462030
+    },
+    {
+      "label": "template-19",
+      "exit_code": 0,
+      "elapsed_ms": 1313
+    },
+    {
+      "label": "template-20",
+      "exit_code": 0,
+      "elapsed_ms": 319
+    },
+    {
+      "label": "template-21",
+      "exit_code": 0,
+      "elapsed_ms": 355
+    },
+    {
+      "label": "template-22",
+      "exit_code": 0,
+      "elapsed_ms": 356
+    },
+    {
+      "label": "template-23",
+      "exit_code": 0,
+      "elapsed_ms": 311
+    },
+    {
+      "label": "template-24",
+      "exit_code": 0,
+      "elapsed_ms": 320
+    },
+    {
+      "label": "template-25-c-first",
+      "exit_code": 0,
+      "elapsed_ms": 389
+    },
+    {
+      "label": "template-25-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 353
+    },
+    {
+      "label": "template-26-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 337
+    },
+    {
+      "label": "template-27-c-resume-r1",
+      "exit_code": 0,
+      "elapsed_ms": 353
+    },
+    {
+      "label": "template-28-d",
+      "exit_code": 0,
+      "elapsed_ms": 365
+    },
+    {
+      "label": "template-29-d",
+      "exit_code": 0,
+      "elapsed_ms": 372
+    },
+    {
+      "label": "template-30-d",
+      "exit_code": 0,
+      "elapsed_ms": 404
+    },
+    {
+      "label": "tool-guard-before-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 182
+    },
+    {
+      "label": "tool-guard-check",
+      "exit_code": 0,
+      "elapsed_ms": 739
+    },
+    {
+      "label": "tool-guard-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 733
+    },
+    {
+      "label": "tool-guard-identity",
+      "exit_code": 0,
+      "elapsed_ms": 207
+    },
+    {
+      "label": "tool-guard-plan",
+      "exit_code": 0,
+      "elapsed_ms": 1202
+    },
+    {
+      "label": "tool-guard-update",
+      "exit_code": 0,
+      "elapsed_ms": 21782
+    },
+    {
+      "label": "tool-help-before-revisions",
+      "exit_code": 0,
+      "elapsed_ms": 190
+    },
+    {
+      "label": "tool-help-check",
+      "exit_code": 0,
+      "elapsed_ms": 741
+    },
+    {
+      "label": "tool-help-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 435
+    },
+    {
+      "label": "tool-help-external-recovery",
+      "exit_code": 0,
+      "elapsed_ms": 113
+    },
+    {
+      "label": "tool-help-identity",
+      "exit_code": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "label": "tool-help-installed-record",
+      "exit_code": 0,
+      "elapsed_ms": 117
+    },
+    {
+      "label": "tool-help-installed-recovery",
+      "exit_code": 0,
+      "elapsed_ms": 118
+    },
+    {
+      "label": "tool-help-old-r1-identity",
+      "exit_code": 1,
+      "elapsed_ms": 608
+    },
+    {
+      "label": "tool-help-plan",
+      "exit_code": 0,
+      "elapsed_ms": 979
+    },
+    {
+      "label": "tool-help-update",
+      "exit_code": 0,
+      "elapsed_ms": 16887
+    },
+    {
+      "label": "volume-10",
+      "exit_code": 0,
+      "elapsed_ms": 535
+    },
+    {
+      "label": "volume-7",
+      "exit_code": 0,
+      "elapsed_ms": 641
+    },
+    {
+      "label": "volume-8",
+      "exit_code": 0,
+      "elapsed_ms": 491
+    },
+    {
+      "label": "volume-9",
+      "exit_code": 0,
+      "elapsed_ms": 476
+    },
+    {
+      "label": "workflow-trial",
+      "exit_code": 0,
+      "elapsed_ms": 765
+    }
+  ]
+}

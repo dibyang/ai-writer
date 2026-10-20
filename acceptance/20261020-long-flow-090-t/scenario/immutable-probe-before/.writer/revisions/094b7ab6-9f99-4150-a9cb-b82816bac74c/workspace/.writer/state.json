@@ -1,0 +1,198 @@
+{
+  "schema_version": 6,
+  "revision": 5,
+  "project_id": "f5756545-3ba5-40c5-b407-b02a626ec1d1",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "林": "见过纸字"
+    },
+    "threads": [],
+    "timeline": [],
+    "ledger": {
+      "OBS": {
+        "type": "observation",
+        "statement": "纸上写着赤。",
+        "status": "active",
+        "cast": [
+          "林"
+        ],
+        "tags": [],
+        "author_truth": "原字是赤，未被改写。",
+        "reader_known": "赤字",
+        "character_known": {
+          "林": "看见赤"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001.md",
+            "sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+            "line": 3,
+            "quote": "林看见纸上写着赤。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001.md",
+      "sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+      "summary": "试验性逆改原字",
+      "source_hashes": {
+        "writer.json": "145dcaedebc6d205a62e097cbd0f0f75f24c64a8260387e1ae0cc516676f7cc3",
+        ".writer/state.json": "edfd37817eae9873907d51ca71eea1a19f0c9d9ea950ce0ca50d6d2195d19238",
+        "大纲/单元/0001.json": "744d818f3bf90f71c04f5a950df1cc4e9e33d39216f7936601b7038a66417e7a",
+        "设定/作品定位.md": "53671fd523841cf9a91b963827e2a70ecb17ec61ccc191dec0527514d63b9af5",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "7623b5e4b2a95ba2728ce8833414816cf5b17ed8a8658899384060fa23df27f9",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "revision",
+        "event": {
+          "ref": ".writer/objects/a24afa77-161c-44b0-aa37-ac9b2ca819ed.json",
+          "sha256": "d9b0a73ac204f010d5f2882a0eb28294dde7ca493103bcb72657503584ae1fed"
+        },
+        "action": "revise"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "c012921c5617106f0b5dede61af532afee505016f207068a2d6910b5caef8505",
+      "replay_review": {
+        "reviewer": "synthetic-negative-interface-probe",
+        "report": "审查/纯接口反例.md",
+        "draft_sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ],
+        "base": {
+          "session_id": "094b7ab6-9f99-4150-a9cb-b82816bac74c",
+          "base_state_sha256": "2c73abb6341aa66a27b4eca64b84de56f43ba4dee8d610244effb6d5d3559716",
+          "old_unit_sha256": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+          "old_journal_sha256": "95fa2f97a89c7692a5a0192b0036243ee6ee47c16450e89330aa8c268cc12850",
+          "draft_sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494"
+        },
+        "frozen_ref": ".writer/objects/8dc7b520f26109c5c536c00bd2f64c52574be941099972c954859a65b73bd887.replay-review",
+        "report_sha256": "8dc7b520f26109c5c536c00bd2f64c52574be941099972c954859a65b73bd887"
+      },
+      "journal": ".writer/journal/724fe9a1-0391-4658-9348-113c162d0163.json",
+      "journal_sha256": "6b47635857271a78cb46ae1818ce748a6482f65a71a6d3ba8ebb300026ac47bd"
+    }
+  ],
+  "governance": {
+    "stage": "revision",
+    "task": "验证专用尾段修订",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 1
+      },
+      "stop_conditions": [
+        "到范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/d5a877a7-d307-4371-adaa-110c75386ea3.json",
+      "sha256": "dd3cc593a4b6134e9e21da8e0ae829f27c85f6362f005dc45995a90917b65bbc"
+    },
+    {
+      "ref": ".writer/objects/a24afa77-161c-44b0-aa37-ac9b2ca819ed.json",
+      "sha256": "d9b0a73ac204f010d5f2882a0eb28294dde7ca493103bcb72657503584ae1fed"
+    }
+  ],
+  "operations": {
+    "workflow-1": {
+      "input_sha256": "9165d18091d0f785ea2cdfed7ff2e883f2bca91ca169f9371a5b292c2fb17a65",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "workflow-1",
+        "event": {
+          "ref": ".writer/objects/d5a877a7-d307-4371-adaa-110c75386ea3.json",
+          "sha256": "dd3cc593a4b6134e9e21da8e0ae829f27c85f6362f005dc45995a90917b65bbc"
+        }
+      }
+    },
+    "workflow-5": {
+      "input_sha256": "224e0f369d13d5597d7615e2dc48420fd110fd0d7ec5131659d699ddeee04eca",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "workflow-5",
+        "event": {
+          "ref": ".writer/objects/a24afa77-161c-44b0-aa37-ac9b2ca819ed.json",
+          "sha256": "d9b0a73ac204f010d5f2882a0eb28294dde7ca493103bcb72657503584ae1fed"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/a24afa77-161c-44b0-aa37-ac9b2ca819ed.json",
+    "sha256": "d9b0a73ac204f010d5f2882a0eb28294dde7ca493103bcb72657503584ae1fed"
+  }
+}

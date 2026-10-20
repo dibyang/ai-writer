@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,work,read,run} from './common.mjs';
+const unit=process.argv[2],tag=process.argv[3]??'';assert.match(unit??'',/^\d+$/);assert.match(tag,/^(?:|[a-z0-9-]+)$/);const prefix='budget-'+unit+(tag?'-'+tag:''),before=read('.writer/state.json');
+const full=run(prefix+'-full',['context','--unit',unit,'--max-chars','250000']),chars=JSON.stringify(full).length;
+const blockedOut=`.writer/drafts/t-${prefix}-blocked.json`,blocked=run(prefix+'-blocked',['context','--unit',unit,'--max-chars','1000','--out',blockedOut],2);
+assert.equal(blocked.code,'CONTEXT_BUDGET_EXCEEDED');assert.equal(blocked.context_budget.required_chars,chars);assert.equal(fs.existsSync(path.join(work,blockedOut)),false);
+const short=run(prefix+'-short',['context','--unit',unit,'--max-chars',String(chars-1)],2);assert.equal(short.context_budget.over_by_chars,1);
+const out=`.writer/drafts/t-${prefix}-exact.json`,retry=run(prefix+'-exact',['context','--unit',unit,'--max-chars',String(chars),'--out',out]),{output,...packet}=retry;
+assert.equal(output,out);assert.deepEqual(packet,full);assert.deepEqual(JSON.parse(read(out)),full);assert.deepEqual(read('.writer/state.json'),before);
+fs.writeFileSync(path.join(base,prefix+'-verification.json'),JSON.stringify({ok:true,unit:Number(unit),required_chars:chars,state_unchanged:true,blocked_output_absent:true,exact_retry_payload_equal:true,measurement:blocked.context_budget.measurement,sections:blocked.context_budget.sections,largest_sources:blocked.context_budget.largest_sources},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,unit,required_chars:chars}));

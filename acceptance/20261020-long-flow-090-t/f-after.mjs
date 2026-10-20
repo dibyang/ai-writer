@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,read,state,sha,save} from './common.mjs';
+const before=JSON.parse(fs.readFileSync(path.join(base,'final-read-before.json'),'utf8'));
+const rows=before.chapters.map(r=>{const b=fs.readFileSync(r.path),t=b.toString('utf8');const next={...r,sha256:sha(b),bytes:b.length,han:(t.match(/\p{Script=Han}/gu)||[]).length,lines:t.split(/\r\n|\n|\r/).length-(t.endsWith('\n')?1:0)};assert.deepEqual(next,r);assert.equal(state().units[r.unit-1].sha256,next.sha256);return next;});
+assert.equal(sha(read('.writer/state.json')),before.state_sha256);
+save('final-read-after.json',{recorded_at:new Date().toISOString(),revision:state().revision,schema:state().schema_version,generation:state().tool_control.generation,state_sha256:sha(read('.writer/state.json')),all_30_sha_equal_before:true,all_30_equal_current_units:true,state_unchanged_during_read:true,chapters:rows,metric_note:'Han includes chapter heading; lines excludes empty element after terminal LF. Actual FastCtx EOF includes that trailing blank line; raw logs are independent reading evidence.'});
+console.log(JSON.stringify({ok:true,chapters:rows.length,totalHan:rows.reduce((n,r)=>n+r.han,0),state_sha256:before.state_sha256}));

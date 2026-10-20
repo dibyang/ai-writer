@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "head": "ccffda7a8f8aa5ffa50b7b4298b0c1eadf913420",
+  "index_empty": true,
+  "diff_check_passed": true,
+  "expected_product_files": [
+    ".agents/skills/writer-project/references/long-form.md",
+    "CHANGELOG.md",
+    "RELEASE_NOTES.md",
+    "docs/quickstart.md",
+    "docs/user-guide.md",
+    "docs/review-and-registration.md",
+    "docs/revision-and-sources.md",
+    "lib/revisions.mjs",
+    "release/distribution.json",
+    "tests/revision-observations.test.mjs",
+    "lib/workspace.mjs",
+    "tests/usability.test.mjs",
+    "tests/protection.test.mjs"
+  ],
+  "retained_unrelated_untracked": ".idea/",
+  "no_commit_or_push_executed": true,
+  "captured": [
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ccffda7a8f8aa5ffa50b7b4298b0c1eadf913420\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "--short",
+        "--untracked-files=normal"
+      ],
+      "exit_code": 0,
+      "stdout": " M .agents/skills/writer-project/references/long-form.md\n M CHANGELOG.md\n M RELEASE_NOTES.md\n M docs/quickstart.md\n M docs/review-and-registration.md\n M docs/revision-and-sources.md\n M docs/user-guide.md\n M lib/revisions.mjs\n M lib/workspace.mjs\n M release/distribution.json\n M tests/protection.test.mjs\n M tests/usability.test.mjs\n?? .idea/\n?? acceptance/20261020-long-flow-090-t/\n?? tests/revision-observations.test.mjs\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Current repository HEAD, index, whitespace and changed-path scope only. Unrelated .idea is retained, not staged; no unsupported claim about byte histories of other concurrent activity."
+}

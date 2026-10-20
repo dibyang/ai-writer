@@ -1,0 +1,70 @@
+{
+  "expected_revision": 69,
+  "operation_id": "t-r2-magazine-continuity",
+  "author_evidence": {
+    "local_source": "研究/T轮验证授权.md",
+    "source_sha256": "8c9205b8ceeecd7db527f60c99eb67fb73f367da085a9ed489865a3502f4f33a",
+    "quote": "发现问题直接修复",
+    "locator": "user-task-2026-10-20-t-scope",
+    "recorded_by": "Codex T within authorized synthetic test scope"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "T测试副本27章杂志已读与夹页纸条连续性修复；当前尾段只有27，不改其他章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 27,
+        "to": 27
+      },
+      "stop_conditions": [
+        "只修当前27一段的阅读状态与纸条动作",
+        "主稿直到正式提交前保持原字节",
+        "保留历史段稿报告，全文回读候选27后重登复核"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

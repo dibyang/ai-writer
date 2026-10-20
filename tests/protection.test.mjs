@@ -51,12 +51,15 @@ test('并行候选A提交后B全局CAS冲突，双方稿件保留', t => {
   call(root, 'revision', 'abort', { id: b.id, token: b.token, reason: '保留冲突候选另建会话' }); assert.equal(main(['check', '--project', root]).ok, true);
 });
 
-test('修订工作区doctor复用父包并保持只读，父包损坏仍拒绝健康结论', t => {
+test('修订工作区doctor和tool identify复用父包并保持只读，绑定不符或父包损坏仍拒绝健康结论', t => {
   const {root}=fixture(t,1);workflow(root,true);const branch=begin(root),parentState=fs.readFileSync(path.join(root,'.writer/state.json')),branchState=fs.readFileSync(path.join(branch.workspace,'.writer/state.json'));
   assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);
   const result=main(['doctor','--project',branch.workspace]);assert.equal(result.ok,true);assert.equal(result.tool_root,path.join(root,'.writer/tool'));assert.equal(result.resource_project_root,root);assert.equal(result.project_root,branch.workspace);assert.equal(result.revision_context.id,branch.id);assert.equal(result.revision_context.build_matches,true);
+  const identity=main(['tool','identify','--project',branch.workspace]);assert.equal(identity.ok,true);assert.equal(identity.tool_root,result.tool_root);assert.equal(identity.observed_content_id,result.build.observed_content_id);assert.equal(identity.resource_project_root,root);assert.equal(identity.revision_context.id,branch.id);
+  const identified=spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'tool','identify','--project',branch.workspace],{encoding:'utf8'});assert.equal(identified.status,0,identified.stderr);assert.equal(JSON.parse(identified.stdout).revision_context.build_matches,true);
   const sessionRef=path.join(root,`.writer/revisions/${branch.id}/session.json`),sessionBytes=fs.readFileSync(sessionRef),sessionValue=JSON.parse(sessionBytes);sessionValue.build_id='0'.repeat(64);fs.writeFileSync(sessionRef,JSON.stringify(sessionValue));const mismatch=main(['doctor','--project',branch.workspace]);assert.equal(mismatch.ok,false);assert.equal(mismatch.revision_context.build_matches,false);assert.ok(mismatch.errors.some(x=>x.includes('会话绑定不同')));fs.writeFileSync(sessionRef,sessionBytes);
-  fs.appendFileSync(path.join(root,'.writer/tool/docs/quickstart.md'),'\n父包测试损坏\n');const damaged=main(['doctor','--project',branch.workspace]);assert.equal(damaged.ok,false);assert.ok(damaged.errors.some(x=>x.includes('构建文件')));
+  const originalSession=fs.readFileSync(sessionRef);const changedSession=JSON.parse(originalSession);changedSession.build_id='0'.repeat(64);fs.writeFileSync(sessionRef,JSON.stringify(changedSession));const identityMismatch=main(['tool','identify','--project',branch.workspace]);assert.equal(identityMismatch.ok,false);assert.equal(identityMismatch.revision_context.build_matches,false);assert.match(identityMismatch.next_action,/保留候选/);fs.writeFileSync(sessionRef,originalSession);
+  fs.appendFileSync(path.join(root,'.writer/tool/docs/quickstart.md'),'\n父包测试损坏\n');const damaged=main(['doctor','--project',branch.workspace]);assert.equal(damaged.ok,false);assert.ok(damaged.errors.some(x=>x.includes('构建文件')));const damagedIdentity=main(['tool','identify','--project',branch.workspace]);assert.equal(damagedIdentity.ok,false);assert.ok(damagedIdentity.mismatches.length>0);assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);
   assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),parentState);assert.deepEqual(fs.readFileSync(path.join(branch.workspace,'.writer/state.json')),branchState);
 });
 test('prepare后锁外改候选被拒绝；主稿第三方字节冲突不覆盖', t => {

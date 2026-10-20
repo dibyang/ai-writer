@@ -1,0 +1,73 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-20T00:22:25.139Z",
+  "operation_id": "t-r1-controlled-three-points",
+  "base_revision": 62,
+  "payload": {
+    "stage": "revision",
+    "task": "T测试副本内多点旧章受控改稿，验证15—24完整尾段连续性与25中断来源保护",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 15,
+        "to": 24
+      },
+      "stop_conditions": [
+        "三个普通事实按已核选项修订，不改原始observation",
+        "逐章实读重登15—24，完整尾段复核",
+        "主稿保持到父会话核差异后正式提交，不写25"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/T轮验证授权.md",
+    "source_sha256": "8c9205b8ceeecd7db527f60c99eb67fb73f367da085a9ed489865a3502f4f33a",
+    "quote": "发现问题直接修复",
+    "locator": "user-task-2026-10-20-t-scope",
+    "recorded_by": "Codex T within authorized synthetic test scope",
+    "frozen_ref": ".writer/objects/8c9205b8ceeecd7db527f60c99eb67fb73f367da085a9ed489865a3502f4f33a.txt"
+  }
+}

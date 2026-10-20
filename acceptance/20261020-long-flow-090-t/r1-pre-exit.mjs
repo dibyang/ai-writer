@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {base,read,state,save,sha} from './common.mjs';
+const b=JSON.parse(fs.readFileSync(path.join(base,'r1-session.json'))),s=state(),c=JSON.parse(fs.readFileSync(path.join(b.workspace,'.writer/state.json'))),before=JSON.parse(fs.readFileSync(path.join(base,'r1-before.json')));
+assert.equal(c.units.length,19);assert.equal(c.revision,69);assert.equal(s.units.length,24);assert.equal(s.revision,63);
+const obs=x=>Object.fromEntries(Object.entries(x.ledger).filter(([id,v])=>v.type==='observation').map(([id,v])=>[id,{type:v.type,statement:v.statement,has_author_truth:Object.hasOwn(v,'author_truth'),...(Object.hasOwn(v,'author_truth')?{author_truth:v.author_truth}:{})}]));
+assert.deepEqual(obs(before.snapshot),obs(c.snapshot));assert.deepEqual(before.snapshot,s.snapshot);
+const all=before.bodies.map(f=>({...f,current_sha256:sha(read(f.ref)),unchanged:sha(read(f.ref))===f.sha256}));assert.ok(all.every(f=>f.unchanged));
+const cc=JSON.parse(fs.readFileSync(path.join(base,'checkpoint-c-first.json'))),parts=before.parts.map(f=>({...f,current_sha256:sha(read(f.ref)),unchanged:sha(read(f.ref))===f.sha256}));assert.ok(parts.every(f=>f.unchanged));
+const reports=['审查/T-0024-已登记硬问题-H1.md','审查/T-0019-0024.md'].map(ref=>({ref,sha256:sha(read(ref))}));
+save('r1-pre-exit-verification.json',{main_revision:s.revision,main_state_sha256:sha(read('.writer/state.json')),candidate_revision:c.revision,candidate_units:c.units.length,all_main_bodies:all,c_parts:parts,protected_observations:obs(c.snapshot),baseline_reports:reports,candidate_downstream_reading:{21:'44—113/114—155 EOF only; 1—43 baseline full read but candidate not reread',22:'146—167 EOF only',23:'baseline 1—159 EOF; unchanged candidate not reread',24:'21—85/86—153 EOF then final added change 138—153 EOF; candidate1—20 not reread'},original_registration_reads:{21:'交接/T-登记-0021.json 1—53 EOF',22:'交接/T-登记-0022.json 1—143 EOF',23:'交接/T-登记-0023.json 1—128 EOF',24:'交接/T-登记-0024.json 1—115 EOF'},next:'record20 after actual preview reading, then only final checkpoint and candidate interruption report'});
+console.log(JSON.stringify({ok:true,main_revision:s.revision,candidate_revision:c.revision,main24_unchanged:true,c25_unchanged:true,observations_unchanged:true,tool_control_keys:Object.keys(s.tool_control),tool_control:s.tool_control}));

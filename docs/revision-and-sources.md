@@ -22,6 +22,8 @@
 
 0.7.2支持从主项目入口对独立workspace运行doctor，资源来自其已核验的父作品，不要求分支自带.writer/tool。结果分别列project_root、resource_project_root和revision_context；当前执行构建与会话绑定不同会明确失败。保留候选并选择匹配入口或新基线，不复制运行包或篡改绑定。正文/来源完整性仍由check及提交前校验负责，doctor通过不等于文学或提交验收。
 
+0.9.0的`tool identify --project 修订区路径`复用同一套父资源与会话校验，返回实际父工具的构建身份及上述修订上下文，不再只报分支缺少`.writer/tool`。会话绑定不符或父包损坏时`ok=false`并保留诊断和候选；识别过程不写作品，也不为旧候选更新绑定。
+
 ## 协议与兼容
 
 - 0.5 新作品默认 schema 4；阶段/授权、作者决策和增量 changes 沿用上一批机制。long-enable 仅启用分卷契约，schema 4 不降为 2/3。
@@ -75,7 +77,7 @@ freeze/bind/publish/stage/cancel 使用稳定 operation_id，完全相同输入�
 4. 从主项目入口把 --project 指向返回的 workspace。实读旧稿；写命令带 --revision-token TOKEN，在区内 rewind，然后从最早影响章逐章实读修改、检查、用 context/record-template/record 重登。正文、分卷、增量账本和旧哈希规则都继续有效；正文不是硬链接。
 5. 如有已 stage 的历史版本，在 rewind 后、重登前，在区内 source publish，输入 expected_revision、operation_id、author_evidence、impact_id。版本在所请求起点生效；为保守核查而提前回读的前缀仍用旧版。主稿的 pending 不提前消失。
 6. 重登到原末章，核对人物所知、伏笔、物件和后果。对整个修订尾段实际连读，写新报告并 review 登记；机械合成测试报告不等于模型实读。依赖绑定改变时，即使正文哈希不变，旧报告也需重核。不能只删审查目录消除待办。
-7. 在主作品 revision prepare（id、token）：核主基线、工具、范围、候选、账本、完整重登和一次完整尾段复核，返回待发布文件/哈希与目标 revision。它只表示机械及流程就绪，不表示文学通过。prepared 后编辑器再改候选会使 commit 拒绝；先 resume、重新检查和 prepare。
+7. 在主作品 revision prepare（id、token）：核主基线、工具、范围、候选、账本、完整重登和一次完整尾段复核，返回待发布文件/哈希与目标 revision。原基线已有的observation须保留type、statement及author_truth，即使本次rewind早于其首次出现；删除或逆改会报IMMUTABLE_OBSERVATION_CHANGED，原稿和候选均保留。知情更新或另建解释不受此限制。它只表示机械及流程就绪，不表示文学通过。prepared 后编辑器再改候选会使 commit 拒绝；先 resume、重新检查和 prepare。
 8. revision commit（id、token）：加短锁重新比较主业务与所有相关字节；成功后多文件事务发布，主 revision 只比基线增加一次，保留分支 revision/head 与提交清单。分支临时 revision 不直接覆盖主 revision。相同已提交会话可幂等查询结果。
 
 主作品的 plan/volume/record/rewind/workflow/decision/迁移/审查/导入等写入口共用占用检查；style-scan 带输出文件也受保护。只读 status、source list、revision list 可以辅助恢复；事务中断期间普通读取也阻断。
@@ -108,6 +110,8 @@ freeze/bind/publish/stage/cancel 使用稳定 operation_id，完全相同输入�
 已有0.7.3 prepared事务可从经核验的外部0.7.6冻结入口运行`revision recover --project 作品 --input 恢复.json`。输入仍是transaction_id、原token、direction=complete/rollback；存在遗留锁时还须原有的lock_sha256和明确作者证据。外部恢复按原session/base/base-state/prepared及旧新备份校验，不修改旧包、原基线或事务plan，也不升级state schema或工具代次。先在完整副本验证，真实恢复由持有令牌的作者会话执行。
 
 不要用新构建对旧绑定会话调用resume/prepare/commit，不要手改清单哈希、删除失败事务或在活跃修订中覆盖随附工具。complete与rollback是明确的两个方向，终态不能反向回填。旧事务未固定的伴随规划文件不会被追加入已有发布目标；其后续同步另按作者授权及实际引用核查。应用层锁、原第三方字节冲突保护和最终状态后写顺序继续生效。
+
+0.9.0的中断恢复在complete写入前还会核对原基线的不可变观察；旧实现已准备但尚未完成的逆改候选也不能继续发布。这项检查不封死rollback：校验原事务和备份后仍可恢复原字节，保留失败候选与日志，不自动纠正或清理作品。
 
 ## 验收边界
 

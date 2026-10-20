@@ -1,0 +1,52 @@
+✖ help 兼容作品通用参数且不访问或修改作品 (2981.4874ms)
+✖ help 错误提示的恢复入口可在随附工具携带project运行 (3838.0632ms)
+✔ help 仍拒绝未知重复缺值参数及多个帮助主题 (4.955ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6939.6397
+
+✖ failing tests:
+
+test at tests\usability.test.mjs:32:1
+✖ help 兼容作品通用参数且不访问或修改作品 (2981.4874ms)
+  Error: help 只接受一个命令名
+      at fail (file:///D:/work/other/ai-writer/lib/workspace.mjs:25:33)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:641:26)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/usability.test.mjs:35:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17)
+
+test at tests\usability.test.mjs:42:1
+✖ help 错误提示的恢复入口可在随附工具携带project运行 (3838.0632ms)
+  AssertionError [ERR_ASSERTION]: {
+    "ok": false,
+    "error": "help 只接受一个命令名",
+    "code": "COMMAND_FAILED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\.tmp\\usability-test-iSkg8u\\中文 空格作品\\.writer\\tool\\bin\\ai-writer.mjs' help"
+  }
+  
+  
+  2 !== 0
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/usability.test.mjs:48:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

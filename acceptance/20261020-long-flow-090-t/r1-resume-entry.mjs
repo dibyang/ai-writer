@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {base,read,state,save,input,run,sha} from './common.mjs';
+const j=ref=>JSON.parse(fs.readFileSync(path.join(base,ref),'utf8')),b=j('r1-session.json'),cp=j('checkpoint-r-first.json'),before=j('r1-before.json');
+assert.equal(state().units.length,24);assert.equal(state().revision,63);assert.equal(sha(read('.writer/state.json')),cp.main.state_sha256);
+assert.ok(before.bodies.every(x=>sha(read(x.ref))===x.sha256));assert.ok(before.parts.every(x=>sha(read(x.ref))===x.sha256));
+const c=JSON.parse(fs.readFileSync(path.join(b.workspace,'.writer/state.json')));assert.equal(c.units.length,20);assert.equal(c.revision,70);assert.equal(c.tool_control.generation,4);
+assert.equal(c.tool_control.installed.source_content_id,'e25b6416d61e498fca37c7a25a3f66e889d85e5d56e8ddca9e2b0c16a1b56f27');
+for(const [label,args] of [['r1-resumed-entry-status',['status']],['r1-resumed-entry-workflow',['workflow','show']],['r1-resumed-entry-identify',['tool','identify']],['r1-resumed-entry-list',['revision','list']]])save(label+'.json',run(label,args));
+const list=j('r1-resumed-entry-list.json'),active=list.sessions.find(x=>x.id===b.id);assert.equal(active.status,'editing');assert.equal(active.base_sha256,cp.candidate.base_sha256);
+save('r1-resumed-resume.json',run('r1-resumed-resume',['revision','resume','--input',input('r1-resumed-resume',{id:b.id,token:b.token})]));
+const files=Array.from({length:10},(_,i)=>{const unit=i+15,ref=`正文/${String(unit).padStart(4,'0')}.md`,v=fs.readFileSync(path.join(b.workspace,ref));return {unit,ref,path:path.join(b.workspace,ref),sha256:sha(v),bytes:v.length,lines:v.toString('utf8').split('\n').length};});
+save('r1-resumed-initial-read-before.json',{main_state_sha256:sha(read('.writer/state.json')),candidate_state_sha256:sha(fs.readFileSync(path.join(b.workspace,'.writer/state.json'))),files,baseline:before.bodies,c_parts:before.parts,protected_observations:cp.protected_observations,help_issue:'父已确认help携project为产品问题并修主项目；本R仅旧gen4/e25，未更新或声称已修，后续用--help',lock_test:'父已留证，无写作进程仍占主稿；本R不重复写主稿验证'});
+console.log(JSON.stringify({ok:true,id:b.id,base_revision:b.base_revision,base_sha256:active.base_sha256,main_revision:63,candidate_revision:70,generation:4,main24_and_c25_unchanged:true,files}));

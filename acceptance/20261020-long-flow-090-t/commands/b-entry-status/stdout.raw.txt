@@ -1,0 +1,393 @@
+{
+  "ok": true,
+  "title": "雨棚后的灯",
+  "kind": "novel",
+  "revision": 59,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "T轮独立副本续写19—30，扩大篇幅与多轮恢复、多点旧章修订；30后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 19,
+        "to": 30
+      },
+      "revise_range": {
+        "from": 1,
+        "to": 18
+      },
+      "stop_conditions": [
+        "到30停止正文并暂停",
+        "已登记旧章修改使用正式保护区",
+        "不触碰S/Q/R与作者现有作品"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 22,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "34d109f3-5e8e-41ef-a3d1-df4d2726abb6",
+        "owner": "Codex-S-final-sparse-replay",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "c012921c5617106f0b5dede61af532afee505016f207068a2d6910b5caef8505",
+        "scope": {
+          "from": 11,
+          "through": 12
+        },
+        "status": "committed",
+        "base_sha256": "db7677c2291b92f61cb80f4c0eb5dfe51eaa4f7e048fadd5bfa5ef3477e86513",
+        "created_at": "2026-10-19T18:20:59.469Z",
+        "transaction_id": "435aa030-8391-424a-a069-97c8a2f94c26",
+        "session_sha256": "ae00537b398a91dbe99266c606b0dec9b764b06992a60ff0c31f343051db1031"
+      },
+      {
+        "id": "3de29e46-a3e9-4689-acfb-f1cf9c79a5be",
+        "owner": "Codex-parent-S-single-word-repair",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "c012921c5617106f0b5dede61af532afee505016f207068a2d6910b5caef8505",
+        "scope": {
+          "from": 15,
+          "through": 15
+        },
+        "status": "committed",
+        "base_sha256": "f53162b98c982c7c07f73a3fec9ea7737ea4a55d283b5717592025b77eddf14b",
+        "created_at": "2026-10-19T19:29:41.913Z",
+        "transaction_id": "6bf64a96-1904-4847-a71a-017f3531307f",
+        "session_sha256": "e2798a770f6ca6f288f2ef6100d40703d7b9a63f52b101c7fdf7bc0adcb54630"
+      },
+      {
+        "id": "4030288b-5f3c-4381-aed3-58af7c2db796",
+        "owner": "Codex-parent-S-tail-continuity-repair",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "c012921c5617106f0b5dede61af532afee505016f207068a2d6910b5caef8505",
+        "scope": {
+          "from": 16,
+          "through": 18
+        },
+        "status": "committed",
+        "base_sha256": "389de05b43a72daf9de3ec4e72c043f66a1fb8fe6c2859766b7647d9f8f8d444",
+        "created_at": "2026-10-19T20:06:58.135Z",
+        "transaction_id": "812ab432-b7c1-459b-a87a-bc378548a873",
+        "session_sha256": "6d89fc98c4b4160f7bcc036a266a63ff3bc841bb5851862306ded5ca32c0acba"
+      },
+      {
+        "id": "5ea99198-b57b-4749-afe6-f9799fcd8aa9",
+        "owner": "Codex-parent-S-reader-view-repair",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "c012921c5617106f0b5dede61af532afee505016f207068a2d6910b5caef8505",
+        "scope": {
+          "from": 14,
+          "through": 14
+        },
+        "status": "committed",
+        "base_sha256": "ba70431a6866f9faf0c06e2da4dfc445b3e6bd67d35dc7795877428b709c5754",
+        "created_at": "2026-10-19T19:04:54.783Z",
+        "transaction_id": "5a6e85d0-804a-400e-9bc9-9e0691806213",
+        "session_sha256": "60d48407240e8bf48308156e297f64028a2c0c920ed54e6ac123da9fef7e811b"
+      },
+      {
+        "id": "6258de87-149a-44e3-871a-2bfc4ef53e05",
+        "owner": "Codex-S-volume-and-dialogue",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 4,
+          "through": 9
+        },
+        "status": "committed",
+        "base_sha256": "f75a3ffeb33e427297a8ef0b3f028b770e5e0cdfca714c6784aa5b96e9d687af",
+        "created_at": "2026-10-19T16:56:04.788Z",
+        "transaction_id": "0c39ee84-28d5-45fd-84dd-678b5564fafd",
+        "session_sha256": "80af433132922714c430d89f57e41b29d1bf46045e6d8ab09f5555886fb57f5c"
+      },
+      {
+        "id": "90b53068-4f15-4a89-ada2-776d956e6afe",
+        "owner": "Codex-Q-associated-knowledge",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 4,
+          "through": 5
+        },
+        "status": "committed",
+        "base_sha256": "3be7bcfb99936ad1dac9cd69470b20ed7e1222635ed59e75601a9c8c98e7a56c",
+        "created_at": "2026-10-19T14:15:50.835Z",
+        "transaction_id": "4118f334-c693-4746-ac46-e32475c8f3cf",
+        "session_sha256": "515ed3130d8acfb084f4a8b1be6319503745e8e1bc3d8bb95c0ae7106ebe9edb"
+      },
+      {
+        "id": "a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0",
+        "owner": "Codex-S-phone-knowledge",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 10,
+          "through": 12
+        },
+        "status": "committed",
+        "base_sha256": "9a9318fffd40f749b42d06f1f80b2e246ac28d2222930be2069cebffb69d49e4",
+        "created_at": "2026-10-19T17:44:44.532Z",
+        "transaction_id": "142c9f33-d5e0-4656-8e7d-587f3bc1c115",
+        "session_sha256": "a5d7673351b042199feb9c282c33c49e6f7ebd42fd501af83b63f2729db6b8cd"
+      },
+      {
+        "id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+        "owner": "Codex-Q-third-chapter-fix",
+        "project_id": "a41c1f54-8cbe-4169-930f-4510158ba75d",
+        "build_id": "28d1085869b8a4b65d1e2da2d438e049b3b774a5ce168f155c6cd3e20b30114d",
+        "scope": {
+          "from": 3,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "e0e338d0832e52ef2b90f92f937053c3472db6fd4c015100a4ed7fc880a8af0b",
+        "created_at": "2026-10-19T14:03:10.273Z",
+        "transaction_id": "a0196448-df12-47dd-a770-40a304f8a452",
+        "session_sha256": "c7f0e86053b58d80aad7d0a5c63adf0b43e1f6d2e96abff854633bb509bede56"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "0c39ee84-28d5-45fd-84dd-678b5564fafd",
+        "session_id": "6258de87-149a-44e3-871a-2bfc4ef53e05",
+        "status": "completed"
+      },
+      {
+        "id": "142c9f33-d5e0-4656-8e7d-587f3bc1c115",
+        "session_id": "a02e4ad6-0b29-49bf-9b2f-56e049cf6ec0",
+        "status": "completed"
+      },
+      {
+        "id": "34814c7b-0269-4f61-b7da-26557035f513",
+        "status": "completed"
+      },
+      {
+        "id": "4118f334-c693-4746-ac46-e32475c8f3cf",
+        "session_id": "90b53068-4f15-4a89-ada2-776d956e6afe",
+        "status": "completed"
+      },
+      {
+        "id": "435aa030-8391-424a-a069-97c8a2f94c26",
+        "session_id": "34d109f3-5e8e-41ef-a3d1-df4d2726abb6",
+        "status": "completed"
+      },
+      {
+        "id": "5a6e85d0-804a-400e-9bc9-9e0691806213",
+        "session_id": "5ea99198-b57b-4749-afe6-f9799fcd8aa9",
+        "status": "completed"
+      },
+      {
+        "id": "6bf64a96-1904-4847-a71a-017f3531307f",
+        "session_id": "3de29e46-a3e9-4689-acfb-f1cf9c79a5be",
+        "status": "completed"
+      },
+      {
+        "id": "812ab432-b7c1-459b-a87a-bc378548a873",
+        "session_id": "4030288b-5f3c-4381-aed3-58af7c2db796",
+        "status": "completed"
+      },
+      {
+        "id": "8cfcfeba-68e8-4d75-8ea3-c1ca0d16c305",
+        "status": "completed"
+      },
+      {
+        "id": "a0196448-df12-47dd-a770-40a304f8a452",
+        "session_id": "cbc2bd13-57a4-4984-ba61-e2e92f692115",
+        "status": "completed"
+      },
+      {
+        "id": "b895db97-fad7-4231-ba0d-bd6545cd42c0",
+        "status": "completed"
+      },
+      {
+        "id": "d1b5a11e-492e-4a02-985d-e925bb4e88a5",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 59,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 4,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "e25b6416d61e498fca37c7a25a3f66e889d85e5d56e8ddca9e2b0c16a1b56f27",
+      "runtime_id": "bd7b7f7bf4f2ce9d7918b129cc96b21e57b1b76971d288322dabdfa2ca58fcfe"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/b895db97-fad7-4231-ba0d-bd6545cd42c0.json",
+        "sha256": "96c21fa41b7ed0c3fc537345cb9f13a6e58859192d6c03a5bebbd5324230586d"
+      },
+      {
+        "ref": ".writer/objects/34814c7b-0269-4f61-b7da-26557035f513.json",
+        "sha256": "07dedc9d4b94e8669d75ff2e8a48117be036dc3a4b54b0d6efc6c069920bf54a"
+      },
+      {
+        "ref": ".writer/objects/8cfcfeba-68e8-4d75-8ea3-c1ca0d16c305.json",
+        "sha256": "2ae96bb14a60f15d313949b72abb7b66ed7285c0d6ffbe8db58e136c08a48466"
+      },
+      {
+        "ref": ".writer/objects/d1b5a11e-492e-4a02-985d-e925bb4e88a5.json",
+        "sha256": "e10e9a2e21b19e62bffd42a394e1226e813f3b58b99afbb8af2aecd31c6d724f"
+      }
+    ],
+    "operations": {
+      "010abba9-cdfc-4b1d-ac60-03988395e210": {
+        "input_hash": "26726aea536a40aa8b2f6dacacd9aaf9b40c81947b1d6a1302c4f907e8daf11f",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "b895db97-fad7-4231-ba0d-bd6545cd42c0",
+          "revision": 3,
+          "generation": 1,
+          "source_content_id": "9e26ebbf6120c9b49d31bfeee56099da843618010e0451ee658c8adacb7f532c",
+          "backups_preserved": true
+        }
+      },
+      "84528970-3379-44e8-b2d1-0487b0eaf4c2": {
+        "input_hash": "55806591d0a8a80b12ec8e2f5295676cdd094d387dcdc761b43ca99c94149c4d",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "34814c7b-0269-4f61-b7da-26557035f513",
+          "revision": 28,
+          "generation": 2,
+          "source_content_id": "2fccbf8acb1b68c91733fbbcea5ece952384b2a5131624a57202ea97b1f7664e",
+          "backups_preserved": true
+        }
+      },
+      "c58591e7-84d2-4036-97f9-f6b3fb39e010": {
+        "input_hash": "d9f6afa04c737c1632e4a9476358e120a14f371be25c4d96704c3a2c5750f834",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "8cfcfeba-68e8-4d75-8ea3-c1ca0d16c305",
+          "revision": 35,
+          "generation": 3,
+          "source_content_id": "730a9e3eaffd691e1ef902722513ba548821ce9f077b35a4ff43bb52e0dbfecc",
+          "backups_preserved": true
+        }
+      },
+      "bd39f55a-92d1-459a-bdf8-5b2fe8444f6b": {
+        "input_hash": "f534058f1d5e27cc03640b55e8c742f929098bbcca97bfaaa1b189ec3a4116a3",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "d1b5a11e-492e-4a02-985d-e925bb4e88a5",
+          "revision": 59,
+          "generation": 4,
+          "source_content_id": "e25b6416d61e498fca37c7a25a3f66e889d85e5d56e8ddca9e2b0c16a1b56f27",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 21,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 22,
+    "plan_exists": false,
+    "action": "先准备下一单元细纲；已有正文时先实读再建立细纲",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\scenario\\雨棚后的灯\\.writer\\tool\\bin\\ai-writer.mjs' plan '--help'"
+  },
+  "current": {
+    "character_count": 6,
+    "ledger_count": 30,
+    "recent": [
+      {
+        "unit": 19,
+        "summary": "故事十七日，林为自家滴水龙头约陶上门、泡衣未晒，途中帮何收货至11:10后实际离店；见坏轮/垫砖仍在。陶到林家换小圈，林实付22元，水止滴；林午后到何店转约、整理营业货、量外宽而未量底座，中途自己买菜送回。四点前后陶到店只外看，何当面约十八日14:00卸空一只检查、承担20元出工，林13:30来帮，未买轮未修架。晚何归营业货、预留20元；林回家收干衬衣、长裤仍湿、做饭，短信向陶确认明日时刻。旧物与旧事范围未变。"
+      },
+      {
+        "unit": 20,
+        "summary": "故事十八日，林早上实告许午后卸架，许用正常午饭尾段到何店递货，13:44离开并短信报回铺；未见陶后来检查。林13:30来与何卸空一只架，陶14点来现场侧放、拆一旧轮，同自带常用件比发现孔不合，描纸样自收、旧轮装回及砖复位，何实付20元陶收，15点前走。林何将货位恢复，架仍坏；何约十九日10点到陶铺看样/价，林9:50到何店同行，何告客并贴10—11点暂离纸。末林自去理发并付钱。未借车/轮或修复。"
+      },
+      {
+        "unit": 21,
+        "summary": "故事十九日，林9:50到何店，何实际锁门同行到陶记，看原纸样及供货照片，只选先试相应轮座、不直接改孔；何实付试工订金20，约二十日14点陶来、林13:30帮卸，合则总100抵20，不合20作出工。为昨卸货占地和多次抱箱实际借陶矮平板车，何亲接管付押50，林答二十二日18点前亲交陶。两人推回过沟、空车过槛，何10:40多开店，一客已去别店买盐；车最终何后间靠墙。午后林才向许实转昨日孔不合/检查付费及今借车押金归期；许明日留铺不能来，晚买盐火柴到店亲看缺角、帮空车试棚位后抬回，自己离店。何押金纸自存，林约二十二日17点取车。架未修、试配/归车/退押待办。"
+      }
+    ],
+    "timeline_tail": [
+      "第十六日上午至14:40前：何新许14:15—15:00靠墙六座一次讲述，电话落实两老、当面告许工作时段不变，另借凳。周自行来、陈乘车来，两邻居到。许14:30出铺回家亲取布，林扶门带垫纸，14:37到何棚借两夹展一截；仍许持未交何。末林托清稿陈示意可念，尚未讲述。",
+      "第十六日约14:40—14:50：六人半圈、何侧门内实际听有限朗读，陈纠正林把雨小误念雨停，林依原纸重念，邻居改变拟转述说法。周另亲说送碗，许自己说补缝及六晚新摄片，无新旧信或原片展示。讲述完成，两邻居离席各做日常事，清稿原字收林包；14:50许移凳准备收布、林托下边，未松夹未归还。",
+      "第十六日14:50后至回住处做饭：许收布数两夹，14:53亲抱到何面前递还，何亲收入后间柜原层、林许实见；许14:58短信报回铺，林当面告周陈何。何店两凳/隔壁两凳各还，三点前何实走确认棚复原。周自主先回，陈自叫车由林送上车；林提稳凳和自己小凳在楼口遇周、同上楼，稳凳实际送进门归桌旁，向周实告入柜及许报到，未报陈已到家。林末回住处清稿归夹，私抄等原处；陈实际短信报家林才知。有限借还及讲述结束，未扩全史或新长期场次。",
+      "第十七日：林泡衣约陶上门，10:15后到何店买夹/帮卸货，11:10离店回家实际洗晒；陶来前电话、到家换圈，林实付22元止滴。午后林回何店转约、分营业货并量外宽，中间买菜送自己家。四点前后陶本人外看仍带货的架，何林陶约故事十八日14:00卸空一只检查，林13:30到、何出20元；未拆换、无工具借还。傍晚何归营业货预留钱，林回家收衬衣留长裤晾、做饭并短信确认明日。原片/信/节目单仍周持，清稿/私抄原分放、幕布仍何柜。",
+      "第十八日：林先整自己屋/吃饭，上午实邀许正常午饭尾段递货；13:30林到何，13:30多许到、13:44走并短信报铺。14点陶到已卸空的一只架，侧放拆一旧轮、比常用件不合、描纸样自收，旧轮装回和砖复位；14:40多收工具，何亲交20陶收，15点前陶走。林何归货，定十九日10点去陶铺、林9:50来何同行，何告客并贴暂离时段；末林理发。未修好或外借工具/车。",
+      "第十九日：林9:50到何，同何实际关门往陶铺，看原纸样/供货照片，何实付新试工订20，约二十日14点试配、林13:30帮卸。何亲借接平板车并付押50，林答二十二日18点前亲交陶；二人推回过沟、空车抬过槛，10:40多何重开，车后间靠墙。午后林在许铺才转十八日检查结果及今借车押金归期，许答明日下午留铺；林回家看杂志，傍晚到何转答，许买盐火柴后亲看车帮试位再收回，自己离店。林另约二十二日17点取车，何答先空车；车仍何持、押金纸何財布、纸样陶柜旁盒，试配/归车/退押均未发生。"
+    ]
+  }
+}

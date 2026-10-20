@@ -1,0 +1,13 @@
+# T轮帮助恢复缺陷及修复版本
+
+真实来源：原生R-first的r1-entry-ledger退出2，错误为“未知命令：ledger”，不是缺子命令。其help_command指向当前CLI的help。随后R经通用包装器附加project运行help，r1-entry-help实际args只有help/--project/作品路径，却退出2“help只接受一个命令名”，state前后仍fa5e71b878db186bb96065aa1cad309ba30d337a27a25935e50195ac1fc277d2。这次不是多传帮助主题；父早期进度对此的归因不准确，以本页与原日志为准。
+
+产品修复lib/workspace.mjs：help最多一个主题，兼容通用project/revision-token，严格拒绝未知、重复及缺值选项，只显示当前工具帮助，不读取/改变作品，无目录也可用。tests/usability.test.mjs新增3项，真实修前2fail/1pass，修后3pass/0fail，含随附工具未知命令→帮助的实际CLI过程及无写入保护。源码/实际ZIP完整回归另见contextual-help-*，不能用原e25构建182项结果替代新版本185项结果。根源码修改后的冻结清单source-contextual-help.json与product-frozen-contextual-help.json，后续无新产品变更不刷新期望。
+
+新候选contentID37096262d76a9dc17b7b2c23f57f8cfe87f6295a45c21b40ecdcfa1c0edc770b，ZIP f1cddcb8461b5234e94738ef3566554fed6311b0d89c3d3a4076eef0d58580ea。它包含此前不可变观察修复。当前R会话仍绑定已安装gen4/e25；须正式提交R、无活跃会话后，从真实新解压包外部CLI更新为gen5，再让C同原thread恢复并实用help/单项帮助。此处记录的是执行顺序要求，安装成功以contextual-help-tool-update-verification.json及原始命令为准。
+
+T辅助common.run原先只将--help输出按文本处理。父保留common-before-help-text-support.mjs后扩展识别args[0]=help，不把纯文本当JSON；不改变其他调用。该辅助改动不是产品补丁或帮旧嵌入工具越过错误的假通过。
+
+父追加说明：原生R计划中的三个金额/时间数值是父代理在用户扩规模/旧章连续性授权内安排的受控试验，不是人类作者逐字选择；本轮真正发现的问题另有24H1及20登记时序。父实际完整实读25前两段58+60行，与SHA绑定，未发现这三点改稿直接改变两段已写动作，但恢复仍必须实读R新稿/两段并取新来源，不能以此预先追认C的续写。
+
+附加验证脚本问题：verify-native-read扩展候选路径时曾误用ES导入冒号，原工具chunk0ebea6返回SyntaxError，旧文件已留。parent-read-helper-before-fix-negative是后来对同字节坏语法的实际负向重放，不冒充首次命令捕获。CP thread断言误解、B文件名冲突及各重试见parent-checkpoint-03和原始commands；所有旧证据保留。

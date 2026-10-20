@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "label": "c-resume-25-old-template-reject",
+      "exit_code": 1,
+      "state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5",
+      "state_unchanged": true,
+      "diagnostic": {
+        "ok": false,
+        "scope": "record-input-preview",
+        "revision": 66,
+        "writes": false,
+        "findings": [
+          {
+            "code": "RECORD_INPUT_INVALID",
+            "message": "追踪修订号已变化，请重新生成 context"
+          }
+        ],
+        "note": "保持原登记和来源保护，不自动修补哈希或事实"
+      }
+    },
+    {
+      "label": "c-resume-25-old-template-record-reject",
+      "exit_code": 2,
+      "state_sha256": "cce2b10f068de3157842af9a2bf9f9b8e6ecc18f3591148ef4e4244de11ff0e5",
+      "state_unchanged": true,
+      "diagnostic": {
+        "ok": false,
+        "error": "追踪修订号已变化，请重新生成 context",
+        "code": "COMMAND_FAILED",
+        "next_action": "按报错核对输入，查看本命令帮助。",
+        "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-t\\scenario\\雨棚后的灯\\.writer\\tool\\bin\\ai-writer.mjs' record '--help'"
+      }
+    }
+  ],
+  "same_valid_draft_summary_and_old_source_payload": true,
+  "expected_revision": 62,
+  "actual_revision": 66,
+  "scope": "Both product refusals were correct. Parent prompt incorrectly expected2 from record-preview; its soft ok:false exits1 on stdout. That caused one retained native auxiliary assertion failure; the same payload was then actually refused by record with stderr/exit2. No state or old template was patched, and this case reaches the revision guard rather than claiming every later source-hash branch ran."
+}

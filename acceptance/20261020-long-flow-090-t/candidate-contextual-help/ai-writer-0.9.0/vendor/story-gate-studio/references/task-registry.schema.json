@@ -1,0 +1,30 @@
+{
+  "schema_version": "story-gate-task-registry-schema@0.1.0",
+  "required_top_level_fields": [
+    "registry_version",
+    "tasks"
+  ],
+  "required_task_fields": [
+    "task_id",
+    "task",
+    "skill",
+    "module_ids",
+    "mode",
+    "write_policy",
+    "inputs",
+    "outputs",
+    "tests",
+    "done_when"
+  ],
+  "allowed_modes": [
+    "novel",
+    "visual",
+    "screenplay",
+    "short_drama"
+  ],
+  "allowed_write_policy": [
+    "review_only",
+    "create_docs",
+    "edit_draft"
+  ]
+}

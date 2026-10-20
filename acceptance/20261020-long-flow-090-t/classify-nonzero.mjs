@@ -1,0 +1,25 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,save} from './common.mjs';
+const j=ref=>JSON.parse(fs.readFileSync(path.join(base,ref),'utf8')),audit=j('command-audit.json'),map=new Map();
+function add(label,code,category,explanation,proof){map.set(label,{expected_exit_code:code,category,explanation,proof:[].concat(proof)});}
+add('baseline-frozen-inputs',1,'helper-assumption','基线核验误把完整开发测试集当嵌入runtime profile；改按发行profile检查，并非产品缺文件。','commands/baseline-frozen-inputs-retry/result.json');
+add('guarded-build-proof',1,'helper-archive-source-map','README发布别名源映射用错；保留原冻结输入，修正源到archive_file映射后重核ZIP，没有刷新原hash掩盖漂移。','commands/guarded-build-proof-retry/result.json');
+for(const label of ['immutable-probe-before','immutable-regression-before'])add(label,1,'product-defect-red-before-fix','旧实现允许rewind/replay改掉原观察；修后真实探针及新回归阻断，原始红结果保留。','final-build-verification.json');
+add('help-regression-before',1,'product-defect-red-before-fix','help带通用project参数的真实缺陷；最终修复并有3项帮助回归及原生C实际调用。','final-build-verification.json');
+add('revision-identity-regression-before',1,'product-defect-red-before-fix','候选区缺嵌入工具导致identify ENOENT；最终继承经校验父资源，坏绑定/损坏仍拒绝。',['final-build-verification.json','r2-candidate-identity.json']);
+add('immutable-legacy-transaction',93,'intentional-fault-injection','旧构建prepared事务按注入点中断；最终构建拒绝非法complete后原字节rollback，未发布到T小说主稿。','immutable-legacy-recovery-verification.json');
+add('immutable-legacy-complete',2,'expected-immutable-recovery-refusal','最终构建对旧prepared非法观察变更正式拒绝，未业务写入；rollback仍允许。','immutable-legacy-recovery-verification.json');
+add('immutable-legacy-recovery-proof',1,'helper-cli-field-assumption','辅助断言错误要求CLI序列化ledger_id；改核真实code/error和回滚原字节，原失败保留。','commands/immutable-legacy-captured-verification/result.json');
+add('parent-c-first-verify',1,'helper-checkpoint-contract','错误要求子客户端自报尚未知的真实threadID；改由实际thread.started及进程结果独立绑定，不补造子交接。','parent-c-first-interruption-verification.json');
+add('parent-read-helper-before-fix-negative',1,'retained-helper-error-reproduction','保留重现错误import别名语法的负向命令，发生在发现后，不冒充最初捕获；修后真实覆盖核验通过。','native-c-resume-window-read.json');
+add('parent-r2-approve',1,'helper-prepared-field-assumption','误把CLI响应target_revision当prepared字段；修为target_state.revision后原语义/8文件断言全执行，第一次未提交。',['commands/parent-r2-approve-v2/result.json','r2-publish-verification.json']);
+add('c-resume-25-old-template-reject',1,'expected-soft-preview-refusal','有效旧输入被preview按软失败1拒绝；辅助误预期2，保留该错误后用同payload正式record拒绝2。','c-old-guard-retry-verification.json');
+add('c-resume-25-old-template-record-reject',2,'expected-stale-input-refusal','已有真实25正文和非空摘要，旧r62输入在正式record因修订号过期拒绝，state不变。','c-old-guard-retry-verification.json');
+add('c-resume-26-preflight-preview',1,'invalid-registration-input','新增thread误写open状态，被preview拦下；改active、换新label重试，正式状态不变。','c-resume-verification.json');
+add('c-resume-final-workflow',2,'command-usage-error','漏写workflow的show子命令；使用新label workflow-show正确查询，state不变。','c-resume-verification.json');
+for(const label of ['c-resume-old-r-identity','tool-help-old-r1-identity'])add(label,1,'expected-old-revision-build-mismatch','gen5父工具与已committed旧gen4 R候选绑定不符；返回校验诊断，无ENOENT/无改绑定。','final-tool-update-verification.json');
+add('r1-entry-ledger',2,'command-usage-error','ledger不是有效CLI子命令；后按实际接口和文件检查，不归为产品缺陷。','commands/codex-r-first/stdout.raw.txt');
+add('r1-entry-help',2,'product-defect-observed-native','真实R恢复时help --project触发只接受一个命令名；最终修复、重启后C实际复验成功。','c-resume-help-verification.json');
+add('r1-ready-candidate-identify',2,'product-defect-observed-native','真实R候选identify ENOENT；最终修复，当前R2活动候选实测正向成功，旧绑定负向仍拒绝。',['r2-candidate-identity.json','final-build-verification.json']);
+add('r1-mid-main-plan-refused',2,'expected-revision-occupancy-refusal','R真实进程退出期间主稿仍被会话占用，plan被REVISION_OCCUPIED拒绝且state不变。','r1-midpoint-verification.json');
+add('final-next-draft-refused',2,'expected-authorization-refusal','最终pause仅discuss后，真实31模板请求ACTION_OUT_OF_SCOPE，state不变且无31输出/正文。','final-flow-verification.json');
+const classified=audit.captured_nonzero.map(row=>{let info=map.get(row.label);if(!info&&/^budget-(19|25(?:-post-r1-gen5)?)-(blocked|short)$/.test(row.label)){const id=row.label.replace(/^budget-/,'').replace(/-(blocked|short)$/,'');info={expected_exit_code:2,category:'expected-budget-refusal',explanation:'真实低预算或比required少一单元预算被拒绝，无输出/state不变；精确required重试payload相同。',proof:[`budget-${id}-verification.json`]};}assert.ok(info,`Unclassified nonzero ${row.label}`);assert.equal(row.exit_code,info.expected_exit_code,row.label);for(const ref of info.proof)assert.ok(fs.existsSync(path.join(base,ref)),ref);return {...row,...info,accounted_for:true};});save('nonzero-classification.json',{ok:true,captured_nonzero:classified.length,all_captured_nonzero_accounted_for:true,commands:classified,scope:'Captured final command receipts only; no double counting these as distinct product defects. Native nested errors and successful-exit content mistakes remain separately audited in command-audit and narrative reports.'});console.log(JSON.stringify({ok:true,classified:classified.length}));

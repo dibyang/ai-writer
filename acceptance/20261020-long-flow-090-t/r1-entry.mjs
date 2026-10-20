@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {base,work,cli,read,state,save,run,sha} from './common.mjs';
+const s=state();
+save('r1-entry-reading-before.json',{state_sha256:sha(read('.writer/state.json')),revision:s.revision,files:[...Array.from({length:10},(_,i)=>`正文/${String(i+15).padStart(4,'0')}.md`),'分段/0025/part-01.md','分段/0025/part-02.md'].map(ref=>{const b=read(ref);return {ref,sha256:sha(b),bytes:b.length,lines:b.toString('utf8').split('\n').length};})});
+for(const [label,args] of [['r1-entry-status',['status']],['r1-entry-workflow',['workflow','show']],['r1-entry-identify',['tool','identify']],['r1-entry-revisions',['revision','list']],['r1-entry-ledger',['ledger']],['r1-entry-revision-help',['revision','--help']]]) save(label+'.json',run(label,args));
+assert.equal(s.units.length,24);
+assert.equal(s.revision,62);
+console.log(JSON.stringify({ok:true,work,cli,units:s.units.length,revision:s.revision}));

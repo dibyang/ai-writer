@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import {base} from './common.mjs';
+const rows=[];for(const label of fs.readdirSync(path.join(base,'commands')).sort()){const file=path.join(base,'commands',label,'result.json');if(!fs.existsSync(file))continue;const r=JSON.parse(fs.readFileSync(file,'utf8'));if(r.exit_code!==0)rows.push({label,exit_code:r.exit_code});}console.log(JSON.stringify({scope:'Only captured commands with an existing final receipt; running clients and semantic content errors are not counted by this list.',nonzero:rows},null,2));

@@ -1,0 +1,76 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-19T20:16:05.981Z",
+  "operation_id": "s-r6-restore",
+  "base_revision": 52,
+  "payload": {
+    "stage": "trial",
+    "task": "独立副本续写7—18章，长章分段及多轮恢复；完成18章后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 7,
+        "to": 18
+      },
+      "revise_range": {
+        "from": 1,
+        "to": 6
+      },
+      "stop_conditions": [
+        "完成18章后暂停",
+        "发现旧章影响先建立正式修订，不直接改主稿"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "设定/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json",
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/S轮验证授权.md",
+    "source_sha256": "08c32d3c4fa6fb917d04bfd033c27cc65bee70a86019f399b7be4183df0bbc59",
+    "quote": "发现问题直接修复",
+    "locator": "user-task-2026-10-20-and-synthetic-scope",
+    "recorded_by": "Codex S agent-within-authorized-scope",
+    "frozen_ref": ".writer/objects/08c32d3c4fa6fb917d04bfd033c27cc65bee70a86019f399b7be4183df0bbc59.txt"
+  }
+}

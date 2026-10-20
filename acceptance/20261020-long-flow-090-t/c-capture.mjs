@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {base,work,sha,save,state} from './common.mjs';
+const [label,...refs]=process.argv.slice(2);
+const s=state();
+const entries=refs.map(ref=>{const file=ref.startsWith('T/')?path.join(base,ref.slice(2)):path.join(work,ref);const b=fs.readFileSync(file);return {ref,bytes:b.length,sha256:sha(b),lines:b.toString('utf8').split('\n').length-(b.at(-1)===10?1:0),han:(b.toString('utf8').replace(/^#.*$/gm,'').match(/\p{Script=Han}/gu)||[]).length};});
+const result={captured_at:new Date().toISOString(),revision:s.revision,registered:s.units.length,state_sha256:sha(fs.readFileSync(path.join(work,'.writer/state.json'))),tool_control:s.tool_control,files:entries};
+save(label+'.json',result);
+console.log(JSON.stringify({...result,tool_control:{generation:s.tool_control.generation,installed:s.tool_control.installed}},null,2));

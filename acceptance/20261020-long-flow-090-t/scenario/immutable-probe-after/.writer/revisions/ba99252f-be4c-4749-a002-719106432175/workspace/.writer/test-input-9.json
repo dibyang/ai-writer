@@ -1,0 +1,64 @@
+{
+  "unit": 1,
+  "expected_revision": 4,
+  "source_hashes": {
+    "writer.json": "145dcaedebc6d205a62e097cbd0f0f75f24c64a8260387e1ae0cc516676f7cc3",
+    ".writer/state.json": "3a0c2ec59f3e6807448cfed00d567f9da4dbcae074e07801ac4624da53e1c32e",
+    "大纲/单元/0001.json": "744d818f3bf90f71c04f5a950df1cc4e9e33d39216f7936601b7038a66417e7a",
+    "设定/作品定位.md": "53671fd523841cf9a91b963827e2a70ecb17ec61ccc191dec0527514d63b9af5",
+    "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+    "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+  },
+  "draft": "正文/0001.md",
+  "source_bindings": {},
+  "summary": "试验性逆改原字",
+  "changes": {
+    "characters": {
+      "林": "见过纸字"
+    },
+    "timeline_append": [],
+    "ledger": {
+      "OBS": {
+        "type": "observation",
+        "statement": "纸上写着赤。",
+        "status": "active",
+        "cast": [
+          "林"
+        ],
+        "tags": [],
+        "author_truth": "原字是赤，未被改写。",
+        "reader_known": "赤字",
+        "character_known": {
+          "林": "看见赤"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "林看见纸上写着赤。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "恢复的是原登记事实草案；路径、当前context哈希和未变项自动填入。必须实读新正文与承接，修正摘要/changes/失效引文，填写replay_review真实报告及六项checked_fields；先record-preview，再record。不能把自动草案当无变化结论。",
+  "_replay": {
+    "session_id": "ba99252f-be4c-4749-a002-719106432175",
+    "base_state_sha256": "7c4819d6472f24e6ec4b494e355c30e4354433c662754411ecf216b204f12921",
+    "old_unit_sha256": "568a1b8790dd47eb0330e7046eb9272f531898fb440a87b86afb7b5ab7ab1780",
+    "old_journal_sha256": "95fa2f97a89c7692a5a0192b0036243ee6ee47c16450e89330aa8c268cc12850",
+    "draft_sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494"
+  },
+  "replay_review": {
+    "reviewer": "synthetic-negative-interface-probe",
+    "report": "审查/纯接口反例.md",
+    "draft_sha256": "42a9dd11552720e8227d43fad487f8dd7266a0f68fffea9ab0a0d00d163d6494",
+    "checked_fields": [
+      "summary",
+      "characters",
+      "timeline",
+      "ledger",
+      "evidence",
+      "downstream"
+    ]
+  }
+}

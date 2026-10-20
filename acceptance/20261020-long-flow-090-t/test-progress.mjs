@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';import {base} from './common.mjs';
+const label=process.argv[2]??'source-tests',dir=path.join(base,'commands',label),text=fs.readFileSync(path.join(dir,'stdout.raw.txt'),'utf8'),lines=text.split(/\r?\n/),result=path.join(dir,'result.json');
+console.log(JSON.stringify({label,observed_pass:lines.filter(x=>x.startsWith('✔')).length,observed_fail:lines.filter(x=>x.startsWith('✖')).length,observed_skip:lines.filter(x=>x.startsWith('﹣')).length,log_bytes:Buffer.byteLength(text),last:lines.filter(Boolean).slice(-3),completed:fs.existsSync(result)?JSON.parse(fs.readFileSync(result)):null,scope:'Observed reporter output only; no completion claim before final process result.'}));

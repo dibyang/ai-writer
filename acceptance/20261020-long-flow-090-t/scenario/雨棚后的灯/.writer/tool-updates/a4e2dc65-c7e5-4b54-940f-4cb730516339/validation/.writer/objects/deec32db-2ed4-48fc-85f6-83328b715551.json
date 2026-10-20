@@ -1,0 +1,56 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-19T13:19:11.781Z",
+  "operation_id": "q-workflow-1",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "独立验证前两卷六章，第一和第四章分段合章，六章后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "完成第六章后暂停正文",
+        "未选路线不得写入已发生事实"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/本轮验证范围.md",
+    "source_sha256": "34a3915788a8cdbd54054d1b272112ed8a6eeb86d2c48711c19c561c3a871ff9",
+    "quote": "写前两卷六章",
+    "locator": "synthetic-scope-for-user-test",
+    "recorded_by": "Codex Q verification",
+    "frozen_ref": ".writer/objects/34a3915788a8cdbd54054d1b272112ed8a6eeb86d2c48711c19c561c3a871ff9.txt"
+  }
+}

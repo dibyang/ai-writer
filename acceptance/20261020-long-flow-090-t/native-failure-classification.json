@@ -1,0 +1,211 @@
+{
+  "ok": true,
+  "nested_failed_commands": 11,
+  "all_nested_command_failures_accounted_for": true,
+  "commands": [
+    {
+      "client": "codex-a-resume",
+      "thread_id": "01a15654-8bd8-79b1-8f41-10d31671537d",
+      "item": "item_42",
+      "exit_code": 1,
+      "category": "helper-shell-quoting",
+      "explanation": "19报告保存的多层中文JS引号SyntaxError；后续仍先record再补报告是保留的真实流程偏差，不能追认先审后登。",
+      "proof": "a-resume-report-save-failure.md",
+      "raw": "commands/codex-a-resume/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-b",
+      "thread_id": "01a15685-e97b-7770-b842-cca80a415e9f",
+      "item": "item_51",
+      "exit_code": 1,
+      "category": "helper-syntax",
+      "explanation": "规划生成器多右括号，未生成细纲；后改用正确JSON/生成器并重做依赖步骤。",
+      "proof": "parent-b-final-verification.json",
+      "raw": "commands/codex-b/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-b",
+      "thread_id": "01a15685-e97b-7770-b842-cca80a415e9f",
+      "item": "item_53",
+      "exit_code": 1,
+      "category": "helper-shell-quoting",
+      "explanation": "尝试修生成器的PowerShell嵌套引号解析失败，未创建v2脚本。",
+      "proof": "parent-b-final-verification.json",
+      "raw": "commands/codex-b/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-b",
+      "thread_id": "01a15685-e97b-7770-b842-cca80a415e9f",
+      "item": "item_54",
+      "exit_code": 1,
+      "category": "failed-prerequisite-orchestration",
+      "explanation": "前一步失败后仍尝试运行尚不存在的v2脚本；MODULE_NOT_FOUND，错误依赖链保留。",
+      "proof": "parent-b-final-verification.json",
+      "raw": "commands/codex-b/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-b",
+      "thread_id": "01a15685-e97b-7770-b842-cca80a415e9f",
+      "item": "item_55",
+      "exit_code": 1,
+      "category": "failed-prerequisite-orchestration",
+      "explanation": "依赖未创建的22细纲继续prepare，helper在读文件时ENOENT；不是成功API，后创建真实细纲再prepare。",
+      "proof": "parent-b-final-verification.json",
+      "raw": "commands/codex-b/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-c-resume",
+      "thread_id": "01a1569f-05fa-7030-8585-9b93513f8f4c",
+      "item": "item_91",
+      "exit_code": 1,
+      "category": "helper-exit-expectation",
+      "explanation": "父编排误预期preview失败2，实际软拒绝1，wrapper断言1!=2；同有效payload正式record拒绝2，保护成立。",
+      "proof": "c-old-guard-retry-verification.json",
+      "raw": "commands/codex-c-resume/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-c-resume",
+      "thread_id": "01a1569f-05fa-7030-8585-9b93513f8f4c",
+      "item": "item_144",
+      "exit_code": 1,
+      "category": "invalid-client-registration-input",
+      "explanation": "新增thread.status误open，preview拒绝1，改active后新label成功，state未变化。",
+      "proof": "c-resume-verification.json",
+      "raw": "commands/codex-c-resume/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-c-resume",
+      "thread_id": "01a1569f-05fa-7030-8585-9b93513f8f4c",
+      "item": "item_225",
+      "exit_code": 1,
+      "category": "command-usage",
+      "explanation": "workflow漏show，CLI2触发wrapper1；正确workflow show另label成功。",
+      "proof": "c-resume-verification.json",
+      "raw": "commands/codex-c-resume/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-r-first",
+      "thread_id": "01a156ac-1221-7c42-8e50-cdb08855559f",
+      "item": "item_16",
+      "exit_code": 1,
+      "category": "command-usage",
+      "explanation": "ledger不是命令，CLI2触发wrapper1；不是缺失的产品能力。",
+      "proof": "commands/codex-r-first/stdout.raw.txt",
+      "raw": "commands/codex-r-first/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-r-first",
+      "thread_id": "01a156ac-1221-7c42-8e50-cdb08855559f",
+      "item": "item_19",
+      "exit_code": 1,
+      "category": "actual-product-defect",
+      "explanation": "合法help带project被旧实现拒绝，CLI2触发wrapper1；最终修help参数解析且C实际复验。",
+      "proof": "c-resume-help-verification.json",
+      "raw": "commands/codex-r-first/stdout.raw.txt",
+      "accounted_for": true
+    },
+    {
+      "client": "codex-r-resume",
+      "thread_id": "01a156ac-1221-7c42-8e50-cdb08855559f",
+      "item": "item_120",
+      "exit_code": 1,
+      "category": "actual-product-defect",
+      "explanation": "候选identify错误寻找自身不存在的runtime，CLI2触发wrapper1；最终复用校验父资源，R2实际正向/旧R绑定负向均留证。",
+      "proof": "r2-candidate-identity.json",
+      "raw": "commands/codex-r-resume/stdout.raw.txt",
+      "accounted_for": true
+    }
+  ],
+  "protocol_failed_mcp": 0,
+  "emitted_failed_file_changes": 0,
+  "notices": [
+    {
+      "client": "codex-a-first",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-a-resume",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-b",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-c-first",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-c-resume",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-d",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-final-read",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-r-first",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    },
+    {
+      "client": "codex-r-resume",
+      "id": "item_0",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml.",
+      "classification": "startup-experimental-feature-warning",
+      "global_config_unchanged": true,
+      "scope": "CLI emitted type error, but the exact text is a startup feature warning; actual process/flow results are verified separately, not inferred from this classification."
+    }
+  ],
+  "additional_reported_tool_format_error": {
+    "ref": "c-resume-26-patch-failure.md",
+    "diagnostic": "apply_patch verification failed: invalid patch: The last line of the patch must be '*** End Patch'",
+    "scope": "C saved this diagnostic and successful independent retries; no matching failed patch event was exposed in its --json transcript. Do not count zero emitted failures as proof no tool-format error occurred."
+  },
+  "successful_exit_content_mistakes": "parent-harness-notes.md",
+  "scope": "Raw nested command failures are distinct from captured CLI receipts and product-defect count. Reported patch diagnostics and0-exit bad content are preserved separately; this is not a claim every internal Codex tool event is exposed by --json."
+}

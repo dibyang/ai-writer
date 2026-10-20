@@ -1,0 +1,43 @@
+{
+  "unit": 1,
+  "expected_revision": 1,
+  "source_hashes": {
+    "writer.json": "145dcaedebc6d205a62e097cbd0f0f75f24c64a8260387e1ae0cc516676f7cc3",
+    ".writer/state.json": "8434d4954c637048b11343cdd697afab98692a614f794f0faa366c5825492d9a",
+    "大纲/单元/0001.json": "744d818f3bf90f71c04f5a950df1cc4e9e33d39216f7936601b7038a66417e7a",
+    "设定/作品定位.md": "53671fd523841cf9a91b963827e2a70ecb17ec61ccc191dec0527514d63b9af5",
+    "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+    "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+  },
+  "draft": "正文/0001.md",
+  "source_bindings": {},
+  "summary": "看见青字",
+  "changes": {
+    "characters": {
+      "林": "见过纸字"
+    },
+    "timeline_append": [],
+    "ledger": {
+      "OBS": {
+        "type": "observation",
+        "statement": "纸上写着青。",
+        "author_truth": "原字是青，未被改写。",
+        "status": "active",
+        "cast": [
+          "林"
+        ],
+        "reader_known": "青字",
+        "character_known": {
+          "林": "看见青"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "林看见纸上写着青。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。"
+}
