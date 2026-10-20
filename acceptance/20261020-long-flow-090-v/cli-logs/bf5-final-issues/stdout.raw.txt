@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 40,
+  "counts": {
+    "verified": 1
+  },
+  "issues": [
+    {
+      "id": "V_A_U5_TIME_METADATA",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "第5章登记summary及timeline两处停航次日晚误导到停航第二日；正文承接第4章今晚六点半，实际应是停航首日晚（末班船次日晚）。",
+      "suggestion": "根核验后决定正式纠正登记的授权与路径。本阶段不改state、不新开修订；续写须读取本问题并保持正确日序，不能由错误标签推造次晨取糕已发生。",
+      "evidence": [
+        {
+          "unit": 4,
+          "draft": "正文/0004-少蒸的两笼-v1.md",
+          "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+          "line": 269,
+          "quote": "今晚六点半能来看看，先量，不一定就能装"
+        },
+        {
+          "unit": 5,
+          "draft": "正文/0005-门板靠墙-v1.md",
+          "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+          "line": 5,
+          "quote": "六点半，我看到了。"
+        },
+        {
+          "unit": 6,
+          "draft": "正文/0006-走一遍再画-v2.md",
+          "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+          "line": 3,
+          "quote": "停航第一天的下午四点"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/90a6ef24-4a8a-421b-810b-62f2714a6b83.json",
+        "review_sha256": "68a1539779935ebce8ec6c9cebd3a8c501c0b84c4a4dbb32d33b6c4d3aaf8120",
+        "units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/9e0fcdde-a195-4414-872c-379990dcc9f6.json",
+          "sha256": "e87ded79bcf9c4055bc2b4b4f80c294db3b727fcf13ed6d60a56e60b7ff14eec"
+        },
+        {
+          "ref": ".writer/objects/9f31501d-fac7-4730-90bb-3526506a4365.json",
+          "sha256": "7eafee6a432849279ffa26ddc136ccbd3ce3cbf96283ba0df45cd405981f1b6e"
+        },
+        {
+          "ref": ".writer/objects/486da441-b366-4657-b54c-cbd362c84f18.json",
+          "sha256": "14c401c3fc1b975ed5cbb713bfe5e18e64d9f085e13378bcd48335a48e7c133f"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/a65e6a2e-9108-4039-a8e9-8b1ecdf2c7e7.json",
+          "sha256": "1d12232671465985c16a0530b61ea66f8378484230980e05ac21d1ab99cde069"
+        },
+        "disposition": "adopted",
+        "reason": "本轮真实根提示明确采用metadata-only修正，覆盖4—6；代理在当前正式revise授权内落实，只修summary/timeline时间措辞，六章正文和人物/物件/钱据/观察保持。不冒充人类逐字选择。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68",
+        "commit_binding": {
+          "ref": ".writer/objects/3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68.json",
+          "sha256": "fc085c834f0cee0d342e948781b63ca20a93726a08bdf2f872ad165c110e4f7c"
+        },
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "reason": "根本轮明确授权以tracking模式应用既有真实追踪修订。事务97c11e48-4f17-44c5-96de-5e087099eea0已completed；该提交把4章summary/timeline澄清为停航首日清晨，把5章summary/timeline纠正为停航首日晚，6章保留同日下午并行。绑定原采用、旧新归档和同一commit_id，六章正文同字节，不捏造第二次修改。新默认apply仍实际退出2且state未变，当前另存显式tracking输入。后续仍需4—6真实完整实读报告与verify。",
+        "changes": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "before": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "after": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "before": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "after": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "before": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "after": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          }
+        ],
+        "change_scope": "tracking",
+        "tracking_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/97c11e48-4f17-44c5-96de-5e087099eea0/old/16.bin",
+            "sha256": "df916afb152e33b9a2545e5ad88ac2b40f428733686c8da538ed71a8d8ef399b"
+          },
+          "after": {
+            "ref": ".writer/transactions/97c11e48-4f17-44c5-96de-5e087099eea0/new/16.bin",
+            "sha256": "e11cac3daca69b62a08a1986bb952ec8b0605e8dded4ffc7b347888067908dd1"
+          }
+        },
+        "tracking_changes": [
+          {
+            "unit": 4,
+            "before": {
+              "summary_sha256": "7643ce0257bc0427f8a1de607fb1906c2f886a94c6c43a5065fa0ade0d89cbe2",
+              "snapshot_sha256": "c796511b23282ca987470a1308a23cc9c1e6d38a1c1437a94aa67398f3043dad"
+            },
+            "after": {
+              "summary_sha256": "cf3aeface1fe9c74cb02ab772eb68052c630c850066a31c5ab511e342f412424",
+              "snapshot_sha256": "f41372e6dcbacbfbba697de55d897b4bc7ed04e3775550cd7097405cdf106c27"
+            },
+            "summary_changed": true,
+            "snapshot_changed": true
+          },
+          {
+            "unit": 5,
+            "before": {
+              "summary_sha256": "dfc2efc7cce2385707a2f9ea64d3e3b78cd42a242ffa5c9aef6136b4939364f3",
+              "snapshot_sha256": "130d0a13cf99b45f523260ec59a6c75ee777f0a1c236e5b23726c65709831715"
+            },
+            "after": {
+              "summary_sha256": "2918450ceb1d058c07ee75f697df8f16ae7f97b265e347c86544885583201eb0",
+              "snapshot_sha256": "bf1865e1e3eb524fbbca04ecbfcfe80e2457bfc0915602f8d39a615ce329923d"
+            },
+            "summary_changed": true,
+            "snapshot_changed": true
+          },
+          {
+            "unit": 6,
+            "before": {
+              "summary_sha256": "c68b4e3b592105b561139520a5eefe9f5eb47ee0b4ff120835c3d9953451bc83",
+              "snapshot_sha256": "f6200cf62ccdb360eec1a67a7402a583240026b341d26d9cb0aae03841f099bb"
+            },
+            "after": {
+              "summary_sha256": "c68b4e3b592105b561139520a5eefe9f5eb47ee0b4ff120835c3d9953451bc83",
+              "snapshot_sha256": "123559c1ee13c6a4e3623a82cdac0f2c7ca676285cef2a110cf058ed423988e0"
+            },
+            "summary_changed": false,
+            "snapshot_changed": true
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/0170b8c3-2e3b-4fda-a065-e8c567b5845c.json",
+        "review_sha256": "96726bef32816fc1a92dbe6c4864377f9ea8b04f97a9c5602f1a0da44a2eb603",
+        "reviewer": "V同一实际A会话Codex知情模型复核",
+        "conclusion": "resolved",
+        "reason": "在revision31完整实读当前4—6正文及修后summary/timeline，并于revision32正式登记本次新报告。4章第二天五点二十承接末班船当夜，下午约今晚六点半；5章六点半到家量柜属于同一停航首日晚；6章明确首日下午四点并行。既有正式commit 3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68、completed事务97c11e48-4f17-44c5-96de-5e087099eea0已把4章summary次晨/timeline停航次晨澄清为停航首日清晨，把5章summary/timeline停航次日晚纠正为停航首日晚，6章正文不改。tracking应用真实绑定该事务旧新归档；本轮没有第二次修改。新报告SHA e0efee8a546c3d198047c83990930ef8c02150f3944fa8292e5a2fea09c65aa8绑定当前三章正文与依赖。六章正文同修前根核验SHA；resolved仅表示该日期追踪意见经当前模型实读复核已解决，不表示作者定稿或后续早取/安装/过桥已经发生。",
+        "rechecked_context": false,
+        "application_commit_id": "3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/d5d3d4e4-ce4d-4286-ab7a-ec984099f7c7.json",
+        "sha256": "4512c2cd3d52c19ac9bb09a4e0cdec068ad23d0463847645c80635b21d6e316f"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证';
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const plan=read(v+'/cli-logs/ac09-external-update-plan/stdout.raw.txt'),state=read(w+'/.writer/state.json'),author=read(v+'/ac-author-evidence.json');
+if(!plan.can_update||plan.blockers.length||state.revision!==29||state.tool_control.generation!==0||plan.request.expected_revision!==state.revision)throw Error('Update plan gate changed');
+if(plan.request.expected_source_build_id!=='ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626'||plan.request.expected_target_build_id!=='ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b'||plan.request.plan_sha256!==plan.plan_sha256)throw Error('Build/plan mismatch');
+if(plan.documents.length||plan.document_changes.length||plan.local_content.some(x=>x.action!=='preserve'))throw Error('Unexpected root overwrite');
+const input={...plan.request,author_evidence:author};
+fs.writeFileSync(v+'/ac-tool-update.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(input,null,2));

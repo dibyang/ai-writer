@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v';
+const w=v+'/scenario/东岸末班船-扩展验证';
+const phase=process.argv[2];
+if(!/^[a-z0-9-]+$/.test(phase??''))throw Error('Invalid phase');
+const dir=v+'/a-part-snapshots/'+phase;
+fs.mkdirSync(dir,{recursive:true});
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const parts=['分段/0004/v1/01.md','分段/0004/v1/02.md'].map(ref=>{
+ const raw=fs.readFileSync(w+'/'+ref),body=raw.toString('utf8');
+ fs.writeFileSync(dir+'/'+path.basename(ref)+'.raw.md',raw,{flag:'wx'});
+ const headings=body.split(/\r?\n/).filter(s=>/^ {0,3}#{1,6}[ \t]/.test(s));
+ const stripped=body.replace(/^ {0,3}#{1,6}[ \t].*(?:\r?\n|$)/gm,'');
+ const han=(stripped.match(/\p{Script=Han}/gu)??[]).length;
+ return {ref,bytes:raw.length,sha256:sha(raw),han_without_markdown_headings:han,headings,within_1100_1500:han>=1100&&han<=1500};
+});
+const result={phase,at:new Date().toISOString(),method:'remove ATX Markdown heading lines, count Unicode Script=Han code points with /\\p{Script=Han}/gu; no punctuation/Latin/numerals counted',parts,total_han:parts.reduce((a,p)=>a+p.han_without_markdown_headings,0),state_sha256:sha(fs.readFileSync(w+'/.writer/state.json')),revision:JSON.parse(fs.readFileSync(w+'/.writer/state.json','utf8')).revision,complete_chapter:false,registered_unit4:false};
+fs.writeFileSync(dir+'/result.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result,null,2));

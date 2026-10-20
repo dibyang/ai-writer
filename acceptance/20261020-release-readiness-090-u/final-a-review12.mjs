@@ -1,0 +1,5 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const U='D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u',W=U+'/scenario-final/东岸末班船',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const report='审查/final-a-0001-0002-连读.md',raw=fs.readFileSync(W+'/'+report);assert.ok(raw.length>0);assert.equal(JSON.parse(fs.readFileSync(W+'/.writer/state.json','utf8')).revision,6);
+const source_hashes={};for(const n of [1,2]){const r=JSON.parse(fs.readFileSync(W+'/.writer/drafts/final-a-record-'+n+'-valid.json','utf8'));const h=sha(fs.readFileSync(W+'/'+r.draft));assert.equal(h,r.draft_review.draft_sha256);source_hashes[r.draft]=h;}
+const input={from:1,to:2,kind:'model-self-review',report,source_hashes};fs.writeFileSync(W+'/.writer/drafts/final-a-review-1-2-input.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,input,report_sha256:sha(raw),actual_reading_note:'Both current chapters fully read by native Codex before this input; script only hashes files.'},null,2));

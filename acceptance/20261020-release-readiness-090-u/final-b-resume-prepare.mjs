@@ -1,0 +1,3 @@
+import path from 'node:path';import {U,W,write,json,hash,run} from './final-b-run.mjs';
+const s=json(path.join(U,'final-b-revision-session.json'));const baseline=json(path.join(U,'final-b-main-revision-baseline.json'));if(hash(path.join(W,'.writer/state.json'))!==baseline.state_sha256||baseline.units.some(u=>hash(path.join(W,u.draft))!==u.sha256))throw Error('Main baseline changed before prepare');
+const p=path.join(U,'final-b-resume-prepare-input.json');write(p,{id:s.id,token:s.token});const result=JSON.parse(run('42-main-revision-prepare',['revision','prepare','--input',p]));write(path.join(U,'final-b-resume-prepare-result.json'),result);

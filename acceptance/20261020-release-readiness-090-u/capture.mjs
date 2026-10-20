@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const [name,exe,...args]=process.argv.slice(2);
+if(!/^[a-z0-9-]+$/.test(name??'')||!exe)throw Error('capture name executable args');
+const dir=path.join(base,'commands',name);fs.mkdirSync(dir,{recursive:true});
+if(fs.existsSync(path.join(dir,'start.json')))throw Error('Do not overwrite prior command');
+const start={exe,args,cwd:process.cwd(),started_at:new Date().toISOString(),pid:process.pid};
+fs.writeFileSync(path.join(dir,'start.json'),JSON.stringify(start,null,2)+'\n');
+const out=fs.createWriteStream(path.join(dir,'stdout.raw.txt'),{flags:'wx'}),err=fs.createWriteStream(path.join(dir,'stderr.raw.txt'),{flags:'wx'});
+const child=spawn(exe,args,{cwd:process.cwd(),windowsHide:true,stdio:['ignore','pipe','pipe']});child.stdout.pipe(out);child.stderr.pipe(err);
+child.on('error',e=>{fs.writeFileSync(path.join(dir,'spawn-error.json'),JSON.stringify({message:e.message,code:e.code}));});
+child.on('close',async(code,signal)=>{await Promise.all([new Promise(r=>out.end(r)),new Promise(r=>err.end(r))]);const result={...start,exit_code:code,signal,finished_at:new Date().toISOString(),elapsed_ms:Date.now()-Date.parse(start.started_at)};fs.writeFileSync(path.join(dir,'result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));process.exitCode=code??2;});

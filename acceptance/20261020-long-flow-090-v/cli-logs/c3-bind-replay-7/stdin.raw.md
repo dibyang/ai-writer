@@ -1,0 +1,17 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const V=path.resolve('acceptance/20261020-long-flow-090-v'),session=JSON.parse(fs.readFileSync(path.join(V,'c3-revision-session.json'),'utf8')),R=session.workspace,W=path.join(V,'scenario/东岸末班船-扩展验证');
+const read=p=>fs.readFileSync(p,'utf8'),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'),put=(p,x)=>fs.writeFileSync(p,typeof x==='string'?x:JSON.stringify(x,null,2)+'\n',{flag:'wx'});
+const t=JSON.parse(read(path.join(R,'.writer/drafts/c3-replay-7-raw.json'))),base=JSON.parse(read(path.join(W,'.writer/state.json'))),old=base.units.find(x=>x.unit===7);
+const versions=base.units.filter(x=>x.unit>=7).map(u=>({unit:u.unit,draft:u.draft,sha256:sha(path.join(R,u.draft))}));
+const header=`原7=${old.sha256}\n当前7=${sha(path.join(R,t.draft))}\n原journal=${old.journal} SHA=${sha(path.join(W,old.journal))}\n独立区=${R}\n\n`+versions.map(x=>`${x.unit} ${x.draft} ${x.sha256}`).join('\n')+'\n\n';
+put(path.join(R,'审查/V-C3-0007-replay六项实读.md'),header+read(path.join(V,'c3-replay7-reports.md')));
+put(path.join(R,'审查/V-C3-0007当前稿自检.md'),'# 第7章修订当前稿完整自检\n\n'+header+'实际完整读新7全部156行，核原细纲0007、V4与新8—12。两处零钱准备改动有8拆备用卷承接；四块糕、两块破边、未付未交、3:30早走尚未来保持。人手/物件/动作顺序成立，老板先拿盒再自行拆一卷、另一卷留内侧，未让沈禾离守盘去接回全部开店活。普通卷数改变不构成新收入，不虚构面额或卷内总钱数。\n\n## 真人语言别扭句\n\n已作当面说话、动宾拆分、具体落地、逐句改口检查。有没有哪句话意思能够看懂，却让你觉得别扭、像为了写得漂亮硬拼出来，或者不像一个人当面会这样说？\n\n### 真人语言硬问题\n\n没有\n\n本报告仅当前7知情模型自检，不是正式尾段报告、真人盲读或作者定稿。六项重登核查及下游边界另见同目录replay报告。\n');
+t.summary+=' 本次修后老板实际带出两卷零钱，拆一卷入盒、另一卷原封留钱盒内侧备用；第二卷实际使用仍待8。';
+t.changes.characters['沈禾']+=' 在场见老板带两卷零钱、拆一留一备用，自己只递剪刀而未接回拆卷；未知卷内金额。';
+t.changes.characters['谭老板']+=' 本章本人带两卷零钱，拆一卷入钱盒、另一卷原封留钱盒内侧备用，未将备用周转零钱算新增销售。';
+t.changes.timeline_append[1]=t.changes.timeline_append[1].replace('老板拿钱盒/搬粉对单','老板拿钱盒带两卷、拆一卷留一卷原封备用/搬粉对单');
+t.changes.ledger.T_EARLY_BATCH.reader_known+=' 零钱准备修为老板带两卷、拆一留一，备用卷尚未拆用。';
+t.changes.ledger.T_EARLY_BATCH.character_known['沈禾']+=' 在场见两卷准备/一卷原封备用，未见备用卷实际使用。';
+t.changes.ledger.T_EARLY_BATCH.character_known['谭老板']+=' 本人带两卷并拆一留一备用，卷内金额未叙述。';
+t.changes.ledger.F_SHOP_CHANGE_ROLLS={type:'fact',statement:'停航第二日早取开店时谭老板准备两卷零钱，拆一卷，另一卷原封留钱盒内侧备用',status:'partial',cast:['沈禾','谭老板'],tags:['普通数量修订','店内找零准备'],due_unit:8,reader_known:'7亲拿两卷，拆一入盒/一原封备用；备用卷实际使用待8，卷内面额总量未写，不是新收入。',character_known:{'沈禾':'在场见两卷准备、一卷拆入盒、一原封在内侧，自己只递剪刀，未见备用卷使用。','谭老板':'本人带两卷、拆一卷、留一卷原封在钱盒内侧备用。'},evidence:[{unit:7,quote:'顺手带出两卷零钱。'},{unit:7,quote:'老板把一卷原封放在钱盒内侧，在柜台拆开另一卷。'}]};
+const h=sha(path.join(R,t.draft));t.replay_review={reviewer:'V-C3实际Codex知情重登核查',report:'审查/V-C3-0007-replay六项实读.md',draft_sha256:h,checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};t.draft_review={reviewer:'V-C3实际Codex知情自检',report:'审查/V-C3-0007当前稿自检.md',draft_sha256:h,report_sha256:sha(path.join(R,'审查/V-C3-0007当前稿自检.md'))};delete t._instructions;delete t.output;put(path.join(V,'inputs/c3-replay-7-reviewed.json'),t);console.log(JSON.stringify({unit:7,expected_revision:t.expected_revision,draft_sha256:h,replay_review:t.replay_review,draft_review:t.draft_review,downstream_read:versions}));

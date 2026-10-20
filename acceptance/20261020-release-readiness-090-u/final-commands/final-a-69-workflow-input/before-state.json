@@ -1,0 +1,685 @@
+{
+  "schema_version": 6,
+  "revision": 5,
+  "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "许蓉": "候船室窗边；听过梁伯外放授权，临管原箱在矮桌，未开未交，借具条在灯下。修门工料三十元已记本并电话转述老何，小票待带。看见谭老板与周岸送单消息，听沈禾向父亲说明；等周岸21:40前返，22:00关门。",
+      "周岸": "已从码头骑电动三轮离开，带自用工具包和铺门钥匙；消息称原单已交谭老板、正在去铺里，21:40前返回。已获梁伯代收、取八十元原钱袋及两联还箱单的明确授权，答应带修门小票；尚未写取钱或返回。离场后不知道候船室洗手、收车及父亲回复细节。",
+      "沈禾": "候船室桌边；听梁伯外放授权，未收退款。借具条平放灯下，折叠小车靠椅，汗衫和捆带收回包，手机已够用。原单经谭老板及周岸消息确认送达，可不用再跑店，已答应明早提前到；发语音告诉父亲目前安排并收到回复，仍等周岸返程。",
+      "沈成林": "家中；本章收到女儿语音说明梁伯已授权周岸、周岸去取钱、箱仍在许蓉处、她等候，回复饭热好、让女儿慢走且自己不下楼。未目击归还或退款，不知道21:40具体返回承诺及维修报价。",
+      "梁伯": "家中远程；找到借具底联，外放核沈父借具押八十，授权周岸到码头代收、取原钱袋并退沈禾。知道三人在候船室及22:00关门，承诺发底联照片；未获本章实际取钱、验收或退款结果。",
+      "老何": "远程接许蓉电话；知道西门插销已修、工料报价三十元记本、周岸会补小票，明早交接须看；未获工具箱现场信息。"
+    },
+    "threads": [],
+    "timeline": [
+      "检修停航前夜：许蓉在候船区雨衣下找到旧箱并挪至矮桌临管，周岸修门，沈禾持借具条到场。",
+      "同夜：沈父手机未接后通过候船室座机接通，许蓉直接接听并转述托送经过；押金与工具清点仍待梁伯核对。",
+      "20:47前后：三人看过梁伯九点十分再联系的文字，约定等待；周岸接下有条件代送备货单的信封，尚未出发。",
+      "21:10—21:15前后：周岸按约拨号并开外放，梁伯找到底联、核借具押金并明确授权收还与退钱给沈禾。",
+      "随后：周岸携原备货单、铺门钥匙及工具包实际离开，约21:40前回；许蓉电话向老何转述门工料三十元。",
+      "21:26及之后：原单获谭老板与周岸双向送达消息确认，沈禾发语音告知父亲当前安排；原箱仍临管，等待周岸去铺里取钱与凭据后返回。"
+    ],
+    "ledger": {
+      "O_BOX_PAINT": {
+        "type": "observation",
+        "statement": "箱盖左后角有一块月牙形的白漆。",
+        "author_truth": "箱盖左后角确有月牙形白漆；它不是暗号，也不能单独充当排他归属证明。",
+        "status": "active",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林"
+        ],
+        "tags": [
+          "旧铁箱",
+          "白漆"
+        ],
+        "due_unit": 3,
+        "reader_known": "许蓉亲见原句所指白漆；沈父电话给出过滴漆说法，成因未独立核实。",
+        "character_known": {
+          "许蓉": "亲见左后角月牙形白漆，电话听沈父说记得并给出滴漆解释；未作排他鉴定。",
+          "周岸": "见过旧箱并说与梁家旧箱相似；正文未明确他核看过白漆形状位置。",
+          "沈禾": "在场听到许蓉询问箱盖白漆，未直接核认该细节形状位置。",
+          "沈成林": "电话称记得左后角漆块并给出旧日滴漆说法；未见当前现场原箱。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 7,
+            "quote": "箱盖左后角有一块月牙形的白漆。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_TOOLBOX": {
+        "type": "object",
+        "statement": "候船室待归还的旧铁工具箱",
+        "status": "active",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "工具箱",
+          "临管"
+        ],
+        "due_unit": 3,
+        "custody": {
+          "holder": "许蓉",
+          "location": "东岸候船室值班窗前矮桌",
+          "condition": "两只搭扣合着，未开箱未清点；试装车后已放回矮桌"
+        },
+        "reader_known": "梁伯已按底联确认借具关系并授权周岸到码头验收，原箱仍在许蓉矮桌未开未交；尚未清点工具。",
+        "character_known": {
+          "许蓉": "亲听外放授权，继续临管闭合原箱，尚未开箱或交给周岸。",
+          "周岸": "获梁伯到码头收箱的授权，出发前知道原箱留许蓉处；自己尚未收箱。",
+          "沈禾": "亲听外放授权，现见原箱仍放许蓉桌上，搭扣未掀、未交还。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 280,
+            "quote": "她把失物本合上，留了一支笔在外头，铁箱仍放在伸手能碰到的矮桌上。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 72,
+            "quote": "我给你留灯。箱子放这儿，不用带着绕。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 163,
+            "quote": "铁箱在她们之间，稳稳地压着桌上那张干报纸。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "找对旧工具箱的实际受托收还人并完成原物归还",
+        "status": "partial",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林",
+          "梁伯"
+        ],
+        "tags": [
+          "归还",
+          "借具关系"
+        ],
+        "due_unit": 3,
+        "reader_known": "梁伯已按底联授权周岸到码头验收并写两联还箱单；真正收还关系已清，原物尚未交还。底联照片只承诺发，尚未写实际收到；两联单也未取回填写。",
+        "character_known": {
+          "许蓉": "亲听梁伯委托周岸收箱，继续看原箱，等返回后实际清点与交接。",
+          "周岸": "本人获委托到码头收箱、验清单和写还箱单，现正去铺里，尚未取回单据或收箱。",
+          "沈禾": "亲听周岸获授权，知道自己可交还并拿一联凭据，当前原箱未换手。",
+          "沈成林": "由女儿本章语音得知梁伯授权周岸，箱仍临管；未获归还完成消息。",
+          "梁伯": "本人按底联委托周岸到码头收还并给沈禾凭据，知道原箱待验，未获完成消息。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 155,
+            "quote": "是借梁家铺的。我这脚走不得远，下午叫送米的小刘顺路捎过去。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 33,
+            "quote": "对。你替我把这一箱收回来。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 33,
+            "quote": "验好你写还箱的那联，给她一份。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      },
+      "T_DEPOSIT": {
+        "type": "thread",
+        "statement": "核清并实际退还借具的八十元押金",
+        "status": "partial",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林",
+          "梁伯"
+        ],
+        "tags": [
+          "押金",
+          "八十元"
+        ],
+        "due_unit": 3,
+        "reader_known": "梁伯核押金八十并明确让周岸从铺里取写沈父姓名的原钱袋，验箱后全退给沈禾；本章没有取袋、交钱或退款动作。",
+        "character_known": {
+          "许蓉": "亲听梁伯核八十及退款授权，尚未见原钱袋或退款。",
+          "周岸": "知道钱袋据梁伯说在铺内借具本最后、面写沈父名字，自己将去取，尚未写拿到。",
+          "沈禾": "亲听八十全退给自己，持借具条等人，尚未拿到钱。",
+          "沈成林": "女儿语音告知周岸去取钱、她等候，未获已经退款消息。",
+          "梁伯": "核八十并授权取原钱袋验后全退给沈禾，未获取出或退回结果。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 165,
+            "quote": "还押在老梁那儿。纸条给她了，八十整。我没叫谁领过。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 43,
+            "quote": "嗯，八十全退，给小禾。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 37,
+            "quote": "钱在铺里借具本最后夹的袋子里，袋面写着你爸名字。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      },
+      "T_CALLBACK": {
+        "type": "thread",
+        "statement": "按梁伯文字约定于当晚九点十分联系并核借具底联",
+        "status": "resolved",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "回电",
+          "九点十分"
+        ],
+        "due_unit": 2,
+        "reader_known": "本章21:10按约实际拨出，外放核到底联及借用押金关系；完成原约定联系。底联照片另仍待实际收到。",
+        "character_known": {
+          "许蓉": "在场听完外放核对，原九点十分联系已完成，改等周岸21:40前返。",
+          "周岸": "本人按21:10拨号、外放核对底联并获授权，已完成联系。",
+          "沈禾": "在场听完外放，已确认收还和退款安排，原九点十分等待结束。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 258,
+            "quote": "九点十分打我，我找下底联"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 21,
+            "quote": "老梁，九点十分了，底联找着没？"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 25,
+            "quote": "找着了，夹在去年那本账里。沈成林借的，押八十。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2
+      },
+      "P_ORDER": {
+        "type": "object",
+        "statement": "沈禾待交点心铺的备货单原件与干信封",
+        "status": "resolved",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "备货单",
+          "九点半"
+        ],
+        "due_unit": 2,
+        "custody": {
+          "holder": "谭老板",
+          "location": "菜场口米糕店（据收单消息，店内具体位置未述）",
+          "condition": "原单经谭老板收单消息及周岸已交消息相互确认送达，信封未叙为遗失或退回"
+        },
+        "reader_known": "21:30关门前，谭老板和周岸消息分别确认原单送达，沈禾不用再跑店；不是仅发照片或承诺代送。",
+        "character_known": {
+          "许蓉": "现场读到谭老板收单文字、听沈禾念并看周岸后续已交消息，知道原单已送到。",
+          "周岸": "本人消息称已将原单交谭老板，正在去铺里；未知道沈禾后续整理与父亲回复。",
+          "沈禾": "收到谭老板和周岸两方确认，已向老板答应明早提前到，知道自己不用再跑店。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 272,
+            "quote": "成。等老梁电话说定，我去的话就带。"
+          },
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 272,
+            "quote": "他接过信封，放进自己外套的内袋"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 123,
+            "quote": "原单收到 周师傅送的 明早按新的做 你别再跑店里了"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 157,
+            "quote": "单子已交谭老板，正去铺里，四十前到。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 2,
+        "previous_holder": "周岸"
+      },
+      "F_GATE_QUOTE": {
+        "type": "fact",
+        "statement": "西门插销维修工料报价与待补小票",
+        "status": "active",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "老何"
+        ],
+        "tags": [
+          "普通报价",
+          "三十元",
+          "维修小票"
+        ],
+        "due_unit": 3,
+        "reader_known": "周岸普通报价工料三十元，许蓉记本并电话转述老何；月底结，小票承诺返程带来，尚未开带或支付。",
+        "character_known": {
+          "许蓉": "直接听周岸报三十元并记本，已向老何同额转述，等小票。",
+          "周岸": "本人报价三十元，称月底结，答应回铺开票并返程带来；尚未写已开票。",
+          "沈禾": "在场听报价与许蓉给老何的同额转述，未付款。",
+          "老何": "从许蓉电话得知工料三十元、记本和待补小票，明早交接须看。"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 58,
+            "quote": "这扇门工料三十元。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 80,
+            "quote": "西门插销修好了，周岸报的工料三十元，我记在值班簿了。"
+          }
+        ],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      },
+      "T_BACK": {
+        "type": "thread",
+        "statement": "周岸取回押金钱袋和还箱凭据并在当晚九点四十前返回码头",
+        "status": "pending",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "返程",
+          "九点四十",
+          "钱袋",
+          "还箱单"
+        ],
+        "due_unit": 3,
+        "reader_known": "周岸已经出发并发消息重申四十前到，消息仍为正去铺里；钱袋、两联单与维修票尚未取回，候船室22:00关门。",
+        "character_known": {
+          "许蓉": "直接听21:40前回，并看后续消息重申；在废票纸记新时间，给人留灯，尚未见返回。",
+          "周岸": "本人承诺先送单再取钱和凭据、21:40前回；消息称正去铺，尚未写完成取回或返程。",
+          "沈禾": "在场听21:40前回并收到同样消息，自己和原箱留在候船室等。"
+        },
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 70,
+            "quote": "先把她的单子送过去，再进铺。九点四十前回来。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+            "line": 157,
+            "quote": "单子已交谭老板，正去铺里，四十前到。"
+          }
+        ],
+        "introduced_unit": 2,
+        "updated_unit": 2
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-灯下的箱子-v2.md",
+      "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+      "summary": "许蓉把误放候船区的旧铁箱暂管在值班窗前矮桌；沈禾带借具条来取箱，装车未成。与沈父的实际通话补清托送来路、借具及八十元押金仍在梁家铺的说法，尚未向梁伯核账。三人看过梁伯约九点十分回电的文字，决定等候；周岸有条件代送沈禾的备货单。箱未开、未交还，押金未退。",
+      "source_hashes": {
+        "writer.json": "09427e05445c28cd172683fcfcf032a7387644f906d5ed9ada6d74b368026b8d",
+        ".writer/state.json": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+        "大纲/单元/0001.json": "3aab96e70065b5fc4b0257d07ef4175703cfa0054c381437fdc426a5744d7276",
+        "设定/作品定位.md": "bd796918caf9c124df5a0e3ad18afa51edeba2279d5bad427b761aaa6b900abc",
+        "设定/文风.md": "b7d91538573ec3036e03075f1482241fe14398fe7c54b89b6e7a8e5507a6c140",
+        "设定/权威规则.md": "4655e29181ada961469b16e494fcc32b30c09a2592dc26de3b923ad5ec4c7ff7",
+        "设定/人物与声音.md": "3049b229dcce94ac5acdebd9e5904ca70ecfef76602b83b64765f940e5ee0c69",
+        "大纲/全书大纲.md": "8d3ba2b2b896dce6e1c85dde5fdbc4e73e39a68e041808fc3e000a9f36a1826c",
+        "大纲/分卷/V1.json": "f213008a93b0c0cd4f5db9b25d165d74b02b5476a98ef466357e657809ad8500"
+      },
+      "fingerprint": "de6844dd43d9aeda4ba8af2e36bf64df206c590a820e15afee4574a55cc7453c",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+          "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [
+        {
+          "id": "D_FINAL_EXECUTION",
+          "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        }
+      ],
+      "tool_build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+      "draft_review": {
+        "reviewer": "本次原生Codex执行代理；知情自检",
+        "report": "审查/final-a-0001-完整章自检.md",
+        "draft_sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+        "report_sha256": "7ff78aeabefe9815c92f4f2af2aa87c1a3af95c8e6d849687f0d3d7874f9c015",
+        "frozen_ref": ".writer/objects/7ff78aeabefe9815c92f4f2af2aa87c1a3af95c8e6d849687f0d3d7874f9c015.draft-review"
+      },
+      "journal": ".writer/journal/4b2f3a3e-753c-4ed9-b883-ea0eb05591ca.json",
+      "journal_sha256": "b752eeff3d8eeb1d73e6f4857f4be56240d11ece0bc05e6aba107d4d31ec530d"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-多跑的一趟-v2.md",
+      "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+      "summary": "21:10三人在场听梁伯外放电话，核清沈父借具和八十元押金，梁伯明确授权周岸到码头验收并退钱给沈禾。周岸带原备货单实际出发，承诺21:40前返；许蓉报价记录为门维修工料三十元并电话转述老何。原单经谭老板与周岸消息确认送达，沈禾告知父亲当前安排后继续等。原箱仍许蓉临管、未开未交，押金钱袋、还箱单及维修票仍待周岸取回。",
+      "source_hashes": {
+        "writer.json": "09427e05445c28cd172683fcfcf032a7387644f906d5ed9ada6d74b368026b8d",
+        ".writer/state.json": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+        "大纲/单元/0002.json": "b4099834a3ae98f2551aca6cc6c46501f9743f26c72e1477b34aa70871a05bc2",
+        "设定/作品定位.md": "bd796918caf9c124df5a0e3ad18afa51edeba2279d5bad427b761aaa6b900abc",
+        "设定/文风.md": "b7d91538573ec3036e03075f1482241fe14398fe7c54b89b6e7a8e5507a6c140",
+        "设定/权威规则.md": "4655e29181ada961469b16e494fcc32b30c09a2592dc26de3b923ad5ec4c7ff7",
+        "设定/人物与声音.md": "3049b229dcce94ac5acdebd9e5904ca70ecfef76602b83b64765f940e5ee0c69",
+        "大纲/全书大纲.md": "8d3ba2b2b896dce6e1c85dde5fdbc4e73e39a68e041808fc3e000a9f36a1826c",
+        "大纲/分卷/V1.json": "f213008a93b0c0cd4f5db9b25d165d74b02b5476a98ef466357e657809ad8500",
+        "正文/0001-灯下的箱子-v2.md": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893"
+      },
+      "fingerprint": "6b8bfcc48fdd6a0aa70a3c82d9edb372f89b1f7fb934f8b39848fbe649f62340",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+          "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [
+        {
+          "id": "D_FINAL_EXECUTION",
+          "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        }
+      ],
+      "tool_build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+      "draft_review": {
+        "reviewer": "本次原生Codex执行代理；知情自检",
+        "report": "审查/final-a-0002-完整章自检.md",
+        "draft_sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+        "report_sha256": "d638f7dda218eb7c6f614c2f7b9744938918cb4e185e31f3d785cdeab1d7dc69",
+        "frozen_ref": ".writer/objects/d638f7dda218eb7c6f614c2f7b9744938918cb4e185e31f3d785cdeab1d7dc69.draft-review"
+      },
+      "journal": ".writer/journal/709134fa-8566-43c0-adaa-1b58a3403de5.json",
+      "journal_sha256": "6121affe6e7776f5594b4a572fa29a0cc0aa69352fafff349dbb1d0a89e96630"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "最终包原生创作试验：总范围1—3；当前进程仅写第1章v1前两个片段后首停，等待根会话核验再同ID恢复",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "当前进程写完分段/0001/v1/01.md和02.md并全文自检即停，禁止03、合章、record及第2/3章",
+        "首停交接保存后正常结束，等待根会话核验再同ID恢复；不能凭总范围自动越过首停",
+        "第3章完成后暂停复盘；后续追溯修订、fresh审查、仅discuss和导出按完整测试授权分阶段执行"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/试验选择说明.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_FINAL_EXECUTION": {
+      "id": "D_FINAL_EXECUTION",
+      "topic": "本次试验代理已选方案与细节",
+      "status": "confirmed",
+      "options": [
+        "在授权内执行眼前归还故事"
+      ],
+      "adopted_items": [
+        "代理选定：三章两卷、温暖克制的现实归还故事；不是人类逐项指定",
+        "代理选定：沈父借箱，沈禾代还，许蓉临管，周岸须获梁伯明确委托后代收",
+        "代理选定：八十元押金，原物与退款分开兑现",
+        "代理选定：首章可见箱体观察，第三章跨卷实际使用；父亲全史保留"
+      ],
+      "excluded_items": [
+        "犯罪反转",
+        "通过编造人类消息ID证明采纳"
+      ],
+      "unresolved_items": [
+        "父亲旧交背景不承担本故事闭合"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": 3
+      },
+      "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+      "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+    },
+    "D_FINAL_CANDIDATE": {
+      "id": "D_FINAL_CANDIDATE",
+      "topic": "末章父亲是否到场与生活尾声候选",
+      "status": "candidate",
+      "options": [
+        "沈父亲自到场",
+        "沈禾带回收据即可",
+        "点心铺热汤尾声"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "沈父亲自到场尚未采纳，不安排他的交通或现场知情",
+        "热汤尾声仅候选，依正文节奏取舍"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": 3
+      },
+      "event_ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+      "event_sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+      "sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+    },
+    {
+      "ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+      "sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+    },
+    {
+      "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+      "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+    }
+  ],
+  "operations": {
+    "final-a-chosen": {
+      "input_sha256": "78831cc1288fb7ac2f9784eec67c6d22a14717970ab90cedbbc23b74a9c33151",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "final-a-chosen",
+        "event": {
+          "ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        },
+        "decision_id": "D_FINAL_EXECUTION"
+      }
+    },
+    "final-a-candidate": {
+      "input_sha256": "ffbff524cc2b46aae3e52fc518ec4259b29c66d31202e31c91f968970b939a62",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "final-a-candidate",
+        "event": {
+          "ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+          "sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+        },
+        "decision_id": "D_FINAL_CANDIDATE"
+      }
+    },
+    "final-a-trial": {
+      "input_sha256": "91dfb16cf2616b5a46bfcc046afddc5398e98e0b040f15d1cf1f2f99f38bc4e4",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "final-a-trial",
+        "event": {
+          "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+          "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+    "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+  }
+}

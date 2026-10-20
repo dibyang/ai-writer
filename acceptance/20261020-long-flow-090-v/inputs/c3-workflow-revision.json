@@ -1,0 +1,76 @@
+{
+  "expected_revision": 50,
+  "operation_id": "v-c3-revision-tail-7-12",
+  "author_evidence": {
+    "quote": "原授权、当前ab14身份、10—12创作、三线兑现、正式7—12修订区只重登7首停全部不变。",
+    "local_source": "研究/V-C3-实际授权来源.md",
+    "source_sha256": "ef02264352bca7af800c1eb71f390d977c112610cf48c22e477c3ea956b69316",
+    "locator": "本次用户补充原话及以上逐份保留的本地验收提示；无可用消息ID",
+    "recorded_by": "V-C3实际Codex执行会话"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "按已授权的7/9普通事实选择修订7—12整个尾段：7备零钱两卷及8实拆备用卷，9工费55总81及11实付；逐章重登并最终完整尾段复核。此进程只重登7首停，根核验后同ID继续8—12",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 7,
+        "to": 12
+      },
+      "stop_conditions": [
+        "整体目标为7—12独立修订、真实逐章重登/尾段完整连读后再由后续授权进程完成prepare/commit，普通事实选择详见V/c-revision-choice.md。",
+        "本执行进程首停：candidate只到1—7，8—12尚未重登；不得record8、prepare、commit、abort。根核验进程结束后的占用保护，再同ID/token恢复8—12。",
+        "独立区原稿留存，正文/旧tracking/下游实读后填replay_review六字段并附当前draft_review；来源或正文变化不得只换SHA。",
+        "独立区活跃时主12/治理/来源只读，不改基线；不改1—6，不改任何observation三项，不串35/80/26/81。",
+        "当前待复核窗口按check如实交接，旧报告过期不称有效；不派代理，不改U/T/产品，不提交推送上传。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "expected_revision": 45,
+  "operation_id": "v-c3-trial-10-12",
+  "author_evidence": {
+    "quote": "原授权、当前ab14身份、10—12创作、三线兑现、正式7—12修订区只重登7首停全部不变。",
+    "local_source": "研究/V-C3-实际授权来源.md",
+    "source_sha256": "ef02264352bca7af800c1eb71f390d977c112610cf48c22e477c3ea956b69316",
+    "locator": "本次用户补充原话及以上逐份保留的本地验收提示；无可用消息ID",
+    "recorded_by": "V-C3实际Codex执行会话"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "完成10—12实际分段创作、逐章完整自检登记与当前滚动窗口；再进入正式7—12修订，改7/9普通事实并仅重登7后首停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 10,
+        "to": 12
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第10/12至少5000正文汉字，第11至少3500；各至少两个真实顺序片段经assemble，完整回读修正/报告/draft_review后preview成功才record。",
+        "第11/12实写柜位与路线后果，回看首次/最近/知情链；完成12后当前7—12完整连读正式review，并按check补齐实际应有窗口。",
+        "完成主12及报告后另正式workflow转revision：draft_range null，revise_range 7—12；独立区修改7/9及必要下游。",
+        "本进程独立区只重登7到candidate1—7后首停；不重登8，不prepare/commit/abort，主区12章原字节只读；根核验后同ID续8—12。",
+        "只写V；不派代理，不改产品/U/T，不提交推送上传；保留所有旧稿/输入/失败和真实双流。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

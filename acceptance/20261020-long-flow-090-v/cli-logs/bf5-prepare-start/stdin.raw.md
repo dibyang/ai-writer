@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const w='scenario/东岸末班船-扩展验证';
+const s=JSON.parse(fs.readFileSync(`${w}/.writer/state.json`));
+const local_source='研究/V-B-v5实际授权原文.md';
+const raw=fs.readFileSync(`${w}/${local_source}`);
+const workflow=structuredClone(s.governance);
+workflow.stage='trial';
+workflow.task='V新鲜B有限7—9：先完整连读并review当前1—6，check覆盖清零后写7—8；8后本进程首停，9待同一实际thread恢复';
+workflow.authorization={allowed_actions:['discuss','plan','draft'],draft_range:{from:7,to:9},revise_range:null,stop_conditions:['当前1—6完整实读、报告和正式review及check确认覆盖后，才进入7写前与正文。','本进程7—8逐章写前模板、至少3500正文汉字、顺序分段assemble、完整实读报告、draft_review、preview成功才record。','第8实际行动与后果兑现取货时段线索；柜内位置与绕行入口最终兑现留11/12。','8完成后连读7—8并回看涉及4—6，正式review全部当前范围；8后首停，不写9；9待同一实际会话恢复。','旧1—6正文、已修追踪与immutable observation不改；新高置信旧章问题保存证据报根。','仅V写入，不派代理，不改U/T/产品/既有作品，不Git提交推送上传。']};
+const input={expected_revision:s.revision,operation_id:'v-bf5-start-trial-7-9',author_evidence:{quote:'这是V新鲜B的实际指令，完整读取prompt-b-first-v5.md并执行其7—8首停/9同ID恢复安排。',local_source,source_sha256:crypto.createHash('sha256').update(raw).digest('hex'),locator:'本会话用户实际指令第1段；V/prompt-b-first-v5.md全文及本来源的额外前置顺序',recorded_by:'V新鲜B当前实际Codex会话；代理按原话准备有限范围，不编造thread ID'},workflow};
+fs.writeFileSync('bf5-workflow-start.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({revision:s.revision,input:'bf5-workflow-start.json',units:s.units.map(u=>({unit:u.unit,draft:u.draft})),author_sha256:input.author_evidence.source_sha256},null,2));

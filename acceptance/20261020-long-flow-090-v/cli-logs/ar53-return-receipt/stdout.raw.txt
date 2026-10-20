@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-20T10:09:05.674Z",
+  "status": "A-prose-4-6-complete-waiting-root-verification-with-unfixed-metadata-issue",
+  "revision": 24,
+  "state_sha256": "85ef095e7dceca979f0b46e44b644dfcbcd2a17bd64294175203848b253c057c",
+  "handoff_sha256": "fc590491e037ccb7f48ec8144caf3e4968f27e8b972470f9307a3f5c205b5aa2",
+  "index_sha256": "21157ff3fe1d964e4a4939fb81976a908fec59a7f9253a9a8313e781d8a8139b",
+  "audit_sha256": "ffb70bd31878a964bbdee34df7c6096615e09a6e980836d46a442b00a9435556",
+  "index_and_files_verified": true,
+  "files_verified": 713,
+  "terminal_index_log": {
+    "label": "ar52-evidence-index-v2",
+    "exit_code": 0,
+    "result_sha256": "480232fb9188855ddb4f3d2e910f576d14b1f617828978abd3356fbd373ffef5"
+  },
+  "resume_nonzero_processes": [
+    {
+      "label": "ar26-prepare-assemble-6",
+      "exit_code": 1,
+      "before_state_sha256": "632a320f2b0c172a75dca11b696c1a7b6be1839f89204ead2ee072f5123fe505",
+      "after_state_sha256": "632a320f2b0c172a75dca11b696c1a7b6be1839f89204ead2ee072f5123fe505"
+    },
+    {
+      "label": "ar37-prepare-stop",
+      "exit_code": 1,
+      "before_state_sha256": "08f20d090d7dfec8afc77555f339f3f914371c8f09a9feb35c032f46a4eada11",
+      "after_state_sha256": "08f20d090d7dfec8afc77555f339f3f914371c8f09a9feb35c032f46a4eada11"
+    },
+    {
+      "label": "ar51-evidence-index",
+      "exit_code": 1,
+      "before_state_sha256": "85ef095e7dceca979f0b46e44b644dfcbcd2a17bd64294175203848b253c057c",
+      "after_state_sha256": "85ef095e7dceca979f0b46e44b644dfcbcd2a17bd64294175203848b253c057c"
+    }
+  ],
+  "known_unfixed_issue": "V_A_U5_TIME_METADATA: 第5章登记summary与timeline两处停航次日晚应为停航首日晚；正文未改，未开启正式修订。",
+  "evidence_limitations": [
+    "A首停a12原始包装器拒绝未采集独立双流，已保留真实说明与复现；不以复现替代首次。",
+    "恢复ar33a只读Get-Location绕过记录器，实际工具合并返回保留于cli-logs/ar33a-location-inspection.json；缺该次现场独立双流和瞬间SHA。"
+  ],
+  "registered_units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-灯下的箱子-v2.md",
+      "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-多跑的一趟-v2.md",
+      "sha256": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886"
+    },
+    {
+      "unit": 3,
+      "draft": "正文/0003-把手朝外-final-b.md",
+      "sha256": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221"
+    },
+    {
+      "unit": 4,
+      "draft": "正文/0004-少蒸的两笼-v1.md",
+      "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4"
+    },
+    {
+      "unit": 5,
+      "draft": "正文/0005-门板靠墙-v1.md",
+      "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb"
+    },
+    {
+      "unit": 6,
+      "draft": "正文/0006-走一遍再画-v2.md",
+      "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91"
+    }
+  ],
+  "next_requires_new_root_prompt": true,
+  "wrote_unit7": false,
+  "opened_new_revision_session": false,
+  "note": "ar53记录器将在此进程结束后保存实际退出码与前后state；不以本收据循环引用自身日志。"
+}

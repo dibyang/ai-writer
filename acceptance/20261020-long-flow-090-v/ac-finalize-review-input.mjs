@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v';
+const w=path.join(v,'scenario','东岸末班船-扩展验证');
+const input=JSON.parse(fs.readFileSync(path.join(v,'ac-review-4-6.json'),'utf8'));
+const text=fs.readFileSync(path.join(w,input.report),'utf8');
+const old='原summary与timeline“停航次晨”有相对锚歧义';
+const replacement='原summary“次晨”、timeline“停航次晨”有相对锚歧义';
+if(text.split(old).length!==2)throw Error('Report correction must be exact once');
+const archive=JSON.parse(fs.readFileSync(path.join(v,'ac-tracking-archive-check.json'),'utf8'));
+if(!archive.time_changes[0].before_summary.includes('。次晨沈禾'))throw Error('Archive anchor changed');
+input.report='审查/V-A-工具升级后-0004-0006-追踪意见复核-v2.md';
+const report=text.replace(old,replacement);
+fs.writeFileSync(path.join(w,input.report),report,{flag:'wx'});
+fs.writeFileSync(path.join(v,'ac-review-4-6-v2.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({expected_revision:input.expected_revision,report:input.report,report_sha256:crypto.createHash('sha256').update(report).digest('hex'),correction:'精确区分旧4章summary次晨与timeline停航次晨；未提交旧输入及原报告保留',original_input:'ac-review-4-6.json'}));

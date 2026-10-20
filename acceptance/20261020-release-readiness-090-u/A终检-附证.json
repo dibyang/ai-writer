@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "checked_at": "2026-10-20T05:53:31.193Z",
+  "revision": 3,
+  "registered_units": 0,
+  "state_sha256": "2d3bf8729a280132e1ddedb71964708c196755659d96e5106c027acd50a14aae",
+  "parts": [
+    {
+      "ref": "分段/0001/v1/01.md",
+      "sha256": "26ef11bffdb451943528283382b1fd0ed37a4c3715c808d8a081f17f053d2306",
+      "bytes": 3933,
+      "body_han": 1135,
+      "headings": 1
+    },
+    {
+      "ref": "分段/0001/v1/02.md",
+      "sha256": "0d7c74fe39ca33e885f9b87284652653b173994ba7a64aa41e02a35b732c86fc",
+      "bytes": 4419,
+      "body_han": 1206,
+      "headings": 0
+    }
+  ],
+  "tool_checks": [
+    {
+      "root": "D:/work/other/ai-writer/.tmp/U 最终交付解压/ai-writer-0.9.0",
+      "files_checked": 66,
+      "unchanged": true
+    },
+    {
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario\\东岸末班船\\.writer\\tool",
+      "files_checked": 66,
+      "unchanged": true
+    }
+  ],
+  "report_sha256": "7439696f8bbacdffaf6b393ac8cc4a50f4d3364e447bd75e9833264b982ef28d",
+  "handoff_sha256": "29f0ba1a235529b8fd9da0ea04677845168b0c97ee6e1a8f064a6533554b129e",
+  "document_corrections": [
+    "自检报告将转运路径转述中的检修棚更正为正文的修理棚，并同步交接中的报告SHA",
+    "交接明确25次CLI分布为a01— a04用P，a05— a25用W"
+  ],
+  "historical_creation_evidence": "commands/a-close/stdout.raw.txt保留初存文档哈希；当前文档哈希以本附证为准。初存文档字节保留在过程稿-A/报告初存.md、交接初存.md。",
+  "git_status_note": {
+    "ref": "commands/a-git-stop/stdout.raw.txt",
+    "additional_paths_observed_since_first_status": [
+      "scripts/build-release.mjs",
+      "tests/release.test.mjs"
+    ],
+    "cause": "未核；本轮未向这些路径发出写命令，未处理。候选P与随附W文件已单独核对未变化。"
+  },
+  "scope": "仅A首停，未完成三章端到端验收"
+}

@@ -1,0 +1,14 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const w='scenario/东岸末班船-扩展验证',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+let a=fs.readFileSync(`${w}/分段/0009/01-v1.md`,'utf8');
+a=a.replace('沈禾平日四点才下工，昨晚她说中午在家一阵，来得急去得也急。','昨晚沈禾只说中午在家一阵，来得急去得也急，晚上六点半左右才安稳。');
+fs.writeFileSync(`${w}/分段/0009/01-v2.md`,a,{flag:'wx'});
+let c=fs.readFileSync(`${w}/分段/0009/03-v1.md`,'utf8');
+c=c.replace('我放聊天里，省得他明天又记成六点半。','我放聊天里，到时候我们俩都看得见。').replace('对方听了笑，让他别把汤滴到小票上，纸都从口袋边露出来了。','对方听了笑，将盛醋的小瓶往他手边推近一点。').replace('周岸将那张属于自己晚饭的零钱票收深些，接过筷子。','周岸接过筷子，把醋瓶挪到碗旁。');
+fs.writeFileSync(`${w}/分段/0009/03-v2.md`,c,{flag:'wx'});
+const s=JSON.parse(fs.readFileSync(`${w}/.writer/state.json`));
+const parts=['分段/0009/01-v2.md','分段/0009/02-v1.md','分段/0009/03-v2.md'].map(path=>{const b=fs.readFileSync(`${w}/${path}`);return {path,sha256:sha(b),han:[...b.toString().replace(/^#.*$/gm,'').matchAll(/\p{Script=Han}/gu)].length};});
+const total=parts.reduce((n,p)=>n+p.han,0);
+console.log(JSON.stringify({revision:s.revision,parts,total_han:total,meets_minimum:total>=5000},null,2));
+if(total<5000)throw Error('below body Han minimum; no assemble input written');
+fs.writeFileSync('br2-assemble-9.json',JSON.stringify({unit:9,expected_revision:s.revision,draft:'正文/0009-留给明天的活-v1.md',parts:parts.map(({path,sha256})=>({path,sha256})),separator:'\n\n'},null,2)+'\n',{flag:'wx'});

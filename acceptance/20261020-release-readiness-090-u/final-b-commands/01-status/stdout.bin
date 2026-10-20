@@ -1,0 +1,200 @@
+{
+  "ok": true,
+  "title": "东岸末班船",
+  "kind": "novel",
+  "revision": 6,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "第1—2章已登记；本进程完成当前1—2全文连读、报告登记和恢复交接后结束，第3章等待后续恢复",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次恢复进程只完成第1—2章与连读交接，不能开始第3章；停点及下一步见当前交接",
+        "总试写范围保持1—3，恢复后第3章完成即复盘，不自动写第4章",
+        "后续小范围追溯修订、fresh会话审查和导出按原完整测试授权分阶段执行，不自动扩权"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/试验选择说明.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_FINAL_EXECUTION",
+          "topic": "本次试验代理已选方案与细节",
+          "status": "confirmed",
+          "options": [
+            "在授权内执行眼前归还故事"
+          ],
+          "adopted_items": [
+            "代理选定：三章两卷、温暖克制的现实归还故事；不是人类逐项指定",
+            "代理选定：沈父借箱，沈禾代还，许蓉临管，周岸须获梁伯明确委托后代收",
+            "代理选定：八十元押金，原物与退款分开兑现",
+            "代理选定：首章可见箱体观察，第三章跨卷实际使用；父亲全史保留"
+          ],
+          "excluded_items": [
+            "犯罪反转",
+            "通过编造人类消息ID证明采纳"
+          ],
+          "unresolved_items": [
+            "父亲旧交背景不承担本故事闭合"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": 3
+          },
+          "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_FINAL_CANDIDATE",
+          "topic": "末章父亲是否到场与生活尾声候选",
+          "status": "candidate",
+          "options": [
+            "沈父亲自到场",
+            "沈禾带回收据即可",
+            "点心铺热汤尾声"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "沈父亲自到场尚未采纳，不安排他的交通或现场知情",
+            "热汤尾声仅候选，依正文节奏取舍"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": 3
+          },
+          "event_ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+          "event_sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 3,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 6,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 2,
+    "unregistered": [
+      {
+        "draft": "正文/0001-灯下的箱子.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0002-多跑的一趟.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 3,
+    "plan_exists": true,
+    "action": "先核对未登记正文，再读取下一单元上下文",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船' '--unit' '3'"
+  },
+  "current": {
+    "character_count": 6,
+    "ledger_count": 8,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "许蓉把误放候船区的旧铁箱暂管在值班窗前矮桌；沈禾带借具条来取箱，装车未成。与沈父的实际通话补清托送来路、借具及八十元押金仍在梁家铺的说法，尚未向梁伯核账。三人看过梁伯约九点十分回电的文字，决定等候；周岸有条件代送沈禾的备货单。箱未开、未交还，押金未退。"
+      },
+      {
+        "unit": 2,
+        "summary": "21:10三人在场听梁伯外放电话，核清沈父借具和八十元押金，梁伯明确授权周岸到码头验收并退钱给沈禾。周岸带原备货单实际出发，承诺21:40前返；许蓉报价记录为门维修工料三十元并电话转述老何。原单经谭老板与周岸消息确认送达，沈禾告知父亲当前安排后继续等。原箱仍许蓉临管、未开未交，押金钱袋、还箱单及维修票仍待周岸取回。"
+      }
+    ],
+    "timeline_tail": [
+      "检修停航前夜：许蓉在候船区雨衣下找到旧箱并挪至矮桌临管，周岸修门，沈禾持借具条到场。",
+      "同夜：沈父手机未接后通过候船室座机接通，许蓉直接接听并转述托送经过；押金与工具清点仍待梁伯核对。",
+      "20:47前后：三人看过梁伯九点十分再联系的文字，约定等待；周岸接下有条件代送备货单的信封，尚未出发。",
+      "21:10—21:15前后：周岸按约拨号并开外放，梁伯找到底联、核借具押金并明确授权收还与退钱给沈禾。",
+      "随后：周岸携原备货单、铺门钥匙及工具包实际离开，约21:40前回；许蓉电话向老何转述门工料三十元。",
+      "21:26及之后：原单获谭老板与周岸双向送达消息确认，沈禾发语音告知父亲当前安排；原箱仍临管，等待周岸去铺里取钱与凭据后返回。"
+    ]
+  }
+}

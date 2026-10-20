@@ -1,0 +1,6 @@
+{
+  "kind": "actual-exec-tool-result-retained-after-call",
+  "raw_input": {"cmd":"Get-Location","workdir":"D:/work/other/ai-writer","max_output_tokens":1000},
+  "actual_result": {"chunk_id":"3262bb","wall_time_seconds":0.299991,"exit_code":0,"original_token_count":11,"output":"\r\nPath\r\n----\r\nD:\\work\\other\\ai-writer\r\n\r\n"},
+  "limitation": "恢复压缩上下文后一次多余只读定位命令未走v-log。这里保存实际工具返回，非重新执行冒充首次双流；该工具只返回合并output，未现场分别采集stdout/stderr及命令瞬间stateSHA。前后ar33/ar34记录可核state未变，但不能冒称该次单独具有完整原始双流与现场SHA。后续仍统一记录器。"
+}

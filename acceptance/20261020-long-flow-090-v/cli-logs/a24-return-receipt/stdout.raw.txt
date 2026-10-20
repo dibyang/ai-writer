@@ -1,0 +1,73 @@
+{
+  "at": "2026-10-20T09:08:45.324Z",
+  "stage": "A-first-stop",
+  "revision": 17,
+  "registered_units": [
+    1,
+    2,
+    3
+  ],
+  "state_sha256": "9ac29347490e31afbb28b91a1288644a791613f23faf204cab31d8c70111a8e9",
+  "handoff": {
+    "file": "交接-A首停.md",
+    "sha256": "f1782f110b2662a27b3b531d8a1856d49e446347f43c85f5f2eed9920e1990e7"
+  },
+  "report": {
+    "file": "审查/V-A-0004前两段-知情自检.md",
+    "sha256": "539bd9d4e0a156c1528cf17a5f9d67fbbbe6312bd5cb040f8c3749f84b9f129c",
+    "nature": "informed-model-self-review"
+  },
+  "parts": [
+    {
+      "ref": "分段/0004/v1/01.md",
+      "sha256": "558eb60ce2c5d9b36c2ec753a4ef76132c544b683999d32c8c4db9aa53408113",
+      "han": 1151,
+      "report_matches": true,
+      "handoff_matches": true
+    },
+    {
+      "ref": "分段/0004/v1/02.md",
+      "sha256": "a899d1299b90a1a628a3577943081f67f239ea2ed616f6c309b50874c3c19493",
+      "han": 1158,
+      "report_matches": true,
+      "handoff_matches": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "v-log.mjs",
+      "sha256": "876a71b5a5ceeaa19521ea97987c7b250b811a1d277b7cf80573b9e0dfca7b50"
+    },
+    {
+      "file": "a-inputs.mjs",
+      "sha256": "b61d840d834d166a0c76fbe5d15bf21b7952f0fb1842855e926af7d9a543b121"
+    },
+    {
+      "file": "a-start-audit.mjs",
+      "sha256": "a1c431e5119afd9b5946f6919dd205d33a2b4d3fb93197d6d4c405575e42cb8a"
+    },
+    {
+      "file": "a-part-audit.mjs",
+      "sha256": "d8e06bd3ab2149ed672fe847c58a9a3c230885e9b8ace0766995644cace95882"
+    },
+    {
+      "file": "a-close-audit.mjs",
+      "sha256": "567009189c6b7885e59ea6ea4dd60806ce3993da548acaab2058205625b2cda4"
+    },
+    {
+      "file": "a-start-audit.json",
+      "sha256": "3c9706402864156443cc1d23b9c3f909c26686d4c0d6a8804a97cf4e42809f8b"
+    },
+    {
+      "file": "a-close-audit.json",
+      "sha256": "abcf59d2d81cf2bd84ae53658c156d7c97e7b4bfd9554b83aa0448e59a7be9fe"
+    }
+  ],
+  "unit4_registered": false,
+  "part_files": [
+    "01.md",
+    "02.md"
+  ],
+  "evidence_limit": "First uppercase-label recorder rejection happened before logging; original separate streams unavailable. Explicitly labeled reproduction preserved. See cli-logs/a12-first-wrapper-rejection-note.md.",
+  "ok": true
+}

@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v';
+const w=v+'/scenario/东岸末班船-扩展验证';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const state=JSON.parse(fs.readFileSync(w+'/.writer/state.json','utf8'));
+const audit=JSON.parse(fs.readFileSync(v+'/a-close-audit.json','utf8'));
+const handoff=fs.readFileSync(v+'/交接-A首停.md');
+const report=fs.readFileSync(w+'/审查/V-A-0004前两段-知情自检.md');
+const parts=['01.md','02.md'].map(file=>{
+ const ref='分段/0004/v1/'+file,raw=fs.readFileSync(w+'/'+ref),text=raw.toString('utf8');
+ const han=(text.replace(/^ {0,3}#{1,6}[ \t].*(?:\r?\n|$)/gm,'').match(/\p{Script=Han}/gu)??[]).length;
+ return {ref,sha256:sha(raw),han,report_matches:report.toString('utf8').includes(sha(raw)),handoff_matches:handoff.toString('utf8').includes(sha(raw))};
+});
+const evidence=['v-log.mjs','a-inputs.mjs','a-start-audit.mjs','a-part-audit.mjs','a-close-audit.mjs','a-start-audit.json','a-close-audit.json'].map(file=>({file,sha256:sha(fs.readFileSync(v+'/'+file))}));
+const result={at:new Date().toISOString(),stage:'A-first-stop',revision:state.revision,registered_units:state.units.map(x=>x.unit),state_sha256:sha(fs.readFileSync(w+'/.writer/state.json')),handoff:{file:'交接-A首停.md',sha256:sha(handoff)},report:{file:'审查/V-A-0004前两段-知情自检.md',sha256:sha(report),nature:'informed-model-self-review'},parts,evidence,unit4_registered:state.units.some(x=>x.unit===4),part_files:fs.readdirSync(w+'/分段/0004/v1').sort(),evidence_limit:'First uppercase-label recorder rejection happened before logging; original separate streams unavailable. Explicitly labeled reproduction preserved. See cli-logs/a12-first-wrapper-rejection-note.md.'};
+result.ok=audit.ok&&state.revision===17&&result.state_sha256===audit.state_sha256&&!result.unit4_registered&&JSON.stringify(result.part_files)===JSON.stringify(['01.md','02.md'])&&parts.every(x=>x.han>=1100&&x.han<=1500&&x.report_matches&&x.handoff_matches);
+fs.writeFileSync(v+'/a-return-receipt.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result,null,2));
+if(!result.ok)process.exitCode=1;

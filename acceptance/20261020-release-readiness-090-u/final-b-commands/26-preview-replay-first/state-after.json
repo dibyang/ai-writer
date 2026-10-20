@@ -1,0 +1,545 @@
+{
+  "schema_version": 6,
+  "revision": 11,
+  "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "许蓉": "东岸候船室值班窗边；临管闭合旧铁箱。亲见左后角月牙白漆，实接沈父电话得知托送经过、押金及内盖清单，已向周岸转述。看过梁伯九点十分联系的文字；十点关门，尚未获真正收还授权。",
+      "周岸": "候船室椅边；插销修好已由许蓉试过，自用帆布包在脚边，持沈禾备货单信封在外套内袋。经许蓉转述知道沈父的送箱、押金和清单说法，读过梁伯短信并听语音，约九点十分再联系。未收原箱、未领押金。",
+      "沈禾": "候船室桌边；父亲的借具条在身边，空拉车靠稳，汗衫和捆带留车上，手机在窗台充电。已向店里发清楚的备货单照片，将原件有条件交周岸代送，店九点半关门。已联系父亲，听许蓉补明托送经过；看过梁伯约九点十分的文字，留在原处等。没有领到退款。",
+      "沈成林": "家中脚伤；本章真实电话中向许蓉说明借梁家铺工具、托小刘送箱、押金八十元仍在梁处的说法。由许蓉得知箱在她桌上、周岸已到；未在现场，不知后续短信与备货单安排。"
+    },
+    "threads": [],
+    "timeline": [
+      "检修停航前夜：许蓉在候船区雨衣下找到旧箱并挪至矮桌临管，周岸修门，沈禾持借具条到场。",
+      "同夜：沈父手机未接后通过候船室座机接通，许蓉直接接听并转述托送经过；押金与工具清点仍待梁伯核对。",
+      "20:47前后：三人看过梁伯九点十分再联系的文字，约定等待；周岸接下有条件代送备货单的信封，尚未出发。"
+    ],
+    "ledger": {
+      "O_BOX_PAINT": {
+        "type": "observation",
+        "statement": "箱盖左后角有一块月牙形的白漆。",
+        "author_truth": "箱盖左后角确有月牙形白漆；它不是暗号，也不能单独充当排他归属证明。",
+        "status": "active",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林"
+        ],
+        "tags": [
+          "旧铁箱",
+          "白漆"
+        ],
+        "due_unit": 3,
+        "reader_known": "许蓉亲见原句所指白漆；沈父电话给出过滴漆说法，成因未独立核实。",
+        "character_known": {
+          "许蓉": "亲见左后角月牙形白漆，电话听沈父说记得并给出滴漆解释；未作排他鉴定。",
+          "周岸": "见过旧箱并说与梁家旧箱相似；正文未明确他核看过白漆形状位置。",
+          "沈禾": "在场听到许蓉询问箱盖白漆，未直接核认该细节形状位置。",
+          "沈成林": "电话称记得左后角漆块并给出旧日滴漆说法；未见当前现场原箱。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 7,
+            "quote": "箱盖左后角有一块月牙形的白漆。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_TOOLBOX": {
+        "type": "object",
+        "statement": "候船室待归还的旧铁工具箱",
+        "status": "active",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "工具箱",
+          "临管"
+        ],
+        "due_unit": 3,
+        "custody": {
+          "holder": "许蓉",
+          "location": "东岸候船室值班窗前矮桌",
+          "condition": "两只搭扣合着，未开箱未清点；试装车后已放回矮桌"
+        },
+        "reader_known": "沈父称借自梁家铺，原箱仍由许蓉暂管，当前没有收还交接。",
+        "character_known": {
+          "许蓉": "亲手移箱并一直临管，已知父亲的借具说法，箱内尚未核验。",
+          "周岸": "先前从雨棚挪箱入室，当前知道许蓉临管，自己尚未受托收还。",
+          "沈禾": "试装车未成，见箱放回矮桌，尚未交给周岸。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 280,
+            "quote": "她把失物本合上，留了一支笔在外头，铁箱仍放在伸手能碰到的矮桌上。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "找对旧工具箱的实际受托收还人并完成原物归还",
+        "status": "partial",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林"
+        ],
+        "tags": [
+          "归还",
+          "借具关系"
+        ],
+        "due_unit": 3,
+        "reader_known": "借具条和沈父通话指向梁家铺；周岸尚未获得梁伯实际代收授权，原物未交还。",
+        "character_known": {
+          "许蓉": "直接听沈父说明借具及托送经过，等待梁伯核实收还关系。",
+          "周岸": "听许蓉转述并已听沈父语音；现在只约好九点十分联系梁伯，未获授权。",
+          "沈禾": "持借具条、已和父亲通话并听许蓉补明送箱经过，想还店里但尚无接收确认。",
+          "沈成林": "托送时只以为会碰见周岸，现知许蓉临管；未获归还完成消息。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 155,
+            "quote": "是借梁家铺的。我这脚走不得远，下午叫送米的小刘顺路捎过去。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_DEPOSIT": {
+        "type": "thread",
+        "statement": "核清并实际退还借具的八十元押金",
+        "status": "pending",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林"
+        ],
+        "tags": [
+          "押金",
+          "八十元"
+        ],
+        "due_unit": 3,
+        "reader_known": "借具条写八十元，沈父称仍押在梁处且没叫人领过；梁伯未核实，现场未交钱。",
+        "character_known": {
+          "许蓉": "直接听沈父说仍押在梁处，尚无梁伯核账及退款。",
+          "周岸": "听许蓉转述八十元仍押着，自述没收这笔钱，须核梁伯。",
+          "沈禾": "持八十元借具条，听许蓉补充电话信息；手中没有退款。",
+          "沈成林": "自称八十整押在梁处且未托领；不知当前核账结果。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 165,
+            "quote": "还押在老梁那儿。纸条给她了，八十整。我没叫谁领过。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_CALLBACK": {
+        "type": "thread",
+        "statement": "按梁伯文字约定于当晚九点十分联系并核借具底联",
+        "status": "pending",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "回电",
+          "九点十分"
+        ],
+        "due_unit": 2,
+        "reader_known": "三人看过短信，约定等待，通话与底联核对尚未发生。",
+        "character_known": {
+          "许蓉": "已读文字并在废票纸记九点十分，十点须关门。",
+          "周岸": "本人收到文字及语音，承接九点十分拨号，尚未再拨。",
+          "沈禾": "已读文字，选择留在候船室等到九点十分。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 258,
+            "quote": "九点十分打我，我找下底联"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_ORDER": {
+        "type": "object",
+        "statement": "沈禾待交点心铺的备货单原件与干信封",
+        "status": "active",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾"
+        ],
+        "tags": [
+          "备货单",
+          "九点半"
+        ],
+        "due_unit": 2,
+        "custody": {
+          "holder": "周岸",
+          "location": "候船室内周岸外套内袋",
+          "condition": "原单在未粘口干信封内，答应去铺时顺路代送；未送达"
+        },
+        "reader_known": "照片已发店里，原件交周岸；有条件代送，店九点半关门，来不及须带回。",
+        "character_known": {
+          "许蓉": "看见照片发送及信封交周岸，听见九点半关门与未去成须还。",
+          "周岸": "实际持信封，知道菜场口谭老板和九点半关门；尚未出发。",
+          "沈禾": "已发照片且告知谭老板可能由周岸送单，知道只是有条件代送。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 272,
+            "quote": "成。等老梁电话说定，我去的话就带。"
+          },
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 272,
+            "quote": "他接过信封，放进自己外套的内袋"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-灯下的箱子-v2.md",
+      "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+      "summary": "许蓉把误放候船区的旧铁箱暂管在值班窗前矮桌；沈禾带借具条来取箱，装车未成。与沈父的实际通话补清托送来路、借具及八十元押金仍在梁家铺的说法，尚未向梁伯核账。三人看过梁伯约九点十分回电的文字，决定等候；周岸有条件代送沈禾的备货单。箱未开、未交还，押金未退。",
+      "source_hashes": {
+        "writer.json": "09427e05445c28cd172683fcfcf032a7387644f906d5ed9ada6d74b368026b8d",
+        ".writer/state.json": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+        "大纲/单元/0001.json": "3aab96e70065b5fc4b0257d07ef4175703cfa0054c381437fdc426a5744d7276",
+        "设定/作品定位.md": "bd796918caf9c124df5a0e3ad18afa51edeba2279d5bad427b761aaa6b900abc",
+        "设定/文风.md": "b7d91538573ec3036e03075f1482241fe14398fe7c54b89b6e7a8e5507a6c140",
+        "设定/权威规则.md": "4655e29181ada961469b16e494fcc32b30c09a2592dc26de3b923ad5ec4c7ff7",
+        "设定/人物与声音.md": "3049b229dcce94ac5acdebd9e5904ca70ecfef76602b83b64765f940e5ee0c69",
+        "大纲/全书大纲.md": "8d3ba2b2b896dce6e1c85dde5fdbc4e73e39a68e041808fc3e000a9f36a1826c",
+        "大纲/分卷/V1.json": "f213008a93b0c0cd4f5db9b25d165d74b02b5476a98ef466357e657809ad8500"
+      },
+      "fingerprint": "de6844dd43d9aeda4ba8af2e36bf64df206c590a820e15afee4574a55cc7453c",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+          "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [
+        {
+          "id": "D_FINAL_EXECUTION",
+          "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        }
+      ],
+      "tool_build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+      "draft_review": {
+        "reviewer": "本次原生Codex执行代理；知情自检",
+        "report": "审查/final-a-0001-完整章自检.md",
+        "draft_sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+        "report_sha256": "7ff78aeabefe9815c92f4f2af2aa87c1a3af95c8e6d849687f0d3d7874f9c015",
+        "frozen_ref": ".writer/objects/7ff78aeabefe9815c92f4f2af2aa87c1a3af95c8e6d849687f0d3d7874f9c015.draft-review"
+      },
+      "journal": ".writer/journal/4b2f3a3e-753c-4ed9-b883-ea0eb05591ca.json",
+      "journal_sha256": "b752eeff3d8eeb1d73e6f4857f4be56240d11ece0bc05e6aba107d4d31ec530d"
+    }
+  ],
+  "governance": {
+    "stage": "revision",
+    "task": "将维修工料普通报价30元追溯改35元，独立修订第2—3章；本进程只重登2，保留同ID候选供后续完成3及尾段复核",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 3
+      },
+      "stop_conditions": [
+        "不得新增第4章或其他正文单元",
+        "本进程只重登最早影响章2，下一待重登章为3",
+        "不prepare、不commit、不abort；主稿三章保持会话基线原字节"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/试验选择说明.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_FINAL_EXECUTION": {
+      "id": "D_FINAL_EXECUTION",
+      "topic": "本次试验代理已选方案与细节",
+      "status": "confirmed",
+      "options": [
+        "在授权内执行眼前归还故事"
+      ],
+      "adopted_items": [
+        "代理选定：三章两卷、温暖克制的现实归还故事；不是人类逐项指定",
+        "代理选定：沈父借箱，沈禾代还，许蓉临管，周岸须获梁伯明确委托后代收",
+        "代理选定：八十元押金，原物与退款分开兑现",
+        "代理选定：首章可见箱体观察，第三章跨卷实际使用；父亲全史保留"
+      ],
+      "excluded_items": [
+        "犯罪反转",
+        "通过编造人类消息ID证明采纳"
+      ],
+      "unresolved_items": [
+        "父亲旧交背景不承担本故事闭合"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": 3
+      },
+      "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+      "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+    },
+    "D_FINAL_CANDIDATE": {
+      "id": "D_FINAL_CANDIDATE",
+      "topic": "末章父亲是否到场与生活尾声候选",
+      "status": "candidate",
+      "options": [
+        "沈父亲自到场",
+        "沈禾带回收据即可",
+        "点心铺热汤尾声"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "沈父亲自到场尚未采纳，不安排他的交通或现场知情",
+        "热汤尾声仅候选，依正文节奏取舍"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": 3
+      },
+      "event_ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+      "event_sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+      "sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+    },
+    {
+      "ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+      "sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+    },
+    {
+      "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+      "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+    },
+    {
+      "ref": ".writer/objects/8c26ab54-2867-4149-9280-64b1ab2b5ded.json",
+      "sha256": "3cabc95d32154d5032b39b4a538e844b84d1a640b834a1e318b5e7c2b589bd94"
+    },
+    {
+      "ref": ".writer/objects/2faabac0-87f5-4ec3-943f-b80706293e75.json",
+      "sha256": "1c2d7affa15692036dac6ca26efa3606c12213baa83119391ab7a28a56f4dc02"
+    },
+    {
+      "ref": ".writer/objects/a50a7a11-28d6-4efc-a08f-82a3cbde2045.json",
+      "sha256": "4315a4f29e495948507abb49f9db0b0c40327e480f6487709f2b0670ee321ac3"
+    }
+  ],
+  "operations": {
+    "final-a-chosen": {
+      "input_sha256": "78831cc1288fb7ac2f9784eec67c6d22a14717970ab90cedbbc23b74a9c33151",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "final-a-chosen",
+        "event": {
+          "ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        },
+        "decision_id": "D_FINAL_EXECUTION"
+      }
+    },
+    "final-a-candidate": {
+      "input_sha256": "ffbff524cc2b46aae3e52fc518ec4259b29c66d31202e31c91f968970b939a62",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "final-a-candidate",
+        "event": {
+          "ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+          "sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+        },
+        "decision_id": "D_FINAL_CANDIDATE"
+      }
+    },
+    "final-a-trial": {
+      "input_sha256": "91dfb16cf2616b5a46bfcc046afddc5398e98e0b040f15d1cf1f2f99f38bc4e4",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "final-a-trial",
+        "event": {
+          "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+          "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+        }
+      }
+    },
+    "final-a-resume-finish-1-2": {
+      "input_sha256": "493c05e346351188ec7124926f61a231a35b40129ea601efa62fa51fd79a24ca",
+      "result": {
+        "ok": true,
+        "revision": 6,
+        "operation_id": "final-a-resume-finish-1-2",
+        "event": {
+          "ref": ".writer/objects/8c26ab54-2867-4149-9280-64b1ab2b5ded.json",
+          "sha256": "3cabc95d32154d5032b39b4a538e844b84d1a640b834a1e318b5e7c2b589bd94"
+        }
+      }
+    },
+    "final-b-third-and-revision-first-stop": {
+      "input_sha256": "3e2bfad065998959413bda8a9a1ca5344e57d3cddd2995fe3d26d865353166a4",
+      "result": {
+        "ok": true,
+        "revision": 7,
+        "operation_id": "final-b-third-and-revision-first-stop",
+        "event": {
+          "ref": ".writer/objects/2faabac0-87f5-4ec3-943f-b80706293e75.json",
+          "sha256": "1c2d7affa15692036dac6ca26efa3606c12213baa83119391ab7a28a56f4dc02"
+        }
+      }
+    },
+    "final-b-revision-2-3-first-stop": {
+      "input_sha256": "d18638e4b3f9fc8840174d8dfd926ee8e3a3a6c38bcb58cd117a5a1a3c9c11eb",
+      "result": {
+        "ok": true,
+        "revision": 10,
+        "operation_id": "final-b-revision-2-3-first-stop",
+        "event": {
+          "ref": ".writer/objects/a50a7a11-28d6-4efc-a08f-82a3cbde2045.json",
+          "sha256": "4315a4f29e495948507abb49f9db0b0c40327e480f6487709f2b0670ee321ac3"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {
+      ".writer/reviews/080eb629-40c9-4aa7-83bb-23efc9dbd46c.json": "d1580f70861c5a7ef383a629974c1dd1f5eec9abe605beb01b3828a15a7e4134"
+    },
+    "issues": {},
+    "events": [],
+    "operations": {
+      "final-b-readback-1-3-r8": {
+        "input_sha256": "59d6772a786854284313f49e64507763b300c7209615f101d76466d5b99057c4",
+        "result": {
+          "ok": true,
+          "revision": 9,
+          "ref": ".writer/reviews/080eb629-40c9-4aa7-83bb-23efc9dbd46c.json",
+          "coverage": [
+            1,
+            3
+          ],
+          "issue_ids": [],
+          "quality": "review-recorded-not-acceptance"
+        }
+      }
+    }
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/a50a7a11-28d6-4efc-a08f-82a3cbde2045.json",
+    "sha256": "4315a4f29e495948507abb49f9db0b0c40327e480f6487709f2b0670ee321ac3"
+  },
+  "revision_scope": {
+    "from": 2,
+    "through": 3
+  }
+}

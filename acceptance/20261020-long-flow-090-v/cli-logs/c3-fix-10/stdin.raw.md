@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const V=path.resolve('acceptance/20261020-long-flow-090-v'),W=path.join(V,'scenario/东岸末班船-扩展验证');
+const corrections=[['01.md','她前夜写的周岸两个字','她停航前夜写的周岸两个字'],['02.md','桌上没有那三张钱了，只留下压纸的回形针。她把夹子的尖头按进去','桌上没有那三张钱了。她把夹票的回形针尖头按进去'],['02.md','数比自己先前算的少了五块','数比自己先前算的多了五块'],['05.md','把当天班表拍过的照片找出来','把手机里明天的班表找出来']];
+const parts=[];fs.mkdirSync(path.join(W,'分段/0010/c3-v2'),{recursive:true});
+for(let i=1;i<=5;i++){const f=String(i).padStart(2,'0')+'.md';let text=fs.readFileSync(path.join(W,'分段/0010/c3',f),'utf8');for(const [file,a,b]of corrections)if(file===f){if(!text.includes(a))throw Error(a);text=text.replace(a,b);}const p='分段/0010/c3-v2/'+f;fs.writeFileSync(path.join(W,p),text,{flag:'wx'});parts.push({path:p,sha256:crypto.createHash('sha256').update(text).digest('hex')});}
+const t=JSON.parse(fs.readFileSync(path.join(W,'.writer/drafts/c3-template-10.json'),'utf8'));fs.writeFileSync(path.join(V,'inputs/c3-assemble-10-v2.json'),JSON.stringify({unit:10,expected_revision:t.expected_revision,draft:'正文/0010-月底的三十五块-v2.md',parts,separator:'\n\n'},null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({corrections,original_assembly_preserved:true}));

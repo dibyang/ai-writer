@@ -1,0 +1,766 @@
+
+> ai-writer@0.9.0 test
+> node scripts/test.mjs workspace
+
+✔ 上下文超限给出精确总量与大项，边界重试完整保留来源和禁揭内容 (22132.5146ms)
+✔ CLI超限不生成out，不改变状态，恢复提示保留保护边界 (21009.7696ms)
+✔ 讨论上下文同样报告预算，低预算不会绕过未授权正文门禁 (20189.9866ms)
+✔ 大量研究引用超限时明细有界，遗漏数可追溯且不输出来源正文 (17422.3795ms)
+✔ 合法上下文扩容超过百万字符后仍可取模板及登记，来源漂移保护继续生效 (18861.0985ms)
+✔ 合章保持有序原字节、只创建新稿，不登记或改变状态 (14927.4726ms)
+✔ 合章所有输入先预检，缺段、空段、错哈希、重复、越界和旧revision不留下目标 (14563.4903ms)
+✔ 合章遵守阶段授权和活跃修订占用，不旁路父稿 (20206.0675ms)
+﹣ 合章拒绝符号链接分段和目标目录 (0.3506ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行
+✔ 报告缺失、为空、错稿或已变先于状态和对象写入拒绝；正确绑定冻结且幂等 (15772.8022ms)
+✔ preview退出1、record退出2，保留同一明确字段和允许状态；原文件不变 (22571.2515ms)
+✔ 新作品默认治理：讨论无需细纲，正文/模板/登记未授权不能写 (23310.6121ms)
+✔ 暂停全部动作时只推荐可执行的只读workflow，不推荐被禁止的讨论 (34475.1112ms)
+✔ 六章后暂停：compact/full均保留next_unit=7，行动转总纲，讨论不需第七章细纲 (82288.1246ms)
+✔ 有限试写完成后复盘；deferred须有范围与条件；空大纲不等于采纳 (25035.2474ms)
+✔ 有限试写的暂缓规划可保留到暂停讨论，不需要伪改成已采纳 (23156.3149ms)
+✔ 旧schema3规划中仅授权修订：兼容回退与重登不能借机续写 (28722.9539ms)
+✔ 逐项采纳和新会话恢复：宗门/炼器已选，小盾与附带数字仍未决 (16609.65ms)
+✔ 取代保留历史；悬空/自环/双重确认被拒绝，原话对象可核 (22875.2986ms)
+✔ 原话与哈希必须匹配；不存在的会话ID和未知字段不能伪造 (17822.3423ms)
+✔ 操作和决策保留键在写前拒绝；普通原型同名ID不被误当既有记录 (26598.3003ms)
+✔ 作者证据冻结后入口可追加；冻结对象损坏不能悄悄接受 (16526.9163ms)
+✔ 阶段/决策CAS及幂等重放：旧模板不能在授权变化后登记 (16908.8635ms)
+✔ schema 1迁移预览只读，应用保留事实、备份与旧来源 (9929.0176ms)
+✖ schema 2迁移预览只读，应用保留事实、备份与旧来源 (8435.5735ms)
+✔ 非空schema 1迁移保留原章及事实，之后可正式续写 (9216.7674ms)
+✖ 非空schema 2迁移保留原章及事实，之后可正式续写 (4357.2634ms)
+✔ 旧工具夹具逐字节来自冻结清单，兼容测试不依赖浅克隆历史 (2.0159ms)
+✔ 只读构建：同版本不同模块可见，重复识别稳定，副本完整性与profile可核 (5523.5704ms)
+✔ doctor不把完整但未声明支持当前schema的旧副本报为可用 (4100.585ms)
+✔ 旧包元数据诊断保留可选文档/模块边界，不冒充旧0.1/0.2真实运行验收 (3851.8092ms)
+✔ 随附新工具可独立恢复schema6，旧0.3解析器明确拒绝且不改状态 (4308.7309ms)
+✔ Apache许可和NOTICE随初始化及二次初始化完整携带，缺失被诊断 (27956.5218ms)
+✔ 新版识别器保留旧0.7与0.8.0资源形状，不反向要求新增NOTICE (20918.584ms)
+✔ 正式0.8.0显式资源配置不可丢NOTICE，未知配置拒绝而非降级解释 (13912.6465ms)
+✔ recall精确账本ID优先于关联和较长ID，限额及AND查询保持可预期 (30808.1855ms)
+✔ 差量追加、替换、删除可双向还原；时间线追加存储量不随历史长度增长 (24.4012ms)
+✔ 长篇差量登记幂等、回退保留正文并恢复完整旧状态 (23838.8032ms)
+✔ 不可变观察、未来证据、编造引文与省略本章证据均拒绝，不推进状态 (19800.6375ms)
+✔ 召回保留到期线索、明确列出省略项，人物知识不注入作者秘密 (24829.8492ms)
+✔ 显式召回不存在的 ID、错误剧情单元及重叠卷纲拒绝 (15759.385ms)
+✔ 已消费卷纲不能静默改写；外部改写使上下文与导出失效 (16689.1206ms)
+✔ journal 被篡改或丢失拒绝恢复，不猜状态 (15217.1929ms)
+✔ 旧作品显式备份迁移，回退后能恢复旧格式章节之前的状态 (30330.2253ms)
+✔ 滚动审查绑定实际正文和报告版本，回退/重写后旧报告失效 (11622.5635ms)
+✔ 旧章回退重登后，分段审查不冒充完整连读，当前覆盖不删除失效历史 (18528.1368ms)
+✔ 旧稿导入断点续跑、冻结副本不覆盖、源漂移阻断与逐章阅读边界 (13680.0294ms)
+✔ 独立作品工具复制全部长篇模块，单独进程可以召回与校验 (10566.324ms)
+✔ 可选召回有界，显式/到期/置顶不被容量裁掉，物证保管状态进入上下文 (14573.2811ms)
+✔ 物证交接拒绝错认原保管人，知识增量保留另一人物，完整快照不能删掉账本 (14343.5532ms)
+✔ 新增参考快照与清单绑定固定提交和MIT许可，原文不进入运行依赖 (13.7721ms)
+✔ 长篇恢复入口默认精简，完整快照只在显式查看时返回 (13568.0924ms)
+✖ 旧稿角色键顺序变化不应使迁移后的差量链失效 (12597.5513ms)
+✔ 当前主稿漂移的恢复指引先列独立修订，不推荐被保护规则拒绝的主稿rewind (21419.6556ms)
+✔ 独立修订区内漂移继续指向所属分支回退，主稿和状态不被诊断改写 (21002.1236ms)
+✔ 缺细纲时给可执行的帮助入口，不让新用户读取一个尚不存在的输入文件 (18719.9157ms)
+✔ 0.9沿用受管资源协议，旧0.7和0.8兼容；随附诊断不回退到根作者资源 (23395.1043ms)
+✔ 默认schema6且真实旧0.4解析器拒绝，原状态不变 (17163.6723ms)
+✔ 固定旧版本后未来新增不废旧章，下一章消费新版本及冻结输入 (18076.6094ms)
+✔ 不能将当前变化的来源追认为旧输入，旧未绑定消费者仍阻断 (16534.864ms)
+✔ 从真实旧字节补绑保留原哈希，影响预览只读且过期/未决报告不发布 (15447.9662ms)
+✔ 会话隔离、旁路写拒绝、错误所有者拒绝；命令恢复不刷新基线 (30106.1974ms)
+✔ 并行候选A提交后B全局CAS冲突，双方稿件保留 (28634.8762ms)
+✔ 修订工作区doctor和tool identify复用父包并保持只读，绑定不符或父包损坏仍拒绝健康结论 (21220.3009ms)
+✔ prepare后锁外改候选被拒绝；主稿第三方字节冲突不覆盖 (21078.9353ms)
+✔ 历史影响stage持久阻断，取消保留版本及历史，不伪造已修复 (14896.2995ms)
+✔ 实际进程提交中断：普通读写拒绝，明确授权处理遗留锁后完整恢复 (18939.2505ms)
+✔ 中断恢复遇第三方字节保留三方，并可在未改目标时回滚原集 (19752.9996ms)
+✔ 历史版本在隔离区发布并完整重登：旧章前缀仍旧版，模型复核后一次业务提交 (24270.1057ms)
+✔ 已冻结的细纲从版本读取，活动入口删除不伪造来源漂移 (10426.3969ms)
+✖ 显式移交只改协作元数据，不制造主基线漂移；旧所有者令牌失效 (18374.0966ms)
+✖ 分卷和单元细纲共用版本解析，旧卷契约不因未来入口变化失效 (12059.1871ms)
+✖ 冻结事实卡不提升verified；同起点未消费版本需显式previous才可替换 (8832.1251ms)
+✖ 发布原话与影响报告均冻结校验，不能只保护事件JSON (10186.2488ms)
+✖ 真实旧字节补绑后需发布原区间，未来版本不偷换历史回放 (11058.1659ms)
+✖ 会话元数据完成但事务未终态的实际中断仍阻断，补完不会遗留活跃占用 (10045.7113ms)
+✖ 事务创建前遗留锁可明确授权处理，存活进程锁仍拒绝 (8465.3549ms)
+✖ 非空schema3显式升级4保留事实、消费来源和备份，未自动升级副本 (6500.0953ms)
+✖ 两个实际CLI同时提交时仅一方成功，另一方锁拒绝或CAS冲突且候选保留 (9004.322ms)
+✔ 回程预览提示同角色未变知情条目，历史说明也只作候选，不自动判错或改状态 (25949.635ms)
+✔ 大量关联条目预览有上限和遗漏计数，无关联变更不产生候选 (25036.5358ms)
+✔ 恢复指引汇总mixed变动，与status一致且一次回退可继续 (29090.2484ms)
+✔ 恢复指引汇总source变动，与status一致且一次回退可继续 (24607.5558ms)
+✔ 恢复指引汇总body变动，与status一致且一次回退可继续 (25913.7399ms)
+✔ 正文也是后章消费的来源，恢复点不得错选到后章 (20085.3686ms)
+✔ 发行包包含隐藏技能和完整许可，排除作品及证据，重建一致且不覆盖 (79187.9993ms)
+✔ 发行版本拒绝未来协议、路径字符和未知资源配置，拒绝时不创建产物 (16.1261ms)
+✔ 后章只更新一人的知识时，重登最小差量保留前章已修的其他知识与原观察 (31207.0641ms)
+✔ 结构化长篇报告超过20k仍完整冻结，报告变化仍使审查失效 (17820.8581ms)
+✔ 兼容审查入口支持同一长报告且保持原有不推进业务revision行为 (14333.7176ms)
+✔ 报告严格按UTF8一MiB边界、非空保护，普通比较字段仍保持20k (18568.6619ms)
+✔ 历史重登大报告完整冻结、预览只读，超文件上限仍在写入前拒绝 (22188.3521ms)
+✔ 修订分支不能在更宽讨论授权下处置声明范围外的旧意见 (24952.615ms)
+✔ 可在分支扩展连读范围，但不能借该报告新增范围外意见 (30586.7929ms)
+✔ 登记预览在空摘要时也先呈现当前暂停范围，不诱导越权补写下一章 (22454.3877ms)
+✔ 结构化审查state发布失败留下的孤儿记录不能计作已完成覆盖 (21277.2243ms)
+✔ 作者明确保留不能被代理同名重记后借一般润色授权改成采用 (20112.0566ms)
+✔ 新版本实读可重新复核已修复意见，不为登记闭环再制造一次正文改动 (56773.6298ms)
+✔ 功能比较绑定全部实读章节和引文，保留未知与差异，结构化记录不可被覆盖 (31071.6258ms)
+✔ 缺功能行、假引文、错误哈希和可选建议升级硬问题均拒绝且不发布状态 (35444.9543ms)
+✔ 只有审查或试写授权不能借采用意见获得修订权，保留和延期不冒充修复 (36517.952ms)
+✔ 采用、实际修改、当前版本复核分开，重改后旧verified显示needs-recheck且保留历史 (68216.295ms)
+✔ 意见处置CAS、操作ID和复核范围保护不能由重复请求绕过 (19610.1631ms)
+✔ record-preview共用正式校验但不写状态，不替空摘要或坏证据补值 (17480.7016ms)
+✔ 重登草案恢复真实changes，强制核查报告，正文变更后不能只抄旧哈希 (23315.8336ms)
+✔ 内部可读入口不覆盖、不推进业务revision、不作为正式设定来源并受会话占用保护 (15120.5344ms)
+✔ 长篇迁移预览只读，schema1实际迁移保持事实及正文原字节 (27026.4921ms)
+✖ 实际旧0.5可读schema4，显式启用5后拒绝；旧事实和消费绑定完全保留 (13365.788ms)
+✖ 重登草案在正文改字后拒绝旧绑定；新稿引文失效仍要求实际修正 (8776.4924ms)
+✖ 等价重登没有对应原文修改，不能把采用意见标为applied (10681.9651ms)
+✖ 按稳定意见ID直接展开取舍历史，普通原型名称不被误当既有操作 (13663.7011ms)
+✖ 结构化功能表在旧章实改后失效，冻结原文和原判断仍可核 (9255.2663ms)
+✔ 提交清单对象的哈希继续受保护，不能只验证账本和正文 (45161.5368ms)
+✔ 已发生的锁外主稿修改可经明确授权保守收纳，原追踪及候选分别保留 (33392.8664ms)
+✔ 内部协作目录不能成为正式细纲消费来源，分支路径不发布为作品依赖 (15750.6776ms)
+✔ 已发布未来版本的入口差异不能误标为未发布编辑 (19587.0501ms)
+✔ 收纳已有来源漂移必须覆盖最早消费者，不能用新字节追认旧章 (26391.6715ms)
+✔ 声明修订会话范围不得借更宽作者授权越界回退 (17784.7917ms)
+✔ prepare后随附工具字节漂移也产生可定位冲突，不只检查业务revision (18524.1502ms)
+✔ 历史生效起点与回读前缀分开：从第2章发布不强迫回退已固定的第1章 (31788.4775ms)
+✔ 已消费作者决策保留当时确认依据，撤回后仍有效，消费哈希损坏须拒绝 (15072.7755ms)
+✔ 登记的历史授权事件哈希必须校验，不能只校验当前阶段 (13006.9461ms)
+✔ 修订复制明确规划引用的目录外伴随文件，首次回退无需手补 (23834.7006ms)
+✔ 已固定的人物/架构依赖随正常修订提交，保留未消费文件并幂等 (35204.9156ms)
+✔ 新增目录外来源未固定时prepare明确拒绝，保留候选而不漏发依赖 (22910.0481ms)
+✔ 目录外依赖的prepared事务可完成并幂等，旧基线/计划不改 (30294.7274ms)
+✔ 已部分替换目录外依赖的事务可回滚，恢复原状态和来源 (22911.0996ms)
+✔ 自校验清单不能授权非消费同目录文件、保留区、未准备的受管文件或重复目标 (20283.6738ms)
+✔ 从首次观察之前回退，完整重登也不能逆改原字 (17045.9219ms)
+✔ 从首次观察之前回退，完整重登也不能逆改作者真相 (23428.5106ms)
+✔ 从首次观察之前回退，完整重登也不能逆改观察类型 (20096.204ms)
+✔ 从首次观察之前回退，完整重登也不能逆改整条观察 (17639.3405ms)
+✔ 从首次观察之前回退，完整重登也不能逆改给原来未填的真相补值 (15702.5189ms)
+✔ 旧观察保留时可更新读者知情并另建解释，再正常提交 (18706.5494ms)
+✔ 随附帮助和诊断定位当前包技能，根作者定制保留，修订区仍指向父包 (24069.1808ms)
+✔ 新包公共身份一致、资源自足；从随附包再次初始化四文体 (75584.9947ms)
+✔ 实际旧0.6读5、拒绝6；显式启用保留事实/旧章/来源，安全撤销逐字节恢复 (34115.8191ms)
+✔ 只读计划列定制，默认保留根文件；选择定制文档或改动受管资源均拒绝 (34288.6707ms)
+✔ 更新后事实/来源/正文和根定制不变、代次只增一次；稳定operation重试 (53269.3109ms)
+✖ 中断准备后普通及旧入口阻断，外部complete恢复保留备份 (19925.1255ms)
+✖ 中断准备后普通及旧入口阻断，外部rollback恢复保留备份 (12454.0058ms)
+✖ 恢复绝不覆盖第三方工具字节，旧/新/外部版本均保留 (9707.6333ms)
+✖ 更新期间业务漂移及验证副本篡改都阻断完成，不伪造已验收 (10969.971ms)
+✖ 持有旧代次的主进程拒绝后续写入，即使磁盘运行模块未变 (11353.3008ms)
+✖ 过期计划、保留operation键、同ID异输入均在写前拒绝 (7211.366ms)
+✖ 活跃修订在只读计划列为阻断；新随附进程对篡改包拒绝写入 (7347.5421ms)
+✖ 多次更新保留原版文档可信基线，不把作者笔记追认为可覆盖原版 (7900.7075ms)
+✖ 正文已有锁外漂移时计划提前阻断，业务状态与目标工具均不变 (6416.1461ms)
+✖ 新随附包丢失清单不能降级成旧副本；只读诊断、预览及写入均识别损坏 (5160.9486ms)
+✖ 安装后的包不能只重建清单追认不同资源；写前核对已安装完整内容身份 (3995.9911ms)
+✔ help 兼容作品通用参数且不访问或修改作品 (18702.1687ms)
+✔ help 错误提示的恢复入口可在随附工具携带project运行 (17876.1974ms)
+✔ help 仍拒绝未知重复缺值参数及多个帮助主题 (3.1394ms)
+✔ 未登记、同编号替代和回退保留稿都可见；导出清单列出排除且不混入正文 (17065.5032ms)
+✔ 独立作品帮助、所有用户指南链接及新工具可离开主项目使用 (34221.2773ms)
+✔ 独立作品保留来源、原文与许可，缺失许可时诊断明确报错 (13627.2832ms)
+✔ 缺作品、缺章纲、无效JSON与空导出提供定位及下一步；错误参数仍拒绝 (14258.4386ms)
+✔ 已部分登记的旧稿可按相同哈希重定位，原状态与冻结清单及旧上下文保持有效 (13537.3566ms)
+✔ 重定位整批拒绝不同内容、重复单元、未知单元与过期修订号，不留下部分定位 (13493.2756ms)
+✔ 重定位后新路径漂移继续阻断，不把定位记录当成内容豁免 (11523.6205ms)
+✔ 去味扫描只提供候选，保留正常对比句与原稿；报告绑定哈希且不覆盖 (12311.6907ms)
+✔ 去味零命中不产生文学通过结论，历史扫描也不改事实限定与引文 (13241.5893ms)
+✔ 段落节奏扫描按空行分段，不把编辑器换行当成四个段落 (17280.6045ms)
+✔ Windows 初始化目录短暂拒绝后可有界重试完成，正文配置不丢失 (16521.484ms)
+✔ Windows 持续拒绝最多尝试六次，仍报错且不留下半成品目标 (14005.477ms)
+✔ Windows 重试期间目标被创建时停止，保留竞争方文件不覆盖 (14128.3754ms)
+✔ Windows 导出目录也处理短暂重命名拒绝，不更改正文或状态 (16413.9898ms)
+✔ novel: 初始化→细纲→上下文→登记→校验→导出，保持中文与哈希 (19226.6133ms)
+✔ screenplay: 初始化→细纲→上下文→登记→校验→导出，保持中文与哈希 (14070.284ms)
+✔ history: 初始化→细纲→上下文→登记→校验→导出，保持中文与哈希 (17267.0687ms)
+✔ essay: 初始化→细纲→上下文→登记→校验→导出，保持中文与哈希 (13718.367ms)
+✔ 旧稿修订使后续追踪失效，回退保留正文及完整备份，再顺序恢复 (14984.0764ms)
+✔ 任一已读规则变化拒绝过期 context，不写入状态 (12885.8891ms)
+✔ 登记后研究卡变化阻止续写和导出，并定位最早受影响单元 (13948.2858ms)
+✔ 登记模板携带真实来源哈希及完整快照，未填摘要不能推进状态 (14788.6423ms)
+✔ 依赖检查只检查已消费文件，缺失来源给出受影响单元 (14166.7024ms)
+✔ 模板保留写前来源证据，写作中规则变化拒绝登记 (10763.0847ms)
+✔ 缺失或伪造来源哈希、跳号和过期修订号被拒绝 (13053.8056ms)
+✔ 写入锁保护并发，持锁失败不会删除其他任务的锁 (12972.8358ms)
+✔ 初始化与导出不覆盖已有文件 (13053.8192ms)
+✔ 路径穿越、绝对路径、ADS、控制字符被拒绝 (11426.3327ms)
+﹣ 符号链接不允许作为作品输入 (10917.323ms) # 当前环境不允许创建链接
+✖ 历史散文缺研究引用或事实卡未核验时阻断 (11375.2116ms)
+✖ 历史事实卡必须说明史源依赖，不能把重复转录当互证 (12125.8421ms)
+✖ 历史史源的HTTPS链接不误报本地路径，真实盘符仍提示 (10608.8802ms)
+✖ 上下文预算溢出不静默截断 (6988.5561ms)
+✖ 正文占位符阻止导出，机械通过不升级文学结论 (8711.6578ms)
+✔ 独立作品随附的工具与技能离开主项目仍可使用 (8725.2671ms)
+✖ 长篇追踪超过正文的1MiB限额后仍可恢复、续写和导出 (4787.5827ms)
+✔ CLI 拒绝拼错、重复及缺值参数 (2.0887ms)
+✔ 原始导入哈希与授权迁移可追溯，第三方原文保持且不作为运行依赖 (25.6217ms)
+ℹ tests 191
+ℹ suites 0
+ℹ pass 155
+ℹ fail 34
+ℹ cancelled 0
+ℹ skipped 2
+ℹ todo 0
+ℹ duration_ms 384224.6568
+
+✖ failing tests:
+
+test at tests\governance.test.mjs:137:36
+✖ schema 2迁移预览只读，应用保留事实、备份与旧来源 (8435.5735ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at enableLong (file:///D:/work/other/ai-writer/lib/workspace.mjs:621:10)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:814:32)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/governance.test.mjs:138:62)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\governance.test.mjs:145:36
+✖ 非空schema 2迁移保留原章及事实，之后可正式续写 (4357.2634ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at enableLong (file:///D:/work/other/ai-writer/lib/workspace.mjs:621:10)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:814:32)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/governance.test.mjs:148:5)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\longform.test.mjs:256:1
+✖ 旧稿角色键顺序变化不应使迁移后的差量链失效 (12597.5513ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at enableLong (file:///D:/work/other/ai-writer/lib/workspace.mjs:621:10)
+      at work (file:///D:/work/other/ai-writer/tests/longform.test.mjs:16:57)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/longform.test.mjs:257:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:113:1
+✖ 显式移交只改协作元数据，不制造主基线漂移；旧所有者令牌失效 (18374.0966ms)
+  Error: 主作品业务或相关文件/工具已变化；双方稿件保留，实读新基线后另建会话，不自动合并
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at parentUnchanged (file:///D:/work/other/ai-writer/lib/revisions.mjs:114:7)
+      at withLock.coordination (file:///D:/work/other/ai-writer/lib/revisions.mjs:231:7)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:94:67)
+      at Object.prepare (file:///D:/work/other/ai-writer/lib/revisions.mjs:204:42)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:740:136)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at prepare (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:52:48)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/protection.test.mjs:118:44) {
+    code: 'BASELINE_CONFLICT',
+    conflicts: [],
+    recovery: { session_id: '77a5abb8-fa5a-48a4-ac38-9661cc1e1cad', base_revision: 4, current_revision: 4, conflict_ref: '.writer/revisions/77a5abb8-fa5a-48a4-ac38-9661cc1e1cad/conflict-5a222cd9-3c2a-4f8f-bc56-4fa8e9c8af50.json', omitted_changes: 0 }
+  }
+
+test at tests\protection.test.mjs:120:1
+✖ 分卷和单元细纲共用版本解析，旧卷契约不因未来入口变化失效 (12059.1871ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:127:1
+✖ 冻结事实卡不提升verified；同起点未消费版本需显式previous才可替换 (8832.1251ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:135:1
+✖ 发布原话与影响报告均冻结校验，不能只保护事件JSON (10186.2488ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:142:1
+✖ 真实旧字节补绑后需发布原区间，未来版本不偷换历史回放 (11058.1659ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:150:1
+✖ 会话元数据完成但事务未终态的实际中断仍阻断，补完不会遗留活跃占用 (10045.7113ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:157:1
+✖ 事务创建前遗留锁可明确授权处理，存活进程锁仍拒绝 (8465.3549ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:163:1
+✖ 非空schema3显式升级4保留事实、消费来源和备份，未自动升级副本 (6500.0953ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\protection.test.mjs:170:1
+✖ 两个实际CLI同时提交时仅一方成功，另一方锁拒绝或CAS冲突且候选保留 (9004.322ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\review-workflow.test.mjs:90:1
+✖ 实际旧0.5可读schema4，显式启用5后拒绝；旧事实和消费绑定完全保留 (13365.788ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\review-workflow.test.mjs:98:1
+✖ 重登草案在正文改字后拒绝旧绑定；新稿引文失效仍要求实际修正 (8776.4924ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\review-workflow.test.mjs:104:1
+✖ 等价重登没有对应原文修改，不能把采用意见标为applied (10681.9651ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\review-workflow.test.mjs:109:1
+✖ 按稳定意见ID直接展开取舍历史，普通原型名称不被误当既有操作 (13663.7011ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\review-workflow.test.mjs:113:1
+✖ 结构化功能表在旧章实改后失效，冻结原文和原判断仍可核 (9255.2663ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:23:48
+✖ 中断准备后普通及旧入口阻断，外部complete恢复保留备份 (19925.1255ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at Object.enable (file:///D:/work/other/ai-writer/lib/tool-update.mjs:60:171)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:775:48)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at enable (file:///D:/work/other/ai-writer/tests/tool-update.test.mjs:14:49)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/tool-update.test.mjs:23:130) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:23:48
+✖ 中断准备后普通及旧入口阻断，外部rollback恢复保留备份 (12454.0058ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:24:1
+✖ 恢复绝不覆盖第三方工具字节，旧/新/外部版本均保留 (9707.6333ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:25:1
+✖ 更新期间业务漂移及验证副本篡改都阻断完成，不伪造已验收 (10969.971ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:26:1
+✖ 持有旧代次的主进程拒绝后续写入，即使磁盘运行模块未变 (11353.3008ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:27:1
+✖ 过期计划、保留operation键、同ID异输入均在写前拒绝 (7211.366ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:28:1
+✖ 活跃修订在只读计划列为阻断；新随附进程对篡改包拒绝写入 (7347.5421ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:29:1
+✖ 多次更新保留原版文档可信基线，不把作者笔记追认为可覆盖原版 (7900.7075ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:30:1
+✖ 正文已有锁外漂移时计划提前阻断，业务状态与目标工具均不变 (6416.1461ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:32:1
+✖ 新随附包丢失清单不能降级成旧副本；只读诊断、预览及写入均识别损坏 (5160.9486ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\tool-update.test.mjs:34:1
+✖ 安装后的包不能只重建清单追认不同资源；写前核对已安装完整内容身份 (3995.9911ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at mutate (file:///D:/work/other/ai-writer/lib/governance.mjs:114:12)
+      at Object.setWorkflow (file:///D:/work/other/ai-writer/lib/governance.mjs:146:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:753:47)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at workflow (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:21:10) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\workspace.test.mjs:137:1
+✖ 历史散文缺研究引用或事实卡未核验时阻断 (11375.2116ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /事实卡/. Input:
+  
+  'Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入'
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:139:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+        at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+        at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+        at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+        at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+        at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+        at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:278:10)
+        at file:///D:/work/other/ai-writer/tests/workspace.test.mjs:139:23
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:139:10),
+    expected: /事实卡/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\workspace.test.mjs:143:1
+✖ 历史事实卡必须说明史源依赖，不能把重复转录当互证 (12125.8421ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:278:10)
+      at plan (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:25:3)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:144:40)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\workspace.test.mjs:149:1
+✖ 历史史源的HTTPS链接不误报本地路径，真实盘符仍提示 (10608.8802ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:278:10)
+      at plan (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:25:3)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:151:61)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\workspace.test.mjs:156:1
+✖ 上下文预算溢出不静默截断 (6988.5561ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:278:10)
+      at plan (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:25:3)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:157:29)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\workspace.test.mjs:160:1
+✖ 正文占位符阻止导出，机械通过不升级文学结论 (8711.6578ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:278:10)
+      at plan (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:25:3)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:161:53)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }
+
+test at tests\workspace.test.mjs:172:1
+✖ 长篇追踪超过正文的1MiB限额后仍可恢复、续写和导出 (4787.5827ms)
+  Error: 本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:15:55)
+      at Object.guardLoaded (file:///D:/work/other/ai-writer/lib/revisions.mjs:67:53)
+      at Object.guard (file:///D:/work/other/ai-writer/lib/tool-update.mjs:21:53)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:93:73)
+      at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:278:10)
+      at plan (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:25:3)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/workspace.test.mjs:175:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'TOOL_BUILD_CHANGED'
+  }

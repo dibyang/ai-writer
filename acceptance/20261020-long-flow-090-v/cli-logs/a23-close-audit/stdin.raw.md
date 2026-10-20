@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root='D:/work/other/ai-writer';
+const v=root+'/acceptance/20261020-long-flow-090-v';
+const baseline=JSON.parse(fs.readFileSync(v+'/baseline-worktree.json','utf8'));
+const w=baseline.work;
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const hash=f=>sha(fs.readFileSync(f));
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const compare=(base,files)=>files.flatMap(x=>{const f=path.join(base,x.file);const actual=fs.existsSync(f)?hash(f):null;return actual===x.sha256?[]:[{file:x.file,expected:x.sha256,actual}];});
+function list(base,rel=''){return fs.readdirSync(path.join(base,rel),{withFileTypes:true}).flatMap(e=>{if(e.isSymbolicLink())throw Error('Unexpected symlink');const r=rel?rel+'/'+e.name:e.name;return e.isDirectory()?list(base,r):[r];}).sort();}
+const start=read(v+'/cli-logs/a01-status/before-state.json');
+const state=read(path.join(w,'.writer/state.json'));
+const context=read(path.join(w,'.writer/drafts/v-a-context-4-before.json'));
+const template=read(path.join(w,'.writer/drafts/v-a-record-4-before.json'));
+const product=read(v+'/product-frozen-start.json');
+const oldFiles=new Set(baseline.files.map(x=>x.file));
+const refs=['.writer/state.json','.writer/drafts/v-a-context-4-before.json','.writer/drafts/v-a-record-4-before.json','研究/V-A-原始任务.md','研究/V-A-授权与选择来源.md','大纲/扩展骨架-V.md','大纲/分卷/V3.json','大纲/分卷/V4.json','大纲/分卷/V5.json','大纲/单元/0004.json','大纲/单元/0005.json','大纲/单元/0006.json','分段/0004/v1/01.md','分段/0004/v1/02.md'];
+const result={at:new Date().toISOString(),revision:state.revision,state_sha256:hash(path.join(w,'.writer/state.json')),registered_units:state.units.map(x=>x.unit),snapshot_unchanged:JSON.stringify(state.snapshot)===JSON.stringify(start.snapshot),units_unchanged:JSON.stringify(state.units)===JSON.stringify(start.units),original_w_changes:compare(w,baseline.files),u_changes:compare(baseline.source,baseline.files),u_added_files:list(baseline.source).filter(x=>!oldFiles.has(x)),product_changes:compare(root,product.files),w_added_files:list(w).filter(x=>!oldFiles.has(x)),source_changes_since_template:Object.entries(template.source_hashes).flatMap(([ref,expected])=>{const actual=hash(path.join(w,ref));return actual===expected?[]:[{ref,expected,actual}];}),context_template_same_sources:JSON.stringify(context.source_hashes)===JSON.stringify(template.source_hashes),context_revision:context.revision,template_revision:template.expected_revision,part_refs:list(path.join(w,'分段/0004/v1')),complete_chapter_exists:fs.existsSync(path.join(w,template.draft)),unit4_registered:state.units.some(x=>x.unit===4),observation_three_fields_equal:['type','statement','author_truth'].every(k=>state.snapshot.ledger.O_BOX_PAINT[k]===start.snapshot.ledger.O_BOX_PAINT[k]),hashes:Object.fromEntries(refs.map(ref=>[ref,hash(path.join(w,ref))]))};
+result.ok=result.revision===17&&result.snapshot_unchanged&&result.units_unchanged&&result.original_w_changes.every(x=>x.file==='.writer/state.json')&&!result.u_changes.length&&!result.u_added_files.length&&!result.product_changes.length&&!result.source_changes_since_template.length&&result.context_template_same_sources&&result.context_revision===17&&result.template_revision===17&&JSON.stringify(result.part_refs)===JSON.stringify(['01.md','02.md'])&&!result.complete_chapter_exists&&!result.unit4_registered&&result.observation_three_fields_equal;
+fs.writeFileSync(v+'/a-close-audit.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result,null,2));
+if(!result.ok)process.exitCode=1;

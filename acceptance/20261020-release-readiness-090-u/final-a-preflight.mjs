@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const U='D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u';
+const P='D:/work/other/ai-writer/.tmp/U 最终交付验收包解压/ai-writer-0.9.0';
+const W=U+'/scenario-final/东岸末班船';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const v=JSON.parse(fs.readFileSync(U+'/zip-delivery-verification.json','utf8'));
+assert.equal(v.content_id,'ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b');
+assert.equal(path.resolve(v.extracted),path.resolve(P));
+assert.equal(fs.existsSync(W),false,'W must initially not exist');
+const manifest=JSON.parse(fs.readFileSync(P+'/build-manifest.json','utf8'));
+assert.equal(manifest.build_id,v.content_id);
+const mismatches=manifest.files.filter(f=>{const b=fs.readFileSync(path.join(P,f.file));return b.length!==f.bytes||sha(b)!==f.sha256;}).map(f=>f.file);
+assert.deepEqual(mismatches,[]);
+console.log(JSON.stringify({ok:true,W,initially_exists:false,verification_sha256:sha(fs.readFileSync(U+'/zip-delivery-verification.json')),expected_content_id:v.content_id,manifest_files_checked:manifest.files.length,manifest_mismatches:mismatches,prompt:{path:U+'/final-prompt.md',sha256:sha(fs.readFileSync(U+'/final-prompt.md')),encoding:'UTF-8',note:'Received task text saved verbatim with LF; no native message or session ID available.'}},null,2));

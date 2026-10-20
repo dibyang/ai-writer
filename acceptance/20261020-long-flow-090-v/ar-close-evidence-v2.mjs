@@ -1,0 +1,19 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),hash=f=>sha(fs.readFileSync(f)),read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const state=read(w+'/.writer/state.json'),audit=read(v+'/ar-final-verification.json');
+if(state.revision!==24||hash(w+'/.writer/state.json')!==audit.state_sha256||!audit.integrity_ok)throw Error('Final state changed');
+const entry=(base,ref)=>({ref,bytes:fs.statSync(path.join(base,ref)).size,sha256:hash(path.join(base,ref))});
+const walk=(base,rel='')=>fs.readdirSync(path.join(base,rel),{withFileTypes:true}).flatMap(e=>{if(e.isSymbolicLink())throw Error('Unexpected symlink');const r=rel?rel+'/'+e.name:e.name;return e.isDirectory()?walk(base,r):[r];}).sort();
+const refs=new Set(['.writer/state.json','.writer/drafts/v-a-context-4-before.json','.writer/drafts/v-a-record-4-before.json','.writer/drafts/v-ar-context-4-r18.json','.writer/drafts/v-ar-record-4-r18-before.json','.writer/drafts/v-ar-context-5-before.json','.writer/drafts/v-ar-record-5-before.json','.writer/drafts/v-ar-context-6-before.json','.writer/drafts/v-ar-record-6-before.json','.writer/drafts/v-ar-workflow-start.json','.writer/drafts/v-ar-workflow-stop.json','研究/V-A-恢复限定原文.md','研究/V-A-恢复任务.md','大纲/扩展骨架-V.md','大纲/分卷/V3.json','大纲/分卷/V4.json','大纲/分卷/V5.json','大纲/单元/0004.json','大纲/单元/0005.json','大纲/单元/0006.json','审查/V-A-恢复-0001-0006-连读功能比较.md','审查/V-A-恢复-0001-0006-连读补记-时间登记问题.md']);
+for(const u of state.units){refs.add(u.draft);for(const ref of Object.keys(u.source_hashes))refs.add(ref);if(u.unit>=4){refs.add(u.draft_review.report);refs.add(u.draft_review.frozen_ref);refs.add(u.journal);}}
+for(const r of audit.reviews){refs.add(r.ref);const item=read(w+'/'+r.ref);refs.add(item.frozen_report);for(const u of item.units)refs.add(u.frozen_ref);}
+for(const ref of walk(w,'分段'))refs.add(ref);
+for(const ref of walk(w,'.writer/drafts').filter(r=>r.split('/').pop().startsWith('v-ar-')))refs.add(ref);
+const logDirs=fs.readdirSync(v+'/cli-logs',{withFileTypes:true}).filter(e=>e.isDirectory()&&fs.existsSync(v+'/cli-logs/'+e.name+'/result.json')).map(e=>e.name).sort();
+const closedLogs=logDirs.map(label=>{const result=read(v+'/cli-logs/'+label+'/result.json');return {label,result,files:walk(v+'/cli-logs/'+label).map(ref=>entry(v+'/cli-logs/'+label,ref))};});
+const evidenceV=['交接-A完成.md','交接-A首停.md','ar-final-verification.json','ar-before-governance-proof.json','ar-governance-only-proof.json','ar-0006-v1-to-v2.json','baseline-worktree.json','product-frozen-start.json','delivery-start.json','parent-a-first-verification.json','cli-logs/ar33a-location-inspection.json'];
+for(const ref of walk(v,'ar-before-minimum-fix'))evidenceV.push(ref);
+const index={at:new Date().toISOString(),project:w,revision:state.revision,state_sha256:audit.state_sha256,known_unfixed_issue:audit.known_unfixed_issue,limitations:audit.evidence_limitations,scope:'A恢复4—6；到6停止等待B新提示；未开始7或正式修订',closed_log_count:closedLogs.length,closed_logs:closedLogs,project_files:[...refs].sort().map(ref=>entry(w,ref)),evidence_files:evidenceV.map(ref=>entry(v,ref)),unit_sources:state.units.map(u=>({unit:u.unit,draft:u.draft,sha256:u.sha256,source_hashes:u.source_hashes,draft_review:u.draft_review??null})),note:'此索引生成时ar52日志仍运行中，终端收据另绑定闭合的ar52日志；ar53自身退出码与前后state见其日志，避免自引用哈希。日志保留真实失败，不解析help为JSON。'};
+fs.writeFileSync(v+'/ar-evidence-index.json',JSON.stringify(index,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({revision:state.revision,state_sha256:audit.state_sha256,closed_log_count:closedLogs.length,project_files:index.project_files.length,evidence_files:index.evidence_files.length,handoff_sha256:hash(v+'/交接-A完成.md'),index_sha256:hash(v+'/ar-evidence-index.json')}));

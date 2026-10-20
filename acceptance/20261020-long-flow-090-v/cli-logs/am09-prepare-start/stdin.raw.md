@@ -1,0 +1,17 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const raw=fs.readFileSync(w+'/.writer/state.json'),state=JSON.parse(raw),verified=read(v+'/parent-a-resume-verification.json'),parent=fs.readFileSync(v+'/parent-a-resume-state.json');
+if(state.revision!==24||sha(raw)!==verified.state_sha256||sha(raw)!==sha(parent))throw Error('Root verified state differs');
+for(const u of verified.units)if(sha(fs.readFileSync(w+'/'+u.draft))!==u.sha256)throw Error('Body drift '+u.unit);
+const shown=read(v+'/cli-logs/am02-workflow/stdout.raw.txt'),workflow=structuredClone(shown.workflow);
+const local_source='研究/V-A-追踪修正授权原文.md',prompt=fs.readFileSync(w+'/'+local_source);
+const quote='明确授权一次metadata-only正式revision4—6：修正V_A_U5_TIME_METADATA，并核第4时间措辞是否同样含糊。';
+if(!prompt.toString('utf8').includes(quote))throw Error('Quote missing');
+workflow.stage='revision';workflow.task='仅正式修正第4—6章追踪时间锚并闭环V_A_U5_TIME_METADATA；正文同字节，到6等待B，不写7';
+workflow.authorization={allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:4,to:6},stop_conditions:['本轮仅metadata-only独立修订4—6，澄清停航首日清晨/首日晚；不写7或改变六章正文','不改变设定、章纲卷纲、人物行动知情、物件钱据及原观察三项；其他新硬问题另报告根','独立区rewind4并逐章实读replay-input、报告、preview、record，完整尾段review后prepare及正式commit','记录真实根授权、原错误与失败；意见流程如不能支持metadata-only则保留诊断报告根，禁止改正文凑变更','只写V，不改产品/U/T/其他作品，不派代理、不Git提交推送、不上传']};
+const author_evidence={quote,local_source,source_sha256:sha(prompt),locator:'本轮实际用户提示第二段；用户文本以根会话试验授权描述采用修正，不冒充真人逐字情节选择或消息ID',recorded_by:'同一实际V-A Codex会话，按根在工具试验内采用修正的明确授权执行'};
+fs.writeFileSync(v+'/am-main-before.json',raw,{flag:'wx'});
+fs.writeFileSync(v+'/am-author-evidence.json',JSON.stringify(author_evidence,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(w+'/.writer/drafts/v-am-workflow-start.json',JSON.stringify({expected_revision:state.revision,operation_id:'v-am-metadata-start',author_evidence,workflow},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({baseline_revision:state.revision,baseline_state_sha256:sha(raw),body_hashes:verified.units.map(({unit,draft,sha256})=>({unit,draft,sha256})),author_evidence,stage:workflow.stage,authorization:workflow.authorization}));

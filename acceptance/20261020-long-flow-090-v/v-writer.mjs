@@ -1,0 +1,4 @@
+// Acceptance-only wrapper. Always pass the intended project explicitly to the CLI.
+import path from 'node:path';import {spawn}from'node:child_process';import {fileURLToPath}from'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),work=path.join(base,'scenario/东岸末班船-扩展验证'),[label,...requested]=process.argv.slice(2);if(!label||!requested.length)throw Error('v-writer LABEL command [args]; revisions must explicitly pass --project workspace and token');
+const args=requested.includes('--project')?requested:[...requested,'--project',work],child=spawn(process.execPath,[path.join(base,'v-log.mjs'),label,process.execPath,path.join(work,'.writer/tool/bin/ai-writer.mjs'),...args],{windowsHide:true,stdio:'inherit'});child.on('error',e=>{process.stderr.write(e.message+'\n');process.exitCode=1;});child.on('close',(code)=>{process.exitCode=code??1;});

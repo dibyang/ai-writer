@@ -1,0 +1,18 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const template=JSON.parse(fs.readFileSync(w+'/.writer/drafts/v-ar-record-6-before.json','utf8'));
+for(const [ref,expected] of Object.entries(template.source_hashes))if(sha(fs.readFileSync(w+'/'+ref))!==expected)throw Error('Original write-before source changed: '+ref);
+const dir=w+'/分段/0006/v2';fs.mkdirSync(dir,{recursive:true});
+const before='他当时把“明早”两个字看漏了，折回来问的也是药店。她在图上添过时间，又让沈禾自己圈过车站';
+const after='那张图上原来漏写了“明早”，他以为说的还是当晚，折回来问的也是药店。她后来另取干图添过时间，又让沈禾自己圈过车站';
+const first=fs.readFileSync(w+'/分段/0006/v1/01.md','utf8');if(!first.includes(before))throw Error('Missing exact original anchor');
+fs.writeFileSync(dir+'/01.md',first.replace(before,after),{flag:'wx'});
+const fourth=fs.readFileSync(w+'/分段/0006/v1/04.md','utf8');const matches=[...fourth.matchAll(/前晚/g)].length;if(matches!==2)throw Error('Unexpected date anchors');
+fs.writeFileSync(dir+'/04.md',fourth.replaceAll('前晚','昨晚'),{flag:'wx'});
+const refs=['分段/0006/v2/01.md','分段/0006/v1/02.md','分段/0006/v1/03.md','分段/0006/v2/04.md','分段/0006/v1/05.md'];
+const parts=refs.map(ref=>({path:ref,sha256:sha(fs.readFileSync(w+'/'+ref))}));
+const total=refs.reduce((s,ref)=>s+(fs.readFileSync(w+'/'+ref,'utf8').replace(/^ {0,3}#{1,6}[ \t].*(?:\r?\n|$)/gm,'').match(/\p{Script=Han}/gu)??[]).length,0);
+const proof={at:new Date().toISOString(),reason:'High-confidence continuity correction against unit2 line94 and unit3 lines15-25; first stop manuscripts and unit1-3 untouched.',before,after,date_correction:'Chapter6 is the afternoon of the first halted day; last night is 昨晚 rather than 前晚.',template_revision:template.expected_revision,source_hashes_unchanged:true,parts,total_han:total,old_full_draft_preserved:'正文/0006-走一遍再画-v1.md'};
+fs.writeFileSync(v+'/ar-0006-v1-to-v2.json',JSON.stringify(proof,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(w+'/.writer/drafts/v-ar-assemble-6-v2.json',JSON.stringify({unit:6,expected_revision:template.expected_revision,draft:'正文/0006-走一遍再画-v2.md',parts,separator:'\n\n'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(proof,null,2));

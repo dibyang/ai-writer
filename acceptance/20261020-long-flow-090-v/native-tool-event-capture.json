@@ -1,0 +1,129 @@
+{
+  "ok": true,
+  "scope": "public-tool-calls-and-results-from-four-actual-native-sessions",
+  "extraction": "Tool input/output values retained; source offsets and line hashes recorded. Message, reasoning, environment and metadata rows are excluded; internal passthrough metadata is omitted.",
+  "threads": [
+    {
+      "label": "a",
+      "thread_id": "01a15880-13ce-7fe0-adf7-78a1110f6bb2",
+      "source": "C:\\Users\\admin\\.codex\\sessions\\2026\\10\\20\\rollout-2026-10-20T16-49-11-01a15880-13ce-7fe0-adf7-78a1110f6bb2.jsonl",
+      "source_sha256": "58da116ed29cf98dc80af26b1249bc058391456ebc8e0277a45f56271ca7bbaa",
+      "source_bytes": 8307900,
+      "extracted": "a.public-tools.jsonl",
+      "extracted_sha256": "3911af04aa82ef1d9582b55d254d574c7d8835cd4427de3aba09a4e8c5833a3f",
+      "tool_rows": 688,
+      "counts": {
+        "function_call": 232,
+        "function_call_output": 232,
+        "custom_tool_call": 112,
+        "custom_tool_call_output": 112
+      },
+      "matched_call_ids": 344,
+      "unmatched_pairs": 0
+    },
+    {
+      "label": "b",
+      "thread_id": "01a15914-4efd-7c72-94b4-c4ceabe4ada9",
+      "source": "C:\\Users\\admin\\.codex\\sessions\\2026\\10\\20\\rollout-2026-10-20T19-31-05-01a15914-4efd-7c72-94b4-c4ceabe4ada9.jsonl",
+      "source_sha256": "41158686633b1109b7219d1ebdc5f81dd57fcb0c0b3c6d5de5cea520293fa987",
+      "source_bytes": 5155026,
+      "extracted": "b.public-tools.jsonl",
+      "extracted_sha256": "557dd8f805a666b98b642e5408afa0fe432ba0bacd3aedce2e797a4b53813cc3",
+      "tool_rows": 396,
+      "counts": {
+        "function_call": 124,
+        "function_call_output": 124,
+        "custom_tool_call": 74,
+        "custom_tool_call_output": 74
+      },
+      "matched_call_ids": 198,
+      "unmatched_pairs": 0
+    },
+    {
+      "label": "c",
+      "thread_id": "01a15949-9318-7cf0-b097-221f6e21d981",
+      "source": "C:\\Users\\admin\\.codex\\sessions\\2026\\10\\20\\rollout-2026-10-20T20-29-16-01a15949-9318-7cf0-b097-221f6e21d981.jsonl",
+      "source_sha256": "de28351085c340c3d1d808356ca3edb22aba4c4f4a0a3c565eac29d8605738bd",
+      "source_bytes": 6406130,
+      "extracted": "c.public-tools.jsonl",
+      "extracted_sha256": "10ecb5d52ffaee5317fa22c7f11a012f64bf0833f4c28066b91481a52ac841a8",
+      "tool_rows": 462,
+      "counts": {
+        "function_call": 149,
+        "function_call_output": 149,
+        "custom_tool_call": 82,
+        "custom_tool_call_output": 82
+      },
+      "matched_call_ids": 231,
+      "unmatched_pairs": 0
+    },
+    {
+      "label": "f",
+      "thread_id": "01a1598a-72fc-7b81-9b12-a481db3738c8",
+      "source": "C:\\Users\\admin\\.codex\\sessions\\2026\\10\\20\\rollout-2026-10-20T21-40-08-01a1598a-72fc-7b81-9b12-a481db3738c8.jsonl",
+      "source_sha256": "57693e73472ee7080b83f8a133d7e6968c6a2405e4181cc664e365035412817d",
+      "source_bytes": 2348023,
+      "extracted": "f.public-tools.jsonl",
+      "extracted_sha256": "098eff91ea25754df076fe213e630ec81d004f9880f0bd0245b51609e58c43ac",
+      "tool_rows": 206,
+      "counts": {
+        "function_call": 80,
+        "function_call_output": 80,
+        "custom_tool_call": 23,
+        "custom_tool_call_output": 23
+      },
+      "matched_call_ids": 103,
+      "unmatched_pairs": 0
+    }
+  ],
+  "script_errors": [
+    {
+      "thread_id": "01a15949-9318-7cf0-b097-221f6e21d981",
+      "source_line": 36,
+      "call_id": "call_70b812c939604c03abddaf7e7ddb02ae",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\nTypeError: tools.mcp__fastctx__read is not a function\n    at exec_main.mjs:7:71\n    at Array.map (<anonymous>)\n    at exec_main.mjs:7:48"
+        }
+      ],
+      "source_line_sha256": "b37b50d0fbc225f3cc2a8cda28299f461030ded5b9499a41c1540b1fbd77809a"
+    },
+    {
+      "thread_id": "01a15949-9318-7cf0-b097-221f6e21d981",
+      "source_line": 376,
+      "call_id": "call_00f814cee7d64b709f2a9c00e33139d8",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\napply_patch verification failed: Failed to find expected lines in D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\c3-artifacts.mjs:\n const header=`# 第${n}章完整稿自检"
+        }
+      ],
+      "source_line_sha256": "ca864262dcc6e922dd227cfba7ac87b5de6c1a9d331bc07ae1ec03b86af9d38d"
+    },
+    {
+      "thread_id": "01a1598a-72fc-7b81-9b12-a481db3738c8",
+      "source_line": 21,
+      "call_id": "call_e3b759d6083f44ff9bf034d09cfb9c89",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\nTypeError: tools.mcp__fastctx__read is not a function\n    at exec_main.mjs:3:90\n    at Array.map (<anonymous>)\n    at exec_main.mjs:3:74"
+        }
+      ],
+      "source_line_sha256": "d1e94da4763491bcf6f2806406e57df3d2f5efbdefe6e9fa8996536f8f756577"
+    }
+  ]
+}

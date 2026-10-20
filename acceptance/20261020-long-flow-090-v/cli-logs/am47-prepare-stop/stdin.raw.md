@@ -1,0 +1,13 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证';
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8')),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const shown=read(v+'/cli-logs/am46-workflow-after-failure/stdout.raw.txt'),state=read(w+'/.writer/state.json'),workflow=structuredClone(shown.workflow),author=read(v+'/am-author-evidence.json');
+if(state.revision!==27||shown.revision!==27)throw Error('Revision changed');
+const prompt=fs.readFileSync(w+'/'+author.local_source),quote='本次正常结束，根独立复核后B才开始。';
+if(!prompt.toString('utf8').includes(quote))throw Error('Stop source missing');
+workflow.stage='paused';
+workflow.task='第4—6追踪时间已正式修正；6章完成，等待B新提示，不写7。意见apply因REVIEW_CHANGE_REQUIRED被工具阻断，未完成闭环，B前须根处理';
+workflow.authorization={allowed_actions:['discuss'],draft_range:null,revise_range:null,stop_conditions:['追踪修正已由正式事务提交，正文到6，等待根独立复核及B新提示，不写7','V_A_U5_TIME_METADATA仍adopted，apply因metadata-only无正文变更被拒；未执行依赖verify，不冒称闭环','本轮无新正文或其他修订授权，不能恢复4—12宽泛范围或再次动正文凑条件','保留planning、decisions、原错误追踪/报告/issue及新修订历史；不改产品/U/T、不Git提交推送或上传']};
+const input={expected_revision:state.revision,operation_id:'v-am-stop-with-tool-blocker',author_evidence:{...author,quote,source_sha256:sha(prompt),locator:'本轮真实提示末段；当前完成点与闭环阻断分别如实说明，不声称未完成条件已达成'},workflow};
+fs.writeFileSync(w+'/.writer/drafts/v-am-workflow-stop.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({revision:state.revision,stage:workflow.stage,authorization:workflow.authorization,task:workflow.task}));

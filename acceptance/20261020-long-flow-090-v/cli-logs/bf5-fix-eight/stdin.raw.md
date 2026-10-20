@@ -1,0 +1,12 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const w='scenario/东岸末班船-扩展验证',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+let a=fs.readFileSync(`${w}/分段/0008/01-v1.md`,'utf8');
+a=a.replace('“给我带那包的，也总算能吃点热的。”她说。','“这下不用她再出去买了。”她说。');
+fs.writeFileSync(`${w}/分段/0008/01-v2.md`,a,{flag:'wx'});
+let b=fs.readFileSync(`${w}/分段/0008/02-v2.md`,'utf8');
+b=b.replace('她拿下自己的袋子，转到里间取外套。','她提着袋子，转到里间取外套。').replace('没让它落到围布上。','没让它落到衣服上。');
+fs.writeFileSync(`${w}/分段/0008/02-v3.md`,b,{flag:'wx'});
+const s=JSON.parse(fs.readFileSync(`${w}/.writer/state.json`));
+const parts=['分段/0008/01-v2.md','分段/0008/02-v3.md'].map(path=>{const b=fs.readFileSync(`${w}/${path}`);return {path,sha256:sha(b),han:[...b.toString().replace(/^#.*$/gm,'').matchAll(/\p{Script=Han}/gu)].length};});
+fs.writeFileSync('bf5-assemble-8-v3.json',JSON.stringify({unit:8,expected_revision:s.revision,draft:'正文/0008-半个钟头-v2.md',parts:parts.map(({path,sha256})=>({path,sha256})),separator:'\n\n'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({preserved_draft:'正文/0008-半个钟头-v1.md',target:'正文/0008-半个钟头-v2.md',parts,total_han:parts.reduce((n,p)=>n+p.han,0)},null,2));

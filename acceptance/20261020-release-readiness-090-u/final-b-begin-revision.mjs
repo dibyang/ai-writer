@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import {U,W,write,json,hash,run} from './final-b-run.mjs';
+const state=json(path.join(W,'.writer/state.json'));const old=json(path.join(W,'.writer/drafts/final-b-workflow-third.json'));const wf=structuredClone(old.workflow);
+wf.stage='revision';wf.task='将维修工料普通报价30元追溯改35元，独立修订第2—3章；本进程只重登2，保留同ID候选供后续完成3及尾段复核';wf.authorization={allowed_actions:['discuss','plan','revise'],draft_range:null,revise_range:{from:2,to:3},stop_conditions:['不得新增第4章或其他正文单元','本进程只重登最早影响章2，下一待重登章为3','不prepare、不commit、不abort；主稿三章保持会话基线原字节']};
+write(path.join(W,'.writer/drafts/final-b-workflow-revision.json'),{expected_revision:state.revision,operation_id:'final-b-revision-2-3-first-stop',author_evidence:{quote:'按原试验授权将workflow设revision、revise_range覆盖最早影响章到3（若最早就是1则1—3），正文新增范围为空',local_source:'研究/final-b-本次任务原文.md',source_sha256:hash(path.join(W,'研究/final-b-本次任务原文.md')),locator:'本次用户任务原文第7段；具体30改35由代理在普通小修授权内选择，见final-b-revision-choice.md',recorded_by:'本次Codex执行代理'},workflow:wf});
+run('19-workflow-revision',['workflow','set','--input','.writer/drafts/final-b-workflow-revision.json']);
+const list=JSON.parse(run('20-list-before-begin',['revision','list']));if(list.sessions.length||list.transactions.length)throw Error('Existing revision; do not create competing candidate');
+const base=json(path.join(W,'.writer/state.json'));write(path.join(U,'final-b-main-revision-baseline.json'),{revision:base.revision,state_sha256:hash(path.join(W,'.writer/state.json')),units:base.units.map(x=>({unit:x.unit,draft:x.draft,sha256:hash(path.join(W,x.draft))})),observation:base.snapshot.ledger.O_BOX_PAINT});
+write(path.join(W,'.writer/drafts/final-b-revision-begin.json'),{expected_revision:base.revision,owner:'final-b-native-codex',from:2,through:3});
+const session=JSON.parse(run('21-revision-begin',['revision','begin','--input','.writer/drafts/final-b-revision-begin.json']));
+write(path.join(U,'final-b-revision-session.json'),session);

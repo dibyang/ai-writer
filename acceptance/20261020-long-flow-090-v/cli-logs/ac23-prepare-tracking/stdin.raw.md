@@ -1,0 +1,10 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证';
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const oldResult=read(v+'/cli-logs/am43-apply-issue/result.json'),newResult=read(v+'/cli-logs/ac20-new-default-apply/result.json'),oldError=read(v+'/cli-logs/am43-apply-issue/stderr.raw.txt'),newError=read(v+'/cli-logs/ac20-new-default-apply/stderr.raw.txt'),listed=read(v+'/cli-logs/ac22-new-issue-before-tracking/stdout.raw.txt'),state=read(w+'/.writer/state.json');
+if([oldResult,newResult].some(x=>x.exit_code!==2||x.before_state_sha256!==x.after_state_sha256)||oldError.code!=='REVIEW_CHANGE_REQUIRED'||newError.code!==oldError.code||state.revision!==30||hash(w+'/.writer/state.json')!==newResult.after_state_sha256)throw Error('Default parity failed');
+const issue=listed.issues.find(x=>x.id==='V_A_U5_TIME_METADATA');if(issue.status!=='adopted'||issue.application!==null||issue.verification!==null)throw Error('Issue not adopted/unapplied');
+fs.writeFileSync(v+'/ac-default-parity.json',JSON.stringify({old:{code:oldError.code,...oldResult},updated:{code:newError.code,...newResult},same_code:true,both_exit2:true,both_state_unchanged:true},null,2)+'\n',{flag:'wx'});
+const input={expected_revision:state.revision,operation_id:'v-ac-apply-tracking-time',id:issue.id,commit_id:'3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68',change_scope:'tracking',reason:'根本轮明确授权以tracking模式应用既有真实追踪修订。事务97c11e48-4f17-44c5-96de-5e087099eea0已completed；该提交把4章summary/timeline澄清为停航首日清晨，把5章summary/timeline纠正为停航首日晚，6章保留同日下午并行。绑定原采用、旧新归档和同一commit_id，六章正文同字节，不捏造第二次修改。新默认apply仍实际退出2且state未变，当前另存显式tracking输入。后续仍需4—6真实完整实读报告与verify。'};
+fs.writeFileSync(v+'/ac-tracking-apply.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(input,null,2));

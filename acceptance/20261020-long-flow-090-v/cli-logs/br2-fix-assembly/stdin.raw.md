@@ -1,0 +1,13 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const w='scenario/东岸末班船-扩展验证',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+let b=fs.readFileSync(`${w}/分段/0009/02-v1.md`,'utf8');
+b=b.replace('老何来了要喝，她便提着壶去接，先没把自己的杯子洗净。水龙头底下有只塑料盆，里面泡着一块抹布，她将盆挪开，接到半壶，手腕已经觉得沉，停住水，慢慢提回来。','老何来了要喝，她便提着壶去后屋添开水，先没把自己的杯子洗净。开水桶下有只接滴水的盆，她将盆往里推，接到半壶，手腕已经觉得沉，关好龙头，慢慢提回来。');
+fs.writeFileSync(`${w}/分段/0009/02-v2.md`,b,{flag:'wx'});
+let c=fs.readFileSync(`${w}/分段/0009/03-v2.md`,'utf8');
+c=c.replace('今天那人将锅抱到楼下，见他真来了','今天那人抱着锅站在自家门口，见他真来了').replace('周岸从本子上划去自己试写的两点，改到四点半。','周岸在本子上添上四点半。').replace('周岸低头在便笺上补“人齐再摆”，没有从电话里猜她今天为什么回来得早，也没问早晨的糕卖得怎样。','周岸低头在便笺上补“人齐再摆”，等那头碗搁稳了才接话。');
+fs.writeFileSync(`${w}/分段/0009/03-v3.md`,c,{flag:'wx'});
+const s=JSON.parse(fs.readFileSync(`${w}/.writer/state.json`));
+const parts=['分段/0009/01-v2.md','分段/0009/02-v2.md','分段/0009/03-v3.md'].map(path=>{const raw=fs.readFileSync(`${w}/${path}`);return {path,sha256:sha(raw),han:[...raw.toString().replace(/^#.*$/gm,'').matchAll(/\p{Script=Han}/gu)].length};});
+const total=parts.reduce((n,p)=>n+p.han,0);if(total<5000)throw Error('body Han minimum');
+fs.writeFileSync('br2-assemble-9-v2.json',JSON.stringify({unit:9,expected_revision:s.revision,draft:'正文/0009-留给明天的活-v2.md',parts:parts.map(({path,sha256})=>({path,sha256})),separator:'\n\n'},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({old_draft:'正文/0009-留给明天的活-v1.md',parts,total_han:total},null,2));

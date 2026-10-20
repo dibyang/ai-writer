@@ -1,0 +1,180 @@
+{
+  "ok": true,
+  "complete": true,
+  "scope": "windows-local-delivery-and-three-chapter-flow",
+  "at": "2026-10-20T08:14:29.275Z",
+  "version": "0.9.0-development",
+  "registered_units": 3,
+  "volumes": 2,
+  "body_han": 13965,
+  "revision": 13,
+  "content_id": "ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b",
+  "archive_sha256": "a4d0263e42f9531a2ffb53ba6ff0d902ee334f3e1a7e833f7a822ea398d22d13",
+  "source_tests": {
+    "label": "source-tests-delivery-bounded",
+    "tests": 194,
+    "pass": 192,
+    "fail": 0,
+    "skipped": 2,
+    "elapsed_ms": 849778,
+    "cwd": "D:\\work\\other\\ai-writer",
+    "args": [
+      "-NoProfile",
+      "-Command",
+      "npm.cmd test -- --test-concurrency=2"
+    ]
+  },
+  "packaged_tests": {
+    "label": "package-tests-delivery-bounded",
+    "tests": 194,
+    "pass": 192,
+    "fail": 0,
+    "skipped": 2,
+    "elapsed_ms": 803863,
+    "cwd": "D:\\work\\other\\ai-writer\\.tmp\\U 最终交付验收包解压\\ai-writer-0.9.0",
+    "args": [
+      "-NoProfile",
+      "-Command",
+      "npm.cmd test -- --test-concurrency=2"
+    ]
+  },
+  "engine": {
+    "label": "package-engine-delivery",
+    "tests": 29,
+    "pass": 29,
+    "fail": 0,
+    "skipped": 0,
+    "elapsed_ms": 94301,
+    "cwd": "D:\\work\\other\\ai-writer\\.tmp\\U 最终交付验收包解压\\ai-writer-0.9.0",
+    "args": [
+      "run",
+      "test:engine"
+    ]
+  },
+  "doctors": [
+    {
+      "label": "source-doctor-delivery",
+      "ok": true,
+      "node": "v24.15.0",
+      "content_id": "ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b"
+    },
+    {
+      "label": "package-doctor-delivery",
+      "ok": true,
+      "node": "v24.15.0",
+      "content_id": "ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b"
+    }
+  ],
+  "actual_local_platform": "Windows Node v24.15.0",
+  "paused_only_discussion": true,
+  "formal_release_acceptance": false,
+  "remote_ci_executed": false,
+  "human_blind_read": false,
+  "market_validation": false,
+  "scale_60_100_new_run_complete": false,
+  "existing_author_works_modified": false,
+  "previous_round_local_commit": "0c6d27abd3548dc99c1a72996b9b4f2e2ef5ccb4",
+  "current_round_committed": false,
+  "pushed": false,
+  "captured_commands": 249,
+  "captured_nonzero_classified": 18,
+  "actual_native_successful_invocations": 6,
+  "actual_native_unique_threads": 4,
+  "final_flow_invocations": 5,
+  "final_flow_unique_threads": 3,
+  "actual_current_line_coverage": 685,
+  "proofs": [
+    {
+      "file": "README.md",
+      "bytes": 12909,
+      "sha256": "63fe5aa2d114916583419e21697b3ce2676de97fae930b6c014a5462b8feff7d"
+    },
+    {
+      "file": "zip-delivery-verification.json",
+      "bytes": 573,
+      "sha256": "8f38a33041615cedfa4821fb94fed0eabdac678c1662c2705d036717df378e45"
+    },
+    {
+      "file": "product-frozen-delivery.json",
+      "bytes": 53285,
+      "sha256": "354d790403d086d23e68f8aa38cedd1ec4dc20055d5b4cdfc2e21870a32b2d3e"
+    },
+    {
+      "file": "build-delivery-verification.json",
+      "bytes": 1969,
+      "sha256": "c71e81f768ccc4312a5d2cf07245be99720c08b5e8c32e35ef23000dca63c079"
+    },
+    {
+      "file": "repository-final-verification.json",
+      "bytes": 4239,
+      "sha256": "dd8794f2be9eabe8cfce1ad416861f9211f47442bee7ab18259f456defe8fb0d"
+    },
+    {
+      "file": "final-flow-verification.json",
+      "bytes": 2680,
+      "sha256": "4d12c12740e2a9b2f9532d5bf600d02f200c786ed7718ca10cc85c21690c04f8"
+    },
+    {
+      "file": "native-final-read-coverage.json",
+      "bytes": 2895,
+      "sha256": "5aaad19f3d87bdb94f397c58610aadc135afe2e44e0adc3a07e3545273daf349"
+    },
+    {
+      "file": "parent-revision-result-verification.json",
+      "bytes": 25669,
+      "sha256": "30bedcfaf21524799245f04fc0d749d2bb1b7e9c735ce4f721dac918adaddcfc"
+    },
+    {
+      "file": "parent-occupancy-verification.json",
+      "bytes": 759,
+      "sha256": "3abafde741fc16d21a938482753ab3ad98948bd27253009d077d6949b85cf4dd"
+    },
+    {
+      "file": "t-local-commit-verification.json",
+      "bytes": 194,
+      "sha256": "55602761784db5c54790d247a6400ce2a4a10916f3421bfc061de6809490a796"
+    },
+    {
+      "file": "command-native-audit-complete.json",
+      "bytes": 176693,
+      "sha256": "1a917f7a5ccdddf782e9eafb7471888249f22ff01391045dade1977abba3b5a9"
+    },
+    {
+      "file": "failure-classification.json",
+      "bytes": 22194,
+      "sha256": "72c0d0aee590e51a171013e90a6765105482780678c8c86127edd14da1ddeff3"
+    },
+    {
+      "file": "failure-classification.md",
+      "bytes": 5228,
+      "sha256": "5b063694e4406bf718ea0f4ef4dd84d85282b6f421542882276cd24e3a58b0e8"
+    },
+    {
+      "file": "final-usability-observations.md",
+      "bytes": 7076,
+      "sha256": "75947ed448536e43b5aaf64f776af29c5369386662cda1d4525e897472bf0d35"
+    },
+    {
+      "file": "交接-最终当前入口.md",
+      "bytes": 4973,
+      "sha256": "0a1e873850974b95dcc3a960548be3bddc9738f9b434352fa9a852521e3b9cc9"
+    },
+    {
+      "file": "export-final-current-3/manifest.json",
+      "bytes": 4727,
+      "sha256": "f5c86f03828b218c4ee813cd4e50de5984d91a8e0ef175c6f98b973bb0114dd9"
+    },
+    {
+      "file": "export-final-current-3/manuscript.md",
+      "bytes": 49633,
+      "sha256": "64ef9907c814d51605c7c9a3cda54a34385881c6e34be58d1d97ae2a4ffd54c5"
+    }
+  ],
+  "deferred": [
+    "Linux/macOS and other Node versions execution",
+    "Windows two symlink permission cases",
+    "60/100 chapter expansion on final current package",
+    "Unguided human usability, blind reading and market validation",
+    "Formal release/tag/push"
+  ]
+}

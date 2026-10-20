@@ -4,8 +4,18 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {spawnSync} from 'node:child_process';
-import {buildRelease} from '../scripts/build-release.mjs';
+import {buildRelease,releaseProvenance} from '../scripts/build-release.mjs';
 import {ROOT} from './protection-fixture.mjs';
+
+test('Git查询临时中断可有界重试，持续失败保留具体命令与错误且不伪造来源',()=>{
+  const ok={status:0,stdout:'',stderr:''};let statusCalls=0;
+  const run=args=>args[0]==='status'?(++statusCalls===1?{status:null,error:{code:'ETIMEDOUT'},stderr:''}:{...ok,stdout:'?? new-source.mjs\n'}):{...ok,stdout:args[1]==='HEAD'?'a'.repeat(40)+'\n':ROOT+'\n'};
+  assert.deepEqual(releaseProvenance(ROOT,run),{source_commit:'a'.repeat(40),dirty:true});assert.equal(statusCalls,2);
+  let failedCalls=0;const failed=args=>args[0]==='status'?(failedCalls++,{status:null,error:{code:'ETIMEDOUT'},stderr:'bounded test timeout'}):{...ok,stdout:args[1]==='HEAD'?'a'.repeat(40)+'\n':ROOT+'\n'};
+  assert.throws(()=>releaseProvenance(ROOT,failed),/git status.*ETIMEDOUT.*bounded test timeout/);assert.equal(failedCalls,2);
+  let deniedCalls=0;const denied=args=>args[0]==='status'?(deniedCalls++,{status:128,stderr:'access denied'}):{...ok,stdout:args[1]==='HEAD'?'a'.repeat(40)+'\n':ROOT+'\n'};
+  assert.throws(()=>releaseProvenance(ROOT,denied),/status=128.*access denied/);assert.equal(deniedCalls,1);
+});
 
 test('发行包包含隐藏技能和完整许可，排除作品及证据，重建一致且不覆盖',t=>{
   fs.mkdirSync(path.join(ROOT,'.tmp'),{recursive:true});const dir=fs.mkdtempSync(path.join(ROOT,'.tmp/release-'));

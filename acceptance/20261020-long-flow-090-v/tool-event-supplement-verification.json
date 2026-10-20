@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "complete": true,
+  "scope": "supplement-for-public-tool-events-not-emitted-by-codex-cli-json",
+  "threads": 4,
+  "tool_rows": 1752,
+  "matched_call_ids": 876,
+  "script_errors": [
+    {
+      "thread_id": "01a15949-9318-7cf0-b097-221f6e21d981",
+      "source_line": 36,
+      "call_id": "call_70b812c939604c03abddaf7e7ddb02ae",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\nTypeError: tools.mcp__fastctx__read is not a function\n    at exec_main.mjs:7:71\n    at Array.map (<anonymous>)\n    at exec_main.mjs:7:48"
+        }
+      ],
+      "source_line_sha256": "b37b50d0fbc225f3cc2a8cda28299f461030ded5b9499a41c1540b1fbd77809a",
+      "category": "orchestration-api-name-error-corrected",
+      "disposition": "C首停尝试从functions.exec访问未暴露FastCtx属性，改直接FastCtx后已完整读取。"
+    },
+    {
+      "thread_id": "01a15949-9318-7cf0-b097-221f6e21d981",
+      "source_line": 376,
+      "call_id": "call_00f814cee7d64b709f2a9c00e33139d8",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\napply_patch verification failed: Failed to find expected lines in D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\c3-artifacts.mjs:\n const header=`# 第${n}章完整稿自检"
+        }
+      ],
+      "source_line_sha256": "ca864262dcc6e922dd227cfba7ac87b5de6c1a9d331bc07ae1ec03b86af9d38d",
+      "category": "acceptance-helper-patch-context-mismatch-corrected",
+      "disposition": "C首停修改验收辅助脚本时旧上下文不匹配，apply_patch拒绝写入；按实际内容重新修补，不涉及产品。"
+    },
+    {
+      "thread_id": "01a1598a-72fc-7b81-9b12-a481db3738c8",
+      "source_line": 21,
+      "call_id": "call_e3b759d6083f44ff9bf034d09cfb9c89",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\nTypeError: tools.mcp__fastctx__read is not a function\n    at exec_main.mjs:3:90\n    at Array.map (<anonymous>)\n    at exec_main.mjs:3:74"
+        }
+      ],
+      "source_line_sha256": "d1e94da4763491bcf6f2806406e57df3d2f5efbdefe6e9fa8996536f8f756577",
+      "category": "orchestration-api-name-error-corrected",
+      "disposition": "F入口尝试未暴露FastCtx属性，改直接调用后完成当前12章实际阅读；CLI JSON事件未呈现此编排层错误。"
+    }
+  ],
+  "unclassified": [],
+  "all_extracted_public_tool_payload_values_match_original_source": true,
+  "reasoning_messages_and_internal_metadata_not_copied": true,
+  "cli_json_audit_remains_a_separate_scope": true
+}

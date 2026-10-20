@@ -9,15 +9,23 @@ import {currentProtocol,identifyBuild,writeBuildManifest} from '../lib/tool-buil
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const forbidden=new Set(['.git','.idea','.codex','.tmp','.writer','works','acceptance','node_modules','dist']);
-function releaseProvenance(root){
-  const git=args=>spawnSync('git',args,{cwd:root,encoding:'utf8',windowsHide:true,timeout:30000,maxBuffer:2**20});
+export function releaseProvenance(root,runGit=args=>spawnSync('git',args,{cwd:root,encoding:'utf8',windowsHide:true,timeout:30000,maxBuffer:2**20})){
+  const describe=(args,r)=>`git ${args.join(' ')}: status=${r.status??'none'}, error=${r.error?.code??'none'}${r.stderr?.trim()?'; '+r.stderr.trim().slice(0,500):''}`;
+  const git=args=>{
+    let result=runGit(args);
+    if(['ETIMEDOUT','EINTR','EAGAIN'].includes(result.error?.code)){
+      console.error('Release Git query interrupted; one bounded retry: '+describe(args,result));
+      result=runGit(args);
+    }
+    return result;
+  };
   const top=git(['rev-parse','--show-toplevel']);
-  if(top.error&&top.error.code!=='ENOENT')throw Error('Cannot inspect release Git root: '+top.error.message);
+  if(top.error&&top.error.code!=='ENOENT')throw Error('Cannot inspect release Git root: '+describe(['rev-parse','--show-toplevel'],top));
   if(top.status!==0)return {source_commit:'unknown',dirty:'unknown'};
   const normalize=p=>process.platform==='win32'?fs.realpathSync(p).toLowerCase():fs.realpathSync(p);
   if(normalize(top.stdout.trim())!==normalize(root))return {source_commit:'unknown',dirty:'unknown'};
   const commit=git(['rev-parse','HEAD']),status=git(['status','--porcelain','--untracked-files=normal']);
-  if(commit.status!==0||status.status!==0)throw Error('Cannot read release Git provenance reliably; retry after Git is available');
+  if(commit.status!==0||status.status!==0)throw Error('Cannot read release Git provenance reliably; '+[commit.status!==0?describe(['rev-parse','HEAD'],commit):null,status.status!==0?describe(['status','--porcelain','--untracked-files=normal'],status):null].filter(Boolean).join('; ')+'; retain failed staging and retry after Git is available');
   return {source_commit:commit.stdout.trim(),dirty:Boolean(status.stdout.trim())};
 }
 function safeRef(ref){

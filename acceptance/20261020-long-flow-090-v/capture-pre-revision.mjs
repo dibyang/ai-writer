@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),work=path.join(base,'scenario/东岸末班船-扩展验证'),target=path.join(base,'parent-before-c-revision'),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+assert.equal(fs.existsSync(target),false,'A prior master snapshot must never be overwritten');
+const raw=fs.readFileSync(path.join(work,'.writer/state.json')),state=JSON.parse(raw);assert.equal(state.units.length,12);
+const beforeC=JSON.parse(fs.readFileSync(path.join(base,'parent-b-resume-state.json')));assert.deepEqual(state.units.slice(0,9),beforeC.units,'C must preserve the original first nine unit records until formal publication');
+const bodies=state.units.map(u=>{const bytes=fs.readFileSync(path.join(work,u.draft));assert.equal(sha(bytes),u.sha256);return{unit:u.unit,draft:u.draft,sha256:u.sha256,bytes};});
+fs.mkdirSync(target);fs.writeFileSync(path.join(target,'state.json'),raw,{flag:'wx'});
+for(const body of bodies)fs.writeFileSync(path.join(target,String(body.unit).padStart(4,'0')+'.md'),body.bytes,{flag:'wx'});
+const manifest={captured_at:new Date().toISOString(),scope:'master-before-publication-of-c-revision',revision:state.revision,state_sha256:sha(raw),units:bodies.map(({bytes,...u})=>({...u,bytes:bytes.length})),observations:Object.fromEntries(Object.entries(state.snapshot.ledger).filter(([,v])=>v.type==='observation').map(([k,v])=>[k,Object.fromEntries(['type','statement','author_truth'].map(f=>[f,v[f]]))]))};
+fs.writeFileSync(path.join(target,'manifest.json'),JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,...manifest}));

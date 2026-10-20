@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "at": "2026-10-20T13:58:17.853Z",
+  "head": "0c6d27abd3548dc99c1a72996b9b4f2e2ef5ccb4",
+  "index_empty": true,
+  "product_diff_check": true,
+  "source_frozen_entries": 324,
+  "all_frozen_entries_unchanged": true,
+  "previous_seals": [
+    {
+      "name": "t",
+      "ok": true,
+      "mode": "verify",
+      "files": 8482,
+      "bytes": 242700148,
+      "manifest_sha256": "7066f1ed62e89738bbd42387f6853e44409208da727e8acbe5e8bae12b1d1df4"
+    },
+    {
+      "name": "u",
+      "ok": true,
+      "mode": "verify",
+      "files": 3073,
+      "bytes": 45981867,
+      "manifest_sha256": "4bac4375c7aba679911fb491a1ddea5c5bbb80b8fb97194eb40c44578974a1f5"
+    }
+  ],
+  "current_round_committed": false,
+  "pushed": false,
+  "unrelated_idea_not_staged_or_edited_by_this_work": true,
+  "status": " M .github/workflows/checks.yml\n M CHANGELOG.md\n M RELEASE_NOTES.md\n M docs/long-form.md\n M docs/quickstart.md\n M docs/review-and-registration.md\n M docs/user-guide.md\n M docs/workflow.md\n M lib/help.mjs\n M lib/longform.mjs\n M lib/review-workflow.mjs\n M lib/revisions.mjs\n M lib/workspace.mjs\n M release/distribution.json\n M scripts/build-release.mjs\n M tests/release.test.mjs\n M tests/review-workflow.test.mjs\n?? .idea/\n?? acceptance/20261020-long-flow-090-v/\n?? acceptance/20261020-release-readiness-090-u-seal-verification.json\n?? acceptance/20261020-release-readiness-090-u/\n?? tests/delivery-flow.test.mjs\n",
+  "stat": " .github/workflows/checks.yml    |  2 +-\n CHANGELOG.md                    |  8 ++++++\n RELEASE_NOTES.md                |  6 ++++\n docs/long-form.md               |  2 ++\n docs/quickstart.md              |  6 ++++\n docs/review-and-registration.md |  8 ++++++\n docs/user-guide.md              |  6 +++-\n docs/workflow.md                | 38 ++++++++++++++++++++++++-\n lib/help.mjs                    |  4 ++-\n lib/longform.mjs                |  6 ++--\n lib/review-workflow.mjs         | 41 +++++++++++++++++++++++----\n lib/revisions.mjs               |  2 +-\n lib/workspace.mjs               | 62 ++++++++++++++++++++++++++++++++++++++---\n release/distribution.json       |  3 ++\n scripts/build-release.mjs       | 16 ++++++++---\n tests/release.test.mjs          | 12 +++++++-\n tests/review-workflow.test.mjs  | 37 +++++++++++++++++++++++-\n 17 files changed, 237 insertions(+), 22 deletions(-)\n",
+  "calls": [
+    {
+      "exe": "git",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "0c6d27abd3548dc99c1a72996b9b4f2e2ef5ccb4\n",
+      "stderr": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "diff",
+        "--check"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "status",
+        "--short",
+        "--untracked-files=normal"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": " M .github/workflows/checks.yml\n M CHANGELOG.md\n M RELEASE_NOTES.md\n M docs/long-form.md\n M docs/quickstart.md\n M docs/review-and-registration.md\n M docs/user-guide.md\n M docs/workflow.md\n M lib/help.mjs\n M lib/longform.mjs\n M lib/review-workflow.mjs\n M lib/revisions.mjs\n M lib/workspace.mjs\n M release/distribution.json\n M scripts/build-release.mjs\n M tests/release.test.mjs\n M tests/review-workflow.test.mjs\n?? .idea/\n?? acceptance/20261020-long-flow-090-v/\n?? acceptance/20261020-release-readiness-090-u-seal-verification.json\n?? acceptance/20261020-release-readiness-090-u/\n?? tests/delivery-flow.test.mjs\n",
+      "stderr": ""
+    },
+    {
+      "exe": "git",
+      "args": [
+        "diff",
+        "--stat"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": " .github/workflows/checks.yml    |  2 +-\n CHANGELOG.md                    |  8 ++++++\n RELEASE_NOTES.md                |  6 ++++\n docs/long-form.md               |  2 ++\n docs/quickstart.md              |  6 ++++\n docs/review-and-registration.md |  8 ++++++\n docs/user-guide.md              |  6 +++-\n docs/workflow.md                | 38 ++++++++++++++++++++++++-\n lib/help.mjs                    |  4 ++-\n lib/longform.mjs                |  6 ++--\n lib/review-workflow.mjs         | 41 +++++++++++++++++++++++----\n lib/revisions.mjs               |  2 +-\n lib/workspace.mjs               | 62 ++++++++++++++++++++++++++++++++++++++---\n release/distribution.json       |  3 ++\n scripts/build-release.mjs       | 16 ++++++++---\n tests/release.test.mjs          | 12 +++++++-\n tests/review-workflow.test.mjs  | 37 +++++++++++++++++++++++-\n 17 files changed, 237 insertions(+), 22 deletions(-)\n",
+      "stderr": ""
+    },
+    {
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "acceptance/20261020-long-flow-090-t/seal-evidence.mjs",
+        "verify"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "{\"ok\":true,\"mode\":\"verify\",\"files\":8482,\"bytes\":242700148,\"manifest_sha256\":\"7066f1ed62e89738bbd42387f6853e44409208da727e8acbe5e8bae12b1d1df4\"}\n",
+      "stderr": ""
+    },
+    {
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "acceptance/20261020-release-readiness-090-u/seal-evidence.mjs",
+        "verify"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "{\"ok\":true,\"mode\":\"verify\",\"files\":3073,\"bytes\":45981867,\"manifest_sha256\":\"4bac4375c7aba679911fb491a1ddea5c5bbb80b8fb97194eb40c44578974a1f5\"}\n",
+      "stderr": ""
+    }
+  ]
+}

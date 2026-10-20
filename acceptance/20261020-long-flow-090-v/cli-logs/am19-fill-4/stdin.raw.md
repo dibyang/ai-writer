@@ -1,0 +1,30 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v';
+const session=JSON.parse(fs.readFileSync(v+'/cli-logs/am13-begin/stdout.raw.txt','utf8')),p=session.workspace;
+const unit=Number(process.argv[2]);if(![4,5,6].includes(unit))throw Error('Scope4-6 only');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const state=read(p+'/.writer/state.json'),baseline=read(v+'/am-main-before.json');
+const ref=`.writer/drafts/v-am-replay-${unit}-before.json`,old=read(p+'/'+ref),input=structuredClone(old),context=read(p+`/.writer/drafts/v-am-context-${unit}-before.json`);
+if(old.expected_revision!==state.revision||context.revision!==state.revision||JSON.stringify(old.source_hashes)!==JSON.stringify(context.source_hashes))throw Error('Write-before context mismatch');
+for(const [r,h] of Object.entries(old.source_hashes))if(sha(fs.readFileSync(p+'/'+r))!==h)throw Error('Candidate source drift '+r);
+const base=baseline.units.find(u=>u.unit===unit);
+if(sha(fs.readFileSync(p+'/'+old.draft))!==base.sha256)throw Error('Body changed');
+const oldContent=Object.fromEntries(Object.entries(base.source_hashes).filter(([r])=>r!=='.writer/state.json'));
+const currentContent=Object.fromEntries(Object.entries(old.source_hashes).filter(([r])=>r!=='.writer/state.json'));
+if(JSON.stringify(oldContent)!==JSON.stringify(currentContent))throw Error('Non-state source mapping changed');
+const replaceOnce=(text,from,to)=>{if(text.split(from).length!==2)throw Error('Expected one time phrase '+from);return text.replace(from,to);};
+if(unit===4){input.summary=replaceOnce(input.summary,'次晨沈禾照减量单做糕','停航首日清晨沈禾照减量单做糕');input.changes.timeline_append[1]=replaceOnce(input.changes.timeline_append[1],'停航次晨5:20—6点多','停航首日清晨5:20—6点多');}
+if(unit===5){input.summary=replaceOnce(input.summary,'停航次日晚约18:30','停航首日晚约18:30');input.changes.timeline_append[0]=replaceOnce(input.changes.timeline_append[0],'停航次日晚18:30前后','停航首日晚18:30前后');}
+const differences=[];
+const diff=(a,b,at='')=>{if(JSON.stringify(a)===JSON.stringify(b))return;if(a&&b&&typeof a==='object'&&typeof b==='object'){for(const k of new Set([...Object.keys(a),...Object.keys(b)]))diff(a[k],b[k],at+'/'+k);}else differences.push({path:at,before:a,after:b});};
+diff({summary:old.summary,changes:old.changes},{summary:input.summary,changes:input.changes});
+const allowed=unit===4?['/summary','/changes/timeline_append/1']:unit===5?['/summary','/changes/timeline_append/0']:[];
+if(differences.some(d=>!allowed.includes(d.path))||differences.length!==allowed.length)throw Error('Out of metadata scope');
+const report=`审查/V-A-追踪修正-000${unit}-replay六项.md`;
+const reportHash=sha(fs.readFileSync(p+'/'+report));
+input.replay_review={reviewer:'同一实际V-A会话；根授权metadata-only追踪修正的知情自检',report,draft_sha256:base.sha256,checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+input.draft_review={reviewer:'同一实际V-A会话；当前整章实读和追踪六项核对',report,draft_sha256:base.sha256,report_sha256:reportHash};
+fs.writeFileSync(p+`/.writer/drafts/v-am-replay-${unit}-filled.json`,JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+const proof={unit,revision:state.revision,before_template:ref,before_template_sha256:sha(fs.readFileSync(p+'/'+ref)),draft:old.draft,draft_sha256:base.sha256,old_state_source:base.source_hashes['.writer/state.json'],current_state_source:old.source_hashes['.writer/state.json'],actual_candidate_state_sha256:sha(fs.readFileSync(p+'/.writer/state.json')),non_state_sources_equal:true,source_hashes:old.source_hashes,differences,characters_unchanged:JSON.stringify(old.changes.characters)===JSON.stringify(input.changes.characters),ledger_unchanged:JSON.stringify(old.changes.ledger)===JSON.stringify(input.changes.ledger),report,report_sha256:reportHash};
+fs.writeFileSync(v+`/am-change-proof-${unit}.json`,JSON.stringify(proof,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(proof,null,2));

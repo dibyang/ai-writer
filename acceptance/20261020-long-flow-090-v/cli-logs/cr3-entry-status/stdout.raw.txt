@@ -1,0 +1,280 @@
+{
+  "ok": true,
+  "title": "东岸末班船",
+  "kind": "novel",
+  "revision": 51,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "按已授权的7/9普通事实选择修订7—12整个尾段：7备零钱两卷及8实拆备用卷，9工费55总81及11实付；逐章重登并最终完整尾段复核。此进程只重登7首停，根核验后同ID继续8—12",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 7,
+        "to": 12
+      },
+      "stop_conditions": [
+        "整体目标为7—12独立修订、真实逐章重登/尾段完整连读后再由后续授权进程完成prepare/commit，普通事实选择详见V/c-revision-choice.md。",
+        "本执行进程首停：candidate只到1—7，8—12尚未重登；不得record8、prepare、commit、abort。根核验进程结束后的占用保护，再同ID/token恢复8—12。",
+        "独立区原稿留存，正文/旧tracking/下游实读后填replay_review六字段并附当前draft_review；来源或正文变化不得只换SHA。",
+        "独立区活跃时主12/治理/来源只读，不改基线；不改1—6，不改任何observation三项，不串35/80/26/81。",
+        "当前待复核窗口按check如实交接，旧报告过期不称有效；不派代理，不改U/T/产品，不提交推送上传。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 13,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "owner": "v-c3-actual-codex-first-stop",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "98862fc07df31871c4221c00f2ee72574c449a0443745b28014162d1476b9da4",
+        "scope": {
+          "from": 7,
+          "through": 12
+        },
+        "status": "editing",
+        "base_sha256": "4eb1f2a7d5c2ab7111bbf3f58524c8485fb07e59f5ca1be20bf3506d49296740",
+        "created_at": "2026-10-20T12:59:52.231Z",
+        "session_sha256": "ce48e40835e89c46a2c5e238e9cc48afa92457c06245bee895094981e568246b"
+      },
+      {
+        "id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "owner": "v-a-metadata-only-root-authorized",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 4,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "7bf633d95462043f82cf48e9ef8a03bdc1271f3734580dbd29188d081ade9ac5",
+        "created_at": "2026-10-20T10:14:46.353Z",
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_sha256": "6cd6922875ccfc7000a0e7bd7120f8ae5eed841e4882a175b204aa64e05a9be7"
+      },
+      {
+        "id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "owner": "final-b-native-codex",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 2,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "1a742700a6e49a0c7665b591f30a64dd4a0fb82022fe911ee6ac119d29d75754",
+        "created_at": "2026-10-20T07:15:17.894Z",
+        "transaction_id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_sha256": "f1f772eb039fb496f49f85c1789a93ef5ef7f8b66cc45f5fab253005c086de1e"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "status": "completed"
+      },
+      {
+        "id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "status": "completed"
+      },
+      {
+        "id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 51,
+    "counts": {
+      "verified": 1
+    },
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 1,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+      "runtime_id": "d4517cba32906d3c758015aacee7fdafadc2037a4dd8288e26c9d9cfa5c448b4"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/c85eb384-71eb-4d25-bb67-f33b6bd7d826.json",
+        "sha256": "60b24b93d665db2b9bc98fec99e9876a547ade2ec1cb38f64018a5b1c85bcb25"
+      }
+    ],
+    "operations": {
+      "0c29e409-2bd6-493d-9eaa-1857fa4c0dcc": {
+        "input_hash": "edc40c25a3608eaaf1cf21aa1750a00ce3aa556ebf6097c2310c8a22cef00bb7",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+          "revision": 30,
+          "generation": 1,
+          "source_content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 12,
+    "unregistered": [
+      {
+        "draft": "正文/0001-灯下的箱子.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0002-多跑的一趟.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 6,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0008-半个钟头-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 8,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0009-留给明天的活-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 9,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0010-月底的三十五块-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 10,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0011-盒子放进去-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 11,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0012-沿着坡走-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 12,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 13,
+    "plan_exists": false,
+    "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\scenario\\东岸末班船-扩展验证\\.writer\\tool\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\scenario\\东岸末班船-扩展验证'"
+  },
+  "current": {
+    "character_count": 12,
+    "ledger_count": 15,
+    "recent": [
+      {
+        "unit": 10,
+        "summary": "停航第三日正逢月底，许蓉从值班备用零钱取20+10+5，周岸现场复试西门后亲数收35元并签收，原票留簿；老何接班看账获告、后发合账照片。两借椅当日实际送回并核查。许蓉实际交钥匙/簿后回家买豆干，与女儿择豆角做饭坐吃；见洗净盒勺，女儿称昨早洗，饭后女儿实际刷锅、两人叠衣并发次日班时。柜门仍约次日第四日16:30，80与柜门26/76无新交付。"
+      },
+      {
+        "unit": 11,
+        "summary": "停航第四日16:20沈禾回家与父亲共同挪桌，16:30周岸带料到场、当面返旧合页。实际拆补木托/原孔、楼下截料磨边、装合页，父亲坐着递件，沈禾扶门并试盒关门/走动取放；调整小碟、留左侧指隙与桌距。沈父用日常钱包实付76（50+20+5+1），周数收写已收，票另信封收抽屉，原80钱盒不动。旧样与旧螺丝归小抽屉。父坐擦碗、父女各擦半桌，沈禾吃饭取碟、饭盒装次日菜入冰箱，柜位空留；酱油瓶另放可及托盘，窗帘等休息再共同弄未执行。"
+      },
+      {
+        "unit": 12,
+        "summary": "第五日沈禾不接新客三包早取，16点正常离店，归家把洗净空盒实放11柜位、关门坐下。17点后新推车男人带空背旧图来，许给两张补图之一，老何在许守窗时陪东岸；男人读图比较石阶/粮油侧坡，重绑过沟推上坡至桥头再上桥，何目送近两灯杆后返，未见对岸。何回告许、母图与剩1补图添沟前停稳，旅客带走添字前补版并自己画圈，旧图未收全。18:30许交班钥匙离岗买葱回家吃，女儿仅听她转述。周六点并行实拆锅待配件/告机主、缝自己包并锁铺坐面摊；何后核人离、留图/两椅、锁门收钥匙离河。"
+      }
+    ],
+    "timeline_tail": [
+      "第四日下午安装：周实截磨木料/补孔换右木托、装原门板及新合页，父坐递件、沈扶门；全家实试盒扣耳/门口/小碟与桌距，留左侧指隙并反复取放关门后收紧。",
+      "同日安装后至晚饭：沈父用另一日常钱包实交50+20+5+1共76，周亲数收写已收，票另信封收桌边抽屉；旧合页/短螺丝酱碟入柜旁小抽屉，80钱盒原纸未动。父坐擦碗、女儿做饭装盒凉后入冰箱，柜位空留；酱油另托盘双方试够，窗帘未洗。",
+      "停航第五日15点多—16点后：沈禾/老板未接新客三包早取，老板写常规六点左右；沈16:00正常离店，回家实放洗净空盒入11柜位关门坐下。",
+      "第五日17点后：新推车男人持空背旧图入候船室，许交6章补版一张（盒余1），旧图仍男人衣袋；许留窗，何陪东岸，男人实读/重绑过沟上坡至桥头，何亲见上桥到近两灯杆返，非已达对岸。",
+      "同日返室—18:30后：何向许回告，母图和余1补图添沟前先停稳，旅客手中版未补此新句；18:30何实接钥匙/簿独答问船，许离岗买葱回家实同女吃擦桌。6妇人去向仍未写。",
+      "第五日18点周岸并行线：实拆电饭煲待配件/先报价告机主，缝自用包试重、归余料工具后锁铺实坐面摊。临关门何查人离及两椅，母图夹簿余1图盒、旧图封存，关西门/锁正门收钥匙离河。"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const base=path.resolve('acceptance/20261020-release-readiness-090-u'),root=path.join(base,'scenario-final/东岸末班船'),s=JSON.parse(fs.readFileSync(path.join(root,'.writer/state.json'))),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const evidence={committed_revisions:s.committed_revisions,units:s.units.map(u=>({unit:u.unit,draft:u.draft,sha256:u.sha256,summary:u.summary,draft_review:u.draft_review,replay_review:u.replay_review,journal:u.journal,journal_sha256:u.journal_sha256})),bindings:[]};
+for(const u of s.units){for(const [kind,r] of Object.entries({draft_review:u.draft_review,replay_review:u.replay_review})){if(!r)continue;for(const [key,val] of Object.entries(r)){if(typeof val==='string'&&(key==='report'||key==='frozen_ref')){const b=fs.readFileSync(path.join(root,val));evidence.bindings.push({unit:u.unit,kind,key,path:val,sha256:sha(b),bytes:b.length});}}}const j=fs.readFileSync(path.join(root,u.journal));assert.equal(sha(j),u.journal_sha256);}
+fs.writeFileSync(path.join(base,'final-f-formal-records.json'),JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,committed_revisions:s.committed_revisions,reports:evidence.bindings},null,2));

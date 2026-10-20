@@ -1,0 +1,50 @@
+{
+  "scope": "Explicit rules for observed captured failures; final classifier must reject unknown failures",
+  "captured": {
+    "commands/parent-guard-after-a": ["expected-authorization-guard", "第6章首停后context7被拒绝；root完整文件库存证明未写入。"],
+    "commands/parent-guard-occupied": ["expected-revision-guard", "C首停进程结束后主区plan13被REVISION_OCCUPIED拒绝，1235文件同字节。"],
+    "commands/parent-upgrade-no-seven": ["expected-authorization-guard", "正式更新及意见闭环后未授权7，context7被拒绝且state相同。"],
+    "commands/tracking-closure-before": ["intentional-red-before-product-fix", "旧实现不接受tracking模式，新增两项复现先红；修后定向及最终199项回归通过。"],
+    "cli-logs/a12-wrapper-rejection-reproduced": ["explicit-reproduction-not-original", "单独重现大写日志标签拒绝；不冒充首次独立双流，首次只有原生聚合流。"],
+    "cli-logs/ac20-new-default-apply": ["expected-default-draft-guard", "新版默认draft仍要求正文实改；显式tracking另一次成功闭环，不放宽默认。"],
+    "cli-logs/am43-apply-issue": ["actual-old-capability-gap", "旧包真实追踪修订已完成但默认apply因正文未改拒绝；保留失败，新增显式模式、正式升级后用同一旧commit闭环。"],
+    "cli-logs/ar26-prepare-assemble-6": ["draft-minimum-stop-before-assemble", "第6章初片段不足5000，辅助准备器停止，未执行依赖assemble；旧片段留存后扩写。"],
+    "cli-logs/ar37-prepare-stop": ["acceptance-helper-path-error-corrected", "辅助脚本误读stdout.txt而非stdout.raw.txt，正式workflow尚未调用；新版本后成功。"],
+    "cli-logs/ar51-evidence-index": ["acceptance-helper-syntax-error-corrected", "证据索引辅助脚本括号错误，保留旧stdin后改新版本。"],
+    "cli-logs/bf5-context-7-budget-1000": ["expected-budget-guard", "真实需21680字符，1000预算返回诊断并拒绝静默截断；state相同，随后显式完整预算成功。"],
+    "cli-logs/bf5-revisions": ["missing-explicit-project-corrected", "从仓库根调用漏project，未针对W执行；修正实际argv后成功。log.project只是快照默认。"],
+    "cli-logs/bf5-status": ["missing-explicit-project-corrected", "从仓库根调用漏project，未针对W执行；修正后成功，新增验收薄包装器，不改产品cwd规则。"],
+    "cli-logs/bf5-template-7-before-draft": ["unsupported-argument-corrected", "把context专用max-chars传给record-template，CLI正确拒绝；去掉后取新模板。"],
+    "cli-logs/bf5-workflow": ["missing-explicit-project-corrected", "只读入口漏project，CLI正确拒绝；修正后成功，原双流保留。"],
+    "cli-logs/br2-save-completion-handoff": ["acceptance-helper-field-error-corrected", "交接核对误用state.workflow字段；改用真实governance，state未变。"],
+    "cli-logs/cr3-entry-identify": ["incorrect-subcommand-corrected", "裸identify被拒绝，改为tool identify后成功；实际CLI2和原生PowerShell包装1分别保留。"]
+  },
+  "native": {
+    "commands/codex-a-first/item_53": ["acceptance-label-error-partial-batch", "前序合法独立调用已完成，随后大写a12-volume-V3在包装器启动CLI前被拒绝；后续依赖停止，原聚合输出保留。"],
+    "commands/codex-a-first/item_55": ["explicit-reproduction-not-original", "对应a12-wrapper-rejection-reproduced，不冒原始独立记录。"],
+    "commands/codex-a-resume/item_54": ["draft-minimum-stop-before-assemble", "对应ar26，未执行依赖合章。"],
+    "commands/codex-a-resume/item_107": ["acceptance-helper-path-error-corrected", "对应ar37。"],
+    "commands/codex-a-resume/item_144": ["acceptance-helper-syntax-error-corrected", "对应ar51。"],
+    "commands/codex-a-tracking-repair/item_90": ["actual-old-capability-gap", "对应am43，默认正文门禁使纯追踪意见闭环不可表达，后续真实修复/升级/显式模式通过。"],
+    "commands/codex-a-upgrade-close/item_58": ["evidence-path-probe-corrected", "猜测日志路径不存在，按实际目录找回；不是产品失败。"],
+    "commands/codex-a-upgrade-close/item_110": ["evidence-path-probe-corrected", "猜测更新日志路径不存在，按实际目录找回。"],
+    "commands/codex-b-first/item_9": ["missing-explicit-project-corrected", "对应bf5-status，原生shell1与CLI2区分。"],
+    "commands/codex-b-first/item_10": ["missing-explicit-project-corrected", "对应bf5-workflow。"],
+    "commands/codex-b-first/item_11": ["missing-explicit-project-corrected", "对应bf5-revisions。"],
+    "commands/codex-b-first/item_19": ["skill-path-probe-corrected", "猜测tool/skills路径失败，按实际根资源路径读到技能，不改包结构。"],
+    "commands/codex-b-first/item_77": ["expected-budget-guard", "对应1000字符诊断；原生shell1不替代CLI实际2。"],
+    "commands/codex-b-first/item_83": ["unsupported-argument-corrected", "对应record-template误带max-chars。"],
+    "commands/codex-b-resume/item_105": ["acceptance-helper-field-error-corrected", "对应br2交接辅助字段名错误。"],
+    "commands/codex-c-first/item_22": ["skill-path-probe-corrected", "猜测tool/skills路径失败后按实际技能资源读取。"],
+    "commands/codex-c-resume/item_18": ["incorrect-subcommand-corrected", "对应cr3-entry-identify，后用tool identify。"],
+    "commands/codex-c-resume/item_55": ["report-path-probe-corrected", "猜测旧9报告文件名失败，按真实登记路径找到并全文读。"],
+    "commands/codex-c-resume/item_85": ["report-path-probe-corrected", "猜测旧10报告文件名失败，按真实登记路径找到并全文读。"]
+  },
+  "additional_evidence_boundaries": [
+    "Native command wrappers sometimes return 1 for actual CLI exit 2; child result.json is authoritative for CLI status.",
+    "Equal null before/after hashes do not prove state preservation; fixture-only runs without state snapshots are explicitly unavailable.",
+    "Codex TLS reconnect is a runtime transport notice; C first recovered and its original process exited zero.",
+    "Successful check can still list a pending rolling window; B and C reread complete ranges rather than overriding hashes.",
+    "Pre-registration prose corrections and optional style findings remain in actual drafts/reports; nonzero inventory is not all literary findings."
+  ]
+}

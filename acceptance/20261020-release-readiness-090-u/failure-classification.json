@@ -1,0 +1,393 @@
+{
+  "ok": true,
+  "scope": "captured-inventory-with-explicit-limits",
+  "commands": 249,
+  "nonzero": [
+    {
+      "name": "commands/audit-v2-failed",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 215,
+      "stdout_bytes": 0,
+      "stderr_bytes": 825,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9d825abf28851674d03380734d52d1317e6f4f3097323bbc0523cc8491504c32",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "auxiliary",
+      "explanation": "审计器仅识别raw.txt/bin，未识别F的stdout.txt；v4统一流文件名、退出码别名及全部容器。"
+    },
+    {
+      "name": "commands/codex-a-first",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 371,
+      "stdout_bytes": 0,
+      "stderr_bytes": 993,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "52a6a0b329637346640e24e456ed6c65c1bd6e4c23ccf2f8f41acfd6b69d5f7d",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "environment",
+      "explanation": "Codex状态数据库及arg0目录访问失败，尚未生成thread；获批外层权限后成功，内层仍workspace-write。"
+    },
+    {
+      "name": "commands/parent-final-no-four",
+      "exit_code": 2,
+      "error": null,
+      "elapsed_ms": 205,
+      "stdout_bytes": 0,
+      "stderr_bytes": 2374,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "750f2ee122934b073bb2f255032d7dc195cd80fa547a58e7e8008599c631e2fa",
+      "before_state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "after_state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "category": "expected-guard",
+      "explanation": "暂停仅讨论后，第4章模板实际退出2 ACTION_OUT_OF_SCOPE，state不变。"
+    },
+    {
+      "name": "commands/parent-main-occupied",
+      "exit_code": 2,
+      "error": null,
+      "elapsed_ms": 231,
+      "stdout_bytes": 0,
+      "stderr_bytes": 634,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "cb4155b27bd458ae4df200211aeec448113a4098f75b9738774ba92afdc3ec10",
+      "before_state_sha256": "fd541f86838265e767b1282f93a2e4db654db310bae50b890e46e2a6f12b1eca",
+      "after_state_sha256": "fd541f86838265e767b1282f93a2e4db654db310bae50b890e46e2a6f12b1eca",
+      "category": "expected-guard",
+      "explanation": "B进程退出后修订占用仍有效，实际退出2 REVISION_OCCUPIED，state不变且未创建第4章细纲。"
+    },
+    {
+      "name": "commands/release-build",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 385,
+      "stdout_bytes": 0,
+      "stderr_bytes": 413,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "2440f549c556b4fc374eb44cd0c4ec04a6210f7cfeaa64c2fbbd5ce83bb62bf5",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "environment",
+      "explanation": "PowerShell选择npm.ps1，被系统执行策略拒绝；改用npm.cmd，不改执行策略。"
+    },
+    {
+      "name": "commands/report-integrity-before",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 26727,
+      "stdout_bytes": 1880,
+      "stderr_bytes": 0,
+      "stdout_sha256": "964ae90da6eb5927643e9434a6c8b20ba4dbd03e1d7790b0c7e4109146ae9c6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "product-fixed",
+      "explanation": "两个新增故障注入测试先失败：冻结报告损坏漏检、验证至冻结间锁外改动漏检；补校验与冻结前复核，最终194项回归通过。"
+    },
+    {
+      "name": "commands/source-tests",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 559,
+      "stdout_bytes": 0,
+      "stderr_bytes": 348,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "41984b79aa79de33c7623d43e6661847924dad2239a0547d8fef4f9b589c6292",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "environment",
+      "explanation": "npm.ps1执行策略拒绝，未开始产品测试；随后npm.cmd执行。"
+    },
+    {
+      "name": "commands/source-tests-cmd",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 774096,
+      "stdout_bytes": 20338,
+      "stderr_bytes": 0,
+      "stdout_sha256": "13e4b3775ea9e3b55e74c5fba89d5831ad04cd39a274753999230bf2393c40b7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "product-diagnostic-fixed",
+      "explanation": "191项188通过/1 Git来源读取失败/2跳过。旧错误未留底层状态，不归因为已证实超时；后补精确诊断及仅瞬时错误一次重试，最终通过。"
+    },
+    {
+      "name": "commands/source-tests-final",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 719808,
+      "stdout_bytes": 20550,
+      "stderr_bytes": 0,
+      "stdout_sha256": "0de6121d66a7c67c2f91c7f38a8ca1af65e6d07da2939883e1d47b4b7867b7fc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "product-diagnostic-fixed",
+      "explanation": "193项190通过/1 Git来源读取失败/2跳过，同上；最终冻结版本194项通过。"
+    },
+    {
+      "name": "commands/source-tests-retry",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 385746,
+      "stdout_bytes": 56636,
+      "stderr_bytes": 0,
+      "stdout_sha256": "9a188bb0115456cb77f4869495fac40e3e3e9fe3d66bf51a34838aa2784d8bb6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "invalidated-run",
+      "explanation": "运行中源码发生变化，191项155通过/34保护失败/2跳过；TOOL_BUILD_CHANGED等使该轮无效，不能当最终验收或34项独立产品缺陷。"
+    },
+    {
+      "name": "commands/verify-final-reading",
+      "exit_code": 1,
+      "error": null,
+      "elapsed_ms": 124,
+      "stdout_bytes": 0,
+      "stderr_bytes": 709,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9bf97579233d8ff29f59bbfa3a23252fef2300153ee42dc89119c4e46afba779",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "auxiliary",
+      "explanation": "实际正文全行已返回，但FastCtx末尾空行被算作不匹配；v2仅排除文件真实末尾换行产生的一个空项，全部685正文行逐字匹配。"
+    },
+    {
+      "name": "final-commands/final-a-00-preflight",
+      "exit_code": 1,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 955,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "dbc23e3c565ffafb2782acefc61e9e9b65315e5da419b26a2391fde32c70a8d8",
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "category": "auxiliary",
+      "explanation": "技能入口错误拼到包根writer-essay/SKILL.md；按真实.agents/skills目录修正，不改变产品。"
+    },
+    {
+      "name": "final-commands/final-a-18-parts-before-review",
+      "exit_code": 1,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 612,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4e9e67e9bd36c3e4e5006155f408f37bdc44744f1b4d834f7f18968cb419f0c4",
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "category": "test-writing-rework",
+      "explanation": "首段1087汉字未达1100下限，写作自检失败后补足，不降低验收线；首停最终1126。"
+    },
+    {
+      "name": "final-commands/final-a-19-parts-after-review",
+      "exit_code": 1,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 612,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "41a04fa8a6059c9b21a9dfb4ac48d42257ae5823e4cb8fbf944a19f1658a97ca",
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "category": "test-writing-rework",
+      "explanation": "第二段1093汉字未达1100下限，补足至首停1215，后续恢复保持两段原字节。"
+    },
+    {
+      "name": "final-commands/final-a-47-preview-missing-report",
+      "exit_code": 1,
+      "error": null,
+      "stdout_bytes": 426,
+      "stderr_bytes": 0,
+      "stdout_sha256": "70a5922cb05be8637da65f29afbb2e113933a8a7071a547f9abe461850cb811e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "category": "expected-guard",
+      "explanation": "缺失报告的preview实际退出1，DRAFT_REVIEW_INVALID；无state/objects/journal推进。"
+    },
+    {
+      "name": "final-commands/final-a-49-record-missing-report",
+      "exit_code": 2,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 486,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "adc831ec69f99e1da5dd50399a26dcebc2a4974664b94a214b68b311ef7ea6d5",
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "category": "expected-guard",
+      "explanation": "同输入record实际退出2，DRAFT_REVIEW_INVALID；无写入，不把PowerShell外层1当产品实际码。"
+    },
+    {
+      "name": "final-f-commands/18-deny-unit4-context",
+      "exit_code": 2,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 2366,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5bfe95b719532951a73eca97db5f417ba4acf291460162276aa54cd6a9d69e63",
+      "before_state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "after_state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "category": "expected-guard",
+      "explanation": "正式paused后第4章context draft实际退出2 ACTION_OUT_OF_SCOPE；状态不变。"
+    },
+    {
+      "name": "final-f-commands/19-deny-unit4-template",
+      "exit_code": 2,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 2374,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "750f2ee122934b073bb2f255032d7dc195cd80fa547a58e7e8008599c631e2fa",
+      "before_state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "after_state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "category": "expected-guard",
+      "explanation": "正式paused后第4章模板实际退出2 ACTION_OUT_OF_SCOPE；状态不变。"
+    }
+  ],
+  "incomplete": [
+    {
+      "name": "commands/source-tests-delivery",
+      "files": [
+        "stderr.raw.txt",
+        "stdout.raw.txt"
+      ],
+      "explanation": "包装器拒绝带等号的参数，未启动子命令、无result，不是仍运行进程；最终bounded命令另有完整结果。"
+    }
+  ],
+  "native_failures": [
+    {
+      "invocation": "commands/final-codex-a-first",
+      "id": "item_21",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node acceptance/20261020-release-readiness-090-u/final-a-run.mjs final-a-00-preflight acceptance/20261020-release-readiness-090-u/final-a-preflight.mjs --project 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船'\"",
+      "output_sha256": "37c6bc2b6cbd36473812c0dd8fc2bbea810c26b45c957b9e151054bf40ccd580",
+      "category": "auxiliary-or-writing",
+      "explanation": "错误技能路径，见对应preflight记录。"
+    },
+    {
+      "invocation": "commands/final-codex-a-first",
+      "id": "item_75",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node acceptance/20261020-release-readiness-090-u/final-a-run.mjs final-a-18-parts-before-review acceptance/20261020-release-readiness-090-u/final-a-parts.mjs before-review --project 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船'\"",
+      "output_sha256": "a05ec56c92349ce06e3abbe5f19d5962a785e0c8e514a5beb48329911d01e17b",
+      "category": "auxiliary-or-writing",
+      "explanation": "分段未达最低篇幅后补足，门槛未降低。"
+    },
+    {
+      "invocation": "commands/final-codex-a-first",
+      "id": "item_78",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node acceptance/20261020-release-readiness-090-u/final-a-run.mjs final-a-19-parts-after-review acceptance/20261020-release-readiness-090-u/final-a-parts.mjs after-review --project 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船'\"",
+      "output_sha256": "198f82dbc989a72c56f4e14db5e17f6d41d21ad250ed4f09e23bc329ce24b3d9",
+      "category": "auxiliary-or-writing",
+      "explanation": "分段未达最低篇幅后补足，门槛未降低。"
+    },
+    {
+      "invocation": "commands/final-codex-a-resume",
+      "id": "item_61",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-run.mjs' final-a-47-preview-missing-report 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs' record-preview --project 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船' --input 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/drafts/final-a-record-1-missing-report.json'\"",
+      "output_sha256": "f1f9a8c1e99109589ba2ecb9a4cd79c474950e60742056586335c401cde6f279",
+      "category": "expected-guard",
+      "explanation": "实际缺报告负向输入；外层PowerShell码1，内层preview1/record2均保留。"
+    },
+    {
+      "invocation": "commands/final-codex-a-resume",
+      "id": "item_63",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"node 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-run.mjs' final-a-49-record-missing-report 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs' record --project 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船' --input 'D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/drafts/final-a-record-1-missing-report.json'\"",
+      "output_sha256": "c8d18ddcf90e42b267f371b8bad86edf76e812fa15d368faa1e309df06b5cdbf",
+      "category": "expected-guard",
+      "explanation": "实际缺报告负向输入；外层PowerShell码1，内层preview1/record2均保留。"
+    },
+    {
+      "invocation": "commands/final-codex-b-first",
+      "id": "item_93",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-release-readiness-090-u/final-b-stop-audit.mjs'",
+      "output_sha256": "b3460224bdcacc5438ce810ac7cf362816aab5814f16cf41c3a3a5cc92fd90fd",
+      "category": "auxiliary",
+      "explanation": "保护清单错误纳入运行中的外层stdout日志；v2只排除已知活动日志，并验证旧哈希是当前文件的原始前缀。"
+    },
+    {
+      "invocation": "commands/final-codex-f",
+      "id": "item_93",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-release-readiness-090-u/final-f-run.mjs 18-deny-unit4-context context --unit 4 --purpose draft'",
+      "output_sha256": "318143a7c304def7c894bb3d0c58b647e85d1e7729435c7711061be585574e54",
+      "category": "expected-guard",
+      "explanation": "第4章两项越权入口实际产品码2，外层PowerShell呈1。"
+    },
+    {
+      "invocation": "commands/final-codex-f",
+      "id": "item_95",
+      "type": "command_execution",
+      "exit_code": 1,
+      "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261020-release-readiness-090-u/final-f-run.mjs 19-deny-unit4-template record-template --unit 4 --draft 正文/0004-未授权.md'",
+      "output_sha256": "1992552d139c386a0b99738994bffa9b1c989ca731edd5cce18eee1410760037",
+      "category": "expected-guard",
+      "explanation": "第4章两项越权入口实际产品码2，外层PowerShell呈1。"
+    }
+  ],
+  "native_development_feature_notices": [
+    {
+      "invocation": "commands/codex-a-first-authorized",
+      "id": "item_0",
+      "type": "item.completed",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+    },
+    {
+      "invocation": "commands/final-codex-a-first",
+      "id": "item_0",
+      "type": "item.completed",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+    },
+    {
+      "invocation": "commands/final-codex-a-resume",
+      "id": "item_0",
+      "type": "item.completed",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+    },
+    {
+      "invocation": "commands/final-codex-b-first",
+      "id": "item_0",
+      "type": "item.completed",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+    },
+    {
+      "invocation": "commands/final-codex-b-resume",
+      "id": "item_0",
+      "type": "item.completed",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+    },
+    {
+      "invocation": "commands/final-codex-f",
+      "id": "item_0",
+      "type": "item.completed",
+      "message": "Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\admin\\.codex\\config.toml."
+    }
+  ],
+  "observed_native_file_changes_outside_u": [],
+  "limitations": [
+    "仅清点已捕获命令；早期未包装shell/工具调用保留会话及摘要，不能声称每次都有独立双流。",
+    "file_change事件之外的全部shell副作用不能仅靠事件清点证明；作品、冻结源码和T另按字节核验。",
+    "初期硬链接EPERM、Python别名、WSL查询及Git index.lock权限在早期说明/会话，均不算最终产品通过。",
+    "源码Git失败底层原因未知；受控ETIMEDOUT/EINTR/EAGAIN测试不是现场超时证明。",
+    "最终阅读核验v1、审计v2的失败保存；v3库存缺A容器而未作终核，最终v4补齐。",
+    "根会话两次手工定位错误（F负向目录名、A日志流后缀）均只读未写；FastCtx替换模板引用拒绝未写，改为字符串拼接。",
+    "B审计辅助文件短暂改动后按保护原SHA恢复，修改版本另存；见parent-audit-helper-version-note.json。",
+    "F曾手选旧journal首100行，随后按state当前指针核验；没有把旧对象当当前事实。"
+  ]
+}

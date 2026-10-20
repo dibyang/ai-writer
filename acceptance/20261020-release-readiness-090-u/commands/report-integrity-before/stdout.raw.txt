@@ -1,0 +1,44 @@
+✖ 登记后冻结报告损坏必须被只读诊断拒绝，原业务状态不变 (11130.5792ms)
+✖ 报告在验证与冻结之间发生锁外变化时，写入前拒绝，不冻结错误字节 (13474.5477ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25741.0527
+
+✖ failing tests:
+
+test at tests\delivery-flow.test.mjs:70:1
+✖ 登记后冻结报告损坏必须被只读诊断拒绝，原业务状态不变 (11130.5792ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/delivery-flow.test.mjs:72:43)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests\delivery-flow.test.mjs:74:1
+✖ 报告在验证与冻结之间发生锁外变化时，写入前拒绝，不冻结错误字节 (13474.5477ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/delivery-flow.test.mjs:77:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

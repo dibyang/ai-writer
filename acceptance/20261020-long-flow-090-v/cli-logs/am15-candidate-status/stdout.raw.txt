@@ -1,0 +1,264 @@
+{
+  "ok": true,
+  "title": "东岸末班船",
+  "kind": "novel",
+  "revision": 26,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "仅正式修正第4—6章追踪时间锚并闭环V_A_U5_TIME_METADATA；正文同字节，到6等待B，不写7",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 4,
+        "to": 6
+      },
+      "stop_conditions": [
+        "本轮仅metadata-only独立修订4—6，澄清停航首日清晨/首日晚；不写7或改变六章正文",
+        "不改变设定、章纲卷纲、人物行动知情、物件钱据及原观察三项；其他新硬问题另报告根",
+        "独立区rewind4并逐章实读replay-input、报告、preview、record，完整尾段review后prepare及正式commit",
+        "记录真实根授权、原错误与失败；意见流程如不能支持metadata-only则保留诊断报告根，禁止改正文凑变更",
+        "只写V，不改产品/U/T/其他作品，不派代理、不Git提交推送、不上传"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_V_EXTENSION",
+          "topic": "V轮代理在继续推进授权内已选的扩展方向",
+          "status": "confirmed",
+          "options": [
+            "停航后的劳动、家务和绕行三条行动线"
+          ],
+          "adopted_items": [
+            "代理已选：全作12章5卷；新增V3=4—6/V4=7—9/V5=10—12，原三章有限归还已经兑现",
+            "代理已选：4章先实写箱入铺、再写沈禾次晨减量做糕；普通细节由代理组织",
+            "代理已选：取货时段/柜内使用位置/绕行入口分别在8/11/12产生真实动作或关系后果",
+            "原题材、声音、有限知情和父辈留白保持；计划不进事实账本"
+          ],
+          "excluded_items": [
+            "阴谋、秘密机关、万能物证",
+            "用重开箱钱据悬念延长原故事",
+            "人类逐项指定或编造消息ID"
+          ],
+          "unresolved_items": [
+            "远期章的场面、定价、复航、材料工费须按实际选择与成稿更新"
+          ],
+          "effective_range": {
+            "from": 4,
+            "to": 12
+          },
+          "event_ref": ".writer/objects/3368100d-af7e-440a-bcb4-942c24a13b55.json",
+          "event_sha256": "55b8c5d6533bc6faa2c9c56bef7af75db8ec98811cfd5ab21f085cb69039556b"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_V_CANDIDATES",
+          "topic": "V轮远期仍未选细节",
+          "status": "candidate",
+          "options": [
+            "末章已复航",
+            "末章仍停航，以绕行和交班收束",
+            "小批取货只试行一次或保持有限频次"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "复航日期与末章是否复航未选",
+            "取货安排长期频次、数量与定价未选",
+            "柜门新材料、工费与未来配角姓名未选；不从候选推定事实"
+          ],
+          "effective_range": {
+            "from": 4,
+            "to": 12
+          },
+          "event_ref": ".writer/objects/8649ccd9-c988-4b75-aee5-896157272631.json",
+          "event_sha256": "36c5a32ba0072ba617bfe00c10980e0fb57c1a23bbe844675897d7483c2a6cc4"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 7,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "owner": "v-a-metadata-only-root-authorized",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 4,
+          "through": 6
+        },
+        "status": "open",
+        "base_sha256": "7bf633d95462043f82cf48e9ef8a03bdc1271f3734580dbd29188d081ade9ac5",
+        "created_at": "2026-10-20T10:14:46.353Z",
+        "session_sha256": "2bf596aca3af18e8e37d241f6d3375b68c45e51d94373e0368303c529a8055fb"
+      },
+      {
+        "id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "owner": "final-b-native-codex",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 2,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "1a742700a6e49a0c7665b591f30a64dd4a0fb82022fe911ee6ac119d29d75754",
+        "created_at": "2026-10-20T07:15:17.894Z",
+        "transaction_id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_sha256": "f1f772eb039fb496f49f85c1789a93ef5ef7f8b66cc45f5fab253005c086de1e"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 26,
+    "counts": {
+      "adopted": 1
+    },
+    "pending": [
+      {
+        "id": "V_A_U5_TIME_METADATA",
+        "type": "continuity",
+        "status": "adopted",
+        "context_changed": false
+      }
+    ],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 6,
+    "unregistered": [
+      {
+        "draft": "正文/0001-灯下的箱子.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0002-多跑的一趟.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 6,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 7,
+    "plan_exists": false,
+    "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\scenario\\东岸末班船-扩展验证\\.writer\\tool\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\scenario\\东岸末班船-扩展验证\\.writer\\revisions\\4b267c89-25a8-4fa0-a61b-06fd59f67561\\workspace'"
+  },
+  "current": {
+    "character_count": 11,
+    "ledger_count": 13,
+    "recent": [
+      {
+        "unit": 4,
+        "summary": "周岸同夜实际把合扣原箱放回梁家铺架下，单据和空钱袋夹借具本，发照片获梁伯语音确认后锁铺离开。次晨沈禾照减量单做糕；许蓉自付8元购两包并带到码头和老何吃，完成收椅后回家，中午实际回店反馈包装。陈秀下午确认明早两包各两块、每包4元、5:45—5:50自取且拿到再付；沈禾和老板约先试五点到店换下午早走半小时，尚未执行。周岸只文字约当晚18:30先量沈家柜口，未到场；柜门未装，原35元未付，80元不重开。"
+      },
+      {
+        "unit": 5,
+        "summary": "停航次日晚约18:30周岸实际到沈家，用自用工具拔出门板翘钉、量柜口，三人试摆碗与饭盒，发现照原样装并不顺手。沈父同意先按女儿饭盒留一块位置，层板/门均未安装；周岸带一片旧合页配样，材料/工费及回装日期未定。周岸当面告知原箱已入铺，沈禾沈父仅由口述获知。周离开后父女择豆芽吃饭，沈父先给饭盒盛菜；沈禾说次晨5点到店和早走对换，父亲安排自己吃早饭。饭盒装菜入冰箱、柜内预留空处；80元和旧纸据无新移动、原35元未付。"
+      },
+      {
+        "unit": 6,
+        "summary": "同一停航第一日16点起改走许蓉线：她请检票同事代守并交钥匙，与老何实走东岸入口。许蓉亲走药店石阶，老何留阶脚，之后二人走粮油店侧缓坡至桥头，未过桥，16:40前返回。两人画分入口母图并逐份补3张旧图，本批明早改停航期间；一张实际给拖保温桶的妇人，两张留窗台，母图夹簿，余旧图封抽屉，外流旧图未收回。代班同事收回笔杯离开接孩子，许蓉取回钥匙守窗，老何离开；她吃完饭，女儿回字称已取包裹、提议次晨洗盒但未执行。三条后卷线索尚未最终兑现，35元未付。"
+      }
+    ],
+    "timeline_tail": [
+      "停航次日晚18:30前后：周岸实际到沈家，量柜、试摆碗饭盒、拔翘钉后包入自用包；柜门仍靠墙、原层板未拆，父亲同意先留女儿使用位。",
+      "同日晚：沈父允许旧合页一片给周岸配样，周裹好入包侧并下楼离开；仅电话约去取电饭煲。周在沈家当面口述箱已入铺和单袋夹本，沈禾沈父获告。",
+      "周离开后至晚饭后：父女共同择豆芽，父亲先给饭盒盛菜；沈禾实际告父两包早取与5点到店/下午早走试行。饭盒最后装菜进冰箱，柜位暂留空；短螺丝酱碟进柜旁小抽屉，柜门未装。",
+      "与5章同一停航第一日的许蓉线：16点她回候船室，请检票同事实际代守并交钥匙；亲上药店石阶，老何留阶脚，后二人走粮油店侧缓坡至东岸桥头，未过桥。",
+      "同日16:40前回候船室：两人画入口母图并逐份补3张图，代班同事返钥匙、取笔杯后离开接孩子；另两把椅借给检修，仅约收工送回。",
+      "同日傍晚至夜间：一张补注图实际交问路妇人，她离室向药店；母图夹簿，两张留茶叶盒，余旧图封抽屉，外流旧图未回收。老何随后离开，许蓉继续守窗并吃完饭；女儿回字称包裹已取，次晨洗盒仍只是约定。"
+    ]
+  }
+}

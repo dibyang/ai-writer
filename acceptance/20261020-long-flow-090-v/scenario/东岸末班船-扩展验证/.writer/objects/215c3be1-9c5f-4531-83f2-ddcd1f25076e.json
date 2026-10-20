@@ -1,0 +1,80 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-20T11:54:32.556Z",
+  "operation_id": "v-bf5-first-stop-after-eight",
+  "base_revision": 39,
+  "payload": {
+    "stage": "trial",
+    "task": "V新鲜B 8首停：7—8已写/登记/完整连读review；范围仍7—9，9待同一实际thread恢复，本进程不写9",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 7,
+        "to": 9
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程已经完成8首停，不取9写前模板、不写9正文；9等待同一实际thread恢复，恢复时先核当前status/交接和当前7—8全文。",
+        "7—9有限范围保持；本次先完成当前1—6完整连读review并check清零，再逐章7/8写前、分段assemble、报告/draft_review、preview和record，已完成。",
+        "8取货/实收8元/余份处置/老板接热笼与沈禾实际早走已完成本次有限试行；不等于长期营业承诺。",
+        "柜内使用与绕行入口最终兑现留11/12，35元实际付款留10；不得把候选或细纲当事实。",
+        "旧1—6正文及已修登记/journal不改，不改不可变观察三项；当前新章只追加真实变化，无新增旧章高置信问题。",
+        "仅V写入，不派代理，不改U/T/产品/既有作品，不Git提交推送上传。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "这是V新鲜B的实际指令，完整读取prompt-b-first-v5.md并执行其7—8首停/9同ID恢复安排。",
+    "local_source": "研究/V-B-v5实际授权原文.md",
+    "source_sha256": "206b134231958a436032fa7371ad503164413105cc72551b12f09c8d6bdd83fe",
+    "locator": "本会话用户实际指令第1段；V/prompt-b-first-v5.md全文及本来源的额外前置顺序",
+    "recorded_by": "V新鲜B当前实际Codex会话；代理按原话准备有限范围，不编造thread ID",
+    "frozen_ref": ".writer/objects/206b134231958a436032fa7371ad503164413105cc72551b12f09c8d6bdd83fe.txt"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "ok": true,
+  "revision": 3,
+  "workflow": {
+    "stage": "trial",
+    "task": "《东岸末班船》隔离工具验收A：规划已备，有限试写整体1—3；本进程仅第1章前两个分段，完成实读修复及交接后正常结束，禁止合章/record/第3段/第2—3章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程只写分段/0001/v1/01.md、02.md，每段约1100—1500正文汉字，完整实读、修复高置信问题并保存交接后结束",
+        "本进程不合章、不record、不写第3段、不写第2/3章；下一进程先核对同ID、交接、当前workflow、真实片段和写前模板，不以停点自动取得新授权",
+        "后续整体试写完成第3章后复盘；修订、连读、暂停、负向第4章和导出按原prompt后续编排执行，本进程均不执行"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "D_U_OLD_STORY"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "《东岸末班船》隔离工具验收A：规划已备，有限试写整体1—3；本进程仅第1章前两个分段，完成实读修复及交接后正常结束，禁止合章/record/第3段/第2—3章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程只写分段/0001/v1/01.md、02.md，每段约1100—1500正文汉字，完整实读、修复高置信问题并保存交接后结束",
+        "本进程不合章、不record、不写第3段、不写第2/3章；下一进程先核对同ID、交接、当前workflow、真实片段和写前模板，不以停点自动取得新授权",
+        "后续整体试写完成第3章后复盘；修订、连读、暂停、负向第4章和导出按原prompt后续编排执行，本进程均不执行"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "D_U_OLD_STORY"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_U_DIRECTION",
+          "topic": "隔离试验的场景与关系编排",
+          "status": "confirmed",
+          "options": [
+            "合作点前后两次借用、沈禾代领的现实场景"
+          ],
+          "adopted_items": [
+            "采用上述代理选择作为本测试的写作计划；不是人类作者逐字指定",
+            "温暖克制、许蓉开场限知；普通劳动推进",
+            "前借周岸、后借沈长年、代领沈禾；两笔押金分开",
+            "黄漆箭头为首章观察候选，第三章用推正偏口兑现"
+          ],
+          "excluded_items": [
+            "外观直接证明所有权",
+            "父亲旧事自动全部查明"
+          ],
+          "unresolved_items": [
+            "父亲离开渡口的缘由未选定",
+            "实际观察与约定须待正文出现后登记"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": 3
+          },
+          "event_ref": ".writer/objects/e3a4a523-990a-4852-b907-c898b09f9907.json",
+          "event_sha256": "3a40ca803b6e5bf25d02f3fc014e09d3d45d91193fa3d5dd048bb710265ce43c"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_U_OLD_STORY",
+          "topic": "父亲旧事的保留方式",
+          "status": "candidate",
+          "options": [
+            "只保留一次停顿或未答的日常问话",
+            "不在此次故事展开旧事"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "离开渡口的缘由不选真相",
+            "收束是否提及一句旧事，仍待实际情节决定"
+          ],
+          "effective_range": {
+            "from": 1,
+            "to": 3
+          },
+          "event_ref": ".writer/objects/6ee6f674-3fa2-4357-8bb8-caa5b4d7d52c.json",
+          "event_sha256": "65c8f821e8cf32dbbfe743dcbb51b2a26919ad96b19a9775d46974ea5d50ecca"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

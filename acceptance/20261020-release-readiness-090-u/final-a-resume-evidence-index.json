@@ -1,0 +1,776 @@
+{
+  "ok": true,
+  "created_at": "2026-10-20T06:56:00.862Z",
+  "W": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船",
+  "P": "D:/work/other/ai-writer/.tmp/U 最终交付验收包解压/ai-writer-0.9.0",
+  "content_id": "ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b",
+  "runtime_id": "9ed9031ff670f4c6e0ef5754b32e079e436d5e6de9576912b4742b6f541b138f",
+  "revision": 6,
+  "state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+  "registered_units": [
+    1,
+    2
+  ],
+  "next_unit": 3,
+  "chapters": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-灯下的箱子-v2.md",
+      "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+      "bytes": 18640,
+      "body_han": 5214,
+      "parts": [
+        {
+          "path": "分段/0001/v2/01.md",
+          "sha256": "d66ee53d6e943f95e6630ad7fbc07bb02febd54f3c3e5e43069b29ca0cd33c49"
+        },
+        {
+          "path": "分段/0001/v2/02.md",
+          "sha256": "8993d508140ce38223d434274ff60617cef368bfef48a2adfa1a67939015f303"
+        },
+        {
+          "path": "分段/0001/v2/03.md",
+          "sha256": "988ebe4a547e0f87054c2bdb52b48bd35d30a28d76e7cf1024c84f73a6daef34"
+        },
+        {
+          "path": "分段/0001/v2/04.md",
+          "sha256": "f81915d0a5f1fc6503a6a9daa59462cee555043c62c025ade7484c163e04795e"
+        }
+      ],
+      "draft_review": {
+        "reviewer": "本次原生Codex执行代理；知情自检",
+        "report": "审查/final-a-0001-完整章自检.md",
+        "draft_sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+        "report_sha256": "7ff78aeabefe9815c92f4f2af2aa87c1a3af95c8e6d849687f0d3d7874f9c015"
+      },
+      "expected_revision": 3
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-多跑的一趟-v2.md",
+      "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+      "bytes": 12457,
+      "body_han": 3523,
+      "parts": [
+        {
+          "path": "分段/0002/v2/01.md",
+          "sha256": "39e9ab941d729c0fc67e62bcdf0d7b6adc97a1eb72754937db368402fcfc5148"
+        },
+        {
+          "path": "分段/0002/v2/02.md",
+          "sha256": "e1f44eb6a59b8d1f6a8569b7ab863195b13d5d2251a0f902bb6a4e158d182af6"
+        },
+        {
+          "path": "分段/0002/v2/03.md",
+          "sha256": "fa8d70c3951b12fce2023be0445d2914c6b5549d0d682443611d8068ef1fae50"
+        }
+      ],
+      "draft_review": {
+        "reviewer": "本次原生Codex执行代理；知情自检",
+        "report": "审查/final-a-0002-完整章自检.md",
+        "draft_sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5",
+        "report_sha256": "d638f7dda218eb7c6f614c2f7b9744938918cb4e185e31f3d785cdeab1d7dc69"
+      },
+      "expected_revision": 4
+    }
+  ],
+  "inputs": [
+    {
+      "ref": ".writer/drafts/final-context-1.json",
+      "sha256": "7b0f7174605ccbf772f666495e1e42fba8d78880f426e3679b8fedf23587ffd0"
+    },
+    {
+      "ref": ".writer/drafts/final-record-1-before.json",
+      "sha256": "e162d0ae80f942ae5289504e5d38d0683cfba50287c02459d269144f7fce131d"
+    },
+    {
+      "ref": ".writer/drafts/final-a-assemble-1-v2.json",
+      "sha256": "287a2a9abe2681e738d9055b6ba9ef044fc5ea6cbf5b7213e1a182966442c6e8"
+    },
+    {
+      "ref": ".writer/drafts/final-a-record-1-valid.json",
+      "sha256": "b65f90e61a471fd0f90360987cab53dfbd5356b47e72d40b25c88cafa907cfaa"
+    },
+    {
+      "ref": ".writer/drafts/final-a-context-2.json",
+      "sha256": "1f16396770fad990a6dd27c9a60176e43763fa9512b04dacf965bd76861d41b3"
+    },
+    {
+      "ref": ".writer/drafts/final-a-record-2-before.json",
+      "sha256": "8b872558264d6b1a2854c619f0351f44b00d6731cd66c5361d8348df8b02bb4d"
+    },
+    {
+      "ref": ".writer/drafts/final-a-assemble-2-v2.json",
+      "sha256": "c5b4baa6fbf01e47754a2f9ca87b144235c7684a26e9f18e3d4c18f695a92354"
+    },
+    {
+      "ref": ".writer/drafts/final-a-record-2-valid.json",
+      "sha256": "44dae804c45f54cc519989c63a239418c1acbaf55b1c4e2630de6579f99f248b"
+    },
+    {
+      "ref": ".writer/drafts/final-a-record-1-missing-report.json",
+      "sha256": "d4f76ec1f6d0c2c67810caa72ba1c1b5c5c8cb4d26ed516f26bf8572a405b3aa"
+    },
+    {
+      "ref": ".writer/drafts/final-a-review-1-2-input.json",
+      "sha256": "53337017e01c30f2e31b89f5ec80d421a6c97b4700ca864607ac1ceab4ca48cd"
+    },
+    {
+      "ref": ".writer/drafts/final-a-workflow-resume-finish.json",
+      "sha256": "7b574ba0dfe05f4f64e69c6e5c65c470fdc4d65143fa769628ecf49e66ea1fc5"
+    }
+  ],
+  "review": {
+    "ref": ".writer/reviews/111032d9-5fe1-4438-8c69-c8a32cbfeb9d.json",
+    "from": 1,
+    "to": 2,
+    "kind": "model-self-review",
+    "report": "审查/final-a-0001-0002-连读.md",
+    "report_sha256": "a0d40a0a2be62f20524616e5949bca9197bb2af293b8afda762033e97ea814fe",
+    "units": [
+      {
+        "unit": 1,
+        "draft": "正文/0001-灯下的箱子-v2.md",
+        "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893"
+      },
+      {
+        "unit": 2,
+        "draft": "正文/0002-多跑的一趟-v2.md",
+        "sha256": "890b9e8b183191013269abfbc2e8a3cec8b125becdf34406819b8495beaca6c5"
+      }
+    ],
+    "dependencies": {
+      "1": "915af5b208a9a0962f2341b1690d6c346ad1a8424de5eb23d47dd10b4a98b445",
+      "2": "1f82ad6c36f42f3c6dc1d4cff993a5f90e7c05aa002ce6e5aacd3cefc891e420"
+    },
+    "revision_session": null
+  },
+  "unchanged_non_state_source_bindings": 26,
+  "original_stop_handoff_unchanged": true,
+  "original_two_parts_unchanged": true,
+  "observation": {
+    "type": "observation",
+    "statement": "箱盖左后角有一块月牙形的白漆。",
+    "author_truth": "箱盖左后角确有月牙形白漆；它不是暗号，也不能单独充当排他归属证明。",
+    "status": "active",
+    "cast": [
+      "许蓉",
+      "周岸",
+      "沈禾",
+      "沈成林"
+    ],
+    "tags": [
+      "旧铁箱",
+      "白漆"
+    ],
+    "due_unit": 3,
+    "reader_known": "许蓉亲见原句所指白漆；沈父电话给出过滴漆说法，成因未独立核实。",
+    "character_known": {
+      "许蓉": "亲见左后角月牙形白漆，电话听沈父说记得并给出滴漆解释；未作排他鉴定。",
+      "周岸": "见过旧箱并说与梁家旧箱相似；正文未明确他核看过白漆形状位置。",
+      "沈禾": "在场听到许蓉询问箱盖白漆，未直接核认该细节形状位置。",
+      "沈成林": "电话称记得左后角漆块并给出旧日滴漆说法；未见当前现场原箱。"
+    },
+    "evidence": [
+      {
+        "unit": 1,
+        "draft": "正文/0001-灯下的箱子-v2.md",
+        "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+        "line": 7,
+        "quote": "箱盖左后角有一块月牙形的白漆。"
+      }
+    ],
+    "introduced_unit": 1,
+    "updated_unit": 1
+  },
+  "guard": {
+    "preview_exit": 1,
+    "record_exit": 2,
+    "code": "DRAFT_REVIEW_INVALID",
+    "state_journal_objects_and_whole_writer_unchanged": true
+  },
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 2,
+    "revision": 6,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0001-灯下的箱子.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0002-多跑的一趟.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      }
+    ],
+    "draft_inventory": {
+      "registered_count": 2,
+      "unregistered": [
+        {
+          "draft": "正文/0001-灯下的箱子.md",
+          "reason": "unregistered",
+          "possible_unit": 1,
+          "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+        },
+        {
+          "draft": "正文/0002-多跑的一趟.md",
+          "reason": "unregistered",
+          "possible_unit": 2,
+          "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+        }
+      ],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 1,
+      "stale": 0,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 0,
+      "stale_without_current_coverage": 0,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "logs_before_closing_call": [
+    {
+      "label": "final-a-30-status-resume",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-31-workflow-resume",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-32-identify-resume",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-33-revisions-resume",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-34-help-assemble",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-34-help-record",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-34-help-record-preview",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-34-help-review",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-34-help-review-template",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-35-verify-resume",
+      "exit_code": 0,
+      "entry": "acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-36-count-1-mid",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-count.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-37-count-1-complete",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-count.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-38-assemble-input-1",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-39-assemble-1",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-assemble-1.json",
+          "sha256": "df6ebd26a57898bdb24ceb453dc3ab033f4a10f1069233fe057b237c97948fe6",
+          "bytes": 663
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-40-verify-assembly-1",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-41-copy-1-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-draft1-v2.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-42-input-1-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-draft1-v2.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-43-assemble-1-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-assemble-1-v2.json",
+          "sha256": "287a2a9abe2681e738d9055b6ba9ef044fc5ea6cbf5b7213e1a182966442c6e8",
+          "bytes": 666
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-44-verify-1-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-draft1-v2.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-45-guard-input",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-guard-input.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-46-guard-before",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-47-preview-missing-report",
+      "exit_code": 1,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-1-missing-report.json",
+          "sha256": "d4f76ec1f6d0c2c67810caa72ba1c1b5c5c8cb4d26ed516f26bf8572a405b3aa",
+          "bytes": 10434
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-48-guard-after-preview",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-49-record-missing-report",
+      "exit_code": 2,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-1-missing-report.json",
+          "sha256": "d4f76ec1f6d0c2c67810caa72ba1c1b5c5c8cb4d26ed516f26bf8572a405b3aa",
+          "bytes": 10434
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-50-guard-after-record",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-51-fill-record-1",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-52-preview-1-valid",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-1-valid.json",
+          "sha256": "b65f90e61a471fd0f90360987cab53dfbd5356b47e72d40b25c88cafa907cfaa",
+          "bytes": 10399
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-53-record-1-valid",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-1-valid.json",
+          "sha256": "b65f90e61a471fd0f90360987cab53dfbd5356b47e72d40b25c88cafa907cfaa",
+          "bytes": 10399
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-54-context-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-55-template-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-56-freeze-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-freeze2.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-57-count-2-mid",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-count.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-58-count-2-complete",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-count.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-59-assemble-input-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-60-assemble-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-assemble-2.json",
+          "sha256": "a9075109bd436b83e4d868fdb5219ac25b8310978bf49b912eea780b1367e135",
+          "bytes": 529
+        }
+      ],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-61-verify-assembly-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-62-copy-2-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-draft2-v2.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-63-input-2-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-draft2-v2.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-64-assemble-2-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-assemble-2-v2.json",
+          "sha256": "c5b4baa6fbf01e47754a2f9ca87b144235c7684a26e9f18e3d4c18f695a92354",
+          "bytes": 532
+        }
+      ],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-65-verify-2-v2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-draft2-v2.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-66-fill-record-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-ops.mjs",
+      "inputs": [],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-67-preview-2-valid",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-2-valid.json",
+          "sha256": "44dae804c45f54cc519989c63a239418c1acbaf55b1c4e2630de6579f99f248b",
+          "bytes": 12256
+        }
+      ],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42"
+    },
+    {
+      "label": "final-a-68-record-2-valid",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-2-valid.json",
+          "sha256": "44dae804c45f54cc519989c63a239418c1acbaf55b1c4e2630de6579f99f248b",
+          "bytes": 12256
+        }
+      ],
+      "before_state_sha256": "81bc99b83dabf350470b13a4d0738ec7ec9d42d59242c49548af7661d9cc7e42",
+      "after_state_sha256": "c21605a28a16939f7d9f26c7089e4491c7fae10e728f1a6d5a6d09dc33f057fa"
+    },
+    {
+      "label": "final-a-69-workflow-input",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-resume-workflow.mjs",
+      "inputs": [],
+      "before_state_sha256": "c21605a28a16939f7d9f26c7089e4491c7fae10e728f1a6d5a6d09dc33f057fa",
+      "after_state_sha256": "c21605a28a16939f7d9f26c7089e4491c7fae10e728f1a6d5a6d09dc33f057fa"
+    },
+    {
+      "label": "final-a-70-workflow-finish",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-workflow-resume-finish.json",
+          "sha256": "7b574ba0dfe05f4f64e69c6e5c65c470fdc4d65143fa769628ecf49e66ea1fc5",
+          "bytes": 2236
+        }
+      ],
+      "before_state_sha256": "c21605a28a16939f7d9f26c7089e4491c7fae10e728f1a6d5a6d09dc33f057fa",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-71-review-input-1-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/final-a-review12.mjs",
+      "inputs": [],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-72-review-1-2",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-review-1-2-input.json",
+          "sha256": "53337017e01c30f2e31b89f5ec80d421a6c97b4700ca864607ac1ceab4ca48cd",
+          "bytes": 351
+        }
+      ],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-73-status-finish",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-74-check-finish",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-75-workflow-finish-show",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-76-revisions-finish",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    },
+    {
+      "label": "final-a-77-observation-finish",
+      "exit_code": 0,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [],
+      "before_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208",
+      "after_state_sha256": "3302546694925136093a920711d35042f9e305896eca77def7d161fc58f36208"
+    }
+  ],
+  "expected_failures": [
+    {
+      "label": "final-a-47-preview-missing-report",
+      "exit_code": 1,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-1-missing-report.json",
+          "sha256": "d4f76ec1f6d0c2c67810caa72ba1c1b5c5c8cb4d26ed516f26bf8572a405b3aa",
+          "bytes": 10434
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    },
+    {
+      "label": "final-a-49-record-missing-report",
+      "exit_code": 2,
+      "entry": "D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u/scenario-final/东岸末班船/.writer/tool/bin/ai-writer.mjs",
+      "inputs": [
+        {
+          "path": "D:\\work\\other\\ai-writer\\acceptance\\20261020-release-readiness-090-u\\scenario-final\\东岸末班船\\.writer\\drafts\\final-a-record-1-missing-report.json",
+          "sha256": "d4f76ec1f6d0c2c67810caa72ba1c1b5c5c8cb4d26ed516f26bf8572a405b3aa",
+          "bytes": 10434
+        }
+      ],
+      "before_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f",
+      "after_state_sha256": "371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f"
+    }
+  ],
+  "unexpected_cli_failures": [],
+  "inspection_warning": {
+    "file": "分段/0002/v1/01.md",
+    "requested_offset": 57,
+    "actual_lines": 54,
+    "resolution": "Full lines 1-54 read before continuing; no state mutation"
+  },
+  "native_session_id": null,
+  "not_done": [
+    "chapter 3",
+    "cross-volume observation payoff",
+    "protected retrospective revision",
+    "fresh-session full three-chapter review",
+    "discuss-only pause and chapter-4 rejection",
+    "draft export"
+  ]
+}

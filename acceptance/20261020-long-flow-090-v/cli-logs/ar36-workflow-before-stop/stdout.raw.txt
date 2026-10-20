@@ -1,0 +1,192 @@
+{
+  "ok": true,
+  "revision": 22,
+  "workflow": {
+    "stage": "trial",
+    "task": "本次从首停恢复完成第4—6章，到6停下等待B",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 4,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次只完成第4—6章，逐章整稿实读、报告、preview成功后record及真实连读review后停止",
+        "第6章完成后更新任务反映真实完成点，下一阶段7—9需要根新提示，不得因next_unit=7续写",
+        "不改首停v1的01/02、原revision17写前模板、旧1—3正文与事实；无新正式修订",
+        "全部操作只在V；保留真实失败和双流/退出码/前后state，不改产品、U/T、不Git提交或推送"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "本次从首停恢复完成第4—6章，到6停下等待B",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 4,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次只完成第4—6章，逐章整稿实读、报告、preview成功后record及真实连读review后停止",
+        "第6章完成后更新任务反映真实完成点，下一阶段7—9需要根新提示，不得因next_unit=7续写",
+        "不改首停v1的01/02、原revision17写前模板、旧1—3正文与事实；无新正式修订",
+        "全部操作只在V；保留真实失败和双流/退出码/前后state，不改产品、U/T、不Git提交或推送"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_V_EXTENSION",
+          "topic": "V轮代理在继续推进授权内已选的扩展方向",
+          "status": "confirmed",
+          "options": [
+            "停航后的劳动、家务和绕行三条行动线"
+          ],
+          "adopted_items": [
+            "代理已选：全作12章5卷；新增V3=4—6/V4=7—9/V5=10—12，原三章有限归还已经兑现",
+            "代理已选：4章先实写箱入铺、再写沈禾次晨减量做糕；普通细节由代理组织",
+            "代理已选：取货时段/柜内使用位置/绕行入口分别在8/11/12产生真实动作或关系后果",
+            "原题材、声音、有限知情和父辈留白保持；计划不进事实账本"
+          ],
+          "excluded_items": [
+            "阴谋、秘密机关、万能物证",
+            "用重开箱钱据悬念延长原故事",
+            "人类逐项指定或编造消息ID"
+          ],
+          "unresolved_items": [
+            "远期章的场面、定价、复航、材料工费须按实际选择与成稿更新"
+          ],
+          "effective_range": {
+            "from": 4,
+            "to": 12
+          },
+          "event_ref": ".writer/objects/3368100d-af7e-440a-bcb4-942c24a13b55.json",
+          "event_sha256": "55b8c5d6533bc6faa2c9c56bef7af75db8ec98811cfd5ab21f085cb69039556b"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "D_V_CANDIDATES",
+          "topic": "V轮远期仍未选细节",
+          "status": "candidate",
+          "options": [
+            "末章已复航",
+            "末章仍停航，以绕行和交班收束",
+            "小批取货只试行一次或保持有限频次"
+          ],
+          "adopted_items": [],
+          "excluded_items": [],
+          "unresolved_items": [
+            "复航日期与末章是否复航未选",
+            "取货安排长期频次、数量与定价未选",
+            "柜门新材料、工费与未来配角姓名未选；不从候选推定事实"
+          ],
+          "effective_range": {
+            "from": 4,
+            "to": 12
+          },
+          "event_ref": ".writer/objects/8649ccd9-c988-4b75-aee5-896157272631.json",
+          "event_sha256": "36c5a32ba0072ba617bfe00c10980e0fb57c1a23bbe844675897d7483c2a6cc4"
+        }
+      ],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

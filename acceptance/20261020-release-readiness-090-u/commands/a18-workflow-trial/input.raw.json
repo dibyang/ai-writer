@@ -1,0 +1,70 @@
+{
+  "expected_revision": 2,
+  "operation_id": "U_A_TRIAL_FIRST_STOP",
+  "author_evidence": {
+    "quote": "4. 不合章，不record，不写第3段，不写第2/3章。保存本地交接U/交接-A首停.md，列W、实际工具身份/路径、workflow、当前revision、写前模板、片段路径/SHA、实际未完成项、原会话ID若可从外部得知（不知道就不编造）。正常结束进程，供同ID恢复。不要把停点自动变成新授权。",
+    "local_source": "研究/验收prompt-A原文.md",
+    "source_sha256": "697f9d7ed45ec21d92132f7744143f291d66cbc1a02a1a2be7bba4125552b20f",
+    "locator": "本次用户验收prompt第11—15行，quote为第15行；无作者消息ID",
+    "recorded_by": "Codex 本轮默认代理；隔离工具验收；非人类作者逐字选择"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "《东岸末班船》隔离工具验收A：规划已备，有限试写整体1—3；本进程仅第1章前两个分段，完成实读修复及交接后正常结束，禁止合章/record/第3段/第2—3章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程只写分段/0001/v1/01.md、02.md，每段约1100—1500正文汉字，完整实读、修复高置信问题并保存交接后结束",
+        "本进程不合章、不record、不写第3段、不写第2/3章；下一进程先核对同ID、交接、当前workflow、真实片段和写前模板，不以停点自动取得新授权",
+        "后续整体试写完成第3章后复盘；修订、连读、暂停、负向第4章和导出按原prompt后续编排执行，本进程均不执行"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书骨架.md"
+        ],
+        "unresolved_ids": [
+          "D_U_OLD_STORY"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

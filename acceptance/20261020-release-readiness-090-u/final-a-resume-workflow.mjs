@@ -1,0 +1,7 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const U='D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u',W=U+'/scenario-final/东岸末班船',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const state=JSON.parse(fs.readFileSync(W+'/.writer/state.json','utf8'));assert.equal(state.revision,5);
+fs.copyFileSync(U+'/final-a-resume-prompt.md',W+'/研究/最终测试恢复prompt.md',fs.constants.COPYFILE_EXCL);
+const previous=JSON.parse(fs.readFileSync(U+'/final-commands/final-a-31-workflow-resume/stdout.raw.txt','utf8')).workflow;
+const input={expected_revision:5,operation_id:'final-a-resume-finish-1-2',author_evidence:{quote:'保持原1—3有限授权，不开始第3章，不暂停到让下一进程丢失原范围（停点记录在交接）。',local_source:'研究/最终测试恢复prompt.md',source_sha256:sha(fs.readFileSync(W+'/研究/最终测试恢复prompt.md')),locator:'本次收到的恢复任务，末段；原生会话或人类消息ID未知，未编造',recorded_by:'本次原生Codex执行代理，依据当前真实恢复授权'},workflow:{...previous,stage:'trial',task:'第1—2章已登记；本进程完成当前1—2全文连读、报告登记和恢复交接后结束，第3章等待后续恢复',authorization:{allowed_actions:['discuss','plan','draft'],draft_range:{from:1,to:3},revise_range:null,stop_conditions:['本次恢复进程只完成第1—2章与连读交接，不能开始第3章；停点及下一步见当前交接','总试写范围保持1—3，恢复后第3章完成即复盘，不自动写第4章','后续小范围追溯修订、fresh会话审查和导出按原完整测试授权分阶段执行，不自动扩权']}}};
+fs.writeFileSync(W+'/.writer/drafts/final-a-workflow-resume-finish.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,expected_revision:5,prompt_sha256:input.author_evidence.source_sha256,retained_range:input.workflow.authorization.draft_range}));

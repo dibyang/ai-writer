@@ -1,0 +1,25 @@
+{
+  "unit": 1,
+  "expected_revision": 3,
+  "source_hashes": {
+    "writer.json": "09427e05445c28cd172683fcfcf032a7387644f906d5ed9ada6d74b368026b8d",
+    ".writer/state.json": "2d3bf8729a280132e1ddedb71964708c196755659d96e5106c027acd50a14aae",
+    "大纲/单元/0001.json": "dea2674038a9a4715678c5635d37d1acce2a396c932993bdc4f03bca9c0dfecd",
+    "设定/作品定位.md": "f4b17d4de20419dc2f0da1c7e9c1c6d5c8e45b8e1fcbec7bbf25c5c6ec085f26",
+    "设定/文风.md": "1ebb7a43345a630268e183343eafcee4df1a6974f3d1e473c8b4f27192d4f929",
+    "设定/权威规则.md": "7e1fd0ae059ef80d9dab40f2542a87b61fcd53af1e2355c6e433ce2566e3d7d2",
+    "设定/人物.md": "91056601e0ca82a782d78904d8b9ec0d3ee77cb9bf30fed03e38d226ce60e5f7",
+    "大纲/全书骨架.md": "dcccfbf08ff739146605fd5ab82e554754ffd28ac34694e7d2edb922b4454b3e",
+    "大纲/分卷/V1.json": "2061d8dd7ee4ecb0aacb475ea72eaef3ddc8346ebb6b9cfd4b5732ad87bac2d4"
+  },
+  "draft": "正文/0001-长凳下的箱子.md",
+  "source_bindings": {},
+  "summary": "",
+  "changes": {
+    "characters": {},
+    "timeline_append": [],
+    "ledger": {}
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。",
+  "output": ".writer/drafts/record-A-before-0001.json"
+}

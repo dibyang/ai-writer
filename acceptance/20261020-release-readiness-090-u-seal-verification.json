@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "at": "2026-10-20T08:15:28.525Z",
+  "scope": "windows-local-delivery-and-three-chapter-flow",
+  "proof_check": {
+    "ok": true,
+    "bound_proofs": 17,
+    "captured_command_streams_verified": 498,
+    "frozen_source_and_zip_unchanged": true,
+    "state_sha256": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3"
+  },
+  "seal": {
+    "ok": true,
+    "mode": "seal",
+    "files": 3073,
+    "bytes": 45981867,
+    "manifest_sha256": "4bac4375c7aba679911fb491a1ddea5c5bbb80b8fb97194eb40c44578974a1f5"
+  },
+  "verify": {
+    "ok": true,
+    "mode": "verify",
+    "files": 3073,
+    "bytes": 45981867,
+    "manifest_sha256": "4bac4375c7aba679911fb491a1ddea5c5bbb80b8fb97194eb40c44578974a1f5"
+  },
+  "receipts": [
+    {
+      "args": [
+        "acceptance/20261020-release-readiness-090-u/final-proof-check.mjs"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "{\"ok\":true,\"bound_proofs\":17,\"captured_command_streams_verified\":498,\"frozen_source_and_zip_unchanged\":true,\"state_sha256\":\"db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "acceptance/20261020-release-readiness-090-u/seal-evidence.mjs",
+        "seal"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "{\"ok\":true,\"mode\":\"seal\",\"files\":3073,\"bytes\":45981867,\"manifest_sha256\":\"4bac4375c7aba679911fb491a1ddea5c5bbb80b8fb97194eb40c44578974a1f5\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "acceptance/20261020-release-readiness-090-u/seal-evidence.mjs",
+        "verify"
+      ],
+      "status": 0,
+      "error": null,
+      "stdout": "{\"ok\":true,\"mode\":\"verify\",\"files\":3073,\"bytes\":45981867,\"manifest_sha256\":\"4bac4375c7aba679911fb491a1ddea5c5bbb80b8fb97194eb40c44578974a1f5\"}\n",
+      "stderr": ""
+    }
+  ],
+  "current_round_committed": false,
+  "pushed": false
+}

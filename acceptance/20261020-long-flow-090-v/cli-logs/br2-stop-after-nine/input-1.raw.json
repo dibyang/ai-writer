@@ -1,0 +1,76 @@
+{
+  "expected_revision": 43,
+  "operation_id": "v-b-resume-v2-stop-after-nine",
+  "author_evidence": {
+    "quote": "按原范围9—9完成第9章与7—9连读review，不写10。",
+    "local_source": "研究/V-B恢复9实际授权.md",
+    "source_sha256": "97c279ae90de58bb3ebda4e19341a2236a766cd94436adc474f416ace3c0eb42",
+    "locator": "当前用户恢复指令第1段；已完整读两份resume提示",
+    "recorded_by": "同一实际B Codex会话；代理按授权准备输入，不编造thread ID或人类逐字情节"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "同一实际B恢复已完成第9章5436汉字及当前7—9完整连读review；只到9，10等待C新提示",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 9,
+        "to": 9
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第9已通过三个真实顺序片段assemble新整章、全文回读修正并绑定报告，preview成功后正式record；当前登记9章。",
+        "当前7—9已逐章完整连读，回看4—6所涉原线索、V4/V5承诺，文学报告及功能比较已正式review绑定全部当前SHA与依赖。",
+        "停在9，draft_range保留9—9、stage trial、revise_range null；本会话不取10写前、不写10，10等待C新的明确提示。",
+        "保留B首停、4—12总体有限试验授权历史及planning/decisions；原35未付、11柜门实装/摆碗和12出行仍未兑现。",
+        "只写V；不派代理，不改U/T/产品/既有作品，不修旧章，不替换包，不做目录索引，不Git提交推送；交接后等待根独立核验。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

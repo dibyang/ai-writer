@@ -47,6 +47,10 @@ review可带chapter_functions、comparison及issues，须expected_revision、稳
 
 record-preview与record共用校验，显示缺项、实际事实差异和未变项，预览不登记、不生成journal、不刷新过期来源。空摘要或坏引文仍拒绝。可选--out .writer/drafts/名称.json写新可读入口，不覆盖旧文件；它是草案，不能作正式设定来源。
 
+先完整实读当前章、写完并保存报告，再preview；退出0才record。需要机械保证报告已保存且对应本稿时，添加 `draft_review`：`reviewer`、`report`（审查/下.md或.txt）、`draft_sha256`、`report_sha256`。工具核非空报告与两项实际SHA256，正式登记冻结报告对象；缺失、空白或版本变化先于状态/journal/报告对象写入拒绝。冻结对象后来缺失或被改写时诊断报 `DRAFT_REVIEW_CORRUPT`，保留现场，不追认新字节；报告原路径之后的正常编辑不覆盖原冻结版本。此字段可选，旧输入兼容；它不证明模型读过或文学通过，不替代 `replay_review` 和完整尾段复核。改稿或改报告后保留原输入，实读新版本后另存，不只刷新哈希。
+
+账本 `type` 允许 `fact/thread/object/relationship/observation`，`status` 允许 `active/pending/partial/resolved/intentional-open`，不要填 `open`。错误 `LEDGER_VALUE_INVALID` 带具体字段及 `allowed_values`，按实际语义选择，不自动转换。preview阻断退出1，record异常退出2；保存真实退出码和双流，在失败处停止依赖步骤。
+
 0.9预览另有related_unchanged_ledger：按输入显式更新的角色，以及变化条目里的角色，列出有共同知情角色、但本次未更新的条目；最近证据优先，最多8条，附总量和遗漏数。它不读懂“尚未”等语句，不判语义错误，不要求补齐所有候选。模型应按ID召回、实读正文，区分当前知情和带明确日期的历史描述；一项约定兑现不自动刷新另一项或同项未改子字段。需要更新时另存真实changes和引文后再预览，不换来源哈希；无变化有据可保留。
 
 0.9重登草案按原登记前后的结构差异恢复ledger变化字段，character_known逐人保留真正变化的项；原本未变的知识不再整表写回，避免覆盖前章刚修好的字段。新条目仍给完整必要内容，物证换手仍核完整custody及previous_holder。结构差量不是语义合并：角色整段状态、实际变化的说明和物证去向仍须实读核查，不自动认定原差量在新上下文中正确。
@@ -66,5 +70,9 @@ issues每条输入id、type（correctness/continuity/readability/optional_style�
 review-issues list查看原意见和当前状态。resolve输入expected_revision、operation_id、id、disposition（adopted/retained/deferred）、reason和decision_actor。author须完整author_evidence；agent-within-authorized-scope须authorization绑定当前governance事件，采用时检查revise范围。仅有审查或讨论授权不能借采用意见取得改稿权限；代理处置不伪称作者逐项确认。
 
 采用后按现有独立修订流程实改并提交。apply输入commit_id和reason，核已完成事务、采用时旧稿与当前新稿、至少一处对应原文实际变更。它不改正文，不把候选分支算作已发布。正式提交后再CAS登记应用，防止意见先于正文标成已修复。verify输入review_ref、reviewer、conclusion（resolved/not-resolved）及reason，必须指向覆盖该意见章节的当前有效模型实读报告。resolved是模型复核声明，不是作者定稿。
+
+正文正确、只有登记摘要或时间线写错时，仍先采用意见，再在正式独立修订区从最早影响单元回退、实读修正追踪、重登完整尾段并提交；原稿可保持同字节。此时apply的JSON额外设置`"change_scope": "tracking"`，其余expected_revision、operation_id、id、commit_id和reason照常准备。省略或写`draft`仍要求正文实际改变，不能改空格来凑条件。
+
+tracking模式核对真实事务归档的前后状态、采用时旧登记和当前已发布登记；对应章的摘要或章末事实快照必须实际改变。对象键顺序、来源哈希、报告、journal引用或修订号变化均不能单独算修复。应用记录保存前后追踪哈希与事务依据，随后仍须覆盖相关章节的当前有效实读报告verify，联合核对正文和追踪是否一致。工具只证明有实际登记变化，不理解日期或判定意见已经解决。
 
 再次修改正文、依赖或所绑定审查版本后，verified显示needs-recheck，旧记录及原话保留；retained保持“保留”，不冒充已修复。新一轮可重新resolve，绑定当时当前稿再修订。status和context只给简短意见摘要，不因可选建议阻断续写，不自动删句或隐去待定项。

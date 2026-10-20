@@ -1,0 +1,203 @@
+{
+  "schema_version": 6,
+  "revision": 3,
+  "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "trial",
+    "task": "最终包原生创作试验：总范围1—3；当前进程仅写第1章v1前两个片段后首停，等待根会话核验再同ID恢复",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "当前进程写完分段/0001/v1/01.md和02.md并全文自检即停，禁止03、合章、record及第2/3章",
+        "首停交接保存后正常结束，等待根会话核验再同ID恢复；不能凭总范围自动越过首停",
+        "第3章完成后暂停复盘；后续追溯修订、fresh审查、仅discuss和导出按完整测试授权分阶段执行"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/试验选择说明.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {
+    "D_FINAL_EXECUTION": {
+      "id": "D_FINAL_EXECUTION",
+      "topic": "本次试验代理已选方案与细节",
+      "status": "confirmed",
+      "options": [
+        "在授权内执行眼前归还故事"
+      ],
+      "adopted_items": [
+        "代理选定：三章两卷、温暖克制的现实归还故事；不是人类逐项指定",
+        "代理选定：沈父借箱，沈禾代还，许蓉临管，周岸须获梁伯明确委托后代收",
+        "代理选定：八十元押金，原物与退款分开兑现",
+        "代理选定：首章可见箱体观察，第三章跨卷实际使用；父亲全史保留"
+      ],
+      "excluded_items": [
+        "犯罪反转",
+        "通过编造人类消息ID证明采纳"
+      ],
+      "unresolved_items": [
+        "父亲旧交背景不承担本故事闭合"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": 3
+      },
+      "event_ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+      "event_sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+    },
+    "D_FINAL_CANDIDATE": {
+      "id": "D_FINAL_CANDIDATE",
+      "topic": "末章父亲是否到场与生活尾声候选",
+      "status": "candidate",
+      "options": [
+        "沈父亲自到场",
+        "沈禾带回收据即可",
+        "点心铺热汤尾声"
+      ],
+      "adopted_items": [],
+      "excluded_items": [],
+      "unresolved_items": [
+        "沈父亲自到场尚未采纳，不安排他的交通或现场知情",
+        "热汤尾声仅候选，依正文节奏取舍"
+      ],
+      "effective_range": {
+        "from": 1,
+        "to": 3
+      },
+      "event_ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+      "event_sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+    }
+  },
+  "governance_events": [
+    {
+      "ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+      "sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+    },
+    {
+      "ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+      "sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+    },
+    {
+      "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+      "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+    }
+  ],
+  "operations": {
+    "final-a-chosen": {
+      "input_sha256": "78831cc1288fb7ac2f9784eec67c6d22a14717970ab90cedbbc23b74a9c33151",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "final-a-chosen",
+        "event": {
+          "ref": ".writer/objects/7072a3ca-2d7e-4d01-86a4-cb0700205f12.json",
+          "sha256": "b674917d7f1c1a8a2e3589ffad2ab3df82dca48e80fd9a30c59c7f56dba2492b"
+        },
+        "decision_id": "D_FINAL_EXECUTION"
+      }
+    },
+    "final-a-candidate": {
+      "input_sha256": "ffbff524cc2b46aae3e52fc518ec4259b29c66d31202e31c91f968970b939a62",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "final-a-candidate",
+        "event": {
+          "ref": ".writer/objects/e406739b-2084-44a3-b5b6-2c65f224525b.json",
+          "sha256": "f97033274bfc0a8b7934032b732b9eb5db0a7a712a1fe3a8cd2eb041609b3fe6"
+        },
+        "decision_id": "D_FINAL_CANDIDATE"
+      }
+    },
+    "final-a-trial": {
+      "input_sha256": "91dfb16cf2616b5a46bfcc046afddc5398e98e0b040f15d1cf1f2f99f38bc4e4",
+      "result": {
+        "ok": true,
+        "revision": 3,
+        "operation_id": "final-a-trial",
+        "event": {
+          "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+          "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/120dd12c-048b-481a-9f0b-730e26c94824.json",
+    "sha256": "c35e3c4fe3920a9553afa898aff17e151dfb047d170228311ce6fc24845fb9f6"
+  }
+}

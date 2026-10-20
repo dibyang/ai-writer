@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const V=path.resolve('acceptance/20261020-long-flow-090-v'),W=path.join(V,'scenario/东岸末班船-扩展验证'),s=JSON.parse(fs.readFileSync(path.join(W,'.writer/state.json'),'utf8'));
+const list=JSON.parse(fs.readFileSync(path.join(V,'cli-logs/cr3-postcommit-list/stdout.raw.txt'),'utf8'));
+if(s.revision!==52||list.sessions.some(x=>!['committed','aborted'].includes(x.status))||list.transactions.some(x=>x.status!=='completed'))throw Error('Not committed/settled');
+const bytes=fs.readFileSync(path.join(V,'prompt-c-resume-v4.md'));
+const local_source='研究/V-C恢复-实际授权来源.md';fs.writeFileSync(path.join(W,local_source),bytes,{flag:'wx'});
+const workflow={stage:s.governance.stage,task:'12章及7—12尾段修订已完成，等待F全文1—12实读复核；不写13',authorization:{...s.governance.authorization,draft_range:null,stop_conditions:['12章及7—12尾段修订已完成；原31b83039-cf67-4d55-9068-b027a090f4ca已committed，事务f0b4ad62-9b88-41a2-8519-de9064f2a040已completed，等待F当前全文1—12真实实读复核。','本C正常结束等待根独立核验；不再执行正文/登记/新修订，不写第13章。F复核、暂停仅discuss、第13负向与草稿导出由后续授权F流程执行，本C不冒称已完成。','4—9及7—12当前版本已分别完整顺读并正式review；旧过期报告仍保留，仅有当前覆盖，不称旧报告自身有效。','保留原稿/逐章重登/报告/事务备份，1—6正文与登记对象及全部observation的type/statement/author_truth不变；35/80/26/81互不抵消。','只写V，不派代理，不更新产品/U/T，不自行Git提交、推送或上传。']},planning:s.governance.planning};
+const input={expected_revision:52,operation_id:'v-cr3-postcommit-wait-f',author_evidence:{quote:'原ID/token、重登8—12、全文回读和prepare/commit要求不变，不能重开修订。',local_source,source_sha256:crypto.createHash('sha256').update(bytes).digest('hex'),locator:'当前用户实际恢复原话，prompt-c-resume-v4.md第1段及其v3/v2/base引用；v2规定commit后更新当前任务与停点。无可用消息ID。',recorded_by:'同一实际C恢复会话'},workflow};
+fs.writeFileSync(path.join(V,'inputs/cr3-workflow-complete.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({revision:s.revision,stage:workflow.stage,draft_range:workflow.authorization.draft_range,task:workflow.task,author_source:local_source,source_sha256:input.author_evidence.source_sha256}));

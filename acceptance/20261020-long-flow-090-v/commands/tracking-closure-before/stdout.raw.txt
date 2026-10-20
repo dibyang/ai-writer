@@ -1,0 +1,59 @@
+✖ 追踪修正正文不变时显式tracking闭环成功，默认正文门槛保持 (7364.3014ms)
+✖ 纯等价重登只换来源和报告，tracking仍拒绝且不写状态 (4764.8383ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12480.3808
+
+✖ failing tests:
+
+test at acceptance\20261020-long-flow-090-v\tracking-closure-probe.test.mjs:6:1
+✖ 追踪修正正文不变时显式tracking闭环成功，默认正文门槛保持 (7364.3014ms)
+  Error: apply含未知字段或不是对象
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+      at fail (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:11:37)
+      at keys (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:13:106)
+      at mutate (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:90:50)
+      at Object.apply (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:101:37)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:749:180)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v/tracking-closure-probe.test.mjs:6:778)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    code: 'REVIEW_INPUT_INVALID'
+  }
+
+test at acceptance\20261020-long-flow-090-v\tracking-closure-probe.test.mjs:7:1
+✖ 纯等价重登只换来源和报告，tracking仍拒绝且不写状态 (4764.8383ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: apply含未知字段或不是对象
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v/tracking-closure-probe.test.mjs:7:411)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: apply含未知字段或不是对象
+        at userError (file:///D:/work/other/ai-writer/lib/help.mjs:59:68)
+        at fail (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:11:37)
+        at keys (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:13:106)
+        at mutate (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:90:50)
+        at Object.apply (file:///D:/work/other/ai-writer/lib/review-workflow.mjs:101:37)
+        at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:749:180)
+        at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+        at file:///D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v/tracking-closure-probe.test.mjs:7:422
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24),
+    operator: 'throws',
+    diff: 'simple'
+  }

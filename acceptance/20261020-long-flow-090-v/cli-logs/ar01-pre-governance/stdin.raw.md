@@ -1,0 +1,13 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const v='D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v',w=v+'/scenario/东岸末班船-扩展验证';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const raw=fs.readFileSync(w+'/.writer/state.json'),state=JSON.parse(raw),old=JSON.parse(fs.readFileSync(w+'/.writer/drafts/v-a-record-4-before.json','utf8')),parent=JSON.parse(fs.readFileSync(v+'/parent-a-first-verification.json','utf8'));
+const changes=Object.entries(old.source_hashes).flatMap(([ref,expected])=>{const actual=sha(fs.readFileSync(w+'/'+ref));return actual===expected?[]:[{ref,expected,actual}];});
+const parts=parent.parts.map(p=>({...p,current_sha256:sha(fs.readFileSync(w+'/'+p.file))}));
+const proof={at:new Date().toISOString(),revision:state.revision,state_sha256:sha(raw),source_changes:changes,parts,old_template_sha256:sha(fs.readFileSync(w+'/.writer/drafts/v-a-record-4-before.json')),snapshot_matches_first:JSON.stringify(state.snapshot)===JSON.stringify(JSON.parse(fs.readFileSync(v+'/cli-logs/a01-status/before-state.json','utf8')).snapshot)};
+proof.ok=state.revision===17&&proof.state_sha256===parent.state_sha256&&!changes.length&&parts.every(p=>p.sha256===p.current_sha256)&&proof.snapshot_matches_first;
+fs.writeFileSync(v+'/ar-before-governance-proof.json',JSON.stringify(proof,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(proof,null,2));if(!proof.ok)process.exit(1);
+fs.writeFileSync(w+'/研究/V-A-恢复任务.md',fs.readFileSync(v+'/prompt-a-resume.md'),{flag:'wx'});
+const source=fs.readFileSync(w+'/研究/V-A-恢复限定原文.md');
+const input={expected_revision:state.revision,operation_id:'v-ar-start-4-6',author_evidence:{quote:'本次从首停恢复完成第4—6章，到6停下等待B',local_source:'研究/V-A-恢复限定原文.md',source_sha256:sha(source),locator:'当前用户恢复限定原文第二段；V/prompt-a-resume.md另按字节保存于研究/V-A-恢复任务.md；不编造消息ID',recorded_by:'同一实际V-A Codex会话恢复代理；情节仍为授权内代理组织'},workflow:{...state.governance,stage:'trial',task:'本次从首停恢复完成第4—6章，到6停下等待B',authorization:{allowed_actions:['discuss','plan','draft'],draft_range:{from:4,to:6},revise_range:null,stop_conditions:['本次只完成第4—6章，逐章整稿实读、报告、preview成功后record及真实连读review后停止','第6章完成后更新任务反映真实完成点，下一阶段7—9需要根新提示，不得因next_unit=7续写','不改首停v1的01/02、原revision17写前模板、旧1—3正文与事实；无新正式修订','全部操作只在V；保留真实失败和双流/退出码/前后state，不改产品、U/T、不Git提交或推送']}}};
+fs.writeFileSync(w+'/.writer/drafts/v-ar-workflow-start.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({input:'.writer/drafts/v-ar-workflow-start.json',sha256:sha(Buffer.from(JSON.stringify(input,null,2)+'\n')),author_source_sha256:sha(source)}));

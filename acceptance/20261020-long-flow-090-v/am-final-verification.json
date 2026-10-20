@@ -1,0 +1,317 @@
+{
+  "at": "2026-10-20T10:29:29.950Z",
+  "revision": 28,
+  "state_sha256": "7060e22e83c65071795afa999ca4c49a26e743b09ca23976c804aa9aaa631af5",
+  "project": "D:/work/other/ai-writer/acceptance/20261020-long-flow-090-v/scenario/东岸末班船-扩展验证",
+  "identity": {
+    "tool_root": "D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\scenario\\东岸末班船-扩展验证\\.writer\\tool",
+    "resource_project_root": "D:\\work\\other\\ai-writer\\acceptance\\20261020-long-flow-090-v\\scenario\\东岸末班船-扩展验证",
+    "content_id": "ff6cde0f1be3459f7d8a4249e3dd8ee3eec39d468df48f9c2f11308e5bd6641b",
+    "runtime_id": "9ed9031ff670f4c6e0ef5754b32e079e436d5e6de9576912b4742b6f541b138f"
+  },
+  "bodies": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-灯下的箱子-v2.md",
+      "expected": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+      "actual": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+      "registered": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/0002-多跑的一趟-v2.md",
+      "expected": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886",
+      "actual": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886",
+      "registered": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886"
+    },
+    {
+      "unit": 3,
+      "draft": "正文/0003-把手朝外-final-b.md",
+      "expected": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221",
+      "actual": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221",
+      "registered": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221"
+    },
+    {
+      "unit": 4,
+      "draft": "正文/0004-少蒸的两笼-v1.md",
+      "expected": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+      "actual": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+      "registered": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4"
+    },
+    {
+      "unit": 5,
+      "draft": "正文/0005-门板靠墙-v1.md",
+      "expected": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+      "actual": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+      "registered": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb"
+    },
+    {
+      "unit": 6,
+      "draft": "正文/0006-走一遍再画-v2.md",
+      "expected": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+      "actual": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+      "registered": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91"
+    }
+  ],
+  "registered_units": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "snapshot_only_expected_time_changes": true,
+  "characters_unchanged": true,
+  "ledger_unchanged": true,
+  "prefix_unit_records_unchanged": true,
+  "observations": [
+    {
+      "id": "O_BOX_PAINT",
+      "unchanged": true
+    }
+  ],
+  "planning_preserved": true,
+  "decisions_preserved": true,
+  "stage": "paused",
+  "authorization": {
+    "allowed_actions": [
+      "discuss"
+    ],
+    "draft_range": null,
+    "revise_range": null,
+    "stop_conditions": [
+      "追踪修正已由正式事务提交，正文到6，等待根独立复核及B新提示，不写7",
+      "V_A_U5_TIME_METADATA仍adopted，apply因metadata-only无正文变更被拒；未执行依赖verify，不冒称闭环",
+      "本轮无新正文或其他修订授权，不能恢复4—12宽泛范围或再次动正文凑条件",
+      "保留planning、decisions、原错误追踪/报告/issue及新修订历史；不改产品/U/T、不Git提交推送或上传"
+    ]
+  },
+  "task": "第4—6追踪时间已正式修正；6章完成，等待B新提示，不写7。意见apply因REVIEW_CHANGE_REQUIRED被工具阻断，未完成闭环，B前须根处理",
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "literary_quality": "unreviewed",
+    "units": 6,
+    "revision": 28,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0001-灯下的箱子.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0002-多跑的一趟.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      }
+    ],
+    "draft_inventory": {
+      "registered_count": 6,
+      "unregistered": [
+        {
+          "draft": "正文/0001-灯下的箱子.md",
+          "reason": "unregistered",
+          "possible_unit": 1,
+          "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+        },
+        {
+          "draft": "正文/0002-多跑的一趟.md",
+          "reason": "unregistered",
+          "possible_unit": 2,
+          "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+        },
+        {
+          "draft": "正文/0006-走一遍再画-v1.md",
+          "reason": "unregistered",
+          "possible_unit": 6,
+          "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+        }
+      ],
+      "unsafe_entries": []
+    },
+    "rolling_review": {
+      "valid": 3,
+      "stale": 4,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 2,
+      "stale_without_current_coverage": 2,
+      "pending_windows": [
+        {
+          "from": 1,
+          "to": 6
+        }
+      ],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "new_session": {
+    "id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+    "owner": "v-a-metadata-only-root-authorized",
+    "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+    "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+    "scope": {
+      "from": 4,
+      "through": 6
+    },
+    "status": "committed",
+    "base_sha256": "7bf633d95462043f82cf48e9ef8a03bdc1271f3734580dbd29188d081ade9ac5",
+    "created_at": "2026-10-20T10:14:46.353Z",
+    "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+    "session_sha256": "6cd6922875ccfc7000a0e7bd7120f8ae5eed841e4882a175b204aa64e05a9be7"
+  },
+  "transaction": {
+    "id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+    "session_id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+    "status": "completed"
+  },
+  "no_pending_transactions": true,
+  "no_active_sessions": true,
+  "no_unit7_plan": true,
+  "no_unit7_parts": true,
+  "frozen_reports": [
+    {
+      "unit": 4,
+      "draft_review": {
+        "report": "审查/V-A-追踪修正-0004-replay六项.md",
+        "expected": "9286471650b7367a379fea2c40c6246bd48a8a9e35f5244499911f03478e87f2",
+        "actual": "9286471650b7367a379fea2c40c6246bd48a8a9e35f5244499911f03478e87f2",
+        "frozen": "9286471650b7367a379fea2c40c6246bd48a8a9e35f5244499911f03478e87f2"
+      },
+      "replay_review": {
+        "report": "审查/V-A-追踪修正-0004-replay六项.md",
+        "expected": "9286471650b7367a379fea2c40c6246bd48a8a9e35f5244499911f03478e87f2",
+        "actual": "9286471650b7367a379fea2c40c6246bd48a8a9e35f5244499911f03478e87f2",
+        "frozen": "9286471650b7367a379fea2c40c6246bd48a8a9e35f5244499911f03478e87f2",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      }
+    },
+    {
+      "unit": 5,
+      "draft_review": {
+        "report": "审查/V-A-追踪修正-0005-replay六项.md",
+        "expected": "7890adfaf7a74cc8db7bbddbce78550b1c7993d8c67b529afdee0c5af0998d8a",
+        "actual": "7890adfaf7a74cc8db7bbddbce78550b1c7993d8c67b529afdee0c5af0998d8a",
+        "frozen": "7890adfaf7a74cc8db7bbddbce78550b1c7993d8c67b529afdee0c5af0998d8a"
+      },
+      "replay_review": {
+        "report": "审查/V-A-追踪修正-0005-replay六项.md",
+        "expected": "7890adfaf7a74cc8db7bbddbce78550b1c7993d8c67b529afdee0c5af0998d8a",
+        "actual": "7890adfaf7a74cc8db7bbddbce78550b1c7993d8c67b529afdee0c5af0998d8a",
+        "frozen": "7890adfaf7a74cc8db7bbddbce78550b1c7993d8c67b529afdee0c5af0998d8a",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      }
+    },
+    {
+      "unit": 6,
+      "draft_review": {
+        "report": "审查/V-A-追踪修正-0006-replay六项.md",
+        "expected": "d47493f4490c0048356d038d6655c29568cc29a6a112ce4d9661180cbc628fee",
+        "actual": "d47493f4490c0048356d038d6655c29568cc29a6a112ce4d9661180cbc628fee",
+        "frozen": "d47493f4490c0048356d038d6655c29568cc29a6a112ce4d9661180cbc628fee"
+      },
+      "replay_review": {
+        "report": "审查/V-A-追踪修正-0006-replay六项.md",
+        "expected": "d47493f4490c0048356d038d6655c29568cc29a6a112ce4d9661180cbc628fee",
+        "actual": "d47493f4490c0048356d038d6655c29568cc29a6a112ce4d9661180cbc628fee",
+        "frozen": "d47493f4490c0048356d038d6655c29568cc29a6a112ce4d9661180cbc628fee",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      }
+    }
+  ],
+  "tail_review": {
+    "ref": ".writer/reviews/20f0f6b8-4303-4426-a853-69882af38c96.json",
+    "report": "审查/V-A-追踪修正-0004-0006-完整尾段连读.md",
+    "report_sha256": "0fa7f01a83b9da95dfb6109e22170867157f55fc62e8ed550d2e1f5b04c3869d",
+    "actual": "0fa7f01a83b9da95dfb6109e22170867157f55fc62e8ed550d2e1f5b04c3869d",
+    "frozen": "0fa7f01a83b9da95dfb6109e22170867157f55fc62e8ed550d2e1f5b04c3869d",
+    "bodies": [
+      {
+        "unit": 4,
+        "expected": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+        "actual": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+        "frozen": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4"
+      },
+      {
+        "unit": 5,
+        "expected": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+        "actual": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+        "frozen": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb"
+      },
+      {
+        "unit": 6,
+        "expected": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+        "actual": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+        "frozen": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91"
+      }
+    ]
+  },
+  "u_files_checked": 349,
+  "u_changes": [],
+  "u_added_files": [],
+  "original_w_changes": [
+    {
+      "file": ".writer/state.json",
+      "expected": "db7b97c87598b4b5666ed94e75326768d530606ed7c9a88fb8e9b955584aa6d3",
+      "actual": "7060e22e83c65071795afa999ca4c49a26e743b09ca23976c804aa9aaa631af5"
+    }
+  ],
+  "product_files_checked": 324,
+  "product_changes": [],
+  "issue": {
+    "id": "V_A_U5_TIME_METADATA",
+    "status": "adopted",
+    "effective_status": "adopted",
+    "context_changed": true,
+    "application": null,
+    "verification": null,
+    "decision_actor": "agent-within-authorized-scope",
+    "author_choice": null
+  },
+  "blocker": {
+    "code": "REVIEW_CHANGE_REQUIRED",
+    "message": "没有对应原文的实际修改，不能把采用或保留登记为已修复",
+    "product_exit_code": 2,
+    "stdout_bytes": 0,
+    "stderr_bytes": 407,
+    "before_state_sha256": "e11cac3daca69b62a08a1986bb952ec8b0605e8dded4ffc7b347888067908dd1",
+    "after_state_sha256": "e11cac3daca69b62a08a1986bb952ec8b0605e8dded4ffc7b347888067908dd1",
+    "verify_not_executed": true
+  },
+  "tracking_commit_completed": true,
+  "issue_closed": false,
+  "literary_or_product_acceptance": false,
+  "integrity_ok": true
+}

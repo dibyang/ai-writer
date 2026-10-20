@@ -1,0 +1,177 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 30,
+  "counts": {
+    "adopted": 1
+  },
+  "issues": [
+    {
+      "id": "V_A_U5_TIME_METADATA",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "第5章登记summary及timeline两处停航次日晚误导到停航第二日；正文承接第4章今晚六点半，实际应是停航首日晚（末班船次日晚）。",
+      "suggestion": "根核验后决定正式纠正登记的授权与路径。本阶段不改state、不新开修订；续写须读取本问题并保持正确日序，不能由错误标签推造次晨取糕已发生。",
+      "evidence": [
+        {
+          "unit": 4,
+          "draft": "正文/0004-少蒸的两笼-v1.md",
+          "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+          "line": 269,
+          "quote": "今晚六点半能来看看，先量，不一定就能装"
+        },
+        {
+          "unit": 5,
+          "draft": "正文/0005-门板靠墙-v1.md",
+          "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+          "line": 5,
+          "quote": "六点半，我看到了。"
+        },
+        {
+          "unit": 6,
+          "draft": "正文/0006-走一遍再画-v2.md",
+          "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+          "line": 3,
+          "quote": "停航第一天的下午四点"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/90a6ef24-4a8a-421b-810b-62f2714a6b83.json",
+        "review_sha256": "68a1539779935ebce8ec6c9cebd3a8c501c0b84c4a4dbb32d33b6c4d3aaf8120",
+        "units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/9e0fcdde-a195-4414-872c-379990dcc9f6.json",
+          "sha256": "e87ded79bcf9c4055bc2b4b4f80c294db3b727fcf13ed6d60a56e60b7ff14eec"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/a65e6a2e-9108-4039-a8e9-8b1ecdf2c7e7.json",
+          "sha256": "1d12232671465985c16a0530b61ea66f8378484230980e05ac21d1ab99cde069"
+        },
+        "disposition": "adopted",
+        "reason": "本轮真实根提示明确采用metadata-only修正，覆盖4—6；代理在当前正式revise授权内落实，只修summary/timeline时间措辞，六章正文和人物/物件/钱据/观察保持。不冒充人类逐字选择。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/9f31501d-fac7-4730-90bb-3526506a4365.json",
+        "sha256": "7eafee6a432849279ffa26ddc136ccbd3ce3cbf96283ba0df45cd405981f1b6e"
+      },
+      "history_events": [
+        {
+          "binding": {
+            "ref": ".writer/objects/9e0fcdde-a195-4414-872c-379990dcc9f6.json",
+            "sha256": "e87ded79bcf9c4055bc2b4b4f80c294db3b727fcf13ed6d60a56e60b7ff14eec"
+          },
+          "issue": {
+            "id": "V_A_U5_TIME_METADATA",
+            "type": "continuity",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "第5章登记summary及timeline两处停航次日晚误导到停航第二日；正文承接第4章今晚六点半，实际应是停航首日晚（末班船次日晚）。",
+            "suggestion": "根核验后决定正式纠正登记的授权与路径。本阶段不改state、不新开修订；续写须读取本问题并保持正确日序，不能由错误标签推造次晨取糕已发生。",
+            "evidence": [
+              {
+                "unit": 4,
+                "draft": "正文/0004-少蒸的两笼-v1.md",
+                "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+                "line": 269,
+                "quote": "今晚六点半能来看看，先量，不一定就能装"
+              },
+              {
+                "unit": 5,
+                "draft": "正文/0005-门板靠墙-v1.md",
+                "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+                "line": 5,
+                "quote": "六点半，我看到了。"
+              },
+              {
+                "unit": 6,
+                "draft": "正文/0006-走一遍再画-v2.md",
+                "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+                "line": 3,
+                "quote": "停航第一天的下午四点"
+              }
+            ],
+            "status": "open",
+            "origin": {
+              "review_ref": ".writer/reviews/90a6ef24-4a8a-421b-810b-62f2714a6b83.json",
+              "review_sha256": "68a1539779935ebce8ec6c9cebd3a8c501c0b84c4a4dbb32d33b6c4d3aaf8120",
+              "units": [
+                {
+                  "unit": 4,
+                  "draft": "正文/0004-少蒸的两笼-v1.md",
+                  "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+                  "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+                },
+                {
+                  "unit": 5,
+                  "draft": "正文/0005-门板靠墙-v1.md",
+                  "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+                  "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+                },
+                {
+                  "unit": 6,
+                  "draft": "正文/0006-走一遍再画-v2.md",
+                  "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+                  "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+                }
+              ]
+            },
+            "history": []
+          }
+        }
+      ],
+      "effective_status": "adopted",
+      "context_changed": true,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

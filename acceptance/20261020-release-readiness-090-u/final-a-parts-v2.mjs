@@ -1,0 +1,13 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const U='D:/work/other/ai-writer/acceptance/20261020-release-readiness-090-u',W=U+'/scenario-final/东岸末班船';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const dir=U+'/final-a-parts-verified';fs.mkdirSync(dir,{recursive:false});
+const parts=['01.md','02.md'].map(name=>{const ref='分段/0001/v1/'+name,raw=fs.readFileSync(path.join(W,ref)),text=raw.toString('utf8'),body=text.replace(/^#{1,6}\s+.*(?:\r?\n|$)/gmu,'');fs.writeFileSync(path.join(dir,name),raw,{flag:'wx'});return {ref,sha256:sha(raw),bytes:raw.length,body_han:[...body.matchAll(/\p{Script=Han}/gu)].length,headings:(text.match(/^#{1,6}\s+/gm)??[]).length,lines:text.split('\n').length-1};});
+const state=fs.readFileSync(W+'/.writer/state.json'),s=JSON.parse(state);
+const prose=fs.readdirSync(W+'/正文').filter(n=>/\.(md|txt)$/i.test(n));
+const issues=parts.filter(p=>p.body_han<1100||p.body_han>1500).map(p=>p.ref+' Han '+p.body_han);
+if(s.revision!==3||sha(state)!=='371b6634ede8ca23aac6f7d951c8b9a04c447422ef7dc44820de6627304cb95f')issues.push('state changed');
+if(parts[0].headings!==1||parts[1].headings!==0)issues.push('heading count');
+if(fs.existsSync(W+'/分段/0001/v1/03.md')||prose.length)issues.push('unexpected prose');
+const manifest={ok:issues.length===0,created_at:new Date().toISOString(),revision:s.revision,state_sha256:sha(state),parts,combined_body_han:parts.reduce((n,p)=>n+p.body_han,0),prose_files:prose,part03_exists:fs.existsSync(W+'/分段/0001/v1/03.md'),not_assembled:prose.length===0,not_recorded:true,issues,count_method:'Remove Markdown heading lines, count Unicode Script=Han; punctuation, numbers and English excluded.'};
+fs.writeFileSync(dir+'/manifest.json',JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(manifest,null,2));assert.deepEqual(issues,[]);

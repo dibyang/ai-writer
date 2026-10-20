@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+
+const U=path.dirname(fileURLToPath(import.meta.url));
+const P='D:/work/other/ai-writer/.tmp/U 最终交付解压/ai-writer-0.9.0';
+const W=path.join(U,'scenario','东岸末班船');
+let [label,...args]=process.argv.slice(2);
+const usePackage=args[0]==='--package'; if(usePackage) args.shift();
+if(!/^a[0-9]{2}-[a-z0-9-]+$/.test(label??'')||!args.length) throw Error('Unique aNN-label and CLI arguments required');
+const entry=path.join(usePackage?P:path.join(W,'.writer','tool'),'bin','ai-writer.mjs');
+const dir=path.join(U,'commands',label);
+if(fs.existsSync(dir)) throw Error('Evidence already exists; choose a new label');
+if(!fs.existsSync(entry)) throw Error('CLI prerequisite missing: '+entry);
+if(args[0]==='init' && fs.existsSync(W)) throw Error('New workspace already exists');
+fs.mkdirSync(dir,{recursive:true});
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const write=(name,bytes)=>fs.writeFileSync(path.join(dir,name),bytes,{flag:'wx'});
+const stateFile=path.join(W,'.writer','state.json');
+const snapshot=name=>{if(!fs.existsSync(stateFile)) return null;const b=fs.readFileSync(stateFile);write(name,b);return sha(b);};
+const inputs=[];
+for(let i=0;i<args.length;i++) if(args[i]==='--input'){
+  const file=path.resolve(args[i+1]),b=fs.readFileSync(file);
+  write('input.raw.json',b);inputs.push({file,sha256:sha(b),bytes:b.length});
+}
+write('stdin.raw.bin',Buffer.alloc(0));
+write('argv.raw.json',JSON.stringify({exe:process.execPath,entry,args},null,2)+'\n');
+const before=snapshot('before-state.json');
+const start=Date.now();
+const result=spawnSync(process.execPath,[entry,...args],{cwd:'D:/work/other/ai-writer',windowsHide:true,input:Buffer.alloc(0),maxBuffer:32*1024*1024,timeout:60000});
+write('stdout.raw.txt',result.stdout??Buffer.alloc(0));
+write('stderr.raw.txt',result.stderr??Buffer.alloc(0));
+const meta={label,exe:process.execPath,entry,entry_sha256:sha(fs.readFileSync(entry)),args,cwd:'D:/work/other/ai-writer',started_at:new Date(start).toISOString(),elapsed_ms:Date.now()-start,exit_code:result.status,signal:result.signal,error:result.error?.message??null,inputs,before_state_sha256:before,after_state_sha256:snapshot('after-state.json')};
+write('result.json',JSON.stringify(meta,null,2)+'\n');
+process.stdout.write(JSON.stringify(meta)+'\n');
+process.stdout.write(result.stdout??Buffer.alloc(0));
+process.stderr.write(result.stderr??Buffer.alloc(0));
+process.exitCode=result.status??2;

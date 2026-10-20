@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
-import {ROOT,fixture,state,file,workflow,evidence,call,begin,edit,prepare,commit,unit,sha} from './protection-fixture.mjs';
+import {ROOT,fixture,state,file,workflow,evidence,call,begin,edit,prepare,commit,unit,sha,rewindBranch,review as reviewBranch} from './protection-fixture.mjs';
 import {initProject,main} from '../lib/workspace.mjs';
 let seq=0;
 function cli(root,command,action,input,token,expected=0){
@@ -116,4 +116,39 @@ test('结构化功能表在旧章实改后失效，冻结原文和原判断仍�
   const factual=snapshot=>JSON.parse(JSON.stringify(snapshot,(key,value)=>key==='sha256'?undefined:value));assert.deepEqual(factual(state(root).snapshot),factual(oldFacts));
   assert.equal(state(root).snapshot.ledger.O_COPPER.evidence[0].sha256,state(root).units[0].sha256);
   const checked=cli(root,'check');assert.ok(checked.rolling_review.stale>=1);const record=JSON.parse(saved);for(const u of record.units)assert.equal(sha(fs.readFileSync(path.join(root,u.frozen_ref))),u.sha256);
+});
+
+function replayTracking(branch,mode){
+  const root=branch.workspace,count=state(root).units.length;rewindBranch(branch);
+  for(let n=1;n<=count;n++){
+    const input=main(['revision','replay-input','--project',root,'--unit',String(n),'--revision-token',branch.token]);
+    if(n===1&&mode==='summary')input.summary+='；合成摘要澄清当日交接';
+    if(n===1&&mode==='timeline')input.changes.timeline_append=['合成时间锚澄清：当日交接1'];
+    const report=`审查/追踪重登-${++seq}.md`;file(root,report,'# 合成接口用例\n\n核验追踪变更协议，不冒充实际模型阅读或文学结论。\n');
+    input.replay_review={reviewer:'synthetic-interface-test',report,draft_sha256:input._replay.draft_sha256,checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+    cli(root,'record-preview',null,input,branch.token);cli(root,'record',null,input,branch.token);
+  }
+  reviewBranch(branch);
+}
+function trackingCommit(root,mode){const b=begin(root);replayTracking(b,mode);prepare(root,b);commit(root,b);return JSON.parse(fs.readFileSync(path.join(root,state(root).committed_revisions.at(-1).ref)));}
+for(const mode of ['summary','timeline'])test(`仅${mode}实际修正可用tracking闭环，正文默认门槛不变，后改须重核`,t=>{
+  const {root}=fixture(t,2);cli(root,'review',null,reviewInput(root));workflow(root,true);resolve(root,'I_CHECK');const before=state(root),bodies=before.units.map(u=>fs.readFileSync(path.join(root,u.draft))),record=trackingCommit(root,mode);
+  for(const [i,u]of state(root).units.entries())assert.deepEqual(fs.readFileSync(path.join(root,u.draft)),bodies[i]);const unchanged=rawState(root);
+  assert.equal(cli(root,'review-issues','apply',{...op(root),id:'I_CHECK',commit_id:record.id,reason:'默认仍只认正文修改'},undefined,2).code,'REVIEW_CHANGE_REQUIRED');assert.deepEqual(rawState(root),unchanged);
+  const input={...op(root),id:'I_CHECK',commit_id:record.id,change_scope:'tracking',reason:'只绑定已提交的实际登记追踪变化'},applied=cli(root,'review-issues','apply',input);assert.equal(applied.status,'applied');assert.equal(cli(root,'review-issues','apply',input).unchanged,true);
+  const application=state(root).review_workflow.issues.I_CHECK.application;assert.equal(application.change_scope,'tracking');assert.ok(application.tracking_changes.some(c=>c[mode==='summary'?'summary_changed':'snapshot_changed']));assert.ok(application.changes.every(c=>c.before===c.after));
+  const reviewed=cli(root,'review',null,reviewInput(root,false));cli(root,'review-issues','verify',{...op(root),id:'I_CHECK',review_ref:reviewed.ref,reviewer:'synthetic-interface-test',conclusion:'resolved',reason:'接口核验，不是文学验收'});assert.equal(cli(root,'review-issues','list').issues.find(i=>i.id==='I_CHECK').effective_status,'verified');
+  const history=state(root).review_workflow.events.slice();trackingCommit(root,mode==='summary'?'timeline':'summary');assert.equal(cli(root,'review-issues','list').issues.find(i=>i.id==='I_CHECK').effective_status,'needs-recheck');assert.deepEqual(state(root).review_workflow.events.slice(0,history.length),history);
+});
+test('tracking不把等价重登的新来源、报告及journal引用算作实际修改',t=>{
+  const {root}=fixture(t,2);cli(root,'review',null,reviewInput(root));workflow(root,true);resolve(root,'I_CHECK');const before=state(root),record=trackingCommit(root,'none'),after=state(root);assert.deepEqual(after.snapshot,before.snapshot);assert.deepEqual(after.units.map(u=>u.summary),before.units.map(u=>u.summary));assert.notEqual(after.units[0].journal,before.units[0].journal);assert.notDeepEqual(after.units[0].source_hashes,before.units[0].source_hashes);const unchanged=rawState(root),objects=fs.readdirSync(path.join(root,'.writer/objects')).sort();
+  assert.equal(cli(root,'review-issues','apply',{...op(root),id:'I_CHECK',commit_id:record.id,change_scope:'tracking',reason:'无实际追踪变化'},undefined,2).code,'REVIEW_CHANGE_REQUIRED');assert.deepEqual(rawState(root),unchanged);assert.deepEqual(fs.readdirSync(path.join(root,'.writer/objects')).sort(),objects);
+});
+test('tracking不能把提交后才采用的新登记当成修改前基线',t=>{
+  const {root}=fixture(t,1);cli(root,'review',null,reviewInput(root));workflow(root,true);const record=trackingCommit(root,'summary');resolve(root,'I_CHECK');const unchanged=rawState(root);assert.equal(cli(root,'review-issues','apply',{...op(root),id:'I_CHECK',commit_id:record.id,change_scope:'tracking',reason:'采用基线已是修改后'},undefined,2).code,'REVIEW_PUBLICATION_MISMATCH');assert.deepEqual(rawState(root),unchanged);
+});
+test('tracking模式与事务归档须真实有效，错误模式及篡改旧状态不写入',t=>{
+  const {root}=fixture(t,1);cli(root,'review',null,reviewInput(root));workflow(root,true);resolve(root,'I_CHECK');const record=trackingCommit(root,'summary'),unchanged=rawState(root),objects=fs.readdirSync(path.join(root,'.writer/objects')).sort();
+  for(const change_scope of [null,'unknown',{},['tracking']]){assert.equal(cli(root,'review-issues','apply',{...op(root),id:'I_CHECK',commit_id:record.id,change_scope,reason:'错误模式'},undefined,2).code,'REVIEW_INPUT_INVALID');assert.deepEqual(rawState(root),unchanged);}
+  const session=JSON.parse(fs.readFileSync(path.join(root,`.writer/revisions/${record.session_id}/session.json`))),tx=JSON.parse(fs.readFileSync(path.join(root,`.writer/transactions/${session.transaction_id}/transaction.json`))),row=tx.plan.find(r=>r.file==='.writer/state.json');file(root,row.old_ref,'破坏已发布事务的旧登记归档');assert.equal(cli(root,'review-issues','apply',{...op(root),id:'I_CHECK',commit_id:record.id,change_scope:'tracking',reason:'不能追认坏归档'},undefined,2).code,'TRANSACTION_CORRUPT');assert.deepEqual(rawState(root),unchanged);assert.deepEqual(fs.readdirSync(path.join(root,'.writer/objects')).sort(),objects);
 });
