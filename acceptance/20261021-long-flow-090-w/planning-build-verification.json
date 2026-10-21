@@ -1,0 +1,147 @@
+{
+  "ok": true,
+  "at": "2026-10-21T03:00:44.436Z",
+  "scope": "final planning-order candidate source and actual ZIP extraction full regression before isolated install; D replay uses unchanged generation2 independently",
+  "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+  "archive_sha256": "04bc027b65ad6b0ae8532a887b8025ae7a2f31bd5ad8cd6568aa713d5b5502c5",
+  "tests": [
+    {
+      "label": "planning-source-full-tests",
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2,
+      "skips": [
+        "﹣ 合章拒绝符号链接分段和目标目录 (0.2981ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+        "﹣ 符号链接不允许作为作品输入 (3856.9601ms) # 当前环境不允许创建链接"
+      ],
+      "stdout_sha256": "a2e8372cdf6108952e6e2a6a052af57e67497927412d40749a586bbe9c1fa3e6",
+      "receipt": {
+        "label": "planning-source-full-tests",
+        "exe": "npm.cmd",
+        "args": [
+          "test",
+          "--",
+          "--test-concurrency=2"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer",
+        "started_at": "2026-10-21T02:46:28.588Z",
+        "elapsed_ms": 832868,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 20531,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    },
+    {
+      "label": "planning-package-full-tests",
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2,
+      "skips": [
+        "﹣ 合章拒绝符号链接分段和目标目录 (1.5859ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+        "﹣ 符号链接不允许作为作品输入 (2742.0955ms) # 当前环境不允许创建链接"
+      ],
+      "stdout_sha256": "5517ebc3c93831ab0c8c1cc141e26a109a5a1a2bc41e5320bd61d409c3812146",
+      "receipt": {
+        "label": "planning-package-full-tests",
+        "exe": "npm.cmd",
+        "args": [
+          "test",
+          "--",
+          "--test-concurrency=2"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer\\.tmp\\W 规划引用顺序验收包解压\\ai-writer-0.9.0",
+        "started_at": "2026-10-21T02:46:28.587Z",
+        "elapsed_ms": 813491,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 20534,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    }
+  ],
+  "doctors": [
+    {
+      "label": "planning-source-doctor",
+      "ok": true,
+      "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+      "runtime_id": "7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f",
+      "errors": [],
+      "warnings": [],
+      "receipt": {
+        "label": "planning-source-doctor",
+        "exe": "npm.cmd",
+        "args": [
+          "run",
+          "doctor"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer",
+        "started_at": "2026-10-21T02:47:00.916Z",
+        "elapsed_ms": 4282,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 15225,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    },
+    {
+      "label": "planning-package-doctor",
+      "ok": true,
+      "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+      "runtime_id": "7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f",
+      "errors": [],
+      "warnings": [],
+      "receipt": {
+        "label": "planning-package-doctor",
+        "exe": "npm.cmd",
+        "args": [
+          "run",
+          "doctor"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer\\.tmp\\W 规划引用顺序验收包解压\\ai-writer-0.9.0",
+        "started_at": "2026-10-21T02:47:00.728Z",
+        "elapsed_ms": 2991,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 15539,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    }
+  ],
+  "zip_files": 325,
+  "source_mapping_files": 323,
+  "frozen_source_files": 324,
+  "changed_since_generation2": [
+    "CHANGELOG.md",
+    "RELEASE_NOTES.md",
+    "docs/quickstart.md",
+    "docs/user-guide.md",
+    "docs/workflow.md",
+    "lib/help.mjs"
+  ],
+  "all_frozen_source_and_package_bytes_unchanged": true,
+  "scenario_units": 24,
+  "scenario_installed_generation": 2,
+  "scenario_installed_content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+  "installed_in_scenario": false,
+  "final_F_read_complete": false,
+  "remote_ci_executed": false
+}

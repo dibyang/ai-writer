@@ -1,0 +1,69 @@
+{
+  "ok": false,
+  "error": "本轮任务“W-F同ID恢复：19章题正式draft修订已completed并应用，提交后当前1—24完整实读报告已登记、I_F19_TITLE_TIME有效verified；本次24章有限试验结束，保留历史，当前仅讨论/暂停保护及草稿导出，不写25。”不允许 draft 25–25；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs' record-template '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "W-F同ID恢复：19章题正式draft修订已completed并应用，提交后当前1—24完整实读报告已登记、I_F19_TITLE_TIME有效verified；本次24章有限试验结束，保留历史，当前仅讨论/暂停保护及草稿导出，不写25。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "24章有限试验结束；不写25、不造25章纲或正文，next_unit25不是许可。",
+        "保持本轮保护结果和旧F记录；不改根产品、不换包、不Git提交推送、不上传发布。",
+        "当前结论是模型知情复核，非真人市场或文学定稿；未来再变稿/依赖须重核。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "当前24章有限范围已结束，后续25没有授权。",
+          "全天穿洗/多日袋耐久/长期凳承重、真人市场等未覆盖；不冒充完成。"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 6
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

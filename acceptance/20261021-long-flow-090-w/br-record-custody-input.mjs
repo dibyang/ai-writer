@@ -1,0 +1,2 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';
+const W=path.dirname(fileURLToPath(import.meta.url)),x=JSON.parse(fs.readFileSync(path.join(W,'inputs/br-record-18-corrected.json'),'utf8'));x.changes.ledger.P_W_COAT.previous_holder='许蓉女儿';fs.writeFileSync(path.join(W,'inputs/br-record-18-custody.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});console.log('coat previous_holder explicitly follows actual return in chapter');

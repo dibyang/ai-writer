@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-cross-artifact-lifecycle-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-cross-artifact-lifecycle-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-DUAL-001-R003",
+      "severity": "blocker",
+      "location": "input.cross_boundary_artifact",
+      "recommendation": "A cross-boundary artifact needs a lifecycle: independently observed old state, present/source state, active carry or trigger condition, one-way cost or modern loss, handoff/use, and final storage or evidence state.",
+      "source_refs": [
+        "docs/traceability.md#SGM-DUAL-001"
+      ]
+    }
+  ]
+}

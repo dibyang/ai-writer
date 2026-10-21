@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const W=path.dirname(fileURLToPath(import.meta.url));
+const P=path.join(W,'scenario/东岸末班船-规模验证');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const raw=fs.readFileSync(path.join(P,'.writer/state.json'));
+const state=JSON.parse(raw);
+const drafts=state.units.map(u=>{const b=fs.readFileSync(path.join(P,u.draft));const t=b.toString('utf8');return {unit:u.unit,draft:u.draft,sha256:sha(b),bytes:b.length,body_han:(t.replace(/^#.*\r?\n/,'').match(/\p{Script=Han}/gu)||[]).length};});
+const observations=Object.fromEntries(Object.entries(state.snapshot.ledger).filter(([,v])=>v.type==='observation').map(([k,v])=>[k,{type:v.type,statement:v.statement,...(Object.hasOwn(v,'author_truth')?{author_truth:v.author_truth}:{})}]));
+const out=process.argv[2]||'d-start-baseline.json';
+fs.writeFileSync(path.join(W,out),JSON.stringify({at:new Date().toISOString(),project:P,state_sha256:sha(raw),state,drafts,observations},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({out,revision:state.revision,units:drafts.length,observations,drafts:drafts.filter(x=>x.unit>=13)},null,2));

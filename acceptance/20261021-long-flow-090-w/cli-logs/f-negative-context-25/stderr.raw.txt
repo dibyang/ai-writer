@@ -1,0 +1,69 @@
+{
+  "ok": false,
+  "error": "本轮任务“W-F已完整实读当前1—24并登记报告；24章有限试验的本轮读取结束，I_F19_TITLE_TIME高置信未解决报根正规修订，未达到无问题通过条件。仅讨论、核暂停保护和草稿导出，不写25、不修正文。”不允许 draft 25–25；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "paused",
+    "task": "W-F已完整实读当前1—24并登记报告；24章有限试验的本轮读取结束，I_F19_TITLE_TIME高置信未解决报根正规修订，未达到无问题通过条件。仅讨论、核暂停保护和草稿导出，不写25、不修正文。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持I_F19_TITLE_TIME open，不能称已修复、文学通过或作者定稿。",
+        "不新增25细纲或正文，不修改任何正文、units、snapshot或观察保护字段。",
+        "只在W保存证据和草稿导出，不Git提交推送、上传发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "D三项普通事实修改在F当前全文中核有真实下游；原计划保持历史意图，不能拼旧分段。",
+          "F完整1—24已读，I_F19_TITLE_TIME高置信minor未解；待根正规修订后按新SHA复核，不等于文学定稿。"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 6
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "planned-not-completed",
+  "at": "2026-10-20T16:10:42.870Z",
+  "source_units": 12,
+  "target_units": 24,
+  "new_units": {
+    "from": 13,
+    "through": 24
+  },
+  "minimum_han": 6000,
+  "larger_units": [
+    15,
+    18,
+    21,
+    24
+  ],
+  "larger_minimum_han": 8000,
+  "minimum_parts": 3,
+  "larger_minimum_parts": 4,
+  "source_body_and_tracking_preserved_through": 12,
+  "stages": [
+    "A: chapter13 two parts then same-thread resume through15",
+    "B: fresh thread16-17 then same-thread resume18",
+    "C: fresh thread19-20 then same-thread resume21",
+    "D: fresh thread22-24 then revision13-24 first replay stop",
+    "D-resume: same revision/token replay14-24 and current full-tail reviews/prepare/commit",
+    "F: fresh current full read1-24, pause, denied25, draft export"
+  ],
+  "revision_choices": {
+    "ordinary_non_observation_origins": [
+      13,
+      17,
+      21
+    ],
+    "require_real_downstream": true,
+    "minimum_changed_body_chapters": 6
+  },
+  "scope": "isolated acceptance sample only",
+  "exclusions": [
+    "existing author works",
+    "prior sealed evidence",
+    "Git commit/push",
+    "release",
+    "human blind read",
+    "remote cross-platform CI"
+  ]
+}

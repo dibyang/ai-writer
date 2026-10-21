@@ -1,0 +1,3 @@
+# 24关联账本核对
+
+预览0，21候选/8显示/13遗漏。F_W_BOOK_RETURN保留22当日已还事实，书当前位置由本次P_W_PICTURE_BOOK更新；F_W_CLOTH_ROTATION历史少卖与新布不因沈24歇班或看书而抹掉；F_W_SHIFT_SWAP仅19换班，24常规18:30交接不是重新改19；F_W_CURTAIN_WASH仍15只洗一幅，24明确未拆另一幅；F_W_POT_REPAIR仍14实际38已收，未新修锅。P_ROUTE_MASTER/T_EARLY_BATCH/T_ROUTE_STEP本章无新路图/早取变化，钥匙正常交何不等于这些条目全部知情重写。上述按完整24及本轮已读原文范围核，未把13个省略候选称全面语义通过；不动任何observation三字段。

@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "scope": "completed-A-through-D-public-tool-inputs-and-results",
+  "extraction": "Only allowed public tool rows and payload keys retained, with source offsets and exact line hashes. Messages, reasoning, system/environment and internal metadata rows excluded. Actual interrupted call pairs preserved and disclosed, not repaired.",
+  "threads": [
+    {
+      "label": "a",
+      "thread_id": "01a15a15-6242-7581-9fd2-8f302b9e749f",
+      "source": "C:/Users/admin/.codex/sessions/2026/10/21/rollout-2026-10-21T00-11-53-01a15a15-6242-7581-9fd2-8f302b9e749f.jsonl",
+      "source_sha256": "598b106a299c29eb2e7c0eb2f5474420cc3e73266b5519383a22e8af805b76ef",
+      "source_bytes": 6536727,
+      "extracted": "a.public-tools.jsonl",
+      "extracted_sha256": "731ef6a7657696e4e0e708eb73cbde632093b42601c6da889bde96d7fbf96774",
+      "tool_rows": 576,
+      "counts": {
+        "function_call": 199,
+        "function_call_output": 199,
+        "custom_tool_call": 89,
+        "custom_tool_call_output": 89
+      },
+      "call_ids": 288,
+      "unmatched_pairs": [],
+      "interrupted_history": true
+    },
+    {
+      "label": "b",
+      "thread_id": "01a15b9a-973c-7953-b8d2-dd7963dbd0d5",
+      "source": "C:/Users/admin/.codex/sessions/2026/10/21/rollout-2026-10-21T07-17-00-01a15b9a-973c-7953-b8d2-dd7963dbd0d5.jsonl",
+      "source_sha256": "16154e7426bbbdc339282036477fe7ebf8cacec23d24218f332cba802769e864",
+      "source_bytes": 5871517,
+      "extracted": "b.public-tools.jsonl",
+      "extracted_sha256": "6541eb434291b8916cd54867f4b985a9a4954b7ffd8b491ad202878502253342",
+      "tool_rows": 504,
+      "counts": {
+        "function_call": 183,
+        "function_call_output": 183,
+        "custom_tool_call": 69,
+        "custom_tool_call_output": 69
+      },
+      "call_ids": 252,
+      "unmatched_pairs": [],
+      "interrupted_history": false
+    },
+    {
+      "label": "c",
+      "thread_id": "01a15bea-c30a-7d40-916f-26f7e85cbfe5",
+      "source": "C:/Users/admin/.codex/sessions/2026/10/21/rollout-2026-10-21T08-44-34-01a15bea-c30a-7d40-916f-26f7e85cbfe5.jsonl",
+      "source_sha256": "21a5b7a6af3ea032c18540c104a481a9fb9a1bf00c054cac08bdf63f67576012",
+      "source_bytes": 5922295,
+      "extracted": "c.public-tools.jsonl",
+      "extracted_sha256": "4628b28aa592ed813fd6724e2e14d5895e11e6b10aa75da0791032c1cfa228f4",
+      "tool_rows": 486,
+      "counts": {
+        "function_call": 173,
+        "function_call_output": 173,
+        "custom_tool_call": 70,
+        "custom_tool_call_output": 70
+      },
+      "call_ids": 243,
+      "unmatched_pairs": [],
+      "interrupted_history": false
+    },
+    {
+      "label": "d",
+      "thread_id": "01a15c1c-2d9a-71d1-b203-98006526cfdf",
+      "source": "C:/Users/admin/.codex/sessions/2026/10/21/rollout-2026-10-21T09-38-33-01a15c1c-2d9a-71d1-b203-98006526cfdf.jsonl",
+      "source_sha256": "d36aa7fd300aa1dec20376a0963b5f55e538c3a6ab25f9f806addcd1cf0c9fc8",
+      "source_bytes": 10127069,
+      "extracted": "d.public-tools.jsonl",
+      "extracted_sha256": "8f4178466908501d8218b38af449ae75a3e11075ee7fb94935fbb16379e19c56",
+      "tool_rows": 774,
+      "counts": {
+        "function_call": 280,
+        "function_call_output": 280,
+        "custom_tool_call": 107,
+        "custom_tool_call_output": 107
+      },
+      "call_ids": 387,
+      "unmatched_pairs": [],
+      "interrupted_history": false
+    }
+  ],
+  "script_errors": [
+    {
+      "thread_id": "01a15b9a-973c-7953-b8d2-dd7963dbd0d5",
+      "source_line": 454,
+      "call_id": "call_9b99eed2a9b04ba9bd9eaef66b520de0",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 1.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"d41e4b\",\"wall_time_seconds\":0.2636281,\"exit_code\":0,\"original_token_count\":0,\"output\":\"\"}"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\napply_patch verification failed: Failed to find expected lines in D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\分段\\0016\\v1\\02.md:\n绳挂稳，她洗过手，回来装下一份，手上比早晨快了，指腹却在纸边磨得有一点涩。"
+        }
+      ],
+      "source_line_sha256": "14128c1738181bc62d8190fb5433ab675b5e25e773cab62c71e3fb31bfdc1833"
+    },
+    {
+      "thread_id": "01a15b9a-973c-7953-b8d2-dd7963dbd0d5",
+      "source_line": 1075,
+      "call_id": "call_884d2d98d8c84cf79a0c0701de91cfe0",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script failed\nWall time 0.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Script error:\nTypeError: tools.mcp__fastctx__read is not a function\n    at exec_main.mjs:3:56\n    at Array.map (<anonymous>)\n    at exec_main.mjs:3:43"
+        }
+      ],
+      "source_line_sha256": "f2058121a5177ec7a0f21b9091e87b1d60957c7c94713c2b08c53f86737a0ac0"
+    }
+  ]
+}

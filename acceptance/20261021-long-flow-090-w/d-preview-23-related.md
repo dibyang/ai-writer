@@ -1,0 +1,3 @@
+# 23关联账本核对
+
+预览0，26候选/8显示/18遗漏。已据22/23完整稿核：F_W_BOOK_RETURN/P_W_PICTURE_BOOK的22已还及沈床头仍成立；P_W_COAT仍母柜/未补，23再次取比后归柜无需换所有人；T_W_EVENING_CLASS明确仍仅18已上，22筹布是历史过程，23干后裁片已在P_W_PATCH_CLOTH更新，未把第二课提前登记。T_W_CURTAIN_BAG的18初次兑现及21有限补边、T_W_BAG_EDGE_REPAIR已有限完成均保留，物件当前内容在P_W_CURTAIN_BAG更新。F_W_SHIFT_SWAP/F_W_CLOTH_ROTATION是19/20—21有日期的历史，不从23推成新事实。未声称18省略条目全面语义通过。另发现本次输入许状态误打“相等”，另存v2改为“互等”，正文/来源/report字节不变。

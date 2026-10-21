@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import{fileURLToPath}from'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),p=path.join(base,'scenario/东岸末班船-规模验证'),s=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json'),'utf8')),old=JSON.parse(fs.readFileSync(path.join(base,'parent-b-complete-state.json'),'utf8'));
+assert.equal(s.revision,78);assert.deepEqual(s.units,old.units);assert.deepEqual(s.snapshot,old.snapshot);
+const workflow=structuredClone(s.governance);workflow.task='W指引更新完成，18章暂停，仅讨论与读取当前证据；等待新鲜C独立恢复并正式限定下一步授权。';workflow.authorization={allowed_actions:['discuss'],draft_range:null,revise_range:null,stop_conditions:['本次仅恢复指引更新后的暂停状态，不新增、修订、登记任何正文；19章尚未授权。','保留完整工具更新事务、旧包备份及全部历史证据。']};
+fs.writeFileSync(path.join(base,'guidance-workflow-pause.json'),JSON.stringify({expected_revision:s.revision,operation_id:'w-guidance-update-pause-18',author_evidence:JSON.parse(fs.readFileSync(path.join(base,'guidance-author-evidence.json'),'utf8')),workflow},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,expected_revision:s.revision,units_unchanged:true,snapshot_unchanged:true,tool_control:s.tool_control}));

@@ -1,0 +1,3112 @@
+{
+  "ok": true,
+  "at": "2026-10-20T23:24:58.003Z",
+  "commands": 86,
+  "prelaunch_failures": [
+    {
+      "group": "commands",
+      "label": "source-full-tests",
+      "kind": "acceptance-wrapper-prelaunch-rejection",
+      "child_started": false,
+      "wrapper_exit_code": 1,
+      "message": "Unsafe npm args",
+      "argument": "--test-concurrency=2",
+      "evidence_basis": "Root tool call transcript; original wrapper created empty stdout/stderr files before validation. No npm child result is invented.",
+      "resolution": "Allow literal equals sign in acceptance wrapper safe npm argv regex; retry with distinct source-full-tests-r2 label. Product source unchanged."
+    }
+  ],
+  "nonzero": [
+    {
+      "group": "commands",
+      "label": "codex-a-resume",
+      "exe": "C:/Users/admin/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+      "args": [
+        "exec",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "-C",
+        "D:/work/other/ai-writer",
+        "resume",
+        "--json",
+        "-o",
+        "acceptance/20261021-long-flow-090-w/codex-a-resume-last.md",
+        "01a15a15-6242-7581-9fd2-8f302b9e749f",
+        "-"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-20T16:35:48.954Z",
+      "elapsed_ms": 7200049,
+      "exit_code": null,
+      "signal": "SIGTERM",
+      "error": null,
+      "stdout_bytes": 1013425,
+      "stderr_bytes": 18421,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\prompt-a-resume.md",
+        "sha256": "47b93aebe0680ffb217cb4ca1c1e1a0b5a109d4c9b5d56ad48b82d54b65a8fae"
+      },
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "stdout_sha256": "85412636c8bf56a7ca74a3e65a7d24ced801a04d6cec30faf973af636f0fc7c9",
+      "stderr_sha256": "ba010f9eb756f45ffa332ab228d4a74a7ac5b1826f3e919703dad779229f6360"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-workflow",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:17:27.404Z",
+      "elapsed_ms": 108,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 343,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "840730f933a13952a71de443e728a2a3ba00d043147263b5c927afc593f88e68"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-budget-too-small",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "13",
+        "--max-chars",
+        "1000",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:34:46.589Z",
+      "elapsed_ms": 1656,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 3071,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "70521ed4bd63b02726a992bc34e1d4fe4dc374570491671c85265b9655681cca"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-budget-too-small-r2",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "13",
+        "--max-chars",
+        "1000",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:35:26.427Z",
+      "elapsed_ms": 1537,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 3071,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "70521ed4bd63b02726a992bc34e1d4fe4dc374570491671c85265b9655681cca"
+    }
+  ],
+  "native": [
+    {
+      "label": "codex-a-first",
+      "thread_id": "01a15a15-6242-7581-9fd2-8f302b9e749f",
+      "exit_code": 0,
+      "events": 299,
+      "elapsed_ms": 1344606,
+      "stdout_sha256": "703a0681ad23ece64f312c477c338d042753b658104424a4d244bb62b8f76415",
+      "stderr_sha256": "94c68373872dafc641f7e963cc39cfd85d451d7f9350efd5d3f0b56cea58650d"
+    },
+    {
+      "label": "codex-a-network-recovery",
+      "thread_id": "01a15a15-6242-7581-9fd2-8f302b9e749f",
+      "exit_code": 0,
+      "events": 128,
+      "elapsed_ms": 648966,
+      "stdout_sha256": "8bb925a8c5bf96de149724fb2df0b0de7d6c1b35be4f1e1dfe04fdd2e7dcab4c",
+      "stderr_sha256": "f72b9f93324302a64099d8eb2899cf8075522653e5992cfcf437a98d45047c57"
+    },
+    {
+      "label": "codex-a-resume",
+      "thread_id": "01a15a15-6242-7581-9fd2-8f302b9e749f",
+      "exit_code": null,
+      "events": 423,
+      "elapsed_ms": 7200049,
+      "stdout_sha256": "85412636c8bf56a7ca74a3e65a7d24ced801a04d6cec30faf973af636f0fc7c9",
+      "stderr_sha256": "ba010f9eb756f45ffa332ab228d4a74a7ac5b1826f3e919703dad779229f6360"
+    }
+  ],
+  "native_failures": [
+    {
+      "label": "codex-a-network-recovery",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_25",
+          "type": "command_execution",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node acceptance/20261021-long-flow-090-w/an-prepare-review.mjs'",
+          "aggregated_output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Missing actual quote 10: 将已经抬起的手放下来\r\n    at file:///D:/work/other/ai-writer/acceptance/20261021-long-flow-090-w/an-prepare-review.mjs:50:199\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n",
+          "exit_code": 1,
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... 2/5 (stream disconnected before completion: tls handshake eof)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... 3/5 (stream disconnected before completion: tls handshake eof)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... 4/5 (stream disconnected before completion: tls handshake eof)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... 5/5 (stream disconnected before completion: tls handshake eof)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    },
+    {
+      "label": "codex-a-resume",
+      "event": {
+        "type": "error",
+        "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+      }
+    }
+  ],
+  "incomplete": [
+    {
+      "group": "commands",
+      "label": "codex-b-first"
+    }
+  ],
+  "command_receipts": [
+    {
+      "group": "commands",
+      "label": "codex-a-first",
+      "exe": "C:/Users/admin/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+      "args": [
+        "exec",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "-C",
+        "D:/work/other/ai-writer",
+        "-o",
+        "acceptance/20261021-long-flow-090-w/codex-a-first-last.md",
+        "-"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-20T16:11:52.789Z",
+      "elapsed_ms": 1344606,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 894001,
+      "stderr_bytes": 1696,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\prompt-a-first.md",
+        "sha256": "043ee501466c8e088d6a43933636f673144c8aa2b3e889350e1a2bdd14f5deda"
+      },
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "stdout_sha256": "703a0681ad23ece64f312c477c338d042753b658104424a4d244bb62b8f76415",
+      "stderr_sha256": "94c68373872dafc641f7e963cc39cfd85d451d7f9350efd5d3f0b56cea58650d"
+    },
+    {
+      "group": "commands",
+      "label": "codex-a-network-recovery",
+      "exe": "C:/Users/admin/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+      "args": [
+        "exec",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "-C",
+        "D:/work/other/ai-writer",
+        "resume",
+        "--json",
+        "-o",
+        "acceptance/20261021-long-flow-090-w/codex-a-network-recovery-last.md",
+        "01a15a15-6242-7581-9fd2-8f302b9e749f",
+        "-"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-20T23:05:25.863Z",
+      "elapsed_ms": 648966,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 311988,
+      "stderr_bytes": 8543,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\prompt-a-network-recovery.md",
+        "sha256": "b1d97389a8a549225a561607fadc6e3550ee8e86e44f3db22d77bebfd904bc66"
+      },
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "stdout_sha256": "8bb925a8c5bf96de149724fb2df0b0de7d6c1b35be4f1e1dfe04fdd2e7dcab4c",
+      "stderr_sha256": "f72b9f93324302a64099d8eb2899cf8075522653e5992cfcf437a98d45047c57"
+    },
+    {
+      "group": "commands",
+      "label": "codex-a-resume",
+      "exe": "C:/Users/admin/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+      "args": [
+        "exec",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "-C",
+        "D:/work/other/ai-writer",
+        "resume",
+        "--json",
+        "-o",
+        "acceptance/20261021-long-flow-090-w/codex-a-resume-last.md",
+        "01a15a15-6242-7581-9fd2-8f302b9e749f",
+        "-"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-20T16:35:48.954Z",
+      "elapsed_ms": 7200049,
+      "exit_code": null,
+      "signal": "SIGTERM",
+      "error": null,
+      "stdout_bytes": 1013425,
+      "stderr_bytes": 18421,
+      "input": {
+        "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\prompt-a-resume.md",
+        "sha256": "47b93aebe0680ffb217cb4ca1c1e1a0b5a109d4c9b5d56ad48b82d54b65a8fae"
+      },
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "stdout_sha256": "85412636c8bf56a7ca74a3e65a7d24ced801a04d6cec30faf973af636f0fc7c9",
+      "stderr_sha256": "ba010f9eb756f45ffa332ab228d4a74a7ac5b1826f3e919703dad779229f6360"
+    },
+    {
+      "group": "commands",
+      "label": "root-doctor-source",
+      "exe": "npm.cmd",
+      "args": [
+        "run",
+        "doctor"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-20T16:13:15.771Z",
+      "elapsed_ms": 6907,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15225,
+      "stderr_bytes": 0,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "stdout_sha256": "a29cc57383bf798f44b1f669a7f1a3ea7f913b7e20c48be66bbf05aa4308ba5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "commands",
+      "label": "source-full-tests-r2",
+      "exe": "npm.cmd",
+      "args": [
+        "test",
+        "--",
+        "--test-concurrency=2"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "started_at": "2026-10-20T16:28:07.870Z",
+      "elapsed_ms": 534313,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 20512,
+      "stderr_bytes": 0,
+      "input": null,
+      "before_state_sha256": null,
+      "after_state_sha256": null,
+      "stdout_sha256": "131839be6e04f8b699fcd64b1c97e5d5d108d4d679b5496c9a384a478b995654",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-before-draft-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:21:48.937Z",
+      "elapsed_ms": 268,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 14631,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "3bc41c090d1cf8c674d2dfcd43c90a4211ef1608fc9ddb880e1b29c264581956",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-context-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "13",
+        "--max-chars",
+        "80000",
+        "--out",
+        ".writer/drafts/w-a-context-13.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:21:53.396Z",
+      "elapsed_ms": 355,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 57593,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "c049fac08d1914d6ce044e3d3fdd3de2223bf81e04575d9103dccd72933d6b21",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-decision-selected",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-decision-selected.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:21:40.795Z",
+      "elapsed_ms": 207,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 293,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-decision-selected.json",
+          "sha256": "e39b37e242da2acabfcccb33465595d710ea636db1d0b01037d29ff8bcf45396"
+        }
+      ],
+      "before_state_sha256": "fbccabeffffe5b05ba68a1bd752e20f8df6b8b9ce0477ec08b19f4b7b551629c",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "9a75f6d33f5fb830e259bf5e1f4f69e6cab1efb81c354fa5a633d2b2467e5b28",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-doctor",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:12:28.368Z",
+      "elapsed_ms": 226,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15964,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "d78fc9e42a67bc3058136b79a9526eba200bb42138f90e8092fe777778745e57",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-final-check",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:30:29.565Z",
+      "elapsed_ms": 314,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 4166,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "454f287633626294ed01632b2e2ec7ea492ffbe28fa14ab37f69f2e657961f4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-final-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:30:29.565Z",
+      "elapsed_ms": 414,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 14631,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "3bc41c090d1cf8c674d2dfcd43c90a4211ef1608fc9ddb880e1b29c264581956",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-help",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "help",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:12:19.837Z",
+      "elapsed_ms": 114,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 9055,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "e4bd9611f4a4294411c54996c7ae55ddedd04a7eb301a6faabf24e75e5fc7749",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-identify",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:12:28.368Z",
+      "elapsed_ms": 153,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 13850,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "50dfaf61ebc9855ac0d67480b3007a977052b745164302604900714e2723549e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-plan-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-plan-13.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:56.643Z",
+      "elapsed_ms": 193,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-plan-13.json",
+          "sha256": "261265416cdf78fc1cdb4700af578fd1c53013eb85a32d74303e33b3b0646a85"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "91095642f249c279d1bd4c27ecef97040412d70e8306b09af2cef409d31f6410",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-plan-14",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-plan-14.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:58.428Z",
+      "elapsed_ms": 205,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-plan-14.json",
+          "sha256": "a5e9d05e16c8159cb6e3741e184af93c84e37a6b435ad511054fd3f62ad95353"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "82e3df4ae8543e8feaecd05a33a92b6574760897489dc56e202ef074b3c4f809",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-plan-15",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-plan-15.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:21:00.237Z",
+      "elapsed_ms": 197,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-plan-15.json",
+          "sha256": "ffabd425941d8b1f10b923dfe8dcd9ac5de7a3391363813eb59211c8cc3af068"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "0bb04e02973628a9ee4a331379145f42945898a7745c19eee9839b4b884f6702",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-plan-help",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--help",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:19:25.062Z",
+      "elapsed_ms": 157,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 1521,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "b382ce6f2af2322d4a37257040732c9c05f88775f3a73fd0e5e8ccce777b298c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-record-template-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "13",
+        "--draft",
+        "正文/0013-桌边留一半-v1.md",
+        "--out",
+        ".writer/drafts/w-a-record-template-13.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:22:22.020Z",
+      "elapsed_ms": 380,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2081,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "8a08fe77a78e4fcd3020401c896f2de985975b6fae1802dfc6e806ff1308a58c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-revision-list",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:12:27.291Z",
+      "elapsed_ms": 109,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2638,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "5eba0c5468d3b9d84a7f1f6cd50b7c7f2e28cd871383d7447a9fefcead41cf4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--view",
+        "full",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:12:26.100Z",
+      "elapsed_ms": 294,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 74467,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "9bdcdf18bb81d391e4d6d8f9cdaa7104cee1f0113d6ecce0e5676cb38176fdf9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-volume-help",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "volume",
+        "--help",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:19:23.134Z",
+      "elapsed_ms": 104,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 1646,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "72b0728b2ffb6526c3f3c72fd593de9675aa929d6c1bf1aaa106df3fdb069b67",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-volume-v6",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "volume",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-volume-v6.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:43.177Z",
+      "elapsed_ms": 193,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 76,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-volume-v6.json",
+          "sha256": "a4144de97b63385aa76e4cb28a586a3f427a0e661122f254f8013c7dd674a33d"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "8e3d702b09419df8a5b49862d894e75ab08a5e50889aac668777760903c538c6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-volume-v7",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "volume",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-volume-v7.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:48.633Z",
+      "elapsed_ms": 195,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 76,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-volume-v7.json",
+          "sha256": "785550c82b041cb9442c0bdbf0c7f141a376e3403cb903601d3ede927c13af1c"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "3bc21d2220856b0c4a3aad51678cfd431bc03258a68014c57c9c6860fd6b8345",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-volume-v8",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "volume",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-volume-v8.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:50.469Z",
+      "elapsed_ms": 203,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 76,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-volume-v8.json",
+          "sha256": "bd5d1b8f5884fcf1a8631dcd26a6d324c281eac7c9763fd69b833c4d81dd865a"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "b55b53a4fc7d19cdfea3f22597b9c289634aa8e2a4c594148fa8d7a168569d19",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-volume-v9",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "volume",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-volume-v9.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:52.260Z",
+      "elapsed_ms": 197,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 76,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-volume-v9.json",
+          "sha256": "b7a893b8448ba034df19b10b075b49086620bac2f7bac4fb7caa29a3cd206510"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "6c827251981d9dce2a6587cd752302ce12cc10a14cdb7fc5fbf51d4534f19cc9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-workflow-official-refs",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-workflow-official-refs.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:21:33.033Z",
+      "elapsed_ms": 206,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 260,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-workflow-official-refs.json",
+          "sha256": "32df34633b922941ad0b03fefa4028f36f7302d96fe36b656b726ce822670605"
+        }
+      ],
+      "before_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "after_state_sha256": "fbccabeffffe5b05ba68a1bd752e20f8df6b8b9ce0477ec08b19f4b7b551629c",
+      "stdout_sha256": "a55bcd2c3b50220a840d260a6f44b5df3c57b8c6cccef7e2b3cac4c642630f58",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-workflow-show",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:12:25.094Z",
+      "elapsed_ms": 188,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 4454,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "c7eabef3a21660d17516ed056ab224c4e0a57eddf7098fab85d5de5f7ddf1af5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "a-workflow-trial",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/a-workflow-trial.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:20:37.486Z",
+      "elapsed_ms": 225,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 259,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\a-workflow-trial.json",
+          "sha256": "8166f2311120b81dbfcbc0e232289394c199dab98b9f7c7b8769757f20ea7c4f"
+        }
+      ],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "e400d1891daec50ad0daea442c2ecbd122172100e655e57c22afadd6d9ee2eef",
+      "stdout_sha256": "ee61a7acd4c79ba496ef9ea8ab9a102933c385a3b17e46a851d671a577b31b78",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-check-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:11:33.157Z",
+      "elapsed_ms": 278,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 4166,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "039f41df4e18d96a496cf5d4fbbadb1e62d7c2f6e21575313133a5d9cef7dc76",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-check-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:05:50.846Z",
+      "elapsed_ms": 457,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 4224,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "after_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "stdout_sha256": "1379b41d19bb33f0d6c5326506a01751f28c74e87ce93c5421b0ffebea07fbcb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-check-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:10:21.827Z",
+      "elapsed_ms": 294,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 4166,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "after_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "stdout_sha256": "43cdacc276764e923b3b1f0a970d12bd24d85956564166a8b0047fc8039b5c22",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-doctor-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:11:33.180Z",
+      "elapsed_ms": 225,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15964,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "d78fc9e42a67bc3058136b79a9526eba200bb42138f90e8092fe777778745e57",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-doctor-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:10:22.213Z",
+      "elapsed_ms": 212,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15964,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "after_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "stdout_sha256": "d78fc9e42a67bc3058136b79a9526eba200bb42138f90e8092fe777778745e57",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-identify-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:05:51.965Z",
+      "elapsed_ms": 317,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 13850,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "after_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "stdout_sha256": "50dfaf61ebc9855ac0d67480b3007a977052b745164302604900714e2723549e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-pause-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/an-workflow-paused.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:10:52.551Z",
+      "elapsed_ms": 279,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 263,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\an-workflow-paused.json",
+          "sha256": "5e94ee665db4cb427d62c2bc5bdf63db33262d1bb8530f0bf3ea78096e264aad"
+        }
+      ],
+      "before_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "0caf2bc19708f85086583eae8919a70145d92409915cbeeb98c0e80fe054557c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-review-current",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "review",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/an-review-10-15-v2.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:10:02.763Z",
+      "elapsed_ms": 326,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 207,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\an-review-10-15-v2.json",
+          "sha256": "d55214c6a4b5df5e6fcd00b11f5929461371f7f98e75525bfb394865b49aa8fd"
+        }
+      ],
+      "before_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "after_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "stdout_sha256": "c7262fd4cd116de614a480254e2dd2634eea6beb1f25e35d96a55beb8d5fe395",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-revisions-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:11:35.384Z",
+      "elapsed_ms": 268,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2638,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "5eba0c5468d3b9d84a7f1f6cd50b7c7f2e28cd871383d7447a9fefcead41cf4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-revisions-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:05:50.822Z",
+      "elapsed_ms": 171,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2638,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "after_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "stdout_sha256": "5eba0c5468d3b9d84a7f1f6cd50b7c7f2e28cd871383d7447a9fefcead41cf4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-revisions-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:10:22.163Z",
+      "elapsed_ms": 103,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2638,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "after_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "stdout_sha256": "5eba0c5468d3b9d84a7f1f6cd50b7c7f2e28cd871383d7447a9fefcead41cf4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-status-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:11:32.982Z",
+      "elapsed_ms": 354,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 14302,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "bf5328ccb138fe7331762ffb130c1901fc9ee29b90e0d640a40f0a58b88cb9b2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-status-one",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:05:50.820Z",
+      "elapsed_ms": 577,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15033,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "after_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "stdout_sha256": "10debc38d6801b048c5a2dc4bb8dbcd66cd04dfc2acc6abc2e4e7b92e626a8fb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-status-reviewed",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:10:22.191Z",
+      "elapsed_ms": 321,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15033,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "after_state_sha256": "1602a353a04cb8f6c6d7b1bcba7f517242d9ae2d531f098460b3678e8d97e1cb",
+      "stdout_sha256": "621c7432723c4bd1987dcf9db749f715476def3ce0aba51f87ede671ac869805",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "an-workflow-final",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:11:34.231Z",
+      "elapsed_ms": 207,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 5262,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "11de2ca268981940c7c0fbcd903a0a708ef9fbecfeb4ea05cabc4ff3785c73c6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-assemble-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "assemble",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-assemble-13-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:44:49.530Z",
+      "elapsed_ms": 211,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 919,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-assemble-13-v1.json",
+          "sha256": "5d7f0889cdcb2b74e1524ac8a6cd3962b8a129ae6608af5248afce4d369e9cc4"
+        }
+      ],
+      "before_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "after_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "stdout_sha256": "4f6151076d925dea069753b3b94f94b2955b991097c5d3a90586a9b4d1192c73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-assemble-fifteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "assemble",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-assemble-15-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:12:02.288Z",
+      "elapsed_ms": 236,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 1074,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-assemble-15-v1.json",
+          "sha256": "860a60f3d2828b9a16240e120939c7a43166a15d20d954ae1cb88820ba9c51cc"
+        }
+      ],
+      "before_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "after_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "stdout_sha256": "2779f02942bac9760f0d5170a3caff625cb41adfb33644c10e66e323f8163214",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-assemble-fourteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "assemble",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-assemble-14-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:01:21.888Z",
+      "elapsed_ms": 225,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 916,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-assemble-14-v1.json",
+          "sha256": "7b8b8d130e3f782141d0d75c0194820fbaed7ea5d4c91569592ca206e7bab629"
+        }
+      ],
+      "before_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "after_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "stdout_sha256": "063fa1a80be226ee93f18c51ad0643cb7c9f2989dc4ecc825de1f6f1d36d1b64",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-context-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "13",
+        "--max-chars",
+        "80000",
+        "--out",
+        ".writer/drafts/w-ar-context-13.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:40:07.903Z",
+      "elapsed_ms": 336,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 61320,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "after_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "stdout_sha256": "35ad96222257c04ec78283254c2030b8f972bea44cdf2d1315c3645b1bc9daca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-context-14",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "14",
+        "--max-chars",
+        "80000",
+        "--out",
+        ".writer/drafts/w-ar-context-14.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:48:36.624Z",
+      "elapsed_ms": 310,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 61551,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "after_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "stdout_sha256": "f82d2ebf18a94e3da11f1257d6886ad0bbf15f3e05627bd5b23f2652990bc09a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-context-fifteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "15",
+        "--out",
+        ".writer/drafts/w-ar-context-15.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:03:25.560Z",
+      "elapsed_ms": 377,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 60086,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "after_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "stdout_sha256": "6fde4a342743f761c286e3fa55c8dfd0813a5475c01684197d3549b8409f6f2c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-decision-continue",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-decision-continue.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:39:38.582Z",
+      "elapsed_ms": 220,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 292,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-decision-continue.json",
+          "sha256": "88750ae7d1a4525c6fda8eb31d1846f30727664ac4824d0faaaace2a2993e87a"
+        }
+      ],
+      "before_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "after_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "stdout_sha256": "1062bf29970a226babe94434fe49390d9e4ee3eb9558c9e4a3c2626ea245c430",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-identify",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:36:20.227Z",
+      "elapsed_ms": 247,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 13850,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "50dfaf61ebc9855ac0d67480b3007a977052b745164302604900714e2723549e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-plan-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-plan-13.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:39:16.068Z",
+      "elapsed_ms": 195,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-plan-13.json",
+          "sha256": "5f06782832ae1748ac94787649382e2de1c1ad9363338a0355dc0ced4272276a"
+        }
+      ],
+      "before_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "after_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "stdout_sha256": "91095642f249c279d1bd4c27ecef97040412d70e8306b09af2cef409d31f6410",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-plan-14",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-plan-14.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:39:17.824Z",
+      "elapsed_ms": 199,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-plan-14.json",
+          "sha256": "e56eb00e10c3a0f530999b4a2a86d10227e9adec077b1d2dfc537c99d65af55e"
+        }
+      ],
+      "before_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "after_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "stdout_sha256": "82e3df4ae8543e8feaecd05a33a92b6574760897489dc56e202ef074b3c4f809",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-plan-15",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-plan-15.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:39:19.592Z",
+      "elapsed_ms": 214,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-plan-15.json",
+          "sha256": "36b59bd66376c9588e6a97f845c45bae7d39c250433bd38890a32de3c342dac9"
+        }
+      ],
+      "before_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "after_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "stdout_sha256": "0bb04e02973628a9ee4a331379145f42945898a7745c19eee9839b4b884f6702",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-preview-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-13-v1.json",
+        "--out",
+        ".writer/drafts/w-ar-preview-13-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:47:07.591Z",
+      "elapsed_ms": 314,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 10917,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-13-v1.json",
+          "sha256": "fbe08534d3bc9f3eb33039862211584d451f92d3890cd39c335713d620c65d8c"
+        }
+      ],
+      "before_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "after_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "stdout_sha256": "d361fcc7e1fa04ef50f7b6dcc3b99e68893788d85eee1d8df703845849b5118f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-preview-fifteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-15-v1.json",
+        "--out",
+        ".writer/drafts/w-ar-preview-15-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:13:51.865Z",
+      "elapsed_ms": 343,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 12113,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-15-v1.json",
+          "sha256": "e0d8f8974f86702debaa908e7420b0127d889f9f577bf4216a611ea2819aec97"
+        }
+      ],
+      "before_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "after_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "stdout_sha256": "cab87639d3ffda29a7681300ab24ed128bcd5834116e0443dad884682ca6a6c1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-preview-fifteen-two",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-15-v2.json",
+        "--out",
+        ".writer/drafts/w-ar-preview-15-v2.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:14:11.946Z",
+      "elapsed_ms": 383,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 12134,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-15-v2.json",
+          "sha256": "f68d6d92468f477cb42c83d680349ae8329fd8b9618358df712bcaeec682382a"
+        }
+      ],
+      "before_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "after_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "stdout_sha256": "2f1b9be7ea37be2045ffa1ccb2abab82e2f4b695608d8e50f7a1ed1276050f92",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-preview-fourteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-preview",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-14-v1.json",
+        "--out",
+        ".writer/drafts/w-ar-preview-14-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:03:08.902Z",
+      "elapsed_ms": 323,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 9619,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-14-v1.json",
+          "sha256": "570b6afac5c6be9d6230715c27a62148c86538bc0452e9f2ecd9bc19e1935d5c"
+        }
+      ],
+      "before_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "after_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "stdout_sha256": "34b42a568e7ed762d47ff59518428d4c47a9f9899be3e900d23e80af405c852f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-record-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-13-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:47:17.785Z",
+      "elapsed_ms": 335,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 191,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-13-v1.json",
+          "sha256": "fbe08534d3bc9f3eb33039862211584d451f92d3890cd39c335713d620c65d8c"
+        }
+      ],
+      "before_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "after_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "stdout_sha256": "2482e038133de59e873e5020632d25d623e3b5ff6696279525f391369264c31c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-record-fifteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-15-v2.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:14:18.631Z",
+      "elapsed_ms": 324,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 191,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-15-v2.json",
+          "sha256": "f68d6d92468f477cb42c83d680349ae8329fd8b9618358df712bcaeec682382a"
+        }
+      ],
+      "before_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "after_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "stdout_sha256": "5bb2946e4d92e8d46aa7231862276c8932b03ecc91f145ad1f296d36aeda1a23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-record-fourteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-record-14-v1.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:03:23.634Z",
+      "elapsed_ms": 327,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 191,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-record-14-v1.json",
+          "sha256": "570b6afac5c6be9d6230715c27a62148c86538bc0452e9f2ecd9bc19e1935d5c"
+        }
+      ],
+      "before_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "after_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "stdout_sha256": "f9ad7911caee08b04804333eeb15def19894d83a2ea784190ba9dcfdea5beb96",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-review-template",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "review-template",
+        "--from",
+        "10",
+        "--to",
+        "15",
+        "--out",
+        ".writer/drafts/w-ar-review-template-10-15.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:14:20.535Z",
+      "elapsed_ms": 219,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 3918,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "after_state_sha256": "5e0b9f9a92eade910a250d8f4f7ced099f02195f02400a4d33addf3229b49963",
+      "stdout_sha256": "07ed5b2822744cd18147dfb5a0354a06ec0fe25ffe76de2ca98902cd776ddd43",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:36:18.984Z",
+      "elapsed_ms": 425,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 14631,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "3bc41c090d1cf8c674d2dfcd43c90a4211ef1608fc9ddb880e1b29c264581956",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-template-13",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "13",
+        "--draft",
+        "正文/0013-桌边留一半-v1.md",
+        "--out",
+        ".writer/drafts/w-ar-record-template-13.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:40:58.989Z",
+      "elapsed_ms": 370,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2190,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "after_state_sha256": "4991c5f632ffca9265e4346a2fa14231b5957bddb1f487db30d82baa9ca46e83",
+      "stdout_sha256": "7e5e8a886f479f9413b878be4c7542bbf709ef0bb9e32060aed9ecc329b6d36a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-template-14",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "14",
+        "--draft",
+        "正文/0014-坐下再量-v1.md",
+        "--out",
+        ".writer/drafts/w-ar-record-template-14.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:48:38.512Z",
+      "elapsed_ms": 376,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2190,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "after_state_sha256": "5f6ff2ec2dbe67e215cd91253088f7fa323ec9f201520999f6c5a28822ac9eff",
+      "stdout_sha256": "aa05f991d4bea472f4441563601bbb692d95c12cd237ae2a0160c81bac428833",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-template-fifteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "15",
+        "--draft",
+        "正文/0015-一幅一幅洗-v1.md",
+        "--out",
+        ".writer/drafts/w-ar-record-template-15.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T17:03:27.555Z",
+      "elapsed_ms": 388,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2190,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "after_state_sha256": "ca8c2d0789377c98818f739a5ae3027931a0a95f19e488e57553c4e61a914f37",
+      "stdout_sha256": "995d61a8b0b5c3f2218eb6473f7bef57c82a213352b939bc66c4754d7196b241",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-workflow",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:36:18.980Z",
+      "elapsed_ms": 263,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 7045,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "b2ed609bc70c71ff77ae0c5aadeb48422112fb49094d79f3ce35b8a7a0a978ea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "ar-workflow-continue",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "acceptance/20261021-long-flow-090-w/inputs/ar-workflow-continue.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:39:09.058Z",
+      "elapsed_ms": 198,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 264,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\ar-workflow-continue.json",
+          "sha256": "c52d3c37b2a8a15fc1fc48b7695c1fec2a6ade4a89cc58d3b05327d7dca24c46"
+        }
+      ],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "3de0cce837221672c5043dd80d7c10dffbb1d27a795c6940cce02b6a29609c93",
+      "stdout_sha256": "a06e0a8371b7002803507eca08e7652e76ca0072c7ff5e87de0984b38790b9ed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-context-sixteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "16",
+        "--max-chars",
+        "80000",
+        "--out",
+        ".writer/drafts/w-b-context-16.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:44.932Z",
+      "elapsed_ms": 618,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 60435,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "after_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "stdout_sha256": "f3bc260627466b13eb91737c7d47196ff416118dd8e95cf5eab741cd9321ec4c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-decision",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "decision",
+        "set",
+        "--input",
+        "inputs/b-decision.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:33.824Z",
+      "elapsed_ms": 234,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 291,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\b-decision.json",
+          "sha256": "10ef4737840c8269a5f4fbbafcc355c624256ce657d19bacee81f0b33bd95078"
+        }
+      ],
+      "before_state_sha256": "254854c4c1144c7016cf906a3faa895d851dfc882fd7c254e736549373836d0f",
+      "after_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "stdout_sha256": "d6046eac800e48d372d7a1d48582cda859775a14d2c820451e3adece69a82702",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-doctor",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:17:36.371Z",
+      "elapsed_ms": 250,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 15964,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "d78fc9e42a67bc3058136b79a9526eba200bb42138f90e8092fe777778745e57",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-plan-eighteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "inputs/b-plan-18.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:42.223Z",
+      "elapsed_ms": 416,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\b-plan-18.json",
+          "sha256": "2a4ab6aa462ead878ac8ef1283d5e2090c16f81c571fe05c0d2b547070282d9a"
+        }
+      ],
+      "before_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "after_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "stdout_sha256": "fa3b6b0248b81dee78c0acfe6ccac21cd32df24bf1cba5bf3f8d2cb2757f65e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-plan-seventeen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "inputs/b-plan-17.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:39.008Z",
+      "elapsed_ms": 283,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\b-plan-17.json",
+          "sha256": "147b3b252873ae32a42e30ba118a9cfb85cdc39590a2c1e2f2f7937f8d83bbf5"
+        }
+      ],
+      "before_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "after_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "stdout_sha256": "e6e03bcb5438392e03feb46acfa7bcea0444d11a80dfc6307dd49cdafac0606a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-plan-sixteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "plan",
+        "--input",
+        "inputs/b-plan-16.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:36.781Z",
+      "elapsed_ms": 237,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 70,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\b-plan-16.json",
+          "sha256": "fbd405ab35b635d9eed31ea783d6bc4e17630de5d254f2e45637f3d493d4a78c"
+        }
+      ],
+      "before_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "after_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "stdout_sha256": "76f473d04847170c4dece4760b8b75d33a86639d27403ae65eda04df034a3d50",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-revision-list",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:17:30.531Z",
+      "elapsed_ms": 125,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2638,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "5eba0c5468d3b9d84a7f1f6cd50b7c7f2e28cd871383d7447a9fefcead41cf4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:17:25.034Z",
+      "elapsed_ms": 292,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 14302,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "bf5328ccb138fe7331762ffb130c1901fc9ee29b90e0d640a40f0a58b88cb9b2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-template-sixteen",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "record-template",
+        "--unit",
+        "16",
+        "--draft",
+        "正文/0016-早饭留在锅里-v1.md",
+        "--out",
+        ".writer/drafts/w-b-record-template-16.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:48.256Z",
+      "elapsed_ms": 450,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 2195,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "after_state_sha256": "aeb4876c9f335dba4154c49ced3c6fe5c5f4ab4f4c3bdaef41ff2bd8534b42d2",
+      "stdout_sha256": "beb14b3286a5363f442149422be28911d971c85dfbb86777573a9176e53796b4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-tool-identify",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:17:33.771Z",
+      "elapsed_ms": 130,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 13850,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "50dfaf61ebc9855ac0d67480b3007a977052b745164302604900714e2723549e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-workflow",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:17:27.404Z",
+      "elapsed_ms": 108,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 343,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "840730f933a13952a71de443e728a2a3ba00d043147263b5c927afc593f88e68"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-workflow-show",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "show",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:18:02.968Z",
+      "elapsed_ms": 181,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 5262,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "11de2ca268981940c7c0fbcd903a0a708ef9fbecfeb4ea05cabc4ff3785c73c6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "bfr-workflow-trial",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "workflow",
+        "set",
+        "--input",
+        "inputs/b-workflow-trial.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:22:31.750Z",
+      "elapsed_ms": 230,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 259,
+      "stderr_bytes": 0,
+      "inputs": [
+        {
+          "file": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\inputs\\b-workflow-trial.json",
+          "sha256": "26a8f4c618f7a6afa28b82d277201894319ec17670359d2c69dcdbcab0301e6b"
+        }
+      ],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "254854c4c1144c7016cf906a3faa895d851dfc882fd7c254e736549373836d0f",
+      "stdout_sha256": "17e4cce2dce84e31455cac68a3f6f577b16f27af3f0d16e786b09c67f2312141",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-after-a-check",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T23:15:42.561Z",
+      "elapsed_ms": 765,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 4166,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "after_state_sha256": "1024cd0cf71c40a9b25e083290c91740d386bdd1b5123e3ff89cc9d1a006f26f",
+      "stdout_sha256": "039f41df4e18d96a496cf5d4fbbadb1e62d7c2f6e21575313133a5d9cef7dc76",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-budget-too-small",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "13",
+        "--max-chars",
+        "1000",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:34:46.589Z",
+      "elapsed_ms": 1656,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 3071,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "70521ed4bd63b02726a992bc34e1d4fe4dc374570491671c85265b9655681cca"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-budget-too-small-r2",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "13",
+        "--max-chars",
+        "1000",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:35:26.427Z",
+      "elapsed_ms": 1537,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stderr_bytes": 3071,
+      "inputs": [],
+      "before_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "after_state_sha256": "bafd4ea882b3fc6ce84315fa09d4aa3686520b1515532ed1f1236fe7199b42a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "70521ed4bd63b02726a992bc34e1d4fe4dc374570491671c85265b9655681cca"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-identify",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "tool",
+        "identify",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:10:54.404Z",
+      "elapsed_ms": 225,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 13850,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "50dfaf61ebc9855ac0d67480b3007a977052b745164302604900714e2723549e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "group": "cli-logs",
+      "label": "root-status",
+      "exe": "C:\\Program Files\\nodejs\\node.exe",
+      "argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证"
+      ],
+      "cwd": "D:\\work\\other\\ai-writer",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证",
+      "started_at": "2026-10-20T16:10:54.456Z",
+      "elapsed_ms": 923,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 12823,
+      "stderr_bytes": 0,
+      "inputs": [],
+      "before_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "after_state_sha256": "90a6781f53d3905159c84de0bb98932c0090771fc4f200d2ff4b602cf21827b8",
+      "stdout_sha256": "520eb391c2c5f8a81a9072e031fd919a7a284a03a41eb6c3746b86c17fa8babd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

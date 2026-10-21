@@ -1,0 +1,95 @@
+2026-10-20T16:35:49.619285Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T16:35:49.619324Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T16:35:49.633849Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T16:35:49.651910Z  WARN codex_skills_extension::loader::metadata: ignoring file:///C:/Users/admin/.codex/skills/clear-maintainable-code/agents/openai.yaml: invalid openai.yaml: deserializing from YAML containing more than one document is not supported
+2026-10-20T16:35:49.658855Z ERROR codex_core::session::session: failed to load skill C:\Users\admin\.codex\skills\clear-maintainable-code\SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-20T16:35:49.658879Z ERROR codex_core::session::session: failed to load skill C:\Users\admin\.codex\skills\novel-consent-workflow\SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-20T16:35:52.504223Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T16:35:52.504258Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T17:14:38.122298Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-10-20T17:14:43.125858Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-10-20T17:14:53.128449Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-10-20T17:15:02.672876Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-10-20T17:20:01.451773Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 212ms)... turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 retries=1 max_retries=5 sampling_error=stream disconnected before completion: IO error: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+2026-10-20T17:20:01.948011Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T17:20:01.948489Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 416ms)... turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 retries=2 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof
+2026-10-20T17:20:02.811050Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T17:20:02.811460Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 826ms)... turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 retries=3 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof
+2026-10-20T17:20:03.892865Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T17:20:03.893254Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.59s)... turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 retries=4 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof
+2026-10-20T17:20:05.717291Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T17:20:05.717678Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 2.953s)... turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 retries=5 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof
+2026-10-20T17:20:08.697692Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses
+2026-10-20T17:20:08.698075Z  WARN codex_core::client: falling back to HTTP
+2026-10-20T17:20:11.970533Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=5s
+2026-10-20T17:20:20.572594Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=10s
+2026-10-20T17:20:33.548607Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=20s
+2026-10-20T17:20:56.893251Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=40s
+2026-10-20T17:21:22.267089Z ERROR codex_models_manager::manager: failed to refresh available models: Connection failed: error sending request
+2026-10-20T17:21:40.482230Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:23:08.730992Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:24:36.994137Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:25:57.287745Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:26:05.168949Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:27:33.153873Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:29:01.251177Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:30:29.165876Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:30:32.300517Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:31:57.226345Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:33:25.281859Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:34:53.299447Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:35:07.333876Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:36:21.280723Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:37:49.439208Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:39:17.702997Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:39:42.354601Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:40:45.903733Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:42:14.072222Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:43:42.124590Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:44:17.363725Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:45:10.008234Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:46:37.874726Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:48:05.977141Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:48:52.383545Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:49:33.962078Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:51:01.962412Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:52:30.072660Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:53:27.405432Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:53:58.282227Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:55:26.346892Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:56:54.435908Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:58:02.421836Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T17:58:22.697825Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T17:59:50.678713Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:01:18.791757Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:02:37.441793Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:02:46.803224Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:04:14.772415Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:05:42.950055Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:07:11.070418Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:07:12.461508Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:08:39.057263Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:10:07.085468Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:11:35.214132Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:11:47.466021Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:13:03.199096Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:14:31.168523Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:15:59.147165Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:16:22.480478Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:17:27.214564Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:18:55.283373Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:20:23.481826Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:20:57.499293Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:21:51.606221Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:23:19.769469Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:24:47.797889Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:25:32.521474Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:26:15.849937Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:27:43.952529Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:29:12.090832Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:30:07.542605Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:30:40.069975Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:32:08.104324Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:33:36.285943Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s
+2026-10-20T18:34:42.552433Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T18:35:04.202463Z  WARN codex_core::responses_retry: stream connection failed; waiting to retry turn_id=01a15a2b-5390-7253-8527-15b260edfdc1 error=Connection failed: error sending request retry_delay=60s

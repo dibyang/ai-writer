@@ -1,0 +1,39 @@
+{
+  "expected_revision": 59,
+  "operation_id": "w-a-resume-decision-stop-15",
+  "author_evidence": {
+    "quote": "继续同一个W-A原生会话。执行范围以本prompt为最新停点；原首停已经完成并经根核验，允许继续完成13—15后停。W=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-w；P=W/scenario/东岸末班船-规模验证。仅写W，唯一入口P/.writer/tool/bin/ai-writer.mjs，通过w-writer自动显式project、原始输入/双流/子码/前后state捕获。前12正文及units对象、全部observation三字段不变，V/U/T和根产品不写。失败先停依赖，不覆盖失败输入，不手改state或构建hash；不另派代理、不Git提交/推送。",
+    "local_source": "研究/W-A-续程授权原文.md",
+    "source_sha256": "47b93aebe0680ffb217cb4ca1c1e1a0b5a109d4c9b5d56ad48b82d54b65a8fae",
+    "locator": "W/prompt-a-resume.md第1行授权同ID完成13—15后停，第5/9/11行规定写读登记、10—15连读及最终paused；原文同字节复制",
+    "recorded_by": "同一W-A原生Codex会话续程；非伪造人类消息ID"
+  },
+  "decision": {
+    "id": "D_W_EXECUTION_AR",
+    "topic": "W13—24本轮代理执行选择",
+    "status": "confirmed",
+    "options": [
+      "日常分工、修衣晚课、面摊窄凳与旧布袋跨卷展开"
+    ],
+    "adopted_items": [
+      "仅13—15有细纲，16—24保留骨架",
+      "13晚课、14窄凳、15旧布用途作为本轮代理选定的跨卷拟线索；不是人类逐项设定或已发生事实",
+      "原首停已核验完成，本次同ID续完13—15和10—15连读review后paused，仅discuss，等新鲜B恢复16"
+    ],
+    "excluded_items": [
+      "重开箱据悬疑",
+      "追补6妇人终点或12旅客对岸抵达",
+      "修改前12或不可变观察"
+    ],
+    "unresolved_items": [
+      "16—24具体细纲",
+      "窄凳尺寸工钱和布袋形状用途须写时在场定",
+      "复航日期及是否安排复航场景"
+    ],
+    "effective_range": {
+      "from": 13,
+      "to": 24
+    },
+    "supersedes": "D_W_EXECUTION_A"
+  }
+}

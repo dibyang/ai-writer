@@ -1,0 +1,67 @@
+{
+  "expected_revision": 76,
+  "operation_id": "w-guidance-maintenance-plan-18",
+  "author_evidence": {
+    "quote": "继续通过 Codex 扩大 0.9.0 的长篇实跑规模，增加章节数量和单章篇幅，重点验证长章分段、多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/W-工具指引更新授权原文.md",
+    "source_sha256": "0bd6e491cc7f09196a5360eb5b2d8af505a8ed4a87dc7e5770d777dc6961e818",
+    "locator": "本文件第4行实际用户原话；第6行是根代理在授权内选择的有限实施步骤，非人类逐项定稿，不认证身份",
+    "recorded_by": "本轮根Codex控制会话，agent-within-authorized-scope"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "W根工具维护：仅规划并执行本轮操作指引候选的正式本地更新，保留18章与作者定制；不准备19章、不新增或修订正文；验收和更新后恢复仅讨论等待新鲜C",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "plan仅供本轮明确的工具更新维护，不准备新小说细纲，不修改任何正文或登记事实。",
+        "最终源码及实际ZIP解压包回归/doctor和身份核验通过后，才执行本隔离P的正式tool update。",
+        "保留全部18章正文、unit对象、snapshot、旧输入、作者根定制和备份；不自动升级其他作品，不Git提交、推送或发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-16-18.md",
+          "大纲/单元/0018.json"
+        ],
+        "unresolved_ids": [
+          "19—24仅骨架；本进程不写19"
+        ]
+      }
+    }
+  }
+}

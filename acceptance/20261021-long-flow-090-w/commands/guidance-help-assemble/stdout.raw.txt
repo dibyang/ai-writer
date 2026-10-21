@@ -1,0 +1,31 @@
+ai-writer 0.9.0 / assemble
+按有序分段路径与SHA256连接完整章，只创建新正文、不覆盖、不登记。separator只允许空白；换场标记须写入片段正文，再按实际字节取SHA256。须当前revision及正文授权；完成后完整实读，再preview/record。
+
+node 'D:\work\other\ai-writer\.tmp\W 输出指引验收包解压\ai-writer-0.9.0\bin\ai-writer.mjs' assemble --project 作品目录 --input 合章.json
+
+输入示例（UTF-8 JSON）：
+{
+  "unit": 1,
+  "expected_revision": 1,
+  "draft": "正文/0001.md",
+  "parts": [
+    {
+      "path": "分段/0001/01.md",
+      "sha256": "替换为实际片段SHA256"
+    },
+    {
+      "path": "分段/0001/02.md",
+      "sha256": "替换为实际片段SHA256"
+    }
+  ],
+  "separator": "\n\n"
+}
+
+在作品目录运行时可省略 --project；其他位置须明确提供作品目录。
+作者手册：D:\work\other\ai-writer\.tmp\W 输出指引验收包解压\ai-writer-0.9.0\docs\user-guide.md
+命令与 JSON：D:\work\other\ai-writer\.tmp\W 输出指引验收包解压\ai-writer-0.9.0\docs\workflow.md
+长篇：D:\work\other\ai-writer\.tmp\W 输出指引验收包解压\ai-writer-0.9.0\docs\long-form.md
+去 AI 味：D:\work\other\ai-writer\.tmp\W 输出指引验收包解压\ai-writer-0.9.0\docs\deslop.md
+当前工具流程技能：D:\work\other\ai-writer\.tmp\W 输出指引验收包解压\ai-writer-0.9.0\.agents\skills\writer-project\SKILL.md
+按文体继续读取该技能目录中的对应技能；作品根作者规则与定制技能仍需遵守，更新不自动替换它们。
+创作与审修改写由 Codex 根据自然语言任务完成。

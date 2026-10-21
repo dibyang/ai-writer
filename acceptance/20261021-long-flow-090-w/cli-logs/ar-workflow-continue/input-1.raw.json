@@ -1,0 +1,76 @@
+{
+  "expected_revision": 58,
+  "operation_id": "w-a-resume-complete-13-15-then-pause",
+  "author_evidence": {
+    "quote": "继续同一个W-A原生会话。执行范围以本prompt为最新停点；原首停已经完成并经根核验，允许继续完成13—15后停。W=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-w；P=W/scenario/东岸末班船-规模验证。仅写W，唯一入口P/.writer/tool/bin/ai-writer.mjs，通过w-writer自动显式project、原始输入/双流/子码/前后state捕获。前12正文及units对象、全部observation三字段不变，V/U/T和根产品不写。失败先停依赖，不覆盖失败输入，不手改state或构建hash；不另派代理、不Git提交/推送。",
+    "local_source": "研究/W-A-续程授权原文.md",
+    "source_sha256": "47b93aebe0680ffb217cb4ca1c1e1a0b5a109d4c9b5d56ad48b82d54b65a8fae",
+    "locator": "W/prompt-a-resume.md第1行授权同ID完成13—15后停，第5/9/11行规定写读登记、10—15连读及最终paused；原文同字节复制",
+    "recorded_by": "同一W-A原生Codex会话续程；非伪造人类消息ID"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "W-A同ID续程：根已核验首停；完成13—15分段/合章实读登记及10—15完整连读review后暂停，等待新鲜B恢复16；整体W仍仅13—24计划",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 13,
+        "to": 15
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次完成13—15后停；13/14各至少6000正文汉字与3段，15至少8000与4段，每段约1800—2400真实连续正文。原首停已完成，不再将旧首两段限制用于本续程。",
+        "逐段实读、CLI assemble、完整成章实读回对有效细纲，报告绑定正文和报告真实SHA；preview退出0才record。旧报告不认证新字节。",
+        "15登记后完整实读当前10—15并正式review；最终workflow paused仅discuss，draft_range和revise_range均null，等下一新鲜B，不写16不导出。",
+        "前12正文及state.units对象和全部observation type/statement/author_truth不变；若需动1—12则停止说明。",
+        "只写W，不改根产品或V/U/T，不另派代理、不Git提交/推送或上传；失败停止依赖，旧/失败输入和原稿不覆盖，禁止手改state/hash或绕过产品。",
+        "13/14/15分别真实种下晚课、窄凳、旧布用途；后文18/21/24仍是计划，不预支事实或知情。后续D普通事实修订不在本次提前执行。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-13-15.md",
+          "大纲/单元/0013.json",
+          "大纲/单元/0014.json",
+          "大纲/单元/0015.json"
+        ],
+        "unresolved_ids": [
+          "16—24仅远期骨架，逐阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

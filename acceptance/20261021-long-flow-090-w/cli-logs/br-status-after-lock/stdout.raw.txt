@@ -1,0 +1,315 @@
+{
+  "ok": true,
+  "title": "东岸末班船",
+  "kind": "novel",
+  "revision": 73,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "W-B同ID续程：17首停已履行，本进程只写18并完成13—18当前全文连读复盘review；18完成后暂停，19留新鲜C恢复，不属本进程；24仍为目标计划",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 18,
+        "to": 18
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "仅18至少8000正文汉字、至少4真实顺序片段；先当前context/record-template，逐段实读、CLI assemble、全章回读报告双SHA、preview退出0才record。",
+        "13晚课首次真实去/学/回；许独处晚饭真实发生且不隔空亲见，15布袋和17窄凳从现状实行动，至少一条跨卷兑现。",
+        "18登记后完整当前13—18连读及正式review；保留慢节奏有效差异，旧章如需改必须正式revision，前12不动。",
+        "结束paused仅discuss，draft_range/revise_range均null，task明确18已完成19待新鲜C；不写19、不导出、不提前修订。",
+        "前17正文/units与全部observation三字段保护；已消费来源若要改先版本/impact，不刷新hash绕过。",
+        "只写W，不派代理、不改根产品/封存/其他作品、不Git提交推送；实际调用全日志，失败停止依赖并保留。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-16-18.md",
+          "大纲/单元/0018.json"
+        ],
+        "unresolved_ids": [
+          "19—24仅骨架；本进程不写19"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_W_EXECUTION_BR",
+          "supersedes": "D_W_EXECUTION_B",
+          "topic": "W13—24本轮代理执行选择",
+          "status": "confirmed",
+          "options": [
+            "同ID仅完成18并回读13—18后暂停"
+          ],
+          "adopted_items": [
+            "旧17首停属已履行历史，旧事件保留，由本次真实新prompt取代现行停点",
+            "只18正文与13—18连读review，19待新鲜C；revise_range保持null",
+            "晚课实际去学回与许实际独处、袋透干短程、窄凳实际加工，具体场面是模型执行选择而非人类逐项采纳"
+          ],
+          "excluded_items": [
+            "写19或提前修订",
+            "修改前17正文及不可变观察",
+            "只改账本冒充兑现"
+          ],
+          "unresolved_items": [
+            "19—24成稿",
+            "凳营业使用及余款实际结清",
+            "复航日期"
+          ],
+          "effective_range": {
+            "from": 13,
+            "to": 24
+          },
+          "event_ref": ".writer/objects/7a7b4110-6a16-462f-81e6-58b2669cfb6f.json",
+          "event_sha256": "398f8f742f358b8d849b4c23b676b0cf229f4afb73c71be44f3c0d8549517cd1"
+        }
+      ],
+      "candidates": [],
+      "history_count": 3
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 18,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "owner": "v-c3-actual-codex-first-stop",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "98862fc07df31871c4221c00f2ee72574c449a0443745b28014162d1476b9da4",
+        "scope": {
+          "from": 7,
+          "through": 12
+        },
+        "status": "committed",
+        "base_sha256": "4eb1f2a7d5c2ab7111bbf3f58524c8485fb07e59f5ca1be20bf3506d49296740",
+        "created_at": "2026-10-20T12:59:52.231Z",
+        "transaction_id": "f0b4ad62-9b88-41a2-8519-de9064f2a040",
+        "session_sha256": "d0857f596e0bddcb9e2d215acda14c7c97e8d57b11708837bb3acc8d09716ba0"
+      },
+      {
+        "id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "owner": "v-a-metadata-only-root-authorized",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 4,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "7bf633d95462043f82cf48e9ef8a03bdc1271f3734580dbd29188d081ade9ac5",
+        "created_at": "2026-10-20T10:14:46.353Z",
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_sha256": "6cd6922875ccfc7000a0e7bd7120f8ae5eed841e4882a175b204aa64e05a9be7"
+      },
+      {
+        "id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "owner": "final-b-native-codex",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 2,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "1a742700a6e49a0c7665b591f30a64dd4a0fb82022fe911ee6ac119d29d75754",
+        "created_at": "2026-10-20T07:15:17.894Z",
+        "transaction_id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_sha256": "f1f772eb039fb496f49f85c1789a93ef5ef7f8b66cc45f5fab253005c086de1e"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "status": "completed"
+      },
+      {
+        "id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "status": "completed"
+      },
+      {
+        "id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+        "status": "completed"
+      },
+      {
+        "id": "f0b4ad62-9b88-41a2-8519-de9064f2a040",
+        "session_id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 73,
+    "counts": {
+      "verified": 1
+    },
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 1,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+      "runtime_id": "d4517cba32906d3c758015aacee7fdafadc2037a4dd8288e26c9d9cfa5c448b4"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/c85eb384-71eb-4d25-bb67-f33b6bd7d826.json",
+        "sha256": "60b24b93d665db2b9bc98fec99e9876a547ade2ec1cb38f64018a5b1c85bcb25"
+      }
+    ],
+    "operations": {
+      "0c29e409-2bd6-493d-9eaa-1857fa4c0dcc": {
+        "input_hash": "edc40c25a3608eaaf1cf21aa1750a00ce3aa556ebf6097c2310c8a22cef00bb7",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+          "revision": 30,
+          "generation": 1,
+          "source_content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 17,
+    "unregistered": [
+      {
+        "draft": "正文/0001-灯下的箱子.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0002-多跑的一趟.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 6,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0008-半个钟头-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 8,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0009-留给明天的活-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 9,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0010-月底的三十五块-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 10,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0011-盒子放进去-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 11,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0012-沿着坡走-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 12,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 18,
+    "plan_exists": true,
+    "action": "先核对未登记正文，再读取下一单元上下文",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-w\\scenario\\东岸末班船-规模验证' '--unit' '18'"
+  },
+  "current": {
+    "character_count": 14,
+    "ledger_count": 25,
+    "recent": [
+      {
+        "unit": 15,
+        "summary": "停航第八日沈禾实际歇班，父女按晾绳和体力只拆洗一幅有旧印窗帘，父坐卸钩剥蒜、沈洗晾做豆腐午饭，忘盐回锅。沈两点一刻步行去旧书店，自己八元买旧画册并读至三点二十，买水返家，归来亲见父叠好薄衫/毛巾、拿出早年另存浅蓝短帘。她收帘还借的两绿夹，与父穿钩自己挂回，厚边续风干晚间合近，另一幅未洗。旧布拟为父自用轻物袋，父缝合袋身，沈裁两带，一带已合一带未缝、均未固定，未试提/出门，约固定并再洗晾透后用；父收针将半成品收椅旁。父伤脚仍未好，未登高，沈晚饭后读自己画册，父看电视。"
+      },
+      {
+        "unit": 16,
+        "summary": "停航第九日沈禾照常上班，将早饭小锅留父手边；父说续做袋，沈未午返。糕店新纸盒现场折装：顾客为手不便母亲买糕，沈改虚合盖加可揭封条，另用小袋给男孩，未写真正母亲吃糕。老板接洗笼并学折，下午多盒占柜重新收扁，沈四点附近离店买菜返家。沈亲见另一带合好、两带四接头固定并加余布，父述坐缝拆过一次；父自述面下多、漏泡一碗，沈晚补洗。父掐菜；饭后父坐揉袋、沈换水压水，用自家两白夹撑衣架晾屋内低绳，盆接水，袋仍湿未装物试提/出门。针回铁盒，外袋余布父椅旁；沈先自己读画册后主动与父同看，父调低电视，脚伤仍在。"
+      },
+      {
+        "unit": 17,
+        "summary": "回切停航第八日，周13:58按第六日后天下午两点之约到廖家。旧板一块去坏端作面，翘薄第二块留廖垫花；共同搬盆、拔钉、锯坏头，经巷三轮带可用板。回摊廖移盆水槽下/葱筐案旁/伞门后，留靠背椅和小板凳、毛巾改挂墙钩；用纸样/现有凳和端空托盘走道当面定面长90净宽28厘米、成高44。周去料店电话报24获廖同意后实垫腿横撑干料及小件，票周夹本，14工60未改，预计成后84未收。周回铺腾台刨削/收宽/磨前角背面，另来的铁架不焊转告前街。廖来送面只见初整面，周付面钱吃后洗碗实送还。末面板备好垫台，腿横撑料架下未画线/组装，小件袋、纸样压板边，旧板仍廖所有周受托管；未交凳/试坐/结工料，18待推进。"
+      }
+    ],
+    "timeline_tail": [
+      "第八日傍晚—夜：父女用另存旧布做父自用轻物袋，袋身合好、两带裁成一带缝好一带未缝均未固定，父眼累歇后收针，拟再固定洗晾未执行；半成品父收椅旁，晚饭后沈读自己画册父看电视，另一幅帘未洗、脚未愈。",
+      "停航第九日早至午：沈留父早饭小锅、出门照常回糕店用新盒，顾客/男孩包装取舍，老板接笼洗笼和学折；沈午不返家。",
+      "第九日四点附近至晚：沈正常离店买菜返，亲见父续齐两带四固定头；父白天缝及面下多等由本人述。晚父掐菜并坐揉洗袋、沈换水压水，两白夹夹布边衣架晾屋内低绳、盆接水，仍湿未出门；针收铁盒，后沈自己看画册再主动共看。",
+      "回切停航第八日13:58至午后：周按14第六日后天下午两点之约到廖家，看两板、拔钉去坏端，廖留翘薄板垫花，周三轮运可用面料。",
+      "第八日午后：廖在面摊实挪盆/葱筐/伞、毛巾挂墙，留靠背椅；用纸样和端托盘走道定面90x28厘米/成高44。周报另料24经廖电话同意后实垫购，工60原约未收。",
+      "第八日傍晚至夜：周铺内初整凳面按纸宽收齐磨边/背，拒焊另铁架；廖送面看初整面，周另付面钱、吃后洗碗实还。面板备好垫台，腿横撑干料架下未加工组装，小件袋/纸样板边，预计成后84未付。"
+    ]
+  }
+}

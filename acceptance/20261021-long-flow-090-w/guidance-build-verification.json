@@ -1,0 +1,145 @@
+{
+  "ok": true,
+  "at": "2026-10-21T00:41:58.618Z",
+  "scope": "final guidance candidate source and actual ZIP extraction full regression; before isolated install and remaining creative flow",
+  "content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+  "archive_sha256": "f613fc8424184b516e8b8975c61a2b0393c424d096ae3b0c8805e715744eaa6b",
+  "tests": [
+    {
+      "label": "guidance-source-full-tests",
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2,
+      "skips": [
+        "﹣ 合章拒绝符号链接分段和目标目录 (1.1503ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+        "﹣ 符号链接不允许作为作品输入 (6184.3709ms) # 当前环境不允许创建链接"
+      ],
+      "stdout_sha256": "eb76bd045e853b59bb78cae07252f5db50eb9b5cb51f5ce4480976de565b40bd",
+      "receipt": {
+        "label": "guidance-source-full-tests",
+        "exe": "npm.cmd",
+        "args": [
+          "test",
+          "--",
+          "--test-concurrency=2"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer",
+        "started_at": "2026-10-21T00:20:55.025Z",
+        "elapsed_ms": 1011050,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 20543,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    },
+    {
+      "label": "guidance-package-full-tests",
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2,
+      "skips": [
+        "﹣ 合章拒绝符号链接分段和目标目录 (0.2124ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+        "﹣ 符号链接不允许作为作品输入 (3566.0419ms) # 当前环境不允许创建链接"
+      ],
+      "stdout_sha256": "3399d41ff7a4cefa65f08e3f06febf07a833b178e118a25285e99134ab99192b",
+      "receipt": {
+        "label": "guidance-package-full-tests",
+        "exe": "npm.cmd",
+        "args": [
+          "test",
+          "--",
+          "--test-concurrency=2"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer\\.tmp\\W 输出指引验收包解压\\ai-writer-0.9.0",
+        "started_at": "2026-10-21T00:22:55.005Z",
+        "elapsed_ms": 908471,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 20532,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    }
+  ],
+  "doctors": [
+    {
+      "label": "guidance-source-doctor",
+      "ok": true,
+      "content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+      "errors": [],
+      "warnings": [],
+      "receipt": {
+        "label": "guidance-source-doctor",
+        "exe": "npm.cmd",
+        "args": [
+          "run",
+          "doctor"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer",
+        "started_at": "2026-10-21T00:23:06.569Z",
+        "elapsed_ms": 8131,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 15225,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    },
+    {
+      "label": "guidance-package-doctor",
+      "ok": true,
+      "content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+      "errors": [],
+      "warnings": [],
+      "receipt": {
+        "label": "guidance-package-doctor",
+        "exe": "npm.cmd",
+        "args": [
+          "run",
+          "doctor"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer\\.tmp\\W 输出指引验收包解压\\ai-writer-0.9.0",
+        "started_at": "2026-10-21T00:23:06.497Z",
+        "elapsed_ms": 4607,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 15515,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    }
+  ],
+  "zip_files": 325,
+  "source_mapping_files": 323,
+  "frozen_source_files": 324,
+  "changed_source_files": [
+    "CHANGELOG.md",
+    "RELEASE_NOTES.md",
+    "docs/quickstart.md",
+    "docs/review-and-registration.md",
+    "docs/user-guide.md",
+    "docs/workflow.md",
+    "lib/help.mjs"
+  ],
+  "all_frozen_source_and_package_bytes_unchanged": true,
+  "scenario_units": 18,
+  "scenario_tool_generation": 1,
+  "installed_in_scenario": false,
+  "creative_flow_complete": false,
+  "remote_ci_executed": false
+}

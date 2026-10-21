@@ -1,0 +1,15 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+const W=path.dirname(fileURLToPath(import.meta.url)),read=f=>JSON.parse(fs.readFileSync(f)),s=read(path.join(W,'d-active-revision.json')),P=s.workspace,n=Number(process.argv[2]),q=read(path.join(W,`drr-cases/${n}.json`)),x=read(path.join(P,`.writer/drafts/drr-replay${n}.json`)),pre=read(path.join(W,'pre-revision-current.json')),old=pre.state.units.find(x=>x.unit===n),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),body=fs.readFileSync(path.join(P,x.draft)),h=sha(body),st=read(path.join(P,'.writer/state.json'));
+assert.equal(st.units.at(-1).unit,n-1);assert.equal(st.revision,x.expected_revision);assert.equal(h,x._replay.draft_sha256);assert.equal(x._replay.session_id,s.id);assert.equal(x.summary,old.summary);assert.equal(sha(fs.readFileSync(path.join(s.main_project,old.journal))),old.journal_sha256);
+const oldSummary=x.summary;
+for(const e of q.edits||[]){let o=x;for(const key of e.path.slice(0,-1))o=o[key];const k=e.path.at(-1);if(e.from!==undefined){assert.equal(typeof o[k],'string');assert.equal(o[k].split(e.from).length,2,`nonunique edit ${e.path}`);o[k]=o[k].replace(e.from,e.to);}else o[k]=e.value;}
+assert.ok(!q.edits?.some(e=>['source_hashes','expected_revision','_replay','source_bindings'].includes(e.path[0])));
+for(const v of Object.values(x.changes.ledger||{}))for(const e of v.evidence||[])if(e.unit===n)assert.ok(body.toString('utf8').includes(e.quote),`invalid quote ${e.quote}`);
+const fields=['summary','characters','timeline','ledger','evidence','downstream'];for(const f of fields)assert.ok(q.review[f]?.length>=35,`real field ${f}`);
+const ref=`审查/${String(n).padStart(4,'0')}-W-D续程实读重登.md`;
+const lines=[`# ${n}章 W-D续程 当前全文与重登六项核查`,'',`实际候选 ${P}`,`正文 ${x.draft}`,`当前SHA-256 ${h}`,`原主稿SHA-256 ${old.sha256}`,`基线r${s.base_revision} / session ${s.id}；本章输入当前r${x.expected_revision}。`, '',q.reading,'', '本报告由本次同一Codex模型实读形成，不是独立代理、真人盲读或正式出版验收。原稿/原追踪/原输入/报告均保留。未手改state或消费哈希。','', '## 当前章完整自检','',q.draft_review,'',`字数：正文汉字 ${(body.toString('utf8').replace(/^#.*\r?\n/,'').match(/\p{Script=Han}/gu)||[]).length}；无凑数增删。`,'', '## 旧摘要与本次摘要','',`旧：${oldSummary}`,'',`新：${x.summary}`];
+for(const f of fields)lines.push('',`## ${f}`,'',q.review[f]);
+lines.push('','## 不确定性与后续','',q.uncertainty,'','来源入口未改；原计划中的两小时/28厘米/15点作为旧计划保留，普通事实修订差异见W/d-revision-choice.md。当前正文按90分钟/27厘米/15:30承接；不批量替换19章换班标题或15章那次书店接人时刻。完整尾段连读及正式review在24重登之后进行，本章报告不冒充已经完成。');
+const report=lines.join('\n')+'\n';fs.writeFileSync(path.join(P,ref),report,{flag:'wx'});
+x.replay_review={reviewer:'W-D同ID续程实际Codex知情实读',report:ref,draft_sha256:h,checked_fields:fields};x.draft_review={reviewer:'W-D同ID续程当前全文实读自检',report:ref,draft_sha256:h,report_sha256:sha(Buffer.from(report))};
+fs.writeFileSync(path.join(W,`inputs/drr-record${n}.json`),JSON.stringify(x,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({unit:n,revision:x.expected_revision,draft_sha256:h,report:ref,report_sha256:x.draft_review.report_sha256,edits:(q.edits||[]).length}));

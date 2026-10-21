@@ -1,0 +1,71 @@
+{
+  "expected_revision": 96,
+  "operation_id": "w-d-authorize-revision-13-24-first-stop",
+  "author_evidence": {
+    "quote": "W轮新鲜D：完成22—24及跨卷兑现，再正式修订三处普通旧事实，独立区仅重登13后停。",
+    "local_source": "研究/W-D-授权原文.md",
+    "source_sha256": "6497e1f49498f902751c6a627db18139459ed7642c96949530738325c426babe",
+    "locator": "真实本轮用户prompt同字节保存，第1行首句；第5—13行载明篇幅、修订和首停；整体人类原话及代理规模选择见W/prompt-a-first.md第3行。无可用消息ID，不编造。",
+    "recorded_by": "W-D本次实际Codex执行会话；具体日常行动与普通事实修订是代理在授权内的测试选择，不冒充人类逐字设定"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "W-D三项普通非observation事实合理回溯测试：13课长90分钟、17凳净宽27、21后天15:30还书；独立修订13—24，本进程仅重登13后停。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 13,
+        "to": 24
+      },
+      "stop_conditions": [
+        "主稿24正文/units和前12全部字节不改；全部observation三字段保留；仅独立区真实改稿，不重写消费哈希。",
+        "使用本次revision begin实际ID/owner/token/base/workspace，不复用V历史。",
+        "本进程仅重登13，候选应1—13；14—24未重登；不prepare/commit/abort。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "修订测试见W/d-revision-choice.md；旧计划留历史意图，普通事实纲文差异真实说明",
+          "14—24由根核占用后同ID恢复，本进程不得继续重登14"
+        ]
+      }
+    }
+  }
+}

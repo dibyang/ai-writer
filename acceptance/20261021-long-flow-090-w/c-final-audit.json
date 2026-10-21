@@ -1,0 +1,198 @@
+{
+  "ok": true,
+  "at": "2026-10-21T01:08:17.633Z",
+  "thread_id": "01a15bea-c30a-7d40-916f-26f7e85cbfe5",
+  "revision": 85,
+  "schema": 6,
+  "generation": 2,
+  "content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+  "runtime_id": "3f669f82196cae9ef38679cae22e642935b16ea25a5a5e20f35f0fa84bb6c98b",
+  "archive_sha256": "f613fc8424184b516e8b8975c61a2b0393c424d096ae3b0c8805e715744eaa6b",
+  "state_sha256": "dc9dd6036b1b8eb14b45393654cedd3f8c73d4553eb774dca12378d42b0d62b8",
+  "units": 20,
+  "total_body_han": 109071,
+  "new_units": [
+    {
+      "unit": 19,
+      "draft": "正文/0019-提前的两个钟头-v1.md",
+      "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+      "bytes": 21431,
+      "lines": 209,
+      "body_han": 6112
+    },
+    {
+      "unit": 20,
+      "draft": "正文/0020-少做的一笼-v1.md",
+      "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+      "bytes": 21521,
+      "lines": 197,
+      "body_han": 6156
+    }
+  ],
+  "reports": [
+    {
+      "file": "审查/0019-W-C完整章自检.md",
+      "sha256": "6b0a376cbe38c7dfd8ae2a6fbb05d596bd4758080c38b8e40699166dfa6de942"
+    },
+    {
+      "file": "审查/0020-W-C完整章自检.md",
+      "sha256": "b74b366038b9af80f843178fb8f2df68cf8a95d7d26e04ab5f18c52f3d8d3375"
+    },
+    {
+      "file": "审查/W-C-16-20完整连读.md",
+      "sha256": "e1d8d2232115006debfaceacc533901f6d7a5c8bbd730d16941370f509181e06"
+    },
+    {
+      "file": ".writer/reviews/49473cae-7a43-46a5-b8cb-2e1c04927f41.json",
+      "sha256": "eb2a49436b05095d622261ee298bef35bafbf935648b7be76cc5969ea12d9cc0"
+    }
+  ],
+  "protected": {
+    "first18_body_unchanged": true,
+    "first18_full_units_deep_equal": true,
+    "first12_body_and_full_units_unchanged": true,
+    "observations_three_fields": [
+      "O_BOX_PAINT"
+    ],
+    "source_versions_ranges_events_operations_unchanged": true,
+    "tool_control_unchanged": true,
+    "root_frozen_files": 324,
+    "root_frozen_changed": [],
+    "archive_unchanged": true
+  },
+  "cli": {
+    "count": 37,
+    "success": 36,
+    "failures": [
+      {
+        "label": "c-authorize",
+        "exit_code": 2,
+        "before_state_sha256": "5abd371ae7a92323aa2e2f86bc02946dbf1511d4c5c3420698413a0827f30d90",
+        "after_state_sha256": "5abd371ae7a92323aa2e2f86bc02946dbf1511d4c5c3420698413a0827f30d90"
+      }
+    ]
+  },
+  "governance": {
+    "stage": "paused",
+    "task": "W-C首停完成：19、20已登记，16—20当前正文已完整连读并正式review；21没有正文/分段，待下一次原C会话同ID恢复，当前仅讨论交接。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程20后停点已达到；不写21正文/分段、不导出、不提前D修订。",
+        "21下一原C会话同ID恢复，先status/治理/当前来源和持有核实，再按真实新续程指令正式恢复有限授权。",
+        "保持前12正文/units及全部observation三字段；前18已登记正文普通写作不得改；失败日志和历史拒绝原样保留。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-19-21.md"
+        ],
+        "unresolved_ids": [
+          "21本进程未写，具体雨天交汇与后续承诺待同ID据20成稿调整",
+          "22—24仍为远骨架"
+        ]
+      }
+    }
+  },
+  "rolling_review": {
+    "valid": 12,
+    "stale": 8,
+    "unpublished_records": [],
+    "stale_with_current_coverage": 8,
+    "stale_without_current_coverage": 0,
+    "pending_windows": [],
+    "nature": "coverage-only-not-literary-pass"
+  },
+  "inherited_findings": [
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0001-灯下的箱子.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0002-多跑的一趟.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0006-走一遍再画-v1.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0008-半个钟头-v1.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0009-留给明天的活-v1.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0010-月底的三十五块-v1.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0011-盒子放进去-v1.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    },
+    {
+      "severity": "warning",
+      "code": "UNREGISTERED_DRAFT",
+      "draft": "正文/0012-沿着坡走-v1.md",
+      "message": "该正文未登记，不会纳入导出；请核对用途。"
+    }
+  ],
+  "unwritten21": [],
+  "active_sessions": [],
+  "pending_transactions": [],
+  "doctor": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "limits": "机械保护/哈希审计，不代替模型实际写读或真人/市场/正式产品验收；未宣称对V/U/T全文件做新一轮扫描。"
+}

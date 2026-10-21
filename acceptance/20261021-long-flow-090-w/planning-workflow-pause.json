@@ -1,0 +1,66 @@
+{
+  "expected_revision": 101,
+  "operation_id": "w-planning-order-update-pause-24",
+  "author_evidence": {
+    "quote": "继续通过 Codex 扩大 0.9.0 的长篇实跑规模，增加章节数量和单章篇幅，重点验证长章分段、多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/W-规划引用指引更新授权原文.md",
+    "source_sha256": "926bd96ffc8588c26eced5958cd1ef898883dd938c7e187b8cbe120ac7eac4b8",
+    "locator": "第4行用户原话；第6行代理在既有授权内的有限工具更新执行选择，非作者逐项确认",
+    "recorded_by": "Codex root / agent-within-authorized-scope"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "W最终工具更新完成，24章正式修订稿保持；仅讨论和读取当前证据，等待新鲜F验证新用户规划顺序及当前全24章，不新增25或修订正文。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "当前仅讨论，25尚未授权，不新增或修订正文。",
+        "新鲜F须核generation3及最终构建，旧gen2/D交接保留历史；从当前完整正文恢复，不拼旧片段。",
+        "保留全部正文、追踪、作者定制、备份与失败证据，不Git提交、推送、上传或发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "三项普通事实修订已提交；旧计划保持历史意图，差异见W/d-revision-choice.md和当前连读报告。",
+          "24章有限试验完成，待新鲜F阅读全文复核；不等于作者定稿、市场验收或最终候选回归通过。"
+        ]
+      }
+    }
+  }
+}

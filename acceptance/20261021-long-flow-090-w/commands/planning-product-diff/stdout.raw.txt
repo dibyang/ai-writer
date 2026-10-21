@@ -1,0 +1,149 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 387268f6..7923ee05 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -2,6 +2,10 @@
+ 
+ ## 0.9.0 — 开发中，未发布
+ 
++- 补齐新章节先规划授权、再建立真实细纲、后登记采用与有限正文范围的启动顺序；规划引用须已存在，不以未来路径、空文件或假采用绕过检查。
++
++- 根据长篇实跑补明同作品草案输出须串行、合章分场标记应写入片段及物件交接previous_holder的同级字段位置；写锁、空白分隔符与保管链保护保持。
++
+ - 意见apply补充显式tracking模式，支持正文同字节而登记摘要/时间线确已修正的闭环；绑定真实提交前后追踪与采用基线，等价重登、刷新来源或报告仍不算修复，默认正文门槛保持。
+ 
+ - 打包读取Git来源遇临时中断时只作一次有界重试，持续失败保留具体命令、退出状态和错误，拒绝产物发布；不伪造来源或跳过一致性检查。
+diff --git a/RELEASE_NOTES.md b/RELEASE_NOTES.md
+index ee69a9aa..5f41c4da 100644
+--- a/RELEASE_NOTES.md
++++ b/RELEASE_NOTES.md
+@@ -2,6 +2,10 @@
+ 
+ 下一版本为0.9.0，本页为开发中的发行说明。当前正式下载仍是[v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，尚未创建或发布v0.9.0。
+ 
++补齐新章节的规划启动顺序：先仅开放规划，用plan建立真实细纲，核对采用后再登记有限正文范围。规划引用必须已存在，文件存在本身不代表作者已采纳；保留失败输入，不用空壳文件或手改状态压过保护。
++
++长篇实跑进一步补明草案输出的串行顺序、合章分场标记的位置，以及已有物件换手的previous_holder字段形状；继续保留写锁、原字节和保管链校验，不把输入失败后的重试当作已完成登记。
++
+ 实跑补齐仅登记追踪修正的意见闭环：原文正确时可保持正文同字节，正式修订、重登及提交后以显式tracking模式绑定摘要/章末事实快照的真实变化，再用当前实读报告复核。默认apply仍要求正文实改，等价重登或只刷新来源/报告不能冒充修复。
+ 
+ 打包工具补充Git来源读取的临时中断恢复与具体错误提示：最多重试一次，仍失败就停止，保留诊断和失败暂存，不将不可靠信息当来源记录。
+diff --git a/docs/quickstart.md b/docs/quickstart.md
+index ddd66f34..2b99ab30 100644
+--- a/docs/quickstart.md
++++ b/docs/quickstart.md
+@@ -38,6 +38,8 @@ node bin/ai-writer.mjs doctor
+ 
+ > 暂停正文，先讨论全书总纲并保存这次任务。投递员的身份已经确定，寄件动机仍待讨论；请分别记录已选和未决内容，下一会话不要自动续写。
+ 
++新章细纲尚未创建时，让Codex先保存仅规划的任务、不开放正文范围，用已有真实来源建立细纲，再登记实际采用的引用和本轮有限正文范围。不要把未来文件先填成已采用引用；遇“引用不存在”应保留失败输入并纠正顺序，不建空文件或手改状态来通过检查。具体字段顺序见[阶段与授权](workflow.md)。
++
+ 保留整个作品目录，包括隐藏的`.writer/`和`.agents/`。只复制正文不能完整恢复状态。长篇后续按[从规划到导出的完整路径](long-form.md)走，跨会话只凭文件恢复，不依赖聊天记忆。
+ 
+ ## 3. 审查、修订和导出
+@@ -109,6 +111,8 @@ node .writer/tool/bin/ai-writer.mjs status
+ 
+ 长篇的context可能超过Codex单次显示容量。可让Codex用`--out .writer/drafts/context-本次.json`保存新入口，检查预算和`omitted_ids`，再分段核读所需内容；该选项仍会返回完整JSON，不会自动缩短控制台输出。看到“输出截断”应保留原输出、补读未显示部分；声称完整读过的正文和必读来源必须实际读全，不能仅凭文件已保存认定读完。细节见[使用手册](user-guide.md)中的“长篇上下文”。
+ 
++同一作品的写前context、登记模板和预览等带`--out`保存操作要依次执行，等上一条退出再运行下一条；它们会创建草案并取得作品写锁，不能当作独立读取并发。遇占用先核仍在执行的命令，正常结束后再重试；不要删除锁或刷新哈希绕过保护。
++
+ 若工具返回`CONTEXT_BUDGET_EXCEEDED`，查看`context_budget`里的实际总量、分项和主要引用占用，再让Codex按相关性整理可选研究或提高`--max-chars`重试。失败不会截断上下文或生成out文件；不要删除作者约束、手改状态或重新初始化。这里统计序列化字符量，不是模型token数。
+ 
+ 若Codex在嵌套作品目录出现`helper_unknown_error`，返回主项目会话并明确作品完整路径；不要重新初始化或修改全局安全设置。已有作品导入、版本变化、修订恢复和工具升级分别见[使用手册](user-guide.md)、[版本与修订](revision-and-sources.md)及[本地安全更新](tool-updates.md)。
+diff --git a/docs/review-and-registration.md b/docs/review-and-registration.md
+index dd52b5f6..ffe62517 100644
+--- a/docs/review-and-registration.md
++++ b/docs/review-and-registration.md
+@@ -53,7 +53,7 @@ record-preview与record共用校验，显示缺项、实际事实差异和未变
+ 
+ 0.9预览另有related_unchanged_ledger：按输入显式更新的角色，以及变化条目里的角色，列出有共同知情角色、但本次未更新的条目；最近证据优先，最多8条，附总量和遗漏数。它不读懂“尚未”等语句，不判语义错误，不要求补齐所有候选。模型应按ID召回、实读正文，区分当前知情和带明确日期的历史描述；一项约定兑现不自动刷新另一项或同项未改子字段。需要更新时另存真实changes和引文后再预览，不换来源哈希；无变化有据可保留。
+ 
+-0.9重登草案按原登记前后的结构差异恢复ledger变化字段，character_known逐人保留真正变化的项；原本未变的知识不再整表写回，避免覆盖前章刚修好的字段。新条目仍给完整必要内容，物证换手仍核完整custody及previous_holder。结构差量不是语义合并：角色整段状态、实际变化的说明和物证去向仍须实读核查，不自动认定原差量在新上下文中正确。
++0.9重登草案按原登记前后的结构差异恢复ledger变化字段，character_known逐人保留真正变化的项；原本未变的知识不再整表写回，避免覆盖前章刚修好的字段。新条目仍给完整必要内容，物证换手仍核完整custody及previous_holder。已有条目的previous_holder与custody同级，取当前账本的保管人，不放在custody内；新保管去向及本章引文按真实正文填写。结构差量不是语义合并：角色整段状态、实际变化的说明和物证去向仍须实读核查，不自动认定原差量在新上下文中正确。
+ 
+ 重登不会重置原观察保护。prepare、commit及中断后的complete会核对原会话基线中已有的observation：不能删除、改为其他类型，或改写statement/author_truth（含向原来未填的author_truth补值）。知情、状态及另建的解释可按实际新稿记录；若因原观察不符而阻断，保留原记录并新增修正，不把退回首次出现之前当作覆盖入口。rollback仍按原备份恢复。
+ 
+diff --git a/docs/user-guide.md b/docs/user-guide.md
+index 30da1dd3..e81655a1 100644
+--- a/docs/user-guide.md
++++ b/docs/user-guide.md
+@@ -57,8 +57,12 @@ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追
+ 
+ Codex可使用 `assemble --input 合章.json`，按实际顺序、分段路径及SHA256创建新完整章；输入还包含单元号、当前revision和新正文路径。它遵守阶段、范围及修订占用保护，不改状态、不登记、不覆盖已有稿。中断后核对完整稿字节；残稿保留后另存，不自动覆盖恢复。形状见 `assemble --help` 和[技术参考](workflow.md)。
+ 
++合章的`separator`只允许空白。需要分场标记时，先把标记写在实际片段中，再读取该片段的新SHA256；不要把横线或其他正文传成separator，也不要只改输入哈希追认未读的新版本。
++
+ 全文实读后先确认报告已保存，再预检和登记。可用 `draft_review` 绑定报告与当前正文版本；缺文件、空报告、正文或报告哈希变化都会先于登记写入拒绝。它只核文件版本，阅读与文学结论仍由实际审查负责。`record-preview` 阻断退出1，`record` 输入异常退出2；任何失败都停止依赖步骤，修正后从失败点重试。
+ 
++同一作品保存context、record-template、record-preview、review-template或replay-input的`--out`草案时，逐条等待命令退出；保存文件也会取得作品写锁，不能因为业务state不变就并发。占用时先核正在运行的命令，不自动删锁、按超时抢锁或改期望revision。已有物件换手的`previous_holder`放在对应ledger条目内，与`custody`同级，值须是当前账本保管人；去向和本章引文仍按实际正文填写。
++
+ 中途换会话时，将分段路径和版本、已写事件与人物/物件现状、下一未完段、最终章路径、写前模板及当前任务保存为本地交接。分段可放`分段/`等明确目录，别混作下一章；status只列正文库存，不能据此判断所有中间稿是否存在。恢复时实读原片段而非重写开头；若模板来源或修订已变，保留旧输入，核查影响并重读后另取新模板，不能只把旧输入的哈希换成新的。
+ 
+ 旧章完成正式修订后，先以已提交的完整正文恢复。`分段/`和普通交接文件不在修订事务的默认复制、发布范围，旧片段可能仍是修前字节；它们保留作历史，不代表当前稿。让Codex新建绑定当前修订号和正文哈希的交接，列明旧入口已过时。确需从分段继续，再以修后完整章另存一套分段版本，按原顺序合章核对字节一致，并实读确认承接；不覆盖旧分段、不重复登记已提交章节，也不将旧段稿拼回主稿。
+@@ -85,6 +89,8 @@ Codex可使用 `assemble --input 合章.json`，按实际顺序、分段路径
+ 
+ 阶段包括方向、全书结构、分卷、章纲、试写、正式写作、修订与暂停，可以从正文返回规划。工具记录 stage/task/allowed_actions/draft_range/revise_range/stop_conditions/planning；阶段是工作中心，动作和有限区间决定能否登记。试写必须有末章和复盘条件；条件文字由代理落实，程序不能自动判断任意自然语言条件已发生。
+ 
++新章或跨卷续写的细纲还不存在时，先登记`outline`阶段、仅`discuss/plan`且两正文范围为null的规划任务；`planning.outline`可用`status: draft`、空`refs`并列出待办。Codex通过`plan`建立真实细纲、核对实际采用后，再以当前revision登记`adopted`引用及有限`trial/drafting`范围。`refs`中的每条路径都须已经存在；`adopted`还表示真实采用，文件存在本身不能证明作者已采纳。已有合适的滚动细纲可以引用，不要预填尚未创建的未来单元文件、建空壳文件或刷新哈希绕过检查。这是在已有任务授权内落实顺序，常规命令不需要重复向作者确认。
++
+ 临时任务放在workflow及交接/研究记录，长期定位、文风和权威规则只放稳定的世界与表达约束。不要把“这轮只写1–3章”写进这三份默认消费的设定文件，否则下一轮会同时读到旧范围。若旧文件已混入阶段性文字，保留原字节与证据，先核对当前正式任务和作者实际新指令，说明哪段是历史任务；确需改来源时走版本/影响流程，不直接覆盖已消费来源或改哈希。
+ 
+ 例如六章后你说“暂停正文，先讨论总纲”，Codex 应保存该指令并正式登记；status 显示 next_unit=7，同时建议处理总纲。context --purpose discussion 不需要第七章细纲；正文 context、record-template、record 会拒绝越权。更晚的新授权可更新范围；不根据过去写过章节推断无限授权。
+diff --git a/docs/workflow.md b/docs/workflow.md
+index b6940723..943ee88a 100644
+--- a/docs/workflow.md
++++ b/docs/workflow.md
+@@ -4,6 +4,8 @@
+ 
+ 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
+ 
++同一作品的写命令和带`--out`的草案保存应串行，等前一命令退出再执行下一条。context、record-template、record-preview、review-template和replay-input保存新草案时也会取得作品写锁，不是可并行的纯读取；失败停止依赖步骤。遇锁先核实际任务，正常结束后重试；若原任务已结束而锁仍在，按恢复手册核查现场，不自动删除锁或抢占。
++
+ **协议选择：** 0.7新作品默认schema6，2–6均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4及以上历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)、[跨章/登记/意见手册](review-and-registration.md)及[工具更新手册](tool-updates.md)。
+ 
+ ## 预览、跨章复核和意见（自0.6.0支持）
+@@ -85,6 +87,15 @@ workflow set 输入由 Codex 根据真实任务准备，字段如下；示例中
+ 
+ `workflow set --input 文件` 用 CAS 推进 revision；相同 operation_id/相同输入重试幂等，不同输入复用 ID 拒绝。stage 为 direction/structure/volume/outline/trial/drafting/revision/paused；规划/paused 不允许新正文，但可有明确 revise_range。draft/revise 动作必须分别有非空有限闭区间；空范围不是无限授权。stop_conditions 是待代理落实的文字条件，程序只自动检查动作与单元范围，不理解任意自然语言触发器。
+ 
++新单元尚无细纲时，按以下顺序落实已有作者授权：
++
++1. 先保存规划任务：`stage: outline`，`allowed_actions: [discuss, plan]`，`draft_range/revise_range: null`。`planning.outline`可为`{"status":"draft","refs":[],"unresolved_ids":["待建立当前章细纲"]}`；其他层级按实际状态填写。
++2. 通过`plan`创建真实单元纲，保留已消费的旧来源和输入；`planning.refs`不能引用尚未创建的文件。
++3. 核对实际采用内容，再以当前`expected_revision`和新`operation_id`登记`planning.outline.status: adopted`及已存在的真实引用。文件存在不自动等于作者采用。
++4. 同一真实任务已授权正文时，再切到`trial/drafting`并落实有限`draft_range`和停点；写前context/template按实际来源串行保存。未授权正文时保持规划范围。
++
++不要为了先填`adopted`而创建空壳、伪造引用或手改state。合法规划状态只有`missing/draft/adopted/deferred`；引用不存在的失败输入保留，纠正顺序后另存输入和调用标签，不将重试冒充已经完成的写作。
++
+ operation_id、decision.id 及 supersedes 引用为 1–100 位字母数字/下划线/连字符，首位为字母或数字；禁止使用 __proto__、constructor、prototype 保留键。非法 ID 在写入前拒绝，不会保存不可恢复的索引。
+ 
+ 暂停正文时 stage=structure、allowed_actions=[discuss,plan]，两个范围为 null，并填写实际任务。status.next_unit 保留登记序号，next.action 改指当前任务；context、record-template、record 同步拒绝越权，不能单改 next 的显示。
+diff --git a/lib/help.mjs b/lib/help.mjs
+index b0a6a350..21679b82 100644
+--- a/lib/help.mjs
++++ b/lib/help.mjs
+@@ -3,12 +3,12 @@ import path from 'node:path';
+ export const COMMANDS = {
+   init: { flags: ['path', 'kind', 'title','mode'], usage: '--path 新目录 --kind novel|screenplay|history|essay --title 作品名 [--mode long|standard]', purpose: '建立作品和随附工具，不覆盖已有目录。明确长篇/跨卷时用long，提前组织全书骨架、卷契约和近期细纲。', example: "--path 'works/雨夜来信' --kind novel --title '雨夜来信' --mode long" },
+   plan: { flags: ['project', 'input'], usage: '--project 作品目录 --input 细纲.json', purpose: '保存下一章、场或篇的细纲。', input: { unit: 1, title: '来信', goal: '确认寄件人', change: '发现寄件时间不符', beats: ['核对邮戳'], cast: [], setting_refs: [], research_refs: [] } },
+-  context: { flags: ['project', 'unit', 'max-chars', 'purpose','out'], usage: '--project 作品目录 [--purpose discussion|draft|revision] [--unit 1] [--max-chars 40000] [--out .writer/drafts/context-1.json]', purpose: 'discussion恢复任务/范围/决策；draft及revision须有授权和细纲。超预算不截断，返回总量、分项及主要引用占用；字符量不是模型token数。out可选，写新的内部JSON可读入口，不覆盖旧输入。' },
+-  'record-template': { flags: ['project', 'unit', 'draft','out'], usage: '--project 作品目录 --unit 1 --draft 正文/0001-来信.md [--out .writer/drafts/record-1.json]', purpose: '动笔前取得登记模板。路径/哈希自动填，未变事实保留；按实际正文填摘要与changes，不誊写全快照。' },
++  context: { flags: ['project', 'unit', 'max-chars', 'purpose','out'], usage: '--project 作品目录 [--purpose discussion|draft|revision] [--unit 1] [--max-chars 40000] [--out .writer/drafts/context-1.json]', purpose: 'discussion恢复任务/范围/决策；draft及revision须有授权和细纲。超预算不截断，返回总量、分项及主要引用占用；字符量不是模型token数。out可选，写新的内部JSON可读入口，不覆盖旧输入。带out会取得作品写锁；同作品的草案保存须串行，不与模板保存并发。' },
++  'record-template': { flags: ['project', 'unit', 'draft','out'], usage: '--project 作品目录 --unit 1 --draft 正文/0001-来信.md [--out .writer/drafts/record-1.json]', purpose: '动笔前取得登记模板。路径/哈希自动填，未变事实保留；按实际正文填摘要与changes，不誊写全快照。带out保存须等同作品context等写入命令结束；遇锁先核真实任务，不删除锁重试。' },
+   'record-preview': {flags:['project','input','out'],usage:'--project 作品目录 --input 登记.json [--out .writer/drafts/preview-1.json]',purpose:'只读预检，复用record校验并展示实际事实差异、未变项和待补字段；不自动刷新过期哈希，不证明语义无变化。'},
+   'long-enable-preview':{flags:['project'],usage:'--project 作品目录',purpose:'只读预览长篇迁移与估计journal体积，不创建备份、不改状态；取消即停止，实际启用仍需授权及当前revision。'},
+   record: { flags: ['project', 'input'], usage: '--project 作品目录 --input 登记.json', purpose: '填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。' },
+-  assemble: { flags: ['project','input'], usage: '--project 作品目录 --input 合章.json', purpose: '按有序分段路径与SHA256连接完整章，只创建新正文、不覆盖、不登记。须当前revision及正文授权；完成后完整实读，再preview/record。', input: {unit:1,expected_revision:1,draft:'正文/0001.md',parts:[{path:'分段/0001/01.md',sha256:'替换为实际片段SHA256'},{path:'分段/0001/02.md',sha256:'替换为实际片段SHA256'}],separator:'\n\n'} },
++  assemble: { flags: ['project','input'], usage: '--project 作品目录 --input 合章.json', purpose: '按有序分段路径与SHA256连接完整章，只创建新正文、不覆盖、不登记。separator只允许空白；换场标记须写入片段正文，再按实际字节取SHA256。须当前revision及正文授权；完成后完整实读，再preview/record。', input: {unit:1,expected_revision:1,draft:'正文/0001.md',parts:[{path:'分段/0001/01.md',sha256:'替换为实际片段SHA256'},{path:'分段/0001/02.md',sha256:'替换为实际片段SHA256'}],separator:'\n\n'} },
+   status: { flags: ['project', 'view'], usage: '--project 作品目录 [--view compact|full]', purpose: '查看进度、过期来源、未登记正文和建议下一步。' },
+   check: { flags: ['project'], usage: '--project 作品目录', purpose: '检查机械一致性与未登记正文；不裁定文学质量。' },
+   rewind: { flags: ['project', 'from', 'expected-revision'], usage: '--project 作品目录 --from 1 --expected-revision 当前修订号', purpose: '备份并作废指定单元及后续追踪，保留正文。schema4及以上须先建立独立修订区，在该区带revision-token回退；不在主稿直接执行。旧协议兼容原路径。' },
+@@ -25,7 +25,7 @@ export const COMMANDS = {
+   'style-scan': { flags: ['project', 'draft', 'out'], usage: '--project 作品目录 --draft 正文/0001-标题.md [--out 审查/语言线索-r1.json]', purpose: '只读扫描表达线索，供去 AI 味实读复核；不自动改稿、不打 AI 概率分。可检查未登记正文。' },
+   doctor: { flags: ['project'], usage: '[--project 作品目录]', purpose: '检查当前工具，或指定作品的随附技能、用户文档和工具文件。' },
+   governance: { flags: ['project', 'input'], usage: 'preview|migrate --project 作品目录 [--input 迁移.json]', purpose: 'preview 只读；migrate 显式备份迁移为 schema 3，保留事实。须提供 expected_revision、operation_id 和 author_evidence，不自动升级随附工具。旧工具会拒绝新状态。' },
+-  workflow: { flags: ['project', 'input'], usage: 'show|set --project 作品目录 [--input 阶段.json]', purpose: 'show 只读；set 登记本轮阶段、任务和有限正文/修订范围。输入含 expected_revision、operation_id、author_evidence、workflow；普通作者用自然语言说明，由 Codex 按手册准备 JSON。' },
++  workflow: { flags: ['project', 'input'], usage: 'show|set --project 作品目录 [--input 阶段.json]', purpose: 'show 只读；set 登记本轮阶段、任务和有限正文/修订范围。输入含 expected_revision、operation_id、author_evidence、workflow；普通作者用自然语言说明，由 Codex 按手册准备 JSON。planning.refs只填已存在的真实文件；新章先仅允许plan，outline可为draft且refs为空，plan建立细纲后再登记真实采用与有限正文范围，不用未来路径或空文件冒充采用。' },
+   decision: { flags: ['project', 'input', 'unit'], usage: 'current|list|set --project 作品目录 [--unit 7] [--input 决策.json]', purpose: '当前作者计划与事实 ledger 分开。set 逐项列出 candidate/confirmed/withdrawn、采纳/排除/未决项；同主题同范围取代用新 ID + supersedes。不自动采纳整稿。' },
+   tool: { flags: ['project', 'other','source','input'], usage: 'identify|compare|update-plan|enable|undo-enable|update|updates|recover [--project 作品目录] [--other 工具或作品目录] [--source 本地来源] [--input 输入.json]', purpose: 'identify/compare/update-plan只读。更新须外部入口、完整本地来源、作者依据、当前revision与计划指纹；schema5先显式enable为6。updates列中断事务，recover完成或回滚并保留备份。根技能/AGENTS/手册默认保留；详见tool-updates.md。' },
+   protection: { flags: ['project', 'input'], usage: 'preview|enable --project 作品目录 [--input 启用.json]', purpose: '显式将 schema 3 备份升级为 schema 4，保留事实/原来源；旧 0.4 工具拒绝新状态。不更新随附工具。enable 输入 expected_revision、author_evidence。新作品默认已启用。' },

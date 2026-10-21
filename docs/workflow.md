@@ -4,6 +4,8 @@
 
 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
 
+同一作品的写命令和带`--out`的草案保存应串行，等前一命令退出再执行下一条。context、record-template、record-preview、review-template和replay-input保存新草案时也会取得作品写锁，不是可并行的纯读取；失败停止依赖步骤。遇锁先核实际任务，正常结束后重试；若原任务已结束而锁仍在，按恢复手册核查现场，不自动删除锁或抢占。
+
 **协议选择：** 0.7新作品默认schema6，2–6均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4及以上历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)、[跨章/登记/意见手册](review-and-registration.md)及[工具更新手册](tool-updates.md)。
 
 ## 预览、跨章复核和意见（自0.6.0支持）
@@ -84,6 +86,15 @@ workflow set 输入由 Codex 根据真实任务准备，字段如下；示例中
 ```
 
 `workflow set --input 文件` 用 CAS 推进 revision；相同 operation_id/相同输入重试幂等，不同输入复用 ID 拒绝。stage 为 direction/structure/volume/outline/trial/drafting/revision/paused；规划/paused 不允许新正文，但可有明确 revise_range。draft/revise 动作必须分别有非空有限闭区间；空范围不是无限授权。stop_conditions 是待代理落实的文字条件，程序只自动检查动作与单元范围，不理解任意自然语言触发器。
+
+新单元尚无细纲时，按以下顺序落实已有作者授权：
+
+1. 先保存规划任务：`stage: outline`，`allowed_actions: [discuss, plan]`，`draft_range/revise_range: null`。`planning.outline`可为`{"status":"draft","refs":[],"unresolved_ids":["待建立当前章细纲"]}`；其他层级按实际状态填写。
+2. 通过`plan`创建真实单元纲，保留已消费的旧来源和输入；`planning.refs`不能引用尚未创建的文件。
+3. 核对实际采用内容，再以当前`expected_revision`和新`operation_id`登记`planning.outline.status: adopted`及已存在的真实引用。文件存在不自动等于作者采用。
+4. 同一真实任务已授权正文时，再切到`trial/drafting`并落实有限`draft_range`和停点；写前context/template按实际来源串行保存。未授权正文时保持规划范围。
+
+不要为了先填`adopted`而创建空壳、伪造引用或手改state。合法规划状态只有`missing/draft/adopted/deferred`；引用不存在的失败输入保留，纠正顺序后另存输入和调用标签，不将重试冒充已经完成的写作。
 
 operation_id、decision.id 及 supersedes 引用为 1–100 位字母数字/下划线/连字符，首位为字母或数字；禁止使用 __proto__、constructor、prototype 保留键。非法 ID 在写入前拒绝，不会保存不可恢复的索引。
 

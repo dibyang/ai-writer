@@ -1,0 +1,22 @@
+{
+  "unit": 1,
+  "expected_revision": 2,
+  "source_hashes": {
+    "writer.json": "f931db6974d97566f0498b7abfb00872ea7f1703919992213424ffe6c493c40b",
+    ".writer/state.json": "9aed98f0e5d9d53a7a35147659505f2a3acb3b33fc61433dae71b692b4ab12d5",
+    "大纲/单元/0001.json": "794bf99efd7ebe9a3b2c9a9bf9b1ae9145d9783e742a35626291cf419c2de552",
+    "设定/作品定位.md": "0edd2a223deba7ea9ba3904e70f086cdc821a24a236c01f5e4aed2929e960395",
+    "设定/文风.md": "d2b1f4aa3a729f512fcdb5dc90060477813fd93f3482c2caf8fbd46620422c30",
+    "设定/权威规则.md": "2128797a32848d30c727b7bc19a501e231f87315126edb86702a9b4ae7e9206d"
+  },
+  "draft": "正文/0001-顺序技术场景.md",
+  "source_bindings": {},
+  "summary": "",
+  "changes": {
+    "characters": {},
+    "timeline_append": [],
+    "ledger": {}
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。",
+  "output": ".writer/drafts/f-bootstrap-template.json"
+}

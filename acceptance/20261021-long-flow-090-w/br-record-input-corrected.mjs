@@ -1,0 +1,2 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';
+const W=path.dirname(fileURLToPath(import.meta.url)),x=JSON.parse(fs.readFileSync(path.join(W,'inputs/br-record-18.json'),'utf8'));x.changes.characters['沈禾']=x.changes.characters['沈禾'].replace('未亲见第十日店边角全过程，仅自己向父讲述。','本人向父讲第十日店里边角，本章未现场展开店场，父只听述。');fs.writeFileSync(path.join(W,'inputs/br-record-18-corrected.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});console.log('corrected narrative scope versus character knowledge; old input retained');

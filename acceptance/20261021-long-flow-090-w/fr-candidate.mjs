@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import{fileURLToPath}from'node:url';import{spawnSync}from'node:child_process';
+const W=path.dirname(fileURLToPath(import.meta.url)),s=JSON.parse(fs.readFileSync(path.join(W,'fr-session.json'))),[label,...args]=process.argv.slice(2);if(!label?.startsWith('fr-')||!args.length)throw Error('unique fr-label and command required');const r=spawnSync(process.execPath,[path.join(W,'w-writer.mjs'),label,...args,'--project',s.workspace,'--revision-token',s.token],{stdio:'inherit',windowsHide:true});process.exitCode=r.status??1;

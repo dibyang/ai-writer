@@ -1,0 +1,132 @@
+{
+  "scope": "Root controller failures observed in tool transcripts; summaries, not invented separate child stdout/stderr captures",
+  "failures": [
+    {
+      "command": "node bin/ai-writer.mjs status",
+      "exit_code": 1,
+      "kind": "usage-error-before-isolated-project-setup",
+      "message": "缺少 --project；请提供作品目录，或在含 writer.json 的作品目录中运行",
+      "effect": "Read-only command at tool repository root, no work targeted or changed",
+      "resolution": "Use w-writer explicit isolated project; cli-logs/root-status actual exit0"
+    },
+    {
+      "command": "node acceptance/20261021-long-flow-090-w/run-long.mjs source-full-tests npm.cmd test -- --test-concurrency=2",
+      "exit_code": 1,
+      "kind": "acceptance-wrapper-prelaunch-rejection",
+      "message": "Unsafe npm args",
+      "child_started": false,
+      "evidence": "commands/source-full-tests/launch-failure.json",
+      "resolution": "Allow literal equals sign in wrapper safe argv; distinct source-full-tests-r2 completed actual npm tests with exit0"
+    },
+    {
+      "command": "node acceptance/20261021-long-flow-090-w/probe-budget.mjs (first invocation)",
+      "exit_code": 1,
+      "kind": "acceptance-parser-wrong-output-stream",
+      "message": "SyntaxError: Unexpected end of JSON input",
+      "effect": "Actual product already correctly rejected at exit2/CONTEXT_BUDGET_EXCEEDED; parser wrongly read empty stdout rather than JSON stderr",
+      "evidence": [
+        "probe-budget-before-stream-fix.mjs",
+        "cli-logs/root-budget-too-small/result.json",
+        "cli-logs/root-budget-too-small/stderr.raw.txt"
+      ],
+      "resolution": "Use stderr and distinct root-budget-too-small-r2 label; budget-probe-verification.json confirms actual rejection and all1387 workspace files same bytes"
+    },
+    {
+      "command": "parent inline assertion after guidance-update-plan",
+      "exit_code": 1,
+      "kind": "acceptance-assumed-plan-authority",
+      "effect": "Read-only tool update plan correctly returned can_update=false with ACTION_OUT_OF_SCOPE while paused/discuss-only; parent assertion incorrectly expected true, before writing update input",
+      "evidence": [
+        "cli-logs/guidance-update-plan/result.json",
+        "cli-logs/guidance-update-plan/stdout.raw.txt"
+      ],
+      "resolution": "Saved genuine user evidence, formally enabled maintenance-only plan at r76→77, replanned and used exact returned request; old failure retained"
+    },
+    {
+      "command": "guidance-installed-context: context --action discuss",
+      "exit_code": 2,
+      "kind": "parent-invalid-cli-option",
+      "effect": "Parser rejected unknown --action without state change",
+      "evidence": [
+        "cli-logs/guidance-installed-context/result.json",
+        "cli-logs/guidance-installed-context/stderr.raw.txt"
+      ],
+      "resolution": "Read actual context help, used --purpose discussion; guidance-installed-discussion completed0"
+    },
+    {
+      "command": "parent inline node -e copying V guard helper",
+      "exit_code": 1,
+      "kind": "acceptance-shell-quoting-error",
+      "message": "SyntaxError: Invalid or unexpected token; Expected unicode escape",
+      "effect": "PowerShell quoting caused JavaScript parse failure before any filesystem write; product and sample unchanged",
+      "resolution": "Wrote dedicated W guard-probe.mjs through apply_patch; no original helper or sealed evidence changed",
+      "evidence_boundary": "Summary from root tool transcript only, not a fabricated raw child log"
+    },
+    {
+      "command": "node verify-repository-final.mjs first invocation",
+      "exit_code": 1,
+      "kind": "root-untracked-inventory-method-error",
+      "effect": "git ls-files --others --directory included pre-existing empty tracked workspace directories; read-only assertion failed, no repository or sample writes",
+      "resolution": "Use git status --porcelain=v1 -z --untracked-files=normal, matching initial boundary semantics; no data removed or baseline changed"
+    },
+    {
+      "command": "FastCtx read lib/review-workflow.mjs offset126 limit45 before F-title resume",
+      "kind": "root-read-output-context-limit",
+      "effect": "Inspection output exceeded available context; no file writes or product calls",
+      "resolution": "Retry with narrow grep and read123/28; verified heading-only byte change qualifies as real draft application before preparing concrete repair prompt",
+      "evidence_basis": "Controller tool transcript/continuation summary; no invented separate stdout capture"
+    },
+    {
+      "command": "classify-failures.mjs final first pass",
+      "kind": "intentional-unclassified-event-stop",
+      "effect": "Refused final completion until three newly observed F helper failures were individually inspected; no product writes",
+      "resolution": "Classified actual missing historical input path, ledger object/array helper mistake and wrong issue response field; original native outputs and corrected successful calls retained. Strict no-unknown assertion remains."
+    }
+  ],
+  "metric_correction": "test-progress initially counted TAP ok lines while Node used spec reporter. It was corrected to also count Unicode spec symbols. Final source-regression-verification.json parses actual final totals199/197/0/2; no early zero counter is treated as a result.",
+  "product_changes_caused_by_these_failures": false,
+  "not_an_operating_system_full_process_audit": true,
+  "controller_followup_failures": [
+    {
+      "command": "verify-d-complete.mjs first direct invocation",
+      "exit_code": 1,
+      "kind": "acceptance-overstrict-derived-source-comparison",
+      "message": "Consumed source hashes changed: 13; difference was .writer/state.json",
+      "effect": "Read-only checker stopped before any proof/state output. The product had correctly rebased derived state and prior-body hashes during formal replay.",
+      "resolution": "Preserved original checker at originals/verify-d-complete-overstrict-sources.mjs; compare stable setting/outline/research/config hashes unchanged, verify prior-body hashes against current actual bytes, and disclose derived before/after values. parent-d-complete-check completed0.",
+      "evidence_boundary": "Initial error from root tool transcript, later successful run has actual commands streams; no fabricated initial dual streams"
+    },
+    {
+      "command": "prepare-planning-update.mjs first invocation before corrected parent proof existed",
+      "exit_code": 1,
+      "kind": "controller-dependent-precondition-failure",
+      "message": "ENOENT parent-d-complete-verification.json",
+      "effect": "Dependent preparation was invoked after failed checker, then stopped at its first read before any P author source/workflow/input was written.",
+      "resolution": "Correct parent proof was established first, then preparation and every subsequent dependent operation were gated on actual exit0. No product or manuscript repair was needed."
+    }
+  ],
+  "inspection_notices": [
+    {
+      "tool": "FastCtx read",
+      "path": "scripts/test.mjs",
+      "result": "Output exceeded available context; no source changed",
+      "evidence_boundary": "Root tool transcript summary, no separate process streams"
+    },
+    {
+      "tool": "FastCtx read",
+      "path": "acceptance/20261021-long-flow-090-w/c-final-verification.json",
+      "result": "File does not exist; used actual c-final-audit.json suggested by tool and independently checked current state/receipts",
+      "evidence_boundary": "Root inspection lookup, not a product or native Codex process failure"
+    },
+    {
+      "tool": "FastCtx read",
+      "path": "acceptance/20261021-long-flow-090-w/drr-final-audit.json",
+      "result": "Lookup absent; glob found actual drr-final-verification.json, then structured metadata and independent product receipts were checked"
+    },
+    {
+      "tool": "apply_patch",
+      "path": "acceptance/20261021-long-flow-090-w/root-failure-notes.json",
+      "result": "One patch used an incomplete metric_correction line anchor and was rejected before any write; exact current lines were read before this corrected update"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# 21预览关联未变项核对
+
+在r87的cr-preview-twentyone中实际列出的未变关联项逐一与本次实读对照：T_W_CURTAIN_BAG是15初愿18首轻用已兑现的历史，不因21新修边再倒改；F_W_SHIFT_SWAP限19换班，21未重开；P_W_COAT仍许柜未剪补；F_W_CURTAIN_WASH限15洗帘，21不改；F_W_POT_REPAIR限14修煲38旧事，21不改；P_ROUTE_MASTER仍12母图/补图持有史，21未用；T_EARLY_BATCH与T_ROUTE_STEP均为前12已完历史，不更新。旧观察三字段全保留。
+
+本次变化项中，旧P_W_STOOL_MATERIALS statement“拟做”和T_W_BAG_EDGE_REPAIR statement“修补尚未发生”容易与当前结果互读混淆，T_W_EVENING_CLASS仍只写报名。本次record-v2输入以21实际结果细化这三条非observation statement，其余引文/旧事件留存；不是手改state，不刷新消费来源hash。第一版preview通过但不直接登记，新v2仍须preview退出0再record。正文与知情完整章报告未变。

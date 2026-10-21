@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+const W=path.dirname(fileURLToPath(import.meta.url)),s=JSON.parse(fs.readFileSync(path.join(W,'d-active-revision.json'))),pre=JSON.parse(fs.readFileSync(path.join(W,'pre-revision-current.json'))),lines=['# 候选原稿影响原文摘录','', '本文件只是实际候选字节摘录，不宣称已完成阅读或结论。'];
+for(const n of [17,18,21,22,23,24]){const d=pre.drafts.find(d=>d.unit===n),file=path.join(s.workspace,d.draft),b=fs.readFileSync(file);if(crypto.createHash('sha256').update(b).digest('hex')!==d.sha256)throw Error('copy drift');const a=b.toString('utf8').split('\n'),keep=new Set();a.forEach((x,i)=>{if(/二十八|28|七点|八点|九点|三点|钟头/.test(x))for(let j=Math.max(0,i-4);j<=Math.min(a.length-1,i+4);j++)keep.add(j);});lines.push('',`## ${n} ${file}`,`SHA ${d.sha256}`);let prev=-2;for(const i of [...keep].sort((a,b)=>a-b)){if(i>prev+1)lines.push('[中间未摘录]');lines.push(`${i+1}: ${a[i]}`);prev=i;}}
+const u=pre.state.units.find(u=>u.unit===13);lines.push('','## 原13追踪（整条）','',JSON.stringify(u,null,2));
+fs.writeFileSync(path.join(W,'d-candidate-impact-original.md'),lines.join('\n')+'\n',{flag:'wx'});
+console.log(JSON.stringify({lines:lines.length}));

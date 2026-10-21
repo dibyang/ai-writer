@@ -1,0 +1,70 @@
+{
+  "expected_revision": 105,
+  "operation_id": "fr-title-revision-scope-r105",
+  "author_evidence": {
+    "quote": "唯一正文文件改动：P/正文/0019-提前的两个钟头-v1.md中首行“# 第十九章 提前的两个钟头”改为“# 第十九章 提前的一个半钟头”。",
+    "local_source": "研究/FR标题修订真实授权.md",
+    "source_sha256": "06b0c792e4e9dcb0ed50afb72f9e3e211f32ef9b3bb7891b1489bf47ac7d00d3",
+    "locator": "本会话prompt-f-title-repair.md第1、5、7、9、13行；保留原作者prompt-a-first.md授权，仅代理在明确范围执行",
+    "recorded_by": "W-F同ID恢复当前模型"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "W-F同ID恢复：正式修复I_F19_TITLE_TIME，仅19章首行两→一个半，保留历史路径；实读重登19—24、当前全24复核与新草稿导出，不写25。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 19,
+        "to": 24
+      },
+      "stop_conditions": [
+        "唯一正文差异是19章首行；其他23章、前18完整units、观察三字段与既有来源原字节保护。",
+        "有限19—24修订完成即暂停；不写25、不新增25章纲或正文。",
+        "失败停依赖；不改根产品、不换包、不Git提交推送、不上传发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "本F已确认I_F19_TITLE_TIME正式修订，待独立事务提交及新当前全24报告复核；D三事实保持。"
+        ]
+      }
+    }
+  }
+}

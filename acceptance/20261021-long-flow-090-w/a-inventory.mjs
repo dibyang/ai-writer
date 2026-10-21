@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const W=path.dirname(fileURLToPath(import.meta.url));
+const P=path.join(W,'scenario/东岸末班船-规模验证');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const raw=fs.readFileSync(path.join(P,'.writer/state.json'));
+const state=JSON.parse(raw);
+const units=state.units.map(u=>{const b=fs.readFileSync(path.join(P,u.draft));return {unit:u.unit,draft:u.draft,sha256:sha(b),lines:b.toString('utf8').split('\n').length,bytes:b.length};});
+const report={project:P,state_sha256:sha(raw),revision:state.revision,schema_version:state.schema_version,units_sha256:sha(JSON.stringify(state.units)),units,created_at:new Date().toISOString(),note:'Mechanical baseline only. Native FastCtx reading is recorded separately.'};
+fs.writeFileSync(path.join(W,'a-start-baseline.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(W,'a-start-state.json'),raw,{flag:'wx'});
+console.log(JSON.stringify(report,null,2));

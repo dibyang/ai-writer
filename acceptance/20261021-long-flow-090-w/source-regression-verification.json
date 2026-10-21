@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "at": "2026-10-20T16:38:34.988Z",
+  "scope": "fresh Windows Node24 source full regression on same frozen ab14 source",
+  "tests": 199,
+  "pass": 197,
+  "fail": 0,
+  "skip": 2,
+  "skip_lines": [
+    "﹣ 合章拒绝符号链接分段和目标目录 (0.2174ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+    "﹣ 符号链接不允许作为作品输入 (3115.5862ms) # 当前环境不允许创建链接"
+  ],
+  "source_files": 324,
+  "source_same_bytes": true,
+  "content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+  "stdout_sha256": "131839be6e04f8b699fcd64b1c97e5d5d108d4d679b5496c9a384a478b995654",
+  "receipt": {
+    "label": "source-full-tests-r2",
+    "exe": "npm.cmd",
+    "args": [
+      "test",
+      "--",
+      "--test-concurrency=2"
+    ],
+    "cwd": "D:\\work\\other\\ai-writer",
+    "started_at": "2026-10-20T16:28:07.870Z",
+    "elapsed_ms": 534313,
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "stdout_bytes": 20512,
+    "stderr_bytes": 0,
+    "input": null,
+    "before_state_sha256": null,
+    "after_state_sha256": null
+  },
+  "not_remote_ci": true,
+  "not_literary_semantic_proof": true
+}

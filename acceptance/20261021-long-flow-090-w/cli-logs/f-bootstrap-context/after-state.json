@@ -1,0 +1,134 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "b7202869-3e17-4702-9886-bbc8ac9ff334",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "trial",
+    "task": "零正文技术门禁验证：有限1—1，只取当前来源context及模板后暂停",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本轮只取第1章context与record-template，不创建正文、不record、不导出。",
+        "取模板后立即paused，复盘引用顺序、来源SHA和零正文结果。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md"
+        ],
+        "unresolved_ids": [
+          "技术样例仅供本轮门禁测试，不宣称作者采用整书"
+        ]
+      },
+      "structure": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "整书与分卷尚未创作"
+        ],
+        "reason": "本轮仅验证第1章规划引用与来源门禁，不写正文；有限1—1取模板后即暂停，复盘引用存在性、来源SHA与授权范围后再考虑任何创作。"
+      },
+      "volume": {
+        "status": "deferred",
+        "refs": [],
+        "unresolved_ids": [
+          "整书与分卷尚未创作"
+        ],
+        "reason": "本轮仅验证第1章规划引用与来源门禁，不写正文；有限1—1取模板后即暂停，复盘引用存在性、来源SHA与授权范围后再考虑任何创作。"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json"
+        ],
+        "unresolved_ids": [
+          "仅代理按真实技术验证授权采用样例细纲；不是作者采纳整书"
+        ]
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/a754ae33-a78a-434c-ad18-d591613190b9.json",
+      "sha256": "a2460ed55fa94c7f639a04618c27117d037eba74394448a8f45813ec03b80420"
+    },
+    {
+      "ref": ".writer/objects/ba7aaff8-97d5-4f52-9574-06af4ce17caa.json",
+      "sha256": "3b20b6e7039d17a1711b08c38d9473ccf87a6a846e5b959c042c06df23be6b90"
+    }
+  ],
+  "operations": {
+    "f-bootstrap-outline-v2-20261021": {
+      "input_sha256": "306973eb23aed14a678119a4d15115689efc83f0292f8979108ff5bdb6e69153",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "f-bootstrap-outline-v2-20261021",
+        "event": {
+          "ref": ".writer/objects/a754ae33-a78a-434c-ad18-d591613190b9.json",
+          "sha256": "a2460ed55fa94c7f639a04618c27117d037eba74394448a8f45813ec03b80420"
+        }
+      }
+    },
+    "f-bootstrap-trial-20261021": {
+      "input_sha256": "d3126e9f106d557189cf06ccf59da5a116e56036d4728c6892edd0d4c4a9c31b",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "f-bootstrap-trial-20261021",
+        "event": {
+          "ref": ".writer/objects/ba7aaff8-97d5-4f52-9574-06af4ce17caa.json",
+          "sha256": "3b20b6e7039d17a1711b08c38d9473ccf87a6a846e5b959c042c06df23be6b90"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/ba7aaff8-97d5-4f52-9574-06af4ce17caa.json",
+    "sha256": "3b20b6e7039d17a1711b08c38d9473ccf87a6a846e5b959c042c06df23be6b90"
+  }
+}

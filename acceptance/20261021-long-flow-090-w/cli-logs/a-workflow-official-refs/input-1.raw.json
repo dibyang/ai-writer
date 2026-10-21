@@ -1,0 +1,77 @@
+{
+  "expected_revision": 56,
+  "operation_id": "w-a-trial-official-planning-refs",
+  "author_evidence": {
+    "quote": "整体方案：将12章5卷扩到24章9卷（V6=13—15,V7=16—18,V8=19—21,V9=22—24）。新增13—24每章至少6000正文汉字，15/18/21/24至少8000；普通章至少3段，大章至少4段，各段是实写连续推进，不重复旧章或把提要、报告、标题计正文凑数。每段约1800—2400汉字；完整回读后CLI assemble，再完整读合章，回对有效细纲、人物/时间/钱物/知情/后果/声音，保存报告并draft_review绑定两项真实当前SHA；record-preview退出0才record。正文只写授权单元、只登记实发事实。旧报告不能认证新字节。\n\n阶段A本进程仅第13章前两段停；原ID恢复完成13—15。B新鲜会话16—17停/同ID18；C新鲜19—20停/同ID21；D新鲜22—24后正式独立修订区13—24，只重登13停；同ID/同修订/token恢复14—24后全尾连读/prepare/commit；最后新鲜F完整1—24回读，暂停只discuss，25越权负向、当前草稿导出。未来多处旧事实修订选13/17/21各一不同普通非observation事实，均须后文有真实承接、至少6章正文有合理改动；这是测试选择不是强说旧稿bug，不能改任何observation type/statement/author_truth。前12正文与state.units对象本轮始终保持；不修改它们用来省事，不恢复指向V的历史修订。",
+    "local_source": "研究/W-A-测试授权原文.md",
+    "source_sha256": "043ee501466c8e088d6a43933636f673144c8aa2b3e889350e1a2bdd14f5deda",
+    "locator": "W/prompt-a-first.md第5—7行；人类原话在第3行，测试规模和停点为根执行器选择，第13—17行限定本进程；本地副本与源同字节",
+    "recorded_by": "Codex W-A 本进程；未伪造人类消息ID，未将代理选择称为人类逐项设定"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "W扩规模有限试验13—24；本进程A只写13章01/02两个分段后停，同ID恢复13—15；其余阶段按原文另行恢复",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 13,
+        "to": 24
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程严格只实写分段/0013/v1/01.md与02.md，各1800—2400正文汉字；两段完整实读，保存交接后正常退出等待根独立核验。",
+        "本进程不写03、不assemble、不record13、不写14—24正文。第13章目标至少6000正文汉字，本次不足是计划中断，不能称章完成。",
+        "后续A同ID完成13—15；B新鲜16—17停/同ID18；C新鲜19—20停/同ID21；D新鲜22—24后另登记正式修订范围13—24，独立区仅重登13停/同ID同token续14—24，最后F新鲜全文回读及暂停导出。未到阶段不提前执行。",
+        "新增普通章至少6000正文汉字且至少3段；15/18/21/24至少8000且至少4段；全文分段及合章实读，报告绑定真实两SHA，preview退出0才record。",
+        "前12正文与state.units对象保持，V/U/T及其他封存只读；不恢复指向V的历史修订，不改已消费source、不刷新旧期望哈希。",
+        "所有新增写入仅W；不改根产品/其他作品、不另派代理、不Git提交或推送、不上传。缺陷留复现报根，不绕过产品。",
+        "只登记实际发生事实，不改任何observation type/statement/author_truth；未来候选与代理方案不冒充人类逐项设定或已发生事实。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-13-15.md",
+          "大纲/单元/0013.json",
+          "大纲/单元/0014.json",
+          "大纲/单元/0015.json"
+        ],
+        "unresolved_ids": [
+          "16—24仅远期骨架，逐阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "acceptance-wrapper-prelaunch-rejection",
+  "child_started": false,
+  "wrapper_exit_code": 1,
+  "message": "Unsafe npm args",
+  "argument": "--test-concurrency=2",
+  "evidence_basis": "Root tool call transcript; original wrapper created empty stdout/stderr files before validation. No npm child result is invented.",
+  "resolution": "Allow literal equals sign in acceptance wrapper safe npm argv regex; retry with distinct source-full-tests-r2 label. Product source unchanged."
+}

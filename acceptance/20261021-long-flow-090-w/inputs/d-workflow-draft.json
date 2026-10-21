@@ -1,0 +1,74 @@
+{
+  "expected_revision": 90,
+  "operation_id": "w-d-authorize-22-24",
+  "author_evidence": {
+    "quote": "W轮新鲜D：完成22—24及跨卷兑现，再正式修订三处普通旧事实，独立区仅重登13后停。",
+    "local_source": "研究/W-D-授权原文.md",
+    "source_sha256": "6497e1f49498f902751c6a627db18139459ed7642c96949530738325c426babe",
+    "locator": "真实本轮用户prompt同字节保存，第1行首句；第5—13行载明篇幅、修订和首停；整体人类原话及代理规模选择见W/prompt-a-first.md第3行。无可用消息ID，不编造。",
+    "recorded_by": "W-D本次实际Codex执行会话；具体日常行动与普通事实修订是代理在授权内的测试选择，不冒充人类逐字设定"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "W-D有限完成22—24长章及19—24完整连读review，之后另正式登记revision范围13—24，仅重登13首停。具体日常行动为代理授权内选择。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 22,
+        "to": 24
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "22/23≥6000正文汉字至少3段，24≥8000至少4段；完整逐段/合章实读、纲文回对及当前两SHA报告，preview0才record",
+        "24登记后完整19—24连读正式review；之后才正式workflow revision13—24并建立新独立区，主稿旧正文不先改",
+        "仅W，不派代理/提交/推送/改产品，不改前12正文units及observation三字段，保留全部旧字节与失败；最终仅重登13停，不prepare/commit/abort/重登14"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md",
+          "大纲/单元/0022.json",
+          "大纲/单元/0023.json",
+          "大纲/单元/0024.json"
+        ],
+        "unresolved_ids": [
+          "复航/父辈全史/小风扇结果未选，不为本卷收束强补",
+          "24完成后才进入13—24普通事实修订，独立区仅重登13停"
+        ]
+      }
+    }
+  }
+}
