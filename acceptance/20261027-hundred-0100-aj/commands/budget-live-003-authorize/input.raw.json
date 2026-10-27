@@ -1,0 +1,52 @@
+{
+  "expected_revision": 0,
+  "operation_id": "budget-auth",
+  "workflow": {
+    "stage": "trial",
+    "task": "合成验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "只用于合成测试"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "author_evidence": {
+    "local_source": "研究/授权.md",
+    "source_sha256": "83b3d1b68c9eb3a397bd1511e8e8a5a8cedfd7a7cde288da006dbe919a2a6721",
+    "quote": "合成验证允许一章试写、作者决策、历史修订、无正文复制更新和中断恢复。",
+    "locator": "合成测试授权",
+    "recorded_by": "Codex"
+  }
+}

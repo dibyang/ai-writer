@@ -1,0 +1,30 @@
+{
+  "head": {
+    "args": [
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "ea3f155589bd776599f80a74c8eeee6f944c5894\n",
+    "stderr": ""
+  },
+  "status": {
+    "args": [
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": " M CHANGELOG.md\n M RELEASE_NOTES.md\n M docs/tool-updates.md\n M lib/tool-update.mjs\n M release/distribution.json\n?? .idea/\n?? acceptance/20261027-hundred-0100-aj/\n?? tests/tool-update-budget.test.mjs\n",
+    "stderr": ""
+  },
+  "diff_check": {
+    "args": [
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "note": "Read-only checks; no staging, commit or push."
+}

@@ -1,0 +1,30 @@
+✖ 规划正文旧引用在迁移后可读，原引用不变，旧地址遮蔽拒绝 (7397.3554ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7520.2181
+
+✖ failing tests:
+
+test at tests\relocation.test.mjs:12:1
+✖ 规划正文旧引用在迁移后可读，原引用不变，旧地址遮蔽拒绝 (7397.3554ms)
+  Error: ENOENT: no such file or directory, stat 'D:\work\other\ai-writer\.tmp\protection-SB9NBr\work\正文\0001.md'
+      at Object.statSync (node:fs:1726:25)
+      at text (file:///D:/work/other/ai-writer/lib/workspace.mjs:41:19)
+      at workflowData (file:///D:/work/other/ai-writer/lib/governance.mjs:43:37)
+      at Object.validate (file:///D:/work/other/ai-writer/lib/governance.mjs:63:52)
+      at project (file:///D:/work/other/ai-writer/lib/workspace.mjs:128:73)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:880:42)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/relocation.test.mjs:18:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25) {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'stat',
+    path: 'D:\\work\\other\\ai-writer\\.tmp\\protection-SB9NBr\\work\\正文\\0001.md'
+  }

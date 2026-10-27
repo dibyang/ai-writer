@@ -1,0 +1,52 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-18T11:46:58.941Z",
+  "operation_id": "f-repair-upgrade-complete-paused-v1",
+  "base_revision": 381,
+  "payload": {
+    "stage": "paused",
+    "task": "F轮0.7.2工具切换、百章副本第100章独立修订区doctor及令牌恢复诊断已完成；无改稿候选已abort且分支/备份保留。当前仅讨论和规划；后续draft-e须从repair-upgrade交接恢复，以真实F轮授权另登记有限101—103，再由下一实际进程处理104—106。本阶段不写新章。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "本轮切换与无改稿诊断结束，暂停正文；不改正文、不rewind、不record、不写101。",
+        "后续101—103留给下一实际进程draft-e，须使用本交接的当前revision/generation及真实文件，不使用旧D的379/gen2生成输入。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/F轮用户授权与执行范围.md",
+    "source_sha256": "0ac5e6bb0e93c39f4d1c19966ad26239dc2215081ddc380143120db13a3da208",
+    "quote": "继续通过 Codex 做百章规模的长篇实跑验证，重点覆盖工具更新后的多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "locator": "用户原话段，F轮隔离验证范围",
+    "recorded_by": "actual-Codex-repair-upgrade",
+    "frozen_ref": ".writer/objects/0ac5e6bb0e93c39f4d1c19966ad26239dc2215081ddc380143120db13a3da208.txt"
+  }
+}

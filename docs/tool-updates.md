@@ -8,6 +8,8 @@
 
 文档更新是显式选择：只允许未被定制且未被章节消费的受管手册；未知旧基线保留现状。更新不会迁移schema、重登章节或修改事实；成功只推进一次业务revision和工具generation，旧输入因此过期。
 
+无正文副本更新在计划选项中显式使用 `"validation_mode":"in-place-readonly"`。更新内部对完整讨论上下文的机械兼容检查使用固定上限 240000 字符，计划中的 `validation_context_max_chars` 显示此上限并纳入计划指纹；它不改变作者写作时的模型上下文预算，也不截断状态。超过上限会保留作品和候选，返回 `TOOL_VALIDATION_FAILED` 及检查项中的 `CONTEXT_BUDGET_EXCEEDED` 详情，不能删除作者决策或刷新旧哈希来绕过。
+
 出现pending时停止普通读写，从外部新入口 `tool updates` 查事务，使用 `tool recover --input ...` 明确complete或rollback。遗留锁必须核原进程、锁SHA及作者恢复依据，不能按超时删除。恢复遇第三方字节保留旧/新/外部并停止。备份与失败材料不会自动清理。
 
 若pending属于修订事务，应使用revision recover而非tool recover。0.7.3目录外固定依赖被提交校验误拒时，先按[修订手册](revision-and-sources.md)从已验证的外部0.7.6入口恢复原事务；不要在活跃修订期间覆盖旧包来修复，也不要重写清单或基线。兼容恢复不安装新包、不改变schema或工具generation。

@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const base='acceptance/20261027-governance-relocation-ak',dist='dist/0.10.0-governance-ak1',root=path.join(dist,'ai-writer-0.10.0'),manifest=JSON.parse(fs.readFileSync(path.join(dist,'release-manifest.json'))),sha=b=>crypto.createHash('sha256').update(b).digest('hex');let bad=[];
+for(const row of manifest.files){const b=fs.readFileSync(path.join(root,row.file));if(b.length!==row.bytes||sha(b)!==row.sha256)bad.push(row.file);}
+for(const row of manifest.sources){if(sha(fs.readFileSync(row.source))!==row.sha256)bad.push('source:'+row.source);}
+const out={ok:!bad.length,source_files:manifest.sources.length,payload_files:manifest.files.length,content_id:manifest.content_id,source_provenance:manifest.source_provenance,zip_sha256:sha(fs.readFileSync(path.join(dist,'ai-writer-0.10.0.zip'))),bad};fs.writeFileSync(path.join(base,'package-verification.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(out));if(!out.ok)process.exitCode=1;

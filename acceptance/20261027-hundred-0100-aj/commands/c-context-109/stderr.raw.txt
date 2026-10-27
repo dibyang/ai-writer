@@ -1,0 +1,125 @@
+{
+  "ok": false,
+  "error": "上下文超过 40000 字符预算（实际 41574）；不会静默截断",
+  "code": "CONTEXT_BUDGET_EXCEEDED",
+  "next_action": "先看context_budget的大项和来源：按本章相关性整理可选研究引用，或显式提高--max-chars。保留作者授权、核心设定、当前状态及必需线索；来源变化仍走原影响分析，不删除约束或改状态绕过保护。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\tool\\bin\\ai-writer.mjs' context '--help'",
+  "context_budget": {
+    "limit_chars": 40000,
+    "required_chars": 41574,
+    "over_by_chars": 1574,
+    "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+    "sections": [
+      {
+        "section": "continuity",
+        "chars": 28516
+      },
+      {
+        "section": "settings",
+        "chars": 4017
+      },
+      {
+        "section": "snapshot",
+        "chars": 2526
+      },
+      {
+        "section": "previous_ending",
+        "chars": 1851
+      },
+      {
+        "section": "source_hashes",
+        "chars": 929
+      },
+      {
+        "section": "governance",
+        "chars": 800
+      },
+      {
+        "section": "plan",
+        "chars": 770
+      },
+      {
+        "section": "review_workflow",
+        "chars": 677
+      },
+      {
+        "section": "recent",
+        "chars": 625
+      },
+      {
+        "section": "outline",
+        "chars": 494
+      },
+      {
+        "section": "instruction",
+        "chars": 69
+      },
+      {
+        "section": "draft_path",
+        "chars": 33
+      },
+      {
+        "section": "kind",
+        "chars": 7
+      },
+      {
+        "section": "title",
+        "chars": 6
+      },
+      {
+        "section": "ok",
+        "chars": 4
+      },
+      {
+        "section": "revision",
+        "chars": 3
+      },
+      {
+        "section": "unit",
+        "chars": 3
+      },
+      {
+        "section": "research",
+        "chars": 2
+      },
+      {
+        "section": "source_bindings",
+        "chars": 2
+      }
+    ],
+    "largest_sources": [
+      {
+        "section": "settings",
+        "ref": "设定/权威规则.md",
+        "chars": 1109
+      },
+      {
+        "section": "settings",
+        "ref": "大纲/H轮107-112续部粗规划.md",
+        "chars": 923
+      },
+      {
+        "section": "settings",
+        "ref": "设定/续部人物与场所.md",
+        "chars": 680
+      },
+      {
+        "section": "settings",
+        "ref": "设定/角色卡.md",
+        "chars": 614
+      },
+      {
+        "section": "settings",
+        "ref": "设定/作品定位.md",
+        "chars": 383
+      },
+      {
+        "section": "settings",
+        "ref": "设定/文风.md",
+        "chars": 301
+      }
+    ],
+    "omitted_source_count": 0,
+    "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+  }
+}

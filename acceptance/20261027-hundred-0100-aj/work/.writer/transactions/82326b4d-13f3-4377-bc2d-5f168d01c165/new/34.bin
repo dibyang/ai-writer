@@ -1,0 +1,770 @@
+{
+  "upstream": "https://github.com/zenstory-ai/oh-story-claudecode",
+  "commit": "6d72f70e5fe3de110b457fd6bc81ede6ea614702",
+  "license": "MIT",
+  "source_inventory": "acceptance/20261015-long/reference-inventory.json",
+  "inventory_sha256": "94b9a2916b61739f66fb6b318e1e8bcd9993dac8beb5940cbdc0686fea190e29",
+  "review_depth": {
+    "all_tracked_files": "path-size-hash inventory, no claim of line-by-line review",
+    "skill_entrypoints": "13 read in full",
+    "scripts": {
+      "outline_view": "full 287 lines",
+      "tracking_commit": "function index and transaction/write ordering lines 1095-1299",
+      "build_writer_prompt": "contract and selection code lines 1-220"
+    }
+  },
+  "retained": [
+    {
+      "upstream_ref": "skills/browser-cdp/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/browser-cdp/SKILL.md",
+      "bytes": 7047,
+      "sha256": "6a14022aa8a6bcde68de2fa8d5978baf44f93d84589aff100f78949be6fd12b7"
+    },
+    {
+      "upstream_ref": "skills/story-cover/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-cover/SKILL.md",
+      "bytes": 16419,
+      "sha256": "8d5fea28ec1f1de630b48c60ac70bc67b0de02d01dc28cfda8532f82512dc651"
+    },
+    {
+      "upstream_ref": "skills/story-deslop/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-deslop/SKILL.md",
+      "bytes": 20646,
+      "sha256": "0cc238aaaa7be2bfbe5d1586e1003a2a4a8095ec671251729b827536eef8b262"
+    },
+    {
+      "upstream_ref": "skills/story-import/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-import/SKILL.md",
+      "bytes": 11762,
+      "sha256": "b2ba4872a990a411cb9d64572a0ed9986ba5b15527b2d67de32e955440aa835d"
+    },
+    {
+      "upstream_ref": "skills/story-long-analyze/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-analyze/SKILL.md",
+      "bytes": 14163,
+      "sha256": "e0a3f40fdd9e59e5b3abe2d52c8eea13e56707c6fa3fc6715204dd2d17ada99c"
+    },
+    {
+      "upstream_ref": "skills/story-long-scan/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-scan/SKILL.md",
+      "bytes": 10428,
+      "sha256": "07cecb8f2a31b4fcca7c303537ebfeb274a72e7a79efcb646b1572eb7074f43e"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/SKILL.md",
+      "bytes": 14598,
+      "sha256": "5c2b76092e60de0345a631ceea1a8a1e02df10f26d6b59c3c323c739afd957f4"
+    },
+    {
+      "upstream_ref": "skills/story-review/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-review/SKILL.md",
+      "bytes": 21711,
+      "sha256": "88271dbdd95f3306f34ca237f5afac0903540c4405396c3862d0f3581d5eb164"
+    },
+    {
+      "upstream_ref": "skills/story-setup/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-setup/SKILL.md",
+      "bytes": 18868,
+      "sha256": "2cecdde4cd9802e03036804377645987a914257a69b5887c67bbdf7f820d9ef7"
+    },
+    {
+      "upstream_ref": "skills/story-short-analyze/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-short-analyze/SKILL.md",
+      "bytes": 14167,
+      "sha256": "966af0304cf7705e334edefd11563ae4b8989c8bbd6106becaae5b767c5b05b1"
+    },
+    {
+      "upstream_ref": "skills/story-short-scan/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-short-scan/SKILL.md",
+      "bytes": 9117,
+      "sha256": "2df2d8784112029f60cb6ddd567b775e5c0e4705cb2a7ff91e8789382f507390"
+    },
+    {
+      "upstream_ref": "skills/story-short-write/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-short-write/SKILL.md",
+      "bytes": 10801,
+      "sha256": "a04db05a5fa09f9386336aaf265f7fecb3ee456f3beb6b5ff1ff2cb9a30defee"
+    },
+    {
+      "upstream_ref": "skills/story/SKILL.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story/SKILL.md",
+      "bytes": 12702,
+      "sha256": "59ae382079331efae72b08d8f19c505f541eb5b731fbc28507076bd8d8fd0a56"
+    },
+    {
+      "upstream_ref": "LICENSE",
+      "file": "vendor/oh-story-reference-20261015/LICENSE",
+      "bytes": 1102,
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    },
+    {
+      "upstream_ref": "README.md",
+      "file": "vendor/oh-story-reference-20261015/README.md",
+      "bytes": 29424,
+      "sha256": "3115102ef4bbaca2af088e8314ce07a968168fa07b383e0ae6f49d32524a6e78"
+    },
+    {
+      "upstream_ref": "docs/architecture.md",
+      "file": "vendor/oh-story-reference-20261015/docs/architecture.md",
+      "bytes": 6631,
+      "sha256": "9cd20afc39b098b71455ffec93c4e831e5b8db147cf8f43ca4959c75ba4a74f5"
+    },
+    {
+      "upstream_ref": "docs/keep-ai-novel-consistent-over-100-chapters.md",
+      "file": "vendor/oh-story-reference-20261015/docs/keep-ai-novel-consistent-over-100-chapters.md",
+      "bytes": 5978,
+      "sha256": "fc64f44f5bf0568dbc693b5f3871d61ad4eb360d78159f4443d4ad0c4c59eae2"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/references/tracking-transaction.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/tracking-transaction.md",
+      "bytes": 15449,
+      "sha256": "e8373faaa9e9590afae0654f64eff8ee1151073ecf6b28698b4b434eb344d752"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/references/workflow-volume.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/workflow-volume.md",
+      "bytes": 17658,
+      "sha256": "c93365c9c3eb0da1cfd4ec35667a1e26cf1c4144bd8770895c5d83347df09817"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/references/workflow-daily.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/workflow-daily.md",
+      "bytes": 7819,
+      "sha256": "495b921d7dcdfa3bc9623f8595f55fcd12ae04e7f75d5a2fa6d5fb3ed71bbc34"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/references/style-resolution.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/style-resolution.md",
+      "bytes": 3915,
+      "sha256": "144690c69d1d822dbc98f5acfce23f4fd91e8d45acd4f046b1a9c8499909b771"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/references/author-memory.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/author-memory.md",
+      "bytes": 11475,
+      "sha256": "43453c4e2fa8f7a981e523f4756831927efedca86e3ab5033edf34a201459248"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/references/benchmark-recall.md",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/references/benchmark-recall.md",
+      "bytes": 5649,
+      "sha256": "fcbb57bfe9e34d31f3e733357e7ad8c7ecaf4e366a798145befb6912d3a418e5"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/scripts/outline_view.py",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/scripts/outline_view.py",
+      "bytes": 12330,
+      "sha256": "e8f9a82225ebaf10fbed394568862a8022d429d50098ee01e603c06e8a7d7f3e"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/scripts/tracking_commit.py",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/scripts/tracking_commit.py",
+      "bytes": 85476,
+      "sha256": "dbeb02fc46361efb69df2aa6f8a5a3c083263252f168d30868a5ea50a6074649"
+    },
+    {
+      "upstream_ref": "skills/story-long-write/scripts/build_writer_prompt.py",
+      "file": "vendor/oh-story-reference-20261015/skills/story-long-write/scripts/build_writer_prompt.py",
+      "bytes": 37847,
+      "sha256": "90575ea3e43c1d7fab3b7c6e4a8fa406f6b8a6b444cd9daa7f9f45315d646e29"
+    }
+  ],
+  "families": {
+    ".agents": {
+      "files": 82,
+      "bytes": 444999
+    },
+    ".claude-plugin": {
+      "files": 2,
+      "bytes": 793
+    },
+    ".clawhub": {
+      "files": 2,
+      "bytes": 16294
+    },
+    ".github": {
+      "files": 11,
+      "bytes": 44626
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 332
+    },
+    ".release": {
+      "files": 1,
+      "bytes": 2108
+    },
+    ".zcode-plugin": {
+      "files": 1,
+      "bytes": 321
+    },
+    "AGENTS.md": {
+      "files": 1,
+      "bytes": 4292
+    },
+    "CHANGELOG.md": {
+      "files": 1,
+      "bytes": 170229
+    },
+    "CLAUDE.md": {
+      "files": 1,
+      "bytes": 12
+    },
+    "CONTRIBUTING.md": {
+      "files": 1,
+      "bytes": 33791
+    },
+    "LICENSE": {
+      "files": 1,
+      "bytes": 1102
+    },
+    "README.md": {
+      "files": 1,
+      "bytes": 29424
+    },
+    "README_EN.md": {
+      "files": 1,
+      "bytes": 32765
+    },
+    "demo": {
+      "files": 138,
+      "bytes": 4503067
+    },
+    "docs": {
+      "files": 13,
+      "bytes": 75196
+    },
+    "marketplace.json": {
+      "files": 1,
+      "bytes": 325
+    },
+    "package-lock.json": {
+      "files": 1,
+      "bytes": 2285
+    },
+    "package.json": {
+      "files": 1,
+      "bytes": 403
+    },
+    "playwright.config.mjs": {
+      "files": 1,
+      "bytes": 962
+    },
+    "reasonix-plugin.json": {
+      "files": 1,
+      "bytes": 190
+    },
+    "scripts": {
+      "files": 87,
+      "bytes": 1677605
+    },
+    "skills/browser-cdp/entry": {
+      "files": 1,
+      "bytes": 7047
+    },
+    "skills/browser-cdp/scripts": {
+      "files": 1,
+      "bytes": 41853
+    },
+    "skills/story-cover/entry": {
+      "files": 1,
+      "bytes": 16419
+    },
+    "skills/story-cover/references": {
+      "files": 1,
+      "bytes": 9658
+    },
+    "skills/story-deslop/entry": {
+      "files": 1,
+      "bytes": 20646
+    },
+    "skills/story-deslop/references": {
+      "files": 7,
+      "bytes": 88941
+    },
+    "skills/story-deslop/scripts": {
+      "files": 5,
+      "bytes": 189057
+    },
+    "skills/story-import/entry": {
+      "files": 1,
+      "bytes": 11762
+    },
+    "skills/story-import/references": {
+      "files": 14,
+      "bytes": 104184
+    },
+    "skills/story-import/scripts": {
+      "files": 4,
+      "bytes": 145724
+    },
+    "skills/story-long-analyze/entry": {
+      "files": 1,
+      "bytes": 14163
+    },
+    "skills/story-long-analyze/references": {
+      "files": 15,
+      "bytes": 140402
+    },
+    "skills/story-long-analyze/scripts": {
+      "files": 5,
+      "bytes": 173085
+    },
+    "skills/story-long-scan/entry": {
+      "files": 1,
+      "bytes": 10428
+    },
+    "skills/story-long-scan/references": {
+      "files": 9,
+      "bytes": 33342
+    },
+    "skills/story-long-scan/scripts": {
+      "files": 7,
+      "bytes": 176852
+    },
+    "skills/story-long-write/entry": {
+      "files": 1,
+      "bytes": 14598
+    },
+    "skills/story-long-write/references": {
+      "files": 86,
+      "bytes": 828644
+    },
+    "skills/story-long-write/scripts": {
+      "files": 13,
+      "bytes": 424240
+    },
+    "skills/story-review/entry": {
+      "files": 1,
+      "bytes": 21711
+    },
+    "skills/story-review/references": {
+      "files": 19,
+      "bytes": 184668
+    },
+    "skills/story-review/scripts": {
+      "files": 7,
+      "bytes": 293276
+    },
+    "skills/story-setup/entry": {
+      "files": 2,
+      "bytes": 54192
+    },
+    "skills/story-setup/references": {
+      "files": 165,
+      "bytes": 1401363
+    },
+    "skills/story-setup/scripts": {
+      "files": 6,
+      "bytes": 33510
+    },
+    "skills/story-short-analyze/entry": {
+      "files": 1,
+      "bytes": 14167
+    },
+    "skills/story-short-analyze/references": {
+      "files": 22,
+      "bytes": 200324
+    },
+    "skills/story-short-scan/entry": {
+      "files": 1,
+      "bytes": 9117
+    },
+    "skills/story-short-scan/references": {
+      "files": 5,
+      "bytes": 10862
+    },
+    "skills/story-short-scan/scripts": {
+      "files": 4,
+      "bytes": 59188
+    },
+    "skills/story-short-write/entry": {
+      "files": 1,
+      "bytes": 10801
+    },
+    "skills/story-short-write/references": {
+      "files": 36,
+      "bytes": 352674
+    },
+    "skills/story-short-write/scripts": {
+      "files": 8,
+      "bytes": 228882
+    },
+    "skills/story/entry": {
+      "files": 6,
+      "bytes": 101101
+    },
+    "skills/story/references": {
+      "files": 2,
+      "bytes": 20458
+    },
+    "skills/story/scripts": {
+      "files": 2,
+      "bytes": 115644
+    },
+    "tests": {
+      "files": 4,
+      "bytes": 70457
+    }
+  },
+  "duplicate_groups": [
+    [
+      "skills/story-deslop/references/anti-ai-writing.md",
+      "skills/story-long-write/references/anti-ai-writing.md",
+      "skills/story-review/references/anti-ai-writing.md",
+      "skills/story-setup/references/agent-references/anti-ai-writing.md"
+    ],
+    [
+      "skills/story-deslop/references/author-memory-maintenance.md",
+      "skills/story-long-write/references/author-memory-maintenance.md",
+      "skills/story-review/references/author-memory-maintenance.md",
+      "skills/story-short-write/references/author-memory-maintenance.md",
+      "skills/story/references/author-memory-maintenance.md"
+    ],
+    [
+      "skills/story-deslop/references/author-memory.md",
+      "skills/story-long-write/references/author-memory.md",
+      "skills/story-review/references/author-memory.md",
+      "skills/story-short-write/references/author-memory.md",
+      "skills/story/references/author-memory.md"
+    ],
+    [
+      "skills/story-deslop/references/banned-words.md",
+      "skills/story-long-write/references/banned-words.md",
+      "skills/story-review/references/banned-words.md",
+      "skills/story-setup/references/agent-references/banned-words.md",
+      "skills/story-short-write/references/banned-words.md"
+    ],
+    [
+      "skills/story-deslop/references/deslop-gates.md",
+      "skills/story-long-write/references/deslop-gates.md",
+      "skills/story-setup/references/agent-references/deslop-gates.md"
+    ],
+    [
+      "skills/story-deslop/references/style-resolution.md",
+      "skills/story-long-write/references/style-resolution.md",
+      "skills/story-review/references/style-resolution.md",
+      "skills/story-setup/references/agent-references/style-resolution.md",
+      "skills/story-short-write/references/style-resolution.md"
+    ],
+    [
+      "skills/story-deslop/scripts/author_memory_commit.py",
+      "skills/story-long-write/scripts/author_memory_commit.py",
+      "skills/story-review/scripts/author_memory_commit.py",
+      "skills/story-short-write/scripts/author_memory_commit.py",
+      "skills/story/scripts/author_memory_commit.py"
+    ],
+    [
+      "skills/story-deslop/scripts/check-ai-patterns.js",
+      "skills/story-long-write/scripts/check-ai-patterns.js",
+      "skills/story-review/scripts/check-ai-patterns.js",
+      "skills/story-short-write/scripts/check-ai-patterns.js"
+    ],
+    [
+      "skills/story-deslop/scripts/check-degeneration.js",
+      "skills/story-long-write/scripts/check-degeneration.js",
+      "skills/story-review/scripts/check-degeneration.js",
+      "skills/story-short-write/scripts/check-degeneration.js"
+    ],
+    [
+      "skills/story-deslop/scripts/normalize-punctuation.js",
+      "skills/story-long-write/scripts/normalize-punctuation.js",
+      "skills/story-review/scripts/normalize-punctuation.js",
+      "skills/story-short-write/scripts/normalize-punctuation.js"
+    ],
+    [
+      "skills/story-deslop/scripts/style-whitelist.js",
+      "skills/story-long-write/scripts/style-whitelist.js",
+      "skills/story-review/scripts/style-whitelist.js",
+      "skills/story-short-write/scripts/style-whitelist.js"
+    ],
+    [
+      "skills/story-import/references/format-and-structure.md",
+      "skills/story-setup/references/agent-references/format-and-structure.md"
+    ],
+    [
+      "skills/story-import/references/tracking-initialization.md",
+      "skills/story-long-write/references/tracking-initialization.md",
+      "skills/story-review/references/tracking-initialization.md"
+    ],
+    [
+      "skills/story-import/references/tracking-transaction.md",
+      "skills/story-long-write/references/tracking-transaction.md",
+      "skills/story-review/references/tracking-transaction.md"
+    ],
+    [
+      "skills/story-import/scripts/check-outline-contract.js",
+      "skills/story-long-write/scripts/check-outline-contract.js"
+    ],
+    [
+      "skills/story-import/scripts/tracking_commit.py",
+      "skills/story-long-write/scripts/tracking_commit.py",
+      "skills/story-review/scripts/tracking_commit.py"
+    ],
+    [
+      "skills/story-import/scripts/wordcount_core.py",
+      "skills/story-long-write/scripts/wordcount_core.py",
+      "skills/story-review/scripts/wordcount_core.py"
+    ],
+    [
+      "skills/story-long-scan/scripts/aggregate-rank.js",
+      "skills/story-short-scan/scripts/aggregate-rank.js"
+    ],
+    [
+      "skills/story-long-scan/scripts/cdp-utils.js",
+      "skills/story-short-scan/scripts/cdp-utils.js"
+    ],
+    [
+      "skills/story-long-write/references/character-basics.md",
+      "skills/story-setup/references/agent-references/character-basics.md"
+    ],
+    [
+      "skills/story-long-write/references/character-design-methods.md",
+      "skills/story-setup/references/agent-references/character-design-methods.md"
+    ],
+    [
+      "skills/story-long-write/references/character-relations.md",
+      "skills/story-review/references/character-relations.md",
+      "skills/story-setup/references/agent-references/character-relations.md"
+    ],
+    [
+      "skills/story-long-write/references/dialogue-mastery.md",
+      "skills/story-review/references/dialogue-mastery.md",
+      "skills/story-setup/references/agent-references/dialogue-mastery.md",
+      "skills/story-short-write/references/dialogue-mastery.md"
+    ],
+    [
+      "skills/story-long-write/references/emotion-on-page.md",
+      "skills/story-setup/references/agent-references/emotion-on-page.md"
+    ],
+    [
+      "skills/story-long-write/references/emotional-arc-design.md",
+      "skills/story-setup/references/agent-references/emotional-arc-design.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/东方仙侠.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/东方仙侠.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/传统玄幻.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/传统玄幻.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/历史古代.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/历史古代.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/历史脑洞.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/历史脑洞.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/双男主.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/双男主.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/古言脑洞.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/古言脑洞.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/古风世情.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/古风世情.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/女频悬疑.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/女频悬疑.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/女频种田.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/女频种田.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/宫斗宅斗.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/宫斗宅斗.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/年代.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/年代.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/快穿.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/快穿.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/悬疑灵异.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/悬疑灵异.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/悬疑脑洞.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/悬疑脑洞.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/战神赘婿.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/战神赘婿.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/抗战谍战.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/抗战谍战.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/星光璀璨.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/星光璀璨.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/民国言情.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/民国言情.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/游戏体育.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/游戏体育.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/玄幻脑洞.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/玄幻脑洞.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/玄幻言情.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/玄幻言情.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/现言脑洞.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/现言脑洞.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/科幻末世.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/科幻末世.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/职场婚恋.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/职场婚恋.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/西方奇幻.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/西方奇幻.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/豪门总裁.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/豪门总裁.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/都市修真.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/都市修真.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/都市日常.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/都市日常.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/都市种田.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/都市种田.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/都市脑洞.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/都市脑洞.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/都市高武.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/都市高武.md"
+    ],
+    [
+      "skills/story-long-write/references/genre-prose-cards/青春甜宠.md",
+      "skills/story-setup/references/agent-references/genre-prose-cards/青春甜宠.md"
+    ],
+    [
+      "skills/story-long-write/references/long-chapter-hooks.md",
+      "skills/story-setup/references/agent-references/long-chapter-hooks.md"
+    ],
+    [
+      "skills/story-long-write/references/long-genre-catalog.md",
+      "skills/story-setup/references/agent-references/long-genre-catalog.md"
+    ],
+    [
+      "skills/story-long-write/references/long-genre-mechanics.md",
+      "skills/story-setup/references/agent-references/long-genre-mechanics.md"
+    ],
+    [
+      "skills/story-long-write/references/long-reversal.md",
+      "skills/story-setup/references/agent-references/long-reversal.md"
+    ],
+    [
+      "skills/story-long-write/references/long-suspense.md",
+      "skills/story-setup/references/agent-references/long-suspense.md"
+    ],
+    [
+      "skills/story-long-write/references/opening-design.md",
+      "skills/story-setup/references/agent-references/opening-design.md"
+    ],
+    [
+      "skills/story-long-write/references/outline-conflict.md",
+      "skills/story-setup/references/agent-references/outline-conflict.md"
+    ],
+    [
+      "skills/story-long-write/references/outline-methods.md",
+      "skills/story-setup/references/agent-references/outline-methods.md"
+    ],
+    [
+      "skills/story-long-write/references/outline-rhythm.md",
+      "skills/story-setup/references/agent-references/outline-rhythm.md"
+    ],
+    [
+      "skills/story-long-write/references/plot-core-methods.md",
+      "skills/story-review/references/plot-core-methods.md",
+      "skills/story-setup/references/agent-references/plot-core-methods.md"
+    ],
+    [
+      "skills/story-long-write/references/style-combat-face.md",
+      "skills/story-setup/references/agent-references/style-combat-face.md"
+    ],
+    [
+      "skills/story-long-write/references/style-genre-modules.md",
+      "skills/story-setup/references/agent-references/style-genre-modules.md"
+    ],
+    [
+      "skills/story-long-write/references/writing-craft.md",
+      "skills/story-setup/references/agent-references/writing-craft.md"
+    ],
+    [
+      "skills/story-long-write/scripts/check-outline-copy.js",
+      "skills/story-short-write/scripts/check-outline-copy.js"
+    ],
+    [
+      "skills/story-setup/references/agent-references/short-chapter-hooks.md",
+      "skills/story-short-write/references/hooks-chapter.md"
+    ],
+    [
+      "skills/story-setup/references/agent-references/short-emotional-methods.md",
+      "skills/story-short-write/references/emotional-methods.md"
+    ],
+    [
+      "skills/story-setup/references/agent-references/short-genre-formulas.md",
+      "skills/story-short-write/references/genre-writing-formulas.md"
+    ],
+    [
+      "skills/story-setup/references/agent-references/short-paragraph-hooks.md",
+      "skills/story-short-write/references/hooks-paragraph.md"
+    ],
+    [
+      "skills/story-setup/references/agent-references/short-reversal.md",
+      "skills/story-short-write/references/short-reversal.md"
+    ],
+    [
+      "skills/story-setup/references/antigravity/hooks/story_hook_core.js",
+      "skills/story-setup/references/opencode/story_hook_core.js",
+      "skills/story-setup/references/templates/hooks/story_hook_core.js",
+      "skills/story-setup/references/zcode/hooks/story_hook_core.js"
+    ],
+    [
+      "skills/story-short-analyze/references/output-contract.md",
+      "skills/story-short-write/references/output-contract.md"
+    ],
+    [
+      "skills/story-short-analyze/references/real-market-data.md",
+      "skills/story-short-scan/references/real-market-data.md"
+    ]
+  ]
+}

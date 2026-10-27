@@ -1,0 +1,17 @@
+file:///D:/work/other/ai-writer/lib/workspace.mjs:26
+const fail = message => { throw new Error(message); };
+                                ^
+
+Error: 历史散文细纲必须指定 research_refs 事实卡
+    at fail (file:///D:/work/other/ai-writer/lib/workspace.mjs:26:33)
+    at planData (file:///D:/work/other/ai-writer/lib/workspace.mjs:193:68)
+    at withLock.continuationAction (file:///D:/work/other/ai-writer/lib/workspace.mjs:292:37)
+    at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:98:75)
+    at savePlan (file:///D:/work/other/ai-writer/lib/workspace.mjs:291:10)
+    at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:910:25)
+    at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+    at unit (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:25:3)
+    at file:///D:/work/other/ai-writer/acceptance/20261027-governance-relocation-ak/fixture47.mjs:12:24
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+
+Node.js v24.15.0

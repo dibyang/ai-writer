@@ -9,6 +9,22 @@ import {fixture,ROOT,file,state,sha,call,evidence,review,workflow,begin,rewindBr
 function spec(root){return {mapping:state(root).units.map(u=>({unit:u.unit,from:u.draft,to:`正文/V1-旧卷/${path.basename(u.draft)}`,sha256:u.sha256})),directories:[{volume_id:'V1',directory:'正文/V1-旧卷',from:1,to:10}]};}
 function request(root){return {...call(root,'draft','relocate-plan',spec(root)).request,author_evidence:evidence(root)};}
 function fault(root,input,env){const f=file(root,'.writer/relocation-input.json',input);return spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'draft','relocate','--project',root,'--input',f],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',...env}});}
+test('规划正文旧引用在迁移后可读，原引用不变，旧地址遮蔽拒绝',t=>{
+  const {root}=fixture(t,3),before=state(root),w=call(root,'workflow','show').workflow;
+  w.planning.structure={status:'adopted',refs:before.units.map(u=>u.draft),unresolved_ids:[]};
+  call(root,'workflow','set',{expected_revision:before.revision,operation_id:'planning-draft-refs',author_evidence:evidence(root),workflow:w});
+  const oldRefs=state(root).governance.planning.structure.refs;
+  call(root,'draft','relocate',request(root));
+  assert.deepEqual(call(root,'workflow','show').workflow.planning.structure.refs,oldRefs);
+  assert.doesNotThrow(()=>main(['status','--project',root]));
+  assert.equal(main(['check','--project',root]).ok,true);
+  call(root,'source','list');
+  const bad=structuredClone(call(root,'workflow','show').workflow);bad.planning.structure.refs=['../outside.md'];
+  assert.throws(()=>call(root,'workflow','set',{expected_revision:state(root).revision,operation_id:'unsafe-planning-ref',author_evidence:evidence(root),workflow:bad}));
+  assert.deepEqual(call(root,'workflow','show').workflow.planning.structure.refs,oldRefs);
+  file(root,oldRefs[0],'占用旧路径');
+  assert.throws(()=>main(['status','--project',root]),e=>e.code==='RELOCATION_ALIAS_SHADOW');
+});
 test('纯移动保持历史消费、差量与审查覆盖，重复执行幂等，稳定目录延续',t=>{
   const {root}=fixture(t,3);review({workspace:root});const before=state(root),reviews=main(['check','--project',root]).rolling_review;
   const input=request(root),result=call(root,'draft','relocate',input);assert.equal(result.body_copies,0);assert.equal(state(root).schema_version,7);

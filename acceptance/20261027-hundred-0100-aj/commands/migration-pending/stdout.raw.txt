@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "recovery_only": true,
+  "can_write": false,
+  "blockers": [
+    {
+      "code": "TRANSACTION_PENDING",
+      "transactions": [
+        {
+          "id": "53eba26b-eb07-4b68-93aa-4b13adfc4898",
+          "kind": "draft-relocation",
+          "status": "applying"
+        }
+      ]
+    }
+  ],
+  "next": {
+    "code": "recover-transaction",
+    "action": "普通读写已暂停；先查看未完成事务，再携原凭据明确选择恢复或回滚。此视图不读取可变业务状态。",
+    "command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' draft relocations '--project' 'acceptance/20261027-hundred-0100-aj/work'",
+    "requires": [
+      "原凭据",
+      "明确恢复方向",
+      "作者恢复证据及遗留锁实际哈希（若有）"
+    ]
+  }
+}

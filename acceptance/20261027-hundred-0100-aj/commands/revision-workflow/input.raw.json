@@ -1,0 +1,63 @@
+{
+  "expected_revision": 458,
+  "operation_id": "aj-controlled-revision-workflow",
+  "workflow": {
+    "stage": "revision",
+    "task": "仅在本独立验证副本做108、110章两处受控测试性细调，实读并顺序重登108—112，不将风格选择称为已确认错误。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 108,
+        "to": 112
+      },
+      "stop_conditions": [
+        "不修改本副本范围外正文及原作品；不写第113章。",
+        "只做两处事实不变、保留原声的测试性细调；如不能安全调整则保留现场并报告。",
+        "保持全书既有未决线索与作者选择，实读后顺序重登并完整连读尾段。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "author_evidence": {
+    "local_source": "研究/AJ轮真实任务授权.md",
+    "source_sha256": "feee7b13db4d0ac500c933eb83468ada417b0d51e45606cb34c6989b8f5c084c",
+    "quote": "继续通过 Codex 扩大 0.10.0 的长篇实跑到百章规模，重点验证分卷迁移、多轮跨会话恢复、旧章修订后的连续性和不复制正文的工具更新，发现问题直接修复，保留完整验证记录，暂不修改现有作品，不提交、不推送。",
+    "locator": "本会话2026-10-27用户请求；仅用于独立验证副本",
+    "recorded_by": "Codex"
+  }
+}

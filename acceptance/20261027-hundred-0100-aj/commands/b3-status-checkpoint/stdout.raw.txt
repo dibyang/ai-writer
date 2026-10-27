@@ -1,0 +1,136 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "潮汐信号",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\revisions\\5ec86233-b90a-4dca-aca0-b4268ab2547b\\workspace",
+  "revision": 461,
+  "next_unit": 109,
+  "identity": {
+    "kind": "revision-workspace",
+    "id": "5ec86233-b90a-4dca-aca0-b4268ab2547b",
+    "scope": {
+      "from": 108,
+      "through": 112
+    },
+    "status": "editing",
+    "parent": "D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work",
+    "owner": "AJ-独立验证"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "仅在本独立验证副本做108、110章两处受控测试性细调，实读并顺序重登108—112，不将风格选择称为已确认错误。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 108,
+        "to": 112
+      },
+      "stop_conditions": [
+        "不修改本副本范围外正文及原作品；不写第113章。",
+        "只做两处事实不变、保留原声的测试性细调；如不能安全调整则保留现场并报告。",
+        "保持全书既有未决线索与作者选择，实读后顺序重登并完整连读尾段。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [],
+  "review_counts": {
+    "needs-recheck": 5
+  },
+  "drafts": {
+    "candidates": [
+      {
+        "draft": "正文/V15-留给自己的上午/0109-两百四十买到什么.md",
+        "reason": "unregistered",
+        "possible_unit": 109,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "omitted": 0,
+    "unregistered_count": 4,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [
+    {
+      "id": "5ec86233-b90a-4dca-aca0-b4268ab2547b",
+      "owner": "AJ-独立验证",
+      "status": "editing",
+      "scope": {
+        "from": 108,
+        "through": 112
+      },
+      "kind": "revision",
+      "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\revisions\\5ec86233-b90a-4dca-aca0-b4268ab2547b\\workspace"
+    }
+  ],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "steps": [
+    "读取当前上下文并核对有效细纲",
+    "核对已有正文或分段，保留旧稿，必要时按显式分段清单合章",
+    "用record-template或replay-input生成机械字段，填写实际变化",
+    "record-preview通过后再record；旧输入失效时重新生成并实读核对"
+  ],
+  "input_template_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\tool\\bin\\ai-writer.mjs' revision replay-input '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\revisions\\5ec86233-b90a-4dca-aca0-b4268ab2547b\\workspace' '--unit' '109'",
+  "input_template_requires": [
+    "附加 --revision-token，并使用原会话令牌；此视图不返回令牌",
+    "先完成当前正文修改，再取replay-input；之后改正文须重新取草案",
+    "填写replay_review：实际报告、reviewer及summary/characters/timeline/ledger/evidence/downstream六项复核"
+  ],
+  "next": {
+    "code": "resume-replay",
+    "action": "从当前候选的下一登记章恢复；先读上下文，再取当前模板并核对旧登记差量，不能直接重放旧输入。",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\revisions\\5ec86233-b90a-4dca-aca0-b4268ab2547b\\workspace' '--unit' '109'",
+    "defaults": {
+      "unit": 109,
+      "expected_revision": 461
+    },
+    "requires": [
+      "实际读稿",
+      "当前来源绑定",
+      "原修订令牌"
+    ]
+  }
+}

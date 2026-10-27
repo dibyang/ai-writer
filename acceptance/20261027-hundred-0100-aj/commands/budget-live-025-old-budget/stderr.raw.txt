@@ -1,0 +1,70 @@
+{
+  "ok": false,
+  "error": "上下文超过 40000 字符预算（实际 56336）；不会静默截断",
+  "code": "CONTEXT_BUDGET_EXCEEDED",
+  "next_action": "先看context_budget的大项和来源：按本章相关性整理可选研究引用，或显式提高--max-chars。保留作者授权、核心设定、当前状态及必需线索；来源变化仍走原影响分析，不删除约束或改状态绕过保护。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\.tmp\\budget-aj1\\ai-writer-0.10.0\\bin\\ai-writer.mjs' context '--help'",
+  "context_budget": {
+    "limit_chars": 40000,
+    "required_chars": 56336,
+    "over_by_chars": 16336,
+    "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+    "sections": [
+      {
+        "section": "governance",
+        "chars": 54913
+      },
+      {
+        "section": "revisions",
+        "chars": 1018
+      },
+      {
+        "section": "review_workflow",
+        "chars": 126
+      },
+      {
+        "section": "instruction",
+        "chars": 63
+      },
+      {
+        "section": "purpose",
+        "chars": 12
+      },
+      {
+        "section": "title",
+        "chars": 11
+      },
+      {
+        "section": "kind",
+        "chars": 7
+      },
+      {
+        "section": "ok",
+        "chars": 4
+      },
+      {
+        "section": "changed_sources",
+        "chars": 2
+      },
+      {
+        "section": "impact_pending",
+        "chars": 2
+      },
+      {
+        "section": "revision",
+        "chars": 2
+      },
+      {
+        "section": "stale_units",
+        "chars": 2
+      },
+      {
+        "section": "next_unit",
+        "chars": 1
+      }
+    ],
+    "largest_sources": [],
+    "omitted_source_count": 0,
+    "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+  }
+}

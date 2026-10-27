@@ -1,0 +1,30 @@
+✖ 规划正文旧引用在迁移后可读，原引用不变，旧地址遮蔽拒绝 (7505.1754ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7615.2188
+
+✖ failing tests:
+
+test at tests\relocation.test.mjs:12:1
+✖ 规划正文旧引用在迁移后可读，原引用不变，旧地址遮蔽拒绝 (7505.1754ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== 3
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/relocation.test.mjs:19:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "潮汐信号",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\revisions\\5ec86233-b90a-4dca-aca0-b4268ab2547b\\workspace",
+  "revision": 459,
+  "next_unit": 113,
+  "identity": {
+    "kind": "revision-workspace",
+    "id": "5ec86233-b90a-4dca-aca0-b4268ab2547b",
+    "scope": {
+      "from": 108,
+      "through": 112
+    },
+    "status": "editing",
+    "parent": "D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work",
+    "owner": "AJ-独立验证"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "仅在本独立验证副本做108、110章两处受控测试性细调，实读并顺序重登108—112，不将风格选择称为已确认错误。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 108,
+        "to": 112
+      },
+      "stop_conditions": [
+        "不修改本副本范围外正文及原作品；不写第113章。",
+        "只做两处事实不变、保留原声的测试性细调；如不能安全调整则保留现场并报告。",
+        "保持全书既有未决线索与作者选择，实读后顺序重登并完整连读尾段。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/H轮107-112续部粗规划.md"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [],
+  "review_counts": {
+    "verified": 5
+  },
+  "drafts": {
+    "candidates": [],
+    "omitted": 0,
+    "unregistered_count": 0,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [
+    {
+      "id": "5ec86233-b90a-4dca-aca0-b4268ab2547b",
+      "owner": "AJ-独立验证",
+      "status": "editing",
+      "scope": {
+        "from": 108,
+        "through": 112
+      },
+      "kind": "revision",
+      "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\revisions\\5ec86233-b90a-4dca-aca0-b4268ab2547b\\workspace"
+    }
+  ],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "next": {
+    "code": "review-revision",
+    "action": "范围内登记已完成；复读尾段、处理意见并核对后再准备提交，不把登记完成当作质量通过。",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work\\.writer\\tool\\bin\\ai-writer.mjs' revision prepare '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-hundred-0100-aj\\work' '--help'",
+    "defaults": {
+      "id": "5ec86233-b90a-4dca-aca0-b4268ab2547b"
+    },
+    "requires": [
+      "当前实读报告",
+      "原修订令牌"
+    ]
+  }
+}

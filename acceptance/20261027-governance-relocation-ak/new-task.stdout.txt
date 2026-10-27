@@ -1,0 +1,116 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "合成历史迁移验证",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-governance-relocation-ak\\work-v3",
+  "revision": 52,
+  "next_unit": 48,
+  "identity": {
+    "kind": "main"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "验证专用有限试写",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 47
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "到范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "正文/0001.md",
+          "正文/0002.md",
+          "正文/0003.md",
+          "正文/0004.md",
+          "正文/0005.md",
+          "正文/0006.md",
+          "正文/0007.md",
+          "正文/0008.md",
+          "正文/0009.md",
+          "正文/0010.md",
+          "正文/0011.md",
+          "正文/0012.md",
+          "正文/0013.md",
+          "正文/0014.md",
+          "正文/0015.md",
+          "正文/0016.md",
+          "正文/0017.md",
+          "正文/0018.md",
+          "正文/0019.md",
+          "正文/0020.md",
+          "正文/0021.md",
+          "正文/0022.md",
+          "正文/0023.md",
+          "正文/0024.md",
+          "正文/0025.md",
+          "正文/0026.md",
+          "正文/0027.md",
+          "正文/0028.md",
+          "正文/0029.md",
+          "正文/0030.md",
+          "正文/0031.md",
+          "正文/0032.md",
+          "正文/0033.md",
+          "正文/0034.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [],
+  "review_counts": {},
+  "drafts": {
+    "candidates": [],
+    "omitted": 0,
+    "unregistered_count": 0,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "next": {
+    "code": "plan-only",
+    "action": "当前只进入规划：保存真实细纲并讨论采用，正文仍需另有授权。",
+    "command": "node 'D:\\work\\other\\ai-writer\\dist\\0.10.0-governance-ak1\\ai-writer-0.10.0\\bin\\ai-writer.mjs' plan '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-governance-relocation-ak\\work-v3' '--help'",
+    "defaults": {
+      "unit": 48
+    },
+    "requires": [
+      "实际规划内容"
+    ]
+  }
+}

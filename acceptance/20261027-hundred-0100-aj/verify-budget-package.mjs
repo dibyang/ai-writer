@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(base,'../..'),dist=path.join(repo,'dist/0.10.0-budget-aj1'),pkg=path.join(repo,'.tmp/budget-aj1/ai-writer-0.10.0'),read=f=>JSON.parse(fs.readFileSync(f)),sha=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),manifest=read(path.join(dist,'release-manifest.json'));
+for(const x of manifest.sources)assert.equal(sha(path.join(repo,x.source)),x.sha256,'source '+x.source);for(const x of manifest.files)assert.equal(sha(path.join(pkg,x.file)),x.sha256,'payload '+x.file);
+for(const name of ['fixed-package-tests','fixed-package-doctor','budget-live','fixed-update'])assert.equal(read(path.join(base,'commands',name,'result.json')).exit_code,0,name);
+const budget=read(path.join(base,'budget-live-verification.json')),migration=read(path.join(base,'migration-verification.json'));assert.ok(budget.ok&&migration.ok);assert.equal(migration.content_id,manifest.content_id);
+const result={ok:true,version:'0.10.0-development',source_commit:manifest.source_provenance.source_commit,dirty:manifest.source_provenance.dirty,content_id:manifest.content_id,zip:path.join(dist,'ai-writer-0.10.0.zip'),zip_sha256:sha(path.join(dist,'ai-writer-0.10.0.zip')),extracted_source:pkg,source_files_verified:manifest.sources.length,payload_files_verified:manifest.files.length,tests:{total:255,passed:254,failed:0,skipped:1},doctor:true,budget,realistic_112_chapter_update:migration,scope:'Windows local synthetic fixture only; not a release and no real author work modified'};
+fs.copyFileSync(path.join(dist,'release-manifest.json'),path.join(base,'fixed-package-manifest.json'));fs.copyFileSync(path.join(dist,'SHA256SUMS.txt'),path.join(base,'fixed-package-SHA256SUMS.txt'));fs.writeFileSync(path.join(base,'budget-package-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,content_id:result.content_id,zip_sha256:result.zip_sha256,source_files_verified:result.source_files_verified,payload_files_verified:result.payload_files_verified,tests:result.tests}));
