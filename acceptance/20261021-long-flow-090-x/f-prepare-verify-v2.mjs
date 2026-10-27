@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+const X=path.dirname(new URL(import.meta.url).pathname.replace(/^\/(\w:)/,'$1'));
+const [label,oldLabel,expected,previous]=process.argv.slice(2);
+const read=p=>JSON.parse(fs.readFileSync(path.join(X,p),'utf8'));
+assert.equal(read(`cli-logs/${previous}/result.json`).exit_code,0);
+assert.equal(read('scenario/东岸末班船-再扩展验证/.writer/state.json').revision,Number(expected));
+const input=read(oldLabel+'.json');input.expected_revision=Number(expected);input.operation_id=label+'-current-full';
+input.review_ref=read('cli-logs/f-review-current-36-v2/stdout.raw.txt').ref;
+input.reason+=' 当前复核引用改用叙述人名周岸校正后的新报告；旧冻结报告与verify历史保留。正文、登记事实和来源没有因报告校正发生变化。';
+const out=path.join(X,label+'.json');assert(!fs.existsSync(out));fs.writeFileSync(out,JSON.stringify(input,null,2)+'\n');console.log(out);

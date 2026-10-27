@@ -1,0 +1,96 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_AD_DR58_SPEAKER",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "58父女晚谈将询问老板意见的说话人误署为沈禾；随后的他听到自己问的那句及沈讲老板意见表明应为父亲沈成林，父未在糕店不能向女提供其老板意见。",
+      "suggestion": "仅将58该句沈禾问老板怎么说改为沈成林问老板怎么说；保留其后父自笑抢问和女解释，六字段若实未变可保留并逐项核，独立revision保守覆盖58—60。",
+      "evidence": [
+        {
+          "unit": 58,
+          "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+          "sha256": "772badfddd9c7a820c07b604bceaf5f3df402b330d1723a3236d6e0d38fc9c40",
+          "line": 420,
+          "quote": "沈禾问老板怎么说，他听到自己问的那句，笑道今日都只问买没买。"
+        },
+        {
+          "unit": 58,
+          "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+          "sha256": "772badfddd9c7a820c07b604bceaf5f3df402b330d1723a3236d6e0d38fc9c40",
+          "line": 420,
+          "quote": "她笑着点头，说老板后来觉得自己该多讲现有的"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/2637d1e7-38db-4932-91dc-f77679da0d75.json",
+        "review_sha256": "13e4331551beafcb60a2a54c4a42c4e63df042545f9081f0c4b22d9ad97c4959",
+        "units": [
+          {
+            "unit": 58,
+            "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+            "sha256": "772badfddd9c7a820c07b604bceaf5f3df402b330d1723a3236d6e0d38fc9c40",
+            "dependency": "29495ee8c77e29ded994ee29ee675fdb8f7ac900f6a4117842903e5bc51df6e5"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/b5fb24a2-b934-46c5-9235-40cc4074fad2.json",
+          "sha256": "3e78f86e4d7b7d9bc999a609a3a67f6ba13fb0da7ee4f42ddb857c3ef52d82d9"
+        },
+        {
+          "ref": ".writer/objects/d99de77a-d051-4233-b842-f0605b9178ef.json",
+          "sha256": "7606374f389f179bcedf79191a8c80fc63788fa07f96cf59d67fa08f32dded84"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/4bc7f344-3bc9-41a8-9806-21574101416d.json",
+          "sha256": "1300878c5ef6c2b9c541fe413d7ad03914e3d1a150f048501eff1d64856b9f96"
+        },
+        "disposition": "adopted",
+        "reason": "本次55—60完整连读确认58父女晚谈说话人误署，按现有revise58—60授权仅改此称呼；独立revision保守重登58—60，不触碰旧前缀或可选风格。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 58,
+            "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+            "sha256": "772badfddd9c7a820c07b604bceaf5f3df402b330d1723a3236d6e0d38fc9c40",
+            "dependency": "29495ee8c77e29ded994ee29ee675fdb8f7ac900f6a4117842903e5bc51df6e5"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "58e46848-dff9-43a6-b2f6-81935d40440a",
+        "commit_binding": {
+          "ref": ".writer/objects/58e46848-dff9-43a6-b2f6-81935d40440a.json",
+          "sha256": "b899df344583ba3023c99dd02ae9f5a4d43a5ec3094f6133490e4aa7035a872d"
+        },
+        "transaction_id": "d5427e6c-d182-4ddc-ab1e-7668a071f850",
+        "reason": "原已采纳意见经独立revision 6fa1ada9-fcb9-4f06-abd3-cfcf0fff7693只改58问话人沈禾为沈成林，58—60全章六字段重登、28页完整尾段复核后已完成真实本地writer事务；59/60正文未变。 原失败输入误填事务ID，现按已完成事务冻结状态中的committed_revisions对象实际id核对，另存修正，不改原失败。",
+        "changes": [
+          {
+            "unit": 58,
+            "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+            "before": "772badfddd9c7a820c07b604bceaf5f3df402b330d1723a3236d6e0d38fc9c40",
+            "after": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 58,
+            "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+            "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+            "dependency": "85ec98196dde148864cd5c0b845976c0a15a7b631d4b7082e3a338c0a48f5cb4"
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}

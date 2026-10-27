@@ -1,0 +1,3 @@
+import fs from'node:fs';import path from'node:path';import{spawnSync}from'node:child_process';import{A,P}from'./vc-common.mjs';
+const[label,target,unit,page]=process.argv.slice(2),b=target==='branch'?JSON.parse(fs.readFileSync(path.join(A,'cli-logs/vc-revision-begin-retry/stdout.txt'))):null,root=b?.workspace??P,units=JSON.parse(fs.readFileSync(path.join(A,'vc-before-revision.json'))).units,ref=units.find(u=>u.unit===Number(unit)).draft;
+const r=spawnSync(process.execPath,[path.join(A,'read.mjs'),label,path.join(root,ref),page],{encoding:'utf8',windowsHide:true,maxBuffer:2*1024*1024,timeout:30000});process.stdout.write(r.stdout??'');process.stderr.write(r.stderr??'');process.exitCode=r.status??1;

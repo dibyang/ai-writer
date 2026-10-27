@@ -1,0 +1,26 @@
+{
+  "unit": 2,
+  "expected_revision": 2,
+  "source_hashes": {
+    "writer.json": "e6fe2c28c4fb2bad51b5284075abbadef2fe4e55b37a319e0a0f58acf12ddc97",
+    ".writer/state.json": "426b79c2ae856100b792d033bc61237d711f9a5da2fcd9205aef9776081c1e8b",
+    "大纲/单元/0002.json": "54a50a7e2d94474f32329cbae20e5db7d65fc0928fb5d268b608dd94c4e3c00c",
+    "设定/作品定位.md": "e58715a30979dc058b1c452cb177d6a32d7261941e8e7c83180176969bb6552c",
+    "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+    "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+    "正文/0001.md": "e3f3613ff140936d7f4f962b0176e14126315b285e898e1c7caee506f4521f5f"
+  },
+  "draft": "正文/0002.md",
+  "source_bindings": {},
+  "summary": "阿禾完成第2次交接核实",
+  "changes": {
+    "characters": {
+      "阿禾": "位于第2处桥头"
+    },
+    "timeline_append": [
+      "交接2"
+    ],
+    "ledger": {}
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。"
+}

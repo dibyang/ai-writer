@@ -1,0 +1,648 @@
+{
+  "ok": true,
+  "title": "东岸末班船",
+  "kind": "novel",
+  "revision": 211,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "在AC独立副本以V17推进46—48整组三章：先实际status/check/doctor/discussion，核generation6/绑定内容ID和45章登记、无漂移/待恢复/未知稿；完整分页读43—45，recall后实读旧承诺，沿用A37—48骨架和未决项，只在未消费未来规划/本轮新增文件滚动2—3章。46正式细纲/context及写前模板后分段写至少10000正文汉字，assemble、完整分页回读、纲文回对和自检、preview/record。再按46实况在47写前保存正式细纲/context/record-template，写前1—2自然段约3000—5000汉字后首程交接退出。等同ID真实恢复核46登记基线、原段/原模板/来源/工具/事务后，保持旧workflow及原模板续完、合章回读并登记47；本章完成后若需同步task，在48取写前输入前完成。再滚动细化、写并登记48至少14000正文汉字，完整连读43—48当前六章，保存实际模型自检报告并正式review绑定当前正文SHA，整组检查后退出。47完整章至少10000。首程断点与整组授权分开，控制器安排不冒充真人情节选择。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 46,
+        "to": 48
+      },
+      "revise_range": {
+        "from": 46,
+        "to": 48
+      },
+      "stop_conditions": [
+        "本组末章48结束并完成43—48整组复核后停止，不写49及以后正文",
+        "只操作AC独立副本及AC证据，不改旧封存目录、真实作品、产品源码或全局配置；不提交推送发布",
+        "不子代理、不额外会话、不后台写稿、不向其他聊天发消息或调用外部写作服务",
+        "范围外高置信问题保存证据交根；工具缺陷保留输入错误构建state原稿并停止相关动作",
+        "未完章恢复保持原workflow和模板；来源变化先核影响，不能写后刷新模板绕过保护"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/AC扩大骨架-37-48.md",
+          "大纲/AC-D推进窗口-46-48.md"
+        ],
+        "unresolved_ids": [
+          "AC_D_48_DETAIL_AFTER47"
+        ]
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V17.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0046.json",
+          "大纲/单元/0047.json"
+        ],
+        "unresolved_ids": [
+          "AC_D_47_RECHECK_AFTER46",
+          "AC_D_48_DETAIL_AFTER47"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 6
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 47,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "owner": "v-c3-actual-codex-first-stop",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "98862fc07df31871c4221c00f2ee72574c449a0443745b28014162d1476b9da4",
+        "scope": {
+          "from": 7,
+          "through": 12
+        },
+        "status": "committed",
+        "base_sha256": "4eb1f2a7d5c2ab7111bbf3f58524c8485fb07e59f5ca1be20bf3506d49296740",
+        "created_at": "2026-10-20T12:59:52.231Z",
+        "transaction_id": "f0b4ad62-9b88-41a2-8519-de9064f2a040",
+        "session_sha256": "d0857f596e0bddcb9e2d215acda14c7c97e8d57b11708837bb3acc8d09716ba0"
+      },
+      {
+        "id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "owner": "v-a-metadata-only-root-authorized",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 4,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "7bf633d95462043f82cf48e9ef8a03bdc1271f3734580dbd29188d081ade9ac5",
+        "created_at": "2026-10-20T10:14:46.353Z",
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_sha256": "6cd6922875ccfc7000a0e7bd7120f8ae5eed841e4882a175b204aa64e05a9be7"
+      },
+      {
+        "id": "5aafdf06-35ca-4768-8818-e793e9f98c3b",
+        "owner": "X-D-same-thread-dr-tracking36",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "6a744c73a662ac5023dee12bedd0426ceb30f0d64df5c887279ee0235dfd9c0b",
+        "scope": {
+          "from": 36,
+          "through": 36
+        },
+        "status": "committed",
+        "base_sha256": "5bbd1d29cb7da65ea26da8f8ed817e95b4b4999ee3cbadd69bf76b17cec0d65a",
+        "created_at": "2026-10-21T11:35:49.397Z",
+        "transaction_id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "session_sha256": "81156ba9c4cf326ea2bfc4e663864b3ec8575b930863a289ec1a06d990031d3c"
+      },
+      {
+        "id": "618831e7-b1af-4864-ac12-802584966ec8",
+        "owner": "w-d-codex-20261021-first-stop",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "1d4edd5c08ede3b55bbd791f0007f12f196902e7c583d3ed26339a26a5226dbd",
+        "scope": {
+          "from": 13,
+          "through": 24
+        },
+        "status": "committed",
+        "base_sha256": "606710b32c6ccbfd2d5577b7d4346e77c010d063a8d9f2e738063f0d80558b5a",
+        "created_at": "2026-10-21T02:29:44.270Z",
+        "transaction_id": "5154f86f-3e2a-489b-a694-5e8c794e1fe6",
+        "session_sha256": "3b069bf677f0c92804642bb1eb227747649a302873f6c7d42e2bb8ff2d6f2878"
+      },
+      {
+        "id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "owner": "final-b-native-codex",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 2,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "1a742700a6e49a0c7665b591f30a64dd4a0fb82022fe911ee6ac119d29d75754",
+        "created_at": "2026-10-20T07:15:17.894Z",
+        "transaction_id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_sha256": "f1f772eb039fb496f49f85c1789a93ef5ef7f8b66cc45f5fab253005c086de1e"
+      },
+      {
+        "id": "962f45e6-2770-421f-9800-cce9bb19ce00",
+        "owner": "X-E-controlled-first-stop-13-18-20261021",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "6a744c73a662ac5023dee12bedd0426ceb30f0d64df5c887279ee0235dfd9c0b",
+        "scope": {
+          "from": 13,
+          "through": 36
+        },
+        "status": "committed",
+        "base_sha256": "14ac7a2451effaa72207d58c566eaae5936c869c300f8fb1cbb761ffb1a857b7",
+        "created_at": "2026-10-21T12:02:29.341Z",
+        "transaction_id": "1c716ac3-c0b9-4954-8ecd-a80c4c3d03fa",
+        "session_sha256": "b1b1678880d20e56d4c4153f96ef110aeb445e985be4a2033bb56c0193d16897"
+      },
+      {
+        "id": "99e35d1f-b2c0-4fea-9642-c1e426cc45f6",
+        "owner": "Codex AC-B same thread 01a16e69-dfce-7b92-a604-87003db67e49",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "b64b8fe71c611086a93219876dcbfc0c943819e89996f4fc5e3de07e82156c1f",
+        "scope": {
+          "from": 42,
+          "through": 42
+        },
+        "status": "committed",
+        "base_sha256": "49bad2f1142cd2cf40344cf093896e12c2dcb803af5e277bc73491ce8e08fb15",
+        "created_at": "2026-10-24T16:39:02.219Z",
+        "transaction_id": "c6626ed5-ec9b-48e9-ade7-da896efde37e",
+        "session_sha256": "a083f574b72d8e4bf0119a9286215cac0bf2adb1dbb15f5d53f806db231be8b3"
+      },
+      {
+        "id": "b3a452be-6839-40af-aea2-6a326c223875",
+        "owner": "w-fr-title-repair-codex-20261021",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "6a744c73a662ac5023dee12bedd0426ceb30f0d64df5c887279ee0235dfd9c0b",
+        "scope": {
+          "from": 19,
+          "through": 24
+        },
+        "status": "committed",
+        "base_sha256": "c5c98c31537ac4af905a5aa12bb296028b86cbd6be70000f3630131248b2076e",
+        "created_at": "2026-10-21T04:27:39.629Z",
+        "transaction_id": "8b607cc7-4878-4cc2-a86a-ac728ee71904",
+        "session_sha256": "a7cda900d7e203164ae7b69e7df3b35ca5e772a3a4e5bcd4947acdc3897b544a"
+      },
+      {
+        "id": "b572b1e1-a2ac-4903-9e43-cc84eb36a1b5",
+        "owner": "Codex AC-C same thread 01a16ed8-0da2-7671-bbad-944dde1a62d0",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "b64b8fe71c611086a93219876dcbfc0c943819e89996f4fc5e3de07e82156c1f",
+        "scope": {
+          "from": 45,
+          "through": 45
+        },
+        "status": "committed",
+        "base_sha256": "474f7434418ff3e7cde012324453fd45d1094c53e3345f7343091a48f4ac9081",
+        "created_at": "2026-10-24T18:33:51.935Z",
+        "transaction_id": "22493cd3-b392-4cf8-868a-70d2a410e4d0",
+        "session_sha256": "9fe8ec4d22e7ca816aabf2f97fd9a586e8298aa818f4aa49720031f1fa9fb30d"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "13c55320-d1e6-4801-8923-fb779018c62f",
+        "status": "completed"
+      },
+      {
+        "id": "1c716ac3-c0b9-4954-8ecd-a80c4c3d03fa",
+        "session_id": "962f45e6-2770-421f-9800-cce9bb19ce00",
+        "status": "completed"
+      },
+      {
+        "id": "22493cd3-b392-4cf8-868a-70d2a410e4d0",
+        "session_id": "b572b1e1-a2ac-4903-9e43-cc84eb36a1b5",
+        "status": "completed"
+      },
+      {
+        "id": "31c33f5b-c649-4987-a85a-183532077006",
+        "status": "completed"
+      },
+      {
+        "id": "4f14bf24-2141-43a6-b8f7-bedcf42af42d",
+        "status": "completed"
+      },
+      {
+        "id": "5154f86f-3e2a-489b-a694-5e8c794e1fe6",
+        "session_id": "618831e7-b1af-4864-ac12-802584966ec8",
+        "status": "completed"
+      },
+      {
+        "id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "status": "completed"
+      },
+      {
+        "id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "session_id": "5aafdf06-35ca-4768-8818-e793e9f98c3b",
+        "status": "completed"
+      },
+      {
+        "id": "8b607cc7-4878-4cc2-a86a-ac728ee71904",
+        "session_id": "b3a452be-6839-40af-aea2-6a326c223875",
+        "status": "completed"
+      },
+      {
+        "id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "status": "completed"
+      },
+      {
+        "id": "b2fd13eb-0330-4df3-bdaa-75c898c7d565",
+        "status": "completed"
+      },
+      {
+        "id": "c6626ed5-ec9b-48e9-ade7-da896efde37e",
+        "session_id": "99e35d1f-b2c0-4fea-9642-c1e426cc45f6",
+        "status": "completed"
+      },
+      {
+        "id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+        "status": "completed"
+      },
+      {
+        "id": "e3fbff5c-ce0b-4f73-82ec-8c629d292221",
+        "status": "completed"
+      },
+      {
+        "id": "f0b4ad62-9b88-41a2-8519-de9064f2a040",
+        "session_id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 211,
+    "counts": {
+      "verified": 6,
+      "open": 10
+    },
+    "pending": [
+      {
+        "id": "I_X_AR_KNEE_JOKE",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_AR_EGG_ECHO",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_BRC_CLASS_SUMMARY",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_CR_TEA_ABSTRACT",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_CR_BOUNDARY_NARRATION",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_DR_WINDOW_TASTE_PATTERN",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_AC_WINDOW_COAT_ECHO",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": false
+      },
+      {
+        "id": "I_AC_WINDOW_PREP_DENSITY",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": false
+      }
+    ],
+    "omitted": 2,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 6,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "adc7f6304e066baabab9fe1c728cc5589f386b6e0a4f092160934b814791eeed",
+      "runtime_id": "af2967f7af9571dd507c3fee7bb37fe9eaf04109a8cc7c746a3748443017cfb8"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/c85eb384-71eb-4d25-bb67-f33b6bd7d826.json",
+        "sha256": "60b24b93d665db2b9bc98fec99e9876a547ade2ec1cb38f64018a5b1c85bcb25"
+      },
+      {
+        "ref": ".writer/objects/13c55320-d1e6-4801-8923-fb779018c62f.json",
+        "sha256": "85489b554e4d855000f4eaef62a764d603627edde0a258e6162ece8bc18fefe2"
+      },
+      {
+        "ref": ".writer/objects/b2fd13eb-0330-4df3-bdaa-75c898c7d565.json",
+        "sha256": "1545f6fc5016ce1044ca2aeaa82c2a9f8aa6ff49a2c901df77d21b96ef718919"
+      },
+      {
+        "ref": ".writer/objects/e3fbff5c-ce0b-4f73-82ec-8c629d292221.json",
+        "sha256": "c44fab00bf32918615e1e98e484966775c891fc99c58d18d82c28ba551d78335"
+      },
+      {
+        "ref": ".writer/objects/31c33f5b-c649-4987-a85a-183532077006.json",
+        "sha256": "0ea8db70c94595ff71ecf3f8fc17533f92ec8512786d6e3c18a3affea058d5b6"
+      },
+      {
+        "ref": ".writer/objects/4f14bf24-2141-43a6-b8f7-bedcf42af42d.json",
+        "sha256": "44bef392a7774764e2faec1b542890213f73bc820ded77c968260e57fe9c4932"
+      }
+    ],
+    "operations": {
+      "0c29e409-2bd6-493d-9eaa-1857fa4c0dcc": {
+        "input_hash": "edc40c25a3608eaaf1cf21aa1750a00ce3aa556ebf6097c2310c8a22cef00bb7",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+          "revision": 30,
+          "generation": 1,
+          "source_content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+          "backups_preserved": true
+        }
+      },
+      "1d17087f-1084-4e12-83ef-022e6b97e0db": {
+        "input_hash": "b5ccd2861a939cac7e61531472132c199383fa1ca415d8bdf720c93a6119db64",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "13c55320-d1e6-4801-8923-fb779018c62f",
+          "revision": 78,
+          "generation": 2,
+          "source_content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+          "backups_preserved": true
+        }
+      },
+      "aa6c8816-11d2-4328-9e37-3f42504ac2d3": {
+        "input_hash": "c67a399dcba55d21a2a592f9dad5c6686b0b35545cc46c0287f635ec917495e6",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "b2fd13eb-0330-4df3-bdaa-75c898c7d565",
+          "revision": 101,
+          "generation": 3,
+          "source_content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+          "backups_preserved": true
+        }
+      },
+      "625c1f03-e512-4611-8720-10d9fc483bd9": {
+        "input_hash": "42de7b82429e899c861942a3ecfcff470d105811e51953ed1086baf443af0356",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "e3fbff5c-ce0b-4f73-82ec-8c629d292221",
+          "revision": 180,
+          "generation": 4,
+          "source_content_id": "52156ccdc8d1fc7a728215ced690e6c1e58d1653cda828fcc8313e0e6df7e47c",
+          "backups_preserved": true
+        }
+      },
+      "1490a06a-f02b-47c6-84c6-347c404c6b39": {
+        "input_hash": "4831945eeb6dcd4585d5732c3bcb7bf9cecffc4e468a87138c81611709c3e210",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "31c33f5b-c649-4987-a85a-183532077006",
+          "revision": 198,
+          "generation": 5,
+          "source_content_id": "29cfafca4f91987584172214a704f8044d3b9ceddfcaf903c70640b0b6af94cf",
+          "backups_preserved": true
+        }
+      },
+      "900705ba-590b-43cf-8fef-5036b1d83e83": {
+        "input_hash": "37401cc0cd7785ae147c35a2882ed010e70dedc07fc9f88963258bb1b0e9ffe6",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "4f14bf24-2141-43a6-b8f7-bedcf42af42d",
+          "revision": 207,
+          "generation": 6,
+          "source_content_id": "adc7f6304e066baabab9fe1c728cc5589f386b6e0a4f092160934b814791eeed",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 46,
+    "unregistered": [
+      {
+        "draft": "正文/0001-灯下的箱子.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0002-多跑的一趟.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 6,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0008-半个钟头-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 8,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0009-留给明天的活-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 9,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0010-月底的三十五块-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 10,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0011-盒子放进去-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 11,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0012-沿着坡走-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 12,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0021-雨落在门檐外-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 21,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0025-衣袖落下来-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 25,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0026-要关的半扇门-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 26,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0027-先把这一天过完-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 27,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0027-先把这一天过完-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 27,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0028-走远一点的路-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 28,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0030-兜里留得下的手-brc-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 30,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0031-门外留一张纸-c-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 31,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0032-茶慢慢凉下来-cr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 32,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0033-把用过的话带回来-cr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 33,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0034-明天的空处-d-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 34,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0034-明天的空处-d-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 34,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0035-一起翻到下一页-dr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 35,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0036-灯下还有一页-dr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 36,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0046-盒里最后一块-ac-d-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 46,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 47,
+    "plan_exists": true,
+    "action": "先核对未登记正文，再读取下一单元上下文",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\extracted-repair-final\\ai-writer-0.9.0\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证' '--unit' '47'"
+  },
+  "current": {
+    "character_count": 21,
+    "ledger_count": 56,
+    "recent": [
+      {
+        "unit": 44,
+        "summary": "第36日周一午后许家，两人各量米淘米，沈芋头先煮、女看米；芋头熟后两只均偏黏非粉，女直说更爱粉，四整块另留、少碎拌饭。芹菜梗叶各先后捞成脆软两份，豆干沈留宽条，各自添油盐，蒜另碟，沈后加多承认偏冲；两火已关，两人真坐食，彼此可不全喜欢。母房内歇后自愿出来尝半块芋头/一小勺饭和少菜，半块另留自己碟，不全程评做。两点多女沈吃完各自碗不再添，原碎碗最后两块两人分吃；共盘一整块、母另碟半块、锅余约小碗饭及两份少菜仍在，锅盆油盐未洗收。各钱余女5沈9仍包内，无借碗带食或父品尝。饭约做吃已发生，洗收交45仍partial。"
+      },
+      {
+        "unit": 45,
+        "summary": "第36日周一两点多至天暗：母自行吃完另半块芋头；女两份余菜各小碗盖冷藏，沈选余饭与共盘一整块装自己带的厚盒，不给父先添份。女洗碗、沈泡洗粘米锅及炒锅，女扶锅，锅碗勺刀板沥放；油回里格，盐误放矮架后因母取用重回干台，勺筷筒旁、厚垫晾、桌地擦净、垃圾封口门侧未投放。饭盒先许家冷藏，洗收后真坐到快三点半，未拍照，女说想躺/沈说想回，当面告别止门内。沈自盒入包到家再冷藏，父仍杖凳，只看盒听饭菜/洗收转述，未尝；父说下午热吃馒头一个另一个留，非女亲见。女真躺过醒后母自下面，女另热并吃净两份少菜，厚垫干收原层、母伸手取盐便得，双火关。一次借厨做吃洗还空间有限完成，无借碗待还，沈余饭未热吃。"
+      },
+      {
+        "unit": 46,
+        "summary": "第36日周一夜：沈从自家冰箱取45余饭/完整芋头移瓷碗，与亲取原剩馒头1切两半同蒸，热透关火。父仍杖凳，沈移凳；父明确想尝后分原芋头半块并吃完，仍更爱馒头，沈吃另一半和全部余饭配咸菜，盒洗净倒扣架外侧/盖另放、非借还。女实投45垃圾袋与湿垫纸，母擦门侧地。母女只理柜前一层，厚巾左/宽口套右，薄巾一条留干架、窄口套另袋柜旁未处置；后来母真用宽口套换枕，退下套待洗。母当夜短试右袖说靠桌仍认角，未拆补片；母女实际洗漂压水、女扶肩上衣架、绳下盆接水，湿衣未干，母备另一件。沈文字告朋友热饭/父尝/咸菜，女回菜热软蒜仍重且已吃完、只说洗衣手皱不练，未约再饭；女有限转述母。沈闹钟真改平常、书移床边未翻、余9收袋无新付，各家休息。"
+      }
+    ],
+    "timeline_tail": [
+      "第36日周一两点多：母吃完自己另半块；女余菜两碗盖冷藏，沈余饭/一整块装自家盒。女沈换手实洗锅碗、归油盐勺刀板，盐误位后改回，擦桌地、垃圾封口留门侧，未见投放。",
+      "同日下午洗收后真坐歇到快三点半：女说想躺/沈也想回，沈自盒冷藏后取出入包，当面告别无借碗还账；女实际躺，沈慢走回家自饭再冷藏。父仍凳杖，看盒听做吃洗、仅自己口述热馒头吃1余1，未品尝。",
+      "当天傍晚天暗前：女醒来母自己下面，女两菜另热吃完，右火母关/左火女关，厚垫已干回原层，盐原位母取便得；厨房与普通饭量回到各家使用。",
+      "第36日周一夜：沈取45自盒余饭及整芋头转瓷碗，原馒头1切半同蒸，热透关火；父仍凳杖，沈按其要求移凳。父明确想尝后吃原芋头一半、吃原馒头1；沈吃另一半/余饭配咸菜，盒空洗沥自架，盖另放，不借还。",
+      "同夜许家：女实投45封袋及垫纸、回洗手，母擦地；母女只理柜前一层，窄口套另袋未处置、宽套后实际换母枕，退套待洗。母当夜试袖仍认角、母女实洗漂压水/女挂绳/盆接水，未干、未拆补，另衣备明早。",
+      "同夜各家：沈改闹钟回平常，余9归零钱袋、画册移床边未翻；两友按真实文字互告热饭/父尝半和热菜吃净，不定下一次。女只说洗衣手皱不练，有限转母沈父尝讯，两家各休息。"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),P=JSON.parse(fs.readFileSync(path.join(A,'project.json'))).project,[n,startArg,countArg='2']=process.argv.slice(2),s=JSON.parse(fs.readFileSync(path.join(P,'.writer/state.json'))),v=s.source_versions[`AE_R_S${n}_NEW`];
+const pages=Math.ceil(fs.readFileSync(path.join(P,v.object_ref),'utf8').length/1800);
+for(let i=Number(startArg);i<=pages&&i<Number(startArg)+Number(countArg);i++){const r=spawnSync(process.execPath,[path.join(A,'read.mjs'),`r-source-s${n}-p${String(i).padStart(2,'0')}`,path.join(P,v.object_ref),String(i)],{encoding:'utf8',maxBuffer:8e6,windowsHide:true});process.stdout.write(r.stdout);process.stderr.write(r.stderr);if(r.status!==0){process.exitCode=r.status;break;}}

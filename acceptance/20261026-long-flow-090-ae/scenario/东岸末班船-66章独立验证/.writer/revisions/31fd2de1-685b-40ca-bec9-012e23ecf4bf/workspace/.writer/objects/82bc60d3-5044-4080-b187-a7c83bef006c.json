@@ -1,0 +1,973 @@
+{
+  "action": "publish",
+  "at": "2026-10-25T22:53:45.744Z",
+  "evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AE作者任务.md",
+    "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+    "locator": "研究/AE作者任务.md第9—15行原话；本次已激活R首程控制器要求独立fixture有限revise54—66并保存只读保护首停。74/20为待实际核实的普通fixture候选，不冒称作者新增逐项原话。",
+    "recorded_by": "AE R native 01a17511-c2b0-79a3-bf72-0f77373bfce2",
+    "frozen_ref": ".writer/objects/fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868.txt"
+  },
+  "input": {
+    "expected_revision": 395,
+    "operation_id": "AE_R_RESUME1_PUBLISH_S03",
+    "author_evidence": {
+      "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+      "local_source": "研究/AE作者任务.md",
+      "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+      "locator": "研究/AE作者任务.md第9—15行原话；本次已激活R首程控制器要求独立fixture有限revise54—66并保存只读保护首停。74/20为待实际核实的普通fixture候选，不冒称作者新增逐项原话。",
+      "recorded_by": "AE R native 01a17511-c2b0-79a3-bf72-0f77373bfce2"
+    },
+    "impact_id": "bf05f097-5227-4b0f-afda-fb47feec825d"
+  },
+  "result": {
+    "published": "AE_R_S03_NEW",
+    "from": 60,
+    "pending_resolution": "branch-only-until-transaction-commit"
+  },
+  "current": {
+    "source_versions": {
+      "CR33_INITIAL": {
+        "id": "CR33_INITIAL",
+        "ref": "大纲/单元/0033.json",
+        "object_ref": ".writer/objects/c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129.source",
+        "sha256": "c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129",
+        "previous": null,
+        "format": "json"
+      },
+      "CR33_RECALL_ID_V2": {
+        "id": "CR33_RECALL_ID_V2",
+        "ref": "大纲/单元/0033.json",
+        "object_ref": ".writer/objects/bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858.source",
+        "sha256": "bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858",
+        "previous": "CR33_INITIAL",
+        "format": "json"
+      },
+      "E1_S01_OLD": {
+        "id": "E1_S01_OLD",
+        "ref": "大纲/单元/0036.json",
+        "object_ref": ".writer/objects/13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a.source",
+        "sha256": "13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S02_OLD": {
+        "id": "E1_S02_OLD",
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "object_ref": ".writer/objects/f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf.source",
+        "sha256": "f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S03_OLD": {
+        "id": "E1_S03_OLD",
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "object_ref": ".writer/objects/efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1.source",
+        "sha256": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S04_OLD": {
+        "id": "E1_S04_OLD",
+        "ref": "大纲/单元/0040.json",
+        "object_ref": ".writer/objects/1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d.source",
+        "sha256": "1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S05_OLD": {
+        "id": "E1_S05_OLD",
+        "ref": "大纲/单元/0041.json",
+        "object_ref": ".writer/objects/420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0.source",
+        "sha256": "420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S06_OLD": {
+        "id": "E1_S06_OLD",
+        "ref": "大纲/单元/0042.json",
+        "object_ref": ".writer/objects/8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf.source",
+        "sha256": "8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S07_OLD": {
+        "id": "E1_S07_OLD",
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "object_ref": ".writer/objects/c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9.source",
+        "sha256": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S08_OLD": {
+        "id": "E1_S08_OLD",
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "object_ref": ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source",
+        "sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S09_OLD": {
+        "id": "E1_S09_OLD",
+        "ref": "大纲/单元/0047.json",
+        "object_ref": ".writer/objects/5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c.source",
+        "sha256": "5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S01_NEW": {
+        "id": "E1_S01_NEW",
+        "ref": "大纲/单元/0036.json",
+        "object_ref": ".writer/objects/18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb.source",
+        "sha256": "18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb",
+        "previous": "E1_S01_OLD",
+        "format": "json"
+      },
+      "E1_S02_NEW": {
+        "id": "E1_S02_NEW",
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "object_ref": ".writer/objects/5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9.source",
+        "sha256": "5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9",
+        "previous": "E1_S02_OLD",
+        "format": "md"
+      },
+      "E1_S03_NEW": {
+        "id": "E1_S03_NEW",
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "object_ref": ".writer/objects/4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc.source",
+        "sha256": "4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc",
+        "previous": "E1_S03_OLD",
+        "format": "md"
+      },
+      "E1_S04_NEW": {
+        "id": "E1_S04_NEW",
+        "ref": "大纲/单元/0040.json",
+        "object_ref": ".writer/objects/7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089.source",
+        "sha256": "7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089",
+        "previous": "E1_S04_OLD",
+        "format": "json"
+      },
+      "E1_S05_NEW": {
+        "id": "E1_S05_NEW",
+        "ref": "大纲/单元/0041.json",
+        "object_ref": ".writer/objects/4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288.source",
+        "sha256": "4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288",
+        "previous": "E1_S05_OLD",
+        "format": "json"
+      },
+      "E1_S06_NEW": {
+        "id": "E1_S06_NEW",
+        "ref": "大纲/单元/0042.json",
+        "object_ref": ".writer/objects/96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4.source",
+        "sha256": "96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4",
+        "previous": "E1_S06_OLD",
+        "format": "json"
+      },
+      "E1_S07_NEW": {
+        "id": "E1_S07_NEW",
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "object_ref": ".writer/objects/ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437.source",
+        "sha256": "ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437",
+        "previous": "E1_S07_OLD",
+        "format": "md"
+      },
+      "E1_S08_NEW": {
+        "id": "E1_S08_NEW",
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "object_ref": ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source",
+        "sha256": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+        "previous": "E1_S08_OLD",
+        "format": "md"
+      },
+      "E1_S09_NEW": {
+        "id": "E1_S09_NEW",
+        "ref": "大纲/单元/0047.json",
+        "object_ref": ".writer/objects/5381bc88ead2d6bf44090f6ab435c16c33d87239d5cdb50617a967f4caeab1c9.source",
+        "sha256": "5381bc88ead2d6bf44090f6ab435c16c33d87239d5cdb50617a967f4caeab1c9",
+        "previous": "E1_S09_OLD",
+        "format": "json"
+      },
+      "AD_E_S01_OLD": {
+        "id": "AD_E_S01_OLD",
+        "ref": "大纲/单元/0056.json",
+        "object_ref": ".writer/objects/c88e9ac3b4fe03a3f4dd6450db1d0f7b296fda7ad68e47d954a3ac32cf5f5213.source",
+        "sha256": "c88e9ac3b4fe03a3f4dd6450db1d0f7b296fda7ad68e47d954a3ac32cf5f5213",
+        "previous": null,
+        "format": "json"
+      },
+      "AD_E_S02_OLD": {
+        "id": "AD_E_S02_OLD",
+        "ref": "大纲/单元/0058.json",
+        "object_ref": ".writer/objects/08aa0ce937038591d06526a963a600e11ed3c6503090eda05adad6275d01a4a0.source",
+        "sha256": "08aa0ce937038591d06526a963a600e11ed3c6503090eda05adad6275d01a4a0",
+        "previous": null,
+        "format": "json"
+      },
+      "AD_E_S03_OLD": {
+        "id": "AD_E_S03_OLD",
+        "ref": "大纲/单元/0059.json",
+        "object_ref": ".writer/objects/86e552371a8c36ce596a6e5349f7aff08699933eeb9b40f403f80773bcc4e15f.source",
+        "sha256": "86e552371a8c36ce596a6e5349f7aff08699933eeb9b40f403f80773bcc4e15f",
+        "previous": null,
+        "format": "json"
+      },
+      "AD_E_S04_OLD": {
+        "id": "AD_E_S04_OLD",
+        "ref": "大纲/单元/0060.json",
+        "object_ref": ".writer/objects/e72066b7624333bb1c6ef3979fba0e87dc1290a0cc316ddfd14847fd9ed9f6de.source",
+        "sha256": "e72066b7624333bb1c6ef3979fba0e87dc1290a0cc316ddfd14847fd9ed9f6de",
+        "previous": null,
+        "format": "json"
+      },
+      "AD_E_S05_OLD": {
+        "id": "AD_E_S05_OLD",
+        "ref": "研究/AD-D滚动写前核对.md",
+        "object_ref": ".writer/objects/ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b.source",
+        "sha256": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b",
+        "previous": null,
+        "format": "md"
+      },
+      "AD_E_S06_OLD": {
+        "id": "AD_E_S06_OLD",
+        "ref": "研究/AD-DR-60写前核对.md",
+        "object_ref": ".writer/objects/4dca76581012c620f37d716ddf65c1308bfb1102fbe6acae5da78224a5173e47.source",
+        "sha256": "4dca76581012c620f37d716ddf65c1308bfb1102fbe6acae5da78224a5173e47",
+        "previous": null,
+        "format": "md"
+      },
+      "AD_E_S01_NEW": {
+        "id": "AD_E_S01_NEW",
+        "ref": "大纲/单元/0056.json",
+        "object_ref": ".writer/objects/7ea36d6d7d85a1fe958c45bae0c036b784f1b7e497a13f4817efc02c2841d830.source",
+        "sha256": "7ea36d6d7d85a1fe958c45bae0c036b784f1b7e497a13f4817efc02c2841d830",
+        "previous": "AD_E_S01_OLD",
+        "format": "json"
+      },
+      "AD_E_S02_NEW": {
+        "id": "AD_E_S02_NEW",
+        "ref": "大纲/单元/0058.json",
+        "object_ref": ".writer/objects/d297fa976bb38e5c86c72f679c73d11506c2c6c48cfc7c190aba03a6344aee0d.source",
+        "sha256": "d297fa976bb38e5c86c72f679c73d11506c2c6c48cfc7c190aba03a6344aee0d",
+        "previous": "AD_E_S02_OLD",
+        "format": "json"
+      },
+      "AD_E_S03_NEW": {
+        "id": "AD_E_S03_NEW",
+        "ref": "大纲/单元/0059.json",
+        "object_ref": ".writer/objects/36ae956bcb9fd78b9082e1fac95aaa4ae26bd98c46401778fb36ec285145d9bc.source",
+        "sha256": "36ae956bcb9fd78b9082e1fac95aaa4ae26bd98c46401778fb36ec285145d9bc",
+        "previous": "AD_E_S03_OLD",
+        "format": "json"
+      },
+      "AD_E_S04_NEW": {
+        "id": "AD_E_S04_NEW",
+        "ref": "大纲/单元/0060.json",
+        "object_ref": ".writer/objects/070969b3bc887c35715a2c8588292e0bc82e2b4f1854ff925618d54116ceabe1.source",
+        "sha256": "070969b3bc887c35715a2c8588292e0bc82e2b4f1854ff925618d54116ceabe1",
+        "previous": "AD_E_S04_OLD",
+        "format": "json"
+      },
+      "AD_E_S05_NEW": {
+        "id": "AD_E_S05_NEW",
+        "ref": "研究/AD-D滚动写前核对.md",
+        "object_ref": ".writer/objects/e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae.source",
+        "sha256": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+        "previous": "AD_E_S05_OLD",
+        "format": "md"
+      },
+      "AD_E_S06_NEW": {
+        "id": "AD_E_S06_NEW",
+        "ref": "研究/AD-DR-60写前核对.md",
+        "object_ref": ".writer/objects/bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066.source",
+        "sha256": "bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066",
+        "previous": "AD_E_S06_OLD",
+        "format": "md"
+      },
+      "AE_R_S01_OLD": {
+        "id": "AE_R_S01_OLD",
+        "ref": "大纲/单元/0054.json",
+        "object_ref": ".writer/objects/075627128141dba6edc148acc2548a015bc1fe9c6e53ac9ac2a4a02675f09cbd.source",
+        "sha256": "075627128141dba6edc148acc2548a015bc1fe9c6e53ac9ac2a4a02675f09cbd",
+        "previous": null,
+        "format": "json"
+      },
+      "AE_R_S01_NEW": {
+        "id": "AE_R_S01_NEW",
+        "ref": "大纲/单元/0054.json",
+        "object_ref": ".writer/objects/21b7fd300b712c620463ea596684293eb08c902cac24bd4087d9c24c108b4c3b.source",
+        "sha256": "21b7fd300b712c620463ea596684293eb08c902cac24bd4087d9c24c108b4c3b",
+        "previous": "AE_R_S01_OLD",
+        "format": "json"
+      },
+      "AE_R_S02_NEW": {
+        "id": "AE_R_S02_NEW",
+        "ref": "大纲/单元/0059.json",
+        "object_ref": ".writer/objects/923f0cb6691f938acbcc014d608e9a88554c29d0ffa0f77a0b159e7e0b620f21.source",
+        "sha256": "923f0cb6691f938acbcc014d608e9a88554c29d0ffa0f77a0b159e7e0b620f21",
+        "previous": "AD_E_S03_NEW",
+        "format": "json"
+      },
+      "AE_R_S03_NEW": {
+        "id": "AE_R_S03_NEW",
+        "ref": "大纲/单元/0060.json",
+        "object_ref": ".writer/objects/ad641e26f3be475701a34b83944050303819d95fb3cd96a9ac6dbabdafb662f4.source",
+        "sha256": "ad641e26f3be475701a34b83944050303819d95fb3cd96a9ac6dbabdafb662f4",
+        "previous": "AD_E_S04_NEW",
+        "format": "json"
+      },
+      "AE_R_S04_NEW": {
+        "id": "AE_R_S04_NEW",
+        "ref": "研究/AD-D滚动写前核对.md",
+        "object_ref": ".writer/objects/e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a.source",
+        "sha256": "e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a",
+        "previous": "AD_E_S05_NEW",
+        "format": "md"
+      },
+      "AE_R_S05_NEW": {
+        "id": "AE_R_S05_NEW",
+        "ref": "研究/AD-DR-60写前核对.md",
+        "object_ref": ".writer/objects/c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540.source",
+        "sha256": "c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540",
+        "previous": "AD_E_S06_NEW",
+        "format": "md"
+      },
+      "AE_R_S06_OLD": {
+        "id": "AE_R_S06_OLD",
+        "ref": "研究/AE规划与旧线证据.md",
+        "object_ref": ".writer/objects/5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61.source",
+        "sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "previous": null,
+        "format": "md"
+      },
+      "AE_R_S06_NEW": {
+        "id": "AE_R_S06_NEW",
+        "ref": "研究/AE规划与旧线证据.md",
+        "object_ref": ".writer/objects/5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331.source",
+        "sha256": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+        "previous": "AE_R_S06_OLD",
+        "format": "md"
+      },
+      "AE_R_S07_OLD": {
+        "id": "AE_R_S07_OLD",
+        "ref": "大纲/分卷/V22.json",
+        "object_ref": ".writer/objects/ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb.source",
+        "sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+        "previous": null,
+        "format": "json"
+      },
+      "AE_R_S07_NEW": {
+        "id": "AE_R_S07_NEW",
+        "ref": "大纲/分卷/V22.json",
+        "object_ref": ".writer/objects/d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047.source",
+        "sha256": "d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047",
+        "previous": "AE_R_S07_OLD",
+        "format": "json"
+      },
+      "AE_R_S08_OLD": {
+        "id": "AE_R_S08_OLD",
+        "ref": "大纲/分卷/V23.json",
+        "object_ref": ".writer/objects/b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca.source",
+        "sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+        "previous": null,
+        "format": "json"
+      },
+      "AE_R_S08_NEW": {
+        "id": "AE_R_S08_NEW",
+        "ref": "大纲/分卷/V23.json",
+        "object_ref": ".writer/objects/ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b.source",
+        "sha256": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+        "previous": "AE_R_S08_OLD",
+        "format": "json"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "大纲/单元/0033.json",
+        "version_id": "CR33_RECALL_ID_V2",
+        "from": 33,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0036.json",
+        "version_id": "E1_S01_OLD",
+        "from": 1,
+        "to": 35
+      },
+      {
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "version_id": "E1_S02_OLD",
+        "from": 1,
+        "to": 35
+      },
+      {
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "version_id": "E1_S03_OLD",
+        "from": 1,
+        "to": 39
+      },
+      {
+        "ref": "大纲/单元/0040.json",
+        "version_id": "E1_S04_OLD",
+        "from": 1,
+        "to": 39
+      },
+      {
+        "ref": "大纲/单元/0041.json",
+        "version_id": "E1_S05_OLD",
+        "from": 1,
+        "to": 40
+      },
+      {
+        "ref": "大纲/单元/0042.json",
+        "version_id": "E1_S06_OLD",
+        "from": 1,
+        "to": 41
+      },
+      {
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "version_id": "E1_S07_OLD",
+        "from": 1,
+        "to": 42
+      },
+      {
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "version_id": "E1_S08_OLD",
+        "from": 1,
+        "to": 45
+      },
+      {
+        "ref": "大纲/单元/0047.json",
+        "version_id": "E1_S09_OLD",
+        "from": 1,
+        "to": 46
+      },
+      {
+        "ref": "大纲/单元/0036.json",
+        "version_id": "E1_S01_NEW",
+        "from": 36,
+        "to": null
+      },
+      {
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "version_id": "E1_S02_NEW",
+        "from": 36,
+        "to": null
+      },
+      {
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "version_id": "E1_S03_NEW",
+        "from": 40,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0040.json",
+        "version_id": "E1_S04_NEW",
+        "from": 40,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0041.json",
+        "version_id": "E1_S05_NEW",
+        "from": 41,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0042.json",
+        "version_id": "E1_S06_NEW",
+        "from": 42,
+        "to": null
+      },
+      {
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "version_id": "E1_S07_NEW",
+        "from": 43,
+        "to": null
+      },
+      {
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "version_id": "E1_S08_NEW",
+        "from": 46,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0047.json",
+        "version_id": "E1_S09_NEW",
+        "from": 47,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0056.json",
+        "version_id": "AD_E_S01_OLD",
+        "from": 1,
+        "to": 55
+      },
+      {
+        "ref": "大纲/单元/0058.json",
+        "version_id": "AD_E_S02_OLD",
+        "from": 1,
+        "to": 57
+      },
+      {
+        "ref": "大纲/单元/0059.json",
+        "version_id": "AD_E_S03_OLD",
+        "from": 1,
+        "to": 58
+      },
+      {
+        "ref": "大纲/单元/0060.json",
+        "version_id": "AD_E_S04_OLD",
+        "from": 1,
+        "to": 59
+      },
+      {
+        "ref": "研究/AD-D滚动写前核对.md",
+        "version_id": "AD_E_S05_OLD",
+        "from": 1,
+        "to": 57
+      },
+      {
+        "ref": "研究/AD-DR-60写前核对.md",
+        "version_id": "AD_E_S06_OLD",
+        "from": 1,
+        "to": 59
+      },
+      {
+        "ref": "大纲/单元/0056.json",
+        "version_id": "AD_E_S01_NEW",
+        "from": 56,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0058.json",
+        "version_id": "AD_E_S02_NEW",
+        "from": 58,
+        "to": null
+      },
+      {
+        "ref": "研究/AD-D滚动写前核对.md",
+        "version_id": "AD_E_S05_NEW",
+        "from": 58,
+        "to": null
+      },
+      {
+        "ref": "研究/AD-DR-60写前核对.md",
+        "version_id": "AD_E_S06_NEW",
+        "from": 60,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0054.json",
+        "version_id": "AE_R_S01_NEW",
+        "from": 54,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0059.json",
+        "version_id": "AE_R_S02_NEW",
+        "from": 59,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0060.json",
+        "version_id": "AE_R_S03_NEW",
+        "from": 60,
+        "to": null
+      }
+    ],
+    "impact_pending": {
+      "64b01019-2db6-417f-a581-688947dca7a7": {
+        "id": "64b01019-2db6-417f-a581-688947dca7a7",
+        "version_id": "AE_R_S04_NEW",
+        "from": 58,
+        "through": 66,
+        "requested_from": 58,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 387,
+          "state_sha256": "9fe06a46888b3393b88f6b5055edade46051c18b1e8d3fa3032949e22a08e4a3",
+          "version_id": "AE_R_S04_NEW",
+          "ref": "研究/AD-D滚动写前核对.md",
+          "from": 58,
+          "mode": "historical",
+          "candidate_sha256": "e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a",
+          "direct_consumers": [
+            {
+              "unit": 58,
+              "consumed_sha256": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 59,
+              "consumed_sha256": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 60,
+              "consumed_sha256": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 58,
+          "review_from": 57,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "研究/AD-D滚动写前核对.md",
+              "version_id": "AD_E_S05_NEW",
+              "from": 58,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 58,
+          "possible_indirect_through": 66,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a.source": "e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a",
+            "正文/0057-那针还留着-ad-cr-v1.md": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+            "正文/0058-袋里放自己的-ad-d-v2.md": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+            "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+            "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+            "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+            "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+            "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+            "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+            "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+            "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+            ".writer/objects/e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae.source": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/AE-R-S04-来源影响.md",
+            "report_sha256": "58daa64c883cb0cf46495269e765312bc6f1d21d03966a39fddc22c88a8bbae5",
+            "readings": {
+              ".writer/objects/e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a.source": "e357f134bd00fb075a4423e5d5ba7296d04bff993798228406dd846d1417072a",
+              "正文/0057-那针还留着-ad-cr-v1.md": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+              "正文/0058-袋里放自己的-ad-d-v2.md": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+              "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+              "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+              "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+              "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+              "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+              "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+              "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+              "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+              ".writer/objects/e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae.source": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae"
+            },
+            "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/58daa64c883cb0cf46495269e765312bc6f1d21d03966a39fddc22c88a8bbae5.txt"
+          }
+        }
+      },
+      "d1be1004-8f67-4f8b-a080-61de4f377e76": {
+        "id": "d1be1004-8f67-4f8b-a080-61de4f377e76",
+        "version_id": "AE_R_S05_NEW",
+        "from": 60,
+        "through": 66,
+        "requested_from": 60,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 388,
+          "state_sha256": "21d42aef80aa95fc1f8738d083336fc81bc071d336fce73d071eb915d845645e",
+          "version_id": "AE_R_S05_NEW",
+          "ref": "研究/AD-DR-60写前核对.md",
+          "from": 60,
+          "mode": "historical",
+          "candidate_sha256": "c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540",
+          "direct_consumers": [
+            {
+              "unit": 60,
+              "consumed_sha256": "bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 60,
+          "review_from": 59,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "研究/AD-DR-60写前核对.md",
+              "version_id": "AD_E_S06_NEW",
+              "from": 60,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 60,
+          "possible_indirect_through": 66,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540.source": "c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540",
+            "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+            "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+            "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+            "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+            "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+            "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+            "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+            "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+            ".writer/objects/bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066.source": "bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/AE-R-S05-来源影响.md",
+            "report_sha256": "ddcd69203b6411f88cd2daedffc8529f459dc7980aec2e3520901961b727b154",
+            "readings": {
+              ".writer/objects/c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540.source": "c10112876dc05088b1ea5521478f76c3a3aa56aa1a65f3833b32058e04433540",
+              "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+              "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+              "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+              "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+              "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+              "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+              "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+              "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+              ".writer/objects/bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066.source": "bb6176f1e972d9efdba96e58015819033aa46e6e93982471f5a35b4ca43f9066"
+            },
+            "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/ddcd69203b6411f88cd2daedffc8529f459dc7980aec2e3520901961b727b154.txt"
+          }
+        }
+      },
+      "b11f0874-edda-4d0e-b2ac-de223316f13b": {
+        "id": "b11f0874-edda-4d0e-b2ac-de223316f13b",
+        "version_id": "AE_R_S06_NEW",
+        "from": 61,
+        "through": 66,
+        "requested_from": 61,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 389,
+          "state_sha256": "aa9c5a8c36e8cbdab191ede3febc22fdddf88fe5691371ddf8eaad69de7e077c",
+          "version_id": "AE_R_S06_NEW",
+          "ref": "研究/AE规划与旧线证据.md",
+          "from": 61,
+          "mode": "historical",
+          "candidate_sha256": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+          "direct_consumers": [
+            {
+              "unit": 61,
+              "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 62,
+              "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 63,
+              "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 64,
+              "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 65,
+              "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 66,
+              "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 61,
+          "review_from": 60,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": 61,
+          "possible_indirect_through": 66,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331.source": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+            "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+            "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+            "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+            "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+            "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+            "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+            "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+            ".writer/objects/5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61.source": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/AE-R-S06-来源影响.md",
+            "report_sha256": "4f495642f0ac5fc6405720ab7812ca8f9fa2f5d6f11b849f74b92d7d462698a1",
+            "readings": {
+              ".writer/objects/5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331.source": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+              "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+              "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+              "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+              "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+              "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+              "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+              "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+              ".writer/objects/5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61.source": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61"
+            },
+            "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/4f495642f0ac5fc6405720ab7812ca8f9fa2f5d6f11b849f74b92d7d462698a1.txt"
+          }
+        }
+      },
+      "6db78e73-6eaa-4b89-9e85-4f76ff365d8d": {
+        "id": "6db78e73-6eaa-4b89-9e85-4f76ff365d8d",
+        "version_id": "AE_R_S07_NEW",
+        "from": 61,
+        "through": 66,
+        "requested_from": 61,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 390,
+          "state_sha256": "a41cae5627a70e996fc7d89d87047e5f69e654d8b73fd82afb478a7d263aec5f",
+          "version_id": "AE_R_S07_NEW",
+          "ref": "大纲/分卷/V22.json",
+          "from": 61,
+          "mode": "historical",
+          "candidate_sha256": "d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047",
+          "direct_consumers": [
+            {
+              "unit": 61,
+              "consumed_sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 62,
+              "consumed_sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 63,
+              "consumed_sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 61,
+          "review_from": 60,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": 61,
+          "possible_indirect_through": 66,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047.source": "d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047",
+            "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+            "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+            "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+            "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+            "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+            "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+            "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+            ".writer/objects/ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb.source": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/AE-R-S07-来源影响.md",
+            "report_sha256": "d39ae5cbba2e2b14216c36062526502da6ad39b5fbbb8d07238eeee4ba2a0e54",
+            "readings": {
+              ".writer/objects/d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047.source": "d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047",
+              "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+              "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+              "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+              "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+              "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+              "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+              "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+              ".writer/objects/ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb.source": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb"
+            },
+            "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/d39ae5cbba2e2b14216c36062526502da6ad39b5fbbb8d07238eeee4ba2a0e54.txt"
+          }
+        }
+      },
+      "85f44ed9-ed66-4bb3-8bba-82b46e276cb9": {
+        "id": "85f44ed9-ed66-4bb3-8bba-82b46e276cb9",
+        "version_id": "AE_R_S08_NEW",
+        "from": 64,
+        "through": 66,
+        "requested_from": 64,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 391,
+          "state_sha256": "0dc7babc88cd7a90a1d77bff3f8cee621d7375428f26ecfb9fb38a537ce413eb",
+          "version_id": "AE_R_S08_NEW",
+          "ref": "大纲/分卷/V23.json",
+          "from": 64,
+          "mode": "historical",
+          "candidate_sha256": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+          "direct_consumers": [
+            {
+              "unit": 64,
+              "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 65,
+              "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 66,
+              "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 64,
+          "review_from": 63,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [],
+          "possible_indirect_from": 64,
+          "possible_indirect_through": 66,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b.source": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+            "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+            "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+            "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+            "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+            ".writer/objects/b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca.source": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/AE-R-S08-来源影响.md",
+            "report_sha256": "093ab736c2e2fa85d0d4673ccace4b8d041b0aedd28ea3970edae6cc1394397d",
+            "readings": {
+              ".writer/objects/ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b.source": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+              "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+              "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+              "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+              "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+              ".writer/objects/b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca.source": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca"
+            },
+            "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/093ab736c2e2fa85d0d4673ccace4b8d041b0aedd28ea3970edae6cc1394397d.txt"
+          }
+        }
+      }
+    }
+  }
+}

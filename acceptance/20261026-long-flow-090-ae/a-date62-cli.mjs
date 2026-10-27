@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),session=JSON.parse(fs.readFileSync(path.join(A,'cli-logs/a-date62-begin/stdout.txt'))),[label,...args]=process.argv.slice(2);
+const r=spawnSync(process.execPath,[path.join(A,'cli.mjs'),label,...args,'--project',session.workspace,'--revision-token',session.token],{encoding:'utf8',windowsHide:true,maxBuffer:32*1024*1024});
+const log=path.join(A,'cli-logs',label);let result;try{result=JSON.parse(r.stdout)}catch{};console.log(JSON.stringify({label,exit_code:r.status,ok:result?.ok,revision:result?.revision,code:result?.code,findings:result?.findings,workspace:session.workspace,stdout_ref:path.join(log,'stdout.txt'),stderr_ref:path.join(log,'stderr.txt')}));if(r.status)process.exitCode=r.status;

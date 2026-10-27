@@ -1,0 +1,64 @@
+{
+  "scope": {
+    "from": 13,
+    "through": 36,
+    "local_stop": 18
+  },
+  "nature": "agent controlled test choice within actual user authorization; not original bugs or human approval of numbers",
+  "base_revision": 167,
+  "base_state_sha256": "7c39096706aee582738574c1f2af08a1b15bb2042d1233c94cab3f10df73023c",
+  "facts": [
+    {
+      "id": "class",
+      "old_minutes": 90,
+      "new_minutes": 100,
+      "start": "19:00",
+      "end": "20:40",
+      "first": 13,
+      "prose_affected": [
+        13,
+        18,
+        24,
+        30
+      ]
+    },
+    {
+      "id": "bench",
+      "old_cm": 27,
+      "new_cm": 29,
+      "first": 17,
+      "prose_affected": [
+        17,
+        18,
+        21,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "book_return",
+      "old": "15:30",
+      "new": "15:20",
+      "first": 21,
+      "prose_affected": [
+        21,
+        22
+      ]
+    }
+  ],
+  "report": "研究/修订选择-X-E.md",
+  "report_sha256": "30a0993254b8991e4046df5deee014dccf6fc771eb98d9ef948ff7153ee452f0",
+  "evidence": {
+    "file": "author-request.md",
+    "sha256": "b1dc4eeeff37d1c97c97955931cf3ec2f98fe794730f4cd2265b84ecdb10d785",
+    "quote": "继续通过 Codex 扩大 0.9.0 的长篇实跑规模，在24章基础上增加章节数量和单章篇幅，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "locator": "line 3; current X-E user instruction in this chat, no message ID available"
+  },
+  "preserve": [
+    "original units/drafts1-12",
+    "all baseline observation type/statement/author_truth",
+    "source33 two versions and from33 range",
+    "unit36 latest journal knowledge of mother/father"
+  ],
+  "remaining": "19-36 full replay and final tail review are future same-ID work; no prepare/commit/abort in first stop"
+}

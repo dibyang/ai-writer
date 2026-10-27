@@ -1,0 +1,75 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-21T01:18:29.749Z",
+  "operation_id": "w-cr-authorize-only21",
+  "base_revision": 85,
+  "payload": {
+    "stage": "trial",
+    "task": "同一W-C原ID续程，仅完成第21章≥8000汉字与分段写审登记，再完整16—21连读review后暂停；22待新鲜D。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 21,
+        "to": 21
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本进程只21；21登记及16—21完整连读正式review完成后停止，不写22。",
+        "至少8000正文汉字4真实顺序分段，context/template写前保存；逐段实读合章完整实读/纲文核对、两SHA报告、preview成功才record。",
+        "前20正文及units不直接改、全部observation三字段保护；失败停依赖；只写W，不导出、不提前D修订。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-C-21.md",
+          "大纲/单元/0021.json"
+        ],
+        "unresolved_ids": [
+          "22—24待新鲜D，不在本进程写",
+          "21具体落针/借画册后文归还仍须按成稿确认"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "同ID恢复W-C，只完成第21章后停。",
+    "local_source": "研究/W-C-续程授权原文.md",
+    "source_sha256": "f4cc8743f7ad7c330c92442e99c7c5e916a81c61bd86aaa1e9f563d01891dec5",
+    "locator": "本次真实用户prompt同字节本地文件第1行首句及第1/3/5行；整体人类原话与测试选择见研究/W-A-测试授权原文.md第3行。无伪造消息ID。",
+    "recorded_by": "同一W-C实际Codex会话01a15bea-c30a-7d40-916f-26f7e85cbfe5，具体场面由模型在授权内执行选择",
+    "frozen_ref": ".writer/objects/f4cc8743f7ad7c330c92442e99c7c5e916a81c61bd86aaa1e9f563d01891dec5.txt"
+  }
+}

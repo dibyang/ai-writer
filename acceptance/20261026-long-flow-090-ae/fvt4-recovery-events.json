@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-26T13:45:16.462Z",
+  "prior_native_failures": [
+    {
+      "run": "final-tail-resume",
+      "units": [
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "pages": 39,
+      "exit": 1,
+      "elapsed_ms": 777023,
+      "error": "Selected model is at capacity",
+      "partial": {
+        "unit": 42,
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "excluded": true
+      }
+    },
+    {
+      "run": "final-tail-recovery",
+      "units": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "pages": 156,
+      "exit": 1,
+      "elapsed_ms": 1488579,
+      "error": "Selected model is at capacity",
+      "partial": {
+        "unit": 60,
+        "pages": [
+          1,
+          2
+        ],
+        "excluded": true
+      }
+    }
+  ],
+  "original_results_untouched": true,
+  "current": {
+    "native_id": "01a176d2-2255-7e80-9c37-d825387a4fef",
+    "session_id": "de25fce4-4446-4b5a-9038-9af130f3b456",
+    "planned_units": [
+      60,
+      66
+    ],
+    "planned_pages": 86,
+    "unit60_restart_at_page1": true
+  },
+  "auxiliary_failures": [],
+  "no_exit_claim_for_current_run": true
+}

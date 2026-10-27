@@ -1,0 +1,75 @@
+{
+  "ok": false,
+  "error": "本轮任务“最终全1—66正式修订事务已提交、旧9已当前verify；现在只验证合法67规划下draft范围1—66保护，然后草稿导出/双CP/根总审计。完整验收任务不因范围测试而缩小。”不允许 draft 67–67；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan、draft）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证\\.writer\\tool\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "drafting",
+    "task": "最终全1—66正式修订事务已提交、旧9已当前verify；现在只验证合法67规划下draft范围1—66保护，然后草稿导出/双CP/根总审计。完整验收任务不因范围测试而缩小。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 66
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "实际仅运行67 context/record-template两个范围负例；不写/登记67，不修改1—66正文。",
+        "两入口均ACTION_OUT_OF_SCOPE、state字节不变与无67正文才计本次范围验收。",
+        "保存草稿export/六类日志/双区完整CP和真实交接，未决文学风险及根待审计事项保留。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "大纲/AE新增骨架-61-66.md",
+          "研究/AE规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V24.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "仅采用用户明确授权的67范围测试前提，不作新增作者核心选择或小说兑现。"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0067.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "官方plan已实际生成且未消费，仅用于范围负例前提。"
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 6
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

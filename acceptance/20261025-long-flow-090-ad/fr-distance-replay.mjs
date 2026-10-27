@@ -1,0 +1,1 @@
+import path from'node:path';import{A,j,cli}from'./fr-lib.mjs';const n=Number(process.argv[2]),s=j(path.join(A,'fr-distance-session.json'));cli(`fr-distance-u${n}-replay`,['revision','replay-input','--unit',String(n)],{root:s.workspace,token:s.token,show:false});const x=j(path.join(A,`cli-logs/fr-distance-u${n}-replay/stdout.txt`));console.log(JSON.stringify(x,null,2));

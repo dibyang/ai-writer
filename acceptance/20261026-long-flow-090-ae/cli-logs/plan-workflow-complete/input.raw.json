@@ -1,0 +1,73 @@
+{
+  "expected_revision": 352,
+  "operation_id": "AE_PLAN_COMPLETE_PAUSED_20261026",
+  "author_evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AE作者任务.md",
+    "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+    "locator": "研究/AE作者任务.md第9—11行此前完整持续任务；最新继续推进见第5—7行，入口事件已分别绑定。本程用户限恢复/规划，13行规模为控制器参数。",
+    "recorded_by": "本轮AE真实原生Codex首程 /root"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "AE首程已完成恢复实读与61—66规划候选：55—60完整实读、更早相关原文定向回查，V22/V23与61—63细纲/64—66骨架已正式保存。等待根核真实exit后另程授权写作；当前不写正文、不取draft context/record-template、不新建revision、不提交Git。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只写AE独立样本的新规划与本程证据；不修改已消费1—60计划、设定、卷纲、正文、原来源版本与旧意见应用。",
+        "61原stub仅在确认未消费后通过正式plan替换；发现消费矛盾停止并记录。",
+        "规划不等于事实，不自动复航、治愈脚伤、揭父旧事或填戏词两空。",
+        "90分钟未完成保存真实checkpoint及未完成交接；退出由根核真实进程结果。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "大纲/AE新增骨架-61-66.md",
+          "研究/AE规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "旧全书与AD历史采纳保留；AE两卷六章是本轮模型规划候选，未冒称作者逐项采纳。"
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V22.json",
+          "大纲/分卷/V23.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "已通过正式volume保存61—63/64—66新契约；仅plan-only，未发生。"
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0061.json",
+          "大纲/单元/0062.json",
+          "大纲/单元/0063.json",
+          "大纲/AE新增骨架-61-66.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "61—63近期细纲已正式plan；64—66正式plan仅留骨架，64后滚动细化，62/65真实断点尚未执行。"
+      }
+    }
+  }
+}

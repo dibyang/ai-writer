@@ -1,0 +1,10 @@
+{
+  "scope": "All retained failures before final acceptance; update if a new failure occurs",
+  "items": [
+    {"evidence":"targeted-attempt-1.log","kind":"fixture-input-error","cause":"record-preview omitted revision token; ownership gate correctly rejected","disposition":"fixture supplied token; later targeted suites pass"},
+    {"evidence":"full-package-tests.log","kind":"product-documentation-error","cause":"quickstart/user-guide linked to a non-carried specialized document and anchor was treated as file path by portable link check","disposition":"entry links now target existing revision-and-sources.md, complete instructions carried there; failed package preserved under final-fixed/extracted-final; final package is verified-fixed/extracted-verified"},
+    {"evidence":"native-prepare-attempt-1.log","kind":"fixture-assertion-error","cause":"expected invented nested-revision error-code name rather than actual REVISION_INPUT_INVALID","disposition":"rejection message confirmed correct; corrected assertion; source unchanged and target not created"},
+    {"evidence":"current root tool stream; no test command started","kind":"controller-path-error","cause":"first npm redirection resolved outside workspace and was denied","disposition":"explicit package cwd and acceptance-local log; no product change or permission escalation"},
+    {"evidence":"current root tool stream; no helper created by failed command","kind":"controller-shell-quoting-error","cause":"inline script escaped quotes incompatible with PowerShell parser","disposition":"generated make-final-flow.mjs via apply_patch; native final-flow executed normally"}
+  ]
+}

@@ -1,0 +1,9 @@
+# 最终构建原生Codex按卷目录实跑：首程
+
+本模板由根在确认最终包后激活。只读root源码，允许写AE/scenario/卷目录默认路径-三章验证及AE根新证据文件，不修改66章主验证作品、真实作品、旧封存、全局配置、memory或Git，不起子代理/新聊天。使用AE/cli-g9-v2-source.mjs唯一label保存所有正式命令输入、完整输出和状态前后；初始化后也使用同一冻结包入口，不调用开发root/bin。核package-generation9-v2.json及generation9-package-verification-v2.json；实际读取包内writer-project、writer-novel、writer-review技能及需要的长篇手册，记录路径/构建。工具是最终0.9开发构建，不宣称正式发布。
+
+通过init --mode long新建指定独立作品，标题《巷口借伞》。保存本任务授权本地证据，明确是用户要求的独立工具验证，由控制器选择合成原创情节，不伪称真实作者逐项决定。先规划阶段、全书三章骨架、V01《借出的一天》1—2章、V02《归还以后》3章；确认范围后正式workflow允许1—3有限正文，不扩章。人物两三人、普通社区生活，明确同一把伞的借出、延期通知和实际归还；不同物件/时刻不混淆，原观察不可改。不得复制66章作品的正文或账本。
+
+本程只完成1和2章，每章至少1000正文汉字，有具体目标、选择、后果与人物关系变化，不用占位文本或重复凑字。每章plan/context及写前record-template都省略--draft，直接采用返回路径正文/V01-借出的一天/000N-标题.md。分两段写在分段/对应单元/，实际SHA后assemble省略draft，验证返回路径与原模板完全一致、完整合章等于原段有序连接。完整逐页实读当前稿，必要修正用明确新路径并保持模板/合章一致，记录所有候选；不刷源哈希。真实摘要/changes及本章物件交接/人物所知登记，preview后record。所有正文读取用AE/read.mjs每次至多同章两页，原输出不截断。
+
+第2章完成后，正式保存第3章细纲、串行获取原context与record-template，仍省略draft，确认其默认目录为V02而不是V01。保存原输入SHA、expected_revision、source_hashes、source_bindings；此后不写正文3或推进state。保存volume-first-stop.json、交接-卷目录首停.md，列2章字数/路径/原段/完整读页/账本/未完3、真实错误及下一步。用scenario-checkpoint save volume-first 指定项目 2，再verify volume-first，保存完整清单后正常退出。后程同ID实际恢复再写3，复核/修订/导出。全程每60秒进度，预计20—35分钟；100分钟未完保存真实断点，不假称2完成。

@@ -1,0 +1,28 @@
+{
+  "rule_pack": "anonymous-customer-pilot",
+  "version": "0.1.0",
+  "modes": [
+    "novel"
+  ],
+  "modules": [
+    {
+      "module_id": "CUSTOMER-PILOT-001",
+      "name": "Anonymous customer boundary",
+      "mode": "novel",
+      "source_refs": [
+        "examples/customer-pilot/rule-pack.json"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "CUSTOMER-PILOT-001-R001",
+      "module_id": "CUSTOMER-PILOT-001",
+      "severity": "high",
+      "description": "Customer project rules must stay project-local and must not be copied into the universal plugin rule pack.",
+      "source_refs": [
+        "examples/customer-pilot/rule-pack.json"
+      ]
+    }
+  ]
+}

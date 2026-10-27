@@ -1,0 +1,28 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+const X=path.dirname(fileURLToPath(import.meta.url)),P=path.join(X,'scenario','东岸末班船-再扩展验证');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');const sha=f=>hash(fs.readFileSync(f));
+const read=f=>JSON.parse(fs.readFileSync(f,'utf8'));const state=read(path.join(P,'.writer/state.json')),parent=read(path.join(X,'parent-before-c-state.json'));
+const save=(f,v)=>fs.writeFileSync(path.join(X,f),JSON.stringify(v,null,2)+'\n',{encoding:'utf8',flag:'wx'});
+const inventory=state.units.map(u=>{const f=path.join(P,u.draft),s=sha(f);if(s!==u.sha256)throw Error('draft drift '+u.unit);return {unit:u.unit,draft:u.draft,sha256:s,bytes:fs.statSync(f).size,han:(fs.readFileSync(f,'utf8').replace(/^#.*$/gm,'').match(/\p{Script=Han}/gu)||[]).length,draft_review:u.draft_review??null};});
+const parts=['分段/0032/01-c-v2.md','分段/0032/02-c-v3.md'].map(f=>({path:f,sha256:sha(path.join(P,f)),bytes:fs.statSync(path.join(P,f)).size,han:(fs.readFileSync(path.join(P,f),'utf8').replace(/^#.*$/gm,'').match(/\p{Script=Han}/gu)||[]).length}));
+if(parts.reduce((n,p)=>n+p.han,0)<3000||parts.reduce((n,p)=>n+p.han,0)>4500)throw Error('32 segment length outside boundary');
+const oldUnits=parent.units.map(u=>({unit:u.unit,unit_object_equal:JSON.stringify(u)===JSON.stringify(state.units.find(x=>x.unit===u.unit)),draft_sha256_same:sha(path.join(P,u.draft))===u.sha256}));
+const observations=Object.entries(parent.snapshot.ledger).filter(([,e])=>e.type==='observation').map(([id,e])=>({id,type_same:e.type===state.snapshot.ledger[id]?.type,statement_same:JSON.stringify(e.statement)===JSON.stringify(state.snapshot.ledger[id]?.statement),author_truth_same:JSON.stringify(e.author_truth)===JSON.stringify(state.snapshot.ledger[id]?.author_truth)}));
+const templatePaths=['.writer/drafts/c-template-31-r136.json','.writer/drafts/c-template-32-r139.json'];
+const templates=templatePaths.map(f=>{const t=read(path.join(P,f));return {path:f,sha256:sha(path.join(P,f)),expected_revision:t.expected_revision,source_hashes:t.source_hashes,current_matches:Object.fromEntries(Object.entries(t.source_hashes).map(([r,s])=>[r,sha(path.join(P,r))===s]))};});
+const sources32=templates[1].current_matches;
+const checks={revision:state.revision,registered_count:state.units.length,next_unit:state.units.length+1,state_sha256:sha(path.join(P,'.writer/state.json')),parent_state_sha256:sha(path.join(X,'parent-before-c-state.json')),old_units:oldUnits,observations,template32_all_sources_current:Object.values(sources32).every(Boolean),no_unit32:!state.units.some(x=>x.unit===32),no_32_complete_draft:!fs.existsSync(path.join(P,'正文/0032-茶慢慢凉下来-c-v1.md')),no_33_plan:!fs.existsSync(path.join(P,'大纲/单元/0033.json')),no_34_plan:!fs.existsSync(path.join(P,'大纲/单元/0034.json')),three_chains:Object.fromEntries(['T_X_COAT_DAILY','T_X_TEA_AFTER_WORK','T_X_BOOK_COMPANY'].map(id=>[id,state.snapshot.ledger[id]]))};
+if(state.revision!==139||state.units.length!==31||oldUnits.some(x=>!x.unit_object_equal||!x.draft_sha256_same)||observations.some(x=>!x.type_same||!x.statement_same||!x.author_truth_same)||!checks.template32_all_sources_current||!checks.no_unit32||!checks.no_32_complete_draft||!checks.no_33_plan||!checks.no_34_plan)throw Error('protection/stop checks failed');
+if(process.argv[2]==='inventory'){
+ save('C首停当前稿清单.json',{revision:state.revision,state_sha256:checks.state_sha256,registered:inventory,unregistered32:{parts,total_han:parts.reduce((n,p)=>n+p.han,0),assembled:false,recorded:false},templates});
+ save('C首停保护核验.json',checks);
+ console.log(JSON.stringify({revision:state.revision,state_sha256:checks.state_sha256,registered:inventory.length,unit31:inventory.at(-1),parts,total32:parts.reduce((n,p)=>n+p.han,0),old30_equal:oldUnits.every(x=>x.unit_object_equal&&x.draft_sha256_same),observation_count:observations.length,all_observations_protected:true,template32_sources_current:true},null,2));
+}else if(process.argv[2]==='exit'){
+ const names=['c-final-status','c-final-check','c-final-doctor','c-final-revisions'];
+ const receipts=names.map(label=>({label,...read(path.join(X,'cli-logs',label,'result.json'))}));
+ const outputs=Object.fromEntries(names.map(label=>[label,read(path.join(X,'cli-logs',label,'stdout.raw.txt'))]));
+ const allCalls=fs.readdirSync(path.join(X,'cli-logs')).filter(x=>x.startsWith('c-')).map(label=>read(path.join(X,'cli-logs',label,'result.json')));
+ const exitResult={revision:state.revision,state_sha256:checks.state_sha256,receipts,product_nonzero:allCalls.filter(x=>x.exit_code!==0),check:outputs['c-final-check'],doctor_errors:outputs['c-final-doctor'].errors,doctor_warnings:outputs['c-final-doctor'].warnings,revisions:outputs['c-final-revisions'],protected:checks,unregistered32:{parts,total_han:parts.reduce((n,p)=>n+p.han,0)}};
+ save('C首停退出核验.json',exitResult);
+ console.log(JSON.stringify({revision:state.revision,state_sha256:checks.state_sha256,all_final_exit0:receipts.every(x=>x.exit_code===0),all_final_state_unchanged:receipts.every(x=>x.before_state_sha256===checks.state_sha256&&x.after_state_sha256===checks.state_sha256),product_nonzero:exitResult.product_nonzero.map(x=>({label:x.label,exit_code:x.exit_code})),check_ok:exitResult.check.ok,rolling:exitResult.check.rolling_review,doctor_errors:exitResult.doctor_errors,doctor_warnings:exitResult.doctor_warnings,stale_units:outputs['c-final-status'].stale_units,changed_sources:outputs['c-final-status'].changed_sources,impact_pending:outputs['c-final-status'].impact_pending,old30_equal:true,observations_protected:observations.length},null,2));
+}else throw Error('unknown stage');

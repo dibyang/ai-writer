@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),p=JSON.parse(fs.readFileSync(path.join(base,'project.json'))).project,sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const x=JSON.parse(fs.readFileSync(path.join(p,'.writer/drafts/ad-d-record58-filled.json'))),before=x.changes.characters['沈成林'];
+const old='不曾持女8册或获其所有权，女书回床边。',replacement='本日未接持女8册或获其所有权，56临看已还的历史保留，今夜女书回床边。';
+assert(before.includes(old));x.changes.characters['沈成林']=before.replace(old,replacement);
+const originalReport=x.draft_review.report,report='审查/AD-D-58整章纲文语言与连续性知情自检-v2.md';
+const append=`\n## preview后追踪措辞补核\n\n首preview机械成功后，实比characters before/after发现父快照“不曾持女8册”可被误读为全部历史；正文56已亲持临看后递还。本次填写版另存改为“本日未接持…56临看已还的历史保留”，防止当前快照抹掉旧知识。没有改正文/来源/原模板，首填稿与首preview保留。\n\nrelated_unchanged_ledger八项P_AC_PRACTICE_CLOTH/P_AD_NEW_DESK_LAMP54/P_AD_PRACTICE_NOTE52/P_CR_FEEDBACK_PAPER/P_DR_FLOWER_BOOK/P_W_COAT/T_W_EVENING_CLASS/T_X_COAT_DAILY均已在写前当前context逐项实读并回到当前57完整正文。58的文字约定带14册不等已搬书，手指自报轻些不等练布或衣新改，未有新纸/灯/课动作；各项保留既有历史时点和知情，不将其候选名单当作错误或批量更新。候选共50、仅列8，余42未冒称本章逐项复核。\n`;
+fs.writeFileSync(path.join(p,report),fs.readFileSync(path.join(p,originalReport),'utf8')+append,{flag:'wx'});x.draft_review.report=report;x.draft_review.report_sha256=sha(fs.readFileSync(path.join(p,report)));
+fs.writeFileSync(path.join(p,'.writer/drafts/ad-d-record58-filled-v2.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});
+const preview=JSON.parse(fs.readFileSync(path.join(base,'cli-logs/d-preview58/stdout.txt')));assert(preview.ok);fs.writeFileSync(path.join(base,'d-preview58-tracking-clarification.json'),JSON.stringify({ok:true,first_preview_ok:true,reason:'Clarify current-day qualifier, preserve actual56 book handling history',before,after:x.changes.characters['沈成林'],report,report_sha256:x.draft_review.report_sha256,related:preview.related_unchanged_ledger,source_hashes_unchanged:true,draft_unchanged:true},null,2)+'\n',{flag:'wx'});console.log('Saved tracking clarification and report v2; original input and preview retained.');

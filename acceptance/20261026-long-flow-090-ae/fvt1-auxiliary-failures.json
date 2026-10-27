@@ -1,0 +1,21 @@
+{
+  "official_product_failures": [],
+  "auxiliary_failures": [
+    {
+      "command": "node acceptance/20261026-long-flow-090-ae/fvt1-audit-end.mjs",
+      "exit_code": 1,
+      "tool_chunk_id": "44b1c5",
+      "actual_error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: actual 6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893; expected undefined; at fvt1-audit-end.mjs:24:62",
+      "cause": "New auxiliary script expected main_sha256 on workspace-only entry body rows. Exact two-area inventories, states, objects and 174 page concatenations had already passed before this assertion.",
+      "original_failed_script_preserved": "fvt1-audit-end.mjs",
+      "corrected_script": "fvt1-audit-end-v2.mjs",
+      "product_or_body_written": false,
+      "success_file_generated_by_failed_attempt": false
+    }
+  ],
+  "console_truncations": [
+    {"command":"fvt1-end-state.mjs","cause":"expanded historical revisions in console summary","product_full_streams_preserved":"cli-logs/fvt1-end-*/stdout.txt and stderr.txt","saved_json":"fvt1-two-area-six-state.json","body_pages_affected":0},
+    {"command":"read saved six-state finite summary first attempt","cause":"doctor build still expanded full file inventory","saved_json":"fvt1-two-area-six-state.json","body_pages_affected":0}
+  ],
+  "note": "These are auxiliary inspection failures/truncations, not product failures and not manuscript-page truncation. Native process exit is not asserted."
+}

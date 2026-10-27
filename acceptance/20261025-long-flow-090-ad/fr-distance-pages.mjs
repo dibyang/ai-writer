@@ -1,0 +1,5 @@
+import fs from'node:fs';import path from'node:path';import assert from'node:assert/strict';import{spawnSync}from'node:child_process';import{A,P,j,state,sha}from'./fr-lib.mjs';
+const[n0,p0,count0='2',phase='tail']=process.argv.slice(2),n=Number(n0),p=Number(p0),count=Number(count0),root=j(path.join(A,'fr-distance-session.json')).workspace;
+assert(n>=21&&n<=60&&Number.isInteger(n));assert([1,2].includes(count));assert(['pre','tail'].includes(phase));
+const u=state().units.find(x=>x.unit===n),file=path.join(root,u.draft),b=fs.readFileSync(file),pages=Math.ceil(b.toString('utf8').length/1800);assert(p>=1&&p+count-1<=pages);if(n!==21)assert.equal(sha(b),u.sha256,'Only21 may change');
+for(let page=p;page<p+count;page++){const r=spawnSync(process.execPath,[path.join(A,'read.mjs'),`fr-distance-${phase}-u${n}-p${String(page).padStart(2,'0')}`,file,String(page)],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024});process.stdout.write(r.stdout);process.stderr.write(r.stderr);assert.equal(r.status,0);}

@@ -1,0 +1,63 @@
+{
+  "fixture_id": "TEST-BLIND-AVERAGE-MASK-BLOCK",
+  "mode": "novel",
+  "expected_report": "blind-read-average-mask-block.report.json",
+  "expected_report_id": "TEST-BLIND-AVERAGE-MASK-BLOCK-REPORT",
+  "input": {
+    "review_scope": "single",
+    "decision_level": "human_formal",
+    "claim": "single_basic",
+    "version_lock": {
+      "date": "2026-07-14",
+      "files": [
+        {
+          "path": "chapters/chapter-011.md",
+          "order": 11,
+          "word_count": 3180
+        }
+      ],
+      "git_ref": "abc1234",
+      "includes": {
+        "title": true,
+        "chapter_title": true,
+        "appendix": false
+      },
+      "questionnaire_version": "blind-read@1.0"
+    },
+    "isolation": {
+      "prompt_neutral": true,
+      "reader_answers_isolated": true,
+      "supplemental_explanations": false,
+      "prohibited_materials_seen": []
+    },
+    "readers": [
+      {
+        "reader_id": "A",
+        "ticket_type": "human",
+        "isolated": true,
+        "complete": true,
+        "retell_accurate": true,
+        "critical_misread": false,
+        "continue_score": 5,
+        "immediate_continue": true
+      },
+      {
+        "reader_id": "B",
+        "ticket_type": "human",
+        "isolated": true,
+        "complete": true,
+        "retell_accurate": false,
+        "critical_misread": true,
+        "continue_score": 3,
+        "immediate_continue": false
+      }
+    ],
+    "execution": {
+      "runner": "internal_temporary_agent",
+      "creates_preview_task": false,
+      "inherits_current_context": false,
+      "result_discarded_after_read": true,
+      "sidebar_entry_retained": false
+    }
+  }
+}

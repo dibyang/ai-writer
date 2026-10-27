@@ -1,0 +1,161 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_AD_F21_DISTANCE",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "9/14/17确认廖同一面摊在工坊近邻，21送凳仍称只隔两条街；42又写廖隔几步，31—60无搬家或第二摊反证。",
+      "suggestion": "根控制器已确定最小修21两条街为两家门面。正式独立21—60修订，其他39章正文保留字节，不另造搬家解释。",
+      "evidence": [
+        {
+          "unit": 9,
+          "draft": "正文/0009-留给明天的活-v2.md",
+          "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+          "line": 215,
+          "quote": "面摊只隔两家门面"
+        },
+        {
+          "unit": 21,
+          "draft": "正文/0021-雨落在门檐外-v2.md",
+          "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+          "line": 61,
+          "quote": "送过去只隔两条街"
+        },
+        {
+          "unit": 42,
+          "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+          "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+          "line": 336,
+          "quote": "廖隔着几步问吃不吃"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/d7b30e89-1f0c-4048-96fa-85c9557b1292.json",
+        "review_sha256": "67735c5d00c53261adbbd1ecde6d0ca6883ed8a909892a08a169929f340c8d3b",
+        "units": [
+          {
+            "unit": 9,
+            "draft": "正文/0009-留给明天的活-v2.md",
+            "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+            "dependency": "a5e5b93ab04fd560faa699dbf5d0b45e8ab9771bda394bb32f57857dee60990b"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "dependency": "4b0b79bdd6ee7e474b82d7a652f0f11af339ee5ebd3481369ace58f55dcb3185"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "d163327ca81df9a2f46b8842b74b544c8f8ea5a7fa2c37fb7b3316ba00367e9f"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/f4222231-fb47-466b-baa1-b5c9e01f113a.json",
+          "sha256": "6a914ebf6d3eb554e6c58bdf5a717007f9b41c7019312d9c7c8f4651b47dd6c3"
+        },
+        {
+          "ref": ".writer/objects/7d2dd023-2c53-4846-b850-d1e73f2a9a0f.json",
+          "sha256": "202197dd54905d1de88810410ab19177d0a70d63d0da7d4b9a07e17182ad4b7f"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/78eccd42-842e-45e4-baec-feb734c8990a.json",
+          "sha256": "0e396266e3b2eba6d2a4031541e5816d386304b29f9221021bbe4f7a4a8204ec"
+        },
+        "disposition": "adopted",
+        "reason": "根已实核9/14/17/21，F31—60无反证且42再证近邻；实际21—60独立只改21两条街为两家门面，保留39章字节。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 9,
+            "draft": "正文/0009-留给明天的活-v2.md",
+            "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+            "dependency": "a5e5b93ab04fd560faa699dbf5d0b45e8ab9771bda394bb32f57857dee60990b"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "dependency": "4b0b79bdd6ee7e474b82d7a652f0f11af339ee5ebd3481369ace58f55dcb3185"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "d163327ca81df9a2f46b8842b74b544c8f8ea5a7fa2c37fb7b3316ba00367e9f"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "eddba6bb-f619-4229-9c99-c191f14837ab",
+        "commit_binding": {
+          "ref": ".writer/objects/eddba6bb-f619-4229-9c99-c191f14837ab.json",
+          "sha256": "72914e167e35f72071313cb78e32a33470f33b08bf3bd85b27d66b962e512f9e"
+        },
+        "transaction_id": "af1dcd6c-e7b5-432a-aad5-776cfe4a75a4",
+        "reason": "本同ID已完整实读当前60章387页并登记G新版全书报告。保留原采用及9/21/42三证，用真实completed事务af1dcd6c-e7b5-432a-aad5-776cfe4a75a4和原commit闭环：正文仅21两条街改两家门面，9范围外完全未变，42范围内合法重登但正文未变。请求自动校验参考与实际目标，无新修改、无重新采用、无acknowledge。",
+        "changes": [
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "before": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "after": "c60091f9c411df052fbf34519f83156b93b6f3b784d35fa8c31910d292772a87"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "before": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "after": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 9,
+            "draft": "正文/0009-留给明天的活-v2.md",
+            "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+            "dependency": "a5e5b93ab04fd560faa699dbf5d0b45e8ab9771bda394bb32f57857dee60990b"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "c60091f9c411df052fbf34519f83156b93b6f3b784d35fa8c31910d292772a87",
+            "dependency": "ce385e60c0292a44c8982c6f533f9b22e7e35c7c1c8c2f11956dd2b333cc6336"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "93f2b0652c6ec251743d63e57958e99a78eaadd033917e3add083719241413c5"
+          }
+        ],
+        "reference_units": [
+          9
+        ],
+        "reference_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/af1dcd6c-e7b5-432a-aad5-776cfe4a75a4/old/168.bin",
+            "sha256": "a7d8dad773e474835d47af0cf7ba38e497836712b8cf0be14ff75d8bc023a340"
+          },
+          "after": {
+            "ref": ".writer/transactions/af1dcd6c-e7b5-432a-aad5-776cfe4a75a4/new/168.bin",
+            "sha256": "909fef0524e7e3b313d5519227611a0ad4416394e005a8b24f87f4794dc6c640"
+          }
+        },
+        "target_units": [
+          21
+        ]
+      },
+      "verification": null
+    }
+  }
+}

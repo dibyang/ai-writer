@@ -1,0 +1,126 @@
+{
+  "ok": false,
+  "error": "上下文超过 44190 字符预算（实际 44191）；不会静默截断",
+  "code": "CONTEXT_BUDGET_EXCEEDED",
+  "next_action": "先看context_budget的大项和来源：按本章相关性整理可选研究引用，或显式提高--max-chars。保留作者授权、核心设定、当前状态及必需线索；来源变化仍走原影响分析，不删除约束或改状态绕过保护。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证\\.writer\\tool\\bin\\ai-writer.mjs' context '--help'",
+  "context_budget": {
+    "limit_chars": 44190,
+    "required_chars": 44191,
+    "over_by_chars": 1,
+    "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+    "sections": [
+      {
+        "section": "continuity",
+        "chars": 22265
+      },
+      {
+        "section": "settings",
+        "chars": 6805
+      },
+      {
+        "section": "research",
+        "chars": 4484
+      },
+      {
+        "section": "previous_ending",
+        "chars": 1850
+      },
+      {
+        "section": "recent",
+        "chars": 1645
+      },
+      {
+        "section": "snapshot",
+        "chars": 1524
+      },
+      {
+        "section": "governance",
+        "chars": 1353
+      },
+      {
+        "section": "plan",
+        "chars": 1096
+      },
+      {
+        "section": "source_hashes",
+        "chars": 1009
+      },
+      {
+        "section": "outline",
+        "chars": 927
+      },
+      {
+        "section": "review_workflow",
+        "chars": 913
+      },
+      {
+        "section": "instruction",
+        "chars": 69
+      },
+      {
+        "section": "kind",
+        "chars": 7
+      },
+      {
+        "section": "title",
+        "chars": 7
+      },
+      {
+        "section": "ok",
+        "chars": 4
+      },
+      {
+        "section": "revision",
+        "chars": 3
+      },
+      {
+        "section": "source_bindings",
+        "chars": 2
+      },
+      {
+        "section": "unit",
+        "chars": 2
+      }
+    ],
+    "largest_sources": [
+      {
+        "section": "settings",
+        "ref": "大纲/AE新增骨架-61-66.md",
+        "chars": 5136
+      },
+      {
+        "section": "research",
+        "ref": "研究/AE规划与旧线证据.md",
+        "chars": 3703
+      },
+      {
+        "section": "research",
+        "ref": "研究/AE作者任务.md",
+        "chars": 778
+      },
+      {
+        "section": "settings",
+        "ref": "设定/人物与声音.md",
+        "chars": 596
+      },
+      {
+        "section": "settings",
+        "ref": "设定/权威规则.md",
+        "chars": 372
+      },
+      {
+        "section": "settings",
+        "ref": "设定/文风.md",
+        "chars": 361
+      },
+      {
+        "section": "settings",
+        "ref": "设定/作品定位.md",
+        "chars": 334
+      }
+    ],
+    "omitted_source_count": 0,
+    "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+  }
+}

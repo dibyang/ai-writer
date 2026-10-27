@@ -1,0 +1,99 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_AD_F49_BOOK_RECALL",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "35沈放回18书、空袋20未花，36父当面已知没买且共看原8册；49叙述父记得她那天带回一本，未标作误记或被纠正。后文未补新购事实，构成购书回忆残留。",
+      "suggestion": "在独立49—60修订中最小改49回忆为回来又翻原来那本，不改父对真实15购8册/鞋页的既有记忆，不虚构新书。其余11章保留字节，六字段及下游实际核。",
+      "evidence": [
+        {
+          "unit": 35,
+          "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+          "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+          "line": 168,
+          "quote": "沈禾的布袋仍空着"
+        },
+        {
+          "unit": 36,
+          "draft": "正文/0036-灯下还有一页-dr-v2.md",
+          "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+          "line": 60,
+          "quote": "她将空袋举起来，笑着告诉他没买。"
+        },
+        {
+          "unit": 49,
+          "draft": "正文/0049-柜角那盏灯-ad-a-v2.md",
+          "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+          "line": 100,
+          "quote": "只是记得那天她带回一本，回家还笑着给他看鞋。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/d7b30e89-1f0c-4048-96fa-85c9557b1292.json",
+        "review_sha256": "67735c5d00c53261adbbd1ecde6d0ca6883ed8a909892a08a169929f340c8d3b",
+        "units": [
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+            "dependency": "d24ff03a0fb0a459f161c9992a7df2fce242325bd2e26aab4493579ec28f28c9"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "dependency": "ece3cfc499212b24c3336b3c733aea173778f3158ce8f5363b5c15eabd7b0d70"
+          },
+          {
+            "unit": 49,
+            "draft": "正文/0049-柜角那盏灯-ad-a-v2.md",
+            "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+            "dependency": "a35f5dac19f4f50e227ed4b573c2e866ccd390040f95f03aca9c5dcee550e60d"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/122e7a4f-028a-47d6-8024-9095e5bf0326.json",
+          "sha256": "a61c48ea91ae09660af25af7c20d0a30d70fa07a4842c33045bffde80b718163"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/78eccd42-842e-45e4-baec-feb734c8990a.json",
+          "sha256": "0e396266e3b2eba6d2a4031541e5816d386304b29f9221021bbe4f7a4a8204ec"
+        },
+        "disposition": "adopted",
+        "reason": "F全文后实际再回查35/36/49整页，49叙述带回一本与未买且父已知冲突；另独立49—60只修该回忆为原册，不造新购书。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+            "dependency": "d24ff03a0fb0a459f161c9992a7df2fce242325bd2e26aab4493579ec28f28c9"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "dependency": "ece3cfc499212b24c3336b3c733aea173778f3158ce8f5363b5c15eabd7b0d70"
+          },
+          {
+            "unit": 49,
+            "draft": "正文/0049-柜角那盏灯-ad-a-v2.md",
+            "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+            "dependency": "a35f5dac19f4f50e227ed4b573c2e866ccd390040f95f03aca9c5dcee550e60d"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

@@ -1,0 +1,946 @@
+{
+  "action": "stage-impact",
+  "at": "2026-10-24T21:58:30.812Z",
+  "evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AC作者任务.md",
+    "source_sha256": "46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2",
+    "locator": "2026-10-24 ai-writer原用户授权；E控制器选择与执行范围另见AC本地e-controller-selection.md及本次用户消息，不冒充真人新增剧情",
+    "recorded_by": "Codex AC E same native session",
+    "frozen_ref": ".writer/objects/46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2.txt"
+  },
+  "input": {
+    "expected_revision": 250,
+    "operation_id": "E1_S08_STAGE",
+    "author_evidence": {
+      "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+      "local_source": "研究/AC作者任务.md",
+      "source_sha256": "46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2",
+      "locator": "2026-10-24 ai-writer原用户授权；E控制器选择与执行范围另见AC本地e-controller-selection.md及本次用户消息，不冒充真人新增剧情",
+      "recorded_by": "Codex AC E same native session"
+    },
+    "impact": {
+      "schema_version": 1,
+      "revision": 250,
+      "state_sha256": "dc149a7e98ed3993b00474180bd164b13af89bca085ae6eb707ae205b394dfab",
+      "version_id": "E1_S08_NEW",
+      "ref": "大纲/AC-D推进窗口-46-48.md",
+      "from": 46,
+      "mode": "historical",
+      "candidate_sha256": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+      "direct_consumers": [
+        {
+          "unit": 46,
+          "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+          "bound": true,
+          "affected_by_publication": true
+        },
+        {
+          "unit": 47,
+          "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+          "bound": true,
+          "affected_by_publication": true
+        },
+        {
+          "unit": 48,
+          "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+          "bound": true,
+          "affected_by_publication": true
+        }
+      ],
+      "revision_from": 46,
+      "review_from": 45,
+      "retained_prefix_consumers": [],
+      "replaced_ranges": [
+        {
+          "ref": "大纲/AC-D推进窗口-46-48.md",
+          "version_id": "E1_S08_OLD",
+          "from": 1,
+          "to": null
+        }
+      ],
+      "possible_indirect_from": 46,
+      "possible_indirect_through": 48,
+      "possible_indirect_impact": "unknown-requires-reading",
+      "required_readings": {
+        ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+        "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+        "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+        "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+        "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+        ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0"
+      },
+      "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+    },
+    "review": {
+      "report": "审查/E1-S08-历史来源impact实读.md",
+      "report_sha256": "dff4d994e90d5b0e95c9d7460aad873b9d3bb39bce69b4ae35473f94e201b48b",
+      "readings": {
+        ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+        "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+        "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+        "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+        "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+        ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0"
+      },
+      "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+      "unresolved": []
+    }
+  },
+  "result": {
+    "impact_id": "f168ba89-2cf3-41b4-8fbf-0845015a140a",
+    "blocked_range": {
+      "from": 46,
+      "through": 48
+    },
+    "note": "持久阻断已启用；需独立修订、逐章重登及实读复核后事务提交"
+  },
+  "current": {
+    "source_versions": {
+      "CR33_INITIAL": {
+        "id": "CR33_INITIAL",
+        "ref": "大纲/单元/0033.json",
+        "object_ref": ".writer/objects/c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129.source",
+        "sha256": "c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129",
+        "previous": null,
+        "format": "json"
+      },
+      "CR33_RECALL_ID_V2": {
+        "id": "CR33_RECALL_ID_V2",
+        "ref": "大纲/单元/0033.json",
+        "object_ref": ".writer/objects/bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858.source",
+        "sha256": "bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858",
+        "previous": "CR33_INITIAL",
+        "format": "json"
+      },
+      "E1_S01_OLD": {
+        "id": "E1_S01_OLD",
+        "ref": "大纲/单元/0036.json",
+        "object_ref": ".writer/objects/13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a.source",
+        "sha256": "13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S02_OLD": {
+        "id": "E1_S02_OLD",
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "object_ref": ".writer/objects/f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf.source",
+        "sha256": "f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S03_OLD": {
+        "id": "E1_S03_OLD",
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "object_ref": ".writer/objects/efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1.source",
+        "sha256": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S04_OLD": {
+        "id": "E1_S04_OLD",
+        "ref": "大纲/单元/0040.json",
+        "object_ref": ".writer/objects/1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d.source",
+        "sha256": "1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S05_OLD": {
+        "id": "E1_S05_OLD",
+        "ref": "大纲/单元/0041.json",
+        "object_ref": ".writer/objects/420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0.source",
+        "sha256": "420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S06_OLD": {
+        "id": "E1_S06_OLD",
+        "ref": "大纲/单元/0042.json",
+        "object_ref": ".writer/objects/8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf.source",
+        "sha256": "8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S07_OLD": {
+        "id": "E1_S07_OLD",
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "object_ref": ".writer/objects/c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9.source",
+        "sha256": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S08_OLD": {
+        "id": "E1_S08_OLD",
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "object_ref": ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source",
+        "sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+        "previous": null,
+        "format": "md"
+      },
+      "E1_S09_OLD": {
+        "id": "E1_S09_OLD",
+        "ref": "大纲/单元/0047.json",
+        "object_ref": ".writer/objects/5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c.source",
+        "sha256": "5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c",
+        "previous": null,
+        "format": "json"
+      },
+      "E1_S01_NEW": {
+        "id": "E1_S01_NEW",
+        "ref": "大纲/单元/0036.json",
+        "object_ref": ".writer/objects/18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb.source",
+        "sha256": "18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb",
+        "previous": "E1_S01_OLD",
+        "format": "json"
+      },
+      "E1_S02_NEW": {
+        "id": "E1_S02_NEW",
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "object_ref": ".writer/objects/5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9.source",
+        "sha256": "5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9",
+        "previous": "E1_S02_OLD",
+        "format": "md"
+      },
+      "E1_S03_NEW": {
+        "id": "E1_S03_NEW",
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "object_ref": ".writer/objects/4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc.source",
+        "sha256": "4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc",
+        "previous": "E1_S03_OLD",
+        "format": "md"
+      },
+      "E1_S04_NEW": {
+        "id": "E1_S04_NEW",
+        "ref": "大纲/单元/0040.json",
+        "object_ref": ".writer/objects/7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089.source",
+        "sha256": "7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089",
+        "previous": "E1_S04_OLD",
+        "format": "json"
+      },
+      "E1_S05_NEW": {
+        "id": "E1_S05_NEW",
+        "ref": "大纲/单元/0041.json",
+        "object_ref": ".writer/objects/4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288.source",
+        "sha256": "4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288",
+        "previous": "E1_S05_OLD",
+        "format": "json"
+      },
+      "E1_S06_NEW": {
+        "id": "E1_S06_NEW",
+        "ref": "大纲/单元/0042.json",
+        "object_ref": ".writer/objects/96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4.source",
+        "sha256": "96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4",
+        "previous": "E1_S06_OLD",
+        "format": "json"
+      },
+      "E1_S07_NEW": {
+        "id": "E1_S07_NEW",
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "object_ref": ".writer/objects/ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437.source",
+        "sha256": "ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437",
+        "previous": "E1_S07_OLD",
+        "format": "md"
+      },
+      "E1_S08_NEW": {
+        "id": "E1_S08_NEW",
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "object_ref": ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source",
+        "sha256": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+        "previous": "E1_S08_OLD",
+        "format": "md"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "大纲/单元/0033.json",
+        "version_id": "CR33_RECALL_ID_V2",
+        "from": 33,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0036.json",
+        "version_id": "E1_S01_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/X-DR第36章执行纲.md",
+        "version_id": "E1_S02_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/AC-B推进窗口-40-42.md",
+        "version_id": "E1_S03_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0040.json",
+        "version_id": "E1_S04_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0041.json",
+        "version_id": "E1_S05_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0042.json",
+        "version_id": "E1_S06_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/AC-C推进窗口-43-45.md",
+        "version_id": "E1_S07_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "version_id": "E1_S08_OLD",
+        "from": 1,
+        "to": null
+      },
+      {
+        "ref": "大纲/单元/0047.json",
+        "version_id": "E1_S09_OLD",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "impact_pending": {
+      "b0a6fb4d-e575-43f8-858a-18758e484c1a": {
+        "id": "b0a6fb4d-e575-43f8-858a-18758e484c1a",
+        "version_id": "E1_S01_NEW",
+        "from": 36,
+        "through": 48,
+        "requested_from": 36,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 236,
+          "state_sha256": "8906f7aca412c1755db08ac75c5b22a8192ddb4feece1c84c5371b4755d9bbee",
+          "version_id": "E1_S01_NEW",
+          "ref": "大纲/单元/0036.json",
+          "from": 36,
+          "mode": "historical",
+          "candidate_sha256": "18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb",
+          "direct_consumers": [
+            {
+              "unit": 36,
+              "consumed_sha256": "13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 36,
+          "review_from": 35,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/单元/0036.json",
+              "version_id": "E1_S01_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 36,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb.source": "18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb",
+            "正文/0035-一起翻到下一页-dr-v2.md": "866e0483f790f16fb6a834b8977897fdb7235e8de9b309a2df7371d480d4678b",
+            "正文/0036-灯下还有一页-dr-v2.md": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "正文/0037-各留一道菜-ac-a-v1.md": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "正文/0038-带进灯下-ac-a-v1.md": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+            "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+            "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a.source": "13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S01-历史来源impact实读.md",
+            "report_sha256": "26f7726f4a4f3f5f4ca593ee4bbb3851cb322ccf4e47d3d7dd8e314d544c6e8b",
+            "readings": {
+              ".writer/objects/18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb.source": "18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb",
+              "正文/0035-一起翻到下一页-dr-v2.md": "866e0483f790f16fb6a834b8977897fdb7235e8de9b309a2df7371d480d4678b",
+              "正文/0036-灯下还有一页-dr-v2.md": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+              "正文/0037-各留一道菜-ac-a-v1.md": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+              "正文/0038-带进灯下-ac-a-v1.md": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+              "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+              "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+              "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a.source": "13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/26f7726f4a4f3f5f4ca593ee4bbb3851cb322ccf4e47d3d7dd8e314d544c6e8b.txt"
+          }
+        }
+      },
+      "37f33ea5-d9fe-4d72-b219-5427abb80743": {
+        "id": "37f33ea5-d9fe-4d72-b219-5427abb80743",
+        "version_id": "E1_S02_NEW",
+        "from": 36,
+        "through": 48,
+        "requested_from": 36,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 238,
+          "state_sha256": "109faa5ccb4a83e23fdafc5924ebc4dc7175163b5c9ec4b945bda28ade00aca5",
+          "version_id": "E1_S02_NEW",
+          "ref": "大纲/X-DR第36章执行纲.md",
+          "from": 36,
+          "mode": "historical",
+          "candidate_sha256": "5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9",
+          "direct_consumers": [
+            {
+              "unit": 36,
+              "consumed_sha256": "f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 36,
+          "review_from": 35,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/X-DR第36章执行纲.md",
+              "version_id": "E1_S02_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 36,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9.source": "5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9",
+            "正文/0035-一起翻到下一页-dr-v2.md": "866e0483f790f16fb6a834b8977897fdb7235e8de9b309a2df7371d480d4678b",
+            "正文/0036-灯下还有一页-dr-v2.md": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "正文/0037-各留一道菜-ac-a-v1.md": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "正文/0038-带进灯下-ac-a-v1.md": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+            "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+            "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf.source": "f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S02-历史来源impact实读.md",
+            "report_sha256": "53a4fb8fd75c012d6ce7c85f4cf5e90a25d39743855f81ad4ec2853d52852746",
+            "readings": {
+              ".writer/objects/5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9.source": "5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9",
+              "正文/0035-一起翻到下一页-dr-v2.md": "866e0483f790f16fb6a834b8977897fdb7235e8de9b309a2df7371d480d4678b",
+              "正文/0036-灯下还有一页-dr-v2.md": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+              "正文/0037-各留一道菜-ac-a-v1.md": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+              "正文/0038-带进灯下-ac-a-v1.md": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+              "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+              "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+              "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf.source": "f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/53a4fb8fd75c012d6ce7c85f4cf5e90a25d39743855f81ad4ec2853d52852746.txt"
+          }
+        }
+      },
+      "11aa5d24-2493-4c77-9a52-2f9b3c5edfaa": {
+        "id": "11aa5d24-2493-4c77-9a52-2f9b3c5edfaa",
+        "version_id": "E1_S03_NEW",
+        "from": 40,
+        "through": 48,
+        "requested_from": 40,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 240,
+          "state_sha256": "e2017348eed403f3be67594459e8245f43d57f1df6e6c62f54f0be86d8c9d75d",
+          "version_id": "E1_S03_NEW",
+          "ref": "大纲/AC-B推进窗口-40-42.md",
+          "from": 40,
+          "mode": "historical",
+          "candidate_sha256": "4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc",
+          "direct_consumers": [
+            {
+              "unit": 40,
+              "consumed_sha256": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 41,
+              "consumed_sha256": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 42,
+              "consumed_sha256": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 40,
+          "review_from": 39,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/AC-B推进窗口-40-42.md",
+              "version_id": "E1_S03_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 40,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc.source": "4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc",
+            "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+            "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1.source": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S03-历史来源impact实读.md",
+            "report_sha256": "4c7ba7c94f0c0744176e9be041c8f049323cb2a8623650475b55ba1ff22a6aad",
+            "readings": {
+              ".writer/objects/4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc.source": "4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc",
+              "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+              "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+              "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1.source": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/4c7ba7c94f0c0744176e9be041c8f049323cb2a8623650475b55ba1ff22a6aad.txt"
+          }
+        }
+      },
+      "2787fb0d-7825-4b5b-a8d1-14951571d498": {
+        "id": "2787fb0d-7825-4b5b-a8d1-14951571d498",
+        "version_id": "E1_S04_NEW",
+        "from": 40,
+        "through": 48,
+        "requested_from": 40,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 242,
+          "state_sha256": "a4b15ee786d2c1e61147e93220981b6b204dc2c3c12846d868443f09a0440d4c",
+          "version_id": "E1_S04_NEW",
+          "ref": "大纲/单元/0040.json",
+          "from": 40,
+          "mode": "historical",
+          "candidate_sha256": "7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089",
+          "direct_consumers": [
+            {
+              "unit": 40,
+              "consumed_sha256": "1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 40,
+          "review_from": 39,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/单元/0040.json",
+              "version_id": "E1_S04_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 40,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089.source": "7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089",
+            "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+            "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d.source": "1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S04-历史来源impact实读.md",
+            "report_sha256": "666876307d756ceff3c6874f4a7fdc1ecfa602989e6bc11fffc3813a2c75a789",
+            "readings": {
+              ".writer/objects/7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089.source": "7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089",
+              "正文/0039-留到手上用-ac-ar-v1.md": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+              "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+              "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d.source": "1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/666876307d756ceff3c6874f4a7fdc1ecfa602989e6bc11fffc3813a2c75a789.txt"
+          }
+        }
+      },
+      "f167fde0-719c-41d5-9cfd-70307227e8f0": {
+        "id": "f167fde0-719c-41d5-9cfd-70307227e8f0",
+        "version_id": "E1_S05_NEW",
+        "from": 41,
+        "through": 48,
+        "requested_from": 41,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 244,
+          "state_sha256": "0755ede08af29e9f900246be4025e53586fba309e5ef37c9ed79e165ce1f45da",
+          "version_id": "E1_S05_NEW",
+          "ref": "大纲/单元/0041.json",
+          "from": 41,
+          "mode": "historical",
+          "candidate_sha256": "4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288",
+          "direct_consumers": [
+            {
+              "unit": 41,
+              "consumed_sha256": "420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 41,
+          "review_from": 40,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/单元/0041.json",
+              "version_id": "E1_S05_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 41,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288.source": "4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288",
+            "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+            "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0.source": "420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S05-历史来源impact实读.md",
+            "report_sha256": "ab4972e96072283bec5f977f62628b41ced2c50258d5caaa6ee17d3dd9be016f",
+            "readings": {
+              ".writer/objects/4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288.source": "4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288",
+              "正文/0040-取下来的那一条-ac-b-v1.md": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+              "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0.source": "420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/ab4972e96072283bec5f977f62628b41ced2c50258d5caaa6ee17d3dd9be016f.txt"
+          }
+        }
+      },
+      "a5b1bd86-054f-4305-945b-3ff713d6ba09": {
+        "id": "a5b1bd86-054f-4305-945b-3ff713d6ba09",
+        "version_id": "E1_S06_NEW",
+        "from": 42,
+        "through": 48,
+        "requested_from": 42,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 246,
+          "state_sha256": "d56e01fcc020d9ac7e6fb47baa4db1f76a03617d70202923dfd31c11c32988e4",
+          "version_id": "E1_S06_NEW",
+          "ref": "大纲/单元/0042.json",
+          "from": 42,
+          "mode": "historical",
+          "candidate_sha256": "96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4",
+          "direct_consumers": [
+            {
+              "unit": 42,
+              "consumed_sha256": "8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 42,
+          "review_from": 41,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/单元/0042.json",
+              "version_id": "E1_S06_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 42,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4.source": "96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4",
+            "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf.source": "8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S06-历史来源impact实读.md",
+            "report_sha256": "557f608fbdb882be27c5b78d571c61bdb27b3144e32cf1711b361596db284cd0",
+            "readings": {
+              ".writer/objects/96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4.source": "96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4",
+              "正文/0041-让她自己推一次-ac-b-v1.md": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf.source": "8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/557f608fbdb882be27c5b78d571c61bdb27b3144e32cf1711b361596db284cd0.txt"
+          }
+        }
+      },
+      "c8361327-7e65-4065-b2bb-64548be40fad": {
+        "id": "c8361327-7e65-4065-b2bb-64548be40fad",
+        "version_id": "E1_S07_NEW",
+        "from": 43,
+        "through": 48,
+        "requested_from": 43,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 248,
+          "state_sha256": "4c1f574e42a699720d9e1eee4af596fb6dd782164d3b6b99356e59c758f54a0c",
+          "version_id": "E1_S07_NEW",
+          "ref": "大纲/AC-C推进窗口-43-45.md",
+          "from": 43,
+          "mode": "historical",
+          "candidate_sha256": "ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437",
+          "direct_consumers": [
+            {
+              "unit": 43,
+              "consumed_sha256": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 44,
+              "consumed_sha256": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 45,
+              "consumed_sha256": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 43,
+          "review_from": 42,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/AC-C推进窗口-43-45.md",
+              "version_id": "E1_S07_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 43,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437.source": "ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437",
+            "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9.source": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S07-历史来源impact实读.md",
+            "report_sha256": "b8939ffddcbb338feb13e06c8a6273caca3f57a7d3dd3600268640b773260970",
+            "readings": {
+              ".writer/objects/ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437.source": "ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437",
+              "正文/0042-各有要回去的地方-ac-b-v1.md": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+              "正文/0043-一起走到摊前-ac-c-v1.md": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+              "正文/0044-锅里留着各人的味-ac-c-v1.md": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9.source": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/b8939ffddcbb338feb13e06c8a6273caca3f57a7d3dd3600268640b773260970.txt"
+          }
+        }
+      },
+      "f168ba89-2cf3-41b4-8fbf-0845015a140a": {
+        "id": "f168ba89-2cf3-41b4-8fbf-0845015a140a",
+        "version_id": "E1_S08_NEW",
+        "from": 46,
+        "through": 48,
+        "requested_from": 46,
+        "analysis": {
+          "schema_version": 1,
+          "revision": 250,
+          "state_sha256": "dc149a7e98ed3993b00474180bd164b13af89bca085ae6eb707ae205b394dfab",
+          "version_id": "E1_S08_NEW",
+          "ref": "大纲/AC-D推进窗口-46-48.md",
+          "from": 46,
+          "mode": "historical",
+          "candidate_sha256": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+          "direct_consumers": [
+            {
+              "unit": 46,
+              "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 47,
+              "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+              "bound": true,
+              "affected_by_publication": true
+            },
+            {
+              "unit": 48,
+              "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+              "bound": true,
+              "affected_by_publication": true
+            }
+          ],
+          "revision_from": 46,
+          "review_from": 45,
+          "retained_prefix_consumers": [],
+          "replaced_ranges": [
+            {
+              "ref": "大纲/AC-D推进窗口-46-48.md",
+              "version_id": "E1_S08_OLD",
+              "from": 1,
+              "to": null
+            }
+          ],
+          "possible_indirect_from": 46,
+          "possible_indirect_through": 48,
+          "possible_indirect_impact": "unknown-requires-reading",
+          "required_readings": {
+            ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+            "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+            "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0"
+          },
+          "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+          "review": {
+            "report": "审查/E1-S08-历史来源impact实读.md",
+            "report_sha256": "dff4d994e90d5b0e95c9d7460aad873b9d3bb39bce69b4ae35473f94e201b48b",
+            "readings": {
+              ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+              "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+              "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+              "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+              "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+              ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0"
+            },
+            "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+            "unresolved": [],
+            "frozen_report": ".writer/objects/dff4d994e90d5b0e95c9d7460aad873b9d3bb39bce69b4ae35473f94e201b48b.txt"
+          }
+        }
+      }
+    }
+  }
+}

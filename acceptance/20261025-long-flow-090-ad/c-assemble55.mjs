@@ -1,0 +1,7 @@
+import {fs,path,project,sha,state,save,outer,json,read,log} from './c-utils.mjs';
+const refs=Array.from({length:9},(_,i)=>`分段/AD-C-0055/${String(i+1).padStart(2,'0')}.md`);
+const parts=refs.map(ref=>({path:ref,sha256:sha(Buffer.from(read(ref)))}));
+save('.writer/drafts/ad-c-assemble55-input.json',{unit:55,expected_revision:state().revision,draft:'正文/0055-门前先留一块-ad-c-v1.md',parts,separator:'\n\n'});
+const c=json('.writer/drafts/ad-c-context55-original.json');
+outer('c-before55-writing-and-assembly.json',{at:new Date().toISOString(),revision:state().revision,unit:55,template:'.writer/drafts/ad-c-record-template55-original.json',template_sha256:sha(Buffer.from(read('.writer/drafts/ad-c-record-template55-original.json'))),context:'.writer/drafts/ad-c-context55-original.json',context_sha256:sha(Buffer.from(read('.writer/drafts/ad-c-context55-original.json'))),default_context_succeeded:true,max_chars:40000,selected_fields_chars:Object.fromEntries(['plan','settings','snapshot','recent','previous_ending','research','outline','continuity','governance','review_workflow'].map(k=>[k,JSON.stringify(c[k]).length])),parts,han:refs.reduce((n,r)=>n+(read(r).replace(/^#.*$/gm,'').match(/\p{Script=Han}/gu)||[]).length,0),note:'template actual CLI c-template55 precedes all parts; this receipt written after parts does not claim own timestamp precedes writing'});
+console.log('ordered assembly input saved');

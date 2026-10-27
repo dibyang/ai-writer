@@ -1,0 +1,262 @@
+{
+  "ok": true,
+  "at": "2026-10-26T14:08:19.836Z",
+  "run": "final-tail-recovery2",
+  "native_id": "01a176d2-2255-7e80-9c37-d825387a4fef",
+  "revision_session_id": "de25fce4-4446-4b5a-9038-9af130f3b456",
+  "entry_verification_at": "2026-10-26T13:38:35.889Z",
+  "observed_local_elapsed_since_entry_ms": 1783947,
+  "elapsed_is_not_native_process_runtime": true,
+  "stage_stop": "all requested current60—66 read; checkpointed read-only stop, awaiting root-observed native exit",
+  "actual_native_exit": null,
+  "actual_native_elapsed_ms": null,
+  "root_observation_required": true,
+  "main": {
+    "revision": 397,
+    "registered_units": 66,
+    "state_sha256": "f01e6f58522dac64ffe56b09dca4b3c4adf1a0f1cabb83210cd6d82686ec88b0"
+  },
+  "workspace": {
+    "revision": 464,
+    "registered_units": 66,
+    "state_sha256": "5b23f72c649144a82757ed3d7854952142279110f30e50cc2afda60756100e98"
+  },
+  "generation": 9,
+  "content_id": "8bff9af21fba84e32d798f4cef969d5a0e4ff0f904089f85047877d16e403131",
+  "runtime_id": "fe8f9636393d1dbbc49689f495cf6aad46a939b5eec11ac993af35ff369b8efe",
+  "credential_file": "fvr1-private-ownership.json",
+  "new_credential_issued": false,
+  "status": "editing",
+  "reading": {
+    "current_from": 60,
+    "current_through": 66,
+    "chapters": 7,
+    "pages": 86,
+    "all_pages_actual_returned": true,
+    "unread_requested_units": [],
+    "extra58_reference_pages": [
+      5,
+      6
+    ],
+    "extra_pages_excluded_from86": 2,
+    "combined_tail37_66": {
+      "pages": 281,
+      "runs": [
+        {
+          "run": "final-tail-resume",
+          "units": [
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
+          "pages": 39,
+          "actual_exit": 1,
+          "normal_stop": false
+        },
+        {
+          "run": "final-tail-recovery",
+          "units": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59
+          ],
+          "pages": 156,
+          "actual_exit": 1,
+          "normal_stop": false
+        },
+        {
+          "run": "final-tail-recovery2",
+          "units": [
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
+          ],
+          "pages": 86,
+          "actual_exit": null,
+          "root_to_observe": true
+        }
+      ]
+    },
+    "combined_current_tail3_66_pages": 455,
+    "first3_36_pages": 174,
+    "old_partial42p1_6_and60p1_2_excluded": true,
+    "old_extra36p6_7_excluded": true,
+    "current_first2_not_reread": true,
+    "body_page_truncations_this_run": 0,
+    "repeated_core_pages_this_run": 0
+  },
+  "prior_failures": [
+    {
+      "run": "final-tail-resume",
+      "units": [
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "pages": 39,
+      "exit": 1,
+      "elapsed_ms": 777023,
+      "error": "Selected model is at capacity",
+      "partial": {
+        "unit": 42,
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "excluded": true
+      },
+      "exit_observed_by": "root; quoted latest activation",
+      "normal_stop": false,
+      "original_results_preserved": true
+    },
+    {
+      "run": "final-tail-recovery",
+      "units": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "pages": 156,
+      "exit": 1,
+      "elapsed_ms": 1488579,
+      "error": "Selected model is at capacity",
+      "partial": {
+        "unit": 60,
+        "pages": [
+          1,
+          2
+        ],
+        "excluded": true
+      },
+      "exit_observed_by": "root; quoted latest activation",
+      "normal_stop": false,
+      "original_results_preserved": true
+    }
+  ],
+  "findings": {
+    "confirmed_uncorrected": [
+      18,
+      51
+    ],
+    "pending_root": [
+      "59 price shorthand plus63—66 downstream family",
+      "45 return-to-shift transition unchanged uncertainty",
+      "65 leave bench17:50+ to mother home cooking transition"
+    ],
+    "withdrawn": [
+      "62 paper face after actual58p5—6 read"
+    ],
+    "new_hard_problem_confirmed60_66": [],
+    "style_risk": "repeated negative explanation and withdrawal/storage cadence retained",
+    "detail": "fvt4-new-findings.md"
+  },
+  "protected": {
+    "all66main_workspace_shas": "fvt4-final-preservation-audit.json",
+    "main_files": 32185,
+    "workspace_files": 2305,
+    "frozen_objects_each": 175,
+    "added": 0,
+    "deleted": 0,
+    "changed": 0,
+    "current_run_body_changes": 0,
+    "cumulative_branch_changed_units": [
+      3,
+      48,
+      55,
+      57,
+      60
+    ],
+    "source_history_author_locks_original9_13optional49retained_O_BOX_PAINT_all_preserved": true
+  },
+  "artifacts": {
+    "manifest": "fvt4-reading-manifest.json",
+    "semantic_notes": "fvt4-semantic-notes.md",
+    "findings": "fvt4-new-findings.md",
+    "failures": "fvt4-recovery-events.json",
+    "product_six_state": "fvt4-two-area-six-state.json",
+    "protection_audit": "fvt4-final-preservation-audit.json",
+    "official_command_index": "fvt4-command-index.json",
+    "complete_command_index": "fvt4-complete-command-index.json",
+    "reading_finalization": "fvt4-reading-finalization.json",
+    "handoff": "交接-全书修后尾读二次容量恢复.md"
+  },
+  "checkpoints": [
+    {
+      "area": "main",
+      "ref": "checkpoint-final-tail-recovery2-main.json",
+      "sha256": "823d6c97933405d81ab1ec1c792d3ca9085cd34b776c2fed3c26ba00693a74ff",
+      "state_ref": "checkpoint-final-tail-recovery2-main-state.json",
+      "state_sha256": "f01e6f58522dac64ffe56b09dca4b3c4adf1a0f1cabb83210cd6d82686ec88b0",
+      "exact_inventory_verified": true,
+      "verified_files": 32185,
+      "frozen_objects_verified": 175,
+      "verification_ref": "reading-resume-final-tail-recovery2-readback-verification.json"
+    },
+    {
+      "area": "workspace",
+      "ref": "checkpoint-final-tail-recovery2-workspace.json",
+      "sha256": "3e27b5176afb451d51492716cfa3803333c8d4fd83576f68226735c101cf5732",
+      "state_ref": "checkpoint-final-tail-recovery2-workspace-state.json",
+      "state_sha256": "5b23f72c649144a82757ed3d7854952142279110f30e50cc2afda60756100e98",
+      "exact_inventory_verified": true,
+      "verified_files": 2305,
+      "frozen_objects_verified": 175,
+      "verification_ref": "fvt4-workspace-checkpoint-verification.json"
+    }
+  ],
+  "checkpoint_targets_registered66_not_reading_progress": true,
+  "no_project_write_after_checkpoint": true,
+  "not_done": [
+    "concentrated repair of confirmed18/51 and root decisions on candidates",
+    "resulting official rewind/replay/record and affected tail review",
+    "final current1—66 formal review",
+    "prepare/commit",
+    "old9verify",
+    "effective67scope negative",
+    "draft export and byte audit",
+    "root final build/tests/old archive audit/final seal"
+  ],
+  "no_release_or_literary_acceptance_claim": true
+}

@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const root=JSON.parse(fs.readFileSync(path.join(base,'project.json'))).project;
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const state=JSON.parse(fs.readFileSync(path.join(root,'.writer/state.json')));
+const checkpoint=JSON.parse(fs.readFileSync(path.join(base,'checkpoint-planning-entry.json')));
+const checks=Object.entries(checkpoint.files).map(([ref,expected])=>{const b=fs.readFileSync(path.join(root,ref));return {ref,bytes:b.length,sha256:sha(b),matches:b.length===expected.bytes&&sha(b)===expected.sha256};});
+const status=JSON.parse(fs.readFileSync(path.join(base,'cli-logs/adp-entry-status/stdout.txt')));
+const inventory=status.draft_inventory.unregistered.map(x=>{const current=state.units.find(u=>u.unit===x.possible_unit);const b=fs.readFileSync(path.join(root,x.draft));return {...x,bytes:b.length,sha256:sha(b),current_registered:current?.draft,differs_from_current:sha(b)!==current?.sha256,purpose:'historical-unregistered-variant-retained; not current text and not for merging or export'};});
+const result={at:new Date().toISOString(),checkpoint_revision:checkpoint.revision,current_revision:state.revision,checkpoint_files:checks.length,checkpoint_mismatches:checks.filter(x=>!x.matches),checks,inventory,registered:state.units.map(u=>{const b=fs.readFileSync(path.join(root,u.draft));return {unit:u.unit,draft:u.draft,bytes:b.length,sha256:sha(b),matches:sha(b)===u.sha256,pages:Math.ceil(b.toString('utf8').length/1800)};})};
+const target=path.join(base,process.argv[2]||'ad-planning-entry-audit.json');fs.writeFileSync(target,JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({report:target,checkpoint_files:checks.length,mismatches:result.checkpoint_mismatches.length,unregistered:inventory.length,all_distinct:inventory.every(x=>x.differs_from_current),registered:result.registered.length,registered_mismatches:result.registered.filter(x=>!x.matches).length,pages43_48:result.registered.filter(x=>x.unit>=43).map(x=>({unit:x.unit,pages:x.pages}))},null,2));

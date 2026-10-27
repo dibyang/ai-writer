@@ -1,0 +1,14 @@
+import {fs,path,project,read,json,sha,save,outer,assert} from './c-utils.mjs';
+const t=json('.writer/drafts/ad-d-record-template59-original.json');
+for(const [r,h] of Object.entries(t.source_hashes))assert.equal(sha(fs.readFileSync(path.join(project,r))),h,r);
+assert.equal(sha(fs.readFileSync(path.join(project,'.writer/drafts/ad-d-record-template59-original.json'))),'069cd116854f4a5b68d45d2b4029dd5079e477ef881c99e9b0f301f28b10af03');
+assert.equal(sha(fs.readFileSync(path.join(project,'.writer/drafts/ad-d-context59-original.json'))),'dee3ebdff8e2240493e9d0befd7dba0621d60c78cfaa3bcc5cb4080c6e286529');
+const paths=['分段/AD-D-0059-首停定稿/01.md','分段/AD-D-0059-首停定稿/02.md',...['03','04','05','06','07','08'].map(x=>`分段/AD-DR-0059/${x}.md`)];
+const parts=paths.map(r=>({path:r,sha256:sha(fs.readFileSync(path.join(project,r)))}));
+assert.equal(parts[0].sha256,'0adeddb29f6dea28c121cb5f3878d38fcc273e583427cb3ee6029c618977e103');
+assert.equal(parts[1].sha256,'17384596e8743e8d22fb7ec96a7111a72782fe8375cebaf7a23143b4832784f5');
+const input={unit:59,expected_revision:288,draft:t.draft,parts,separator:'\n\n'};
+save('.writer/drafts/ad-dr-assemble59-input.json',input);
+outer('ddr-before59-assembly.json',{thread:process.env.CODEX_THREAD_ID,source_hashes_verified:true,template_unchanged:true,context_unchanged:true,parts,han:paths.reduce((n,r)=>n+(read(r).replace(/^#.*$/gm,'').match(/\p{Script=Han}/gu)||[]).length,0)});
+outer('ddr-auxiliary-input-error.json',{command:'read 大纲/章节/0059.json',exit_code:1,error:'ENOENT',reason:'辅助只读命令误将单元目录写为章节；无文件或状态修改',correct_path:'大纲/单元/0059.json',corrective_action:'按原模板路径读实际细纲；此失败原样另存'});
+console.log(JSON.stringify({input:path.join(project,'.writer/drafts/ad-dr-assemble59-input.json'),plan:json('大纲/单元/0059.json')},null,2));

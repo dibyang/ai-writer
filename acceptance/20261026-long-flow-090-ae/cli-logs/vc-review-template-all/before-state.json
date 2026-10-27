@@ -1,0 +1,446 @@
+{
+  "schema_version": 6,
+  "revision": 5,
+  "project_id": "5badc02c-dec6-4193-b5de-c76021f9608c",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "许宁": "临近次晨08:00持深蓝伞、斜抱棉布卷走向公交站；07:30亲手收回伞，看到原白线与贴纸缺角，知道昨夜晾伞和近九点锁门仅为周岚口述；已重系松布带并实际试走；约晚些时候扶木牌尚未发生",
+      "周岚": "次晨07:30在店门亲手归还伞并见许宁接收；随后临时帮撑、试遮布并让许宁接回，离开往楼道；知道许宁已能抱布持伞、仍08:00出门；答应10:00以后再电话约扶木牌，尚未做"
+    },
+    "threads": [],
+    "timeline": [
+      "当日07:40后：许宁在店门借出深蓝长柄伞，双方约今晚19:00前在店归还并交换号码",
+      "当日近08:30：许宁买回灰色拉链，蓝色未补；随后收到周岚报到及伞收屋里的消息",
+      "当日18:20：周岚在原19:00期限前电话通知延期；双方排除次晨08:40提议，改约次晨07:30店门口亲交并文字确认",
+      "当日19:00后：许宁整理布料并关店回家，伞未归还，设次晨07:10开店闹钟",
+      "次晨07:25：许宁开店，布带因昨夜松系而滑向一端，放下重系",
+      "次晨07:30：周岚亲手交还同一把伞，许宁握稳并确认收到；之后周岚临时帮撑试遮布，许宁接回",
+      "次晨临近08:00：许宁持伞斜抱布卷向公交站走；扶木牌只是晚些再电话约的未来安排"
+    ],
+    "ledger": {
+      "O_UMBRELLA_MARK": {
+        "type": "observation",
+        "statement": "借出时深蓝长柄伞的伞套扣环有白线补缝，伞柄底部贴纸墨已糊且右边缺一小角；贴纸缺角是原有状态。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "tags": [
+          "伞",
+          "原观察"
+        ],
+        "reader_known": "借出时已经看见白线与贴纸缺角，缺角不是新损坏",
+        "character_known": {
+          "许宁": "知道白线是自己缝的，缺角早已存在",
+          "周岚": "当面看到贴纸右边缺角和扣环白线，听许宁说明缺角早已存在"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 50,
+            "quote": "贴纸原来写过名字，墨已糊了，右边缺一小角。"
+          },
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 54,
+            "quote": "周岚看了看，又摸了摸伞套扣环上的白线。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_UMBRELLA": {
+        "type": "object",
+        "statement": "许宁借给周岚的同一把深蓝长柄伞。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "tags": [
+          "伞",
+          "借物"
+        ],
+        "custody": {
+          "holder": "许宁",
+          "location": "巷内向公交站行进，许宁右手撑伞",
+          "condition": "已实际归还，后短暂交周岚帮撑并接回；原白线与缺角保留"
+        },
+        "reader_known": "07:30周岚亲交许宁并获确认；帮撑试布后许宁接回，末尾持伞出门",
+        "character_known": {
+          "许宁": "已亲手接收自己的伞，看见原白线及缺角；知道周岚昨夜晾伞仅为口述；帮撑后接回并持伞出门",
+          "周岚": "知道已亲手归还且许宁当面确认；随后临时帮撑，试走时见许宁接回；离开后未跟随出门"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 58,
+            "quote": "许宁替她托住箱底，等周岚把一只胳膊稳稳垫好，才把伞柄送进她另一只手。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/V01-借出的一天/0002-迟一天的消息-r2.md",
+            "sha256": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066",
+            "line": 42,
+            "quote": "还是早上那把，在椅子旁边放着呢。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/V02-归还以后/0003-干透的伞.md",
+            "sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+            "line": 21,
+            "quote": "七点半，周岚把伞柄递给许宁，等许宁握稳才松手。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/V02-归还以后/0003-干透的伞.md",
+            "sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+            "line": 42,
+            "quote": "右手接回伞柄。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/V02-归还以后/0003-干透的伞.md",
+            "sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+            "line": 64,
+            "quote": "右手撑开自己的深蓝伞。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 3,
+        "previous_holder": "周岚"
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "借伞归还约定及完成情况。",
+        "status": "resolved",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "due_unit": 3,
+        "reader_known": "原当日19:00承诺提前通知后改为次晨07:30，现已当面归还并确认",
+        "character_known": {
+          "许宁": "知道次晨07:30已实际接伞并说收到了，延期归还约定完成",
+          "周岚": "亲手在次晨07:30归还，听许宁说收到了，知道本次约定完成"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 36,
+            "quote": "我今晚七点前送回来，你店还开着吗？"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/V01-借出的一天/0002-迟一天的消息-r2.md",
+            "sha256": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066",
+            "line": 60,
+            "quote": "明早七点半，你店门口，我把伞交给你。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/V01-借出的一天/0002-迟一天的消息-r2.md",
+            "sha256": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066",
+            "line": 68,
+            "quote": "记下了，7:30见。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/V02-归还以后/0003-干透的伞.md",
+            "sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+            "line": 21,
+            "quote": "朝她说：“收到了。”"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 3
+      },
+      "R_NEIGHBOR": {
+        "type": "relationship",
+        "statement": "许宁与周岚从点头之交发展为借伞并能直接联系的邻居。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "reader_known": "双方能说需要、承认先客套或先答应的习惯；帮撑试布已做，晚些扶木牌只是新约",
+        "character_known": {
+          "许宁": "知道周岚接受明确时间与直接求助；本次帮撑已落实，扶木牌约10点后再电话确定",
+          "周岚": "知道许宁能直接说要用伞并请求帮撑；知道扶木牌需10点后等许宁回来电话再约"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 70,
+            "quote": "将“周岚”改成“楼上周岚”。"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/V01-借出的一天/0002-迟一天的消息-r2.md",
+            "sha256": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066",
+            "line": 44,
+            "quote": "我是明早要用，不是怕你拿走。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/V02-归还以后/0003-干透的伞.md",
+            "sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+            "line": 52,
+            "quote": "我真要用，也先告诉你。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 3
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+      "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+      "summary": "雨天早上，许宁把深蓝长柄伞借给赶去社区服务站的周岚，交换号码并约定今晚七点前送回店内；自己绕连廊买拉链，未补蓝色拉链。周岚随后消息称箱子已到、伞收在屋里。",
+      "source_hashes": {
+        "writer.json": "522c5e261c04d80c9baf25b5a33cde2a4bae8fe483e1e4231619560ad84f19be",
+        ".writer/state.json": "36932519255087ffee9d482b2e742fd3b1b2429ff1597f35a46d1b9859638ba6",
+        "大纲/单元/0001.json": "b792e0985eed3968fe076fc24fff22dc5eead72853b1c59f0ef9119a63b507d7",
+        "设定/作品定位.md": "259a580686f4db15e33024c0ca017e2dfc19eca0411feda17f3566c0e54d9200",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "设定/本次故事约束.md": "502a1fb416fbac6c1b3256a7da9f72d6ab342fbcd09b50fbcc5575a0eee4094a",
+        "大纲/分卷/V01.json": "d9485be8e70ebc52003c5efc23b31bc4ceaaece67c7c741711b0276588888439"
+      },
+      "fingerprint": "00a68cbbaddbb69b10381a2a42d2c60ef515a2ab497180c100c31fde8e29f9f6",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "drafting",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "6cc298c5d4f30a2a5373e8b9d461727a522291fdfe90ae76166d0fbed672b674",
+      "draft_review": {
+        "reviewer": "Codex同会话知情自检",
+        "report": "审查/0001-r2-知情自检.md",
+        "draft_sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+        "report_sha256": "93a22aeaacd2b9df3b247f0d6db0dc78a457f04409b183f3b1105b3398c55f32",
+        "frozen_ref": ".writer/objects/93a22aeaacd2b9df3b247f0d6db0dc78a457f04409b183f3b1105b3398c55f32.draft-review"
+      },
+      "journal": ".writer/journal/124be159-bc69-412d-8606-d2862b207c58.json",
+      "journal_sha256": "045c38f87fbba85ed908ac53243ca4f1588536b5f74951962a28712c328b9c7a"
+    },
+    {
+      "unit": 2,
+      "draft": "正文/V01-借出的一天/0002-迟一天的消息-r2.md",
+      "sha256": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066",
+      "summary": "当日18:20周岚来电，因服务站书架工作未完且仍需借伞避雨，无法19:00前归还。许宁说清次晨08:00出门需要用伞，双方改约次晨07:30店门口亲手交还，文字再确认。许宁整理布卷后关店回家，伞仍未归还。",
+      "source_hashes": {
+        "writer.json": "522c5e261c04d80c9baf25b5a33cde2a4bae8fe483e1e4231619560ad84f19be",
+        ".writer/state.json": "a7ff3f9328450e410aa74a060b75d0711d27824ff92f7dc63a4c771c1b198314",
+        "大纲/单元/0002.json": "19bfbb80828eb1ef54aee1bfaf64ef3ec782ab0443815ad75b8dc31637f60774",
+        "设定/作品定位.md": "259a580686f4db15e33024c0ca017e2dfc19eca0411feda17f3566c0e54d9200",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "设定/本次故事约束.md": "502a1fb416fbac6c1b3256a7da9f72d6ab342fbcd09b50fbcc5575a0eee4094a",
+        "大纲/分卷/V01.json": "d9485be8e70ebc52003c5efc23b31bc4ceaaece67c7c741711b0276588888439",
+        "正文/V01-借出的一天/0001-雨停以前-r2.md": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372"
+      },
+      "fingerprint": "a8c41752331788c3e488a5c45fe6ae924c1baf46c97c744afa2b33d3410380af",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "drafting",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "6cc298c5d4f30a2a5373e8b9d461727a522291fdfe90ae76166d0fbed672b674",
+      "draft_review": {
+        "reviewer": "Codex同会话知情自检",
+        "report": "审查/0002-r2-知情自检.md",
+        "draft_sha256": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066",
+        "report_sha256": "02197bccd6e8f233ee46114189334312e0238e54db8ccc372c02ed0be78aa858",
+        "frozen_ref": ".writer/objects/02197bccd6e8f233ee46114189334312e0238e54db8ccc372c02ed0be78aa858.draft-review"
+      },
+      "journal": ".writer/journal/56cfa8f2-fb06-4915-8fa3-d0a1641dd1c7.json",
+      "journal_sha256": "b46739795ca30bc600fad8be5ecfafbf9808245700911ed450cda5ba677871ea"
+    },
+    {
+      "unit": 3,
+      "draft": "正文/V02-归还以后/0003-干透的伞.md",
+      "sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+      "summary": "次晨07:25许宁开店，先重系昨夜松着的布带；07:30周岚按新约亲手还伞，许宁确认收到。双方核同一把伞的原识别处，短暂帮撑试遮布后伞回许宁，临近08:00许宁持伞抱布向公交站走；另约晚些时候扶木牌仍未发生。",
+      "source_hashes": {
+        "writer.json": "522c5e261c04d80c9baf25b5a33cde2a4bae8fe483e1e4231619560ad84f19be",
+        ".writer/state.json": "468c57e401e2a4497243d75da5b4beadbd4e16cceab451d6c070e0920c91ea8d",
+        "大纲/单元/0003.json": "2bca0d1b328abe60d7d68a42a41269c73c02aafba9b86bfc2ef7c81f48c856af",
+        "设定/作品定位.md": "259a580686f4db15e33024c0ca017e2dfc19eca0411feda17f3566c0e54d9200",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "设定/本次故事约束.md": "502a1fb416fbac6c1b3256a7da9f72d6ab342fbcd09b50fbcc5575a0eee4094a",
+        "大纲/分卷/V02.json": "550d210f56bf8b0071088d7af246e5c76871f6ec11754476d0b0a9741e23a25d",
+        "正文/V01-借出的一天/0002-迟一天的消息-r2.md": "a23f238c6bfccdb407adb30bc64e40b2dbb391486acd2fb4d1941e949a7ca066"
+      },
+      "fingerprint": "d8b79c83279d7eadf639c14c623a6a33f7291c671c24e284be231ca7d8f6999c",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "drafting",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "6cc298c5d4f30a2a5373e8b9d461727a522291fdfe90ae76166d0fbed672b674",
+      "draft_review": {
+        "reviewer": "Codex同ID知情自检",
+        "report": "审查/0003-初稿自检.md",
+        "draft_sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+        "report_sha256": "b86afcd0237a4f20e7ca88bd7376f177e1320e293cf636b41367d8205cc8e6ec",
+        "frozen_ref": ".writer/objects/b86afcd0237a4f20e7ca88bd7376f177e1320e293cf636b41367d8205cc8e6ec.draft-review"
+      },
+      "journal": ".writer/journal/b0e0ee2a-e0c1-4fb3-b90e-6b3e7bbd188a.json",
+      "journal_sha256": "d4cc39e059829dd914394f0670a21407ce7d20f2bf088dd260a1cfb0ca52b979"
+    }
+  ],
+  "governance": {
+    "stage": "drafting",
+    "task": "按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "三章范围不扩章",
+        "本程第2章后仅保存第3章写前输入并停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/91dc38c6-7e26-4ad3-a990-db21e5c3b565.json",
+      "sha256": "d5c42e35833f2f747271d89d709513240d33b1316eb046060f55b46c8ce72db8"
+    },
+    {
+      "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+      "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+    }
+  ],
+  "operations": {
+    "vf-planning": {
+      "input_sha256": "40d8b93aa2440047f8ea5faf5683f547c1bc4f00dea574e144ce1e4b75488150",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "vf-planning",
+        "event": {
+          "ref": ".writer/objects/91dc38c6-7e26-4ad3-a990-db21e5c3b565.json",
+          "sha256": "d5c42e35833f2f747271d89d709513240d33b1316eb046060f55b46c8ce72db8"
+        }
+      }
+    },
+    "vf-drafting-bounded": {
+      "input_sha256": "faa56970dd7ea7cfe58c009248b162e8a11bbb48bd59e5cff6d2ef128f0b911c",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "vf-drafting-bounded",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+    "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+  }
+}

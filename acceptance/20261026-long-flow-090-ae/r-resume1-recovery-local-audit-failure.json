@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-26T03:52:07.176Z",
+  "script": "rrc-stop-audit.mjs",
+  "initial_error": "AssertionError: undefined !== 8 at impact_pending.length",
+  "cause": "Local evidence helper treated impact_pending object as array",
+  "correction": "Object.keys(impact_pending).length; main8/workspace0",
+  "rerun": "exit0; 25679 old files outside workspace unchanged",
+  "product_mutation": false
+}

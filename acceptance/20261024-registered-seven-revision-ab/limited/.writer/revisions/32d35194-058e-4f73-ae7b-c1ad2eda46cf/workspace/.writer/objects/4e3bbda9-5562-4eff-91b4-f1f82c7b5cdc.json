@@ -1,0 +1,61 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_COMPARE",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "比较对象省略",
+      "suggestion": "明确比较昨夜",
+      "evidence": [
+        {
+          "unit": 7,
+          "draft": "正文/0007.md",
+          "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+          "line": 4,
+          "quote": "没有那么急"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/5b1fd795-678b-4334-aa28-86fe4d9f5bee.json",
+        "review_sha256": "752dd81cd0c2cfa880cccda4a2dc350fe33835ca82084d8afef569d785e493b9",
+        "units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/999ec718-1ca0-48a4-ad0b-a79ce988defa.json",
+          "sha256": "1ba22a51eb9db8976c43b902fe284ee7404b312399d7f85349308686bc6681b0"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/248cf453-c2e1-4bc7-aff6-a4d3d465b858.json",
+          "sha256": "52c8599d36e469163ba05b9f37be6ecc1750cb4bc391110d90dcb0d275fa0d74"
+        },
+        "disposition": "adopted",
+        "reason": "本次测试明确授权两处小修，非真实作者逐项决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

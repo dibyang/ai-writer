@@ -1,0 +1,21 @@
+{
+  "failures": [
+    {
+      "step": "inline node setup",
+      "exit_code": 1,
+      "error": "SyntaxError Invalid or unexpected token",
+      "cause": "PowerShell interpreted Chinese curly quotes within double quoted -e argument",
+      "state_changed": false,
+      "files_written": false
+    },
+    {
+      "step": "cr18-begin45 wrapper",
+      "exit_code": 1,
+      "error": "missing input begin45.json before product spawn; caller then JSON.parse stderr failed",
+      "product_invoked": false,
+      "state_changed": false,
+      "partial_log": "cli-logs/cr18-begin45"
+    }
+  ],
+  "recovery": "Use file script setup then new label cr19, retain cr18 partial directory."
+}

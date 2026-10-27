@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-physical-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-physical-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-PHY-001-R001",
+      "severity": "blocker",
+      "location": "input.physical_operability",
+      "recommendation": "Explain why the key evidence, injury, trace, concealment, reveal order, or on-page action is physically possible through position, obstruction, angle, light, distance, posture, tool, timing, and procedure.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    }
+  ]
+}

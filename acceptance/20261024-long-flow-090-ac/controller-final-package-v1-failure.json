@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-25T00:33:14.386Z",
+  "kind": "controller-delivery-boundary-assumption-error",
+  "exit_code": 1,
+  "code": "ENOENT",
+  "missing": "installed .writer/tool/tests/limited-revision.test.mjs",
+  "cause": "Verifier incorrectly required all release/source files including development tests inside the installed managed runtime. Build identity checks had already passed.",
+  "effect": "Read-only failure before writing final-package-parity.json; no source, story or installed file changed.",
+  "correction": "Verify all 327 release sources against repository/package, and separately verify every declared managed runtime/content file in the installed copy."
+}

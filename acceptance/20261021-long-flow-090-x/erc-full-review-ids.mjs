@@ -1,0 +1,6 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';import assert from'node:assert/strict';
+const X=path.dirname(fileURLToPath(import.meta.url)),j=f=>JSON.parse(fs.readFileSync(f,'utf8')),h=j(path.join(X,'cli-logs/e-begin/stdout.raw.txt')),s=j(path.join(h.workspace,'.writer/state.json')),i=j(path.join(X,'er-review13-36-final.json'));
+const statuses={T_X_COAT_DAILY:'partial',T_X_TEA_AFTER_WORK:'resolved',T_X_BOOK_COMPANY:'resolved'};for(const[k,v]of Object.entries(statuses))assert.equal(s.snapshot.ledger[k].status,v);
+const fix=v=>v.replaceAll('T_X_COAT_DAILY33','T_X_COAT_DAILY（33阶段反馈）').replaceAll('T_X_TEA_VISIT32','T_X_TEA_AFTER_WORK（32真实到访）').replaceAll('T_X_BOOK_COMPANY35','T_X_BOOK_COMPANY（35实际同行）');
+let report=fix(fs.readFileSync(path.join(h.workspace,i.report),'utf8'));report+='\n\n## 登记前实际账本ID核实\n\n'+JSON.stringify(statuses,null,2)+'\n\n前一未登记报告将章号连在ID后/茶链用了描述式简称，本版按当前state实际ID核实，更正只涉及报告称呼；原报告/输入保留，未改正文或追踪。\n';
+i.comparison=JSON.parse(fix(JSON.stringify(i.comparison)));i.operation_id='X_ER_current_13_36_r201_ledger_ids';i.report='审查/X-ER当前13-36完整连读-账本ID核实.md';fs.writeFileSync(path.join(h.workspace,i.report),report,{flag:'wx'});fs.writeFileSync(path.join(X,'er-review13-36-current-final.json'),JSON.stringify(i,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({report:i.report,statuses}));

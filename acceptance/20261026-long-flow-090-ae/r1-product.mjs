@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),stop=JSON.parse(fs.readFileSync(path.join(A,'r-first-stop.json'))),owner=JSON.parse(fs.readFileSync(path.join(A,'r-revision-owner-input.json'))),[label,...args]=process.argv.slice(2);
+const r=spawnSync(process.execPath,[path.join(A,'cli.mjs'),label,...args,'--project',stop.workspace,'--revision-token',owner.token],{encoding:'utf8',windowsHide:true,maxBuffer:32e6});
+const meta=JSON.parse(fs.readFileSync(path.join(A,'cli-logs',label,'result.json')));let o;try{o=JSON.parse(r.stdout);}catch{o={stdout_bytes:Buffer.byteLength(r.stdout??'')};}
+const redact=v=>Array.isArray(v)?v.map(redact):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,/token/i.test(k)?'[LOCAL ONLY]':redact(x)])):v;
+console.log(JSON.stringify({label,product_exit:meta.exit_code,before:meta.before_state_sha256,after:meta.after_state_sha256,keys:Object.keys(o),summary:JSON.stringify(o).length<4500?redact(o):undefined,stdout:`cli-logs/${label}/stdout.txt`,stderr:`cli-logs/${label}/stderr.txt`},null,2));process.exitCode=r.status??1;

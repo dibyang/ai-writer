@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "impact": {
+    "schema_version": 1,
+    "revision": 318,
+    "state_sha256": "393d766431a026851bcf41827c1345911de23e23d00ba4d16c4ea789dd446acb",
+    "version_id": "AD_E_S04_NEW",
+    "ref": "大纲/单元/0060.json",
+    "from": 60,
+    "mode": "historical",
+    "candidate_sha256": "070969b3bc887c35715a2c8588292e0bc82e2b4f1854ff925618d54116ceabe1",
+    "direct_consumers": [
+      {
+        "unit": 60,
+        "consumed_sha256": "e72066b7624333bb1c6ef3979fba0e87dc1290a0cc316ddfd14847fd9ed9f6de",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 60,
+    "review_from": 59,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "大纲/单元/0060.json",
+        "version_id": "AD_E_S04_OLD",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": 60,
+    "possible_indirect_through": 60,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/070969b3bc887c35715a2c8588292e0bc82e2b4f1854ff925618d54116ceabe1.source": "070969b3bc887c35715a2c8588292e0bc82e2b4f1854ff925618d54116ceabe1",
+      "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+      "正文/0060-窗边还留着光-ad-dr-v2.md": "b34e30cef34d30aee6f2cc7f8429dfec7f3934b0ec04a96c3f2a324980b1f777",
+      ".writer/objects/e72066b7624333bb1c6ef3979fba0e87dc1290a0cc316ddfd14847fd9ed9f6de.source": "e72066b7624333bb1c6ef3979fba0e87dc1290a0cc316ddfd14847fd9ed9f6de"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  }
+}

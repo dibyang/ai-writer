@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const x=path.dirname(fileURLToPath(import.meta.url)),j=f=>JSON.parse(fs.readFileSync(path.join(x,f),'utf8'));
+assert.equal(j('commands/codex-e-first/result.json').exit_code,0);
+assert.equal(j('e-first-verification.json').ok,true);
+assert.equal(j('parent-guard-occupied-verification.json').ok,true);
+const h=j('cli-logs/e-begin/stdout.raw.txt');
+assert.equal(j('parent-e-first-stop-candidate-state.json').units.length,18);
+const prompt=`同ID恢复X-E，正式接上候选19—36、完整尾段回读、prepare/commit及主区暂停。本轮授权完成工具内部revision事务；不Git提交/推送/发布。先实读X/prompt-common.md、交接-E首停.md、e-first-verification.json、e-choice.json、d-tracking-fix-verification.json和source33-publish-verification.json。X=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-x；P=X/scenario/东岸末班船-再扩展验证。全部写入限X，不碰旧W或真人作品/根产品。最新共同操作规范有效，失败先停依赖、原始记录不覆盖，不猜路径/结构，不运行尚未成功创建的文件。
+
+第一产品调用固定er-entry-status（主P），与parent-e-first-stop-main-state.json字节相同；候选另用er-candidate-entry-status实读实际${h.workspace}，与parent-e-first-stop-candidate-state.json相同。读取现行handle原件cli-logs/e-begin/stdout.raw.txt，id=${h.id}、owner=${h.owner}、base_revision=${h.base_revision}；令牌从原件读取，不能复用其他历史会话。先正式revision resume，固定标签er-resume，再候选继续；P/.writer/tool唯一产品入口，候选显式--project实际workspace且所有write/--out带真实--revision-token。工具写命令经x-writer.mjs唯一er-标签、逐条成功再依赖，不平行。主workflow已授权13—36，活跃lease期间不要再改主workflow/来源/决策/正文，不强解锁。
+
+本轮修订选择：课程90→100分钟，19:00—20:40；凳净宽27→29厘米；21/22返书约15:30→15:20。以e-choice和已改候选为准。19上班提前90分钟不是课程；旧19正文标题提前一个半钟头保留历史文件名，风扇27/柜26+55=81/其他日15:30不是同一事实。不能全局替换数字。22当前原15:24到店须改为合理早于15:20，核等待/路程/对话而非只改约定。课程改动需核真实钟面/小标题、下课后/回家和新30；新32刚超8000字，不无关删减。按真实文本保留旧计划为历史意图并记录纲文差异，不刷旧来源哈希。
+
+不重登13—18、不重写已完成首停；逐章19—36全文实际FastCtx分页<=100行，对当前正文/旧base当前journal和追踪变化做语义核读。revision replay-input恢复每章基线，6个checked_fields逐项实际依据与当前SHA报告；先同一最终输入record-preview0再record0，增量保留未变项，不能拷贝36全快照当19历史。固定各章标签er-replay19、er-preview19、er-record19依次类推到36，便于根独立核对真实输入/退出/状态。生成的原replay草案和最终输入都留存，不覆盖失败。实际滚动门到期则真实完整窗口回读及review再继续，不以最后尾段回读代替中间硬门。
+
+特别新增回归：重登36必须检查replay-input原始生成草案来自最新修复journal ${j('pre-revision36-state.json').units[35].journal}，母亲/沈父已听购书结果的T_X_BOOK_COMPANY.character_known不能退回35。根已保存d-tracking-fix-verification；若原草案丢了最新修复立即保留原输出报根，不默默补正确后声称自动恢复通过。源版本CR33_INITIAL/CR33_RECALL_ID_V2及from33范围在rewind后必须仍在；canonical33物理文件旧P_X_COAT不等于漂移，应按activeV2绑定读取冻结bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858.source，33重登绑定V2，不能改state修补。前12完整units/正文、所有基线observation三字段保护，O_BOX_PAINT非排他证明不变。三新线T_X_COAT_DAILY33仅阶段反馈仍partial、TEA32真实到访resolved、BOOK35实际同行resolved；已修父母36知情保留，不硬结未知旅客/伤脚/未来约。
+
+候选完成36后，最后主区发布前必须对当前候选13→36作一次不夹写入的完整稳定尾段语义回读：先node X/candidate-read-boundary.mjs er-window-current before 36 13 36 ACTUAL_WORKSPACE；按state当前draft逐章单调完整FastCtx<=100行精确续页，不能读历史候选算当前，可每6章在X根保存阅读笔记（不写候选/主）。全读后同命令after。边界之间不能改候选state/正文；若发现问题，保留旧边界，修复后用新唯一label重新全24章稳定回读。之后给出真实跨章比较/纲文差异/三组旧事实传播/角色知情/物件/三伏笔证据报告，正式review覆盖完整13—36当前版本，再revision prepare与commit。固定发布标签er-prepare、er-commit。先实读当前help/docs不猜JSON结构。prepare机械通过不等于文学或作者验收。
+
+工具revision commit正常0后才在主P正式workflow paused、allowed_actions仅discuss、draft_range/revise_range都null，主P status/check/doctor/tool identify/revision list核36完整/无活跃lease/无drift/无pending窗口/当前覆盖。不写37不Git。保留最后实读报告/候选/全部journal与原稿。保存X/交接-E完成.md及机器可读e-complete-summary.json：真实handle/commit、实际改稿章与新值/旧字节引用、24章重登和读稿、36最新知情恢复核对原草案字段、版本33逻辑绑定、硬问题/保留可选项/全部失败与原始恢复记录、主暂停。正常退出供根核验及全新F会话做当前全36回读。`;
+fs.writeFileSync(path.join(x,'prompt-e-resume.md'),prompt+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,id:h.id,remaining:[19,36],prompt:'prompt-e-resume.md'}));

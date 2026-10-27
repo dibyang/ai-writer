@@ -1,0 +1,12 @@
+{
+  "operation": "ad hoc read-only state metadata extraction after final65 selected text reading",
+  "command_kind": "node -e, not product CLI",
+  "actual_outer_exit": 1,
+  "error": "SyntaxError: Unexpected token ')' / Expected ',', got ')'",
+  "cause": "An extra closing parenthesis was written in the SHA256 expression before digest().",
+  "effects": "JavaScript did not parse; no product invocation or state write occurred.",
+  "tool_output_was_truncated": true,
+  "original_evidence": "Native tool event with chunk_id deff5b; exact submitted command and tool output retained in native session events. This file is a failure description, not a fabricated full stderr capture.",
+  "correction": "Use the subsequent file-based b-first-stop-audit.mjs to compute actual hashes and compare the original template/CAS; preserve this failure.",
+  "product_defect": false
+}

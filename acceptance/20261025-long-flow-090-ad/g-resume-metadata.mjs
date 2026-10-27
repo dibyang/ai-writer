@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),j=x=>JSON.parse(fs.readFileSync(path.join(A,x))),P=j('project.json').project,s=JSON.parse(fs.readFileSync(path.join(P,'.writer/state.json'))),first=j('g-first-reading.json'),cp=j('checkpoint-g-first.json'),doctor=j('cli-logs/g-resume-doctor/stdout.txt'),status=j('cli-logs/g-resume-status/stdout.txt'),launch=j('native/g-resume/launch.json');
+const events=fs.readFileSync(path.join(A,'native/g-resume/events.public.jsonl'),'utf8').split('\n').filter(Boolean).map(x=>{try{return JSON.parse(x);}catch{return null;}}),thread=events.find(x=>x?.type==='thread.started');
+assert.equal(thread.thread_id,first.native_thread_id);
+const units=s.units.slice(30).map(u=>{const b=fs.readFileSync(path.join(P,u.draft)),t=b.toString('utf8');assert.equal(crypto.createHash('sha256').update(b).digest('hex'),u.sha256);return {unit:u.unit,draft:u.draft,sha256:u.sha256,chars:t.length,pages:Math.ceil(t.length/1800)};});
+const result={at:new Date().toISOString(),native_thread:thread,launch,elapsed_ms:Date.now()-Date.parse(launch.started_at),restored_first_reading:{thread:first.native_thread_id,revision:first.main_revision,scope:first.read_scope,not_reread_this_process:true},checkpoint_metadata:{revision:cp.revision,registered_units:cp.registered_units,generation:cp.generation,state_sha256:cp.state_sha256,files:Object.keys(cp.files).length},resources:{skill_root:doctor.skill_root,content_root:doctor.content_root,cid:doctor.build.observed_content_id,rid:doctor.build.runtime_id},status:{revision:status.revision,stage:status.governance.stage,authorization:status.governance.authorization,stale_units:status.stale_units,changed_sources:status.changed_sources,impact_pending:status.impact_pending,issue_counts:status.review_workflow.counts},units,total_pages:units.reduce((n,u)=>n+u.pages,0)};
+fs.writeFileSync(path.join(A,'g-resume-current-manifest.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result,null,2));

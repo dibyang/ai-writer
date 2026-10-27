@@ -1,0 +1,72 @@
+{
+  "expected_revision": 28,
+  "operation_id": "v-ac-update-and-tracking-start",
+  "author_evidence": {
+    "quote": "本次用户继续推进、发现问题直接修复的工具试验授权，由根明确允许仅对V隔离作品执行正式tool update和意见应用/复核。",
+    "local_source": "研究/V-A-工具升级与追踪闭环授权原文.md",
+    "source_sha256": "181f85742dda66eec24b8293de3312e7451a476341dc876629b47b61eade972b",
+    "locator": "本轮实际提示第二段；根在V隔离试验内选择工具更新与tracking闭环，不认证作者身份、不冒充人类逐字选择字段",
+    "recorded_by": "同一实际V-A Codex会话"
+  },
+  "workflow": {
+    "stage": "structure",
+    "task": "仅规划并正式升级V隔离作品随附工具、对既有追踪修订执行意见应用与实读复核闭环；不写7、不新开剧情修订",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "根修后构建核验ok=true后，外部P完整包正式tool update，根定制默认保留；六章正文/事实/消费内容不改",
+        "新工具默认apply仍须拒绝无正文变更；另存显式change_scope tracking输入绑定已有真实commit，不捏造第二次修改",
+        "完整实读4—6和修后summary/timeline，新review后verify；成功才称意见闭环",
+        "完成后paused仅discuss、两范围null，到6等根独立复核及B新的7—9提示；不写7",
+        "仅V写入，不改U/T/源码，不派代理、不Git提交推送上传；失败留原输入和双流实际码/前后state"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

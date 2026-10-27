@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath}from'node:url';const X=path.dirname(fileURLToPath(import.meta.url)),h=JSON.parse(fs.readFileSync(path.join(X,'e-handle.json'),'utf8')),i=JSON.parse(fs.readFileSync(path.join(h.workspace,'.writer/drafts/e-replay17.json'),'utf8'));
+const fix=v=>typeof v==='string'?v.replaceAll('二十七','二十九').replaceAll('27','29'):Array.isArray(v)?v.map(fix):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,fix(x)])):v;
+fs.writeFileSync(path.join(X,'e-input-patch17.json'),JSON.stringify({summary:fix(i.summary),changes:fix(i.changes)},null,2)+'\n',{flag:'wx'});console.log('saved explicit unit17 fact patch');

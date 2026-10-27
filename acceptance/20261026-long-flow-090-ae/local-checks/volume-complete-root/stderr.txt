@@ -1,0 +1,11 @@
+file:///D:/work/other/ai-writer/acceptance/20261026-long-flow-090-ae/verify-volume-complete.mjs:7
+assert.deepEqual(state.units[0],before.units[0]);assert.deepEqual(state.ledger.O_UMBRELLA_MARK,before.ledger.O_UMBRELLA_MARK);for(const u of state.units){assert.equal(u.draft,before.units[u.unit-1].draft);assert.equal(sha(fs.readFileSync(path.join(P,u.draft))),u.sha256);if(u.unit>1)assert.notEqual(u.sha256,before.units[u.unit-1].sha256);}
+                                                                               ^
+
+TypeError: Cannot read properties of undefined (reading 'O_UMBRELLA_MARK')
+    at file:///D:/work/other/ai-writer/acceptance/20261026-long-flow-090-ae/verify-volume-complete.mjs:7:80
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

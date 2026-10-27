@@ -1,0 +1,12 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+const X=path.dirname(fileURLToPath(import.meta.url)),P=path.join(X,'scenario/东岸末班船-再扩展验证');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const raw=fs.readFileSync(path.join(P,'.writer/state.json')),s=JSON.parse(raw),base=read(path.join(X,'parent-before-f-state.json'));
+const issueLog=read(path.join(X,'cli-logs/f-issues-list/stdout.raw.txt'));
+const b=read(path.join(X,'read-boundaries/f-current-full-before.json')),a=read(path.join(X,'read-boundaries/f-current-full-after.json'));
+assert.equal(sha(raw),a.state_sha256);assert.deepEqual(s.units,base.units);assert.deepEqual(s.snapshot,base.snapshot);
+const drafts=s.units.map(u=>{const text=fs.readFileSync(path.join(P,u.draft),'utf8');assert.equal(sha(Buffer.from(text)),u.sha256);const body=text.replace(/^# .*\r?\n(?:\r?\n)?/u,'');return {unit:u.unit,draft:u.draft,sha256:u.sha256,title:text.split(/\r?\n/)[0],body_han:(body.match(/\p{Script=Han}/gu)||[]).length};});
+const relevant=Object.fromEntries(Object.entries(s.snapshot.ledger).filter(([id,e])=>/COAT|TEA_AFTER|BOOK_COMPANY|BOX_PAINT|CLASS|BENCH|RETURN|DEPOSIT|DOOR_FEE|CABINET/u.test(id)));
+const observations=Object.fromEntries(Object.entries(base.snapshot.ledger).filter(([,e])=>e.type==='observation').map(([id,e])=>{for(const k of ['type','statement','author_truth'])assert.deepEqual(s.snapshot.ledger[id][k],e[k]);return [id,{type:e.type,statement:e.statement,...(Object.hasOwn(e,'author_truth')?{author_truth:e.author_truth}:{})}];}));
+const result={ok:true,at:new Date().toISOString(),state_sha256:sha(raw),revision:s.revision,boundary:{label:b.label,from:1,through:36,stable:true,before:b.state_sha256,after:a.state_sha256},drafts,body_han:drafts.reduce((n,u)=>n+u.body_han,0),state_keys:Object.keys(s),unit33:s.units.find(u=>u.unit===33),source_related:Object.fromEntries(Object.entries(s).filter(([k])=>/source/i.test(k))),relevant_ledger:relevant,observations,issues:issueLog};
+fs.writeFileSync(path.join(X,'f-current-audit.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,revision:s.revision,body_han:result.body_han,state_keys:result.state_keys,issue_keys:Object.keys(issueLog),drafts:drafts.length,relevant_ledger_ids:Object.keys(relevant)}));

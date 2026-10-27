@@ -1,0 +1,3644 @@
+{
+  "schema": "ac-e-second-execution-v1",
+  "generated_at": "2026-10-24T22:51:44.517Z",
+  "status": "candidate44-recorded-same-id-uncommitted-checkpoint",
+  "overall_authorized_revision": {
+    "from": 35,
+    "through": 48,
+    "draft_range": null
+  },
+  "stop_is_task_checkpoint_not_author_scope": true,
+  "author_evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AC作者任务.md",
+    "source_sha256": "46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2",
+    "locator": "2026-10-24 ai-writer原用户授权；E控制器选择与执行范围另见AC本地e-controller-selection.md及本次用户消息，不冒充真人新增剧情",
+    "recorded_by": "Codex AC E same native session"
+  },
+  "controller_selection": {
+    "ref": "e-controller-selection.md",
+    "sha256": "28d9cbdf7d68ec5b61c83e2d70fc9bddc034c9c0d8f9bd20e495ada6524757a2",
+    "authority": "controller under original human task, not new human plot wording",
+    "current_instruction": "AC E第二组同ID39恢复44；44正式登记即停，下一组45—48"
+  },
+  "revision": {
+    "id": "46029167-c62a-44f9-b591-e053ddc01bbb",
+    "scope": {
+      "from": 35,
+      "through": 48
+    },
+    "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证\\.writer\\revisions\\46029167-c62a-44f9-b591-e053ddc01bbb\\workspace",
+    "base_revision": 253,
+    "token_file": "e1-private/ownership.json",
+    "token_disclosed": false,
+    "same_id": true,
+    "not_reopened": true,
+    "not_abandoned": true,
+    "prepare": false,
+    "commit": false
+  },
+  "entry": {
+    "resume_verification": "revision-resume-e-second-verification.json",
+    "actual_command": "node acceptance/20261024-long-flow-090-ac/check-revision-resume.mjs e-second checkpoint-root-e-repaired-first.json",
+    "ok": true,
+    "at": "2026-10-24T22:31:36.864Z",
+    "label": "e-second",
+    "checkpoint": "checkpoint-root-e-repaired-first.json",
+    "checkpoint_sha256": "8e347dc110cb3dadbd4006fd3c5ae72d18ca9a7a571619a62f9decafc303da9d",
+    "project": "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证\\.writer\\revisions\\46029167-c62a-44f9-b591-e053ddc01bbb\\workspace",
+    "main": "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证",
+    "revision": 269,
+    "main_revision": 253,
+    "registered_units": 39,
+    "state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+    "main_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+    "verified_files": 1045,
+    "note": "Read-only byte restoration check before any candidate mutation. Native resume identity is separately checked against public launch/events."
+  },
+  "main": {
+    "project": "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证",
+    "revision": 253,
+    "registered_units": 48,
+    "state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+    "impact_pending": 9,
+    "all_1168_existing_files_unchanged": true,
+    "check_passed": false
+  },
+  "candidate": {
+    "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证\\.writer\\revisions\\46029167-c62a-44f9-b591-e053ddc01bbb\\workspace",
+    "revision": 275,
+    "units": 44,
+    "state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+    "pending": 0,
+    "registered_units": 44,
+    "check_passed": true,
+    "next_unit": 45
+  },
+  "source_protocol": [
+    {
+      "id": "S01",
+      "ref": "大纲/单元/0036.json",
+      "file": "研究/E1候选来源/S01.json",
+      "old_sha256": "13d7863bc14d9440b29d2f0e4d8ca5f70e663cde4063bc884cb2153af9b5ce7a",
+      "new_sha256": "18f2ee59b5cd04cc85b1f0898d43a3938dd3d77666bef1125204880e9623c5cb",
+      "from": 36,
+      "edits": [
+        [
+          "12元花册",
+          "14元花册"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S01_OLD",
+      "new_version": "E1_S01_NEW",
+      "review_from": 35,
+      "revision_from": 36,
+      "impact_id": "b0a6fb4d-e575-43f8-858a-18758e484c1a",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 36",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S01-旧来源baseline实读.md",
+        "审查/E1-S01-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s01-freeze-old",
+        "e1-s01-impact-baseline",
+        "e1-s01-publish-baseline",
+        "e1-s01-freeze-new",
+        "e1-s01-impact-historical",
+        "e1-s01-stage",
+        "e1-s01-candidate-publish"
+      ],
+      "consumed_new_units": [
+        36
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/单元/0036.json",
+          "version_id": "E1_S01_OLD",
+          "from": 1,
+          "to": 35
+        },
+        {
+          "ref": "大纲/单元/0036.json",
+          "version_id": "E1_S01_NEW",
+          "from": 36,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "ref": "大纲/X-DR第36章执行纲.md",
+      "file": "研究/E1候选来源/S02.md",
+      "old_sha256": "f5ea72dcb29301f86e01f382619fc33e61c817fc145f7c112e05ae87e9b4c1cf",
+      "new_sha256": "5e24fb0d12eed858d38210226eeb0cea8ee18d688a70c230461c3b8bc98489e9",
+      "from": 36,
+      "edits": [
+        [
+          "女拆自己12元花册",
+          "女拆自己14元花册"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S02_OLD",
+      "new_version": "E1_S02_NEW",
+      "review_from": 35,
+      "revision_from": 36,
+      "impact_id": "37f33ea5-d9fe-4d72-b219-5427abb80743",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 36",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S02-旧来源baseline实读.md",
+        "审查/E1-S02-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s02-freeze-old",
+        "e1-s02-impact-baseline",
+        "e1-s02-publish-baseline",
+        "e1-s02-freeze-new",
+        "e1-s02-impact-historical",
+        "e1-s02-stage",
+        "e1-s02-candidate-publish"
+      ],
+      "consumed_new_units": [
+        36
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/X-DR第36章执行纲.md",
+          "version_id": "E1_S02_OLD",
+          "from": 1,
+          "to": 35
+        },
+        {
+          "ref": "大纲/X-DR第36章执行纲.md",
+          "version_id": "E1_S02_NEW",
+          "from": 36,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "ref": "大纲/AC-B推进窗口-40-42.md",
+      "file": "研究/E1候选来源/S03.md",
+      "old_sha256": "efe1b953a3991d8413165c09ceaa0f92dd890a36ce2b63b2692ec0a960f0bef1",
+      "new_sha256": "4f358e4645170bd37183d876e73d1d585860bcb7f25990ba452b4885afe2b6fc",
+      "from": 40,
+      "edits": [
+        [
+          "拟材料实报8",
+          "拟材料实报10"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S03_OLD",
+      "new_version": "E1_S03_NEW",
+      "review_from": 39,
+      "revision_from": 40,
+      "impact_id": "11aa5d24-2493-4c77-9a52-2f9b3c5edfaa",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 40",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S03-旧来源baseline实读.md",
+        "审查/E1-S03-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s03-freeze-old",
+        "e1-s03-impact-baseline",
+        "e1-s03-publish-baseline",
+        "e1-s03-freeze-new",
+        "e1-s03-impact-historical",
+        "e1-s03-stage",
+        "e1-s03-candidate-publish"
+      ],
+      "consumed_new_units": [
+        40,
+        41,
+        42
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/AC-B推进窗口-40-42.md",
+          "version_id": "E1_S03_OLD",
+          "from": 1,
+          "to": 39
+        },
+        {
+          "ref": "大纲/AC-B推进窗口-40-42.md",
+          "version_id": "E1_S03_NEW",
+          "from": 40,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "ref": "大纲/单元/0040.json",
+      "file": "研究/E1候选来源/S04.json",
+      "old_sha256": "1c1fd1baa2163bdf0be1e420e42f170f8da8b73e0f54b964065e2cf1e855b51d",
+      "new_sha256": "7bc0f6f73bad474d4c6e831d8331cf9230feeb74d009e0f08d7029966a990089",
+      "from": 40,
+      "edits": [
+        [
+          "材料拟8实报",
+          "材料拟10实报"
+        ],
+        [
+          "付款八元并留凭条",
+          "付款十元并留凭条"
+        ],
+        [
+          "原件/八元凭条",
+          "原件/十元凭条"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S04_OLD",
+      "new_version": "E1_S04_NEW",
+      "review_from": 39,
+      "revision_from": 40,
+      "impact_id": "2787fb0d-7825-4b5b-a8d1-14951571d498",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 40",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S04-旧来源baseline实读.md",
+        "审查/E1-S04-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s04-freeze-old",
+        "e1-s04-impact-baseline",
+        "e1-s04-publish-baseline",
+        "e1-s04-freeze-new",
+        "e1-s04-impact-historical",
+        "e1-s04-stage",
+        "e1-s04-candidate-publish"
+      ],
+      "consumed_new_units": [
+        40
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/单元/0040.json",
+          "version_id": "E1_S04_OLD",
+          "from": 1,
+          "to": 39
+        },
+        {
+          "ref": "大纲/单元/0040.json",
+          "version_id": "E1_S04_NEW",
+          "from": 40,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "ref": "大纲/单元/0041.json",
+      "file": "研究/E1候选来源/S05.json",
+      "old_sha256": "420060d3f2f73f3bb15a75762414340e0809d9e510f7a8f8b7a788d2976f78d0",
+      "new_sha256": "4403959441c950a877fb483b5ea2527dad560eb71eab621b78a503376ed4a288",
+      "from": 41,
+      "edits": [
+        [
+          "买8元料",
+          "买10元料"
+        ],
+        [
+          "八元条",
+          "十元条"
+        ],
+        [
+          "本处工40料8待真正交款才已收",
+          "本处工40料10待真正交款才已收；若本章交款，合50整付，不发生原两元找零"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S05_OLD",
+      "new_version": "E1_S05_NEW",
+      "review_from": 40,
+      "revision_from": 41,
+      "impact_id": "f167fde0-719c-41d5-9cfd-70307227e8f0",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 41",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S05-旧来源baseline实读.md",
+        "审查/E1-S05-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s05-freeze-old",
+        "e1-s05-impact-baseline",
+        "e1-s05-publish-baseline",
+        "e1-s05-freeze-new",
+        "e1-s05-impact-historical",
+        "e1-s05-stage",
+        "e1-s05-candidate-publish"
+      ],
+      "consumed_new_units": [
+        41
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/单元/0041.json",
+          "version_id": "E1_S05_OLD",
+          "from": 1,
+          "to": 40
+        },
+        {
+          "ref": "大纲/单元/0041.json",
+          "version_id": "E1_S05_NEW",
+          "from": 41,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "ref": "大纲/单元/0042.json",
+      "file": "研究/E1候选来源/S06.json",
+      "old_sha256": "8e64b9ff129c7820975fa0d0e809796d4ba9e3b1cca9ba8aabd3e08e241ab9bf",
+      "new_sha256": "96f6c6502753ff27dfc363235f00dca0c6c11c406fa01731785a1284ce8c36f4",
+      "from": 42,
+      "edits": [
+        [
+          "不重收41已收48",
+          "不重收41已收50"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S06_OLD",
+      "new_version": "E1_S06_NEW",
+      "review_from": 41,
+      "revision_from": 42,
+      "impact_id": "a5b1bd86-054f-4305-945b-3ff713d6ba09",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 42",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S06-旧来源baseline实读.md",
+        "审查/E1-S06-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s06-freeze-old",
+        "e1-s06-impact-baseline",
+        "e1-s06-publish-baseline",
+        "e1-s06-freeze-new",
+        "e1-s06-impact-historical",
+        "e1-s06-stage",
+        "e1-s06-candidate-publish"
+      ],
+      "consumed_new_units": [
+        42
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/单元/0042.json",
+          "version_id": "E1_S06_OLD",
+          "from": 1,
+          "to": 41
+        },
+        {
+          "ref": "大纲/单元/0042.json",
+          "version_id": "E1_S06_NEW",
+          "from": 42,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "ref": "大纲/AC-C推进窗口-43-45.md",
+      "file": "研究/E1候选来源/S07.md",
+      "old_sha256": "c683b8b8a3cbc32b6e30abc333ee99dec1f4443c601be463c7ef99ef61d731d9",
+      "new_sha256": "ea6c317e22eadf0a61201b6d3efbfed44b6a3d137602291b92ead5e3ee494437",
+      "from": 43,
+      "edits": [
+        [
+          "门条41当面有限验收并实收48",
+          "门条41当面有限验收并实收50"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S07_OLD",
+      "new_version": "E1_S07_NEW",
+      "review_from": 42,
+      "revision_from": 43,
+      "impact_id": "c8361327-7e65-4065-b2bb-64548be40fad",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 43",
+      "consumed_new": true,
+      "not_yet_effective_in_recorded_units": false,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S07-旧来源baseline实读.md",
+        "审查/E1-S07-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s07-freeze-old",
+        "e1-s07-impact-baseline",
+        "e1-s07-publish-baseline",
+        "e1-s07-freeze-new",
+        "e1-s07-impact-historical",
+        "e1-s07-stage",
+        "e1-s07-candidate-publish"
+      ],
+      "consumed_new_units": [
+        43,
+        44
+      ],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/AC-C推进窗口-43-45.md",
+          "version_id": "E1_S07_OLD",
+          "from": 1,
+          "to": 42
+        },
+        {
+          "ref": "大纲/AC-C推进窗口-43-45.md",
+          "version_id": "E1_S07_NEW",
+          "from": 43,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "ref": "大纲/AC-D推进窗口-46-48.md",
+      "file": "研究/E1候选来源/S08.md",
+      "old_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+      "new_sha256": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+      "from": 46,
+      "edits": [
+        [
+          "门41实付48/本处完成",
+          "门41实付50/本处完成"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S08_OLD",
+      "new_version": "E1_S08_NEW",
+      "review_from": 45,
+      "revision_from": 46,
+      "impact_id": "f168ba89-2cf3-41b4-8fbf-0845015a140a",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 46",
+      "consumed_new": false,
+      "not_yet_effective_in_recorded_units": true,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S08-旧来源baseline实读.md",
+        "审查/E1-S08-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s08-freeze-old",
+        "e1-s08-impact-baseline",
+        "e1-s08-publish-baseline",
+        "e1-s08-freeze-new",
+        "e1-s08-impact-historical",
+        "e1-s08-stage",
+        "e1-s08-candidate-publish"
+      ],
+      "consumed_new_units": [],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/AC-D推进窗口-46-48.md",
+          "version_id": "E1_S08_OLD",
+          "from": 1,
+          "to": 45
+        },
+        {
+          "ref": "大纲/AC-D推进窗口-46-48.md",
+          "version_id": "E1_S08_NEW",
+          "from": 46,
+          "to": null
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "ref": "大纲/单元/0047.json",
+      "file": "研究/E1候选来源/S09.json",
+      "old_sha256": "5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c",
+      "new_sha256": "5381bc88ead2d6bf44090f6ab435c16c33d87239d5cdb50617a967f4caeab1c9",
+      "from": 47,
+      "edits": [
+        [
+          "本次门修工40料8已结",
+          "本次门修工40料10已结"
+        ]
+      ],
+      "authority": "controller under original human task; not new human plot wording",
+      "old_version": "E1_S09_OLD",
+      "new_version": "E1_S09_NEW",
+      "review_from": 46,
+      "revision_from": 47,
+      "impact_id": "55817c83-87e6-427b-8db7-75e6e84b9f08",
+      "retained_prefix_consumers": [],
+      "baseline": "published from1, original matching consumers auto-bound",
+      "stage": "main impact-pending",
+      "candidate_publish": "published interval from 47",
+      "consumed_new": false,
+      "not_yet_effective_in_recorded_units": true,
+      "original_entry_unchanged": true,
+      "reports": [
+        "审查/E1-S09-旧来源baseline实读.md",
+        "审查/E1-S09-历史来源impact实读.md"
+      ],
+      "labels": [
+        "e1-s09-freeze-old",
+        "e1-s09-impact-baseline",
+        "e1-s09-publish-baseline",
+        "e1-s09-freeze-new",
+        "e1-s09-impact-historical",
+        "e1-s09-stage",
+        "e1-s09-candidate-publish"
+      ],
+      "consumed_new_units": [],
+      "protocol_repeated_this_turn": false,
+      "main_pending": true,
+      "candidate_ranges": [
+        {
+          "ref": "大纲/单元/0047.json",
+          "version_id": "E1_S09_OLD",
+          "from": 1,
+          "to": 46
+        },
+        {
+          "ref": "大纲/单元/0047.json",
+          "version_id": "E1_S09_NEW",
+          "from": 47,
+          "to": null
+        }
+      ]
+    }
+  ],
+  "source_events_this_turn": [],
+  "source_protocol_note": "九项已于E1完成旧freeze/baseline/必要等价bind、新freeze/historical impact/stage及候选publish。本轮未重走、未覆盖旧输入或入口；仅按既存有效区间读取并正式回放。主区九pending未提交。S08/S09已发布但46/47尚未消费，不称未publish。",
+  "reading": [
+    {
+      "unit": 39,
+      "draft": "正文/0039-留到手上用-ac-ar-v1.md",
+      "sha256": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+      "chars": 11818,
+      "hanzi": 10059,
+      "pages": 7,
+      "logs": [
+        "read-pages/e3-c39-p1.json",
+        "read-pages/e3-c39-p2.json",
+        "read-pages/e3-c39-p3.json",
+        "read-pages/e3-c39-p4.json",
+        "read-pages/e3-c39-p5.json",
+        "read-pages/e3-c39-p6.json",
+        "read-pages/e3-c39-p7.json"
+      ],
+      "full_current_returned_this_turn": true
+    },
+    {
+      "unit": 40,
+      "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+      "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+      "chars": 16443,
+      "hanzi": 14097,
+      "pages": 10,
+      "logs": [
+        "read-pages/e3-c40-p1.json",
+        "read-pages/e3-c40-p2.json",
+        "read-pages/e3-c40-p3.json",
+        "read-pages/e3-c40-p4.json",
+        "read-pages/e3-c40-p5.json",
+        "read-pages/e3-c40-p6.json",
+        "read-pages/e3-c40-p7.json",
+        "read-pages/e3-c40-p8.json",
+        "read-pages/e3-c40-p9.json",
+        "read-pages/e3-c40-p10.json"
+      ],
+      "full_current_returned_this_turn": true
+    },
+    {
+      "unit": 41,
+      "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+      "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+      "chars": 11936,
+      "hanzi": 10218,
+      "pages": 7,
+      "logs": [
+        "read-pages/e3-c41-p1.json",
+        "read-pages/e3-c41-p2.json",
+        "read-pages/e3-c41-p3.json",
+        "read-pages/e3-c41-p4.json",
+        "read-pages/e3-c41-p5.json",
+        "read-pages/e3-c41-p6.json",
+        "read-pages/e3-c41-p7.json"
+      ],
+      "full_current_returned_this_turn": true
+    },
+    {
+      "unit": 42,
+      "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+      "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+      "chars": 12526,
+      "hanzi": 10665,
+      "pages": 7,
+      "logs": [
+        "read-pages/e3-c42-p1.json",
+        "read-pages/e3-c42-p2.json",
+        "read-pages/e3-c42-p3.json",
+        "read-pages/e3-c42-p4.json",
+        "read-pages/e3-c42-p5.json",
+        "read-pages/e3-c42-p6.json",
+        "read-pages/e3-c42-p7.json"
+      ],
+      "full_current_returned_this_turn": true
+    },
+    {
+      "unit": 43,
+      "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+      "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+      "chars": 12619,
+      "hanzi": 10807,
+      "pages": 8,
+      "logs": [
+        "read-pages/e3-c43-p1.json",
+        "read-pages/e3-c43-p2.json",
+        "read-pages/e3-c43-p3.json",
+        "read-pages/e3-c43-p4.json",
+        "read-pages/e3-c43-p5.json",
+        "read-pages/e3-c43-p6.json",
+        "read-pages/e3-c43-p7.json",
+        "read-pages/e3-c43-p8.json"
+      ],
+      "full_current_returned_this_turn": true
+    },
+    {
+      "unit": 44,
+      "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+      "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+      "chars": 16436,
+      "hanzi": 14113,
+      "pages": 10,
+      "logs": [
+        "read-pages/e3-c44-p1.json",
+        "read-pages/e3-c44-p2.json",
+        "read-pages/e3-c44-p3.json",
+        "read-pages/e3-c44-p4.json",
+        "read-pages/e3-c44-p5.json",
+        "read-pages/e3-c44-p6.json",
+        "read-pages/e3-c44-p7.json",
+        "read-pages/e3-c44-p8.json",
+        "read-pages/e3-c44-p9.json",
+        "read-pages/e3-c44-p10.json"
+      ],
+      "full_current_returned_this_turn": true
+    }
+  ],
+  "reading_total_current_pages": 49,
+  "reading_reuse": {
+    "units": [
+      37,
+      38
+    ],
+    "basis": "同原生Codex会话E2实际完整页，当前正文SHA和E2日志相同；仅用于本轮37—42连读正式报告，未冒称37/38本轮重新返回。35/36本轮核当前知识账本及当前SHA，正文完整页为E2同SHA复用。"
+  },
+  "replay": [
+    {
+      "unit": 40,
+      "input": ".writer/drafts/e3-record-40.json",
+      "expected_revision": 269,
+      "draft_sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+      "report": "审查/E3-40-当前修订实读与六项差量.md",
+      "report_sha256": "20609ab64b7119980ab35f890b92e9bda7bab5c62bafb4aab06786f8d5b910a6",
+      "reviewer": "Codex AC E same native session; informed model self-review, not human or blind review",
+      "replay_review": {
+        "reviewer": "Codex AC E same native session informed model self-review",
+        "report": "审查/E3-40-当前修订实读与六项差量.md",
+        "draft_sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      },
+      "body_changed": true,
+      "tracking_diff": "e3-delta-40.json",
+      "input_clarification": null,
+      "semantic_patch": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "第32日周四九点续门前现场：周岸稳门退钉，旧加条两截与碎片取清给老人看并入脚侧纸箱，旧钉厚纸另包留自工具包。原门底亲见仅钉孔/浅层松皮，未见须换整块坏处，门未卸合页，无遮条能轻合但下缝有风；老人同意新条留行程细缝。姑娘真向排班者及接手者问妥周六后两小时换下周一12点后，发沈而未告许母。沈收消息，向谭只说女班问好仍须告诉家里，自己提出到许家先坐10分钟获女答应；半块豆腐换盒冷藏未交父。周电话问料8获主人同意，实到料店挑干条，付10找2，回屋出示八元条交主人留。新余头入另纸袋，长条试夹后因高砖与门面起伏标记待收；十点刚过仍未正式固定/未成品试用/未向主人收钱，工40不变。",
+          "after": "第32日周四九点续门前现场：周岸稳门退钉，旧加条两截与碎片取清给老人看并入脚侧纸箱，旧钉厚纸另包留自工具包。原门底亲见仅钉孔/浅层松皮，未见须换整块坏处，门未卸合页，无遮条能轻合但下缝有风；老人同意新条留行程细缝。姑娘真向排班者及接手者问妥周六后两小时换下周一12点后，发沈而未告许母。沈收消息，向谭只说女班问好仍须告诉家里，自己提出到许家先坐10分钟获女答应；半块豆腐换盒冷藏未交父。周电话问料10获主人同意，实到料店挑干条，付10正好，回屋出示十元条交主人留。新余头入另纸袋，长条试夹后因高砖与门面起伏标记待收；十点刚过仍未正式固定/未成品试用/未向主人收钱，工40不变。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "周岸"
+          ],
+          "before": "周四九点后亲拆旧条，原门未卸合页，底边钉孔/浅松皮未见大块腐坏；工40不变，电话问料8获同意，店付10找2选料回屋，八元条交主人。新条锯长/试夹后发现高砖处需收，十点刚过新条仍在垫木边手上待修未固定/未收主人钱；旧钉纸包留自包外格。未知姑娘饭约新排班，抽屉未装/18未收。",
+          "after": "周四九点后亲拆旧条，原门未卸合页，底边钉孔/浅松皮未见大块腐坏；工40不变，电话问料10获同意，店付10正好选料回屋，十元条交主人。新条锯长/试夹后发现高砖处需收，十点刚过新条仍在垫木边手上待修未固定/未收主人钱；旧钉纸包留自包外格。未知姑娘饭约新排班，抽屉未装/18未收。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "房门女主人"
+          ],
+          "before": "亲留家扶门看取条，亲试无遮条门轻但有底缝；同意料8工40，听周先付并收到8元条留空碟下，自己未付。让老人参与挡风/朝面/余料选择；真电话改下午取物先另联系。十点刚过去厨房淘米，11:30热饭，未邀请周共同吃。",
+          "after": "亲留家扶门看取条，亲试无遮条门轻但有底缝；同意料10工40，听周先付并收到10元条留空碟下，自己未付。让老人参与挡风/朝面/余料选择；真电话改下午取物先另联系。十点刚过去厨房淘米，11:30热饭，未邀请周共同吃。"
+        },
+        {
+          "path": [
+            "changes",
+            "timeline_append",
+            2
+          ],
+          "before": "同日上午周经同意料8去店真付10找2购条，回屋交8元条；新余料另袋，旧条入箱，新条试配再标记。",
+          "after": "同日上午周经同意料10去店真付10正好购条，回屋交10元条；新余料另袋，旧条入箱，新条试配再标记。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "reader_known"
+          ],
+          "before": "40旧条实拆/原门底亲见/料8同意且周实购；原门可轻合却仍有缝，老人同意新条留余量；十点后新条已锯/试夹再取下待收，未固定未收款。",
+          "after": "40旧条实拆/原门底亲见/料10同意且周实购；原门可轻合却仍有缝，老人同意新条留余量；十点后新条已锯/试夹再取下待收，未固定未收款。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "character_known",
+            "周岸"
+          ],
+          "before": "亲见拆后木况，和母女同意工40料8，已自付8购料回屋；新条试夹后待再收，正式安装/付款尚未发生。",
+          "after": "亲见拆后木况，和母女同意工40料10，已自付10购料回屋；新条试夹后待再收，正式安装/付款尚未发生。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "character_known",
+            "房门女主人"
+          ],
+          "before": "亲看拆条/试无遮门，料8已同意，见周付料凭条但自己未付；十点后新条待修固定，11:30热饭。",
+          "after": "亲看拆条/试无遮门，料10已同意，见周付料凭条但自己未付；十点后新条待修固定，11:30热饭。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "evidence",
+            0,
+            "quote"
+          ],
+          "before": "这一根八块，我付了。",
+          "after": "这一根十块，我付了。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "P_AC_B_NEW_DOOR_STRIP",
+            "statement"
+          ],
+          "before": "40周岸经主人同意八元后实际买回的本处新木条",
+          "after": "40周岸经主人同意十元后实际买回的本处新木条"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "P_AC_B_NEW_DOOR_STRIP",
+            "custody",
+            "condition"
+          ],
+          "before": "选料付款8/回屋确认/锯长，旧漆不同新浅色；临夹试配后取下，铅笔记高砖余量待收，未正式固定；锯下余头已交主人另袋",
+          "after": "选料付款10/回屋确认/锯长，旧漆不同新浅色；临夹试配后取下，铅笔记高砖余量待收，未正式固定；锯下余头已交主人另袋"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "statement"
+          ],
+          "before": "40本处普通门底工40约定不变，料8获同意，周实际付料8；主人未向周付工料",
+          "after": "40本处普通门底工40约定不变，料10获同意，周实际付料10正好；主人未向周付工料"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "reader_known"
+          ],
+          "before": "周付十找两买一根木条，8元小条交主人留空碟下；做后再付工40及料8，现未收主人款。",
+          "after": "周付十元正好买一根木条，无找零；10元小条交女主人留空碟下。做后再付工40及料10共50，现未收主人款。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "character_known",
+            "周岸"
+          ],
+          "before": "料店真付8且交凭条，尚未从主人收48。",
+          "after": "料店真付10正好且交凭条，尚未从主人收50。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "character_known",
+            "房门女主人"
+          ],
+          "before": "亲同意料8工40并看到八元条，问先付料后同意装好一起给，未付款。",
+          "after": "亲同意料10工40并看到十元条，问先付料后同意装好一起给50，未付款。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "evidence",
+            0,
+            "quote"
+          ],
+          "before": "周岸从钱夹取十块，对方找回两枚硬币",
+          "after": "周岸从钱夹取十块，递过去，老板将纸币展平看过，说正好"
+        }
+      ],
+      "preview": "e3-u40-preview",
+      "record": "e3-u40-record",
+      "journal": ".writer/journal/cfe54c1b-569d-4c96-ae90-c77158bada1c.json",
+      "journal_sha256": "15d3d47abf411c73ce2b34aaa1240fe48300205283e6f943640b990001e00d2c",
+      "actual_result": "门主在购料前实际听到并同意10；周付10正好，店收纸币；十元凭条/材料实支10及旧条、新条、余头保管均核实。无原找回2或其依赖动作。正文9处局部编辑；追踪15项显式差量。",
+      "full_read_report_text": "# E3 第40章当前修订实读与六项差量\n\nCodex模型知情自检，同一原生会话，不是人类或盲读。控制材料10元为controller已选试验值，不是新作者原话或原文错误判定。\n\n写前：指定e-second恢复核1045文件全匹配，主r253/48九pending、候选r269/39零pending，实际status/check/doctor。当前39七页e3-c39-p1—p7完整回读；当前35/36花册14知识和账本、原8册/18未买/20未动、O_BOX_PAINT原观察实核。当前context e3-u40-context采用E1_S03_NEW与E1_S04_NEW，687行差量视图完整分页读，包括新来源全文。旧来源和所有冻结对象保持；已publish的九项不重走。\n\n新稿：正文/0040-取下来的那一条-ac-b-v1.md，SHA 34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7，16443字符/14097去标题汉字，十页e3-c40-p1—p10全部实际读完。原正文另存e3-original-drafts，九处精确语境改动见e3-u40-body-diff.json，未全局替换数字。原分段未改。\n\n- summary：保留退旧钉、旧条分截给老人看/纸箱、原门仍挂合页且仅浅松皮、留行程细缝；换班及豆腐冷藏线逐段核实。仅将门料8/付10找2/八元条改成料10、付10正好与十元条；主人本章仍未给周工料钱。\n- characters：周亲问店价10，向母女说明工40不变；女主人实际问够不够、明确同意10，无此知情先不买。老人亲听并选浅色朝面和留余料。料店实收10；女主人实见周付后带回的十元条留空碟。周不知道两姑娘调班；许母未得周一日期、沈父未得新排班和豆腐，老板只听女班问好待家里答复。\n- timeline：周四九点拆条、九点半后姑娘换周六末两小时取周一12点后窗口、沈12:30窗口不动；十点刚过新条未固定，11:30热饭仍未来。买料支出10发生在主人付50之前，不能写成本章收50。\n- ledger：T_D_ROOM_DOOR_LOOK的料款与知情改10；P_AC_B_NEW_DOOR_STRIP声明/condition改同意十元实际付10，仍周手边垫木旁待修；F_AC_B_DOOR_PAYMENT改周实付十元正好、十元条在女主人空碟下，工40/料10合50待做后给。旧钉厚纸包在周工具包外格，旧条两截/小碎片归老人开口箱，新一掌余头收断口后另纸袋在箱侧，不与旧裂条混。抽屉未装/18未收、柜门等侧图保持。\n- evidence：原“周岸从钱夹取十块，对方找回两枚硬币”已失效，另用当前“周岸从钱夹取十块，递过去，老板将纸币展平看过，说正好”引文；“这一根十块，我付了。”与回屋条据相符。其他引文实定位，不刷SHA掩盖旧句。官方replay在改稿后实际生成，_replay/expected_revision/写前source绑定不手改。\n- downstream：41须真实固定/试用后付工40料10合50正好，不保留原找2依赖；42/43来源承接50；47账留末组改，未假称已改。新条本章试夹后仍取下，不能提前resolved；有限门缝不保证冬天无风。花册14、原8册、18未买/20未动与独立消费、旧80/35/81/84、33V2、19—20:40课程/100分钟、箱漆观察均不变。\n\n纲文回对：新0040.json/S03的十元材料/凭条、同意后买、未固定未收款与本章一致；旧阶段首停措辞为历史，不覆盖本次到44安排。三线不同收益：拆清木况形成主人可选范围；姑娘承担周六劳动才有窗口；沈提出进门先歇十分钟而不被当人手。未发现测试变量以外必须改稿的高置信剧情问题。原六条应用历史不新造，留新版整体复核。\n"
+    },
+    {
+      "unit": 41,
+      "input": ".writer/drafts/e3-record-41.json",
+      "expected_revision": 270,
+      "draft_sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+      "report": "审查/E3-41-当前修订实读与六项差量.md",
+      "report_sha256": "076b180a952c1b73bba5856e785b9d0c6cdb587dd154a83e7227a2dd4e03c055",
+      "reviewer": "Codex AC E same native session; informed model self-review, not human or blind review",
+      "replay_review": {
+        "reviewer": "Codex AC E same native session informed model self-review",
+        "report": "审查/E3-41-当前修订实读与六项差量.md",
+        "draft_sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      },
+      "body_changed": true,
+      "tracking_diff": "e3-delta-41.json",
+      "input_clarification": null,
+      "semantic_patch": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "同ID按原41模板/原01—02字节续03—07。周四十点后新条收边/原门松皮及固定；女主人和老人分别实开关/端空盆过门，老人坐处认仍有细风但比无遮条少，接受本次。十一点出头周扫收，女付50周找2实收工40料8，原8元条补工料已收由女收票，周带工具/旧钉离开；夜只文字听女述母下午再关。午间女电话告许蓉周一日期/周六补两小时，母许可并保留先吃/想歇；女真转沈，沈当日当面向谭采用原早半小时/12:30交班窗口，谭勾本。沈四点带豆腐回家，半盒留冷藏/半盒煮汤；父脚仍垫，亲听日子，约周日看自己午饭，未提前做周一。女真花6元买芹菜豆干做今晚一碟，母指出老梗，女仍想周一做该菜并告沈，沈只看照/听述。周下午试抽屉板一侧后退，未装完/未交/18未收。",
+          "after": "同ID按原41模板/原01—02字节续03—07。周四十点后新条收边/原门松皮及固定；女主人和老人分别实开关/端空盆过门，老人坐处认仍有细风但比无遮条少，接受本次。十一点出头周扫收，女付50正好实收工40料10，原10元条补工料已收由女收票，周带工具/旧钉离开；夜只文字听女述母下午再关。午间女电话告许蓉周一日期/周六补两小时，母许可并保留先吃/想歇；女真转沈，沈当日当面向谭采用原早半小时/12:30交班窗口，谭勾本。沈四点带豆腐回家，半盒留冷藏/半盒煮汤；父脚仍垫，亲听日子，约周日看自己午饭，未提前做周一。女真花6元买芹菜豆干做今晚一碟，母指出老梗，女仍想周一做该菜并告沈，沈只看照/听述。周下午试抽屉板一侧后退，未装完/未交/18未收。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "周岸"
+          ],
+          "before": "周四上午完成本处新条固定，母女亲试和老人坐处接受，11点出头实收50找2=工40料8共48，补凭条交女主人，带旧钉/工具离开。下午抽屉新板一侧试入即退，记待周五早收边未装完，18未收；夜读女主人母下午再关文字非亲见，材料支8/实收48分记。",
+          "after": "周四上午完成本处新条固定，母女亲试和老人坐处接受，11点出头实收50正好=工40料10共50，补凭条交女主人，带旧钉/工具离开。下午抽屉新板一侧试入即退，记待周五早收边未装完，18未收；夜读女主人母下午再关文字非亲见，材料支10/实收50分记。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "房门女主人"
+          ],
+          "before": "亲开合/让母亲端空盆试，接母坐处细风可留意见，扫地留厨房路。真给周50收回2，8元条补工40总48已收，折进自己家用小票格；晚文字告周母下午自己关过，未作长期保证。",
+          "after": "亲开合/让母亲端空盆试，接母坐处细风可留意见，扫地留厨房路。真给周50正好，10元条补工40总50已收，折进自己家用小票格；晚文字告周母下午自己关过，未作长期保证。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "女主人母亲"
+          ],
+          "before": "亲开关新门/端空盆过，坐原椅认比无遮条少直风仍一点，接受细缝，亲听女付50找2并见周点头；旧条箱/新余头袋仍自己处，未来冷天感觉未知。",
+          "after": "亲开关新门/端空盆过，坐原椅认比无遮条少直风仍一点，接受细缝，亲听女付50正好并见周点头；旧条箱/新余头袋仍自己处，未来冷天感觉未知。"
+        },
+        {
+          "path": [
+            "changes",
+            "timeline_append",
+            0
+          ],
+          "before": "第32日周四上午：新条固定后母女真实试用并接受适当细缝，11点出头女付50周找2，工40料8已清，凭条入女家用小票格，周离门主家。",
+          "after": "第32日周四上午：新条固定后母女真实试用并接受适当细缝，11点出头女付50正好，工40料10已清，凭条入女家用小票格，周离门主家。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "reader_known"
+          ],
+          "before": "41完成当次本处新条安装、母女亲试/老人坐处接受，实收工40料8=48，工具带离；仅本次有限修用结清，长期/冬天效果仍未知。",
+          "after": "41完成当次本处新条安装、母女亲试/老人坐处接受，实收工40料10=50，工具带离；仅本次有限修用结清，长期/冬天效果仍未知。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "character_known",
+            "周岸"
+          ],
+          "before": "亲做/亲见母女试并实收48，夜仅文字知母下午又关，未亲见后续家用。",
+          "after": "亲做/亲见母女试并实收50，夜仅文字知母下午又关，未亲见后续家用。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "character_known",
+            "房门女主人"
+          ],
+          "before": "亲试/亲付50找2并收已收凭条，听母接受，晚文字告周下午家用。",
+          "after": "亲试/亲付50正好并收已收凭条，听母接受，晚文字告周下午家用。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "character_known",
+            "女主人母亲"
+          ],
+          "before": "亲试/坐认细风仍有但本次可用，听付50找2和周确认，未来冷天未知。",
+          "after": "亲试/坐认细风仍有但本次可用，听付50正好和周确认，未来冷天未知。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_D_ROOM_DOOR_LOOK",
+            "evidence",
+            2,
+            "quote"
+          ],
+          "before": "五十递到他手上。钱入掌，他从钱夹拿出两块",
+          "after": "周岸答工四十、料十，合起来正好五十。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "P_AC_B_NEW_DOOR_STRIP",
+            "custody",
+            "condition"
+          ],
+          "before": "新浅色木条螺丝固定，母女亲试可开合/老人坐认仍细风而接受；本次已付48，长期未验证",
+          "after": "新浅色木条螺丝固定，母女亲试可开合/老人坐认仍细风而接受；本次已付50，长期未验证"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "reader_known"
+          ],
+          "before": "41女付50周找2，工40料8共48实际全清，周补凭条/女收票；40周买料支8不重复再付。",
+          "after": "41女付50正好，工40料10共50实际全清，无找零；周补凭条，女将十元条及工40/总50已收折入家用小票格。40周买料支10不重复再付，支10与收50分记，净工40。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "character_known",
+            "周岸"
+          ],
+          "before": "亲收50找2=48，材料支8另记，票补已收交女。",
+          "after": "亲收50正好，材料支10另记，票补工40/总50已收交女。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "character_known",
+            "房门女主人"
+          ],
+          "before": "亲付/收2和已收凭条，放自家小票格。",
+          "after": "亲付50正好，十元条补工40/总50已收，折放自家小票格。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "character_known",
+            "女主人母亲"
+          ],
+          "before": "亲听女说50找2且周点头，知本次已清。",
+          "after": "亲听女说50正好且周点头，知本次已清。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "F_AC_B_DOOR_PAYMENT",
+            "evidence",
+            0,
+            "quote"
+          ],
+          "before": "在纸的空处写明工四十、工料共四十八已收",
+          "after": "在纸的空处写明工四十、工料共五十已收"
+        }
+      ],
+      "preview": "e3-u41-preview",
+      "record": "e3-u41-record",
+      "journal": ".writer/journal/44cf4db3-90f4-4fa7-8dfc-d2eb893b1e13.json",
+      "journal_sha256": "c67820ec5c1607213deebbec8b46429a6e78c2b42e940565c38efe67f8672430",
+      "actual_result": "主人付50正好，工40/料10/合50已收；母亲真实听女告知且周点头，十元条补工/总款由主人收格；周晚账支10、收50、净工40。移除两元找零及后文借它作对比，保留下午独立消费所得硬币。正文6处局部编辑，追踪16项显式差量。",
+      "full_read_report_text": "# E3 第41章当前修订实读与六项差量\n\nCodex模型知情自检，非人类或盲读；价格变量为controller安排，作者依据仍原human原话。当前context r270（e3-u41-context）的597行差量视图全部分页读取，S03/S05新冻结版本实际生效；历史只写前两段的措辞不覆盖当前35—48授权。正文0041-让她自己推一次-ac-b-v1.md，SHA 8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d，11936字符/10218去标题汉字，e3-c41-p1—p7完整实读。\n\n六处精确语境改动，旧稿在e3-original-drafts，前后见e3-u41-body-diff.json；未改原分段或已登记40。工40保持、料10、合50，原两元找零及依赖比较移除；下午独立消费找回的一枚零钱仍是另一笔，不改作门款。\n\n- summary：逐段核原门合页未卸、收浅松皮/旧漆起边、引孔螺丝固定、母女各自真开关及老人端空盆/坐认细风，11点出头真实付50正好。午间许母实际获知周一/女换周六，沈当日回老板，四点正常交柜；晚父知日子，半块豆腐一半汤一半冷藏、姑娘实花6做今晚芹菜豆干，周抽屉只试一侧退出均保留。\n- characters：周、女主人、老人各按现场亲见/听述同步工40料10合50。女主人拿一张50，周收进钱夹，本上已收；十元原条补工及总50后由女主人折入家用小票格。沈与许家不知道门款；周不知道朋友饭约。许母先电话得日期、后晚上听沈父知日子，不提前共享对话；沈父本章晚才知道老板问成条件，仍脚伤垫凳用杖开门。\n- timeline：周四十点后接续40收配，11点出头完成/交钱，午间日期实际许可/回谭、16点交班、晚家常与周记账。材料支10早于本章收50，两行分记不重复付，净工40；47回看账留后组，不在此伪记。\n- ledger：T_D_ROOM_DOOR_LOOK仅本次有限修用resolved，冬天/长期未知；F_AC_B_DOOR_PAYMENT本处已收50正好，支10另记。P_AC_B_NEW_DOOR_STRIP由周实际交母女使用、本次已付50，仍原门上；旧条/碎片归老人箱、余头另袋不变，旧钉周带离，凭条由空碟临放变女主人家用小票格。T_AC_SHARED_MEAL只形成日子和排班、许母先吃歇/父周日再看饭，尚未朋友饭；抽屉新板退出未装妥/18未收，柜门未有新资料。\n- evidence：删除登记草案的“从钱夹拿出两块”失效引文，改当前“周岸答工四十、料十，合起来正好五十。”；总额引文改“工料共五十已收”。实际正文、replay draft SHA一致，其余引文逐条定位，写前source与expected_revision270保持，不追认新模板。\n- downstream：42不再收41已清50，18元抽屉与3元馒头独立；43新版AC-C的门款50由当前登记承接，不能旧全量覆盖回48。47总账末组再改。44/45豆干控制尚未来，本章今晚两片豆干/六元菜是独立消费，不因44三宽条改这里。花册14、旧8册、18薄书未购/20未动、旧80/35/81/84、33V2与箱漆、课程100分钟及有限衣感保持。\n\n纲文回对：本章完成新S05工40料10、合50整付，无找2；实际修用、午饭过道、各自时间和真实回老板均与功能一致。人物允许自己说出想吃/想休息，母亲不被变成评菜人；没有以重复段落凑数。未发现控制变量以外必须改稿的高置信问题，旧应用只留本次新版核查证据，不伪造第二次apply。\n"
+    },
+    {
+      "unit": 42,
+      "input": ".writer/drafts/e3-record-42.json",
+      "expected_revision": 271,
+      "draft_sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+      "report": "审查/E3-42-当前修订实读与六项差量.md",
+      "report_sha256": "a7e94627101765b4c31b363dad3d0e0e452ac27281df4fcc2db1e33fcd948d52",
+      "reviewer": "Codex AC E same native session; informed model self-review, not human or blind review",
+      "replay_review": {
+        "reviewer": "Codex AC E same native session informed model self-review",
+        "report": "审查/E3-42-当前修订实读与六项差量.md",
+        "draft_sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      },
+      "body_changed": false,
+      "tracking_diff": "e3-delta-42.json",
+      "input_clarification": null,
+      "semantic_patch": [],
+      "preview": "e3-u42-preview",
+      "record": "e3-u42-record",
+      "journal": ".writer/journal/cef0ca72-6e70-44d0-aa77-ca39341e143b.json",
+      "journal_sha256": "573dedabdb2cdf309715f9433c264f1692b00f0bba3d35fefc6f87964cbd3bb1",
+      "actual_result": "正文同字节。抽屉底实交/实收18及老柜右侧抬仍在；独立3元两个热包子为姑娘个人消费（实际正文不是馒头），父亲馒头另条未知价。眼镜与那恐怕两修复保持；当前source新版门账50不重收。六项逐场核完，原语义差量适用，无新增补丁。",
+      "full_read_report_text": "# E3 第42章当前修订实读与六项差量\n\nCodex模型知情自检，非人类/盲读。当前context r271，S03/S06新版由官方解析，597行差量视图及e3-replay-42全部实读。正文0042-各有要回去的地方-ac-b-v1.md当前SHA b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4，12526字符，e3-c42-p1—p7全部完整实读，正文同字节保留，未触旧分段。独立核对后登记六字段与原草案一致，无需为测试制造修改。\n\n- summary：周五清槽/收边装底、客户主动电话将午后提前到午前、现场试自带毛巾/实付18抱屉离开，原板客户不要才包尖收废；午后回原柜装袜关合只客户文字。周五晚锅碗照/量杯谈分量，周六姑娘补两小时与3元两个热包子，周日姑娘洗自己衣/买今日菜、沈父择豆角及留饭菜冷藏，夜收桌备袋均按实际时点支持。周一仍未来，不把预算当采购。\n- characters：周没见原柜，不能把客户自述右边仍旧卡写成整个柜修好。客户知自己原柜情况；沈只文字知姑娘周六做完及包子照片。许母未亲见沈家备饭；姑娘只沈文字知父那份已留。沈父自己扶杖择菜/取冷饭盒到台，仍垫脚，未自动痊愈；其领口眼镜真找回，未误改为遥控。\n- timeline：周五电话真实提前取屉，原周五午后安排被本人改变，不伪造仍等下午；周六实际兑现补班，周日留父饭/夜调闹钟，周一12:30交班与到家先坐再同买仍计划。3元花的是姑娘两个热包子；沈父的两个馒头是他托邻买且自述已付款、金额未明，两笔严格分开，不因本次用户简称把包子改馒头或补造价格。\n- ledger：P_AC_DRAWER真交客户/实收18，本次底板修用resolved但原柜卡与长期承重未知；原底板废料、毛巾归客户、姓名纸带号码段收纸篓有实际动作。P_DR_FLOWER_BOOK只改custody到家内格、condition说原书未添改，不覆盖14元statement/四人知识。原纸仍原字护纸，不添加老师判词；工装未洗或新增穿洗测试。T_AC_SHARED_MEAL停准备阶段，女10沈15还在各人包，父饭小盒/浅碟两容器中层冷藏并实试冷盒，未热吃。\n- evidence：逐条核“原纸压进护纸中”“书回到自己里面那一格”“一共十八，推到周岸手边。”等引文；眼镜在领口与“男人道那恐怕还得叫他去。”两处原应用当前仍正确。官方_replay和当前写前SHA原样，不把来源变化擦成旧绑定。\n- downstream：41门款已清50、材料支10保持，42没有再次收门款或覆回48；抽屉18与姑娘3元包子及沈父未知金额馒头均独立。43须实际交班/相会/买菜才能产生消费；44豆干/45转述待实写，不预记。原8元册/18薄书未购/20未动/14元花册、旧80/35/81/84、33V2、箱漆、课程100分钟与有限衣感不变。\n\n纲文回对：新0042的“不重收41已收50”成立；锅米分量、补班代价和父自主安排已有现实后果而非继续重问日期。没有测试变量以外必须改稿的高置信问题。I_AC_B_42_GLASSES_TARGET和I_AC_B_42_TYPO_KONGPA本次当前整章实读能支持旧修复仍在，原application保留，后续F以全书当前有效报告复核，不造第二次修改。其他四条复核义务仍保留。\n"
+    },
+    {
+      "unit": 43,
+      "input": ".writer/drafts/e3-record-43.json",
+      "expected_revision": 273,
+      "draft_sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+      "report": "审查/E3-43-当前修订实读与六项差量.md",
+      "report_sha256": "6cf56c0cc01ca2a6d609570317c0d82b73e54b9204f65c868379321c9a4bf514",
+      "reviewer": "Codex AC E same native session; informed model self-review, not human or blind review",
+      "replay_review": {
+        "reviewer": "Codex AC E same native session informed model self-review",
+        "report": "审查/E3-43-当前修订实读与六项差量.md",
+        "draft_sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      },
+      "body_changed": false,
+      "tracking_diff": "e3-delta-43.json",
+      "input_clarification": null,
+      "semantic_patch": [],
+      "preview": "e3-u43-preview",
+      "record": "e3-u43-record",
+      "journal": ".writer/journal/00681472-6e75-41a3-ad78-5846bc4a2f0c.json",
+      "journal_sha256": "36388d630a22d26f40ad2a4c75c7bf08e4e39faa6e86448fbc466b7a9370c3af",
+      "actual_result": "正文同字节。实际早到、交班12点/12:30、先坐十分钟、各自称买：女芹菜3豆干2余5，沈两小芋头6余9；原两片豆干进浅盘，未切/未开火。父热饭只本人文字，许母不共享全账。AC-C新版41已收50承接。六项逐场实核无新增补丁。",
+      "full_read_report_text": "# E3 第43章当前修订实读与六项差量\n\nCodex模型知情自检，非人类/盲读。正文0043-一起走到摊前-ac-c-v1.md，SHA 1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3，12619字符，e3-c43-p1—p8全文实读（第8页仍实际返回末19字符）。r273当前context差量视图615行、AC-C新版全文与e3-replay-43完整读取。S07新版本所载41门款50承接当前state，不重走来源协议；正文同字节保留。\n\n- summary：新闹钟早半小时沈吃自己软面/到店，女12点实际交清回家垫南瓜饭，沈在店垫饼并将迟到订单交老板12:30离，许家坐过十分钟后同买。女芹菜3/豆干2合5余5，沈两小芋头6余9；返家去泥初洗、锅杯到位未开火。旧摘要能逐场支持，不改成已做吃。\n- characters：沈父杖凳仍在；热饭已吃/碟好拿/未热馒头只有其真实文字，沈及女没隔空见过程。老板认分包/描清字条并接客回电，迟到订单留店，不被当沈没完成。许母先自己吃/分水/回房，见沈到家拿水又回房，沈坐后非她亲见；她不知摊前各款。姑娘听沈念父消息而不拿手机检查，不把父菜盒送到自己厨房。周未在本章，未自动知饭约。\n- timeline：实际周一早到与12点/12:30各自交清，坐超十分钟才同出；实际称付才从预算变消费，不以原15/10当花费。章末米未下、菜未切、灶未开；44煮吃、45洗收均未来。\n- ledger：T_AC_SHARED_MEAL保留partial，只本章真实动作追加。十元买3元芹菜找7（五元+两枚一元），再两枚一元买原两片豆干2，女余5；沈付10找四枚一元买两小芋头6、五元未出共余9。拒额外葱，不增加原料。芋头先自己袋后换姑娘提，菜/豆干换沈拿；返屋芋头盆灶旁、芹菜另盆、豆干仍袋置浅盘、空泥袋另挂门边，未将脏袋搭干布。原书和反馈纸不展示/不交朋友，护纸边只被看到；母杯垫与常用布局不改。\n- evidence：实际核“原来十块买过菜找七，如今余五”“原先备的十五还剩九”“厨房里还没开火”及老板/交班/父消息引文。官方_replay/source_hashes/expected_revision273保持；逐字段核原差量无需额外事实改动，不盲抄旧全量快照回退14或50。\n- downstream：44接原两片豆干/2元、两小芋头/6元，留三宽条须从现有两片切，不能添料；各自余5/9保持。锅杯只是已拿，饭未做，父仅知到许家坐水/将买，不先知三宽条或吃剩。45容器/带回/转述留末组。门料10工40总50、抽屉18与3元包子独立不重收，47账尚待。花册14/旧8册/18未买20未动、固定旧款、33V2、箱漆、课程100分钟与有限衣感不变。\n\n纲文回对：V16/A16从可用时间变真实赴约、休息、各自花费和待做材料；没有重演厨房许可或拿许母充当万能老师。历史AC-C首停安排保留来源原字节，本轮按最新指令到44。未发现本章必须额外改稿的高置信问题；原六条应用保持，F以当前全书报告复核，不造假修改。\n"
+    },
+    {
+      "unit": 44,
+      "input": ".writer/drafts/e3-record-44-v2.json",
+      "expected_revision": 274,
+      "draft_sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+      "report": "审查/E3-44-当前修订实读与六项差量.md",
+      "report_sha256": "5de635500ac23157f8cfc5edf7751ddba1ef908c4ea00e581f67ec43c92ad2bd",
+      "reviewer": "Codex AC E same native session; informed model self-review, not human or blind review",
+      "replay_review": {
+        "reviewer": "Codex AC E same native session informed model self-review",
+        "report": "审查/E3-44-当前修订实读与六项差量.md",
+        "draft_sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+        "checked_fields": [
+          "summary",
+          "characters",
+          "timeline",
+          "ledger",
+          "evidence",
+          "downstream"
+        ]
+      },
+      "body_changed": true,
+      "tracking_diff": "e3-delta-44.json",
+      "input_clarification": "e3-u44-input-clarification.json",
+      "semantic_patch": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "第36日周一午后许家，两人各量米淘米，沈芋头先煮、女看米；芋头熟后两只均偏黏非粉，女直说更爱粉，四整块另留、少碎拌饭。芹菜梗叶各先后捞成脆软两份，豆干沈留宽条，各自添油盐，蒜另碟，沈后加多承认偏冲；两火已关，两人真坐食，彼此可不全喜欢。母房内歇后自愿出来尝半块芋头/一小勺饭和少菜，半块另留自己碟，不全程评做。两点多女沈吃完各自碗不再添，原碎碗最后两块两人分吃；共盘一整块、母另碟半块、锅余约小碗饭及两份少菜仍在，锅盆油盐未洗收。各钱余女5沈9仍包内，无借碗带食或父品尝。饭约做吃已发生，洗收交45仍partial。",
+          "after": "第36日周一午后许家，两人各量米淘米，沈芋头先煮、女看米；芋头熟后两只均偏黏非粉，女直说更爱粉，四整块另留、少碎拌饭。芹菜梗叶各先后捞成脆软两份，原两片豆干中沈留三宽条；先吃一条、母见余两条，母回房后再吃半条、余一条半，各自添油盐，蒜另碟，沈后加多承认偏冲；两火已关，两人真坐食，彼此可不全喜欢。母房内歇后自愿出来尝半块芋头/一小勺饭和少菜，半块另留自己碟，不全程评做。两点多女沈吃完各自碗不再添，原碎碗最后两块两人分吃；共盘一整块、母另碟半块、锅余约小碗饭及两份少菜仍在，锅盆油盐未洗收。各钱余女5沈9仍包内，无借碗带食或父品尝。饭约做吃已发生，洗收交45仍partial。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "沈禾"
+          ],
+          "before": "周一午后许家亲淘米/煮熟两芋头/剥分、少拌米，留四整块，自己软菜加油盐后蒜多承认；与女真坐食，宽豆干留口，饱后不添饭再夹整块；原碎碗两人分吃空。钱余9仍包，自己包未翻装食，手腕累，想收完再坐，不再逛。父热饭仍仅43文字非本人目击。",
+          "after": "周一午后许家亲淘米/煮熟两芋头/剥分、少拌米，留四整块，自己软菜加油盐后蒜多承认；与女真坐食，原两片豆干留三宽条，母出房前吃完一条、母回房后再吃半条，余一条半，饱后不添饭再夹整块；原碎碗两人分吃空。钱余9仍包，自己包未翻装食，手腕累，想收完再坐，不再逛。父热饭仍仅43文字非本人目击。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "许蓉女儿"
+          ],
+          "before": "周一午后亲量米/看米火至熟关，择切芹菜豆干并依两人要求先后捞脆软菜，自己加油盐少蒜；直说芋头更爱粉，提留四整块，真坐食到饱停添。母自愿少尝，余半块另留。两点多与沈歇坐，余饭菜及碗锅待洗收，钱余5仍包，无递出护纸/练布。",
+          "after": "周一午后亲量米/看米火至熟关，从原两片豆干切出沈要的三宽条，其余切细，亲见沈先吃一条、后半条留一条半；择切芹菜并依两人要求先后捞脆软菜，自己加油盐少蒜；直说芋头更爱粉，提留四整块，真坐食到饱停添。母自愿少尝，余半块另留。两点多与沈歇坐，余饭菜及碗锅待洗收，钱余5仍包，无递出护纸/练布。"
+        },
+        {
+          "path": [
+            "changes",
+            "characters",
+            "许蓉"
+          ],
+          "before": "周一房内自歇后出门倒水，亲见两人正吃/两火灭，自愿尝芋头半块及一小勺饭少菜，得知两小芋头6元、宽豆干沈自要，拒加足一餐；另碟半块明说为自己留，不合共锅，凳归门侧后回房，未检查代洗，不共享全摊前账。",
+          "after": "周一房内自歇后出门倒水，亲见两人正吃/两火灭，自愿尝芋头半块及一小勺饭少菜，得知两小芋头6元、亲见碟角两宽条、听沈说自要宽的；未见起初切三条或回房后又吃半条，拒加足一餐；另碟半块明说为自己留，不合共锅，凳归门侧后回房，未检查代洗，不共享全摊前账。"
+        },
+        {
+          "path": [
+            "changes",
+            "timeline_append",
+            0
+          ],
+          "before": "第36日周一午后：许家两人量淘米、切配、起两火，芋头熟后偏黏，四整块另留，米关火，芹菜梗叶分两种熟软后关左火；各调油盐、蒜另添。",
+          "after": "第36日周一午后：许家两人量淘米、从原两片豆干切出三宽条及其余细条、起两火，芋头熟后偏黏，四整块另留，米关火，芹菜梗叶分两种熟软后关左火；各调油盐、蒜另添。"
+        },
+        {
+          "path": [
+            "changes",
+            "timeline_append",
+            1
+          ],
+          "before": "同日下午：两人坐食，沈蒜多承认、女仍偏爱粉与脆；许母出房自愿少尝后半块留自己小碟，回房。两点多两人吃完不添，余饭约小碗、两菜少许、共盘整块1/母另半块，原碎块碗已空；碗锅待洗、油盐未归，无带食借还。",
+          "after": "同日下午：两人坐食，沈先吃完一宽条、留两条，沈蒜多承认、女仍偏爱粉与脆；许母出房自愿少尝后半块留自己小碟，回房；沈再吃另一条半，余一条整和半条。两点多两人吃完不添，余饭约小碗、两菜少许、共盘整块1/母另半块，原碎块碗已空；碗锅待洗、油盐未归，无带食借还。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_AC_SHARED_MEAL",
+            "reader_known"
+          ],
+          "before": "44已实际做成且坐吃。芋头偏黏，女爱粉/脆，沈爱软/宽条并蒜加多，留整块和分碟真改变吃法。母自主少尝后回房，母半块独留。止两点多余饭约小碗、两菜少许、共盘整块1，锅盆碗和油盐尚未洗收，不以做吃冒充借厨归还，无借碗或带食。",
+          "after": "44已实际做成且坐吃。芋头偏黏，女爱粉/脆，沈爱软/宽条并蒜加多，留整块和分碟真改变吃法。原两片豆干切三宽条归沈那份，先吃完一条，母见余两条后回房，再吃另一条半，余一条整和半条。母自主少尝后回房，母半块独留。止两点多余饭约小碗、两菜少许、共盘整块1，锅盆碗和油盐尚未洗收，不以做吃冒充借厨归还，无借碗或带食。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_AC_SHARED_MEAL",
+            "character_known",
+            "沈禾"
+          ],
+          "before": "亲做/吃并知女偏粉脆，自己软菜蒜多；听母说只尝一点/另半块留自己，余饭菜与待洗锅盆在眼前。未见父当日热饭，钱余9包内。",
+          "after": "亲做/吃并知女偏粉脆，自己软菜蒜多；亲要原两片中切三宽条，先吃一条、母回房后再吃半条余一条半；听母说只尝一点/另半块留自己，余饭菜与待洗锅盆在眼前。未见父当日热饭，钱余9包内。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_AC_SHARED_MEAL",
+            "character_known",
+            "许蓉女儿"
+          ],
+          "before": "亲做看米/切菜及坐食，确认沈软口/宽豆干/蒜多，自己可直说偏粉。母自愿尝后另留半块，尚未洗收/装盒，钱余5包内。",
+          "after": "亲做看米/切菜及坐食，确认沈软口/宽豆干/蒜多，自己可直说偏粉。从原两片切三宽条，亲见沈分两次吃一条及半条，余一条半。母自愿尝后另留半块，尚未洗收/装盒，钱余5包内。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_AC_SHARED_MEAL",
+            "character_known",
+            "许蓉"
+          ],
+          "before": "只亲见出房后吃饭、尝半块和小勺饭/少菜，听芋头6元与宽条缘由，半块自己另留，未全程教学、未见摊前及沈父热饭。",
+          "after": "只亲见出房后吃饭、尝半块和小勺饭/少菜，听芋头6元与宽条缘由，亲见碟角两条宽豆干但不知起初切三条及回房后再吃半条，半块自己另留，未全程教学、未见摊前及沈父热饭。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_AC_SHARED_MEAL",
+            "evidence"
+          ],
+          "before": [
+            {
+              "unit": 44,
+              "quote": "外头已经软，米心却还带一点硬"
+            },
+            {
+              "unit": 44,
+              "quote": "姑娘拿出干净小碟，将四块形还整的拨进去。"
+            },
+            {
+              "unit": 44,
+              "quote": "沈禾自己取了一点盐撒在菜上"
+            },
+            {
+              "unit": 44,
+              "quote": "“我嫌什么？”"
+            },
+            {
+              "unit": 44,
+              "quote": "真要一碗，自己会拿碗"
+            },
+            {
+              "unit": 44,
+              "quote": "桌上还留一块完整芋头，一小锅余饭，两份菜各剩一点；母亲的小碟另有半块，谁也没混回去。"
+            },
+            {
+              "unit": 44,
+              "quote": "这顿约了好些天的饭，真的被她们坐着吃过了。"
+            }
+          ],
+          "after": [
+            {
+              "unit": 44,
+              "quote": "外头已经软，米心却还带一点硬"
+            },
+            {
+              "unit": 44,
+              "quote": "姑娘拿出干净小碟，将四块形还整的拨进去。"
+            },
+            {
+              "unit": 44,
+              "quote": "沈禾自己取了一点盐撒在菜上"
+            },
+            {
+              "unit": 44,
+              "quote": "“我嫌什么？”"
+            },
+            {
+              "unit": 44,
+              "quote": "真要一碗，自己会拿碗"
+            },
+            {
+              "unit": 44,
+              "quote": "桌上还留一块完整芋头，一小锅余饭，两份菜各剩一点；母亲的小碟另有半块，谁也没混回去。"
+            },
+            {
+              "unit": 44,
+              "quote": "这顿约了好些天的饭，真的被她们坐着吃过了。"
+            },
+            {
+              "unit": 44,
+              "quote": "从原来留着的第二片边上切出三条"
+            },
+            {
+              "unit": 44,
+              "quote": "说完把这一半也吃了，碟角另两条还好好留着。"
+            },
+            {
+              "unit": 44,
+              "quote": "许蓉看见碟角留着两条宽豆干"
+            },
+            {
+              "unit": 44,
+              "quote": "如今桌上三条宽豆干吃掉一条半，还留一条整的和半条"
+            }
+          ]
+        }
+      ],
+      "preview": "e3-u44-preview",
+      "record": "e3-u44-record",
+      "journal": ".writer/journal/2ab6a45a-60b7-4426-aa76-178125365521.json",
+      "journal_sha256": "add5c29b687f36f7184d4bc85d0ef0d37c37c9fab17251056677ab5259ae147e",
+      "actual_result": "原两片豆干/2元中切三宽条，不添原料；饭前夹回未吃，第一条分两口吃完，母出来亲见余两条，母回房后再吃第二条的一半，合计吃1.5、余1.5。母仅知亲见两条及宽切缘由，不补起初3与后来半条。四整块/母另半、各余款5/9、锅菜待洗、饭盒与浅碟边界保持。正文11处局部编辑，追踪11项显式差量，输入v2在预览前澄清“另一条的一半”。",
+      "full_read_report_text": "# E3 第44章当前修订实读与六项差量\n\nCodex模型知情自检，非人类/盲读。当前正文SHA bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9，16436字符，去标题14113汉字。e3-c44-p1—p10完整分页实读，r274当前context全部474行差量视图及官方e3-replay-44全文92行实读。旧正文/分段保留，精确11项正文编辑另有e3-u44-body-diff.json，不全局替换。作者依据仍原human；三宽条是controller受控变量。\n\n- summary：由原43称买的同两片豆干2元，第二片边切三条较宽、余下仍细；梗叶按脆软分两份，三宽条在沈那份。饭前夹起又放回未吃；开饭一条分两口吃完，许母出来所见余两条，仅问宽细缘由；母回房后沈再咬另一条一半，章末余一条整及半条。合计吃一条半，非再买原料。其余两火关、坐吃、母尝半芋头与少饭、停添、待洗收均原事实。\n- characters：两姑娘亲见三条切配与两次进食，自己知道初3/余1.5；许母只见余2，听沈说宽条自己要，不能替她补知起初3或回房后吃的半条。她只听芋头6元，未获姑娘3+2的全账。沈父/周岸均不在场，无新增转述或共享，父43消息仍不是沈目击。各人可直说粉/黏、脆/软和蒜多，未变成必须全喜欢。\n- timeline：第36日周一午后先熟芋头/米，再焯菜各调味、盛饭，沈吃第一条，许母出房少尝后回房，再吃另一条半；两点多歇坐收洗未开始。45洗收、饭盒/浅碟带回及实际转述尚未发生，不能将未来写进44登记。\n- ledger：T_AC_SHARED_MEAL只增真实三宽条的切配/食用/剩量和各自所知，不回退既有14/10/50的继承账。女原10买芹菜3豆干2余5，沈原15买芋头6余9，均在各自包内；44无新增消费或钱物交接。四整块芋头：女吃1，母取1分半吃半另留半，沈再吃1，共盘剩1；原碎碗最后两块两人分空，母半块不可并作共盘整块。完整芋头1、母半块、约小碗余饭、两份少菜与宽豆干1.5仍在许家，未借碗/装盒/送父。\n- evidence：保留原熟米、四块、盐、拒添、末态引文逐字核对；新增原句“从原来留着的第二片边上切出三条”“说完把这一半也吃了，碟角另两条还好好留着。”“许蓉看见碟角留着两条宽豆干”“如今桌上三条宽豆干吃掉一条半，还留一条整的和半条”绑定当前SHA。source_hashes与r274 expected_revision来自写后官方replay，未手改SHA或来源绑定。\n- downstream：45实写必须承接三条/余1.5和本章母所知边界，再按真实收洗装盒、饭盒及浅碟所有权与父实听转述核对；不能机械把所有两条都换三条（母余两条是正确）。47独立门账应10支出/50实收/净工40，仍留下一组。旧8元书、沈18未买/20未动、花册14、固定80/35/81/84、33V2、O_BOX_PAINT原句/非排他真相、19:00—20:40共100分钟、有限衣感保持。\n\n纲文回对：V16/A16以实际坐吃、各口味差异和母自主少尝兑现43买料，不额外添加角色或材料；四整块、母另半、钱余及待洗尾段保持计划边界。三宽条不属不可变observation或作者固定数，原两片/2元保持。来源AC-C用已发布E1_S07_NEW（43起），单元44计划及其它来源均原字节，普通细节修改只回读正文及45尾段，九项历史协议不重走。未发现须另行更改的高置信剧情问题；六条旧应用不制造第二次修改或冒充已复核关闭。\n"
+    }
+  ],
+  "body_diffs": [
+    {
+      "unit": 40,
+      "ref": "正文/0040-取下来的那一条-ac-b-v1.md",
+      "old_sha256": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+      "new_sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+      "old_hanzi": 14085,
+      "new_hanzi": 14097,
+      "edits": [
+        {
+          "before": "对方报八块一根，若要长的另拿。",
+          "after": "对方报十块一根，若要长的另拿。"
+        },
+        {
+          "before": "朝女人说店里有可挑的，八块；自己去一趟",
+          "after": "朝女人说店里有可挑的，十块；自己去一趟"
+        },
+        {
+          "before": "先问八块这根够不够整道。",
+          "after": "先问十块这根够不够整道。"
+        },
+        {
+          "before": "那你先看。八块就八块，别最后一算又多一样。",
+          "after": "那你先看。十块就十块，别最后一算又多一样。"
+        },
+        {
+          "before": "他说八块那根写清就行",
+          "after": "他说十块那根写清就行"
+        },
+        {
+          "before": "老板添了日期，把纸推来。周岸从钱夹取十块，对方找回两枚硬币，他接到掌心，先收钱，再将那张写着八元的小纸叠好，放进本子夹页。",
+          "after": "老板添了日期，把纸推来。周岸从钱夹取十块，递过去，老板将纸币展平看过，说正好，收进台下的钱匣。周岸等他腾出手，把那张写着十元的小纸叠好，放进本子夹页。"
+        },
+        {
+          "before": "店里那张八元条也在",
+          "after": "店里那张十元条也在"
+        },
+        {
+          "before": "这一根八块，我付了。",
+          "after": "这一根十块，我付了。"
+        },
+        {
+          "before": "八元小条压在空碟下",
+          "after": "十元小条压在空碟下"
+        }
+      ],
+      "scope": "controller material8to10; labor40; exact10 payment no change; not global number substitution"
+    },
+    {
+      "unit": 41,
+      "ref": "正文/0041-让她自己推一次-ac-b-v1.md",
+      "old_sha256": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+      "new_sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+      "old_hanzi": 10214,
+      "new_hanzi": 10218,
+      "edits": [
+        {
+          "before": "钟到十一点出头。锅里饭还得焖，女人看他背好包，才从小包里取钱，先拿出五十，又翻找零钞，想换成正好的数。周岸说四十八，自己找她，不必凑；她一听便停，五十递到他手上。钱入掌，他从钱夹拿出两块，交回给她，等她收好，才在自己的本上写下工四十、料八，旁边添了已收。",
+          "after": "钟到十一点出头。锅里饭还得焖，女人看他背好包，才从小包里取出一张五十，问连材料是不是这些。周岸答工四十、料十，合起来正好五十。她将纸币展开，递到他手上，自己拿回桌边的小包。他接过看清，钱夹里空出一格，将这一张收好，才在本上写下工四十、料十，旁边添了已收。"
+        },
+        {
+          "before": "女人将空碟下的八元条取出，叫他把工钱也写旁边，省得自己过几日只看见一根木头八块，忘了另一笔。",
+          "after": "女人将空碟下的十元条取出，叫他把工钱也写旁边，省得自己过几日只看见一根木头十块，忘了另一笔。"
+        },
+        {
+          "before": "写明工四十、工料共四十八已收",
+          "after": "写明工四十、工料共五十已收"
+        },
+        {
+          "before": "女儿说给了，五十找两，周岸也向她点一下头。",
+          "after": "女儿说给了，五十正好，周岸也向她点一下头。"
+        },
+        {
+          "before": "材料支出八，工料实收四十八，两行分着。收回来的料钱不用再算作多得八块",
+          "after": "材料支出十，工料实收五十，两行分着。收回来的料钱不用再算作多得十块"
+        },
+        {
+          "before": "今天门活那两块已找回主人，这一枚是自己的，混在一起的时候没觉得重，落到盘里才听得清。",
+          "after": "那是下午买东西剩的，回来时顺手塞进口袋，一直没记起。小小一枚，隔着布摸不真切，落到盘里才听得清。"
+        }
+      ],
+      "scope": "labor40 material10 total50 exact; remove two-yuan change and dependent contrast, preserve separate afternoon coin"
+    },
+    {
+      "unit": 44,
+      "ref": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+      "old_sha256": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+      "new_sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+      "old_hanzi": 14027,
+      "new_hanzi": 14113,
+      "edits": [
+        {
+          "before": "那我能留两条宽点的？",
+          "after": "那我能留三条宽点的？"
+        },
+        {
+          "before": "沈禾见她真将那片转来，笑着说两条就行，不是叫她整盘换成自己家的。姑娘点头，先把眼前这片切完，再从另一片边上落两条，宽得认得出来，放到浅盘一角。",
+          "after": "沈禾见她真将那片转来，笑着说三条就行，不是叫她整盘换成自己家的。姑娘点头，先把眼前这片切完，再从原来留着的第二片边上切出三条，比细丝宽些，放到浅盘一角。第二片余下的，她仍照自己喜欢的切细，没再添一片。"
+        },
+        {
+          "before": "不把另外那两条也一起拌成救不回的咸",
+          "after": "不把另外那三条也一起拌成救不回的咸"
+        },
+        {
+          "before": "豆干的两条宽边留在浅盘一角",
+          "after": "豆干的三条宽边留在浅盘一角"
+        },
+        {
+          "before": "沈禾想要的两条宽边仍在她那份上",
+          "after": "沈禾想要的三条宽边仍在她那份上"
+        },
+        {
+          "before": "说这两条自己先留住",
+          "after": "说这三条自己先留住"
+        },
+        {
+          "before": "将那两条宽豆干中的一条夹回自己的碗里",
+          "after": "将那三条宽豆干中的一条夹回自己的碗里"
+        },
+        {
+          "before": "沈禾将宽条剩的那一半举给她，说今天这条还行，自己总算能咬两口。",
+          "after": "沈禾将宽条剩的那一半举给她，说今天这条还行，自己总算能咬两口。说完把这一半也吃了，碟角另两条还好好留着。"
+        },
+        {
+          "before": "许蓉看见那两条宽豆干只剩一条，不知为何另有这一角",
+          "after": "许蓉看见碟角留着两条宽豆干，不知为何另有这一角"
+        },
+        {
+          "before": "她的软叶那份剩了少许，蒜末粘在边上，自己尝到后头，还是会换姑娘那边吃两口。",
+          "after": "她的软叶那份剩了少许，蒜末粘在边上，自己尝到后头，还是会换姑娘那边吃两口。碟角的宽豆干，她又夹起一条，咬下一半，余下的半条放回自己这边，没有夹到姑娘的碟里。"
+        },
+        {
+          "before": "如今桌上两条宽豆干早吃掉一条半，余下那点也混在软叶里",
+          "after": "如今桌上三条宽豆干吃掉一条半，还留一条整的和半条，在软叶那份的碟角"
+        }
+      ],
+      "scope": "same original two tofu sheets cut three wide strips; first strip finished before mother sees two; later half eaten leaves one and half; no change to taro, ingredients, money or ownership"
+    }
+  ],
+  "review": {
+    "ok": true,
+    "revision": 273,
+    "ref": ".writer/reviews/d5da7ef7-1829-45e3-94a3-8eceef815e91.json",
+    "coverage": [
+      37,
+      42
+    ],
+    "issue_ids": [],
+    "quality": "review-recorded-not-acceptance",
+    "label": "e3-review-37-42",
+    "input": ".writer/drafts/e3-review-37-42.json",
+    "report": "审查/E3-37-42-当前六章连读.md",
+    "report_sha256": "7d7b569311f7c8e8679bbb1fc4e4fa1e2fd2de1933801d49c874110302101da8",
+    "current_coverage": [
+      37,
+      42
+    ],
+    "pages_basis": 46,
+    "not_literary_or_author_acceptance": true
+  },
+  "issues": [
+    {
+      "id": "V_A_U5_TIME_METADATA",
+      "stored_status": "verified",
+      "effective_status": "needs-recheck",
+      "original_application": {
+        "commit_id": "3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68",
+        "commit_binding": {
+          "ref": ".writer/objects/3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68.json",
+          "sha256": "fc085c834f0cee0d342e948781b63ca20a93726a08bdf2f872ad165c110e4f7c"
+        },
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "reason": "根本轮明确授权以tracking模式应用既有真实追踪修订。事务97c11e48-4f17-44c5-96de-5e087099eea0已completed；该提交把4章summary/timeline澄清为停航首日清晨，把5章summary/timeline纠正为停航首日晚，6章保留同日下午并行。绑定原采用、旧新归档和同一commit_id，六章正文同字节，不捏造第二次修改。新默认apply仍实际退出2且state未变，当前另存显式tracking输入。后续仍需4—6真实完整实读报告与verify。",
+        "changes": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "before": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "after": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "before": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "after": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "before": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "after": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          }
+        ],
+        "change_scope": "tracking",
+        "tracking_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/97c11e48-4f17-44c5-96de-5e087099eea0/old/16.bin",
+            "sha256": "df916afb152e33b9a2545e5ad88ac2b40f428733686c8da538ed71a8d8ef399b"
+          },
+          "after": {
+            "ref": ".writer/transactions/97c11e48-4f17-44c5-96de-5e087099eea0/new/16.bin",
+            "sha256": "e11cac3daca69b62a08a1986bb952ec8b0605e8dded4ffc7b347888067908dd1"
+          }
+        },
+        "tracking_changes": [
+          {
+            "unit": 4,
+            "before": {
+              "summary_sha256": "7643ce0257bc0427f8a1de607fb1906c2f886a94c6c43a5065fa0ade0d89cbe2",
+              "snapshot_sha256": "c796511b23282ca987470a1308a23cc9c1e6d38a1c1437a94aa67398f3043dad"
+            },
+            "after": {
+              "summary_sha256": "cf3aeface1fe9c74cb02ab772eb68052c630c850066a31c5ab511e342f412424",
+              "snapshot_sha256": "f41372e6dcbacbfbba697de55d897b4bc7ed04e3775550cd7097405cdf106c27"
+            },
+            "summary_changed": true,
+            "snapshot_changed": true
+          },
+          {
+            "unit": 5,
+            "before": {
+              "summary_sha256": "dfc2efc7cce2385707a2f9ea64d3e3b78cd42a242ffa5c9aef6136b4939364f3",
+              "snapshot_sha256": "130d0a13cf99b45f523260ec59a6c75ee777f0a1c236e5b23726c65709831715"
+            },
+            "after": {
+              "summary_sha256": "2918450ceb1d058c07ee75f697df8f16ae7f97b265e347c86544885583201eb0",
+              "snapshot_sha256": "bf1865e1e3eb524fbbca04ecbfcfe80e2457bfc0915602f8d39a615ce329923d"
+            },
+            "summary_changed": true,
+            "snapshot_changed": true
+          },
+          {
+            "unit": 6,
+            "before": {
+              "summary_sha256": "c68b4e3b592105b561139520a5eefe9f5eb47ee0b4ff120835c3d9953451bc83",
+              "snapshot_sha256": "f6200cf62ccdb360eec1a67a7402a583240026b341d26d9cb0aae03841f099bb"
+            },
+            "after": {
+              "summary_sha256": "c68b4e3b592105b561139520a5eefe9f5eb47ee0b4ff120835c3d9953451bc83",
+              "snapshot_sha256": "123559c1ee13c6a4e3623a82cdac0f2c7ca676285cef2a110cf058ed423988e0"
+            },
+            "summary_changed": false,
+            "snapshot_changed": true
+          }
+        ]
+      },
+      "original_application_units": [
+        4,
+        5,
+        6
+      ],
+      "application_retained_identical": true,
+      "recheck_obligation": "原application只改4—6追踪；此前E提案/E1已完整实读，当前同SHA。本次恢复未重新读4—6，仅核前缀登记同字节。F须有效当前报告复核原application，不再造tracking修改。",
+      "current_recheck_required": true,
+      "current_supporting_reports": []
+    },
+    {
+      "id": "I_F19_TITLE_TIME",
+      "stored_status": "verified",
+      "effective_status": "needs-recheck",
+      "original_application": {
+        "commit_id": "2391c67a-1aac-4232-8351-c35e357de154",
+        "commit_binding": {
+          "ref": ".writer/objects/2391c67a-1aac-4232-8351-c35e357de154.json",
+          "sha256": "cbf8105e3504ae174865be336ab1f0a46cfa6902501109be80fa298fcd9f79ae"
+        },
+        "transaction_id": "8b607cc7-4878-4cc2-a86a-ac728ee71904",
+        "reason": "实际completed独立修订事务在同一历史路径仅改19首行两个钟头为一个半钟头；原正文时刻和标题后字节未变，19—24实读重登/尾段review有效。按draft真实字节变化应用，后续另做提交后全24当前SHA实读verify。",
+        "changes": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "before": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "after": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+            "dependency": "bb4b5a9a42066149837a15ca7c7d9b81e4f11107d2c7e5c6ec524df9c828f1e4"
+          }
+        ]
+      },
+      "original_application_units": [
+        19
+      ],
+      "application_retained_identical": true,
+      "recheck_obligation": "原application仅19标题；此前E提案/E1同SHA实读核标题一个半钟头与14:30相对16点的90分钟。本次未重新读19，F须有效当前报告复核原application，不再改题名。",
+      "current_recheck_required": true,
+      "current_supporting_reports": []
+    },
+    {
+      "id": "I_X_DR36_BOOK_KNOWLEDGE",
+      "stored_status": "verified",
+      "effective_status": "needs-recheck",
+      "original_application": {
+        "commit_id": "4940f163-50c0-4289-a95d-a7af0daa030f",
+        "commit_binding": {
+          "ref": ".writer/objects/4940f163-50c0-4289-a95d-a7af0daa030f.json",
+          "sha256": "7c94394e28c612ed24a61a6c03fdad90ab7bad970494ab43e0b86e9eae884d7f"
+        },
+        "transaction_id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "reason": "正式36独立区已提交，正文SHA未变，36书约链两人知情发生真实差量变化，与当章11/68/92听述/图片同步。使用真实commit对象id，不以事务id替代。",
+        "changes": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "before": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "after": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "12f89bc674abb2a5eb45e1ab7278944883e243382c27f14ea1e1fab79174a70c"
+          }
+        ],
+        "change_scope": "tracking",
+        "tracking_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/68e1d789-e95d-414a-8054-b5beea4832c8/old/8.bin",
+            "sha256": "8a909f8f00f6161cc940590f2d5b2ea731b7773ac025364da7f7c4ed6d27732e"
+          },
+          "after": {
+            "ref": ".writer/transactions/68e1d789-e95d-414a-8054-b5beea4832c8/new/8.bin",
+            "sha256": "52400169e0aeb402102c9b3d94cc2c59790e69108ece77ef49cdcf1738555b09"
+          }
+        },
+        "tracking_changes": [
+          {
+            "unit": 36,
+            "before": {
+              "summary_sha256": "719e6400e2baf600e7e5e873faa6155312fa70bf7302d051d0b7cbdbb8f6a9fe",
+              "snapshot_sha256": "08cebcd91536cdb3853913ad19450f3fd4ad7b0de77faf59113df47462b0121f"
+            },
+            "after": {
+              "summary_sha256": "719e6400e2baf600e7e5e873faa6155312fa70bf7302d051d0b7cbdbb8f6a9fe",
+              "snapshot_sha256": "7a676c1171c6d2fd780f40fa0c9dfafa0ce66924848a371890e9758e837a6a43"
+            },
+            "summary_changed": false,
+            "snapshot_changed": true
+          }
+        ]
+      },
+      "original_application_units": [
+        36
+      ],
+      "application_retained_identical": true,
+      "recheck_obligation": "原application为36 tracking，正文未改。项一改变数额后实读35/36当前正文、四人实际知情及新tracking，以新报告verify原应用效果；保留原commit和application。",
+      "current_recheck_required": true,
+      "current_supporting_reports": []
+    },
+    {
+      "id": "I_AC_B_42_GLASSES_TARGET",
+      "stored_status": "verified",
+      "effective_status": "needs-recheck",
+      "original_application": {
+        "commit_id": "79841afd-89d0-4193-a8ee-090f89ff6d5f",
+        "commit_binding": {
+          "ref": ".writer/objects/79841afd-89d0-4193-a8ee-090f89ff6d5f.json",
+          "sha256": "f721ef9a1ff7d904e1f5a94864b6e177e5446532b4865ff2d726d245cae86bce"
+        },
+        "transaction_id": "c6626ed5-ec9b-48e9-ade7-da896efde37e",
+        "reason": "正式独立区42—42两处字节实改、完整重登和37—42当前全文复核已由受管事务应用，旧稿及备份保留。",
+        "changes": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "before": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "after": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "940d692c681f7a25b27fed3a934bd88934c029f0d57d9d62b394012ea581201b"
+          }
+        ]
+      },
+      "original_application_units": [
+        42
+      ],
+      "application_retained_identical": true,
+      "recheck_obligation": "本轮42同SHA七页实际回读，父领口眼镜动作成立，未改回遥控；当前E3-42及37—42报告已提供版本证据，后续F正式verify原application。",
+      "current_recheck_required": true,
+      "current_supporting_reports": [
+        "审查/E3-42-当前修订实读与六项差量.md",
+        "审查/E3-37-42-当前六章连读.md"
+      ]
+    },
+    {
+      "id": "I_AC_B_42_TYPO_KONGPA",
+      "stored_status": "verified",
+      "effective_status": "needs-recheck",
+      "original_application": {
+        "commit_id": "79841afd-89d0-4193-a8ee-090f89ff6d5f",
+        "commit_binding": {
+          "ref": ".writer/objects/79841afd-89d0-4193-a8ee-090f89ff6d5f.json",
+          "sha256": "f721ef9a1ff7d904e1f5a94864b6e177e5446532b4865ff2d726d245cae86bce"
+        },
+        "transaction_id": "c6626ed5-ec9b-48e9-ade7-da896efde37e",
+        "reason": "正式独立区42—42两处字节实改、完整重登和37—42当前全文复核已由受管事务应用，旧稿及备份保留。",
+        "changes": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "before": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "after": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "940d692c681f7a25b27fed3a934bd88934c029f0d57d9d62b394012ea581201b"
+          }
+        ]
+      },
+      "original_application_units": [
+        42
+      ],
+      "application_retained_identical": true,
+      "recheck_obligation": "本轮42实际七页读到“男人道那恐怕还得叫他去。”，原修复保持。后续F以当前绑定报告verify原application，不另造修改。",
+      "current_recheck_required": true,
+      "current_supporting_reports": [
+        "审查/E3-42-当前修订实读与六项差量.md",
+        "审查/E3-37-42-当前六章连读.md"
+      ]
+    },
+    {
+      "id": "I_AC_C45_MEAL_DISH",
+      "stored_status": "verified",
+      "effective_status": "needs-recheck",
+      "original_application": {
+        "commit_id": "8d1da1d6-f999-4c6d-bb03-ca91f958434a",
+        "commit_binding": {
+          "ref": ".writer/objects/8d1da1d6-f999-4c6d-bb03-ca91f958434a.json",
+          "sha256": "66fce0b0a99df599dc9be54f8d7d43fb22864b21460a490d007747545278ffa6"
+        },
+        "transaction_id": "22493cd3-b392-4cf8-868a-70d2a410e4d0",
+        "reason": "现在接受已发生且当前重新核实的真实修复，不追认为事前采纳。原意见因42/43/45证据越43—45授权未能adopt，后由代理deferred交根，绝非作者延期。真实45独立修订及完成事务已经把两只空盒修为饭盒和菜碟，并同步沈角色追踪；本次完整读当前42/43/45共22页，参考42/43未变，45仍10126汉字。仅补登记目标45，原失败/延期/修复时间全部保留，不扩大授权或改稿。",
+        "changes": [
+          {
+            "unit": 45,
+            "draft": "正文/0045-洗过再放回去-ac-c-v1.md",
+            "before": "73cc31d895e58042c78699b8f23c2e73071e07eda4cd588d2d869f84159f7e8b",
+            "after": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "940d692c681f7a25b27fed3a934bd88934c029f0d57d9d62b394012ea581201b"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "dependency": "ad7a5d9e2cb6c254642cb523c94967f7d406ed0caf477d8d802f700e9b1425a7"
+          },
+          {
+            "unit": 45,
+            "draft": "正文/0045-洗过再放回去-ac-c-v1.md",
+            "sha256": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+            "dependency": "36356bb9812f4d423f0c0205a864615e5dd1fa27c40c977806a73e9573b2deb6"
+          }
+        ],
+        "acknowledged_existing_repair": true,
+        "acknowledged_at": "2026-10-24T19:18:37.637Z",
+        "target_units": [
+          45
+        ],
+        "reference_units": [
+          42,
+          43
+        ]
+      },
+      "original_application_units": [
+        45
+      ],
+      "application_retained_identical": true,
+      "recheck_obligation": "原application仅45；本轮42/43已实读，44仍未装盒，45尚未回放。末组核饭盒＋浅碟所有权、3宽条与余1.5的真实转述，再F正式verify，不能把42/43引用当原应用覆盖。",
+      "current_recheck_required": true,
+      "current_supporting_reports": [
+        "审查/E3-42-当前修订实读与六项差量.md",
+        "审查/E3-43-当前修订实读与六项差量.md",
+        "审查/E3-44-当前修订实读与六项差量.md"
+      ]
+    }
+  ],
+  "issue_actions_this_turn": [],
+  "checks": {
+    "main": {
+      "revision": 253,
+      "units": 48,
+      "check_ok": false,
+      "error_findings": [
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "b0a6fb4d-e575-43f8-858a-18758e484c1a",
+          "from": 36,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "37f33ea5-d9fe-4d72-b219-5427abb80743",
+          "from": 36,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "11aa5d24-2493-4c77-9a52-2f9b3c5edfaa",
+          "from": 40,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "2787fb0d-7825-4b5b-a8d1-14951571d498",
+          "from": 40,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "f167fde0-719c-41d5-9cfd-70307227e8f0",
+          "from": 41,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "a5b1bd86-054f-4305-945b-3ff713d6ba09",
+          "from": 42,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "c8361327-7e65-4065-b2bb-64548be40fad",
+          "from": 43,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "f168ba89-2cf3-41b4-8fbf-0845015a140a",
+          "from": 46,
+          "through": 48
+        },
+        {
+          "severity": "error",
+          "code": "IMPACT_PENDING",
+          "id": "55817c83-87e6-427b-8db7-75e6e84b9f08",
+          "from": 47,
+          "through": 48
+        }
+      ],
+      "warning_counts": {
+        "UNREGISTERED_DRAFT": 25
+      },
+      "rolling_review": {
+        "valid": 15,
+        "stale": 38,
+        "unpublished_records": [],
+        "stale_with_current_coverage": 22,
+        "stale_without_current_coverage": 16,
+        "pending_windows": [
+          {
+            "from": 31,
+            "to": 36
+          },
+          {
+            "from": 34,
+            "to": 39
+          },
+          {
+            "from": 37,
+            "to": 42
+          },
+          {
+            "from": 40,
+            "to": 45
+          },
+          {
+            "from": 43,
+            "to": 48
+          }
+        ],
+        "nature": "coverage-only-not-literary-pass"
+      },
+      "issue_counts": {
+        "needs-recheck": 6,
+        "open": 13
+      },
+      "changed_sources": [],
+      "doctor_ok": true,
+      "doctor_errors": [],
+      "doctor_warnings": [],
+      "tool_content_id": "818438a541f3e518d5e88cd011e2e412df9ccd841390d243622164429726d265",
+      "tool_runtime_id": "2bbcca1280b6aef8d6d11762790f64ccb8dfaac5d1b377332f612c8484ab21b9"
+    },
+    "candidate": {
+      "revision": 275,
+      "units": 44,
+      "check_ok": true,
+      "error_findings": [],
+      "warning_counts": {
+        "UNREGISTERED_DRAFT": 29
+      },
+      "rolling_review": {
+        "valid": 17,
+        "stale": 38,
+        "unpublished_records": [],
+        "stale_with_current_coverage": 27,
+        "stale_without_current_coverage": 11,
+        "pending_windows": [
+          {
+            "from": 31,
+            "to": 36
+          }
+        ],
+        "nature": "coverage-only-not-literary-pass"
+      },
+      "issue_counts": {
+        "needs-recheck": 6,
+        "open": 13
+      },
+      "changed_sources": [],
+      "doctor_ok": true,
+      "doctor_errors": [],
+      "doctor_warnings": [],
+      "tool_content_id": "818438a541f3e518d5e88cd011e2e412df9ccd841390d243622164429726d265",
+      "tool_runtime_id": "2bbcca1280b6aef8d6d11762790f64ccb8dfaac5d1b377332f612c8484ab21b9"
+    }
+  },
+  "operations": [
+    {
+      "label": "e3-entry-candidate-check",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "output": "cli-logs/e3-entry-candidate-check/stdout.txt",
+      "stderr": "cli-logs/e3-entry-candidate-check/stderr.txt",
+      "metadata": "cli-logs/e3-entry-candidate-check/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-entry-candidate-doctor",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "output": "cli-logs/e3-entry-candidate-doctor/stdout.txt",
+      "stderr": "cli-logs/e3-entry-candidate-doctor/stderr.txt",
+      "metadata": "cli-logs/e3-entry-candidate-doctor/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-entry-candidate-status",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "output": "cli-logs/e3-entry-candidate-status/stdout.txt",
+      "stderr": "cli-logs/e3-entry-candidate-status/stderr.txt",
+      "metadata": "cli-logs/e3-entry-candidate-status/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-entry-main-check",
+      "exit_code": 1,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-entry-main-check/stdout.txt",
+      "stderr": "cli-logs/e3-entry-main-check/stderr.txt",
+      "metadata": "cli-logs/e3-entry-main-check/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-entry-main-doctor",
+      "exit_code": 0,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-entry-main-doctor/stdout.txt",
+      "stderr": "cli-logs/e3-entry-main-doctor/stderr.txt",
+      "metadata": "cli-logs/e3-entry-main-doctor/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-entry-main-status",
+      "exit_code": 0,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-entry-main-status/stdout.txt",
+      "stderr": "cli-logs/e3-entry-main-status/stderr.txt",
+      "metadata": "cli-logs/e3-entry-main-status/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-candidate-check",
+      "exit_code": 0,
+      "before_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "after_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "output": "cli-logs/e3-final-candidate-check/stdout.txt",
+      "stderr": "cli-logs/e3-final-candidate-check/stderr.txt",
+      "metadata": "cli-logs/e3-final-candidate-check/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-candidate-doctor",
+      "exit_code": 0,
+      "before_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "after_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "output": "cli-logs/e3-final-candidate-doctor/stdout.txt",
+      "stderr": "cli-logs/e3-final-candidate-doctor/stderr.txt",
+      "metadata": "cli-logs/e3-final-candidate-doctor/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-candidate-status",
+      "exit_code": 0,
+      "before_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "after_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "output": "cli-logs/e3-final-candidate-status/stdout.txt",
+      "stderr": "cli-logs/e3-final-candidate-status/stderr.txt",
+      "metadata": "cli-logs/e3-final-candidate-status/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-main-check",
+      "exit_code": 1,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-final-main-check/stdout.txt",
+      "stderr": "cli-logs/e3-final-main-check/stderr.txt",
+      "metadata": "cli-logs/e3-final-main-check/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-main-doctor",
+      "exit_code": 0,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-final-main-doctor/stdout.txt",
+      "stderr": "cli-logs/e3-final-main-doctor/stderr.txt",
+      "metadata": "cli-logs/e3-final-main-doctor/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-main-status",
+      "exit_code": 0,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-final-main-status/stdout.txt",
+      "stderr": "cli-logs/e3-final-main-status/stderr.txt",
+      "metadata": "cli-logs/e3-final-main-status/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-review-37-42",
+      "exit_code": 0,
+      "before_state_sha256": "3dda11f08fffdb06a5aa9149367422fb0097f39775452936453fef61ae5940b9",
+      "after_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "output": "cli-logs/e3-review-37-42/stdout.txt",
+      "stderr": "cli-logs/e3-review-37-42/stderr.txt",
+      "metadata": "cli-logs/e3-review-37-42/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-review-template-37-42",
+      "exit_code": 0,
+      "before_state_sha256": "3dda11f08fffdb06a5aa9149367422fb0097f39775452936453fef61ae5940b9",
+      "after_state_sha256": "3dda11f08fffdb06a5aa9149367422fb0097f39775452936453fef61ae5940b9",
+      "output": "cli-logs/e3-review-template-37-42/stdout.txt",
+      "stderr": "cli-logs/e3-review-template-37-42/stderr.txt",
+      "metadata": "cli-logs/e3-review-template-37-42/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u40-context",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "output": "cli-logs/e3-u40-context/stdout.txt",
+      "stderr": "cli-logs/e3-u40-context/stderr.txt",
+      "metadata": "cli-logs/e3-u40-context/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u40-preview",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "output": "cli-logs/e3-u40-preview/stdout.txt",
+      "stderr": "cli-logs/e3-u40-preview/stderr.txt",
+      "metadata": "cli-logs/e3-u40-preview/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u40-record",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "output": "cli-logs/e3-u40-record/stdout.txt",
+      "stderr": "cli-logs/e3-u40-record/stderr.txt",
+      "metadata": "cli-logs/e3-u40-record/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u40-replay-input",
+      "exit_code": 0,
+      "before_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "after_state_sha256": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+      "output": "cli-logs/e3-u40-replay-input/stdout.txt",
+      "stderr": "cli-logs/e3-u40-replay-input/stderr.txt",
+      "metadata": "cli-logs/e3-u40-replay-input/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u41-context",
+      "exit_code": 0,
+      "before_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "after_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "output": "cli-logs/e3-u41-context/stdout.txt",
+      "stderr": "cli-logs/e3-u41-context/stderr.txt",
+      "metadata": "cli-logs/e3-u41-context/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u41-preview",
+      "exit_code": 0,
+      "before_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "after_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "output": "cli-logs/e3-u41-preview/stdout.txt",
+      "stderr": "cli-logs/e3-u41-preview/stderr.txt",
+      "metadata": "cli-logs/e3-u41-preview/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u41-record",
+      "exit_code": 0,
+      "before_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "after_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "output": "cli-logs/e3-u41-record/stdout.txt",
+      "stderr": "cli-logs/e3-u41-record/stderr.txt",
+      "metadata": "cli-logs/e3-u41-record/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u41-replay-input",
+      "exit_code": 0,
+      "before_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "after_state_sha256": "8f1eff4132c468b434f85856aed59d79c6360d31f79f34350115a6b79c52ce62",
+      "output": "cli-logs/e3-u41-replay-input/stdout.txt",
+      "stderr": "cli-logs/e3-u41-replay-input/stderr.txt",
+      "metadata": "cli-logs/e3-u41-replay-input/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u42-context",
+      "exit_code": 0,
+      "before_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "after_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "output": "cli-logs/e3-u42-context/stdout.txt",
+      "stderr": "cli-logs/e3-u42-context/stderr.txt",
+      "metadata": "cli-logs/e3-u42-context/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u42-preview",
+      "exit_code": 0,
+      "before_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "after_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "output": "cli-logs/e3-u42-preview/stdout.txt",
+      "stderr": "cli-logs/e3-u42-preview/stderr.txt",
+      "metadata": "cli-logs/e3-u42-preview/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u42-record",
+      "exit_code": 0,
+      "before_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "after_state_sha256": "3dda11f08fffdb06a5aa9149367422fb0097f39775452936453fef61ae5940b9",
+      "output": "cli-logs/e3-u42-record/stdout.txt",
+      "stderr": "cli-logs/e3-u42-record/stderr.txt",
+      "metadata": "cli-logs/e3-u42-record/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u42-replay-input",
+      "exit_code": 0,
+      "before_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "after_state_sha256": "8aab28c12a5d630c376ab4180f858fcadbac28d593191b3c0f5eff0e36107d82",
+      "output": "cli-logs/e3-u42-replay-input/stdout.txt",
+      "stderr": "cli-logs/e3-u42-replay-input/stderr.txt",
+      "metadata": "cli-logs/e3-u42-replay-input/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u43-context",
+      "exit_code": 0,
+      "before_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "after_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "output": "cli-logs/e3-u43-context/stdout.txt",
+      "stderr": "cli-logs/e3-u43-context/stderr.txt",
+      "metadata": "cli-logs/e3-u43-context/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u43-preview",
+      "exit_code": 0,
+      "before_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "after_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "output": "cli-logs/e3-u43-preview/stdout.txt",
+      "stderr": "cli-logs/e3-u43-preview/stderr.txt",
+      "metadata": "cli-logs/e3-u43-preview/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u43-record",
+      "exit_code": 0,
+      "before_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "after_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "output": "cli-logs/e3-u43-record/stdout.txt",
+      "stderr": "cli-logs/e3-u43-record/stderr.txt",
+      "metadata": "cli-logs/e3-u43-record/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u43-replay-input",
+      "exit_code": 0,
+      "before_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "after_state_sha256": "c0d07f472b5f8ef7e0bb4320a6923ab9e953be50a9805334ff92ff0a6aeb1d83",
+      "output": "cli-logs/e3-u43-replay-input/stdout.txt",
+      "stderr": "cli-logs/e3-u43-replay-input/stderr.txt",
+      "metadata": "cli-logs/e3-u43-replay-input/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u44-context",
+      "exit_code": 0,
+      "before_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "after_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "output": "cli-logs/e3-u44-context/stdout.txt",
+      "stderr": "cli-logs/e3-u44-context/stderr.txt",
+      "metadata": "cli-logs/e3-u44-context/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u44-preview",
+      "exit_code": 0,
+      "before_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "after_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "output": "cli-logs/e3-u44-preview/stdout.txt",
+      "stderr": "cli-logs/e3-u44-preview/stderr.txt",
+      "metadata": "cli-logs/e3-u44-preview/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u44-record",
+      "exit_code": 0,
+      "before_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "after_state_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+      "output": "cli-logs/e3-u44-record/stdout.txt",
+      "stderr": "cli-logs/e3-u44-record/stderr.txt",
+      "metadata": "cli-logs/e3-u44-record/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-u44-replay-input",
+      "exit_code": 0,
+      "before_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "after_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "output": "cli-logs/e3-u44-replay-input/stdout.txt",
+      "stderr": "cli-logs/e3-u44-replay-input/stderr.txt",
+      "metadata": "cli-logs/e3-u44-replay-input/result.json",
+      "private_args_may_contain_token": true
+    }
+  ],
+  "unexpected_cli_failures": [],
+  "known_expected_nonzero_cli": [
+    {
+      "label": "e3-entry-main-check",
+      "exit_code": 1,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-entry-main-check/stdout.txt",
+      "stderr": "cli-logs/e3-entry-main-check/stderr.txt",
+      "metadata": "cli-logs/e3-entry-main-check/result.json",
+      "private_args_may_contain_token": true
+    },
+    {
+      "label": "e3-final-main-check",
+      "exit_code": 1,
+      "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+      "output": "cli-logs/e3-final-main-check/stdout.txt",
+      "stderr": "cli-logs/e3-final-main-check/stderr.txt",
+      "metadata": "cli-logs/e3-final-main-check/result.json",
+      "private_args_may_contain_token": true
+    }
+  ],
+  "auxiliary_failures": [
+    {
+      "action": "Read saved preview output using wrong stdout.json extension",
+      "exit_code": 1,
+      "error": "ENOENT -4058: cli-logs/e3-u44-preview/stdout.json does not exist",
+      "correct_file": "cli-logs/e3-u44-preview/stdout.txt",
+      "effect": "read-only helper failure; no CLI mutation and candidate state still preview baseline",
+      "candidate_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "preview_before": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+      "preview_after": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1"
+    }
+  ],
+  "input_clarifications": [
+    {
+      "reason": "Before preview clarify half of the second strip, not another one-and-half; original prepared input retained; no state changes or failed CLI",
+      "old_input": ".writer/drafts/e3-record-44.json",
+      "current_input": ".writer/drafts/e3-record-44-v2.json",
+      "edits": [
+        {
+          "path": [
+            "changes",
+            "timeline_append",
+            1
+          ],
+          "before": "同日下午：两人坐食，沈先吃完一宽条、留两条，沈蒜多承认、女仍偏爱粉与脆；许母出房自愿少尝后半块留自己小碟，回房；沈再吃另一条半，余一条整和半条。两点多两人吃完不添，余饭约小碗、两菜少许、共盘整块1/母另半块，原碎块碗已空；碗锅待洗、油盐未归，无带食借还。",
+          "after": "同日下午：两人坐食，沈先吃完一宽条、留两条，沈蒜多承认、女仍偏爱粉与脆；许母出房自愿少尝后半块留自己小碟，回房；沈再吃另一条的一半，余一条整和半条。两点多两人吃完不添，余饭约小碗、两菜少许、共盘整块1/母另半块，原碎块碗已空；碗锅待洗、油盐未归，无带食借还。"
+        },
+        {
+          "path": [
+            "changes",
+            "ledger",
+            "T_AC_SHARED_MEAL",
+            "reader_known"
+          ],
+          "before": "44已实际做成且坐吃。芋头偏黏，女爱粉/脆，沈爱软/宽条并蒜加多，留整块和分碟真改变吃法。原两片豆干切三宽条归沈那份，先吃完一条，母见余两条后回房，再吃另一条半，余一条整和半条。母自主少尝后回房，母半块独留。止两点多余饭约小碗、两菜少许、共盘整块1，锅盆碗和油盐尚未洗收，不以做吃冒充借厨归还，无借碗或带食。",
+          "after": "44已实际做成且坐吃。芋头偏黏，女爱粉/脆，沈爱软/宽条并蒜加多，留整块和分碟真改变吃法。原两片豆干切三宽条归沈那份，先吃完一条，母见余两条后回房，再吃另一条的一半，余一条整和半条。母自主少尝后回房，母半块独留。止两点多余饭约小碗、两菜少许、共盘整块1，锅盆碗和油盐尚未洗收，不以做吃冒充借厨归还，无借碗或带食。"
+        }
+      ]
+    }
+  ],
+  "original_failure": {
+    "ref": "e-repaired-first-execution.json",
+    "issue": "原e1-record-35 draft_review缺非空reviewer，E2已另存纠正并登记35—39；本轮不重试或覆盖旧失败/报告。"
+  },
+  "audit": {
+    "ref": "e3-final-audit.json",
+    "sha256": "344a324b3ffe9e50cf46be3d6fe35fe4dcd3de85006fea28cb44b08acbdec1c7",
+    "main_existing_files": 1168,
+    "candidate_entry_existing_files": 1045,
+    "frozen_objects_unchanged": 582,
+    "candidate_existing_file_differences": [
+      {
+        "ref": "正文/0040-取下来的那一条-ac-b-v1.md",
+        "bytes_before": 48475,
+        "bytes_after": 48517,
+        "before": "657edca9f94aead84669ac9a6008e0b4807a1598a56079e2973a74518f8bf99d",
+        "after": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+        "unchanged": false
+      },
+      {
+        "ref": "正文/0041-让她自己推一次-ac-b-v1.md",
+        "bytes_before": 35200,
+        "bytes_after": 35212,
+        "before": "20117999349e1c2b209db0c757ebd8fcb18f3940ba9ff4a77ee6ea6a4bd4bc53",
+        "after": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+        "unchanged": false
+      },
+      {
+        "ref": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+        "bytes_before": 48277,
+        "bytes_after": 48568,
+        "before": "0ff85a634a442c65f16bae9a3c39b7269d0747931f8be28fef08eaf8b823b63f",
+        "after": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+        "unchanged": false
+      },
+      {
+        "ref": ".writer/state.json",
+        "bytes_before": 815150,
+        "bytes_after": 863403,
+        "before": "e7a582ed97dcfb2bd21d50240bafd3d2628b10306af8d21a575e4c66377e3019",
+        "after": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+        "unchanged": false
+      }
+    ],
+    "prefix1_39_units_identical_to_entry": true,
+    "prefix1_34_identical_to_main": true,
+    "source_ranges_versions_events_unchanged": true,
+    "future": [
+      {
+        "unit": 45,
+        "draft": "正文/0045-洗过再放回去-ac-c-v1.md",
+        "sha256": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+        "body_unmodified": true,
+        "candidate_registered": false
+      },
+      {
+        "unit": 46,
+        "draft": "正文/0046-盒里最后一块-ac-d-v2.md",
+        "sha256": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+        "body_unmodified": true,
+        "candidate_registered": false
+      },
+      {
+        "unit": 47,
+        "draft": "正文/0047-留一口自己的-ac-d-v2.md",
+        "sha256": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+        "body_unmodified": true,
+        "candidate_registered": false
+      },
+      {
+        "unit": 48,
+        "draft": "正文/0048-自己的那一段-ac-d-v2.md",
+        "sha256": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+        "body_unmodified": true,
+        "candidate_registered": false
+      }
+    ],
+    "protected_ledger": {
+      "P_DR_FLOWER_BOOK": {
+        "type": "object",
+        "statement": "35许蓉女儿旧书店自费14元购红花旧画册，与沈原八元册及18元未购薄书不同",
+        "status": "active",
+        "cast": [
+          "许蓉女儿",
+          "沈禾",
+          "旧书店店主"
+        ],
+        "tags": [],
+        "reader_known": "36女实际拆用并同母看不同页/真拍发两图，自己另旧信封画红花不改书，末夜自桌续读；母同看没接走。",
+        "character_known": {
+          "许蓉女儿": "亲拍两图发沈获回应/自己画信封/母喜欢黄枝，书仍自己家桌。",
+          "沈禾": "亲收红花/叶白两图并回应，托手机给父看，没接实体书。",
+          "许蓉": "亲见书页听价14/沈18未买，自己喜欢黄枝未接走。",
+          "沈成林": "沈托手机给看红花且口述女14，非亲见实体。"
+        },
+        "custody": {
+          "holder": "许蓉女儿",
+          "location": "许家女自家桌内格，42周日夜收桌放回",
+          "condition": "原书未添改，42仅为留明日吃饭桌面回内格"
+        },
+        "previous_holder": "旧书店店主",
+        "evidence": [
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+            "line": 160,
+            "quote": "她把包好的书放入自己的袋，先用一只手托底，再将袋带挽回腕上。"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "line": 37,
+            "quote": "接着又拍那张叶中留白的"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 344,
+            "quote": "书回到自己里面那一格"
+          }
+        ],
+        "introduced_unit": 35,
+        "updated_unit": 42
+      },
+      "T_X_BOOK_COMPANY": {
+        "type": "thread",
+        "statement": "25沈禾与许蓉女儿约下下周日14点书店一起各选书，先各自问班并在前日告变",
+        "status": "resolved",
+        "cast": [
+          "沈禾",
+          "许蓉女儿",
+          "许蓉",
+          "沈成林",
+          "谭老板"
+        ],
+        "tags": [
+          "X新阶段",
+          "各自兴趣",
+          "朋友同行"
+        ],
+        "due_unit": 35,
+        "reader_known": "35周日14点前后按25原约实际同进书店，各看不同花/巷图；女自付14携回花册，沈18薄书归架/20未花，仍共同坐水到分路。只结一次同行与不同选择，不许下一次日期/未来借读或全部友谊。",
+        "character_known": {
+          "沈禾": "亲同行/各留口味/见女付14，自己18不买20仍留，分路后女归家未见。",
+          "许蓉女儿": "亲12:30交完赴14点，付14自有花书，见沈18不买，亲同坐水分路。",
+          "许蓉": "36周日出班前亲同女看花册，听女亲述14元自购/沈18薄书未买；不再仅知35末书袋，但未亲历店内同行/沈付否全程。",
+          "沈成林": "36周日三点多亲听沈自述18薄书看后未买及女买14花册，又亲看沈托手机红花照片；未亲历书店/未见实体花册。",
+          "谭老板": "亲翻本与沈确认明日原整休，不共享姑娘班和书店细节。"
+        },
+        "evidence": [
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "line": 206,
+            "quote": "下下个星期日，两点，书店门前。前一天要变就给你说。"
+          },
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "line": 226,
+            "quote": "又添“我明天问班”。对方回一个好，说自己也问。"
+          },
+          {
+            "unit": 26,
+            "draft": "正文/0026-要关的半扇门-v2.md",
+            "sha256": "5c19d6646bbb78694e1ee2651c30cf028c1b91145f0f8677dc07fd3d5b88ff6e",
+            "line": 115,
+            "quote": "星期一五点到，三点半走。下下个星期日整天歇。这是两件。"
+          },
+          {
+            "unit": 26,
+            "draft": "正文/0026-要关的半扇门-v2.md",
+            "sha256": "5c19d6646bbb78694e1ee2651c30cf028c1b91145f0f8677dc07fd3d5b88ff6e",
+            "line": 175,
+            "quote": "明天不管成不成都回。"
+          },
+          {
+            "unit": 26,
+            "draft": "正文/0026-要关的半扇门-v2.md",
+            "sha256": "5c19d6646bbb78694e1ee2651c30cf028c1b91145f0f8677dc07fd3d5b88ff6e",
+            "line": 197,
+            "quote": "沈那一天能歇，自己这边还得等另一个人的安排。"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "line": 38,
+            "quote": "十二点半交完，午后便留给她。"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "line": 48,
+            "quote": "姑娘把“前一天再互说”接在后头"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "line": 134,
+            "quote": "她告诉他下下个星期日已问准，姑娘今天也回话了，两个人仍两点到那家书店。"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 96,
+            "quote": "今天才星期五，还没到。"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 96,
+            "quote": "今天不必先替后天开锅。"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 278,
+            "quote": "两点、店门前的约还在"
+          },
+          {
+            "unit": 34,
+            "draft": "正文/0034-明天的空处-d-v3.md",
+            "sha256": "3fe2d103bd729ad7f0c6cfa47c49098649f84d3f07f5584ef4173a8bc446135b",
+            "line": 229,
+            "quote": "明日周日，两点，原来那家旧书店门前。我中午回家吃过再去。"
+          },
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+            "line": 158,
+            "quote": "姑娘用自己的手机付了十四元。"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "line": 11,
+            "quote": "母亲问沈禾买的什么，她说没买，看中一本十八的，后来放回去了。"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "line": 68,
+            "quote": "她坐到旁边，说姑娘买一本花，十四"
+          }
+        ],
+        "introduced_unit": 25,
+        "updated_unit": 36
+      },
+      "P_W_PICTURE_BOOK": {
+        "type": "object",
+        "statement": "沈禾15自购八元旧画册，21借女后22第十五日15:20实收回并归床头",
+        "status": "active",
+        "cast": [
+          "沈禾",
+          "许蓉女儿",
+          "沈成林"
+        ],
+        "tags": [
+          "画册",
+          "自有兴趣",
+          "借阅"
+        ],
+        "due_unit": 24,
+        "reader_known": "36原册沈自持共看/归床头，周一分饭盒另袋带店，真坐读有限页再收，傍晚自行携回；父说再借未做。",
+        "character_known": {
+          "沈禾": "亲持全程/白纸原页不动，店里认晾衣盆，夜告女原8非18。",
+          "许蓉女儿": "夜沈文字知原8带店坐读已带家，自己先记串18经回话改清。",
+          "沈成林": "亲共看原册且见女周一携出上班，未再接册。",
+          "许蓉": "仅听女念父借同本一事，不共享完整书消息/位置。",
+          "谭老板": "亲见沈携一本并读后回工/傍晚提走，不知原白纸史。"
+        },
+        "custody": {
+          "holder": "沈禾",
+          "location": "36周日自持同父看后归床头；周一自袋带店搁板/膝读收回，傍晚自己携回沈家",
+          "condition": "原八元册白纸原页旧印保留，未再交父或朋友，无新买18薄书"
+        },
+        "evidence": [
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 258,
+            "quote": "八块钱买的旧书，在电影院旁边那家"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 315,
+            "quote": "书压在床头那叠干净衣服下面"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 333,
+            "quote": "她把书装进自己包"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 337,
+            "quote": "看她将书包护到伞下"
+          },
+          {
+            "unit": 22,
+            "draft": "正文/0022-书里那张白纸-v1.md",
+            "sha256": "9624eba564cba4ffddacf804ad0bf0bcf2a48ddac54c737c74fabe5f369b5995",
+            "line": 147,
+            "quote": "书便稳稳躺住"
+          },
+          {
+            "unit": 24,
+            "draft": "正文/0024-门给你留着-v1.md",
+            "sha256": "4140e41ad5443e3d98a126691c3a691c6682f483ec7958f3563e17f58fd48b7a",
+            "line": 90,
+            "quote": "她把白纸翻过来，夹到刚看完的下一页"
+          },
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "line": 289,
+            "quote": "她把自己的画册从门边椅上拿起。"
+          },
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "line": 289,
+            "quote": "送进房放回床头"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "line": 150,
+            "quote": "画册打开，昨天看到的人物手里拿着一只碗"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "line": 148,
+            "quote": "又按原处放回。"
+          },
+          {
+            "unit": 28,
+            "draft": "正文/0028-走远一点的路-v2.md",
+            "sha256": "3f0f8223ccb6359c41b4960346722c9849aa812ca1697c5e59d2073b8863c734",
+            "line": 260,
+            "quote": "她将书合好，送到床头里侧，给手机和小杯腾地方。"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 66,
+            "quote": "书合好拿去给他。"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 74,
+            "quote": "父亲接过，掌心托住书脊"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 274,
+            "quote": "白纸还留原处"
+          },
+          {
+            "unit": 34,
+            "draft": "正文/0034-明天的空处-d-v3.md",
+            "sha256": "3fe2d103bd729ad7f0c6cfa47c49098649f84d3f07f5584ef4173a8bc446135b",
+            "line": 145,
+            "quote": "她把画册送回自己床头，翻到树下那人，看一遍，又从白纸原处翻两页。"
+          },
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+            "line": 23,
+            "quote": "她将白纸仍放回原处，书合好，送回床头。"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "line": 231,
+            "quote": "直到傍晚她解围裙，才同空饭盒一并提回家。"
+          }
+        ],
+        "introduced_unit": 21,
+        "updated_unit": 36,
+        "previous_holder": "沈成林"
+      },
+      "O_BOX_PAINT": {
+        "type": "observation",
+        "statement": "箱盖左后角有一块月牙形的白漆。",
+        "author_truth": "箱盖左后角确有月牙形白漆；它不是暗号，也不能单独充当排他归属证明。",
+        "status": "resolved",
+        "cast": [
+          "许蓉",
+          "周岸",
+          "沈禾",
+          "沈成林"
+        ],
+        "tags": [
+          "旧铁箱",
+          "白漆"
+        ],
+        "due_unit": 3,
+        "reader_known": "原白漆在第3章实际用于转箱定向和装车连续辨认；不是排他证明，成因仍只来自沈父旧日口述。",
+        "character_known": {
+          "许蓉": "本人原有亲见继续，指白漆角安排靠窗与提手朝外，并装车再见；未作排他鉴定。",
+          "周岸": "本章转箱时明确看见白漆形位，按指示站位/开盖并装车；没有新增成因知识。",
+          "沈禾": "本章低头看清月牙白漆位置，协助转箱与装车；没有获白漆成因的新核验。",
+          "沈成林": "仍仅是第1章电话称记得白漆并给滴漆说法；本章女儿未告诉他白漆定向用途，未见现场。"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "line": 7,
+            "quote": "箱盖左后角有一块月牙形的白漆。"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/0003-把手朝外-final-b.md",
+            "sha256": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221",
+            "line": 53,
+            "quote": "箱盖左后角有一块月牙形的白漆。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 3
+      },
+      "T_W_EVENING_CLASS": {
+        "type": "thread",
+        "statement": "18首课与21小修后，24真实第二课有限补母袖并交还母试穿；学习继续",
+        "status": "partial",
+        "cast": [
+          "许蓉",
+          "许蓉女儿",
+          "沈禾",
+          "沈成林"
+        ],
+        "tags": [
+          "晚课",
+          "修衣",
+          "自己的时间"
+        ],
+        "due_unit": 24,
+        "reader_known": "第四课结果已有限转母，女练布展示后停针；继续学习总期数未定。",
+        "character_known": {
+          "许蓉": "听女练收线/实看新段仍拱，未亲上课。",
+          "许蓉女儿": "亲上第四课/练布六针，已收自针和剪刀，示范笔归还。",
+          "沈禾": "女文字知练拉线常多拽，不共享完整课堂。",
+          "沈成林": "亲见补后不齐小针而非课堂，听沈有限转述，接纳小帮助。"
+        },
+        "evidence": [
+          {
+            "unit": 13,
+            "draft": "正文/0013-桌边留一半-v1.md",
+            "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+            "line": 21,
+            "quote": "下周三开始，晚上七点，每周一次"
+          },
+          {
+            "unit": 13,
+            "draft": "正文/0013-桌边留一半-v1.md",
+            "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+            "line": 215,
+            "quote": "自己最想问的是一点也不会，去了会不会跟不上。"
+          },
+          {
+            "unit": 13,
+            "draft": "正文/0013-桌边留一半-v1.md",
+            "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+            "line": 233,
+            "quote": "这件先留给我。下周带去，回来还给你。"
+          },
+          {
+            "unit": 13,
+            "draft": "正文/0013-桌边留一半-v1.md",
+            "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+            "line": 39,
+            "quote": "一回一小时四十分钟。"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+            "line": 127,
+            "quote": "七点，老师把门虚掩"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+            "line": 209,
+            "quote": "八点四十，老师开了门"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+            "line": 211,
+            "quote": "推开门，许蓉坐在窗前"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+            "line": 213,
+            "quote": "母亲翻到背面，问这个疙瘩是不是结"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+            "line": 127,
+            "quote": "提醒大家八点四十收针"
+          },
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+            "line": 157,
+            "quote": "上了一回课，回来倒不敢动我那袖子。"
+          },
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+            "line": 207,
+            "quote": "不拆。老师叫下回还带着。"
+          },
+          {
+            "unit": 20,
+            "draft": "正文/0020-少做的一笼-v1.md",
+            "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+            "line": 141,
+            "quote": "我学的就是先把边放平。"
+          },
+          {
+            "unit": 20,
+            "draft": "正文/0020-少做的一笼-v1.md",
+            "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+            "line": 141,
+            "quote": "但这个厚，我没缝过。"
+          },
+          {
+            "unit": 20,
+            "draft": "正文/0020-少做的一笼-v1.md",
+            "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+            "line": 181,
+            "quote": "只说人上过一回修衣课，今天亲看这里"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 100,
+            "quote": "小的这里还能看见原来的针眼。这里厚的，我不弄。"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 222,
+            "quote": "另一只手压平布"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 240,
+            "quote": "结贴住了"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "line": 84,
+            "quote": "母亲的旧工装仍在衣柜里，她没有再拿"
+          },
+          {
+            "unit": 22,
+            "draft": "正文/0022-书里那张白纸-v1.md",
+            "sha256": "9624eba564cba4ffddacf804ad0bf0bcf2a48ddac54c737c74fabe5f369b5995",
+            "line": 200,
+            "quote": "我周三带去。人家要说不行，我再拿回来。"
+          },
+          {
+            "unit": 24,
+            "draft": "正文/0024-门给你留着-v1.md",
+            "sha256": "4140e41ad5443e3d98a126691c3a691c6682f483ec7958f3563e17f58fd48b7a",
+            "line": 215,
+            "quote": "许蓉把胳膊弯起来，手摸到后颈，再向前伸"
+          },
+          {
+            "unit": 24,
+            "draft": "正文/0024-门给你留着-v1.md",
+            "sha256": "4140e41ad5443e3d98a126691c3a691c6682f483ec7958f3563e17f58fd48b7a",
+            "line": 203,
+            "quote": "八点四十，老师叫收针。"
+          },
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "line": 174,
+            "quote": "她说昨晚已经去过，补片缝到了衣服上"
+          },
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "line": 180,
+            "quote": "她咬下的一口还没咽，朝她点头，等咽下才说起那两针带住另一面"
+          },
+          {
+            "unit": 28,
+            "draft": "正文/0028-走远一点的路-v2.md",
+            "sha256": "3f0f8223ccb6359c41b4960346722c9849aa812ca1697c5e59d2073b8863c734",
+            "line": 209,
+            "quote": "才发现里布也薄，开口并非全在那道缝上。"
+          },
+          {
+            "unit": 28,
+            "draft": "正文/0028-走远一点的路-v2.md",
+            "sha256": "3f0f8223ccb6359c41b4960346722c9849aa812ca1697c5e59d2073b8863c734",
+            "line": 225,
+            "quote": "裤子叠回袋中，白纸仍放到能一眼看见的那端"
+          },
+          {
+            "unit": 30,
+            "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+            "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+            "line": 127,
+            "quote": "钟指到七点，老师将门虚掩"
+          },
+          {
+            "unit": 30,
+            "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+            "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+            "line": 207,
+            "quote": "八点四十，老师叫收针"
+          },
+          {
+            "unit": 30,
+            "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+            "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+            "line": 256,
+            "quote": "说今晚缝的是自己的裤兜，里面垫薄布，外面那道线也合了"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 197,
+            "quote": "针线课还没到呢。"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 223,
+            "quote": "上头旧针脚仍在，谁也没有拔针拆线"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "line": 225,
+            "quote": "“先试折平，再缝。今天回去困了就别拿针赶，下一次带来我再看。”"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "line": 272,
+            "quote": "整段看起来仍不整齐，六七针就能认出好几处差别"
+          },
+          {
+            "unit": 37,
+            "draft": "正文/0037-各留一道菜-ac-a-v1.md",
+            "sha256": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "line": 300,
+            "quote": "我要先回一趟，再去。衣服拿着上班，放哪儿都得惦记。"
+          },
+          {
+            "unit": 38,
+            "draft": "正文/0038-带进灯下-ac-a-v1.md",
+            "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+            "line": 258,
+            "quote": "八点四十，老师叫收针"
+          },
+          {
+            "unit": 39,
+            "draft": "正文/0039-留到手上用-ac-ar-v1.md",
+            "sha256": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "line": 72,
+            "quote": "她把布放回，没开盒，自己转头看母亲究竟在听什么。"
+          }
+        ],
+        "introduced_unit": 13,
+        "updated_unit": 39
+      },
+      "F_AC_B_DOOR_PAYMENT": {
+        "type": "fact",
+        "statement": "40本处普通门底工40约定不变，料10获同意，周实际付料10正好；主人未向周付工料",
+        "status": "resolved",
+        "cast": [
+          "周岸",
+          "房门女主人",
+          "女主人母亲"
+        ],
+        "tags": [],
+        "reader_known": "41女付50正好，工40料10共50实际全清，无找零；周补凭条，女将十元条及工40/总50已收折入家用小票格。40周买料支10不重复再付，支10与收50分记，净工40。",
+        "character_known": {
+          "周岸": "亲收50正好，材料支10另记，票补工40/总50已收交女。",
+          "房门女主人": "亲付50正好，十元条补工40/总50已收，折放自家小票格。",
+          "女主人母亲": "亲听女说50正好且周点头，知本次已清。"
+        },
+        "evidence": [
+          {
+            "unit": 40,
+            "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+            "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+            "line": 280,
+            "quote": "周岸从钱夹取十块，递过去，老板将纸币展平看过，说正好"
+          },
+          {
+            "unit": 40,
+            "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+            "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+            "line": 328,
+            "quote": "他说等装好和工钱一起给就行，小条先让她留着。"
+          },
+          {
+            "unit": 41,
+            "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+            "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+            "line": 135,
+            "quote": "在纸的空处写明工四十、工料共五十已收"
+          }
+        ],
+        "introduced_unit": 40,
+        "updated_unit": 41
+      },
+      "P_AC_DRAWER": {
+        "type": "object",
+        "statement": "37周铺新客户留下看底槽的一只旧抽屉",
+        "status": "resolved",
+        "cast": [
+          "周岸"
+        ],
+        "tags": [
+          "普通委托",
+          "抽屉"
+        ],
+        "reader_known": "42周五当次换底交还并真收18有限完成；客户改上午亲取，原板看过决定不要，由周拆短包尖入废料。原柜推回/袜子使用仅客户文字，右侧旧抬仍在，不是整个柜修好。",
+        "character_known": {
+          "周岸": "亲装/亲交/亲收18；午后只文字知屉回柜和袜子关合，原柜右侧仍旧卡，长期未知。",
+          "抽屉客户": "亲试新底/付18/抱走；自己回家空试后装袜，并文字告周右侧仍老处需抬，原板不带。"
+        },
+        "custody": {
+          "holder": "抽屉客户",
+          "location": "周五客户亲抱离周铺；据其午后文字，已回自家原柜放袜关合",
+          "condition": "当次底板已换/客户毛巾试/18实付；原柜右边旧卡仍需抬，周未现场见原柜，长期承重未知"
+        },
+        "evidence": [
+          {
+            "unit": 37,
+            "draft": "正文/0037-各留一道菜-ac-a-v1.md",
+            "sha256": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "line": 114,
+            "quote": "东西留在铺里，周岸下午看过再回话，没让他等着一小时拿。"
+          },
+          {
+            "unit": 38,
+            "draft": "正文/0038-带进灯下-ac-a-v1.md",
+            "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+            "line": 56,
+            "quote": "连这一小片十八。换底，外面不重新涂。"
+          },
+          {
+            "unit": 38,
+            "draft": "正文/0038-带进灯下-ac-a-v1.md",
+            "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+            "line": 242,
+            "quote": "抽屉的新底板裁到能放进原槽，还没装回去；"
+          },
+          {
+            "unit": 41,
+            "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+            "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+            "line": 283,
+            "quote": "刚进去一侧，另一侧还翘着，他就停了，退出来"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 80,
+            "quote": "一共十八，推到周岸手边。"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 88,
+            "quote": "抽屉两手抱着。"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 92,
+            "quote": "男人说屉已放回，右边还是老地方要抬一下"
+          }
+        ],
+        "introduced_unit": 37,
+        "updated_unit": 42,
+        "previous_holder": "周岸"
+      },
+      "T_AC_SHARED_MEAL": {
+        "type": "thread",
+        "statement": "37沈禾与许蓉女儿约下一次双方都空半天一起做一顿午饭，各做一项且各负担菜钱，许母许可借厨房一次",
+        "status": "partial",
+        "cast": [
+          "沈禾",
+          "许蓉女儿",
+          "许蓉",
+          "沈成林"
+        ],
+        "tags": [
+          "AC跨卷",
+          "朋友做饭",
+          "各自口味"
+        ],
+        "due_unit": 48,
+        "reader_known": "44已实际做成且坐吃。芋头偏黏，女爱粉/脆，沈爱软/宽条并蒜加多，留整块和分碟真改变吃法。原两片豆干切三宽条归沈那份，先吃完一条，母见余两条后回房，再吃另一条的一半，余一条整和半条。母自主少尝后回房，母半块独留。止两点多余饭约小碗、两菜少许、共盘整块1，锅盆碗和油盐尚未洗收，不以做吃冒充借厨归还，无借碗或带食。",
+        "character_known": {
+          "沈禾": "亲做/吃并知女偏粉脆，自己软菜蒜多；亲要原两片中切三宽条，先吃一条、母回房后再吃半条余一条半；听母说只尝一点/另半块留自己，余饭菜与待洗锅盆在眼前。未见父当日热饭，钱余9包内。",
+          "许蓉女儿": "亲做看米/切菜及坐食，确认沈软口/宽豆干/蒜多，自己可直说偏粉。从原两片切三宽条，亲见沈分两次吃一条及半条，余一条半。母自愿尝后另留半块，尚未洗收/装盒，钱余5包内。",
+          "许蓉": "只亲见出房后吃饭、尝半块和小勺饭/少菜，听芋头6元与宽条缘由，亲见碟角两条宽豆干但不知起初切三条及回房后再吃半条，半块自己另留，未全程教学、未见摊前及沈父热饭。",
+          "沈成林": "周一早晨在家听沈早出；本人发消息称热饭吃了，收到沈到许家坐水/等会儿才买菜；未到许家或知摊前钱款。",
+          "谭老板": "实际接过沈未取订单和柜中物，12:30让沈走/自己接下午取货，未见许家或摊前。"
+        },
+        "evidence": [
+          {
+            "unit": 37,
+            "draft": "正文/0037-各留一道菜-ac-a-v1.md",
+            "sha256": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "line": 210,
+            "quote": "不如找个都空的半天一起做。"
+          },
+          {
+            "unit": 37,
+            "draft": "正文/0037-各留一道菜-ac-a-v1.md",
+            "sha256": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "line": 356,
+            "quote": "问过了，厨房可以借一回。各做一点，收好。哪天我们再看班。"
+          },
+          {
+            "unit": 39,
+            "draft": "正文/0039-留到手上用-ac-ar-v1.md",
+            "sha256": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "line": 231,
+            "quote": "我今晚前告诉你要不要这个半天。"
+          },
+          {
+            "unit": 39,
+            "draft": "正文/0039-留到手上用-ac-ar-v1.md",
+            "sha256": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "line": 235,
+            "quote": "下周一我早来半小时，十二点半交完能走，你那边怎样？"
+          },
+          {
+            "unit": 40,
+            "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+            "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+            "line": 145,
+            "quote": "我能接周六最后两小时。周一十二点，前头做完交给谁？"
+          },
+          {
+            "unit": 40,
+            "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+            "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+            "line": 212,
+            "quote": "那天我到你家，想先坐十分钟喝点水。别我一进门你就把菜递我手里。"
+          },
+          {
+            "unit": 41,
+            "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+            "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+            "line": 158,
+            "quote": "周一用吧。我先吃我的，想歇我就进屋。"
+          },
+          {
+            "unit": 41,
+            "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+            "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+            "line": 182,
+            "quote": "才说下周一这个半天自己要，早半小时到，十二点半交清后走"
+          },
+          {
+            "unit": 41,
+            "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+            "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+            "line": 231,
+            "quote": "我爸知道日子了。星期日我再安顿他那份，不用你多做带回的。"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 133,
+            "quote": "姑娘留十块给自己的菜，沈禾说芋头先带十五"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 192,
+            "quote": "周六这一截已经做完"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 283,
+            "quote": "将小碟盖好，一起收进冰箱中层。"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "line": 321,
+            "quote": "她说先把店里该交的交清，十二点半过后去许家"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 39,
+            "quote": "老板看钟，说她来得正好，比平时早半小时"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 58,
+            "quote": "墙钟刚到十二点，对方朝她摆手，说走吧"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 125,
+            "quote": "他朝钟看，十二点半刚到，让她走"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 176,
+            "quote": "她们起身时，已经过了原先说的十分钟。"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 207,
+            "quote": "原来十块买过菜找七，如今余五"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 236,
+            "quote": "原先备的十五还剩九"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 170,
+            "quote": "饭热过吃了。碟好拿，没热馒头。"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "line": 293,
+            "quote": "厨房里还没开火"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 150,
+            "quote": "外头已经软，米心却还带一点硬"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 160,
+            "quote": "姑娘拿出干净小碟，将四块形还整的拨进去。"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 212,
+            "quote": "沈禾自己取了一点盐撒在菜上"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 259,
+            "quote": "“我嫌什么？”"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 314,
+            "quote": "真要一碗，自己会拿碗"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 367,
+            "quote": "桌上还留一块完整芋头，一小锅余饭，两份菜各剩一点；母亲的小碟另有半块，谁也没混回去。"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 367,
+            "quote": "这顿约了好些天的饭，真的被她们坐着吃过了。"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 70,
+            "quote": "从原来留着的第二片边上切出三条"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 271,
+            "quote": "说完把这一半也吃了，碟角另两条还好好留着。"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 312,
+            "quote": "许蓉看见碟角留着两条宽豆干"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "line": 353,
+            "quote": "如今桌上三条宽豆干吃掉一条半，还留一条整的和半条"
+          }
+        ],
+        "introduced_unit": 37,
+        "updated_unit": 44
+      }
+    }
+  },
+  "checkpoint": {
+    "label": "e-second",
+    "count": 44,
+    "ref": "checkpoint-e-second.json",
+    "sha256": "7f3c33475bd8fb11a02fc0c58812c7f335467267d247759e5fdf01c32a6337f1",
+    "candidate_state": "checkpoint-e-second-state.json",
+    "main_state": "checkpoint-e-second-main-state.json",
+    "inventory_files": 487,
+    "authority": false,
+    "root_to_add_frozen_objects_inventory": true,
+    "note": "487项主候选审计清单，按既有脚本范围生成。根随后扩充当前冻结对象清单；清单不能编辑权威state。"
+  },
+  "historical_D48": {
+    "ref": "大纲/AC-D48-登记47后滚动细化.md",
+    "line": 3,
+    "original_point": "after original47 record revision212, before48 writing",
+    "historical47_sha256": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+    "current_E47_sha256": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+    "E47_revised": false,
+    "final_E47_sha256": null,
+    "old_pin_retained": true,
+    "later_obligation": "Once47 actually revised, record E new47SHA separately and read before48 context; never refresh old historical pin silently."
+  },
+  "actual_high_confidence_story_problems": [],
+  "test_variables_completed": [
+    "35花册14及36两个告知已E2完成、本轮继承核实",
+    "40料10正好、41总50正好及全部当前实际钱款/凭条/知识差量",
+    "44原两片中三宽条、母见2、章末余1.5"
+  ],
+  "pending_test_variables": [
+    "45实际转述、留三条及余1.5后续；饭盒/浅碟、各余款和各人所知需实读同步",
+    "47当前独立门账改支10/收50/净工40，不能回退固定旧款或其它独立消费",
+    "46—48逐章当前context/replay/完整回读登记及后续真实报告；E47新SHA独立记明，不刷新D48旧历史钉"
+  ],
+  "known_historical_plan_limits": [
+    "0038.json和扩大骨架保留A阶段只前两段首停措辞，现完整38已由同ID后来续成；本轮照最新35—48授权回放，保留历史来源。",
+    "0039.json保留当时40未授权措辞，当前授权35—48，本次首组仍止39。"
+  ],
+  "uncovered": [
+    "本轮新返回完整正文39—44；没有宣称本轮完整重读1—38或45—48",
+    "候选45—48正文保留原字节但未回放，现有旧事实不视作E已更新",
+    "6条verified旧应用有效状态仍needs-recheck；13可选open未擅改，F正式verify未执行",
+    "candidate check仍有29项旧稿/尚待回放正文未登记warning；31—36滚动复核窗口仍pending；check通过仅机械门禁",
+    "主区check原9项IMPACT_PENDING仍未过，主区25项历史未登记warning，未宣称总体完工/验收"
+  ],
+  "not_done": [
+    "45及其后未处理",
+    "未prepare/commit或放弃/重开revision",
+    "未写49",
+    "无子代理/额外会话/后台写稿/对外聊天消息",
+    "未改产品源码/state绕过或固定工具/真实作品/封存包/原来源入口；未提交推送"
+  ],
+  "next_unit": 45,
+  "next_stop": 48,
+  "root_next": "根检查本交接与断点，扩充冻结对象清单后同ID恢复45—48；仍原35—48整体任务，并非作者仅许40—44。"
+}

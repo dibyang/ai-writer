@@ -14,7 +14,7 @@
 
 首发的[M轮记录](acceptance/20261019-release-publish-m/README.md)保存CI故障修复、最终干净构建、标签及正式发布回执和匿名下载核验。Windows × Node20/24各167项全通过，Ubuntu × Node20/24各163通过、4项Windows专用测试跳过；四组doctor和引擎29/29均通过。最终解压包本地166通过、0失败、1项本机符号链接环境跳过，doctor、引擎和实际CLI流程通过。[L轮](acceptance/20261019-release-080-l/README.md)保留此前准备产物与失败修复，历史报告不改写。
 
-下一版本定为 **0.9.0，当前开发中、尚未发布**，包含上下文预算诊断、长章展开与纲文回对。三个新增参考项目的来源与取舍见[审查说明](docs/three-project-reference-audit.md)，方法验证见[N轮记录](acceptance/20261019-three-references-n/README.md)，0.9.0版本切换验证见[O轮记录](acceptance/20261019-version-090-o/README.md)。正式下载仍为上方v0.8.0；版本比较同时核对内容ID与资源配置。
+**0.9.0 已完成本地候选验收，正在执行正式发布流程**，包含上下文预算诊断、长章展开与纲文回对。三个新增参考项目的来源与取舍见[审查说明](docs/three-project-reference-audit.md)，方法验证见[N轮记录](acceptance/20261019-three-references-n/README.md)，0.9.0版本切换验证见[O轮记录](acceptance/20261019-version-090-o/README.md)。发布进度和最终下载见 [0.9.0 发布记录](acceptance/20261027-release-090-af/README.md)；版本比较同时核对内容ID与资源配置。
 
 0.9.0完整流程的后续实跑与问题修复另见[Q轮记录](acceptance/20261019-long-flow-090-q/README.md)，覆盖长章中断恢复、纲文实读回对、预算扩容和登记；各项结论以该轮具体构建及实际覆盖为准。
 

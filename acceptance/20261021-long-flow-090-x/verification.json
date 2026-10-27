@@ -1,0 +1,227 @@
+{
+  "ok": true,
+  "complete": true,
+  "at": "2026-10-22T02:34:03.239Z",
+  "scope": "windows-local-thirty-six-chapter-expanded-flow",
+  "formal_release_acceptance": false,
+  "registered_units": 36,
+  "volumes": 13,
+  "body_han": 246223,
+  "new_chapters_body_han": 108581,
+  "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+  "runtime_id": "7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f",
+  "archive_sha256": "04bc027b65ad6b0ae8532a887b8025ae7a2f31bd5ad8cd6568aa713d5b5502c5",
+  "state_sha256": "c20c532114328640998dc4efbfe03d242d924875499cae684a63ba5b774f3e38",
+  "revision": 178,
+  "actual_native_runs": 13,
+  "unique_threads": 6,
+  "actual_thread_ids": [
+    "01a15cf8-3c5c-7ff3-9389-f54d906bfd02",
+    "01a15d55-748a-7500-9016-ada8458f00a7",
+    "01a15dc1-084b-7b70-a1d3-4f5e124033f1",
+    "01a15dfa-2d52-7962-a1be-a5d2fc3967f4",
+    "01a15e52-6b2b-7652-b96d-d54312698022",
+    "01a16146-dad6-7e40-8596-9105ab57cba0"
+  ],
+  "same_thread_resumes": 7,
+  "native_normal_exits": 11,
+  "interrupted_native_runs": [
+    {
+      "invocation": "codex-b-resume",
+      "exit_code": 1,
+      "cause": "provider-model-capacity",
+      "recovered_same_thread": true,
+      "proof": "capacity-recovery-b-verification.json"
+    },
+    {
+      "invocation": "codex-e-resume",
+      "exit_code": null,
+      "signal": "SIGTERM",
+      "cause": "network retries, observed clock gaps and runner wall timeout; exact system cause unknown",
+      "recovered_same_thread": true,
+      "proof": "e-network-recovery-verification.json"
+    }
+  ],
+  "new_chapter_minimum_body_han": 8000,
+  "long_chapter_minimum_body_han": 10000,
+  "long_chapters": [
+    27,
+    30,
+    33,
+    36
+  ],
+  "controlled_old_fact_families": [
+    {
+      "id": "class",
+      "old_minutes": 90,
+      "new_minutes": 100,
+      "start": "19:00",
+      "end": "20:40",
+      "first": 13,
+      "prose_affected": [
+        13,
+        18,
+        24,
+        30
+      ]
+    },
+    {
+      "id": "bench",
+      "old_cm": 27,
+      "new_cm": 29,
+      "first": 17,
+      "prose_affected": [
+        17,
+        18,
+        21,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "book_return",
+      "old": "15:30",
+      "new": "15:20",
+      "first": 21,
+      "prose_affected": [
+        21,
+        22
+      ]
+    }
+  ],
+  "revision_replay_range": {
+    "from": 13,
+    "through": 36
+  },
+  "replayed_unit_count": 24,
+  "changed_body_units": [
+    13,
+    17,
+    18,
+    21,
+    22,
+    23,
+    24,
+    30
+  ],
+  "protected_complete_prefix": 12,
+  "source33_versions_and_future_binding_preserved": true,
+  "latest_D36_tracking_repair_preserved": true,
+  "fresh_current_full_read": "read-proof-f-current-full.json",
+  "current_whole_model_reviews": [
+    {
+      "ref": ".writer/reviews/c7655651-58d4-4234-b2e1-167c9923ab5d.json",
+      "report": "审查/X-F当前36章全书复核.md",
+      "sha256": "b6e6174e8b3abd359cd251ee311ac9b0d2c0fea5e7d8a8ef489911e0e0bf6734"
+    }
+  ],
+  "all_actual_failures_classified": true,
+  "failure_dispositions": "failure-dispositions.json",
+  "public_tool_record_supplement": {
+    "ok": true,
+    "proof": "public-tool-record-verification.json",
+    "source": "native-tool-event-capture.json",
+    "scope": "allowlisted public tool calls and outputs only; no private reasoning or full global session copies"
+  },
+  "regressions": {
+    "proof": "baseline-regression-verification.json",
+    "source": {
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2
+    },
+    "actual_extracted_package": {
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2
+    },
+    "windows_permission_skips_retained": true,
+    "source_and_package_doctor": "both ok with empty errors and warnings"
+  },
+  "product_source_changes_this_round": 0,
+  "product_source_and_runtime_parity": "repository-final-verification.json",
+  "prior_W_seal_unchanged": true,
+  "existing_author_works_edited": false,
+  "export": {
+    "directory": "export-final/parent-current-36-draft-r178",
+    "status": "draft-export",
+    "quality_review": "required",
+    "included_units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "sha256": "fe79569c70225584d99fd8556d92dffdda19619147e9842452f1eef308627eb0",
+    "manifest_sha256": "19518f2323f5b082596089ae2d042dd2ea39644455af72c8b41b4ba9dae0b1da",
+    "excluded_drafts": 22,
+    "recombined_current_bytes_equal": true
+  },
+  "final_paused_discussion_only": true,
+  "chapter37_not_created": true,
+  "git_commit_performed": false,
+  "push_performed": false,
+  "release_performed": false,
+  "human_blind_read": false,
+  "market_validation": false,
+  "cross_platform_ci_executed": false,
+  "limitations": [
+    "Windows local real Codex integration, not Linux/macOS or release acceptance",
+    "Model semantic review and mechanical provenance checks are separately recorded",
+    "Controlled ordinary-fact changes are test variables, not original manuscript bugs",
+    "Optional style suggestions remain optional; unresolved fictional promises are not forced closed",
+    "Original package historical source_commit/dirty provenance is retained, not rewritten as a new build"
+  ],
+  "required_proofs": [
+    "creation-transition-verification.json",
+    "capacity-recovery-b-verification.json",
+    "input-recovery-verification.json",
+    "source33-publish-verification.json",
+    "source33-recovery-verification.json",
+    "d-tracking-fix-verification.json",
+    "e-first-verification.json",
+    "e-complete-verification.json",
+    "parent-guard-occupied-verification.json",
+    "parent-guard-final-context-verification.json",
+    "parent-guard-final-template-verification.json",
+    "read-proof-f-current-full.json"
+  ],
+  "wall_clock_duration_note": "Interrupted E elapsed time includes large environment/heartbeat gaps; active execution time is unknown.",
+  "authorization_provenance_clarification": "e-authorization-provenance-clarification.json",
+  "final_current_export_proof": "parent-current-export-verification.json",
+  "report_only_correction_proof": "f-report-correction-verification.json"
+}

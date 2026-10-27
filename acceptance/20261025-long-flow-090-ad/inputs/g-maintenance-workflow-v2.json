@@ -1,0 +1,72 @@
+{
+  "expected_revision": 337,
+  "operation_id": "ad-g-generation8-maintenance-workflow-paused-v2",
+  "author_evidence": {
+    "quote": "发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AD作者任务.md",
+    "source_sha256": "7b7d4195d50b6be4988f065087516ee848fd77c40cea9e6a015032f82fcdddc0",
+    "locator": "第7行原任务；显式更新AD独立副本以完成已授权工具修复和最终构建验收，由根控制器选择实现，不伪称新增作者原话。",
+    "recorded_by": "Codex root controller"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "AD G：修复已采用跨章意见apply误拒窄范围真实提交；显式更新此独立60章验证副本至已测试的新0.9.0构建，随后完整复读、跨会话恢复并闭环原意见。不写或改正文，不冒称新构建重写了原60章。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "本轮只更新AD独立副本内受管工具和已验证未定制/未被正文消费的手册，保留gen7/备份和旧输入。",
+        "不写改任何正文或现有真实作品，不写61正文，不刷新冻结设定、原引用或消费哈希。",
+        "保留原9/21/42证据与原采用/真实提交；49误判retained和13optional不变；旧8不再次apply。",
+        "新构建从作品随附入口运行，完整复读1—60并正常首停/同ID恢复；验证原意见apply/verify、有效61范围拒绝和草稿导出。",
+        "最终仍为模型知情自检与草稿，不提交、推送或发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "研究/AD规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V21.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0058.json",
+          "大纲/单元/0059.json",
+          "大纲/单元/0060.json",
+          "研究/AD-D滚动写前核对.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      }
+    }
+  }
+}

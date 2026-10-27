@@ -1,0 +1,76 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-26T05:19:48.896Z",
+  "operation_id": "ae-g9-maintenance-workflow",
+  "base_revision": 393,
+  "payload": {
+    "stage": "paused",
+    "task": "AE：显式更新独立66章验证副本至已测试的0.9最终候选；随后用新ID及同ID恢复完整复核1—66、原九条意见验证、合法67越界负例和草稿导出。现有正文路径保持，不声称新构建重写旧66章。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只更新AE独立副本的受管工具和明确选择的未定制手册，保留旧工具事务备份。",
+        "不修改真实作品、不写67、不自动迁移已登记正文路径；新按卷目录另建小型独立作品验证。",
+        "原9应用及13optional/49retained保持，复核不得二次apply。",
+        "当前不提交、不推送、不打标签或发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "大纲/AE新增骨架-61-66.md",
+          "研究/AE规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V22.json",
+          "大纲/分卷/V23.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0054.json",
+          "大纲/单元/0059.json",
+          "大纲/单元/0060.json",
+          "大纲/AE新增骨架-61-66.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      }
+    }
+  },
+  "evidence": {
+    "quote": "那就让长篇正文按卷分目录。然后按你的建议继续，先恢复中断现场，完成当前修订和0.9.0最终构建的完整验收，发现问题直接修复，保留完整验证记录，暂不修改现有作品，不提交、不推送。",
+    "local_source": "研究/AE后续授权-卷目录与最终验收.md",
+    "source_sha256": "e045d0616297552e1a849f7dad28cbcdf21c65af671e9eaaf1da517baa1f91cd",
+    "locator": "用户原话段；本轮仅独立验证作品更新和恢复验收",
+    "recorded_by": "Codex root controller",
+    "frozen_ref": ".writer/objects/e045d0616297552e1a849f7dad28cbcdf21c65af671e9eaaf1da517baa1f91cd.txt"
+  }
+}

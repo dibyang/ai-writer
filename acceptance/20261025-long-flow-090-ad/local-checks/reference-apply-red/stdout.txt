@@ -1,0 +1,40 @@
+✖ 事前采用跨章意见后可仅提交目标章，范围外参考须保持且复核仍覆盖参考 (7237.2041ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7371.525
+
+✖ failing tests:
+
+test at tests\review-workflow.test.mjs:206:1
+✖ 事前采用跨章意见后可仅提交目标章，范围外参考须保持且复核仍覆盖参考 (7237.2041ms)
+  AssertionError [ERR_ASSERTION]: D:\work\other\ai-writer\bin\ai-writer.mjs review-issues apply --project D:\work\other\ai-writer\.tmp\protection-xUWvYg\work --input D:\work\other\ai-writer\.tmp\protection-xUWvYg\work\.writer\review-test-8.json
+  
+  {
+    "ok": false,
+    "error": "实际修订提交与采用时旧稿/当前新稿不匹配",
+    "code": "REVIEW_PUBLICATION_MISMATCH",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' review-issues '--help'"
+  }
+  
+  
+  2 !== 0
+  
+      at cli (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:12:108)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/review-workflow.test.mjs:208:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

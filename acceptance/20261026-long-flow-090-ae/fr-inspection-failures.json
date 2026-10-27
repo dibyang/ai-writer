@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-26T08:32:50.975Z",
+  "native_id": "01a176d2-2255-7e80-9c37-d825387a4fef",
+  "current_run_body_page_failures": [],
+  "current_run_truncated_body_batches": [],
+  "official_six_product_failures": [],
+  "inspection_events": [
+    {
+      "kind": "metadata_output_truncated",
+      "count": 3,
+      "details": [
+        "Unbounded governance/decision metadata print (~94826 tokens).",
+        "Final six-state metadata print (~54691 tokens).",
+        "Final artifact schema probe printed first full doctor row (4040 tokens, max3000)."
+      ],
+      "handling": "Truncated metadata was not treated as read evidence. Complete artifacts are preserved; bounded field checks and relevant source reads were used. No prose page was in these batches.",
+      "exact_event_timestamps": null
+    },
+    {
+      "kind": "powershell_inline_parser_error",
+      "count": 1,
+      "exit_code": 1,
+      "detail": "Missing type name after '[' from inline quote regexp.",
+      "handling": "Replaced by standalone fr-quote-audit.mjs; final 125 literal quotes present, no literary pass inferred.",
+      "exact_event_timestamps": null
+    },
+    {
+      "kind": "wrong_guessed_path",
+      "count": 1,
+      "detail": "FastCtx grep for guessed unit38 filename returned path nonexistent.",
+      "handling": "Read real registered path 正文/0038-带进灯下-ac-a-v1.md and relevant metadata.",
+      "exact_event_timestamps": null
+    },
+    {
+      "kind": "read_offset_past_eof",
+      "count": 1,
+      "detail": "Read offset350 exceeded 151-line semantic note.",
+      "handling": "Actually read available lines130–151.",
+      "exact_event_timestamps": null
+    },
+    {
+      "kind": "apply_patch_context_mismatch",
+      "count": 2,
+      "detail": "Embedded sentence and paragraph anchors did not match complete lines; no file writes occurred on failed attempts.",
+      "handling": "Corrected exact sentence using FastCtx replace; created separate language/impact note. Final notes and all baseline files independently hashed.",
+      "exact_event_timestamps": null
+    }
+  ],
+  "previous_native_capacity_failure": {
+    "run": "final-first",
+    "root_observed_exit_code": 1,
+    "root_observed_elapsed_ms": 1467764,
+    "error": "Selected model is at capacity",
+    "original_result_and_checkpoint_unchanged": true
+  },
+  "this_native_exit": "pending root observation; no invented result"
+}

@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),p=JSON.parse(fs.readFileSync(path.join(base,'project.json'))).project,sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const s=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json')));assert.equal(s.units.length,58);assert.equal(s.revision,288);
+const ref='大纲/单元/0059.json',before=fs.readFileSync(path.join(p,ref)),x=JSON.parse(before);
+fs.writeFileSync(path.join(p,'.writer/drafts/ad-d-plan59-before-refinement.json'),before,{flag:'wx'});
+x.goal='第47日周五，两友依58真实所约16:30小广场至约17:15，各下工回家取书；女为自己已接工作的交清晚15分钟并主动告知，沈先到独看后真正交流，容纳不同兴趣。';
+x.change='从58相约尚未见面，到女实际处理迟到并说清、沈独看和两友各自持书的实际来往；关系收益不靠替人统一看法或补偿买糕。';
+x.beats[0]='第47日周五下工前女因自己已经接的一页工作需交清，约16点后实际文字告沈拟晚15分钟到16:45；沈按自己仍须17:15左右走的时间答先去坐，回家取原8册，父只在听她本日说明后知她去见友。';
+x.beats[1]='沈实际按16:30到小广场找座，保留短等的不快也有完整独看/短走，不靠不停看手机惩罚对方。女先交清自己已接的一页、回家取原14册和自杯，原书签/自写夹纸保留，课布/两张课堂纸不带。';
+x.beats[2]='女约16:45实际到场，先报来迟而不默认沈今日无别事；共同余半小时容许自己先喝水。两本书可递接临看，原8白纸/女14自写夹纸分明。原练布只文字有限所得，沈可先看画/不急夸，临场误会讲清，不所有人说同一条边界。';
+x.recall_ids=['T_AD_BOOK_MEET59','P_W_PICTURE_BOOK','P_DR_FLOWER_BOOK','P_ROUTE_MASTER','T_W_EVENING_CLASS'];
+const out='.writer/drafts/ad-d-plan59-refined-input.json';fs.writeFileSync(path.join(p,out),JSON.stringify(x,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(base,'d-before59-refinement.json'),JSON.stringify({ok:true,revision:288,units:58,ref,before_sha256:sha(before),input_sha256:sha(Buffer.from(JSON.stringify(x,null,2)+'\n')),consumed_by_existing_units:false,reason:'58 source_hashes do not consume59 plan; only ordinary unconsumed future refinement, original preserved; no source protocol needed for unchanged consumed sources',workflow_unchanged:true},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(x,null,2));

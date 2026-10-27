@@ -1,0 +1,7 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';import {initProject,enableLong,main} from '../../lib/workspace.mjs';
+const A=path.dirname(fileURLToPath(import.meta.url)),root=path.join(A,'probes/volume-id-case-before/work');assert(!fs.existsSync(root));initProject(root,'novel','卷ID大小写合成诊断',{legacy:true});enableLong(root,0);
+const volume={id:'V1',title:'第一卷',start:1,end:1,promises:['开始'],constraints:[],reserved:[],arcs:[{id:'A1',start:1,end:1,goal:'开始',payoff:'完成',forbidden:[]}]};
+const put=(name,x)=>{const f=path.join(root,'研究',name);fs.writeFileSync(f,JSON.stringify(x,null,2)+'\n',{flag:'wx'});return f;};
+main(['volume','--project',root,'--input',put('original.json',volume)]);const before=fs.readFileSync(path.join(root,'大纲/分卷/V1.json'));fs.writeFileSync(path.join(root,'研究/original-volume-bytes.json'),before,{flag:'wx'});
+let blocked=false,error=null;try{main(['volume','--project',root,'--input',put('case-alias.json',{...volume,id:'v1',title:'另一卷',start:2,end:2,arcs:[{...volume.arcs[0],start:2,end:2}]})]);}catch(e){blocked=true;error=e.message;}
+const preserved=fs.readFileSync(path.join(root,'大纲/分卷/V1.json')).equals(before),result={platform:process.platform,blocked,error,original_volume_preserved:preserved,synthetic_only:true};fs.writeFileSync(path.join(root,'研究/result.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));assert(blocked&&preserved,'Case-only volume ID alias must not overwrite an existing volume plan');

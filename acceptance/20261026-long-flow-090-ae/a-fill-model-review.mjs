@@ -1,0 +1,30 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),mode=process.argv[2],session=JSON.parse(fs.readFileSync(path.join(A,'cli-logs/a-date62-begin/stdout.txt'))),P=mode==='tail'?session.workspace:JSON.parse(fs.readFileSync(path.join(A,'project.json'))).project;
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),j=r=>JSON.parse(fs.readFileSync(path.join(P,r))),s=j('.writer/state.json');
+const data={
+58:[['父主动找院门报并想在窗边读自己喜欢的段，沈也要独坐看书。','有一张，后头画了个小院。我想再看看。'],['女先误听成原篇结果；父伤脚换座需扶杖，读文也仍不喜欢结尾。','不过同一间屋几步，他走得也慢。'],['父取消下楼，屋内实换窗椅；沈照自己的安排真独出再归。','自己今天不想为坐太阳再折腾一回。'],['父亲写自己的记纸、袋轻用后收，女真独读而非等人。','店里的人先找钱'],['父女各能讲自己看到一段，但仍会急问后来，互听不等喜欢一致。','她也讲了']],
+59:[['两女想在有限下工时段互看两册、各保留自己的偏好。','不是急。我本来想多看一会儿她那本。'],['女工作错行真实交接使晚一刻，沈有不快/时间只到17:15。','想晚十五分钟，四点四十五到'],['沈拒老板额外折盒先自行看，女交清再赴约；书短换后各归。','我下工了。她晚，不是我晚。'],['两册与两纸没有混，实际共看约半小时；沈17:11走洗头，女自己等面取回遗杯。','原白纸还露在旧页间'],['女直说想被夸，沈只能肯定已知问与自退，不假见练布；不同喜好留着。','也不能每个人都拿一样的给你。']],
+60:[['许要从熟听走到自己开声并能找回唱句，周也想外出休闲。','今日原来想把这句接得过来'],['许气短/羞/找听位置不准；周看不懂棋且与友停留偏好不同。','末尾仍短'],['许留早录并晚请女在母手机再录，女拒跟唱；周可坐外看人、另走河边。','她将这条留在手机里'],['真留早晚两条自录和私人记号，何只现场起句；柜电话只是使用回述不再验/不重收。','手机里却留住了今天两回自己的声音。'],['母肯当面唱、女有有限喜欢也能拒唱，何快与许慢不互改。','自己又不是来收两个人的节目']],
+61:[['女想留14及自己的时间试画杯。','今天我还不想借出去。我自己也想看。'],['先回在造成误会、沈失望，母桌面/声音有摩擦；画手不从眼。','自己买了铅笔，竟没有买刨笔刀。'],['澄清本次不借，另纸笔3加刨刀2实付，留失败两张而不再起第三张。','她没有将它揉成团。'],['两画真实缺陷和8空白纸留下，14/原夹纸自持，沈未见画；晚只告沈两录存在/数量。','第二张小，站得稍正，却有双层柄和一点擦毛。'],['沈短答失望未抹，仍能普通问饭；母诚实不喜欢全张但看见底下两笔。','那就先放你那里。']],
+62:[['沈想交好新六盒单并四点回家留歇，父想读吃东西段。','她今日想四点收工便回家'],['漏搭配而卖走三米，四混已装/只余六米；客人不接受无限延迟。','方才卖出去的三块，正好少在这里。'],['客到才反馈选择四盒，沈认错交清、不私赔；夜明确拒当晚全文。','今天就是不想听。'],['真实四盒40、二取消无待取，一豆吃一豆弃，迟饭误歇16:12离；日期回忆已修前几天。','今天店里不再给她另记一笔待取，也不等她补钱。'],['父失落并指只听自己，互认口气仍不约明晚；父自读的兴致可能过去。','自己也可能已经没了今日这股兴致。']],
+63:[['周想真坐一局，两女也想让今日自愿借书实际发生。','自己想坐下一盘'],['周落手后亏且不许悔；女想让沈先看自己喜欢的枝，沈先看虫。','手都松了。'],['周下到认输且另约周四；女今天明示愿借，沈明示周五还。','算自己输了'],['14实际交沈带回干台，夹纸女浅抽不随；新柜问无约无新钱，周理发净8。','十四册放回干台，普通袋在底下'],['借到书仍有花/虫偏好失落，女有限承认，父女各用声音与空间而不抹昨夜拒听。','末了仍坦白有一点想听花']]
+};
+const fields=['goal','obstacle','choice','consequence','relationship_change'],range=mode==='tail'?[62,63]:[58,59,60,61,62,63];
+const bodies=Object.fromEntries(range.map(n=>{const u=s.units.find(x=>x.unit===n);return[n,fs.readFileSync(path.join(P,u.draft),'utf8')]}));
+const ev=(n,q)=>{assert(bodies[n].includes(q),`${n}: ${q}`);return{unit:n,quote:q};};
+const template=mode==='tail'?'.writer/drafts/date62-tail-review-original.json':'.writer/drafts/ae-a-review58-63-current.json',i=j(template);
+i.operation_id=mode==='tail'?'AE_A_DATE62_TAIL_REVIEW':'AE_A_FINAL58_63_REVIEW';i.chapter_functions=range.map(n=>({unit:n,...Object.fromEntries(fields.map((f,k)=>[f,{status:'observed',text:data[n][k][0],evidence:[ev(n,data[n][k][1])]}]))}));
+const pair=(units,judgment,differences,preserve,quotes)=>({units,judgment,differences,preserve,optional_adjustments:[],uncertainty:'同一知情模型实读，未有独立读者或全书完稿节奏验证；不因相似即判重复。',evidence:units.map((n,k)=>ev(n,quotes[k]))});
+const similarities=mode==='tail'?[pair([62,63],'均有愿望落地后出现不可倒回的损失。','62错误交易损失六改四/实物去处；63输棋自己承担而不能用手艺抵，书实借有未来期限。','保留吴不再许订、父未能念、周仍不甘及女盼枝。',['不是客人改。是我记错了。','手都松了。'])]:[
+pair([58,62],'父想念给女听，女需要自己的时间，两次都在吃饭/休息之间协商。','58换椅后真重听找钱段并互讲；62错单后明确不听吃东西全文，父自己读、兴致可能过期。','58有获得的互听，62有合理但刺人的拒听，不能一律修成顺利陪伴。',['我想念给你听。','我今晚不想听一整篇。']),
+pair([59,63],'两友同坐看两种画，先盯的部分不同。','59临看换册后各归、晚到15分仍有独读收益；63先实际借走14，再承担周五19:30还书和自主看页责任。','61拒借的真实失望不追改；63交书不强朋友改成同一兴趣。',['原白纸还露在旧页间','周五晚上七点半在你家楼下还']),
+pair([60,61],'从欣赏到自己做，结果不完全像心里那一份。','60声音录留、可听见停气并真唱给人；61画杯另买纸笔/两趟楼/两失败画，不向友发图求补偿。','母与女都有可笑/急/羞，作品不必全好才保留。',['手机里却留住了今天两回自己的声音。','她没有将它揉成团。']),
+pair([62,63],'都让人物在已有选择后承担不顺，解释不能换来全部补齐。','62食品时限/金额/顾客用途有实损；63棋认输、客户新结构可不下单，另找自己的下午。','不把顾客写成来教主角，不将茶友写成永远让棋的导师。',['今天就是不想听。','算自己输了'])];
+const limits=mode==='tail'?'独立区已顺序重登62、63后，以a-date62-tail-u62-p01—p16再a-date62-tail-u63-p01—p11完整连读27页；当前SHA由source_hashes冻结。先前六章66页的发现和本次修复保留，未改1—60/61，不写64。':'63登记后以a-final-roll-u58..u63逐章完整读66页（9+8+11+11+16+11），发现62一处日期硬伤，随后独立区改前几天，逐章重登前再读27页、重登后再连续尾读27页。58—61与63正文SHA不变，62新稿在尾读完整覆盖；不把此前写前28页或原355两段回读冒成本次六章连读。是同一模型知情复核，check仅机械覆盖，非作者定稿/真人盲读/市场验收。';
+i.comparison={similar_structures:similarities,distinct_gains:range.map(n=>`${n}：${data[n][3][0]}`),preserve:['保留不同口味、各自疲劳与兴趣；已发生与未发生严格分开。','原13optional/49retained及9旧应用保持；版本失效保留到最终全书才verify。','夹纸/原大白纸/两画/父记纸/戏词纸用途不混，私录不外流。'],optional_adjustments:[],limits};i.issues=[];
+const report=mode==='tail'?'审查/AE-A-日期小修-62至63完整尾读.md':'审查/AE-A-58至63完整连读模型比较.md';i.report=report;delete i._instructions;delete i.output;
+let reportText=`# ${mode==='tail'?'62—63日期小修后完整尾读':'58—63完整连读模型比较'}\n\n${limits}\n\n原生ID：01a1741a-532e-7b12-9a7d-fece1cd8944e。\n\n## 逐章功能与实际引文\n`;
+for(const row of i.chapter_functions){reportText+=`\n### ${row.unit}\n`;for(const f of fields)reportText+=`\n- ${f}：${row[f].text} 原句：${row[f].evidence[0].quote}\n`;}
+reportText+='\n## 相似结构和不同收益\n';for(const q of similarities)reportText+=`\n${q.units.join('/')}：${q.judgment} ${q.differences} ${q.preserve}\n`;
+reportText+='\n## 当前连续性与风险\n\n第46日周四至第51日周二顺行；62周一回忆59周五窗口不能称前天，已在独立revision仅改该词，保留原错误稿/原报告/重登证据。62仍20+20=40四盒、二纯二混、二取消无待取；米九卖三余六，二豆一吃一弃、无罚薪或补卖。63柜是另问新结构，原补固62不重收；新理发10找2=8。周四十点棋与第54日周五19:30归还均只约未发生。\n\n63女真的交14给沈，沈房干台普通袋底；女自写夹纸取留女房桌浅抽最上字朝上，旧字细枝/左边空着不添，沈只听位置并见书无纸，未读字。许听口述已交/期限而未在交接，父仅知女口述且未持看14。沈8册与大白纸床边不挪；两画仍女自收/8空白未用，沈本章只新知白杯两张与缺陷口述，无图。母两录仍手机自留，沈知存在数量但无文件与唱句，不把录了没误当沈不知录音是否存在。旧两空不填，伤脚不自动愈、未复航。\n\n本次保留的风险是连续六章多次用吃饭、听读/看页、少说一句的相邻节奏，解释性反向句偏密，可能削弱日常的偶然性；此为全书语感复核事项，没有足以要求本程再改旧1—60的依据，不为填意见制造新条目。59/63的看页外形近，但短看各还与限期实借具有不同责任和后果；62四盒账清不等原用途补齐，父不满没有被女休息权抹去。\n\n62正文约24023汉字达到22000及建议24000—25500；63约16286达到16000，未达章纲建议18000以上，不据建议再填重复段。长度、source/check覆盖均不能证明文学合格。本报告没有独立真人验证，也不对长期兴趣、柜耐用或未来还书作已验结论。\n';
+fs.writeFileSync(path.join(P,report),reportText,{flag:'wx'});fs.writeFileSync(path.join(A,mode==='tail'?'a-date62-tail-review-filled.json':'a-final-review58-63-input.json'),JSON.stringify(i,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,mode,revision:i.expected_revision,range,report,report_sha256:sha(Buffer.from(reportText)),issue_count:0,source_hashes:i.source_hashes}));

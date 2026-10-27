@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "at": "2026-10-22T02:22:45.676Z",
+  "scope": "actual F input containment and bytes, independent of original mixed-separator prefix check",
+  "project_root": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x",
+  "inputs": [
+    {
+      "label": "f-review-current-36",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-review-current-36.json",
+      "relative": "f-review-current-36.json",
+      "sha256": "9411570138e6e97aaeee2ef3dc6641ab27d6c7b5c1405c4034ef8f312a2e8a69"
+    },
+    {
+      "label": "f-review-current-36-v2",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-review-current-36-v2.json",
+      "relative": "f-review-current-36-v2.json",
+      "sha256": "ead2be28c7a7a484128bf0369461a6e1eb9618b6831bf9dc7a99ae066147cdd6"
+    },
+    {
+      "label": "f-verify-dr36",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-verify-dr36.json",
+      "relative": "f-verify-dr36.json",
+      "sha256": "925b65eef08c84b0a82a1c676dbbcfa2bb17f95b2c0a776d76e9f0db65ec747e"
+    },
+    {
+      "label": "f-verify-dr36-v2",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-verify-dr36-v2.json",
+      "relative": "f-verify-dr36-v2.json",
+      "sha256": "ed834e3cf868368a02038b9f0bdd7eb10d3ae521f34e26a2316f5f3d0920f9d0"
+    },
+    {
+      "label": "f-verify-f19",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-verify-f19.json",
+      "relative": "f-verify-f19.json",
+      "sha256": "c58d5d8a3d3c1bf388cf1db232bd0d4fa4bb5b4e81abb1faeeb2283ca790e762"
+    },
+    {
+      "label": "f-verify-f19-v2",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-verify-f19-v2.json",
+      "relative": "f-verify-f19-v2.json",
+      "sha256": "75d69311b8d9275f4e74e2d776bf7ae66da4fa9c0a5f59a403aa6c0eee5f2089"
+    },
+    {
+      "label": "f-verify-u5",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-verify-u5.json",
+      "relative": "f-verify-u5.json",
+      "sha256": "3dfb8e42a7f0848ce926f8dd3e93e83fc54c3ec4010149186201ac5d427fb1de"
+    },
+    {
+      "label": "f-verify-u5-v2",
+      "input": "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\f-verify-u5-v2.json",
+      "relative": "f-verify-u5-v2.json",
+      "sha256": "37f5af9f0c02eb28936ee0cfcc8ff75056f3d6c2cf7c0b69f51a1f4fe30066d2"
+    }
+  ],
+  "all_actual_files_inside_X": true,
+  "all_actual_input_bytes_match_receipts": true,
+  "original_failure": "commands/codex-f-final/stdout.raw.txt#item_257",
+  "note": "Windows path.resolve/path.relative containment is checked, including parent traversal rejection. Original string-prefix guard compared forward and backward slash spellings and failed before this normalized check."
+}

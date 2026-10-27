@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "revision": 195,
+  "versions": [
+    {
+      "id": "CR33_INITIAL",
+      "ref": "大纲/单元/0033.json",
+      "object_ref": ".writer/objects/c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129.source",
+      "sha256": "c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129",
+      "previous": null,
+      "format": "json"
+    },
+    {
+      "id": "CR33_RECALL_ID_V2",
+      "ref": "大纲/单元/0033.json",
+      "object_ref": ".writer/objects/bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858.source",
+      "sha256": "bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858",
+      "previous": "CR33_INITIAL",
+      "format": "json"
+    }
+  ],
+  "range": {
+    "ref": "大纲/单元/0033.json",
+    "version_id": "CR33_RECALL_ID_V2",
+    "from": 33,
+    "to": null
+  },
+  "canonical_physical_sha256": "c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129",
+  "replay_binding": {
+    "version_id": "CR33_RECALL_ID_V2",
+    "object_ref": ".writer/objects/bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858.source",
+    "sha256": "bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858"
+  },
+  "logical_source_sha256": "bbc56b1c15e97bb9d22895d04979687543f7a5b93b710ebf36d8df02b6b95858",
+  "note": "物理旧canonical符合rewind历史，按已发布V2逻辑消费，不改state/source。两原对象和范围全部保留。"
+}

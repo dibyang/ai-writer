@@ -1,0 +1,1 @@
+import fs from 'node:fs';import path from 'node:path';const base=path.resolve('acceptance/20261024-long-flow-090-ac'),root=JSON.parse(fs.readFileSync(path.join(base,'project.json'))).project;fs.copyFileSync(path.join(root,'分段/AC-D-0047/02.md'),path.join(base,'d-inputs/47-02-before-read-fix.md'),fs.constants.COPYFILE_EXCL);

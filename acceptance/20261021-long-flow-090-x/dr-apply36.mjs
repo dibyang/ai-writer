@@ -1,0 +1,2 @@
+import fs from 'node:fs';const P=new URL('./scenario/东岸末班船-再扩展验证/',import.meta.url);
+fs.writeFileSync(new URL('.writer/drafts/dr-apply36-tracking.json',P),JSON.stringify({expected_revision:163,operation_id:'x-dr36-apply-tracking',id:'I_X_DR36_BOOK_KNOWLEDGE',commit_id:'4940f163-50c0-4289-a95d-a7af0daa030f',change_scope:'tracking',reason:'正式36独立区已提交，正文SHA未变，36书约链两人知情发生真实差量变化，与当章11/68/92听述/图片同步。使用真实commit对象id，不以事务id替代。'},null,2)+'\n',{flag:'wx'});

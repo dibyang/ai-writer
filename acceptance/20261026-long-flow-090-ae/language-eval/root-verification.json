@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "at": "2026-10-26T05:19:18.814Z",
+  "samples": 16,
+  "author_example": "L07",
+  "synthetic_other_cases": 15,
+  "samples_sha256": "64951750d50739dcdfc9dbe46f2db661716740da5748c7650035ccc8fb8682d5",
+  "expected_sha256": "bab6611b5dd6ebf7aedfb93c788da851b5ac9f78e7a101f45f0127cfed09ad74",
+  "results": [
+    {
+      "prefix": "baseline",
+      "run": "language-baseline-retry",
+      "thread_id": "01a17692-20d3-7120-957a-5d3f0ade602a",
+      "exit_code": 0,
+      "elapsed_ms": 557736,
+      "first_sha256": "731c54e2853ef73f30a30f1e78f5c79ae9b058012632b5eb422351c6955325d0",
+      "final_sha256": "640160282b891cfb8d9a3b24b91f9e8f167c02d73b0e0dcccf88294c454e45d1",
+      "report_sha256": "ff62fb78a79d2b8c4b4c94acdfab2d0ffd625b4ca8d26e45eb27b47f913fed67",
+      "counts": {
+        "issue": 5,
+        "keep": 8,
+        "context-needed": 3
+      },
+      "case_label_agreement": 15,
+      "mismatches": [
+        {
+          "id": "L07",
+          "actual": "context-needed",
+          "expected": "issue"
+        }
+      ],
+      "first_to_final_verdict_changes": [],
+      "first_to_final_case_details_unchanged": true,
+      "normal_controls_flagged": [],
+      "insufficient_context_overcalled": [],
+      "first_root_snapshot_at": "2026-10-26T05:06:32.366Z"
+    },
+    {
+      "prefix": "updated",
+      "run": "language-updated",
+      "thread_id": "01a1769a-f219-7ad0-adf9-0eaab10a3491",
+      "exit_code": 0,
+      "elapsed_ms": 490839,
+      "first_sha256": "b3efb9b20148dde59cfe42007518953bab9c3e630a665bdfada7516075aeb174",
+      "final_sha256": "1ffa44947abfe09d60b4334d678b9128a69b69ff4a94877158a6434fd2f22639",
+      "report_sha256": "4c44a8c9fc7fb16c284461393034bccdca69094a44c786d674d6371648015456",
+      "counts": {
+        "issue": 6,
+        "keep": 8,
+        "context-needed": 2
+      },
+      "case_label_agreement": 16,
+      "mismatches": [],
+      "first_to_final_verdict_changes": [],
+      "first_to_final_case_details_unchanged": true,
+      "normal_controls_flagged": [],
+      "insufficient_context_overcalled": [],
+      "first_root_snapshot_at": "2026-10-26T05:12:57.468Z"
+    }
+  ],
+  "final_package_content_id": "8bff9af21fba84e32d798f4cef969d5a0e4ff0f904089f85047877d16e403131",
+  "rule_files": [
+    {
+      "file": "SKILL.md",
+      "sha256": "61a73116e346822d4a0a89242de53688d8e0a8e9a71d98618cd5eac3a316d274",
+      "evaluated_v4_equals_final_v5": true
+    },
+    {
+      "file": "references/general-review.md",
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23",
+      "evaluated_v4_equals_final_v5": true
+    },
+    {
+      "file": "references/natural-language-authenticity.md",
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df",
+      "evaluated_v4_equals_final_v5": true
+    },
+    {
+      "file": "references/deslop.md",
+      "sha256": "3755fd5ccd4f923d8ffe8a29a9f3c4d41a122757087ff29fb963eae9c51443b3",
+      "evaluated_v4_equals_final_v5": true
+    },
+    {
+      "file": "references/concrete-language-review.md",
+      "sha256": "1465ab13318bb0ccc6a7f17c9b59d5c75b85d3ff8f9ac5810cd431364f30d72e",
+      "evaluated_v4_equals_final_v5": true
+    }
+  ],
+  "scope": "Case-label agreement with controller-authored regression criteria, exact quotations/hashes and unchanged evaluated rule bytes in final package. Baseline identified L07 candidates but deferred the whole case; this is not a claim it detected nothing. Root semantic review is separate. Not independent corpus accuracy, human blind reading, guaranteed AI detection, or whole-book acceptance."
+}

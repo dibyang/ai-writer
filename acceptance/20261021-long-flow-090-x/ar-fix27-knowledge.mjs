@@ -1,0 +1,13 @@
+import {put,read,sha,state} from './a-prepare.mjs';
+let a=read('分段/0027-A/01-来取风扇的人-v2.md');
+a=a.replace('本子上那一格才添“十六已收”，','本子上那一格才添“十六已收”，纸上也记一遍，');
+put('分段/0027-A/01-来取风扇的人-v3.md',a);
+let b=read('分段/0027-A/04-两碟番茄-v2.md');
+const before='父亲没有接着替她排，说姑娘喜欢鲜亮的那些，她那本画册里颜色也不少，为什么又要去。';
+if(!b.includes(before))throw Error('missing');
+b=b.replace(before,'父亲没有接着替她排，只问是不是两人还要挑花。她那本画册里颜色也不少，为什么又要去。');
+put('分段/0027-A/04-两碟番茄-v3.md',b);
+put('审查/X-AR-27知情复读纠正-v2.md','# 第27章知情复读纠正\n\n当前初修稿正文/0027-先把这一天过完-v2.md，SHA '+sha(read('正文/0027-先把这一天过完-v2.md'))+'，以原生FastCtx完整读1—100/101—200/201—253。回对25父女原谈“她喜欢的和我不一样”仅知兴趣不同，不知姑娘偏好鲜亮；27父无来源直接知道鲜亮，应改为问是否还挑花。另存04-v3，不给父补造消息。01-v3同时补明纸上也记一次收款，对应后文纸上小字；不让读者将纸条和本子误作未交代的同一载体。其余初修保留。只改未登记27片段，最终另assemble并完整读，本文不认证后稿。\n');
+const files=['01-来取风扇的人-v3.md','02-十二点半以后-v2.md','03-等接人的一阵-v2.md','04-两碟番茄-v3.md','05-汤另盛一盒-v2.md','06-自己的那一页-v3.md'];
+put('.writer/ar-inputs/assemble-27-v3.json',{unit:27,expected_revision:state().revision,draft:'正文/0027-先把这一天过完-v3.md',parts:files.map(f=>({path:'分段/0027-A/'+f,sha256:sha(read('分段/0027-A/'+f))})),separator:'\n\n'});
+console.log('saved 01/04 v3, report and assembly input');

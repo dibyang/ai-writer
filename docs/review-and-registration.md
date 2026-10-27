@@ -71,8 +71,18 @@ review-issues list查看原意见和当前状态。resolve输入expected_revisio
 
 采用后按现有独立修订流程实改并提交。apply输入commit_id和reason，核已完成事务、采用时旧稿与当前新稿、至少一处对应原文实际变更。它不改正文，不把候选分支算作已发布。正式提交后再CAS登记应用，防止意见先于正文标成已修复。verify输入review_ref、reviewer、conclusion（resolved/not-resolved）及reason，必须指向覆盖该意见章节的当前有效模型实读报告。resolved是模型复核声明，不是作者定稿。
 
+已采用的跨章意见可以只修错误章。引用9章对照21章、仅21章有错时，真实修订可从21开始；apply自动识别范围外的9章参考，不新增必填参数。它要求归档可核、采用基线匹配，并确认参考章在真实提交前、提交后及当前的完整登记和原文均未改变；范围内仍须有对应意见的实际修改。应用记录另列reference_units、target_units和归档依据，after_units仍包含全部证据章，verify不能只读21章。参考变化、当前目标已再次重登、无关提交或等价重登均不能冒充该次修复；旧意见、采用原话和历史事件保持。
+
 正文正确、只有登记摘要或时间线写错时，仍先采用意见，再在正式独立修订区从最早影响单元回退、实读修正追踪、重登完整尾段并提交；原稿可保持同字节。此时apply的JSON额外设置`"change_scope": "tracking"`，其余expected_revision、operation_id、id、commit_id和reason照常准备。省略或写`draft`仍要求正文实际改变，不能改空格来凑条件。
 
 tracking模式核对真实事务归档的前后状态、采用时旧登记和当前已发布登记；对应章的摘要或章末事实快照必须实际改变。对象键顺序、来源哈希、报告、journal引用或修订号变化均不能单独算修复。应用记录保存前后追踪哈希与事务依据，随后仍须覆盖相关章节的当前有效实读报告verify，联合核对正文和追踪是否一致。工具只证明有实际登记变化，不理解日期或判定意见已经解决。
 
 再次修改正文、依赖或所绑定审查版本后，verified显示needs-recheck，旧记录及原话保留；retained保持“保留”，不冒充已修复。新一轮可重新resolve，绑定当时当前稿再修订。status和context只给简短意见摘要，不因可选建议阻断续写，不自动删句或隐去待定项。
+
+### 已实际修好、原意见未先采纳
+
+跨章证据不等于每章都需修改。代理resolve采用授权仍按全部引文章节保守检查；例如42章提供正确器物作为参考、只修45章，而本轮只授权43—45，原采纳会拒绝42—45范围。保留真实引文和失败输入，不缩证据、扩大授权或伪称作者逐条采用。普通45—45独立修订仍可按原授权完成。已经事先采用的意见则走前述apply，不用acknowledge改写采纳历史。
+
+实际修订提交后，可用`review-issues acknowledge --project 作品目录 --input 补登记.json`。由Codex填写当前`expected_revision`、唯一`operation_id`、原意见`id`、真实`commit_id`、递增无重复的`target_units`、`reason`、`decision_actor: "agent-within-authorized-scope"`及当前`authorization`绑定。目标须来自原意见证据且在现有revise范围内；仅open或代理延期且没有任何既有采纳历史、高置信的correctness/continuity可用。代理延期的原因和原事件保留；已采用、作者保留/延期、可选润色、tracking-only或候选内部均不可用。
+
+工具核原意见的旧稿与真实事务before，目标正文必须确有改变并匹配当前after；非目标参考章须在修前、修后及当前完全不变。新意见不能借旧提交认领修复；等价重登、伪造或损坏归档、修后又改变的版本均拒绝，保留诊断。补登记的新事件明确`phase=after-actual-repair`和`prior_adoption_recorded=false`，保存实际修复与当前接受的不同时间，状态只到applied。随后仍须现有verify，用覆盖**全部原证据章**的当前有效模型实读报告判resolved/not-resolved；不把补登记、机械校验或旧报告当文学验收，也不为闭环再制造一次错误。

@@ -1,0 +1,187 @@
+{
+  "ok": true,
+  "scope": "record-input-preview",
+  "revision": 2,
+  "unit": 1,
+  "writes": false,
+  "summary": "雨天早上，许宁把深蓝长柄伞借给赶去社区服务站的周岚，交换号码并约定今晚七点前送回店内；自己绕连廊买拉链，未补蓝色拉链。周岚随后消息称箱子已到、伞收在屋里。",
+  "changes": [
+    {
+      "at": [
+        "characters",
+        "许宁"
+      ],
+      "had": false,
+      "has": true,
+      "after": "缝纫店；买回灰色拉链开始改裤子，蓝色未补；知道伞已借给周岚、今晚七点前送回；收到对方称伞在屋里的消息"
+    },
+    {
+      "at": [
+        "characters",
+        "周岚"
+      ],
+      "had": false,
+      "has": true,
+      "after": "已带伞与书箱离开店门；随后发消息称到达服务站、伞收在屋里；知道许宁店名、号码及七点半关门"
+    },
+    {
+      "at": [
+        "timeline"
+      ],
+      "append": [
+        "当日07:40后：许宁在店门借出深蓝长柄伞，双方约今晚19:00前在店归还并交换号码",
+        "当日近08:30：许宁买回灰色拉链，蓝色未补；随后收到周岚报到及伞收屋里的消息"
+      ],
+      "length": 0
+    },
+    {
+      "at": [
+        "ledger"
+      ],
+      "had": false,
+      "has": true,
+      "after": {
+        "O_UMBRELLA_MARK": {
+          "type": "observation",
+          "statement": "借出时深蓝长柄伞的伞套扣环有白线补缝，伞柄底部贴纸墨已糊且右边缺一小角；贴纸缺角是原有状态。",
+          "status": "active",
+          "cast": [
+            "许宁",
+            "周岚"
+          ],
+          "tags": [
+            "伞",
+            "原观察"
+          ],
+          "reader_known": "借出时已经看见白线与贴纸缺角，缺角不是新损坏",
+          "character_known": {
+            "许宁": "知道白线是自己缝的，缺角早已存在",
+            "周岚": "当面看到贴纸右边缺角和扣环白线，听许宁说明缺角早已存在"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+              "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+              "line": 50,
+              "quote": "贴纸原来写过名字，墨已糊了，右边缺一小角。"
+            },
+            {
+              "unit": 1,
+              "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+              "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+              "line": 54,
+              "quote": "周岚看了看，又摸了摸伞套扣环上的白线。"
+            }
+          ],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        },
+        "P_UMBRELLA": {
+          "type": "object",
+          "statement": "许宁借给周岚的同一把深蓝长柄伞。",
+          "status": "active",
+          "cast": [
+            "许宁",
+            "周岚"
+          ],
+          "tags": [
+            "伞",
+            "借物"
+          ],
+          "custody": {
+            "holder": "周岚",
+            "location": "社区服务站屋内（周岚消息所述，许宁未现场看见）",
+            "condition": "已借出，未归还；原有白线与贴纸缺角"
+          },
+          "reader_known": "门口已亲手借出；末尾消息说伞在屋里，未发生归还",
+          "character_known": {
+            "许宁": "亲手交出伞，收到周岚说伞收在屋里的消息；未到服务站核看",
+            "周岚": "持有借来的深蓝长柄伞，知道原识别处与今晚归还约定"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+              "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+              "line": 58,
+              "quote": "许宁替她托住箱底，等周岚把一只胳膊稳稳垫好，才把伞柄送进她另一只手。"
+            }
+          ],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        },
+        "T_RETURN": {
+          "type": "thread",
+          "statement": "借伞归还约定及完成情况。",
+          "status": "pending",
+          "cast": [
+            "许宁",
+            "周岚"
+          ],
+          "due_unit": 3,
+          "reader_known": "初约当晚七点前送回缝纫店，实际归还未发生",
+          "character_known": {
+            "许宁": "今晚七点前收伞，自己七点半关店；有事可电话联系",
+            "周岚": "承诺今晚七点前送回许宁店里，已存号码；知道七点半关门"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+              "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+              "line": 36,
+              "quote": "我今晚七点前送回来，你店还开着吗？"
+            }
+          ],
+          "tags": [],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        },
+        "R_NEIGHBOR": {
+          "type": "relationship",
+          "statement": "许宁与周岚从点头之交发展为借伞并能直接联系的邻居。",
+          "status": "active",
+          "cast": [
+            "许宁",
+            "周岚"
+          ],
+          "reader_known": "交换号码，许宁将联系人存为楼上周岚",
+          "character_known": {
+            "许宁": "知道周岚姓名、号码及住楼上，愿意借伞",
+            "周岚": "知道许宁姓名、号码与巷口改衣店名，接受借伞"
+          },
+          "evidence": [
+            {
+              "unit": 1,
+              "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+              "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+              "line": 70,
+              "quote": "将“周岚”改成“楼上周岚”。"
+            }
+          ],
+          "tags": [],
+          "introduced_unit": 1,
+          "updated_unit": 1
+        }
+      }
+    }
+  ],
+  "unchanged": {
+    "characters": 0,
+    "ledger": 0
+  },
+  "related_unchanged_ledger": {
+    "scope": "manual-related-ledger-review",
+    "candidates": [],
+    "candidate_count": 0,
+    "omitted_count": 0,
+    "semantic_judgment": "not-performed",
+    "note": "仅按角色关联列出未变条目，不表示它们有错。请实读核对当前知情、历史时点及条目内未改字段；有据可保留，不自动改账本或不可变观察。"
+  },
+  "source_hashes": "matched-current-context",
+  "replay_review": "not-replay",
+  "findings": [],
+  "note": "与record共用验证；仅机械准备就绪，不是文学或作者验收",
+  "output": ".writer/drafts/preview-1.json"
+}

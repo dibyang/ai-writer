@@ -1,0 +1,79 @@
+{
+  "expected_revision": 327,
+  "operation_id": "ad-f-final-review-and-range-test",
+  "author_evidence": {
+    "quote": "发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AD作者任务.md",
+    "source_sha256": "7b7d4195d50b6be4988f065087516ee848fd77c40cea9e6a015032f82fcdddc0",
+    "locator": "第7行真实既有任务授权；当前控制器确定仅修21、49保留以及61仅范围验证，不是作者新原话。",
+    "recorded_by": "Codex AD F same native thread 01a172ad-3e1d-7063-a856-7dfbbcbc0c66"
+  },
+  "workflow": {
+    "stage": "drafting",
+    "task": "AD F最终全书审查：距离21两条街已正式改两家门面并提交；49疑点补核15后正式retained，禁止49修订/apply。登记当前1—60模型知情报告，旧8原application/commit仅再次verify；仅以有效输入验证61范围拒绝并导出60章草稿。此方向由根控制器确定，不伪作作者新引语。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 60
+      },
+      "revise_range": {
+        "from": 9,
+        "to": 60
+      },
+      "stop_conditions": [
+        "严禁第61章正文，draft范围终点60；仅验证context和record-template负例，必要61计划仅验证且不消费。",
+        "49正确正文保留，13optional仍可选；旧8不二次apply。",
+        "不修改任何其他正文、冻结源、旧基线/消费哈希、旧封存、源码、Git或外部服务。",
+        "最终草稿export非作者定稿；100—105分钟未完保存真实checkpoint和交接。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "研究/AD规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V21.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0058.json",
+          "大纲/单元/0059.json",
+          "大纲/单元/0060.json",
+          "研究/AD-D滚动写前核对.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      }
+    }
+  }
+}

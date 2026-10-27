@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const x=path.dirname(fileURLToPath(import.meta.url)),p=path.join(x,'scenario/东岸末班船-再扩展验证');
+const j=f=>JSON.parse(fs.readFileSync(path.join(x,f),'utf8'));
+const sha=v=>crypto.createHash('sha256').update(v).digest('hex');
+const label='cr-publish33',receipt=j('cli-logs/'+label+'/result.json'),output=j('cli-logs/'+label+'/stdout.raw.txt');
+const before=j('cli-logs/'+label+'/before-state.json'),after=j('cli-logs/'+label+'/after-state.json');
+assert.equal(receipt.exit_code,0);assert(output.ok&&output.original_hashes_preserved);
+assert.equal(output.from,33);assert.equal(output.analysis.mode,'future');
+assert.deepEqual(output.analysis.direct_consumers,[]);assert.deepEqual(output.analysis.retained_prefix_consumers,[]);
+assert.equal(before.units.length,32);assert.deepEqual(after.units,before.units);assert.deepEqual(after.snapshot,before.snapshot);
+assert.equal(sha(fs.readFileSync(path.join(x,'cli-logs',label,'before-state.json'))),output.analysis.state_sha256);
+const old=after.source_versions.CR33_INITIAL,next=after.source_versions.CR33_RECALL_ID_V2;
+assert(old&&next);assert.equal(next.previous,old.id);
+const firstRaw=fs.readFileSync(path.join(p,old.object_ref)),nextRaw=fs.readFileSync(path.join(p,next.object_ref));
+assert.equal(sha(firstRaw),old.sha256);assert.equal(sha(nextRaw),next.sha256);
+assert.equal(next.sha256,output.analysis.candidate_sha256);
+assert(after.source_ranges.some(r=>r.ref===next.ref&&r.version_id===next.id&&r.from===33&&r.to===null));
+for(const [ref,hash] of Object.entries(output.analysis.required_readings))assert.equal(sha(fs.readFileSync(path.join(p,ref))),hash);
+const review=output.analysis.review;
+assert.equal(sha(fs.readFileSync(path.join(p,review.report))),review.report_sha256);
+assert.equal(sha(fs.readFileSync(path.join(p,review.frozen_report))),review.report_sha256);
+const changes=[];
+function diff(a,b,ref=''){
+  if(JSON.stringify(a)===JSON.stringify(b))return;
+  if(a&&b&&typeof a==='object'&&typeof b==='object')for(const k of new Set([...Object.keys(a),...Object.keys(b)]))diff(a[k],b[k],ref?ref+'.'+k:k);
+  else changes.push({path:ref,before:a,after:b});
+}
+diff(JSON.parse(firstRaw),JSON.parse(nextRaw));assert(changes.length>0);
+const result={ok:true,at:new Date().toISOString(),scope:'real future33 publication after model impact reading; structural bytes and preserved prefix verified, not script-only semantic acceptance',actual_exit_code:0,from:33,original_version:old,published_version:next,range:after.source_ranges.find(r=>r.version_id===next.id),original_32_complete_units_and_snapshot_unchanged:true,actual_json_changes:changes,model_impact_review:review,followup_requirement:'After the controlled13-36 revision, verify both source objects and the from33 range survive and current33 binds the published version.'};
+fs.writeFileSync(path.join(x,'source33-publish-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,from:33,original_prefix:32,changes}));

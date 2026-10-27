@@ -1,0 +1,74 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-20T13:52:45.448Z",
+  "operation_id": "v-f2-paused-after-current-full-review",
+  "base_revision": 54,
+  "payload": {
+    "stage": "paused",
+    "task": "12章有限试验结束：当前1—12已全文实读并正式review；只讨论，第13章无授权，草稿导出后等待根独立核验",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "12章有限试验已结束；只允许discuss，不新增第13章，不继续正文或旧章修订。",
+        "当前1—12完整模型知情实读与正式review已完成；机械覆盖不等于理解、真人验收或市场通过。",
+        "保留当前正文、原1—3、全部不可变观察、旧稿与历史报告；可选节奏建议待作者选择。",
+        "后续仅执行本次明确授权的第13章两项负向、讨论恢复、当前核验及12章草稿导出；正常结束等待根核验。",
+        "只写V，不派代理，不改根产品/冻结包/封存U/T，不自行Git提交、推送或上传。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "正式workflow设paused，仅allowed_actions=['discuss']，draft_range和revise_range均null，task明确12章有限试验结束、13无授权。",
+    "local_source": "研究/V-F-实际授权来源.md",
+    "source_sha256": "59963ad8e442678e402ca43c595ca03b3e79722c1933516602bbb85ca6cf6d03",
+    "locator": "本次用户要求引用prompt-f-v2及prompt-f第13行；无可用人类消息ID",
+    "recorded_by": "最终F实际执行Codex",
+    "frozen_ref": ".writer/objects/59963ad8e442678e402ca43c595ca03b3e79722c1933516602bbb85ca6cf6d03.txt"
+  }
+}

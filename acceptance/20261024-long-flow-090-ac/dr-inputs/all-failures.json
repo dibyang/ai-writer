@@ -1,0 +1,83 @@
+{
+  "first_process_product_failures": [
+    {
+      "label": "d16-assemble46-final",
+      "product_exit_code": 2,
+      "outer_powershell_exit_code": 1,
+      "state_unchanged": true,
+      "args": [
+        "assemble",
+        "--input",
+        "acceptance/20261024-long-flow-090-ac/d-inputs/assemble46-final-v2.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证"
+      ]
+    },
+    {
+      "label": "d18-assemble46-new-target",
+      "product_exit_code": 2,
+      "outer_powershell_exit_code": 1,
+      "state_unchanged": true,
+      "args": [
+        "assemble",
+        "--input",
+        "acceptance/20261024-long-flow-090-ac/d-inputs/assemble46-new-target.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证"
+      ]
+    }
+  ],
+  "first_process_auxiliary": [
+    {
+      "file": "d-inputs/failure-count-inline.json",
+      "exit_code": 1,
+      "type": "agent-helper-syntax"
+    }
+  ],
+  "resumed_product_failures": [],
+  "resumed_auxiliary": [
+    {
+      "phase": "inline47-count",
+      "exit_code": 1,
+      "error": "SyntaxError: Invalid regular expression: overescaped \\p{Script=Han}: Incomplete quantifier",
+      "effect": "未调用产品，无写入",
+      "recovery": "保存脚本使用正确Unicode属性正则"
+    },
+    {
+      "phase": "prepare-assemble47 initial gate",
+      "exit_code": 1,
+      "error": "AssertionError: Han=9939",
+      "effect": "不足10000，尚未生成assemble输入/未合章/未登记",
+      "recovery": "补入具体收尾动作后10045，再语句修清最终10054；不计重复总结填充"
+    },
+    {
+      "phase": "inspect current ledger wrong root",
+      "exit_code": 1,
+      "error": "TypeError: Cannot read properties of undefined (reading 'P_AC_C_MEAL_BOX')",
+      "effect": "只读命令误用state.ledger，无写入",
+      "recovery": "读真实结构后改state.snapshot.ledger核未变子字段"
+    },
+    {
+      "phase": "read38 wrong guessed filename",
+      "exit_code": 1,
+      "error": "ENOENT: 正文/0038-把衣服放到桌上-ac-v1.md",
+      "effect": "未读到正文、无页证据生成、不算实读",
+      "recovery": "glob定位真实0038-带进灯下-ac-a-v1.md后dr-pre48-old38-actual-p4成功"
+    },
+    {
+      "phase": "FastCtx read wrong prior log path",
+      "exit_code": null,
+      "error": "File does not exist: cli-logs/d19-assemble46-final/input.json",
+      "effect": "只读失败；不算产品调用或实读",
+      "recovery": "读真实cli.mjs/已存输入格式，使用正确assemble字段"
+    },
+    {
+      "phase": "save-completion first attempt",
+      "exit_code": 1,
+      "error": "AssertionError: formal review.source_hashes undefined; actual record stores units/frozen_ref",
+      "effect": "交接写入前断言停止，未改作品/state",
+      "recovery": "读实际review结构，改核units当前SHA及frozen_body/frozen_report原字节，失败脚本另存"
+    }
+  ],
+  "note": "产品结果以result.json为准；首停文字将产品2简写为1，完成交接更正，旧文件不改。辅助错误不是产品缺陷。"
+}

@@ -1,0 +1,78 @@
+{
+  "expected_revision": 250,
+  "operation_id": "E1_S08_STAGE",
+  "author_evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AC作者任务.md",
+    "source_sha256": "46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2",
+    "locator": "2026-10-24 ai-writer原用户授权；E控制器选择与执行范围另见AC本地e-controller-selection.md及本次用户消息，不冒充真人新增剧情",
+    "recorded_by": "Codex AC E same native session"
+  },
+  "impact": {
+    "schema_version": 1,
+    "revision": 250,
+    "state_sha256": "dc149a7e98ed3993b00474180bd164b13af89bca085ae6eb707ae205b394dfab",
+    "version_id": "E1_S08_NEW",
+    "ref": "大纲/AC-D推进窗口-46-48.md",
+    "from": 46,
+    "mode": "historical",
+    "candidate_sha256": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+    "direct_consumers": [
+      {
+        "unit": 46,
+        "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 47,
+        "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 48,
+        "consumed_sha256": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 46,
+    "review_from": 45,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "大纲/AC-D推进窗口-46-48.md",
+        "version_id": "E1_S08_OLD",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": 46,
+    "possible_indirect_through": 48,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+      "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+      "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+      "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+      "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+      ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  },
+  "review": {
+    "report": "审查/E1-S08-历史来源impact实读.md",
+    "report_sha256": "dff4d994e90d5b0e95c9d7460aad873b9d3bb39bce69b4ae35473f94e201b48b",
+    "readings": {
+      ".writer/objects/191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a.source": "191dcd64ff45cd293e0165b20d22c346ecb67677eb7e2d7773cd2e2974a51a2a",
+      "正文/0045-洗过再放回去-ac-c-v1.md": "b2e472d8a8c1c92a55a61f065e4d93165db40205c594d9e29d7cd163c1209a3e",
+      "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+      "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+      "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+      ".writer/objects/dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0.source": "dec197eeb295d47486156c2d0005bd18cb8949d2128e4654d8177e19fc34a1b0"
+    },
+    "conclusion": "候选来源已实读且required_readings同SHA全覆盖；旧入口保留，拟从指定章历史发布，不刷新旧哈希；尾章执行与F复核尚待。",
+    "unresolved": []
+  }
+}

@@ -1,0 +1,10 @@
+import {put,read,sha,state} from './a-prepare.mjs';
+const old=read('分段/0026-A/03-壶盖与班表-ar-v1.md');
+const before='壶比记得的沉。廖师傅托住底，先向外挪一点，等壶把越过桌脚才直起腰。里面竟塞着半袋夹子，隔着塑料，晃起来没有声。他将袋子取出来，和筛里的合到一处；盖不在筛里，是倒扣在壶口，上头压着一块褪色的方布。布揭开，圆圆一道灰留在盖上。';
+const after='壶比记得的沉。廖师傅托住底，先向外挪一点，等壶把越过桌脚才直起腰。盖不在筛里，是倒扣在壶口，上头压着一块褪色的方布。他揭布取盖，圆圆一道灰留在盖上；壶里竟塞着半袋夹子，隔着塑料，晃起来没有声。他将袋子取出来，和筛里的合到一处。';
+if(!old.includes(before))throw Error('anchor absent');
+put('分段/0026-A/03-壶盖与班表-ar-v2.md',old.replace(before,after));
+put('审查/X-AR-26初合章实读纠正-v1.md','# 第26章初合章实读纠正\n\n知情模型自检。实际完整读正文/0026-要关的半扇门-v1.md，1—100、101—200、201—218。该稿SHA '+sha(read('正文/0026-要关的半扇门-v1.md'))+'。\n\n第三段原先先写取壶里夹子、后交代盖倒扣壶口，动作次序让读者误以为隔盖取物。具体落地与朗读改口两项均指向拿取先后不清。另存03-ar-v2，明确揭布取盖后取夹子；首停01/02-v2原字节未动，原第三段和初合章保留。下次assemble用真实新SHA，完整复读新合章后另出报告，本文不认证v2。\n\n第五段先前只在母女谈话中转述询班，ar-v2补入姑娘本人午间询班场面，旧ar-v1保留；改为六个事件场面、五个物理片段，无新阴谋或旧补袖重做。\n');
+const files=['01-铺门里的本子-v2.md','02-家里的坐处-v2.md','03-壶盖与班表-ar-v2.md','04-午间那通电话-ar-v1.md','05-晾干以后-ar-v2.md'];
+put('.writer/ar-inputs/assemble-26-v2.json',{unit:26,expected_revision:state().revision,draft:'正文/0026-要关的半扇门-v2.md',parts:files.map(f=>({path:'分段/0026-A/'+f,sha256:sha(read('分段/0026-A/'+f))})),separator:'\n\n'});
+console.log('new part03, correction report and v2 assembly input saved');

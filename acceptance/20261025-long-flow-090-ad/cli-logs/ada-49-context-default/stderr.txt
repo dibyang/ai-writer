@@ -1,0 +1,126 @@
+{
+  "ok": false,
+  "error": "上下文超过 40000 字符预算（实际 43646）；不会静默截断",
+  "code": "CONTEXT_BUDGET_EXCEEDED",
+  "next_action": "先看context_budget的大项和来源：按本章相关性整理可选研究引用，或显式提高--max-chars。保留作者授权、核心设定、当前状态及必需线索；来源变化仍走原影响分析，不删除约束或改状态绕过保护。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\extracted-destination-help\\ai-writer-0.9.0\\bin\\ai-writer.mjs' context '--help'",
+  "context_budget": {
+    "limit_chars": 40000,
+    "required_chars": 43646,
+    "over_by_chars": 3646,
+    "measurement": "JSON.stringify(packet).length; UTF-16 code units, not bytes or model tokens",
+    "sections": [
+      {
+        "section": "continuity",
+        "chars": 21545
+      },
+      {
+        "section": "settings",
+        "chars": 11261
+      },
+      {
+        "section": "previous_ending",
+        "chars": 1843
+      },
+      {
+        "section": "snapshot",
+        "chars": 1643
+      },
+      {
+        "section": "governance",
+        "chars": 1332
+      },
+      {
+        "section": "recent",
+        "chars": 1273
+      },
+      {
+        "section": "plan",
+        "chars": 1267
+      },
+      {
+        "section": "source_hashes",
+        "chars": 1008
+      },
+      {
+        "section": "review_workflow",
+        "chars": 900
+      },
+      {
+        "section": "outline",
+        "chars": 834
+      },
+      {
+        "section": "research",
+        "chars": 420
+      },
+      {
+        "section": "instruction",
+        "chars": 69
+      },
+      {
+        "section": "kind",
+        "chars": 7
+      },
+      {
+        "section": "title",
+        "chars": 7
+      },
+      {
+        "section": "ok",
+        "chars": 4
+      },
+      {
+        "section": "revision",
+        "chars": 3
+      },
+      {
+        "section": "source_bindings",
+        "chars": 2
+      },
+      {
+        "section": "unit",
+        "chars": 2
+      }
+    ],
+    "largest_sources": [
+      {
+        "section": "settings",
+        "ref": "大纲/AD扩大骨架-49-60.md",
+        "chars": 5542
+      },
+      {
+        "section": "settings",
+        "ref": "研究/AD规划与旧线证据.md",
+        "chars": 4049
+      },
+      {
+        "section": "settings",
+        "ref": "设定/人物与声音.md",
+        "chars": 596
+      },
+      {
+        "section": "research",
+        "ref": "研究/AD作者任务.md",
+        "chars": 418
+      },
+      {
+        "section": "settings",
+        "ref": "设定/权威规则.md",
+        "chars": 372
+      },
+      {
+        "section": "settings",
+        "ref": "设定/文风.md",
+        "chars": 361
+      },
+      {
+        "section": "settings",
+        "ref": "设定/作品定位.md",
+        "chars": 334
+      }
+    ],
+    "omitted_source_count": 0,
+    "section_note": "各项独立序列化长度用于定位占用；总量另含字段名和分隔符，不能将分项简单相加。"
+  }
+}

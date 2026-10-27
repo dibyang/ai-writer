@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const X=new URL('./',import.meta.url);
+let t=fs.readFileSync(new URL('dr-final-handover.mjs',X),'utf8');
+const old="const put=(p,v,base=P)=>fs.writeFileSync(path.join(base,p),typeof v==='string'?v:JSON.stringify(v,null,2)+'\\n',{flag:'wx'});";
+const fixed="const put=(p,v,base=X)=>{const file=path.join(base,p),data=typeof v==='string'?v:JSON.stringify(v,null,2)+'\\n';if(fs.existsSync(file)){assert.equal(fs.readFileSync(file,'utf8'),data,p+' preserved artifact differs');return;}fs.writeFileSync(file,data,{flag:'wx'});};";
+if(!t.includes(old))throw Error('generator put anchor missing');t=t.replace(old,fixed);
+t=t.replaceAll("h('交接-D首停.md')","hash(fs.readFileSync(path.join(X,'交接-D首停.md')))");
+t=t.replace("h('交接-D完成.md')","hash(fs.readFileSync(path.join(X,'交接-D完成.md')))");
+const anchor='其他完成调用均以实际日志为准，最终0不抹内部失败。';
+if(!t.includes(anchor))throw Error('handover failure anchor missing');
+t=t.replace(anchor,'完成交接生成器dr-final-handover.mjs另有真实exit1：将X根交接-D首停.md误当P内文件，保护核验/检查摘要已先成功保存，正文与state未变。原生成器保留；v2改为读写X根交接，对已存在产物核字节一致后只新增交接，不覆盖历史。详见DR续程真实失败补充-交接路径.md。'+anchor);
+fs.writeFileSync(new URL('dr-final-handover-v2.mjs',X),t,{flag:'wx'});
+fs.writeFileSync(new URL('DR续程真实失败补充-交接路径.md',X),'# 交接生成器实际失败\n\n原dr-final-handover.mjs实际exec退出1：ENOENT读取P/交接-D首停.md，真实旧交接在X根。此时DR完成保护核验.json、DR最终检查摘要.json、DR续程真实失败及纠正.md已成功新建；未生成完成交接，未改state或正文。原生成器与产物保留。\n\n纠正另存dr-final-handover-v2.mjs：旧交接由X根读取，完成交接写X根；对已有保护核验等产物只比较字节相同后跳过，不覆盖。此为代理生成器失败，不是产品CLI失败或预设测试。原有DR续程真实失败及纠正.md保留，补充记录单独保存。\n',{flag:'wx'});
+console.log('saved distinct corrected generator and failure supplement');

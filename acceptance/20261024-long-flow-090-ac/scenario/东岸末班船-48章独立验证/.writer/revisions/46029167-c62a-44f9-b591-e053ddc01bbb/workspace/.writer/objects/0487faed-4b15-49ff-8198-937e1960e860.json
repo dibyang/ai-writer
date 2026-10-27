@@ -1,0 +1,43 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_F19_TITLE_TIME",
+      "type": "correctness",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "第19章标题提前两个钟头，正文常规16:00—18:30改为14:30—17:00，实际前移90分钟；标题与最自然所指的排班幅度不符，未解决。",
+      "suggestion": "报根核标题所指并走正式独立修订，优先保留自洽正文排班；本轮不擅改、不采用、不标修复。",
+      "evidence": [
+        {
+          "unit": 19,
+          "draft": "正文/0019-提前的两个钟头-v1.md",
+          "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+          "line": 1,
+          "quote": "# 第十九章 提前的两个钟头"
+        },
+        {
+          "unit": 19,
+          "draft": "正文/0019-提前的两个钟头-v1.md",
+          "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+          "line": 15,
+          "quote": "你今天两点半到五点，后头归我，还是那两个半钟头。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/35886295-c0f4-45cf-bbc0-2fd96de4f6a5.json",
+        "review_sha256": "211b9646605edf84e10fb35a90722a9c493bb71fa9395b99a42d4902966b8af1",
+        "units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "dependency": "fdd61498caa1c42cc67f0e98c90e632ae941cc71b412f07184f2a1bbbb6ca7ab"
+          }
+        ]
+      },
+      "history": []
+    }
+  }
+}

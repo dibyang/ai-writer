@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-24T08:57:47.019Z",
+  "operation_id": "continue-a11d6a6a-e64d-406f-91e7-19976b08bb0d",
+  "base_revision": 16,
+  "payload": {
+    "stage": "trial",
+    "task": "仅采纳已有第7章候选，不切换主稿",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 7,
+        "to": 7
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第8章须另行授权；本候选不可发布或修订旧章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "允许独立验证作品试写六章、修订六章，并仅采纳封存的第七章候选；不切换主稿，第八章不写。",
+    "local_source": "研究/作者授权.md",
+    "source_sha256": "55c88bfb87ad7800c631fd5b010fd4da1ea5531aa5d1fced4d82950c1d190733",
+    "locator": "independent compatibility test, not actual author approval",
+    "recorded_by": "Codex synthetic fixture",
+    "frozen_ref": ".writer/objects/55c88bfb87ad7800c631fd5b010fd4da1ea5531aa5d1fced4d82950c1d190733.txt"
+  }
+}

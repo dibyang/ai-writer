@@ -1,0 +1,19 @@
+2026-10-25T20:50:27.016356Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-25T20:50:27.016408Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-25T20:50:27.030949Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-25T20:50:27.051048Z  WARN codex_skills_extension::loader::metadata: ignoring file:///C:/Users/admin/.codex/skills/clear-maintainable-code/agents/openai.yaml: invalid openai.yaml: deserializing from YAML containing more than one document is not supported
+2026-10-25T20:50:27.058346Z ERROR codex_core::session::session: failed to load skill C:\Users\admin\.codex\skills\clear-maintainable-code\SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-25T20:50:27.058370Z ERROR codex_core::session::session: failed to load skill C:\Users\admin\.codex\skills\novel-consent-workflow\SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-25T20:50:29.663582Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-25T20:50:29.663633Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-25T20:50:54.667639Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-25T20:50:54.691157Z  WARN codex_skills_extension::loader::metadata: ignoring file:///C:/Users/admin/.codex/skills/clear-maintainable-code/agents/openai.yaml: invalid openai.yaml: deserializing from YAML containing more than one document is not supported
+2026-10-25T20:50:54.822750Z ERROR codex_core::session::session: failed to load skill C:\Users\admin\.codex\skills\clear-maintainable-code\SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-25T20:50:54.822783Z ERROR codex_core::session::session: failed to load skill C:\Users\admin\.codex\skills\novel-consent-workflow\SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-25T20:51:08.925192Z ERROR codex_core::tools::router: error=collab spawn failed: no thread with id: 01a174d4-a248-7791-b248-df2280b1fc79
+2026-10-25T20:51:08.925243Z  WARN codex_analytics::reducer: dropping tool item analytics event: missing analytics context thread_id=01a174d4-a248-7791-b248-df2280b1fc79 turn_id=Some("01a174d4-a2e8-7671-93ba-4472d22b7294") review_id=None item_id=Some("call_39d5b10feb954b96aa686d58fa57a8e7") missing_context="thread_connection"
+2026-10-25T20:55:03.497866Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in C:\Users\admin\.codex\memories\memory_summary.md:
+- 中文歌曲 AI 人声连贯性与原配乐锁定: DiffSinger, Qixuan, “原配乐和第二句别动”, `verify_local_singing.py`, `c10_xpu.dll`
+  - desc: 首句 AI 演唱的局部替换、已接受音色锁定及伴奏/第二句一致性验证；cwd=D:\work\wcyzx。
+  - learnings: v10 仅是 audition candidate；ASR 将“竟”写为“尽”不能替代人工听感，优先整句 legato，且每次 audition 先备齐 `.report.json`。
+2026-10-25T21:27:48.652773Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 194ms)... turn_id=01a174d4-3d26-7181-8b4a-490ff97ffe63 retries=1 max_retries=5 sampling_error=stream disconnected before completion: websocket closed by server before response.completed

@@ -1,0 +1,76 @@
+{
+  "expected_revision": 135,
+  "operation_id": "x-c-trial31-first",
+  "author_evidence": {
+    "quote": "继续通过 Codex 扩大 0.9.0 的长篇实跑规模，在24章基础上增加章节数量和单章篇幅，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/作者请求-X-原文.md",
+    "source_sha256": "b1dc4eeeff37d1c97c97955931cf3ec2f98fe794730f4cd2265b84ecdb10d785",
+    "locator": "2026-10-21实际用户原话第3行；本次细范围见研究/X-C有限执行指令-原文.md，无消息ID",
+    "recorded_by": "X-C当前执行代理；按授权实施，非作者逐项采纳新细节"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "代理按实际扩大请求与本次有限指令执行31—33；当前首次仅完成31整章与32前两段3000—4500字后正常退出，32不assemble/record，根同ID恢复32/33；33后28—33完整复盘，不建34。新增细节为代理常规安排。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 31,
+        "to": 33
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次完成31完整自检/preview0/record后只写32前两段并保存真实交接正常退出",
+        "32未完不合章不登记不进state",
+        "同ID恢复完成32/33后当前28—33完整实读正式review；不提前34",
+        "旧24/观察三字段/旧来源保持，禁代理/封存/导出/提交推送/源码改动"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩大骨架-X.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V10.json",
+          "大纲/分卷/V11.json",
+          "大纲/分卷/V12.json",
+          "大纲/分卷/V13.json"
+        ],
+        "unresolved_ids": [
+          "远期仅粗排，实际结果待后续授权创作"
+        ]
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0031.json",
+          "大纲/X-C近期执行纲-31-33.md"
+        ],
+        "unresolved_ids": [
+          "32写前正式plan，33恢复32后再plan",
+          "茶待32真实行动/衣待33真实新反馈/书待35",
+          "本首次停于32两段未完，不登记未完事实"
+        ]
+      }
+    }
+  }
+}

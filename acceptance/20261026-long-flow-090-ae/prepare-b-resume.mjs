@@ -1,0 +1,57 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),j=p=>JSON.parse(fs.readFileSync(p));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const P=j(path.join(A,'project.json')).project,native=j(path.join(A,'native/b-first/result.json'));
+assert.equal(native.exit_code,0);assert.equal(native.thread_id,'01a174a4-b60f-7fe3-9a9d-ba7857671feb');
+const auditFile=path.join(A,'b-first-audit.json'),audit=j(auditFile),bytes=fs.readFileSync(path.join(P,'.writer/state.json')),s=JSON.parse(bytes);
+assert(audit.ok);assert.equal(audit.state_sha256,sha(bytes));assert.equal(s.units.length,64);assert.equal(s.revision,363);assert.equal(s.tool_control.generation,8);
+const cp=j(path.join(A,'checkpoint-b-first.json'));assert.equal(cp.state_sha256,sha(bytes));
+const rootCheck=j(path.join(A,'reading-resume-root-b-first-final-byte-hold-verification.json'));
+assert(rootCheck.ok);assert.equal(rootCheck.state_sha256,sha(bytes));
+assert(fs.existsSync(path.join(A,'交接-B首停.md')));assert(fs.existsSync(path.join(A,'b-first-stop.json')));
+const before=j(path.join(A,'checkpoint-a-complete-state.json'));
+assert.deepEqual(s.units.slice(0,63),before.units);
+for(const key of ['baseline','source_versions','source_ranges','source_events','source_operations','impact_pending','committed_revisions','review_workflow','tool_control','decisions'])assert.deepEqual(s[key],before[key],key);
+for(const u of s.units)assert.equal(sha(fs.readFileSync(path.join(P,u.draft))),u.sha256);
+const entry=j(path.join(A,'checkpoint-a-complete.json')),changed=[];
+for(const [ref,old] of Object.entries(entry.files)){const file=path.join(P,ref);assert(fs.existsSync(file),ref);if(sha(fs.readFileSync(file))!==old.sha256)changed.push(ref);}
+assert.deepEqual(changed.sort(),['.writer/state.json','大纲/单元/0064.json','大纲/单元/0065.json','大纲/单元/0066.json'].sort());
+const cut=audit.unit65,tRef=cut.original_template.ref,cRef=cut.context.ref,tBytes=fs.readFileSync(path.join(P,tRef)),cBytes=fs.readFileSync(path.join(P,cRef)),t=JSON.parse(tBytes),c=JSON.parse(cBytes);
+assert.equal(sha(tBytes),cut.original_template.sha256);assert.equal(sha(cBytes),cut.context.sha256);
+assert.equal(t.expected_revision,363);assert.equal(t.summary,'');assert.deepEqual(t.changes,{characters:{},timeline_append:[],ledger:{}});assert.deepEqual(t.source_hashes,c.source_hashes);assert.deepEqual(t.source_bindings,cut.original_template.source_bindings);
+for(const [ref,hash] of Object.entries(t.source_hashes))assert.equal(sha(fs.readFileSync(path.join(P,ref))),hash,ref);
+assert.equal(cut.selected.length,2);
+const originals=path.join(A,'originals/b-first-root-selected-stop');fs.mkdirSync(originals);
+const save=(name,b)=>{fs.writeFileSync(path.join(originals,name),b,{flag:'wx'});return{name,bytes:b.length,sha256:sha(b)};};
+const copies=[save('record65-original.json',tBytes),save('context65-original.json',cBytes)];
+const parts=cut.selected.map((row,i)=>{
+ const file=path.join(P,row.ref),b=fs.readFileSync(file);assert.equal(sha(b),row.sha256);
+ const relative=path.relative(P,fs.realpathSync(file));assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative));
+ copies.push(save(`part-${i+1}.md`,b));
+ return{part:i+1,path:row.ref,sha256:row.sha256,bytes:b.length,chars:b.toString('utf8').length,han:row.han};
+});
+assert.equal(parts.reduce((n,p)=>n+p.han,0),7696);
+assert(!fs.existsSync(path.join(P,t.draft)));assert(!s.units.some(u=>u.unit===65));
+assert(!fs.readdirSync(path.dirname(path.join(P,parts[0].path))).some(n=>/^0[3-9]/.test(n)));
+const checks=[];
+for(const command of audit.commands){
+ const d=path.resolve(command.folder),relative=path.relative(path.join(A,'cli-logs'),d);assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative));
+ const r=j(path.join(d,'result.json'));assert.equal(r.exit_code,0);assert.equal(r.before_state_sha256,sha(bytes));assert.equal(r.after_state_sha256,sha(bytes));
+ checks.push({label:path.basename(d),exit_code:0,stdout_sha256:sha(fs.readFileSync(path.join(d,'stdout.txt'))),stderr_sha256:sha(fs.readFileSync(path.join(d,'stderr.txt')))});
+}
+assert.equal(checks.length,6);assert.equal(sha(fs.readFileSync(path.join(P,'.writer/state.json'))),sha(bytes));
+const normalized={ok:true,at:new Date().toISOString(),thread_id:native.thread_id,revision:s.revision,registered_units:64,state_sha256:sha(bytes),generation:8,derived_from:{native_audit:'b-first-audit.json',audit_sha256:sha(fs.readFileSync(auditFile)),native_stop:'b-first-stop.json',native_stop_sha256:sha(fs.readFileSync(path.join(A,'b-first-stop.json')))},chapter65:{status:'incomplete-unregistered-two-of-six-parts',original_template:tRef,template_sha256:sha(tBytes),original_context:{path:cRef,sha256:sha(cBytes)},parts,total_han:7696,registered:false,assembled:false,part3_exists:false},scope:'Root normalized real selected stop, not a new author choice or completed65'};
+fs.writeFileSync(path.join(A,'b-root-selected-stop.json'),JSON.stringify(normalized,null,2)+'\n',{flag:'wx'});
+const out={ok:true,at:new Date().toISOString(),native_exit_code:0,thread_id:native.thread_id,units:64,revision:s.revision,state_sha256:sha(bytes),original_63_units_unchanged:true,original_entry_files_verified:Object.keys(entry.files).length,changed_original_paths:changed,template_revision:363,source_count:Object.keys(t.source_hashes).length,parts,copies,checks,normalized_stop:'b-root-selected-stop.json',full_checkpoint_receipt:'reading-resume-root-b-first-final-byte-hold-verification.json'};
+fs.writeFileSync(path.join(A,'b-first-root-stop-verification.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});
+let prompt=fs.readFileSync(path.join(A,'prompt-b-resume.template.md'),'utf8');
+prompt=prompt.replace('# AE B同ID恢复候选：尚未激活','# AE B同ID恢复实际任务');
+const intro='根已实际观察B首程exit0并核完整checkpoint、选定两段/原CAS363及12源，见b-first-root-stop-verification.json。本提示已激活。先实际运行 node acceptance/20261026-long-flow-090-ae/check-main-reading-resume.mjs b-resume-entry checkpoint-b-first.json，再读COMMON、交接-B首停.md、b-first-stop.json及b-root-selected-stop.json。以根normalized stop的chapter65字段用于通用字节/读页证明，原native材料不改。\n\n';
+const gate='\n恢复读页门槛：原两段六页全部公开返回后，先报告已完整读回原段的实际进度，再运行 node acceptance/20261026-long-flow-090-ae/probe-cut-reads.mjs b-resume b-resume b-root-selected-stop.json chapter65。必须ready:true/ok:true且无part3，才能写第3段。若ready:false，核实际公开返回/截断/状态，不写新段并交根；不手工制造成功文件。此脚本只核实际公开返回与无新段时的字节，文学消化仍须自己实读。根之后另核最后原读页<捕获边界<首次新段公开写入。\n';
+prompt=prompt.replace('只有B首程真实正常退出、根独立核对选定断点和完整checkpoint之后，另存实际prompt-b-resume.md才执行。本模板不能作成功回执。','B首程真实正常退出与根独立核对已完成；继续真实用户持续任务中的独立试写，不伪造新作者原话。');
+fs.writeFileSync(path.join(A,'prompt-b-resume.md'),intro+gate+'\n'+prompt,{flag:'wx'});
+console.log(JSON.stringify({ok:true,units:64,revision:363,parts_han:7696,source_count:Object.keys(t.source_hashes).length,prompt:'prompt-b-resume.md'}));

@@ -1,0 +1,66 @@
+{
+  "ok": false,
+  "error": "本轮任务“按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止”不允许 revise 2–3；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan、draft）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\extracted-final-candidate-v5\\ai-writer-0.9.0\\bin\\ai-writer.mjs' revision '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "drafting",
+    "task": "按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "三章范围不扩章",
+        "本程第2章后仅保存第3章写前输入并停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

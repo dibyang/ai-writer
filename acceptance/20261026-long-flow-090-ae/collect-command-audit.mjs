@@ -1,0 +1,23 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+import {runClosure} from './run-closure.mjs';
+const here=path.dirname(fileURLToPath(import.meta.url)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const cli=[],native=[],local=[];
+for(const label of fs.readdirSync(path.join(here,'cli-logs')).sort()){
+ const dir=path.join(here,'cli-logs',label),file=path.join(dir,'result.json');
+ if(!fs.existsSync(file)){const f=path.join(dir,'prelaunch-failure.json');assert(fs.existsSync(f),'Incomplete CLI evidence: '+label);const c=JSON.parse(fs.readFileSync(f));assert.equal(c.schema,'ae-cli-prelaunch-failure-v1');assert.equal(c.label,label);assert.equal(c.child_started,false);assert.equal(c.product_exit_code,null);assert.equal(sha(fs.readFileSync(path.join(here,c.events_ref))),c.events_sha256);assert.equal(sha(fs.readFileSync(path.join(here,c.wrapper_ref))),c.wrapper_sha256);assert.equal(sha(fs.readFileSync(path.join(dir,'before-state.json'))),c.before_state_sha256);const e=fs.readFileSync(path.join(here,c.events_ref),'utf8').trim().split('\n').map(JSON.parse).find(e=>e.item?.id===c.event_id&&e.type==='item.completed');assert(e&&sha(JSON.stringify(e))===c.event_sha256&&e.item.exit_code===c.wrapper_exit_code);cli.push({label,closure:c.kind,exit_code:null,wrapper_exit_code:c.wrapper_exit_code,child_started:false,closure_record_sha256:sha(fs.readFileSync(f)),recovery_ref:c.recovery_ref});continue;}
+ const r=JSON.parse(fs.readFileSync(file));let code=null;
+ for(const stream of ['stdout.txt','stderr.txt']){const out=path.join(dir,stream);if(fs.existsSync(out)){try{const o=JSON.parse(fs.readFileSync(out,'utf8'));code=o.error?.code??(typeof o.code==='string'?o.code:code);}catch{}}}
+ cli.push({label,command:r.args?.[0],action:r.args?.[1],exit_code:r.exit_code,error_code:code,started_at:r.started_at,elapsed_ms:r.elapsed_ms,package_content_id:r.package_content_id,state_unchanged:r.before_state_sha256===r.after_state_sha256,result_sha256:sha(fs.readFileSync(file))});
+}
+for(const label of fs.readdirSync(path.join(here,'native')).sort()){
+ const dir=path.join(here,'native',label),closure=runClosure(here,`native/${label}`),r=closure.record,events=path.join(dir,'events.public.jsonl'),failed=[];let completed=0;
+ if(fs.existsSync(events))for(const line of fs.readFileSync(events,'utf8').split(/\r?\n/).filter(Boolean)){
+  const e=JSON.parse(line),i=e.item;if(e.type!=='item.completed'||i?.type!=='command_execution')continue;completed++;
+  if(i.exit_code!==0)failed.push({item_id:i.id,exit_code:i.exit_code,status:i.status,note:'See exact command and output in referenced public event. CLI nested product exit code may differ from outer PowerShell exit.'});
+ }
+ native.push({label,closure:closure.kind,thread_id:r.thread_id??null,exit_code:r.exit_code,elapsed_ms:r.elapsed_ms??null,completed_commands:completed,failed_commands:failed,events_ref:`native/${label}/events.public.jsonl`,events_sha256:fs.existsSync(events)?sha(fs.readFileSync(events)):null,closure_record_sha256:closure.record_sha256,recovery_ref:r.recovery_ref??null});
+}
+for(const label of fs.readdirSync(path.join(here,'local-checks')).sort()){const c=runClosure(here,`local-checks/${label}`),r=c.record;local.push({label,closure:c.kind,exit_code:r.exit_code,expected_exit_code:r.expected_exit_code??null,elapsed_ms:r.elapsed_ms??null,closure_record_sha256:c.record_sha256,recovery_ref:r.recovery_ref??null});}
+const result={schema:'ae-command-audit-v3',at:new Date().toISOString(),cli_count:cli.length,cli_failures:cli.filter(x=>x.exit_code!==null&&x.exit_code!==0),cli_prelaunch_failures:cli.filter(x=>x.child_started===false),cli,native,local,note:'Preserved CLI, native public events and local checks. Interrupted attempts retain unknown exit and linked recovery evidence, never fabricated success. Prelaunch failures have actual wrapper exit and null product exit; child streams/results were never created. Nonzero includes expected safety refusals, auxiliary mistakes and environment failures; classification is in handoffs/controller records. Root orchestration errors outside captured streams are documented separately, not claimed exhaustively reconstructed.'};
+fs.writeFileSync(path.join(here,'command-audit-final.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,cli:cli.length,cli_nonzero:result.cli_failures.length,native:native.length,native_nonzero:native.filter(x=>x.exit_code!==null&&x.exit_code!==0).length,native_interrupted:native.filter(x=>x.exit_code===null).length,failed_native_commands:native.reduce((n,x)=>n+x.failed_commands.length,0)}));

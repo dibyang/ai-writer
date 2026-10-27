@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+const X=path.dirname(new URL(import.meta.url).pathname.replace(/^\/(\w:)/,'$1'));
+const r=p=>JSON.parse(fs.readFileSync(path.join(X,p),'utf8'));
+assert.equal(r('cli-logs/f-export-final/result.json').exit_code,0);
+assert.equal(r('scenario/东岸末班船-再扩展验证/.writer/state.json').revision,174);
+const input=r('f-review-current-36.json');
+const report=fs.readFileSync(path.join(X,'scenario/东岸末班船-再扩展验证',input.report));
+assert.equal(crypto.createHash('sha256').update(report).digest('hex'),'7910b7ab18af38c09e8bb61eb96b83609e079134d48cf39d5c1bca43db3031ad');
+const original=path.join(X,'f-report-original-name-error.md');assert(!fs.existsSync(original));fs.writeFileSync(original,report);
+input.expected_revision=174;input.operation_id='f-current-full-review-r174-name-correction';
+const out=path.join(X,'f-review-current-36-v2.json');assert(!fs.existsSync(out));fs.writeFileSync(out,JSON.stringify(input,null,2)+'\n');
+console.log(JSON.stringify({ok:true,original_report_preserved:original,new_input:out,frozen_old_review_unchanged:true}));

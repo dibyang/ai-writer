@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const X=new URL('./',import.meta.url),P=new URL('./scenario/东岸末班船-再扩展验证/',X);
+const json=(root,p)=>JSON.parse(fs.readFileSync(new URL(p,root))),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const labels=['d-final-status','d-final-check','d-final-doctor','d-final-revisions'];
+const receipts=Object.fromEntries(labels.map(label=>{const v=json(X,`cli-logs/${label}/result.json`);assert.equal(v.exit_code,0);return[label,v];}));
+const results=Object.fromEntries(labels.map(label=>[label,json(X,`cli-logs/${label}/stdout.raw.txt`)]));
+const status=results['d-final-status'],check=results['d-final-check'],doc=results['d-final-doctor'],rev=results['d-final-revisions'];
+assert.equal(status.revision,154);assert.equal(check.units,34);assert.equal(doc.ok,true);assert.deepEqual(doc.errors,[]);assert.deepEqual(doc.warnings,[]);
+assert.equal(rev.sessions.every(v=>v.status==='committed'),true);assert.equal(rev.transactions.every(v=>v.status==='completed'),true);
+const s=json(P,'.writer/state.json'),a=json(X,'D首停保护核验.json');assert.equal(hash(fs.readFileSync(new URL('.writer/state.json',P))),a.state_sha256);
+for(const v of a.unfinished_parts)assert.equal(hash(fs.readFileSync(new URL(v.path,P))),v.sha256);
+const u=s.units.at(-1);assert.equal(hash(fs.readFileSync(new URL(u.draft,P))),u.sha256);assert.equal(hash(fs.readFileSync(new URL(u.draft_review.frozen_ref,P))),u.draft_review.report_sha256);
+const summary={ok:true,revision:154,registered:34,state_sha256:a.state_sha256,tool_content:doc.build.observed_content_id,tool_runtime:doc.build.runtime_id,commands:labels.map(label=>({label,exit_code:receipts[label].exit_code,raw_stdout:`cli-logs/${label}/stdout.raw.txt`})),stale_units:status.stale_units,changed_sources:status.changed_sources,impact_pending:status.impact_pending,check_findings:check.findings,rolling_review:check.rolling_review,unsafe_entries:check.draft_inventory.unsafe_entries,doctor_errors:doc.errors,doctor_warnings:doc.warnings,revision_sessions:rev.sessions.map(v=>({id:v.id,status:v.status})),transactions:rev.transactions.map(v=>({id:v.id,status:v.status})),unfinished35:a.unfinished_parts,unregistered35:true,original33_units_preserved:true};
+fs.writeFileSync(new URL('D首停最终检查摘要.json',X),JSON.stringify(summary,null,2)+'\n',{flag:'wx'});
+fs.appendFileSync(new URL('交接-D首停.md',X),`\n终检实际结果：d-final-status/check/doctor/revisions四个子码均0，全部前后state SHA为${a.state_sha256}，r154/34章。stale_units/changed_sources/impact_pending=[]，unsafe_entries=[]；check仅20份UNREGISTERED_DRAFT历史候选警告（原18+34修前v1/v2），rolling_review=${JSON.stringify(check.rolling_review)}。doctor errors/warnings=[]、工具身份同入口；5历史修订committed/8事务completed，无活跃修订/待恢复。35两段SHA及34冻结报告再次匹配。D首停最终检查摘要.json保存真实收据，不把check机械ok称文学验收；未造尚未到期31—36覆盖。现在正常退出等待根核首停，不继续书店内动作。\n`);
+console.log(JSON.stringify({ok:true,revision:154,registered:34,final_codes:labels.map(label=>receipts[label].exit_code),warnings:check.findings.length,rolling_review:check.rolling_review,handoff_sha256:hash(fs.readFileSync(new URL('交接-D首停.md',X))),unfinished_han:a.unfinished_total_han},null,2));

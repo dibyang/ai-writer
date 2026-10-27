@@ -1,0 +1,148 @@
+{
+  "ok": true,
+  "complete": true,
+  "at": "2026-10-26T16:09:49.607Z",
+  "native": [
+    {
+      "run": "language-rewrite-first",
+      "thread_id": "01a178e6-3098-73b2-974c-14f5709a1e43",
+      "resumed_from": null,
+      "exit_code": 0,
+      "elapsed_ms": 625546,
+      "events_sha256": "ea8f20cf4edc03c0bde05615eee145af17cca4141e0e2ce67ab81c859ed0baad"
+    },
+    {
+      "run": "language-rewrite-resume",
+      "thread_id": "01a178e6-3098-73b2-974c-14f5709a1e43",
+      "resumed_from": "01a178e6-3098-73b2-974c-14f5709a1e43",
+      "exit_code": 0,
+      "elapsed_ms": 621705,
+      "events_sha256": "72f9d18779b9d8f34169783709cf14ba42c1f7ba292274767a69051c347b4c8c"
+    }
+  ],
+  "files": {
+    "cases.json": {
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4",
+      "bytes": 5479
+    },
+    "first-drafts.json": {
+      "sha256": "e2a1f303a336a2d4cdc69bcee9ec6fb0a26bee7dee6bd715e1a8f58dbe080eda",
+      "bytes": 6390
+    },
+    "first-review.md": {
+      "sha256": "9a477d409598dec37e69af0edb8615b6b6689fee8ed69232ec0fad595c1a747e",
+      "bytes": 16819
+    },
+    "first-manifest.json": {
+      "sha256": "ac01d44ac9bc3e33c246f5895d2a4a351c287044041cd6328ce29e235814774a",
+      "bytes": 10089
+    },
+    "first-root-checkpoint.json": {
+      "sha256": "e7a6d68c1db73b95b3ba2c4c826ab39f2745f5704159a75f99c891f1867249fb",
+      "bytes": 1189
+    },
+    "second-drafts.json": {
+      "sha256": "dd079dcf5ebd25d818e826b2164791b4d9c6027e2efe6eaaabdcefb73657707c",
+      "bytes": 8769
+    },
+    "reread-review.md": {
+      "sha256": "216ae7ac6bc05dbb2e4f428e2861267b4c8ede04a6b2a13a0cfdbbd5f2004a60",
+      "bytes": 16170
+    },
+    "final-manifest.json": {
+      "sha256": "290186e28d98b7ff44c47974495e45b36881c73a6b653e6e9689484554bef43a",
+      "bytes": 20632
+    },
+    "final-handoff.md": {
+      "sha256": "c906064a6281907288529e95734d25333dd88de9f7e4a306d251957c77c1f03d",
+      "bytes": 4603
+    },
+    "root-semantic-review.md": {
+      "sha256": "b972ef4e38d90c8059854e7581befc779b778ea7d5d2b1a797724914b9a3f400",
+      "bytes": 2879
+    }
+  },
+  "actual_complete_reads": [
+    {
+      "run": "language-rewrite-first",
+      "file": "language-rewrite-eval/cases.json",
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4",
+      "event_id": "item_6",
+      "returned_output_sha256": "a54aae16340d95ea7bd6efed633b1b27672972e10e1525a3e7aea990efa32631"
+    },
+    {
+      "run": "language-rewrite-first",
+      "file": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/SKILL.md",
+      "sha256": "61a73116e346822d4a0a89242de53688d8e0a8e9a71d98618cd5eac3a316d274",
+      "event_id": "item_7",
+      "returned_output_sha256": "859c520be0baf1cd0f5dadbcf67abd8b2113f73ad78b6f4ad1be4c42f7b60cfb"
+    },
+    {
+      "run": "language-rewrite-first",
+      "file": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/general-review.md",
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23",
+      "event_id": "item_10",
+      "returned_output_sha256": "1c6837c0c787aafcb351289a62a33b17506d90be12a4988a448d552edb1d6469"
+    },
+    {
+      "run": "language-rewrite-first",
+      "file": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df",
+      "event_id": "item_11",
+      "returned_output_sha256": "0fc95f3fb220a31ec78fb068b1a9755ff710dc1b7dd053ca65ac46025df76e12"
+    },
+    {
+      "run": "language-rewrite-first",
+      "file": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/deslop.md",
+      "sha256": "3755fd5ccd4f923d8ffe8a29a9f3c4d41a122757087ff29fb963eae9c51443b3",
+      "event_id": "item_12",
+      "returned_output_sha256": "3c4cc650bbd45d69e6a5ea86985a88b43137cfd0c5c40ae18ac487b211ff95ac"
+    },
+    {
+      "run": "language-rewrite-first",
+      "file": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/concrete-language-review.md",
+      "sha256": "1465ab13318bb0ccc6a7f17c9b59d5c75b85d3ff8f9ac5810cd431364f30d72e",
+      "event_id": "item_13",
+      "returned_output_sha256": "af9c13eacda361fcd18ef0d7dc4ea97ba52d8e3d2832c8b0507fa3d4cc7587b3"
+    },
+    {
+      "run": "language-rewrite-resume",
+      "file": "language-rewrite-eval/cases.json",
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4",
+      "event_id": "item_6",
+      "returned_output_sha256": "a54aae16340d95ea7bd6efed633b1b27672972e10e1525a3e7aea990efa32631"
+    },
+    {
+      "run": "language-rewrite-resume",
+      "file": "language-rewrite-eval/first-drafts.json",
+      "sha256": "e2a1f303a336a2d4cdc69bcee9ec6fb0a26bee7dee6bd715e1a8f58dbe080eda",
+      "event_id": "item_7",
+      "returned_output_sha256": "0893fe0eb73c04c92d0c3ba6efc4552190ae937adbe4a1e1d601f53eee58988d"
+    },
+    {
+      "run": "language-rewrite-resume",
+      "file": "language-rewrite-eval/second-drafts.json",
+      "sha256": "dd079dcf5ebd25d818e826b2164791b4d9c6027e2efe6eaaabdcefb73657707c",
+      "event_id": "item_12",
+      "returned_output_sha256": "2f5b72f3fdd1646f6dffb71b551a13a0398a61fa8e85e75c54d881623ace8d8a"
+    }
+  ],
+  "cases": 8,
+  "paragraphs": 24,
+  "modified_from_input": [
+    "R01",
+    "R03"
+  ],
+  "retained_from_input": 6,
+  "second_round_body_changes": 0,
+  "confirmed_first_draft_regressions": 0,
+  "rejected_supplied_bad_candidates": [
+    "R05",
+    "R06",
+    "R07"
+  ],
+  "candidate_not_required_to_change": "R02",
+  "semantic_review": "root-semantic-review.md",
+  "hidden_criteria_not_directly_read_in_public_tool_events": true,
+  "scope": "Same-maintainer synthetic model review with actual rewrite and same-ID recovery. Not independent blind benchmark, general accuracy or human publication approval."
+}

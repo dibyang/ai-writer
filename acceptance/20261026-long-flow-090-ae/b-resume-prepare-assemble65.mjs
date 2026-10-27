@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const a=path.resolve('acceptance/20261026-long-flow-090-ae'),p=path.join(a,'scenario/东岸末班船-66章独立验证');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const t=JSON.parse(fs.readFileSync(path.join(p,'.writer/drafts/ae-b-record65-original.json')));
+for(const [f,h] of Object.entries(t.source_hashes))if(sha(fs.readFileSync(path.join(p,f)))!==h)throw Error('source drift '+f);
+const names=['01-把这一小时问清楚-v3.md','02-还没问出的那一句-v2.md','03-坐开的几分钟-v2.md','04-最后一张还白着-v1.md','05-回家先做的事-v1.md','06-明天仍在楼下-v1.md'];
+const parts=names.map(n=>{const rel='分段/AE-0065/'+n;return {path:rel,sha256:sha(fs.readFileSync(path.join(p,rel)))};});
+if(parts[0].sha256!=='db7a9a89d6b2e362d65b2848a21314f0e3a73631eb34bb448b54a6837989b8fc'||parts[1].sha256!=='92acb355cff26cf839d1b532cf15e4ed7bf3b62ce67513ba9febfe8300cc2212')throw Error('originals drift');
+const input={unit:65,expected_revision:t.expected_revision,draft:t.draft,parts,separator:'\n\n'};
+fs.writeFileSync(path.join(a,'b-resume-assemble65-input.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(input,null,2));

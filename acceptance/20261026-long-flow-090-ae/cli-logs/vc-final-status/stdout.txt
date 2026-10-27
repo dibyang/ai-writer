@@ -1,0 +1,170 @@
+{
+  "ok": true,
+  "title": "巷口借伞",
+  "kind": "novel",
+  "revision": 9,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "用户授权的卷目录受控旧章修订：2章布带改为系牢，3章同步因果回述并完整重登2—3",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 3
+      },
+      "stop_conditions": [
+        "只改2—3普通布带打包细节与相应追踪",
+        "原观察和所有卷目录/原相对路径保持",
+        "完成尾段复核及prepare/commit后检查导出；不写4"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 4,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "272c9b72-4e41-4837-a025-fe9a4969b167",
+        "owner": "Codex-01a176aa-7e1b-7401-928d-a4f980e4bb16",
+        "project_id": "5badc02c-dec6-4193-b5de-c76021f9608c",
+        "build_id": "6cc298c5d4f30a2a5373e8b9d461727a522291fdfe90ae76166d0fbed672b674",
+        "scope": {
+          "from": 2,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "acdfc117b56ad6f3b755666666b39e354bd86abaff7929e065e7a4217cb36b73",
+        "created_at": "2026-10-26T05:53:48.622Z",
+        "transaction_id": "ffb738eb-86a7-4584-82a8-02680507d0d0",
+        "session_sha256": "ede1be39ded8b1ab4b14012688d8a44c35ef52fb094488c189656b205b3b698d"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "ffb738eb-86a7-4584-82a8-02680507d0d0",
+        "session_id": "272c9b72-4e41-4837-a025-fe9a4969b167",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 9,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 3,
+    "unregistered": [
+      {
+        "draft": "正文/V01-借出的一天/0001-雨停以前.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/V01-借出的一天/0002-迟一天的消息.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 4,
+    "plan_exists": false,
+    "action": "用户授权的卷目录受控旧章修订：2章布带改为系牢，3章同步因果回述并完整重登2—3",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\extracted-final-candidate-v5\\ai-writer-0.9.0\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\卷目录默认路径-三章验证' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 4,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "雨天早上，许宁把深蓝长柄伞借给赶去社区服务站的周岚，交换号码并约定今晚七点前送回店内；自己绕连廊买拉链，未补蓝色拉链。周岚随后消息称箱子已到、伞收在屋里。"
+      },
+      {
+        "unit": 2,
+        "summary": "当日18:20周岚提前来电通知无法19:00归还，许宁明确次晨08:00出门用伞，双方改约07:30店门口亲交并文字确认。许宁给布卷套袋，将旧布带结收紧并试抱确认不滑后关店回家；伞未归还。"
+      },
+      {
+        "unit": 3,
+        "summary": "次晨07:25许宁开店，复查昨夜已收紧的布带结未松；07:30周岚按新约亲手还伞，许宁确认收到。双方核同一把伞原识别处，短暂帮撑试遮布后伞回许宁，临近08:00许宁持伞抱布向公交站走；晚些扶木牌只是将来约。"
+      }
+    ],
+    "timeline_tail": [
+      "当日近08:30：许宁买回灰色拉链，蓝色未补；随后收到周岚报到及伞收屋里的消息",
+      "当日18:20：周岚在原19:00期限前电话通知延期；双方排除次晨08:40提议，改约次晨07:30店门口亲交并文字确认",
+      "当日19:00前后：许宁整理布卷、收紧旧布带并试抱确认不滑，随后关店回家；伞未归还，设次晨07:10开店闹钟",
+      "次晨07:25：许宁开店，复查昨夜已系牢的旧布带结未松，夹布试抬手；没有滑带重系",
+      "次晨07:30：周岚亲手交还同一把伞，许宁握稳并确认收到；之后周岚临时帮撑试遮布，许宁接回",
+      "次晨临近08:00：许宁持伞斜抱布卷向公交站走；扶木牌只是晚些再电话约的未来安排"
+    ]
+  }
+}

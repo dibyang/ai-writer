@@ -1,0 +1,58 @@
+{
+  "action": "cancel-impact",
+  "at": "2026-10-26T03:54:33.345Z",
+  "evidence": {
+    "local_source": "研究/验证授权.md",
+    "source_sha256": "074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19",
+    "quote": "允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。",
+    "locator": "synthetic-test-only",
+    "recorded_by": "test-fixture",
+    "frozen_ref": ".writer/objects/074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19.txt"
+  },
+  "input": {
+    "expected_revision": 10,
+    "operation_id": "source-26",
+    "impact_id": "8fd2df87-3f69-4bf9-a6ba-57ac60f35a82",
+    "author_evidence": {
+      "local_source": "研究/验证授权.md",
+      "source_sha256": "074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19",
+      "quote": "允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。",
+      "locator": "synthetic-test-only",
+      "recorded_by": "test-fixture"
+    },
+    "reason": "合成负例已完成，保留提案和事件；取消未执行的新规则，不声称正文修订完成。"
+  },
+  "result": {
+    "cancelled": "8fd2df87-3f69-4bf9-a6ba-57ac60f35a82",
+    "reason": "合成负例已完成，保留提案和事件；取消未执行的新规则，不声称正文修订完成。"
+  },
+  "current": {
+    "source_versions": {
+      "CLI_PREFIX_OLD": {
+        "id": "CLI_PREFIX_OLD",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2.source",
+        "sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "previous": null,
+        "format": "md"
+      },
+      "CLI_PREFIX_NEW": {
+        "id": "CLI_PREFIX_NEW",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/7170f39a4fe11501843157efd8bf477f34456fdc3572503a54d7c77b980c618b.source",
+        "sha256": "7170f39a4fe11501843157efd8bf477f34456fdc3572503a54d7c77b980c618b",
+        "previous": null,
+        "format": "md"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "CLI_PREFIX_OLD",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "impact_pending": {}
+  }
+}

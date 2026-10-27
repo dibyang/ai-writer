@@ -1,0 +1,32 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {initProject,main} from '../../lib/workspace.mjs';
+import {state,file,call,evidence,workflow,unit,freeze,publishInput,sourceInput,begin,rewindBranch,sha} from '../../tests/protection-fixture.mjs';
+const A=path.dirname(fileURLToPath(import.meta.url)),phase=process.argv[2]??'before';assert(['before','after'].includes(phase));
+const dir=path.join(A,'probes/historical-prefix-'+phase),root=path.join(dir,'work');
+assert(!fs.existsSync(dir),'Never overwrite a diagnostic');fs.mkdirSync(dir,{recursive:true});
+initProject(root,'novel','历史前缀来源边界机械诊断');
+file(root,'研究/验证授权.md','允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。\n合成接口诊断，不冒充实际作者选择或文学实读。\n');
+workflow(root);for(let n=1;n<=3;n++)unit(root,n);
+const ref='设定/权威规则.md',oldBytes=fs.readFileSync(path.join(root,ref)),oldHashes=state(root).units.map(u=>u.source_hashes[ref]);
+file(root,'研究/真实旧规则.md',oldBytes.toString('utf8'));
+freeze(root,'PREFIX_OLD');call(root,'source','bind',sourceInput(root,{version_id:'PREFIX_OLD',from:1,through:3,author_evidence:evidence(root)}));
+file(root,ref,'# 新规则候选\n\n仅第二章起使用新桥规；第一章应继续原规则。\n');freeze(root,'PREFIX_NEW');workflow(root,true);
+const before=fs.readFileSync(path.join(root,'.writer/state.json')),stageInput=publishInput(root,'PREFIX_NEW',2,'historical');
+file(root,'研究/历史stage输入.json',stageInput);
+let staged;
+try{staged=call(root,'source','stage',stageInput);}catch(error){
+ const out={at:new Date().toISOString(),root,synthetic_only:true,blocked_before_branch:true,code:error.code,message:error.message,state_unchanged:fs.readFileSync(path.join(root,'.writer/state.json')).equals(before)};
+ file(root,'研究/诊断结果.json',out);console.log(JSON.stringify(out));
+ if(error.code==='SOURCE_BASELINE_REQUIRED'&&out.state_unchanged)process.exit(0);
+ throw error;
+}
+const branch=begin(root);rewindBranch(branch);
+call(branch.workspace,'source','publish',sourceInput(branch.workspace,{impact_id:staged.impact_id,author_evidence:evidence(branch.workspace)}),branch.token);
+const template=main(['record-template','--project',branch.workspace,'--unit','1','--draft','正文/0001-prefix-probe.md']);
+const out={at:new Date().toISOString(),root,workspace:branch.workspace,synthetic_only:true,literary_reading:false,old_source_sha256:sha(oldBytes),old_consumed_hashes:oldHashes,new_live_sha256:sha(fs.readFileSync(path.join(root,ref))),publication_from:2,retained_prefix_unit:1,retained_prefix_input_sha256:template.source_hashes[ref],source_ranges:state(branch.workspace).source_ranges,old_source_bindings_retained_in_base:state(root).units.map(u=>u.source_bindings[ref]),stage_succeeded_without_baseline:true};
+file(root,'研究/诊断结果.json',out);file(root,'研究/前缀登记模板.json',template);
+console.log(JSON.stringify(out));
+assert.equal(template.source_hashes[ref],oldHashes[0],'Historical publication starting at2 must not consume new live bytes for retained prefix1 after rewind');

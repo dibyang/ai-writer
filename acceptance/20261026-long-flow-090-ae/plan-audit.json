@@ -1,0 +1,2926 @@
+{
+  "ok": true,
+  "nature": "planning-only mechanical invariants plus separately documented model judgment; not literary acceptance",
+  "at": "2026-10-25T17:18:36.476Z",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证",
+  "entry": {
+    "revision": 351,
+    "units": 60,
+    "generation": 8,
+    "checkpoint": "checkpoint-entry.json",
+    "state_sha256": "9aed786d51ae6861bbef165a488ccf4ab166d534e847b793a6da50c81e1015af"
+  },
+  "final": {
+    "revision": 353,
+    "units": 60,
+    "generation": 8,
+    "state_sha256": "a1e083ed0ee90e87dbef435033662e15731d74447cda43d59abaa04a1f3c8599",
+    "stage": "paused",
+    "allowed_actions": [
+      "discuss",
+      "plan"
+    ],
+    "draft_range": null,
+    "revise_range": null
+  },
+  "author_evidence": {
+    "input": "plan-workflow-input.json",
+    "final_input": "plan-final-workflow-input.json",
+    "source": "研究/AE作者任务.md",
+    "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+    "latest_quote": "继续推进",
+    "earlier_quote_locator": "lines 9-11; complete actual quote separately bound in final workflow"
+  },
+  "invariants": {
+    "all_entry_project_files_checked": 23630,
+    "missing_old_files": [],
+    "changed_old_files": [
+      ".writer/state.json",
+      "大纲/单元/0061.json"
+    ],
+    "only_allowed_old_file_changes": true,
+    "unchanged_state_keys": [
+      "schema_version",
+      "project_id",
+      "baseline",
+      "snapshot",
+      "units",
+      "decisions",
+      "source_versions",
+      "source_ranges",
+      "source_events",
+      "source_operations",
+      "impact_pending",
+      "committed_revisions",
+      "review_workflow",
+      "tool_control",
+      "long_form",
+      "source_binding"
+    ],
+    "units_equal": true,
+    "snapshot_equal": true,
+    "baseline_equal": true,
+    "source_versions_equal": true,
+    "source_ranges_equal": true,
+    "original_review_workflow_equal": true,
+    "revisions_list_equal": true,
+    "issues_and_application_histories_equal": true,
+    "issue_counts": {
+      "verified": 9,
+      "open": 13,
+      "retained": 1
+    },
+    "source_pending_edits": [
+      {
+        "ref": "大纲/单元/0033.json",
+        "live_sha256": "c90f0d78c76dbb9dc6bc6d7ed56c68b589f3470940cf222011244101a0913129",
+        "selected_version": "CR33_RECALL_ID_V2",
+        "status": "editing-entry-only-not-published",
+        "matched_published_ranges": []
+      }
+    ],
+    "old_planning_preserved_at_entry": "plan61-preflight.json"
+  },
+  "readings": {
+    "recent_full_units": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "recent_full_pages": 56,
+    "earlier_selected_pages": 42,
+    "total_pages": 98,
+    "notes": "plan-reading-notes.md",
+    "pages": [
+      {
+        "evidence": "read-pages/plan-u13-p1.json",
+        "file": "正文/0013-桌边留一半-v1.md",
+        "unit": 13,
+        "page": 1,
+        "total_pages": 5,
+        "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "2f6d1506a933c7ca9e6b43594ff60eaa64cdbb09e0fb6b2c8a43c4a43c099758"
+      },
+      {
+        "evidence": "read-pages/plan-u13-p2.json",
+        "file": "正文/0013-桌边留一半-v1.md",
+        "unit": 13,
+        "page": 2,
+        "total_pages": 5,
+        "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "0d224d4be50b63dede0593760ea2f7f026e89414f59c7536096c2f783f98a8bc"
+      },
+      {
+        "evidence": "read-pages/plan-u15-p4.json",
+        "file": "正文/0015-一幅一幅洗-v1.md",
+        "unit": 15,
+        "page": 4,
+        "total_pages": 6,
+        "sha256": "e30513d5c0914e5d0de0c477c26ffae47e5a9f06d8c645bc22d54503d7f66d83",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "dda369e9c5716e0e1b1af5bfd1db2b665b6b4b6dc9ea998bff0796429c6989e6"
+      },
+      {
+        "evidence": "read-pages/plan-u15-p5.json",
+        "file": "正文/0015-一幅一幅洗-v1.md",
+        "unit": 15,
+        "page": 5,
+        "total_pages": 6,
+        "sha256": "e30513d5c0914e5d0de0c477c26ffae47e5a9f06d8c645bc22d54503d7f66d83",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "ef2fc9745af5af2edfa3265181f20b581c820075ab5baa5442e8d2cf57a0a97c"
+      },
+      {
+        "evidence": "read-pages/plan-u15-p6.json",
+        "file": "正文/0015-一幅一幅洗-v1.md",
+        "unit": 15,
+        "page": 6,
+        "total_pages": 6,
+        "sha256": "e30513d5c0914e5d0de0c477c26ffae47e5a9f06d8c645bc22d54503d7f66d83",
+        "from": 9000,
+        "to": 9421,
+        "output_sha256": "cc112c8f081ea964d845f764ab037a87731f41f35fbc63629f22a51956090930"
+      },
+      {
+        "evidence": "read-pages/plan-u18-p4.json",
+        "file": "正文/0018-灯下第一排-v1.md",
+        "unit": 18,
+        "page": 4,
+        "total_pages": 7,
+        "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "2998c423c6394490e0a35d996647b937e5977351afb45efd60f749c10929a4c4"
+      },
+      {
+        "evidence": "read-pages/plan-u18-p5.json",
+        "file": "正文/0018-灯下第一排-v1.md",
+        "unit": 18,
+        "page": 5,
+        "total_pages": 7,
+        "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "999762fe7293b9b565f3b49d12a77ddccf9025ee7dc1da6a86a8c6a3afcd8bfa"
+      },
+      {
+        "evidence": "read-pages/plan-u24-p3.json",
+        "file": "正文/0024-门给你留着-v1.md",
+        "unit": 24,
+        "page": 3,
+        "total_pages": 6,
+        "sha256": "4140e41ad5443e3d98a126691c3a691c6682f483ec7958f3563e17f58fd48b7a",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "2f2c3eab47c35eadda8d3bf2e288ae578e9692a46751e56a8cb2a34c7b706262"
+      },
+      {
+        "evidence": "read-pages/plan-u30-p1.json",
+        "file": "正文/0030-兜里留得下的手-brc-v2.md",
+        "unit": 30,
+        "page": 1,
+        "total_pages": 7,
+        "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "da028835013276335c8d5f993aa1dfe6bf22e27d8e79f570c13cbbcf245f4fd0"
+      },
+      {
+        "evidence": "read-pages/plan-u30-p4.json",
+        "file": "正文/0030-兜里留得下的手-brc-v2.md",
+        "unit": 30,
+        "page": 4,
+        "total_pages": 7,
+        "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "2f6929b7b690bfe8ce1b9bd4cbee31a00769789246a8ca26c00dd5a822ee96be"
+      },
+      {
+        "evidence": "read-pages/plan-u30-p5.json",
+        "file": "正文/0030-兜里留得下的手-brc-v2.md",
+        "unit": 30,
+        "page": 5,
+        "total_pages": 7,
+        "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "5f15258574ca0e4dfa3e5b08b766f7fcb02558db444ba6ffc6e7d096aebfaa18"
+      },
+      {
+        "evidence": "read-pages/plan-u34-p5.json",
+        "file": "正文/0034-明天的空处-d-v3.md",
+        "unit": 34,
+        "page": 5,
+        "total_pages": 6,
+        "sha256": "3fe2d103bd729ad7f0c6cfa47c49098649f84d3f07f5584ef4173a8bc446135b",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "7446e663943d4edf4d334460361cd64d8901f9759833758c57611e191defd6a3"
+      },
+      {
+        "evidence": "read-pages/plan-u35-p3.json",
+        "file": "正文/0035-一起翻到下一页-dr-v2.md",
+        "unit": 35,
+        "page": 3,
+        "total_pages": 6,
+        "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "1f2617d0d45b691d0d99d83de5e5b437a02542176416decda9c0d77b84e4d76c"
+      },
+      {
+        "evidence": "read-pages/plan-u35-p5.json",
+        "file": "正文/0035-一起翻到下一页-dr-v2.md",
+        "unit": 35,
+        "page": 5,
+        "total_pages": 6,
+        "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "5dea9306f6ba0a5d7e531f64f4aefbc45d13869320697e69682944d3ed4d07ab"
+      },
+      {
+        "evidence": "read-pages/plan-u38-p3.json",
+        "file": "正文/0038-带进灯下-ac-a-v1.md",
+        "unit": 38,
+        "page": 3,
+        "total_pages": 7,
+        "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "1ff9bc27d609e3c6359d97abf6ef2939ee9bfa78fdf0dff1c201e4dbb10b26bf"
+      },
+      {
+        "evidence": "read-pages/plan-u38-p4.json",
+        "file": "正文/0038-带进灯下-ac-a-v1.md",
+        "unit": 38,
+        "page": 4,
+        "total_pages": 7,
+        "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "1ecc96c66619e4e98c63749e4a0ab4827e07219b4c5d3f24b454f01828701199"
+      },
+      {
+        "evidence": "read-pages/plan-u38-p5.json",
+        "file": "正文/0038-带进灯下-ac-a-v1.md",
+        "unit": 38,
+        "page": 5,
+        "total_pages": 7,
+        "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "58f2c0530b92e40ce69eeeae1c65d5bb92150143df1b78d659e4ec5b6deaedf6"
+      },
+      {
+        "evidence": "read-pages/plan-u48-p4.json",
+        "file": "正文/0048-自己的那一段-ac-d-v2.md",
+        "unit": 48,
+        "page": 4,
+        "total_pages": 10,
+        "sha256": "0c1b85ea4f9aa3113adc3dd01d12a3a830fe51f441bf87a15a9766abf2513939",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "c7352a2e1da6c362d772f9c631414380203b6dc9b589b974208a08c68575b8a2"
+      },
+      {
+        "evidence": "read-pages/plan-u48-p5.json",
+        "file": "正文/0048-自己的那一段-ac-d-v2.md",
+        "unit": 48,
+        "page": 5,
+        "total_pages": 10,
+        "sha256": "0c1b85ea4f9aa3113adc3dd01d12a3a830fe51f441bf87a15a9766abf2513939",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "6bf263956104cd5b0de1981620cbf0ab4434345c6a51ccdd1d3a3dd809e3e968"
+      },
+      {
+        "evidence": "read-pages/plan-u48-p6.json",
+        "file": "正文/0048-自己的那一段-ac-d-v2.md",
+        "unit": 48,
+        "page": 6,
+        "total_pages": 10,
+        "sha256": "0c1b85ea4f9aa3113adc3dd01d12a3a830fe51f441bf87a15a9766abf2513939",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "a0f3ab120a5f16f644618e977f1c2ec45eb6a45a413b4e1364ed8c9db2f2b4ef"
+      },
+      {
+        "evidence": "read-pages/plan-u49-p2.json",
+        "file": "正文/0049-柜角那盏灯-ad-a-v2.md",
+        "unit": 49,
+        "page": 2,
+        "total_pages": 10,
+        "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "ed30e854465c89c4670551d6fc874ffdf1e43708b22b4a0c14706bbc40a003cb"
+      },
+      {
+        "evidence": "read-pages/plan-u49-p3.json",
+        "file": "正文/0049-柜角那盏灯-ad-a-v2.md",
+        "unit": 49,
+        "page": 3,
+        "total_pages": 10,
+        "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "773643bf343f981eca811947538d8dff2c2ed455212fd26fb8fbd996033c00c4"
+      },
+      {
+        "evidence": "read-pages/plan-u49-p4.json",
+        "file": "正文/0049-柜角那盏灯-ad-a-v2.md",
+        "unit": 49,
+        "page": 4,
+        "total_pages": 10,
+        "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "87e4c470713c85047046e9bd2796a3f975697fdebddf8c0d5e570cb4ae9ec178"
+      },
+      {
+        "evidence": "read-pages/plan-u49-p8.json",
+        "file": "正文/0049-柜角那盏灯-ad-a-v2.md",
+        "unit": 49,
+        "page": 8,
+        "total_pages": 10,
+        "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+        "from": 12600,
+        "to": 14400,
+        "output_sha256": "a498318f02eb7b158d95442d18f948fc14e62e9f08a1ce1416cb6d37dc61e4b8"
+      },
+      {
+        "evidence": "read-pages/plan-u49-p9.json",
+        "file": "正文/0049-柜角那盏灯-ad-a-v2.md",
+        "unit": 49,
+        "page": 9,
+        "total_pages": 10,
+        "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+        "from": 14400,
+        "to": 16200,
+        "output_sha256": "c69eec2d233e5d1b27d4cd089e1948f615b2db6c98aea59ccb009c55126b97c0"
+      },
+      {
+        "evidence": "read-pages/plan-u50-p5.json",
+        "file": "正文/0050-照片外的一侧-ad-ar-v2.md",
+        "unit": 50,
+        "page": 5,
+        "total_pages": 8,
+        "sha256": "836a70105be272b8511304ac4ba9aa98a960cbc71054eeed3f5e91108e51a9ab",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "5ad2603c4d53c52c645c502c2074f367de50445f9018bfebf6aaa4b386b3f9e6"
+      },
+      {
+        "evidence": "read-pages/plan-u50-p6.json",
+        "file": "正文/0050-照片外的一侧-ad-ar-v2.md",
+        "unit": 50,
+        "page": 6,
+        "total_pages": 8,
+        "sha256": "836a70105be272b8511304ac4ba9aa98a960cbc71054eeed3f5e91108e51a9ab",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "e592e126881c434586dfc21f7a60b21a9614d0872564e4806caf5e26cb2ae266"
+      },
+      {
+        "evidence": "read-pages/plan-u51-p1.json",
+        "file": "正文/0051-翻到自己那页-ad-ar-v1.md",
+        "unit": 51,
+        "page": 1,
+        "total_pages": 9,
+        "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "0e42fc9bc3123603854e68c08aee58c4790d7efe29887569165839e5ea143033"
+      },
+      {
+        "evidence": "read-pages/plan-u51-p2.json",
+        "file": "正文/0051-翻到自己那页-ad-ar-v1.md",
+        "unit": 51,
+        "page": 2,
+        "total_pages": 9,
+        "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "28816c644cf36da3cd61bfd4f28fbbc6ab7691a9ddc576c65f04c951de3e24f3"
+      },
+      {
+        "evidence": "read-pages/plan-u51-p4.json",
+        "file": "正文/0051-翻到自己那页-ad-ar-v1.md",
+        "unit": 51,
+        "page": 4,
+        "total_pages": 9,
+        "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "32dc67f53dae6ad69c40927789332e433f24e3c0374ce85c22b118b671867246"
+      },
+      {
+        "evidence": "read-pages/plan-u51-p5.json",
+        "file": "正文/0051-翻到自己那页-ad-ar-v1.md",
+        "unit": 51,
+        "page": 5,
+        "total_pages": 9,
+        "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "2bdf0e0e15f80edbc0c3e1b661cf3c6a281d19451ab2f41e29392347a7429930"
+      },
+      {
+        "evidence": "read-pages/plan-u51-p8.json",
+        "file": "正文/0051-翻到自己那页-ad-ar-v1.md",
+        "unit": 51,
+        "page": 8,
+        "total_pages": 9,
+        "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+        "from": 12600,
+        "to": 14400,
+        "output_sha256": "b8f61e77b1feaffe9dad12a080fd8f01d208713a40ee09d44444943a0791a12e"
+      },
+      {
+        "evidence": "read-pages/plan-u52-p2.json",
+        "file": "正文/0052-半日不是一整天-ad-b-v3.md",
+        "unit": 52,
+        "page": 2,
+        "total_pages": 11,
+        "sha256": "7b838e81cb4994646420ca5e7fc6fdd127b5b48c42c2de94a3d035ebe807c449",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "534e1e89dd10dc890d71c9d8833c26185f770ea3c694e3c1f6d903dfe8320f5a"
+      },
+      {
+        "evidence": "read-pages/plan-u52-p3.json",
+        "file": "正文/0052-半日不是一整天-ad-b-v3.md",
+        "unit": 52,
+        "page": 3,
+        "total_pages": 11,
+        "sha256": "7b838e81cb4994646420ca5e7fc6fdd127b5b48c42c2de94a3d035ebe807c449",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "35f4d8c88c553dfd0bc7ccd7a4933b16bf85cd2c9770c989a55d43b6e2aedf0d"
+      },
+      {
+        "evidence": "read-pages/plan-u52-p10.json",
+        "file": "正文/0052-半日不是一整天-ad-b-v3.md",
+        "unit": 52,
+        "page": 10,
+        "total_pages": 11,
+        "sha256": "7b838e81cb4994646420ca5e7fc6fdd127b5b48c42c2de94a3d035ebe807c449",
+        "from": 16200,
+        "to": 18000,
+        "output_sha256": "280603f88dfc6a2416ca803c78e425f10d7f2372f4b64478525124f67c52f8d6"
+      },
+      {
+        "evidence": "read-pages/plan-u52-p11.json",
+        "file": "正文/0052-半日不是一整天-ad-b-v3.md",
+        "unit": 52,
+        "page": 11,
+        "total_pages": 11,
+        "sha256": "7b838e81cb4994646420ca5e7fc6fdd127b5b48c42c2de94a3d035ebe807c449",
+        "from": 18000,
+        "to": 19445,
+        "output_sha256": "61a8c739619649d509a8602bc91b9ca6df57a389da20c9143d74cc70572c31d3"
+      },
+      {
+        "evidence": "read-pages/plan-u53-p6.json",
+        "file": "正文/0053-这幅由谁收-ad-b-v2.md",
+        "unit": 53,
+        "page": 6,
+        "total_pages": 9,
+        "sha256": "240e268d658dd7d2ed40f45ee9412651c5cec471d56dbb06399623f3a9a9417f",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "45e9d7fd12ffd2ce9c9df787459dbac1e397dd8ee3c1385284633ff9af420fc7"
+      },
+      {
+        "evidence": "read-pages/plan-u53-p7.json",
+        "file": "正文/0053-这幅由谁收-ad-b-v2.md",
+        "unit": 53,
+        "page": 7,
+        "total_pages": 9,
+        "sha256": "240e268d658dd7d2ed40f45ee9412651c5cec471d56dbb06399623f3a9a9417f",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "726cba9de76e03e4152d3889e2f3c77a5398c5811cf6b984f95688ae6f83c317"
+      },
+      {
+        "evidence": "read-pages/plan-u54-p4.json",
+        "file": "正文/0054-灯照到哪边-ad-b-v2.md",
+        "unit": 54,
+        "page": 4,
+        "total_pages": 8,
+        "sha256": "3c4374ccce00641455905e55a28817cbe4bbb349d804ec1d6f85e72ad552ef23",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "8fa01a675f4a7295c359d9100ef012331844bca8b11267a1097889d40bb2e92c"
+      },
+      {
+        "evidence": "read-pages/plan-u54-p5.json",
+        "file": "正文/0054-灯照到哪边-ad-b-v2.md",
+        "unit": 54,
+        "page": 5,
+        "total_pages": 8,
+        "sha256": "3c4374ccce00641455905e55a28817cbe4bbb349d804ec1d6f85e72ad552ef23",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "4963f55294e384f9b20fef44273c0d906186417b961690f4b7f546fd2981d147"
+      },
+      {
+        "evidence": "read-pages/plan-u54-p7.json",
+        "file": "正文/0054-灯照到哪边-ad-b-v2.md",
+        "unit": 54,
+        "page": 7,
+        "total_pages": 8,
+        "sha256": "3c4374ccce00641455905e55a28817cbe4bbb349d804ec1d6f85e72ad552ef23",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "6ca69b8c6cd2e770e940aa6ae2cdcf76b91f4b349c97e8f5c24d47b404063835"
+      },
+      {
+        "evidence": "read-pages/plan-u54-p8.json",
+        "file": "正文/0054-灯照到哪边-ad-b-v2.md",
+        "unit": 54,
+        "page": 8,
+        "total_pages": 8,
+        "sha256": "3c4374ccce00641455905e55a28817cbe4bbb349d804ec1d6f85e72ad552ef23",
+        "from": 12600,
+        "to": 14313,
+        "output_sha256": "295a353a4b90e73f2c1838fe8ba26d68ebc8b8dd28fee5030b02c38cfe07fb35"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p1.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 1,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "7877b85e3275fe80a8cb266f23d688d92cc77c498f0e78c4fb0e911ad5e59ab1"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p2.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 2,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "bd0bcc5e00344791a47423b193da54501b7e396f929da14691ade2f29c20c396"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p3.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 3,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "60387f84043488eb73a466fd5eca30f503124237758921513373f78512a4d097"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p4.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 4,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "45e649da85358402ae41a0bd49d85bffdc952cdd176f7bac7a860dd9db255b98"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p5.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 5,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "590e3b24faf9a9dfbdedda5a661a4c619e0ddff72b0388b7c2ac026e63ce4eb2"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p6.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 6,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "855c2dfff71ea0e4e3df1a49cbb7423e992a7905cb4f9f2fbbc5635900ccf62d"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p7.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 7,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "cc5e1f30bdc85cd81dc3facee2e04bb5324eb254d60ac75def0c4d3a59b61b07"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p8.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 8,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 12600,
+        "to": 14400,
+        "output_sha256": "6262aa46c0ac72f94d07fc11abd5fe32ef77b1502df9d17cee846139a612209f"
+      },
+      {
+        "evidence": "read-pages/plan-u55-p9.json",
+        "file": "正文/0055-门前先留一块-ad-c-v3.md",
+        "unit": 55,
+        "page": 9,
+        "total_pages": 9,
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "from": 14400,
+        "to": 15455,
+        "output_sha256": "c4cadb80ef27363e9ab6f0d58b14798ba9d3308b4dd93e11c24c023d5d73d1df"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p1.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 1,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "5624852b1c8009f2f04d8aeff645ccd80c2b976a1af9241e3f0977f6a78cd65b"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p2.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 2,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "fccc53bf1f3ecf43b33a932865c88bf1b58ca1e22b9a09813c6dafd48b4c936b"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p3.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 3,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "1d00a636c4a0cb9bfec2d9298e2191c288271c86f030068a52f1f0b968b83b0a"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p4.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 4,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "c0f5da5e5a6d195ab1ede59691ee52fe4987dbb3844b5f19388ba52fe60161ea"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p5.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 5,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "581f35fd57da26380765e6e91aaa9f3ea7d6325d1b5091e557615fd67583d384"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p6.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 6,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "b954028df9e946973d6650d57c6189a6ff3e32d5ef748b72360bfacd652ab2b0"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p7.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 7,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "6e01c59cde1c53fb747d631ea0fbccb794439d4d1958f4c764a1eab16593ab32"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p8.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 8,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 12600,
+        "to": 14400,
+        "output_sha256": "e00623470cbdee5f4b1cf8f343c517d40f281bbeb17dc58f36e99912792d2d5b"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p9.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 9,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 14400,
+        "to": 16200,
+        "output_sha256": "56cd13e48db6da02fc3497e1a9af13986974cd1584bc853465ff2a9b766bca17"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p10.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 10,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 16200,
+        "to": 18000,
+        "output_sha256": "828bf45232410d07f78fe92cb93ddad25f0cbf3dfec5b3a58f3feefdef050a38"
+      },
+      {
+        "evidence": "read-pages/plan-u56-p11.json",
+        "file": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "unit": 56,
+        "page": 11,
+        "total_pages": 11,
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "from": 18000,
+        "to": 18797,
+        "output_sha256": "25d6ab3e73da505460cc6cf9895f5516c6d95d757074d19172664c7bbc5d5a25"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p1.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 1,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "269316fb3559d29a92457edef0ec2aa16daefe4048c56928c0249e388556968c"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p2.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 2,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "dadafc3e7423f3ca50dc349f0b0feece812864c945b5a41a9377e8274a4b7ca4"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p3.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 3,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "60f4ce9835cde4d4a1a2a6af8117fc5f455436a50dcd6387c8056cb4854c8f94"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p4.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 4,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "0ab46ce4309e65c5d02c08914f15cf180a7c44ac2faa0713a3e4e8bae368a4a6"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p5.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 5,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "ec7b0a133ac65e6bee565baebb1ff40449c94d16d697fbf1469828d00292fcf9"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p6.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 6,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "41949a3787f1815f5f5d418c374cc2228d096e2b54bfe411517e45a57d101594"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p7.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 7,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "055596020129a735d5f81c75e04ae329bb61a6b7ab0f7eeba2df66f3c28fb483"
+      },
+      {
+        "evidence": "read-pages/plan-u57-p8.json",
+        "file": "正文/0057-那针还留着-ad-cr-v1.md",
+        "unit": 57,
+        "page": 8,
+        "total_pages": 8,
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "from": 12600,
+        "to": 14110,
+        "output_sha256": "25db95f67ba8ebf0e7345c8ea3068bf9e87c6671c15364abfe59e0f63e8d0efb"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p1.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 1,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "d4507e6d5d772babe1f5e9e435f494f705311589bc11be874e98989f33272f08"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p2.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 2,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "90945ace22e7c42fafd323968412f1fdc0e8fa14e9b7f015b296fe1e7ce37ea7"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p3.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 3,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "67b161c508e19cfb7f499e7292ba872caa4e4d29e6a7d80383879f02572c6664"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p4.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 4,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "8d50bae4665964191ee05eb59255a1baf54607cc9ae142e1da8a606e49dc978d"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p5.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 5,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "88ca319ebb25e15a566870697cc6f5865dd7382a0cad443b07a7912bdcc7c0dd"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p6.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 6,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "55a30d8d54feb291243a1a8df746032ebe310093273336991a4644b76b9a5874"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p7.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 7,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "42edc7362c4a9d6903904f960f56d6b23ef014945e101d5b5118acff52cd87a0"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p8.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 8,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 12600,
+        "to": 14400,
+        "output_sha256": "173e7a424101d6795323c8b1e221a1193f5541e6142614e17fa5cc97ba74ab04"
+      },
+      {
+        "evidence": "read-pages/plan-u58-p9.json",
+        "file": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "unit": 58,
+        "page": 9,
+        "total_pages": 9,
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "from": 14400,
+        "to": 15409,
+        "output_sha256": "b89c679e43f0ebf7529ef9c064bce91def27dc29124387a5ab0ce44c6dbe61ba"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p1.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 1,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "f70b7770f65db9addeb0999fac237eeb79c94b1ce0e379c8217c44b7a3ff8d53"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p2.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 2,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "74cfc04a7dbce1604815db6156dfdb5d13c19b4a5717194cf4409fb8332bba34"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p3.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 3,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "895733f8d1d8e347d65d08ac2dce39344f370d9a2303548b5a88813cef322639"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p4.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 4,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "25e64c1aeacc66796f04b5d03bec3dcba29e8439ecc5d1d078ea9a7355333544"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p5.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 5,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "217cf7a75cb45bde77c5fb7a55bf5c240d9065a8b89be484d0967bc1f99d5b59"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p6.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 6,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "072223293455e6ae9290c972325bac4189df890b882902c66108bdaa267cde23"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p7.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 7,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "122798c703375591a0e6a55099e4d58a1d79b7f3edc7bc41e66aff50eeac88f6"
+      },
+      {
+        "evidence": "read-pages/plan-u59-p8.json",
+        "file": "正文/0059-两本不必一样-ad-d-v1.md",
+        "unit": 59,
+        "page": 8,
+        "total_pages": 8,
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "from": 12600,
+        "to": 14232,
+        "output_sha256": "2f4cf8bcf53bb03c0cdcdbf8c8cc523db3b77ad6c9c5631a31f96e3d5ac594e7"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p1.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 1,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 0,
+        "to": 1800,
+        "output_sha256": "0a063854ed26fba16d952870f7e71e460c14cdefebacd0b681c8dc9488276b71"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p2.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 2,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 1800,
+        "to": 3600,
+        "output_sha256": "04b52a94c53c61116849e13568a4e75eb87d7c4f8d043a5087498797276203e1"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p3.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 3,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 3600,
+        "to": 5400,
+        "output_sha256": "90bd8a3c9306b429b702719fede19f7cfc2dce2904d58db66bc1a3300906e2cf"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p4.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 4,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 5400,
+        "to": 7200,
+        "output_sha256": "a62db99ff071be8f67799a0d2bf14e42823ab58500b787fd390cd792b5dcb886"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p5.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 5,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 7200,
+        "to": 9000,
+        "output_sha256": "c7e4a245111c1a9e393107a229554541d6963089a364515c8efd130c36fff593"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p6.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 6,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 9000,
+        "to": 10800,
+        "output_sha256": "9b06dd28bc7118df7414c19aa2dd7f359fec2d703049889aa456000ef96f3e5d"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p7.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 7,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 10800,
+        "to": 12600,
+        "output_sha256": "739947606d9547d705d1907ab891c6ea3d0fafe8a141cee793b85c92111a45d2"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p8.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 8,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 12600,
+        "to": 14400,
+        "output_sha256": "d205965b5365bb2b66d5f83f30d4692f2b83b6ed58a10f514903b47d2ab4a66b"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p9.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 9,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 14400,
+        "to": 16200,
+        "output_sha256": "b27d5b13a6d050b3d27919562c63ecaf369e2c6b3b675f85f1563f402df30691"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p10.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 10,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 16200,
+        "to": 18000,
+        "output_sha256": "0d3c5768d89afb21bec90ec69f9e7fe2e824339733c17d349c237fc8d3e8e703"
+      },
+      {
+        "evidence": "read-pages/plan-u60-p11.json",
+        "file": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "unit": 60,
+        "page": 11,
+        "total_pages": 11,
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "from": 18000,
+        "to": 18981,
+        "output_sha256": "6f8b81d9a52d83da44c8b502441cbb17b2f76b92ffd00c641b169e0cc1c61ec3"
+      }
+    ],
+    "coverage": [
+      {
+        "unit": 1,
+        "draft": "正文/0001-灯下的箱子-v2.md",
+        "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+        "chars": 6402,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 2,
+        "draft": "正文/0002-多跑的一趟-v2.md",
+        "sha256": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886",
+        "chars": 4267,
+        "pages": 3,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      },
+      {
+        "unit": 3,
+        "draft": "正文/0003-把手朝外-final-b.md",
+        "sha256": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221",
+        "chars": 6338,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 4,
+        "draft": "正文/0004-少蒸的两笼-v1.md",
+        "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+        "chars": 7052,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 5,
+        "draft": "正文/0005-门板靠墙-v1.md",
+        "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+        "chars": 4635,
+        "pages": 3,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      },
+      {
+        "unit": 6,
+        "draft": "正文/0006-走一遍再画-v2.md",
+        "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+        "chars": 6075,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 7,
+        "draft": "正文/0007-先留出两包-v1.md",
+        "sha256": "44c39f40f7a22b3ef500e4948066303e27407b4f0d426daeedfdbb88781d9a04",
+        "chars": 4397,
+        "pages": 3,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      },
+      {
+        "unit": 8,
+        "draft": "正文/0008-半个钟头-v2.md",
+        "sha256": "5c1f40674da30b617367171ec44a72a6972ae9e87add5db3f26b761df8b0cfc5",
+        "chars": 4423,
+        "pages": 3,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      },
+      {
+        "unit": 9,
+        "draft": "正文/0009-留给明天的活-v2.md",
+        "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+        "chars": 6507,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 10,
+        "draft": "正文/0010-月底的三十五块-v2.md",
+        "sha256": "773cf058337c048165bbb6afab2c00edf860068ebdef986902b94110d6cac52d",
+        "chars": 6066,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 11,
+        "draft": "正文/0011-盒子放进去-v2.md",
+        "sha256": "2410d684c6a0d2de7f0cdd0e25b20814af22dca213dfb66f2e804cd111bac075",
+        "chars": 4281,
+        "pages": 3,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      },
+      {
+        "unit": 12,
+        "draft": "正文/0012-沿着坡走-v2.md",
+        "sha256": "973c82b824598d71120d881c9c5b8dc87c8ded132d82643bffd89c92c579fc42",
+        "chars": 6054,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 13,
+        "draft": "正文/0013-桌边留一半-v1.md",
+        "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+        "chars": 7215,
+        "pages": 5,
+        "read_pages": [
+          1,
+          2
+        ],
+        "unread_pages": [
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      {
+        "unit": 14,
+        "draft": "正文/0014-坐下再量-v1.md",
+        "sha256": "85bc3fd6b6b6476011ed17bc0cc505800100b570fbcc6430ec59498d6c2664da",
+        "chars": 7108,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 15,
+        "draft": "正文/0015-一幅一幅洗-v1.md",
+        "sha256": "e30513d5c0914e5d0de0c477c26ffae47e5a9f06d8c645bc22d54503d7f66d83",
+        "chars": 9421,
+        "pages": 6,
+        "read_pages": [
+          4,
+          5,
+          6
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      },
+      {
+        "unit": 16,
+        "draft": "正文/0016-早饭留在锅里-v1.md",
+        "sha256": "1900edd2c9ef5cd0ea1c7de4728182352da57d78894cbc2fdbc9effbe2ac6cd2",
+        "chars": 7143,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 17,
+        "draft": "正文/0017-板头留一截-v1.md",
+        "sha256": "016558b3d30ed702983120c536337bca845c9999a430e4f607cb52e9cd381e13",
+        "chars": 7119,
+        "pages": 4,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false
+      },
+      {
+        "unit": 18,
+        "draft": "正文/0018-灯下第一排-v1.md",
+        "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+        "chars": 10862,
+        "pages": 7,
+        "read_pages": [
+          4,
+          5
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 19,
+        "draft": "正文/0019-提前的两个钟头-v1.md",
+        "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+        "chars": 7286,
+        "pages": 5,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      {
+        "unit": 20,
+        "draft": "正文/0020-少做的一笼-v1.md",
+        "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+        "chars": 7307,
+        "pages": 5,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      {
+        "unit": 21,
+        "draft": "正文/0021-雨落在门檐外-v2.md",
+        "sha256": "c60091f9c411df052fbf34519f83156b93b6f3b784d35fa8c31910d292772a87",
+        "chars": 9887,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 22,
+        "draft": "正文/0022-书里那张白纸-v1.md",
+        "sha256": "9624eba564cba4ffddacf804ad0bf0bcf2a48ddac54c737c74fabe5f369b5995",
+        "chars": 7301,
+        "pages": 5,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      {
+        "unit": 23,
+        "draft": "正文/0023-收摊以前-v1.md",
+        "sha256": "e7ae4d8bacb485d1e6f231ea2df2e542e85253c3a0bce0ae7d91a58eed405be3",
+        "chars": 7355,
+        "pages": 5,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      {
+        "unit": 24,
+        "draft": "正文/0024-门给你留着-v1.md",
+        "sha256": "4140e41ad5443e3d98a126691c3a691c6682f483ec7958f3563e17f58fd48b7a",
+        "chars": 9467,
+        "pages": 6,
+        "read_pages": [
+          3
+        ],
+        "unread_pages": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 25,
+        "draft": "正文/0025-衣袖落下来-v2.md",
+        "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+        "chars": 10269,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 26,
+        "draft": "正文/0026-要关的半扇门-v2.md",
+        "sha256": "5c19d6646bbb78694e1ee2651c30cf028c1b91145f0f8677dc07fd3d5b88ff6e",
+        "chars": 9478,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 27,
+        "draft": "正文/0027-先把这一天过完-v3.md",
+        "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+        "chars": 12299,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 28,
+        "draft": "正文/0028-走远一点的路-v2.md",
+        "sha256": "3f0f8223ccb6359c41b4960346722c9849aa812ca1697c5e59d2073b8863c734",
+        "chars": 10463,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 29,
+        "draft": "正文/0029-五点进门以后-brc-v1.md",
+        "sha256": "65aef7c9d76fdfb1a7879947ee7f6fd34a0bdaad1f038facd11d8086031a8b7e",
+        "chars": 9712,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 30,
+        "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+        "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+        "chars": 12273,
+        "pages": 7,
+        "read_pages": [
+          1,
+          4,
+          5
+        ],
+        "unread_pages": [
+          2,
+          3,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 31,
+        "draft": "正文/0031-门外留一张纸-c-v2.md",
+        "sha256": "801eb7ebef168c48712cc9e8cd5ba141fcd416e4059cb81f34d0dfe62349f24e",
+        "chars": 9612,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 32,
+        "draft": "正文/0032-茶慢慢凉下来-cr-v2.md",
+        "sha256": "33233593787820901c1b8bc8a0c72d780ef57c4d7cb05cd8aa61f8c8c50093f3",
+        "chars": 9522,
+        "pages": 6,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 33,
+        "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+        "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+        "chars": 12357,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 34,
+        "draft": "正文/0034-明天的空处-d-v3.md",
+        "sha256": "3fe2d103bd729ad7f0c6cfa47c49098649f84d3f07f5584ef4173a8bc446135b",
+        "chars": 9635,
+        "pages": 6,
+        "read_pages": [
+          5
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 35,
+        "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+        "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+        "chars": 9510,
+        "pages": 6,
+        "read_pages": [
+          3,
+          5
+        ],
+        "unread_pages": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 36,
+        "draft": "正文/0036-灯下还有一页-dr-v2.md",
+        "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+        "chars": 12514,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 37,
+        "draft": "正文/0037-各留一道菜-ac-a-v1.md",
+        "sha256": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+        "chars": 12999,
+        "pages": 8,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "complete": false
+      },
+      {
+        "unit": 38,
+        "draft": "正文/0038-带进灯下-ac-a-v1.md",
+        "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+        "chars": 11741,
+        "pages": 7,
+        "read_pages": [
+          3,
+          4,
+          5
+        ],
+        "unread_pages": [
+          1,
+          2,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 39,
+        "draft": "正文/0039-留到手上用-ac-ar-v1.md",
+        "sha256": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+        "chars": 11818,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 40,
+        "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+        "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+        "chars": 16443,
+        "pages": 10,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complete": false
+      },
+      {
+        "unit": 41,
+        "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+        "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+        "chars": 11936,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 42,
+        "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+        "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+        "chars": 12526,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 43,
+        "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+        "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+        "chars": 12619,
+        "pages": 8,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "complete": false
+      },
+      {
+        "unit": 44,
+        "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+        "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+        "chars": 16436,
+        "pages": 10,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complete": false
+      },
+      {
+        "unit": 45,
+        "draft": "正文/0045-洗过再放回去-ac-c-v1.md",
+        "sha256": "3d7fb489fc95afd921c9956d52387784a3fff12f6ed23428466f4e7e7ebe323b",
+        "chars": 11898,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 46,
+        "draft": "正文/0046-盒里最后一块-ac-d-v2.md",
+        "sha256": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+        "chars": 12040,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 47,
+        "draft": "正文/0047-留一口自己的-ac-d-v2.md",
+        "sha256": "07b32a65cbfc453d4d08e43c0b7c284566c964ee3b672a1d17ec150ff56ad922",
+        "chars": 11842,
+        "pages": 7,
+        "read_pages": [],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "complete": false
+      },
+      {
+        "unit": 48,
+        "draft": "正文/0048-自己的那一段-ac-d-v2.md",
+        "sha256": "0c1b85ea4f9aa3113adc3dd01d12a3a830fe51f441bf87a15a9766abf2513939",
+        "chars": 16455,
+        "pages": 10,
+        "read_pages": [
+          4,
+          5,
+          6
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complete": false
+      },
+      {
+        "unit": 49,
+        "draft": "正文/0049-柜角那盏灯-ad-a-v2.md",
+        "sha256": "07b42624e104a0d3507c916610e3fe492cd926592bb58c7f9e3302c0a83f3c5f",
+        "chars": 16425,
+        "pages": 10,
+        "read_pages": [
+          2,
+          3,
+          4,
+          8,
+          9
+        ],
+        "unread_pages": [
+          1,
+          5,
+          6,
+          7,
+          10
+        ],
+        "complete": false
+      },
+      {
+        "unit": 50,
+        "draft": "正文/0050-照片外的一侧-ad-ar-v2.md",
+        "sha256": "836a70105be272b8511304ac4ba9aa98a960cbc71054eeed3f5e91108e51a9ab",
+        "chars": 14150,
+        "pages": 8,
+        "read_pages": [
+          5,
+          6
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "complete": false
+      },
+      {
+        "unit": 51,
+        "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+        "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+        "chars": 14670,
+        "pages": 9,
+        "read_pages": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "unread_pages": [
+          3,
+          6,
+          7,
+          9
+        ],
+        "complete": false
+      },
+      {
+        "unit": 52,
+        "draft": "正文/0052-半日不是一整天-ad-b-v3.md",
+        "sha256": "7b838e81cb4994646420ca5e7fc6fdd127b5b48c42c2de94a3d035ebe807c449",
+        "chars": 19445,
+        "pages": 11,
+        "read_pages": [
+          2,
+          3,
+          10,
+          11
+        ],
+        "unread_pages": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "complete": false
+      },
+      {
+        "unit": 53,
+        "draft": "正文/0053-这幅由谁收-ad-b-v2.md",
+        "sha256": "240e268d658dd7d2ed40f45ee9412651c5cec471d56dbb06399623f3a9a9417f",
+        "chars": 14569,
+        "pages": 9,
+        "read_pages": [
+          6,
+          7
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        "complete": false
+      },
+      {
+        "unit": 54,
+        "draft": "正文/0054-灯照到哪边-ad-b-v2.md",
+        "sha256": "3c4374ccce00641455905e55a28817cbe4bbb349d804ec1d6f85e72ad552ef23",
+        "chars": 14313,
+        "pages": 8,
+        "read_pages": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "unread_pages": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "complete": false
+      },
+      {
+        "unit": 55,
+        "draft": "正文/0055-门前先留一块-ad-c-v3.md",
+        "sha256": "80724609077647287ee1183ef30426dc647cbb9e759bdea0b00802b011236117",
+        "chars": 15455,
+        "pages": 9,
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "unread_pages": [],
+        "complete": true
+      },
+      {
+        "unit": 56,
+        "draft": "正文/0056-留给她自己试-ad-cr-v2.md",
+        "sha256": "0f82d28cd3aa734275b1594f0e96f438aaa7dea91e4b282c7a34a549df1b0be8",
+        "chars": 18797,
+        "pages": 11,
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unread_pages": [],
+        "complete": true
+      },
+      {
+        "unit": 57,
+        "draft": "正文/0057-那针还留着-ad-cr-v1.md",
+        "sha256": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+        "chars": 14110,
+        "pages": 8,
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "unread_pages": [],
+        "complete": true
+      },
+      {
+        "unit": 58,
+        "draft": "正文/0058-袋里放自己的-ad-d-v2.md",
+        "sha256": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+        "chars": 15409,
+        "pages": 9,
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "unread_pages": [],
+        "complete": true
+      },
+      {
+        "unit": 59,
+        "draft": "正文/0059-两本不必一样-ad-d-v1.md",
+        "sha256": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+        "chars": 14232,
+        "pages": 8,
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "unread_pages": [],
+        "complete": true
+      },
+      {
+        "unit": 60,
+        "draft": "正文/0060-窗边还留着光-ad-dr-v2.md",
+        "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+        "chars": 18981,
+        "pages": 11,
+        "read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "unread_pages": [],
+        "complete": true
+      }
+    ],
+    "not_claimed": "No full 1-60 reread, no blind reader, no literary acceptance. recall/metadata/hashes do not count as manuscript reading."
+  },
+  "resources": [
+    {
+      "ref": ".writer/tool/.agents/skills/writer-project/SKILL.md",
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".agents/skills/writer-project/SKILL.md",
+      "sha256": "13c9e1eb069b03a31395a86285fda4db5bc58a37bb84b01b09bf9f32e5163879",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-novel/SKILL.md",
+      "sha256": "c86ac8a82543a23dad43d36382b7476886fbee3a40e02c1b38c2d3c94ce6754f",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-review/SKILL.md",
+      "sha256": "6aa3dd4d62eebd6e76e379bd38b117d698bd2337e72a1db8dace8321ba394293",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-project/references/long-form.md",
+      "sha256": "ba5d1bea8fbf66aca0ab1bf91159481ae5de06f71f713afcf7457ab39cf04222",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-novel/references/chapter-delivery.md",
+      "sha256": "e509649fd0e914c12d95db0c5a68f87cd480608a80676a8fb094257ac826dc8f",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-novel/references/story-development.md",
+      "sha256": "83896f003614ed20306198d44ed32b480dfdbe0a948ef553a69ecc0d316af9d9",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-review/references/general-review.md",
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/docs/long-form.md",
+      "sha256": "7e25d2aec3f6874c16465f0a2b7028b6dd33ea0f3b9a6b8b5ebd895f7a692d9c",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/docs/review-and-registration.md",
+      "sha256": "277df9e8daa3dbdd6cc019ac9e7a181a925e413d4d4009a624a16d8e16e7f1fa",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": ".writer/tool/docs/revision-and-sources.md",
+      "sha256": "1a84aa33cd61ad4a1bdd5e7a742f41cd989447e69cee4ff2125717dacd4c38e1",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "AGENTS.md",
+      "sha256": "3617a4127dc352d80e6f284d52c8d77ef33f3cd1697df678bc3e1da9d59658a2",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "writer.json",
+      "sha256": "09427e05445c28cd172683fcfcf032a7387644f906d5ed9ada6d74b368026b8d",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "设定/作品定位.md",
+      "sha256": "bd796918caf9c124df5a0e3ad18afa51edeba2279d5bad427b761aaa6b900abc",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "设定/文风.md",
+      "sha256": "b7d91538573ec3036e03075f1482241fe14398fe7c54b89b6e7a8e5507a6c140",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "设定/人物与声音.md",
+      "sha256": "3049b229dcce94ac5acdebd9e5904ca70ecfef76602b83b64765f940e5ee0c69",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "设定/权威规则.md",
+      "sha256": "4655e29181ada961469b16e494fcc32b30c09a2592dc26de3b923ad5ec4c7ff7",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "大纲/全书大纲.md",
+      "sha256": "8d3ba2b2b896dce6e1c85dde5fdbc4e73e39a68e041808fc3e000a9f36a1826c",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "大纲/AD扩大骨架-49-60.md",
+      "sha256": "17ce8df95df174f277c361ef3e01a76e2d7606a35100d82565822f08a9dfa193",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "大纲/分卷/V21.json",
+      "sha256": "244db5e77ff2a71e7da88c87bfd3934a72151fb7fa1513aee7d7b7d3ebadf172",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    },
+    {
+      "ref": "研究/AE作者任务.md",
+      "sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+      "mode": "full FastCtx read; metadata/resource, not manuscript pages"
+    }
+  ],
+  "partial_resources": [
+    {
+      "ref": ".writer/tool/docs/workflow.md",
+      "scope": "help/JSON sections 46-122 located by FastCtx grep; not full manual reading"
+    }
+  ],
+  "plans": [
+    {
+      "ref": "大纲/分卷/V22.json",
+      "sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb"
+    },
+    {
+      "ref": "大纲/分卷/V23.json",
+      "sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca"
+    },
+    {
+      "ref": "大纲/单元/0061.json",
+      "sha256": "65a9050ff2e65c734a8cfeecb01e5cbbe433df2675eccef9d4d0519e5c01b788"
+    },
+    {
+      "ref": "大纲/单元/0062.json",
+      "sha256": "0cae486c8d33c34bdd4790eaf90bdbeff5c8c474e8a49e3554c33287d0c48285"
+    },
+    {
+      "ref": "大纲/单元/0063.json",
+      "sha256": "275c8b18e823311914457c11e41d4d0423f091d14e813d4066df03b977def9b6"
+    },
+    {
+      "ref": "大纲/单元/0064.json",
+      "sha256": "9144b9da8ff0f9c17788562637e62433af135d3bf332361c4f7ed0942682580b"
+    },
+    {
+      "ref": "大纲/单元/0065.json",
+      "sha256": "adb2408b8261f6410193f809e750db094426d9bc37239fb2978822b93e6b7be3"
+    },
+    {
+      "ref": "大纲/单元/0066.json",
+      "sha256": "43eb5c763629f8290d35de4d4a732f836243b8938d4907b75a173e668cd0d9ee"
+    },
+    {
+      "ref": "大纲/AE新增骨架-61-66.md",
+      "sha256": "8bc6f3880efd0de614bfa0a9f8259408ced109c2671cc1a7331029dcaaff4806"
+    },
+    {
+      "ref": "研究/AE规划与旧线证据.md",
+      "sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61"
+    }
+  ],
+  "near_detail": [
+    61,
+    62,
+    63
+  ],
+  "rolling_skeleton": [
+    64,
+    65,
+    66
+  ],
+  "long_chapter_segments": {
+    "62": 6,
+    "65": 6,
+    "actual_segments_created": 0,
+    "actual_templates_acquired": 0,
+    "actual_process_breaks_executed": 0
+  },
+  "manuscript": {
+    "new_units": 0,
+    "new_drafts": 0,
+    "draft_context_calls": 0,
+    "record_template_calls": 0,
+    "new_revision_sessions": 0,
+    "git_commits": 0,
+    "all_61_66_unwritten": true
+  },
+  "final_outputs": [
+    {
+      "label": "plan-final-status",
+      "args": [
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-final-status/stdout.txt",
+      "stdout_sha256": "f77a69fafeef30736108dcf9dc8e9fbd7fd7526847abe75157a03ed4edd998e5",
+      "stdout_bytes": 39279,
+      "stderr_ref": "cli-logs/plan-final-status/stderr.txt",
+      "result_ref": "cli-logs/plan-final-status/result.json"
+    },
+    {
+      "label": "plan-final-check",
+      "args": [
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-final-check/stdout.txt",
+      "stdout_sha256": "5e6d8a1083a661710d55b87f8d2afaf20ff4aed1664ee8daee617d3f1883950f",
+      "stdout_bytes": 17444,
+      "stderr_ref": "cli-logs/plan-final-check/stderr.txt",
+      "result_ref": "cli-logs/plan-final-check/result.json"
+    },
+    {
+      "label": "plan-final-doctor",
+      "args": [
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-final-doctor/stdout.txt",
+      "stdout_sha256": "3f246ebebaabcb0d0470f7c3beeb39696cc239235d701bb421b303088b680027",
+      "stdout_bytes": 16006,
+      "stderr_ref": "cli-logs/plan-final-doctor/stderr.txt",
+      "result_ref": "cli-logs/plan-final-doctor/result.json"
+    },
+    {
+      "label": "plan-final-sources",
+      "args": [
+        "source",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-final-sources/stdout.txt",
+      "stdout_sha256": "1c15a58f8c4b8a0a9507422ed67e355fac2f36f4c073e7b23e3857cd61f81e8c",
+      "stdout_bytes": 21919,
+      "stderr_ref": "cli-logs/plan-final-sources/stderr.txt",
+      "result_ref": "cli-logs/plan-final-sources/result.json"
+    },
+    {
+      "label": "plan-final-revisions",
+      "args": [
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-final-revisions/stdout.txt",
+      "stdout_sha256": "7d738a12761dcb48d25fe9553541228628fe4dfef57d3e1286c448123b249d1f",
+      "stdout_bytes": 12345,
+      "stderr_ref": "cli-logs/plan-final-revisions/stderr.txt",
+      "result_ref": "cli-logs/plan-final-revisions/result.json"
+    },
+    {
+      "label": "plan-final-issues",
+      "args": [
+        "review-issues",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-final-issues/stdout.txt",
+      "stdout_sha256": "745e800f42902f80c4444acd20e6a0ebeac752e8cc1d6c83d16cfbfd49fb1f11",
+      "stdout_bytes": 258159,
+      "stderr_ref": "cli-logs/plan-final-issues/stderr.txt",
+      "result_ref": "cli-logs/plan-final-issues/result.json"
+    }
+  ],
+  "entry_outputs": [
+    {
+      "label": "plan-entry-status",
+      "args": [
+        "status",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-entry-status/stdout.txt",
+      "stdout_sha256": "2feb22ec477b925d404551216d7a707fe727a8b8e684760d58f191af16112047",
+      "stdout_bytes": 39518,
+      "stderr_ref": "cli-logs/plan-entry-status/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-status/result.json"
+    },
+    {
+      "label": "plan-entry-check",
+      "args": [
+        "check",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-entry-check/stdout.txt",
+      "stdout_sha256": "c2d8235127c862e47353945505185f0c23d8b9d089bdf800e343d18838f45d83",
+      "stdout_bytes": 17444,
+      "stderr_ref": "cli-logs/plan-entry-check/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-check/result.json"
+    },
+    {
+      "label": "plan-entry-doctor",
+      "args": [
+        "doctor",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-entry-doctor/stdout.txt",
+      "stdout_sha256": "3f246ebebaabcb0d0470f7c3beeb39696cc239235d701bb421b303088b680027",
+      "stdout_bytes": 16006,
+      "stderr_ref": "cli-logs/plan-entry-doctor/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-doctor/result.json"
+    },
+    {
+      "label": "plan-entry-sources-supported",
+      "args": [
+        "source",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-entry-sources-supported/stdout.txt",
+      "stdout_sha256": "2aa240c342c0cc5f176cef5a27bf3a09f62c9addcfae822af2900362d79f72bd",
+      "stdout_bytes": 21919,
+      "stderr_ref": "cli-logs/plan-entry-sources-supported/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-sources-supported/result.json"
+    },
+    {
+      "label": "plan-entry-revisions-supported",
+      "args": [
+        "revision",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-entry-revisions-supported/stdout.txt",
+      "stdout_sha256": "7d738a12761dcb48d25fe9553541228628fe4dfef57d3e1286c448123b249d1f",
+      "stdout_bytes": 12345,
+      "stderr_ref": "cli-logs/plan-entry-revisions-supported/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-revisions-supported/result.json"
+    },
+    {
+      "label": "plan-entry-issues-supported",
+      "args": [
+        "review-issues",
+        "list",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 0,
+      "stdout_ref": "cli-logs/plan-entry-issues-supported/stdout.txt",
+      "stdout_sha256": "9ef96a38c2dddc928bcb5ec8c78ac65f558499b67e64072ecbb4d2803753d78a",
+      "stdout_bytes": 258159,
+      "stderr_ref": "cli-logs/plan-entry-issues-supported/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-issues-supported/result.json"
+    }
+  ],
+  "ordinary_failures": [
+    {
+      "label": "plan-entry-sources",
+      "args": [
+        "sources",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 2,
+      "stdout_ref": "cli-logs/plan-entry-sources/stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stderr_ref": "cli-logs/plan-entry-sources/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-sources/result.json"
+    },
+    {
+      "label": "plan-entry-revisions",
+      "args": [
+        "revisions",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 2,
+      "stdout_ref": "cli-logs/plan-entry-revisions/stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stderr_ref": "cli-logs/plan-entry-revisions/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-revisions/result.json"
+    },
+    {
+      "label": "plan-entry-issues",
+      "args": [
+        "issues",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "exit_code": 2,
+      "stdout_ref": "cli-logs/plan-entry-issues/stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stderr_ref": "cli-logs/plan-entry-issues/stderr.txt",
+      "result_ref": "cli-logs/plan-entry-issues/result.json"
+    }
+  ],
+  "other_warning": "FastCtx plan-body-index.json offset 470 exceeded 423 lines; corrected read at 310. Native tool result retained in this session; no manuscript read credit.",
+  "mechanical_check": {
+    "ok": true,
+    "scope": "mechanical-only",
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0001-灯下的箱子.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0002-多跑的一趟.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0008-半个钟头-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0009-留给明天的活-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0010-月底的三十五块-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0011-盒子放进去-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0012-沿着坡走-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0021-雨落在门檐外-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0025-衣袖落下来-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0026-要关的半扇门-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0027-先把这一天过完-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0027-先把这一天过完-v2.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0028-走远一点的路-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0030-兜里留得下的手-brc-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0031-门外留一张纸-c-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0032-茶慢慢凉下来-cr-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0033-把用过的话带回来-cr-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0034-明天的空处-d-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0034-明天的空处-d-v2.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0035-一起翻到下一页-dr-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0036-灯下还有一页-dr-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0046-盒里最后一块-ac-d-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0047-留一口自己的-ac-d-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0048-自己的那一段-ac-d-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0049-柜角那盏灯-ad-a-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0050-照片外的一侧-ad-a-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0052-半日不是一整天-ad-b-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0052-半日不是一整天-ad-b-v2.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0053-这幅由谁收-ad-b-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0054-灯照到哪边-ad-b-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0055-门前先留一块-ad-c-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0055-门前先留一块-ad-c-v2.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0056-留给她自己试-ad-c-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0058-袋里放自己的-ad-d-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      },
+      {
+        "severity": "warning",
+        "code": "UNREGISTERED_DRAFT",
+        "draft": "正文/0060-窗边还留着光-ad-dr-v1.md",
+        "message": "该正文未登记，不会纳入导出；请核对用途。"
+      }
+    ],
+    "rolling_review": {
+      "valid": 13,
+      "stale": 59,
+      "unpublished_records": [],
+      "stale_with_current_coverage": 59,
+      "stale_without_current_coverage": 0,
+      "pending_windows": [],
+      "nature": "coverage-only-not-literary-pass"
+    }
+  },
+  "risks": [
+    "64-66 require rolling detail from actual 61-63; no future events registered.",
+    "16k/22k targets require actual new consequences; skeleton is not proof of literary supply or word count.",
+    "65 drawing may become abstract discussion; 62 order may become inventory narration; 63 chess must not become rules tutorial.",
+    "Old unregistered drafts and 33 unpublished editing entry remain; 13 optional and 49 retained unchanged."
+  ],
+  "checkpoint_expected": {
+    "label": "plan-complete",
+    "registered_units": 60,
+    "file": "checkpoint-plan-complete.json",
+    "state_copy": "checkpoint-plan-complete-state.json"
+  },
+  "process_exit": "Not observable from inside this active native run; root must inspect real exit before next writing run.",
+  "checkpoint_observed": {
+    "ok": true,
+    "file": "checkpoint-plan-complete.json",
+    "state_copy": "checkpoint-plan-complete-state.json",
+    "checkpoint_sha256": "50c90772aad4b9d5283294bf4f1e02a9986fbe6d3abe10b703d965ceca227139",
+    "state_sha256": "a1e083ed0ee90e87dbef435033662e15731d74447cda43d59abaa04a1f3c8599",
+    "revision": 353,
+    "registered_units": 60,
+    "generation": 8,
+    "files": 23642,
+    "frozen_source_and_report_objects_verified": 151,
+    "receipt": "plan-checkpoint-receipt.json",
+    "readback_receipt": "plan-checkpoint-readback-receipt.json",
+    "not_process_exit": true
+  },
+  "report_artifacts": [
+    {
+      "ref": "规划范围报告.md",
+      "sha256": "218b5f9a303f3506480df38488518d7a9a4b45e4f6d26fe82a87934796d0a233"
+    },
+    {
+      "ref": "交接-规划完成.md",
+      "sha256": "ee2d9ce2d7d5273bf4d63d272a1f9e1d07bb208e615cc563bce0ffc449f1c8bf"
+    },
+    {
+      "ref": "plan-reading-notes.md",
+      "sha256": "617e64cfba08fb4c0b62da2649e39965a4d8a430de69bd60c06a26a69c92fdd9"
+    }
+  ],
+  "finished_at": "2026-10-25T17:22:33.730Z"
+}

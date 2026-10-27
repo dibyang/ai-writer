@@ -1,0 +1,20 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const a=path.resolve('acceptance/20261026-long-flow-090-ae'),p=path.join(a,'scenario/东岸末班船-66章独立验证');
+const from='正文/0065-画到不想给人看-ae-b-v1.md',to='正文/0065-画到不想给人看-ae-b-v2.md';
+let s=fs.readFileSync(path.join(p,from),'utf8');const changes=[];
+function rep(before,after,reason){if(s.split(before).length!==2)throw Error('count '+before);s=s.replace(before,after);changes.push({before,after,reason});}
+rep('她把笔收掉，先用两张买纸时带的普通包装纸分别覆住新旧两张，再将它们同余下八张空白分层收进自己装纸的袋。','她把笔收掉，将两张画背面相对，画面都朝外，不把新旧两面压在一起。原先垫纸的旧硬纸折在外头护住，沾过橡皮屑的包装边避开画面，余下八张空白另留在袋内一侧。她慢慢将这几层送回自己装纸的袋，没有来回抽动。', '买纸只明示一张旧硬纸，删除凭空出现的两张包装纸并交代实际收纸动作。');
+rep('他拿起书，先摸到昨天折痕旁那个旧磨白角，','他拿起书，先摸到昨天见过的那个旧磨白角，','删除没有前文依据的借书折痕。');
+rep('沈禾洗完最后一只碗，才回房看画。第一张的灰隔着包装纸透不出来，她先摊第二张，','沈禾洗完最后一只碗，才回房看画。她先将旧硬纸放平，把两张画分开，又从家里另找两张干净的旧包装纸，摸过没有油湿，才各自盖住。第一张那块灰没蹭到第二张上，她松了口气，先摊第二张，','在家明确取得新隔纸，接续夜间隔纸/分层描写。');
+rep('上午买来时十张都白，','下工买来时十张都白，','与16点下工后购买时间一致。');
+rep('她从口袋摸出买刨刀时找回的硬币，放回零钱处，想起姑娘那个还没画完便被抱走的招牌，','她从随身包取出新刨刀，旋开盖，将里面的木屑倒掉。刨刀边口还有一小截没落，她轻磕两下才出来，重新旋紧，另收在铅笔旁，免得明早拿包又找不见。她想起姑娘那个还没画完便被抱走的招牌，','实际手机付5元，无找币；保留新物实际整理动作。');
+rep('刚才从母亲那句给看看里等来的不安，','刚才等着母亲那句给看看时的不安，','母亲当时未真提出看新画，区分期待与实际话语。');
+rep('她今天买的并不是新笔，','她今天用的并不是新笔，','女自有笔不是今日新买。');
+rep('左手仍像喝水时那样松握，放在杯旁，杯子移得足够远。','左手仍像喝水时那样松握，放在桌面空处。','杯在外间，与后文取杯扑空一致。');
+rep('抽屉没动，没必要为核一条电话消息再打开。','抽屉没动，她仍靠着椅背，没有起身去取。','去掉审核口吻。');
+fs.writeFileSync(path.join(p,to),s,{flag:'wx'});
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const original=fs.readFileSync(path.join(p,from));
+const body=s.replace(/^#.*\n/,'');
+const result={from,to,before_sha256:sha(original),after_sha256:sha(s),han:(body.match(/[\u4e00-\u9fff]/g)||[]).length,chars:s.length,pages:Math.ceil(s.length/1800),changes};
+fs.writeFileSync(path.join(a,'b-resume-65-pre-record-fixes.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result,null,2));

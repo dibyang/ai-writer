@@ -1,0 +1,16 @@
+{
+  "expected_revision": 207,
+  "operation_id": "AC-C-ACK-NEGATIVE-42-45-45adbed5-590d-42ea-9401-50aa0356c8a9",
+  "id": "I_AC_C45_MEAL_DISH",
+  "commit_id": "8d1da1d6-f999-4c6d-bb03-ca91f958434a",
+  "target_units": [
+    42,
+    45
+  ],
+  "reason": "受控负例：现有43—45范围不允许将42列为修复目标。保留完整42/43参考证据和真实旧提交，不扩workflow；预期拒绝且不变state。",
+  "decision_actor": "agent-within-authorized-scope",
+  "authorization": {
+    "ref": ".writer/objects/ce2c5abd-f7c0-4d88-9edb-f1b2ba05e0e3.json",
+    "sha256": "6809c913ce803a1d24b396b7a809cc44fffc0a9642ed3bf01be421df3f829ba9"
+  }
+}

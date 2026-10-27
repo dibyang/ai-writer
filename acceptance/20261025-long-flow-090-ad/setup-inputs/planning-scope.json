@@ -1,0 +1,71 @@
+{
+  "expected_revision": 261,
+  "operation_id": "ad-setup-planning",
+  "author_evidence": {
+    "quote": "继续推进",
+    "local_source": "研究/AD作者任务.md",
+    "source_sha256": "7b7d4195d50b6be4988f065087516ee848fd77c40cea9e6a015032f82fcdddc0",
+    "locator": "current ai-writer chat latest continuation instruction 2026-10-25; preceding task quoted locally; no message ID supplied",
+    "recorded_by": "Codex"
+  },
+  "workflow": {
+    "stage": "structure",
+    "task": "AD独立测试副本：从AC封存48章基线先核当前构建/事实，组织49—60骨架和近期卷；先讨论规划，尚不写49。数字是控制器验收安排，不是作者逐项情节选择。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "只作用AD独立样本；不改真实作品和AC等旧封存",
+        "完成新窗口与有限近期纲后再登记试写范围",
+        "不Git提交推送发布"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AC扩大骨架-37-48.md",
+          "大纲/AC-D推进窗口-46-48.md",
+          "大纲/AC-D48-登记47后滚动细化.md"
+        ],
+        "unresolved_ids": [
+          "AD49—60近期规划尚未组织"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/分卷/V17.json"
+        ],
+        "unresolved_ids": [
+          "AD49—60近期规划尚未组织"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0046.json",
+          "大纲/单元/0047.json",
+          "大纲/单元/0048.json"
+        ],
+        "unresolved_ids": [
+          "AD49—60近期规划尚未组织"
+        ]
+      }
+    }
+  }
+}

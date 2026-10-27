@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const a=path.resolve('acceptance/20261026-long-flow-090-ae'),p=path.join(a,'scenario/东岸末班船-66章独立验证'),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const refs=['.writer/drafts/ae-b-context66-original.json','.writer/drafts/ae-b-record66-original.json'],c=JSON.parse(fs.readFileSync(path.join(p,refs[0]))),t=JSON.parse(fs.readFileSync(path.join(p,refs[1])));
+assert.equal(t.expected_revision,365);assert.deepEqual(c.source_hashes,t.source_hashes);for(const [r,h]of Object.entries(t.source_hashes))assert.equal(sha(fs.readFileSync(path.join(p,r))),h,r);
+const out={at:new Date().toISOString(),expected_revision:t.expected_revision,budget_requested:180000,context_budget:c.context_budget,source_hashes:t.source_hashes,source_bindings:t.source_bindings,files:refs.map(ref=>({ref,sha256:sha(fs.readFileSync(path.join(p,ref)))})),read_context_pages:36,read_template_pages:1,labels:'b-resume-ctx66-p01..36 / b-resume-template66-p1',draft_abs:path.join(p,t.draft),previous65:t.source_hashes['正文/0065-画到不想给人看-ae-b-v2.md']};
+fs.writeFileSync(path.join(a,'b-resume-prewrite66.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(out,null,2));

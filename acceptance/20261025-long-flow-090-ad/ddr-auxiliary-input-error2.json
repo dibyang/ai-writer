@@ -1,0 +1,8 @@
+{
+  "command": "读取context.snapshot.ledger",
+  "exit_code": 1,
+  "error": "TypeError: snapshot中无ledger字段",
+  "reason": "辅助只读脚本误认context结构；无文件或状态写入",
+  "correction": "先打印实际keys，再读取权威state.snapshot.ledger中的三项；完整输出已在本进程实读",
+  "tool_defect": false
+}

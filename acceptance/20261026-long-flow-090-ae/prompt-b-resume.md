@@ -1,0 +1,18 @@
+根已实际观察B首程exit0并核完整checkpoint、选定两段/原CAS363及12源，见b-first-root-stop-verification.json。本提示已激活。先实际运行 node acceptance/20261026-long-flow-090-ae/check-main-reading-resume.mjs b-resume-entry checkpoint-b-first.json，再读COMMON、交接-B首停.md、b-first-stop.json及b-root-selected-stop.json。以根normalized stop的chapter65字段用于通用字节/读页证明，原native材料不改。
+
+
+恢复读页门槛：原两段六页全部公开返回后，先报告已完整读回原段的实际进度，再运行 node acceptance/20261026-long-flow-090-ae/probe-cut-reads.mjs b-resume b-resume b-root-selected-stop.json chapter65。必须ready:true/ok:true且无part3，才能写第3段。若ready:false，核实际公开返回/截断/状态，不写新段并交根；不手工制造成功文件。此脚本只核实际公开返回与无新段时的字节，文学消化仍须自己实读。根之后另核最后原读页<捕获边界<首次新段公开写入。
+
+# AE B同ID恢复实际任务
+
+B首程真实正常退出与根独立核对已完成；继续真实用户持续任务中的独立试写，不伪造新作者原话。读COMMON.md、交接-B首停.md、b-first-stop.json和根补充的准确路径/当前状态，先实际运行指定完整checkpoint字节核验。
+
+必须与B首程同一真实原生会话ID。完整读回65唯一选定的原第1—2段全部页和原context/record-template、未完成选择及物件状态；摘要/哈希/首程读页不算恢复后的原文读回。全部读回后才能写65第3段。保留原两段、模板source_hashes/source_bindings/expected_revision，登记65前不改workflow/plan/source或开revision导致旧CAS失效，也不重取模板洗来源。若确有必须先修来源的问题，保存原状态/复现并交根，不能为守CAS盲续。
+
+继续第3—6段，完整正文≥22000汉字；每段长度只是自然场面分配，不设置逐段硬配额。第一份完整合章必须assemble原前两段+新后四段，原段各一次有序，保存输入、每段SHA及实际输出字节。若发现硬问题，另存修后稿和明确改前改后，保留首合章与原分段；不能倒改原件以虚称旧字节没变。完整最终版本逐页实际复读、纲文回对和知识/日期/钱物/物理操作/语言复核后，填原65模板preview/record。
+
+65登记完成后，才正式workflow转66任务（有限draft范围仍64—66），滚动细化66真正未消费的计划；已消费骨架/卷纲按正式freeze/impact/版本，不直改后刷新hash。动笔前取66新context/template，写完整普通正文≥16000汉字，分段assemble、修后当前完整复读回对、真实preview/record。只还实际交付的书，保留63实际约定、65实际纸/书/谁见过和各人选择，不把计划当事实，不强制聚齐总结，不修治脚伤、不复航、不填两空或偷转录音，不写67。
+
+66完成后，以新标签按61→62→63→64→65→66连续完整实读当前六章，整章读完再下章，不用创作前读页冒充最终滚动阅读。保存逐章目标/阻力/选择/后果/关系变化、跨章相似结构与真正不同内容、需要保留的不完美及风险。正式review-template/report/review绑定当前稿SHA，机械check不作文学合格。高置信本轮64—66已登记硬问题可按实际授权限定相应范围正式revision修正，不能直接改已登记正文或动旧1—63；真实工具问题交根，不私改源码或受管资源。
+
+末态应main66、无本程未完修订；六类产品命令完整原始双流，保存b-complete.json、交接-B完成.md与checkpoint-main-complete b-complete 66。交接精确记录14书/夹纸/8书/新画原件去处和各人知情、65原段原模板链、跨卷回收实际及仍开放项、旧意见处置、真实失败、未完成的后续旧章修改/全书阅读。不可预填根验证、正常退出、整轮完成或封存。100—105分钟仍未完成就保存实际checkpoint/未完交接正常退出，由根再同ID恢复。

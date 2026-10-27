@@ -1,0 +1,11 @@
+{
+  "code": "DRAFT_REVIEW_INVALID",
+  "field": "draft_review",
+  "cause": "Agent constructed draft_review without mandatory reviewer; input-format omission, not a product defect or unsupported interface.",
+  "missing_reviewer": true,
+  "draft_hash_matches": true,
+  "report_hash_matches": true,
+  "api_evidence": "bundled lib/workspace.mjs validateDraftReview lines432—436 requires nonempty reviewer; record-template instructions lines549 also list reviewer",
+  "action": "Stop after rejection under this run instruction. Do not edit failed input, retry preview, record, continue36 or bypass state. Root inspects and may resume same revision at35, not40.",
+  "state_unchanged": true
+}

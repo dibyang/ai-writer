@@ -1,0 +1,78 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-20T10:01:12.509Z",
+  "operation_id": "v-ar-stop-after-6",
+  "base_revision": 22,
+  "payload": {
+    "stage": "trial",
+    "task": "本次已完成第4—6章整稿、逐章实读报告与登记，并完成当前1—6章连读review；到6停下等待B，下一阶段7—9需根新提示",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 4,
+        "to": 6
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次第4—6章及连读review已完成，到6停止等待根独立核验和B新提示；next_unit=7不构成续写授权",
+        "stage保持trial，draft_range仍明确4—6，revise_range为null；不得写7、不得开启正式修订",
+        "首停v1的01/02、revision17写前模板、旧1—3正文与O_BOX_PAINT保留；后续8/11/12兑现仍属计划",
+        "全部操作仅V；不改产品、U/T及其他作品，不Git提交或推送、不上传；保留真实失败、原输入和版本"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "第6完成后更新task说明真实完成点、下一阶段7—9需根新提示，当前draft_range仍4—6，到6停止。",
+    "local_source": "研究/V-A-恢复限定原文.md",
+    "source_sha256": "83432f7e37086212de3e866c1a7014a9e6456e000c472002b0b7c0f277df3507",
+    "locator": "当前用户恢复限定原文末段；真实本提示原文已保存，不编造人类消息ID或thread",
+    "recorded_by": "同一实际V-A Codex恢复会话；完成点来自实际登记与报告",
+    "frozen_ref": ".writer/objects/83432f7e37086212de3e866c1a7014a9e6456e000c472002b0b7c0f277df3507.txt"
+  }
+}

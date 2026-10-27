@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "at": "2026-10-21T10:32:33.894Z",
+  "scope": "actual invalid-recall rejection, future-version repair and successful new inputs; not a preplanned negative scenario",
+  "cases": [
+    {
+      "failed": "cr-context33",
+      "failed_exit_code": 2,
+      "error": "recall_ids 找不到已登记条目：P_X_COAT",
+      "state_sha256": "12c231fff7cf96f5dde4cdd43d2fc1592f5e2c8869a312b3d56b299181a9ee33",
+      "revision": 143,
+      "units": 32,
+      "state_bytes_unchanged": true,
+      "rejected_output_absent": ".writer/drafts/cr-context-33-r143.json",
+      "retry": "cr-context33-v2",
+      "retry_exit_code": 0,
+      "failed_started_at": "2026-10-21T09:58:51.781Z",
+      "failed_elapsed_ms": 410
+    },
+    {
+      "failed": "cr-template33",
+      "failed_exit_code": 2,
+      "error": "recall_ids 找不到已登记条目：P_X_COAT",
+      "state_sha256": "12c231fff7cf96f5dde4cdd43d2fc1592f5e2c8869a312b3d56b299181a9ee33",
+      "revision": 143,
+      "units": 32,
+      "state_bytes_unchanged": true,
+      "rejected_output_absent": ".writer/drafts/cr-template-33-r143.json",
+      "retry": "cr-template33-v2",
+      "retry_exit_code": 0,
+      "failed_started_at": "2026-10-21T09:58:54.255Z",
+      "failed_elapsed_ms": 412
+    }
+  ],
+  "source_fix": "source33-publish-verification.json",
+  "operator_deviation": {
+    "observed": true,
+    "detail": "After the first context failure, a dependent template request was still attempted and rejected for the same cause; calls were serial, not overlapping. This unnecessary second request violated the intended stop-on-error workflow and is retained rather than relabeled as a planned test.",
+    "effect": "Both guards rejected without state mutation or failed output files; only corrected source version and successful new inputs were used for chapter33."
+  }
+}

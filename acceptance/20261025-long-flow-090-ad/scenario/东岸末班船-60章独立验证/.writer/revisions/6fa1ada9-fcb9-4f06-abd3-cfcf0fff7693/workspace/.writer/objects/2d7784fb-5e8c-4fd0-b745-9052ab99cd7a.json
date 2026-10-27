@@ -1,0 +1,115 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_X_DR36_BOOK_KNOWLEDGE",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "36正文已让许母/沈父听到12元花书与18元未购，书约链两人知情仍保留35末未知，须正式tracking修订36。",
+      "suggestion": "保持36正文和35历史原字节，仅在36重登changes补T_X_BOOK_COMPANY.character_known许蓉/沈成林两项及真实引文。",
+      "evidence": [
+        {
+          "unit": 36,
+          "draft": "正文/0036-灯下还有一页-dr-v2.md",
+          "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+          "line": 11,
+          "quote": "告诉她十二块，自己原以为是前回看过那一本"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/d29d1ee4-eca4-43f4-afeb-450a536a9181.json",
+        "review_sha256": "d71de903a52a6de255ea9d1f80bb86cb3244fccb4a64a8d16dbfa206af5a4af1",
+        "units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "2cf2b0487fb85e7a0eb3c5f73212f37fffe2de8abb0e90cbbc3b469f843b132f"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/97c9a1fc-bbc3-473d-b6cd-183cb90af529.json",
+          "sha256": "d300edad9f7f382c41ae6d68f3248458b0b3d06b36ee76d9775941fafa2c4e29"
+        },
+        {
+          "ref": ".writer/objects/e5113e30-a4b5-4cd0-a475-2149f5427fe1.json",
+          "sha256": "710259d7cdff22452540bd873ba1ded9c51f5ba3affa52d40c0aad0a63d7f5ad"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/345ca1e4-f6b5-4369-90d2-5678a699f1a6.json",
+          "sha256": "110d6df464e8058748ba48e3216de4d0f8837b80ebc23ae4197a2d8c2fcf43bc"
+        },
+        "disposition": "adopted",
+        "reason": "实读36:11/68/92及recall确认同一书约链旧未知应更新；仅36追踪，不改正文及35当时正确未知。依当前用户明确正式修订授权在36范围采用，非作者逐项采纳。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "2cf2b0487fb85e7a0eb3c5f73212f37fffe2de8abb0e90cbbc3b469f843b132f"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "4940f163-50c0-4289-a95d-a7af0daa030f",
+        "commit_binding": {
+          "ref": ".writer/objects/4940f163-50c0-4289-a95d-a7af0daa030f.json",
+          "sha256": "7c94394e28c612ed24a61a6c03fdad90ab7bad970494ab43e0b86e9eae884d7f"
+        },
+        "transaction_id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "reason": "正式36独立区已提交，正文SHA未变，36书约链两人知情发生真实差量变化，与当章11/68/92听述/图片同步。使用真实commit对象id，不以事务id替代。",
+        "changes": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "before": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "after": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "12f89bc674abb2a5eb45e1ab7278944883e243382c27f14ea1e1fab79174a70c"
+          }
+        ],
+        "change_scope": "tracking",
+        "tracking_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/68e1d789-e95d-414a-8054-b5beea4832c8/old/8.bin",
+            "sha256": "8a909f8f00f6161cc940590f2d5b2ea731b7773ac025364da7f7c4ed6d27732e"
+          },
+          "after": {
+            "ref": ".writer/transactions/68e1d789-e95d-414a-8054-b5beea4832c8/new/8.bin",
+            "sha256": "52400169e0aeb402102c9b3d94cc2c59790e69108ece77ef49cdcf1738555b09"
+          }
+        },
+        "tracking_changes": [
+          {
+            "unit": 36,
+            "before": {
+              "summary_sha256": "719e6400e2baf600e7e5e873faa6155312fa70bf7302d051d0b7cbdbb8f6a9fe",
+              "snapshot_sha256": "08cebcd91536cdb3853913ad19450f3fd4ad7b0de77faf59113df47462b0121f"
+            },
+            "after": {
+              "summary_sha256": "719e6400e2baf600e7e5e873faa6155312fa70bf7302d051d0b7cbdbb8f6a9fe",
+              "snapshot_sha256": "7a676c1171c6d2fd780f40fa0c9dfafa0ce66924848a371890e9758e837a6a43"
+            },
+            "summary_changed": false,
+            "snapshot_changed": true
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "ok": false,
+  "error": "本轮任务“AD G有效范围负例：官方允许draft且draft_range止60，仅验证有计划61的context/record-template被范围拒绝；不生成、改写、合章或登记任何正文。本阶段全书实读和原意见闭环已完成，仍为草稿。”不允许 draft 61–61；不得自行扩大作者授权",
+  "code": "ACTION_OUT_OF_SCOPE",
+  "next_action": "按当前任务和范围执行允许动作（discuss、plan、draft）。可用 workflow show 查看；只有作者的新明确指令才可更新范围。",
+  "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261025-long-flow-090-ad\\scenario\\东岸末班船-60章独立验证\\.writer\\tool\\bin\\ai-writer.mjs' context '--help'",
+  "scope": {
+    "enabled": true,
+    "stage": "drafting",
+    "task": "AD G有效范围负例：官方允许draft且draft_range止60，仅验证有计划61的context/record-template被范围拒绝；不生成、改写、合章或登记任何正文。本阶段全书实读和原意见闭环已完成，仍为草稿。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 60
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本轮只更新AD独立副本内受管工具和已验证未定制/未被正文消费的手册，保留gen7/备份和旧输入。",
+        "不写改任何正文或现有真实作品，不写61正文，不刷新冻结设定、原引用或消费哈希。",
+        "保留原9/21/42证据与原采用/真实提交；49误判retained和13optional不变；旧8不再次apply。",
+        "新构建从作品随附入口运行，完整复读1—60并正常首停/同ID恢复；验证原意见apply/verify、有效61范围拒绝和草稿导出。",
+        "最终仍为模型知情自检与草稿，不提交、推送或发布。",
+        "根正式选择仅为范围门禁测试设置drafting/允许draft/范围1—60；不许可实际写改任何正文，61始终禁止。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "研究/AD规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V21.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0058.json",
+          "大纲/单元/0059.json",
+          "大纲/单元/0060.json",
+          "研究/AD-D滚动写前核对.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "沿用已登记规划及其真实历史采纳依据；本程按当前冻结版本另行实读，不追认本程已经读完"
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 6
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  }
+}

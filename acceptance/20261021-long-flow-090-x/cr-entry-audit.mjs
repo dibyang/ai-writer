@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+const X=path.dirname(fileURLToPath(import.meta.url)),P=path.join(X,'scenario','东岸末班船-再扩展验证');const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),read=f=>JSON.parse(fs.readFileSync(f,'utf8'));
+const parent=read(path.join(X,'parent-c-first-stop-state.json')),archive=read(path.join(X,'parent-c-first-stop-archive.json')),state=read(path.join(P,'.writer/state.json'));
+if(sha(path.join(X,'parent-c-first-stop-state.json'))!==sha(path.join(P,'.writer/state.json'))||state.revision!==139||state.units.length!==31)throw Error('entry state mismatch');
+const files=archive.files.map(x=>({...x,live_same:sha(path.join(P,x.file))===x.sha256,archive_same:sha(path.join(archive.archive,x.file))===x.sha256}));if(files.some(x=>!x.live_same||!x.archive_same))throw Error('archive mismatch');
+const template=read(path.join(P,'.writer/drafts/c-template-32-r139.json'));
+const sources=Object.fromEntries(Object.entries(template.source_hashes).map(([f,s])=>[f,{sha256:s,current_same:sha(path.join(P,f))===s}]));if(Object.values(sources).some(x=>!x.current_same))throw Error('template drift');
+const result={ok:true,parent_revision:parent.revision,parent_units:parent.units.length,state_sha256:sha(path.join(P,'.writer/state.json')),thread_id:archive.thread_id,archive_files:files,sources,template_sha256:sha(path.join(P,'.writer/drafts/c-template-32-r139.json')),tool:read(path.join(X,'cli-logs/cr-entry-identify/stdout.raw.txt'))};
+fs.writeFileSync(path.join(X,'CR入口保护核验.json'),JSON.stringify(result,null,2)+'\n',{encoding:'utf8',flag:'wx'});
+console.log(JSON.stringify({ok:true,revision:139,units:31,thread_id:archive.thread_id,state_sha256:result.state_sha256,archive_count:files.length,all_live_archive_equal:true,template_sources:Object.keys(sources).length,template_sources_current:true,content:result.tool.observed_content_id,runtime:result.tool.runtime_id}));

@@ -1,0 +1,69 @@
+{
+  "expected_revision": 5,
+  "operation_id": "final-a-resume-finish-1-2",
+  "author_evidence": {
+    "quote": "保持原1—3有限授权，不开始第3章，不暂停到让下一进程丢失原范围（停点记录在交接）。",
+    "local_source": "研究/最终测试恢复prompt.md",
+    "source_sha256": "d25dfcdc50e04e189b4746b8360eaa5a02f2c1f2d7367c9855a2dadc37ddb3f9",
+    "locator": "本次收到的恢复任务，末段；原生会话或人类消息ID未知，未编造",
+    "recorded_by": "本次原生Codex执行代理，依据当前真实恢复授权"
+  },
+  "workflow": {
+    "stage": "trial",
+    "task": "第1—2章已登记；本进程完成当前1—2全文连读、报告登记和恢复交接后结束，第3章等待后续恢复",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本次恢复进程只完成第1—2章与连读交接，不能开始第3章；停点及下一步见当前交接",
+        "总试写范围保持1—3，恢复后第3章完成即复盘，不自动写第4章",
+        "后续小范围追溯修订、fresh会话审查和导出按原完整测试授权分阶段执行，不自动扩权"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/试验选择说明.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json",
+          "大纲/单元/0003.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

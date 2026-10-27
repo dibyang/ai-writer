@@ -1,0 +1,40 @@
+{
+  "from": 36,
+  "to": 36,
+  "kind": "model-self-review",
+  "report": "审查/X-DR36书约知情遗漏-发现.md",
+  "report_sha256": "660967537e7e88308852eec1289ea83922426b28b4201b0a1f519f3dade5f475",
+  "units": [
+    {
+      "unit": 36,
+      "draft": "正文/0036-灯下还有一页-dr-v2.md",
+      "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+      "frozen_ref": ".writer/objects/95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30.review-body"
+    }
+  ],
+  "dependencies": {
+    "36": "2cf2b0487fb85e7a0eb3c5f73212f37fffe2de8abb0e90cbbc3b469f843b132f"
+  },
+  "revision_session": null,
+  "structured": true,
+  "frozen_report": ".writer/objects/660967537e7e88308852eec1289ea83922426b28b4201b0a1f519f3dade5f475.review-report",
+  "issues": [
+    {
+      "id": "I_X_DR36_BOOK_KNOWLEDGE",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "36正文已让许母/沈父听到12元花书与18元未购，书约链两人知情仍保留35末未知，须正式tracking修订36。",
+      "suggestion": "保持36正文和35历史原字节，仅在36重登changes补T_X_BOOK_COMPANY.character_known许蓉/沈成林两项及真实引文。",
+      "evidence": [
+        {
+          "unit": 36,
+          "draft": "正文/0036-灯下还有一页-dr-v2.md",
+          "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+          "line": 11,
+          "quote": "告诉她十二块，自己原以为是前回看过那一本"
+        }
+      ]
+    }
+  ]
+}

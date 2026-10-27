@@ -1,0 +1,14 @@
+{
+  "action": "e4-read.mjs entry 44 pages1/2/3",
+  "attempts": 3,
+  "exit_code": 1,
+  "error": "AssertionError 253 !== 216 at e1-ops.mjs:24; imported helper has process.argv[2] entry side effect",
+  "cause": "New read wrapper used entry phase and statically imported old executable helper",
+  "original_script": "e4-read.mjs",
+  "corrected_script": "e4-read-v2.mjs",
+  "main_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+  "candidate_sha256": "42f1f795fdda7b5fca2e74e33df43f536854a6082169674ef9573a152afb436e",
+  "state_unchanged": true,
+  "body_pages_read": false,
+  "product_defect": false
+}

@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "impact": {
+    "schema_version": 1,
+    "revision": 252,
+    "state_sha256": "a76e4feb82adc8a35a6ee81004bfe12f80978c3e222f4eecf0ca83e975801b70",
+    "version_id": "E1_S09_NEW",
+    "ref": "大纲/单元/0047.json",
+    "from": 47,
+    "mode": "historical",
+    "candidate_sha256": "5381bc88ead2d6bf44090f6ab435c16c33d87239d5cdb50617a967f4caeab1c9",
+    "direct_consumers": [
+      {
+        "unit": 47,
+        "consumed_sha256": "5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 47,
+    "review_from": 46,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "大纲/单元/0047.json",
+        "version_id": "E1_S09_OLD",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": 47,
+    "possible_indirect_through": 48,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/5381bc88ead2d6bf44090f6ab435c16c33d87239d5cdb50617a967f4caeab1c9.source": "5381bc88ead2d6bf44090f6ab435c16c33d87239d5cdb50617a967f4caeab1c9",
+      "正文/0046-盒里最后一块-ac-d-v2.md": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+      "正文/0047-留一口自己的-ac-d-v2.md": "d11005ccf9601e2e106d7e5ad28d9d4895243f82fb2cdadd0f7f1b6645e9283c",
+      "正文/0048-自己的那一段-ac-d-v2.md": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+      ".writer/objects/5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c.source": "5aa8a25cee42d37c7ae305b9da5879668a3f8a6136ce12897bed3a22c2052c9c"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  }
+}

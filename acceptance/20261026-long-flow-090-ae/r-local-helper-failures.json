@@ -1,0 +1,28 @@
+{
+  "note": "Local acceptance helpers only; no product tool edits. Native tool result remains original evidence; these entries are an index, not invented log captures.",
+  "events": [
+    {
+      "tool_chunk": "c4b7ef",
+      "kind": "inline JavaScript SyntaxError",
+      "effects": "before audit write; later fixed by r-inspect-sources.mjs"
+    },
+    {
+      "tool_chunk": "2bbaf3",
+      "kind": "ledger.filter TypeError",
+      "effects": "before write; ledger object correctly read later"
+    },
+    {
+      "tool_chunk": "459c5e",
+      "exit_code": 1,
+      "kind": "read.mjs assert(page<=pages)",
+      "detail": "S01 frozen object has one page; page1 complete and saved, unnecessary page2 rejected before page file write",
+      "effects": "no project mutations; source reader now clamps actual pages"
+    },
+    {
+      "tool_chunk": "540403",
+      "exit_code": 0,
+      "kind": "overbroad numeric locator output truncated",
+      "detail": "Included actual state and archived inputs; preserve r-consumed-numeric-boundary-audit.json, use r-consumed-source-numeric-boundary-filtered.json for ordinary source refs. Not full-reading evidence."
+    }
+  ]
+}

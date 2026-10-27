@@ -1,0 +1,32 @@
+[
+  {
+    "operation": "read-only e-proposal projection",
+    "error": "TypeError: reading.earlier_pages.map is not a function",
+    "effect": "none; actual field is count19, source_read_scope is string; corrected read projection, no CLI write"
+  },
+  {
+    "operation": "e1-revision.mjs begin precondition",
+    "error": "AssertionError undefined !== 9 because impact_pending is object, not array",
+    "effect": "before CLI; helper only corrected Object.keys count; subsequent actual begin succeeded"
+  },
+  {
+    "operation": "valid main workflow negative audit",
+    "error": "helper expected error in stdout but tool returned structured stderr; helper assertion undefined versus REVISION_OCCUPIED",
+    "effect": "actual single valid write correctly refused; recovered audit from original before/after/stderr, did not repeat negative"
+  },
+  {
+    "operation": "candidate context before pending publish",
+    "error": "IMPACT_PENDING, exit2; helper expected0",
+    "effect": "state unchanged; documented rewind/publish protocol used to publish9 requested future intervals, then fresh context succeeded; no product/state bypass"
+  },
+  {
+    "operation": "35 record-preview",
+    "error": "DRAFT_REVIEW_INVALID, exit1; helper expected0",
+    "effect": "agent omitted mandatory draft_review.reviewer; actual state unchanged; stop without retry/record; this is input omission, not product defect"
+  },
+  {
+    "operation": "final main check audit",
+    "error": "check exit1 from9 IMPACT_PENDING; helper expected0",
+    "effect": "state unchanged; saved original full output, remaining read-only checks run with actual exit statuses; not repeated maincheck"
+  }
+]

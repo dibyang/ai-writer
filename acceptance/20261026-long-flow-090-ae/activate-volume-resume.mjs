@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {fileURLToPath}from'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),j=n=>JSON.parse(fs.readFileSync(path.join(A,n))),r=j('native/volume-first/result.json'),v=j('volume-first-root-verification.json');assert.equal(r.exit_code,0);assert(v.ok&&v.thread_id===r.thread_id);assert(j('local-checks/volume-first-root-inventory/result.json').ok);
+const prefix=`根已实际观察首程exit0，耗时${r.elapsed_ms}ms，同ID必须为${r.thread_id}。根核188文件清单、当前2章4页原始公开返回、两版有序合章、原来源映射及第三章原CAS4/输入哈希均通过，证据volume-first-root-verification.json。首程网络4次超时后恢复正常，完整原日志保留；不把其自写exit文件替代外层result.json。先完整恢复原检查点，再按下文完成。激活时间${new Date().toISOString()}。\n\n`;
+fs.writeFileSync(path.join(A,'prompt-volume-resume.md'),prefix+fs.readFileSync(path.join(A,'prompt-volume-resume.template.md'),'utf8'),{flag:'wx'});console.log(JSON.stringify({ok:true,thread_id:r.thread_id,prompt:path.join(A,'prompt-volume-resume.md')}));

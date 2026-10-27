@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "at": "2026-10-25T19:55:00.253Z",
+  "units": 63,
+  "revision": 361,
+  "state_sha256": "7ca1a9797bcf349aa4df3dc67c14a7da0693dedb415a43932383a808903c7622",
+  "body_changed_units": [
+    62
+  ],
+  "body_change": "One occurrence: 前天给朋友指 -> 前几天给朋友指",
+  "other_62_bytes_unchanged": true,
+  "other_62_to_63_source_metadata": "Replayed through official revision; unchanged63 body is allowed to carry updated source dependencies",
+  "commit": {
+    "ok": true,
+    "transaction_id": "ece41c1a-6df1-4cc6-af80-e330bb4373c7",
+    "status": "completed",
+    "session_id": "e5f23ab0-8789-4eac-a06b-0d46a013c8f8",
+    "revision": 360,
+    "backups_preserved": true
+  },
+  "tail_proof": "reading-after-a-date62-tail-verification.json",
+  "checks": [
+    {
+      "label": "a-complete-status",
+      "exit_code": 0,
+      "stdout_sha256": "20f3a8353f8651ea0422b4ed91ec54a18e655f1c025fdf4aef63c20b6ca36297",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "a-complete-check",
+      "exit_code": 0,
+      "stdout_sha256": "48cdaae95f5caa3410f36a431158c154c79fc555ba88ada42b032d137eb5543e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "a-complete-doctor",
+      "exit_code": 0,
+      "stdout_sha256": "3f246ebebaabcb0d0470f7c3beeb39696cc239235d701bb421b303088b680027",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "a-complete-source-list",
+      "exit_code": 0,
+      "stdout_sha256": "170b10ee3663f6ab4822a01663c83e95aa107fb652907a6fde72460fd65be75e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "a-complete-revision-list",
+      "exit_code": 0,
+      "stdout_sha256": "a007bccee0cfc8aa79835bc9e4d1e4d19338efcc4ec4fe4748398c0b11cdaad2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "a-complete-review-issues-list",
+      "exit_code": 0,
+      "stdout_sha256": "a787de85bfbb20857f5357aa2382f04c54aaf527a72789b3d654d62aa34b02ff",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Mechanical exact edit, official successful commit, matching post-replay current-body returns and read-only final commands. No human or literary certification."
+}

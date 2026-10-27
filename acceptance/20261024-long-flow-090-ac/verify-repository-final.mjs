@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(here,'../..');
+function git(args){const r=spawnSync('git',args,{cwd:repo,env:{...process.env,GIT_OPTIONAL_LOCKS:'0'},encoding:'utf8',windowsHide:true,timeout:30000,maxBuffer:4*1024*1024});assert.equal(r.status,0,r.stderr||r.stdout);return {stdout:r.stdout,stderr:r.stderr};}
+const head=git(['rev-parse','HEAD']).stdout.trim();assert.equal(head,'7961decef067a63453e05923d2a7512a103ff795');
+const result={ok:true,at:new Date().toISOString(),head,branch:git(['branch','--show-current']).stdout.trim(),diff_check:git(['diff','--check']),status:git(['status','--short']),staged_stat:git(['diff','--cached','--stat']),committed:false,pushed:false,note:'Read-only Git inspection with optional locks disabled. No staging/reset/commit/push; unrelated .idea remains untouched. Same HEAD as task entry.'};
+fs.writeFileSync(path.join(here,'repository-final-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,head,branch:result.branch,diff_check_passed:true,staged_stat:result.staged_stat.stdout,committed:false,pushed:false}));

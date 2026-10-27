@@ -1,0 +1,37 @@
+import fs from'node:fs';import path from'node:path';import assert from'node:assert/strict';import{fileURLToPath}from'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),j=n=>JSON.parse(fs.readFileSync(path.join(A,n))),r=j('native/final-revision-resume1/result.json'),v=j('final-revision-resume1-root-verification.json');assert.equal(r.exit_code,0);assert(v.ok&&v.thread_id===r.thread_id);assert.equal(v.workspace_units,48);
+const text=`# 正式修订恢复二：48语言漏检闭环，49—66重登，修55和60
+
+必须继续同原生ID ${r.thread_id}，同revision de25fce4-4446-4b5a-9038-9af130f3b456。上一程实际exit0/2666105ms，根完整读44行交接、完整当前48共340行、语言复核报告，独立核两区精确CP/当前48十页真实输出和24次preview/record及原25/49身份均通过，见final-revision-resume1-root-verification.json。主66/r397/gen9、分支48/r444/gen9；分支累计改3/48，主稿未应用。
+
+开始先实际执行：
+node acceptance/20261026-long-flow-090-ae/check-main-reading-resume.mjs final-revision-resume2 checkpoint-final-revision-resume1-main.json
+node acceptance/20261026-long-flow-090-ae/scenario-checkpoint.mjs verify final-revision-resume1-workspace
+
+## 恢复与正式补改48
+
+两区通过才官方resume原session，不新建。读COMMON-G9、交接-全书修订恢复一.md、ROOT-FVR2-48-LANGUAGE-FOLLOWUP.md、ROOT-FVR2-48-CURRENT-READ.md、ROOT-48-55-REVIEW.md、ROOT-60-TIME-REVIEW.md和当前随包技能；原凭据仅fvr1-private-ownership.json，不输出token，若新token另存fvr3私有文件。工具包源v5、真实作品、旧封存、Git不改，不提交推送，不起子代理、不切模型。
+
+先实际读取、核验冻结49原context/replay/CAS444与全部身份、source_hashes/source_bindings和48依赖新SHA。这里根授权新增三处48语言修正，因此后续48会再次变化，不能直接用该49输入登记，也不能偷偷重取。原件保持，明确记录原49在恢复时有效，随后因正式rewind48/真实改稿重登而失效的原因与前后差异。使用官方rewind48，保留此前48班次修正和所有旧journal/报告/输入；只补三处经根完整语境确认的局部问题：缺动作宾语、夜里想一遍的病搭配、母发消息/女回读的自己指向。根文档给出方向，实际措辞自行做最小调整；不凭空增练针、用餐、文件职业或动机。正常职业对白、简练省略、整街夸张、结尾余韵保留，整体否定句节拍风险不机械批改。
+
+48改前后均保留正文、精确差异，改后完整当前10页左右实际返回并模型实读，核相邻段、事实、语言和新歧义；实际修订后按官方context/replay-input、六字段明确语义、preview/record再登记48，CAS和来源身份不手改。原49冻结输入完整留档，随后官方取得适用新49输入，并保存新旧CAS/来源/绑定/_replay差异及合法原因，不能把这个新增修订场景虚报为原49无变化复用。若流程拒绝，保留真实返回，按产品允许方式恢复，不绕保护。
+
+## 49—66以及55/60
+
+逐章当前官方context/replay-input、具体六字段知情复核、preview/record。新的fvr3唯一标签/输入/报告/日志，既有fvr1/fvr2不覆盖。非48/55/60预期正文SHA保持；3修正保持。未改稿可用本ID前程真实完整全读+现SHA一致恢复语义，不能冒称本程又全文读过；变化处/疑点需实际完整相关段。本程48以及55/60改后必须实际完整全章回读，原稿先全文读、逐处差异/有效来源和邻章依据保存。
+
+55同一位修衣老师在18/57/64为女性，原55“明日若问便给他看”回指错误；只修该处代词或明确称谓，保留“老师此时未看最后一夜的话”、纸物与知识来源，不新造老师/知情。ROOT-48-55有精确依据。
+
+60私有第一次录音有效计划为周六上午在家，原185附近却由181“午后许蓉将纸收起来时”引入，随后多处上午回述且61同样上午。完整读60和有效AE_R_S03_NEW/既定计划及必要61段，修正入口与相邻“临近中午”等转场，使真正首录在上午；不同来源原声/发何短语音与自己第一次录音分开，不能补第二次首录或第三次录制来圆。下午16—18:30、课程/修灯74等既有R修正全保持，旧72历史不洗。仅恢复原有效来源事实，若真实源冲突需正式影响流程，不能更新哈希遮盖。
+
+实际确需同步的后章引句逐项说明、最小改并实读；不能为证明成果新造问题或广泛润色。原9应用/提交、13optional/49retained、O_BOX_PAINT statement/type/author_truth、44版本35区间历史、原1—2和已登记未影响前缀保持。源入口不同不等于全部漂移，既有有效绑定优先。
+
+## 真实停点
+
+本程目标登记66，保存两区末态和完整CP后正常停。暂不做全3—66新尾读、不prepare/commit、不最终review/旧9verify/67负例/export；这些留后续专程，不能伪填已完成。若100—105分钟未到66，在实际完整章停并冻结下一章原输入，明确剩余；不为赶时间缩读或批量自动认可六字段。
+
+保存final-revision-resume2-stop.json、交接-全书修订恢复二.md、fvr3完整命令/失败索引、48/55/60前后与实际页证、三处48漏检闭环和保留样例、原49合法失效与新输入差异、所有66主/分支SHA、源历史/旧意见/不可变观察保护审计。保存checkpoint-final-revision-resume2-main.json和checkpoint-final-revision-resume2-workspace.json及各自state，实际完整回核；CP后不再写作品。若停66，不先生成越授权67稿件或预填负例；最终尾读和negative按后程正式激活。
+
+预计60—100分钟，每60秒实际进度。P1八组合成改写闭环材料待全66终验之后串行执行，本程不读隐藏判据、不读取其其他答案。本程不改真实作品、不提交不推送。激活${new Date().toISOString()}。
+`;
+fs.writeFileSync(path.join(A,'prompt-final-revision-resume2.md'),text,{flag:'wx'});console.log(JSON.stringify({ok:true,prompt:path.join(A,'prompt-final-revision-resume2.md'),thread_id:r.thread_id}));

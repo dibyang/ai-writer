@@ -1,0 +1,70 @@
+{
+  "expected_revision": 27,
+  "operation_id": "v-am-stop-with-tool-blocker",
+  "author_evidence": {
+    "quote": "本次正常结束，根独立复核后B才开始。",
+    "local_source": "研究/V-A-追踪修正授权原文.md",
+    "source_sha256": "e904c74e867247d0917c9ead82d9a9582f389a812ade130948880014de4c4b81",
+    "locator": "本轮真实提示末段；当前完成点与闭环阻断分别如实说明，不声称未完成条件已达成",
+    "recorded_by": "同一实际V-A Codex会话，按根在工具试验内采用修正的明确授权执行"
+  },
+  "workflow": {
+    "stage": "paused",
+    "task": "第4—6追踪时间已正式修正；6章完成，等待B新提示，不写7。意见apply因REVIEW_CHANGE_REQUIRED被工具阻断，未完成闭环，B前须根处理",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "追踪修正已由正式事务提交，正文到6，等待根独立复核及B新提示，不写7",
+        "V_A_U5_TIME_METADATA仍adopted，apply因metadata-only无正文变更被拒；未执行依赖verify，不冒称闭环",
+        "本轮无新正文或其他修订授权，不能恢复4—12宽泛范围或再次动正文凑条件",
+        "保留planning、decisions、原错误追踪/报告/issue及新修订历史；不改产品/U/T、不Git提交推送或上传"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  }
+}

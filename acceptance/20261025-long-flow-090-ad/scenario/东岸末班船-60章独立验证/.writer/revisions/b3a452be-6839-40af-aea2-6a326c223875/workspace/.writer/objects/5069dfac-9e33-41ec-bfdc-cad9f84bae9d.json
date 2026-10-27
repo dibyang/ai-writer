@@ -1,0 +1,69 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-21T04:07:24.867Z",
+  "operation_id": "f-pause-current-24-open-issue-20261021",
+  "base_revision": 104,
+  "payload": {
+    "stage": "paused",
+    "task": "W-F已完整实读当前1—24并登记报告；24章有限试验的本轮读取结束，I_F19_TITLE_TIME高置信未解决报根正规修订，未达到无问题通过条件。仅讨论、核暂停保护和草稿导出，不写25、不修正文。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持I_F19_TITLE_TIME open，不能称已修复、文学通过或作者定稿。",
+        "不新增25细纲或正文，不修改任何正文、units、snapshot或观察保护字段。",
+        "只在W保存证据和草稿导出，不Git提交推送、上传发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "D三项普通事实修改在F当前全文中核有真实下游；原计划保持历史意图，不能拼旧分段。",
+          "F完整1—24已读，I_F19_TITLE_TIME高置信minor未解；待根正规修订后按新SHA复核，不等于文学定稿。"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "不新增25，不擅自改正文或state/hash",
+    "local_source": "研究/F当前全稿实读真实授权.md",
+    "source_sha256": "c609b2a32206777d77567acfc9711fc647e109c6302946bd0d4bcc5afa298ac4",
+    "locator": "本会话用户prompt-f-final.md同文授权第1/9/13/17行；真实本地副本",
+    "recorded_by": "W-F当前同一模型知情执行者",
+    "frozen_ref": ".writer/objects/c609b2a32206777d77567acfc9711fc647e109c6302946bd0d4bcc5afa298ac4.txt"
+  }
+}

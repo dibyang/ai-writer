@@ -1,0 +1,10 @@
+{
+  "scope": "Execution guidance clarification, not a product authorization bypass or new human instruction",
+  "observed_at_revision": 183,
+  "observation": "A group draft/revise_range is37-39; task and one textual stop_condition still describe first invocation stopping in partial38 and not writing39. A-resume is an execution-controller continuation under the same original user task and same37-39 range.",
+  "current_safe_action": "Do not mutate workflow while a prewriting template may be in use; A-resume completes the authorized group, then next group establishes its own finite scope at a safe boundary.",
+  "fix": "Future make-wave prompts explicitly record whole three-chapter group and both invocation stages in workflow.task; invocation-specific stopping is kept in prompt/handoff, permanent stop_condition is group end. No changes to already dispatched A prompts or original evidence.",
+  "product_source_changed": false,
+  "author_quote_fabricated": false,
+  "real_author_works_changed": false
+}

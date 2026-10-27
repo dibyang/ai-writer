@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root=path.resolve('acceptance/20261024-long-flow-090-ac');
+const {project}=JSON.parse(fs.readFileSync(path.join(root,'project.json')));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const checkpoint=JSON.parse(fs.readFileSync(path.join(root,'checkpoint-b-entry.json')));
+const stateBytes=fs.readFileSync(path.join(project,'.writer/state.json'));
+const state=JSON.parse(stateBytes);
+const changed=[];
+for(const [rel,v] of Object.entries(checkpoint.files)){const b=fs.readFileSync(path.join(project,rel));if(b.length!==v.bytes||sha(b)!==v.sha256)changed.push(rel);}
+const status=JSON.parse(fs.readFileSync(path.join(root,'cli-logs/b01-status/stdout.txt')));
+const check=JSON.parse(fs.readFileSync(path.join(root,'cli-logs/b02-check/stdout.txt')));
+const doctor=JSON.parse(fs.readFileSync(path.join(root,'cli-logs/b03-doctor/stdout.txt')));
+const drafts=status.draft_inventory.unregistered;
+const unknown=drafts.filter(d=>!checkpoint.files[d.draft]);
+const result={at:new Date().toISOString(),revision:state.revision,project_id:state.project_id,state_sha256:sha(stateBytes),checkpoint_state_match:sha(stateBytes)===checkpoint.state_sha256,protected_count:Object.keys(checkpoint.files).length,changed,registered_count:status.draft_inventory.registered_count,unregistered_count:drafts.length,unknown_unregistered:unknown,changed_sources:status.changed_sources,stale_units:status.stale_units,impact_pending:status.impact_pending,sessions:status.revisions.sessions.map(s=>({id:s.id,status:s.status})),transactions:status.revisions.transactions,tool_control:status.tool_control.installed,generation:status.tool_control.generation,doctor:{ok:doctor.ok,errors:doctor.errors,warnings:doctor.warnings},check_ok:check.ok};
+result.ok=result.checkpoint_state_match&&changed.length===0&&unknown.length===0&&doctor.ok&&check.ok&&result.registered_count===39;
+fs.writeFileSync(path.join(root,'b-inputs/entry-verification.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

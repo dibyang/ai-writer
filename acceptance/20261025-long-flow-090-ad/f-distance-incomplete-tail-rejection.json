@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "at": "2026-10-25 13:19:02 UTC",
+  "expected_rejection": true,
+  "command": "node acceptance/20261025-long-flow-090-ad/verify-f-distance-batch.mjs tail f-resume,f-resume2",
+  "tool_result": {
+    "chunk_id": "baec6c",
+    "wall_time_seconds": 0.9299004,
+    "exit_code": 1,
+    "original_token_count": 157,
+    "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Missing strict post-batch current page 49/7\r\n    at file:///D:/work/other/ai-writer/acceptance/20261025-long-flow-090-ad/verify-f-distance-batch.mjs:30:583\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+  },
+  "scope": "Intentional live negative control: the audited capacity-failure resume is accepted, but missing post-batch current pages still reject completion. This does not mark the tail complete; the final positive receipt remains pending."
+}

@@ -1,0 +1,1 @@
+import fs from 'node:fs';const X='D:/work/other/ai-writer/acceptance/20261021-long-flow-090-x';let s=fs.readFileSync(X+'/cr-review.mjs','utf8').replace('“今天不行？”','“早上去上班。今天不行？”').replace('她回拨老板补问小包','沈禾回拨老板补问小包');fs.writeFileSync(X+'/cr-review-v2.mjs',s,{flag:'wx'});

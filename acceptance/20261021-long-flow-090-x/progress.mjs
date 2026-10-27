@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),work=path.join(base,'scenario/东岸末班船-再扩展验证'),label=process.argv[2]??'codex-a-first',dir=path.join(base,'commands',label);
+const state=JSON.parse(fs.readFileSync(path.join(work,'.writer/state.json'),'utf8'));
+const file=path.join(dir,'stdout.raw.txt'),text=fs.existsSync(file)?fs.readFileSync(file,'utf8'):'';
+const events=text.split(/\r?\n/).flatMap(l=>{try{return [JSON.parse(l)];}catch{return [];}});
+const started=events.find(e=>e.type==='thread.started');
+const important=events.filter(e=>e.item?.type==='agent_message'||(['command_execution','mcp_tool_call','file_change'].includes(e.item?.type)&&e.type==='item.completed')||e.type==='error');
+let parts=[];const partDir=path.join(work,'分段');if(fs.existsSync(partDir)){function walk(d){for(const n of fs.readdirSync(d)){const f=path.join(d,n);if(fs.statSync(f).isDirectory())walk(f);else if(/\.md$/.test(n)){const b=fs.readFileSync(f,'utf8');if(Number(f.match(/00(\d\d)/)?.[1])>=25)parts.push({file:path.relative(work,f).replaceAll('\\','/'),han:[...b.replace(/^#{1,6}.*$/gm,'').matchAll(/\p{Script=Han}/gu)].length,bytes:Buffer.byteLength(b)});}}}walk(partDir);}
+const result=fs.existsSync(path.join(dir,'result.json'))?JSON.parse(fs.readFileSync(path.join(dir,'result.json'),'utf8')):null;
+const report={at:new Date().toISOString(),label,thread:started?.thread_id??null,finished:!!result,exit_code:result?.exit_code??null,units:state.units.length,revision:state.revision,stage:state.governance.stage,stdout_bytes:Buffer.byteLength(text),event_count:events.length,latest:important.slice(-2).map(e=>({type:e.type,item_type:e.item?.type,text:(e.item?.text??e.item?.command??JSON.stringify(e.item?.arguments??e.item?.changes??e)).slice(-1100),exit_code:e.item?.exit_code??null})),new_parts:parts.slice(-8)};
+console.log(JSON.stringify(process.argv.includes('--brief')?{at:report.at,label,thread:report.thread,finished:report.finished,exit_code:report.exit_code,units:report.units,revision:report.revision,stage:report.stage,bytes:report.stdout_bytes,events:report.event_count,latest:report.latest.at(-1),parts:report.new_parts}:report,null,process.argv.includes('--brief')?0:2));

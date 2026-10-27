@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "at": "2026-10-26T15:42:36.316Z",
+  "preconditions": {
+    "stage": "drafting",
+    "allowed_actions": [
+      "discuss",
+      "plan",
+      "draft"
+    ],
+    "draft_range": {
+      "from": 1,
+      "to": 66
+    },
+    "plan": "大纲/单元/0067.json",
+    "plan_sha256": "a916e051265bdad9a0039d9b098ac91f72537507c5905db16d4b0083299498b0",
+    "volume": "大纲/分卷/V24.json",
+    "consumed": false,
+    "changed_sources": [],
+    "impact_pending": []
+  },
+  "commands": [
+    {
+      "label": "fcl-negative-context-67",
+      "tool": "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证\\.writer\\tool\\bin\\ai-writer.mjs",
+      "package_content_id": "8bff9af21fba84e32d798f4cef969d5a0e4ff0f904089f85047877d16e403131",
+      "args": [
+        "context",
+        "--purpose",
+        "draft",
+        "--unit",
+        "67",
+        "--max-chars",
+        "200000",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "started_at": "2026-10-26T15:36:58.125Z",
+      "elapsed_ms": 700,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "before_state_sha256": "51f11f8c4062a2a812e4e36ecbb61629031356ed89a31efcfd2e07d685e46961",
+      "after_state_sha256": "51f11f8c4062a2a812e4e36ecbb61629031356ed89a31efcfd2e07d685e46961",
+      "code": "ACTION_OUT_OF_SCOPE"
+    },
+    {
+      "label": "fcl-negative-record-template-67",
+      "tool": "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证\\.writer\\tool\\bin\\ai-writer.mjs",
+      "package_content_id": "8bff9af21fba84e32d798f4cef969d5a0e4ff0f904089f85047877d16e403131",
+      "args": [
+        "record-template",
+        "--unit",
+        "67",
+        "--draft",
+        "正文/0067-范围保护验证.md",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证"
+      ],
+      "started_at": "2026-10-26T15:37:00.398Z",
+      "elapsed_ms": 694,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "before_state_sha256": "51f11f8c4062a2a812e4e36ecbb61629031356ed89a31efcfd2e07d685e46961",
+      "after_state_sha256": "51f11f8c4062a2a812e4e36ecbb61629031356ed89a31efcfd2e07d685e46961",
+      "code": "ACTION_OUT_OF_SCOPE"
+    }
+  ],
+  "state_identical": true,
+  "no_unit67": true,
+  "no_body67": true,
+  "no_output_template67": true,
+  "note": "产品子进程实际exit2，PowerShell外层非零返回1另保留；不以外层码代替产品码。合法未来规划不触及1—66旧消费来源，无需刷新哈希或新历史版本。"
+}

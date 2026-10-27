@@ -1,0 +1,9 @@
+{
+  "scope": "Root supervision only, not a product CLI failure",
+  "at_approximately": "2026-10-24T16:58:00Z",
+  "action": "Parsing exec_command.output from progress.mjs using JSON.parse",
+  "observed_error": "SyntaxError: Unexpected token 'W', Warning: t... is not valid JSON",
+  "limitation": "The full prefixed shell output was not retained by the failed parse expression; no exact warning text or cause is claimed.",
+  "impact": "progress.mjs itself wrote its progress.jsonl record; no project mutation, writer interruption or registration failure",
+  "follow_up": "Reran the read-only monitor with login:false, received valid JSON and confirmed the native C process was active; future root monitor calls retain the raw result before parsing"
+}

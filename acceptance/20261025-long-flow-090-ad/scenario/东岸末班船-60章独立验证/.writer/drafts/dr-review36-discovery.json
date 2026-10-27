@@ -1,0 +1,27 @@
+{
+  "from": 36,
+  "to": 36,
+  "kind": "model-self-review",
+  "expected_revision": 159,
+  "operation_id": "x-dr36-knowledge-discovery",
+  "report": "审查/X-DR36书约知情遗漏-发现.md",
+  "source_hashes": {
+    "正文/0036-灯下还有一页-dr-v2.md": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30"
+  },
+  "issues": [
+    {
+      "id": "I_X_DR36_BOOK_KNOWLEDGE",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "36正文已让许母/沈父听到12元花书与18元未购，书约链两人知情仍保留35末未知，须正式tracking修订36。",
+      "suggestion": "保持36正文和35历史原字节，仅在36重登changes补T_X_BOOK_COMPANY.character_known许蓉/沈成林两项及真实引文。",
+      "evidence": [
+        {
+          "unit": 36,
+          "quote": "告诉她十二块，自己原以为是前回看过那一本"
+        }
+      ]
+    }
+  ]
+}

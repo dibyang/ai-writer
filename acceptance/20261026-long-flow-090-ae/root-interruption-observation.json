@@ -1,0 +1,66 @@
+{
+  "observed_at": "2026-10-26T03:17:57.370Z",
+  "status": "interrupted-no-completion-receipt",
+  "native_label": "r-resume1",
+  "native_thread_id": "01a17511-c2b0-79a3-bf72-0f77373bfce2",
+  "old_exec_sessions_unavailable": [
+    90743,
+    21245,
+    62103
+  ],
+  "targeted_process_query": {
+    "first_sandbox_query": "access-denied",
+    "elevated_read_only_query_exit": 0,
+    "matching_processes": [],
+    "filters": [
+      "r-resume1",
+      "historical-prefix",
+      "scripts/test.mjs",
+      "01a17511-c2b0-79a3-bf72-0f77373bfce2",
+      "build-release.mjs"
+    ]
+  },
+  "exit_code": null,
+  "reason_unknown": true,
+  "states": [
+    {
+      "ref": ".writer/state.json",
+      "sha256": "26ac46ee78df1c0bfd708d7d423879d97b6cbac934abd173e0d9c1fb5b754c08",
+      "units": 66,
+      "revision": 392
+    },
+    {
+      "ref": ".writer/revisions/31fd2de1-685b-40ca-bec9-012e23ecf4bf/workspace/.writer/state.json",
+      "sha256": "18990d90e14e8aee181e0bdc1f9a13158d50b62ea3d8fd7b13e76edc763399c0",
+      "units": 54,
+      "revision": 402
+    }
+  ],
+  "logs": [
+    {
+      "ref": "local-checks/historical-prefix-full-tests/stdout.txt",
+      "sha256": "bda9f271582d753d52a7fa0aaeed9b4a0a949f103f0880a8611e85c9d5303725",
+      "bytes": 285,
+      "modified_at": "2026-10-25T23:02:29.681Z"
+    },
+    {
+      "ref": "local-checks/historical-prefix-full-tests/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified_at": "2026-10-25T22:59:42.833Z"
+    },
+    {
+      "ref": "local-checks/historical-prefix-build/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified_at": "2026-10-25T23:02:42.587Z"
+    },
+    {
+      "ref": "local-checks/historical-prefix-build/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified_at": "2026-10-25T23:02:42.587Z"
+    }
+  ],
+  "scope": "Root observation only. No native exit code or completed checkpoint is fabricated. Read-only process query found no matching currently running process. No product-state writes."
+}

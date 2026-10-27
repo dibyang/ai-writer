@@ -1,0 +1,78 @@
+{
+  "expected_revision": 319,
+  "operation_id": "AD_E_STAGE_S05_NEW",
+  "author_evidence": {
+    "quote": "继续推进",
+    "local_source": "研究/AD作者任务.md",
+    "source_sha256": "7b7d4195d50b6be4988f065087516ee848fd77c40cea9e6a015032f82fcdddc0",
+    "locator": "第3行；数值是根控制器本次验收参数，非作者新增原话",
+    "recorded_by": "Codex AD E native 01a1723a-0b10-7d13-bb86-eabb701c7e89"
+  },
+  "impact": {
+    "schema_version": 1,
+    "revision": 319,
+    "state_sha256": "4fd5dd51ecb9da4701c1a9203d125e7f484f480d83b662a6952cdf71a9680585",
+    "version_id": "AD_E_S05_NEW",
+    "ref": "研究/AD-D滚动写前核对.md",
+    "from": 58,
+    "mode": "historical",
+    "candidate_sha256": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+    "direct_consumers": [
+      {
+        "unit": 58,
+        "consumed_sha256": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 59,
+        "consumed_sha256": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 60,
+        "consumed_sha256": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 58,
+    "review_from": 57,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [
+      {
+        "ref": "研究/AD-D滚动写前核对.md",
+        "version_id": "AD_E_S05_OLD",
+        "from": 1,
+        "to": null
+      }
+    ],
+    "possible_indirect_from": 58,
+    "possible_indirect_through": 60,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae.source": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+      "正文/0057-那针还留着-ad-cr-v1.md": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+      "正文/0058-袋里放自己的-ad-d-v2.md": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+      "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+      "正文/0060-窗边还留着光-ad-dr-v2.md": "b34e30cef34d30aee6f2cc7f8429dfec7f3934b0ec04a96c3f2a324980b1f777",
+      ".writer/objects/ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b.source": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  },
+  "review": {
+    "report": "审查/AD-E-historical-s05-r319.md",
+    "report_sha256": "a10dd7831e8b48ffa74c5298155d6eca3189ff64f85f1666df432baf2e2336ea",
+    "readings": {
+      ".writer/objects/e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae.source": "e1589ffd06216b27247facdbed348fc583d4ded776fe12723753cac6fccdfeae",
+      "正文/0057-那针还留着-ad-cr-v1.md": "b197d7f08c49753eacf6e1465a2d89500e284412182b60db7846e8a6495c0bc2",
+      "正文/0058-袋里放自己的-ad-d-v2.md": "2aa11d037aa79b1d837d684bd3eef2646dfee62239689a4ebee5914c12e1724b",
+      "正文/0059-两本不必一样-ad-d-v1.md": "57a514d2e1ca93b08536802e4c08bae9fcf261cf4c33a10e926895ce05fa6e71",
+      "正文/0060-窗边还留着光-ad-dr-v2.md": "b34e30cef34d30aee6f2cc7f8429dfec7f3934b0ec04a96c3f2a324980b1f777",
+      ".writer/objects/ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b.source": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b"
+    },
+    "conclusion": "实读确认历史影响，完整48—60受控回放；保留旧前缀/原哈希，新事实仅根选及必要下游一致化。",
+    "unresolved": []
+  }
+}

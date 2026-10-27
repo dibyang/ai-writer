@@ -1,0 +1,64 @@
+{
+  "expected_revision": 6,
+  "operation_id": "vc-revision-authorization",
+  "author_evidence": {
+    "quote": "在主作品正式授权revise_range2—3、begin",
+    "local_source": "研究/本次续程授权.md",
+    "source_sha256": "287406de6ee741bfef9f6326d21ff02b9811116be2f53b6bab2f69dab369aedf",
+    "locator": "本次用户续程消息摘录，激活2026-10-26T05:43:16.428Z",
+    "recorded_by": "Codex同ID控制器；依实际用户授权"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "用户授权的卷目录受控旧章修订：2章布带改为系牢，3章同步因果回述并完整重登2—3",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 2,
+        "to": 3
+      },
+      "stop_conditions": [
+        "只改2—3普通布带打包细节与相应追踪",
+        "原观察和所有卷目录/原相对路径保持",
+        "完成尾段复核及prepare/commit后检查导出；不写4"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

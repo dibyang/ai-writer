@@ -1,0 +1,4 @@
+import path from'node:path';import{fileURLToPath}from'node:url';import{spawnSync}from'node:child_process';
+const a=path.dirname(fileURLToPath(import.meta.url)),u=Number(process.argv[2]),next=process.argv[3];if(!Number.isInteger(u)||u<3||u>24)throw Error('Record only3–24 this stage');
+const r=spawnSync(process.execPath,[path.join(a,'fvr1-cli.mjs'),'work',`fvr1-record-u${u}`,'record','--input',path.join(a,'fvr1-inputs',`u${u}-reviewed.json`)],{encoding:'utf8',windowsHide:true,timeout:130000,maxBuffer:64*1024*1024});process.stdout.write(r.stdout??'');process.stderr.write(r.stderr??'');if(r.status!==0)process.exit(r.status??1);
+if(next){if(Number(next)!==u+1||u>=24)throw Error('No next start after24');const n=spawnSync(process.execPath,[path.join(a,'fvr1-start-unit.mjs'),next],{encoding:'utf8',windowsHide:true,timeout:130000,maxBuffer:64*1024*1024});process.stdout.write(n.stdout??'');process.stderr.write(n.stderr??'');process.exitCode=n.status??1;}

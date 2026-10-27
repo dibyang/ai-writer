@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-26T10:52:37.358Z",
+  "rows": [
+    {
+      "label": "create-main",
+      "command": [
+        "node",
+        "acceptance/20261026-long-flow-090-ae/checkpoint-main-complete.mjs",
+        "final-revision-resume2-main",
+        "66"
+      ],
+      "started_at": "2026-10-26T10:52:20.706Z",
+      "finished_at": "2026-10-26T10:52:25.351Z",
+      "exit_code": 0,
+      "stdout": "fvr3-checkpoint-logs/create-main.stdout.txt",
+      "stderr": "fvr3-checkpoint-logs/create-main.stderr.txt"
+    },
+    {
+      "label": "create-workspace",
+      "command": [
+        "node",
+        "acceptance/20261026-long-flow-090-ae/fvr3-workspace-checkpoint.mjs",
+        "create"
+      ],
+      "started_at": "2026-10-26T10:52:25.353Z",
+      "finished_at": "2026-10-26T10:52:25.881Z",
+      "exit_code": 0,
+      "stdout": "fvr3-checkpoint-logs/create-workspace.stdout.txt",
+      "stderr": "fvr3-checkpoint-logs/create-workspace.stderr.txt"
+    },
+    {
+      "label": "verify-main-frozen",
+      "command": [
+        "node",
+        "acceptance/20261026-long-flow-090-ae/check-main-reading-resume.mjs",
+        "fvr3-final-revision-resume2-readback",
+        "checkpoint-final-revision-resume2-main.json"
+      ],
+      "started_at": "2026-10-26T10:52:25.881Z",
+      "finished_at": "2026-10-26T10:52:30.511Z",
+      "exit_code": 0,
+      "stdout": "fvr3-checkpoint-logs/verify-main-frozen.stdout.txt",
+      "stderr": "fvr3-checkpoint-logs/verify-main-frozen.stderr.txt"
+    },
+    {
+      "label": "verify-main-exact",
+      "command": [
+        "node",
+        "acceptance/20261026-long-flow-090-ae/scenario-checkpoint.mjs",
+        "verify",
+        "final-revision-resume2-main"
+      ],
+      "started_at": "2026-10-26T10:52:30.511Z",
+      "finished_at": "2026-10-26T10:52:36.413Z",
+      "exit_code": 0,
+      "stdout": "fvr3-checkpoint-logs/verify-main-exact.stdout.txt",
+      "stderr": "fvr3-checkpoint-logs/verify-main-exact.stderr.txt"
+    },
+    {
+      "label": "verify-workspace-frozen",
+      "command": [
+        "node",
+        "acceptance/20261026-long-flow-090-ae/fvr3-workspace-checkpoint.mjs",
+        "verify"
+      ],
+      "started_at": "2026-10-26T10:52:36.413Z",
+      "finished_at": "2026-10-26T10:52:36.916Z",
+      "exit_code": 0,
+      "stdout": "fvr3-checkpoint-logs/verify-workspace-frozen.stdout.txt",
+      "stderr": "fvr3-checkpoint-logs/verify-workspace-frozen.stderr.txt"
+    },
+    {
+      "label": "verify-workspace-exact",
+      "command": [
+        "node",
+        "acceptance/20261026-long-flow-090-ae/scenario-checkpoint.mjs",
+        "verify",
+        "final-revision-resume2-workspace"
+      ],
+      "started_at": "2026-10-26T10:52:36.917Z",
+      "finished_at": "2026-10-26T10:52:37.358Z",
+      "exit_code": 0,
+      "stdout": "fvr3-checkpoint-logs/verify-workspace-exact.stdout.txt",
+      "stderr": "fvr3-checkpoint-logs/verify-workspace-exact.stderr.txt"
+    }
+  ],
+  "all_exit0": true,
+  "no_project_writes": true
+}

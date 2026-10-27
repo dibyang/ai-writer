@@ -1,0 +1,115 @@
+{
+  "fixture_id": "TEST-BLIND-CONTINUOUS-BLOCK",
+  "mode": "novel",
+  "expected_report": "blind-read-continuous-block.report.json",
+  "expected_report_id": "TEST-BLIND-CONTINUOUS-BLOCK-REPORT",
+  "input": {
+    "review_scope": "continuous",
+    "decision_level": "agent_formal",
+    "claim": "continuous_page_turner",
+    "single_votes_used_for_continuous": true,
+    "merged_quality_and_page_turner_score": true,
+    "version_lock": {
+      "date": "2026-07-14",
+      "files": [
+        {
+          "path": "chapters/chapter-020.md",
+          "order": 20,
+          "word_count": 3200
+        },
+        {
+          "path": "chapters/chapter-021.md",
+          "order": 21,
+          "word_count": 3210
+        }
+      ],
+      "git_ref": "abc1234",
+      "includes": {
+        "title": true,
+        "chapter_title": true,
+        "appendix": false
+      },
+      "questionnaire_version": "blind-read@1.0"
+    },
+    "isolation": {
+      "prompt_neutral": true,
+      "reader_answers_isolated": true,
+      "supplemental_explanations": false,
+      "prohibited_materials_seen": []
+    },
+    "readers": [
+      {
+        "reader_id": "A",
+        "ticket_type": "isolated_agent",
+        "isolated": true,
+        "complete": true,
+        "sequential_reading": false,
+        "retell_accurate": true,
+        "continue_score": 4,
+        "immediate_continue": true,
+        "page_turner_score": 92,
+        "pursuit_reason": {
+          "concrete_character": false,
+          "unresolved_event": true
+        },
+        "chapters": [
+          {
+            "chapter": "020",
+            "continue_score": 4,
+            "immediate_continue": true
+          },
+          {
+            "chapter": "021",
+            "continue_score": 3,
+            "immediate_continue": false
+          }
+        ],
+        "fatigue": {
+          "first_slow": "chapter-021 sentence 3",
+          "first_skim": "chapter-021 sentence 9",
+          "stable_fatigue": "chapter-021"
+        },
+        "hard_chapter_break": true
+      },
+      {
+        "reader_id": "B",
+        "ticket_type": "isolated_agent",
+        "isolated": true,
+        "complete": true,
+        "sequential_reading": true,
+        "retell_accurate": true,
+        "continue_score": 4,
+        "immediate_continue": true,
+        "page_turner_score": 91,
+        "pursuit_reason": {
+          "concrete_character": true,
+          "unresolved_event": false
+        },
+        "chapters": [
+          {
+            "chapter": "020",
+            "continue_score": 4,
+            "immediate_continue": true
+          },
+          {
+            "chapter": "021",
+            "continue_score": 4,
+            "immediate_continue": true
+          }
+        ],
+        "fatigue": {
+          "first_slow": "none",
+          "first_skim": "none",
+          "stable_fatigue": "none"
+        }
+      }
+    ],
+    "execution": {
+      "runner": "internal_temporary_agent",
+      "creates_preview_task": false,
+      "inherits_current_context": false,
+      "result_discarded_after_read": true,
+      "sidebar_entry_retained": false
+    }
+  }
+}

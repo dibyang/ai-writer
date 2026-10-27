@@ -1,0 +1,81 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-24T15:05:49.655Z",
+  "operation_id": "AC_B_trial_40_42_complete_plan",
+  "base_revision": 185,
+  "payload": {
+    "stage": "trial",
+    "task": "在AC独立副本推进V15第40—42章完整一组：首程先完整分页实读37—39及召回旧承诺原文，滚动采用40—42近纲；40写前context/template后分段、assemble、完整回读/纲文回对/自检/preview/record；准备41正式细纲/context/原写前template，仅写前1—2自然分段约3000—5000汉字后保存首停交接退出。同ID真实恢复后核字节/来源/状态，保持旧workflow与模板续完并登记41；本章完成后如需同步任务说明，在42取写前输入前完成。再写并登记42，完整连读37—42、保存模型报告及正式review，整组复核后退出。40正文汉字至少14000，其余至少10000。计划与已发生事实分开，作者原话仅为总任务授权，断点及分组为控制器执行安排。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft",
+        "revise"
+      ],
+      "draft_range": {
+        "from": 40,
+        "to": 42
+      },
+      "revise_range": {
+        "from": 40,
+        "to": 42
+      },
+      "stop_conditions": [
+        "本组末章42完成并完成37—42整组复核后停止，不写43及以后正文",
+        "只操作AC独立副本及AC证据，不改旧封存目录、真实作品、产品源码或全局配置，不提交推送发布",
+        "不子代理、不额外会话、不后台写稿、不向其他聊天发消息或外部写作服务",
+        "发现范围外高置信问题只保存证据交根；工具缺陷保留输入/错误/构建/state/原稿并停止相关动作",
+        "未完章恢复保持原workflow及模板；来源有变化先核实影响，不写后刷新模板绕过保护"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/AC扩大骨架-37-48.md",
+          "大纲/AC-B推进窗口-40-42.md"
+        ],
+        "unresolved_ids": [
+          "AC_FUTURE_43_48_COARSE"
+        ]
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V15.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0040.json",
+          "大纲/单元/0041.json",
+          "大纲/单元/0042.json"
+        ],
+        "unresolved_ids": [
+          "AC_41_42_RECHECK_AFTER_REAL_PREVIOUS"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AC作者任务.md",
+    "source_sha256": "46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2",
+    "locator": "研究/AC作者任务.md第3行，当前维护任务2026-10-24用户原话；无外部消息ID",
+    "recorded_by": "Codex AC-B本进程；组数篇幅断点为原总任务内控制器安排，非真人新增情节选择",
+    "frozen_ref": ".writer/objects/46ae5227965bc9dde9d937413796cb94dc49561e70d80845b6fafc747a658bb2.txt"
+  }
+}

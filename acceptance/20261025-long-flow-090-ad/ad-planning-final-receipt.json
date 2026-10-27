@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "at": "2026-10-25T01:11:34.750Z",
+  "artifacts": [
+    {
+      "ref": "ad-planning.json",
+      "bytes": 284809,
+      "sha256": "2654ebc88946edecce647569e0139114122828c2f459126635a6f570159b5877"
+    },
+    {
+      "ref": "交接-规划完成.md",
+      "bytes": 6833,
+      "sha256": "e15d2ae33783e258176e62847563a2c7039d1552780691ce69406de8887301c8"
+    }
+  ],
+  "old_checkpoint_files": 681,
+  "old_files_unchanged": true,
+  "protected_state": {
+    "units": true,
+    "snapshot": true,
+    "baseline": true,
+    "source_versions": true,
+    "source_ranges": true,
+    "source_events": true,
+    "source_operations": true,
+    "impact_pending": true,
+    "committed_revisions": true,
+    "tool_control": true
+  },
+  "old_issues_unchanged": true,
+  "body_pages": 92,
+  "current_pages": 49,
+  "old_pages": 43,
+  "command_count": 39,
+  "cli_failures": 0,
+  "auxiliary_failures": 2,
+  "final_revision": 264,
+  "new_prose": false,
+  "state_sha256": "afbc535811f1f5e29c28c73efdbbe876f9c948d6b5a6b2cb1d1df1449a5efc4f",
+  "recovered_auxiliary_failure": {
+    "kind": "auxiliary-receipt-generation-error",
+    "script": "finalize-ad-planning.mjs",
+    "exit_code": 1,
+    "error": "ReferenceError: protected_state is not defined",
+    "location": "line 82 receipt object",
+    "effect": "全部核验断言已通过，ad-planning.json及交接已保存；仅最后回执未创建。没有state/正文/来源改动。",
+    "correction": "保留原失败脚本及两份失败前证据，由finish-ad-planning-receipt-v2.mjs补记后生成回执；不重跑独占写入生成脚本。"
+  }
+}

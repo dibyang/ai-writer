@@ -1,0 +1,658 @@
+{
+  "ok": true,
+  "title": "东岸末班船",
+  "kind": "novel",
+  "revision": 180,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "X-E受控多处普通事实修订：课100分钟19—20:40、凳净宽29、还书15:20，测试变量非原稿bug/非作者逐字采纳。正式修订授权13—36，draft=null；本进程仅重登13—18首停，保留19—36同ID续程，不prepare/commit/abort。选择详见X/e-choice.json及研究/修订选择-X-E.md，旧来源不改。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 13,
+        "to": 36
+      },
+      "stop_conditions": [
+        "本进程18重登后本地首停；13—36完整授权继续有效，19—36留同ID恢复",
+        "不prepare/commit/abort，不发布主稿，不Git操作、不另派代理",
+        "原前12/全部原观察/来源版本/36已修知情保护；非0停依赖并保留失败"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩大骨架-X.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V10.json",
+          "大纲/分卷/V11.json",
+          "大纲/分卷/V12.json",
+          "大纲/分卷/V13.json"
+        ],
+        "unresolved_ids": [
+          "远期仅粗排，实际结果待后续授权创作"
+        ]
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0034.json",
+          "大纲/单元/0035.json",
+          "大纲/单元/0036.json",
+          "大纲/X-D近期执行纲-34-36.md",
+          "大纲/X-DR续程执行纲-35-36.md",
+          "大纲/X-DR第36章执行纲.md"
+        ],
+        "unresolved_ids": [
+          "母衣新条/实衣给老师、下一真实课/长期洗穿仍待后卷",
+          "女旧练布未齐/另房门待另排/柜门等侧图仍未决，非本轮未完成正文",
+          "37未获本轮授权"
+        ]
+      }
+    },
+    "decisions": {
+      "current": [
+        {
+          "id": "D_W_EXECUTION_D",
+          "supersedes": "D_W_EXECUTION_CR",
+          "topic": "W13—24本轮代理执行选择",
+          "status": "confirmed",
+          "options": [
+            "完成末卷日常兑现后独立修订首停"
+          ],
+          "adopted_items": [
+            "22第十五日按21约定亲还画册，沈收回家；23收摊与家务选择；24第二课有限补母袖和凳袋实际后续",
+            "晚课继续不等于全部学成，父脚仍伤、凳需收脚擦收、未洗帘和复航保留",
+            "后续13/17/21普通事实测试须真实下游至少六章合理实改，独立区本次只重登13"
+          ],
+          "excluded_items": [
+            "直接改主稿旧章或source_hashes",
+            "修改任何observation三字段",
+            "强结父辈/全员全知/用ledger状态替正文"
+          ],
+          "unresolved_items": [
+            "三项普通事实的最终选值须在24后实读选择报告确定",
+            "复航、小风扇与对岸结果"
+          ],
+          "effective_range": {
+            "from": 13,
+            "to": 24
+          },
+          "event_ref": ".writer/objects/f2a0bce4-0f24-42eb-bd6d-28392871d720.json",
+          "event_sha256": "c21cbfcc02b2ec15aa9fa7968442e585055fb83d0fbb7722ebcae9302878d9ae"
+        }
+      ],
+      "candidates": [],
+      "history_count": 6
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 22,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "owner": "v-c3-actual-codex-first-stop",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "98862fc07df31871c4221c00f2ee72574c449a0443745b28014162d1476b9da4",
+        "scope": {
+          "from": 7,
+          "through": 12
+        },
+        "status": "committed",
+        "base_sha256": "4eb1f2a7d5c2ab7111bbf3f58524c8485fb07e59f5ca1be20bf3506d49296740",
+        "created_at": "2026-10-20T12:59:52.231Z",
+        "transaction_id": "f0b4ad62-9b88-41a2-8519-de9064f2a040",
+        "session_sha256": "d0857f596e0bddcb9e2d215acda14c7c97e8d57b11708837bb3acc8d09716ba0"
+      },
+      {
+        "id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "owner": "v-a-metadata-only-root-authorized",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 4,
+          "through": 6
+        },
+        "status": "committed",
+        "base_sha256": "7bf633d95462043f82cf48e9ef8a03bdc1271f3734580dbd29188d081ade9ac5",
+        "created_at": "2026-10-20T10:14:46.353Z",
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_sha256": "6cd6922875ccfc7000a0e7bd7120f8ae5eed841e4882a175b204aa64e05a9be7"
+      },
+      {
+        "id": "5aafdf06-35ca-4768-8818-e793e9f98c3b",
+        "owner": "X-D-same-thread-dr-tracking36",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "6a744c73a662ac5023dee12bedd0426ceb30f0d64df5c887279ee0235dfd9c0b",
+        "scope": {
+          "from": 36,
+          "through": 36
+        },
+        "status": "committed",
+        "base_sha256": "5bbd1d29cb7da65ea26da8f8ed817e95b4b4999ee3cbadd69bf76b17cec0d65a",
+        "created_at": "2026-10-21T11:35:49.397Z",
+        "transaction_id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "session_sha256": "81156ba9c4cf326ea2bfc4e663864b3ec8575b930863a289ec1a06d990031d3c"
+      },
+      {
+        "id": "618831e7-b1af-4864-ac12-802584966ec8",
+        "owner": "w-d-codex-20261021-first-stop",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "1d4edd5c08ede3b55bbd791f0007f12f196902e7c583d3ed26339a26a5226dbd",
+        "scope": {
+          "from": 13,
+          "through": 24
+        },
+        "status": "committed",
+        "base_sha256": "606710b32c6ccbfd2d5577b7d4346e77c010d063a8d9f2e738063f0d80558b5a",
+        "created_at": "2026-10-21T02:29:44.270Z",
+        "transaction_id": "5154f86f-3e2a-489b-a694-5e8c794e1fe6",
+        "session_sha256": "3b069bf677f0c92804642bb1eb227747649a302873f6c7d42e2bb8ff2d6f2878"
+      },
+      {
+        "id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "owner": "final-b-native-codex",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "2703faece8d4b030927eaa8d2c02df5ca300d0ce918673da6ad2494976727734",
+        "scope": {
+          "from": 2,
+          "through": 3
+        },
+        "status": "committed",
+        "base_sha256": "1a742700a6e49a0c7665b591f30a64dd4a0fb82022fe911ee6ac119d29d75754",
+        "created_at": "2026-10-20T07:15:17.894Z",
+        "transaction_id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_sha256": "f1f772eb039fb496f49f85c1789a93ef5ef7f8b66cc45f5fab253005c086de1e"
+      },
+      {
+        "id": "962f45e6-2770-421f-9800-cce9bb19ce00",
+        "owner": "X-E-controlled-first-stop-13-18-20261021",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "6a744c73a662ac5023dee12bedd0426ceb30f0d64df5c887279ee0235dfd9c0b",
+        "scope": {
+          "from": 13,
+          "through": 36
+        },
+        "status": "editing",
+        "base_sha256": "14ac7a2451effaa72207d58c566eaae5936c869c300f8fb1cbb761ffb1a857b7",
+        "created_at": "2026-10-21T12:02:29.341Z",
+        "session_sha256": "6fbd927e4c88beabc519bf5445375b1d586ebef07ef326a47d02c6a9cbf38b88"
+      },
+      {
+        "id": "b3a452be-6839-40af-aea2-6a326c223875",
+        "owner": "w-fr-title-repair-codex-20261021",
+        "project_id": "a8035b97-80cf-4c77-80db-bdccf05c29bf",
+        "build_id": "6a744c73a662ac5023dee12bedd0426ceb30f0d64df5c887279ee0235dfd9c0b",
+        "scope": {
+          "from": 19,
+          "through": 24
+        },
+        "status": "committed",
+        "base_sha256": "c5c98c31537ac4af905a5aa12bb296028b86cbd6be70000f3630131248b2076e",
+        "created_at": "2026-10-21T04:27:39.629Z",
+        "transaction_id": "8b607cc7-4878-4cc2-a86a-ac728ee71904",
+        "session_sha256": "a7cda900d7e203164ae7b69e7df3b35ca5e772a3a4e5bcd4947acdc3897b544a"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "13c55320-d1e6-4801-8923-fb779018c62f",
+        "status": "completed"
+      },
+      {
+        "id": "5154f86f-3e2a-489b-a694-5e8c794e1fe6",
+        "session_id": "618831e7-b1af-4864-ac12-802584966ec8",
+        "status": "completed"
+      },
+      {
+        "id": "5acbb3c2-1c68-47d7-9b6c-550e01bcb481",
+        "session_id": "8cf5ae0a-54f3-424b-b89e-61562f20d120",
+        "status": "completed"
+      },
+      {
+        "id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "session_id": "5aafdf06-35ca-4768-8818-e793e9f98c3b",
+        "status": "completed"
+      },
+      {
+        "id": "8b607cc7-4878-4cc2-a86a-ac728ee71904",
+        "session_id": "b3a452be-6839-40af-aea2-6a326c223875",
+        "status": "completed"
+      },
+      {
+        "id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "session_id": "4b267c89-25a8-4fa0-a61b-06fd59f67561",
+        "status": "completed"
+      },
+      {
+        "id": "b2fd13eb-0330-4df3-bdaa-75c898c7d565",
+        "status": "completed"
+      },
+      {
+        "id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+        "status": "completed"
+      },
+      {
+        "id": "f0b4ad62-9b88-41a2-8519-de9064f2a040",
+        "session_id": "31b83039-cf67-4d55-9068-b027a090f4ca",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 180,
+    "counts": {
+      "verified": 1,
+      "needs-recheck": 2,
+      "open": 6
+    },
+    "pending": [
+      {
+        "id": "I_F19_TITLE_TIME",
+        "type": "correctness",
+        "status": "needs-recheck",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_AR_KNEE_JOKE",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_AR_EGG_ECHO",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_BRC_CLASS_SUMMARY",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_CR_TEA_ABSTRACT",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_CR_BOUNDARY_NARRATION",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_DR36_BOOK_KNOWLEDGE",
+        "type": "continuity",
+        "status": "needs-recheck",
+        "context_changed": true
+      },
+      {
+        "id": "I_X_DR_WINDOW_TASTE_PATTERN",
+        "type": "optional_style",
+        "status": "open",
+        "context_changed": true
+      }
+    ],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 3,
+    "installed": {
+      "version": "0.9.0",
+      "source_content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+      "runtime_id": "7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/c85eb384-71eb-4d25-bb67-f33b6bd7d826.json",
+        "sha256": "60b24b93d665db2b9bc98fec99e9876a547ade2ec1cb38f64018a5b1c85bcb25"
+      },
+      {
+        "ref": ".writer/objects/13c55320-d1e6-4801-8923-fb779018c62f.json",
+        "sha256": "85489b554e4d855000f4eaef62a764d603627edde0a258e6162ece8bc18fefe2"
+      },
+      {
+        "ref": ".writer/objects/b2fd13eb-0330-4df3-bdaa-75c898c7d565.json",
+        "sha256": "1545f6fc5016ce1044ca2aeaa82c2a9f8aa6ff49a2c901df77d21b96ef718919"
+      }
+    ],
+    "operations": {
+      "0c29e409-2bd6-493d-9eaa-1857fa4c0dcc": {
+        "input_hash": "edc40c25a3608eaaf1cf21aa1750a00ce3aa556ebf6097c2310c8a22cef00bb7",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "c85eb384-71eb-4d25-bb67-f33b6bd7d826",
+          "revision": 30,
+          "generation": 1,
+          "source_content_id": "ab14a65fc7677e8c76c03cbe8f7ec7c49203ad070ed0163e265cf5047500e626",
+          "backups_preserved": true
+        }
+      },
+      "1d17087f-1084-4e12-83ef-022e6b97e0db": {
+        "input_hash": "b5ccd2861a939cac7e61531472132c199383fa1ca415d8bdf720c93a6119db64",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "13c55320-d1e6-4801-8923-fb779018c62f",
+          "revision": 78,
+          "generation": 2,
+          "source_content_id": "e980bf0574feaa9851c430f91f8a545da3f1cd8e6a4198fad7b28cddb07d9d2d",
+          "backups_preserved": true
+        }
+      },
+      "aa6c8816-11d2-4328-9e37-3f42504ac2d3": {
+        "input_hash": "c67a399dcba55d21a2a592f9dad5c6686b0b35545cc46c0287f635ec917495e6",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "b2fd13eb-0330-4df3-bdaa-75c898c7d565",
+          "revision": 101,
+          "generation": 3,
+          "source_content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 21,
+    "unregistered": [
+      {
+        "draft": "正文/0001-灯下的箱子.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0002-多跑的一趟.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0006-走一遍再画-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 6,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0008-半个钟头-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 8,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0009-留给明天的活-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 9,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0010-月底的三十五块-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 10,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0011-盒子放进去-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 11,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0012-沿着坡走-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 12,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0021-雨落在门檐外-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 21,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0022-书里那张白纸-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 22,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0023-收摊以前-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 23,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0024-门给你留着-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 24,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0025-衣袖落下来-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 25,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0025-衣袖落下来-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 25,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0026-要关的半扇门-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 26,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0026-要关的半扇门-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 26,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0027-先把这一天过完-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 27,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0027-先把这一天过完-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 27,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0027-先把这一天过完-v3.md",
+        "reason": "unregistered",
+        "possible_unit": 27,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0028-走远一点的路-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 28,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0028-走远一点的路-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 28,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0029-五点进门以后-brc-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 29,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0030-兜里留得下的手-brc-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 30,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 30,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0031-门外留一张纸-c-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 31,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0031-门外留一张纸-c-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 31,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0032-茶慢慢凉下来-cr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 32,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0032-茶慢慢凉下来-cr-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 32,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0033-把用过的话带回来-cr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 33,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 33,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0034-明天的空处-d-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 34,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0034-明天的空处-d-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 34,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0034-明天的空处-d-v3.md",
+        "reason": "unregistered",
+        "possible_unit": 34,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0035-一起翻到下一页-dr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 35,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 35,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0036-灯下还有一页-dr-v1.md",
+        "reason": "unregistered",
+        "possible_unit": 36,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/0036-灯下还有一页-dr-v2.md",
+        "reason": "unregistered",
+        "possible_unit": 36,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 22,
+    "plan_exists": true,
+    "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\scenario\\东岸末班船-再扩展验证\\.writer\\tool\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\scenario\\东岸末班船-再扩展验证\\.writer\\revisions\\962f45e6-2770-421f-9800-cce9bb19ce00\\workspace'"
+  },
+  "current": {
+    "character_count": 14,
+    "ledger_count": 30,
+    "recent": [
+      {
+        "unit": 19,
+        "summary": "第十一日何为与将离镇旧同事在茶铺坐谈提出换班，许将惯常16—18:30挪14:30—17，少睡延送旧灯。许14:26先到接钥匙，实际值守交表/普通来访；何16:56返接钥匙、出示照片述会面，许仅见照听述。许提前离岗糕店扫码买糕未写金额，沈本人述午间回家下午补工，许告女首课/袖未补，沈指布头摊。许归家与女洗衣、分工做饭热透午余饭，女洗碗；许告沈姓及布摊，女拟明午买糕问布，尚未去。练布复看结不拆收回折纸针盒，工装母柜未补、旧灯柜角拔电未修。"
+      },
+      {
+        "unit": 20,
+        "summary": "第十二日沈自用饭袋未干，经父同意借浅蓝袋带轻饭盒/小水瓶。店笼布要拆洗、备用一破，沈选择12点先吃二十分钟，老板放弃未调的加批；客要十份本店只卖六、另店补四，少卖后仍有不快。下午实裁洗两新布/分开晾，破一幅另袋转外架脚用途，不再起糕锅，沈16点正常下班。袋早勾柜侧铁皮，白褶开两三针、袋身/四提带接头未散；物卸出，饭盒冷藏后热饭，袋干处放。许女因母19指路到店自述身份，买散糕付款金额未写，给沈看手机袖照、声明一课所学有限；亲看袋边约翌日歇班带针看看，未修/未带针，沈仅见转入布摊巷不知成交。沈托空袋返亲还父、说明损，父听有限转述并同意翌日带看，末父椅旁干净外袋上未拆线。自用袋已干，父仍伤脚，今日尚未雨。"
+      },
+      {
+        "unit": 21,
+        "summary": "第十三日周岸实从18散端收正、接长撑紧固装面找平试坐，失去一笔要中午拿的急活；午前实交廖，60工+24料合84付收，另付面钱金额未写。29厘米窄凳实际双人/客坐，雨披水泥、顾客伸脚、雨斜入，廖往墙里挪并将葱筐案边移案下，擦收/摘葱位置付代价，靠背椅保留。沈晨经父亲手接袋，女从窄桌带针盒并当面告母，店内沈转父许可，上午忙改一点再来。女仅按一课所学平铺短线收尾合白褶小段，厚处退针、四提带接头未动/毛点留，针剪线收妥，袋返沈。沈按20新布工序收干布、营业内抽时，16点下班按约带女赴家取自己的八元旧画册，父收到消息/介绍才见她。父亲接回袋亲看补针，后装眼镜盒/报纸提换椅另一侧再取用，地湿不下楼脚仍垫。画册实借女包带离，本章首度约后天下午三点二十在糕店归还，尚未兑现；母衣未补/第二课未上，22未写。"
+      }
+    ],
+    "timeline_tail": [
+      "第十二日16点后沈家：沈托空袋回亲还父并述损/姑娘一课愿看，父亲见开线未拆，同意明日带看；袋末父椅旁外袋上，沈自用饭袋已干，父仍伤脚，雨尚未落。",
+      "第十三日星期六清晨至九点：沈从父椅旁亲接浅蓝袋带店、用已干自有饭袋。周收正余端/连撑装面找平双人实坐，未接急锄柄小活，约十点后送凳。",
+      "第十三日九点后至十一点：许女从家携盒当面告母，在店听父许可，上午忙湿暂离、回家饭买豆腐约一点；沈十一点收20两新布，小雨始。",
+      "第十三日中午前至近一点：周实交成凳廖、84付收且面钱另付，客真坐；雨大周返，廖因雨/菜袋/脚挪凳移葱筐/擦水，椅保留盆原位。",
+      "第十三日一点：女再来仅修白褶小段、厚处退针、收妥针盒返袋沈；误认画册照片触发借书兴趣，约四点店口往沈家取，沈先消息父。",
+      "第十三日16点下班后：女取鞋后赴店按约与沈同路，由沈介绍父；父接修后袋，沈取自有画册实际借出，双方首约后天下午三点二十糕店归还。父后轻装眼镜盒报纸换椅侧再取用，地湿不出门，晚饭仍按食量煮。"
+    ]
+  }
+}

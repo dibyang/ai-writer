@@ -1,0 +1,166 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_X_DR36_BOOK_KNOWLEDGE",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "36正文已让许母/沈父听到12元花书与18元未购，书约链两人知情仍保留35末未知，须正式tracking修订36。",
+      "suggestion": "保持36正文和35历史原字节，仅在36重登changes补T_X_BOOK_COMPANY.character_known许蓉/沈成林两项及真实引文。",
+      "evidence": [
+        {
+          "unit": 36,
+          "draft": "正文/0036-灯下还有一页-dr-v2.md",
+          "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+          "line": 11,
+          "quote": "告诉她十二块，自己原以为是前回看过那一本"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/d29d1ee4-eca4-43f4-afeb-450a536a9181.json",
+        "review_sha256": "d71de903a52a6de255ea9d1f80bb86cb3244fccb4a64a8d16dbfa206af5a4af1",
+        "units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "2cf2b0487fb85e7a0eb3c5f73212f37fffe2de8abb0e90cbbc3b469f843b132f"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/97c9a1fc-bbc3-473d-b6cd-183cb90af529.json",
+          "sha256": "d300edad9f7f382c41ae6d68f3248458b0b3d06b36ee76d9775941fafa2c4e29"
+        },
+        {
+          "ref": ".writer/objects/e5113e30-a4b5-4cd0-a475-2149f5427fe1.json",
+          "sha256": "710259d7cdff22452540bd873ba1ded9c51f5ba3affa52d40c0aad0a63d7f5ad"
+        },
+        {
+          "ref": ".writer/objects/2d7784fb-5e8c-4fd0-b745-9052ab99cd7a.json",
+          "sha256": "505cb28c160bf0fc1d61cd1c850bad7d39d1aa08ee764049d58cb16ad69e715a"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/345ca1e4-f6b5-4369-90d2-5678a699f1a6.json",
+          "sha256": "110d6df464e8058748ba48e3216de4d0f8837b80ebc23ae4197a2d8c2fcf43bc"
+        },
+        "disposition": "adopted",
+        "reason": "实读36:11/68/92及recall确认同一书约链旧未知应更新；仅36追踪，不改正文及35当时正确未知。依当前用户明确正式修订授权在36范围采用，非作者逐项采纳。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "2cf2b0487fb85e7a0eb3c5f73212f37fffe2de8abb0e90cbbc3b469f843b132f"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "4940f163-50c0-4289-a95d-a7af0daa030f",
+        "commit_binding": {
+          "ref": ".writer/objects/4940f163-50c0-4289-a95d-a7af0daa030f.json",
+          "sha256": "7c94394e28c612ed24a61a6c03fdad90ab7bad970494ab43e0b86e9eae884d7f"
+        },
+        "transaction_id": "68e1d789-e95d-414a-8054-b5beea4832c8",
+        "reason": "正式36独立区已提交，正文SHA未变，36书约链两人知情发生真实差量变化，与当章11/68/92听述/图片同步。使用真实commit对象id，不以事务id替代。",
+        "changes": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "before": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "after": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "12f89bc674abb2a5eb45e1ab7278944883e243382c27f14ea1e1fab79174a70c"
+          }
+        ],
+        "change_scope": "tracking",
+        "tracking_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/68e1d789-e95d-414a-8054-b5beea4832c8/old/8.bin",
+            "sha256": "8a909f8f00f6161cc940590f2d5b2ea731b7773ac025364da7f7c4ed6d27732e"
+          },
+          "after": {
+            "ref": ".writer/transactions/68e1d789-e95d-414a-8054-b5beea4832c8/new/8.bin",
+            "sha256": "52400169e0aeb402102c9b3d94cc2c59790e69108ece77ef49cdcf1738555b09"
+          }
+        },
+        "tracking_changes": [
+          {
+            "unit": 36,
+            "before": {
+              "summary_sha256": "719e6400e2baf600e7e5e873faa6155312fa70bf7302d051d0b7cbdbb8f6a9fe",
+              "snapshot_sha256": "08cebcd91536cdb3853913ad19450f3fd4ad7b0de77faf59113df47462b0121f"
+            },
+            "after": {
+              "summary_sha256": "719e6400e2baf600e7e5e873faa6155312fa70bf7302d051d0b7cbdbb8f6a9fe",
+              "snapshot_sha256": "7a676c1171c6d2fd780f40fa0c9dfafa0ce66924848a371890e9758e837a6a43"
+            },
+            "summary_changed": false,
+            "snapshot_changed": true
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/e49ee356-47f3-4187-adc0-52ff4cd091f0.json",
+        "review_sha256": "4f03a57d6dfe56d8ccb1b087aef042ead2a936d5e75812166ca8faf9de7500a6",
+        "reviewer": "X-DR同ID当前31—36完整实读模型复核",
+        "conclusion": "resolved",
+        "reason": "正式36tracking修订已真实提交并apply；其后主r164以新before/after完整单调实读31—36，当前report覆盖36及依赖。36:11母听女12/沈18未买，36:68/92父听述/看照片，与当前T_X_BOOK_COMPANY两人知情一致。正文未改/35当时未知保留；仅模型复核已解决，不冒充真人定稿。",
+        "rechecked_context": false,
+        "application_commit_id": "4940f163-50c0-4289-a95d-a7af0daa030f",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 31,
+            "draft": "正文/0031-门外留一张纸-c-v2.md",
+            "sha256": "801eb7ebef168c48712cc9e8cd5ba141fcd416e4059cb81f34d0dfe62349f24e",
+            "dependency": "be0e562c3470202d8aa8e95473b02645a6a781e7a8587dff52be70e975cbd2a7"
+          },
+          {
+            "unit": 32,
+            "draft": "正文/0032-茶慢慢凉下来-cr-v2.md",
+            "sha256": "33233593787820901c1b8bc8a0c72d780ef57c4d7cb05cd8aa61f8c8c50093f3",
+            "dependency": "ea440cab5796a9b62556fa6be4276cbb0ed1b084e482cc771494f6834187396f"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "dependency": "6a653af51dd481247e53c51315a8484e03bcbeef971a49adacda3f24449698dc"
+          },
+          {
+            "unit": 34,
+            "draft": "正文/0034-明天的空处-d-v3.md",
+            "sha256": "3fe2d103bd729ad7f0c6cfa47c49098649f84d3f07f5584ef4173a8bc446135b",
+            "dependency": "5f26126e0a0c822449a86735011431d01189c28abff65fc44b3db5dd1d356adc"
+          },
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "866e0483f790f16fb6a834b8977897fdb7235e8de9b309a2df7371d480d4678b",
+            "dependency": "4eec508dd31dfe0f5e2ca659fd7320f7497d9801804008ecb4c4ded9a0f1d236"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "95b2cbe04693117764656b10bc2098ae7d87890ffa5805ced0397d4e38e73d30",
+            "dependency": "12f89bc674abb2a5eb45e1ab7278944883e243382c27f14ea1e1fab79174a70c"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fixture_id": "TEST-CHAP-SMALL-OBJECT-ACTION-BLOCK",
+  "mode": "novel",
+  "description": "A chapter gate card that must be blocked because a small evidence object has position detail but no size-appropriate handling action.",
+  "input": {
+    "chapter_goal": "The investigator must preserve a small paper corner before the suspect leaves town.",
+    "main_event": "The paper corner is revealed beside the sealed witness record.",
+    "worsening": "If the investigator mishandles it, the only trace connecting the record to the route ledger is lost.",
+    "reader_mainline": "A tiny paper corner can prove the witness record was opened.",
+    "physical_operability": "The paper corner stays under the folder edge beside the desk lamp, visible only from the left angle.",
+    "next_pursuit": "Who opened the folder before the official review?"
+  },
+  "expected_report": "chapter-gate-small-object-action-block.report.json",
+  "expected_report_id": "sgm-fixture-chapter-gate-small-object-action-block"
+}

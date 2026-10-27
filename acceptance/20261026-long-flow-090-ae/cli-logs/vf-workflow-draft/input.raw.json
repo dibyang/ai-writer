@@ -1,0 +1,63 @@
+{
+  "expected_revision": 1,
+  "operation_id": "vf-drafting-bounded",
+  "author_evidence": {
+    "quote": "本程只完成1和2章，每章至少1000正文汉字",
+    "local_source": "研究/本次用户授权.md",
+    "source_sha256": "a9699f9dc613db4e04b51f27df6fe23de699acb2b8fe701320ee4fae309f055a",
+    "locator": "本次用户消息，激活时间2026-10-26T05:23:54.421Z；本地逐字保存的任务段落",
+    "recorded_by": "Codex控制器，依用户独立工具验证授权"
+  },
+  "workflow": {
+    "stage": "drafting",
+    "task": "按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "三章范围不扩章",
+        "本程第2章后仅保存第3章写前输入并停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

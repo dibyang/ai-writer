@@ -1,0 +1,314 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 274,
+  "counts": {
+    "verified": 1
+  },
+  "issues": [
+    {
+      "id": "I_AD_AR51_HE_TITLE",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "51将既有男性接班人老何称为“何阿姨”，与本窗口48—50连续使用他的老何为同一人，人物称谓漂移。只改51。",
+      "suggestion": "独立revision51，将何阿姨改成49既有称呼何师傅，不改消息、知情或情节。",
+      "evidence": [
+        {
+          "unit": 51,
+          "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+          "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+          "line": 65,
+          "quote": "女儿给何阿姨回了一条话，只说灯已拿回、没修、没收钱。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/4596e4e1-146c-4bf4-8f9f-84be7b33e577.json",
+        "review_sha256": "e6f48878bbaaa0de4fb16dcd6a7643bb121ed53b88a8f0a56aa42b8b796b3b41",
+        "units": [
+          {
+            "unit": 51,
+            "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+            "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+            "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/f3262991-b6f0-48e9-a9d8-191b39fa531e.json",
+          "sha256": "aab6d413f9956bf1ec037a0559ef1f837a8bca4f902fbe06cbe2263a49adf2d6"
+        },
+        {
+          "ref": ".writer/objects/70e9f14f-0f61-4ef7-b574-0fbc6bff72ac.json",
+          "sha256": "69cefea8c68b5f56014a3c456010d9c774a01ef120cd9ad5d48282d4eb53b853"
+        },
+        {
+          "ref": ".writer/objects/6cc0a012-74b6-4f72-b72c-19a143888139.json",
+          "sha256": "e863f82dd7f6ce692f45a02f103da4b7b32cdabfbc8d95ba82dc6cab9b324f85"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/ef721911-58c4-49b8-8f52-5d65aa22db8e.json",
+          "sha256": "f8bebd9aba6eb15dbc192c183b3b2bc4c25e2262f00f41aec29fb2505b585736"
+        },
+        "disposition": "adopted",
+        "reason": "本进程六章完整连读发现新写51称何阿姨，与当前男性老何及49何师傅矛盾；按既有revise49—51授权仅改51此称呼，不将可选风格升级为必改。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 51,
+            "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+            "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+            "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "1c94d798-93e9-4379-8da0-0bd179343820",
+        "commit_binding": {
+          "ref": ".writer/objects/1c94d798-93e9-4379-8da0-0bd179343820.json",
+          "sha256": "23c3c847355d521bed06ade44e436a6791a4d16ad324e07e322ea3038be239c8"
+        },
+        "transaction_id": "db48dd08-ee13-47e9-be6a-bff610801515",
+        "reason": "正式revision51—51真实事务仅改一次何阿姨为既有何师傅，新稿与事务after一致；全章实读/六字段重登/尾段正式review已完成，未制造第二次修改。",
+        "changes": [
+          {
+            "unit": 51,
+            "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+            "before": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+            "after": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 51,
+            "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+            "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+            "dependency": "a6ac07b41d5819b8775a964d802862069b25ab705a165faf4ea21c15d15782e8"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/e312a8ad-4962-4119-a1ec-9b2dbebe65a4.json",
+        "review_sha256": "0f7111b6b37abbd31cabfe0795634cadcea7c3e72b093ab8c9eae53bde31c5d7",
+        "reviewer": "Codex same native ID informed complete-tail reread",
+        "conclusion": "resolved",
+        "reason": "登记后完整9页实读新SHA ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd，何师傅对应同一老何；其他字节未变，有限知情未扩散。真实原意见只修一次。",
+        "rechecked_context": false,
+        "application_commit_id": "1c94d798-93e9-4379-8da0-0bd179343820",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 51,
+            "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+            "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+            "dependency": "a6ac07b41d5819b8775a964d802862069b25ab705a165faf4ea21c15d15782e8"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/85589e45-5453-424d-b561-fe65e1c8ccd8.json",
+        "sha256": "70f97fef1dbb2fd981a14b7dbf2e2f9fc05ae5f9ef8008017cd1eeb7859e9580"
+      },
+      "history_events": [
+        {
+          "binding": {
+            "ref": ".writer/objects/f3262991-b6f0-48e9-a9d8-191b39fa531e.json",
+            "sha256": "aab6d413f9956bf1ec037a0559ef1f837a8bca4f902fbe06cbe2263a49adf2d6"
+          },
+          "issue": {
+            "id": "I_AD_AR51_HE_TITLE",
+            "type": "continuity",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "51将既有男性接班人老何称为“何阿姨”，与本窗口48—50连续使用他的老何为同一人，人物称谓漂移。只改51。",
+            "suggestion": "独立revision51，将何阿姨改成49既有称呼何师傅，不改消息、知情或情节。",
+            "evidence": [
+              {
+                "unit": 51,
+                "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                "line": 65,
+                "quote": "女儿给何阿姨回了一条话，只说灯已拿回、没修、没收钱。"
+              }
+            ],
+            "status": "open",
+            "origin": {
+              "review_ref": ".writer/reviews/4596e4e1-146c-4bf4-8f9f-84be7b33e577.json",
+              "review_sha256": "e6f48878bbaaa0de4fb16dcd6a7643bb121ed53b88a8f0a56aa42b8b796b3b41",
+              "units": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                  "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+                }
+              ]
+            },
+            "history": []
+          }
+        },
+        {
+          "binding": {
+            "ref": ".writer/objects/70e9f14f-0f61-4ef7-b574-0fbc6bff72ac.json",
+            "sha256": "69cefea8c68b5f56014a3c456010d9c774a01ef120cd9ad5d48282d4eb53b853"
+          },
+          "issue": {
+            "id": "I_AD_AR51_HE_TITLE",
+            "type": "continuity",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "51将既有男性接班人老何称为“何阿姨”，与本窗口48—50连续使用他的老何为同一人，人物称谓漂移。只改51。",
+            "suggestion": "独立revision51，将何阿姨改成49既有称呼何师傅，不改消息、知情或情节。",
+            "evidence": [
+              {
+                "unit": 51,
+                "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                "line": 65,
+                "quote": "女儿给何阿姨回了一条话，只说灯已拿回、没修、没收钱。"
+              }
+            ],
+            "status": "adopted",
+            "origin": {
+              "review_ref": ".writer/reviews/4596e4e1-146c-4bf4-8f9f-84be7b33e577.json",
+              "review_sha256": "e6f48878bbaaa0de4fb16dcd6a7643bb121ed53b88a8f0a56aa42b8b796b3b41",
+              "units": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                  "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+                }
+              ]
+            },
+            "history": [
+              {
+                "ref": ".writer/objects/f3262991-b6f0-48e9-a9d8-191b39fa531e.json",
+                "sha256": "aab6d413f9956bf1ec037a0559ef1f837a8bca4f902fbe06cbe2263a49adf2d6"
+              }
+            ],
+            "resolution": {
+              "decision_actor": "agent-within-authorized-scope",
+              "authorization": {
+                "ref": ".writer/objects/ef721911-58c4-49b8-8f52-5d65aa22db8e.json",
+                "sha256": "f8bebd9aba6eb15dbc192c183b3b2bc4c25e2262f00f41aec29fb2505b585736"
+              },
+              "disposition": "adopted",
+              "reason": "本进程六章完整连读发现新写51称何阿姨，与当前男性老何及49何师傅矛盾；按既有revise49—51授权仅改51此称呼，不将可选风格升级为必改。",
+              "author_choice": null,
+              "basis_units": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                  "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+                }
+              ]
+            },
+            "application": null,
+            "verification": null
+          }
+        },
+        {
+          "binding": {
+            "ref": ".writer/objects/6cc0a012-74b6-4f72-b72c-19a143888139.json",
+            "sha256": "e863f82dd7f6ce692f45a02f103da4b7b32cdabfbc8d95ba82dc6cab9b324f85"
+          },
+          "issue": {
+            "id": "I_AD_AR51_HE_TITLE",
+            "type": "continuity",
+            "severity": "minor",
+            "confidence": "high",
+            "statement": "51将既有男性接班人老何称为“何阿姨”，与本窗口48—50连续使用他的老何为同一人，人物称谓漂移。只改51。",
+            "suggestion": "独立revision51，将何阿姨改成49既有称呼何师傅，不改消息、知情或情节。",
+            "evidence": [
+              {
+                "unit": 51,
+                "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                "line": 65,
+                "quote": "女儿给何阿姨回了一条话，只说灯已拿回、没修、没收钱。"
+              }
+            ],
+            "status": "applied",
+            "origin": {
+              "review_ref": ".writer/reviews/4596e4e1-146c-4bf4-8f9f-84be7b33e577.json",
+              "review_sha256": "e6f48878bbaaa0de4fb16dcd6a7643bb121ed53b88a8f0a56aa42b8b796b3b41",
+              "units": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                  "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+                }
+              ]
+            },
+            "history": [
+              {
+                "ref": ".writer/objects/f3262991-b6f0-48e9-a9d8-191b39fa531e.json",
+                "sha256": "aab6d413f9956bf1ec037a0559ef1f837a8bca4f902fbe06cbe2263a49adf2d6"
+              },
+              {
+                "ref": ".writer/objects/70e9f14f-0f61-4ef7-b574-0fbc6bff72ac.json",
+                "sha256": "69cefea8c68b5f56014a3c456010d9c774a01ef120cd9ad5d48282d4eb53b853"
+              }
+            ],
+            "resolution": {
+              "decision_actor": "agent-within-authorized-scope",
+              "authorization": {
+                "ref": ".writer/objects/ef721911-58c4-49b8-8f52-5d65aa22db8e.json",
+                "sha256": "f8bebd9aba6eb15dbc192c183b3b2bc4c25e2262f00f41aec29fb2505b585736"
+              },
+              "disposition": "adopted",
+              "reason": "本进程六章完整连读发现新写51称何阿姨，与当前男性老何及49何师傅矛盾；按既有revise49—51授权仅改51此称呼，不将可选风格升级为必改。",
+              "author_choice": null,
+              "basis_units": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "sha256": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                  "dependency": "981f092179e18da7f652aa9c7243faf8f1ddb8e9a6a415dda7815e783e475634"
+                }
+              ]
+            },
+            "application": {
+              "commit_id": "1c94d798-93e9-4379-8da0-0bd179343820",
+              "commit_binding": {
+                "ref": ".writer/objects/1c94d798-93e9-4379-8da0-0bd179343820.json",
+                "sha256": "23c3c847355d521bed06ade44e436a6791a4d16ad324e07e322ea3038be239c8"
+              },
+              "transaction_id": "db48dd08-ee13-47e9-be6a-bff610801515",
+              "reason": "正式revision51—51真实事务仅改一次何阿姨为既有何师傅，新稿与事务after一致；全章实读/六字段重登/尾段正式review已完成，未制造第二次修改。",
+              "changes": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "before": "410732066d7c6b1c9fb6c30ab57ba9bf2aa5100895f2c20f7b5169950d59eb7f",
+                  "after": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd"
+                }
+              ],
+              "after_units": [
+                {
+                  "unit": 51,
+                  "draft": "正文/0051-翻到自己那页-ad-ar-v1.md",
+                  "sha256": "ceac81cb3419fe7875f35608df39069d1006f922e3a5faebf0cab719c3fc4bfd",
+                  "dependency": "a6ac07b41d5819b8775a964d802862069b25ab705a165faf4ea21c15d15782e8"
+                }
+              ]
+            },
+            "verification": null
+          }
+        }
+      ],
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

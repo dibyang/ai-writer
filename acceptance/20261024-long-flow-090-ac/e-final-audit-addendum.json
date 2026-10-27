@@ -1,0 +1,164 @@
+{
+  "at": "2026-10-24T23:26:58.259Z",
+  "extra_cli_outputs": [
+    {
+      "label": "help",
+      "exit_code": 2,
+      "stdout": "cli-logs/help/stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "cli-logs/help/stderr.txt",
+      "stderr_sha256": "7017aef134ad96b514b002c756107ca4a95931a47cfeebecb5920d733ceba754",
+      "note": "this-turn mistaken wrapper help label, not a product mutation; repeated help label rejected before log overwrite"
+    }
+  ],
+  "nonzero_operation_codes": [
+    {
+      "label": "e1-final-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e1-final-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e1-final-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e1-main-valid-write-negative",
+      "exit_code": 2,
+      "code": "REVISION_OCCUPIED",
+      "error": "作品有活跃修订会话；在独立区操作，或由所有者显式结束，不允许旁路写入",
+      "stdout": {
+        "ref": "cli-logs/e1-main-valid-write-negative/stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "ref": "cli-logs/e1-main-valid-write-negative/stderr.txt",
+        "sha256": "3fd4d6f90c8bbdcfb40f568b9c32e6cb34176e87e7a598494839d2c21430b2c6"
+      }
+    },
+    {
+      "label": "e1-u35-context",
+      "exit_code": 2,
+      "code": "IMPACT_PENDING",
+      "error": "历史设定影响待修订；普通续写、登记和导出暂停，先 revision begin。讨论可查看阻断。",
+      "stdout": {
+        "ref": "cli-logs/e1-u35-context/stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "ref": "cli-logs/e1-u35-context/stderr.txt",
+        "sha256": "b4d9ecb80d257d615e206598da5311f8d1624adc256b53b044531e1cacf1f57d"
+      }
+    },
+    {
+      "label": "e1-u35-preview",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e1-u35-preview/stdout.txt",
+        "sha256": "881e85a6e3eadc31651e08a6d679f41bc0d179d1cdc6272c477d9607f1a09328"
+      },
+      "stderr": {
+        "ref": "cli-logs/e1-u35-preview/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e2-entry-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e2-entry-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e2-entry-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e2-final-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e2-final-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e2-final-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e3-entry-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e3-entry-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e3-entry-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e3-final-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e3-final-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e3-final-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e4-entry-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e4-entry-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e4-entry-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "e4-pre-main-check",
+      "exit_code": 1,
+      "code": null,
+      "error": null,
+      "stdout": {
+        "ref": "cli-logs/e4-pre-main-check/stdout.txt",
+        "sha256": "a039f6070d7b6c0662581de40f96e90ad6dd42125cf18ac91a816f2e5f94363b"
+      },
+      "stderr": {
+        "ref": "cli-logs/e4-pre-main-check/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "auxiliary_records": [
+    "e4-aux-failure-01.json",
+    "e4-aux-failure-02.json",
+    "e4-aux-failure-03.json"
+  ],
+  "main_frozen_objects": 609,
+  "freeze_inventory": "checkpoint-e-complete-frozen.json",
+  "no_authoritative_mutation": true
+}

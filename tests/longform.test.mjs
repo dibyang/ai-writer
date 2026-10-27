@@ -28,6 +28,60 @@ function append(root, unit, changes = {}, extra = {}) {
 }
 const observed = { type: 'observation', statement: '信封有一道裂口', status: 'pending', cast: ['阿禾'], tags: ['裂口'], author_truth: '裂口的成因尚待核实', reader_known: '看见裂口', character_known: { 阿禾: '看见裂口' }, due_unit: 5, evidence: [{ unit: 1, quote: '阿禾看见信封有一道裂口。' }] };
 
+test('长篇默认卷目录贯通context、模板、合章、登记、跨卷与导出，旧显式路径保持', t => {
+  const { root, base, volume } = work(t, 1);
+  write(base, '卷2.json', { ...volume, id:'V2', title:'雨/夜:归途? .', start:2, end:2, arcs:[{...volume.arcs[0],start:2,end:2}] });
+  main(['volume','--project',root,'--input',path.join(base,'卷2.json')]);
+  for (const unit of [1,2]) {
+    savePlan(root,{unit,title:'来/信',goal:'查看来信',change:'收到来信',cast:[],beats:['读信']});
+    const input=main(['record-template','--project',root,'--unit',String(unit)]);
+    assert.equal(input.draft,`正文/${unit===1?'V1-查信':'V2-雨-夜-归途-'}/000${unit}-来-信.md`);
+    assert.equal(context(root,unit).draft_path,input.draft);
+    write(root,`分段/${unit}/01.md`,'第一段\r\n');write(root,`分段/${unit}/02.md`,'第二段\n');
+    const partRefs=[`分段/${unit}/01.md`,`分段/${unit}/02.md`];
+    write(base,'合章.json',{unit,expected_revision:input.expected_revision,parts:partRefs.map(ref=>({path:ref,sha256:sha(fs.readFileSync(path.join(root,ref)))}))});
+    const result=main(['assemble','--project',root,'--input',path.join(base,'合章.json')]);
+    assert.equal(result.draft,input.draft);assert.equal(fs.readFileSync(path.join(root,input.draft),'utf8'),'第一段\r\n\n\n第二段\n');
+    assert.throws(()=>main(['assemble','--project',root,'--input',path.join(base,'合章.json')]),/不覆盖/);
+    input.summary='收到并读完来信';record(root,input);
+  }
+  assert.equal(check(root).ok,true);
+  const output=main(['export','--project',root,'--out',path.join(base,'导出')]);assert.equal(output.ok,true);
+  const other=work(t);savePlan(other.root,{unit:1,title:'旧路径',goal:'读信',change:'读完',cast:[],beats:['读信']});
+  assert.equal(main(['record-template','--project',other.root,'--unit','1','--draft','正文/旧路径.md']).draft,'正文/旧路径.md');
+});
+
+test('卷ID大小写冲突拒绝并保留原卷纲，精确原ID仍可更新未消费卷纲', t => {
+  const {root,base,volume}=work(t,1),old=fs.readFileSync(path.join(root,'大纲/分卷/V1.json')),stateBefore=fs.readFileSync(path.join(root,'.writer/state.json'));
+  write(base,'冲突.json',{...volume,id:'v1',title:'第二卷',start:2,end:2,arcs:[{...volume.arcs[0],start:2,end:2}]});
+  assert.throws(()=>main(['volume','--project',root,'--input',path.join(base,'冲突.json')]),e=>e.code==='VOLUME_ID_COLLISION');
+  assert.deepEqual(fs.readFileSync(path.join(root,'大纲/分卷/V1.json')),old);assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),stateBefore);assert.deepEqual(fs.readdirSync(path.join(root,'大纲/分卷')),['V1.json']);
+  write(base,'更新.json',{...volume,title:'第一卷新名'});main(['volume','--project',root,'--input',path.join(base,'更新.json')]);assert.equal(main(['outline','--project',root,'--unit','1']).volume.title,'第一卷新名');
+});
+
+test('默认卷目录限制UTF8文件名长度，保留Unicode字符并能正常登记', t => {
+  const { root,base,volume }=work(t,1),name='😀'.repeat(80);
+  write(base,'长卷名.json',{...volume,id:'V'.repeat(64),title:name});
+  fs.unlinkSync(path.join(root,'大纲/分卷/V1.json'));
+  main(['volume','--project',root,'--input',path.join(base,'长卷名.json')]);
+  savePlan(root,{unit:1,title:name,goal:'读取',change:'读完',beats:['读']});
+  const input=main(['record-template','--project',root,'--unit','1']);
+  for(const part of input.draft.split('/'))assert(Buffer.byteLength(part,'utf8')<=255);
+  write(root,input.draft,'已读。');input.summary='读完';record(root,input);assert.equal(check(root).ok,true);
+});
+
+test('旧平铺导入稿原位恢复且保留冲突字节，新导入按卷保存', t => {
+  const {root,base}=work(t);
+  write(base,'源.md','原始旧稿。');write(base,'输入.json',{rights:'本测试自有合成文字',files:[path.join(base,'源.md')]});
+  main(['import-index','--project',root,'--input',path.join(base,'输入.json')]);
+  write(root,'正文/0001-导入.md','冲突版本');
+  assert.throws(()=>main(['import-next','--project',root]),/不覆盖/);
+  assert.equal(fs.readFileSync(path.join(root,'正文/0001-导入.md'),'utf8'),'冲突版本');
+  write(root,'正文/0001-导入.md','原始旧稿。');
+  assert.equal(main(['import-next','--project',root]).draft,'正文/0001-导入.md');
+  assert.equal(fs.existsSync(path.join(root,'正文/V1-查信/0001-导入.md')),false);
+});
+
 test('recall精确账本ID优先于关联和较长ID，限额及AND查询保持可预期', t => {
   const { root } = work(t);
   append(root, 1, { ledger: {
@@ -191,7 +245,7 @@ test('旧稿导入断点续跑、冻结副本不覆盖、源漂移阻断与逐�
   write(base, 'import.json', { rights: '本测试自有原创夹具', files: sources });
   const cli = (cmd, args = []) => main([cmd, '--project', root, ...args]);
   cli('import-index', ['--input', path.join(base, 'import.json')]);
-  const first = cli('import-next'); assert.equal(first.unit, 1); assert.equal(cli('import-next').unit, 1);
+  const first = cli('import-next'); assert.equal(first.unit, 1); assert.equal(first.draft,'正文/V1-查信/0001-导入.md'); assert.equal(cli('import-next').unit, 1);
   assert.deepEqual(cli('import-status').unread_or_unregistered, [1, 2]);
   savePlan(root, { unit: 1, title: '信封', goal: '看信', change: '发现裂口', beats: ['看信'] });
   const tx = cli('record-template', ['--unit', '1', '--draft', first.draft]); tx.summary = '发现信封裂口。'; record(root, tx);

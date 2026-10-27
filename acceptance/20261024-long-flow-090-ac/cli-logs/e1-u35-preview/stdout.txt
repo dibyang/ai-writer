@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "scope": "record-input-preview",
+  "revision": 263,
+  "writes": false,
+  "findings": [
+    {
+      "code": "DRAFT_REVIEW_INVALID",
+      "message": "draft_review须绑定已保存的真实报告及当前完整章；先保存报告，再核对正文和报告SHA256，失败后停止登记",
+      "field": "draft_review"
+    }
+  ],
+  "note": "保持原登记和来源保护，不自动修补哈希或事实"
+}

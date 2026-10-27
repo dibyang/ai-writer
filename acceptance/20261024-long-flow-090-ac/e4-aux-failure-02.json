@@ -1,0 +1,16 @@
+{
+  "kind": "local report evidence quote validation",
+  "old_script": "e4-tail-review.mjs",
+  "corrected_script": "e4-tail-review-v2.mjs",
+  "failure": "38:周一那句话",
+  "correction": "下面是她周一写的。",
+  "meaning": "original real quote from current chapter38 page4, not an SHA refresh",
+  "authoritative_writes_before_failure": false,
+  "main_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+  "additional_operator_errors": [
+    "help supplied without unique wrapper label: missing project rejected; repeated help label rejected before CLI",
+    "PowerShell inline escaped quote syntax failed before execution",
+    "following v2 command module not found because previous correction script did not execute"
+  ],
+  "product_defect": false
+}

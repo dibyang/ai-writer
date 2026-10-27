@@ -1,0 +1,41 @@
+{
+  "schema_version": "story-gate-license-profile@0.1.0",
+  "software_license": "Apache-2.0",
+  "activation": "none-required-for-software-use",
+  "tiers_scope": "Optional support and service offerings only; Apache-2.0 permissions are identical for all users.",
+  "tiers": [
+    {
+      "tier": "Trial",
+      "use_case": "optional evaluation support",
+      "offline": true,
+      "support": "community or limited async support"
+    },
+    {
+      "tier": "Pro",
+      "use_case": "single author or editor",
+      "offline": true,
+      "support": "standard async support"
+    },
+    {
+      "tier": "Studio",
+      "use_case": "small writing team",
+      "offline": true,
+      "support": "priority async support"
+    },
+    {
+      "tier": "Enterprise",
+      "use_case": "custom workflow, CI, or container integration",
+      "offline": true,
+      "support": "custom support agreement"
+    }
+  ],
+  "privacy_boundary": [
+    "does not upload manuscripts",
+    "customer work remains customer-owned",
+    "support bundles must not copy manuscript prose"
+  ],
+  "future_extension_points": [
+    "optional support agreement records",
+    "customer-specific integration services"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-25T10:19:20.959Z",
+  "before_snapshot_created": false,
+  "failed_copy": {
+    "command": "Copy-Item ... -NoClobber -ErrorAction Stop",
+    "exit_code": 1,
+    "root_tool_chunk": "63b55c",
+    "error": "A parameter cannot be found that matches parameter name NoClobber.",
+    "disposition": "Root continued to patch after this failure; record that controller mistake explicitly. Do not label the after-copy as a before-copy."
+  },
+  "actual_retained_versions": {
+    "earlier_pre_ndjson": {
+      "ref": "harness-history/20261025-ndjson/verify-tail-read-after-replay.mjs",
+      "sha256": "ed16103e040d5b36512dd9fda438e5d58ab22375714ef8d06b1a52c634fe40da"
+    },
+    "after_anchor": {
+      "ref": "harness-history/20261025-post-record-anchor/verify-tail-read-after-replay-after.mjs",
+      "sha256": "90cc6efee8999bfd4bd5edbeb79bb79b66a2109dfcd0ea9c909b3f3b2b5f5391"
+    }
+  },
+  "change": "Supports identifying a helper-driven final record by command needle plus an exact public CLI-result match, and verifies captured record exit/arguments/after-state. Prior NDJSON-only change is recorded separately; original native output and old receipts unchanged.",
+  "regression": "post-replay-reading-d-local-repair-anchor-regression.json passed 28 pages",
+  "scope": "AD validation harness only. No product source/package or project state/body modified."
+}

@@ -1,0 +1,5 @@
+同ID恢复W-C，只完成第21章后停。W=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-w；P=W/scenario/东岸末班船-规模验证。整体授权prompt-a-first.md、本次停点以此为准；仅写W、产品用w-writer捕获、不另派代理/不Git提交推送/不改其他作品或封存/不手改state和hash。先status、workflow show、revision list、tool identify、交接-C首停，核20章/paused及当前身份；重读19—20和21有效细纲，回读13—18涉及三链首次最近和实际兑现。正式workflow只授权21，本进程不写22，revise_range=null，保留真实授权证据与旧输入。
+
+21≥8000正文汉字、至少4个真实顺序分段，context/template当前来源，逐段实读→CLI assemble→完整合章实读和纲文/连续性核对，保留高置信修正/原稿，报告draft_review绑定两项当前SHA，preview成功才record。角色在场、钱物/时间与脚伤/技能限度均按成稿；不要三条都只在状态里resolved、不靠巧合全知集合或重复解释凑字。将14/17窄凳的承诺落实为真实营业使用/挪放及代价，把15布袋及18之后真实使用落实为修补或帮助，学习所得只做合理小事。首次、最近、持有/知情、实际兑现与未完后果均留正文引文/SHA。允许本章首度成立一个普通非observation约定或数量，后文22—24有真实承接，供D以后合理小改，不故意写错，不替人类做逐项定稿。
+
+21登记后完整16→21连读，核三链跨卷事实及章节功能差异，真实报告+review-template+正式review16—21。旧18首次课只在其已写边界有效，不倒填人物全知。高置信问题按实际授权正规修订，可选风格保留观察，不把机械检查当文学通过。最后status/check/doctor/revision list无缺覆盖或未完事务/漂移，workflow暂停仅discuss/两范围null，task21完成、22待新鲜D。保存交接-C完成.md，含当前全部身份/状态/文件SHA/字数与分段、三链首次最近和真正兑现、17/21普通事实的首度证据及后果、报告/review、未决和失败。正常退出，不写22、不提前修订/导出。

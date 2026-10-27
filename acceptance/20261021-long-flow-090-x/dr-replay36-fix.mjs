@@ -1,0 +1,14 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const P=new URL('./scenario/东岸末班船-再扩展验证/',import.meta.url),B=new URL('.writer/revisions/5aafdf06-35ca-4768-8818-e793e9f98c3b/workspace/',P);
+const r=(p,b=B)=>fs.readFileSync(new URL(p,b)),h=(p,b=B)=>crypto.createHash('sha256').update(r(p,b)).digest('hex');const put=(p,v)=>fs.writeFileSync(new URL(p,B),typeof v==='string'?v:JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const t=JSON.parse(r('.writer/drafts/dr-replay36-original-r163.json')),old=JSON.parse(r('.writer/drafts/dr-record36-final-v2.json',P)),draft=t.draft,text=r(draft).toString();
+if(h(draft)!==h(draft,P))throw Error('body copy changed');
+for(const [p,sha]of Object.entries(old.source_hashes))if(p!=='.writer/state.json'&&h(p)!==sha)throw Error('source mismatch '+p);
+const ev=q=>{if(!text.includes(q))throw Error('quote missing');return {unit:36,quote:q};};
+t.changes.ledger.T_X_BOOK_COMPANY={character_known:{'许蓉':'36周日出班前亲同女看花册，听女亲述12元自购/沈18薄书未买；不再仅知35末书袋，但未亲历店内同行/沈付否全程。','沈成林':'36周日三点多亲听沈自述18薄书看后未买及女买12花册，又亲看沈托手机红花照片；未亲历书店/未见实体花册。'},evidence:[ev('母亲问沈禾买的什么，她说没买，看中一本十八的，后来放回去了。'),ev('她坐到旁边，说姑娘买一本花，十二') ]};
+const report='审查/X-DR36追踪修订重登自检.md';
+put(report,r('审查/X-DR36最终合章自检-v2.md',P).toString()+`\n\n# 正式tracking修订补充\n\n独立区5aafdf06-35ca-4768-8818-e793e9f98c3b，主基线r162，区内rewind36至r163。刚已在独立区原生逐行全读当前36：1—100、101—200、201—283 EOF；与主稿正文同SHA ${h(draft)}，一字未改。原报告保留，此补充修正原登记遗漏，不把旧报告当自动无变化结论。\n\n六项核查：summary逐事件同当前文不改；characters已正确知道购否无需再改；timeline的周日/周一及钱物顺序无误；ledger仅T_X_BOOK_COMPANY两人所知补36实际听述/照片，其余本章差量实读保留，35当时未知与全部前缀不动；evidence核两句分别36:11/68真实存在，所有旧变化引句仍存在；downstream当前末章36无后章，37未创建，34/35承接已实读，人物不能由图片知道店内全部经过。\n\n修前许蓉仍“亲见女归家书袋未知价格页/沈决定”、沈父仍“仅亲听女出门，未获本次买否结果”；现按当章所见所听更新为女亲述12/沈18未买与沈口述+托手机红花图，明确非亲临书店。此为实际追踪变化，非加空格或只刷新哈希。用原回放输入当前真实context哈希，非正文改动绕过旧输入。\n\n原三链结案边界保留：一次书约已结、一次茶约已结，母衣新条/实衣和下一课/长期洗穿仍待；两件修理待办未结。语言四测试和纲文结论对相同正文仍成立。正文硬问题本次无新增；已确认登记硬问题按本项正式修订，optional_style不冒充错误。\n`);
+t.replay_review={reviewer:'X-DR36正式tracking修订逐字段知情复核',report,draft_sha256:h(draft),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};
+t.draft_review={reviewer:'X-DR36正式tracking修订逐行自检',report,draft_sha256:h(draft),report_sha256:h(report)};
+put('.writer/drafts/dr-replay36-corrected-r163.json',t);
+console.log(JSON.stringify({branch:B.pathname,input:'.writer/drafts/dr-replay36-corrected-r163.json',draft_sha256:h(draft),report_sha256:h(report)}));

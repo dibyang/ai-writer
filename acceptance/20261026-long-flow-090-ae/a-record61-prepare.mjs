@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),P=JSON.parse(fs.readFileSync(path.join(A,'project.json'))).project;
+const j=f=>JSON.parse(fs.readFileSync(f)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const input=j(path.join(P,'.writer/drafts/ae-a-record61-original.json')),s=j(path.join(P,'.writer/state.json'));
+assert.equal(s.revision,354);assert.equal(s.units.length,60);
+const draft='正文/0061-这一页先留我这里-ae-a-v2.md',bytes=fs.readFileSync(path.join(P,draft)),body=bytes.toString('utf8');
+assert.equal(sha(bytes),'4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c');
+for(const [ref,hash] of Object.entries(input.source_hashes))assert.equal(sha(fs.readFileSync(path.join(P,ref))),hash,ref);
+const ev=quote=>{assert(body.includes(quote),quote);return[{unit:61,quote}];};
+input.draft=draft;delete input._instructions;delete input.output;
+input.summary='第49日周日。女欲留14册与一段自己的时间，母想重听60两条私人录音，桌面/音量有真实摩擦。沈文字问借两晚，女先回在造成误会后明确本次不借/自己想看并道句未讲清；沈失望短答，四点后不去取书，回家继续8册/原白纸旧位，父只听有限话未接14。女家中找纸未取旧专用纸，实际买十张普通白纸/铅笔/橡皮3元，再下楼买刨笔刀2元各自实付。以家用白底蓝圈杯画两张：首张歪沿鼓底远柄；第二张缩小、双线柄/擦毛/误成缺口，后添底下两笔，第三张未落笔收回。付出两页与原读书时间，未学成；与母午饭不快、晚诚实比较后仍只喜欢两笔，决定留不满意的画，未发照/未告沈画杯。母16点接班、18:30对页交钥匙何，没给外人放两录；女去原面店因无上回种类而不等，另买粥饼实付吃过，母归家自热饭。夜友只谈吃饭/坐歇，女文字说母有两条自留录音，沈未得内容/文件。14册自持未借/原夹纸旧字不添；两画与8空白纸分收，第二张背写周日，母两录仍手机枕边、本人关新灯，原戏词两空不填。';
+input.changes={characters:{
+  '许蓉':s.snapshot.characters['许蓉']+' 第49日周日早/夜自听原两录，与女有桌面声音及看画分歧，早见第一张过程、午后见第二张未完、夜只细看第二张，不代改/未去取首张重看。16点接班、18:30亲对页交钥匙何；只告何哼过，无录音文件交付。归家自热饭，仍认为画杯不大像/缺口会留，接受女自己收纸。两录不删剪转、不新录，夜收纸/关新灯，手机回本人枕边；同意明早声小些，午后不等女陪。',
+  '许蓉女儿':s.snapshot.characters['许蓉女儿']+' 第49日周日拒这一次借14，沈有短答/失望，未约下次。家用白底细蓝圈杯实际作画对象，另买纸笔橡皮3/刨笔刀2共5元实付；画过2张留缺陷，另8空白（第3张只取未落笔），不拿旧白纸/夹纸/课堂纸作画。第二张背写周日，母夜细看此张，第一张夜不取；没有发画照或告沈画杯。自去面店因无上回品种不等，另买粥饼实付吃过。夜文字告沈母有两条自留录音，但不发内容/文件；自己的14和旧夹纸仍自持，画纸分放，家用白杯窗下，出门杯装水包边。',
+  '沈禾':s.snapshot.characters['沈禾']+' 第49日周日文字问借14两晚，先因女回在以为可取，获明确拒借后失望/短答，四点后回家不取书；原8册自读窗/屋瓦/桶等后归床边，白纸不移，父未接14/脚仍凳上。做饭吃过，与女普通问饭店/吃什么及坐歇，未获画画或画照消息；夜首次文字知许有两条自留录音，未听内容/无文件，不知其唱法与纸记号。'
+},timeline_append:[
+  '第49日周日晨：许回放60原两录；女先等一条再用桌，沈问借14，女明确本次不借、仍自持，沈短答失望。',
+  '同日晨至午后：女另购十张普通纸/铅笔/橡皮3元、刨笔刀2元并实付，画家用杯两张；歪/擦毛/缺口留下，第三张未落笔，8张仍空。',
+  '同日16—18:30许当班，何看页问清接钥匙后许离；无新图/复航事实、无向何转录音。沈下工不往女家取书，自读8册/做饭。',
+  '同日傍晚女原面店不等替代面，另买粥饼实付吃过，母归家自热饭；晚母细看第二画仍有不合意意见，女留纸不传图。',
+  '同日夜两女仍能谈吃饭/坐歇，不改变未借；沈新知母有两条自留录音但无内容文件。14/旧夹纸和两画分放，第二画背周日；母手机枕边/关新灯，原两空未填。'
+],ledger:{
+  F_AE_REFUSAL61:{type:'fact',statement:'61女儿明确拒绝这一次即时借14册，沈失望但仍有普通来往；没有新借或借期约定',status:'resolved',cast:['许蓉女儿','沈禾'],reader_known:'本次拒借成立，不等朋友破裂或永久不借；后续是否愿借须实际选择。',character_known:{'许蓉女儿':'本人明确拒本次并澄清先前在字，晚没有改口。','沈禾':'亲收拒借，知道本次不借/未约下次；女画画并未获告。'},evidence:ev('今天我还不想借出去。我自己也想看。')},
+  P_AE_DRAW61:{type:'object',statement:'61女另买普通纸笔后所画的两张家用杯铅笔画，独立于原白纸/自写夹纸/课堂纸/父记纸',status:'active',cast:['许蓉女儿','许蓉'],custody:{holder:'许蓉女儿',location:'61周日夜女房桌内干处，旧包装纸隔两画、原店主硬纸保护',condition:'第一张歪沿鼓底远柄/试线；第二张小杯双线柄、擦毛/口沿误黑、后添底下两笔，背右下周日；两画均保留，另8新纸空白；笔/橡皮/刨笔刀另纸盒，原家用白杯窗下'},reader_known:'已实际画过和改过但不满意；不算学成，未发画照/未交友，不把第三张未落笔算已画。',character_known:{'许蓉女儿':'本人独画/改/收两张，花本章新5元和两趟上下楼，知道纸上缺陷。','许蓉':'早见首张制作和午后第二张未完，夜只细看第二张及女指的两笔，未重新取首张，认为仍不像/有缺口。'},evidence:[...ev('她没有将它揉成团。两张分开叠好，中间留一张干净的旧包装纸'),...ev('十张纸、铅笔和橡皮合三元。她手机付过'),...ev('这一只两元') ]},
+  P_DR_FLOWER_BOOK:{custody:{holder:'许蓉女儿',location:'61周日夜女房，原自写夹纸留实际停页',condition:'原14册仍自持，本次明确拒借沈；细枝/左边空着旧字未添，和新画分放，无新借/画照'},reader_known:'61自己看/保留14，友拒借仍有失望及普通联系；后续借还未发生。',character_known:{'许蓉女儿':'亲持14并本次拒借，旧夹纸不作新画纸，午后和夜实际翻看。','沈禾':'亲看过59页后还回，61文字获明确拒借，未拿到/未新看实体，不知女今具体停页。','许蓉':'亲听女说沈问借及女没答应，未读两女全部消息或代决是否借。'},evidence:ev('她将原夹纸夹回今夜还想看的位置，没有添字，书收进房里。')},
+  P_W_PICTURE_BOOK:{custody:{holder:'沈禾',location:'61周日傍晚沈自家床边',condition:'原8册自读后收回，原白纸仍旧处，父未持/没有新购或新借'},reader_known:'61本想看14未借成，自读8不是立即消除失望；只当日读用，不认画中人全史。',character_known:{'沈禾':'亲读窗/屋瓦/桶等，白纸旧位，自收床边。'},evidence:ev('书合上时，原白纸仍在旧处，她将它带回床边')},
+  P_AD_SELF_RECORD60:{custody:{holder:'许蓉',location:'61周日夜本人手机，回本人枕边',condition:'60早晚两条原录音继续自听；未删剪转发/无新录，女无副本，沈只获文字存在及数量'},reader_known:'母女听过原文件；何只旧现场起句/当日听母口述哼过，61夜沈文字新知有两条母自留录音但无内容/文件，不再称完全不知存在。',character_known:{'许蓉':'亲自重听并保留两条，夜自手机回枕边；未获告女与沈这段文字。','许蓉女儿':'亲听原两条并知内容，61夜文字提两条及母自留，没发文件/唱法细节；自己无副本。','沈禾':'61夜女文字新告母有两条自己留的录音，只知存在/数量及今日在听，未听文件、不知唱句/前头录了没。'},evidence:ev('明明录音只有两条，自己母亲开头还要每回都等。')},
+  P_AD_NEW_DESK_LAMP54:{custody:{holder:'许蓉',location:'61周日夜许家原桌，母亲临歇关',condition:'原72元灯，女晚用灯看第二张画，母同桌吃饭/独听，未新购/退换；女小灯独立'},evidence:ev('临歇前，许蓉关了新灯，手机带回自己枕边。')}
+}};
+const report='审查/AE-A-61-完整实读与纲文回对.md';
+input.draft_review={reviewer:'AE A同一原生Codex知情创作自检',report,draft_sha256:sha(bytes),report_sha256:sha(fs.readFileSync(path.join(P,report)))};
+assert.deepEqual(input.source_hashes,j(path.join(P,'.writer/drafts/ae-a-record61-original.json')).source_hashes);
+fs.writeFileSync(path.join(A,'a-record61-input.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,unit:61,expected_revision:input.expected_revision,draft,input:'a-record61-input.json',ledger_ids:Object.keys(input.changes.ledger),report,source_hashes_preserved:true}));

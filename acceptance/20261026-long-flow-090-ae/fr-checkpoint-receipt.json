@@ -1,0 +1,51 @@
+{
+  "saved_at": "2026-10-26T08:33:38.750Z",
+  "native_id": "01a176d2-2255-7e80-9c37-d825387a4fef",
+  "checkpoint_command": {
+    "command": "node acceptance/20261026-long-flow-090-ae/checkpoint-main-complete.mjs final-read-complete 66",
+    "exit_code": 0,
+    "stdout": {
+      "ok": true,
+      "label": "final-read-complete",
+      "revision": 396,
+      "registered_units": 66,
+      "generation": 9,
+      "files": 29876
+    },
+    "stderr": ""
+  },
+  "readback_command": {
+    "command": "node acceptance/20261026-long-flow-090-ae/check-main-reading-resume.mjs final-read-complete-readback checkpoint-final-read-complete.json",
+    "exit_code": 0,
+    "stdout": {
+      "ok": true,
+      "at": "2026-10-26T08:33:13.326Z",
+      "label": "final-read-complete-readback",
+      "project": "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\东岸末班船-66章独立验证",
+      "checkpoint": "checkpoint-final-read-complete.json",
+      "checkpoint_sha256": "fb344aa1678ec735bf12545ce7e16cfc76081b9f9bc72714f7c2b3e0ee0fffdf",
+      "revision": 396,
+      "registered_units": 66,
+      "state_sha256": "ec9ff0317a385348704bc65e51815cd9d5d5ab0313a1fa0441ba0fa002f0d2ad",
+      "verified_files": 29876,
+      "frozen_source_and_report_objects_verified": 175,
+      "note": "Read-only restoration check before continuing current-book reading/review/export; not literary acceptance."
+    },
+    "stderr": ""
+  },
+  "checkpoint": {
+    "ref": "checkpoint-final-read-complete.json",
+    "sha256": "fb344aa1678ec735bf12545ce7e16cfc76081b9f9bc72714f7c2b3e0ee0fffdf"
+  },
+  "checkpoint_state": {
+    "ref": "checkpoint-final-read-complete-state.json",
+    "sha256": "ec9ff0317a385348704bc65e51815cd9d5d5ab0313a1fa0441ba0fa002f0d2ad"
+  },
+  "readback": {
+    "ref": "reading-resume-final-read-complete-readback-verification.json",
+    "sha256": "62ff3f55a19d94dba2ff6b1cae9da4074417be9636a8afbeb2931e32319d79e9"
+  },
+  "project_writes_after_checkpoint": 0,
+  "actual_native_exit": "pending root observation",
+  "overall_acceptance_complete": false
+}

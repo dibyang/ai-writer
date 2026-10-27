@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),out=path.join(here,'final-flow');fs.mkdirSync(out);
+const s=fs.readFileSync(path.join(here,'run-revision.mjs'),'utf8').replace("path.join(here,'extracted-final/ai-writer-0.9.0')","path.resolve(here,'../extracted-verified/ai-writer-0.9.0')").replaceAll("'source/derived.json'","'../source/derived.json'").replaceAll("'source/old-review-1.json'","'../source/old-review-1.json'").replaceAll("'build-final-fixed.json'","'../build-verified-fixed.json'");fs.writeFileSync(path.join(out,'run-revision.mjs'),s,{flag:'wx'});

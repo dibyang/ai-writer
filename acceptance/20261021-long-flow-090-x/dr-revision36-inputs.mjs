@@ -1,0 +1,3 @@
+import fs from 'node:fs';const P=new URL('./scenario/东岸末班船-再扩展验证/',import.meta.url);const put=(p,v)=>fs.writeFileSync(new URL(p,P),JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+put('.writer/drafts/dr-resolve36-tracking.json',{expected_revision:161,operation_id:'x-dr36-adopt-tracking',id:'I_X_DR36_BOOK_KNOWLEDGE',disposition:'adopted',reason:'实读36:11/68/92及recall确认同一书约链旧未知应更新；仅36追踪，不改正文及35当时正确未知。依当前用户明确正式修订授权在36范围采用，非作者逐项采纳。',decision_actor:'agent-within-authorized-scope',authorization:{ref:'.writer/objects/345ca1e4-f6b5-4369-90d2-5678a699f1a6.json',sha256:'110d6df464e8058748ba48e3216de4d0f8837b80ebc23ae4197a2d8c2fcf43bc'}});
+put('.writer/drafts/dr-revision36-begin-v2.json',{expected_revision:162,owner:'X-D-same-thread-dr-tracking36',from:36,through:36});

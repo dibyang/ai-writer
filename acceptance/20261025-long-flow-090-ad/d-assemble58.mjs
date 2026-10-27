@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),p=JSON.parse(fs.readFileSync(path.join(base,'project.json'))).project,sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const s=JSON.parse(fs.readFileSync(path.join(p,'.writer/state.json'))),t=JSON.parse(fs.readFileSync(path.join(p,'.writer/drafts/ad-d-record-template58-original.json'))),ctx=JSON.parse(fs.readFileSync(path.join(p,'.writer/drafts/ad-d-context58-default.json')));
+assert.equal(s.revision,t.expected_revision);assert.deepEqual(t.source_hashes,ctx.source_hashes);for(const [ref,h]of Object.entries(t.source_hashes))assert.equal(sha(fs.readFileSync(path.join(p,ref))),h,ref);
+const original=fs.readFileSync(path.join(p,'分段/AD-D-0058/09.md'),'utf8');
+const replacements=[['沈禾问原来的白纸呢，话出口，自己便摇头，说想起的是自己书里那张。父亲让她看记纸的背面，印过的旧说明还在，他取的是早先纸套里的，没动她的画册。她笑着认过，将袋轻提到原椅旁干桌上，杯另拿，没有一并装进去。','记纸背面印过的旧说明还在，沈禾认出是方才从纸套里取的那张。她将袋轻提到原椅旁干桌上，杯另拿，又接过父亲盖好的笔，留到原桌上。父亲的两手空出来，一手够到杖，另一臂才让她扶住。'],['父亲说今天那把窗边椅先留着，薄衣别再搭回去，她答好，明早穿的时候自己认得另一头。','父亲说今天那把窗边椅先留着，薄衣别再搭回去，她答好，衣服就在他身旁，明早伸手能取。']];
+let revised=original;for(const [a,b]of replacements){assert.equal(revised.split(a).length,2);revised=revised.replace(a,b);}
+const revisedRef='分段/AD-D-0058-修正/09.md';fs.mkdirSync(path.dirname(path.join(p,revisedRef)),{recursive:true});fs.writeFileSync(path.join(p,revisedRef),revised,{flag:'wx'});
+const parts=Array.from({length:9},(_,i)=>i===8?revisedRef:`分段/AD-D-0058/${String(i+1).padStart(2,'0')}.md`).map(ref=>({path:ref,sha256:sha(fs.readFileSync(path.join(p,ref)))}));
+const input={unit:58,expected_revision:s.revision,draft:t.draft,parts,separator:'\n\n'};
+fs.writeFileSync(path.join(p,'.writer/drafts/ad-d-assemble58-input.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+const count=x=>(x.replace(/^#{1,6} .*$/gm,'').match(/\p{Script=Han}/gu)||[]).length;
+const report={at:new Date().toISOString(),revision:s.revision,context_sha256:sha(fs.readFileSync(path.join(p,'.writer/drafts/ad-d-context58-default.json'))),template_sha256:sha(fs.readFileSync(path.join(p,'.writer/drafts/ad-d-record-template58-original.json'))),source_hashes_verified:true,default_context_passed:true,max_chars:40000,serialized_context_chars:JSON.stringify(ctx).length,section_chars:Object.fromEntries(Object.entries(ctx).map(([k,v])=>[k,JSON.stringify(v).length])),original_parts_han:13012,replacements:replacements.map(([before,after])=>({before,after})),final_han:parts.reduce((n,v)=>n+count(fs.readFileSync(path.join(p,v.path),'utf8')),0),parts};
+assert(report.final_han>=12000);fs.writeFileSync(path.join(base,'d-before58-writing-and-assembly.json'),JSON.stringify(report,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,final_han:report.final_han,revision:s.revision,parts:parts.length,context:report.serialized_context_chars},null,2));

@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "at": "2026-10-25T09:31:49.368Z",
+  "planned_order_passed": false,
+  "actual_sequence": "new workflow rejected; six authorized old-byte proposal freezes; corrected revision workflow; full reading; baseline publications; historical stages; independent revision",
+  "failed_workflow_state_unchanged": true,
+  "freezes": [
+    {
+      "label": "ef-freeze-old-1",
+      "revision_before": 296,
+      "revision_after": 297,
+      "old_stage": "trial",
+      "plan_was_authorized": true,
+      "proposal_only": true,
+      "version_id": "AD_E_S01_OLD",
+      "ref": "大纲/单元/0056.json",
+      "sha256": "c88e9ac3b4fe03a3f4dd6450db1d0f7b296fda7ad68e47d954a3ac32cf5f5213",
+      "consumers": [
+        56
+      ],
+      "units_snapshot_governance_ranges_pending_unchanged": true
+    },
+    {
+      "label": "ef-freeze-old-2",
+      "revision_before": 297,
+      "revision_after": 298,
+      "old_stage": "trial",
+      "plan_was_authorized": true,
+      "proposal_only": true,
+      "version_id": "AD_E_S02_OLD",
+      "ref": "大纲/单元/0058.json",
+      "sha256": "08aa0ce937038591d06526a963a600e11ed3c6503090eda05adad6275d01a4a0",
+      "consumers": [
+        58
+      ],
+      "units_snapshot_governance_ranges_pending_unchanged": true
+    },
+    {
+      "label": "ef-freeze-old-3",
+      "revision_before": 298,
+      "revision_after": 299,
+      "old_stage": "trial",
+      "plan_was_authorized": true,
+      "proposal_only": true,
+      "version_id": "AD_E_S03_OLD",
+      "ref": "大纲/单元/0059.json",
+      "sha256": "86e552371a8c36ce596a6e5349f7aff08699933eeb9b40f403f80773bcc4e15f",
+      "consumers": [
+        59
+      ],
+      "units_snapshot_governance_ranges_pending_unchanged": true
+    },
+    {
+      "label": "ef-freeze-old-4",
+      "revision_before": 299,
+      "revision_after": 300,
+      "old_stage": "trial",
+      "plan_was_authorized": true,
+      "proposal_only": true,
+      "version_id": "AD_E_S04_OLD",
+      "ref": "大纲/单元/0060.json",
+      "sha256": "e72066b7624333bb1c6ef3979fba0e87dc1290a0cc316ddfd14847fd9ed9f6de",
+      "consumers": [
+        60
+      ],
+      "units_snapshot_governance_ranges_pending_unchanged": true
+    },
+    {
+      "label": "ef-freeze-old-5",
+      "revision_before": 300,
+      "revision_after": 301,
+      "old_stage": "trial",
+      "plan_was_authorized": true,
+      "proposal_only": true,
+      "version_id": "AD_E_S05_OLD",
+      "ref": "研究/AD-D滚动写前核对.md",
+      "sha256": "ba97625e69a41c4d2d5accff0cb79ae664171778cacbd0a4f1b60be356dc131b",
+      "consumers": [
+        58,
+        59,
+        60
+      ],
+      "units_snapshot_governance_ranges_pending_unchanged": true
+    },
+    {
+      "label": "ef-freeze-old-6",
+      "revision_before": 301,
+      "revision_after": 302,
+      "old_stage": "trial",
+      "plan_was_authorized": true,
+      "proposal_only": true,
+      "version_id": "AD_E_S06_OLD",
+      "ref": "研究/AD-DR-60写前核对.md",
+      "sha256": "4dca76581012c620f37d716ddf65c1308bfb1102fbe6acae5da78224a5173e47",
+      "consumers": [
+        60
+      ],
+      "units_snapshot_governance_ranges_pending_unchanged": true
+    }
+  ],
+  "later_publications_stages_and_begin_after_corrected_workflow": [
+    "ef-baseline-publish-1",
+    "ef-baseline-publish-2",
+    "ef-baseline-publish-3",
+    "ef-baseline-publish-4",
+    "ef-baseline-publish-5",
+    "ef-baseline-publish-6",
+    "ef-candidate-source-publish-1",
+    "ef-candidate-source-publish-2",
+    "ef-candidate-source-publish-3",
+    "ef-candidate-source-publish-4",
+    "ef-candidate-source-publish-5",
+    "ef-candidate-source-publish-6",
+    "ef-revision-begin",
+    "ef-stage-1",
+    "ef-stage-2",
+    "ef-stage-3",
+    "ef-stage-4",
+    "ef-stage-5",
+    "ef-stage-6"
+  ],
+  "decision": "Root accepts the correctly frozen original-byte proposals for continued validation. Keep the controller ordering deviation; do not claim the planned setup order passed. No source hash, baseline, or old record is rewritten to hide it.",
+  "scope": "Existing stage allowed plan; freeze is proposal-only. This does not retrospectively authorize a body edit or version publication under the old range."
+}

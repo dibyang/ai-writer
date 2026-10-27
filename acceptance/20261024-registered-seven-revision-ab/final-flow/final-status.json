@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "title": "桥账：独立兼容验证",
+  "kind": "novel",
+  "revision": 29,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "独立样本两处封存小修及候选意见闭环",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 7,
+        "to": 7
+      },
+      "stop_conditions": [
+        "只重登本次封存第七章小修稿；旧六章只读，不写第八章，不发布主稿"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 8,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "55875160-9d83-44f6-b86c-0c530275ddd1",
+        "kind": "continuation-revision",
+        "owner": "AB-independent-CLI",
+        "project_id": "5b880809-2875-42df-82bc-6820845a946f",
+        "build_id": "b64b8fe71c611086a93219876dcbfc0c943819e89996f4fc5e3de07e82156c1f",
+        "scope": {
+          "from": 1,
+          "through": 7
+        },
+        "status": "editing",
+        "base_sha256": "f85f0f2a768dda484e99a1160ad8712625e6eec630927e29cf546f0d0eb627f4",
+        "local_proofs": [
+          {
+            "id": "47032c6c-7200-4bfe-8532-a1b76c7b4ad0",
+            "ref": ".writer/objects/d00bf381-ff22-44d6-9b83-23f72cdb5a2f.json",
+            "sha256": "9f9e645b4071645146e9b7959b8c25c730cd12f352da0caf3c7eecf6ae011ca2",
+            "operation_id": "local-seven",
+            "input_sha256": "2a2965a9b2bbdb02887c5dd348af5dcd9b0a31de406300e831c5c193856f9195"
+          }
+        ],
+        "created_at": "2026-10-24T12:55:56.648Z",
+        "session_sha256": "8d4588ee19fc286e849ca9cab1397eb1cc4579adde5298c8d1dd2c0d1df8ee5b"
+      }
+    ],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 29,
+    "counts": {
+      "verified": 2
+    },
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": false,
+    "suggestion": "跨卷或长篇创作先long-enable-preview，再按已授权范围启用、组织分卷与滚动细纲"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 7,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 8,
+    "plan_exists": false,
+    "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261024-registered-seven-revision-ab\\extracted-verified\\ai-writer-0.9.0\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261024-registered-seven-revision-ab\\final-flow\\limited\\.writer\\revisions\\55875160-9d83-44f6-b86c-0c530275ddd1\\workspace'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 0,
+    "recent": [
+      {
+        "unit": 5,
+        "summary": "阿禾在第5处桥头核对回执日期。"
+      },
+      {
+        "unit": 6,
+        "summary": "阿禾在第6处桥头核对回执日期。"
+      },
+      {
+        "unit": 7,
+        "summary": "阿禾在家压平回执，父亲交代明日带回执先找守桥人，叠好衣服并添灯。"
+      }
+    ],
+    "timeline_tail": [
+      "第2次核账",
+      "第3次核账",
+      "第4次核账",
+      "第5次核账",
+      "第6次核账",
+      "第七章清晨父子交代明日手续，尚未发生明日行动"
+    ]
+  }
+}

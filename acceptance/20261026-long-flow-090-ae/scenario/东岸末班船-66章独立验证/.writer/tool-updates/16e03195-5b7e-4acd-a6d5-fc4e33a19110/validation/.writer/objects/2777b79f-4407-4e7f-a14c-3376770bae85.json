@@ -1,0 +1,69 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-21T09:37:00.003Z",
+  "operation_id": "x-c-outline32-first",
+  "base_revision": 137,
+  "payload": {
+    "stage": "outline",
+    "task": "31真实登记后规划32；本首次只写32前两段3000—4500汉字即停，不合章不登记；同ID再恢复32/33。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "先plan32再采用真实引用",
+        "本次32两段首停，不建33/34",
+        "不把32未登记事件进state"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩大骨架-X.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V10.json",
+          "大纲/分卷/V11.json",
+          "大纲/分卷/V12.json",
+          "大纲/分卷/V13.json"
+        ],
+        "unresolved_ids": [
+          "远期仅粗排，实际结果待后续授权创作"
+        ]
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": [
+          "32写前真实plan；33尚未创建"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续通过 Codex 扩大 0.9.0 的长篇实跑规模，在24章基础上增加章节数量和单章篇幅，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/作者请求-X-原文.md",
+    "source_sha256": "b1dc4eeeff37d1c97c97955931cf3ec2f98fe794730f4cd2265b84ecdb10d785",
+    "locator": "2026-10-21实际用户原话第3行；本次细范围见研究/X-C有限执行指令-原文.md，无消息ID",
+    "recorded_by": "X-C当前执行代理；按授权实施，非作者逐项采纳新细节",
+    "frozen_ref": ".writer/objects/b1dc4eeeff37d1c97c97955931cf3ec2f98fe794730f4cd2265b84ecdb10d785.txt"
+  }
+}

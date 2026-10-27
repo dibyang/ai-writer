@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const a=path.dirname(fileURLToPath(import.meta.url)),unit=Number(process.argv[2]);
+const read=n=>JSON.parse(fs.readFileSync(path.join(a,n),'utf8')),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const entry=read('fvt3-entry-audit.json'),name='fvt3-reading-manifest.json';
+const old=fs.existsSync(path.join(a,name))?read(name):{completed_chapters:[],chapters:[]};
+assert.equal(unit,42+old.completed_chapters.length);assert(unit>=42&&unit<=66);
+const row=entry.reading_range_rows.find(r=>r.unit===unit),noteRef=`fvt3-notes/u${unit}.json`,note=read(noteRef),bytes=fs.readFileSync(path.join(entry.workspace,row.draft)),txt=bytes.toString('utf8');
+assert.equal(sha(bytes),row.sha256);assert.equal(sha(fs.readFileSync(path.join(entry.workspace,'.writer/state.json'))),entry.workspace_state_sha256);
+for(const k of ['causality','continuity','language','carry'])assert(typeof note[k]==='string'&&note[k].trim());
+const pages=[];for(let page=1;page<=row.pages;page++){const label=`fvt3-u${unit}-current-p${String(page).padStart(2,'0')}`,ref=`read-pages/${label}.json`,raw=fs.readFileSync(path.join(a,ref)),p=JSON.parse(raw);assert.equal(p.sha256,row.sha256);assert.equal(p.text,txt.slice((page-1)*1800,page*1800));pages.push({label,ref,sha256:sha(raw),page,from:p.from,to:p.to});}
+const notes=path.join(a,'fvt3-semantic-notes.md');if(!fs.existsSync(notes))fs.writeFileSync(notes,'# 最终修后尾读恢复：workspace42—66容量恢复逐章语义\n\n同原生ID01a176d2-2255-7e80-9c37-d825387a4fef，同revision de25fce4-4446-4b5a-9038-9af130f3b456。主66/r397、分支66/r464/gen9不变；本程只读，新的fvt3页证不复用旧页。第18背对左右错误已由根确认、尚未修，待全尾读后集中处理。48报告错序按老师先问女孩后答纠正，原报告保留，不当正文错。知情模型阅读，非真人盲读或最终验收。\n\n',{flag:'wx'});
+fs.appendFileSync(notes,`## ${unit} ${row.draft}\n\nSHA ${row.sha256}；UTF16 ${row.utf16}；本程完整${row.pages}/${row.pages}页（1—${row.pages}）。\n\n- 因果与关系：${note.causality}\n- 连续性与知情：${note.continuity}\n- 语言与保留：${note.language}\n- 接续/待核：${note.carry}\n\n`);
+old.completed_chapters.push(unit);old.chapters.push({...row,actual_pages:pages,complete_model_read:true,semantic_note_input:noteRef});
+Object.assign(old,{at:new Date().toISOString(),native_id:entry.native_id,session_id:entry.session_id,workspace:entry.workspace,workspace_state_sha256:entry.workspace_state_sha256,planned_from:42,planned_through:66,planned_pages:242,actual_complete_reading_pages:old.chapters.reduce((n,r)=>n+r.pages,0),unread_requested_units:Array.from({length:66-unit},(_,i)=>unit+1+i),prior_run_coverage:{complete_units:[37,38,39,40,41],pages:39,incomplete42pages6_excluded:true,capacity_failure_preserved:true},semantic_notes:'fvt3-semantic-notes.md',unfixed_confirmed_issue:'ROOT-FVT1-18-DIRECTION-REVIEW.md',not_literary_acceptance:true});
+fs.writeFileSync(path.join(a,name),JSON.stringify(old,null,2)+'\n');fs.writeFileSync(path.join(a,`fvt3-reading-manifest-through${unit}.json`),JSON.stringify(old,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,completed_through:unit,chapters:old.chapters.length,pages:old.actual_complete_reading_pages,planned_pages:242}));

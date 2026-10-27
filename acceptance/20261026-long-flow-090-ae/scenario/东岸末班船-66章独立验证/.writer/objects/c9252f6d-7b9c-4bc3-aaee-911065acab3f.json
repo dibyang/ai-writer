@@ -1,0 +1,81 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-25T20:05:18.389Z",
+  "operation_id": "AE_B_FIRST_FINITE64_66_20261026",
+  "base_revision": 361,
+  "payload": {
+    "stage": "drafting",
+    "task": "AE B完整有限目标draft64—66。本新原生ID首个进程仅写64完整/实读复核/登记，65六段只写第1—2段真实正文后正常退出；该首程结束后，同一ID恢复并先核checkpoint/读回原两段/原context和原record-template，才可续65第3—6段、合章登记及66。不得在65原模板停点后改workflow导致CAS失效。具体普通场面由根已接受的独立fixture实施，非人类新增逐项选择。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 64,
+        "to": 66
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "64—66为完整有限目标；第一进程断点为64完整登记及65前2/6段，不合章/登记65、不写第3段及66；首程实际退出后，同ID恢复才获后四段及66实施许可。",
+        "停点保持workflow及65原context/template/source_hashes/source_bindings/CAS和选定两段；不得为标暂停改workflow，也不重取模板洗哈希。",
+        "已登记稿若发现硬伤需先保存失败/原件交根，本程revise范围为空；未登记新稿可另存修正版。旧33未发布差异、9已应用、13optional/49retained均保留。",
+        "普通章正文至少16000汉字、65至少22000/建议24000—25500；靠行动选择及后果展开，不能凭篇幅宣称文学验收。",
+        "100—105分钟未抵达断点保存真实状态/未完成及适当checkpoint，正常结束供根同ID续；不预填exit。禁止旧AD/关闭修订路径、真实作品、Git、工具资源、子代理/其他原生/外部聊天。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "根已接受在真实作者持续隔离验证任务范围内实施B有限fixture；普通实施选择由代理承担，非人类新增逐项确认。原已消费骨架/卷纲保持；本程只正式细化确认无消费者的64/65和可信66骨架。"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "大纲/AE新增骨架-61-66.md",
+          "研究/AE规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "根已接受在真实作者持续隔离验证任务范围内实施B有限fixture；普通实施选择由代理承担，非人类新增逐项确认。原已消费骨架/卷纲保持；本程只正式细化确认无消费者的64/65和可信66骨架。"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V22.json",
+          "大纲/分卷/V23.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "根已接受在真实作者持续隔离验证任务范围内实施B有限fixture；普通实施选择由代理承担，非人类新增逐项确认。原已消费骨架/卷纲保持；本程只正式细化确认无消费者的64/65和可信66骨架。"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0064.json",
+          "大纲/单元/0065.json",
+          "大纲/单元/0066.json",
+          "大纲/AE新增骨架-61-66.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "根已接受在真实作者持续隔离验证任务范围内实施B有限fixture；普通实施选择由代理承担，非人类新增逐项确认。原已消费骨架/卷纲保持；本程只正式细化确认无消费者的64/65和可信66骨架。"
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AE作者任务.md",
+    "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+    "locator": "研究/AE作者任务.md第9—15行；根b-root-entry-review.json及已激活prompt-b-first.md在真实任务范围接受受限fixture。",
+    "recorded_by": "AE B新原生01a174a4-b60f-7fe3-9a9d-ba7857671feb",
+    "frozen_ref": ".writer/objects/fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868.txt"
+  }
+}

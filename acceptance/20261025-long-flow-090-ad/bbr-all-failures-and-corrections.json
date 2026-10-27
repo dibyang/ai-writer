@@ -1,0 +1,81 @@
+{
+  "scope": "B same-ID restoration turn only",
+  "tool_defects_found": [],
+  "cli_success": 22,
+  "cli_failed": 1,
+  "helper_read_or_audit_failures": 7,
+  "failures": [
+    {
+      "id": "F1",
+      "kind": "CLI预算",
+      "action": "bbr-context54-budget",
+      "exit_code": 2,
+      "reason": "默认40000，实际44267，超4267，明确拒绝不静默截断",
+      "correction": "保留全部约束，bbr-context54显式60000成功；模板之后才写第一段",
+      "state_changed": false
+    },
+    {
+      "id": "F2",
+      "kind": "FastCtx输入",
+      "action": "read外层研究/none",
+      "reason": "误输不存在路径",
+      "correction": "立即读作品内研究/AD规划与旧线证据.md全文39行",
+      "state_changed": false
+    },
+    {
+      "id": "F3",
+      "kind": "辅助shell",
+      "action": "inline替换bbr-fill54.mjs",
+      "exit_code": 1,
+      "reason": "PowerShell引号造成SyntaxError Expected unicode escape",
+      "correction": "保留原失败脚本，另存bbr-fill54-corrected.mjs并FastCtx单次替换",
+      "state_changed": false
+    },
+    {
+      "id": "F4",
+      "kind": "辅助引文校验",
+      "action": "bbr-fill54.mjs",
+      "exit_code": 1,
+      "reason": "临时占位引文 她从零钱格 不在正文，AssertionError",
+      "correction": "未生成报告/登记输入即停止；原失败脚本另保留bbr-fill54-failed-original.mjs，修正版用真实子串后成功",
+      "state_changed": false
+    },
+    {
+      "id": "F5",
+      "kind": "只读日志",
+      "action": "read cli-logs/bbr-preview54/stdout.json",
+      "exit_code": 1,
+      "reason": "ENOENT，真实输出为stdout.txt",
+      "correction": "FastCtx列出6文件后按stdout.txt读摘要/未变条目",
+      "state_changed": false
+    },
+    {
+      "id": "F6",
+      "kind": "只读审计摘要",
+      "action": "checkpoint files.slice",
+      "exit_code": 1,
+      "reason": "TypeError：files为路径映射不是数组",
+      "correction": "Object.entries读取清单摘要，完整799项交脚本核字节",
+      "state_changed": false
+    },
+    {
+      "id": "F7",
+      "kind": "最终辅助审计",
+      "action": "bbr-final-audit.mjs",
+      "exit_code": 1,
+      "reason": "误按普通state读快照；实际为type Buffer/data包装，old.governance undefined",
+      "correction": "原失败脚本保留，另存corrected解码原字节，核decoded SHA等入口state",
+      "state_changed": false
+    },
+    {
+      "id": "F8",
+      "kind": "最终辅助审计",
+      "action": "bbr-final-audit-corrected.mjs",
+      "exit_code": 1,
+      "reason": "误以为799文件清单含.writer/state.json；实际state另字段/独立快照，清单仅54plan改变",
+      "correction": "保留两失败脚本，corrected2核状态独立SHA及799项，798不变/54未消费plan合法变化，成功",
+      "state_changed": false
+    }
+  ],
+  "output_truncations": "CLI/context/preview/status/doctor输出有显示截断，stdout.txt原文留存；正文分页均完整输出，未以截尾计覆盖。"
+}

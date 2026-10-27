@@ -1,0 +1,71 @@
+{
+  "expected_revision": 391,
+  "operation_id": "AE_R_S08_STAGE",
+  "author_evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AE作者任务.md",
+    "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+    "locator": "研究/AE作者任务.md第9—15行原话；本次已激活R首程控制器要求独立fixture有限revise54—66并保存只读保护首停。74/20为待实际核实的普通fixture候选，不冒称作者新增逐项原话。",
+    "recorded_by": "AE R native 01a17511-c2b0-79a3-bf72-0f77373bfce2"
+  },
+  "impact": {
+    "schema_version": 1,
+    "revision": 391,
+    "state_sha256": "0dc7babc88cd7a90a1d77bff3f8cee621d7375428f26ecfb9fb38a537ce413eb",
+    "version_id": "AE_R_S08_NEW",
+    "ref": "大纲/分卷/V23.json",
+    "from": 64,
+    "mode": "historical",
+    "candidate_sha256": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+    "direct_consumers": [
+      {
+        "unit": 64,
+        "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 65,
+        "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 66,
+        "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 64,
+    "review_from": 63,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [],
+    "possible_indirect_from": 64,
+    "possible_indirect_through": 66,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b.source": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+      "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+      "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+      "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+      "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+      ".writer/objects/b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca.source": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  },
+  "review": {
+    "report": "审查/AE-R-S08-来源影响.md",
+    "report_sha256": "093ab736c2e2fa85d0d4673ccace4b8d041b0aedd28ea3970edae6cc1394397d",
+    "readings": {
+      ".writer/objects/ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b.source": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+      "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+      "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+      "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+      "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+      ".writer/objects/b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca.source": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca"
+    },
+    "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+    "unresolved": []
+  }
+}

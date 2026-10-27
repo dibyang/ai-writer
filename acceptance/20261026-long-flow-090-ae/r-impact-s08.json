@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "revision": 391,
+  "state_sha256": "0dc7babc88cd7a90a1d77bff3f8cee621d7375428f26ecfb9fb38a537ce413eb",
+  "version_id": "AE_R_S08_NEW",
+  "ref": "大纲/分卷/V23.json",
+  "from": 64,
+  "mode": "historical",
+  "candidate_sha256": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+  "direct_consumers": [
+    {
+      "unit": 64,
+      "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+      "bound": true,
+      "affected_by_publication": true
+    },
+    {
+      "unit": 65,
+      "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+      "bound": true,
+      "affected_by_publication": true
+    },
+    {
+      "unit": 66,
+      "consumed_sha256": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca",
+      "bound": true,
+      "affected_by_publication": true
+    }
+  ],
+  "revision_from": 64,
+  "review_from": 63,
+  "retained_prefix_consumers": [],
+  "replaced_ranges": [],
+  "possible_indirect_from": 64,
+  "possible_indirect_through": 66,
+  "possible_indirect_impact": "unknown-requires-reading",
+  "required_readings": {
+    ".writer/objects/ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b.source": "ceaf8441cb37aa35c37c707c4808307132e891929ede5ee65cf1ed70eadd639b",
+    "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+    "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+    "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+    "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+    ".writer/objects/b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca.source": "b8b6ec2e605f43b19005fb8bf1acd38b34376326dd42345ec515a10ef8368dca"
+  },
+  "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+}

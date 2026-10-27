@@ -1,0 +1,77 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-21T06:09:36.966Z",
+  "operation_id": "x-a-26-first-stop-task",
+  "base_revision": 116,
+  "payload": {
+    "stage": "drafting",
+    "task": "X-A首停执行：25已完整登记，正在26前两段；26尚未完成，达到3000—4500汉字保存交接并暂停本次执行、正常退出，保留同ID有限25—27授权，续完26/27后滚动复盘。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 25,
+        "to": 27
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "A首次25登记后只写26前两段3000—4500正文汉字，不合章不record，保存交接正常退出，有限25—27授权留给同ID恢复。",
+        "27完成后完整连读25—27及22—24复盘；28—36仍只规划，不写37。",
+        "所有旧24正文/units及原observation三项保护；只写X，不改产品根/W/其他作品、不派代理、不提交推送发布付费。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩大骨架-X.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V10.json",
+          "大纲/分卷/V11.json",
+          "大纲/分卷/V12.json",
+          "大纲/分卷/V13.json"
+        ],
+        "unresolved_ids": [
+          "远期仅粗排，实际结果待后续授权创作"
+        ]
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0025.json",
+          "大纲/单元/0026.json"
+        ],
+        "unresolved_ids": [
+          "26仅中间稿不入ledger，尚未完成；27待写/读22—27后复盘",
+          "28—36远期只规划，未来兑现不记resolved；作者未逐项确认代理附带细节"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续通过 Codex 扩大 0.9.0 的长篇实跑规模，在24章基础上增加章节数量和单章篇幅，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/作者请求-X-原文.md",
+    "source_sha256": "b1dc4eeeff37d1c97c97955931cf3ec2f98fe794730f4cd2265b84ecdb10d785",
+    "locator": "X/author-request.md 第3行；2026-10-21 本聊天用户消息，无可用消息ID",
+    "recorded_by": "X-A 原生 Codex，依据本地实际作者请求记录；不作作者身份认证",
+    "frozen_ref": ".writer/objects/b1dc4eeeff37d1c97c97955931cf3ec2f98fe794730f4cd2265b84ecdb10d785.txt"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-25T00:34:08.758Z",
+  "kind": "controller-managed-group-path-error",
+  "exit_code": 1,
+  "code": "ENOENT",
+  "missing": "installed tool/writer-essay/SKILL.md",
+  "cause": "skills file paths are relative to their group root, not tool root. identifyBuild already resolves and hashes the actual paths correctly.",
+  "effect": "Read-only failure before final receipt; no source/story/installed resource mutation.",
+  "correction": "Compare actual identifyBuild file vectors including group/file/bytes/hash for package and installation; do not reconstruct grouped paths."
+}

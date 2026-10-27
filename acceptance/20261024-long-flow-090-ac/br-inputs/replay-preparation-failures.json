@@ -1,0 +1,11 @@
+{
+  "state_revision_unchanged":193,
+  "failures":[
+    {"stage":"prepare-replay42.mjs","exit_code":1,"error":"deepStrictEqual: replay omitted unchanged T_AC_SHARED_MEAL.status=partial","effect":"assert before report/input write; original changes and replay raw retained","correction":"check actual pre-42 ledger partial, compare all real differences after allowing exactly this omitted unchanged field"},
+    {"stage":"br32-preview-replay42 wrapper","exit_code":1,"error":"ENOENT replay42-filled.json -> input.raw.json","effect":"wrapper stopped before CLI; empty log directory retained","cause":"dependent call incorrectly attempted after preparation failure"},
+    {"stage":"read br32 stdout","exit_code":1,"error":"ENOENT stdout.txt","effect":"read only; no output existed","cause":"dependent inspection incorrectly attempted after wrapper failure"}
+  ],
+  "failed_helper":"prepare-replay42-before-delta-check.mjs",
+  "source_hashes_refreshed":false,
+  "draft_changed_during_failure":false
+}

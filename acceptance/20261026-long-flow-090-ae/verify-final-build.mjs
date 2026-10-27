@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {identifyBuild} from '../../lib/tool-build.mjs';
+const A=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(A,'../..');
+const j=p=>JSON.parse(fs.readFileSync(p)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const cfg=j(path.join(A,'active-tool-generation8.json')),reused=j(path.join(A,'reused-tests.json'));
+const P=j(path.join(A,'project.json')).project,state=j(path.join(P,'.writer/state.json'));
+assert.equal(state.units.length,66,'Only run after actual66 and later fixes');
+assert.equal(state.tool_control.generation,8,'A new build requires its own final test/package proof, not this reused-generation8 receipt');
+const source=identifyBuild(repo),pack=identifyBuild(cfg.package),installed=identifyBuild(cfg.installed_root);
+for(const b of [source,pack,installed]){assert(b.ok);assert.equal(b.observed_content_id,cfg.content_id);assert.equal(b.runtime_id,cfg.runtime_id);}
+assert.deepEqual(installed.files,pack.files);assert.equal(state.tool_control.installed.source_content_id,cfg.content_id);
+const manifest=j(path.join(cfg.package,'RELEASE-MANIFEST.json'));
+assert.equal(manifest.sources.length,327);
+for(const row of manifest.sources){assert.equal(sha(fs.readFileSync(path.join(repo,row.source))),row.sha256,row.source);assert.equal(sha(fs.readFileSync(path.join(cfg.package,row.file))),row.sha256,row.file);}
+const AD=path.dirname(cfg.package).replace(/[\\/]extracted-reference-evidence$/,'');
+const verificationFile=path.join(AD,'generation8-package-verification.json'),verification=j(verificationFile);
+assert.equal(sha(fs.readFileSync(verification.archive)),cfg.archive_sha256);
+const receiptBytes=fs.readFileSync(reused.reference),receipt=JSON.parse(receiptBytes);
+assert.equal(sha(receiptBytes),reused.receipt_sha256);assert.equal(receipt.exit_code,0);
+const stdout=fs.readFileSync(path.join(path.dirname(reused.reference),'stdout.txt'));
+assert.equal(sha(stdout),receipt.stdout_sha256);assert.equal(receipt.stdout_sha256,verification.tests.stdout_sha256);
+for(const [key,value] of [['tests',229],['pass',227],['fail',0],['skipped',2]])assert(new RegExp('^# '+key+' '+value+'\\r?$','m').test(stdout.toString('utf8')),key);
+assert.equal(reused.content_id,cfg.content_id);assert.equal(reused.runtime_id,cfg.runtime_id);assert.equal(reused.fresh_test_run,false);
+const result={ok:true,at:new Date().toISOString(),generation:8,revision:state.revision,content_id:cfg.content_id,runtime_id:cfg.runtime_id,source_and_release_files_matched:manifest.sources.length,installed_managed_files_matched:installed.files.length,archive_sha256:cfg.archive_sha256,tests:{fresh_test_run:false,reference:reused.reference,receipt_sha256:reused.receipt_sha256,stdout_sha256:receipt.stdout_sha256,tests:229,pass:227,fail:0,skipped:2,skips:'Windows symlink permissions'},package_verification_sha256:sha(fs.readFileSync(verificationFile)),engine_changed:false,engine_suite_run:false,scope:'Final source, immutable package, project installation and exact original same-build TAP test streams. No new229-test run, Linux/macOS CI, literary or formal release certification.'};
+fs.writeFileSync(path.join(A,'build-parity-final.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));

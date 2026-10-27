@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "auxiliary-json-parser",
+    "formal_cli": "epr-recall-zhou-short",
+    "formal_cli_exit": 0,
+    "error": "SyntaxError: Unexpected token W, Warning: truncated output is not valid JSON",
+    "cause": "exec_command返回长输出时的显示截断前缀被当成JSON解析；包装器实际stdout.txt为完整JSON。",
+    "correction": "从原cli-logs/epr-recall-zhou-short/stdout.txt解析并按字段返回；成功取total112/omitted12及九章定位，之后原文实际读。",
+    "state_unchanged": true
+  },
+  {
+    "kind": "metadata-output-truncation",
+    "cause": "初次units+review_workflow全对象及sources/issue嵌套汇总过大；没有将截断元数据或摘要算正文实读。",
+    "correction": "保留原会话输出/CLI原始双流；epr-inspect.mjs改为source消费者和issue commit/ref/units摘要，所需54/55/56/60差量与ledger又专门足额输出。正式正文87页全部足额返回。",
+    "state_unchanged": true
+  },
+  {
+    "kind": "progress-time-estimate-correction",
+    "cause": "早期按估算报约9分钟偏大，08:18:20真实时钟显示入场约7分钟。",
+    "correction": "后续按UTC实时时钟/首次CLI started_at计时，不把估计当执行证据。",
+    "state_unchanged": true
+  }
+]

@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+const P=path.join(path.dirname(fileURLToPath(import.meta.url)),'scenario','东岸末班船-再扩展验证');
+const state=JSON.parse(fs.readFileSync(path.join(P,'.writer/state.json'),'utf8'));
+const source='研究/X-C续程执行指令-原文.md';const quote='本新任务覆盖首轮“停在未完段”的本地停点指令，现明确授权在既有有限31—33范围内继续至末章复盘，别再停回同一首停。';
+const sha=crypto.createHash('sha256').update(fs.readFileSync(path.join(P,source))).digest('hex');
+const w=structuredClone(state.governance);delete w.enabled;delete w.decisions;delete w.note;
+w.stage='trial';w.task='X-C同ID续程：真实本次任务覆盖首次未完段停点，接现有32两段完成32/33及当前28—33完整复盘，不重写已登记31，不创建34。旧32纲/近期纲关于首次停点为历史执行范围，非本次永久剧情禁止；原来源字节保留。';
+w.authorization={allowed_actions:['discuss','plan','draft'],draft_range:{from:31,to:33},revise_range:null,stop_conditions:['完成现有32到至少8000汉字、4—6实际段/真实报告及preview0/record','33另先plan/context/template，目标10500—11500、至少10000汉字/至少5段；record后当前28—33完整单调实读/正式review','完成后paused仅discuss、两范围null；34本轮未授权','原24/已登记31/原观察三字段/旧来源及备份保持，不代理/源码/原作品/导出/封存/提交推送']};
+w.planning.outline.unresolved_ids=['32当前两段保留接续，旧首次停点被本次真实任务覆盖','33完成32后正式plan','茶按32真行动核范围；衣反馈/书约不得强结'];
+const input={expected_revision:state.revision,operation_id:'x-cr-resume-to33',author_evidence:{quote,local_source:source,source_sha256:sha,locator:'2026-10-21本次用户续程消息第1段，实际线程01a15dc1-084b-7b70-a1d3-4f5e124033f1；无作者消息ID',recorded_by:'X-C同ID执行代理；按授权执行非作者逐项采纳'},workflow:w};
+fs.mkdirSync(path.join(P,'.writer/cr-inputs'),{recursive:true});fs.writeFileSync(path.join(P,'.writer/cr-inputs/workflow-resume32.json'),JSON.stringify(input,null,2)+'\n',{encoding:'utf8',flag:'wx'});console.log(JSON.stringify({expected_revision:state.revision,source_sha256:sha}));

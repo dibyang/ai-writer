@@ -1,0 +1,13 @@
+import path from 'node:path';import assert from 'node:assert/strict';import{base,j,save}from './e1-ops.mjs';const root=j(path.join(base,'e-second-execution.json')).revision.workspace,i=j(path.join(root,'.writer/drafts/e4-replay-45.json')),old=j(path.join(root,'.writer/drafts/e4-replay-45-before.json')),p=[];assert.deepEqual(i.source_hashes,old.source_hashes);assert.deepEqual(i.changes,old.changes);const set=(keys,after)=>{let x=i;for(const k of keys)x=x[k];p.push({path:keys,before:x,after});};
+set(['summary'],i.summary.replace('父仍杖凳，只看盒听饭菜/洗收转述','父仍杖凳，只看盒听饭菜/洗收和三宽豆干转述、实问三条够否').replace('女另热并吃净两份少菜','女另热并吃净两份少菜，软叶碗余的一整宽条及半条也分口吃净'));
+set(['changes','characters','沈禾'],i.changes.characters['沈禾'].replace('父仍凳杖，','父仍凳杖，回家亲口述三宽豆干并答父三条够否，'));
+set(['changes','characters','沈成林'],i.changes.characters['沈成林'].replace('宽豆干/蒜多有限转述','三条宽豆干/蒜多有限转述并实问三条够不够'));
+set(['changes','characters','许蓉女儿'],i.changes.characters['许蓉女儿'].replace('醒来另热并吃完两碗少菜/关左火','醒来另热并吃完两碗少菜，其中原三宽条吃余的一条半也吃净/关左火'));
+set(['changes','timeline_append',1],i.changes.timeline_append[1].replace('看盒听做吃洗','看盒听做吃洗及三宽条，实问三条够否'));
+set(['changes','timeline_append',2],i.changes.timeline_append[2].replace('女两菜另热吃完','女两菜另热吃完，宽豆干一整条及半条分口吃净'));
+const l=i.changes.ledger.T_AC_SHARED_MEAL;
+set(['changes','ledger','T_AC_SHARED_MEAL','reader_known'],l.reader_known+' 沈回家实口述三条宽豆干，父才获知并问够否；许家女夜间把原留一整条及半条吃净，两碗余菜皆空，不带回旧两宽条或只余半条的追踪。');
+set(['changes','ledger','T_AC_SHARED_MEAL','character_known','沈禾'],l.character_known['沈禾']+' 回家实口述初三宽条并答父三条够否；未见姑娘夜间吃净菜。');
+set(['changes','ledger','T_AC_SHARED_MEAL','character_known','许蓉女儿'],l.character_known['许蓉女儿'].replace('自己余菜晚些真吃完','自己余菜晚些真吃完，原三宽条中剩的一整条和半条也分口吃净'));
+set(['changes','ledger','T_AC_SHARED_MEAL','character_known','沈成林'],l.character_known['沈成林'].replace('口味分歧','口味分歧及三条宽豆干并问三条够否')+' 不知许家后来的余菜吃净现场。');
+set(['changes','ledger','T_AC_SHARED_MEAL','evidence'],l.evidence.map(e=>e.quote==='两只菜碗里所余不多，她把剩下几条也慢慢吃过'?{unit:45,quote:'软叶那碗还留着一条宽豆干和半条。她先吃半条，再将整条咬作两口'}:e).concat([{unit:45,quote:'豆干还有三条是我非要留宽的。'},{unit:45,quote:'沈成林问她三条够不够。'}]));save('e4-delta-45.json',p);console.log(JSON.stringify({unit:45,changed_paths:p.length,source_hashes_same_as_before:true}));

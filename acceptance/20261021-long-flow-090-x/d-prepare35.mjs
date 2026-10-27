@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+const P=new URL('./scenario/东岸末班船-再扩展验证/',import.meta.url);
+const read=r=>JSON.parse(fs.readFileSync(new URL(r,P)));
+const put=(r,v)=>fs.writeFileSync(new URL(r,P),JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const s=read('.writer/state.json'),prev=read('.writer/drafts/d-workflow-trial34-36.json');
+if(s.revision!==152||s.units.length!==34)throw Error('not after34');
+prev.expected_revision=152;prev.operation_id='x-d-outline35';prev.workflow.stage='outline';prev.workflow.task='X-D首次34已登记，先正式plan35；本次35只前两段约3000—4500字后正常首停，不合章不登记。';prev.workflow.authorization={allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['实际建立35细纲后再采用真实引用','本次35仅两段未完，36以后同ID恢复再写，不创建37']};prev.workflow.planning.outline={status:'draft',refs:[],unresolved_ids:['35实际细纲待建立，34已登记不重写']};put('.writer/drafts/d-workflow-outline35.json',prev);
+put('.writer/drafts/d-plan35.json',{unit:35,title:'一起翻到下一页',goal:'让远约成为两姑娘各有兴趣的一次真实同行，不替别人选也不因同行就必须购买',change:'全章拟真实14点会面进店各看各选，按实际行动决定买或不买；本次只写赴约前两段，未进入整链回收',beats:['第28日周日沈禾原准整休，晚起/父早饭仅眼前所见与听述，午饭按自己口味同父分工，原册留家自有不带还','姑娘正常上工至12:30实际交班，回家与母午饭/穿昨夜选的修裤与细纹衣，带小包和空袋出门，14点前后与沈在原店门相见；本次到此真实中途停','同ID恢复后从门前接原动作，实际入店各看，各自喜欢的亮花/窗人书不同，可互相指给看但保留分歧','各自问价/看缺损后决定自费购买或不买，不伪造旧八元书变新册，不为回收勉强同款','各自带回或空手后到阶段明确位置，原纸/钱/伤脚/母衣边界依实稿；章末不代写36'],cast:['沈禾','沈成林','许蓉女儿','许蓉'],setting_refs:['设定/人物与声音.md','大纲/扩大骨架-X.md','大纲/X-D近期执行纲-34-36.md'],research_refs:[],recall_ids:['T_X_BOOK_COMPANY','P_W_PICTURE_BOOK','P_X_OWN_TROUSERS','P_X_THIN_CLASS_CLOTH','T_X_COAT_DAILY'],arc_id:'A13',forbidden:['本次严格只前两段3000—4500正文汉字，不assemble/record35，不写36或37','本章全章目标至少8000汉字4—6段，仅同ID后续继续完成，不把首停等同完成','父伤脚仍垫凳/限站，不带父去书店不忽然痊愈；不补全旧旅客终点','书约日期为第28日周日14点；仅行动/选择/代价发生才结链，门前相见不等于各选买书','母工装第三洗后状态不凭夜里凉自动推干后已穿；原纸/旧练布不冒新课']});

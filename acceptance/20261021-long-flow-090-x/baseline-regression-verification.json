@@ -1,0 +1,129 @@
+{
+  "ok": true,
+  "at": "2026-10-21T05:58:50.374Z",
+  "phase": "Actual baseline regression of unchanged source and previously delivered ZIP bytes; not completion of36-chapter workflow",
+  "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+  "archive_sha256": "04bc027b65ad6b0ae8532a887b8025ae7a2f31bd5ad8cd6568aa713d5b5502c5",
+  "tests": [
+    {
+      "label": "baseline-source-tests",
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2,
+      "skips": [
+        "﹣ 合章拒绝符号链接分段和目标目录 (1.6582ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+        "﹣ 符号链接不允许作为作品输入 (3886.4244ms) # 当前环境不允许创建链接"
+      ],
+      "stdout_sha256": "2248db7d4a0049a9b3087f3836eb4968823cb7589551b815b76c61d6310ee57f",
+      "result": {
+        "label": "baseline-source-tests",
+        "exe": "npm.cmd",
+        "args": [
+          "test",
+          "--",
+          "--test-concurrency=2"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer",
+        "started_at": "2026-10-21T05:39:52.504Z",
+        "elapsed_ms": 996925,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 20541,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    },
+    {
+      "label": "baseline-package-tests",
+      "tests": 199,
+      "pass": 197,
+      "fail": 0,
+      "skip": 2,
+      "skips": [
+        "﹣ 合章拒绝符号链接分段和目标目录 (0.2831ms) # Windows测试账户未承诺symlink权限，Linux/macOS CI执行",
+        "﹣ 符号链接不允许作为作品输入 (2911.4681ms) # 当前环境不允许创建链接"
+      ],
+      "stdout_sha256": "c314159a1e69b08e79f3c46c660bbf9779ec9b5e0ad351bd13a6ed448a36f956",
+      "result": {
+        "label": "baseline-package-tests",
+        "exe": "npm.cmd",
+        "args": [
+          "test",
+          "--",
+          "--test-concurrency=2"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer\\.tmp\\X 原包解压\\ai-writer-0.9.0",
+        "started_at": "2026-10-21T05:40:02.752Z",
+        "elapsed_ms": 947968,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 20536,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    }
+  ],
+  "doctors": [
+    {
+      "label": "baseline-source-doctor",
+      "ok": true,
+      "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+      "runtime_id": "7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f",
+      "result": {
+        "label": "baseline-source-doctor",
+        "exe": "npm.cmd",
+        "args": [
+          "run",
+          "doctor"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer",
+        "started_at": "2026-10-21T05:40:38.333Z",
+        "elapsed_ms": 8715,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 15225,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    },
+    {
+      "label": "baseline-package-doctor",
+      "ok": true,
+      "content_id": "553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2",
+      "runtime_id": "7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f",
+      "result": {
+        "label": "baseline-package-doctor",
+        "exe": "npm.cmd",
+        "args": [
+          "run",
+          "doctor"
+        ],
+        "cwd": "D:\\work\\other\\ai-writer\\.tmp\\X 原包解压\\ai-writer-0.9.0",
+        "started_at": "2026-10-21T05:40:38.333Z",
+        "elapsed_ms": 6513,
+        "exit_code": 0,
+        "signal": null,
+        "error": null,
+        "stdout_bytes": 15455,
+        "stderr_bytes": 0,
+        "input": null,
+        "before_state_sha256": null,
+        "after_state_sha256": null
+      }
+    }
+  ],
+  "frozen_source_files": 324,
+  "release_files": 324,
+  "all_source_and_package_bytes_unchanged": true,
+  "remote_ci_executed": false
+}

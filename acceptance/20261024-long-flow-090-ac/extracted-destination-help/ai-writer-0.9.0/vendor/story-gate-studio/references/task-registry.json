@@ -1,0 +1,459 @@
+{
+  "registry_version": "story-gate-task-registry@0.1.0",
+  "tasks": [
+    {
+      "task_id": "TASK-ARCH-BIBLE",
+      "task": "project_bible",
+      "skill": "story-architect",
+      "module_ids": [
+        "SGM-ARCH-001"
+      ],
+      "mode": "novel",
+      "write_policy": "create_docs",
+      "inputs": [
+        "premise",
+        "genre",
+        "target_reader"
+      ],
+      "outputs": [
+        "project_bible",
+        "risk_register",
+        "traceability_seed"
+      ],
+      "tests": [
+        "QG-011"
+      ],
+      "done_when": [
+        "output contains project boundary, protagonist function, world rules, and no private source-project names"
+      ]
+    },
+    {
+      "task_id": "TASK-CHAP-GATE",
+      "task": "chapter_gate",
+      "skill": "chapter-workbench",
+      "module_ids": [
+        "SGM-CHAP-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "chapter_goal",
+        "main_event",
+        "worsening",
+        "reader_mainline",
+        "next_pursuit"
+      ],
+      "outputs": [
+        "StoryGateReport"
+      ],
+      "tests": [
+        "scripts/chapter-gate.js",
+        "examples/fixtures/chapter-gate-pass.json",
+        "examples/fixtures/chapter-gate-block.json"
+      ],
+      "done_when": [
+        "pass fixture returns pass",
+        "block fixture returns blocked"
+      ]
+    },
+    {
+      "task_id": "TASK-REV-COLD",
+      "task": "third_party_review",
+      "skill": "third-party-review",
+      "module_ids": [
+        "SGM-REV-001",
+        "SGM-READ-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "draft_refs",
+        "reader_profile"
+      ],
+      "outputs": [
+        "abandonment_risks",
+        "clarity_findings",
+        "StoryGateReport"
+      ],
+      "tests": [
+        "QG-011"
+      ],
+      "done_when": [
+        "review surfaces current-page abandonment risk before defending future explanations"
+      ]
+    },
+    {
+      "task_id": "TASK-BLIND-GATE",
+      "task": "blind_read_gate",
+      "skill": "third-party-review",
+      "module_ids": [
+        "SGM-BLIND-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "blind_read_summary",
+        "version_lock",
+        "isolated_tickets"
+      ],
+      "outputs": [
+        "StoryGateReport"
+      ],
+      "tests": [
+        "scripts/blind-read-gate.js",
+        "examples/fixtures/blind-read-pass.json",
+        "examples/fixtures/blind-read-isolation-block.json",
+        "examples/fixtures/blind-read-context-leak-block.json",
+        "examples/fixtures/blind-read-average-mask-block.json",
+        "examples/fixtures/blind-read-continuous-block.json"
+      ],
+      "done_when": [
+        "pass fixture returns pass",
+        "invalid execution isolation, mixed ticket types, averaged failed tickets, and continuous-read violations return blocked"
+      ]
+    },
+    {
+      "task_id": "TASK-GATE-RELEASE",
+      "task": "release_gate",
+      "skill": "release-gate",
+      "module_ids": [
+        "SGM-GATE-001",
+        "SGM-GATE-002",
+        "SGM-PROOF-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "target_refs"
+      ],
+      "outputs": [
+        "StoryGateReport"
+      ],
+      "tests": [
+        "scripts/story-gate.js",
+        "scripts/story-gate-audit.js",
+        "scripts/story-template-scan.js"
+      ],
+      "done_when": [
+        "script output is valid StoryGateReport JSON",
+        "formal release review records a dedicated line-by-line proofreading range instead of treating mechanical scans as proofreading"
+      ]
+    },
+    {
+      "task_id": "TASK-MKT-REVIEW",
+      "task": "market_readability_review",
+      "skill": "blockbuster-review",
+      "module_ids": [
+        "SGM-MKT-001",
+        "SGM-EMO-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "draft_refs",
+        "release_gate_report"
+      ],
+      "outputs": [
+        "release_score",
+        "market_score",
+        "emotion_findings",
+        "StoryGateReport"
+      ],
+      "tests": [
+        "QG-011"
+      ],
+      "done_when": [
+        "release readiness and market-readability are reported separately"
+      ]
+    },
+    {
+      "task_id": "TASK-VIS-SELECTED",
+      "task": "visual_selected_gate",
+      "skill": "visual-asset-manager",
+      "module_ids": [
+        "SGM-VIS-001",
+        "SGM-VIS-002"
+      ],
+      "mode": "visual",
+      "write_policy": "review_only",
+      "inputs": [
+        "visual_card",
+        "prompt_record",
+        "version_state",
+        "selection_basis",
+        "usage_purpose"
+      ],
+      "outputs": [
+        "StoryGateReport"
+      ],
+      "tests": [
+        "examples/fixtures/visual-selected-block.json",
+        "scripts/visual-asset-audit.js"
+      ],
+      "done_when": [
+        "missing prompt or selection basis blocks selected entry"
+      ]
+    },
+    {
+      "task_id": "TASK-SCR-TRIAL",
+      "task": "short_drama_trial_pack",
+      "skill": "screenplay-adapter",
+      "module_ids": [
+        "SGM-SCR-001",
+        "SGM-SCR-002"
+      ],
+      "mode": "short_drama",
+      "write_policy": "create_docs",
+      "inputs": [
+        "premise",
+        "scene_goal",
+        "visual_assets"
+      ],
+      "outputs": [
+        "trial_script",
+        "shot_list",
+        "prop_list",
+        "sound_notes",
+        "delivery_checklist"
+      ],
+      "tests": [
+        "QG-006",
+        "QG-011"
+      ],
+      "done_when": [
+        "shot-list output only appears in screenplay or short_drama mode"
+      ]
+    },
+    {
+      "task_id": "TASK-RUN-BATCH-METRICS",
+      "task": "chapter_batch_metrics",
+      "skill": "blockbuster-review",
+      "module_ids": [
+        "SGM-MKT-001",
+        "SGM-READ-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "chapter_refs",
+        "rule_pack",
+        "project_rule_pack"
+      ],
+      "outputs": [
+        "StoryGateReport",
+        "chapter_metrics"
+      ],
+      "tests": [
+        "scripts/chapter-batch-metrics.js",
+        "examples/fixtures/chapter-batch-metrics-sample.md",
+        "examples/final-arc-live-cost/chapter-01.md",
+        "examples/final-arc-live-cost/chapter-02.md",
+        "examples/final-arc-live-cost/chapter-03.md"
+      ],
+      "done_when": [
+        "batch metrics report includes system density, live pressure, dialogue count, target refs, and verdict"
+      ]
+    },
+    {
+      "task_id": "TASK-PROJECT-RULE-CHECK",
+      "task": "project_rule_pack_check",
+      "skill": "story-architect",
+      "module_ids": [
+        "SGM-ARCH-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "project_rule_pack"
+      ],
+      "outputs": [
+        "validation_result"
+      ],
+      "tests": [
+        "scripts/project-rule-pack-check.js",
+        "examples/project-rule-packs/sample-project-rule-pack.json"
+      ],
+      "done_when": [
+        "external project rule pack validates without adding private project material to references/rule-pack.json"
+      ]
+    },
+    {
+      "task_id": "TASK-PROJECT-RULE-INIT",
+      "task": "project_rule_pack_init",
+      "skill": "story-architect",
+      "module_ids": [
+        "SGM-ARCH-001"
+      ],
+      "mode": "novel",
+      "write_policy": "create_docs",
+      "inputs": [
+        "project_slug",
+        "mode",
+        "external_project_directory"
+      ],
+      "outputs": [
+        "project_rule_pack",
+        "project_rule_pack_readme"
+      ],
+      "tests": [
+        "scripts/init-project-rule-pack.js",
+        "templates/project-rule-pack/rule-pack.template.json",
+        "scripts/project-rule-pack-check.js"
+      ],
+      "done_when": [
+        "generated external project rule pack validates",
+        "universal references/rule-pack.json is unchanged"
+      ]
+    },
+    {
+      "task_id": "TASK-REVIEW-SCORECARD",
+      "task": "review_scorecard",
+      "skill": "third-party-review",
+      "module_ids": [
+        "SGM-REV-001",
+        "SGM-READ-001",
+        "SGM-MKT-001",
+        "SGM-EMO-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "chapter_refs",
+        "rule_pack",
+        "project_rule_pack"
+      ],
+      "outputs": [
+        "StoryGateReport",
+        "scorecard"
+      ],
+      "tests": [
+        "scripts/review-scorecard.js",
+        "examples/fixtures/review-scorecard-pass.md",
+        "examples/fixtures/review-scorecard-needs-polish.md"
+      ],
+      "done_when": [
+        "pass fixture returns pass",
+        "needs-polish fixture returns stable high-severity findings",
+        "scorecard separates clarity, abandonment risk, market pull, and emotion landing"
+      ]
+    },
+    {
+      "task_id": "TASK-HOST-RUN",
+      "task": "host_run",
+      "skill": "story-architect",
+      "module_ids": [
+        "SGM-ARCH-001"
+      ],
+      "mode": "novel",
+      "write_policy": "review_only",
+      "inputs": [
+        "host_adapter_request"
+      ],
+      "outputs": [
+        "host_adapter_response"
+      ],
+      "tests": [
+        "scripts/host-adapter.js",
+        "examples/host-adapter/review-scorecard-request.json",
+        "examples/host-adapter/chapter-gate-request.json"
+      ],
+      "done_when": [
+        "host-run returns JSON for supported tasks",
+        "pass tasks exit 0",
+        "adapter errors remain parseable JSON"
+      ]
+    },
+    {
+      "task_id": "TASK-CUSTOMER-PILOT",
+      "task": "customer_pilot",
+      "skill": "story-architect",
+      "module_ids": [
+        "SGM-PILOT-001",
+        "SGM-REV-001",
+        "SGM-MKT-001"
+      ],
+      "mode": "novel",
+      "write_policy": "create_docs",
+      "inputs": [
+        "customer_project_directory",
+        "project_rule_pack",
+        "chapter_refs",
+        "chapter_gate_card",
+        "host_adapter_request"
+      ],
+      "outputs": [
+        "StoryGateReport",
+        "customer_pilot_report",
+        "support_bundle_diagnostics"
+      ],
+      "tests": [
+        "scripts/customer-pilot.js",
+        "examples/customer-pilot/",
+        "tests/quality-gates.test.js"
+      ],
+      "done_when": [
+        "anonymous customer pilot exits 0",
+        "rules, review, chapter gate, host-run, and support bundle checks pass",
+        "private source-project markers are absent"
+      ]
+    },
+    {
+      "task_id": "TASK-SUPPORT-BUNDLE",
+      "task": "support_bundle",
+      "skill": "feedback-triage",
+      "module_ids": [
+        "SGM-PILOT-001"
+      ],
+      "mode": "novel",
+      "write_policy": "create_docs",
+      "inputs": [
+        "customer_project_directory",
+        "support_output_directory"
+      ],
+      "outputs": [
+        "support-bundle.json"
+      ],
+      "tests": [
+        "scripts/support-bundle.js",
+        "examples/customer-pilot/chapters/opening-page.md",
+        "tests/quality-gates.test.js"
+      ],
+      "done_when": [
+        "support bundle records excluded manuscript files",
+        "support bundle does not copy customer manuscript prose",
+        "dry-run support bundle exits 0"
+      ]
+    },
+    {
+      "task_id": "TASK-INSTALL-LOCAL",
+      "task": "install_local",
+      "skill": "story-architect",
+      "module_ids": [
+        "SGM-PILOT-001"
+      ],
+      "mode": "novel",
+      "write_policy": "create_docs",
+      "inputs": [
+        "target_project_directory",
+        "project_slug",
+        "mode"
+      ],
+      "outputs": [
+        "plugin_directory",
+        "marketplace_json",
+        "project_rule_pack",
+        "install_smoke_report"
+      ],
+      "tests": [
+        "scripts/install-local.js",
+        "tests/quality-gates.test.js"
+      ],
+      "done_when": [
+        "plugin files are installed under the target project",
+        "marketplace config points to ./plugins/story-gate-studio",
+        "project rule pack is created outside the plugin directory",
+        "existing installs are not overwritten without --force"
+      ]
+    }
+  ]
+}

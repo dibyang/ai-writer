@@ -1,0 +1,255 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 29,
+  "counts": {
+    "verified": 2
+  },
+  "issues": [
+    {
+      "id": "I_COMPARE",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "比较对象省略",
+      "suggestion": "明确比较昨夜",
+      "evidence": [
+        {
+          "unit": 7,
+          "draft": "正文/0007.md",
+          "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+          "line": 4,
+          "quote": "没有那么急"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/5b1fd795-678b-4334-aa28-86fe4d9f5bee.json",
+        "review_sha256": "752dd81cd0c2cfa880cccda4a2dc350fe33835ca82084d8afef569d785e493b9",
+        "units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/999ec718-1ca0-48a4-ad0b-a79ce988defa.json",
+          "sha256": "1ba22a51eb9db8976c43b902fe284ee7404b312399d7f85349308686bc6681b0"
+        },
+        {
+          "ref": ".writer/objects/10609c9c-4a33-4806-9104-2c6ebf7e46db.json",
+          "sha256": "75121c460ed0ce08039ba2dbbcfe3b0b792453ec0e7c5482b90dfec8e90645a4"
+        },
+        {
+          "ref": ".writer/objects/f394b0a9-128a-493c-880c-0e32147a8e95.json",
+          "sha256": "2e21e72bc76db4eb3aae1cad4df1bfa3bb11f0beaf10190bf2753a4d97c1b1c1"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6e16b2d3-9fbc-4712-b55e-e3ff6e73f76a.json",
+          "sha256": "a2794d94d181805ad0c1d2a08b974d2893d47f232b2e8b48cbc860c8780b1f45"
+        },
+        "disposition": "adopted",
+        "reason": "本次测试明确授权两处小修，非真实作者逐项决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "application": {
+        "local_revision_id": "47032c6c-7200-4bfe-8532-a1b76c7b4ad0",
+        "local_revision_binding": {
+          "ref": ".writer/objects/d00bf381-ff22-44d6-9b83-23f72cdb5a2f.json",
+          "sha256": "9f9e645b4071645146e9b7959b8c25c730cd12f352da0caf3c7eecf6ae011ca2"
+        },
+        "local_session_id": "55875160-9d83-44f6-b86c-0c530275ddd1",
+        "scope": "unpublished-candidate-only",
+        "publication": false,
+        "reason": "独立候选两处修改已经正式重登，非主稿提交",
+        "changes": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "before": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "after": "c656798b97bc259e6fedaf4c280b23271fb4900f4b38fc7d9271f3db566c469c"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "c656798b97bc259e6fedaf4c280b23271fb4900f4b38fc7d9271f3db566c469c",
+            "dependency": "151e834703265fd8c827dfa92c58cffde192aa89ddcd66be34f2fbad027df1bf"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/3206ed31-80f8-4760-95cb-aa1ac6066890.json",
+        "review_sha256": "c159bbaa90893e13c6c0cb7c3c1331ce5b44cfb8ccc1df694faf2a1fa2ff9802",
+        "reviewer": "Codex actual current-version sample reading",
+        "conclusion": "resolved",
+        "reason": "按当前报告核对两处实际修改",
+        "rechecked_context": false,
+        "application_local_revision_id": "47032c6c-7200-4bfe-8532-a1b76c7b4ad0",
+        "scope": "unpublished-candidate-only",
+        "publication": false,
+        "revision_session": "55875160-9d83-44f6-b86c-0c530275ddd1",
+        "units": [
+          {
+            "unit": 6,
+            "draft": "正文/0006.md",
+            "sha256": "e97f69e8bfa27aebfba1aa2853850fa19f3ef3889edfac103046d924a0b83dd5",
+            "dependency": "9b204ef4de9cca44581e8832ab27a7684239260d585dcd8fd377cf0e34c1d722"
+          },
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "c656798b97bc259e6fedaf4c280b23271fb4900f4b38fc7d9271f3db566c469c",
+            "dependency": "151e834703265fd8c827dfa92c58cffde192aa89ddcd66be34f2fbad027df1bf"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/f9e4e66d-bbf9-436d-aa03-22f7fc154041.json",
+        "sha256": "6fcb677031a36ddd7335990c3bafa21fb0d5368730ba6db1e43ae7ad6e6a44f4"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_TAIL",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "尾句重复手续",
+      "suggestion": "按本次限定修订删除尾句",
+      "evidence": [
+        {
+          "unit": 7,
+          "draft": "正文/0007.md",
+          "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+          "line": 7,
+          "quote": "下一回去桥头，该带什么、先找谁，他也已问清。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/5b1fd795-678b-4334-aa28-86fe4d9f5bee.json",
+        "review_sha256": "752dd81cd0c2cfa880cccda4a2dc350fe33835ca82084d8afef569d785e493b9",
+        "units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/131d20a9-67fb-44b6-8350-c4ea905b54b2.json",
+          "sha256": "87d0cb7442766665befd110734e94cb87913f65fafa9d83f1ebd34c2a03cc6dc"
+        },
+        {
+          "ref": ".writer/objects/9a6238cc-ade2-4f35-9656-2705bfd2bb46.json",
+          "sha256": "368dd869a2fb3013629677fa4f499b336a8b2b67fc5defecfc5057a3c8415887"
+        },
+        {
+          "ref": ".writer/objects/813ceab0-570f-4873-a5ae-ebfd96ba3987.json",
+          "sha256": "9f93a98e83d2277e146ad3295af3087e4fad9ed90abc0d37467b677e58128082"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/6e16b2d3-9fbc-4712-b55e-e3ff6e73f76a.json",
+          "sha256": "a2794d94d181805ad0c1d2a08b974d2893d47f232b2e8b48cbc860c8780b1f45"
+        },
+        "disposition": "adopted",
+        "reason": "本次测试明确授权两处小修，非真实作者逐项决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "application": {
+        "local_revision_id": "47032c6c-7200-4bfe-8532-a1b76c7b4ad0",
+        "local_revision_binding": {
+          "ref": ".writer/objects/d00bf381-ff22-44d6-9b83-23f72cdb5a2f.json",
+          "sha256": "9f9e645b4071645146e9b7959b8c25c730cd12f352da0caf3c7eecf6ae011ca2"
+        },
+        "local_session_id": "55875160-9d83-44f6-b86c-0c530275ddd1",
+        "scope": "unpublished-candidate-only",
+        "publication": false,
+        "reason": "独立候选两处修改已经正式重登，非主稿提交",
+        "changes": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "before": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "after": "c656798b97bc259e6fedaf4c280b23271fb4900f4b38fc7d9271f3db566c469c"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "c656798b97bc259e6fedaf4c280b23271fb4900f4b38fc7d9271f3db566c469c",
+            "dependency": "151e834703265fd8c827dfa92c58cffde192aa89ddcd66be34f2fbad027df1bf"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/3206ed31-80f8-4760-95cb-aa1ac6066890.json",
+        "review_sha256": "c159bbaa90893e13c6c0cb7c3c1331ce5b44cfb8ccc1df694faf2a1fa2ff9802",
+        "reviewer": "Codex actual current-version sample reading",
+        "conclusion": "resolved",
+        "reason": "按当前报告核对两处实际修改",
+        "rechecked_context": false,
+        "application_local_revision_id": "47032c6c-7200-4bfe-8532-a1b76c7b4ad0",
+        "scope": "unpublished-candidate-only",
+        "publication": false,
+        "revision_session": "55875160-9d83-44f6-b86c-0c530275ddd1",
+        "units": [
+          {
+            "unit": 6,
+            "draft": "正文/0006.md",
+            "sha256": "e97f69e8bfa27aebfba1aa2853850fa19f3ef3889edfac103046d924a0b83dd5",
+            "dependency": "9b204ef4de9cca44581e8832ab27a7684239260d585dcd8fd377cf0e34c1d722"
+          },
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "c656798b97bc259e6fedaf4c280b23271fb4900f4b38fc7d9271f3db566c469c",
+            "dependency": "151e834703265fd8c827dfa92c58cffde192aa89ddcd66be34f2fbad027df1bf"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/cd9f9cb0-1cb3-49d1-b124-7b7b10f0db69.json",
+        "sha256": "89aecd935c0ece9124f4823e5b2bd9da77fd8ba0eb749912a0a3adf0ac3fec5b"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

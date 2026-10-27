@@ -123,6 +123,8 @@ test('分卷和单元细纲共用版本解析，旧卷契约不因未来入口�
   call(root, 'volume', null, vol); freeze(root, 'VOL1', '大纲/分卷/V1.json'); call(root, 'source', 'publish', publishInput(root, 'VOL1')); unit(root, 1); unit(root, 2);
   call(root, 'volume', null, { ...vol, title: '新卷' }); freeze(root, 'VOL2', '大纲/分卷/V1.json'); call(root, 'source', 'publish', publishInput(root, 'VOL2', 3, 'future'));
   assert.equal(main(['outline', '--project', root, '--unit', '2']).volume.title, '旧卷'); assert.equal(main(['outline', '--project', root, '--unit', '3']).volume.title, '新卷'); assert.equal(main(['check', '--project', root]).ok, true);
+  assert.equal(main(['outline','--project',root,'--unit','2']).draft_directory,'正文/V1-旧卷');
+  assert.equal(main(['outline','--project',root,'--unit','3']).draft_directory,'正文/V1-新卷');
 });
 test('冻结事实卡不提升verified；同起点未消费版本需显式previous才可替换', t => {
   const { root } = fixture(t, 0, 'history'), ref = '研究/事实.json'; file(root, ref, { status: 'draft', claims: [] }); freeze(root, 'CARD1', ref); call(root, 'source', 'publish', publishInput(root, 'CARD1'));
@@ -146,6 +148,37 @@ test('真实旧字节补绑后需发布原区间，未来版本不偷换历史�
   call(root, 'source', 'bind', sourceInput(root, { version_id: 'OLD_BYTES', from: 1, through: 2, author_evidence: evidence(root) }));
   assert.deepEqual(state(root).units.map(u => u.source_hashes), oldHashes); freeze(root, 'NEXT'); fails(() => call(root, 'source', 'publish', publishInput(root, 'NEXT', 3, 'future')), 'SOURCE_BASELINE_REQUIRED');
   call(root, 'source', 'publish', publishInput(root, 'OLD_BYTES')); call(root, 'source', 'publish', publishInput(root, 'NEXT', 3, 'future')); assert.equal(main(['check', '--project', root]).ok, true);
+});
+test('历史变更保留前缀也需原区间，拒绝不冻结报告；补齐后回放仍消费旧版', t => {
+  const { root } = fixture(t, 3), ref = '设定/权威规则.md', oldHash = state(root).units[0].source_hashes[ref];
+  freeze(root, 'PREFIX_OLD'); call(root, 'source', 'bind', sourceInput(root, { version_id: 'PREFIX_OLD', from: 1, through: 3, author_evidence: evidence(root) }));
+  file(root, ref, '第二章起的新规则，不应改变第一章输入。'); freeze(root, 'PREFIX_NEW'); workflow(root, true);
+  const input = publishInput(root, 'PREFIX_NEW', 2, 'historical'), before = fs.readFileSync(path.join(root, '.writer/state.json'));
+  const objects = fs.readdirSync(path.join(root, '.writer/objects')).sort();
+  fails(() => call(root, 'source', 'stage', input), 'SOURCE_BASELINE_REQUIRED');
+  assert.deepEqual(fs.readFileSync(path.join(root, '.writer/state.json')), before);
+  assert.deepEqual(fs.readdirSync(path.join(root, '.writer/objects')).sort(), objects);
+  call(root, 'source', 'publish', publishInput(root, 'PREFIX_OLD'));
+  const staged = call(root, 'source', 'stage', publishInput(root, 'PREFIX_NEW', 2, 'historical')), branch = begin(root);
+  rewindBranch(branch); call(branch.workspace, 'source', 'publish', sourceInput(branch.workspace, { impact_id: staged.impact_id, author_evidence: evidence(branch.workspace) }), branch.token);
+  const first = main(['record-template', '--project', branch.workspace, '--unit', '1', '--draft', '正文/0001.md']);
+  assert.equal(first.source_hashes[ref], oldHash); assert.equal(first.source_bindings[ref].version_id, 'PREFIX_OLD');
+  for (let n = 1; n <= 3; n++) unit(branch.workspace, n, branch.token, '修订后');
+  review(branch); prepare(root, branch); commit(root, branch);
+  assert.equal(state(root).units[0].source_bindings[ref].version_id, 'PREFIX_OLD');
+  assert.equal(state(root).units[1].source_bindings[ref].version_id, 'PREFIX_NEW');
+  assert.equal(main(['check', '--project', root]).ok, true);
+});
+test('历史变更覆盖全部消费者时不强迫无用基线，合法全尾段可发布重登', t => {
+  const { root } = fixture(t, 2), ref = '设定/权威规则.md';
+  freeze(root, 'ALL_OLD'); call(root, 'source', 'bind', sourceInput(root, { version_id: 'ALL_OLD', from: 1, through: 2, author_evidence: evidence(root) }));
+  file(root, ref, '从第一章起重核的新规则。'); freeze(root, 'ALL_NEW'); workflow(root, true);
+  const staged = call(root, 'source', 'stage', publishInput(root, 'ALL_NEW', 1, 'historical')), branch = begin(root);
+  rewindBranch(branch); call(branch.workspace, 'source', 'publish', sourceInput(branch.workspace, { impact_id: staged.impact_id, author_evidence: evidence(branch.workspace) }), branch.token);
+  for (let n = 1; n <= 2; n++) unit(branch.workspace, n, branch.token, '全尾段重核');
+  review(branch); prepare(root, branch); commit(root, branch);
+  assert.ok(state(root).units.every(u => u.source_bindings[ref].version_id === 'ALL_NEW'));
+  assert.equal(main(['check', '--project', root]).ok, true);
 });
 test('会话元数据完成但事务未终态的实际中断仍阻断，补完不会遗留活跃占用', t => {
   const { root } = fixture(t); workflow(root, true); const branch = begin(root); edit(branch); prepare(root, branch); const input = file(root, '.writer/finalize-crash.json', { id: branch.id, token: branch.token });

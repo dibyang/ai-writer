@@ -1,0 +1,54 @@
+name: 问题报告 / Bug report
+description: 提供可复现的工具问题，不上传私有作品或安全漏洞细节。
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "请先查看 docs/bug-reporting.md。安全问题按 SECURITY.md 私下报告；勿上传正文、令牌或完整作品状态。 / Do not disclose manuscripts, tokens or security exploits here."
+  - type: input
+    id: version
+    attributes:
+      label: 版本与构建 / Version and build
+      description: 填写包版本、资源配置、内容ID或Git提交；勿粘贴含私有路径的完整输出。
+    validations:
+      required: true
+  - type: dropdown
+    id: entry
+    attributes:
+      label: 使用入口 / Entry point
+      options:
+        - Codex主项目会话 / Main workspace
+        - 独立作品随附工具 / Embedded tool
+        - 终端CLI / CLI
+        - 更新或修订恢复 / Update or revision recovery
+        - 发布包与手册 / Package or documentation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 最小复现 / Minimal reproducer
+      description: 用新建匿名目录说明命令、操作顺序、预期与实际结果；若可行附最小测试。并发问题注明会话数、发生频率和首个错误。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境 / Environment
+      description: 操作系统、Node.js版本、Codex使用方式、是否网络盘或多会话编辑。
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误与日志 / Errors and logs
+      description: 保留首个错误码、退出码和脱敏调用；不要包含正文、作者规则、令牌或完整state。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前核对 / Checks
+      options:
+        - label: 已核对版本和构建，并说明复现步骤 / Version, build and reproduction are included.
+          required: true
+        - label: 这不是安全漏洞披露，内容已脱敏 / This is not a security disclosure; private content is removed.
+          required: true

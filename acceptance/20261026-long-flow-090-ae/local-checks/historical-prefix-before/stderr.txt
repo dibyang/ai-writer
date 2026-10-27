@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Historical publication starting at2 must not consume new live bytes for retained prefix1 after rewind
++ actual - expected
+
++ 'adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e'
+- '52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2'
+
+    at file:///D:/work/other/ai-writer/acceptance/20261026-long-flow-090-ae/probe-historical-prefix.mjs:31:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e',
+  expected: '52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

@@ -1,0 +1,70 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-21T00:13:37.727Z",
+  "operation_id": "w-br-completed-eighteen-pause-for-fresh-c",
+  "base_revision": 75,
+  "payload": {
+    "stage": "paused",
+    "task": "W-B同ID续程已完成18《灯下第一排》9323正文汉字/5真片段、当前13—18完整连读及正式review；本进程到18结束，19尚未写，等待新鲜C恢复；24仍为整体计划",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "18已完成记录及13—18当前六SHA review；本进程正常退出，不写19、不导出、不提前修订。",
+        "19—20留新鲜C，21待其同ID恢复；未发未来仅为骨架，不因next_unit=19获得正文授权。",
+        "前17正文/units及全部observation三字段保持；旧报告和失败历史保留。",
+        "只写W，不派代理、不改根产品/封存/其他作品，不Git提交推送或上传。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-16-18.md",
+          "大纲/单元/0018.json"
+        ],
+        "unresolved_ids": [
+          "19—24仅骨架；本进程不写19"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续同一个W-B会话，首停17已经由根核验；本次只完成18后停。W=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-w；P=W/scenario/东岸末班船-规模验证。真实整体授权prompt-a-first.md，本prompt为最新停点；仅写W、不另派代理、不改根产品/封存/现有作品、不Git提交/推送。产品调用走w-writer唯一标签，保留实际双流/子码/输入/前后状态，错误先停依赖，不覆盖失败，不手改state/hash/产品。",
+    "local_source": "研究/W-B-续程授权原文.md",
+    "source_sha256": "3e6ba964d2e8a765430530122e776975fbe60648f92de09397c4983d795d3779",
+    "locator": "真实本轮用户原话W/prompt-b-resume.md第1/3/5/7/9/11行，同字节副本；整体原话W/prompt-a-first.md第3行及整体路线第5/7行；无伪造人类消息ID",
+    "recorded_by": "同ID W-B原生Codex；具体场面由模型在真实授权内组织，不冒充人类逐项采纳",
+    "frozen_ref": ".writer/objects/3e6ba964d2e8a765430530122e776975fbe60648f92de09397c4983d795d3779.txt"
+  }
+}

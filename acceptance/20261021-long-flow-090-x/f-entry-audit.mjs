@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const X=path.dirname(fileURLToPath(import.meta.url));
+const P=path.join(X,'scenario/东岸末班船-再扩展验证');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const before=fs.readFileSync(path.join(X,'parent-before-f-state.json'));
+const current=fs.readFileSync(path.join(P,'.writer/state.json'));
+assert.ok(before.equals(current),'entry raw state differs from parent');
+const log=JSON.parse(fs.readFileSync(path.join(X,'cli-logs/f-entry-status/result.json'),'utf8'));
+assert.equal(log.exit_code,0);
+assert.equal(log.before_state_sha256,sha(before));
+assert.equal(log.after_state_sha256,sha(current));
+const result={ok:true,at:new Date().toISOString(),parent_state_sha256:sha(before),current_state_sha256:sha(current),raw_bytes_equal:true,first_product_label:'f-entry-status'};
+fs.writeFileSync(path.join(X,'f-entry-byte-verification.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));

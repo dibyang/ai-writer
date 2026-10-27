@@ -1,0 +1,12 @@
+import fs from'node:fs';import path from'node:path';import crypto from'node:crypto';import assert from'node:assert/strict';import{fileURLToPath}from'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),P=JSON.parse(fs.readFileSync(path.join(A,'project.json'))).project,sha=b=>crypto.createHash('sha256').update(b).digest('hex'),s=JSON.parse(fs.readFileSync(path.join(P,'.writer/state.json')));
+assert.equal(s.revision,363);assert.equal(s.units.at(-1).unit,64);
+const refs=['大纲/单元/0065.json','大纲/单元/0066.json','大纲/AE新增骨架-61-66.md','大纲/分卷/V23.json'];
+const consumers=refs.map(ref=>({ref,sha256:sha(fs.readFileSync(path.join(P,ref))),units:s.units.filter(u=>Object.hasOwn(u.source_hashes??{},ref)||Object.hasOwn(u.source_bindings??{},ref)).map(u=>u.unit)}));assert.equal(consumers[0].units.length,0);
+fs.writeFileSync(path.join(A,'b-65-consumers-after64.json'),JSON.stringify({at:new Date().toISOString(),revision:s.revision,consumers},null,2)+'\n',{flag:'wx'});
+const old=fs.readFileSync(path.join(P,refs[0]));fs.writeFileSync(path.join(A,'originals/b-plan65-after64-before.json'),old,{flag:'wx'});const x=JSON.parse(old);
+x.goal='第53日周四长章，承接64昨夜已真约16:45旧街大盆边长凳/女最晚18:00走。白天各自确认时间、取得普通画纸/铅笔，沈想在明晚还14前多看，女想试杯以外眼前大盆和叶。六段完整章至少22000正文汉字，建议24000—25500，无逐段硬配额。';
+x.beats[0]='分段1：周四第53日从各家早晨及实际下工承接64原约，父脚仍需凳/杖但不把沈出门自动撤销；女昨夜课后手酸仍选有限画。女从61余8空白里新取2张（旧两画/6空白留家），铅笔橡皮刨刀仍自有，另找干净硬垫不挪课堂纸/夹纸。沈实际下工买普通新白纸/铅笔/橡皮及需要的刨刀，金额只按实稿；自己决定是否带14，放在干净原袋保护/不同画纸分开，8与原白纸家里留。两人实际赴16:45旧街大盆边长凳，先确定能坐、不挡人/盆不归她们，目标不同不自动统一。';
+x.beats[1]='分段2：两人在长凳实际选不同看点，沈先画眼前一只大盆口及朝外一叶，女想画旁边斜枝叶，光/座位/过路人遮挡造成可见形状不同。各在自己新白纸落笔，手跟不上眼、擦改真实留灰/折痕；在未被请求前女建议沈盆口得接齐或叶向另边之一，使沈不快；女自己的纸也不完整，不装高手。后果停在两张实际未完纸面、书/袋/各物持有及下一步未决，不能把后四段预做成结果。';
+x.forbidden.push('64已经真实第七课并当晚同母看摸新行，65不可又首次报告第七课/拆旧尾；母两录沈仅知数量存在，原自写夹纸原字沈仍未知。64父只有限看14且已交回沈，65不能写成父从未见14或仍持书。');
+fs.writeFileSync(path.join(A,'b-plan65-after64-input.json'),JSON.stringify(x,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({consumers,plan:'b-plan65-after64-input.json',workflow_changed:false}));

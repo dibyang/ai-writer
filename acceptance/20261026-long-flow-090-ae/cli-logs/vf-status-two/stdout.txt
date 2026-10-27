@@ -1,0 +1,141 @@
+{
+  "ok": true,
+  "title": "巷口借伞",
+  "kind": "novel",
+  "revision": 4,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "drafting",
+    "task": "按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "三章范围不扩章",
+        "本程第2章后仅保存第3章写前输入并停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 3,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 4,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": true,
+    "suggestion": "按现有文体与篇幅组织计划"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 2,
+    "unregistered": [
+      {
+        "draft": "正文/V01-借出的一天/0001-雨停以前.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      },
+      {
+        "draft": "正文/V01-借出的一天/0002-迟一天的消息.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 3,
+    "plan_exists": false,
+    "action": "先准备下一单元细纲；已有正文时先实读再建立细纲",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\extracted-final-candidate-v5\\ai-writer-0.9.0\\bin\\ai-writer.mjs' plan '--help'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 4,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "雨天早上，许宁把深蓝长柄伞借给赶去社区服务站的周岚，交换号码并约定今晚七点前送回店内；自己绕连廊买拉链，未补蓝色拉链。周岚随后消息称箱子已到、伞收在屋里。"
+      },
+      {
+        "unit": 2,
+        "summary": "当日18:20周岚来电，因服务站书架工作未完且仍需借伞避雨，无法19:00前归还。许宁说清次晨08:00出门需要用伞，双方改约次晨07:30店门口亲手交还，文字再确认。许宁整理布卷后关店回家，伞仍未归还。"
+      }
+    ],
+    "timeline_tail": [
+      "当日07:40后：许宁在店门借出深蓝长柄伞，双方约今晚19:00前在店归还并交换号码",
+      "当日近08:30：许宁买回灰色拉链，蓝色未补；随后收到周岚报到及伞收屋里的消息",
+      "当日18:20：周岚在原19:00期限前电话通知延期；双方排除次晨08:40提议，改约次晨07:30店门口亲交并文字确认",
+      "当日19:00后：许宁整理布料并关店回家，伞未归还，设次晨07:10开店闹钟"
+    ]
+  }
+}

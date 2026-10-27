@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const x=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(x,'../..'),p=path.join(x,'scenario/东岸末班船-再扩展验证');
+const j=f=>JSON.parse(fs.readFileSync(path.join(x,f),'utf8')),sha=v=>crypto.createHash('sha256').update(v).digest('hex');
+const git=(...args)=>{const r=spawnSync('git',args,{cwd:repo,encoding:'utf8',windowsHide:true});assert.equal(r.status,0,r.stderr);return r.stdout;};
+const head=git('rev-parse','HEAD').trim(),status=git('status','--porcelain=v1','--untracked-files=normal'),index=git('diff','--cached','--name-only');
+assert.equal(head,j('environment.json').source_head);assert.equal(index,'');
+const allowed=['?? .idea/','?? acceptance/20261021-long-flow-090-x/','?? acceptance/20261021-long-flow-090-x-seal-receipt.json'];
+for(const line of status.trimEnd().split(/\r?\n/).filter(Boolean))assert(allowed.includes(line),line);
+assert.equal(git('diff','--name-only'),'');
+const source=j('product-frozen-start.json');for(const f of source.files)assert.equal(sha(fs.readFileSync(path.join(repo,f.file))),f.sha256,f.file);
+const d=j('baseline-release.json');assert.equal(sha(fs.readFileSync(d.archive)),d.archive_sha256);
+const manifest=JSON.parse(fs.readFileSync(path.join(d.extracted,'RELEASE-MANIFEST.json'),'utf8'));assert.equal(manifest.content_id,d.content_id);
+for(const f of manifest.files)assert.equal(sha(fs.readFileSync(path.join(d.extracted,f.file))),f.sha256,f.file);
+const installed=JSON.parse(fs.readFileSync(path.join(p,'.writer/tool/build-manifest.json'),'utf8'));assert.equal(installed.build_id,d.content_id);
+for(const f of installed.files){const ref=f.group==='skills'?'.agents/skills/'+f.file:f.file;const expected=manifest.files.find(v=>v.file===ref);assert(expected,ref);assert.equal(expected.sha256,f.sha256);assert.equal(sha(fs.readFileSync(path.join(p,'.writer/tool',ref))),f.sha256,ref);}
+assert.equal(j('baseline-regression-verification.json').ok,true);assert.equal(j('commands/final-prior-w-seal/result.json').exit_code,0);
+const w=j('commands/final-prior-w-seal/stdout.raw.txt');assert(w.ok);assert.equal(w.manifest_sha256,'385c1e457b6ba3b930c13ba09e03abb8ab7596dd99a2d5c3133ea9cb10e60a78');
+const out={ok:true,at:new Date().toISOString(),head,head_unchanged:true,git_status_raw:status,index_empty:true,tracked_files_changed:[],allowed_untracked:allowed,product_source_files_verified:source.files.length,product_source_bytes_unchanged:true,package_files_verified:manifest.files.length,installed_runtime_files_verified:installed.files.length,content_id:d.content_id,archive_sha256:d.archive_sha256,archive_historical_provenance_preserved:d.prior_delivery.source_provenance,prior_W_seal_verified:w,tests:'baseline-regression-verification.json',product_source_changes_this_round:0,engine_changes:false,engine_test_required:false,git_commit_performed:false,push_performed:false,release_performed:false,existing_author_works_edited:false,scope_note:'Boundary supported by unchanged tracked tree, exact product and prior evidence hashes, and retained public tool history; not an OS-wide filesystem audit. Original .idea untracked directory is preserved without staging or cleanup. External X seal receipt is an expected final addition.'};
+fs.writeFileSync(path.join(x,'repository-final-verification.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(out));

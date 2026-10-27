@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "stage": "first-session-saved-not-controller-frozen",
+  "created_at_utc": "2026-10-26T15:58:35.913Z",
+  "base_directory": "D:/work/other/ai-writer/acceptance/20261026-long-flow-090-ae",
+  "allowed_output_directory": "language-rewrite-eval",
+  "session": {
+    "id": "01a178e6-3098-73b2-974c-14f5709a1e43",
+    "source": [
+      "CODEX_SESSION_ID",
+      "CODEX_THREAD_ID"
+    ],
+    "both_values_equal": true
+  },
+  "reviewer": "same-session informed model review; no subagents; no human blind reading",
+  "scope": "eight independent synthetic materials; language review and minimal rewrite only",
+  "hash_algorithm": "SHA-256 of raw file bytes; lowercase hex",
+  "sources": [
+    {
+      "path": "language-rewrite-eval/cases.json",
+      "kind": "input",
+      "bytes": 5479,
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4",
+      "actual_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 82,
+        "completion": "Complete",
+        "all_fields_or_rules_read": true
+      },
+      "pre_and_post_output_hash_match": true
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/SKILL.md",
+      "kind": "rule",
+      "bytes": 6255,
+      "sha256": "61a73116e346822d4a0a89242de53688d8e0a8e9a71d98618cd5eac3a316d274",
+      "actual_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 50,
+        "completion": "Complete",
+        "all_fields_or_rules_read": true
+      },
+      "pre_and_post_output_hash_match": true
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/general-review.md",
+      "kind": "rule",
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23",
+      "actual_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 125,
+        "completion": "Complete",
+        "all_fields_or_rules_read": true
+      },
+      "pre_and_post_output_hash_match": true
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "kind": "rule",
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df",
+      "actual_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 95,
+        "completion": "Complete",
+        "all_fields_or_rules_read": true
+      },
+      "pre_and_post_output_hash_match": true
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/deslop.md",
+      "kind": "rule",
+      "bytes": 5731,
+      "sha256": "3755fd5ccd4f923d8ffe8a29a9f3c4d41a122757087ff29fb963eae9c51443b3",
+      "actual_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 55,
+        "completion": "Complete",
+        "all_fields_or_rules_read": true
+      },
+      "pre_and_post_output_hash_match": true
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/concrete-language-review.md",
+      "kind": "rule",
+      "bytes": 6275,
+      "sha256": "1465ab13318bb0ccc6a7f17c9b59d5c75b85d3ff8f9ac5810cd431364f30d72e",
+      "actual_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 39,
+        "completion": "Complete",
+        "all_fields_or_rules_read": true
+      },
+      "pre_and_post_output_hash_match": true
+    }
+  ],
+  "path_discovery": [
+    {
+      "method": "FastCtx glob",
+      "root": "D:/work/other/ai-writer/acceptance/20261026-long-flow-090-ae",
+      "pattern": "**/cases.json",
+      "result": "one actual input path; no input content read by glob"
+    },
+    {
+      "method": "FastCtx glob",
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\extracted-final-candidate-v5\\ai-writer-0.9.0",
+      "pattern": "**/writer-review/**",
+      "result": "21 paths listed; only the five requested rule files read"
+    }
+  ],
+  "ancillary_observations": [
+    {
+      "kind": "environment",
+      "scope": "working directory, CODEX_SESSION_ID/CODEX_THREAD_ID and Node.js executable path only"
+    },
+    {
+      "kind": "registry-search-no-content",
+      "path": "C:/Users/admin/.codex/memories/MEMORY.md",
+      "pattern": "language-rewrite-eval|20261026-long-flow-090-ae",
+      "result": "no matches; no memory text returned or used as evidence"
+    },
+    {
+      "kind": "metadata",
+      "scope": "exact requested source hashes/sizes and absence checks for all six new result filenames; no prohibited file content"
+    }
+  ],
+  "case_results": [
+    {
+      "input_id": "R01",
+      "changed": true,
+      "paragraph_count": 3,
+      "replacement_count": 1,
+      "editor_candidate_decision": "not-provided"
+    },
+    {
+      "input_id": "R02",
+      "changed": false,
+      "paragraph_count": 3,
+      "replacement_count": 0,
+      "editor_candidate_decision": "reject-no-net-benefit"
+    },
+    {
+      "input_id": "R03",
+      "changed": true,
+      "paragraph_count": 3,
+      "replacement_count": 2,
+      "editor_candidate_decision": "not-provided"
+    },
+    {
+      "input_id": "R04",
+      "changed": false,
+      "paragraph_count": 3,
+      "replacement_count": 0,
+      "editor_candidate_decision": "not-provided"
+    },
+    {
+      "input_id": "R05",
+      "changed": false,
+      "paragraph_count": 3,
+      "replacement_count": 0,
+      "editor_candidate_decision": "reject-factual-change"
+    },
+    {
+      "input_id": "R06",
+      "changed": false,
+      "paragraph_count": 3,
+      "replacement_count": 0,
+      "editor_candidate_decision": "reject-factual-change"
+    },
+    {
+      "input_id": "R07",
+      "changed": false,
+      "paragraph_count": 3,
+      "replacement_count": 0,
+      "editor_candidate_decision": "reject-factual-change"
+    },
+    {
+      "input_id": "R08",
+      "changed": false,
+      "paragraph_count": 3,
+      "replacement_count": 0,
+      "editor_candidate_decision": "not-provided"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "language-rewrite-eval/first-input-cases-before.json",
+      "bytes": 5479,
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4",
+      "new_file_this_run": true,
+      "kind": "byte-exact-input-backup",
+      "verification": "byte-equal to cases.json; source content fully read via cases.json"
+    },
+    {
+      "path": "language-rewrite-eval/first-review.md",
+      "bytes": 16819,
+      "sha256": "9a477d409598dec37e69af0edb8615b6b6689fee8ed69232ec0fad595c1a747e",
+      "new_file_this_run": true,
+      "kind": "per-case-diagnosis",
+      "post_save_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 170,
+        "completion": "Complete",
+        "same_session_only": true
+      }
+    },
+    {
+      "path": "language-rewrite-eval/first-drafts.json",
+      "bytes": 6390,
+      "sha256": "e2a1f303a336a2d4cdc69bcee9ec6fb0a26bee7dee6bd715e1a8f58dbe080eda",
+      "new_file_this_run": true,
+      "kind": "eight-complete-three-paragraph-results",
+      "post_save_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 130,
+        "completion": "Complete",
+        "same_session_only": true
+      }
+    },
+    {
+      "path": "language-rewrite-eval/first-handoff.md",
+      "bytes": 3520,
+      "sha256": "f7e841b51049f8f45e7b4d8a8662f0d8395043a7e2be466d21527f02b763f173",
+      "new_file_this_run": true,
+      "kind": "resume-handoff",
+      "post_save_content_read": {
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 30,
+        "completion": "Complete",
+        "same_session_only": true
+      }
+    }
+  ],
+  "manifest_integrity": {
+    "path": "language-rewrite-eval/first-manifest.json",
+    "new_file_this_run": true,
+    "self_hash": "stored externally to avoid recursive self-reference",
+    "detached_sha256_file": "language-rewrite-eval/first-manifest.sha256",
+    "detached_format": "<sha256>  first-manifest.json followed by LF",
+    "checksum_carrier_is_not_recursively_self_hashed": true
+  },
+  "validation": {
+    "status": "passed for listed mechanical checks only",
+    "runner": "Node.js inline; no validation script file created",
+    "execution_note": "Initial Python command could not launch WindowsApps/python.exe; no script body ran and no manifest was created by that attempt. Node.js then performed all listed checks.",
+    "case_count": 8,
+    "complete_paragraph_count": 24,
+    "changed_input_ids": [
+      "R01",
+      "R03"
+    ],
+    "retained_input_ids": [
+      "R02",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08"
+    ],
+    "exact_replacement_records": 3,
+    "all_differences_explained_by_change_records": true,
+    "retained_cases_exactly_equal_input": true,
+    "all_editor_candidates_quoted_and_judged": [
+      "R02",
+      "R05",
+      "R06",
+      "R07"
+    ],
+    "exact_evidence_and_replacement_citation_checks": 15,
+    "all_block_quotes_verbatim": true,
+    "input_backup_byte_equal": true,
+    "all_six_source_hashes_unchanged": true,
+    "session_identifiers_consistent": true,
+    "not_a_literary_quality_or_statistical_acceptance": true
+  },
+  "boundaries": {
+    "original_input_modified": false,
+    "rules_modified": false,
+    "works_or_tools_modified": false,
+    "expected_root_only_read": false,
+    "other_model_answers_read": false,
+    "language_eval_results_read": false,
+    "subagents_created": false,
+    "other_tasks_created": false,
+    "commit_or_push": false,
+    "controller_evidence_frozen": false,
+    "same_session_post_save_output_read": true,
+    "resumed_original_session_reread_completed": false,
+    "cross_session_reread_completed": false,
+    "overall_acceptance_completed": false,
+    "next_step": "normal exit; controller freezes evidence and resumes original session ID"
+  }
+}

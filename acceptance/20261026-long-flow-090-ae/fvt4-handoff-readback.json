@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "at": "2026-10-26T14:09:34.892Z",
+  "native_id": "01a176d2-2255-7e80-9c37-d825387a4fef",
+  "session_id": "de25fce4-4446-4b5a-9038-9af130f3b456",
+  "handoff": "交接-全书修后尾读二次容量恢复.md",
+  "handoff_sha256": "0337fc341f03aca26501aaf94893fa115ed2e4e761d3af38e79d9f39e74d1e03",
+  "stop_sha256": "2fb39a24f0482a7afc2af534e09d3cb212d75f0463626fcad6ad30965b70c65a",
+  "actual_model_readback": {
+    "tool": "mcp__fastctx.read",
+    "lines": "1—17",
+    "complete": true
+  },
+  "all_current_reading_evidence_hashes_match_finalization": true,
+  "both_checkpoint_state_hashes_still_match": true,
+  "after_CP_project_writes": 0,
+  "official_command_count": 13,
+  "body_read_batches": 46,
+  "extra_pages": 2,
+  "failures_this_run": [],
+  "prior_capacity_failures_not_rewritten": true,
+  "last_technical_commands": [
+    "node acceptance/20261026-long-flow-090-ae/fvt4-save-stop.mjs",
+    "node -e read fvt4-final-preservation-audit.json and print finite sources/check/issues/session fields only",
+    "node acceptance/20261026-long-flow-090-ae/fvt4-final-receipt.mjs"
+  ],
+  "native_exit": null,
+  "native_exit_observer": "root; pending",
+  "no_release_or_whole_acceptance_claim": true
+}

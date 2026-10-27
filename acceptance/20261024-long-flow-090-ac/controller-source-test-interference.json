@@ -1,0 +1,9 @@
+{
+  "scope": "Unplanned controller sequencing error; no installed scenario runtime changed",
+  "run": "existing-repair-targeted-v2-tests.log",
+  "result": {"tests": 6, "pass": 2, "fail": 4},
+  "observed_code": "TOOL_BUILD_CHANGED",
+  "cause": "The root controller edited lib/help.mjs while this source-importing test process was still running; the loaded-runtime guard correctly refused later writes.",
+  "response": "Preserve the failed log, freeze runtime source files, rerun all six tests from a new process in targeted-v3; keep native C on its immutable external package. Do not relax the guard.",
+  "validation_status": "v3 rerun started; final package and native acknowledgement still pending"
+}

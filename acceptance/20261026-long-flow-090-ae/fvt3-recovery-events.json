@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-26T13:14:38.167Z",
+  "previous": {
+    "run": "final-tail-resume",
+    "started": "2026-10-26T12:55:12.811Z",
+    "observed_by_root": {
+      "exit": 1,
+      "elapsed_ms": 777023,
+      "error": "Selected model is at capacity"
+    },
+    "complete_units": [
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "complete_pages": 39,
+    "partial_unit42_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "extra36_pages": [
+      6,
+      7
+    ],
+    "original_results_untouched": true
+  },
+  "current": {
+    "native_id": "01a176d2-2255-7e80-9c37-d825387a4fef",
+    "planned_units": [
+      42,
+      66
+    ],
+    "planned_pages": 242,
+    "unit42_restart_at_page1": true
+  },
+  "auxiliary_failures": [
+    {
+      "kind": "functions exec tool discovery",
+      "error": "TypeError: Cannot read properties of undefined (reading name)",
+      "effect": "No filesystem or product calls occurred; direct FastCtx calls used instead."
+    }
+  ]
+}

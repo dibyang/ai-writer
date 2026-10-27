@@ -1,0 +1,134 @@
+{
+  "unit": 1,
+  "expected_revision": 2,
+  "source_hashes": {
+    "writer.json": "522c5e261c04d80c9baf25b5a33cde2a4bae8fe483e1e4231619560ad84f19be",
+    ".writer/state.json": "36932519255087ffee9d482b2e742fd3b1b2429ff1597f35a46d1b9859638ba6",
+    "大纲/单元/0001.json": "b792e0985eed3968fe076fc24fff22dc5eead72853b1c59f0ef9119a63b507d7",
+    "设定/作品定位.md": "259a580686f4db15e33024c0ca017e2dfc19eca0411feda17f3566c0e54d9200",
+    "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+    "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+    "设定/本次故事约束.md": "502a1fb416fbac6c1b3256a7da9f72d6ab342fbcd09b50fbcc5575a0eee4094a",
+    "大纲/分卷/V01.json": "d9485be8e70ebc52003c5efc23b31bc4ceaaece67c7c741711b0276588888439"
+  },
+  "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+  "source_bindings": {},
+  "summary": "雨天早上，许宁把深蓝长柄伞借给赶去社区服务站的周岚，交换号码并约定今晚七点前送回店内；自己绕连廊买拉链，未补蓝色拉链。周岚随后消息称箱子已到、伞收在屋里。",
+  "changes": {
+    "characters": {
+      "许宁": "缝纫店；买回灰色拉链开始改裤子，蓝色未补；知道伞已借给周岚、今晚七点前送回；收到对方称伞在屋里的消息",
+      "周岚": "已带伞与书箱离开店门；随后发消息称到达服务站、伞收在屋里；知道许宁店名、号码及七点半关门"
+    },
+    "timeline_append": [
+      "当日07:40后：许宁在店门借出深蓝长柄伞，双方约今晚19:00前在店归还并交换号码",
+      "当日近08:30：许宁买回灰色拉链，蓝色未补；随后收到周岚报到及伞收屋里的消息"
+    ],
+    "ledger": {
+      "O_UMBRELLA_MARK": {
+        "type": "observation",
+        "statement": "借出时深蓝长柄伞的伞套扣环有白线补缝，伞柄底部贴纸墨已糊且右边缺一小角；贴纸缺角是原有状态。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "tags": [
+          "伞",
+          "原观察"
+        ],
+        "reader_known": "借出时已经看见白线与贴纸缺角，缺角不是新损坏",
+        "character_known": {
+          "许宁": "知道白线是自己缝的，缺角早已存在",
+          "周岚": "当面看到贴纸右边缺角和扣环白线，听许宁说明缺角早已存在"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "贴纸原来写过名字，墨已糊了，右边缺一小角。"
+          },
+          {
+            "unit": 1,
+            "quote": "周岚看了看，又摸了摸伞套扣环上的白线。"
+          }
+        ]
+      },
+      "P_UMBRELLA": {
+        "type": "object",
+        "statement": "许宁借给周岚的同一把深蓝长柄伞。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "tags": [
+          "伞",
+          "借物"
+        ],
+        "custody": {
+          "holder": "周岚",
+          "location": "社区服务站屋内（周岚消息所述，许宁未现场看见）",
+          "condition": "已借出，未归还；原有白线与贴纸缺角"
+        },
+        "reader_known": "门口已亲手借出；末尾消息说伞在屋里，未发生归还",
+        "character_known": {
+          "许宁": "亲手交出伞，收到周岚说伞收在屋里的消息；未到服务站核看",
+          "周岚": "持有借来的深蓝长柄伞，知道原识别处与今晚归还约定"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "许宁替她托住箱底，等周岚把一只胳膊稳稳垫好，才把伞柄送进她另一只手。"
+          }
+        ]
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "借伞归还约定及完成情况。",
+        "status": "pending",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "due_unit": 3,
+        "reader_known": "初约当晚七点前送回缝纫店，实际归还未发生",
+        "character_known": {
+          "许宁": "今晚七点前收伞，自己七点半关店；有事可电话联系",
+          "周岚": "承诺今晚七点前送回许宁店里，已存号码；知道七点半关门"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "我今晚七点前送回来，你店还开着吗？"
+          }
+        ]
+      },
+      "R_NEIGHBOR": {
+        "type": "relationship",
+        "statement": "许宁与周岚从点头之交发展为借伞并能直接联系的邻居。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "reader_known": "交换号码，许宁将联系人存为楼上周岚",
+        "character_known": {
+          "许宁": "知道周岚姓名、号码及住楼上，愿意借伞",
+          "周岚": "知道许宁姓名、号码与巷口改衣店名，接受借伞"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "quote": "将“周岚”改成“楼上周岚”。"
+          }
+        ]
+      }
+    }
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。",
+  "draft_review": {
+    "reviewer": "Codex同会话知情自检",
+    "report": "审查/0001-r2-知情自检.md",
+    "draft_sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+    "report_sha256": "93a22aeaacd2b9df3b247f0d6db0dc78a457f04409b183f3b1105b3398c55f32"
+  }
+}

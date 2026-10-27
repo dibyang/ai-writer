@@ -1,0 +1,6 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';import{spawnSync}from'node:child_process';import assert from'node:assert/strict';
+const a=path.dirname(fileURLToPath(import.meta.url)),rows=[];
+for(const mode of ['main','work'])for(const[kind,args]of [['doctor',['doctor']],['status',['status']],['check',['check']],['sources',['source','list']],['revisions',['revision','list']],['issues',['review-issues','list']]]){
+ const label=`fvr3-end-${mode}-${kind}`,r=spawnSync(process.execPath,[path.join(a,'fvr3-cli.mjs'),mode,label,...args],{encoding:'utf8',windowsHide:true,timeout:130000,maxBuffer:64*1024*1024});const result=JSON.parse(fs.readFileSync(path.join(a,'cli-logs',label,'result.json'),'utf8'));assert.equal(r.status,0,label);assert.equal(result.before_state_sha256,result.after_state_sha256,label);const product=JSON.parse(r.stdout);rows.push({mode,kind,label,result,product});console.log(JSON.stringify({mode,kind,exit_code:r.status,state_unchanged:true,ok:product.ok??null,revision:product.revision??null}));
+}
+fs.writeFileSync(path.join(a,'fvr3-two-area-six-state.json'),JSON.stringify({at:new Date().toISOString(),native_id:'01a176d2-2255-7e80-9c37-d825387a4fef',rows},null,2)+'\n',{flag:'wx'});

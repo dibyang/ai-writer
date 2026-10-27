@@ -1,0 +1,246 @@
+{
+  "result": {
+    "ok": true,
+    "impact_id": "b11f0874-edda-4d0e-b2ac-de223316f13b",
+    "blocked_range": {
+      "from": 61,
+      "through": 66
+    },
+    "note": "持久阻断已启用；需独立修订、逐章重登及实读复核后事务提交",
+    "revision": 390,
+    "event": {
+      "ref": ".writer/objects/0f31d233-822a-4449-9e18-590f0847b8e5.json",
+      "sha256": "84c926b755e5a09dede8a0b9d0fa8c7f6d89efe52fe140f7c779b1f4f7bd3b66"
+    }
+  },
+  "impact": {
+    "schema_version": 1,
+    "revision": 389,
+    "state_sha256": "aa9c5a8c36e8cbdab191ede3febc22fdddf88fe5691371ddf8eaad69de7e077c",
+    "version_id": "AE_R_S06_NEW",
+    "ref": "研究/AE规划与旧线证据.md",
+    "from": 61,
+    "mode": "historical",
+    "candidate_sha256": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+    "direct_consumers": [
+      {
+        "unit": 61,
+        "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 62,
+        "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 63,
+        "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 64,
+        "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 65,
+        "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 66,
+        "consumed_sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 61,
+    "review_from": 60,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [],
+    "possible_indirect_from": 61,
+    "possible_indirect_through": 66,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331.source": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+      "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+      "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+      "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+      "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+      "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+      "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+      "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+      ".writer/objects/5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61.source": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  },
+  "proof": {
+    ".writer/objects/5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331.source": {
+      "kind": "full-new-frozen-object-paged-read",
+      "labels": [
+        "r-source-s06-p01.json",
+        "r-source-s06-p02.json",
+        "r-source-s06-p03.json"
+      ],
+      "sha256": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331"
+    },
+    "正文/0060-窗边还留着光-ad-dr-v2.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u60-p01.json",
+        "r-pre-u60-p02.json",
+        "r-pre-u60-p03.json",
+        "r-pre-u60-p04.json",
+        "r-pre-u60-p05.json",
+        "r-pre-u60-p06.json",
+        "r-pre-u60-p07.json",
+        "r-pre-u60-p08.json",
+        "r-pre-u60-p09.json",
+        "r-pre-u60-p10.json",
+        "r-pre-u60-p11.json"
+      ],
+      "sha256": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a"
+    },
+    "正文/0061-这一页先留我这里-ae-a-v2.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u61-p01.json",
+        "r-pre-u61-p02.json",
+        "r-pre-u61-p03.json",
+        "r-pre-u61-p04.json",
+        "r-pre-u61-p05.json",
+        "r-pre-u61-p06.json",
+        "r-pre-u61-p07.json",
+        "r-pre-u61-p08.json",
+        "r-pre-u61-p09.json",
+        "r-pre-u61-p10.json",
+        "r-pre-u61-p11.json"
+      ],
+      "sha256": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c"
+    },
+    "正文/0062-改不了的那一份-ae-a-v1.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u62-p01.json",
+        "r-pre-u62-p02.json",
+        "r-pre-u62-p03.json",
+        "r-pre-u62-p04.json",
+        "r-pre-u62-p05.json",
+        "r-pre-u62-p06.json",
+        "r-pre-u62-p07.json",
+        "r-pre-u62-p08.json",
+        "r-pre-u62-p09.json",
+        "r-pre-u62-p10.json",
+        "r-pre-u62-p11.json",
+        "r-pre-u62-p12.json",
+        "r-pre-u62-p13.json",
+        "r-pre-u62-p14.json",
+        "r-pre-u62-p15.json",
+        "r-pre-u62-p16.json"
+      ],
+      "sha256": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980"
+    },
+    "正文/0063-轮到自己落一子-ae-a-v2.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u63-p01.json",
+        "r-pre-u63-p02.json",
+        "r-pre-u63-p03.json",
+        "r-pre-u63-p04.json",
+        "r-pre-u63-p05.json",
+        "r-pre-u63-p06.json",
+        "r-pre-u63-p07.json",
+        "r-pre-u63-p08.json",
+        "r-pre-u63-p09.json",
+        "r-pre-u63-p10.json",
+        "r-pre-u63-p11.json"
+      ],
+      "sha256": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52"
+    },
+    "正文/0064-把这一边转过来-ae-b-v2.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u64-p01.json",
+        "r-pre-u64-p02.json",
+        "r-pre-u64-p03.json",
+        "r-pre-u64-p04.json",
+        "r-pre-u64-p05.json",
+        "r-pre-u64-p06.json",
+        "r-pre-u64-p07.json",
+        "r-pre-u64-p08.json",
+        "r-pre-u64-p09.json",
+        "r-pre-u64-p10.json",
+        "r-pre-u64-p11.json"
+      ],
+      "sha256": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35"
+    },
+    "正文/0065-画到不想给人看-ae-b-v2.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u65-p01.json",
+        "r-pre-u65-p02.json",
+        "r-pre-u65-p03.json",
+        "r-pre-u65-p04.json",
+        "r-pre-u65-p05.json",
+        "r-pre-u65-p06.json",
+        "r-pre-u65-p07.json",
+        "r-pre-u65-p08.json",
+        "r-pre-u65-p09.json",
+        "r-pre-u65-p10.json",
+        "r-pre-u65-p11.json",
+        "r-pre-u65-p12.json",
+        "r-pre-u65-p13.json",
+        "r-pre-u65-p14.json",
+        "r-pre-u65-p15.json"
+      ],
+      "sha256": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b"
+    },
+    "正文/0066-照约把书带回来-ae-b-v3.md": {
+      "kind": "full-body-paged-read",
+      "labels": [
+        "r-pre-u66-p01.json",
+        "r-pre-u66-p02.json",
+        "r-pre-u66-p03.json",
+        "r-pre-u66-p04.json",
+        "r-pre-u66-p05.json",
+        "r-pre-u66-p06.json",
+        "r-pre-u66-p07.json",
+        "r-pre-u66-p08.json",
+        "r-pre-u66-p09.json",
+        "r-pre-u66-p10.json",
+        "r-pre-u66-p11.json"
+      ],
+      "sha256": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70"
+    },
+    ".writer/objects/5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61.source": {
+      "kind": "full-original-source-FastCtx-read-and-exact-byte-frozen-alias",
+      "version_id": "AE_R_S06_OLD",
+      "logical_ref": "研究/AE规划与旧线证据.md",
+      "sha256": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61",
+      "old_copy": "r-old-sources/S06.md"
+    }
+  },
+  "review": {
+    "report": "审查/AE-R-S06-来源影响.md",
+    "report_sha256": "4f495642f0ac5fc6405720ab7812ca8f9fa2f5d6f11b849f74b92d7d462698a1",
+    "readings": {
+      ".writer/objects/5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331.source": "5787858cfe6f510743f2f3c6954f03bfec9ef1706b5ce8aa323c8c974f044331",
+      "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+      "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+      "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+      "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+      "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+      "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+      "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+      ".writer/objects/5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61.source": "5189bdefff6d82e6c97b8f8bcd26c0aae37d3d0272bacd14493127b7ede67c61"
+    },
+    "conclusion": "全尾及旧/新来源已实读；两处普通受控fixture的依赖已定位，允许建立历史待处理提案。stage不等于改稿/发布/验收，首程必须只读保护停程。",
+    "unresolved": []
+  }
+}

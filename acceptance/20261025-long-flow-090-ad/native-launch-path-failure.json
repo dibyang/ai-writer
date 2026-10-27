@@ -1,0 +1,10 @@
+{
+  "label": "a-first-before-launch",
+  "command": "node acceptance/20261025-long-flow-090-ad/run-native.mjs a-first prompt-a-first.md",
+  "exit_code": 1,
+  "error": "ENOENT opening D:\\work\\other\\ai-writer\\prompt-a-first.md",
+  "cause": "Controller supplied a basename although launcher resolves prompt relative to repository cwd.",
+  "child_started": false,
+  "state_changed": false,
+  "correction": "Use full absolute prompt path. No tool source or story changes."
+}

@@ -1,0 +1,78 @@
+{
+  "expected_revision": 392,
+  "operation_id": "AE_R_RESUME1_MAIN_WRITE_PROTECTION_NEGATIVE",
+  "author_evidence": {
+    "quote": "继续完成当前尚未验收的工具修改，再用最新 0.9.0 从36章继续扩大长篇实跑，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/AE作者任务.md",
+    "source_sha256": "fb716f7f8744715181908a37fd66f356ac1a93762a55e7fe62171087fa2b7868",
+    "locator": "研究/AE作者任务.md第9—15行原话；本次已激活R首程控制器要求独立fixture有限revise54—66并保存只读保护首停。74/20为待实际核实的普通fixture候选，不冒称作者新增逐项原话。",
+    "recorded_by": "AE R native 01a17511-c2b0-79a3-bf72-0f77373bfce2"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "AE R受控旧章修订54—66。54净价72→74、59迟到15→20/16:45→16:50经实读判断可作普通fixture。首程只做旧新冻结、影响实读/stage和revision begin，再在受保护workspace完整重读54/59后停。不改正文、不rewind、不publish新历史、不重登、不prepare/commit；不draft。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 54,
+        "to": 66
+      },
+      "stop_conditions": [
+        "任何不可变观察/作者核心选择冲突或未知影响未解则停，不强stage。",
+        "先在main冻结/stage，之后才revision begin；保护区首程仅实读。",
+        "实际正文依赖为54、55、59、61，后续重登54—66全部；不同事件不全局替换。",
+        "保存完整main/workspace字节checkpoint，核完后不再写作品；同ID恢复前两个checkpoint均须先核字节再官方resume。",
+        "保留旧33/13optional/49retained/9已采用，原文及失败历史不删除。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书大纲.md",
+          "大纲/AD扩大骨架-49-60.md",
+          "大纲/AE新增骨架-61-66.md",
+          "研究/AE规划与旧线证据.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V22.json",
+          "大纲/分卷/V23.json"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0054.json",
+          "大纲/单元/0059.json",
+          "大纲/单元/0060.json",
+          "大纲/AE新增骨架-61-66.md"
+        ],
+        "unresolved_ids": [],
+        "reason": "本R首程完整实读main54—66，实际消费版本与历史骨架区分。有限受控候选，先freeze/impact/stage后begin，只读保护首停；不把规划当事实。"
+      }
+    }
+  }
+}

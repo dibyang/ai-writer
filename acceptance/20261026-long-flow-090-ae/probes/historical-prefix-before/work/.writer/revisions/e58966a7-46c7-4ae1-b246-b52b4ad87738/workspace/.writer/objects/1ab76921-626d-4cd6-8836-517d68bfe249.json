@@ -1,0 +1,58 @@
+{
+  "action": "publish",
+  "at": "2026-10-25T22:33:54.356Z",
+  "evidence": {
+    "local_source": "研究/验证授权.md",
+    "source_sha256": "074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19",
+    "quote": "允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。",
+    "locator": "synthetic-test-only",
+    "recorded_by": "test-fixture",
+    "frozen_ref": ".writer/objects/074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19.txt"
+  },
+  "input": {
+    "expected_revision": 10,
+    "operation_id": "source-23",
+    "impact_id": "168235ac-cb8e-4bff-ba44-f91a9261066a",
+    "author_evidence": {
+      "local_source": "研究/验证授权.md",
+      "source_sha256": "074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19",
+      "quote": "允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。",
+      "locator": "synthetic-test-only",
+      "recorded_by": "test-fixture"
+    }
+  },
+  "result": {
+    "published": "PREFIX_NEW",
+    "from": 2,
+    "pending_resolution": "branch-only-until-transaction-commit"
+  },
+  "current": {
+    "source_versions": {
+      "PREFIX_OLD": {
+        "id": "PREFIX_OLD",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2.source",
+        "sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "previous": null,
+        "format": "md"
+      },
+      "PREFIX_NEW": {
+        "id": "PREFIX_NEW",
+        "ref": "设定/权威规则.md",
+        "object_ref": ".writer/objects/adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e.source",
+        "sha256": "adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e",
+        "previous": null,
+        "format": "md"
+      }
+    },
+    "source_ranges": [
+      {
+        "ref": "设定/权威规则.md",
+        "version_id": "PREFIX_NEW",
+        "from": 2,
+        "to": null
+      }
+    ],
+    "impact_pending": {}
+  }
+}

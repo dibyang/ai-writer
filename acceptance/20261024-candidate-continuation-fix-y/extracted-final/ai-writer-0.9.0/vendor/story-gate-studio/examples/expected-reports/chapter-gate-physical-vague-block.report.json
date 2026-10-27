@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-physical-vague-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-physical-vague-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-PHY-001-R002",
+      "severity": "blocker",
+      "location": "input.physical_operability",
+      "recommendation": "Replace the generic physical explanation with at least one concrete evidence or action target and at least two support anchors such as position, obstruction, angle, light, distance, posture, tool, timing, or procedure.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    }
+  ]
+}

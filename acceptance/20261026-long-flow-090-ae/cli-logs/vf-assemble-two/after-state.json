@@ -1,0 +1,299 @@
+{
+  "schema_version": 6,
+  "revision": 3,
+  "project_id": "5badc02c-dec6-4193-b5de-c76021f9608c",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "许宁": "缝纫店；买回灰色拉链开始改裤子，蓝色未补；知道伞已借给周岚、今晚七点前送回；收到对方称伞在屋里的消息",
+      "周岚": "已带伞与书箱离开店门；随后发消息称到达服务站、伞收在屋里；知道许宁店名、号码及七点半关门"
+    },
+    "threads": [],
+    "timeline": [
+      "当日07:40后：许宁在店门借出深蓝长柄伞，双方约今晚19:00前在店归还并交换号码",
+      "当日近08:30：许宁买回灰色拉链，蓝色未补；随后收到周岚报到及伞收屋里的消息"
+    ],
+    "ledger": {
+      "O_UMBRELLA_MARK": {
+        "type": "observation",
+        "statement": "借出时深蓝长柄伞的伞套扣环有白线补缝，伞柄底部贴纸墨已糊且右边缺一小角；贴纸缺角是原有状态。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "tags": [
+          "伞",
+          "原观察"
+        ],
+        "reader_known": "借出时已经看见白线与贴纸缺角，缺角不是新损坏",
+        "character_known": {
+          "许宁": "知道白线是自己缝的，缺角早已存在",
+          "周岚": "当面看到贴纸右边缺角和扣环白线，听许宁说明缺角早已存在"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 50,
+            "quote": "贴纸原来写过名字，墨已糊了，右边缺一小角。"
+          },
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 54,
+            "quote": "周岚看了看，又摸了摸伞套扣环上的白线。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "P_UMBRELLA": {
+        "type": "object",
+        "statement": "许宁借给周岚的同一把深蓝长柄伞。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "tags": [
+          "伞",
+          "借物"
+        ],
+        "custody": {
+          "holder": "周岚",
+          "location": "社区服务站屋内（周岚消息所述，许宁未现场看见）",
+          "condition": "已借出，未归还；原有白线与贴纸缺角"
+        },
+        "reader_known": "门口已亲手借出；末尾消息说伞在屋里，未发生归还",
+        "character_known": {
+          "许宁": "亲手交出伞，收到周岚说伞收在屋里的消息；未到服务站核看",
+          "周岚": "持有借来的深蓝长柄伞，知道原识别处与今晚归还约定"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 58,
+            "quote": "许宁替她托住箱底，等周岚把一只胳膊稳稳垫好，才把伞柄送进她另一只手。"
+          }
+        ],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "T_RETURN": {
+        "type": "thread",
+        "statement": "借伞归还约定及完成情况。",
+        "status": "pending",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "due_unit": 3,
+        "reader_known": "初约当晚七点前送回缝纫店，实际归还未发生",
+        "character_known": {
+          "许宁": "今晚七点前收伞，自己七点半关店；有事可电话联系",
+          "周岚": "承诺今晚七点前送回许宁店里，已存号码；知道七点半关门"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 36,
+            "quote": "我今晚七点前送回来，你店还开着吗？"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      },
+      "R_NEIGHBOR": {
+        "type": "relationship",
+        "statement": "许宁与周岚从点头之交发展为借伞并能直接联系的邻居。",
+        "status": "active",
+        "cast": [
+          "许宁",
+          "周岚"
+        ],
+        "reader_known": "交换号码，许宁将联系人存为楼上周岚",
+        "character_known": {
+          "许宁": "知道周岚姓名、号码及住楼上，愿意借伞",
+          "周岚": "知道许宁姓名、号码与巷口改衣店名，接受借伞"
+        },
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+            "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+            "line": 70,
+            "quote": "将“周岚”改成“楼上周岚”。"
+          }
+        ],
+        "tags": [],
+        "introduced_unit": 1,
+        "updated_unit": 1
+      }
+    }
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/V01-借出的一天/0001-雨停以前-r2.md",
+      "sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+      "summary": "雨天早上，许宁把深蓝长柄伞借给赶去社区服务站的周岚，交换号码并约定今晚七点前送回店内；自己绕连廊买拉链，未补蓝色拉链。周岚随后消息称箱子已到、伞收在屋里。",
+      "source_hashes": {
+        "writer.json": "522c5e261c04d80c9baf25b5a33cde2a4bae8fe483e1e4231619560ad84f19be",
+        ".writer/state.json": "36932519255087ffee9d482b2e742fd3b1b2429ff1597f35a46d1b9859638ba6",
+        "大纲/单元/0001.json": "b792e0985eed3968fe076fc24fff22dc5eead72853b1c59f0ef9119a63b507d7",
+        "设定/作品定位.md": "259a580686f4db15e33024c0ca017e2dfc19eca0411feda17f3566c0e54d9200",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "设定/本次故事约束.md": "502a1fb416fbac6c1b3256a7da9f72d6ab342fbcd09b50fbcc5575a0eee4094a",
+        "大纲/分卷/V01.json": "d9485be8e70ebc52003c5efc23b31bc4ceaaece67c7c741711b0276588888439"
+      },
+      "fingerprint": "00a68cbbaddbb69b10381a2a42d2c60ef515a2ab497180c100c31fde8e29f9f6",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "drafting",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "6cc298c5d4f30a2a5373e8b9d461727a522291fdfe90ae76166d0fbed672b674",
+      "draft_review": {
+        "reviewer": "Codex同会话知情自检",
+        "report": "审查/0001-r2-知情自检.md",
+        "draft_sha256": "a2d76afb2f1215def561a17beeae46f3d102409113500352053a210c04f2a372",
+        "report_sha256": "93a22aeaacd2b9df3b247f0d6db0dc78a457f04409b183f3b1105b3398c55f32",
+        "frozen_ref": ".writer/objects/93a22aeaacd2b9df3b247f0d6db0dc78a457f04409b183f3b1105b3398c55f32.draft-review"
+      },
+      "journal": ".writer/journal/124be159-bc69-412d-8606-d2862b207c58.json",
+      "journal_sha256": "045c38f87fbba85ed908ac53243ca4f1588536b5f74951962a28712c328b9c7a"
+    }
+  ],
+  "governance": {
+    "stage": "drafting",
+    "task": "按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "三章范围不扩章",
+        "本程第2章后仅保存第3章写前输入并停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/91dc38c6-7e26-4ad3-a990-db21e5c3b565.json",
+      "sha256": "d5c42e35833f2f747271d89d709513240d33b1316eb046060f55b46c8ce72db8"
+    },
+    {
+      "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+      "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+    }
+  ],
+  "operations": {
+    "vf-planning": {
+      "input_sha256": "40d8b93aa2440047f8ea5faf5683f547c1bc4f00dea574e144ce1e4b75488150",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "vf-planning",
+        "event": {
+          "ref": ".writer/objects/91dc38c6-7e26-4ad3-a990-db21e5c3b565.json",
+          "sha256": "d5c42e35833f2f747271d89d709513240d33b1316eb046060f55b46c8ce72db8"
+        }
+      }
+    },
+    "vf-drafting-bounded": {
+      "input_sha256": "faa56970dd7ea7cfe58c009248b162e8a11bbb48bd59e5cff6d2ef128f0b911c",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "vf-drafting-bounded",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+    "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+  }
+}

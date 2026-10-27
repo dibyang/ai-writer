@@ -1,0 +1,723 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 149,
+  "counts": {
+    "verified": 2,
+    "open": 5
+  },
+  "issues": [
+    {
+      "id": "V_A_U5_TIME_METADATA",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "第5章登记summary及timeline两处停航次日晚误导到停航第二日；正文承接第4章今晚六点半，实际应是停航首日晚（末班船次日晚）。",
+      "suggestion": "根核验后决定正式纠正登记的授权与路径。本阶段不改state、不新开修订；续写须读取本问题并保持正确日序，不能由错误标签推造次晨取糕已发生。",
+      "evidence": [
+        {
+          "unit": 4,
+          "draft": "正文/0004-少蒸的两笼-v1.md",
+          "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+          "line": 269,
+          "quote": "今晚六点半能来看看，先量，不一定就能装"
+        },
+        {
+          "unit": 5,
+          "draft": "正文/0005-门板靠墙-v1.md",
+          "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+          "line": 5,
+          "quote": "六点半，我看到了。"
+        },
+        {
+          "unit": 6,
+          "draft": "正文/0006-走一遍再画-v2.md",
+          "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+          "line": 3,
+          "quote": "停航第一天的下午四点"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/90a6ef24-4a8a-421b-810b-62f2714a6b83.json",
+        "review_sha256": "68a1539779935ebce8ec6c9cebd3a8c501c0b84c4a4dbb32d33b6c4d3aaf8120",
+        "units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/9e0fcdde-a195-4414-872c-379990dcc9f6.json",
+          "sha256": "e87ded79bcf9c4055bc2b4b4f80c294db3b727fcf13ed6d60a56e60b7ff14eec"
+        },
+        {
+          "ref": ".writer/objects/9f31501d-fac7-4730-90bb-3526506a4365.json",
+          "sha256": "7eafee6a432849279ffa26ddc136ccbd3ce3cbf96283ba0df45cd405981f1b6e"
+        },
+        {
+          "ref": ".writer/objects/486da441-b366-4657-b54c-cbd362c84f18.json",
+          "sha256": "14c401c3fc1b975ed5cbb713bfe5e18e64d9f085e13378bcd48335a48e7c133f"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/a65e6a2e-9108-4039-a8e9-8b1ecdf2c7e7.json",
+          "sha256": "1d12232671465985c16a0530b61ea66f8378484230980e05ac21d1ab99cde069"
+        },
+        "disposition": "adopted",
+        "reason": "本轮真实根提示明确采用metadata-only修正，覆盖4—6；代理在当前正式revise授权内落实，只修summary/timeline时间措辞，六章正文和人物/物件/钱据/观察保持。不冒充人类逐字选择。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a953e526399641ed287d8be2d856da8fa117ce021309169437b73ad0dc44550b"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "f2cb8057e0fa8e50b7e3cae6ee6cce3628b3b4e970da202fa7a4ec1328c962c8"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "41860671f8d0c934c2d9a8ec4c656440e809d44da6cd8834058859ce724eeb24"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68",
+        "commit_binding": {
+          "ref": ".writer/objects/3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68.json",
+          "sha256": "fc085c834f0cee0d342e948781b63ca20a93726a08bdf2f872ad165c110e4f7c"
+        },
+        "transaction_id": "97c11e48-4f17-44c5-96de-5e087099eea0",
+        "reason": "根本轮明确授权以tracking模式应用既有真实追踪修订。事务97c11e48-4f17-44c5-96de-5e087099eea0已completed；该提交把4章summary/timeline澄清为停航首日清晨，把5章summary/timeline纠正为停航首日晚，6章保留同日下午并行。绑定原采用、旧新归档和同一commit_id，六章正文同字节，不捏造第二次修改。新默认apply仍实际退出2且state未变，当前另存显式tracking输入。后续仍需4—6真实完整实读报告与verify。",
+        "changes": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "before": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "after": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "before": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "after": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "before": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "after": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          }
+        ],
+        "change_scope": "tracking",
+        "tracking_state_refs": {
+          "before": {
+            "ref": ".writer/transactions/97c11e48-4f17-44c5-96de-5e087099eea0/old/16.bin",
+            "sha256": "df916afb152e33b9a2545e5ad88ac2b40f428733686c8da538ed71a8d8ef399b"
+          },
+          "after": {
+            "ref": ".writer/transactions/97c11e48-4f17-44c5-96de-5e087099eea0/new/16.bin",
+            "sha256": "e11cac3daca69b62a08a1986bb952ec8b0605e8dded4ffc7b347888067908dd1"
+          }
+        },
+        "tracking_changes": [
+          {
+            "unit": 4,
+            "before": {
+              "summary_sha256": "7643ce0257bc0427f8a1de607fb1906c2f886a94c6c43a5065fa0ade0d89cbe2",
+              "snapshot_sha256": "c796511b23282ca987470a1308a23cc9c1e6d38a1c1437a94aa67398f3043dad"
+            },
+            "after": {
+              "summary_sha256": "cf3aeface1fe9c74cb02ab772eb68052c630c850066a31c5ab511e342f412424",
+              "snapshot_sha256": "f41372e6dcbacbfbba697de55d897b4bc7ed04e3775550cd7097405cdf106c27"
+            },
+            "summary_changed": true,
+            "snapshot_changed": true
+          },
+          {
+            "unit": 5,
+            "before": {
+              "summary_sha256": "dfc2efc7cce2385707a2f9ea64d3e3b78cd42a242ffa5c9aef6136b4939364f3",
+              "snapshot_sha256": "130d0a13cf99b45f523260ec59a6c75ee777f0a1c236e5b23726c65709831715"
+            },
+            "after": {
+              "summary_sha256": "2918450ceb1d058c07ee75f697df8f16ae7f97b265e347c86544885583201eb0",
+              "snapshot_sha256": "bf1865e1e3eb524fbbca04ecbfcfe80e2457bfc0915602f8d39a615ce329923d"
+            },
+            "summary_changed": true,
+            "snapshot_changed": true
+          },
+          {
+            "unit": 6,
+            "before": {
+              "summary_sha256": "c68b4e3b592105b561139520a5eefe9f5eb47ee0b4ff120835c3d9953451bc83",
+              "snapshot_sha256": "f6200cf62ccdb360eec1a67a7402a583240026b341d26d9cb0aae03841f099bb"
+            },
+            "after": {
+              "summary_sha256": "c68b4e3b592105b561139520a5eefe9f5eb47ee0b4ff120835c3d9953451bc83",
+              "snapshot_sha256": "123559c1ee13c6a4e3623a82cdac0f2c7ca676285cef2a110cf058ed423988e0"
+            },
+            "summary_changed": false,
+            "snapshot_changed": true
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/0170b8c3-2e3b-4fda-a065-e8c567b5845c.json",
+        "review_sha256": "96726bef32816fc1a92dbe6c4864377f9ea8b04f97a9c5602f1a0da44a2eb603",
+        "reviewer": "V同一实际A会话Codex知情模型复核",
+        "conclusion": "resolved",
+        "reason": "在revision31完整实读当前4—6正文及修后summary/timeline，并于revision32正式登记本次新报告。4章第二天五点二十承接末班船当夜，下午约今晚六点半；5章六点半到家量柜属于同一停航首日晚；6章明确首日下午四点并行。既有正式commit 3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68、completed事务97c11e48-4f17-44c5-96de-5e087099eea0已把4章summary次晨/timeline停航次晨澄清为停航首日清晨，把5章summary/timeline停航次日晚纠正为停航首日晚，6章正文不改。tracking应用真实绑定该事务旧新归档；本轮没有第二次修改。新报告SHA e0efee8a546c3d198047c83990930ef8c02150f3944fa8292e5a2fea09c65aa8绑定当前三章正文与依赖。六章正文同修前根核验SHA；resolved仅表示该日期追踪意见经当前模型实读复核已解决，不表示作者定稿或后续早取/安装/过桥已经发生。",
+        "rechecked_context": false,
+        "application_commit_id": "3ec56fe0-3fbc-4bfe-9cb1-2253bdf0db68",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/d5d3d4e4-ce4d-4286-ab7a-ec984099f7c7.json",
+        "sha256": "4512c2cd3d52c19ac9bb09a4e0cdec068ad23d0463847645c80635b21d6e316f"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_F19_TITLE_TIME",
+      "type": "correctness",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "第19章标题提前两个钟头，正文常规16:00—18:30改为14:30—17:00，实际前移90分钟；标题与最自然所指的排班幅度不符，未解决。",
+      "suggestion": "报根核标题所指并走正式独立修订，优先保留自洽正文排班；本轮不擅改、不采用、不标修复。",
+      "evidence": [
+        {
+          "unit": 19,
+          "draft": "正文/0019-提前的两个钟头-v1.md",
+          "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+          "line": 1,
+          "quote": "# 第十九章 提前的两个钟头"
+        },
+        {
+          "unit": 19,
+          "draft": "正文/0019-提前的两个钟头-v1.md",
+          "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+          "line": 15,
+          "quote": "你今天两点半到五点，后头归我，还是那两个半钟头。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/35886295-c0f4-45cf-bbc0-2fd96de4f6a5.json",
+        "review_sha256": "211b9646605edf84e10fb35a90722a9c493bb71fa9395b99a42d4902966b8af1",
+        "units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "dependency": "fdd61498caa1c42cc67f0e98c90e632ae941cc71b412f07184f2a1bbbb6ca7ab"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/0487faed-4b15-49ff-8198-937e1960e860.json",
+          "sha256": "33161478f6823062286d9e93387901b8e7016c6abbd5696bdfabf35a03b4a424"
+        },
+        {
+          "ref": ".writer/objects/b14ab664-bd4a-4f4a-bc9d-cbfb6b2d273e.json",
+          "sha256": "a238636409442d9d80c38a3d850257d43647b24d322ee6f2f5e7004eaed84f47"
+        },
+        {
+          "ref": ".writer/objects/4ab91aec-7e14-4be7-b645-2e11b96e8368.json",
+          "sha256": "598df927a708180d51b0e4a38c5428ec9d733c1e111632a66580041cd3bbc7a8"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/b11ae55d-c265-4043-82e5-a7cbef76587d.json",
+          "sha256": "32d7f3da838cefa01d383174d3ff718918eb4c794f1863e4c048498dc6b4278e"
+        },
+        "disposition": "adopted",
+        "reason": "依本会话明确授权，只将第19章首行改为提前的一个半钟头，正文排班和历史路径保留。代理在授权范围采用，不伪称作者逐项亲自采用。新独立19—24会话实改重登后再按实际draft事务应用及当前全文复核。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "dependency": "fdd61498caa1c42cc67f0e98c90e632ae941cc71b412f07184f2a1bbbb6ca7ab"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "2391c67a-1aac-4232-8351-c35e357de154",
+        "commit_binding": {
+          "ref": ".writer/objects/2391c67a-1aac-4232-8351-c35e357de154.json",
+          "sha256": "cbf8105e3504ae174865be336ab1f0a46cfa6902501109be80fa298fcd9f79ae"
+        },
+        "transaction_id": "8b607cc7-4878-4cc2-a86a-ac728ee71904",
+        "reason": "实际completed独立修订事务在同一历史路径仅改19首行两个钟头为一个半钟头；原正文时刻和标题后字节未变，19—24实读重登/尾段review有效。按draft真实字节变化应用，后续另做提交后全24当前SHA实读verify。",
+        "changes": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "before": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "after": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+            "dependency": "bb4b5a9a42066149837a15ca7c7d9b81e4f11107d2c7e5c6ec524df9c828f1e4"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/967cb8c8-7e96-4d9f-b65b-fa4b90c1d241.json",
+        "review_sha256": "240803904a9c7979ff3b37a43da610112cb5eec98eda9c900c37ac69d768a700",
+        "reviewer": "W-F同ID恢复当前模型知情完整1—24实读",
+        "conclusion": "resolved",
+        "reason": "提交后r110当前全24按state.units原生顺序完整读取，f-title-current前后state/units/snapshot/24正文SHA相同。19新首行一个半钟头与16→14:30、18:30→17各前移90分钟一致；正文时刻和余下字节原样。原路径同绑定，实际completed事务/commit对象的draft应用已落主区，报告覆盖当前新19 SHA和当前全部依赖；非真人/作者定稿。",
+        "rechecked_context": false,
+        "application_commit_id": "2391c67a-1aac-4232-8351-c35e357de154",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "dependency": "915af5b208a9a0962f2341b1690d6c346ad1a8424de5eb23d47dd10b4a98b445"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886",
+            "dependency": "100447844a54922669f42e485dad012f2c8d4eb6705a03458c6feb9269538e63"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/0003-把手朝外-final-b.md",
+            "sha256": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221",
+            "dependency": "878256f268cb62a259475a9225595873a0bdb6131042377b8b23c4a20b58f4c3"
+          },
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          },
+          {
+            "unit": 7,
+            "draft": "正文/0007-先留出两包-v1.md",
+            "sha256": "44c39f40f7a22b3ef500e4948066303e27407b4f0d426daeedfdbb88781d9a04",
+            "dependency": "728754abfe4bfa5f9e38b9783dfcb18d3b6b6891c6021cc37860cb425e33dade"
+          },
+          {
+            "unit": 8,
+            "draft": "正文/0008-半个钟头-v2.md",
+            "sha256": "5c1f40674da30b617367171ec44a72a6972ae9e87add5db3f26b761df8b0cfc5",
+            "dependency": "e5d6342cd9ae7bdb4c012c623a291db6c8940044100bc75e0af1da2d0e10b17d"
+          },
+          {
+            "unit": 9,
+            "draft": "正文/0009-留给明天的活-v2.md",
+            "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+            "dependency": "a5e5b93ab04fd560faa699dbf5d0b45e8ab9771bda394bb32f57857dee60990b"
+          },
+          {
+            "unit": 10,
+            "draft": "正文/0010-月底的三十五块-v2.md",
+            "sha256": "773cf058337c048165bbb6afab2c00edf860068ebdef986902b94110d6cac52d",
+            "dependency": "3c401f043e61d5e85adb0de41715299712a4c6bbbefd2852258be6d00ba76847"
+          },
+          {
+            "unit": 11,
+            "draft": "正文/0011-盒子放进去-v2.md",
+            "sha256": "2410d684c6a0d2de7f0cdd0e25b20814af22dca213dfb66f2e804cd111bac075",
+            "dependency": "182d47490fe6e69ea9fb919ea6dfc71e8f9e44a43e16767aae3b4d394f01c23f"
+          },
+          {
+            "unit": 12,
+            "draft": "正文/0012-沿着坡走-v2.md",
+            "sha256": "973c82b824598d71120d881c9c5b8dc87c8ded132d82643bffd89c92c579fc42",
+            "dependency": "be391ec17e3540991a5a7c6dbb2204cabf9968675f3ae0e51d96f2c906cb2f30"
+          },
+          {
+            "unit": 13,
+            "draft": "正文/0013-桌边留一半-v1.md",
+            "sha256": "64ed099bd718907e34724d7fff80a3d59583cffd843848311000ac0d97abb20a",
+            "dependency": "e13a520a73d04c37bcab9480bd17039a3f731878a98a808cd658c7e4fed397d0"
+          },
+          {
+            "unit": 14,
+            "draft": "正文/0014-坐下再量-v1.md",
+            "sha256": "85bc3fd6b6b6476011ed17bc0cc505800100b570fbcc6430ec59498d6c2664da",
+            "dependency": "1af180462560ecd7b1e737f73810b8a02574591ce5b762b7081eb423b9cc42d3"
+          },
+          {
+            "unit": 15,
+            "draft": "正文/0015-一幅一幅洗-v1.md",
+            "sha256": "e30513d5c0914e5d0de0c477c26ffae47e5a9f06d8c645bc22d54503d7f66d83",
+            "dependency": "e7e0a22ed006eb9dbddd07446c746810003a4e46e073ce6d10f993d790a0df67"
+          },
+          {
+            "unit": 16,
+            "draft": "正文/0016-早饭留在锅里-v1.md",
+            "sha256": "1900edd2c9ef5cd0ea1c7de4728182352da57d78894cbc2fdbc9effbe2ac6cd2",
+            "dependency": "a6cdbb6cc396b62399253e6da4bda0417b3fa878466a62421994faf959075b85"
+          },
+          {
+            "unit": 17,
+            "draft": "正文/0017-板头留一截-v1.md",
+            "sha256": "f57febae9fc7593bf007905c026a259fb3084d4bae9bbb1d35cbde96b88c0189",
+            "dependency": "8c41ee779ae75fe3c269efc6c40c15ba3fa4f367c3253c08e586aa727a56b0b2"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "7d836f6084742e30e29ed24fa3f4d21f97f634e242fa2f197e4e10da1985af54",
+            "dependency": "de0841bfa937ef5d8eebc629a4a8bed2259cefeb894568abcdbe1ea2eeb7787c"
+          },
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+            "dependency": "bb4b5a9a42066149837a15ca7c7d9b81e4f11107d2c7e5c6ec524df9c828f1e4"
+          },
+          {
+            "unit": 20,
+            "draft": "正文/0020-少做的一笼-v1.md",
+            "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+            "dependency": "01bbe2ca60b88577dbdd79802752ab864c2d3055fa9c495285c63e36eabf7c37"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "c7de5d065543543b3a28810a8a14670beb2a1946c377ec28303ab0fba0988887",
+            "dependency": "51f34ad0c96ec295242083d005d91f1b81821ca8fea81876d8e17ca308f18dd9"
+          },
+          {
+            "unit": 22,
+            "draft": "正文/0022-书里那张白纸-v1.md",
+            "sha256": "dae0d3c1274197e71244b0c9ee300b1556a8edab9ed32075d7143a9f2ab6ed06",
+            "dependency": "6a9aea2b571c77046f8ac1fdc2076a4e55fd0be8268399c9b58a95313b3d071b"
+          },
+          {
+            "unit": 23,
+            "draft": "正文/0023-收摊以前-v1.md",
+            "sha256": "361d2a16759d18e2cde01386e0ab7e0b099a588df98aff7b7b0fa591ac1df84e",
+            "dependency": "1dc8f7d227fcb2832df6a99abaafcac7929f3b7b834a6bb89591b66c22a89093"
+          },
+          {
+            "unit": 24,
+            "draft": "正文/0024-门给你留着-v1.md",
+            "sha256": "c35b5fe13d4d6ee08414896906dadb0bc03ed6743ff6f027e24abd0e3a80d2ca",
+            "dependency": "1e672073397c312186c52b59d32e42c0d9f7f57942757d69c6af9ce836ef66ba"
+          }
+        ]
+      },
+      "binding": {
+        "ref": ".writer/objects/5bf8661a-0705-490f-8a49-23a87df92426.json",
+        "sha256": "ed6f428d715a448cc3e54d93143d9178d6f4d58b78d94e78ecc7407e95774f45"
+      },
+      "effective_status": "verified",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_X_AR_KNEE_JOKE",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "23修椅大姐与27取扇物主用相近膝盖自嘲，配角的笑法局部趋同。",
+      "suggestion": "如后续另有正式修订范围，可仅替换或删27这一句笑话，保留交付/付款/运输，不动旧23。",
+      "evidence": [
+        {
+          "unit": 23,
+          "draft": "正文/0023-收摊以前-v1.md",
+          "sha256": "361d2a16759d18e2cde01386e0ab7e0b099a588df98aff7b7b0fa591ac1df84e",
+          "line": 40,
+          "quote": "笑说现在响的是她膝盖，不是椅子。"
+        },
+        {
+          "unit": 27,
+          "draft": "正文/0027-先把这一天过完-v3.md",
+          "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+          "line": 17,
+          "quote": "天天坐着，蹲一下倒像修的该是我。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/a853fedb-f1d5-4aa4-950f-1c5e6eadfc40.json",
+        "review_sha256": "1c40f6faffb3602e3871a226259e5a78f997a0fe07fd80fa940f8f3cfceed5cc",
+        "units": [
+          {
+            "unit": 23,
+            "draft": "正文/0023-收摊以前-v1.md",
+            "sha256": "361d2a16759d18e2cde01386e0ab7e0b099a588df98aff7b7b0fa591ac1df84e",
+            "dependency": "1dc8f7d227fcb2832df6a99abaafcac7929f3b7b834a6bb89591b66c22a89093"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "dependency": "550d2ca3dfcc5b60acd543d00e25d45b8ce3e59d62beac295c11b049fcad3682"
+          }
+        ]
+      },
+      "history": [],
+      "binding": {
+        "ref": ".writer/objects/ce5e6af8-7381-4596-8b14-73e1ef8ce009.json",
+        "sha256": "42b511a6e37d9d5c0e769b540f7a76c0b3cb57b48df372479bc3ee08d731aa3f"
+      },
+      "effective_status": "open",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_X_AR_EGG_ECHO",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "22与27母女共分焦蛋的回合相近，生活气味有效但新鲜收益有限。",
+      "suggestion": "如后续正式修订27，可压短分蛋，把读者注意留给再穿反馈/共听戏/发画；此为风格建议，未采纳未修。",
+      "evidence": [
+        {
+          "unit": 22,
+          "draft": "正文/0022-书里那张白纸-v1.md",
+          "sha256": "dae0d3c1274197e71244b0c9ee300b1556a8edab9ed32075d7143a9f2ab6ed06",
+          "line": 196,
+          "quote": "两人分开那一块，吃到最后倒没剩。"
+        },
+        {
+          "unit": 27,
+          "draft": "正文/0027-先把这一天过完-v3.md",
+          "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+          "line": 206,
+          "quote": "母亲从她这边取一块软的，大小又和先前差不多"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/a853fedb-f1d5-4aa4-950f-1c5e6eadfc40.json",
+        "review_sha256": "1c40f6faffb3602e3871a226259e5a78f997a0fe07fd80fa940f8f3cfceed5cc",
+        "units": [
+          {
+            "unit": 22,
+            "draft": "正文/0022-书里那张白纸-v1.md",
+            "sha256": "dae0d3c1274197e71244b0c9ee300b1556a8edab9ed32075d7143a9f2ab6ed06",
+            "dependency": "6a9aea2b571c77046f8ac1fdc2076a4e55fd0be8268399c9b58a95313b3d071b"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "dependency": "550d2ca3dfcc5b60acd543d00e25d45b8ce3e59d62beac295c11b049fcad3682"
+          }
+        ]
+      },
+      "history": [],
+      "binding": {
+        "ref": ".writer/objects/c9fa422e-132b-482b-8bcf-b028a7cac886.json",
+        "sha256": "c5ee6d3cc64f2af113ec7f89ab7813f11406738d845f8e7c52fe366b9e02ae4c"
+      },
+      "effective_status": "open",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_X_BRC_CLASS_SUMMARY",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "30课堂末的明白不等于缝好总结略带解释，前面实作已充足，可选压短。",
+      "suggestion": "若未来获相应修订范围，可试删短此句后比较停顿；当前保留，不视作硬问题或已采纳。",
+      "evidence": [
+        {
+          "unit": 30,
+          "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+          "sha256": "cf70d2f5bcb75d2e782bd9531a366624bfc5b9f194d3b6e079a0b0c9abc40258",
+          "line": 172,
+          "quote": "没有因为自己听明白就先变成缝好的样子。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/247d6ac7-de58-49c4-adbe-7e63e6da2abf.json",
+        "review_sha256": "b333ce06dd362061f71e8dd67fc8555fcbace384b4adbf2b17ffa757d5820c5f",
+        "units": [
+          {
+            "unit": 30,
+            "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+            "sha256": "cf70d2f5bcb75d2e782bd9531a366624bfc5b9f194d3b6e079a0b0c9abc40258",
+            "dependency": "8391ac79110eb57e4d12b03d5679d771edda2036d283d562f8abc240a4e2c7c0"
+          }
+        ]
+      },
+      "history": [],
+      "binding": {
+        "ref": ".writer/objects/ac40fc44-8992-43d9-ae3e-1ed0d7482e01.json",
+        "sha256": "e4b34e54be0111b1f630c1784f89c5d3a1b1338d095f8fea1aefc1efd8115a3e"
+      },
+      "effective_status": "open",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_X_CR_TEA_ABSTRACT",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "32用“一项活摆在人中间”收束关系，抽象物作空间主语略拗口，前面实坐闲话已足。",
+      "suggestion": "仅在后续获得润色授权时考虑简化这句概括，保留两人静坐与不同话题。",
+      "evidence": [
+        {
+          "unit": 32,
+          "draft": "正文/0032-茶慢慢凉下来-cr-v2.md",
+          "sha256": "33233593787820901c1b8bc8a0c72d780ef57c4d7cb05cd8aa61f8c8c50093f3",
+          "line": 155,
+          "quote": "不用先把一项活摆在人中间。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/562b9ecb-7915-47ba-a9a1-8e735d5deb30.json",
+        "review_sha256": "24c3e3a0357279a6ad57b9a982b6170620f5d11dc7d4a59d14f355ed443955e3",
+        "units": [
+          {
+            "unit": 32,
+            "draft": "正文/0032-茶慢慢凉下来-cr-v2.md",
+            "sha256": "33233593787820901c1b8bc8a0c72d780ef57c4d7cb05cd8aa61f8c8c50093f3",
+            "dependency": "ea440cab5796a9b62556fa6be4276cbb0ed1b084e482cc771494f6834187396f"
+          }
+        ]
+      },
+      "history": [],
+      "binding": {
+        "ref": ".writer/objects/933c194b-3c2d-437f-82e8-c2a07f1ba266.json",
+        "sha256": "28e815511098bfdf2b83f3b99304c06f6241c4b597f909946fdec6db6195cf82"
+      },
+      "effective_status": "open",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    },
+    {
+      "id": "I_X_CR_BOUNDARY_NARRATION",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "33指路段“不替那人安排到头的事”将取证边界说成叙述，接修椅段也有类似解释，读起来显得替人物做自评。",
+      "suggestion": "后续有授权可只留指路与回座动作；此次仅报告，不改已登记稿，不据此推断原问路观察有错。",
+      "evidence": [
+        {
+          "unit": 33,
+          "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+          "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+          "line": 147,
+          "quote": "不替那人安排到头的事。"
+        }
+      ],
+      "status": "open",
+      "origin": {
+        "review_ref": ".writer/reviews/562b9ecb-7915-47ba-a9a1-8e735d5deb30.json",
+        "review_sha256": "24c3e3a0357279a6ad57b9a982b6170620f5d11dc7d4a59d14f355ed443955e3",
+        "units": [
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "dependency": "6a653af51dd481247e53c51315a8484e03bcbeef971a49adacda3f24449698dc"
+          }
+        ]
+      },
+      "history": [],
+      "binding": {
+        "ref": ".writer/objects/fb18ae62-0ece-4260-84c1-e301bf9c3a18.json",
+        "sha256": "b339566e8cbbcf90b529b9c5d72169df05bf863269d00874d9f476553928afba"
+      },
+      "effective_status": "open",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

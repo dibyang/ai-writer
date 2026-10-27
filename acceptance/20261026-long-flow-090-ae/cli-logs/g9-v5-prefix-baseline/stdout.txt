@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "published": "CLI_PREFIX_OLD",
+  "from": 1,
+  "analysis": {
+    "schema_version": 1,
+    "revision": 8,
+    "state_sha256": "1f7b0ea5406049d2b53af63d4215919f2fb121dbc6ccf0b844f51f8cc07fd406",
+    "version_id": "CLI_PREFIX_OLD",
+    "ref": "设定/权威规则.md",
+    "from": 1,
+    "mode": "baseline",
+    "candidate_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+    "direct_consumers": [
+      {
+        "unit": 1,
+        "consumed_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 2,
+        "consumed_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 3,
+        "consumed_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 1,
+    "review_from": 1,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [],
+    "possible_indirect_from": 1,
+    "possible_indirect_through": 3,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2.source": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+      "正文/0001.md": "e3f3613ff140936d7f4f962b0176e14126315b285e898e1c7caee506f4521f5f",
+      "正文/0002.md": "accd275ad33c37fc47bf7a853cfde58e8b55b5a3d2933545380bd1cf27a9569f",
+      "正文/0003.md": "1df21d9babce8b081dcb21b17e186d15fbe9381f26084aafa40a2b9418e5032d"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。",
+    "review": {
+      "report": "审查/影响-21.md",
+      "report_sha256": "8336fe5168221d49e9d279391c5dfa57ed2a42de1924ce86363936f6268f6908",
+      "readings": {
+        ".writer/objects/52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2.source": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "正文/0001.md": "e3f3613ff140936d7f4f962b0176e14126315b285e898e1c7caee506f4521f5f",
+        "正文/0002.md": "accd275ad33c37fc47bf7a853cfde58e8b55b5a3d2933545380bd1cf27a9569f",
+        "正文/0003.md": "1df21d9babce8b081dcb21b17e186d15fbe9381f26084aafa40a2b9418e5032d"
+      },
+      "conclusion": "合成测试声明，仅用于结构校验",
+      "unresolved": [],
+      "frozen_report": ".writer/objects/8336fe5168221d49e9d279391c5dfa57ed2a42de1924ce86363936f6268f6908.txt"
+    }
+  },
+  "original_hashes_preserved": true,
+  "revision": 9,
+  "event": {
+    "ref": ".writer/objects/50d9af82-d545-4e7b-804b-84ae4a3d4fb8.json",
+    "sha256": "d1f8af3cf4761cb80a6c22c41ece2a7657a7aa1b3ade6d987967c51234d22017"
+  }
+}

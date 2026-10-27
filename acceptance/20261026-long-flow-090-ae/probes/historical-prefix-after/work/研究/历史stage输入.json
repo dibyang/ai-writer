@@ -1,0 +1,71 @@
+{
+  "expected_revision": 8,
+  "operation_id": "source-19",
+  "author_evidence": {
+    "local_source": "研究/验证授权.md",
+    "source_sha256": "074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19",
+    "quote": "允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。",
+    "locator": "synthetic-test-only",
+    "recorded_by": "test-fixture"
+  },
+  "impact": {
+    "schema_version": 1,
+    "revision": 8,
+    "state_sha256": "721f6c4fd61a7b78a73da2d98478297a56fdcc12600e0cabae3771766fec7f14",
+    "version_id": "PREFIX_NEW",
+    "ref": "设定/权威规则.md",
+    "from": 2,
+    "mode": "historical",
+    "candidate_sha256": "adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e",
+    "direct_consumers": [
+      {
+        "unit": 1,
+        "consumed_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "bound": true,
+        "affected_by_publication": false
+      },
+      {
+        "unit": 2,
+        "consumed_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 3,
+        "consumed_sha256": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 2,
+    "review_from": 1,
+    "retained_prefix_consumers": [
+      1
+    ],
+    "replaced_ranges": [],
+    "possible_indirect_from": 2,
+    "possible_indirect_through": 3,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e.source": "adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e",
+      "正文/0001.md": "e3f3613ff140936d7f4f962b0176e14126315b285e898e1c7caee506f4521f5f",
+      "正文/0002.md": "accd275ad33c37fc47bf7a853cfde58e8b55b5a3d2933545380bd1cf27a9569f",
+      "正文/0003.md": "1df21d9babce8b081dcb21b17e186d15fbe9381f26084aafa40a2b9418e5032d",
+      ".writer/objects/52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2.source": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  },
+  "review": {
+    "report": "审查/影响-18.md",
+    "report_sha256": "8336fe5168221d49e9d279391c5dfa57ed2a42de1924ce86363936f6268f6908",
+    "readings": {
+      ".writer/objects/adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e.source": "adefc04901bd637a307110a9d6d74974ca0726b295f06b92f7f7136c443fdb9e",
+      "正文/0001.md": "e3f3613ff140936d7f4f962b0176e14126315b285e898e1c7caee506f4521f5f",
+      "正文/0002.md": "accd275ad33c37fc47bf7a853cfde58e8b55b5a3d2933545380bd1cf27a9569f",
+      "正文/0003.md": "1df21d9babce8b081dcb21b17e186d15fbe9381f26084aafa40a2b9418e5032d",
+      ".writer/objects/52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2.source": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+    },
+    "conclusion": "合成测试声明，仅用于结构校验",
+    "unresolved": []
+  }
+}

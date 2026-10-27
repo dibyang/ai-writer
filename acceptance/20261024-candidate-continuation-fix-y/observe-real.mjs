@@ -1,0 +1,8 @@
+// Read-only hashing. Never writes within the real work, never stores story text or tokens.
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const root='D:/work/小说/dzkxqxx',id='a250c807-0023-4bda-bf8b-188585d7abac',candidate=path.join(root,`.writer/revisions/${id}/workspace`),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const manifest='.writer/drafts/rootless-ch7-draft-20261024/source-manifest-before-writing-final.json',m=JSON.parse(fs.readFileSync(path.join(root,manifest)));
+const sources=Object.entries(m.source_hashes).map(([ref,expected])=>{const actual=sha(fs.readFileSync(path.join(candidate,ref)));return {ref,expected,actual,unchanged:expected===actual};});
+const fixed=[['main_state',path.join(root,'.writer/state.json')],['candidate_state',path.join(candidate,'.writer/state.json')],['session',path.join(root,`.writer/revisions/${id}/session.json`)],['installed_manifest',path.join(root,'.writer/tool/build-manifest.json')],['prewriting_manifest',path.join(root,manifest)],['pending_body',path.join(candidate,'.writer/drafts/rootless-ch7-pending-20261024/0007-下一回.md')]];
+const report={scope:'Read-only hashes only; no real work writes or backup audit',manifest_revision:m.revision,source_count:sources.length,sources,fixed:Object.fromEntries(fixed.map(([key,file])=>[key,sha(fs.readFileSync(file))])),all_sources_match:sources.every(s=>s.unchanged)};
+if(!process.argv[2])throw Error('Explicit new output file required');fs.writeFileSync(process.argv[2],JSON.stringify(report,null,2)+'\n',{flag:'wx'});if(!report.all_sources_match)process.exitCode=1;else console.log(`Read-only ${sources.length} source hashes match, plus ${fixed.length} fixed files`);

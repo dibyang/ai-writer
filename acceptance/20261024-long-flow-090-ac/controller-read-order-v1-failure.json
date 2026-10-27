@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-24T23:18:32.041Z",
+  "kind": "controller-audit-assumption-error",
+  "exit_code": 1,
+  "message": "missing ordered current reading 31/2 after previous page",
+  "actual_chapter31_completion_pages": [
+    2,
+    3,
+    1,
+    6,
+    5,
+    4
+  ],
+  "scope": "Read-only assertion failed before writing its receipt; no story or state mutation. Full first console output is in root conversation tool record.",
+  "correction": "Require complete current page coverage per chapter and chapter-to-chapter completion order. Parallel page completion does not prove the cognitive reading order."
+}

@@ -1,0 +1,7 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';import{spawnSync}from'node:child_process';
+const a=path.dirname(fileURLToPath(import.meta.url)),[mode,label,...args]=process.argv.slice(2);if(!['main','work'].includes(mode)||!label?.startsWith('fvr2-'))throw Error('Explicit target/unique fvr2 label required');
+const oldpath=path.join(a,'fvr1-private-ownership.json'),newpath=path.join(a,'fvr2-private-ownership.json'),cred=JSON.parse(fs.readFileSync(fs.existsSync(newpath)?newpath:oldpath,'utf8'));
+const main=path.join(a,'scenario','东岸末班船-66章独立验证'),full=[...args,'--project',mode==='work'?cred.workspace:main];if(mode==='work')full.push('--revision-token',cred.token);
+const r=spawnSync(process.execPath,[path.join(a,'cli-g9.mjs'),label,...full],{encoding:'utf8',windowsHide:true,timeout:130000,maxBuffer:64*1024*1024});let parsed;try{parsed=JSON.parse(r.stdout)}catch{}
+if(parsed?.token){if(r.status===0&&args[0]==='revision'&&args[1]==='resume'){if(parsed.id!==cred.id||parsed.workspace!==cred.workspace)throw Error('Resume identity changed; private raw output retained');fs.writeFileSync(newpath,JSON.stringify(parsed,null,2)+'\n',{flag:'wx'});}const{token,...publicResult}=parsed;console.log(JSON.stringify({...publicResult,token:'[private credential omitted]',credential_file:fs.existsSync(newpath)?newpath:oldpath},null,2));}else process.stdout.write(r.stdout??'');
+process.stderr.write(r.stderr??'');process.exitCode=r.status??1;

@@ -1,0 +1,4 @@
+import assert from'node:assert/strict';assert(Number(process.argv[5])-Number(process.argv[4])<=1,'at most two pages');
+import fs from 'node:fs';import path from 'node:path';import {base,j} from './ef-lib.mjs';import {spawnSync} from 'node:child_process';
+const [label,ref,startArg,endArg]=process.argv.slice(2),r=j(path.join(base,'e-revision-private.json')),root=r.workspace,n=Number(ref),f=Number.isInteger(n)&&n>0?j(path.join(base,'ef-main-business-baseline.json')).bodies.find(x=>x.unit===n).draft:ref;
+for(let p=Number(startArg||1);p<=Number(endArg||startArg||1);p++){const z=spawnSync(process.execPath,[path.join(base,'read.mjs'),label+'-p'+p,path.join(root,f),String(p)],{encoding:'utf8',windowsHide:true,maxBuffer:4*1024*1024});assert.equal(z.status,0,z.stderr);process.stdout.write(z.stdout);}

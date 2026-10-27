@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,j,sha,project,state,write,evidence,cli} from './ef-lib.mjs';
+for(const [label,args] of [['ef-negative-pending-context',['context','--purpose','revision','--unit','56','--max-chars','200000']],['ef-negative-pending-export',['export','--out',path.join(base,'e-negative-export-must-not-exist')]]]){cli(label,args,{expect:2,show:false});console.log({label,error:fs.readFileSync(path.join(base,'cli-logs',label,'stderr.txt'),'utf8')});}
+const before=fs.readFileSync(path.join(project,'.writer/state.json')),s=state(),bodies=s.units.map(u=>({unit:u.unit,draft:u.draft,sha256:sha(fs.readFileSync(path.join(project,u.draft)))}));for(const x of bodies)assert.equal(x.sha256,s.units.find(u=>u.unit===x.unit).sha256);
+const begin=cli('ef-revision-begin',['revision','begin'],{input:{expected_revision:s.revision,owner:'AD E formal first native '+process.env.CODEX_THREAD_ID,from:48,through:60},show:false});
+write(path.join(base,'e-revision-private.json'),{thread_id:process.env.CODEX_THREAD_ID,...begin});
+write(path.join(base,'ef-main-business-baseline.json'),{thread_id:process.env.CODEX_THREAD_ID,revision_id:begin.id,main:project,candidate:begin.workspace,revision:s.revision,state_sha256:sha(before),bodies,source_hashes:s.units.map(u=>({unit:u.unit,source_hashes:u.source_hashes,source_bindings:u.source_bindings})),defined_after:'workflow, OLD freeze/baseline, NEW freeze and six historical stages; before begin',note:'begin后主业务state和正文保持；必要前置元数据变化不误称正文变化'});
+assert.equal(sha(fs.readFileSync(path.join(project,'.writer/state.json'))),sha(before));
+console.log(JSON.stringify({id:begin.id,workspace:begin.workspace,base_revision:begin.base_revision,private:'AD/e-revision-private.json',keys:Object.keys(begin)}));
+const wf=j(path.join(base,'inputs','ef-workflow-corrected.json'));wf.expected_revision=state().revision;wf.operation_id='AD_E_N_MAIN_WRITE_ACTIVE_VALID_WORKFLOW';
+cli('ef-negative-main-workflow-active',['workflow','set'],{input:wf,expect:2,show:false});console.log(fs.readFileSync(path.join(base,'cli-logs','ef-negative-main-workflow-active','stderr.txt'),'utf8'));
+assert.equal(sha(fs.readFileSync(path.join(project,'.writer/state.json'))),sha(before));for(const x of bodies)assert.equal(sha(fs.readFileSync(path.join(project,x.draft))),x.sha256);

@@ -1,0 +1,6 @@
+import fs from'node:fs';import path from'node:path';import{base,write}from'./ef-lib.mjs';
+write(path.join(base,'er2-before.mjs'),fs.readFileSync(path.join(base,'er1-before.mjs'),'utf8').replaceAll('er1-','er2-'));
+let record=fs.readFileSync(path.join(base,'er1-record.mjs'),'utf8').replaceAll('er1-','er2-').replaceAll('AD-E-r1-','AD-E-r2-').replaceAll('恢复1','恢复2').replaceAll('resume1','resume2').replaceAll('本恢复进程断点56','本恢复进程继续57—60及全部登记后完整48—60尾读').replaceAll('57—60本程不改、不prepare/commit。','本次全部登记60后另行完整48—60尾读，正式review后才prepare/commit。');write(path.join(base,'er2-record.mjs'),record);
+let read=fs.readFileSync(path.join(base,'er1-read.mjs'),'utf8');read=read.replace("const [label,unitArg,startArg,endArg]=process.argv.slice(2);","const [label,unitArg,startArg,endArg]=process.argv.slice(2);");
+write(path.join(base,'er2-read.mjs'),"import assert from'node:assert/strict';assert(Number(process.argv[5])-Number(process.argv[4])<=1,'at most two pages');\n"+read.replace("import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';","import fs from 'node:fs';import path from 'node:path';"));
+console.log('AD resume2 evidence helpers saved, no fixed package changes');

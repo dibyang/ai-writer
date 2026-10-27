@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const x=path.dirname(fileURLToPath(import.meta.url)),p=path.join(x,'scenario/东岸末班船-再扩展验证');
+const j=f=>JSON.parse(fs.readFileSync(path.join(x,f),'utf8'));
+const sha=v=>crypto.createHash('sha256').update(v).digest('hex');
+for(const label of ['dr-revision36-begin','dr-branch36-replay','dr-branch36-preview','dr-branch36-record','dr-branch36-tail-review','dr-revision36-prepare','dr-revision36-commit'])assert.equal(j(`cli-logs/${label}/result.json`).exit_code,0);
+const before=j('cli-logs/dr-revision36-commit/before-state.json'),after=j('cli-logs/dr-revision36-commit/after-state.json'),pre=j('pre-revision36-state.json');
+assert.equal(before.units.length,36);assert.equal(after.units.length,36);
+assert.deepEqual(before.units.slice(0,35),after.units.slice(0,35));
+assert.deepEqual(after.units,pre.units);assert.deepEqual(after.snapshot,pre.snapshot);
+assert.equal(after.revision,before.revision+1);
+assert.notEqual(before.units[35].journal,after.units[35].journal);
+for(let i=0;i<36;i++){assert.equal(before.units[i].draft,after.units[i].draft);assert.equal(before.units[i].sha256,after.units[i].sha256);assert.equal(sha(fs.readFileSync(path.join(p,after.units[i].draft))),after.units[i].sha256);}
+const old=before.snapshot.ledger.T_X_BOOK_COMPANY,now=after.snapshot.ledger.T_X_BOOK_COMPANY;
+assert.equal(old.updated_unit,35);assert.equal(now.updated_unit,36);
+assert.match(old.character_known.沈成林,/未获/);assert.match(now.character_known.沈成林,/36周日/);
+assert.match(now.character_known.许蓉,/36周日/);
+const u=after.units[35],body=fs.readFileSync(path.join(p,u.draft),'utf8').split(/\r?\n/);
+const actualEvidence=now.evidence.filter(e=>e.unit===36);assert(actualEvidence.length>=2);
+for(const e of actualEvidence){assert.equal(e.sha256,u.sha256);assert.equal(e.draft,u.draft);assert(body[e.line-1].includes(e.quote));}
+const report=fs.readFileSync(path.join(p,u.replay_review.report)),frozen=fs.readFileSync(path.join(p,u.replay_review.frozen_ref));
+assert.equal(sha(report),u.replay_review.report_sha256);assert.deepEqual(frozen,report);
+assert.equal(sha(fs.readFileSync(path.join(p,u.journal))),u.journal_sha256);
+const out={ok:true,at:new Date().toISOString(),scope:'naturally found D36 tracking omission, distinct from planned E ordinary-fact revisions',before_revision:before.revision,after_revision:after.revision,body_files_changed:0,protected_complete_prefix:35,body_quotes:actualEvidence,character_known_before:old.character_known,character_known_after:now.character_known,latest_journal:u.journal,latest_journal_sha256:u.journal_sha256,report:u.replay_review,final_current_read_proof:'read-proof-dr-window-current-final.json',limitation:'model self review; no human acceptance claimed'};
+assert.equal(j(out.final_current_read_proof).ok,true);
+fs.writeFileSync(path.join(x,'d-tracking-fix-verification.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,body_files_changed:0,protected_complete_prefix:35,before_revision:before.revision,after_revision:after.revision,latest_journal:u.journal}));

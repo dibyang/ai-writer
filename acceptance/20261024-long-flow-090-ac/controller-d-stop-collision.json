@@ -1,0 +1,7 @@
+{
+  "scope": "Controller evidence receipt collision, not a product failure",
+  "failed_label": "d-first",
+  "error": "EEXIST on d-first-stop-verification.json, which D had already saved",
+  "effect": "Existing receipt was not overwritten. The helper had already copied five raw originals under originals/d-first; those are retained. Project body/state/source bytes were unchanged.",
+  "resolution": "Rerun with root-only label root-d-first, creating a distinct receipt and raw original directory; use originals/root-d-first for later persistence proof. No deletion or replacement."
+}

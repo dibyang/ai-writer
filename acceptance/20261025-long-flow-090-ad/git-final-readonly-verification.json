@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "at": "2026-10-25T16:09:52.019Z",
+  "head": "7961decef067a63453e05923d2a7512a103ff795",
+  "commands": [
+    {
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "7961decef067a63453e05923d2a7512a103ff795\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "status",
+        "--short"
+      ],
+      "exit_code": 0,
+      "stdout": " M RELEASE_NOTES.md\n M docs/quickstart.md\n M docs/review-and-registration.md\n M docs/revision-and-sources.md\n M docs/user-guide.md\n M lib/governance.mjs\n M lib/help.mjs\n M lib/longform.mjs\n M lib/review-workflow.mjs\n M lib/revisions.mjs\n M lib/workspace.mjs\n M release/distribution.json\n M tests/review-workflow.test.mjs\n?? .idea/\n?? acceptance/20261021-long-flow-090-x-seal-receipt.json\n?? acceptance/20261021-long-flow-090-x/\n?? acceptance/20261024-candidate-continuation-fix-y-seal-receipt.json\n?? acceptance/20261024-candidate-continuation-fix-y/\n?? acceptance/20261024-candidate-parent-addition-fix-z-seal-receipt.json\n?? acceptance/20261024-candidate-parent-addition-fix-z/\n?? acceptance/20261024-candidate-plan-handoff-fix-aa-seal-receipt.json\n?? acceptance/20261024-candidate-plan-handoff-fix-aa/\n?? acceptance/20261024-long-flow-090-ac-seal-receipt.json\n?? acceptance/20261024-long-flow-090-ac/\n?? acceptance/20261024-registered-seven-revision-ab-handoff.md\n?? acceptance/20261024-registered-seven-revision-ab-seal-receipt.json\n?? acceptance/20261024-registered-seven-revision-ab/\n?? acceptance/20261025-long-flow-090-ad/\n?? docs/candidate-continuation-design.md\n?? docs/candidate-continuation.md\n?? tests/candidate-continuation.test.mjs\n?? tests/limited-revision.test.mjs\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Read-only Git boundary and diff whitespace check. No stage/reset/commit/push/tag/release command was run. Existing modifications and .idea remain; status is an inventory, not attribution of every old dirty file."
+}

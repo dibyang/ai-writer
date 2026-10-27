@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "stage": "original-session-root-reread-saved",
+  "created_at_utc": "2026-10-26T16:09:17.662Z",
+  "base_directory": "D:/work/other/ai-writer/acceptance/20261026-long-flow-090-ae",
+  "allowed_output_directory": "language-rewrite-eval",
+  "session": {
+    "actual_id": "01a178e6-3098-73b2-974c-14f5709a1e43",
+    "environment_sources": [
+      "CODEX_SESSION_ID",
+      "CODEX_THREAD_ID"
+    ],
+    "matches_first_manifest": true,
+    "matches_controller_checkpoint": true
+  },
+  "reviewer": "informed model review and root reread in the original session; no independent human or agent review",
+  "hash_algorithm": "SHA-256 of raw file bytes; lowercase hex",
+  "preserved_files": [
+    {
+      "path": "language-rewrite-eval/cases.json",
+      "role": "original-input",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 5479,
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4"
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/SKILL.md",
+      "role": "frozen-rule",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 6255,
+      "sha256": "61a73116e346822d4a0a89242de53688d8e0a8e9a71d98618cd5eac3a316d274"
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/general-review.md",
+      "role": "frozen-rule",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 8251,
+      "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23"
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/natural-language-authenticity.md",
+      "role": "frozen-rule",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 6546,
+      "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df"
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/deslop.md",
+      "role": "frozen-rule",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 5731,
+      "sha256": "3755fd5ccd4f923d8ffe8a29a9f3c4d41a122757087ff29fb963eae9c51443b3"
+    },
+    {
+      "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/concrete-language-review.md",
+      "role": "frozen-rule",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 6275,
+      "sha256": "1465ab13318bb0ccc6a7f17c9b59d5c75b85d3ff8f9ac5810cd431364f30d72e"
+    },
+    {
+      "path": "language-rewrite-eval/first-input-cases-before.json",
+      "role": "byte-exact-input-backup",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 5479,
+      "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4"
+    },
+    {
+      "path": "language-rewrite-eval/first-review.md",
+      "role": "per-case-diagnosis",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 16819,
+      "sha256": "9a477d409598dec37e69af0edb8615b6b6689fee8ed69232ec0fad595c1a747e"
+    },
+    {
+      "path": "language-rewrite-eval/first-drafts.json",
+      "role": "eight-complete-three-paragraph-results",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 6390,
+      "sha256": "e2a1f303a336a2d4cdc69bcee9ec6fb0a26bee7dee6bd715e1a8f58dbe080eda"
+    },
+    {
+      "path": "language-rewrite-eval/first-handoff.md",
+      "role": "resume-handoff",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 3520,
+      "sha256": "f7e841b51049f8f45e7b4d8a8662f0d8395043a7e2be466d21527f02b763f173"
+    },
+    {
+      "path": "language-rewrite-eval/first-manifest.json",
+      "role": "first-stage-integrity",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 10089,
+      "sha256": "ac01d44ac9bc3e33c246f5895d2a4a351c287044041cd6328ce29e235814774a"
+    },
+    {
+      "path": "language-rewrite-eval/first-manifest.sha256",
+      "role": "first-stage-integrity",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 86,
+      "sha256": "be63a78f4c498d3dbf8c07da3afa3d1cd181e92caac41a0a356c9bc8021a12bf"
+    },
+    {
+      "path": "language-rewrite-eval/first-root-checkpoint.json",
+      "role": "controller-first-stop-byte-checkpoint",
+      "preserved_from_before_continuation": true,
+      "new_file_this_continuation": false,
+      "bytes": 1189,
+      "sha256": "e7a6d68c1db73b95b3ba2c4c826ab39f2745f5704159a75f99c891f1867249fb"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "language-rewrite-eval/reread-integrity-check.json",
+      "role": "reread-evidence",
+      "preserved_from_before_continuation": false,
+      "new_file_this_continuation": true,
+      "bytes": 6599,
+      "sha256": "e8e4a87032cc43a5897d0707a3a52f8173cc747225f1d83dbefcabf2f99d4f38"
+    },
+    {
+      "path": "language-rewrite-eval/second-drafts.json",
+      "role": "final-eight-complete-three-paragraph-materials",
+      "preserved_from_before_continuation": false,
+      "new_file_this_continuation": true,
+      "bytes": 8769,
+      "sha256": "dd079dcf5ebd25d818e826b2164791b4d9c6027e2efe6eaaabdcefb73657707c"
+    },
+    {
+      "path": "language-rewrite-eval/reread-review.md",
+      "role": "reread-evidence",
+      "preserved_from_before_continuation": false,
+      "new_file_this_continuation": true,
+      "bytes": 16170,
+      "sha256": "216ae7ac6bc05dbb2e4f428e2861267b4c8ede04a6b2a13a0cfdbbd5f2004a60"
+    },
+    {
+      "path": "language-rewrite-eval/final-handoff.md",
+      "role": "reread-evidence",
+      "preserved_from_before_continuation": false,
+      "new_file_this_continuation": true,
+      "bytes": 4603,
+      "sha256": "c906064a6281907288529e95734d25333dd88de9f7e4a306d251957c77c1f03d"
+    }
+  ],
+  "integrity_gate": {
+    "file": "language-rewrite-eval/reread-integrity-check.json",
+    "sha256": "e8e4a87032cc43a5897d0707a3a52f8173cc747225f1d83dbefcabf2f99d4f38",
+    "checkpoint_file": "language-rewrite-eval/first-root-checkpoint.json",
+    "checkpoint_sha256": "e7a6d68c1db73b95b3ba2c4c826ab39f2745f5704159a75f99c891f1867249fb",
+    "hash_and_size_checks": 15,
+    "all_passed_at_start": true,
+    "all_passed_again_before_final_manifest": true,
+    "expected_hashes_never_updated": true,
+    "controller_scope": "First-stop byte checkpoint only; semantic review and same-session reread remain required.",
+    "controller_acceptance_complete": false,
+    "opaque_native_and_public_event_hashes_not_dereferenced": true
+  },
+  "actual_reading": {
+    "current_phase_full_content_reads": [
+      {
+        "path": "language-rewrite-eval/first-handoff.md",
+        "sha256": "f7e841b51049f8f45e7b4d8a8662f0d8395043a7e2be466d21527f02b763f173",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 30,
+        "completion": "Complete",
+        "scope": "complete file",
+        "note": "Current continuation content read"
+      },
+      {
+        "path": "language-rewrite-eval/first-manifest.json",
+        "sha256": "ac01d44ac9bc3e33c246f5895d2a4a351c287044041cd6328ce29e235814774a",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 304,
+        "completion": "Complete",
+        "scope": "complete file",
+        "note": "Current continuation content read"
+      },
+      {
+        "path": "language-rewrite-eval/first-root-checkpoint.json",
+        "sha256": "e7a6d68c1db73b95b3ba2c4c826ab39f2745f5704159a75f99c891f1867249fb",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 34,
+        "completion": "Complete",
+        "scope": "complete file",
+        "note": "Current continuation content read"
+      },
+      {
+        "path": "language-rewrite-eval/cases.json",
+        "sha256": "021f07275acb62e4ff6fb27dbcb0da4b52ca1958442f1bc33429c5db272d2cf4",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 82,
+        "completion": "Complete",
+        "scope": "all eight cases, all three paragraphs each; all context and metadata present in the file",
+        "note": "Current continuation content read"
+      },
+      {
+        "path": "language-rewrite-eval/first-drafts.json",
+        "sha256": "e2a1f303a336a2d4cdc69bcee9ec6fb0a26bee7dee6bd715e1a8f58dbe080eda",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 130,
+        "completion": "Complete",
+        "scope": "all eight cases, all three paragraphs each; all context and metadata present in the file",
+        "note": "Current continuation content read"
+      },
+      {
+        "path": "language-rewrite-eval/first-review.md",
+        "sha256": "9a477d409598dec37e69af0edb8615b6b6689fee8ed69232ec0fad595c1a747e",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 170,
+        "completion": "Complete",
+        "scope": "complete file",
+        "note": "Current continuation content read"
+      },
+      {
+        "path": "language-rewrite-eval/second-drafts.json",
+        "sha256": "dd079dcf5ebd25d818e826b2164791b4d9c6027e2efe6eaaabdcefb73657707c",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 150,
+        "completion": "Complete",
+        "scope": "all eight cases, all three paragraphs each; all context and metadata present in the file",
+        "note": "Complete post-save final-paragraph reread; no paragraph edits after this read"
+      },
+      {
+        "path": "language-rewrite-eval/reread-review.md",
+        "sha256": "216ae7ac6bc05dbb2e4f428e2861267b4c8ede04a6b2a13a0cfdbbd5f2004a60",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 184,
+        "completion": "Complete",
+        "scope": "complete file",
+        "note": "Two complete reads, latest after diagnostic precision edits; SHA-256 binds latest read version"
+      },
+      {
+        "path": "language-rewrite-eval/final-handoff.md",
+        "sha256": "c906064a6281907288529e95734d25333dd88de9f7e4a306d251957c77c1f03d",
+        "method": "FastCtx read",
+        "start_line": 1,
+        "end_line": 35,
+        "completion": "Complete",
+        "scope": "complete file",
+        "note": "Two complete reads, latest includes inline-command syntax-failure record"
+      }
+    ],
+    "rule_content_reads": [
+      {
+        "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/SKILL.md",
+        "sha256": "61a73116e346822d4a0a89242de53688d8e0a8e9a71d98618cd5eac3a316d274",
+        "phase": "previous first-stage full content read in this original session",
+        "range": {
+          "method": "FastCtx read",
+          "start_line": 1,
+          "end_line": 50,
+          "completion": "Complete",
+          "all_fields_or_rules_read": true
+        },
+        "current_phase_byte_hash_reverified": true,
+        "current_phase_content_reread": false
+      },
+      {
+        "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/general-review.md",
+        "sha256": "92b138c907b5fd70db8162fa633e1a3ab745ed6fac0c8f1fbf16eb6934f96a23",
+        "phase": "previous first-stage full content read in this original session",
+        "range": {
+          "method": "FastCtx read",
+          "start_line": 1,
+          "end_line": 125,
+          "completion": "Complete",
+          "all_fields_or_rules_read": true
+        },
+        "current_phase_byte_hash_reverified": true,
+        "current_phase_content_reread": false
+      },
+      {
+        "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/natural-language-authenticity.md",
+        "sha256": "1a3fda00afa225e86bfe6f0db45995cf64d7c90b8653e89d00a2a51a5bc956df",
+        "phase": "previous first-stage full content read in this original session",
+        "range": {
+          "method": "FastCtx read",
+          "start_line": 1,
+          "end_line": 95,
+          "completion": "Complete",
+          "all_fields_or_rules_read": true
+        },
+        "current_phase_byte_hash_reverified": true,
+        "current_phase_content_reread": false
+      },
+      {
+        "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/deslop.md",
+        "sha256": "3755fd5ccd4f923d8ffe8a29a9f3c4d41a122757087ff29fb963eae9c51443b3",
+        "phase": "previous first-stage full content read in this original session",
+        "range": {
+          "method": "FastCtx read",
+          "start_line": 1,
+          "end_line": 55,
+          "completion": "Complete",
+          "all_fields_or_rules_read": true
+        },
+        "current_phase_byte_hash_reverified": true,
+        "current_phase_content_reread": false
+      },
+      {
+        "path": "extracted-final-candidate-v5/ai-writer-0.9.0/.agents/skills/writer-review/references/concrete-language-review.md",
+        "sha256": "1465ab13318bb0ccc6a7f17c9b59d5c75b85d3ff8f9ac5810cd431364f30d72e",
+        "phase": "previous first-stage full content read in this original session",
+        "range": {
+          "method": "FastCtx read",
+          "start_line": 1,
+          "end_line": 39,
+          "completion": "Complete",
+          "all_fields_or_rules_read": true
+        },
+        "current_phase_byte_hash_reverified": true,
+        "current_phase_content_reread": false
+      }
+    ],
+    "mechanical_reads_only": [
+      {
+        "path": "language-rewrite-eval/first-input-cases-before.json",
+        "scope": "raw-byte equality and hash; full source content read through cases.json"
+      },
+      {
+        "path": "language-rewrite-eval/first-manifest.sha256",
+        "scope": "complete detached checksum string read and checked by Node.js"
+      },
+      {
+        "path": "language-rewrite-eval/reread-integrity-check.json",
+        "scope": "generated at gate, parsed and all recorded expectations rechecked by Node.js; not a semantic prose source"
+      }
+    ],
+    "final_paragraph_coverage": [
+      {
+        "input_id": "R01",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "f53ab751e2662404b64de3e9a2d0be9b7ffae28350df2b014d2e9852c0065163"
+      },
+      {
+        "input_id": "R02",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "082b9ec7c160925823a6c0ac34abb37f9877e12e42bccd3dd9b4596171ed7ce2"
+      },
+      {
+        "input_id": "R03",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "be8f525966566fe05f92f188426ec8d086dfbc9afdc6e56f2aeaedfe946632cf"
+      },
+      {
+        "input_id": "R04",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "4e48694fab8ee96f6806897d1fbb4215c643b976d907daf331999506fe0ac211"
+      },
+      {
+        "input_id": "R05",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "5e1f4dcb54bcca918e862ba3f0a829e5d4e3d6b0d3f0dfc49eac5a5432c82d26"
+      },
+      {
+        "input_id": "R06",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "cda3543a591dd7b3bc2c7104cb754132be40a2fbf9a47e9f328fe1dbc4d1a02a"
+      },
+      {
+        "input_id": "R07",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "94a99c0c2e10ecf3db9f9d9cc5413f3ecb6dacbe534c6a9e498e31cfae5f2be9"
+      },
+      {
+        "input_id": "R08",
+        "paragraphs": [
+          1,
+          2,
+          3
+        ],
+        "original_fully_reread": true,
+        "first_fully_reread": true,
+        "post_save_final_fully_reread": true,
+        "final_paragraph_array_sha256": "d8df4417a33bf5ef53115c7eff835ec49dec4014d13b097a191b666256e5a897"
+      }
+    ],
+    "paragraph_array_hash_serialization": "UTF-8 of JavaScript JSON.stringify(paragraphs), no trailing newline"
+  },
+  "decisions": {
+    "new_text_corrections_from_first": 0,
+    "all_24_final_paragraphs_equal_first": true,
+    "changed_from_original_ids": [
+      "R01",
+      "R03"
+    ],
+    "inherited_replacement_records": 3,
+    "first_draft_regression_findings": [],
+    "supplied_bad_candidate_ids": [
+      "R05",
+      "R06",
+      "R07"
+    ],
+    "supplied_ambiguous_candidate_not_adopted_ids": [
+      "R02"
+    ],
+    "diagnostic_boundary_clarifications": [
+      {
+        "input_id": "R07",
+        "scope": "exact refill timing relative to report not specified; no invented chronology"
+      },
+      {
+        "input_id": "R08",
+        "scope": "do not infer unwritten gaze or spoken urging as fact; no draft paragraph changed"
+      }
+    ]
+  },
+  "mechanical_validation": {
+    "status": "passed for enumerated byte, structure and provenance checks only",
+    "runner": "Node.js inline; no script file created",
+    "prior_command_failure": {
+      "type": "SyntaxError",
+      "message": "Unexpected token ')'",
+      "phase": "parsing before any statement executed",
+      "exit_code": 1,
+      "manifest_or_checksum_created": false,
+      "input_or_draft_modified": false,
+      "remedy": "corrected parentheses in output-existence assertion; reran checks without changing any expected hash"
+    },
+    "original_case_count": 8,
+    "first_case_count": 8,
+    "final_case_count": 8,
+    "final_paragraph_count": 24,
+    "input_id_order_matches": true,
+    "changed_flags_match_actual_text": true,
+    "all_first_to_final_change_lists_empty": true,
+    "all_original_to_final_differences_reconstruct_from_first_stage_changes": true,
+    "all_report_blockquotes_exist_in_actual_materials": true,
+    "report_blockquote_count": 18,
+    "language_and_continuity_sections_present_for_all_eight": true,
+    "candidate_classifications_separated_from_regressions": true,
+    "preserved_source_hashes_and_sizes_match_first_and_checkpoint": true,
+    "first_manifest_detached_checksum_matches": true,
+    "input_backup_byte_equal": true,
+    "session_ids_consistent": true,
+    "does_not_prove_language_judgment_or_general_detection_rate": true
+  },
+  "manifest_integrity": {
+    "path": "language-rewrite-eval/final-manifest.json",
+    "new_file_this_continuation": true,
+    "self_sha256": "stored externally to avoid recursive self-reference",
+    "detached_sha256_file": "language-rewrite-eval/final-manifest.sha256",
+    "format": "<sha256>  final-manifest.json followed by LF",
+    "checksum_carrier_not_recursively_self_hashed": true
+  },
+  "boundaries": {
+    "requested_eight_case_reread_completed": true,
+    "final_materials_full_post_save_read_completed": true,
+    "first_files_preserved": true,
+    "original_input_or_rules_modified": false,
+    "real_works_or_tools_modified": false,
+    "hidden_criteria_read": false,
+    "other_model_answers_read": false,
+    "language_eval_results_read": false,
+    "subagents_or_other_tasks_created": false,
+    "commit_or_push": false,
+    "independent_human_blind_read": false,
+    "universal_detection_rate_claimed": false,
+    "formal_publication_approval_claimed": false,
+    "overall_product_acceptance_completed": false,
+    "this_continuation_outputs_controller_frozen": false,
+    "remaining_scope": "controller may freeze this new evidence and conduct any separately authorized overall assessment"
+  }
+}

@@ -1,0 +1,17 @@
+X轮原生Codex新会话A首次运行。X=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-x；P=X/scenario/东岸末班船-再扩展验证。实际用户授权见X/author-request.md：在24章基础扩大长篇实跑、增加篇幅、重点恢复/回收/旧章连续性、发现问题直接修、保留完整记录、暂不改现有作品。根将本次隔离试验定为有限25—36，共12新章，普通章至少8000正文汉字，27/30/33/36至少10000；标题/纲/报告/旧候选不计数。细节由当前故事合理推进，不凑字、不堆重复解释，不为商业追读硬加阴谋。本次A首次只完成恢复/规划/25整章及26约前两段，26不得合章登记；主动保存真实中途停点并正常退出，之后同ID恢复26/27。绝不一轮赶完25—36或继续37。
+
+边界：只写X，根lib/bin/tests/docs和其他acceptance/作品/原W封存全部只读；不得Git提交推送、发布上传、付费调用、修改全局配置、另派代理、伪造工具输出或手改state/hash。必须实际通过P/.writer/tool/bin/ai-writer.mjs；产品命令一律用`node X/x-writer.mjs a-唯一标签 ...`，其自动明确P并保存真实argv/输入/双流/子码/前后state；候选另显式project/token且必须在X。带--out也算写命令，同P严格串行。所有非0停止依赖、读实际帮助并另存纠正输入，不删除失败或覆盖历史。根run-long会原样捕获本轮原生事件流/错误和退出码。旧committed修订中的绝对W路径只是历史，不得当执行目标。若需修产品报根，不能擅改根源码或测试。
+
+恢复首个产品调用固定为a-entry-status，核根baseline-state r113/24与当前一致；再workflow show、revision list、tool identify、doctor、context --purpose discussion，读取baseline-worktree.json/environment.json及本P内技能/实际最新包手册。工具应generation3/content553de8f8a42c7bc7ff5f04f78703ed423d17dd69c21ff640ebd8c5c11c570ec2/runtime7fde4277424d98312d67d9db142301ee02d4805c6f5ae095b20b3d1544e0042f；实际以CLI观测为准，build/git来源可与W的旧提交元数据不同，不能擅自tool update。读writer-project、writer-novel、writer-review及long-form、chapter-delivery、general-review、natural-language-authenticity适用规则；作者文风高于通用商业节拍。当前P.writer权威，旧分段/旧交接/旧模板不认证修后稿。读W最终修后交接时仅作只读资料，当前作品所有命令仍P。
+
+先实际完整恢复1—24当前正文：node X/read-boundary.mjs a-entry-current before 24；按state.units顺序原生FastCtx逐章全部读取，每次limit<=100，Partial用精确offset续，禁止脚本只算SHA代替读稿、只读摘要或只抽查。本pass不改正文/状态，读完立即node X/read-boundary.mjs a-entry-current after 24，两边界须全相同。按真实当前文风、人物所知、持有物、钱时伤情和已兑现/未覆盖处保存恢复报告。根会逐项核实际返回文本。原前12完整unit对象/正文，以及全部原observation的type/statement/author_truth永久保护；25—36创作阶段全部旧24正文/units也保护，后续旧章测试另由正式revision授权，不在主稿先改旧章。
+
+文学边界：这是温和克制现实生活群像，不统一改成悬疑/镜头表。旧箱/80押金/35门费/柜门26+55=81已有限收束，不重开；未知问路人真正终点仍不补造。伤脚没有即时康复，不让角色共享未获消息。W普通事实当前值为课程90分钟（19:00—20:30）、窄凳净宽27cm（长90/高44等其余值以当前原文）、还书15:30（实际22章15:24到/15:30交还，不能因不同日旧书店15:30事件混淆）。19当前真实章题是提前的一个半钟头，历史文件名仍两个钟头；旧错误已verified，不把旧分段拼回去。三条W链晚课/凳/布袋已有真实有限兑现，延续使用与代价可以，但不能取消已发生结果、统一膨胀万能技能或重演同一失败—解释—再试—查验。
+
+完整恢复后，用真实author-request原话/本地UTF8 source复制到P研究并实际SHA/quote/locator/recorded_by author_evidence；无聊天消息ID就不造。先workflow outline、仅discuss/plan、draft/revise范围null，planning.outline=draft且refs可空，不先引用未创建的单元纲；其他规划层按实际采用或deferred填写。以当前人物处境保存X扩大骨架和13卷分卷契约：既有V1—V9不动；新V10(25—27)/V11(28—30)/V12(31—33)/V13(34—36)通过实际volume登记，远期粗排，近期仅细化25—27。在有效计划中组织至少3条有动作/成本/关系变化、不同人物知情的新阶段承诺，至少两条跨两个新卷后兑现；沿W已有技能/物件或生活关系生长，不能全靠新神秘物/阴谋。当前只完成V10部分，未来结果留计划不记已发生。保存新稳定ledger IDs及首次/最近/预期兑现位置；完整回查相关旧证据原文，摘要不替正文。
+
+通过plan建立真实25细纲，再登记实际采用引用和有限trial/drafting25—27、停点27复盘；不要假称用户逐项采纳你所有附带方案，代理常规实现选择如实说明。新author请求是本轮扩大授权，原paused任务不能被next25替代。正式授权25—27后逐章context/outline/recall真实相关来源，context预算不足显式诊断/扩容，不能删作者限制或静默裁切。record-template必须在写前取得并串行保存，新模板/输入独立命名，不只刷新旧哈希。
+
+第25章分4—6个实际事件段写，展开有效行动、对话和后果，至少8000正文汉字；每段承接上一实际段，不重复开场或复述作者边界。用实际parts路径/各SHA和空白separator执行assemble生成新完整稿；若需要场景横线写进真实片段、核新SHA，separator不能含正文。合章后原生FastCtx逐行完整阅读limit<=100，实做纲文回对/四项语言测试，保存真实当前draft_review两SHA/冻结报告。必要授权内纠错另存版本，不能拿旧报告认证新SHA。填实际summary和changes差量，角色完整当前所知/只写发生事件；物件换手previous_holder与custody同级，取当前真实保管人；未变项不反复誊写全快照。以同一最终输入record-preview成功0后才record，失败保留旧输入并停止依赖。不要把record-preview通过或字数达标当文学通过。
+
+第26章同样先实际plan/context/template，再写约前2段、3000—4500正文汉字停点，不合章、不record、不能把未完段当27。保存X/交接-A首停.md：当前revision/工具身份/全部25当前路径SHA字数及自检、26原段路径SHA/写前来源/实际已写事件/人物和物件现状/下一未完行动，未决和到27复盘边界。25已发生进state，26仅中间稿不进ledger。暂停写作执行但保留本轮有限25—27授权以便同ID恢复，task可明确尚未完成26；不提前把未写结果登记为resolved。最后status/check/revision list/doctor确认无漂移/未完事务，缺滚动审查窗口若本三章未齐如实保留，不能伪造未读报告。正常退出，不封存、不导出、不提交推送。根独立核首停再发同ID续程。

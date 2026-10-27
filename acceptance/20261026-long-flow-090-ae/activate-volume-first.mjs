@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import{fileURLToPath}from'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),j=n=>JSON.parse(fs.readFileSync(path.join(A,n))),pkg=j('package-generation9-v5.json'),v=j('generation9-package-verification-v5.json'),update=j('generation9-update-verification.json');
+assert(v.ok&&update.ok&&v.content_id===pkg.content_id&&update.content_id===pkg.content_id);assert(j('r-final-root-commit-verification.json').ok);assert.equal(j('native/r-resume2/result.json').exit_code,0);assert(!fs.existsSync(path.join(A,'native/volume-first/launch.json')));
+const prefix=`根已核最终候选v5全量235项（234通过、1跳过、0失败）及包内容，R修订正常退出且正式commit核验通过，独立66章工具已更新generation9。当前CID ${pkg.content_id}。本程另建三章小作品，不改66章主验证作品。提示激活时间${new Date().toISOString()}。\n\n`;
+fs.writeFileSync(path.join(A,'prompt-volume-first.md'),prefix+fs.readFileSync(path.join(A,'prompt-volume-first.template.md'),'utf8'),{flag:'wx'});console.log(JSON.stringify({ok:true,prompt:path.join(A,'prompt-volume-first.md'),content_id:pkg.content_id}));

@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {base,j,sha,cli} from './e1-ops.mjs';
+const root=j(path.join(base,'e-repaired-first-execution.json')).revision.workspace,n=Number(process.argv[2]),mode=process.argv[3];assert(n>=40&&n<=44);const ref=`.writer/drafts/e3-record-${n}.json`,file=path.join(root,ref);
+if(mode==='prepare'){
+ const input=j(path.join(root,`.writer/drafts/e3-replay-${n}.json`)),patch=j(path.join(base,`e3-delta-${n}.json`));
+ for(const {path:keys,before,after}of patch){let o=input;for(const k of keys.slice(0,-1))o=o[k];const k=keys.at(-1);assert.deepEqual(o[k],before,keys.join('.'));o[k]=after;}
+ const report=fs.readFileSync(path.join(base,`e3-notes-${n}.md`),'utf8');assert(report.includes('Codex模型知情自检'));const reportRef=`审查/E3-${n}-当前修订实读与六项差量.md`;fs.writeFileSync(path.join(root,reportRef),report,{flag:'wx'});
+ const b=fs.readFileSync(path.join(root,input.draft)),text=b.toString('utf8');assert.equal(sha(b),input._replay.draft_sha256);for(const v of Object.values(input.changes.ledger??{}))for(const e of v.evidence??[])assert(text.includes(e.quote),e.quote);
+ input.replay_review={reviewer:'Codex AC E same native session informed model self-review',report:reportRef,draft_sha256:sha(b),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};input.draft_review={reviewer:'Codex AC E same native session; informed model self-review, not human or blind review',report:reportRef,report_sha256:sha(Buffer.from(report)),draft_sha256:sha(b)};
+ fs.writeFileSync(file,JSON.stringify(input,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({unit:n,expected_revision:input.expected_revision,changes:patch,draft_sha256:sha(b),report_sha256:input.draft_review.report_sha256},null,2));
+}else if(mode==='preview'){const out=cli(`e3-u${n}-preview`,['record-preview'],{root,input:file,token:true,brief:true});assert.equal(out.ok,true);}else if(mode==='record'){cli(`e3-u${n}-record`,['record'],{root,input:file,token:true,brief:true});}else throw new Error('unknown mode');

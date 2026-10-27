@@ -1,0 +1,19 @@
+{
+  "failures": [
+    {
+      "command": "ddr-fill60.mjs",
+      "exit_code": 1,
+      "error": "AssertionError: 答自己往另一边走走",
+      "reason": "真实引文应为说，脚本严格子串核对拒绝；未保存报告或填写输入"
+    },
+    {
+      "command": "cli.mjs ddr-preview60 record-preview",
+      "exit_code": 1,
+      "error": "ENOENT input.raw.json copyfile",
+      "reason": "依赖上一步不存在的填写文件，wrapper未启动writer CLI；这是本次调度输入错误，不是writer缺陷"
+    }
+  ],
+  "state_revision": 289,
+  "state_sha256": "79603861f532d2438c5de15a5f03691468d742f66505797ddeac0a1e6f3c9ead",
+  "correction": "保留原失败脚本和失败标签，改真实引文后另行执行填写，确认成功后才新标签preview"
+}

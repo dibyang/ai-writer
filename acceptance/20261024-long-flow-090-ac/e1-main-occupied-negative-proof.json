@@ -1,0 +1,45 @@
+{
+  "operation": "workflow set, live CAS253 and same valid workflow structure already succeeded at217; single call",
+  "expected_code": "REVISION_OCCUPIED",
+  "actual": {
+    "ok": false,
+    "error": "作品有活跃修订会话；在独立区操作，或由所有者显式结束，不允许旁路写入",
+    "code": "REVISION_OCCUPIED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\extracted-destination-help\\ai-writer-0.9.0\\bin\\ai-writer.mjs' workflow '--help'",
+    "sessions": [
+      {
+        "id": "46029167-c62a-44f9-b591-e053ddc01bbb",
+        "owner": "Codex AC E same native session; controller execution first stop39 of full35-48",
+        "scope": {
+          "from": 35,
+          "through": 48
+        },
+        "status": "open"
+      }
+    ]
+  },
+  "state_unchanged": true,
+  "output_target": null,
+  "stdout_empty": true,
+  "result": {
+    "tool": "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\extracted-destination-help\\ai-writer-0.9.0\\bin\\ai-writer.mjs",
+    "package_content_id": "818438a541f3e518d5e88cd011e2e412df9ccd841390d243622164429726d265",
+    "args": [
+      "workflow",
+      "set",
+      "--project",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\scenario\\东岸末班船-48章独立验证",
+      "--input",
+      "D:\\work\\other\\ai-writer\\acceptance\\20261024-long-flow-090-ac\\e1-inputs\\valid-main-workflow-negative.json"
+    ],
+    "started_at": "2026-10-24T21:59:34.031Z",
+    "elapsed_ms": 180,
+    "exit_code": 2,
+    "signal": null,
+    "error": null,
+    "before_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230",
+    "after_state_sha256": "668daedd0b03a9a0fc592841b0956f37aaa08893b4c0c1322001c45837d6f230"
+  },
+  "helper_assertion_failure": "First audit read stderr error as stdout; corrected from original log without rerun"
+}

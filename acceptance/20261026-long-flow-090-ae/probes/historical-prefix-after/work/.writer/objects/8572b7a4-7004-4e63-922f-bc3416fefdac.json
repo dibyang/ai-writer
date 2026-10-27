@@ -1,0 +1,55 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-25T22:52:25.347Z",
+  "operation_id": "workflow-1",
+  "base_revision": 0,
+  "payload": {
+    "stage": "trial",
+    "task": "验证专用有限试写",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 10
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "到范围末尾停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "local_source": "研究/验证授权.md",
+    "source_sha256": "074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19",
+    "quote": "允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。",
+    "locator": "synthetic-test-only",
+    "recorded_by": "test-fixture",
+    "frozen_ref": ".writer/objects/074eaef2fbdf25f326d68c7752e8b4c8862f5e4af247a89c698c005b4d4c7b19.txt"
+  }
+}

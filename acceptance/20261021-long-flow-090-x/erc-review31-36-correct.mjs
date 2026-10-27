@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import{fileURLToPath}from'node:url';
+const X=path.dirname(fileURLToPath(import.meta.url));
+fs.writeFileSync(path.join(X,'erc-review31-36-build-failure.json'),JSON.stringify({command:'node acceptance/20261021-long-flow-090-x/er-review-build.mjs 31-36',exit_code:1,error:'AssertionError [ERR_ASSERTION]: quote absent 34: 不能按一小时给她许',stage:'quote assertion before report/input writes',product_call:false,state_changed:false,correction:'原文他不肯按一小时给她许；原data保留不覆盖，更正数据另存。'},null,2)+'\n',{flag:'wx'});
+const data=JSON.parse(fs.readFileSync(path.join(X,'er-reviewdata31-36.json'),'utf8'));data.chapters.find(c=>c.unit===34).obstacle[1]='他不肯按一小时给她许';fs.writeFileSync(path.join(X,'er-reviewdata31-36-corrected.json'),JSON.stringify(data,null,2)+'\n',{flag:'wx'});
+const source=fs.readFileSync(path.join(X,'er-review-build.mjs'),'utf8').replace('`er-reviewdata${key}.json`','`er-reviewdata${key}-corrected.json`');fs.writeFileSync(path.join(X,'erc-review-build-corrected.mjs'),source,{flag:'wx'});

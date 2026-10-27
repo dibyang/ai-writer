@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const A=path.resolve('acceptance/20261026-long-flow-090-ae'),P=path.join(A,'scenario/东岸末班船-66章独立验证');
+const j=JSON.parse(fs.readFileSync(path.join(A,'b-resume-review61-66-input.json'),'utf8'));
+const quote='今天不比了，先给自己，得弄饭';
+const f=Object.keys(j.source_hashes).find(x=>x.startsWith('正文/0064'));
+if(!fs.readFileSync(path.join(P,f),'utf8').includes(quote))throw Error('quote absent');
+j.comparison.similar_structures[1].evidence.splice(1,0,{unit:64,quote});
+for(const s of j.comparison.similar_structures)for(const u of s.units)if(!s.evidence.some(e=>e.unit===u))throw Error('unit lacks evidence');
+const originalReport=j.report;
+j.report='审查/AE-B-61至66-最终滚动连读自审-v2.md';
+let r=fs.readFileSync(path.join(P,originalReport),'utf8');
+r=r.replace('证据：第63章「八元那本和大白纸都留床边」；第65章','证据：第63章「八元那本和大白纸都留床边」；第64章「'+quote+'」；第65章');
+r=r.replace('女孩同意还书但两人各自决定不带画。','双方再次确认还书时间，但各自决定不带画。');
+j.chapter_functions.find(c=>c.unit===65).relationship_change.text='夜话各认硬话而未得万能相处规则；双方再次确认还书时间，但各自决定不带画。';
+fs.writeFileSync(path.join(P,j.report),r,{flag:'wx'});
+fs.writeFileSync(path.join(A,'b-resume-review61-66-input-v2.json'),JSON.stringify(j,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,expected_revision:j.expected_revision,report:j.report,input:'b-resume-review61-66-input-v2.json',note:'发布前补全比较涉及每一章的引文，原未发布输入和报告保留'}));

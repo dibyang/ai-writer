@@ -1,0 +1,129 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "5badc02c-dec6-4193-b5de-c76021f9608c",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "drafting",
+    "task": "按用户授权进行独立三章工具验证；本程写1、2并保存3写前输入后停止",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 3
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "三章范围不扩章",
+        "本程第2章后仅保存第3章写前输入并停止"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/本次故事约束.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/全书三章骨架.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V01.json",
+          "大纲/分卷/V02.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0001.json",
+          "大纲/单元/0002.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/91dc38c6-7e26-4ad3-a990-db21e5c3b565.json",
+      "sha256": "d5c42e35833f2f747271d89d709513240d33b1316eb046060f55b46c8ce72db8"
+    },
+    {
+      "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+      "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+    }
+  ],
+  "operations": {
+    "vf-planning": {
+      "input_sha256": "40d8b93aa2440047f8ea5faf5683f547c1bc4f00dea574e144ce1e4b75488150",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "vf-planning",
+        "event": {
+          "ref": ".writer/objects/91dc38c6-7e26-4ad3-a990-db21e5c3b565.json",
+          "sha256": "d5c42e35833f2f747271d89d709513240d33b1316eb046060f55b46c8ce72db8"
+        }
+      }
+    },
+    "vf-drafting-bounded": {
+      "input_sha256": "faa56970dd7ea7cfe58c009248b162e8a11bbb48bd59e5cff6d2ef128f0b911c",
+      "result": {
+        "ok": true,
+        "revision": 2,
+        "operation_id": "vf-drafting-bounded",
+        "event": {
+          "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+          "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": true,
+  "governance_binding": {
+    "ref": ".writer/objects/c8a66735-b471-4a27-a70d-e850b19f3ccc.json",
+    "sha256": "4186e0ab80870b355ed51df0b389073d33b9e00a3b3831602ba3e106d8eac699"
+  }
+}

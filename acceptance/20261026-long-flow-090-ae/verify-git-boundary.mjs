@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import{spawnSync}from'node:child_process';import{fileURLToPath}from'node:url';
+const A=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(A,'../..'),runs=[];
+function git(args){const r=spawnSync('git',args,{cwd:repo,encoding:'utf8',windowsHide:true});runs.push({args,exit_code:r.status,stdout:r.stdout,stderr:r.stderr});assert.equal(r.status,0);return r.stdout.trim();}
+const head=git(['rev-parse','HEAD']);assert.equal(head,'7961decef067a63453e05923d2a7512a103ff795');assert.equal(git(['diff','--cached','--name-only']),'');git(['diff','--check']);git(['status','--short']);
+const out={ok:true,at:new Date().toISOString(),head,index_empty:true,runs,scope:'Read-only Git boundary evidence: HEAD unchanged, index empty, diff whitespace check passed. No commit, push, tag or release command executed by this verifier; unrelated working changes are preserved.'};fs.writeFileSync(path.join(A,'git-boundary-verification.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({ok:true,head,index_empty:true}));

@@ -1,0 +1,89 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_AC_B_42_TYPO_KONGPA",
+      "type": "readability",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "“那怕还得叫他去”这里应为“那恐怕还得”，缺字使语义绊读。",
+      "suggestion": "补“恐”，保留客户可能再叫周看原柜而尚未约成。",
+      "evidence": [
+        {
+          "unit": 42,
+          "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+          "sha256": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+          "line": 76,
+          "quote": "男人道那怕还得叫他去。"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/188d35d3-9ff0-4211-808d-1f2f1d24d71b.json",
+        "review_sha256": "4410231a9129c5dd798e6967a127161df7be6f6b8f4d4699400e813d82308e7b",
+        "units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "dependency": "611504b873cd98a612a6713ebb96126f37f2747796d059a4bb03eae6b9df9071"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/64376556-113d-4f0d-8b9c-25a9105d0da0.json",
+          "sha256": "d7d6d74dace37c2e27ac8b3a9e6f9c2d8ca3a1b616f1264eefed9a0b128de63b"
+        },
+        {
+          "ref": ".writer/objects/ff073b5f-50ba-4cd6-9fcc-98e64f1c6fdd.json",
+          "sha256": "08bcbb1be0cda4fb071d35e02e43ecef90a2927c3acbe6705ee23be9584d753f"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/c88378f6-3092-4de0-8751-d63d153d956e.json",
+          "sha256": "e4c9f117c641fd7b42331b1e4889400c70b851992d1dbb615c8c5703cd22c729"
+        },
+        "disposition": "adopted",
+        "reason": "本轮用户要求确认问题在正式独立区按已授范围修订；仅第42章的物件目标衔接/缺字，非冒充真人逐项新增情节选择。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "dependency": "611504b873cd98a612a6713ebb96126f37f2747796d059a4bb03eae6b9df9071"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "79841afd-89d0-4193-a8ee-090f89ff6d5f",
+        "commit_binding": {
+          "ref": ".writer/objects/79841afd-89d0-4193-a8ee-090f89ff6d5f.json",
+          "sha256": "f721ef9a1ff7d904e1f5a94864b6e177e5446532b4865ff2d726d245cae86bce"
+        },
+        "transaction_id": "c6626ed5-ec9b-48e9-ade7-da896efde37e",
+        "reason": "正式独立区42—42两处字节实改、完整重登和37—42当前全文复核已由受管事务应用，旧稿及备份保留。",
+        "changes": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "before": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "after": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "940d692c681f7a25b27fed3a934bd88934c029f0d57d9d62b394012ea581201b"
+          }
+        ]
+      },
+      "verification": null
+    }
+  }
+}

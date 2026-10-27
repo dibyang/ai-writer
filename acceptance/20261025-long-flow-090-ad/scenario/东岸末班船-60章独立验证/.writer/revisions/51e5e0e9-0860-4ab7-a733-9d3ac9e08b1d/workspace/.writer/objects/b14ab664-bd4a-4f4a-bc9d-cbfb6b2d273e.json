@@ -1,0 +1,68 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_F19_TITLE_TIME",
+      "type": "correctness",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "第19章标题提前两个钟头，正文常规16:00—18:30改为14:30—17:00，实际前移90分钟；标题与最自然所指的排班幅度不符，未解决。",
+      "suggestion": "报根核标题所指并走正式独立修订，优先保留自洽正文排班；本轮不擅改、不采用、不标修复。",
+      "evidence": [
+        {
+          "unit": 19,
+          "draft": "正文/0019-提前的两个钟头-v1.md",
+          "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+          "line": 1,
+          "quote": "# 第十九章 提前的两个钟头"
+        },
+        {
+          "unit": 19,
+          "draft": "正文/0019-提前的两个钟头-v1.md",
+          "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+          "line": 15,
+          "quote": "你今天两点半到五点，后头归我，还是那两个半钟头。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/35886295-c0f4-45cf-bbc0-2fd96de4f6a5.json",
+        "review_sha256": "211b9646605edf84e10fb35a90722a9c493bb71fa9395b99a42d4902966b8af1",
+        "units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "dependency": "fdd61498caa1c42cc67f0e98c90e632ae941cc71b412f07184f2a1bbbb6ca7ab"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/0487faed-4b15-49ff-8198-937e1960e860.json",
+          "sha256": "33161478f6823062286d9e93387901b8e7016c6abbd5696bdfabf35a03b4a424"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/b11ae55d-c265-4043-82e5-a7cbef76587d.json",
+          "sha256": "32d7f3da838cefa01d383174d3ff718918eb4c794f1863e4c048498dc6b4278e"
+        },
+        "disposition": "adopted",
+        "reason": "依本会话明确授权，只将第19章首行改为提前的一个半钟头，正文排班和历史路径保留。代理在授权范围采用，不伪称作者逐项亲自采用。新独立19—24会话实改重登后再按实际draft事务应用及当前全文复核。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "576857c6e1eba88df65996f207f890fc8a90efb419632eeae569e118afb2a3a3",
+            "dependency": "fdd61498caa1c42cc67f0e98c90e632ae941cc71b412f07184f2a1bbbb6ca7ab"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

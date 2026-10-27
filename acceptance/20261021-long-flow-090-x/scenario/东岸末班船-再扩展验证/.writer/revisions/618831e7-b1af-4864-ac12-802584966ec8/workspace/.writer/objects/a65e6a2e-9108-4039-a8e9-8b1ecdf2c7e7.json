@@ -1,0 +1,79 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-20T10:14:13.206Z",
+  "operation_id": "v-am-metadata-start",
+  "base_revision": 24,
+  "payload": {
+    "stage": "revision",
+    "task": "仅正式修正第4—6章追踪时间锚并闭环V_A_U5_TIME_METADATA；正文同字节，到6等待B，不写7",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 4,
+        "to": 6
+      },
+      "stop_conditions": [
+        "本轮仅metadata-only独立修订4—6，澄清停航首日清晨/首日晚；不写7或改变六章正文",
+        "不改变设定、章纲卷纲、人物行动知情、物件钱据及原观察三项；其他新硬问题另报告根",
+        "独立区rewind4并逐章实读replay-input、报告、preview、record，完整尾段review后prepare及正式commit",
+        "记录真实根授权、原错误与失败；意见流程如不能支持metadata-only则保留诊断报告根，禁止改正文凑变更",
+        "只写V，不改产品/U/T/其他作品，不派代理、不Git提交推送、不上传"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md",
+          "研究/V-A-授权与选择来源.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-V.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V1.json",
+          "大纲/分卷/V2.json",
+          "大纲/分卷/V3.json",
+          "大纲/分卷/V4.json",
+          "大纲/分卷/V5.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0004.json",
+          "大纲/单元/0005.json",
+          "大纲/单元/0006.json"
+        ],
+        "unresolved_ids": [
+          "7—12仅骨架，按后续阶段滚动细化"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "明确授权一次metadata-only正式revision4—6：修正V_A_U5_TIME_METADATA，并核第4时间措辞是否同样含糊。",
+    "local_source": "研究/V-A-追踪修正授权原文.md",
+    "source_sha256": "e904c74e867247d0917c9ead82d9a9582f389a812ade130948880014de4c4b81",
+    "locator": "本轮实际用户提示第二段；用户文本以根会话试验授权描述采用修正，不冒充真人逐字情节选择或消息ID",
+    "recorded_by": "同一实际V-A Codex会话，按根在工具试验内采用修正的明确授权执行",
+    "frozen_ref": ".writer/objects/e904c74e867247d0917c9ead82d9a9582f389a812ade130948880014de4c4b81.txt"
+  }
+}

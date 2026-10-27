@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath}from'node:url';const X=path.dirname(fileURLToPath(import.meta.url)),h=JSON.parse(fs.readFileSync(path.join(X,'e-handle.json'),'utf8')),i=JSON.parse(fs.readFileSync(path.join(h.workspace,'.writer/drafts/e-replay18.json'),'utf8'));
+const fix=v=>typeof v==='string'?v.replaceAll('二十七','二十九').replaceAll('27','29').replaceAll('一个半小时','一小时四十分钟').replaceAll('20:30','20:40').replaceAll('20:20','20:30').replaceAll('八点半，老师开了门','八点四十，老师开了门'):Array.isArray(v)?v.map(fix):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,fix(x)])):v;
+const changes=fix(i.changes);changes.ledger.T_W_EVENING_CLASS.evidence.push({unit:18,quote:'提醒大家八点四十收针'});
+fs.writeFileSync(path.join(X,'e-input-patch18.json'),JSON.stringify({summary:fix(i.summary),changes},null,2)+'\n',{flag:'wx'});console.log('saved explicit unit18 width/time changes and current quote');

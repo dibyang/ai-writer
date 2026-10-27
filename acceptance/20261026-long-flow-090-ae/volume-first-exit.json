@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "status": "completed-requested-first-stop",
+  "at": "2026-10-26T05:41:59.797Z",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\卷目录默认路径-三章验证",
+  "revision": 4,
+  "registered_units": 2,
+  "files": 188,
+  "checkpoint": "checkpoint-volume-first.json",
+  "checkpoint_sha256": "67d06b7275407379ca0e55be3e5458c92f13c136ddaac5438804269dff3f00da",
+  "checkpoint_state_sha256": "468c57e401e2a4497243d75da5b4beadbd4e16cceab451d6c070e0920c91ea8d",
+  "state_unchanged_after_template": true,
+  "unit3_body_exists": false,
+  "calls": [
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario-checkpoint.mjs",
+        "save",
+        "volume-first",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario\\卷目录默认路径-三章验证",
+        "2"
+      ],
+      "started_at": "2026-10-26T05:41:59.525Z",
+      "elapsed_ms": 139,
+      "exit_code": 0,
+      "error": null,
+      "before_state_sha256": "468c57e401e2a4497243d75da5b4beadbd4e16cceab451d6c070e0920c91ea8d",
+      "after_state_sha256": "468c57e401e2a4497243d75da5b4beadbd4e16cceab451d6c070e0920c91ea8d",
+      "stdout_sha256": "612fffd62ea5fb06446b841e9ad565224cbe864e31264197e6e9dbc361755c8f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261026-long-flow-090-ae\\scenario-checkpoint.mjs",
+        "verify",
+        "volume-first"
+      ],
+      "started_at": "2026-10-26T05:41:59.666Z",
+      "elapsed_ms": 128,
+      "exit_code": 0,
+      "error": null,
+      "before_state_sha256": "468c57e401e2a4497243d75da5b4beadbd4e16cceab451d6c070e0920c91ea8d",
+      "after_state_sha256": "468c57e401e2a4497243d75da5b4beadbd4e16cceab451d6c070e0920c91ea8d",
+      "stdout_sha256": "02ee293ce5b2786e84a83a0b6531d5ee035ac7cade54163226c9cabe5fc91627",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Normal child process exits 0; full path/byte inventory verified. This records the first-stop completion, not a second-session recovery or release."
+}

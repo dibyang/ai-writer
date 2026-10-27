@@ -1,0 +1,61 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_TAIL",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "high",
+      "statement": "尾句重复手续",
+      "suggestion": "按本次限定修订删除尾句",
+      "evidence": [
+        {
+          "unit": 7,
+          "draft": "正文/0007.md",
+          "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+          "line": 7,
+          "quote": "下一回去桥头，该带什么、先找谁，他也已问清。"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/5b1fd795-678b-4334-aa28-86fe4d9f5bee.json",
+        "review_sha256": "752dd81cd0c2cfa880cccda4a2dc350fe33835ca82084d8afef569d785e493b9",
+        "units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/131d20a9-67fb-44b6-8350-c4ea905b54b2.json",
+          "sha256": "87d0cb7442766665befd110734e94cb87913f65fafa9d83f1ebd34c2a03cc6dc"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/248cf453-c2e1-4bc7-aff6-a4d3d465b858.json",
+          "sha256": "52c8599d36e469163ba05b9f37be6ecc1750cb4bc391110d90dcb0d275fa0d74"
+        },
+        "disposition": "adopted",
+        "reason": "本次测试明确授权两处小修，非真实作者逐项决定",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 7,
+            "draft": "正文/0007.md",
+            "sha256": "de11a345e90ea3eecc260511e34b3790a572bf61a88ce922f88d2cdbf8b1e30d",
+            "dependency": "49441c24d0a6f89afc99f2cdca571a6ca491b435a5fcbadc641a2bd75f220779"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

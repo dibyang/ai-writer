@@ -1,0 +1,396 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_AC_B_42_GLASSES_TARGET",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "父亲正在找遥控，后句摸衣袋与领口眼镜相接，缺少转找眼镜的动作，物件目标衔接错。",
+      "suggestion": "改为拿起遥控想认屏幕字，才摸衣袋找眼镜；不改眼镜领口/父伤和后续动作。",
+      "evidence": [
+        {
+          "unit": 42,
+          "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+          "sha256": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+          "line": 323,
+          "quote": "沈成林正低头找遥控，眼镜在领口挂着，自己摸了两回上衣袋，没摸到。"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/188d35d3-9ff0-4211-808d-1f2f1d24d71b.json",
+        "review_sha256": "4410231a9129c5dd798e6967a127161df7be6f6b8f4d4699400e813d82308e7b",
+        "units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "dependency": "611504b873cd98a612a6713ebb96126f37f2747796d059a4bb03eae6b9df9071"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/823031c4-bab0-4c5b-ac9f-01b6343748a6.json",
+          "sha256": "e7ffed9a6d89c26c83a6a7427a000025e169d11694918c3a2fe45b6b9a460c96"
+        },
+        {
+          "ref": ".writer/objects/84ecbc07-456b-4bbe-ad3b-759389002312.json",
+          "sha256": "afdb153fec931764ec9a9bf9b16ccb96b70f39890d81bc3676934320cc2cc4ba"
+        },
+        {
+          "ref": ".writer/objects/6cbf4651-6d81-4911-8d70-b0a437dfb0a8.json",
+          "sha256": "544d311a8ea407496c417f9089974d575d9825a79146eaa5f6b4b705449dba3b"
+        },
+        {
+          "ref": ".writer/objects/2e8b648b-8af6-4d7b-9c9d-8b783e687572.json",
+          "sha256": "cb676a9afa923f2ea288e52e3959b633698553528cf25e1eec9451675a0104e4"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/c88378f6-3092-4de0-8751-d63d153d956e.json",
+          "sha256": "e4c9f117c641fd7b42331b1e4889400c70b851992d1dbb615c8c5703cd22c729"
+        },
+        "disposition": "adopted",
+        "reason": "本轮用户要求确认问题在正式独立区按已授范围修订；仅第42章的物件目标衔接/缺字，非冒充真人逐项新增情节选择。",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "dependency": "611504b873cd98a612a6713ebb96126f37f2747796d059a4bb03eae6b9df9071"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "79841afd-89d0-4193-a8ee-090f89ff6d5f",
+        "commit_binding": {
+          "ref": ".writer/objects/79841afd-89d0-4193-a8ee-090f89ff6d5f.json",
+          "sha256": "f721ef9a1ff7d904e1f5a94864b6e177e5446532b4865ff2d726d245cae86bce"
+        },
+        "transaction_id": "c6626ed5-ec9b-48e9-ade7-da896efde37e",
+        "reason": "正式独立区42—42两处字节实改、完整重登和37—42当前全文复核已由受管事务应用，旧稿及备份保留。",
+        "changes": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "before": "9d2d5f695085a56f732d3efc024b8035b5cc12193c5d9c3d43d0b16232127dda",
+            "after": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "940d692c681f7a25b27fed3a934bd88934c029f0d57d9d62b394012ea581201b"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/54ceb42a-0570-4544-b946-9c6a8fd61765.json",
+        "review_sha256": "5a04bdd3682b2425a1025259b2261ffc9b492fccd8dbf7ca8036c88905e197ac",
+        "reviewer": "Codex F同原生ID 01a1703f-5d48-72e3-8fe2-b12b202fd72c；当前全48章276页知情模型实读",
+        "conclusion": "resolved",
+        "reason": "本次完整42p7先拿遥控认屏幕字，再摸两回上衣袋找眼镜；眼镜领口，沈叫低头后父看见并取下戴好，动作目标是眼镜。当前42正文与原application commit 79841afd-89d0-4193-a8ee-090f89ff6d5f修后同字节；E改变邻章和依赖所以用当前全48报告重新核，原真实提交/采纳不变。",
+        "rechecked_context": true,
+        "application_commit_id": "79841afd-89d0-4193-a8ee-090f89ff6d5f",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/0001-灯下的箱子-v2.md",
+            "sha256": "6b7dda66e606b753b75cbebeab8af536b797b0060a9c14048932da58a6709893",
+            "dependency": "915af5b208a9a0962f2341b1690d6c346ad1a8424de5eb23d47dd10b4a98b445"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/0002-多跑的一趟-v2.md",
+            "sha256": "78ff1a743694ce4ca1fb0dcca7a7d94dab5f36b7305d2ba078522f408653d886",
+            "dependency": "100447844a54922669f42e485dad012f2c8d4eb6705a03458c6feb9269538e63"
+          },
+          {
+            "unit": 3,
+            "draft": "正文/0003-把手朝外-final-b.md",
+            "sha256": "3647db1243db710d9942db1df904aa301f349fc7ae050ce25803c2f18f20a221",
+            "dependency": "878256f268cb62a259475a9225595873a0bdb6131042377b8b23c4a20b58f4c3"
+          },
+          {
+            "unit": 4,
+            "draft": "正文/0004-少蒸的两笼-v1.md",
+            "sha256": "9ccb0b8e5eb4e5631555fa280b706f9a53639500773ebbec611c0efd0db169f4",
+            "dependency": "a8551e2a0b7271c9e60c050c8ac7d1e2616bd7406b6cc1c1254f1151ce1a2c54"
+          },
+          {
+            "unit": 5,
+            "draft": "正文/0005-门板靠墙-v1.md",
+            "sha256": "2386bbb6cb98237842871a1274afa5b33df113b1373dae177bcc1ce61a4832bb",
+            "dependency": "05477899c53072a7ad6ba2ac4c0a3eef2c9293e45514a22afe0b38c5b855398a"
+          },
+          {
+            "unit": 6,
+            "draft": "正文/0006-走一遍再画-v2.md",
+            "sha256": "7d94bf2d87f925e43001c88e7ce7b7d60968ad93a9cc54e5322bbbdf7310fb91",
+            "dependency": "44ce1c716601fd8cb09cf839897c06ef58d019c80c3c7945a69942f3c9c6d5e9"
+          },
+          {
+            "unit": 7,
+            "draft": "正文/0007-先留出两包-v1.md",
+            "sha256": "44c39f40f7a22b3ef500e4948066303e27407b4f0d426daeedfdbb88781d9a04",
+            "dependency": "728754abfe4bfa5f9e38b9783dfcb18d3b6b6891c6021cc37860cb425e33dade"
+          },
+          {
+            "unit": 8,
+            "draft": "正文/0008-半个钟头-v2.md",
+            "sha256": "5c1f40674da30b617367171ec44a72a6972ae9e87add5db3f26b761df8b0cfc5",
+            "dependency": "e5d6342cd9ae7bdb4c012c623a291db6c8940044100bc75e0af1da2d0e10b17d"
+          },
+          {
+            "unit": 9,
+            "draft": "正文/0009-留给明天的活-v2.md",
+            "sha256": "77d7210e10d8f2c662cacff742755d096ea6d890a762af56231491f881dde48e",
+            "dependency": "a5e5b93ab04fd560faa699dbf5d0b45e8ab9771bda394bb32f57857dee60990b"
+          },
+          {
+            "unit": 10,
+            "draft": "正文/0010-月底的三十五块-v2.md",
+            "sha256": "773cf058337c048165bbb6afab2c00edf860068ebdef986902b94110d6cac52d",
+            "dependency": "3c401f043e61d5e85adb0de41715299712a4c6bbbefd2852258be6d00ba76847"
+          },
+          {
+            "unit": 11,
+            "draft": "正文/0011-盒子放进去-v2.md",
+            "sha256": "2410d684c6a0d2de7f0cdd0e25b20814af22dca213dfb66f2e804cd111bac075",
+            "dependency": "182d47490fe6e69ea9fb919ea6dfc71e8f9e44a43e16767aae3b4d394f01c23f"
+          },
+          {
+            "unit": 12,
+            "draft": "正文/0012-沿着坡走-v2.md",
+            "sha256": "973c82b824598d71120d881c9c5b8dc87c8ded132d82643bffd89c92c579fc42",
+            "dependency": "be391ec17e3540991a5a7c6dbb2204cabf9968675f3ae0e51d96f2c906cb2f30"
+          },
+          {
+            "unit": 13,
+            "draft": "正文/0013-桌边留一半-v1.md",
+            "sha256": "c742a61882a01ea8d152a6a729eddaeb4991cb04746d3ec1cde5ebf813de0284",
+            "dependency": "81608377fc5515ccac3b27e2c24b653c9497fd6276d4a0bff194e0ce23eadd4b"
+          },
+          {
+            "unit": 14,
+            "draft": "正文/0014-坐下再量-v1.md",
+            "sha256": "85bc3fd6b6b6476011ed17bc0cc505800100b570fbcc6430ec59498d6c2664da",
+            "dependency": "8d633e7df02126fb9c22c9388c34689ca42bfad9ade7024ecee98920fa5e83f1"
+          },
+          {
+            "unit": 15,
+            "draft": "正文/0015-一幅一幅洗-v1.md",
+            "sha256": "e30513d5c0914e5d0de0c477c26ffae47e5a9f06d8c645bc22d54503d7f66d83",
+            "dependency": "f2a62e084d5576990a98546d017a59638c6b8d54e80d9950f2335f0d4b0add11"
+          },
+          {
+            "unit": 16,
+            "draft": "正文/0016-早饭留在锅里-v1.md",
+            "sha256": "1900edd2c9ef5cd0ea1c7de4728182352da57d78894cbc2fdbc9effbe2ac6cd2",
+            "dependency": "5ce7a891ab4ed4a3e8efb87b96b726decf8fd199861dc81b2b382641333bb666"
+          },
+          {
+            "unit": 17,
+            "draft": "正文/0017-板头留一截-v1.md",
+            "sha256": "016558b3d30ed702983120c536337bca845c9999a430e4f607cb52e9cd381e13",
+            "dependency": "4942363a5dda37ada381126f4dd4e486511935b5ffdc252e526f6c3257ea2791"
+          },
+          {
+            "unit": 18,
+            "draft": "正文/0018-灯下第一排-v1.md",
+            "sha256": "57313d2704117ab19a1cfb590256d576660869bdaa6fb88e95772c99356d3360",
+            "dependency": "2a5b5cc744d4ef53a62e1b55e0edf82e8c05865495f8697a1fba3d297aaa3787"
+          },
+          {
+            "unit": 19,
+            "draft": "正文/0019-提前的两个钟头-v1.md",
+            "sha256": "a3334a28a0bc613daaae24de8f75ca7d6b4ea35dd2e303615b2acaa2bcf4a2d5",
+            "dependency": "f3648d805f0832205548bf4d602dfef155274bf1ae31b31c99b10861ac568390"
+          },
+          {
+            "unit": 20,
+            "draft": "正文/0020-少做的一笼-v1.md",
+            "sha256": "4756e72fe81cfb4b05edabffcb12fae2d92e3036dccee36af1313f49f7bc6b87",
+            "dependency": "9372bfc449b663e36fc23badd294e06ebbd8df8b491ab0db1fbb5ba7e55267ab"
+          },
+          {
+            "unit": 21,
+            "draft": "正文/0021-雨落在门檐外-v2.md",
+            "sha256": "5da93537846945edfd38f788c6919715c4f4ed66857e8a9a47d9147108a30e72",
+            "dependency": "4b0b79bdd6ee7e474b82d7a652f0f11af339ee5ebd3481369ace58f55dcb3185"
+          },
+          {
+            "unit": 22,
+            "draft": "正文/0022-书里那张白纸-v1.md",
+            "sha256": "9624eba564cba4ffddacf804ad0bf0bcf2a48ddac54c737c74fabe5f369b5995",
+            "dependency": "1b99276e407713716100ee82a7d488268d82ad52b6d6a959ea1f52d80d21902e"
+          },
+          {
+            "unit": 23,
+            "draft": "正文/0023-收摊以前-v1.md",
+            "sha256": "e7ae4d8bacb485d1e6f231ea2df2e542e85253c3a0bce0ae7d91a58eed405be3",
+            "dependency": "e4a9321dff1af578009a5250cf2c2ce4fd62b671e4fb54e7c564fe44de225618"
+          },
+          {
+            "unit": 24,
+            "draft": "正文/0024-门给你留着-v1.md",
+            "sha256": "4140e41ad5443e3d98a126691c3a691c6682f483ec7958f3563e17f58fd48b7a",
+            "dependency": "9f1bd580c3724b6a42126da50ef2cd99c5dad3ef6dbf4abf7a778c30e585f6f8"
+          },
+          {
+            "unit": 25,
+            "draft": "正文/0025-衣袖落下来-v2.md",
+            "sha256": "5bda90e0b1c2846ebe734aba5717ad6dff911a0ba8441b417177bae4c530ca69",
+            "dependency": "c37cb6bd4b22ca5671aefb0f607c34aec8d8f6d64f8bcbd9b50edb96d96e6a7c"
+          },
+          {
+            "unit": 26,
+            "draft": "正文/0026-要关的半扇门-v2.md",
+            "sha256": "5c19d6646bbb78694e1ee2651c30cf028c1b91145f0f8677dc07fd3d5b88ff6e",
+            "dependency": "83b266248df6e129ba86c4c1951f4c2cb329c5f92b56d4ff0dac78b069e749ec"
+          },
+          {
+            "unit": 27,
+            "draft": "正文/0027-先把这一天过完-v3.md",
+            "sha256": "0deb0e8c480e75f6e7fadddfde95eb8ef81e966f86d9968d30b01de2d24ed8a1",
+            "dependency": "f7e53726c89deadb1af28d1e43a2bda7d437ff701e75a1e7d9a94223180fdcb0"
+          },
+          {
+            "unit": 28,
+            "draft": "正文/0028-走远一点的路-v2.md",
+            "sha256": "3f0f8223ccb6359c41b4960346722c9849aa812ca1697c5e59d2073b8863c734",
+            "dependency": "314cbbc63ecee7d02cc9f7b163a1dd24878f30985fab40d536bfc2002fb304d2"
+          },
+          {
+            "unit": 29,
+            "draft": "正文/0029-五点进门以后-brc-v1.md",
+            "sha256": "65aef7c9d76fdfb1a7879947ee7f6fd34a0bdaad1f038facd11d8086031a8b7e",
+            "dependency": "9823d27e2b561509878ddb8fa3a48a9fa00be29f480637b7fe698322c1484877"
+          },
+          {
+            "unit": 30,
+            "draft": "正文/0030-兜里留得下的手-brc-v2.md",
+            "sha256": "a2a6d1cd57f4d612a160bc865b0b11ce760b08765fce76e0ce3c39d9f7213252",
+            "dependency": "7786adae01b24c99d46a3449638ba3666ec180ffca38cdae04d4e60235b1e5e9"
+          },
+          {
+            "unit": 31,
+            "draft": "正文/0031-门外留一张纸-c-v2.md",
+            "sha256": "801eb7ebef168c48712cc9e8cd5ba141fcd416e4059cb81f34d0dfe62349f24e",
+            "dependency": "4b751e0017e5ffd931c974986cbff8844543d558095c90ba26fe70a0cfcb4b8e"
+          },
+          {
+            "unit": 32,
+            "draft": "正文/0032-茶慢慢凉下来-cr-v2.md",
+            "sha256": "33233593787820901c1b8bc8a0c72d780ef57c4d7cb05cd8aa61f8c8c50093f3",
+            "dependency": "179def33f45b3f1d9f77e8d474564afcec7a84318ba5fe7ed951f102770bf7cf"
+          },
+          {
+            "unit": 33,
+            "draft": "正文/0033-把用过的话带回来-cr-v2.md",
+            "sha256": "c9f8e7e9d4126b723d719fed7e48ae1f67baf1444d3fcc59fb19e51d45ad8b44",
+            "dependency": "efbace088bd861d04ac98b8d41287d337f1ae0be52319f1bc4412fa7427de811"
+          },
+          {
+            "unit": 34,
+            "draft": "正文/0034-明天的空处-d-v3.md",
+            "sha256": "3fe2d103bd729ad7f0c6cfa47c49098649f84d3f07f5584ef4173a8bc446135b",
+            "dependency": "eaaf44a8a613f310bc8b2ca75bf5b5681a1e96584428c89b186a570331dda842"
+          },
+          {
+            "unit": 35,
+            "draft": "正文/0035-一起翻到下一页-dr-v2.md",
+            "sha256": "d283dd3666673aa304c549d17cc711cc191177f6eaa0a21838f79fed933d4f8f",
+            "dependency": "d24ff03a0fb0a459f161c9992a7df2fce242325bd2e26aab4493579ec28f28c9"
+          },
+          {
+            "unit": 36,
+            "draft": "正文/0036-灯下还有一页-dr-v2.md",
+            "sha256": "b6dde64388e696a69db396567cc3f6aa6a846943513b71f47c333cdbd929a245",
+            "dependency": "ece3cfc499212b24c3336b3c733aea173778f3158ce8f5363b5c15eabd7b0d70"
+          },
+          {
+            "unit": 37,
+            "draft": "正文/0037-各留一道菜-ac-a-v1.md",
+            "sha256": "f8d1a97468265b8e1b802524e35679d3369d9c01452d24ecdc7bd6ab17df1739",
+            "dependency": "ae6a9eca6ee370a8553385d9915591401b31ab76dfeaf429b00126b1eabf4e53"
+          },
+          {
+            "unit": 38,
+            "draft": "正文/0038-带进灯下-ac-a-v1.md",
+            "sha256": "83d9e925e15d28216d579fa569d5b7916b5f58e0cd1789ce8ff5a94c3b3b246d",
+            "dependency": "ecdb6a9c8e3525fd51d59de9dfd2815746a1c26c2d488b8b9de840c8d9262fd6"
+          },
+          {
+            "unit": 39,
+            "draft": "正文/0039-留到手上用-ac-ar-v1.md",
+            "sha256": "b6dce9743042ee4365d3bad3b61fb34fa9ef45247aed167417487fd280ce023c",
+            "dependency": "484a4955124e6e4fa758bcaf202abb37db9e2ce23a88816777eacfd4a9a82a21"
+          },
+          {
+            "unit": 40,
+            "draft": "正文/0040-取下来的那一条-ac-b-v1.md",
+            "sha256": "34dd63c71e762a2d20c9c3e60e11bae1000e82a59d15a8fca770e8cc2a0b96c7",
+            "dependency": "d1dbf950a4e0af4219214beaed8d0ed5c906dbe4842d8852fcd8d366b144ed24"
+          },
+          {
+            "unit": 41,
+            "draft": "正文/0041-让她自己推一次-ac-b-v1.md",
+            "sha256": "8594def5308d42ee41bc3b0d98d1e13be68b0969e2c80135a0fcd641c47eeb7d",
+            "dependency": "159a580fcbd4df2196ec4485d540cec8b6502c1f9f82bf1bd52ba6913ff0f77d"
+          },
+          {
+            "unit": 42,
+            "draft": "正文/0042-各有要回去的地方-ac-b-v1.md",
+            "sha256": "b1f908d5c4fa0be5a17e6ffaa36d13095f134e9446b172f1ee9c64aefdd6e7c4",
+            "dependency": "d163327ca81df9a2f46b8842b74b544c8f8ea5a7fa2c37fb7b3316ba00367e9f"
+          },
+          {
+            "unit": 43,
+            "draft": "正文/0043-一起走到摊前-ac-c-v1.md",
+            "sha256": "1e3ca20f4c30332a5a78c57591f0c1b3d7f7a8db8859f03fa468186f3619adb3",
+            "dependency": "552a3f88c7ad9b230448d4e85918dabc38cea7462ad85b50cf8515a91bdf08ea"
+          },
+          {
+            "unit": 44,
+            "draft": "正文/0044-锅里留着各人的味-ac-c-v1.md",
+            "sha256": "bc86601d0d1c2164ecf76d40415a90d099fea62e8b8ba4d8abcb0d85770856d9",
+            "dependency": "937e12df260bad1c7d03c1980761137b2ff440c80879f3552a37ac65207ba815"
+          },
+          {
+            "unit": 45,
+            "draft": "正文/0045-洗过再放回去-ac-c-v1.md",
+            "sha256": "3d7fb489fc95afd921c9956d52387784a3fff12f6ed23428466f4e7e7ebe323b",
+            "dependency": "7a77d65a81607f50e7261ceebbf909b0b1759dcac9948a67a8d69791c72e604d"
+          },
+          {
+            "unit": 46,
+            "draft": "正文/0046-盒里最后一块-ac-d-v2.md",
+            "sha256": "0a192b5c472880d9d64263395d3aa02652c19de6f2d7ffec4a656e883fd079b4",
+            "dependency": "e5c337a0e35f2f9b0c8a0e3edf2b7bdd55e20c199baebe4a88f38081c54df563"
+          },
+          {
+            "unit": 47,
+            "draft": "正文/0047-留一口自己的-ac-d-v2.md",
+            "sha256": "07b32a65cbfc453d4d08e43c0b7c284566c964ee3b672a1d17ec150ff56ad922",
+            "dependency": "b45d89a726f3950d5cfa3d3431f3fa5cf93fe3f988dfd3b5238cab0b0085e2b6"
+          },
+          {
+            "unit": 48,
+            "draft": "正文/0048-自己的那一段-ac-d-v2.md",
+            "sha256": "bca07263925234288c0ad9236d682dbdc9349ffe7b3d281dd74aea4b76a8f534",
+            "dependency": "a70c5db76aa700df19c01c936009c1c31becac78abd16420bdb0038417cbe5b5"
+          }
+        ]
+      }
+    }
+  }
+}

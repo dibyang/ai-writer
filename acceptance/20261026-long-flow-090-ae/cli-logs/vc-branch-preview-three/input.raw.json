@@ -1,0 +1,111 @@
+{
+  "unit": 3,
+  "expected_revision": 9,
+  "source_hashes": {
+    "writer.json": "522c5e261c04d80c9baf25b5a33cde2a4bae8fe483e1e4231619560ad84f19be",
+    ".writer/state.json": "e3779d07c09aaf5db064e6c8d81c173f92e11ffde94351819b43d9dc7211721f",
+    "大纲/单元/0003.json": "2bca0d1b328abe60d7d68a42a41269c73c02aafba9b86bfc2ef7c81f48c856af",
+    "设定/作品定位.md": "259a580686f4db15e33024c0ca017e2dfc19eca0411feda17f3566c0e54d9200",
+    "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+    "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2",
+    "设定/本次故事约束.md": "502a1fb416fbac6c1b3256a7da9f72d6ab342fbcd09b50fbcc5575a0eee4094a",
+    "大纲/分卷/V02.json": "550d210f56bf8b0071088d7af246e5c76871f6ec11754476d0b0a9741e23a25d",
+    "正文/V01-借出的一天/0002-迟一天的消息-r2.md": "a1c7822aacae4f407ced3073798adb3e67db744522e7bbb3aef089326f32693a"
+  },
+  "draft": "正文/V02-归还以后/0003-干透的伞.md",
+  "source_bindings": {},
+  "summary": "次晨07:25许宁开店，复查昨夜已收紧的布带结未松；07:30周岚按新约亲手还伞，许宁确认收到。双方核同一把伞原识别处，短暂帮撑试遮布后伞回许宁，临近08:00许宁持伞抱布向公交站走；晚些扶木牌只是将来约。",
+  "changes": {
+    "characters": {
+      "许宁": "临近次晨08:00持深蓝伞、斜抱棉布卷走向公交站；07:30亲手收回伞，看到原白线与贴纸缺角，知道昨夜晾伞和近九点锁门仅为周岚口述；复查昨夜已系牢的布带后实际试走，未发生松带重系；约晚些时候扶木牌尚未发生",
+      "周岚": "次晨07:30在店门亲手归还伞并见许宁接收；随后临时帮撑、试遮布并让许宁接回，离开往楼道；知道许宁已能抱布持伞、仍08:00出门；答应10:00以后再电话约扶木牌，尚未做"
+    },
+    "timeline_append": [
+      "次晨07:25：许宁开店，复查昨夜已系牢的旧布带结未松，夹布试抬手；没有滑带重系",
+      "次晨07:30：周岚亲手交还同一把伞，许宁握稳并确认收到；之后周岚临时帮撑试遮布，许宁接回",
+      "次晨临近08:00：许宁持伞斜抱布卷向公交站走；扶木牌只是晚些再电话约的未来安排"
+    ],
+    "ledger": {
+      "P_UMBRELLA": {
+        "reader_known": "07:30周岚亲交许宁并获确认；帮撑试布后许宁接回，末尾持伞出门",
+        "character_known": {
+          "许宁": "已亲手接收自己的伞，看见原白线及缺角；知道周岚昨夜晾伞仅为口述；帮撑后接回并持伞出门",
+          "周岚": "知道已亲手归还且许宁当面确认；随后临时帮撑，试走时见许宁接回；离开后未跟随出门"
+        },
+        "custody": {
+          "holder": "许宁",
+          "location": "巷内向公交站行进，许宁右手撑伞",
+          "condition": "已实际归还，后短暂交周岚帮撑并接回；原白线与缺角保留"
+        },
+        "previous_holder": "周岚",
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "七点半，周岚把伞柄递给许宁，等许宁握稳才松手。"
+          },
+          {
+            "unit": 3,
+            "quote": "右手接回伞柄。"
+          },
+          {
+            "unit": 3,
+            "quote": "右手撑开自己的深蓝伞。"
+          }
+        ]
+      },
+      "T_RETURN": {
+        "status": "resolved",
+        "reader_known": "原当日19:00承诺提前通知后改为次晨07:30，现已当面归还并确认",
+        "character_known": {
+          "许宁": "知道次晨07:30已实际接伞并说收到了，延期归还约定完成",
+          "周岚": "亲手在次晨07:30归还，听许宁说收到了，知道本次约定完成"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "朝她说：“收到了。”"
+          }
+        ]
+      },
+      "R_NEIGHBOR": {
+        "reader_known": "双方能说需要、承认先客套或先答应的习惯；帮撑试布已做，晚些扶木牌只是新约",
+        "character_known": {
+          "许宁": "知道周岚接受明确时间与直接求助；本次帮撑已落实，扶木牌约10点后再电话确定",
+          "周岚": "知道许宁能直接说要用伞并请求帮撑；知道扶木牌需10点后等许宁回来电话再约"
+        },
+        "evidence": [
+          {
+            "unit": 3,
+            "quote": "我真要用，也先告诉你。"
+          }
+        ]
+      }
+    }
+  },
+  "_replay": {
+    "session_id": "272c9b72-4e41-4837-a025-fe9a4969b167",
+    "base_state_sha256": "f164e7ab08173124db7f8c32c8ff298c18ac82af689e24cac3a9a0a170821966",
+    "old_unit_sha256": "8d1e6cef37ec8d5c0e46eba6bf874c25c1295ffc4e6d2a86bdcd4c25fe0e2486",
+    "old_journal_sha256": "d4cc39e059829dd914394f0670a21407ce7d20f2bf088dd260a1cfb0ca52b979",
+    "draft_sha256": "197f7d31abaf10aad9bbf92b953eb5cc3126a909ece43ea8f50ab388fd928763"
+  },
+  "replay_review": {
+    "reviewer": "Codex同ID知情实读",
+    "report": "审查/replay-3-六字段核验.md",
+    "draft_sha256": "197f7d31abaf10aad9bbf92b953eb5cc3126a909ece43ea8f50ab388fd928763",
+    "checked_fields": [
+      "summary",
+      "characters",
+      "timeline",
+      "ledger",
+      "evidence",
+      "downstream"
+    ]
+  },
+  "draft_review": {
+    "reviewer": "Codex同ID知情自检",
+    "report": "审查/replay-3-六字段核验.md",
+    "draft_sha256": "197f7d31abaf10aad9bbf92b953eb5cc3126a909ece43ea8f50ab388fd928763",
+    "report_sha256": "19bf3dfd3d966323b780b1f89d94a0c0d8d810068cd4b7acf5690fa9b000123d"
+  }
+}

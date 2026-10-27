@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "at": "2026-10-25T17:38:09.824Z",
+  "unit": 61,
+  "revision": 354,
+  "state_sha256": "8ffdbbf24753ee9974d953b1ab91773814c2acd36b76d1e98dd98c2a963f6d10",
+  "required_chars": 44191,
+  "negative_limits": [
+    1000,
+    44190
+  ],
+  "exact_success_limit": 44191,
+  "packet_chars_excluding_output": 44191,
+  "failed_out_absent": true,
+  "all_four_state_bytes_unchanged": true,
+  "source_count": 12,
+  "context_and_original_template_sources_equal": true,
+  "context_and_template_saved_output_exact": true,
+  "commands": [
+    {
+      "label": "a-u61-budget-1000",
+      "exit_code": 2,
+      "budget": 1000,
+      "state_sha256": "8ffdbbf24753ee9974d953b1ab91773814c2acd36b76d1e98dd98c2a963f6d10",
+      "state_unchanged": true,
+      "result_sha256": "6a0883332ecb396f2a924cc461e06d55133ad3e03bdd2b369bcc6bc1d6624de9"
+    },
+    {
+      "label": "a-u61-budget-lower",
+      "exit_code": 2,
+      "budget": 44190,
+      "state_sha256": "8ffdbbf24753ee9974d953b1ab91773814c2acd36b76d1e98dd98c2a963f6d10",
+      "state_unchanged": true,
+      "result_sha256": "645358adbad67a2651fd595065c61e29ef540d47a3914c15f66b13b10e540ba6"
+    },
+    {
+      "label": "a-u61-context-exact",
+      "exit_code": 0,
+      "budget": 44191,
+      "state_sha256": "8ffdbbf24753ee9974d953b1ab91773814c2acd36b76d1e98dd98c2a963f6d10",
+      "state_unchanged": true,
+      "result_sha256": "02005d42a47816235d615e195abc82018f907d90dff5e7b5f80868b86ee91b5e"
+    },
+    {
+      "label": "a-u61-template",
+      "exit_code": 0,
+      "budget": null,
+      "state_sha256": "8ffdbbf24753ee9974d953b1ab91773814c2acd36b76d1e98dd98c2a963f6d10",
+      "state_unchanged": true,
+      "result_sha256": "5ffb789c14448a2300e72d4dc07e5e906afe7cfa0f7b3e8716498d0382e636ea"
+    }
+  ],
+  "scope": "Actual installed G8 CLI budget boundary under valid draft authorization; separate from body reading and literary review."
+}

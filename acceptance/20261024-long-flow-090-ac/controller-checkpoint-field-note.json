@@ -1,0 +1,8 @@
+{
+  "scope": "Controller evidence helper only, not product runtime",
+  "checkpoint": "checkpoint-d-first.json",
+  "observation": "D saved a broader1675-file inventory with registered_range.to=46 rather than registered_units.",
+  "helper_change": "preserve-stop.mjs uses registered_units ?? registered_range?.to when writing its receipt; original checkpoint bytes are unchanged.",
+  "failed_attempt": "An apply_patch whole-line match failed due to an escaped regex mismatch; the failed patch made no writes. A literal FastCtx replacement of only the receipt field succeeded.",
+  "product_or_story_changes": false
+}

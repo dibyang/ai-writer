@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';
+const base=path.dirname(fileURLToPath(import.meta.url)),[unitArg,pageArg]=process.argv.slice(2),unit=Number(unitArg),page=Number(pageArg);assert(Number.isInteger(unit)&&unit>=1&&unit<=24);assert(Number.isInteger(page)&&page>=1);
+const {project}=JSON.parse(fs.readFileSync(path.join(base,'project.json'))),state=JSON.parse(fs.readFileSync(path.join(project,'.writer/state.json'))),u=state.units.find(x=>x.unit===unit);const label=`ffirst-u${String(unit).padStart(2,'0')}-p${String(page).padStart(2,'0')}`;
+const r=spawnSync(process.execPath,[path.join(base,'read.mjs'),label,path.join(project,u.draft),String(page)],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024});process.stdout.write(r.stdout??'');process.stderr.write(r.stderr??'');process.exitCode=r.status??1;

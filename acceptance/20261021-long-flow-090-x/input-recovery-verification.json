@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "at": "2026-10-21T09:58:58.666Z",
+  "scope": "actual known input-error rejection and corrected retries; state immutability only, not an OS-wide filesystem audit",
+  "cases": [
+    {
+      "failed_label": "a-context-25",
+      "actual_exit_code": 2,
+      "error": "--out只能是.writer/drafts/下的新JSON可读入口",
+      "state_sha256": "718044dc6fc3da6424119e682df93abb876c521070ff49f64189d6e7d272f9fe",
+      "state_bytes_unchanged": true,
+      "retry_label": "a-context-25-v2",
+      "retry_exit_code": 0,
+      "retry_state_unchanged": true,
+      "retry_argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\scenario\\东岸末班船-再扩展验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "25",
+        "--out",
+        ".writer/drafts/a-context-25-before-v2.json",
+        "--project",
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\scenario\\东岸末班船-再扩展验证"
+      ]
+    },
+    {
+      "failed_label": "b-context28",
+      "actual_exit_code": 2,
+      "error": "--out只能是.writer/drafts/下的新JSON可读入口",
+      "state_sha256": "95069c325e002cb00ea9375c226852b46a7e3155225eee8234961f09c7cca5c7",
+      "state_bytes_unchanged": true,
+      "retry_label": "b-context28-v2",
+      "retry_exit_code": 0,
+      "retry_state_unchanged": true,
+      "retry_argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\scenario\\东岸末班船-再扩展验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--unit",
+        "28",
+        "--max-chars",
+        "65000",
+        "--out",
+        ".writer/drafts/b-context-28-r125.json",
+        "--project",
+        "D:/work/other/ai-writer/acceptance/20261021-long-flow-090-x/scenario/东岸末班船-再扩展验证"
+      ]
+    },
+    {
+      "failed_label": "brc-entry-discussion",
+      "actual_exit_code": 2,
+      "error": "未知命令：discussion",
+      "state_sha256": "4367fe93aca3ba9cb5b4a742fe5e3b010f81edd899ee976dbc57211b8d9faa4e",
+      "state_bytes_unchanged": true,
+      "retry_label": "brc-entry-discussion-v2",
+      "retry_exit_code": 0,
+      "retry_state_unchanged": true,
+      "retry_argv": [
+        "D:\\work\\other\\ai-writer\\acceptance\\20261021-long-flow-090-x\\scenario\\东岸末班船-再扩展验证\\.writer\\tool\\bin\\ai-writer.mjs",
+        "context",
+        "--purpose",
+        "discussion",
+        "--max-chars",
+        "65000",
+        "--project",
+        "acceptance/20261021-long-flow-090-x/scenario/东岸末班船-再扩展验证"
+      ]
+    }
+  ]
+}

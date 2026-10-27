@@ -1,0 +1,69 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-21T04:36:29.690Z",
+  "operation_id": "fr-pause-for-current-full24-read",
+  "base_revision": 109,
+  "payload": {
+    "stage": "paused",
+    "task": "W-F标题修订已正式提交并draft应用；仅完整1—24当前全文复核、报告登记/意见复核及新草稿导出，有限试验止24不写25。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "当前全文pass期间不修改正文或state；以f-title-current before/after核全24原字节。",
+        "不写25、不新增25纲/正文；不Git提交推送、不上传发布。",
+        "修订应用不冒充当前全稿已复核；须本次实读后另正式review/verify。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/执行细纲-W-D-22-24.md"
+        ],
+        "unresolved_ids": [
+          "I_F19_TITLE_TIME已按真实draft事务应用，待提交后新当前全24实读及意见verify。",
+          "D三项普通事实及三链有限兑现不扩成耐久或文学定稿。"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "唯一正文文件改动：P/正文/0019-提前的两个钟头-v1.md中首行“# 第十九章 提前的两个钟头”改为“# 第十九章 提前的一个半钟头”。",
+    "local_source": "研究/FR标题修订真实授权.md",
+    "source_sha256": "06b0c792e4e9dcb0ed50afb72f9e3e211f32ef9b3bb7891b1489bf47ac7d00d3",
+    "locator": "本会话prompt-f-title-repair.md第1、5、7、9、13行；保留原作者prompt-a-first.md授权，仅代理在明确范围执行",
+    "recorded_by": "W-F同ID恢复当前模型",
+    "frozen_ref": ".writer/objects/06b0c792e4e9dcb0ed50afb72f9e3e211f32ef9b3bb7891b1489bf47ac7d00d3.txt"
+  }
+}

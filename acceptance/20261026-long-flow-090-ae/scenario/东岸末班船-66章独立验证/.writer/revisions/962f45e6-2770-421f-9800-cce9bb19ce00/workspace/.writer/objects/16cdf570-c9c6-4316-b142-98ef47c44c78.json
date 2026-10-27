@@ -1,0 +1,68 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-20T23:42:06.763Z",
+  "operation_id": "w-b-first-pause-after-17-before-18",
+  "base_revision": 70,
+  "payload": {
+    "stage": "paused",
+    "task": "W-B首程16—17已完成并登记，当前13—17全文知情连读review已登记；18仅细纲、正文和片段均尚未写，等下一同ID恢复。本进程到17正常收束，仅discuss，不导出不提前修订；24章仍为计划。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "16—17完成，18尚未写，等待下一同ID按最新授权恢复；next_unit18不是自行续写许可。",
+        "前15正文/units、全部observation type/statement/author_truth和冻结随包工具保持；旧修订全部committed不恢复。",
+        "仅写W，不另派代理、不改根产品/V/U/T/其他作品，不提交推送/上传/导出，不提前正式修订；历史报告/失败/原稿保留。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "adopted",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md",
+          "设定/权威规则.md",
+          "设定/人物与声音.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "adopted",
+        "refs": [
+          "大纲/扩展骨架-W.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V6.json",
+          "大纲/分卷/V7.json",
+          "大纲/分卷/V8.json",
+          "大纲/分卷/V9.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/近期细纲-W-16-18.md"
+        ],
+        "unresolved_ids": [
+          "19—24仅骨架；18正文待同ID恢复"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "W轮新鲜B：从当前文件恢复，完成16—17后正常退出，18留同ID恢复。W=D:/work/other/ai-writer/acceptance/20261021-long-flow-090-w；P=W/scenario/东岸末班船-规模验证。真实整体授权在prompt-a-first.md，本prompt为此阶段最新停点。仅写W，不另派代理、不改根产品/V/U/T/现有作品、不Git提交/推送。所有产品调用走node W/w-writer.mjs <新唯一小写标签> <命令参数>，实际双流/输入/子码/前后state留cli-logs。唯一CLI在P/.writer/tool/bin/ai-writer.mjs；有缺陷保留复现报根，不改state/hash/产品绕过。",
+    "local_source": "研究/W-B-首程授权原文.md",
+    "source_sha256": "3feaa217498055ca06e53222361a74c05169b0b3d653db35ee6b5a96be2c25a0",
+    "locator": "W/prompt-b-first.md第1/5/7/9/11/13/15行；同字节本地原话；整体人类原话出处W/prompt-a-first.md第3行与原整体路线第5/7行，未伪造人类消息ID",
+    "recorded_by": "W新鲜B原生Codex，代理执行选择不冒充人类逐项采纳",
+    "frozen_ref": ".writer/objects/3feaa217498055ca06e53222361a74c05169b0b3d653db35ee6b5a96be2c25a0.txt"
+  }
+}

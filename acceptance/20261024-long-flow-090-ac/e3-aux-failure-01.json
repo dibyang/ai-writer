@@ -1,0 +1,10 @@
+{
+  "action": "Read saved preview output using wrong stdout.json extension",
+  "exit_code": 1,
+  "error": "ENOENT -4058: cli-logs/e3-u44-preview/stdout.json does not exist",
+  "correct_file": "cli-logs/e3-u44-preview/stdout.txt",
+  "effect": "read-only helper failure; no CLI mutation and candidate state still preview baseline",
+  "candidate_state_sha256": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+  "preview_before": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1",
+  "preview_after": "b7ee7101d5419beca23bb42c963551fb52ac805ebf37d76ad307883139dc0ec1"
+}

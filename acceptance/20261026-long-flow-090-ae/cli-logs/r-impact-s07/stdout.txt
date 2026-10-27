@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "impact": {
+    "schema_version": 1,
+    "revision": 390,
+    "state_sha256": "a41cae5627a70e996fc7d89d87047e5f69e654d8b73fd82afb478a7d263aec5f",
+    "version_id": "AE_R_S07_NEW",
+    "ref": "大纲/分卷/V22.json",
+    "from": 61,
+    "mode": "historical",
+    "candidate_sha256": "d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047",
+    "direct_consumers": [
+      {
+        "unit": 61,
+        "consumed_sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 62,
+        "consumed_sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+        "bound": true,
+        "affected_by_publication": true
+      },
+      {
+        "unit": 63,
+        "consumed_sha256": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb",
+        "bound": true,
+        "affected_by_publication": true
+      }
+    ],
+    "revision_from": 61,
+    "review_from": 60,
+    "retained_prefix_consumers": [],
+    "replaced_ranges": [],
+    "possible_indirect_from": 61,
+    "possible_indirect_through": 66,
+    "possible_indirect_impact": "unknown-requires-reading",
+    "required_readings": {
+      ".writer/objects/d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047.source": "d86c43240f2f1d6483ca93d24818fdd6163d5a2155254ea12abf452ddff36047",
+      "正文/0060-窗边还留着光-ad-dr-v2.md": "0c7478a4f29e1ecb45780ef42b8a404c2a7e04bba4c51348a4af8c780e06357a",
+      "正文/0061-这一页先留我这里-ae-a-v2.md": "4354a0a5a1badc5128d1c69a9b89d72599eec9089073806310162a22ac79041c",
+      "正文/0062-改不了的那一份-ae-a-v1.md": "771b9a42a8480dc35385b2756ce27b4d035966b0fcd1ec2c8e15c36986f8c980",
+      "正文/0063-轮到自己落一子-ae-a-v2.md": "dbe17e536db263e383a79ee7b072dc050f3a2f8e861c0957097109d5d28b2b52",
+      "正文/0064-把这一边转过来-ae-b-v2.md": "dfd01f5f6319bc15476b6f41693abc55a52507d3e15dc03aa6ac724e12888c35",
+      "正文/0065-画到不想给人看-ae-b-v2.md": "1e5ef74f4e959a395ad38fcc29cf4d1555724240c68d1a680dfba2b02544ab2b",
+      "正文/0066-照约把书带回来-ae-b-v3.md": "997bd98b995bee1fdb3f0cc69e1b55091476f618b7a5b82ea911194d6e646f70",
+      ".writer/objects/ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb.source": "ca57545d6772da10450382759847f9eba930282b0c435b8b69533b5a1c4441bb"
+    },
+    "note": "仅计算可观察消费关系；模型需实读候选、旧输入与相关正文。脚本不证明语义无影响。"
+  }
+}
