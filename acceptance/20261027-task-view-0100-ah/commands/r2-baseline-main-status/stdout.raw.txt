@@ -1,0 +1,130 @@
+{
+  "ok": true,
+  "title": "任务恢复验证",
+  "kind": "novel",
+  "revision": 5,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "独立任务视图验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "只做本测试范围"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 3,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [
+      {
+        "id": "05252b9a-4a9f-416f-a109-2e8fe1777cd8",
+        "owner": "AH synthetic owner",
+        "project_id": "e16aed75-08a8-4c0f-b294-7c702a671eec",
+        "build_id": "9be93bbd81c69802955eec9592ed9d1b7ac763a86d0e546b6ac23b1a9d58a7de",
+        "scope": {
+          "from": 1,
+          "through": 2
+        },
+        "status": "open",
+        "base_sha256": "3e2d961ac78c7e2a8e17a75e113a4675a06f854534b6a1ad45ddaad36f7b4d27",
+        "created_at": "2026-10-27T02:54:58.718Z",
+        "session_sha256": "af818c341603f7b1c92431935ab47b4412d5cfa7cf6df9eea0b6e7a81ed9436d"
+      }
+    ],
+    "transactions": [],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 5,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": false,
+    "suggestion": "跨卷或长篇创作先long-enable-preview，再按已授权范围启用、组织分卷与滚动细纲"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 2,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 3,
+    "plan_exists": false,
+    "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+    "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\version0100-ag-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\任务恢复验证'"
+  },
+  "current": {
+    "character_count": 1,
+    "ledger_count": 0,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "阿禾完成第1次借书核对"
+      },
+      {
+        "unit": 2,
+        "summary": "阿禾完成第2次借书核对"
+      }
+    ],
+    "timeline_tail": [
+      "第1次核对结束",
+      "第2次核对结束"
+    ]
+  }
+}

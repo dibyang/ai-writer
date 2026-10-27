@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "任务恢复验证",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\任务恢复验证",
+  "revision": 2,
+  "next_unit": 2,
+  "identity": {
+    "kind": "main"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "独立任务视图验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 2
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "只做本测试范围"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [],
+  "review_counts": {},
+  "drafts": {
+    "candidates": [
+      {
+        "draft": "正文/0002-第2章.md",
+        "reason": "unregistered",
+        "possible_unit": 2,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "omitted": 0,
+    "unregistered_count": 1,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "steps": [
+    "读取当前上下文并核对有效细纲",
+    "核对已有正文或分段，保留旧稿，必要时按显式分段清单合章",
+    "用record-template或replay-input生成机械字段，填写实际变化",
+    "record-preview通过后再record；旧输入失效时重新生成并实读核对"
+  ],
+  "input_template_command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' record-template '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\任务恢复验证' '--unit' '2'",
+  "next": {
+    "code": "inspect-existing-draft",
+    "action": "发现本章未登记候选；先核对正文/分段和版本，避免重复写稿。",
+    "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\任务恢复验证' '--unit' '2'",
+    "defaults": {
+      "unit": 2,
+      "expected_revision": 2
+    },
+    "requires": [
+      "实际读稿",
+      "当前来源绑定"
+    ]
+  }
+}

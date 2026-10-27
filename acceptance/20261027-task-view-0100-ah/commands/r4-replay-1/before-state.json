@@ -1,0 +1,137 @@
+{
+  "schema_version": 6,
+  "revision": 6,
+  "project_id": "e16aed75-08a8-4c0f-b294-7c702a671eec",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "revision",
+    "task": "独立任务视图验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "只做本测试范围"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/a3608ce7-5de0-4977-b9bb-e96e313de1c4.json",
+      "sha256": "40aae4c014e90960b898c681f36cba671dcac61641df741ae5570a1cb3903322"
+    },
+    {
+      "ref": ".writer/objects/26455ad8-dc7b-44a3-99f9-fbfbaef9fb56.json",
+      "sha256": "59353a231ffd9b4928883bc18ef45805d211e36fdca43bfcb02d1393bbe80d70"
+    },
+    {
+      "ref": ".writer/objects/11a030aa-3e79-4ce5-8622-565c69c1d34c.json",
+      "sha256": "de15b032486c0b31e97d547778b584c9ea9cca6f4853dc67fba5c77f3462a867"
+    }
+  ],
+  "operations": {
+    "ah-1": {
+      "input_sha256": "ec0d419dc30a3fc6dcb62969cfaf8ad7093d86fcf0c7d8c592aacfb72588ae05",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "ah-1",
+        "event": {
+          "ref": ".writer/objects/a3608ce7-5de0-4977-b9bb-e96e313de1c4.json",
+          "sha256": "40aae4c014e90960b898c681f36cba671dcac61641df741ae5570a1cb3903322"
+        }
+      }
+    },
+    "ah-r2-pause": {
+      "input_sha256": "948d0098f9e5e3e11aee7fb805217e09d37ccbcc0fd2cf763a87b9d2478f4f78",
+      "result": {
+        "ok": true,
+        "revision": 4,
+        "operation_id": "ah-r2-pause",
+        "event": {
+          "ref": ".writer/objects/26455ad8-dc7b-44a3-99f9-fbfbaef9fb56.json",
+          "sha256": "59353a231ffd9b4928883bc18ef45805d211e36fdca43bfcb02d1393bbe80d70"
+        }
+      }
+    },
+    "ah-r2-allow-revision": {
+      "input_sha256": "f916aea353c82906991f6e592e8bd5501c6e94376633a17642350da63ce17523",
+      "result": {
+        "ok": true,
+        "revision": 5,
+        "operation_id": "ah-r2-allow-revision",
+        "event": {
+          "ref": ".writer/objects/11a030aa-3e79-4ce5-8622-565c69c1d34c.json",
+          "sha256": "de15b032486c0b31e97d547778b584c9ea9cca6f4853dc67fba5c77f3462a867"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/11a030aa-3e79-4ce5-8622-565c69c1d34c.json",
+    "sha256": "de15b032486c0b31e97d547778b584c9ea9cca6f4853dc67fba5c77f3462a867"
+  },
+  "revision_scope": {
+    "from": 1,
+    "through": 2
+  }
+}

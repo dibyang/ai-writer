@@ -4,7 +4,7 @@
 
 本页是维护者的本地准备流程，不自动创建标签、推送或发布。用户批准具体产物后，再执行对应Git和GitHub动作。
 
-本次发行版本为0.9.0，执行进度、最终提交及资产核验见[发布记录](release-090-verification.md)。以下构建步骤针对当前package.json版本；0.8.0的发行记录和资产保持原身份。
+当前正式版本为0.9.0，最终提交及资产核验见[发布记录](release-090-verification.md)。源码已进入0.10.0开发阶段，尚未发布；以下构建步骤针对当前package.json版本。0.8.0、0.9.0的发行记录、标签和资产保持原身份。
 
 ## 首发版本身份
 
@@ -13,14 +13,14 @@
 ## 构建与验证
 
 ```powershell
-npm run release:build -- --out dist/0.9.0
+npm run release:build -- --out dist/0.10.0
 ```
 
 输出目录必须不存在。构建器按`release/distribution.json`的明确文件清单复制，拒绝不安全路径、重复路径、符号链接和覆盖已有产物；根README使用`release/README.md`作为下载包入口。不会扫描或打包作品、验收目录、.git、.idea或临时目录。失败时保留临时构建目录供诊断，不自动删除或覆盖。
 
 历史来源审计索引以`docs/oh-story-reference-inventory.json`镜像随源码包携带，只包含公开参考仓库的文件元数据，与原审计清单的SHA一致；回归不依赖未分发的验收目录。Git来源只在当前目录确为仓库根时记录，不借用父仓库；暂时读取失败会停止构建，不把不确定状态悄悄写成另一份成功产物。
 
-产物包括`ai-writer-0.9.0.zip`、`SHA256SUMS.txt`、`release-manifest.json`、`RELEASE_NOTES.md`和便于检查的展开目录；默认输出为`dist/<package.json版本>`。ZIP使用固定条目时间；同一输入、同一来源状态下可复现。清单记录实际来源Git提交与dirty状态，不把开发候选称为已发布版本。包内`build-manifest.json`绑定受管资源；`RELEASE-MANIFEST.json`记录载荷哈希，外部SHA绑定最终ZIP。
+产物包括`ai-writer-0.10.0.zip`、`SHA256SUMS.txt`、`release-manifest.json`、`RELEASE_NOTES.md`和便于检查的展开目录；默认输出为`dist/<package.json版本>`。ZIP使用固定条目时间；同一输入、同一来源状态下可复现。清单记录实际来源Git提交与dirty状态，不把开发候选称为已发布版本。包内`build-manifest.json`绑定受管资源；`RELEASE-MANIFEST.json`记录载荷哈希，外部SHA绑定最终ZIP。
 
 以最终ZIP解压到新目录后，运行npm test、npm run doctor、npm run test:engine和真实CLI流程；核对隐藏技能、中文路径、来源许可、旧候选更新、幂等及暂停门禁。验证数据放在包外，保持下载资产原始哈希。Windows环境跳过不能算通过，也不能代替未取得结果的跨系统CI。
 

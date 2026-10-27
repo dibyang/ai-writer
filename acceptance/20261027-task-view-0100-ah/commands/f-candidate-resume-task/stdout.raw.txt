@@ -1,0 +1,123 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "任务恢复验证",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace",
+  "revision": 6,
+  "next_unit": 1,
+  "identity": {
+    "kind": "revision-workspace",
+    "id": "8e09055e-994a-4676-93ee-18fbb6fc48e4",
+    "scope": {
+      "from": 1,
+      "through": 2
+    },
+    "status": "editing",
+    "parent": "D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证",
+    "owner": "AH synthetic owner"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "独立任务视图验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "只做本测试范围"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [],
+  "review_counts": {},
+  "drafts": {
+    "candidates": [
+      {
+        "draft": "正文/0001-第1章.md",
+        "reason": "unregistered",
+        "possible_unit": 1,
+        "action": "核对是否为新稿、修订留稿或归档；确认后登记，不能直接合并或删除。"
+      }
+    ],
+    "omitted": 0,
+    "unregistered_count": 2,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [
+    {
+      "id": "8e09055e-994a-4676-93ee-18fbb6fc48e4",
+      "owner": "AH synthetic owner",
+      "status": "editing",
+      "scope": {
+        "from": 1,
+        "through": 2
+      },
+      "kind": "revision",
+      "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace"
+    }
+  ],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "steps": [
+    "读取当前上下文并核对有效细纲",
+    "核对已有正文或分段，保留旧稿，必要时按显式分段清单合章",
+    "用record-template或replay-input生成机械字段，填写实际变化",
+    "record-preview通过后再record；旧输入失效时重新生成并实读核对"
+  ],
+  "input_template_command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-final\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision replay-input '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace' '--unit' '1'",
+  "input_template_requires": [
+    "附加 --revision-token，并使用原会话令牌；此视图不返回令牌",
+    "先完成当前正文修改，再取replay-input；之后改正文须重新取草案",
+    "填写replay_review：实际报告、reviewer及summary/characters/timeline/ledger/evidence/downstream六项复核"
+  ],
+  "next": {
+    "code": "resume-replay",
+    "action": "从当前候选的下一登记章恢复；先读上下文，再取当前模板并核对旧登记差量，不能直接重放旧输入。",
+    "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-final\\ai-writer-0.10.0\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace' '--unit' '1'",
+    "defaults": {
+      "unit": 1,
+      "expected_revision": 6
+    },
+    "requires": [
+      "实际读稿",
+      "当前来源绑定",
+      "原修订令牌"
+    ]
+  }
+}

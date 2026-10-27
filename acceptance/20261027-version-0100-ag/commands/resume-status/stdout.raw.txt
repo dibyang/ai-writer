@@ -1,0 +1,137 @@
+{
+  "ok": true,
+  "title": "没寄出的信",
+  "kind": "novel",
+  "revision": 3,
+  "schema_version": 6,
+  "governance": {
+    "enabled": true,
+    "stage": "trial",
+    "task": "仅重放本测试副本第1章，完成后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一章完成后复盘"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "next_unit": 2,
+  "stale_units": [],
+  "changed_sources": [],
+  "impact_pending": [],
+  "revisions": {
+    "ok": true,
+    "sessions": [],
+    "transactions": [
+      {
+        "id": "9c43e838-7744-4e0b-8cfc-9fc2885483ac",
+        "status": "completed"
+      }
+    ],
+    "note": "令牌不在列表中返回；无自动超时抢占、合并、覆盖或清理"
+  },
+  "review_workflow": {
+    "ok": true,
+    "enabled": true,
+    "revision": 3,
+    "counts": {},
+    "pending": [],
+    "omitted": 0,
+    "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+  },
+  "tool_control": {
+    "generation": 1,
+    "installed": {
+      "version": "0.10.0",
+      "source_content_id": "f1b4a2b139b13d8c6bb48aec2563e5c9b29fb41693c2311d4a89503e199e2f47",
+      "runtime_id": "8f4cc9727ed3bf97237874dca5d7056538252971fbce98989a81bdc80ec1af08"
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/9c43e838-7744-4e0b-8cfc-9fc2885483ac.json",
+        "sha256": "92ac71d7ce0f32bf6bf4566a079272a16adea9c2caf39d7f4ed9cc3da48463b0"
+      }
+    ],
+    "operations": {
+      "704977a7-efc7-45a6-a77c-7ec43bbd7251": {
+        "input_hash": "04607888d71f7db1d4502161705dee2ca90acb3d323e1c95c76768944d7263dd",
+        "result": {
+          "ok": true,
+          "status": "completed",
+          "transaction_id": "9c43e838-7744-4e0b-8cfc-9fc2885483ac",
+          "revision": 3,
+          "generation": 1,
+          "source_content_id": "f1b4a2b139b13d8c6bb48aec2563e5c9b29fb41693c2311d4a89503e199e2f47",
+          "backups_preserved": true
+        }
+      }
+    },
+    "enable_id": null
+  },
+  "long_form": {
+    "enabled": false,
+    "suggestion": "跨卷或长篇创作先long-enable-preview，再按已授权范围启用、组织分卷与滚动细纲"
+  },
+  "view": "compact",
+  "draft_inventory": {
+    "registered_count": 1,
+    "unregistered": [],
+    "unsafe_entries": []
+  },
+  "next": {
+    "unit": 2,
+    "plan_exists": false,
+    "action": "试写范围已到，先复盘：仅重放本测试副本第1章，完成后复盘",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261027-version-0100-ag\\cli-scenarios\\smoke-VNWrN6\\匿名作品\\.writer\\tool\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-version-0100-ag\\cli-scenarios\\smoke-VNWrN6\\匿名作品' '--purpose' 'discussion'"
+  },
+  "current": {
+    "character_count": 2,
+    "ledger_count": 0,
+    "recent": [
+      {
+        "unit": 1,
+        "summary": "阿禾查已故父亲寄来的信，值班员取出同编号的第二封和没有邮戳的第三封。"
+      }
+    ],
+    "timeline_tail": [
+      "第一夜：阿禾在末班车后抵达邮局"
+    ]
+  }
+}

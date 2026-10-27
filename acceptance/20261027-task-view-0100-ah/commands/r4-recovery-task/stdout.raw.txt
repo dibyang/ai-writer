@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "recovery_only": true,
+  "can_write": false,
+  "blockers": [
+    {
+      "code": "TRANSACTION_PENDING",
+      "transactions": [
+        {
+          "id": "5264a9c5-1240-4971-9a88-510d805a896c",
+          "kind": "revision",
+          "session_id": "05252b9a-4a9f-416f-a109-2e8fe1777cd8",
+          "status": "applying"
+        }
+      ]
+    }
+  ],
+  "next": {
+    "code": "recover-transaction",
+    "action": "普通读写已暂停；先查看未完成事务，再携原凭据明确选择恢复或回滚。此视图不读取可变业务状态。",
+    "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\任务恢复验证'",
+    "requires": [
+      "原凭据",
+      "明确恢复方向",
+      "作者恢复证据及遗留锁实际哈希（若有）"
+    ]
+  }
+}

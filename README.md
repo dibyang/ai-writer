@@ -4,6 +4,10 @@
 
 当前发行版本为 **0.9.0**，采用 Apache License 2.0。发布状态与下载见 [v0.9.0 Release](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0)，历史 [v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0) 保持不变。
 
+当前源码进入 **0.10.0 开发阶段，尚未发布**。正式下载仍为 0.9.0；开发版本沿用 schema 6 和现有资源配置，不自动更新作品。[开发说明](RELEASE_NOTES.md)与[不足和下一步建议](docs/next-development.md)区分本轮已改内容与待实施建议。
+
+0.10.0 新增只读任务视图：`node bin/ai-writer.mjs status --project "作品目录" --view task`，集中查看授权、原候选、阻塞和下一步；它不自动写稿、登记或恢复事务。
+
 从全书大纲、分卷和近期章纲开始创作，在新会话中恢复进度，并在独立修订区修改旧稿、导出草稿。工具记录创作阶段、授权范围、作者决定及来源版本，支持长章分段、上下文预算诊断、跨章复核和审查意见闭环；文学质量仍需实际读稿判断。
 
 包含 7 个 Codex 技能、去 AI 味流程和质量引擎。新作品使用 schema 6；已有作品不会自动迁移或更新工具。长篇新正文默认按卷分目录，已登记的旧路径继续兼容。

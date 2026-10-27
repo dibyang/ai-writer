@@ -1,0 +1,140 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "7a538ac2-4438-413b-b78f-5836d58ac636",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {
+      "阿禾": "在邮局；知道多封信编号重复，不知道寄件人",
+      "值班员": "在邮局；持有第三封信，未说明来源"
+    },
+    "threads": [
+      "相同编号的原因",
+      "第三封信的寄件人和去向"
+    ],
+    "timeline": [
+      "第一夜：阿禾在末班车后抵达邮局"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/0001-没寄出的信.md",
+      "sha256": "40cf992362148757143f903b529392dc12b837228806857d7827ca6c7d4c28fb",
+      "summary": "阿禾查已故父亲寄来的信，值班员取出同编号的第二封和没有邮戳的第三封。",
+      "source_hashes": {
+        "writer.json": "977b736656b6b378367abfa97a5784287842b1145116c8283edf03163c8172b4",
+        ".writer/state.json": "58e80b026e03c3ba870f2cdc9e9a2b8a6ec9fb068f459a6f4825ac8cbf14706a",
+        "大纲/单元/0001.json": "8ce16e2f1e4344ea3c77a674f556bfada1972f99d56e201e9248235edc41e678",
+        "设定/作品定位.md": "90b877297496aa840dc803d62719d2fc9a9464146fa7104a6a72b514358f571d",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "618367a5598125ddaa841f4e84a36d97540cab6e5d28326114cbca70d9dda9b1",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/e7b28952-91da-4da8-b1f1-4e5101fa6d2e.json",
+          "sha256": "3d9569bf182597bd55e8624c255eea2f3bd8b7863d5936db67360689d6a5973e"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "6cc298c5d4f30a2a5373e8b9d461727a522291fdfe90ae76166d0fbed672b674",
+      "journal": ".writer/journal/ba4e3a9b-c1fd-4670-92ba-08143afb0241.json",
+      "journal_sha256": "57fd6d4837673b26b1e5cd49971f775b11b8d3a0b624566f8b4b699293c51d4d"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "仅重放本测试副本第1章，完成后复盘",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "第一章完成后复盘"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/e7b28952-91da-4da8-b1f1-4e5101fa6d2e.json",
+      "sha256": "3d9569bf182597bd55e8624c255eea2f3bd8b7863d5936db67360689d6a5973e"
+    }
+  ],
+  "operations": {
+    "smoke-trial": {
+      "input_sha256": "455d5d4a42575b85f5e91a49f30c37907ed9c9e173211d857c6a4c9aec09192e",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "smoke-trial",
+        "event": {
+          "ref": ".writer/objects/e7b28952-91da-4da8-b1f1-4e5101fa6d2e.json",
+          "sha256": "3d9569bf182597bd55e8624c255eea2f3bd8b7863d5936db67360689d6a5973e"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/e7b28952-91da-4da8-b1f1-4e5101fa6d2e.json",
+    "sha256": "3d9569bf182597bd55e8624c255eea2f3bd8b7863d5936db67360689d6a5973e"
+  }
+}

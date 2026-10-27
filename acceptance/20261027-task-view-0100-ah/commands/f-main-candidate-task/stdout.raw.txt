@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "任务恢复验证",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证",
+  "revision": 5,
+  "next_unit": 3,
+  "identity": {
+    "kind": "main"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "独立任务视图验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "只做本测试范围"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [
+    {
+      "code": "REVISION_ACTIVE",
+      "count": 1
+    }
+  ],
+  "review_counts": {},
+  "drafts": {
+    "candidates": [],
+    "omitted": 0,
+    "unregistered_count": 0,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [
+    {
+      "id": "8e09055e-994a-4676-93ee-18fbb6fc48e4",
+      "owner": "AH synthetic owner",
+      "status": "open",
+      "scope": {
+        "from": 1,
+        "through": 2
+      },
+      "kind": "revision",
+      "workspace": "D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace"
+    }
+  ],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "next": {
+    "code": "inspect-candidate",
+    "action": "主稿已有修订；先查看原候选的任务视图，保留原令牌和基线。",
+    "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-final\\ai-writer-0.10.0\\bin\\ai-writer.mjs' status '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace' '--view' 'task'",
+    "defaults": {
+      "id": "8e09055e-994a-4676-93ee-18fbb6fc48e4"
+    },
+    "requires": []
+  }
+}

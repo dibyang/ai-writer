@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "content_id": "3f04b18cbf92a577c4545d0f059c2df6d86ec9bf7d3147ef18962bf1f14aa585",
+  "source_files_checked": 331,
+  "errors": [],
+  "zip_sha256": "3fc2a1066bc938aaa141d7b097f057abd71c9d81d913f35edb30c7e706bb27d0",
+  "tests": {
+    "total": 239,
+    "passed": 238,
+    "failed": 0,
+    "skipped": 1
+  },
+  "cli": {
+    "ok": true,
+    "registered_units": 2,
+    "read_only_tasks": true,
+    "stale_input_rejected": true,
+    "pause_rejected": true,
+    "revision_interruption_recovered": true,
+    "closed_candidate_redirected": true,
+    "existing_works_modified": false,
+    "comparison": {
+      "baseline_main_next": {
+        "unit": 3,
+        "plan_exists": false,
+        "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+        "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\version0100-ag-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证'"
+      },
+      "task_main_next": {
+        "code": "inspect-candidate",
+        "action": "主稿已有修订；先查看原候选的任务视图，保留原令牌和基线。",
+        "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-final\\ai-writer-0.10.0\\bin\\ai-writer.mjs' status '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace' '--view' 'task'",
+        "defaults": {
+          "id": "8e09055e-994a-4676-93ee-18fbb6fc48e4"
+        },
+        "requires": []
+      },
+      "baseline_candidate_next": {
+        "unit": 1,
+        "plan_exists": true,
+        "action": "先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记",
+        "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\version0100-ag-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision list '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace'"
+      },
+      "task_candidate_next": {
+        "code": "resume-replay",
+        "action": "从当前候选的下一登记章恢复；先读上下文，再取当前模板并核对旧登记差量，不能直接重放旧输入。",
+        "command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-final\\ai-writer-0.10.0\\bin\\ai-writer.mjs' context '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace' '--unit' '1'",
+        "defaults": {
+          "unit": 1,
+          "expected_revision": 6
+        },
+        "requires": [
+          "实际读稿",
+          "当前来源绑定",
+          "原修订令牌"
+        ]
+      },
+      "task_template_command": "node 'D:\\work\\other\\ai-writer\\.tmp\\task-view-ah-final\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision replay-input '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261027-task-view-0100-ah\\scenario\\最终任务恢复验证\\.writer\\revisions\\8e09055e-994a-4676-93ee-18fbb6fc48e4\\workspace' '--unit' '1'",
+      "write_command_reduction_claimed": false,
+      "thirty_percent_goal": "not established; this batch adds navigation, not automatic multi-step execution"
+    },
+    "scope": "Synthetic actual CLI workflow, not literary acceptance"
+  },
+  "payload_errors": [],
+  "payload_files_checked": 332
+}

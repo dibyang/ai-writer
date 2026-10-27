@@ -1,0 +1,191 @@
+{
+  "ok": true,
+  "version": "0.10.0",
+  "development": true,
+  "published": false,
+  "committed": false,
+  "pushed": false,
+  "tests": {
+    "total": 235,
+    "pass": 234,
+    "fail": 0,
+    "skip": 1,
+    "elapsed_ms": 747439
+  },
+  "doctor": true,
+  "package": {
+    "ok": true,
+    "version": "0.10.0",
+    "content_id": "f1b4a2b139b13d8c6bb48aec2563e5c9b29fb41693c2311d4a89503e199e2f47",
+    "source_provenance": {
+      "source_commit": "6e1e4b8b63d4e70930b36a175b8e7e00d0482cd2",
+      "dirty": true
+    },
+    "payload_files": 331,
+    "source_files": 330,
+    "zip_sha256": "17c03f5f6c6adf8f35b30df64cf20a0c942d5da96fc92e3323334a2e2e496208",
+    "development_only": true,
+    "published": false
+  },
+  "upgrade": {
+    "ok": true,
+    "source_version": "0.9.0",
+    "target_version": "0.10.0",
+    "schema": 6,
+    "registered_units": 1,
+    "generation_before": 0,
+    "generation_after": 1,
+    "bodies_and_sources_unchanged": true,
+    "units_and_snapshot_unchanged": true,
+    "custom_rules_and_manual_unchanged": true,
+    "idempotent": true,
+    "embedded_help_owned": true,
+    "scope_refusal": "ACTION_OUT_OF_SCOPE",
+    "project": "D:\\work\\other\\ai-writer\\acceptance\\20261027-version-0100-ag\\cli-scenarios\\smoke-VNWrN6\\匿名作品",
+    "prior_harness_error": "context for registered unit 1 correctly refused; resumed via status and unauthorized unit 2",
+    "scope": "Independent synthetic fixture only"
+  },
+  "commands": [
+    {
+      "label": "baseline-090-smoke",
+      "exit_code": 0,
+      "elapsed_ms": 9610
+    },
+    {
+      "label": "build",
+      "exit_code": 0,
+      "elapsed_ms": 14718
+    },
+    {
+      "label": "cli-01-init",
+      "exit_code": 0,
+      "elapsed_ms": 4550
+    },
+    {
+      "label": "cli-02-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 143
+    },
+    {
+      "label": "cli-03-workflow",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "cli-04-plan",
+      "exit_code": 0,
+      "elapsed_ms": 181
+    },
+    {
+      "label": "cli-05-context",
+      "exit_code": 0,
+      "elapsed_ms": 167
+    },
+    {
+      "label": "cli-06-record-template",
+      "exit_code": 0,
+      "elapsed_ms": 248
+    },
+    {
+      "label": "cli-07-record",
+      "exit_code": 0,
+      "elapsed_ms": 401
+    },
+    {
+      "label": "cli-08-check",
+      "exit_code": 0,
+      "elapsed_ms": 446
+    },
+    {
+      "label": "cli-09-export",
+      "exit_code": 0,
+      "elapsed_ms": 392
+    },
+    {
+      "label": "doctor",
+      "exit_code": 0,
+      "elapsed_ms": 7161
+    },
+    {
+      "label": "full-tests",
+      "exit_code": 0,
+      "elapsed_ms": 747439
+    },
+    {
+      "label": "resume-init",
+      "exit_code": 0,
+      "elapsed_ms": 4645
+    },
+    {
+      "label": "resume-new-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 211
+    },
+    {
+      "label": "resume-scope-refusal",
+      "exit_code": 2,
+      "elapsed_ms": 271
+    },
+    {
+      "label": "resume-status",
+      "exit_code": 0,
+      "elapsed_ms": 323
+    },
+    {
+      "label": "upgrade-apply",
+      "exit_code": 0,
+      "elapsed_ms": 5896
+    },
+    {
+      "label": "upgrade-idempotent",
+      "exit_code": 0,
+      "elapsed_ms": 216
+    },
+    {
+      "label": "upgrade-plan",
+      "exit_code": 0,
+      "elapsed_ms": 1419
+    },
+    {
+      "label": "upgrade-resume",
+      "exit_code": 1,
+      "elapsed_ms": 177
+    },
+    {
+      "label": "upgrade-resume-v2",
+      "exit_code": 0,
+      "elapsed_ms": 8044
+    },
+    {
+      "label": "upgrade-smoke",
+      "exit_code": 1,
+      "elapsed_ms": 11993
+    },
+    {
+      "label": "upgraded-check",
+      "exit_code": 0,
+      "elapsed_ms": 174
+    },
+    {
+      "label": "upgraded-context",
+      "exit_code": 2,
+      "elapsed_ms": 415
+    },
+    {
+      "label": "upgraded-doctor",
+      "exit_code": 0,
+      "elapsed_ms": 205
+    },
+    {
+      "label": "upgraded-help",
+      "exit_code": 0,
+      "elapsed_ms": 662
+    }
+  ],
+  "known_harness_failures": [
+    "upgrade-smoke called context for an already registered unit; correctly refused",
+    "upgrade-resume compared historical state source hash to legitimately updated control state; corrected in v2"
+  ],
+  "existing_works_modified": false,
+  "engine_modified": false
+}
