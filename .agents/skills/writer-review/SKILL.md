@@ -16,9 +16,13 @@ description: 审查小说、剧本、历史散文和非虚构的结构、语言�
 - history：分别检查史料、自然表达、易懂、人物亲近、叙述声音、散文性与跨章基调。按 writer-history 的事实边界核对引用；不凭未核网页摘要判史实。
 - essay：按作者的结构与声音目标，检查事实、观点、经验之间的边界及表达、节奏、论证。不能用小说追读门槛否定散文。
 
+自然表达审查同时读[具体表达与漏检复核](references/concrete-language-review.md)，核对含混压缩、对象缺失和概括式对白，并做漏检与误伤复核；不把用户点名句笼统归为偏好，也不按抽象词命中判错。
+
 小说发布判断任务再读 publication-gate、final-publication-review；逐句校对任务读 proofreading-language-quality。常规全稿自检完整连读并记录覆盖，不自动引入发布评分。商业追读目标再读 page-turner、readability-accessibility，情绪杀伤力任务再读 knife-emotional-impact。只加载当前任务需要的模块，不把整套规则全塞进上下文。
 
 小说的开篇、转场、对白或章末承接专项审查，按需读[小说局部诊断](../writer-novel/references/scene-connections.md)；长篇供给与卷末兑现问题读[长篇方向](../writer-novel/references/story-development.md)。报告保留有效慢热、合作对白与余韵，不把偏好升级为硬伤；未来章未写只核计划，不声称承接已经落实。
+
+长章分段合成或纲文偏差问题读[长章展开与纲文回对](../writer-novel/references/chapter-delivery.md)：以实际正文逐项回查有效细纲，允许多对多及合理调整；缺证不补造映射，计划变化不冒充原稿已落实。判断写进本次报告，继续复用既有修订和意见闭环。
 
 ## 报告
 

@@ -4,7 +4,7 @@
 
 本页原schema4保护同样适用于schema5/6；重登草案、登记预览及意见闭环见[复核专项手册](review-and-registration.md)。0.7新作品默认6，旧作品仅显式启用，不自动迁移；随附工具另按[本地安全更新](tool-updates.md)处理。
 
-当前适用0.8.0本地候选，新作品默认state schema6，继续兼容0.7受管包协议；版本与独立修订保护自0.5.0/schema4引入，后续协议继续复用。普通作者用自然语言说明任务，由Codex准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
+当前适用0.9.0开发候选，新作品默认state schema6，继续兼容0.7/0.8受管包协议；版本与独立修订保护自0.5.0/schema4引入，后续协议继续复用。普通作者用自然语言说明任务，由Codex准备输入和核验真实哈希。这里的命令不自动理解文学含义、作者身份或授权范围。
 
 ## 从任务开始
 
@@ -22,6 +22,8 @@
 
 0.7.2支持从主项目入口对独立workspace运行doctor，资源来自其已核验的父作品，不要求分支自带.writer/tool。结果分别列project_root、resource_project_root和revision_context；当前执行构建与会话绑定不同会明确失败。保留候选并选择匹配入口或新基线，不复制运行包或篡改绑定。正文/来源完整性仍由check及提交前校验负责，doctor通过不等于文学或提交验收。
 
+0.9.0的`tool identify --project 修订区路径`复用同一套父资源与会话校验，返回实际父工具的构建身份及上述修订上下文，不再只报分支缺少`.writer/tool`。会话绑定不符或父包损坏时`ok=false`并保留诊断和候选；识别过程不写作品，也不为旧候选更新绑定。
+
 ## 协议与兼容
 
 - 0.5 新作品默认 schema 4；阶段/授权、作者决策和增量 changes 沿用上一批机制。long-enable 仅启用分卷契约，schema 4 不降为 2/3。
@@ -37,6 +39,8 @@
 4. source impact 只读列出版本、直接消费者、保守的间接范围和 required_readings；默认间接语义影响 unknown。Codex 实读这些字节及必要原文，写独立审查报告、记录报告哈希和所读文件哈希，说明结论和未解决项。脚本只核这些声明及字节，不证明模型读过或结论正确。
 
 历史发布的 revision_from 是实际生效起点；review_from 可提前一章读承接，retained_prefix_consumers 明列保持旧版的前缀。读前文不等于必须回退前文。例如从第100章生效，授权和回退可以只覆盖100至当前末章，不能仅因同一规则文件被前99章消费就强制回退到1。如果实读发现更早矛盾，应报告并依据真实授权另调范围；若前缀仍是未固定的 live 输入且已经漂移，原哈希保护继续阻断，不能借此忽略它。
+
+保留旧前缀时，source bind 的等价绑定还不足以固定回放输入：须先将真实旧版以 baseline 发布到原区间，再 stage 历史变更。否则报 SOURCE_BASELINE_REQUIRED，列出仍未固定的前缀章次；拒绝不会冻结本次审查报告或推进状态。恢复旧构建已接受的 pending 时，publish 也会复核这项条件。若本次修订已覆盖该来源的全部旧消费者，没有保留前缀，则无需为此额外建立 baseline。不能把当前新文件当旧版补登。
 
 一次 publish 表示从指定起点持续生效；impact.replaced_ranges 明列将切分或取代的原区间，包括已经安排但尚未消费的未来版本。实读时核对这些安排是否仍应保留，不能只看直接消费者。旧区间和提案事件仍保留在历史记录中。
 5. 确认只涉及未来且没有未解决矛盾时，source publish 从尚未登记的单元生效。旧章保留旧绑定及原 source_hashes；下一章解析新版。旧消费者除 bind 外仍须先发布 baseline 原区间，确保将来回放也取旧版。未来版本不能倒填旧章；同起点尚未消费的版本，只能用 previous 明确指向原版本后显式替换。
@@ -75,7 +79,7 @@ freeze/bind/publish/stage/cancel 使用稳定 operation_id，完全相同输入�
 4. 从主项目入口把 --project 指向返回的 workspace。实读旧稿；写命令带 --revision-token TOKEN，在区内 rewind，然后从最早影响章逐章实读修改、检查、用 context/record-template/record 重登。正文、分卷、增量账本和旧哈希规则都继续有效；正文不是硬链接。
 5. 如有已 stage 的历史版本，在 rewind 后、重登前，在区内 source publish，输入 expected_revision、operation_id、author_evidence、impact_id。版本在所请求起点生效；为保守核查而提前回读的前缀仍用旧版。主稿的 pending 不提前消失。
 6. 重登到原末章，核对人物所知、伏笔、物件和后果。对整个修订尾段实际连读，写新报告并 review 登记；机械合成测试报告不等于模型实读。依赖绑定改变时，即使正文哈希不变，旧报告也需重核。不能只删审查目录消除待办。
-7. 在主作品 revision prepare（id、token）：核主基线、工具、范围、候选、账本、完整重登和一次完整尾段复核，返回待发布文件/哈希与目标 revision。它只表示机械及流程就绪，不表示文学通过。prepared 后编辑器再改候选会使 commit 拒绝；先 resume、重新检查和 prepare。
+7. 在主作品 revision prepare（id、token）：核主基线、工具、范围、候选、账本、完整重登和一次完整尾段复核，返回待发布文件/哈希与目标 revision。原基线已有的observation须保留type、statement及author_truth，即使本次rewind早于其首次出现；删除或逆改会报IMMUTABLE_OBSERVATION_CHANGED，原稿和候选均保留。知情更新或另建解释不受此限制。它只表示机械及流程就绪，不表示文学通过。prepared 后编辑器再改候选会使 commit 拒绝；先 resume、重新检查和 prepare。
 8. revision commit（id、token）：加短锁重新比较主业务与所有相关字节；成功后多文件事务发布，主 revision 只比基线增加一次，保留分支 revision/head 与提交清单。分支临时 revision 不直接覆盖主 revision。相同已提交会话可幂等查询结果。
 
 主作品的 plan/volume/record/rewind/workflow/decision/迁移/审查/导入等写入口共用占用检查；style-scan 带输出文件也受保护。只读 status、source list、revision list 可以辅助恢复；事务中断期间普通读取也阻断。
@@ -109,8 +113,73 @@ freeze/bind/publish/stage/cancel 使用稳定 operation_id，完全相同输入�
 
 不要用新构建对旧绑定会话调用resume/prepare/commit，不要手改清单哈希、删除失败事务或在活跃修订中覆盖随附工具。complete与rollback是明确的两个方向，终态不能反向回填。旧事务未固定的伴随规划文件不会被追加入已有发布目标；其后续同步另按作者授权及实际引用核查。应用层锁、原第三方字节冲突保护和最终状态后写顺序继续生效。
 
+0.9.0的中断恢复在complete写入前还会核对原基线的不可变观察；旧实现已准备但尚未完成的逆改候选也不能继续发布。这项检查不封死rollback：校验原事务和备份后仍可恢复原字节，保留失败候选与日志，不自动纠正或清理作品。
+
 ## 验收边界
 
 当前保护面向同机本地文件系统。应用命令锁不能阻止任意编辑器或旧程序写文件；隔离、提交前重复比对和三方冲突保留降低损失，但不宣称排除最后一次比对后的全部锁外竞态。共享盘/NFS、跨机协作和自动合并继续暂缓。安全工具更新与意见级闭环在原B批之后已实现，分别见[更新手册](tool-updates.md)和[复核专项手册](review-and-registration.md)，不再作为当前产品的未实现项；活跃修订期间仍禁止替换工具绑定。
 
 保留既有分卷、changes/journal 增量链、不可变观察、物证交接、滚动连读和来源哈希。文学影响与语言判断仍由 Codex 实读并说明范围；不能把脚本、自检或报告字段检查包装为真人验收。
+## 独立候选的下一章采纳
+
+适用情形：普通独立修订候选已完整重登到原范围末章，作者允许采纳已经封存的下一章，要求保留候选和主稿。新入口完整复制原登记状态、正文、增量账本、对象和来源，不重建或重新登记旧章，不升级原工具。仅支持单章追加；不发布、不切换主稿、不修改旧章或写再下一章。
+
+先保留原作品、候选、会话、封存稿和动笔前原始清单的备份及 SHA-256，停止并行写入。使用外部固定新工具，原随附工具不覆盖。目标必须是原作品之外的全新目录。
+
+`revision continue --project <原候选> --input <派生.json>` 输入字段：
+
+- `expected_revision`、`expected_state_sha256`：原候选实时 revision 和 `.writer/state.json` 哈希。
+- `expected_session_sha256`、`token`：原协调目录中本会话 session.json 哈希、所有者令牌。
+- `target`、`owner`、`unit`：新协调目录绝对路径、操作者、恰为当前末章加一的章号。
+- `author_evidence`：正常作者原话证据对象（quote/local_source/source_sha256/locator/recorded_by），本地来源须为候选中普通公开来源文件，明确允许这一章采纳。
+- `draft`、`draft_sha256`：旧候选 `.writer/drafts/` 下封存正文的相对路径及真实哈希。
+- `manifest`：`{root:"parent",ref:".writer/drafts/准备记录/动笔前清单.json",sha256:"真实哈希",audit_only_refs:[]}`。root 也可为 candidate。原始 JSON 须包含 revision 与 source_hashes，逐项对照原候选当前字节，不改写旧清单。
+
+清单中的私有准备材料，只允许已有 `.writer/drafts/` 文件逐个显式列为 audit_only_refs；它们保留为审计附件，不能成为正式细纲来源。.git/.aws 等其他私有目录拒绝。正式细纲仍使用原清单中的普通公开材料，模型实读确认与封存稿相符。作者证据和动笔前清单是留存记录，不是身份或时间认证。
+
+成功结果含新 parent、workspace、id 和 token；保存结果并保护令牌。以后将 `--project` 指向新 workspace。目标重复、CAS 或来源漂移均拒绝；失败时保留现场，不把失败目标作为可用作品，不改哈希绕过保护。
+
+1. 在新 workspace 用正常 `plan --input` 建立下一章正式细纲并使用公开来源；带新 revision-token。
+2. 执行 `revision adopt --project <新workspace> --revision-token <新token> --input <采纳.json>`；采纳输入只有 unit、当前 expected_revision 和正常正文目标 draft（如 正文/0007.md）。将返回 JSON 按 UTF-8 保存为新的登记草案。
+3. 命令复制封存正文原字节，返回 registered:false 和 _adoption。实读正文、旧章承接和来源后填写真实 summary/changes；新报告保存在新候选 审查/，添加正常 draft_review，保留 _adoption。它不是动笔前模板；不得补造旧时间线或虚构事实。
+4. record-preview 通过后再 record，并带新令牌；执行 check 和必要的连读、review。工具只核验机械边界，实读结论另记。
+5. 跨进程先 revision list，需要时对新 parent 用新 id/token 执行 revision resume。旧六章继续只读；第八章及 prepare/commit 拒绝。
+
+采纳凭据分别保留旧清单和当前正式登记上下文。后来建立的正式细纲不会被追认为动笔前模板。原候选、旧状态和旧消费链不被更换。
+
+### 主稿仅新增未消费规划文件
+
+若旧基线文件和主稿 state 均未变，只有后来保存的未来规划新增，默认仍报 BASELINE_CONFLICT。可在 continue 输入中显式加入 `acknowledged_parent_additions` 数组，逐项填写 `{ref:"大纲/下一章细纲候选.md",sha256:"实际SHA256",manifest_ref:".writer/drafts/封存稿/写前准备.md"}`。不支持目录、通配或自动忽略；最多16项，仅限大纲目录直属新增 Markdown。所有实际新增必须精确列明，既有文件修改或删除不能以此承认。
+
+每项须在旧主稿及候选 state 中尚无引用，且与原始写前清单的一份候选材料同哈希；该材料仍须通过原清单全部来源验证。manifest_ref 可指显式列明的审计附件，它不会因此成为公开创作来源，也不说明另一份公开细纲与其字节相同。主稿新增原件保留，不自动拷入候选的公开来源树。
+
+新候选冻结新增原字节、逐项承认和完整接受库存，保留旧基线身份；复制结束必须与本次接受库存逐项相同。不会刷新原基线、改旧会话、放宽普通 revision prepare/commit，或承认未列明新增。遇并发、CAS、来源或旧消费者变化仍停止。
+
+### 派生中已有未登记的下一章正式计划
+
+原候选可能已经保存了 `大纲/单元/0007.json`，但尚未登记第七章。如果旧六章和原始动笔前清单都没有消费它，这份计划可以在新候选内由官方 plan7 改写，随后 context/adopt/record 使用当前正式计划；它不会被追认为动笔前模板。旧六章及其他来源仍保持原哈希。第七章登记后，计划按该登记行实际消费哈希保护；再改变会拒绝。若旧章或原始写前清单已经消费此计划，plan 在写入前拒绝，不以“下一章”为由绕过保护。
+
+### 已被旧包拦住的派生如何接管
+
+不要覆盖活跃派生的工具、修改旧基线或删除计划。固定新包提供 `revision continue-repair --project <现有续写workspace> --input <接管.json>`，受保护复制到新的独立候选，旧派生原样保留。仅用于尚未登记新章、登记state原字节未变、业务差异仅限未消费下一章计划的状态；不收纳其他新增业务文件或状态修订。
+
+输入字段为 token（原派生所有者令牌）、expected_revision、expected_state_sha256、expected_session_sha256、expected_base_sha256、expected_plan_sha256、target（所有原作品和派生之外的全新协调目录）、owner、reason。哈希分别绑定现有 workspace state、协调目录 session/base，以及当前下一章正式计划。原协调目录库存和工具构建也须仍与会话绑定一致。不要输出或转发令牌。
+
+命令验证当前 context 与原清单公开来源，冻结原基线、原计划、当前状态和接管审计，再返回新 parent/workspace/id/token。它不刷新原基线、不回写原派生或随附工具、不增加创作范围；新候选仍仅限第七章，8章及发布拒绝。后续在新候选重新读取 context，revision adopt 显式采纳封存稿，实读填写摘要/changes/draft_review，先 preview 再 record，最后 review/check。原来的 context 文件保留为历史记录，不当作新会话写前模板。
+
+任一所有者、CAS、旧来源、计划资格、当前状态或结束库存核查失败都停止，保留双方现场。不覆盖已有目标，不自动删除失败目录；不要以重复执行或改哈希处理失败。
+
+## 已登记第七章的小修与重登
+
+`revision continue-revise` 处理已经登记第七章的续写候选。当前实现只覆盖这一明确边界，不是任意章数的嵌套修订。作者须授权本次小修，并有确定的修订稿 SHA256。命令在全部旧作品和候选之外建立新协调目录，绑定当前外部工具；旧七章、原基线、原工具和原状态均保留。读稿可覆盖前六章，正文修改与意见处置只允许第七章；不写第八章，不执行主稿 prepare/commit。
+
+输入字段为 `token`（源续写会话令牌）、`expected_revision`、`expected_state_sha256`、`expected_session_sha256`、`expected_base_sha256`、`replacement_sha256`、`target`、`owner`、`reason`、`author_evidence`。哈希均来自源候选实时字节；`replacement_sha256` 是本次授权修订稿的哈希，须与旧稿不同。`author_evidence` 沿用上文五个字段；若授权文件位于原作品而非源候选，可另传绝对 `evidence_root`，`local_source` 相对此目录。工具复制并冻结授权原字节，不向证据来源写文件。输入 JSON、返回令牌都应保存在受保护操作记录中，不能上传或混入公开报告。
+
+1. 新目录建立后保存返回的 `parent/workspace/id/token/authorization_ref`。这是一条新修订链，不继续使用旧 id/token。失败时可能保留 `.ai-writer-limited-*` 暂存目录；仅成功返回的目标可继续，不删除现场、不刷新旧基线。
+2. 在旧稿仍登记时，先用已有的真实旧版本意见 ID 登记采用，标明 `agent-within-authorized-scope` 并绑定当前授权；没有结构化意见时，先实读旧稿，登记绑定旧稿哈希的 review 和本次真实意见。可选润色仍为 suggestion，作者授权范围不等于作者逐条采纳。
+3. 在新 workspace 带新 `--revision-token` 执行 `rewind --from 7 --expected-revision ...`，读 `context --unit 7` 并保存本次写前来源，再把封存修订稿原字节放回原第七章路径。此前的小修准备清单只是准备记录，不能追认为本次正式模板。
+4. 用 `revision replay-input --unit 7 --revision-token ...` 生成待核草案，核对来源与写前 context 一致。逐项实读并确认 `summary/characters/timeline/ledger/evidence/downstream`；确实未变才保留自动带出的摘要和事实。保存六项复核报告，填写 `replay_review`，同时填写绑定新稿及报告哈希的 `draft_review`。保留 `_replay`。本次工具不自动推断语义等价。
+5. `record-preview` 和 `record` 都带新 `--revision-token`。新稿须匹配封存 SHA、原登记路径及限章范围；旧六章和来源仍受哈希保护。登记后完整实读当前新稿与相关旧章，再正式 `review` 登记当前版本报告。
+6. 执行 `revision local-proof --project <新workspace> --revision-token <新token> --input <凭据输入.json>`。输入为当前 `expected_revision`、`.writer/state.json` 的 `expected_state_sha256`、唯一 `operation_id`、上一步返回的 `review_ref`。凭据冻结旧稿、新稿、当前报告及登记版本，不产生主稿提交。
+7. 对已采用意见执行 `review-issues apply`，使用 `local_revision_id`（凭据返回的 id）、`expected_revision`、`operation_id`、意见 `id` 和 `reason`，不传 `commit_id`。再用当前新稿 `review_ref`、`reviewer`、`conclusion: resolved|not-resolved`、`reason` 及正常 CAS 字段执行 `verify`。旧报告不能证明新稿已修；归档损坏不能继续显示有效核验。
+8. 新进程执行 `revision resume`、`status`、`check`、`doctor`，复核原七章候选、旧六章及来源未变。`verified` 在这里仅表示本次候选意见已核查，凭据明确 `publication:false`；它不是主稿发布、作者定稿或文学验收。

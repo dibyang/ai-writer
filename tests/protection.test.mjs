@@ -51,12 +51,15 @@ test('并行候选A提交后B全局CAS冲突，双方稿件保留', t => {
   call(root, 'revision', 'abort', { id: b.id, token: b.token, reason: '保留冲突候选另建会话' }); assert.equal(main(['check', '--project', root]).ok, true);
 });
 
-test('修订工作区doctor复用父包并保持只读，父包损坏仍拒绝健康结论', t => {
+test('修订工作区doctor和tool identify复用父包并保持只读，绑定不符或父包损坏仍拒绝健康结论', t => {
   const {root}=fixture(t,1);workflow(root,true);const branch=begin(root),parentState=fs.readFileSync(path.join(root,'.writer/state.json')),branchState=fs.readFileSync(path.join(branch.workspace,'.writer/state.json'));
   assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);
   const result=main(['doctor','--project',branch.workspace]);assert.equal(result.ok,true);assert.equal(result.tool_root,path.join(root,'.writer/tool'));assert.equal(result.resource_project_root,root);assert.equal(result.project_root,branch.workspace);assert.equal(result.revision_context.id,branch.id);assert.equal(result.revision_context.build_matches,true);
+  const identity=main(['tool','identify','--project',branch.workspace]);assert.equal(identity.ok,true);assert.equal(identity.tool_root,result.tool_root);assert.equal(identity.observed_content_id,result.build.observed_content_id);assert.equal(identity.resource_project_root,root);assert.equal(identity.revision_context.id,branch.id);
+  const identified=spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'tool','identify','--project',branch.workspace],{encoding:'utf8'});assert.equal(identified.status,0,identified.stderr);assert.equal(JSON.parse(identified.stdout).revision_context.build_matches,true);
   const sessionRef=path.join(root,`.writer/revisions/${branch.id}/session.json`),sessionBytes=fs.readFileSync(sessionRef),sessionValue=JSON.parse(sessionBytes);sessionValue.build_id='0'.repeat(64);fs.writeFileSync(sessionRef,JSON.stringify(sessionValue));const mismatch=main(['doctor','--project',branch.workspace]);assert.equal(mismatch.ok,false);assert.equal(mismatch.revision_context.build_matches,false);assert.ok(mismatch.errors.some(x=>x.includes('会话绑定不同')));fs.writeFileSync(sessionRef,sessionBytes);
-  fs.appendFileSync(path.join(root,'.writer/tool/docs/quickstart.md'),'\n父包测试损坏\n');const damaged=main(['doctor','--project',branch.workspace]);assert.equal(damaged.ok,false);assert.ok(damaged.errors.some(x=>x.includes('构建文件')));
+  const originalSession=fs.readFileSync(sessionRef);const changedSession=JSON.parse(originalSession);changedSession.build_id='0'.repeat(64);fs.writeFileSync(sessionRef,JSON.stringify(changedSession));const identityMismatch=main(['tool','identify','--project',branch.workspace]);assert.equal(identityMismatch.ok,false);assert.equal(identityMismatch.revision_context.build_matches,false);assert.match(identityMismatch.next_action,/保留候选/);fs.writeFileSync(sessionRef,originalSession);
+  fs.appendFileSync(path.join(root,'.writer/tool/docs/quickstart.md'),'\n父包测试损坏\n');const damaged=main(['doctor','--project',branch.workspace]);assert.equal(damaged.ok,false);assert.ok(damaged.errors.some(x=>x.includes('构建文件')));const damagedIdentity=main(['tool','identify','--project',branch.workspace]);assert.equal(damagedIdentity.ok,false);assert.ok(damagedIdentity.mismatches.length>0);assert.equal(fs.existsSync(path.join(branch.workspace,'.writer/tool')),false);
   assert.deepEqual(fs.readFileSync(path.join(root,'.writer/state.json')),parentState);assert.deepEqual(fs.readFileSync(path.join(branch.workspace,'.writer/state.json')),branchState);
 });
 test('prepare后锁外改候选被拒绝；主稿第三方字节冲突不覆盖', t => {
@@ -120,6 +123,8 @@ test('分卷和单元细纲共用版本解析，旧卷契约不因未来入口�
   call(root, 'volume', null, vol); freeze(root, 'VOL1', '大纲/分卷/V1.json'); call(root, 'source', 'publish', publishInput(root, 'VOL1')); unit(root, 1); unit(root, 2);
   call(root, 'volume', null, { ...vol, title: '新卷' }); freeze(root, 'VOL2', '大纲/分卷/V1.json'); call(root, 'source', 'publish', publishInput(root, 'VOL2', 3, 'future'));
   assert.equal(main(['outline', '--project', root, '--unit', '2']).volume.title, '旧卷'); assert.equal(main(['outline', '--project', root, '--unit', '3']).volume.title, '新卷'); assert.equal(main(['check', '--project', root]).ok, true);
+  assert.equal(main(['outline','--project',root,'--unit','2']).draft_directory,'正文/V1-旧卷');
+  assert.equal(main(['outline','--project',root,'--unit','3']).draft_directory,'正文/V1-新卷');
 });
 test('冻结事实卡不提升verified；同起点未消费版本需显式previous才可替换', t => {
   const { root } = fixture(t, 0, 'history'), ref = '研究/事实.json'; file(root, ref, { status: 'draft', claims: [] }); freeze(root, 'CARD1', ref); call(root, 'source', 'publish', publishInput(root, 'CARD1'));
@@ -143,6 +148,37 @@ test('真实旧字节补绑后需发布原区间，未来版本不偷换历史�
   call(root, 'source', 'bind', sourceInput(root, { version_id: 'OLD_BYTES', from: 1, through: 2, author_evidence: evidence(root) }));
   assert.deepEqual(state(root).units.map(u => u.source_hashes), oldHashes); freeze(root, 'NEXT'); fails(() => call(root, 'source', 'publish', publishInput(root, 'NEXT', 3, 'future')), 'SOURCE_BASELINE_REQUIRED');
   call(root, 'source', 'publish', publishInput(root, 'OLD_BYTES')); call(root, 'source', 'publish', publishInput(root, 'NEXT', 3, 'future')); assert.equal(main(['check', '--project', root]).ok, true);
+});
+test('历史变更保留前缀也需原区间，拒绝不冻结报告；补齐后回放仍消费旧版', t => {
+  const { root } = fixture(t, 3), ref = '设定/权威规则.md', oldHash = state(root).units[0].source_hashes[ref];
+  freeze(root, 'PREFIX_OLD'); call(root, 'source', 'bind', sourceInput(root, { version_id: 'PREFIX_OLD', from: 1, through: 3, author_evidence: evidence(root) }));
+  file(root, ref, '第二章起的新规则，不应改变第一章输入。'); freeze(root, 'PREFIX_NEW'); workflow(root, true);
+  const input = publishInput(root, 'PREFIX_NEW', 2, 'historical'), before = fs.readFileSync(path.join(root, '.writer/state.json'));
+  const objects = fs.readdirSync(path.join(root, '.writer/objects')).sort();
+  fails(() => call(root, 'source', 'stage', input), 'SOURCE_BASELINE_REQUIRED');
+  assert.deepEqual(fs.readFileSync(path.join(root, '.writer/state.json')), before);
+  assert.deepEqual(fs.readdirSync(path.join(root, '.writer/objects')).sort(), objects);
+  call(root, 'source', 'publish', publishInput(root, 'PREFIX_OLD'));
+  const staged = call(root, 'source', 'stage', publishInput(root, 'PREFIX_NEW', 2, 'historical')), branch = begin(root);
+  rewindBranch(branch); call(branch.workspace, 'source', 'publish', sourceInput(branch.workspace, { impact_id: staged.impact_id, author_evidence: evidence(branch.workspace) }), branch.token);
+  const first = main(['record-template', '--project', branch.workspace, '--unit', '1', '--draft', '正文/0001.md']);
+  assert.equal(first.source_hashes[ref], oldHash); assert.equal(first.source_bindings[ref].version_id, 'PREFIX_OLD');
+  for (let n = 1; n <= 3; n++) unit(branch.workspace, n, branch.token, '修订后');
+  review(branch); prepare(root, branch); commit(root, branch);
+  assert.equal(state(root).units[0].source_bindings[ref].version_id, 'PREFIX_OLD');
+  assert.equal(state(root).units[1].source_bindings[ref].version_id, 'PREFIX_NEW');
+  assert.equal(main(['check', '--project', root]).ok, true);
+});
+test('历史变更覆盖全部消费者时不强迫无用基线，合法全尾段可发布重登', t => {
+  const { root } = fixture(t, 2), ref = '设定/权威规则.md';
+  freeze(root, 'ALL_OLD'); call(root, 'source', 'bind', sourceInput(root, { version_id: 'ALL_OLD', from: 1, through: 2, author_evidence: evidence(root) }));
+  file(root, ref, '从第一章起重核的新规则。'); freeze(root, 'ALL_NEW'); workflow(root, true);
+  const staged = call(root, 'source', 'stage', publishInput(root, 'ALL_NEW', 1, 'historical')), branch = begin(root);
+  rewindBranch(branch); call(branch.workspace, 'source', 'publish', sourceInput(branch.workspace, { impact_id: staged.impact_id, author_evidence: evidence(branch.workspace) }), branch.token);
+  for (let n = 1; n <= 2; n++) unit(branch.workspace, n, branch.token, '全尾段重核');
+  review(branch); prepare(root, branch); commit(root, branch);
+  assert.ok(state(root).units.every(u => u.source_bindings[ref].version_id === 'ALL_NEW'));
+  assert.equal(main(['check', '--project', root]).ok, true);
 });
 test('会话元数据完成但事务未终态的实际中断仍阻断，补完不会遗留活跃占用', t => {
   const { root } = fixture(t); workflow(root, true); const branch = begin(root); edit(branch); prepare(root, branch); const input = file(root, '.writer/finalize-crash.json', { id: branch.id, token: branch.token });

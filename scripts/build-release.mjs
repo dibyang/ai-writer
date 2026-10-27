@@ -4,20 +4,28 @@ import crypto from 'node:crypto';
 import zlib from 'node:zlib';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {identifyBuild,writeBuildManifest} from '../lib/tool-build.mjs';
+import {currentProtocol,identifyBuild,writeBuildManifest} from '../lib/tool-build.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const forbidden=new Set(['.git','.idea','.codex','.tmp','.writer','works','acceptance','node_modules','dist']);
-function releaseProvenance(root){
-  const git=args=>spawnSync('git',args,{cwd:root,encoding:'utf8',windowsHide:true,timeout:30000,maxBuffer:2**20});
+export function releaseProvenance(root,runGit=args=>spawnSync('git',args,{cwd:root,encoding:'utf8',windowsHide:true,timeout:30000,maxBuffer:2**20})){
+  const describe=(args,r)=>`git ${args.join(' ')}: status=${r.status??'none'}, error=${r.error?.code??'none'}${r.stderr?.trim()?'; '+r.stderr.trim().slice(0,500):''}`;
+  const git=args=>{
+    let result=runGit(args);
+    if(['ETIMEDOUT','EINTR','EAGAIN'].includes(result.error?.code)){
+      console.error('Release Git query interrupted; one bounded retry: '+describe(args,result));
+      result=runGit(args);
+    }
+    return result;
+  };
   const top=git(['rev-parse','--show-toplevel']);
-  if(top.error&&top.error.code!=='ENOENT')throw Error('Cannot inspect release Git root: '+top.error.message);
+  if(top.error&&top.error.code!=='ENOENT')throw Error('Cannot inspect release Git root: '+describe(['rev-parse','--show-toplevel'],top));
   if(top.status!==0)return {source_commit:'unknown',dirty:'unknown'};
   const normalize=p=>process.platform==='win32'?fs.realpathSync(p).toLowerCase():fs.realpathSync(p);
   if(normalize(top.stdout.trim())!==normalize(root))return {source_commit:'unknown',dirty:'unknown'};
   const commit=git(['rev-parse','HEAD']),status=git(['status','--porcelain','--untracked-files=normal']);
-  if(commit.status!==0||status.status!==0)throw Error('Cannot read release Git provenance reliably; retry after Git is available');
+  if(commit.status!==0||status.status!==0)throw Error('Cannot read release Git provenance reliably; '+[commit.status!==0?describe(['rev-parse','HEAD'],commit):null,status.status!==0?describe(['status','--porcelain','--untracked-files=normal'],status):null].filter(Boolean).join('; ')+'; retain failed staging and retry after Git is available');
   return {source_commit:commit.stdout.trim(),dirty:Boolean(status.stdout.trim())};
 }
 function safeRef(ref){
@@ -59,8 +67,8 @@ function zip(root,prefix,rows){
 }
 export function buildRelease({root=ROOT,out}={}){
   root=path.resolve(root);const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));
-  if(pkg.version!=='0.8.0'||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected first release 0.8.0 with apache-2.0-v1 resources');
-  out=path.resolve(out??path.join(root,'dist','0.8.0'));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
+  if(!/^0\.(?:8|9)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x or 0.9.x package with apache-2.0-v1 resources');
+  out=path.resolve(out??path.join(root,'dist',pkg.version));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
   const build=identifyBuild(root);if(!build.ok)throw Error('Source build is incomplete');
   const spec=JSON.parse(fs.readFileSync(path.join(root,'release/distribution.json'))),seen=new Set(),sources=[];
   for(const item of spec.files){const ref=safeRef(item.file),key=ref.toLowerCase();if(seen.has(key))throw Error('Duplicate release path: '+ref);seen.add(key);const source=sourceFile(root,item.source??ref);sources.push({file:ref,source:item.source??ref,sha256:sha(fs.readFileSync(source))});}

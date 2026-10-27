@@ -4,6 +4,8 @@
 
 作者日常使用先看 [使用手册](user-guide.md)。独立作品将命令前缀换为 `node .writer/tool/bin/ai-writer.mjs`，在含 writer.json 的作品目录可省略 --project。各子命令支持 `--help`，例如 `node bin/ai-writer.mjs record --help`。
 
+同一作品的写命令和带`--out`的草案保存应串行，等前一命令退出再执行下一条。context、record-template、record-preview、review-template和replay-input保存新草案时也会取得作品写锁，不是可并行的纯读取；失败停止依赖步骤。遇锁先核实际任务，正常结束后重试；若原任务已结束而锁仍在，按恢复手册核查现场，不自动删除锁或抢占。
+
 **协议选择：** 0.7新作品默认schema6，2–6均用changes，schema1才用snapshot。下方snapshot及主稿rewind是旧协议兼容说明。明确新长篇可init --mode long；否则显式long-enable启用分卷。schema4及以上历史修订用独立区和事务。初始仅讨论/规划，正文须有限授权。见[版本修订手册](revision-and-sources.md)、[跨章/登记/意见手册](review-and-registration.md)及[工具更新手册](tool-updates.md)。
 
 ## 预览、跨章复核和意见（自0.6.0支持）
@@ -21,7 +23,7 @@ node bin/ai-writer.mjs review-issues list --project "作品目录"
 
 resolve需expected_revision、operation_id、id、disposition（adopted/retained/deferred）、reason、decision_actor。author沿用本页完整author_evidence；agent-within-authorized-scope传当前workflow事件的authorization={ref,sha256}，采用须revise覆盖意见范围。只是记录意见不改变正文授权。
 
-按授权在独立区完成实改和完整尾段复核并提交，apply再传expected_revision、operation_id、id、实际commit_id和reason；verify再传当前有效review_ref、reviewer、conclusion=resolved/not-resolved及reason。保留不能标修复，无实际对应改稿不能applied，原文/依赖再变后显示needs-recheck并保留旧链。各意见动作都会推进revision，不复用旧context哈希。
+按授权在独立区完成实改和完整尾段复核并提交，apply再传expected_revision、operation_id、id、实际commit_id和reason；默认要求对应正文实改。若正文正确、只修登记摘要或事实追踪，JSON显式增加`"change_scope": "tracking"`，绑定真实提交前后对应章节的摘要/章末事实快照变化；仅换来源、报告或等价重登不算实改。verify再传当前有效review_ref、reviewer、conclusion=resolved/not-resolved及reason，联合核正文与追踪。保留不能标修复，再次修改相关正文、追踪或依赖后显示needs-recheck并保留旧链。各意见动作都会推进revision，不复用旧context哈希。
 
 schema5独立区rewind后生成修订草案：
 
@@ -84,6 +86,15 @@ workflow set 输入由 Codex 根据真实任务准备，字段如下；示例中
 ```
 
 `workflow set --input 文件` 用 CAS 推进 revision；相同 operation_id/相同输入重试幂等，不同输入复用 ID 拒绝。stage 为 direction/structure/volume/outline/trial/drafting/revision/paused；规划/paused 不允许新正文，但可有明确 revise_range。draft/revise 动作必须分别有非空有限闭区间；空范围不是无限授权。stop_conditions 是待代理落实的文字条件，程序只自动检查动作与单元范围，不理解任意自然语言触发器。
+
+新单元尚无细纲时，按以下顺序落实已有作者授权：
+
+1. 先保存规划任务：`stage: outline`，`allowed_actions: [discuss, plan]`，`draft_range/revise_range: null`。`planning.outline`可为`{"status":"draft","refs":[],"unresolved_ids":["待建立当前章细纲"]}`；其他层级按实际状态填写。
+2. 通过`plan`创建真实单元纲，保留已消费的旧来源和输入；`planning.refs`不能引用尚未创建的文件。
+3. 核对实际采用内容，再以当前`expected_revision`和新`operation_id`登记`planning.outline.status: adopted`及已存在的真实引用。文件存在不自动等于作者采用。
+4. 同一真实任务已授权正文时，再切到`trial/drafting`并落实有限`draft_range`和停点；写前context/template按实际来源串行保存。未授权正文时保持规划范围。
+
+不要为了先填`adopted`而创建空壳、伪造引用或手改state。合法规划状态只有`missing/draft/adopted/deferred`；引用不存在的失败输入保留，纠正顺序后另存输入和调用标签，不将重试冒充已经完成的写作。
 
 operation_id、decision.id 及 supersedes 引用为 1–100 位字母数字/下划线/连字符，首位为字母或数字；禁止使用 __proto__、constructor、prototype 保留键。非法 ID 在写入前拒绝，不会保存不可恢复的索引。
 
@@ -269,5 +280,41 @@ node bin/ai-writer.mjs gate chapter-gate vendor/story-gate-studio/examples/fixtu
 | context 过大 | 定点选资料或显式扩容，不能悄悄删关键约束 |
 
 退出码：0 表示该命令成功；1 表示检查存在阻断结果；2 表示输入或运行异常。`--help` 输出可读文本，其余命令输出 JSON。
+
+### 分段合章与登记前报告绑定
+
+`assemble --project 作品目录 --input 合章.json` 的输入示例（占位哈希必须替换）：
+
+```json
+{
+  "unit": 1,
+  "expected_revision": 1,
+  "draft": "正文/0001.md",
+  "parts": [
+    {"path": "分段/0001/01.md", "sha256": "实际分段SHA256"},
+    {"path": "分段/0001/02.md", "sha256": "实际分段SHA256"}
+  ],
+  "separator": "\n\n"
+}
+```
+
+parts按实际顺序列2—100个分段/下普通UTF-8的md/txt文件，禁止重复、越界与符号链接；separator默认两个换行，只允许至多100个空白字符。保留原片段字节，包括标题、BOM及换行，不自动加标题、删重或重排。合章上限1MiB，与单章读取上限一致。要求当前下一未登记单元、当前revision和有效正文授权；旧章先进入独立修订区回退。全部预检后才独占复制临时完整稿到新路径，不改state、不登记、不覆盖已有目标。I/O中断后核目标哈希，保留残稿并另存，不承诺断电原子写入；成功后仍须全文实读并回对细纲。
+
+原record-template输入中可追加以下字段，不能把此片段当完整登记：
+
+```json
+{
+  "draft_review": {
+    "reviewer": "实际审稿者",
+    "report": "审查/0001-当前稿.md",
+    "draft_sha256": "实际完整章SHA256",
+    "report_sha256": "实际已保存报告SHA256"
+  }
+}
+```
+
+有此字段时preview/record共同验证；缺报告、空白或版本不符为DRAFT_REVIEW_INVALID。没有仍按旧流程，不能据此声称审稿完成。正式登记冻结报告及版本绑定，它只证明文件，不证明实际阅读或文学结论；已有replay_review仍须另按原保护填写。
+
+PowerShell逐步执行命令，立即检查 `$LASTEXITCODE`，非0就停止依赖步骤；不要用分号串接并假定成功。先保存报告→确认文件非空与版本→preview退出0→record。帮助是文本，不按JSON解析；报告保存或分段生成失败后不继续合章、登记。
 
 异常包含 code、error、next_action、help_command；适用时带 file、next_command 和 recovery。缺章纲会提示先 plan；JSON 解析错误给文件和解析位置。不要在输入尚未核实时直接执行建议的回退命令。包装脚本先保存真实退出码、stdout和stderr，再按实际回包解析；帮助文本和外层辅助结果不能当成CLI成功JSON。

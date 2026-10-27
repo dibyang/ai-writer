@@ -28,7 +28,7 @@ description: 在 Codex 中初始化或恢复作品，组织小说、剧本、历
 1. 小说按章、剧本按场/集、历史散文按章、散文按篇；先读对应 writer 技能。
 2. `plan --input` 保存 unit/title/goal/change/beats，可带 cast/setting_refs/research_refs/forbidden。路径用作品内正斜杠相对路径。需要的大纲、角色卡与规则显式列入引用；默认 context 不自动整读全书大纲。
 3. `context --unit N` 读取设定、当前状态、最近摘要、前章结尾和研究；召回摘要不能代替相关旧原文。预算超限按相关性拆分或显式扩容，不静默截断。
-4. 动笔前 `record-template --unit N --draft 正文/实际文件名.md` 保存真实来源哈希与当前 revision。schema 1 填完整 snapshot；schema 2及以上 填 changes，未变项保留。模板空摘要不能登记。
+4. 动笔前 `record-template --unit N` 保存真实来源哈希与当前 revision。采用返回的 draft（与 context.draft_path 一致）：长篇默认 `正文/卷ID-卷名/章号-标题.md`，按需创建父目录。分段合章省略 draft 使用同一默认路径；自定新路径或旧稿修订时显式传 --draft，并在合章/登记中保持一致。旧正文不因卷名或工具更新自动搬迁。schema 1 填完整 snapshot；schema 2及以上 填 changes，未变项保留。模板空摘要不能登记。
 5. 在授权范围写正文，逐段自检并修复授权内高置信问题，再填实际 summary/changes 或 snapshot，先 record-preview 查看缺项和实际差量，再用 record 登记；预览不修改状态，也不自动重填过期哈希。来源改变需实读核查，不能写后刷新哈希绕过校验。check 只证明机械范围，不能称文学通过、作者定稿或真人盲读。
 6. 完成范围或达到试写末章后复盘；已有明确连续写作范围时不逐章重复询问。无须修改的表达允许保留。
 

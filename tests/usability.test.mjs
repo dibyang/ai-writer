@@ -29,6 +29,36 @@ function cli(args, cwd = ROOT, script = path.join(ROOT, 'bin/ai-writer.mjs')) {
   return run;
 }
 
+test('help 兼容作品通用参数且不访问或修改作品', t => {
+  const { root, base } = work(t), before = sha(path.join(root, '.writer/state.json'));
+  const missing = path.join(base, '不存在 中文 空格');
+  assert.match(main(['help', '--project', missing]).help, /ai-writer/);
+  assert.match(main(['help', 'record', '--project', root, '--revision-token', 'help-does-not-use-token']).help, /record/);
+  assert.match(main(['help', '--project', root, 'record']).help, /record/);
+  assert.equal(fs.existsSync(missing), false);
+  assert.equal(sha(path.join(root, '.writer/state.json')), before);
+});
+
+test('help 错误提示的恢复入口可在随附工具携带project运行', t => {
+  const { root } = work(t), script = path.join(root, '.writer/tool/bin/ai-writer.mjs');
+  const before = sha(path.join(root, '.writer/state.json'));
+  const bad = cli(['ledger', '--project', root], ROOT, script);
+  assert.equal(bad.status, 2);assert.match(JSON.parse(bad.stderr).help_command, / help$/);
+  const restored = cli(['help', '--project', root], ROOT, script);
+  assert.equal(restored.status, 0, restored.stderr);assert.match(restored.stdout, /ai-writer/);
+  const targeted = cli(['help', 'revision', '--project', root], ROOT, script);
+  assert.equal(targeted.status, 0, targeted.stderr);assert.match(targeted.stdout, /replay-input/);
+  assert.equal(sha(path.join(root, '.writer/state.json')), before);
+});
+
+test('help 仍拒绝未知重复缺值参数及多个帮助主题', () => {
+  for (const args of [
+    ['--project'],['--project','a','--project','b'],['--revision-token'],
+    ['--revision-token','a','--revision-token','b'],['--unknown','a'],
+    ['record','status'],['--project','--force']
+  ]) assert.throws(() => main(['help', ...args]));
+});
+
 test('未登记、同编号替代和回退保留稿都可见；导出清单列出排除且不混入正文', t => {
   const { base, root } = work(t); append(root, 1); const second = append(root, 2);
   write(root, '正文/0002-替代.md', '替代文本不能偷偷合并。');

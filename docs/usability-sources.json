@@ -157,6 +157,328 @@
         "按不稳项目数量判断交付",
         "自动判断文学质量"
       ]
+    },
+    {
+      "repository": "https://github.com/LiPu-jpg/Openwrite",
+      "branch": "main",
+      "commit": "c662440f351436e666b6f996d3bdb3274f351b31",
+      "checked_at": "2026-10-19T09:51:08.810Z",
+      "license": {
+        "github_license": "Apache-2.0",
+        "root_license_files": [
+          "LICENSE"
+        ],
+        "redistributed_upstream_files": false
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 17451,
+          "sha256": "5c092ad6db16c14fd63ed49704068fc322df083db929cd6a58ce737dc6922ad6"
+        },
+        {
+          "path": "docs/REVIEW_DAG_FRAMEWORK.md",
+          "bytes": 3741,
+          "sha256": "82b2ffec63472b841677f8f3b3f1ab5f58c6117aadc211c3d0d24d4ee8e2e74b"
+        },
+        {
+          "path": "docs/WORKSPACE_CONTEXT_CONTRACT.md",
+          "bytes": 9290,
+          "sha256": "1bbd27c3023caabf06d3ac9eb4d53174dd9e14f90022b4ada6e952c0d579b8c3"
+        },
+        {
+          "path": "docs/ISSUE_76_REPAIRS.md",
+          "bytes": 8257,
+          "sha256": "1a8e2780f63a1b3dc1f3e3de89f600e55c4b49dccf6f6c31a1837ce65bcfc277"
+        },
+        {
+          "path": "presets/openwrite/skills/write-next/SKILL.md",
+          "bytes": 1055,
+          "sha256": "7c5be1f7a72b6ac2624fa6c8b6575fb399ed4f6ab6ef1636cb48454ab7745561"
+        }
+      ],
+      "read_scope": "Root README overview plus the exact partial ranges below. Other listed files were cached/indexed, not claimed as fully read.",
+      "read_coverage": {
+        "docs/REVIEW_DAG_FRAMEWORK.md": "1-83",
+        "docs/WORKSPACE_CONTEXT_CONTRACT.md": "1-120 of 126",
+        "docs/ISSUE_76_REPAIRS.md": "1-62"
+      },
+      "not_executed": [
+        "all upstream code, installers, model calls, example manuscripts"
+      ],
+      "adapted_into": [
+        ".agents/skills/writer-novel/references/chapter-delivery.md",
+        ".agents/skills/writer-novel/SKILL.md",
+        ".agents/skills/writer-review/SKILL.md"
+      ],
+      "adopted": [
+        "复用既有版本绑定和覆盖范围，缺证不当完成"
+      ],
+      "not_adopted": [
+        "复制上游代码、提示词或例文",
+        "引入宿主/UI/向量库/付费模型依赖",
+        "固定章节配额、场数、强制悬念或机械去词",
+        "自动补齐纲文映射或自动判文学通过"
+      ]
+    },
+    {
+      "repository": "https://github.com/LiPu-jpg/Openwrite",
+      "branch": "native-core",
+      "commit": "4af1f24c2c8dc2751574495fac5da8d5b452c694",
+      "checked_at": "2026-10-19T09:51:44.447Z",
+      "license": {
+        "github_license": "Apache-2.0",
+        "root_license_files": [
+          "LICENSE"
+        ],
+        "redistributed_upstream_files": false
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 32435,
+          "sha256": "4887a96567d2944174cb4527de965a626adea0fac6ab3e2e2cd0bfd4ed8c365a"
+        },
+        {
+          "path": "models/context_package.py",
+          "bytes": 13516,
+          "sha256": "8f4227144e9cf15ae630c5b2e67ff49b21167b74ac6bf0d432b0b15db935d84a"
+        },
+        {
+          "path": "models/narrative_forecast.py",
+          "bytes": 4412,
+          "sha256": "856665118758fd15efece7726f9f030d5d91e59e4883caed859da7603f77ad14"
+        },
+        {
+          "path": "tools/chapter_work_brief.py",
+          "bytes": 30483,
+          "sha256": "4f52464ed07ae9e987db926e15bd0c2872db2dd05030efcfa481e0a8fa0ded0f"
+        },
+        {
+          "path": "tools/context_protection.py",
+          "bytes": 8621,
+          "sha256": "a28b41faf39dfe49adb9e46a4e9bd9fc8999848ed3a0d912eed06923e5bd3c2f"
+        },
+        {
+          "path": "tools/chapter_memory.py",
+          "bytes": 7489,
+          "sha256": "7c55f5afff8d2bc8046e10b7e0aa27902ba2d007fcb6c0a825e513ec4693a293"
+        },
+        {
+          "path": "tools/chapter_assembler.py",
+          "bytes": 42949,
+          "sha256": "d576d049791c2a84d5f49df974f1541ac59e0f227101d101e025d95560c6a839"
+        },
+        {
+          "path": "tools/outline_contract.py",
+          "bytes": 5592,
+          "sha256": "d4026f5c2beb0de29468bc3c3a3cf351d947778344278bb50867121ee53c2736"
+        },
+        {
+          "path": "craft/scene_craft.md",
+          "bytes": 3410,
+          "sha256": "cb7a2b5bc7b27a258a827363998ece0a3aaa08871f9e34fd5d1ef4049b5b777e"
+        }
+      ],
+      "read_scope": "Root README overview plus the exact partial ranges below. Other listed files were cached/indexed, not claimed as fully read.",
+      "read_coverage": {
+        "tools/chapter_work_brief.py": "1-200 of 787",
+        "tools/context_protection.py": "1-180 of 235",
+        "models/narrative_forecast.py": "1-108"
+      },
+      "not_executed": [
+        "all upstream code, installers, model calls, example manuscripts"
+      ],
+      "adapted_into": [
+        "lib/workspace.mjs",
+        "lib/help.mjs",
+        ".agents/skills/writer-novel/references/chapter-delivery.md",
+        ".agents/skills/writer-novel/SKILL.md",
+        ".agents/skills/writer-review/SKILL.md"
+      ],
+      "adopted": [
+        "上下文超限的可解释诊断，保护必要约束",
+        "短程分支候选与已发生事实分离"
+      ],
+      "not_adopted": [
+        "复制上游代码、提示词或例文",
+        "引入宿主/UI/向量库/付费模型依赖",
+        "固定章节配额、场数、强制悬念或机械去词",
+        "自动补齐纲文映射或自动判文学通过"
+      ]
+    },
+    {
+      "repository": "https://github.com/leenbj/novel-creator-skill",
+      "branch": "main",
+      "commit": "a327428ea26962163f823ad74001243f91bc7738",
+      "checked_at": "2026-10-19T09:51:46.604Z",
+      "license": {
+        "github_license": null,
+        "root_license_files": [],
+        "readme_declaration": "README lines702-704 states MIT License; no complete license text found at root",
+        "redistributed_upstream_files": false
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 20802,
+          "sha256": "741c13ace64bca28cea81984cc5a595b20ff8492ee3d60ff2eee7d27d78c38b9"
+        },
+        {
+          "path": "SKILL.md",
+          "bytes": 28395,
+          "sha256": "8a31ae8380c1a131d91ae3e9a687180d181b198753a5f68c006a877ef7a7049b"
+        },
+        {
+          "path": "references/beat-pipeline-spec.md",
+          "bytes": 2582,
+          "sha256": "2e666c87dc077001709bf898516d86c915116ab0c48836aae0ee1613adf83236"
+        },
+        {
+          "path": "references/anti-resolution-cooldown-spec.md",
+          "bytes": 4337,
+          "sha256": "3ebcb1723606af93ae1db463e3bd9e406e63eeae1c244127853a3639271e166c"
+        },
+        {
+          "path": "references/outline-anchor-quota-spec.md",
+          "bytes": 2602,
+          "sha256": "73865ae4d9112aa05e860fb3c75be4c3c0712f19997e414c42e1e6473692db85"
+        },
+        {
+          "path": "references/rag-consistency-design.md",
+          "bytes": 2010,
+          "sha256": "7f389ce4f1828e8cc3773839847117edce841ac0fad78f23835f5b3b20ffdaa1"
+        },
+        {
+          "path": "references/million-word-roadmap.md",
+          "bytes": 960,
+          "sha256": "7359390f390dcf9bbaed4c8337da48341c1b5eaf3ad3d15f2f1e9f06707cb3eb"
+        },
+        {
+          "path": "references/humanizer-guide.md",
+          "bytes": 5474,
+          "sha256": "e551df9c0e5514504c21fb2e53fd9537dc0f70a1b8c5ef0598e4988ba738c59a"
+        },
+        {
+          "path": "scripts/outline_anchor_manager.py",
+          "bytes": 13092,
+          "sha256": "83a5510d424c4a7478d70d33ce1ee4ab986db84f94e5eb3b9dbfdc18ebc635bd"
+        },
+        {
+          "path": "scripts/pacing_tracker.py",
+          "bytes": 14637,
+          "sha256": "97bf2b85903d098142ae5a8e70bb76a8a13da9e032efdf6144b02205f2fcb329"
+        }
+      ],
+      "read_scope": "Root README overview plus the exact partial ranges below. Other listed files were cached/indexed, not claimed as fully read.",
+      "read_coverage": {
+        "references/beat-pipeline-spec.md": "1-92",
+        "references/anti-resolution-cooldown-spec.md": "1-118",
+        "references/outline-anchor-quota-spec.md": "1-89",
+        "references/rag-consistency-design.md": "1-39",
+        "references/humanizer-guide.md": "1-120 of 149",
+        "scripts/outline_anchor_manager.py": "1-190 of 348"
+      },
+      "not_executed": [
+        "all upstream code, installers, model calls, example manuscripts"
+      ],
+      "adapted_into": [
+        ".agents/skills/writer-novel/references/chapter-delivery.md",
+        ".agents/skills/writer-novel/SKILL.md",
+        ".agents/skills/writer-review/SKILL.md"
+      ],
+      "adopted": [
+        "长章按事件步骤展开后合章复读",
+        "长线保留与本章有限兑现并存，复用现有分卷/增量记忆"
+      ],
+      "not_adopted": [
+        "复制上游代码、提示词或例文",
+        "引入宿主/UI/向量库/付费模型依赖",
+        "固定章节配额、场数、强制悬念或机械去词",
+        "自动补齐纲文映射或自动判文学通过"
+      ]
+    },
+    {
+      "repository": "https://github.com/MaoXiaoYuZ/Long-Novel-GPT",
+      "branch": "main",
+      "commit": "107c31e54686947a6d00404e332475a60b66e630",
+      "checked_at": "2026-10-19T09:51:48.137Z",
+      "license": {
+        "github_license": null,
+        "root_license_files": [],
+        "redistributed_upstream_files": false
+      },
+      "files": [
+        {
+          "path": "readme.md",
+          "bytes": 5906,
+          "sha256": "e277cd97f8c3ea39ef8939fcf175a5301b150751554093d777be2c5640a4d896"
+        },
+        {
+          "path": "core/writer.py",
+          "bytes": 23343,
+          "sha256": "5a6c6ebace2b1cd3ec828f5ad7629220f8b4e93cf87714dd39ca5ae60d66a442"
+        },
+        {
+          "path": "core/outline_writer.py",
+          "bytes": 3631,
+          "sha256": "f23480877b12668012c769739f9fd283004558f97244e9edb79ff7be685370b5"
+        },
+        {
+          "path": "core/plot_writer.py",
+          "bytes": 2047,
+          "sha256": "cfe00d4b2b2ed56182848ce331ef26710038b674e3f2d3f8ad220d2aac6f1adc"
+        },
+        {
+          "path": "core/draft_writer.py",
+          "bytes": 1906,
+          "sha256": "256a490946990e4ae8b96c0eeb08f7233960b62681b26e8f0b05c2a657c4eba7"
+        },
+        {
+          "path": "core/diff_utils.py",
+          "bytes": 7044,
+          "sha256": "1a5368fda3975e52d24777f8acbdddd4e354839e8ff5ec037b331f331a130643"
+        },
+        {
+          "path": "prompts/对齐剧情和正文/prompt.py",
+          "bytes": 2308,
+          "sha256": "18b95ec9dc23039c4d1892c6128b8b9a48a64425f0630a8bf58834783fe160b8"
+        },
+        {
+          "path": "prompts/根据意见重写正文/prompt.py",
+          "bytes": 817,
+          "sha256": "8e396bb0c71caa1ce3cf868e7870e9d6999abe9b85d3a5e2a046de5b0d50ac75"
+        },
+        {
+          "path": "backend/summary.py",
+          "bytes": 5374,
+          "sha256": "7746667beeab97541c4712312d9179cc4d8acbc521c94dea74236df306a111bc"
+        }
+      ],
+      "read_scope": "Root README overview plus the exact partial ranges below. Other listed files were cached/indexed, not claimed as fully read.",
+      "read_coverage": {
+        "core/writer.py": "1-180 of 534",
+        "core/draft_writer.py": "1-47",
+        "prompts/对齐剧情和正文/prompt.py": "1-68"
+      },
+      "not_executed": [
+        "all upstream code, installers, model calls, example manuscripts"
+      ],
+      "adapted_into": [
+        ".agents/skills/writer-novel/references/chapter-delivery.md",
+        ".agents/skills/writer-novel/SKILL.md",
+        ".agents/skills/writer-review/SKILL.md"
+      ],
+      "adopted": [
+        "分层创作与纲文回对",
+        "局部修改后核对相邻承接"
+      ],
+      "not_adopted": [
+        "复制上游代码、提示词或例文",
+        "引入宿主/UI/向量库/付费模型依赖",
+        "固定章节配额、场数、强制悬念或机械去词",
+        "自动补齐纲文映射或自动判文学通过"
+      ]
     }
   ]
 }
