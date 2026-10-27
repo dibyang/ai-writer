@@ -26,7 +26,7 @@ npm run release:build -- --out dist/0.9.0
 
 ## 正式发布前最后一步
 
-核对具体提交、发布说明、ZIP SHA及对应验证记录；完成用户授权的提交后，从选定提交重新构建并核验产物来源，更新开发说明为正式发行说明，再按授权创建对应版本标签、上传附件和发布。不要移动已有v0.8.0标签或覆盖资产；0.9.0当前尚未执行这些发布动作。
+核对具体提交、发布说明、ZIP SHA及对应验证记录；完成用户授权的提交后，从选定提交重新构建并核验产物来源，更新开发说明为正式发行说明，再按授权创建对应版本标签、上传附件和发布。不要移动已有v0.8.0标签或覆盖资产；0.9.0 已于 2026-10-27 发布，标签绑定 01df489d9；后续记录提交不移动标签或覆盖资产。
 
 建议先保存GitHub Release草稿并附齐ZIP、SHA和发布说明，再在授权后发布为正式版本；不勾选预发布。GitHub生成的Source code归档来自整个标签树，可能包含历史验收记录，用户下载应优先选择专门的ai-writer ZIP。GitHub流程依据见[官方发行文档](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)。
 

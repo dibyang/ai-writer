@@ -13,3 +13,13 @@
 本页随发行准备提交保存。正式发布前必须完成该提交的 Windows、Ubuntu、macOS × Node.js 20/24 六组 CI，最终 ZIP 解压后的主回归、doctor、引擎及实际 CLI 流程，并核对标签提交与资产哈希。结果以 GitHub Actions 和 Release 为准，尚未完成的检查不计为通过。
 
 原始失败、重试及中断证据保留；脚本检查不等于文学质量或小说出版验收。历史 v0.8.0 标签及资产不变。
+
+## 正式发布结果（2026-10-27）
+
+[v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0) 已正式发布，非预发布。标签固定在 `01df489d9d83e0e4bbd14d13b49c3b2f3492caae`，包来源干净。
+
+[提交 CI](https://github.com/dibyang/ai-writer/actions/runs/40432785537) 与 [标签 CI](https://github.com/dibyang/ai-writer/actions/runs/40433656101) 各六组全部通过。提交回归中，Windows 两组各 234 通过、1 项符号链接环境跳过；Ubuntu/macOS 四组各 231 通过、4 项 Windows 专用测试跳过；六组 doctor 和引擎 29/29 通过。
+
+最终 ZIP 本机主回归 234 通过、0 失败、1 项环境跳过；引擎 29/29、doctor 和真实 CLI 创建—授权—规划—登记—检查—导出流程通过。330 个载荷文件逐项核对，新增验证摘要已纳入发行白名单。
+
+ZIP SHA-256：`079ef166fef940c25d0947b3f988a8aa583a79c46875dcdfc306b279f39308f1`。发布后的记录补充不改变已验证标签和资产。
