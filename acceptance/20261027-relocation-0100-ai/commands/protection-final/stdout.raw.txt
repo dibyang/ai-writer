@@ -1,0 +1,28 @@
+✖ 迁移不追认手工替换后的安装构建，恢复拒绝中断期间工具改动 (12277.956ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12386.5894
+
+✖ failing tests:
+
+test at tests\relocation.test.mjs:77:1
+✖ 迁移不追认手工替换后的安装构建，恢复拒绝中断期间工具改动 (12277.956ms)
+  Error: EEXIST: file already exists, open 'D:\work\other\ai-writer\.tmp\protection-sYvaHd\work\.writer\tool\build-manifest.json'
+      at Object.openSync (node:fs:561:18)
+      at Object.writeFileSync (node:fs:2428:35)
+      at writeBuildManifest (file:///D:/work/other/ai-writer/lib/tool-build.mjs:96:6)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/relocation.test.mjs:80:43)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    errno: -4075,
+    code: 'EEXIST',
+    syscall: 'open',
+    path: 'D:\\work\\other\\ai-writer\\.tmp\\protection-sYvaHd\\work\\.writer\\tool\\build-manifest.json'
+  }

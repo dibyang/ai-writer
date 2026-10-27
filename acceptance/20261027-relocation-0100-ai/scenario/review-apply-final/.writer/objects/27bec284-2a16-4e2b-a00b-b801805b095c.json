@@ -1,0 +1,94 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_ACK",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "合成待修复项2",
+      "suggestion": "增加核对动作",
+      "evidence": [
+        {
+          "unit": 2,
+          "draft": "正文/2.md",
+          "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+          "line": 3,
+          "quote": "铜片留在柜上"
+        }
+      ],
+      "status": "applied",
+      "origin": {
+        "review_ref": ".writer/reviews/99eb56cf-622e-4c23-af18-618398efb430.json",
+        "review_sha256": "491dcfe7a1c8316801479208a88d81a45bd0160b55cc4977b6b099b499693098",
+        "units": [
+          {
+            "unit": 2,
+            "draft": "正文/2.md",
+            "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+            "dependency": "bf8217f0ac156eb5e88e928159af5045ca69c01cda97749b826b8ef0e91dfc3a"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/0466573b-f7eb-45ca-9c4b-d871c297017b.json",
+          "sha256": "95a94b298e227cc8cbced8ac26ef027a96d8d2ea892dea900b80e816a4367108"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/016fcf39-de36-423e-adad-b8a837d82905.json",
+          "sha256": "ac4821ecf72dfd7dac47608ff6e846fb1f913cbffb89a0e2c4d56d18e2fd2007"
+        },
+        "disposition": "adopted",
+        "phase": "after-actual-repair",
+        "prior_adoption_recorded": false,
+        "acknowledged_at": "2026-10-27T04:08:04.961Z",
+        "reason": "合成已有修复补登记",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 2,
+            "draft": "正文/2.md",
+            "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+            "dependency": "bf8217f0ac156eb5e88e928159af5045ca69c01cda97749b826b8ef0e91dfc3a"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "cc36e347-4c92-4e24-a554-a9c8b053c706",
+        "commit_binding": {
+          "ref": ".writer/objects/cc36e347-4c92-4e24-a554-a9c8b053c706.json",
+          "sha256": "fa3a56a49f1ab5cb451448e6bc196966fb857ecb6b20445d297b76160ea66874"
+        },
+        "transaction_id": "67701e75-1411-4933-9bec-fee2a07612fe",
+        "reason": "合成已有修复补登记",
+        "changes": [
+          {
+            "unit": 2,
+            "draft": "正文/2.md",
+            "before": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+            "after": "b08547633439bdc0bd09bf477da3324b2eb261a16395d1edac2796e41e8514a4"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 2,
+            "draft": "正文/V1-固定目录/2.md",
+            "sha256": "b08547633439bdc0bd09bf477da3324b2eb261a16395d1edac2796e41e8514a4",
+            "dependency": "50ec4fc1d9dc862bc4be301b91fac6aacd3bb09d8f6852bc14faaaa4eb808f29"
+          }
+        ],
+        "acknowledged_existing_repair": true,
+        "acknowledged_at": "2026-10-27T04:08:04.961Z",
+        "target_units": [
+          2
+        ],
+        "reference_units": []
+      },
+      "verification": null
+    }
+  }
+}

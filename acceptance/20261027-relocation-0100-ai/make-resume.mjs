@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const base='acceptance/20261027-relocation-0100-ai/';
+const s=fs.readFileSync(base+'scale-flow.mjs','utf8'),start=s.indexOf("run('init'"),end=s.indexOf("cli=path.join(source");
+const prefix=s.slice(0,start).replace("path.join(base,'scenario',label)","path.join(base,'scenario','scale47-first')");
+const middle=`const quote=fs.readFileSync(path.join(root,'研究/验证授权.md'),'utf8');
+const evidence={local_source:'研究/验证授权.md',source_sha256:sha(quote),quote,locator:'synthetic fixture line 1',recorded_by:'Codex synthetic CLI validation'};
+const ranges=[[1,7,'新朝入户'],[8,17,'谁能任事'],[18,25,'钱粮远行'],[26,37,'战争与重建'],[38,49,'再议号令']];
+const before=state(),bodyBytes=before.units.reduce((n,u)=>n+fs.statSync(path.join(root,u.draft)).size,0),reviewBefore=call('before-check','check').rolling_review;
+const exportBefore=call('before-export','export',null,null,['--out',path.join(base,label+'-export-before')]);
+`;
+fs.writeFileSync(base+'scale-resume.mjs',prefix+middle+s.slice(end));

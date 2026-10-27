@@ -1,0 +1,279 @@
+{
+  "schema_version": 7,
+  "revision": 8,
+  "project_id": "5f49d296-2727-4bd0-8e62-1b145e49e789",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "units": [],
+  "governance": {
+    "stage": "revision",
+    "task": "合成验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "仅两章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/6c0b30bc-4ea6-4271-8f74-1cffbc612f44.json",
+      "sha256": "6cb7e0c94c829872c9147ec0316d7940c4d7c832f890fec36bb117f6aa7e34d4"
+    },
+    {
+      "ref": ".writer/objects/016fcf39-de36-423e-adad-b8a837d82905.json",
+      "sha256": "ac4821ecf72dfd7dac47608ff6e846fb1f913cbffb89a0e2c4d56d18e2fd2007"
+    }
+  ],
+  "operations": {
+    "review-apply-final-draft": {
+      "input_sha256": "a0b32c5e3f6d196210939970d3e5f7d529afefc6f67f768a7aa839cc381c0040",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "review-apply-final-draft",
+        "event": {
+          "ref": ".writer/objects/6c0b30bc-4ea6-4271-8f74-1cffbc612f44.json",
+          "sha256": "6cb7e0c94c829872c9147ec0316d7940c4d7c832f890fec36bb117f6aa7e34d4"
+        }
+      }
+    },
+    "review-apply-final-revise": {
+      "input_sha256": "c11398b43169e0ac6e602547facd8fb8bb39f6b857c33c1ccf04c59549bdde86",
+      "result": {
+        "ok": true,
+        "revision": 5,
+        "operation_id": "review-apply-final-revise",
+        "event": {
+          "ref": ".writer/objects/016fcf39-de36-423e-adad-b8a837d82905.json",
+          "sha256": "ac4821ecf72dfd7dac47608ff6e846fb1f913cbffb89a0e2c4d56d18e2fd2007"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {
+      ".writer/reviews/99eb56cf-622e-4c23-af18-618398efb430.json": "491dcfe7a1c8316801479208a88d81a45bd0160b55cc4977b6b099b499693098"
+    },
+    "issues": {
+      "I_FIX": {
+        "id": "I_FIX",
+        "type": "continuity",
+        "severity": "minor",
+        "confidence": "high",
+        "statement": "合成待修复项1",
+        "suggestion": "增加核对动作",
+        "evidence": [
+          {
+            "unit": 1,
+            "draft": "正文/1.md",
+            "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+            "line": 3,
+            "quote": "铜片留在柜上"
+          }
+        ],
+        "status": "adopted",
+        "origin": {
+          "review_ref": ".writer/reviews/99eb56cf-622e-4c23-af18-618398efb430.json",
+          "review_sha256": "491dcfe7a1c8316801479208a88d81a45bd0160b55cc4977b6b099b499693098",
+          "units": [
+            {
+              "unit": 1,
+              "draft": "正文/1.md",
+              "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+              "dependency": "4f9de1e7ea8dc837c471f68564f872770bf684e962de409bc05ade69c3989c31"
+            }
+          ]
+        },
+        "history": [
+          {
+            "ref": ".writer/objects/484e80be-4854-427e-a9bf-7e646643567c.json",
+            "sha256": "0edab53b7c6a80e151800d018a36a65e892a9a6116db00e1b99c56b214747208"
+          }
+        ],
+        "resolution": {
+          "decision_actor": "agent-within-authorized-scope",
+          "authorization": {
+            "ref": ".writer/objects/016fcf39-de36-423e-adad-b8a837d82905.json",
+            "sha256": "ac4821ecf72dfd7dac47608ff6e846fb1f913cbffb89a0e2c4d56d18e2fd2007"
+          },
+          "disposition": "adopted",
+          "reason": "合成授权修订",
+          "author_choice": null,
+          "basis_units": [
+            {
+              "unit": 1,
+              "draft": "正文/1.md",
+              "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+              "dependency": "4f9de1e7ea8dc837c471f68564f872770bf684e962de409bc05ade69c3989c31"
+            }
+          ]
+        },
+        "application": null,
+        "verification": null,
+        "binding": {
+          "ref": ".writer/objects/337d4aef-ea1d-48fc-a983-72d7a38f93c4.json",
+          "sha256": "adc95ff6f870c2bdf415a495a9e8013093c50950826cb9082761ffb2a555e2dc"
+        }
+      },
+      "I_ACK": {
+        "id": "I_ACK",
+        "type": "continuity",
+        "severity": "minor",
+        "confidence": "high",
+        "statement": "合成待修复项2",
+        "suggestion": "增加核对动作",
+        "evidence": [
+          {
+            "unit": 2,
+            "draft": "正文/2.md",
+            "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+            "line": 3,
+            "quote": "铜片留在柜上"
+          }
+        ],
+        "status": "open",
+        "origin": {
+          "review_ref": ".writer/reviews/99eb56cf-622e-4c23-af18-618398efb430.json",
+          "review_sha256": "491dcfe7a1c8316801479208a88d81a45bd0160b55cc4977b6b099b499693098",
+          "units": [
+            {
+              "unit": 2,
+              "draft": "正文/2.md",
+              "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+              "dependency": "bf8217f0ac156eb5e88e928159af5045ca69c01cda97749b826b8ef0e91dfc3a"
+            }
+          ]
+        },
+        "history": [],
+        "binding": {
+          "ref": ".writer/objects/0466573b-f7eb-45ca-9c4b-d871c297017b.json",
+          "sha256": "95a94b298e227cc8cbced8ac26ef027a96d8d2ea892dea900b80e816a4367108"
+        }
+      }
+    },
+    "events": [
+      {
+        "ref": ".writer/objects/484e80be-4854-427e-a9bf-7e646643567c.json",
+        "sha256": "0edab53b7c6a80e151800d018a36a65e892a9a6116db00e1b99c56b214747208"
+      },
+      {
+        "ref": ".writer/objects/0466573b-f7eb-45ca-9c4b-d871c297017b.json",
+        "sha256": "95a94b298e227cc8cbced8ac26ef027a96d8d2ea892dea900b80e816a4367108"
+      },
+      {
+        "ref": ".writer/objects/337d4aef-ea1d-48fc-a983-72d7a38f93c4.json",
+        "sha256": "adc95ff6f870c2bdf415a495a9e8013093c50950826cb9082761ffb2a555e2dc"
+      }
+    ],
+    "operations": {
+      "review-apply-final-before-review": {
+        "input_sha256": "c8774417b3b07c31783344e3acef23d063fa6ed25ec451c3d08ac379bf7c0c35",
+        "result": {
+          "ok": true,
+          "revision": 4,
+          "ref": ".writer/reviews/99eb56cf-622e-4c23-af18-618398efb430.json",
+          "coverage": [
+            1,
+            2
+          ],
+          "issue_ids": [
+            "I_FIX",
+            "I_ACK"
+          ],
+          "quality": "review-recorded-not-acceptance"
+        }
+      },
+      "review-apply-final-adopt": {
+        "input_sha256": "df3f5768b1041c66621b9497ddb1c8d86711de37e2899b70ed4a123c14b5174a",
+        "result": {
+          "ok": true,
+          "revision": 6,
+          "id": "I_FIX",
+          "status": "adopted",
+          "event": {
+            "ref": ".writer/objects/337d4aef-ea1d-48fc-a983-72d7a38f93c4.json",
+            "sha256": "adc95ff6f870c2bdf415a495a9e8013093c50950826cb9082761ffb2a555e2dc"
+          }
+        }
+      }
+    }
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/016fcf39-de36-423e-adad-b8a837d82905.json",
+    "sha256": "ac4821ecf72dfd7dac47608ff6e846fb1f913cbffb89a0e2c4d56d18e2fd2007"
+  },
+  "draft_relocations": {
+    "events": [
+      {
+        "ref": ".writer/objects/16fd6636-13ab-4c1a-860a-eaba232f5a8c.json",
+        "sha256": "211136a4333d3ec0134ce08d5d3ad287bb495049fa62d506595b3de01870370f"
+      }
+    ],
+    "directories": [
+      {
+        "volume_id": "V1",
+        "directory": "正文/V1-初卷",
+        "from": 1,
+        "to": 4
+      }
+    ]
+  },
+  "revision_scope": {
+    "from": 1,
+    "through": 2
+  }
+}

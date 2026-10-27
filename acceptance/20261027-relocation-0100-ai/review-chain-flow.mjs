@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),label=process.argv[2]??'review-chain',root=JSON.parse(fs.readFileSync(path.join(base,process.argv[3]??'scale36-final-verification.json'))).root,cli=path.join(root,'.writer/tool/bin/ai-writer.mjs');let seq=0;
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),state=()=>JSON.parse(fs.readFileSync(path.join(root,'.writer/state.json'))),write=(f,v)=>{fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,typeof v==='string'?v:JSON.stringify(v,null,2)+'\n',{flag:'wx'});return f;};
+function call(name,cmd,action,input,extra=[],expected=0){const id=`${label}-${String(++seq).padStart(3,'0')}-${name}`,args=[cmd,...(action?[action]:[]),'--project',root];if(input)args.push('--input',write(path.join(base,'inputs',id+'.json'),input));const r=spawnSync(process.execPath,[path.join(base,'capture.mjs'),id,process.execPath,cli,...args,...extra],{encoding:'utf8',windowsHide:true});assert.equal(r.status,expected,r.stderr||r.stdout);return JSON.parse(fs.readFileSync(path.join(base,'commands',id,expected===2?'stderr.raw.txt':'stdout.raw.txt'),'utf8'));}
+const quote=fs.readFileSync(path.join(root,'研究/验证授权.md'),'utf8'),evidence={local_source:'研究/验证授权.md',source_sha256:sha(quote),quote,locator:'synthetic fixture line 1',recorded_by:'Codex synthetic validation'},s=state(),units=s.units.slice(0,2);
+const report='审查/二次迁移前结构复核.md';write(path.join(root,report),'# 合成结构复核\n用于检验历史报告、意见处置和多次路径迁移的绑定，不代表文学评价。\n');
+const fields=['goal','obstacle','choice','consequence','relationship_change'];
+const review=call('review','review',null,{expected_revision:s.revision,operation_id:'chain-review',from:1,to:2,kind:'model-self-review',report,source_hashes:Object.fromEntries(units.map(u=>[u.draft,u.sha256])),chapter_functions:units.map(u=>({unit:u.unit,...Object.fromEntries(fields.map(k=>[k,k==='relationship_change'?{status:'unknown',reason:'样本没有关系变化依据'}:{status:'observed',text:'核对清单并记录交接',evidence:[{unit:u.unit,quote:'柜上的木匣没有移动'}]}]))})),comparison:{similar_structures:[],distinct_gains:['编号不同'],preserve:['清单核对事实'],optional_adjustments:[],limits:'合成数据只检验接口绑定'},issues:[{id:'I_KEEP',type:'optional_style',severity:'suggestion',confidence:'medium',statement:'合成可选措辞意见',suggestion:'允许保留',evidence:[{unit:1,quote:'柜上的木匣没有移动'}]}]});
+call('retain','review-issues','resolve',{expected_revision:state().revision,operation_id:'chain-retain',id:'I_KEEP',disposition:'retained',reason:'合成验证保留原句',decision_actor:'author',author_evidence:evidence});
+const issueBefore=call('before-issues','review-issues','list').issues.find(i=>i.id==='I_KEEP');assert.equal(issueBefore.context_changed,false);const frozenReport=fs.readFileSync(path.join(root,review.ref));
+const original=state(),dirs=original.draft_relocations.directories.map(d=>({...d,directory:d.directory+'-固定目录'})),mapping=original.units.map(u=>({unit:u.unit,from:u.draft,to:dirs.find(d=>d.from<=u.unit&&u.unit<=d.to).directory+'/'+path.basename(u.draft),sha256:u.sha256}));
+const plan=call('plan','draft','relocate-plan',{mapping,directories:dirs});call('move','draft','relocate',{...plan.request,author_evidence:evidence});
+assert.equal(call('check','check').ok,true);const issueAfter=call('after-issues','review-issues','list').issues.find(i=>i.id==='I_KEEP');assert.equal(issueAfter.context_changed,false);assert.equal(issueAfter.effective_status,'retained');assert.deepEqual(fs.readFileSync(path.join(root,review.ref)),frozenReport);
+for(let n=0;n<36;n++){assert.equal(state().units[n].sha256,original.units[n].sha256);assert.deepEqual(state().units[n].source_hashes,original.units[n].source_hashes);}
+call('context','context',null,null,['--unit','37','--max-chars','250000']);
+const bodyFile=path.join(root,state().units[0].draft),body=fs.readFileSync(bodyFile);fs.appendFileSync(bodyFile,'\n第三方修改，仅测试漂移识别。\n');
+const changed=call('drift-check','check',null,null,[],1);assert.ok(changed.findings.some(f=>f.code==='CONTEXT_SOURCE_CHANGED'&&f.ref==='正文/0001.md'));assert.equal(call('changed-issues','review-issues','list').issues.find(i=>i.id==='I_KEEP').context_changed,true);
+fs.writeFileSync(bodyFile,body);assert.equal(call('restored-check','check').ok,true);
+const prior=state().revision,bad=mapping.map((m,i)=>({...m,from:state().units[i].draft,to:original.units[i].draft}));assert.equal(call('alias-reuse','draft','relocate-plan',{mapping:bad,directories:original.draft_relocations.directories},[],2).code,'RELOCATION_ALIAS_REUSE');assert.equal(state().revision,prior);
+write(path.join(base,label+'-verification.json'),{ok:true,chapters:36,migration_events:state().draft_relocations.events.length,historical_report_bytes_preserved:true,retained_issue_context_unchanged:true,historical_alias_drift_detected:true,alias_reuse_rejected:true,body_changes_restored:true,scope:'synthetic isolated verification'});

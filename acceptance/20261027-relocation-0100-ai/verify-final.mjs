@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(base,'../..'),dist=path.join(repo,'dist/0.10.0-relocation-ai6'),pkg=path.join(repo,'.tmp/relocation-ai6/ai-writer-0.10.0');
+const read=f=>JSON.parse(fs.readFileSync(f)),sha=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),manifest=read(path.join(dist,'release-manifest.json'));
+const labels=['protected-package-tests','protected-package-doctor','scale36-protected','scale47-protected','post47-protected','review-chain-protected','review-apply-protected','copyfree-protected'];
+const commands=Object.fromEntries(labels.map(l=>{const r=read(path.join(base,'commands',l,'result.json'));assert.equal(r.exit_code,0,l);return [l,{exit_code:r.exit_code,elapsed_ms:r.elapsed_ms}];}));
+for(const row of manifest.sources)assert.equal(sha(path.join(repo,row.source)),row.sha256,'source '+row.source);
+for(const row of manifest.files)assert.equal(sha(path.join(pkg,row.file)),row.sha256,'payload '+row.file);
+const raw=fs.readFileSync(path.join(base,'commands/protected-package-tests/stdout.raw.txt'),'utf8'),number=k=>Number(raw.match(new RegExp('(?:ℹ|#) '+k+' (\\d+)'))?.[1]);
+const tests={total:number('tests'),passed:number('pass'),failed:number('fail'),skipped:number('skipped')};assert.ok(tests.total>240);assert.equal(tests.failed,0);
+const names=['scale36-protected','scale47-protected','post47-protected','review-chain-protected','review-apply-protected','copyfree-protected'];
+const flows=Object.fromEntries(names.map(n=>{const r=read(path.join(base,n+'-verification.json'));assert.equal(r.ok,true,n);return [n,r];}));
+const result={ok:true,status:'Windows local candidate verified, unreleased',version:'0.10.0',content_id:manifest.content_id,archive:path.join(dist,'ai-writer-0.10.0.zip'),archive_sha256:sha(path.join(dist,'ai-writer-0.10.0.zip')),source_files_checked:manifest.sources.length,payload_files_checked:manifest.files.length,tests,commands,flows,existing_works_modified:false,committed:false,pushed:false,scope:'Synthetic CLI and regression verification; no literary or cross-platform acceptance claimed'};
+fs.copyFileSync(path.join(dist,'release-manifest.json'),path.join(base,'final-release-manifest.json'));fs.copyFileSync(path.join(dist,'SHA256SUMS.txt'),path.join(base,'final-SHA256SUMS.txt'));fs.writeFileSync(path.join(base,'verification.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({ok:true,content_id:result.content_id,archive_sha256:result.archive_sha256,tests,source_files_checked:result.source_files_checked,payload_files_checked:result.payload_files_checked}));

@@ -1,0 +1,52 @@
+{
+  "expected_revision": 0,
+  "operation_id": "copyfree-protected-validated-rollback-auth",
+  "workflow": {
+    "stage": "trial",
+    "task": "仅合成验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 1
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "一章结束"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "author_evidence": {
+    "local_source": "研究/授权.md",
+    "source_sha256": "444fa80bd3bdbd9dec2676d29cccd43395dfde6b0960e010b7bc153fabe50b2e",
+    "quote": "合成接口验证允许一章试写和原地工具更新、明确的中断恢复。",
+    "locator": "synthetic fixture",
+    "recorded_by": "Codex"
+  }
+}

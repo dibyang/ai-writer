@@ -1,0 +1,61 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_FIX",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "合成待修复项1",
+      "suggestion": "增加核对动作",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/1.md",
+          "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+          "line": 3,
+          "quote": "铜片留在柜上"
+        }
+      ],
+      "status": "adopted",
+      "origin": {
+        "review_ref": ".writer/reviews/99eb56cf-622e-4c23-af18-618398efb430.json",
+        "review_sha256": "491dcfe7a1c8316801479208a88d81a45bd0160b55cc4977b6b099b499693098",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/1.md",
+            "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+            "dependency": "4f9de1e7ea8dc837c471f68564f872770bf684e962de409bc05ade69c3989c31"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/484e80be-4854-427e-a9bf-7e646643567c.json",
+          "sha256": "0edab53b7c6a80e151800d018a36a65e892a9a6116db00e1b99c56b214747208"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/016fcf39-de36-423e-adad-b8a837d82905.json",
+          "sha256": "ac4821ecf72dfd7dac47608ff6e846fb1f913cbffb89a0e2c4d56d18e2fd2007"
+        },
+        "disposition": "adopted",
+        "reason": "合成授权修订",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/1.md",
+            "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+            "dependency": "4f9de1e7ea8dc837c471f68564f872770bf684e962de409bc05ade69c3989c31"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null
+    }
+  }
+}

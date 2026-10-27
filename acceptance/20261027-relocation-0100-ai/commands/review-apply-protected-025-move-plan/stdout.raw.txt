@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "read_only": true,
+  "installed_manifest_sha256": "aa78b2323c4f9e92c03eb95430ee0ea08c834ffc81b28f7ce1a9141ba2eb0cd0",
+  "executor_build_id": "4d852e5c8e7e738dbe4773d585ff84859449e7d23eafce24d60f3baf62902dd0",
+  "project_id": "17d83e79-1664-4e2c-84f6-f8a0c031e589",
+  "revision": 8,
+  "state_sha256": "2e4d212a4c35c79d00409ed80269d9b864edce3d846942c730c5048383303ab5",
+  "generation": 0,
+  "build_id": "4d852e5c8e7e738dbe4773d585ff84859449e7d23eafce24d60f3baf62902dd0",
+  "mapping": [
+    {
+      "unit": 1,
+      "from": "正文/V1-初卷/1.md",
+      "to": "正文/V1-固定目录/1.md",
+      "sha256": "8c574faad0d59dc12aac7fc1ebdb20400cb78f5533ff59ed26363d708f29833c",
+      "bytes": 116
+    },
+    {
+      "unit": 2,
+      "from": "正文/V1-初卷/2.md",
+      "to": "正文/V1-固定目录/2.md",
+      "sha256": "b08547633439bdc0bd09bf477da3324b2eb261a16395d1edac2796e41e8514a4",
+      "bytes": 116
+    }
+  ],
+  "directories": [
+    {
+      "volume_id": "V1",
+      "directory": "正文/V1-固定目录",
+      "from": 1,
+      "to": 4
+    }
+  ],
+  "plan_sha256": "dded731840ddffd4c9a2f82e8da059fe1841b9b47e38e350b9b83d74d58b0a46",
+  "request": {
+    "expected_revision": 8,
+    "expected_generation": 0,
+    "expected_build_id": "4d852e5c8e7e738dbe4773d585ff84859449e7d23eafce24d60f3baf62902dd0",
+    "expected_executor_build_id": "4d852e5c8e7e738dbe4773d585ff84859449e7d23eafce24d60f3baf62902dd0",
+    "operation_id": "79e37e84-378a-4bad-8427-5122113ab916",
+    "plan_sha256": "dded731840ddffd4c9a2f82e8da059fe1841b9b47e38e350b9b83d74d58b0a46",
+    "mapping": [
+      {
+        "unit": 1,
+        "from": "正文/V1-初卷/1.md",
+        "to": "正文/V1-固定目录/1.md",
+        "sha256": "8c574faad0d59dc12aac7fc1ebdb20400cb78f5533ff59ed26363d708f29833c"
+      },
+      {
+        "unit": 2,
+        "from": "正文/V1-初卷/2.md",
+        "to": "正文/V1-固定目录/2.md",
+        "sha256": "b08547633439bdc0bd09bf477da3324b2eb261a16395d1edac2796e41e8514a4"
+      }
+    ],
+    "directories": [
+      {
+        "volume_id": "V1",
+        "directory": "正文/V1-固定目录",
+        "from": 1,
+        "to": 4
+      }
+    ],
+    "author_evidence": null
+  },
+  "note": "只改变路径；采用后 schema7，旧工具拒绝读取；正文原地移动，不复制正文备份。"
+}

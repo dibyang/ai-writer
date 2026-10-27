@@ -1,0 +1,80 @@
+✔ 纯移动保持历史消费、差量与审查覆盖，重复执行幂等，稳定目录延续 (3534.6705ms)
+✖ 正文移动中断可 complete，原文不复制 (3645.2746ms)
+✖ 正文移动中断可 rollback，原文不复制 (3679.534ms)
+✖ 目标占用、坏哈希、错误卷、过期预览不写业务状态；第三方修改不覆盖 (4045.0445ms)
+✔ 原地只读验证的工具更新不在验证目录复制正文 (13053.3926ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 2
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28063.7556
+
+✖ failing tests:
+
+test at tests\relocation.test.mjs:19:48
+✖ 正文移动中断可 complete，原文不复制 (3645.2746ms)
+  Error: 存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:60:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:16:55)
+      at assertReady (file:///D:/work/other/ai-writer/lib/revisions.mjs:66:77)
+      at Object.guardWrite (file:///D:/work/other/ai-writer/lib/revisions.mjs:71:5)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:98:42)
+      at Object.recover (file:///D:/work/other/ai-writer/lib/relocation.mjs:81:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:845:56)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/relocation.test.mjs:22:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14) {
+    code: 'TRANSACTION_PENDING',
+    transactions: [ { id: '19ff0d66-b617-4a4e-99ff-280f891ccd19', kind: 'draft-relocation', session_id: undefined, status: 'applying' } ]
+  }
+
+test at tests\relocation.test.mjs:19:48
+✖ 正文移动中断可 rollback，原文不复制 (3679.534ms)
+  Error: 存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。
+      at userError (file:///D:/work/other/ai-writer/lib/help.mjs:60:68)
+      at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:16:55)
+      at assertReady (file:///D:/work/other/ai-writer/lib/revisions.mjs:66:77)
+      at Object.guardWrite (file:///D:/work/other/ai-writer/lib/revisions.mjs:71:5)
+      at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:98:42)
+      at Object.recover (file:///D:/work/other/ai-writer/lib/relocation.mjs:81:12)
+      at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:845:56)
+      at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/relocation.test.mjs:22:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14) {
+    code: 'TRANSACTION_PENDING',
+    transactions: [ { id: 'd9b941f3-288d-4ece-8b39-f65339565a7c', kind: 'draft-relocation', session_id: undefined, status: 'applying' } ]
+  }
+
+test at tests\relocation.test.mjs:24:1
+✖ 目标占用、坏哈希、错误卷、过期预览不写业务状态；第三方修改不覆盖 (4045.0445ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: 存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/relocation.test.mjs:28:211)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: 存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。
+        at userError (file:///D:/work/other/ai-writer/lib/help.mjs:60:68)
+        at fail (file:///D:/work/other/ai-writer/lib/revisions.mjs:16:55)
+        at assertReady (file:///D:/work/other/ai-writer/lib/revisions.mjs:66:77)
+        at Object.guardWrite (file:///D:/work/other/ai-writer/lib/revisions.mjs:71:5)
+        at withLock (file:///D:/work/other/ai-writer/lib/workspace.mjs:98:42)
+        at Object.recover (file:///D:/work/other/ai-writer/lib/relocation.mjs:81:12)
+        at main (file:///D:/work/other/ai-writer/lib/workspace.mjs:845:56)
+        at call (file:///D:/work/other/ai-writer/tests/protection-fixture.mjs:14:59)
+        at file:///D:/work/other/ai-writer/tests/relocation.test.mjs:28:222
+        at getActual (node:assert:611:5),
+    operator: 'throws',
+    diff: 'simple'
+  }

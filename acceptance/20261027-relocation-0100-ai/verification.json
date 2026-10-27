@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "status": "Windows local candidate verified, unreleased",
+  "version": "0.10.0",
+  "content_id": "4d852e5c8e7e738dbe4773d585ff84859449e7d23eafce24d60f3baf62902dd0",
+  "archive": "D:\\work\\other\\ai-writer\\dist\\0.10.0-relocation-ai6\\ai-writer-0.10.0.zip",
+  "archive_sha256": "902497171aefe617b637246b27ea126886f8d48cb5590e3b8675a627c3228476",
+  "source_files_checked": 334,
+  "payload_files_checked": 335,
+  "tests": {
+    "total": 254,
+    "passed": 253,
+    "failed": 0,
+    "skipped": 1
+  },
+  "commands": {
+    "protected-package-tests": {
+      "exit_code": 0,
+      "elapsed_ms": 420700
+    },
+    "protected-package-doctor": {
+      "exit_code": 0,
+      "elapsed_ms": 2864
+    },
+    "scale36-protected": {
+      "exit_code": 0,
+      "elapsed_ms": 163664
+    },
+    "scale47-protected": {
+      "exit_code": 0,
+      "elapsed_ms": 214647
+    },
+    "post47-protected": {
+      "exit_code": 0,
+      "elapsed_ms": 57560
+    },
+    "review-chain-protected": {
+      "exit_code": 0,
+      "elapsed_ms": 20680
+    },
+    "review-apply-protected": {
+      "exit_code": 0,
+      "elapsed_ms": 29338
+    },
+    "copyfree-protected": {
+      "exit_code": 0,
+      "elapsed_ms": 47855
+    }
+  },
+  "flows": {
+    "scale36-protected": {
+      "ok": true,
+      "chapters": 36,
+      "body_bytes": 303813,
+      "body_sha_unchanged": true,
+      "source_hashes_unchanged": true,
+      "journals_unchanged": true,
+      "review_coverage_unchanged": true,
+      "manuscript_sha256": "b6a460d57c71659afdef52d9b7ad14605eed0924afffba6d79926f191971a642",
+      "update_body_copies": 0,
+      "migration_body_copies": 0,
+      "interrupted_after": 18,
+      "recovered": true,
+      "old_runtime_refused": true,
+      "next_path": "正文/V2-续卷/0037-下一次交接.md",
+      "source": "D:\\work\\other\\ai-writer\\.tmp\\relocation-ai6\\ai-writer-0.10.0",
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261027-relocation-0100-ai\\scenario\\scale36-protected",
+      "scope": "synthetic CLI mechanical verification only; no real works accessed or changed"
+    },
+    "scale47-protected": {
+      "ok": true,
+      "chapters": 47,
+      "body_bytes": 396763,
+      "body_sha_unchanged": true,
+      "source_hashes_unchanged": true,
+      "journals_unchanged": true,
+      "review_coverage_unchanged": true,
+      "manuscript_sha256": "af47d0489205010508631b6d234f65492394ae40b32fcf8d548c9b308bfd8a51",
+      "update_body_copies": 0,
+      "migration_body_copies": 0,
+      "interrupted_after": 23,
+      "recovered": true,
+      "old_runtime_refused": true,
+      "next_path": "正文/V5-再议号令/0048-下一次交接.md",
+      "source": "D:\\work\\other\\ai-writer\\.tmp\\relocation-ai6\\ai-writer-0.10.0",
+      "root": "D:\\work\\other\\ai-writer\\acceptance\\20261027-relocation-0100-ai\\scenario\\scale47-protected",
+      "scope": "synthetic CLI mechanical verification only; no real works accessed or changed"
+    },
+    "post47-protected": {
+      "ok": true,
+      "migrated_chapters": 47,
+      "appended": 48,
+      "edited": [
+        45,
+        46
+      ],
+      "replayed": [
+        45,
+        46,
+        47,
+        48
+      ],
+      "same_session_resumes": 3,
+      "paths_stable": true,
+      "unmodified_body_hashes_preserved": true,
+      "snapshot_unchanged": true,
+      "existing_works_modified": false,
+      "scope": "synthetic mechanical continuity validation, not literary acceptance"
+    },
+    "review-chain-protected": {
+      "ok": true,
+      "chapters": 36,
+      "migration_events": 2,
+      "historical_report_bytes_preserved": true,
+      "retained_issue_context_unchanged": true,
+      "historical_alias_drift_detected": true,
+      "alias_reuse_rejected": true,
+      "body_changes_restored": true,
+      "scope": "synthetic isolated verification"
+    },
+    "review-apply-protected": {
+      "ok": true,
+      "actual_revisions": 1,
+      "migrations": 2,
+      "adopted_issue_applied": true,
+      "existing_repair_acknowledged": true,
+      "verified": 2,
+      "scope": "synthetic CLI verification only"
+    },
+    "copyfree-protected": {
+      "ok": true,
+      "source": "D:\\work\\other\\ai-writer\\.tmp\\relocation-ai6\\ai-writer-0.10.0",
+      "results": [
+        {
+          "kind": "partial",
+          "direction": "complete",
+          "ok": true,
+          "body_unchanged": true,
+          "validation_body_files": 0
+        },
+        {
+          "kind": "validated",
+          "direction": "rollback",
+          "ok": true,
+          "body_unchanged": true,
+          "validation_body_files": 0
+        },
+        {
+          "kind": "validated",
+          "direction": "complete",
+          "ok": true,
+          "body_unchanged": true,
+          "validation_body_files": 0
+        }
+      ]
+    }
+  },
+  "existing_works_modified": false,
+  "committed": false,
+  "pushed": false,
+  "scope": "Synthetic CLI and regression verification; no literary or cross-platform acceptance claimed"
+}

@@ -1,0 +1,67 @@
+{
+  "ok": true,
+  "read_only": true,
+  "executor_build_id": "4df502b7e1748fc731029ed31e46b35d9fb39689bc526d58b1ff13cb45779330",
+  "project_id": "faa90309-7899-4bf9-93b8-28e7c94a9c72",
+  "revision": 6,
+  "state_sha256": "846327e5935f412a8b2381e6ae888883afa4359fe716cea41b95c9c2cb87335c",
+  "generation": 0,
+  "build_id": "4df502b7e1748fc731029ed31e46b35d9fb39689bc526d58b1ff13cb45779330",
+  "mapping": [
+    {
+      "unit": 1,
+      "from": "正文/1.md",
+      "to": "正文/V1-初卷/1.md",
+      "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+      "bytes": 57
+    },
+    {
+      "unit": 2,
+      "from": "正文/2.md",
+      "to": "正文/V1-初卷/2.md",
+      "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083",
+      "bytes": 57
+    }
+  ],
+  "directories": [
+    {
+      "volume_id": "V1",
+      "directory": "正文/V1-初卷",
+      "from": 1,
+      "to": 4
+    }
+  ],
+  "plan_sha256": "df6c30186a3ca86c2945aae10b98982fa0d3243ca877d3af4e47498d93ef3e0b",
+  "request": {
+    "expected_revision": 6,
+    "expected_generation": 0,
+    "expected_build_id": "4df502b7e1748fc731029ed31e46b35d9fb39689bc526d58b1ff13cb45779330",
+    "expected_executor_build_id": "4df502b7e1748fc731029ed31e46b35d9fb39689bc526d58b1ff13cb45779330",
+    "operation_id": "4d8007e9-405d-494e-b5f6-81582a0c5d30",
+    "plan_sha256": "df6c30186a3ca86c2945aae10b98982fa0d3243ca877d3af4e47498d93ef3e0b",
+    "mapping": [
+      {
+        "unit": 1,
+        "from": "正文/1.md",
+        "to": "正文/V1-初卷/1.md",
+        "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197"
+      },
+      {
+        "unit": 2,
+        "from": "正文/2.md",
+        "to": "正文/V1-初卷/2.md",
+        "sha256": "a8ec71355af9640b788a92398b5e270c2597107ea45c18c5ba56c1dfa549c083"
+      }
+    ],
+    "directories": [
+      {
+        "volume_id": "V1",
+        "directory": "正文/V1-初卷",
+        "from": 1,
+        "to": 4
+      }
+    ],
+    "author_evidence": null
+  },
+  "note": "只改变路径；采用后 schema7，旧工具拒绝读取；正文通过 rename 移动，不复制备份。"
+}

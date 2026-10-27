@@ -1,0 +1,134 @@
+{
+  "schema_version": 6,
+  "revision": 2,
+  "project_id": "faa90309-7899-4bf9-93b8-28e7c94a9c72",
+  "baseline": {
+    "characters": {},
+    "threads": [],
+    "timeline": []
+  },
+  "snapshot": {
+    "characters": {},
+    "threads": [],
+    "timeline": [
+      "核对1"
+    ],
+    "ledger": {}
+  },
+  "units": [
+    {
+      "unit": 1,
+      "draft": "正文/1.md",
+      "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+      "summary": "第1次核对",
+      "source_hashes": {
+        "writer.json": "a70146a71de944ba0aa959901c5310f47242be280b401add5614f91134603ba6",
+        ".writer/state.json": "fe62c525aa87e44fd0a1378a930cecd4563d01e2a19b35460b190be8e2b069db",
+        "大纲/单元/0001.json": "bbbcc1b80f14ca6671ed710743d0bfdd70f8cfc6cc205b2c935513033387636f",
+        "设定/作品定位.md": "c7ba6bf8b393045d3b8fcd97c7ac16b61744fffeefbe5761cf875c80b31e48aa",
+        "设定/文风.md": "44df703be13c0e525aa1c9f357fed98e871de027fdeb8772be155124e85018ab",
+        "设定/权威规则.md": "52bfda81bb5e5ae95e2c3c6774437440d38474792b922d0a0d4818b0090f97b2"
+      },
+      "fingerprint": "e649e0caf3ced5b611f3f7634d37e0e5bbb6290450b9c378a9e467acfb808b1b",
+      "status": "draft-recorded",
+      "authorization": {
+        "stage": "trial",
+        "event": {
+          "ref": ".writer/objects/604e4a40-9e2d-48b3-9ca0-27d284810a8a.json",
+          "sha256": "a71feb64430ba47d5cb0da026548daac1628972962abd671d8679b219a2883e8"
+        },
+        "action": "draft"
+      },
+      "source_bindings": {},
+      "decision_bindings": [],
+      "tool_build_id": "8105ddc46de07dca1b0322dab03e4db5133b20ba35b7d9d7a619e3188dca9d8b",
+      "journal": ".writer/journal/3dcac06f-1efe-4297-a669-e4c152183d63.json",
+      "journal_sha256": "1369f879e7be5c21a682cd7d883e8b431db311d86185d0a12a67bcab50ef1ff0"
+    }
+  ],
+  "governance": {
+    "stage": "trial",
+    "task": "合成验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 1,
+        "to": 2
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "仅两章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "decisions": {},
+  "governance_events": [
+    {
+      "ref": ".writer/objects/604e4a40-9e2d-48b3-9ca0-27d284810a8a.json",
+      "sha256": "a71feb64430ba47d5cb0da026548daac1628972962abd671d8679b219a2883e8"
+    }
+  ],
+  "operations": {
+    "review-apply-source-fixed-draft": {
+      "input_sha256": "846f4b5fb973a6fce21586d7597a19147336551137a40dae0f6d717193e13568",
+      "result": {
+        "ok": true,
+        "revision": 1,
+        "operation_id": "review-apply-source-fixed-draft",
+        "event": {
+          "ref": ".writer/objects/604e4a40-9e2d-48b3-9ca0-27d284810a8a.json",
+          "sha256": "a71feb64430ba47d5cb0da026548daac1628972962abd671d8679b219a2883e8"
+        }
+      }
+    }
+  },
+  "source_versions": {},
+  "source_ranges": [],
+  "source_events": [],
+  "source_operations": {},
+  "impact_pending": {},
+  "committed_revisions": [],
+  "review_workflow": {
+    "reports": {},
+    "issues": {},
+    "events": [],
+    "operations": {}
+  },
+  "tool_control": {
+    "generation": 0,
+    "installed": null,
+    "events": [],
+    "operations": {},
+    "enable_id": null
+  },
+  "governance_binding": {
+    "ref": ".writer/objects/604e4a40-9e2d-48b3-9ca0-27d284810a8a.json",
+    "sha256": "a71feb64430ba47d5cb0da026548daac1628972962abd671d8679b219a2883e8"
+  }
+}

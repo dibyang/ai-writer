@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "enabled": true,
+  "revision": 41,
+  "counts": {
+    "retained": 1
+  },
+  "issues": [
+    {
+      "id": "I_KEEP",
+      "type": "optional_style",
+      "severity": "suggestion",
+      "confidence": "medium",
+      "statement": "合成可选措辞意见",
+      "suggestion": "允许保留",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/V1-初卷/0001.md",
+          "sha256": "f5429fa27fe7e39da50740a681d73b62eea90be4d5ad6838b1c6ad4206b6213d",
+          "line": 3,
+          "quote": "柜上的木匣没有移动"
+        }
+      ],
+      "status": "retained",
+      "origin": {
+        "review_ref": ".writer/reviews/46ac9ed5-5852-4583-b400-d47ed932e289.json",
+        "review_sha256": "7a32c63de525a5223e2f6b36b5f930815af8e308126035d4046237e453b25351",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/V1-初卷/0001.md",
+            "sha256": "f5429fa27fe7e39da50740a681d73b62eea90be4d5ad6838b1c6ad4206b6213d",
+            "dependency": "ce1e66bd5d171ab2b7cb625a9be76cda45e9ceb6e5d9f9225588aa0207f70c0c"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/1ce433f8-29f7-4efb-8900-cc8f00236610.json",
+          "sha256": "a570f211407913819cba251657a812970bc3d149eaae1a04134cc97b64cb4a92"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "author",
+        "author_evidence": {
+          "local_source": "研究/验证授权.md",
+          "source_sha256": "9df99be305f322dcd74b95518c77031d83ac931223befdce46dbd47ef52a8656",
+          "quote": "仅用于合成 36 章验证：允许限定写作、工具更新、纯路径迁移、修订和明确的中断恢复。不是实际作品授权。",
+          "locator": "synthetic fixture line 1",
+          "recorded_by": "Codex synthetic validation",
+          "frozen_ref": ".writer/objects/9df99be305f322dcd74b95518c77031d83ac931223befdce46dbd47ef52a8656.txt"
+        },
+        "disposition": "retained",
+        "reason": "合成验证保留原句",
+        "author_choice": {
+          "disposition": "retained",
+          "evidence": {
+            "local_source": "研究/验证授权.md",
+            "source_sha256": "9df99be305f322dcd74b95518c77031d83ac931223befdce46dbd47ef52a8656",
+            "quote": "仅用于合成 36 章验证：允许限定写作、工具更新、纯路径迁移、修订和明确的中断恢复。不是实际作品授权。",
+            "locator": "synthetic fixture line 1",
+            "recorded_by": "Codex synthetic validation",
+            "frozen_ref": ".writer/objects/9df99be305f322dcd74b95518c77031d83ac931223befdce46dbd47ef52a8656.txt"
+          }
+        },
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/V1-初卷/0001.md",
+            "sha256": "f5429fa27fe7e39da50740a681d73b62eea90be4d5ad6838b1c6ad4206b6213d",
+            "dependency": "ce1e66bd5d171ab2b7cb625a9be76cda45e9ceb6e5d9f9225588aa0207f70c0c"
+          }
+        ]
+      },
+      "application": null,
+      "verification": null,
+      "binding": {
+        "ref": ".writer/objects/ad4cdf69-2ccc-4ae8-84f9-af6dd8708942.json",
+        "sha256": "f9761ca2febac1c78866051e7e47eebfda2361fab078bb06f2c4509121bdc12f"
+      },
+      "effective_status": "retained",
+      "context_changed": false,
+      "nature": "disposition-not-author-finalization"
+    }
+  ],
+  "note": "保留不等于修复；可选建议不自动变成必改。旧复核历史保留，版本变化会显示需重核。"
+}

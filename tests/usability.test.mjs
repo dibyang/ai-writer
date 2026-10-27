@@ -92,7 +92,8 @@ test('独立作品帮助、所有用户指南链接及新工具可离开主项�
     const file = path.join(root, 'docs', name), body = fs.readFileSync(file, 'utf8');
     for (const match of body.matchAll(/\]\(([^)]+)\)/g)) {
       if (/^(?:https?:|#)/.test(match[1])) continue;
-      assert.ok(fs.existsSync(path.resolve(path.dirname(file), match[1])), `${name}: ${match[1]}`);
+      // A Markdown section fragment is not part of the filesystem filename.
+      assert.ok(fs.existsSync(path.resolve(path.dirname(file), match[1].split('#')[0])), `${name}: ${match[1]}`);
     }
   }
   const child = path.join(root, '子作品');

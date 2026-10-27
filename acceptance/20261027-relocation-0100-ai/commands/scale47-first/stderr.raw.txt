@@ -1,0 +1,24 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"exe":"C:\\Program Files\\nodejs\\node.exe","args":["D:\\work\\other\\ai-writer\\.tmp\\relocation-ai1\\ai-writer-0.10.0\\bin\\ai-writer.mjs","tool","update","--project","D:\\work\\other\\ai-writer\\acceptance\\20261027-relocation-0100-ai\\scenario\\scale47-first","--input","D:\\work\\other\\ai-writer\\acceptance\\20261027-relocation-0100-ai\\inputs\\scale47-first-248-update.json"],"cwd":"D:\\work\\other\\ai-writer","started_at":"2026-10-27T03:35:53.911Z","elapsed_ms":2195,"exit_code":2,"signal":null,"input":{"file":"D:\\work\\other\\ai-writer\\acceptance\\20261027-relocation-0100-ai\\inputs\\scale47-first-248-update.json","sha256":"836b72229f36d377dd745aaec92635ff7c3375afa66f8240d8eab6168d145975"},"before_state_sha256":"cc09c8e389630a3c03a040d2b71fb5fa1da58e0c892dd8a911a1b1fd6997310e","after_state_sha256":"cc09c8e389630a3c03a040d2b71fb5fa1da58e0c892dd8a911a1b1fd6997310e","build_before":{"root":"D:\\work\\other\\ai-writer\\.tmp\\relocation-ai1\\ai-writer-0.10.0","version":"0.10.0","runtime_guard_id":"3d9e8dd65e8379cd39b39fda9da80ea55b859714ba663f0590a769051c9df350","basis":"disk bytes observed around a fresh CLI process; not module-byte attestation"},"build_after":{"root":"D:\\work\\other\\ai-writer\\.tmp\\relocation-ai1\\ai-writer-0.10.0","version":"0.10.0","runtime_guard_id":"3d9e8dd65e8379cd39b39fda9da80ea55b859714ba663f0590a769051c9df350","basis":"disk bytes observed around a fresh CLI process; not module-byte attestation"},"runtime_files_stable":true}
+
+
+2 !== 0
+
+    at run (file:///D:/work/other/ai-writer/acceptance/20261027-relocation-0100-ai/scale-flow.mjs:14:290)
+    at call (file:///D:/work/other/ai-writer/acceptance/20261027-relocation-0100-ai/scale-flow.mjs:15:255)
+    at file:///D:/work/other/ai-writer/acceptance/20261027-relocation-0100-ai/scale-flow.mjs:39:15
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.15.0

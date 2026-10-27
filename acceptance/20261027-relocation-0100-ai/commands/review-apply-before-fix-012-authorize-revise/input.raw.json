@@ -1,0 +1,52 @@
+{
+  "expected_revision": 4,
+  "operation_id": "review-apply-before-fix-revise",
+  "workflow": {
+    "stage": "revision",
+    "task": "合成验证",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 1,
+        "to": 2
+      },
+      "stop_conditions": [
+        "仅两章"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "missing",
+        "refs": [],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "author_evidence": {
+    "local_source": "研究/授权.md",
+    "source_sha256": "36e1c81c7ce5ddac3c4f159fad7d09b63865fa987fa418926c37c8599c7a8e03",
+    "quote": "合成验证允许两章试写、修订、迁移、意见处置和恢复，不是实际作品授权。",
+    "locator": "synthetic fixture",
+    "recorded_by": "Codex"
+  }
+}

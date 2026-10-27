@@ -1,0 +1,116 @@
+{
+  "kind": "review-workflow",
+  "payload": {
+    "issue": {
+      "id": "I_FIX",
+      "type": "continuity",
+      "severity": "minor",
+      "confidence": "high",
+      "statement": "合成待修复项1",
+      "suggestion": "增加核对动作",
+      "evidence": [
+        {
+          "unit": 1,
+          "draft": "正文/1.md",
+          "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+          "line": 3,
+          "quote": "铜片留在柜上"
+        }
+      ],
+      "status": "verified",
+      "origin": {
+        "review_ref": ".writer/reviews/521e288a-3b8d-4d46-886f-83cef981187f.json",
+        "review_sha256": "3999ad4f9e1d0c747bea11aa9e75ed37e05b8601b306b05cc53564ab35449f59",
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/1.md",
+            "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+            "dependency": "676db7802e71ea48de7a73a292bf58a596ddfb043fe70d0ccbf2fe97b95560c1"
+          }
+        ]
+      },
+      "history": [
+        {
+          "ref": ".writer/objects/1a11dec7-76fc-4879-8e40-fac40d5c642c.json",
+          "sha256": "76b11918a2e6b170336d57db9e00e12d147081c116fad1fefd55df5e817b0d38"
+        },
+        {
+          "ref": ".writer/objects/9eb7ce83-8b9a-4f7e-aa4a-760ac911205f.json",
+          "sha256": "309bf739f80f48b84ea4c304f3ee4b279d8c1522eeacd3bfc3d5bdcdb1d35fd8"
+        },
+        {
+          "ref": ".writer/objects/415d3295-dd1b-4d05-9f6a-1aed6779fbce.json",
+          "sha256": "24d8658d8a391ad2e2c1384315b98bb771c6cd93bf49d2dbdd5c7214d027b8c9"
+        }
+      ],
+      "resolution": {
+        "decision_actor": "agent-within-authorized-scope",
+        "authorization": {
+          "ref": ".writer/objects/2776f20c-3f4c-426a-a3cb-5844b5b7b011.json",
+          "sha256": "41124aac78e4575266226475168759175763513c820041cdf0ec31158977cd4f"
+        },
+        "disposition": "adopted",
+        "reason": "合成授权修订",
+        "author_choice": null,
+        "basis_units": [
+          {
+            "unit": 1,
+            "draft": "正文/1.md",
+            "sha256": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+            "dependency": "676db7802e71ea48de7a73a292bf58a596ddfb043fe70d0ccbf2fe97b95560c1"
+          }
+        ]
+      },
+      "application": {
+        "commit_id": "eaaf2ccf-cf5f-424a-9c0e-67560223be29",
+        "commit_binding": {
+          "ref": ".writer/objects/eaaf2ccf-cf5f-424a-9c0e-67560223be29.json",
+          "sha256": "1119e16bc7f7192e558ebfdaadfe49a86481cbc8036ed12fdafe8f16a496068d"
+        },
+        "transaction_id": "014bd019-2c94-4515-8d09-5c892673d3ef",
+        "reason": "绑定真实修订和双重迁移",
+        "changes": [
+          {
+            "unit": 1,
+            "draft": "正文/1.md",
+            "before": "d9525a2b031b3036602fd0461e32392e56671822b2685e05743d6a4c3fbba197",
+            "after": "8c574faad0d59dc12aac7fc1ebdb20400cb78f5533ff59ed26363d708f29833c"
+          }
+        ],
+        "after_units": [
+          {
+            "unit": 1,
+            "draft": "正文/V1-固定目录/1.md",
+            "sha256": "8c574faad0d59dc12aac7fc1ebdb20400cb78f5533ff59ed26363d708f29833c",
+            "dependency": "03ce1dc9f1b3c8977febf400b73c1430d9327641ed8cdc39aa857c1c70c0d2d0"
+          }
+        ]
+      },
+      "verification": {
+        "review_ref": ".writer/reviews/184a1298-4f1d-41ee-9c8e-1630160a74d4.json",
+        "review_sha256": "2f6a756018f65dabd19d39b464f80a8ffb2628bb33cb441cd5b53df332b69e5f",
+        "reviewer": "Codex synthetic test",
+        "conclusion": "resolved",
+        "reason": "合成闭环检验",
+        "rechecked_context": false,
+        "application_commit_id": "eaaf2ccf-cf5f-424a-9c0e-67560223be29",
+        "revision_session": null,
+        "units": [
+          {
+            "unit": 1,
+            "draft": "正文/V1-固定目录/1.md",
+            "sha256": "8c574faad0d59dc12aac7fc1ebdb20400cb78f5533ff59ed26363d708f29833c",
+            "dependency": "03ce1dc9f1b3c8977febf400b73c1430d9327641ed8cdc39aa857c1c70c0d2d0"
+          },
+          {
+            "unit": 2,
+            "draft": "正文/V1-固定目录/2.md",
+            "sha256": "b08547633439bdc0bd09bf477da3324b2eb261a16395d1edac2796e41e8514a4",
+            "dependency": "a41d344960863a8f8702f15d353d5dc03b03fef093b009962a884374a425537f"
+          }
+        ]
+      }
+    }
+  }
+}
