@@ -1,0 +1,73 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-27T10:45:59.926Z",
+  "operation_id": "AL-session-a-drafting-113-118",
+  "base_revision": 461,
+  "payload": {
+    "stage": "drafting",
+    "task": "AL合成副本续写113—118；本独立会话仅细化并写113—114后交接，后续会话从115恢复。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 113,
+        "to": 118
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "本会话完成114后停，不写115及以后正文。",
+        "不修改旧章、不提交修订、不操作真实作品/旧封存，不Git提交/推送/发布。",
+        "上下文超预算保留失败并显式扩容；真实复读后preview再record。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md",
+          "正文/0027-他愿意留下的那一段.md",
+          "正文/0095-先写今天这一页.md",
+          "正文/0100-念到这一页的末尾.md",
+          "正文/0108-先陪你走这一趟.md",
+          "正文/0110-坐下以后还想说话.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md"
+        ],
+        "unresolved_ids": [
+          "115-118待前章实际结果后细化"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续通过 Codex 从现有 112 章合成副本扩增长篇实跑，增加章节数量和单章篇幅，重点验证修复后的分卷迁移、多轮跨会话恢复、跨卷伏笔回收和多处旧章修订后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品，不提交、不推送。",
+    "local_source": "研究/AL轮真实任务授权.md",
+    "source_sha256": "4ca7a2b2c8e358e758d293a19042b43c938e80f87ae0e239c92534e2b7aad114",
+    "locator": "本轮真实任务授权文件第1行；未提供可核会话ID",
+    "recorded_by": "session-a 独立Codex创作会话",
+    "frozen_ref": ".writer/objects/4ca7a2b2c8e358e758d293a19042b43c938e80f87ae0e239c92534e2b7aad114.txt"
+  }
+}

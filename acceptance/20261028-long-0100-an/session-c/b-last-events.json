@@ -1,0 +1,106 @@
+{
+  "source_sha256": "d5d5ec496db2385622971b918ebaeacf909fecf216d61f1f78cae5c21a6755e8",
+  "line_count": 252,
+  "invalid_lines": [
+    {
+      "line": 252,
+      "bytes": 17051,
+      "error": "Unterminated string in JSON at position 10269 (line 1 column 10270)"
+    }
+  ],
+  "last_valid_events": [
+    {
+      "line": 246,
+      "event": {
+        "type": "item.started",
+        "item": {
+          "id": "item_126",
+          "type": "file_change",
+          "changes": [
+            {
+              "path": "D:\\work\\other\\ai-writer\\acceptance\\20261028-long-0100-an\\b-session-report.mjs",
+              "kind": "add"
+            }
+          ],
+          "status": "in_progress"
+        }
+      }
+    },
+    {
+      "line": 247,
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_126",
+          "type": "file_change",
+          "changes": [
+            {
+              "path": "D:\\work\\other\\ai-writer\\acceptance\\20261028-long-0100-an\\b-session-report.mjs",
+              "kind": "add"
+            }
+          ],
+          "status": "completed"
+        }
+      }
+    },
+    {
+      "line": 248,
+      "event": {
+        "type": "item.started",
+        "item": {
+          "id": "item_127",
+          "type": "command_execution",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node b-session-report.mjs'",
+          "aggregated_output": "",
+          "exit_code": null,
+          "status": "in_progress"
+        }
+      }
+    },
+    {
+      "line": 249,
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_127",
+          "type": "command_execution",
+          "command": "\"C:\\\\Users\\\\admin\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node b-session-report.mjs'",
+          "aggregated_output": "{\"report\":\"session-b-report.md\",\"bytes\":17132,\"sha256\":\"4d68184af72bade0307075ba574a57b198fe1ad68e5bbc043e5ef2588a12a0c6\",\"identity\":{\"observed_at\":\"2026-10-28T03:28:47.836Z\",\"a_thread_id\":\"01a18048-1168-7161-af65-f3b810f7ea46\",\"b_thread_id\":\"01a18071-3eac-74a2-83ea-a23874bc062a\",\"current_env_thread_id\":\"01a18071-3eac-74a2-83ea-a23874bc062a\",\"independent_threads\":true,\"logs\":[\"session-a.jsonl\",\"session-b.jsonl\"],\"active_log_not_sealed\":true},\"checkpoint\":{\"id\":\"fe5fe68c-ef72-4ad8-9554-075db8d08f5f\",\"parent\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261028-long-0100-an\\\\work\",\"workspace\":\"D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261028-long-0100-an\\\\work\\\\.writer\\\\revisions\\\\fe5fe68c-ef72-4ad8-9554-075db8d08f5f\\\\workspace\",\"base_revision\":481,\"main_revision\":481,\"candidate_revision\":485,\"next_replay_unit\":119,\"registered_replay_units\":[116,117,118],\"remaining_replay_units\":[119,120],\"scope\":{\"from\":116,\"through\":120},\"base_sha256\":\"673479b5ba06dd606ae2eb469809cc46c1a31bee6517e0fbde34a431316d667f\",\"base_state_sha256\":\"c1f806b08dd3698e5eb388cef4caa23da52f7f725b068e4bf9e152c9f74479e9\",\"main_state_sha256\":\"c1f806b08dd3698e5eb388cef4caa23da52f7f725b068e4bf9e152c9f74479e9\",\"candidate_state_sha256\":\"e6ff8925c37762bc3a4091d46948103b30d805e106cbbd62bd484ac6c4d80915\",\"session_sha256\":\"cdfb8f36846e17bdb49d525f4e70c79d5d0a59af0dbc5bb6ab96444d1f02f9ce\",\"token_location\":\"session-b/owner-recovery.json (local only)\",\"status\":\"editing\",\"prepared\":false,\"committed\":false}}\n",
+          "exit_code": 0,
+          "status": "completed"
+        }
+      }
+    },
+    {
+      "line": 250,
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_128",
+          "type": "agent_message",
+          "text": "交接报告已写好，正在做最后回读并更新 AN 恢复入口。报告明确区分了已完成的 116—118 重登、待重登的 119—120，以及下一独立会话必须执行的原 ID resume 和最终尾段连读。后续恢复说明也保留了当前基线、哈希和预期警告。\n"
+        }
+      }
+    },
+    {
+      "line": 251,
+      "event": {
+        "type": "item.started",
+        "item": {
+          "id": "item_129",
+          "type": "mcp_tool_call",
+          "server": "fastctx",
+          "tool": "read",
+          "arguments": {
+            "file_path": "D:\\work\\other\\ai-writer\\acceptance\\20261028-long-0100-an\\session-b-report.md",
+            "limit": 190
+          },
+          "result": null,
+          "error": null,
+          "status": "in_progress"
+        }
+      }
+    }
+  ],
+  "report_exists": true
+}

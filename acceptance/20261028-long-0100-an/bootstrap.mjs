@@ -1,0 +1,8 @@
+import fs from 'node:fs'; import path from 'node:path'; import crypto from 'node:crypto'; import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)), src=path.resolve(base,'../20261027-long-0100-al'), dest=path.join(base,'work');
+if(fs.existsSync(dest)) throw Error('Destination exists');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'), manifest=fs.readFileSync(path.join(src,'seal-files.json')), seal=JSON.parse(fs.readFileSync(path.join(src,'seal.json')));
+if(sha(manifest)!==seal.manifest_sha256) throw Error('Manifest mismatch');
+const rows=JSON.parse(manifest).filter(x=>x.file.startsWith('work/')); fs.mkdirSync(dest,{recursive:true}); let bytes=0;
+for(const [i,r] of rows.entries()){const b=fs.readFileSync(path.join(src,r.file));if(b.length!==r.bytes||sha(b)!==r.sha256)throw Error('Source mismatch '+r.file);const p=path.join(dest,r.file.slice(5));fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,b,{flag:'wx'});if(sha(fs.readFileSync(p))!==r.sha256)throw Error('Copy mismatch '+r.file);bytes+=b.length;if((i+1)%500===0)fs.writeFileSync(path.join(base,'bootstrap-progress.json'),JSON.stringify({files:i+1,total:rows.length,bytes}));}
+const state=JSON.parse(fs.readFileSync(path.join(dest,'.writer/state.json')));if(state.units.length!==118||state.revision!==474)throw Error('Unexpected baseline');const out={ok:true,files:rows.length,bytes,source_manifest_sha256:sha(manifest),revision:state.revision,units:state.units.length};fs.writeFileSync(path.join(base,'bootstrap-verification.json'),JSON.stringify(out,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(out));

@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url)), work=path.join(root,'work');
+const state=JSON.parse(fs.readFileSync(path.join(work,'.writer/state.json')));
+if(state.revision!==480) throw Error('Unexpected revision');
+const source='研究/AN会话B真实用户授权.md', bytes=fs.readFileSync(path.join(work,source));
+const quote='按真实授权及原生 workflow 准备跨多处旧章的有限修订范围，选择两处确有净收益的小修订，若找不到则明确标记受控测试改动，不能伪造文学提升；原稿和候选均保留。';
+if(!bytes.toString('utf8').includes(quote)) throw Error('Quote mismatch');
+const prior=JSON.parse(fs.readFileSync(path.join(root,'commands/a-007-workflow-draft/input.raw.json')));
+const input={expected_revision:480,operation_id:'AN-b-finite-revise-116-120-v1',author_evidence:{quote,local_source:source,source_sha256:crypto.createHash('sha256').update(bytes).digest('hex'),locator:'2026-10-28 本独立会话用户消息第二段；本地第7行，无消息ID',recorded_by:'Codex AN session B actual user instruction'},workflow:{stage:'revision',task:'AN会话B：复核V15/V18至V19边界，独立修订116与120两处表达；116—120尾段保守重登，本会话仅116—118，停点留给下个独立会话resume；禁止prepare/commit。',authorization:{allowed_actions:['discuss','revise'],draft_range:null,revise_range:{from:116,to:120},stop_conditions:['本会话只回放116—118；119—120待下一独立会话原ID/token/base恢复后再核读重登。','禁止prepare/commit，不写121及以后。','仅写AN目录；主稿正文不动，旧封存、真实作品、工具、Git不动。','产品失败或来源/基线冲突立即停止依赖步骤并保护现场；不改state或刷新旧哈希。']},planning:prior.workflow.planning}};
+fs.writeFileSync(path.join(root,'session-b/workflow.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(path.join(root,'session-b/begin.json'),JSON.stringify({expected_revision:481,owner:'AN-session-b-independent-116-120-partial-replay',from:116,through:120},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({source_sha256:input.author_evidence.source_sha256,scope:input.workflow.authorization.revise_range}));

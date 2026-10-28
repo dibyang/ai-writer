@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const root=new URL('./work/',import.meta.url),unit=Number(process.argv[2]);
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(new URL(p,root))).digest('hex');
+const template=JSON.parse(fs.readFileSync(new URL(`.writer/drafts/AN-a-template${unit}.json`,root)));
+const state=JSON.parse(fs.readFileSync(new URL('.writer/state.json',root)));
+if(template.expected_revision!==state.revision)throw Error('template revision drift');
+const parts=['01','02','03'].map(n=>({path:`分段/AN-a-${String(unit).padStart(4,'0')}/${n}.md`,sha256:sha(`分段/AN-a-${String(unit).padStart(4,'0')}/${n}.md`)}));
+const input={unit,expected_revision:state.revision,draft:template.draft,parts,separator:'\n\n'};
+fs.writeFileSync(new URL(`研究/AN-a-assemble${unit}.json`,root),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({unit,draft:template.draft,parts:parts.map(p=>({path:p.path,han:(fs.readFileSync(new URL(p.path,root),'utf8').replace(/^#.*\r?\n/u,'').match(/\p{Script=Han}/gu)||[]).length}))}));

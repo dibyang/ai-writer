@@ -1,0 +1,66 @@
+{
+  "expected_revision": 475,
+  "operation_id": "AN-a-draft-119-120-v1",
+  "author_evidence": {
+    "quote": "本会话只做第一阶段：根据实际情节与既有分卷合约，规划并真实创作至少两章，目标每章汉字不少于 4200；分段、合章、实读、审查、预览、原生登记，保持事实与作者声音，不能靠机械重复凑篇幅。",
+    "local_source": "研究/AN轮真实用户授权.md",
+    "source_sha256": "cc4350bfaa187f9a3dc60b64b4155e572088bd10097a13c653a9403eab4d209f",
+    "locator": "本次用户消息第二段；本地原话文件第7行，无消息ID",
+    "recorded_by": "Codex AN session A actual user instruction"
+  },
+  "workflow": {
+    "stage": "drafting",
+    "task": "AN会话A：依据118已成稿规划并分段创作119—120，每章目标正文汉字至少4200；完整实读、审查、原生合章/preview/record后保存交接，不写121，不改旧章。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 119,
+        "to": 120
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "120登记、115—120滚动实读登记及本会话报告后停止新正文。",
+        "仅写AN work及父目录，不改旧封存、真实作品、工具、Git。",
+        "不将新卷计划、客户预期、发出或收款推成外部最终使用/文学验收。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AN轮119-122未来规划.md"
+        ],
+        "unresolved_ids": [
+          "121—122只保留职责，待120实际后果再细化"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/AN轮119-122未来规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0119.json",
+          "大纲/单元/0120.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}

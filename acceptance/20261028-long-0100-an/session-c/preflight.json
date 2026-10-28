@@ -1,0 +1,144 @@
+{
+  "at": "2026-10-28T03:32:38.330Z",
+  "thread": "01a1808e-a5a4-75f3-9ef1-e17ffdb7e2c8",
+  "observations": [
+    {
+      "name": "main-state",
+      "file": "work/.writer/state.json",
+      "sha256": "c1f806b08dd3698e5eb388cef4caa23da52f7f725b068e4bf9e152c9f74479e9"
+    },
+    {
+      "name": "candidate-state",
+      "file": "work\\.writer\\revisions\\fe5fe68c-ef72-4ad8-9554-075db8d08f5f\\workspace\\.writer\\state.json",
+      "sha256": "e6ff8925c37762bc3a4091d46948103b30d805e106cbbd62bd484ac6c4d80915"
+    },
+    {
+      "name": "base",
+      "file": "work\\.writer\\revisions\\fe5fe68c-ef72-4ad8-9554-075db8d08f5f\\base.json",
+      "sha256": "673479b5ba06dd606ae2eb469809cc46c1a31bee6517e0fbde34a431316d667f"
+    },
+    {
+      "name": "base-state",
+      "file": "work\\.writer\\revisions\\fe5fe68c-ef72-4ad8-9554-075db8d08f5f\\base-state.json",
+      "sha256": "c1f806b08dd3698e5eb388cef4caa23da52f7f725b068e4bf9e152c9f74479e9"
+    },
+    {
+      "name": "session",
+      "file": "work\\.writer\\revisions\\fe5fe68c-ef72-4ad8-9554-075db8d08f5f\\session.json",
+      "sha256": "cdfb8f36846e17bdb49d525f4e70c79d5d0a59af0dbc5bb6ab96444d1f02f9ce"
+    }
+  ],
+  "drafts_verified": 120,
+  "b_jsonl": {
+    "line_count": 252,
+    "invalid_lines": [
+      {
+        "line": 252,
+        "bytes": 17051,
+        "error": "Unterminated string in JSON at position 10269 (line 1 column 10270)"
+      }
+    ],
+    "last_valid": [
+      {
+        "line": 249,
+        "type": "item.completed",
+        "item_type": "command_execution",
+        "item_id": "item_127",
+        "text": null
+      },
+      {
+        "line": 250,
+        "type": "item.completed",
+        "item_type": "agent_message",
+        "item_id": "item_128",
+        "text": "交接报告已写好，正在做最后回读并更新 AN 恢复入口。报告明确区分了已完成的 116—118 重登、待重登的 119—120，以及下一独立会话必须执行的原 ID resume 和最终尾段连读。后续恢复说明也保留了当前基线、哈希和预期警告。\n"
+      },
+      {
+        "line": 251,
+        "type": "item.started",
+        "item_type": "mcp_tool_call",
+        "item_id": "item_129",
+        "text": null
+      }
+    ]
+  },
+  "native": {
+    "main": {
+      "revision": 481,
+      "units": 120
+    },
+    "candidate": {
+      "revision": 485,
+      "units": 118,
+      "governance": {
+        "stage": "revision",
+        "task": "AN会话B：复核V15/V18至V19边界，独立修订116与120两处表达；116—120尾段保守重登，本会话仅116—118，停点留给下个独立会话resume；禁止prepare/commit。",
+        "authorization": {
+          "allowed_actions": [
+            "discuss",
+            "revise"
+          ],
+          "draft_range": null,
+          "revise_range": {
+            "from": 116,
+            "to": 120
+          },
+          "stop_conditions": [
+            "本会话只回放116—118；119—120待下一独立会话原ID/token/base恢复后再核读重登。",
+            "禁止prepare/commit，不写121及以后。",
+            "仅写AN目录；主稿正文不动，旧封存、真实作品、工具、Git不动。",
+            "产品失败或来源/基线冲突立即停止依赖步骤并保护现场；不改state或刷新旧哈希。"
+          ]
+        },
+        "planning": {
+          "positioning": {
+            "status": "draft",
+            "refs": [
+              "设定/作品定位.md",
+              "设定/文风.md"
+            ],
+            "unresolved_ids": []
+          },
+          "structure": {
+            "status": "draft",
+            "refs": [
+              "大纲/AN轮119-122未来规划.md"
+            ],
+            "unresolved_ids": [
+              "121—122只保留职责，待120实际后果再细化"
+            ]
+          },
+          "volume": {
+            "status": "draft",
+            "refs": [
+              "大纲/AN轮119-122未来规划.md"
+            ],
+            "unresolved_ids": []
+          },
+          "outline": {
+            "status": "draft",
+            "refs": [
+              "大纲/单元/0119.json",
+              "大纲/单元/0120.json"
+            ],
+            "unresolved_ids": []
+          }
+        }
+      }
+    },
+    "session": {
+      "id": "fe5fe68c-ef72-4ad8-9554-075db8d08f5f",
+      "owner": "AN-session-b-independent-116-120-partial-replay",
+      "token_sha256": "7f5959aafd2c07396f979e20e8de619b56e0260ff3acf384067495633632df7d",
+      "project_id": "cd8e8d32-f685-41b1-8f52-5447fe29d399",
+      "build_id": "a1975b4561f7a4edc12adccc9bc08f74508941454988bdc9ec55ba2262623815",
+      "scope": {
+        "from": 116,
+        "through": 120
+      },
+      "status": "editing",
+      "base_sha256": "673479b5ba06dd606ae2eb469809cc46c1a31bee6517e0fbde34a431316d667f",
+      "created_at": "2026-10-28T03:04:32.511Z"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const recovery=JSON.parse(fs.readFileSync(path.join(root,'session-b/owner-recovery.json')));
+const [label,target,...args]=process.argv.slice(2);
+if(!/^d-[0-9]{3}-[a-z0-9-]+$/.test(label)||!['main','candidate'].includes(target))throw Error('d- unique label and main/candidate required');
+const project=target==='main'?path.join(root,'work'):recovery.workspace;
+if(args.some(x=>['begin','rewind','transfer','recover','unlock','abort'].includes(x)))throw Error('D does not replace original revision identity or baseline');
+const actual=args.map(x=>x==='$TOKEN'?recovery.token:x);
+const result=spawnSync(process.execPath,[path.join(root,'capture.mjs'),label,process.execPath,path.join(root,'work/.writer/tool/bin/ai-writer.mjs'),...actual,'--project',project],{cwd:root,windowsHide:true,stdio:'inherit'});
+process.exitCode=result.status??1;

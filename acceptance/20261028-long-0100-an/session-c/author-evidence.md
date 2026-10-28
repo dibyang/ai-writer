@@ -1,0 +1,7 @@
+# AN 会话 C 当前用户消息
+
+来源：当前独立 Codex 会话的用户消息，无可用消息 ID，不编造。下列原文是实际授权，不把冻结文件当作身份认证。
+
+用户授权：继续推进，恢复当前 Codex 实跑，完成第 119、120 章及后续多轮跨会话恢复、跨卷伏笔回收和多处旧章修订连续性验证，发现问题直接修复，保留完整记录，暂不修改现有作品，不提交、不推送。
+
+你是独立恢复会话，仅操作 acceptance/20261028-long-0100-an 合成副本。先读项目与 writer-project/novel/review 规则、session-a-report.md、session-b-final-audit.json、session-b.jsonl 最后事件、原生状态和 session-b/owner-recovery.json；B 已完成前半回放和审计，但写交接时网络重连长期无进展，外层停止进程，session-b-report.md 不存在。独立审计并使用 B 原修订 ID、token、workspace、base，原生 revision resume，不新建基线或覆盖已有记录。完整实读候选 116—120，回查必要旧卷原文，区分已发生、计划和未知。接续 next119，以原生 replay-input、独立实读六项审查、record-preview 和 record 重登119，核对来源哈希、引用和事实差量。然后停在 next120，写 session-c-report.md 和结构化检查点，保留 candidate/main/base、输入、双流、退出码及全部失败，供再一个独立 Codex 会话以相同 ID 恢复。不要 prepare/commit，不修改主稿/真实作品/已封存目录，不做 Git 提交或推送。产品命令经 capture.mjs 唯一 c- 标签；遇产品错误保留现场、定位并在授权范围修复，不能手改状态或刷新哈希规避保护。模型自检不能称真人验收。

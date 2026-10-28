@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-28T03:50:20.438Z",
+  "issue": "C omitted preflight report_exists=true and incorrectly repeated prompt absence",
+  "initial_preflight_report_exists": true,
+  "current_b_report_exists": true,
+  "b_report_bytes": 17132,
+  "b_report_sha256": "4d68184af72bade0307075ba574a57b198fe1ad68e5bbc043e5ef2588a12a0c6",
+  "b_report_full_read_in_C": true,
+  "b_report_not_created_or_modified_by_C": true,
+  "v1_delivery_verifier_failed": {
+    "script": "c-verify-delivery.mjs",
+    "exit_code": 1,
+    "line": 13,
+    "error": "AssertionError [ERR_ASSERTION]: true !== false; expected B report absent but actual exists"
+  },
+  "native_state_not_changed_by_correction": true
+}
