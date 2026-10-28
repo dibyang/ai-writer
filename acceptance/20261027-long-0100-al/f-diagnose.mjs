@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {isDeepStrictEqual as equal} from 'node:util';
+const base=path.dirname(fileURLToPath(import.meta.url)),main=path.join(base,'work');
+const get=(r,p)=>JSON.parse(fs.readFileSync(path.join(r,p))),rec=get(base,'session-d-recovery.json'),branch=rec.workspace;
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),digest=(r,p)=>hash(fs.readFileSync(path.join(r,p)));
+const save=(p,v)=>fs.writeFileSync(path.join(base,p),JSON.stringify(v,null,2)+'\n',{flag:'wx'});
+const m=get(main,'.writer/state.json'),c=get(branch,'.writer/state.json'),start=get(base,'session-f-start.json'),preview=get(base,'commands/f-010-preview118/stdout.raw.txt');
+const old=get(main,m.units[117].journal).patch;
+const normalize=x=>JSON.parse(JSON.stringify(x).replaceAll(c.units[109].sha256,m.units[109].sha256).replaceAll(c.units[111].sha256,m.units[111].sha256));
+const actual=normalize(preview.changes),diffs=[];
+function diff(a,b,p='root'){if(equal(a,b))return;if(a&&b&&typeof a==='object'&&typeof b==='object'&&Array.isArray(a)===Array.isArray(b)){for(const k of new Set([...Object.keys(a),...Object.keys(b)]))diff(a[k],b[k],p+'/'+k);}else diffs.push({path:p,preview:a,original:b});}
+diff(actual,old);
+const byAt=new Map(old.map(x=>[JSON.stringify(x.at),x]));
+const perOperation=actual.map(x=>({at:x.at,equal_original_at_same_path:equal(x,byAt.get(JSON.stringify(x.at)))}));
+const commands=fs.readdirSync(path.join(base,'commands')).filter(x=>x.startsWith('f-')).sort().map(label=>{const ref=`commands/${label}`,r=get(base,`${ref}/result.json`);return {label,exit_code:r.exit_code,stderr_bytes:fs.statSync(path.join(base,ref,'stderr.raw.txt')).size,runtime_files_stable:r.runtime_files_stable,input_sha256:r.input?.sha256??null,input_capture_matches:r.input?digest(base,`${ref}/input.raw.json`)===r.input.sha256:null,before:r.before_state_sha256,after:r.after_state_sha256};});
+const bodyRows=m.units.map(x=>({unit:x.unit,draft:x.draft,main_start:start.main_files[x.draft],main_now:digest(main,x.draft),candidate_start:start.branch_files[x.draft],candidate_now:digest(branch,x.draft)}));
+const units=[27,95,100,105,107,109,110,111,112,113,114,115,116,117,118];
+save('session-f-reading-manifest.json',{reviewer:'AL-session-f-Codex-informed-model-self-review',complete_read_units:units,rows:bodyRows.filter(x=>units.includes(x.unit)),note:'完整实读；未列章不冒称已读。118证据比较失败后仅在父目录保存清单，无正式review登记。'});
+const report={stopped:true,stop_reason:'118 preview delta deep comparison failed',product_preview_ok:preview.ok,findings:preview.findings,source_hashes:preview.source_hashes,original_patch_operations:old.length,preview_patch_operations:actual.length,perOperation,differences:diffs,original_patch:old,normalized_preview_patch:actual,main_state_unchanged:digest(main,'.writer/state.json')===start.main_state_sha256,main_units_unchanged:equal(m.units,start.main_units),candidate_revision:c.revision,candidate_registered:c.units.length,next:c.units.length+1,prior115_rows_unchanged:equal(c.units.slice(0,115),start.branch_units),all118_main_bodies_unchanged:bodyRows.every(x=>x.main_start===x.main_now),all118_candidate_bodies_unchanged:bodyRows.every(x=>x.candidate_start===x.candidate_now),bodyRows,main_state_sha256:digest(main,'.writer/state.json'),candidate_state_sha256:digest(branch,'.writer/state.json'),session:get(main,`.writer/revisions/${rec.id}/session.json`),commands};
+delete report.session.token_sha256;
+save('session-f-stopped-audit.json',report);
+console.log(JSON.stringify({stopped:true,main_state_unchanged:report.main_state_unchanged,candidate_revision:c.revision,candidate_registered:c.units.length,next:report.next,main_bodies_unchanged:report.all118_main_bodies_unchanged,candidate_bodies_unchanged:report.all118_candidate_bodies_unchanged,prior115_rows_unchanged:report.prior115_rows_unchanged,product_preview_ok:preview.ok,patch_counts:[old.length,actual.length],perOperation,differences:diffs,commands:commands.length},null,2));

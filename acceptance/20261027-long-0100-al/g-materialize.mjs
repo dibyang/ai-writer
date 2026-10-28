@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {fileURLToPath}from'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),rec=JSON.parse(fs.readFileSync(path.join(base,'session-d-recovery.json'))),root=rec.workspace,sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const audit=JSON.parse(fs.readFileSync(path.join(base,'session-g-start-audit.json'))),units=[27,95,100,105,107,109,110,111,112,113,114,115,116,117,118];
+const rows=audit.rows.filter(r=>units.includes(r.unit));for(const row of rows)assert.equal(sha(fs.readFileSync(path.join(root,row.draft))),row.candidate);
+const report='审查/AL-g-110-118-rolling-review.md',notes=fs.readFileSync(path.join(base,'session-g-semantic-notes.md'),'utf8');
+const table='\n## 本轮完整实读版本 SHA256\n\n|章|候选正文SHA256|\n|---|---|\n'+rows.map(r=>`|${r.unit}|${r.candidate}|`).join('\n')+'\n';
+fs.writeFileSync(path.join(root,report),notes+table,{flag:'wx'});
+fs.writeFileSync(path.join(root,'研究/AL-g-reading-manifest.json'),JSON.stringify({reviewer:'AL-session-g-Codex-informed-model-self-review',complete_read_units:units,rows,report,report_sha256:sha(fs.readFileSync(path.join(root,report)))},null,2)+'\n',{flag:'wx'});
+const input={from:110,to:118,kind:'model-self-review',report,source_hashes:Object.fromEntries(rows.filter(r=>r.unit>=110).map(r=>[r.draft,r.candidate]))};
+fs.writeFileSync(path.join(root,'.writer/drafts/AL-g-review110-118.json'),JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,complete_read_chapters:rows.length,report,report_sha256:sha(fs.readFileSync(path.join(root,report)))}));

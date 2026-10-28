@@ -1,0 +1,63 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-19T00:26:57.049Z",
+  "operation_id": "h-read-b-discuss-plan-075-v1",
+  "base_revision": 412,
+  "payload": {
+    "stage": "paused",
+    "task": "H轮 read-b：真实0.7.4→0.7.5更新后，只恢复、完整阅读原正文23–54章并讨论/规划；23–27是重读，28–54为本进程新增覆盖。下一真实进程读50–81。代理测试范围不代表作者新增文学采纳。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "保持106章；107与任何新章未授权，不创建正文、细纲或新卷契约。",
+        "旧revision仅只读，不resume/transfer或刷新构建绑定。",
+        "正文/units/snapshot与已消费来源保留；临时阅读范围不写入长期设定。",
+        "只写H目录；不联网、不子代理、不提交推送发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/F轮104-106现场续纲.md"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续通过 Codex 做百章规模的长篇实跑验证，重点覆盖新版工具下的多轮跨会话恢复、跨卷伏笔回收和多处旧章修改后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品。",
+    "local_source": "研究/H轮read-b任务与代理范围.md",
+    "source_sha256": "1de726db295f35aa11df0c70ecdf10f1e51ce026b11e806be928e1f42ccc6474",
+    "locator": "H轮PLAN.md第5–19行及本次read-b request.raw.md；人类授权为工具验证；阶段阅读范围为代理测试安排，不是新文学选择。",
+    "recorded_by": "Codex read-b actual process; parent-organized verification",
+    "frozen_ref": ".writer/objects/1de726db295f35aa11df0c70ecdf10f1e51ce026b11e806be928e1f42ccc6474.txt"
+  }
+}

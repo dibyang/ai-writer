@@ -47,6 +47,8 @@ review可带chapter_functions、comparison及issues，须expected_revision、稳
 
 record-preview与record共用校验，显示缺项、实际事实差异和未变项，预览不登记、不生成journal、不刷新过期来源。空摘要或坏引文仍拒绝。可选--out .writer/drafts/名称.json写新可读入口，不覆盖旧文件；它是草案，不能作正式设定来源。
 
+`changes.characters` 是逐角色的整段状态替换，不是对状态字符串追加文字：未填写的角色保持不变；填写某角色时，先实读旧状态，保留仍有效的信息并写入真实变化，再核对预览。不要将“未变项自动保留”理解为已填写状态内部的旧句子会自动合并。
+
 先完整实读当前章、写完并保存报告，再preview；退出0才record。需要机械保证报告已保存且对应本稿时，添加 `draft_review`：`reviewer`、`report`（审查/下.md或.txt）、`draft_sha256`、`report_sha256`。工具核非空报告与两项实际SHA256，正式登记冻结报告对象；缺失、空白或版本变化先于状态/journal/报告对象写入拒绝。冻结对象后来缺失或被改写时诊断报 `DRAFT_REVIEW_CORRUPT`，保留现场，不追认新字节；报告原路径之后的正常编辑不覆盖原冻结版本。此字段可选，旧输入兼容；它不证明模型读过或文学通过，不替代 `replay_review` 和完整尾段复核。改稿或改报告后保留原输入，实读新版本后另存，不只刷新哈希。
 
 账本 `type` 允许 `fact/thread/object/relationship/observation`，`status` 允许 `active/pending/partial/resolved/intentional-open`，不要填 `open`。错误 `LEDGER_VALUE_INVALID` 带具体字段及 `allowed_values`，按实际语义选择，不自动转换。preview阻断退出1，record异常退出2；保存真实退出码和双流，在失败处停止依赖步骤。

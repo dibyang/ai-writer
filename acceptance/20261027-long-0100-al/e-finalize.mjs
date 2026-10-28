@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {isDeepStrictEqual as equal} from 'node:util';
+const base=path.dirname(fileURLToPath(import.meta.url)),main=path.join(base,'work');
+const bytes=p=>fs.readFileSync(p),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),json=p=>JSON.parse(bytes(p));
+const audit=json(path.join(base,'session-e-audit.json')),recovery=json(path.join(base,'session-d-recovery.json')),root=recovery.workspace;
+if(sha(bytes(path.join(main,'.writer/state.json')))!==audit.main_state_sha256||sha(bytes(path.join(root,'.writer/state.json')))!==audit.candidate_state_sha256)throw Error('state changed after audit');
+const old=json(path.join(main,'.writer/state.json')),now=json(path.join(root,'.writer/state.json'));
+const a=bytes(path.join(main,old.units[114].journal)),b=bytes(path.join(root,now.units[114].journal));
+if(!equal(JSON.parse(a),JSON.parse(b))||a.toString()!==JSON.stringify(JSON.parse(a),null,2)+'\n'||b.toString()!==JSON.stringify(JSON.parse(b),null,2)+'\n')throw Error('journal difference not limited to key ordering');
+const refs=['session-e-prompt.md','session-e-report.md','session-e-sandbox-error.md','session-e-start.json','session-e-audit.json','session-e-bindings.json','e-run.mjs','e-evidence.mjs','e-close.mjs','e-finalize.mjs'];
+const candidateRefs=['研究/AL-e-reading-manifest.json','审查/AL-e-110-115-rolling-review.md',...([113,114,115].flatMap(n=>[`审查/AL-e-${n}-replay-review.md`,`研究/AL-e-${n}-evidence-comparison.json`,`.writer/drafts/AL-e-replay${n}-raw.json`,`.writer/drafts/AL-e-record${n}.json`]))];
+const result={ok:true,created_at:new Date().toISOString(),scope:'delivery-bindings-only',id:audit.id,next_unit:116,main_state_unchanged_since_audit:true,candidate_state_unchanged_since_audit:true,journal115_byte_difference_is_only_object_key_order:true,files:refs.map(ref=>({ref,sha256:sha(bytes(path.join(base,ref)))})),candidate_files:candidateRefs.map(ref=>({ref,sha256:sha(bytes(path.join(root,ref)))}))};
+fs.writeFileSync(path.join(base,'session-e-report-bindings.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({ok:true,next_unit:116,report:result.files.find(x=>x.ref==='session-e-report.md'),parent_files:refs.length,candidate_files:candidateRefs.length}));

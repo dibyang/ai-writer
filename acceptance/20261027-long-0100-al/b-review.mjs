@@ -1,0 +1,15 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+const base=path.dirname(fileURLToPath(import.meta.url)),root=path.join(base,'work');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const scan=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?scan(path.join(d,e.name)):[path.join(d,e.name)]);
+const all=scan(path.join(root,'正文')).filter(p=>p.endsWith('.md'));
+const ids=[27,95,100,105,107,108,109,110,111,112,113,114,115,116];
+const manifest=ids.map(unit=>{const file=all.find(p=>Number(path.basename(p).slice(0,4))===unit);if(!file)throw Error('Missing '+unit);const b=fs.readFileSync(file),text=b.toString('utf8'),body=text.replace(/^#.*\r?\n\s*\n/,'');return {unit,path:path.relative(root,file).replaceAll('\\','/'),sha256:sha(b),han:(body.match(/\p{Script=Han}/gu)||[]).length,codepoints:[...body].length,coverage:'完整正文逐段实读；115/116首轮合章和修正后最终全文均读取',evidence_type:'当前会话模型文字实读记录，不是机器语义阅读认证'};});
+fs.writeFileSync(path.join(root,'研究/AL-b-reading-manifest.json'),JSON.stringify({scope:ids,chapters:manifest,not_claimed:'不称1—116全书重读；没有完整读取74/78或其他未列章节。'},null,2)+'\n',{flag:'wx'});
+const rows=manifest.filter(x=>x.unit>=109);
+const report='审查/AL-b-109-116-连读与跨卷回对.md';
+const table=rows.map(x=>`|${x.unit}|${x.path}|${x.sha256}|`).join('\n');
+const content=`# 109—116实际连读及V17→V18回对\n\n本会话实际完整读取109—114正文，并在新章合章后读115、116（两章修正再合章后最终全文再次读取）。另全文读27、95、100、105、107、108，均在reading manifest记录当前路径/SHA。不是全书阅读或真人/隔离盲读。\n\n|章|实际完整读取正文|SHA256|\n|---|---|---|\n${table}\n\n109—112：240自用说明经顾当场试用后自改，不是订单；葛本次靠坐/饭凉、次日热饭吃完和剪发付35成立，回店及余糕不由离开方向推完成；素姐修镜仍未知。113—114：晨走采购已实做；何经新约读105新页并全还，当日回话不是首肯/定价/公开许可；周未读不变。115接住读后失落，不重约欠读，另写/重走/独读，105页、划头稿、回话及95半页不混，27旧起点得到有限新实践。116跨入V18，115发问未答到116晨新答、实际远程试送/有限失败反馈/只自测修改，工作样例不占用个人页或旧声。\n\n早卷锚及证据支持的阶段回收：27“你讲箱子，为什么先讲我坐椅子？”、“那你写你自己听。”；115“是想让她替我把这一页接下去。”、“沈把这一张从头读到末行，屋里只有她自己，没有录音。”，且85行明写此前95/100已实践。回收的是沈自己承担叙述和听见自身欲望的这一步，不把T_VOICE_CONSENT改resolved，不重开罗私因/旧使用范围。\n\n因果与情绪：114想要喜欢又想要文字回应，115仍介意并没有突然看开；116也仍想从顾的好字中讨满意，但按本次具体失败修改而非追价。顾有自己吃饭/送件时段，修后没给他不能算他验收。正文115扶伞、116播放器问题各有具体身体/时间成本；仍有“想索好话—止住”的相近节奏，后续宜让选择承担新的现实后果，不继续同型自检。此为风格风险观察，未据此擅改旧章。\n\n逐章具体回对与修改详见AL-b-115和AL-b-116单章报告，原合章均保留。最终三段与各正文逐字节一致；115未达4000—4500目标，116达到；篇幅不当作文学质量。\n\n## 真人语言别扭句\n\n有没有哪句话意思能够看懂，却让你觉得别扭、像为了写得漂亮硬拼出来，或者不像一个人当面会这样说？\n\n### 真人语言硬问题\n\n没有\n\n这是当前授权新稿修正后的知情模型判断，不给旧章5条needs-recheck意见擅改状态。四项文字层测试已在单章报告记录；保留职业叙述及人物有效改口，未以词频机械改稿。\n\n未覆盖：1—26、28—94等未列正文未全文读取；旧审查待窗97—102、100—105本轮不补做，因其中未列章本会话未完整读。旧5条needs-recheck保持原状。机械覆盖登记只绑定本文及当前109—116哈希，不是文学通过、作者定稿或产品发布验收。\n`;
+fs.writeFileSync(path.join(root,report),content,{flag:'wx'});
+fs.writeFileSync(path.join(root,'研究/AL-b-review109-116.json'),JSON.stringify({from:109,to:116,kind:'model-self-review',report,source_hashes:Object.fromEntries(rows.map(x=>[x.path,x.sha256]))},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({actual_complete_units:ids,review_from:109,review_to:116,report,chapters:rows.length}));

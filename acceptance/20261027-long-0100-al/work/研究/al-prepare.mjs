@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root=process.cwd(), sha=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+const write=(p,o)=>fs.writeFileSync(path.join(root,p),JSON.stringify(o,null,2)+'\n');
+const baseline=JSON.parse(fs.readFileSync('研究/AL-a-initial-drafts.json','utf8'));
+const readUnits=[27,95,100,102,103,104,105,106,107,108,109,110,111,112];
+const readings=baseline.filter(x=>readUnits.includes(Number(path.basename(x.path).slice(0,4)))).map(x=>({...x,unit:Number(path.basename(x.path).slice(0,4)),coverage:'full-text actually read in session A'}));
+write('研究/AL-a-reading-manifest.json',{readings,not_claimed:'全书重读、真人盲读、文学验收',historical_refs:['正文/0027-他愿意留下的那一段.md','正文/0095-先写今天这一页.md','正文/0100-念到这一页的末尾.md','正文/0108-先陪你走这一趟.md','正文/0110-坐下以后还想说话.md'].map(ref=>({ref,exists:fs.existsSync(ref)}))});
+const common={constraints:['未来规划不是事实；按已成稿滚动细化','旧原件及停止使用范围不改；不借当次阅读扩大公开或录音','不凭离开方向推到达、开门或销售；人物所知按实际听见看见分开'],reserved:['旧余带未知男声/钟声、剪片者与日期','罗敬私人失约原因','新客户、收入、公开讲读及长期保证']};
+write('研究/AL-a-volume17.json',{id:'V17',title:'走到桥那边',start:113,end:115,promises:['完成一次真正为自己的出门，并让新本人页的阅读愿望得到一次新的具体选择及后果'],...common,arcs:[{id:'A17',start:113,end:115,goal:'从70日晨走与自理采购推进到具体个人邀读和回应后的生活',payoff:'当次走路/采购及一次新阅读选择的实做结果，保留反应和后果',forbidden:['把108已答请求写成欠读','把95半页当105新页','未发生先登记读完或所有人认可']}]});
+write('研究/AL-a-volume18.json',{id:'V18',title:'带着回话往下做',start:116,end:118,promises:['在前卷结果上完成一项有明确用途与承担范围的行动，并显示回话怎样改变下一步'],...common,arcs:[{id:'A18',start:116,end:118,goal:'依据115成稿，在现有自用说明或新写作中选择实际受话者、落实一项有限行动',payoff:'一次有具体结果的交付、拒接或自主保留，不能预定收入和认可',forbidden:['未细化先写116','借新工作重用旧材料','将粗规划预写进账本']}]});
+const state=JSON.parse(fs.readFileSync('.writer/state.json','utf8'));
+const author_evidence={quote:fs.readFileSync('研究/AL轮真实任务授权.md','utf8').trim(),local_source:'研究/AL轮真实任务授权.md',source_sha256:sha('研究/AL轮真实任务授权.md'),locator:'本轮真实任务授权文件第1行；未提供可核会话ID',recorded_by:'session-a 独立Codex创作会话'};
+write('研究/AL-a-author-evidence.json',author_evidence);
+write('研究/AL-a-workflow.json',{expected_revision:state.revision+2,operation_id:'AL-session-a-drafting-113-118',author_evidence,workflow:{stage:'drafting',task:'AL合成副本续写113—118；本独立会话仅细化并写113—114后交接，后续会话从115恢复。',authorization:{allowed_actions:['discuss','plan','draft'],draft_range:{from:113,to:118},revise_range:null,stop_conditions:['本会话完成114后停，不写115及以后正文。','不修改旧章、不提交修订、不操作真实作品/旧封存，不Git提交/推送/发布。','上下文超预算保留失败并显式扩容；真实复读后preview再record。']},planning:{positioning:{status:'draft',refs:['设定/作品定位.md','设定/文风.md'],unresolved_ids:[]},structure:{status:'draft',refs:['大纲/AL轮113-118未来规划.md','正文/0027-他愿意留下的那一段.md','正文/0095-先写今天这一页.md','正文/0100-念到这一页的末尾.md','正文/0108-先陪你走这一趟.md','正文/0110-坐下以后还想说话.md'],unresolved_ids:[]},volume:{status:'draft',refs:['大纲/AL轮113-118未来规划.md'],unresolved_ids:[]},outline:{status:'draft',refs:['大纲/AL轮113-118未来规划.md'],unresolved_ids:['115-118待前章实际结果后细化']}}}});
+console.log(JSON.stringify({readings:readings.length,authorization:author_evidence.source_sha256,workflow_expected_revision:state.revision+2}));

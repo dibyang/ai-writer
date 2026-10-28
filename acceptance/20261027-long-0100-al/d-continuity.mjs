@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const base=path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'));
+const r=JSON.parse(fs.readFileSync(path.join(base,'session-d-recovery.json'))),root=r.workspace;
+const baseline=JSON.parse(fs.readFileSync(path.join(base,'session-d-baseline.json')));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const write=(ref,value)=>fs.writeFileSync(path.join(root,ref),typeof value==='string'?value:JSON.stringify(value,null,2)+'\n',{flag:'wx'});
+const units=[27,95,100,104,105,...Array.from({length:12},(_,i)=>107+i)];
+const rows=units.map(n=>{const old=baseline.units.find(x=>x.unit===n);return {unit:n,draft:old.draft,old_sha256:old.sha256,candidate_sha256:sha(fs.readFileSync(path.join(root,old.draft))),reading:n>=110&&n<=112?'原稿完整实读，replay后候选完整复读':'原稿完整实读，候选以字节一致核对；未声称候选再读一次'};});
+write('研究/AL-d-reading-manifest.json',{nature:'知情模型文本实读；非真人、非盲读、非全书审查',rows,uncovered:'未列出的旧章未完整读取；113—118只作为下游实读并留稿，未重登。'});
+const report='审查/AL-d-107-112-连读及113-118下游核对.md';
+write(report,`# 107—112候选连读与113—118旧尾段核对\n\n本轮独立旧章修订会话Codex，知情模型自检。完整读107—118主稿及27、95、100、104、105；110—112在各自replay后又完整读候选。候选其他章按字节对照确认同一版本。只将已登记107—112作为此次产品review覆盖，不登记113—118，不称全书深读或真人验收。\n\n${rows.map(x=>`- ${x.unit}：${x.draft}；原SHA ${x.old_sha256}；候选SHA ${x.candidate_sha256}`).join('\n')}\n\n107自留三段试声与工作说明，108当日拒读已答且自付79买灰鞋，109的240仍自用示例。110靠坐和短谈有经营/冷饭成本；111葛另一次炒饭吃完、自己想好看且13:50持钥匙出门；112本人付35洗剪、留后颈线与蓝衫愿望，分路只见回铺方向。\n\n微调仅110“接问”→“接着问”，仍是未出口的原想；112等候感受句改主语前置，七八分钟及主观感受不变。两处均受控测试选择，无确认语言硬伤或可确认文学净收益，不记作者采纳。111字节不变，重新登记承接的新依赖。\n\n下游实际核对：113才实走桥/买面5与蛋4，不把112计划直接算已完成；114何亲读105全页并归还，何66日烦意本次才口述；115另写桥页独读，湿砂与未修成伞留原边界；116顾只收初版，修后未发，240不证明市场接受；117第133行本人确认112所说蓝衫，118第124/143行本人要拍且两张自留。111第47行“专门留的，最后专门倒”是对68日的本人口述，118第110—116行当日晚饭吃小块是新实践，不抹去111炒饭已完成。\n\n证据/保管：原窄夹前105新页/后划头稿，114回话外夹，95半面另夹，115新纸独夹；何114交还真实存在，周无105新增阅读，葛未读115。112旧夹和钥匙葛自持；118手机拍照后交还且照片葛自留，不推云端/公开。微调不含物件交接、金额、时间或任何登记引文；三章18条登记引文逐条保留。\n\n## 真人语言别扭句\n\n### 真人语言硬问题\n没有\n\n### 风格偏好观察\n本书允许停顿、笑话和慢叙事，葛/何的个人欲望与沈的索求不简化为审核口吻。两处测试经过叙述声音复述、动宾拆分、具体落地和文本朗读节奏模拟，均未见两项共同支持硬伤；没有真人朗读或市场反馈。反复“小失落—收手—生活收束”仍是节奏观察，本次不扩大修改。\n\n## 边界与未决\n仅107—112登记review覆盖；113—118保留旧稿和旧journal/记录，尚待同一修订会话逐章replay/复核/重登。当前112状态不会提前含114读稿、116试送或118照片。\n\n旧五项needs-recheck未处置；旧欠审97—102、100—105未补。此次依赖变化可令103—108、106—111等旧报告失效，本轮未完整读103/106，不用107—112报告冒称覆盖这些窗口。具体剩余窗口以最后check为准。\n\n保留余带男声/钟声/同日、剪者/命名、残通知日期/挂牌点、罗私因、旧钱押金/载体受话人/长期公屋；素姐修镜、葛69日15点开门销售、何71日取送样、花衫女人去向、伞最终修成、顾送件到达、修后外测、葛72日晚到家均无新证。未决不是未发生。无新正文/新单款/公开。\n\n本报告不判文学通过；机械检查只表字节与登记一致。候选停next113、保持open，不prepare/commit。\n`);
+write('研究/AL-d-review107-112.json',{from:107,to:112,kind:'model-self-review',report,source_hashes:Object.fromEntries(rows.filter(x=>x.unit>=107&&x.unit<=112).map(x=>[x.draft,x.candidate_sha256]))});
+console.log(JSON.stringify({report,registered_review_range:[107,112],downstream_read_but_not_registered:[113,118]}));

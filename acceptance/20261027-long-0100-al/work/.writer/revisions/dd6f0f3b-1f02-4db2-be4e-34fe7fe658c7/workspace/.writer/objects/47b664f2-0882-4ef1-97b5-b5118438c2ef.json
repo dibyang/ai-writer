@@ -1,0 +1,73 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-27T12:37:33.964Z",
+  "operation_id": "AL-d-revision-110-118-no-new-draft",
+  "base_revision": 472,
+  "payload": {
+    "stage": "revision",
+    "task": "AL会话D：独立候选修订110、112各一处安全表达；110—118为影响核查范围；本次逐章重登110、111不变、112后停在next113，不写新正文，不prepare/commit。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 110,
+        "to": 118
+      },
+      "stop_conditions": [
+        "仅操作本合成work及父目录证据，不访问真实作品，不Git提交、推送、发布。",
+        "候选begin成功后才rewind及改稿；本次重登至112即停next113，113—118旧稿及凭据保留。",
+        "只有110与112各一处微调；事实/物件/人物知识/时间/证据引文不变；原主稿正文原样。",
+        "原规划引用与未决项保留，不将受控测试表达宣称错误修复、品质提升或作者采纳。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md",
+          "正文/0027-他愿意留下的那一段.md",
+          "正文/0095-先写今天这一页.md",
+          "正文/0100-念到这一页的末尾.md",
+          "正文/0108-先陪你走这一趟.md",
+          "正文/0110-坐下以后还想说话.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md"
+        ],
+        "unresolved_ids": [
+          "117—118按实际前章与正文细化；规划仍为draft"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "继续通过 Codex 从现有 112 章合成副本扩增长篇实跑，增加章节数量和单章篇幅，重点验证修复后的分卷迁移、多轮跨会话恢复、跨卷伏笔回收和多处旧章修订后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品，不提交、不推送。",
+    "local_source": "研究/AL轮真实任务授权.md",
+    "source_sha256": "4ca7a2b2c8e358e758d293a19042b43c938e80f87ae0e239c92534e2b7aad114",
+    "locator": "第1行；本地真实任务原文，无可核会话ID；范围与停止条件由本轮用户指令明确",
+    "recorded_by": "AL session D Codex",
+    "frozen_ref": ".writer/objects/4ca7a2b2c8e358e758d293a19042b43c938e80f87ae0e239c92534e2b7aad114.txt"
+  }
+}

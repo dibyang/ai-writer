@@ -1,0 +1,13 @@
+file:///D:/work/other/ai-writer/acceptance/20261027-long-0100-al/update2.mjs:4
+function run(label,args){const r=spawnSync(process.execPath,[capture,label,process.execPath,bin,...args,'--project',root],{encoding:'utf8',windowsHide:true,timeout:300000});if(r.status!==0)throw Error(`${label} exit ${r.status}: ${r.stderr} ${r.stdout}`);return JSON.parse(fs.readFileSync(path.join(base,'commands',label,'stdout.raw.txt')));}
+                                                                                                                                                                                                   ^
+
+Error: update2-plan exit 2:  {"exe":"C:\\Program Files\\nodejs\\node.exe","args":["D:\\work\\other\\ai-writer\\dist\\0.10.0-long-al2\\ai-writer-0.10.0\\bin\\ai-writer.mjs","tool","update2-plan","--input","D:\\work\\other\\ai-writer\\acceptance\\20261027-long-0100-al\\update2-options.json","--project","D:\\work\\other\\ai-writer\\acceptance\\20261027-long-0100-al\\work"],"cwd":"D:\\work\\other\\ai-writer","started_at":"2026-10-27T11:48:30.713Z","elapsed_ms":134,"exit_code":2,"signal":null,"input":{"file":"D:\\work\\other\\ai-writer\\acceptance\\20261027-long-0100-al\\update2-options.json","sha256":"389905e76eb25904d2c156860263805ea2e23bd3472c9fa3e60387decebaef24"},"before_state_sha256":"1507c67fc9ea6c1acacb7be6a7f757512fe42fe51df524a4fd0cf28c35a61c99","after_state_sha256":"1507c67fc9ea6c1acacb7be6a7f757512fe42fe51df524a4fd0cf28c35a61c99","build_before":{"root":"D:\\work\\other\\ai-writer\\dist\\0.10.0-long-al2\\ai-writer-0.10.0","version":"0.10.0","runtime_guard_id":"a1975b4561f7a4edc12adccc9bc08f74508941454988bdc9ec55ba2262623815","basis":"disk bytes observed around a fresh CLI process; not module-byte attestation"},"build_after":{"root":"D:\\work\\other\\ai-writer\\dist\\0.10.0-long-al2\\ai-writer-0.10.0","version":"0.10.0","runtime_guard_id":"a1975b4561f7a4edc12adccc9bc08f74508941454988bdc9ec55ba2262623815","basis":"disk bytes observed around a fresh CLI process; not module-byte attestation"},"runtime_files_stable":true}
+
+    at run (file:///D:/work/other/ai-writer/acceptance/20261027-long-0100-al/update2.mjs:4:196)
+    at file:///D:/work/other/ai-writer/acceptance/20261027-long-0100-al/update2.mjs:5:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

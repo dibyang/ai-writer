@@ -1,0 +1,9 @@
+{
+  "provenance": "Exact fields and output from the observed exec_command tool response; saved after diagnosis, not a rerun or synthetic product capture.",
+  "command": "node ../g-precommit.mjs",
+  "chunk_id": "3e7431",
+  "wall_time_seconds": 0.5214734,
+  "exit_code": 1,
+  "original_token_count": 256,
+  "output": "node:fs:561\r\n  return binding.open(\r\n                 ^\r\n\r\nError: ENOENT: no such file or directory, open 'D:\\work\\other\\ai-writer\\acceptance\\20261027-long-0100-al\\work\\.writer\\revisions\\dd6f0f3b-1f02-4db2-be4e-34fe7fe658c7\\workspace\\正文\\0001-六天的空位.md'\r\n    at Object.openSync (node:fs:561:18)\r\n    at Object.readFileSync (node:fs:445:35)\r\n    at digest (file:///D:/work/other/ai-writer/acceptance/20261027-long-0100-al/g-precommit.mjs:2:218)\r\n    at file:///D:/work/other/ai-writer/acceptance/20261027-long-0100-al/g-precommit.mjs:15:122\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'D:\\\\work\\\\other\\\\ai-writer\\\\acceptance\\\\20261027-long-0100-al\\\\work\\\\.writer\\\\revisions\\\\dd6f0f3b-1f02-4db2-be4e-34fe7fe658c7\\\\workspace\\\\正文\\\\0001-六天的空位.md'\r\n}\r\n\r\nNode.js v24.15.0\r\n"
+}

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
+const base=path.dirname(fileURLToPath(import.meta.url));
+const session=JSON.parse(fs.readFileSync(path.join(base,'session-d-recovery.json')));
+const [label,...args]=process.argv.slice(2);
+if(!/^f-/.test(label))throw Error('F labels only');
+const inputAt=args.indexOf('--input');
+if(inputAt>=0&&!path.isAbsolute(args[inputAt+1]))args[inputAt+1]=path.join(session.workspace,args[inputAt+1]);
+const r=spawnSync(process.execPath,[path.join(base,'capture.mjs'),label,process.execPath,path.join(base,'work/.writer/tool/bin/ai-writer.mjs'),...args,'--project',session.workspace,'--revision-token',session.token],{cwd:path.join(base,'work'),stdio:'inherit',windowsHide:true});
+process.exitCode=r.status??1;
