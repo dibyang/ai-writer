@@ -1,0 +1,12 @@
+实跑推进到修订事务提交前，但 **`revision prepare` 因基线冲突失败，事务未提交**。第 123 章已在隔离副本主稿登记；第 122 章修订及第 122—123 章重登保留在独立候选区。
+
+冲突由我的记录安排造成：建立修订会话后，我继续向主稿的 `研究/` 目录写命令日志和辅助文件。保护机制检测到 13 个基线外新增文件并拒绝提交；主稿业务 revision 和工具构建本身没有变化。我已保留冲突清单、失败日志和候选，没有刷新基线或自动合并。
+
+已完成的关键步骤包括候选工具更新、目录扩展、第 123 章写作与登记，以及独立区的两章实读、重登和尾段自检登记。第 123 章初稿中一处与第 118 章不符的鱼盘动作已在登记前纠正；第 122 章候选只做了一处消除指代含混的表达修改。
+
+- [续行实跑报告](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/审查/0100最终候选隔离实跑续行报告.md>)
+- [第 123 章主稿](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/正文/V20-留出的时段/0123-把下午留出来.md>)
+- [修订候选的尾段自检](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/.writer/revisions/d876dad2-e1f8-4907-8a66-e5a6ace00ead/workspace/审查/0100实跑-122修订与123承接自检.md>)
+- [基线冲突清单](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/.writer/revisions/d876dad2-e1f8-4907-8a66-e5a6ace00ead/conflict-70a4ef2a-44a0-4f2c-95ef-dac5e830af21.json>)
+
+尚未完成事务提交、最终整体 `check` 和完整滚动连读，因此**两条完整路径及发行候选最终验收均不能称为通过**。本次阅读是知情自检，并非真人盲读或文学定稿。

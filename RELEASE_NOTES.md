@@ -1,6 +1,6 @@
-# ai-writer 0.10.0（开发中，未发布）
+# ai-writer 0.10.0
 
-当前源码版本为 0.10.0。正式下载仍为 [v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0)，其标签、发行资产和封存记录保持不变。
+本文介绍 0.10.0。正式发行状态以[项目 Release](https://github.com/dibyang/ai-writer/releases)为准；此前 [v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0) 的标签、发行资产和封存记录保持不变。
 
 ## 本轮已改内容
 
@@ -19,7 +19,7 @@
 
 ## 构建与验证边界
 
-运行 npm run release:build -- --out dist/0.10.0，在全新目录生成开发候选和 SHA256SUMS.txt；自行构建不等于正式发行。沿用现有 Codex 与 Node.js 20 或更高版本要求。
+运行 npm run release:build -- --out dist/0.10.0，在全新目录生成发行候选和 SHA256SUMS.txt；自行构建不等于正式发行。沿用现有 Codex 与 Node.js 20 或更高版本要求。
 
 版本接续结果保存在维护者本地 acceptance/20261027-version-0100-ag/README.md，任务视图实跑另见 acceptance/20261027-task-view-0100-ah/README.md；0.9.0 的既有验收见[发布摘要](docs/release-090-verification.md)，不把旧版实跑结果当作 0.10.0 的新增功能验收。
 

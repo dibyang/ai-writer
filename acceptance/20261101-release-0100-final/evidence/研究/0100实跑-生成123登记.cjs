@@ -1,0 +1,12 @@
+const fs = require('fs');
+const crypto = require('crypto');
+const template = JSON.parse(fs.readFileSync('.writer/drafts/0100-record123.json', 'utf8'));
+const context = JSON.parse(fs.readFileSync('.writer/drafts/0100-context123-2.json', 'utf8'));
+const hash = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+template.summary = '75日葛走后顾问另一机，约76日11点先看不算接单；沈写饭局记忆并为试鞋和私写留时间。76日穿新鞋出门，左脚热而未破，换回旧鞋；顾店只亲看小机及其操作，顾先问使用人，未录未议价。沈买番茄回家做饭，下午续写饭局；葛纸内容及远端使用仍未知。';
+template.changes.characters['沈禾'] = '第123章当前：75日晚安排76日11点先到顾店看另一机，非接单；续写饭局并区分记忆与猜测。76日新鞋首次穿外，左脚热未破后换旧鞋，知原未穿外换货条件不再适用；顾店亲看机身及拨键，约由顾先问使用者，未录未议价；买番茄归家吃饭，下午续写饭局。葛带走的纸仍未知，远端使用未知。；此前有效状态按原章时点保留：' + context.snapshot.characters['沈禾'];
+template.changes.characters['顾遥'] = '第123章当前：75日约沈76日11点先看另一机；76日本人在店展示和操作小机，说亲戚留下、家里另一位老人可能听，未定是否录；应先问使用者，未与沈约录音或议价。未获沈私人稿。；此前有效状态按原章时点保留：' + context.snapshot.characters['顾遥'];
+template.changes.timeline_append = ['第75日葛离后—第76日下午：顾约沈先看另一机；沈续写饭局并安排试鞋。76日新鞋穿外脚侧热未破，换旧鞋；十点五十多顾店看机，顾待问使用者，未接单、未录未议价；沈买番茄回家吃饭并续写饭局。'];
+template.draft_review = {reviewer: 'Codex 知情自检', report: '审查/0100实跑-第123章写前后知情自检.md', draft_sha256: hash(template.draft), report_sha256: hash('审查/0100实跑-第123章写前后知情自检.md')};
+delete template.output;
+fs.writeFileSync('研究/0100实跑-第123章登记输入.json', JSON.stringify(template, null, 2) + '\n', {flag: 'wx'});

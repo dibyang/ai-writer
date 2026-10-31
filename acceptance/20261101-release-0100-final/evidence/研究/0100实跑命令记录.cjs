@@ -1,0 +1,12 @@
+const fs = require('fs');
+const cp = require('child_process');
+const path = require('path');
+const [name, ...args] = process.argv.slice(2);
+const entry = path.resolve('../unpacked/ai-writer-0.10.0/bin/ai-writer.mjs');
+const file = path.resolve('研究/0100实跑记录-' + name + '.json');
+if (fs.existsSync(file)) throw new Error('记录已存在: ' + file);
+const result = cp.spawnSync(process.execPath, [entry, ...args], {cwd: process.cwd(), encoding: 'utf8', maxBuffer: 64 * 1024 * 1024});
+const log = {cwd: process.cwd(), executable: process.execPath, candidate: entry, args, started_at: new Date().toISOString(), exit_code: result.status, signal: result.signal, error: result.error && String(result.error), stdout: result.stdout, stderr: result.stderr};
+fs.writeFileSync(file, JSON.stringify(log, null, 2) + '\n', {flag: 'wx'});
+process.stdout.write(JSON.stringify({file, exit_code: result.status, stdout: result.stdout, stderr: result.stderr}));
+process.exitCode = result.status === null ? 1 : result.status;

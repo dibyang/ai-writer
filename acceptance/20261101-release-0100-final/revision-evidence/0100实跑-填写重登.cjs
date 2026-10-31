@@ -1,0 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const unit = process.argv[2];
+const root = '.writer/revisions/d876dad2-e1f8-4907-8a66-e5a6ace00ead/workspace';
+const src = path.join(root, '.writer/drafts/0100-replay' + unit + '.json');
+const dst = path.join(root, '.writer/drafts/0100-replay' + unit + '-filled.json');
+const value = JSON.parse(fs.readFileSync(src, 'utf8'));
+value.replay_review.reviewer = 'Codex 知情自检';
+value.replay_review.report = '审查/0100实跑-122修订与123承接自检.md';
+value.replay_review.checked_fields = ['summary', 'characters', 'timeline', 'ledger', 'evidence', 'downstream'];
+delete value.output;
+fs.writeFileSync(dst, JSON.stringify(value, null, 2) + '\n', {flag: 'wx'});

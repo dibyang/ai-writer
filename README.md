@@ -2,9 +2,9 @@
 
 面向 Codex 的中文创作工具，支持小说、剧本、散文与非虚构写作。作品保存在本地 Markdown 文件中，设定、细纲、正文、研究资料和创作状态分开管理；新会话可从文件恢复进度。
 
-当前发行版本为 **0.9.0**，采用 Apache License 2.0。发布状态与下载见 [v0.9.0 Release](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0)，历史 [v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0) 保持不变。
+项目采用 Apache License 2.0。发行状态与下载见[项目 Release](https://github.com/dibyang/ai-writer/releases)；历史 [v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0) 和 [v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0) 保持不变。
 
-当前源码进入 **0.10.0 开发阶段，尚未发布**。正式下载仍为 0.9.0；开发版本沿用 schema 6 和现有资源配置，不自动更新作品。[开发说明](RELEASE_NOTES.md)与[不足和下一步建议](docs/next-development.md)区分本轮已改内容与待实施建议。
+当前源码版本为 **0.10.0**，正式发行状态以[项目 Release](https://github.com/dibyang/ai-writer/releases)为准。新作品使用 schema 6 和现有资源配置，不自动更新已有作品。[发行说明](RELEASE_NOTES.md)与[不足和下一步建议](docs/next-development.md)区分本轮已改内容与待实施建议。
 
 0.10.0 新增只读任务视图：`node bin/ai-writer.mjs status --project "作品目录" --view task`，集中查看授权、原候选、阻塞和下一步；它不自动写稿、登记或恢复事务。
 
@@ -14,7 +14,7 @@
 
 ## 开始使用
 
-从 Release 下载 ai-writer-0.9.0.zip 和 SHA256SUMS.txt，校验后解压到新目录。专用发行包不含作品和原始验收日志；源码检出见[说明](docs/source-checkout.md)。本轮[验证摘要](docs/release-090-verification.md)列出实跑规模、结果和边界，完整原始证据保留在维护者本地封存记录中。
+从 Release 下载所需版本的 ai-writer ZIP 和 SHA256SUMS.txt，校验后解压到新目录。专用发行包不含作品和原始验收日志；源码检出见[说明](docs/source-checkout.md)。[0.9.0 验证摘要](docs/release-090-verification.md)记录该版本的结果和边界，完整原始证据保留在维护者本地封存记录中。
 
 使用前请准备好 Codex 和 Node.js 20 或更高版本。无须安装额外 npm 依赖；写作使用当前 Codex 会话及其模型，不单独调用模型 API。
 

@@ -1,0 +1,8 @@
+**实跑在工具更新计划阶段遇到阻断，已按要求停止并保留现场。** 两条主路径均未完成，不能称为通过。
+
+候选入口的状态查询显示：当前 revision 为 489，下一章为 123，无未登记正文；但副本仍登记着旧 AO 修订任务，允许的操作不含 `plan`。随后 `tool update-plan` 虽以退出码 0 返回，业务结果却是 `can_update: false`，阻断码为 `ACTION_OUT_OF_SCOPE`。
+
+已保存[实跑阻断报告](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/审查/0100最终候选隔离实跑阻断报告.md>)、[用户授权原话](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/研究/0100最终候选实跑-用户授权原话.md>)以及[状态查询](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/研究/0100实跑记录-status.json>)和[更新计划](</D:/work/other/ai-writer/acceptance/20261101-release-0100-final/work/研究/0100实跑记录-update-plan.json>)的输入、输出与退出码。
+
+尚未实读章节原文，也未执行第 123 章写作登记或第 122 章受保护修订；没有修改状态、正文或项目源码。后续需先处理旧任务治理与本次授权的衔接，再重新生成更新计划。
+

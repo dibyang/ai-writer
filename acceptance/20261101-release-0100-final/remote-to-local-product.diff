@@ -1,0 +1,1443 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 7bdbe7fd8..f3b592f9e 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,5 +1,19 @@
+ # 更新记录
+ 
++## 0.10.0 — 开发中，未发布
++
++- 任务视图在已迁移作品的新章超出稳定目录契约时，提前提示预览并扩展目录，避免先推荐必然失败的上下文命令；不自动迁移正文或扩大授权。
++- 澄清增量登记中人物状态按角色整段替换；模板和手册提示保留仍有效的旧信息并核对预览，避免误以为状态字符串自动合并。
++- 修复分卷迁移后治理规划仍引用旧正文地址导致项目无法加载的问题；保留原引用并通过迁移事件解析，继续拒绝旧地址被占用。
++- 工具更新的完整讨论上下文兼容检查采用固定 240000 字符上限，计划显示并绑定该上限；超限保留诊断和状态，不截断作者决策，也不改变实际写作的预算。
++- 新增已登记正文 `draft relocate-plan/relocate/relocations/relocate-recover`：显式映射、构建/代次/CAS 绑定、状态最后发布和可恢复的纯路径移动；历史消费与审查通过迁移事件解释，不改旧证据哈希。迁移显式启用 schema 7，旧工具拒绝操作。
++- 工具更新新增 `validation_mode: "in-place-readonly"`，受锁保护地原地只读核验作品，仅备份工具与元数据，不复制正文到更新验证目录。稳定卷目录超出范围时要求显式补充契约。
++- 新增 `status --view task`，复用现有状态集中显示恢复位置、授权、未登记候选、模板入口和下一步；支持只规划、暂停、窄尾段授权、旧章重登及中断事务的只读恢复指引，不新增持久任务账本或自动执行写入。
++
++- 将开发版本切换到 0.10.0，补齐构建器、受管资源协议、随附帮助入口及完整包更新来源的版本识别；保留 0.7–0.9 兼容，未声明的未来协议继续拒绝。
++- 新作品默认 schema 6；仅显式正文迁移启用 schema 7。沿用 apache-2.0-v1，不自动迁移或更新已有作品。0.9.0 标签、资产和封存记录保持原身份。
++- 同步源码与开发包说明，更新已完成的跨平台验收状态；下一阶段建议另列，尚未实施的能力不计入本版本交付。
++
+ ## 0.9.0 — 2026-10-27
+ 
+ - 补齐新章节先规划授权、再建立真实细纲、后登记采用与有限正文范围的启动顺序；规划引用须已存在，不以未来路径、空文件或假采用绕过检查。
+diff --git a/README.md b/README.md
+index 8e0aa67f1..dc79c5917 100644
+--- a/README.md
++++ b/README.md
+@@ -4,6 +4,10 @@
+ 
+ 当前发行版本为 **0.9.0**，采用 Apache License 2.0。发布状态与下载见 [v0.9.0 Release](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0)，历史 [v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0) 保持不变。
+ 
++当前源码进入 **0.10.0 开发阶段，尚未发布**。正式下载仍为 0.9.0；开发版本沿用 schema 6 和现有资源配置，不自动更新作品。[开发说明](RELEASE_NOTES.md)与[不足和下一步建议](docs/next-development.md)区分本轮已改内容与待实施建议。
++
++0.10.0 新增只读任务视图：`node bin/ai-writer.mjs status --project "作品目录" --view task`，集中查看授权、原候选、阻塞和下一步；它不自动写稿、登记或恢复事务。
++
+ 从全书大纲、分卷和近期章纲开始创作，在新会话中恢复进度，并在独立修订区修改旧稿、导出草稿。工具记录创作阶段、授权范围、作者决定及来源版本，支持长章分段、上下文预算诊断、跨章复核和审查意见闭环；文学质量仍需实际读稿判断。
+ 
+ 包含 7 个 Codex 技能、去 AI 味流程和质量引擎。新作品使用 schema 6；已有作品不会自动迁移或更新工具。长篇新正文默认按卷分目录，已登记的旧路径继续兼容。
+diff --git a/RELEASE_NOTES.md b/RELEASE_NOTES.md
+index da5c00e7f..a1fafe07c 100644
+--- a/RELEASE_NOTES.md
++++ b/RELEASE_NOTES.md
+@@ -1,61 +1,26 @@
+-# ai-writer 0.9.0
++# ai-writer 0.10.0（开发中，未发布）
+ 
+-本页为 0.9.0 发行说明。发行资产与发布状态以 [v0.9.0 Release](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0) 为准；历史 [v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0) 保留不变。
++当前源码版本为 0.10.0。正式下载仍为 [v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0)，其标签、发行资产和封存记录保持不变。
+ 
+-长篇新正文默认按卷ID和卷名分目录，章号全书连续；上下文、登记模板、分段合章和新稿导入共享路径规则。显式旧路径及已保存的平铺导入稿继续兼容，更新工具或卷名不自动移动已登记正文。目录按相应章节实际生效的卷纲解析，保留原始卷名并处理跨平台文件名字符；拒绝仅大小写不同的卷ID，修复Windows上新卷覆盖旧卷纲的问题。
++## 本轮已改内容
+ 
+-语言审查补充含混压缩、对象缺失、因果空泛及概括式对白的具体示例，增加漏检与误伤复核。保留指代清楚的省略、专业概括、正式对白和正常修辞；不新增禁词或自动语言通过门槛。规则实跑使用混合样本分别核对漏检与误伤，模型结果不代表真人盲读或普遍检出率。
++- 已迁移作品的新章超出稳定目录范围时，任务视图提前提示预览扩展未来目录，避免先引导执行会被拒绝的上下文命令；原有授权和迁移保护不变。
++- 修复已迁移正文被治理规划通过旧地址引用时的加载失败；保留旧规划原文及路径冲突保护。
++- 工具更新的讨论上下文兼容检查采用固定 240000 字符上限，计划显示并绑定上限；超过时保留明确诊断，不截断作者决策或改变写作预算。
++- 新增已登记正文按卷迁移：显式路径映射、历史引用兼容、稳定卷目录、中断完成或回滚，以及不改正文数据的独占路径移动。旧消费哈希、journal 和审查原文保持原字节，意见闭环按迁移事件核对等价路径。
++- 新增工具更新 `validation_mode: "in-place-readonly"`，只读核验原位置作品，仅备份工具和元数据，不复制正文到验证目录。
++- 新增只读 `status --view task`，集中展示当前授权、主稿或候选身份、未登记正文提示、阻塞、模板入口和下一步。普通状态视图增加任务入口；未完成事务只显示恢复指引，不恢复业务读写权限。
+ 
+-补齐新章节的规划启动顺序：先仅开放规划，用plan建立真实细纲，核对采用后再登记有限正文范围。规划引用必须已存在，文件存在本身不代表作者已采纳；保留失败输入，不用空壳文件或手改状态压过保护。
++- 补齐构建器、受管资源协议、随附帮助入口及更新来源的 0.10.x 识别。
++- 新建作品默认 schema 6，显式正文迁移启用 schema 7；旧工具拒绝操作迁移后状态。沿用 apache-2.0-v1，继续识别完整 0.7、0.8、0.9 工具包，未声明支持的未来版本仍拒绝。
++- 同步源码与下载包的开发状态说明，以及已完成的 0.9.0 跨平台验收信息。
+ 
+-长篇实跑进一步补明草案输出的串行顺序、合章分场标记的位置，以及已有物件换手的previous_holder字段形状；继续保留写锁、原字节和保管链校验，不把输入失败后的重试当作已完成登记。
++版本切换不自动迁移、升级或改写已有作品。任务视图为新用户引导的最小首批；自动执行多步任务、完整分段发现和量化减负目标尚未完成，范围见[下一步建议](docs/next-development.md)。
+ 
+-实跑补齐仅登记追踪修正的意见闭环：原文正确时可保持正文同字节，正式修订、重登及提交后以显式tracking模式绑定摘要/章末事实快照的真实变化，再用当前实读报告复核。默认apply仍要求正文实改，等价重登或只刷新来源/报告不能冒充修复。
++## 构建与验证边界
+ 
+-60章实跑修复了已采用跨章意见无法绑定窄范围提交的问题：例如第9章仅提供正确对照、只修第21章，apply现按真实事务归档确认参考章前后和当前保持，再绑定实际修改，无需多改参考章、缩减引文或重新采用。复核仍覆盖全部证据章，参考变化、归档损坏及无实改继续拒绝。这些实跑使用当时的 0.9.0 候选，以构建指纹区分；最终发行包另行绑定发布提交。
++运行 npm run release:build -- --out dist/0.10.0，在全新目录生成开发候选和 SHA256SUMS.txt；自行构建不等于正式发行。沿用现有 Codex 与 Node.js 20 或更高版本要求。
+ 
+-历史来源变更增加旧前缀保护：仅有等价绑定、却未发布原版区间时，stage 和旧 pending 的 publish 均拒绝，避免以后回退重登旧章误取新版入口。真实旧版发布后可继续；修订已覆盖全部旧消费者时无需额外 baseline。修复前反例、修复后诊断及验证范围保留在源码仓库 AE 轮记录。
++版本接续结果保存在维护者本地 acceptance/20261027-version-0100-ag/README.md，任务视图实跑另见 acceptance/20261027-task-view-0100-ah/README.md；0.9.0 的既有验收见[发布摘要](docs/release-090-verification.md)，不把旧版实跑结果当作 0.10.0 的新增功能验收。
+ 
+-打包工具补充Git来源读取的临时中断恢复与具体错误提示：最多重试一次，仍失败就停止，保留诊断和失败暂存，不将不可靠信息当来源记录。
+-
+-ai-writer是面向Codex的中文创作工具，支持小说、剧本、历史散文、散文与一般非虚构。0.9.0在已有长篇、修订与审查能力上增加上下文预算超限诊断、按需长章分段合成、纲文实读回对和关键选择的短程推演；来源核查与取舍保留在源码仓库。工具不自动截断必要上下文，文学判断仍需模型实读和作者确认。
+-
+-后续流程实跑修复了显式扩容后的大上下文仍被内部登记预算阻断的问题，并补充未完成长章的交接和恢复指引；文件容量、完整来源及授权核验继续保留。具体修复前后证据及实际范围见源码仓库Q轮记录。
+-
+-扩规模流程进一步补充正式修订后的中间稿管理：分段和普通交接不会随修订事务自动同步，恢复时以当前完整正文为准，另存并核对新分段版本，保留旧入口为历史。实际验证进度及范围见源码仓库S轮记录。
+-
+-登记预览增加按角色关联的未变条目候选，最多8条并标明遗漏数，帮助实读者发现其他线索中的知情漏更新。它不自动理解文字、判错或补账本；来源、修订号和不可变观察保护继续生效。
+-
+-重登草案改为恢复原登记真正变化的字段和逐人知识差量，避免整张旧表覆盖前章修正；新条目、物证换手、来源绑定与实际尾段复核仍按原保护执行，不把结构差量当自动语义合并。
+-
+-独立修订发布补充原观察的基线核验：即使回退到首次出现之前，重登也不能删除或改写既有观察的原字、类型及作者真相。中断后的继续发布同样核验，按原备份回滚仍可执行；知情更新和另建解释继续支持。
+-
+-修复恢复未知命令错误时，帮助入口携带通用`--project`参数又失败的问题。`help`及单项帮助接受作品通用参数，保持只读，不依赖作品存在，也不忽略未知、重复或缺值参数。
+-
+-独立修订区的`tool identify`改为复用经校验的父工具并显示修订上下文；会话绑定不符或父包损坏仍明确失败，不向候选复制工具或追认旧绑定。
+-
+-新增`assemble`按有序分段及SHA256创建新完整稿，不覆盖、不登记；支持可选`draft_review`将已保存报告与本章绑定，正式登记冻结报告。账本状态错误提示列出准确字段及允许值。完整章仍须实际阅读、回对细纲并保存报告，失败后停止依赖步骤；文件保护不等于文学通过。CI增加macOS配置，配置存在不代表本轮已经在该平台执行通过。
+-
+-## 安装与开始
+-
+-本地构建命令为`npm run release:build -- --out dist/0.9.0`，生成`ai-writer-0.9.0.zip`和`SHA256SUMS.txt`；自行构建不等于官方发行。核对SHA-256后解压到新目录，在Codex中打开`ai-writer-0.9.0`；需要Node.js 20或更高版本，无须安装npm依赖。
+-
+-```powershell
+-node bin/ai-writer.mjs doctor
+-```
+-
+-然后说：“创建小说 works/雨夜来信，先规划两卷与近期前三章，本轮只试写第一章，写完暂停；完成审查、登记和检查。”详细流程见包内`docs/quickstart.md`和`docs/user-guide.md`。
+-
+-## 已有作品与版本兼容
+-
+-先备份，使用包内当前工具的`tool identify`、`tool compare`和`tool update-plan`核对，再按手册显式更新。不要覆盖现有作品目录，也不要只替换CLI。作品正文、作者规则和本地定制不因本次发行而自动改写。
+-
+-0.9.0沿用schema6和受管资源协议，识别完整0.7、0.8及0.9包，保留`apache-2.0-v1`资源配置。版本号变化不自动迁移或更新已有作品；活跃修订结束后再单独规划更新。历史内部0.8.0和0.8.1候选保留原验证身份；不能仅凭版本号判断内容相同，应核对内容ID与差异计划。
+-
+-## 许可与验证边界
+-
+-自有部分采用Apache License 2.0，见LICENSE.md和NOTICE；第三方参考资料保留各自许可。工具许可不改变作者作品与私有资料的权利归属。
+-
+-源码仓库的N轮记录保存新增方法的实际CLI流程和章节实读，O轮记录保存0.9.0版本切换验证。历史百章及首发跨平台结果分别绑定各自冻结构建；不能直接作为0.9.0的正式验收。模型复核不等于真人盲读或文学无误保证；正式发布仍需对选定提交、最终资产及跨平台CI重新核验。
+-
+-下载包排除现有作品、验收作品与本机配置；完整历史验证记录保留在源码仓库。普通问题请通过GitHub Issues反馈，安全问题按SECURITY.md处理；反馈时勿上传私有正文或令牌。
++正文迁移与不复制正文的更新流程单独记录在维护者本地 acceptance/20261027-relocation-0100-ai/。采用固定候选前核对该轮最终制品、真实命令结果和验证边界；不把合成机械测试称为文学验收或真实作品已迁移。
+diff --git a/docs/attribution.md b/docs/attribution.md
+index d6d5de1bd..be318cf6e 100644
+--- a/docs/attribution.md
++++ b/docs/attribution.md
+@@ -4,7 +4,7 @@
+ 
+ 本次授权也覆盖本仓库历史快照与验证归档中的自有内容；其中旧内部/私有许可说明保留历史证据含义，本次分发时自有内容适用当前Apache-2.0授权。第三方原许可不变。已有作品不会因工具许可切换而自动改稿、升级或重新授权；作品正文、私有研究、作者专属材料和第三方引文仍按各自权利与约定处理。
+ 
+-正式0.8.0（资源配置`apache-2.0-v1`）、此前内部0.8.1候选及当前0.9.0开发候选的新作品，在作品根和`.writer/tool/`内均携带许可与NOTICE；更新旧作品时，新的受管包携带当前许可，作品根旧副本和作者定制默认保留。分发更新后的工具应使用完整受管包，并查阅其中当前的本说明和NOTICE。轻量工具不包含story-gate-studio引擎；单独分发引擎时须保留引擎自身的LICENSE.md和NOTICE。
++正式0.8.0起使用资源配置`apache-2.0-v1`；当前0.10.0开发版尚未发布。新作品在作品根和`.writer/tool/`内均携带许可与NOTICE；更新旧作品时，新的受管包携带当前许可，作品根旧副本和作者定制默认保留。分发更新后的工具应使用完整受管包，并查阅其中当前的本说明和NOTICE。轻量工具不包含story-gate-studio引擎；单独分发引擎时须保留引擎自身的LICENSE.md和NOTICE。
+ 
+ 新作品除了工具、技能和使用手册，还保存以下资料，离开 ai-writer 主项目后仍可查看。
+ 
+@@ -13,7 +13,7 @@
+ - [本轮去味来源清单](usability-sources.json)：其中列出的专题原文与 MIT 许可均按原路径随作品保存，可直接重新计算 SHA-256 核对。
+ - 上游许可全文：[初始快照](../vendor/oh-story-reference/LICENSE)、[后续快照](../vendor/oh-story-reference-20261015/LICENSE)、[去味专题](../vendor/oh-story-deslop-reference/LICENSE)。这些 MIT 许可只适用于对应上游资料，不能推导整个工具项目的许可。
+ 
+-上游原文用于溯源，里面的命令、技能指令和跨文件链接不是本作品的操作入口。日常写作继续使用随附的 writer-project、文体技能和本套手册。随附轻量工具不包含 story-gate-studio 引擎。
++上游原文按来源清单选取并保留，用于溯源，并非上游仓库的完整副本；其中指向未收录文件的相对链接可能无法在本地打开。原文中的命令、技能指令和跨文件链接不是本作品的操作入口。需要上下文时应按来源清单中的固定版本查阅上游；日常写作继续使用随附的 writer-project、文体技能和本套手册。随附轻量工具不包含 story-gate-studio 引擎。
+ 
+ 保留整个作品目录即可一并保留这些资料。既有作品不会自动升级；完整升级随附工具和资料前先备份，之后运行 doctor 核对。
+ 
+diff --git a/docs/authoring-governance-status.md b/docs/authoring-governance-status.md
+index 42f31f5f1..0fcfc8c73 100644
+--- a/docs/authoring-governance-status.md
++++ b/docs/authoring-governance-status.md
+@@ -1,5 +1,7 @@
+ # 八项创作治理需求：当前实现与验证状态
+ 
++2026-10-27 更新：正式版为 0.9.0，源码已进入 0.10.0 开发阶段。八项范围保持已实现；0.9.0 最终提交与标签的 Windows、Ubuntu、macOS × Node.js 20/24 六组 CI 均通过，见[发布验收](release-090-verification.md)。下文 0.8.x 及 H/J 等测试数字是历史基准，不是当前版本的重新验收；0.10.0 的下一步建议见[开发重点](next-development.md)。
++
+ 首个正式版本[0.8.0已发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`。[M轮](../acceptance/20261019-release-publish-m/README.md)保存提交与标签两轮四组CI全通过、最终干净构建、解压后全回归/doctor/引擎/CLI流程和四附件匿名下载逐字节核验；Windows各167/167，Ubuntu各163通过/4项Windows专用测试跳过，四组引擎均29/29。最终包本地166通过/0失败/1项符号链接环境跳过。
+ 
+ 首发采用**Apache-2.0**，新增资源配置区分首发与旧同号候选，明确清单打包并补齐反馈入口。[L轮记录](../acceptance/20261019-release-080-l/README.md)保留准备过程、旧候选更新、幂等、定制保护及写作门禁验证。此前内部0.8.1候选的[K轮记录](../acceptance/20261019-apache-license-k/README.md)保存164通过/0失败/1环境跳过、doctor和引擎29/29及许可携带结果，已随50bbead6提交并推送。下文H/J等结果仍对应各自原版，封存报告保留验证当时的状态；本轮不重新宣称百章文学验收。
+@@ -50,7 +52,7 @@ F轮旧100章正文仅四处单字符指代澄清，另修正58章派生知情
+ ## 暂缓、不承诺及未执行范围
+ 
+ - **明确暂缓的功能**：复杂作者方案树与自动传播、自动语义影响裁决、并行分支自动合并、共享盘/跨机协作保证、作者身份认证系统、自动联网升级、机械文学重复评分。它们不属于本次八项已确认交付范围。
+-- **尚未完成的验收**：Linux/其他运行环境、共享盘/跨机、物理断电持久性、真人盲读、市场验证和作者定稿。Windows异常注入不能替代真断电，环境跳过项不能算通过。
++- **尚未完成的验收**：共享盘/跨机、物理断电持久性、真人盲读、市场验证和作者定稿。0.9.0 的 Windows/Linux/macOS 本地文件流程已完成上述 CI；这不覆盖所有部署环境。Windows异常注入不能替代真断电，环境跳过项不能算通过。
+ - **使用边界**：自然语言授权和文学判断仍由执行者准确理解；令牌防误操作不构成同用户强安全隔离，任意编辑器锁外写入仍有竞态边界。副本读稿与小范围旧章修改不能泛化为任意规模重写保证。
+ - **尚未对现有作品执行的操作**：迁移、工具升级或改稿。用户明确要求暂不修改现有作品；这不是功能未实现，也不因维护说明而自动获得作品操作授权。
+ 
+diff --git a/docs/candidate-continuation-design.md b/docs/candidate-continuation-design.md
+index 8ecb00741..c8686eca4 100644
+--- a/docs/candidate-continuation-design.md
++++ b/docs/candidate-continuation-design.md
+@@ -1,6 +1,6 @@
+ # 独立候选的限章续写采纳设计
+ 
+-状态：限章功能已实现，0.9.0 开发版。此批暂停扩大长篇实跑，只处理已有独立候选的第七章登记阻塞。固定制品及完整验收记录单独保存在 `acceptance/20261024-candidate-continuation-fix-y/`，未发布正式版本。
++当前状态：限章功能已随 0.9.0 正式发布；源码进入 0.10.0 开发阶段，范围仍限下文所列单章流程。以下记录 0.9.0 开发期间处理已有独立候选第七章登记阻塞的设计与修复，固定制品和完整验收记录在维护者本地 `acceptance/20261024-candidate-continuation-fix-y/`；它们保持原候选身份，不替代最终发行验收。
+ 
+ ## 问题与边界
+ 
+diff --git a/docs/next-development.md b/docs/next-development.md
+new file mode 100644
+index 000000000..af713cdbe
+--- /dev/null
++++ b/docs/next-development.md
+@@ -0,0 +1,29 @@
++# 0.10.0 起点：当前不足与下一步建议
++
++更新于 2026-10-27。0.9.0 已发布；0.10.0 已增加开发版本接续和只读任务视图，尚未发布。以下其余建议不代表已经实施或承诺发布日期。
++
++## 已有基础
++
++八项创作治理的已确认范围均已实现。0.9.0 已覆盖分卷正文目录、长章分段、预算诊断、版本来源、保护修订和意见闭环，最终提交与标签的六组跨平台 CI 通过。候选实跑覆盖 66 章约 65.4 万汉字，以及实际跨会话恢复和旧章修订；这不代表任意规模重写或文学质量保证。见[发布验收](release-090-verification.md)。
++
++## 当前不足
++
++| 范围 | 现有证据与限制 | 建议方向 |
++| --- | --- | --- |
++| 任务易用性 | 底层模板和预览已减负，但正式修订仍跨多个命令、CAS、报告和登记步骤。长篇最终复核曾需重登 18–66 共49章、214次产品调用；实跑仍出现字段或顺序错误。该数字描述该场景，不是普通写章的平均成本。 | 由工具给出一个当前任务入口，集中展示下一步、缺项、阻塞和恢复点；复用现有命令执行及保护。 |
++| 语义连续性 | 哈希只能确认版本。全书实读仍发现说话人、方位、人物知情、时间和数量误读；来源影响范围是保守判断。 | 由模型提出带原句的影响清单；工具绑定来源和确认状态，不能自动裁决或跳过复读。 |
++| 语言质量 | 已有16例对照和8组段落改写恢复验证；不能外推检出率。长文仍有过度解释、相似动作和章尾、角色声音趋同的风险。 | 扩大带上下文与反例的复核集，分别记录漏检、误伤和无净收益；保持作者文风。 |
++| 维护与发布 | 本次累计原始验收约7.89 GB；整体推送被拒绝后采用独立公开提交链。历史源码还有Windows保留路径；公开说明部分仍链接仅本地保留的记录。 | 将产品源码、公开摘要、私有原始证据分开存放；增加发布范围预检和文档链接检查。迁移旧历史另行设计，不改封存证据。 |
++| 已知功能边界 | 限章候选续写只支持明确单章，不提供候选发布/自动合并；未承诺跨机共享盘、真实断电持久性、作者身份认证和自动联网升级。 | 按真实使用需求扩展，不把范围收敛重新称为八项未实现。 |
++
++## 最优先：新用户任务引导与中断恢复
++
++最小首批已实现 `status --view task`：从权威状态即时派生恢复位置和下一步，区分主稿/候选、授权、未登记稿提示、旧章重登、已结束候选与中断事务。默认状态提供入口；本批不自动执行多步操作、不判断分段完整性、不另存任务状态。验证记录在维护者本地 `acceptance/20261027-task-view-0100-ah/`；减少30%填写或纠错负担仍是后续待测目标，不因增加视图而宣称达成。
++
++建议第一批只覆盖“恢复作品 → 续写一章”及“修订一处旧章 → 重登受影响尾段”两条主路径。基于当前 status/context/record-preview/revision 能力生成只读任务视图，列出当前阶段与授权、原稿和候选身份、未完成分段、待核内容以及准确的下一步。
++
++执行时复用现有锁、CAS、源哈希和作者证据；机械字段可以自动填入，正文、事实判断、作者决定和审查采用必须保持真实依据。中断后恢复同一个任务，不创建重复稿、不刷新旧基线，也不把建议当作正文授权。先做现有状态到任务视图的最小闭环，再决定是否需要新持久状态；避免增加另一套权威账本。
++
++建议验收：在隔离作品比较当前版与改进版的两个主路径，加上暂停拒绝、旧输入失效及修订中断恢复三个异常场景。记录人工JSON字段数量、产品调用次数、纠错次数、恢复耗时和最终文件状态；先取得基线，再以人工填写或纠错负担降低至少30%作为目标，未测量前不承诺达成。全部现有保护回归必须保持通过。
++
++随后优先处理证据与发布的存放边界；上下文压缩、任意分支合并和更大章数验证需有具体问题与量化目标后再立项。本批不修改现有作品，其余建议另行实施。
+diff --git a/docs/quickstart.md b/docs/quickstart.md
+index 926552a1f..d9b5cfa62 100644
+--- a/docs/quickstart.md
++++ b/docs/quickstart.md
+@@ -1,6 +1,10 @@
+ # 快速入门：先完成第一章
+ 
+-已有受保护续写候选的第七章登记后需要小修时，使用[版本与修订手册](revision-and-sources.md)中的“已登记第七章的小修与重登”。先建立独立区、固定来源，再按封存稿重登和复核；不要直接修改旧候选或更新其中的工具。
++已有作品想把正文按卷整理时，可直接对 Codex 说：“先预览已登记正文的分卷迁移，保持字节和历史证据不变；确认映射后再按授权移动。工具更新用 `in-place-readonly`，不要复制正文。”需要支持迁移的固定开发制品；仅移动目录或手改登记路径都不安全。具体流程见[使用手册的正文迁移说明](user-guide.md#已登记正文按卷迁移)。本功能不会自动修改现有作品。
++
++已有作品要继续时，可以直接对 Codex 说：“先查看这部作品的任务视图，说明当前授权、未完成事项和下一步，再按原范围继续。”对应命令是 `node bin/ai-writer.mjs status --project "作品目录" --view task`；在作品目录使用 `node .writer/tool/bin/ai-writer.mjs status --view task`。它只读取现有文件，不会自动续写、登记或扩大授权。新作品按下方步骤开始。
++
++已迁移正文的长篇开启新卷时，如果任务视图提示扩展稳定目录，先让 Codex 按[使用手册](user-guide.md#已登记正文按卷迁移)预览并扩展未来目录范围；原正文不会因此自动搬动。
+ 
+ ai-writer在Codex中使用：你说明任务，Codex阅读文件、写作和登记；正文与追踪都保存在本地。准备好可以使用的Codex和Node.js 20或以上，无须安装npm依赖。第一次先用一个新目录，已有作品的导入或升级另走专项流程。
+ 
+diff --git a/docs/registered-draft-relocation-design.md b/docs/registered-draft-relocation-design.md
+new file mode 100644
+index 000000000..020542191
+--- /dev/null
++++ b/docs/registered-draft-relocation-design.md
+@@ -0,0 +1,87 @@
++# 已登记正文按卷重定位：实施设计
++
++2026-10-27。状态：0.10.0 开发实现；实际验收范围和失败记录见 `acceptance/20261027-relocation-0100-ai/`。与已提交的任务恢复视图分开管理；本轮不提交、不推送。本文不是迁移真实作品或发布新制品的授权。
++
++## 背景与目标
++
++两个真实使用场景分别需要把 36 章和 47 章已登记正文移入明确的卷目录，并让后续章节沿用稳定卷目录。维护工作区仅实现产品能力并使用合成作品验证；真实作品由原会话接管固定制品后操作。
++
++目标是明确映射、逐字节不变、登记唯一、历史证据可解释、中断可恢复。不是改写正文、改变卷界、补写下一章或重新进行文学审查。
++
++## 现状与核心约束
++
++- `lib/revisions.mjs` 的普通修订要求旧章保留相对路径，不能用普通修订变相搬运。
++- `lib/workspace.mjs` 的漂移、导出、登记模板与已有稿采纳凭据直接使用 `unit.draft`。仅移动文件或改一个 state 字段会破坏这些保护。
++- `lib/sources.mjs` 的历史消费没有版本绑定时按原路径读取。旧 `source_hashes` 必须保留，不能批量替换后刷新原哈希。
++- `lib/longform.mjs` 和 `lib/review-workflow.mjs` 的审查覆盖绑定正文路径、内容和依赖；纯移动不能冒充新的审读，也不能无理由丢掉有效审查。
++- `lib/journal.mjs` 保存不可变快照差量；迁移不能改写旧差量或旧快照中的证据文本。
++- `lib/tool-update.mjs:104` 的既有更新流程复制作品内容到验证副本，不能用于明确禁止复制旧正文的现场。
++- 源状态为 schema 6，随附工具为正式 0.9.0；开发主线为 0.10.0。不能把修改后的窄制品标成未经修改的正式 0.9.0，也不能借迁移静默安装整批无关功能。
++
++## 接口设计
++
++| 接口 | 输入与结果 |
++| --- | --- |
++| `draft relocate-plan` | 显式逐章映射和稳定目录契约；只读返回完整基线、冲突、文件哈希和预览指纹 |
++| `draft relocate` | expected_revision、generation、源/目标 build ID、operation_id、预览指纹、作者原话依据；执行受保护移动 |
++| `draft relocations` | 只读列出进行中事务、已完成迁移与恢复入口 |
++| `draft relocate-recover` | transaction_id、方向、锁指纹、作者依据；继续或回滚，不猜测所有者 |
++
++上述接口已接入 CLI。输入拒绝未知字段。预览不写状态，不自动创建目标目录。正式执行重新核对预览全部前提，包括安装构建和实际执行入口构建。
++
++## 数据结构与历史解析
++
++新事件记录 operation_id、前后状态哈希、原构建与目标构建、作者依据引用、每章 unit/from/to/sha256/bytes、稳定卷 ID 与目录、前后修订号。历史 `source_hashes`、journal、冻结输入和审查原文保持原字节。
++
++必须引入专门的正文路径解析层：当前正文地址与历史登记地址分离，用已验证迁移事件解释两者关系。解析限定正文、登记单元和指定内容版本；不能把通用 `safe()` 改成隐式别名器，否则写入和安全检查也会悄悄重定向。迁移链禁止环、同名歧义和跨单元别名。
++
++迁移后修订正文时，旧来源仍按旧哈希核对，不能因为路径映射存在就跳过内容变化。旧审查只有内容及原依赖均相同才保持覆盖；显示技术路径等价，不生成新的文学审查时间或结论。
++
++迁移显式启用 schema 7，老工具拒绝误操作；新建作品仍默认 schema 6。制品通过 `aiWriter.draftRelocationProtocol: 1` 声明所需模块及 schema 7 支持，不反向要求旧版具有新模块。
++
++## 事务状态机与时序
++
++实现状态为 `prepared → applying → completed`；检测到第三方冲突进入 `conflicted`，明确恢复方向后继续。回滚终态为 `rolled-back`，终态重复请求幂等返回，反向撤销必须新事务。
++
++1. 取独占锁，检查无修订候选、无待影响、无中断事务、无正文或消费漂移。
++2. 验证状态/CAS/generation/build、完整映射、作者证据与预览指纹。
++3. 固定元数据基线和事务清单，再执行逐章移动；每步之前检查源与目标当前文件身份及哈希。
++4. 重新核对正文、依赖、映射与文件数量，最后发布新状态。
++5. 保留元数据证据和恢复记录，解除事务保护。任何阶段中断后，普通写入都必须被阻断。
++
++正文不另存备份。实现用同卷独占 `link` 创建目标目录项、核对同 inode/字节后 `unlink` 原目录项，避免普通 rename 覆盖检查后突然出现的目标。正文数据只有一个实例；中断可能留下两条指向同一实例的路径，恢复只认可本事务映射中同 inode、同字节且恰好两个链接的组合。输入已有的外部硬链接仍拒绝，完成后只剩一个链接。文件系统不支持时拒绝，不退化为复制。元数据和工具可备份；不复用把旧/新正文复制成 `.bin` 的发布器。
++
++## 路径、异常、幂等与回滚
++
++源必须是唯一登记的普通文件；拒绝 symlink、junction、hardlink、路径穿越、Windows 保留名、尾点/空格、大小写别名、超长路径、重名目标、目标覆盖和跨卷错配。检查现存父目录的实际大小写及文件身份，不能只比较 JSON 字符串。
++
++同 operation_id 同输入可重放；不同输入返回冲突。恢复逐条判断源/暂存/目标与期望哈希，第三方修改不覆盖、不删除、不自动抢锁。正文遗失或产生两个不同候选时保留现场，返回明确冲突。回滚恢复路径和元数据，不重写正文。
++
++## 稳定卷目录
++
++目录契约显式绑定稳定卷 ID 与目录，记录作者选定的范围；不根据滚动操作切片标题新建卷目录，也不因卷名修改而自动搬文。新章节只有落在已确认契约内才沿用目录，范围外需要新契约。目录不是剧情卷界的权威。
++
++## 兼容性与无正文复制的采用流程
++
++迁移实现和工具采用分别验证。普通 `tool update` 默认仍需要作品验证副本；新增显式 `validation_mode: "in-place-readonly"`，仅备份工具与元数据，以原位置只读校验作为采用门禁，校验期间持写锁；失败可恢复旧工具，不复制正文。采用 schema 7 后拒绝降级到不支持该协议的包。
++
++先在隔离官方 0.9.0 基线上验证兼容协议，再确定窄候选制品版本和 content ID；不得冒充原正式包。主线 0.10.0 可以吸收同一实现，但真实作品是否采用主线不能替作者决定。
++
++## 验收方案
++
++使用合成 36/47 章作品，覆盖增量账本、正文消费来源、已有稿采纳、滚动审查和意见闭环。迁移前后检查逐章 SHA、字节数、合稿顺序、唯一登记、全部不可变证据字节、无未登记正文/漂移/待影响/活跃事务。
++
++逐个移动边界、状态发布前后注入中断，分别 complete/rollback；覆盖目标存在、过期 CAS、坏哈希、错误卷、第三方改动、硬链接及 Windows 大小写冲突。拒绝时验证状态与非事务文件不变。
++
++再跑跨会话恢复、历史上下文、旧章修订重登、审查覆盖、草稿导出与下一章稳定目录。最终固定制品解压后重复完整流程、`npm test` 与 `npm run doctor`。只使用合成书稿，不复制或写入真实作品。
++
++## 风险与分阶段实施
++
++高风险点是历史证据地址解析、老工具绕过新保护、中断期间的唯一文件实例、以及更新流程复制正文。四者任一未验收，都不能交付真实迁移。
++
++1. 设计阶段：明确解析和协议保护，形成预览接口与只读负例。
++2. 实现阶段：移动事务、恢复和历史消费兼容；稳定卷目录契约。
++3. 采用阶段：无正文复制的受控工具采用与回滚，独立验证官方 0.9.0 来源。
++4. 验收阶段：完整规模样本、最终制品与完整命令记录；交回原作品会话，不由维护会话操作真实作品。
++
++当前实现与验收记录单独归入 AI 轮次；任务视图的 AH 验收不能作为本能力的验收。真实作品迁移、对外发布和采用整批 0.10.0 均不在本轮执行范围。
+diff --git a/docs/release.md b/docs/release.md
+index 68800898e..0419782be 100644
+--- a/docs/release.md
++++ b/docs/release.md
+@@ -1,10 +1,10 @@
+ # 发行准备与已发布版本
+ 
+-0.8.0已于2026-10-19[正式发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`，完整执行与验证见[M轮记录](../acceptance/20261019-release-publish-m/README.md)。下文保留维护者操作流程；发布后补交的记录不移动标签，也不覆盖已验证资产。
++0.8.0已于2026-10-19[正式发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`；完整执行与验证的 M 轮原始记录保存在维护者本地 acceptance 目录，不随下载包分发。下文保留维护者操作流程；发布后补交的记录不移动标签，也不覆盖已验证资产。
+ 
+ 本页是维护者的本地准备流程，不自动创建标签、推送或发布。用户批准具体产物后，再执行对应Git和GitHub动作。
+ 
+-本次发行版本为0.9.0，执行进度、最终提交及资产核验见[发布记录](release-090-verification.md)。以下构建步骤针对当前package.json版本；0.8.0的发行记录和资产保持原身份。
++当前正式版本为0.9.0，最终提交及资产核验见[发布记录](release-090-verification.md)。源码已进入0.10.0开发阶段，尚未发布；以下构建步骤针对当前package.json版本。0.8.0、0.9.0的发行记录、标签和资产保持原身份。
+ 
+ ## 首发版本身份
+ 
+@@ -13,14 +13,14 @@
+ ## 构建与验证
+ 
+ ```powershell
+-npm run release:build -- --out dist/0.9.0
++npm run release:build -- --out dist/0.10.0
+ ```
+ 
+ 输出目录必须不存在。构建器按`release/distribution.json`的明确文件清单复制，拒绝不安全路径、重复路径、符号链接和覆盖已有产物；根README使用`release/README.md`作为下载包入口。不会扫描或打包作品、验收目录、.git、.idea或临时目录。失败时保留临时构建目录供诊断，不自动删除或覆盖。
+ 
+ 历史来源审计索引以`docs/oh-story-reference-inventory.json`镜像随源码包携带，只包含公开参考仓库的文件元数据，与原审计清单的SHA一致；回归不依赖未分发的验收目录。Git来源只在当前目录确为仓库根时记录，不借用父仓库；暂时读取失败会停止构建，不把不确定状态悄悄写成另一份成功产物。
+ 
+-产物包括`ai-writer-0.9.0.zip`、`SHA256SUMS.txt`、`release-manifest.json`、`RELEASE_NOTES.md`和便于检查的展开目录；默认输出为`dist/<package.json版本>`。ZIP使用固定条目时间；同一输入、同一来源状态下可复现。清单记录实际来源Git提交与dirty状态，不把开发候选称为已发布版本。包内`build-manifest.json`绑定受管资源；`RELEASE-MANIFEST.json`记录载荷哈希，外部SHA绑定最终ZIP。
++产物包括`ai-writer-0.10.0.zip`、`SHA256SUMS.txt`、`release-manifest.json`、`RELEASE_NOTES.md`和便于检查的展开目录；默认输出为`dist/<package.json版本>`。ZIP使用固定条目时间；同一输入、同一来源状态下可复现。清单记录实际来源Git提交与dirty状态，不把开发候选称为已发布版本。包内`build-manifest.json`绑定受管资源；`RELEASE-MANIFEST.json`记录载荷哈希，外部SHA绑定最终ZIP。
+ 
+ 以最终ZIP解压到新目录后，运行npm test、npm run doctor、npm run test:engine和真实CLI流程；核对隐藏技能、中文路径、来源许可、旧候选更新、幂等及暂停门禁。验证数据放在包外，保持下载资产原始哈希。Windows环境跳过不能算通过，也不能代替未取得结果的跨系统CI。
+ 
+diff --git a/docs/review-and-registration.md b/docs/review-and-registration.md
+index 2805ff29a..2e68102b3 100644
+--- a/docs/review-and-registration.md
++++ b/docs/review-and-registration.md
+@@ -47,6 +47,8 @@ review可带chapter_functions、comparison及issues，须expected_revision、稳
+ 
+ record-preview与record共用校验，显示缺项、实际事实差异和未变项，预览不登记、不生成journal、不刷新过期来源。空摘要或坏引文仍拒绝。可选--out .writer/drafts/名称.json写新可读入口，不覆盖旧文件；它是草案，不能作正式设定来源。
+ 
++`changes.characters` 是逐角色的整段状态替换，不是对状态字符串追加文字：未填写的角色保持不变；填写某角色时，先实读旧状态，保留仍有效的信息并写入真实变化，再核对预览。不要将“未变项自动保留”理解为已填写状态内部的旧句子会自动合并。
++
+ 先完整实读当前章、写完并保存报告，再preview；退出0才record。需要机械保证报告已保存且对应本稿时，添加 `draft_review`：`reviewer`、`report`（审查/下.md或.txt）、`draft_sha256`、`report_sha256`。工具核非空报告与两项实际SHA256，正式登记冻结报告对象；缺失、空白或版本变化先于状态/journal/报告对象写入拒绝。冻结对象后来缺失或被改写时诊断报 `DRAFT_REVIEW_CORRUPT`，保留现场，不追认新字节；报告原路径之后的正常编辑不覆盖原冻结版本。此字段可选，旧输入兼容；它不证明模型读过或文学通过，不替代 `replay_review` 和完整尾段复核。改稿或改报告后保留原输入，实读新版本后另存，不只刷新哈希。
+ 
+ 账本 `type` 允许 `fact/thread/object/relationship/observation`，`status` 允许 `active/pending/partial/resolved/intentional-open`，不要填 `open`。错误 `LEDGER_VALUE_INVALID` 带具体字段及 `allowed_values`，按实际语义选择，不自动转换。preview阻断退出1，record异常退出2；保存真实退出码和双流，在失败处停止依赖步骤。
+diff --git a/docs/tool-updates.md b/docs/tool-updates.md
+index 11070aa6e..6408ee17b 100644
+--- a/docs/tool-updates.md
++++ b/docs/tool-updates.md
+@@ -8,6 +8,8 @@
+ 
+ 文档更新是显式选择：只允许未被定制且未被章节消费的受管手册；未知旧基线保留现状。更新不会迁移schema、重登章节或修改事实；成功只推进一次业务revision和工具generation，旧输入因此过期。
+ 
++无正文副本更新在计划选项中显式使用 `"validation_mode":"in-place-readonly"`。更新内部对完整讨论上下文的机械兼容检查使用固定上限 240000 字符，计划中的 `validation_context_max_chars` 显示此上限并纳入计划指纹；它不改变作者写作时的模型上下文预算，也不截断状态。超过上限会保留作品和候选，返回 `TOOL_VALIDATION_FAILED` 及检查项中的 `CONTEXT_BUDGET_EXCEEDED` 详情，不能删除作者决策或刷新旧哈希来绕过。
++
+ 出现pending时停止普通读写，从外部新入口 `tool updates` 查事务，使用 `tool recover --input ...` 明确complete或rollback。遗留锁必须核原进程、锁SHA及作者恢复依据，不能按超时删除。恢复遇第三方字节保留旧/新/外部并停止。备份与失败材料不会自动清理。
+ 
+ 若pending属于修订事务，应使用revision recover而非tool recover。0.7.3目录外固定依赖被提交校验误拒时，先按[修订手册](revision-and-sources.md)从已验证的外部0.7.6入口恢复原事务；不要在活跃修订期间覆盖旧包来修复，也不要重写清单或基线。兼容恢复不安装新包、不改变schema或工具generation。
+@@ -52,4 +54,4 @@ staging中的pre-transaction-candidate表示事务尚未发布，原工具和sta
+ 
+ doctor返回`skill_root`和`content_root`，分别是实际校验的技能与手册资源目录；`project_skill_root`指保留的作品根技能。0.7/0.8随附包的技能在`.writer/tool/.agents/skills`，修订区仍指向父作品安装包。校验通过只证明这些资源完整，不代表Codex已经阅读过它们；交接应记录本轮实际读取的位置与版本。工具流程参考不能覆盖作者约定，也不自动改变技能发现顺序或根文件。
+ 
+-当前开发版本为0.9.0，沿用0.7起的schema6、受管资源、清单和更新协议；新入口同时识别完整0.7、0.8与0.9包，不接受未声明支持的未来版本。正式下载仍为v0.8.0。版本号提升不自动迁移作品或更新旧包；活跃修订仍须使用其原绑定构建，结束后再单独规划正式更新。
++当前开发版本为0.10.0，沿用0.7起的schema6、受管资源、清单和更新协议；新入口同时识别完整0.7、0.8、0.9与0.10包，不接受未声明支持的未来版本。正式下载为v0.9.0。版本号提升不自动迁移作品或更新旧包；活跃修订仍须使用其原绑定构建，结束后再单独规划正式更新。
+diff --git a/docs/user-guide.md b/docs/user-guide.md
+index 1539ad94e..039dd8a5f 100644
+--- a/docs/user-guide.md
++++ b/docs/user-guide.md
+@@ -1,5 +1,18 @@
+ # ai-writer 使用手册
+ 
++## 恢复现场，确认下一步
++
++优先用 `node bin/ai-writer.mjs status --project "作品目录" --view task`；在作品目录改用 `node .writer/tool/bin/ai-writer.mjs status --view task`。默认 `status` 仍提供详细诊断，并给出 `task_view_command` 入口。
++
++- `identity` 区分主稿和原修订候选；存在多个候选时需按任务与所有者选择，不自动合并。
++- `governance` 是当前阶段与授权；`next.action` 说明下一步，`next.command` 是可调用的读取或帮助入口。`next.defaults` 只提供当前章号、修订号等机械字段，不是完整写入请求；`next.requires` 仍须真实核对。
++- 续写时先读取当前上下文，再使用 `input_template_command` 取得登记模板，并核对 `input_template_requires`。修订重登的 `revision replay-input` 须附加 `--revision-token` 和原会话令牌；先改好当前正文，再取草案，并填写绑定当前正文的 `replay_review` 报告、审查者及六项复核。修订预览与登记也按接口携带原令牌。填入实际变化，预览通过后才登记。之后又改正文或输入失效，就重新取模板并实读复核，不直接重试旧输入。
++- `drafts` 只列出正文目录中按文件名推测的本章候选，不判断分段是否完整；其他位置的分段和交接仍需实际阅读。不会自动选稿、合章或删除旧稿。
++- `recovery_only: true` 表示存在未完成事务，普通业务读写仍暂停。此时只显示恢复入口；携原凭据、实际锁哈希及作者恢复证据，明确选择继续或回滚。它不是自动恢复或质量通过。
++- 已启用稳定正文目录的作品进入新卷时，若本章超出原目录契约，任务视图会提示先扩展目录。Codex 按下方“已登记正文按卷迁移”预览空 `mapping` 和完整 `directories`，在授权范围内扩展未来目录；这一步不自动移动旧正文，也不授予写作权限。
++
++任务视图从现有状态即时派生，不保存另一套任务账本，不刷新旧基线，也不返回修订令牌。更改状态后重新查看；每条正式命令仍会重新检查授权、CAS、来源和锁。已结束候选只供回查，应回到主稿继续。
++
+ 受保护续写候选已登记第七章后的小修，见[版本与修订手册](revision-and-sources.md)中的“已登记第七章的小修与重登”。该入口保留原七章版本，以本地候选凭据记录实际修改，不产生主稿提交；普通作品仍沿用正常修订事务。
+ 
+ ai-writer 通过 Codex 阅读、写作和审修；本地工具负责文件、追踪、来源和导出。日常使用可以直接说任务，无需手工编辑追踪 JSON。
+@@ -117,6 +130,8 @@ Codex可使用 `assemble --input 合章.json`，按实际顺序、分段路径
+ 
+ 多处旧章修改后，不仅检查新正文，也要检查后续人物所知和物件保管。已经交接，人物条目却还写“明早待签收”，会误导下次续写；但未在现场的人也不能自动知道接收结果。让 Codex 按实际在场、看照或转述逐项更新，并把旧时知识标明章次。具体恢复、回退、召回和语义复核步骤见 [长篇工具用法](long-form.md)。
+ 
++增量登记的 `changes.characters` 按角色替换整段状态：没有填写的角色保持不变；一旦填写某个角色，需把仍有效的旧信息连同本章真实变化一起写入。不要只写一句新变化而丢掉该角色仍需保留的旧状态；用 `record-preview` 检查前后差异，再登记。
++
+ 同一设定需要分章生效时，可以直接说：“从第10章采用新版，前9章保留原输入；先固定真实旧版、分析影响，再执行授权修订。”Codex 负责核对旧版的发布区间和回放来源。出现 SOURCE_BASELINE_REQUIRED，表示保留的旧章还缺原版发布区间，应找回真实旧字节并补齐，而不是刷新哈希；全部旧消费者都纳入本次修订时无需多做这一步。详见[版本与修订手册](revision-and-sources.md)。
+ 
+ ## 旧稿导入与换位置
+@@ -237,4 +252,49 @@ context的`--max-chars`控制工具生成上下文的字符预算，与Codex单
+ 普通审查与旧章重登报告使用非空UTF-8文本，单文件最多1 MiB，按实际字节计；普通摘要、角色状态及比较字段保持原短字段限制。修改已登记报告或依赖后须重新核读并登记。超上限时保留原文，整理覆盖同一实际阅读范围的重点报告，不缩小声称范围或填表冒充完整复核。该限制由Codex准备输入时处理，新作者无需手工计算哈希或拼接报告。
+ ## 独立候选已有下一章稿件
+ 
++相关的纯目录整理见下方说明；目录迁移不属于正文修订或候选采纳。
++
+ 旧修订会话不能用更宽 workflow 授权扩展。已有封存稿时，按[来源与修订说明](revision-and-sources.md)的“独立候选的下一章采纳”一节派生新候选，完整承接原消费链，再显式采纳登记。原候选、原工具和主稿均保留。新候选仅允许指定下一章；旧章只读，再下一章、prepare/commit 均拒绝。不要用后来取得的 record-template 追认动笔前准备。
++
++## 已登记正文按卷迁移
++
++0.10.0 开发制品新增 `draft` 迁移入口。先确认作者已授权目录整理，当前作品无活跃修订、来源漂移或待处理影响，并已采用支持迁移的固定工具制品。已有 0.9.0 正式包不能直接执行迁移；不能手改 `state.json`、刷新旧哈希或把普通修订当成搬文接口。
++
++Codex 根据实际登记生成以下输入，`sha256` 使用每章当前真实哈希，不能照抄占位内容：
++
++```json
++{
++  "mapping": [
++    {"unit": 1, "from": "正文/0001.md", "to": "正文/V1-初卷/0001.md", "sha256": "实际SHA256"}
++  ],
++  "directories": [
++    {"volume_id": "V1", "directory": "正文/V1-初卷", "from": 1, "to": 20}
++  ]
++}
++```
++
++`directories` 必须覆盖全部已登记章节；契约内未移动的章节也必须已在对应目录。目录范围可以包含已明确的后续章节，但不因此获得写作授权。
++
++1. `node bin/ai-writer.mjs draft relocate-plan --project "作品目录" --input "映射.json"` 只读预览。
++2. Codex 保存输出中的 `request`，补齐真实 `author_evidence`；保留原 `expected_revision`、`expected_generation`、`expected_build_id`、`expected_executor_build_id`、`operation_id` 和 `plan_sha256`。按已确认授权执行 `draft relocate --project "作品目录" --input "迁移请求.json"`。
++3. 执行后 `check`、`status --view task`，对照迁移前后逐章 SHA、合稿顺序、来源与审查覆盖。机械等价不等于新的文学验收。
++
++迁移显式升级到 schema 7，旧工具会拒绝操作。新正文地址由迁移事件解释；旧来源哈希、差量账本、冻结输入和审查原文不改写。若旧路径重新出现文件，停止并核查，不静默忽略。
++
++正文数据不另存副本。移动通过独占创建目标目录项并撤去原目录项完成；过程中可能短暂出现指向同一文件的两条路径。只允许本事务预期的同一文件身份与相同字节，已有外部硬链接、符号链接、重名目标都拒绝。完成后每章只剩一个路径、一个链接。文件系统不支持该安全移动时保留事务并报错，不退化为复制正文。
++
++中断后先运行 `draft relocations` 或 `status --view task`。普通读写暂停；使用 `draft relocate-recover`，输入 `transaction_id`、明确的 `direction: "complete"` 或 `"rollback"`、真实作者恢复依据及现存锁的 `lock_sha256`。原进程仍活跃时不抢锁。发现第三方内容或两个不等价文件时保留现场，不覆盖、不自动删除。已完成事务不能反向恢复；需要撤销时另开已授权迁移。
++
++稳定目录独立于滚动卷纲的标题。超出已确认范围时返回 `DRAFT_DIRECTORY_REQUIRED`，不自动生成另一个卷文件夹。补充未来目录时仍走同一预览/执行入口，`mapping` 可为空，`directories` 提供完整新契约；不移动已登记正文，也不修改剧情卷界。
++
++### 工具更新时不复制正文
++
++从待替换工具之外的可信固定入口调用 `tool update-plan`，输入如：
++
++```json
++{"source":"固定制品绝对路径","validation_mode":"in-place-readonly"}
++```
++
++核对计划后保存 `request` 并填写真实作者依据，再执行 `tool update`。这个模式在写锁保护下，对作品原位置进行只读检查，只在验证目录暂存新工具和元数据；事务备份也仅涉及工具、所选手册和元数据，不复制正文。工具代次和状态仍最后发布，异常仍走 `tool updates` / `tool recover`，不会跳过哈希或定制文件保护。默认 `copy` 模式保留旧行为，需要禁止正文复制时必须显式选择本模式。
++
++这是新开发能力，不表示已把任何现有作品升级到 0.10.0。真实采用哪个固定制品、何时移动作品，由作者单独决定。
+diff --git a/lib/governance.mjs b/lib/governance.mjs
+index 2dec0e377..496f95530 100644
+--- a/lib/governance.mjs
++++ b/lib/governance.mjs
+@@ -40,7 +40,7 @@ export function createGovernance(api) {
+       const entry = value.planning[level]; keys(entry, ['status', 'refs', 'unresolved_ids', 'reason'], `planning.${level}`);
+       if (!['missing', 'draft', 'adopted', 'deferred'].includes(entry.status)) reject('INVALID_INPUT', 'planning.status 无效');
+       strings(entry.refs, 'planning.refs'); strings(entry.unresolved_ids, 'planning.unresolved_ids');
+-      for (const ref of entry.refs) text(safe(p.root, ref));
++      for (const ref of entry.refs) text(safe(p.root, api.resolveDraft(p, ref)));
+       if (entry.status === 'adopted' && !entry.refs.length) reject('INVALID_INPUT', '采纳的规划需有可读来源；存在文件不等于采纳');
+       if (entry.status === 'deferred') { string(entry.reason, 'deferred.reason'); if (a.allowed_actions.includes('draft') && (value.stage !== 'trial' || !a.draft_range || !a.stop_conditions.length)) reject('PLANNING_REQUIRED', '暂缓规划时写正文须有有限试写范围和复盘条件；暂停讨论可保留暂缓状态'); }
+     }
+diff --git a/lib/help.mjs b/lib/help.mjs
+index 4022d5069..69e1227fc 100644
+--- a/lib/help.mjs
++++ b/lib/help.mjs
+@@ -1,6 +1,7 @@
+ import path from 'node:path';
+ 
+ export const COMMANDS = {
++  draft: {flags:['project','input'],usage:'relocate-plan|relocate|relocations|relocate-recover --project 作品目录 [--input 输入.json]',purpose:'已登记正文按显式映射移动；先只读预览，再按作者依据执行。仅改路径，保留历史哈希，状态升级schema7。中断先查看relocations，再明确complete/rollback；不复制正文、不自动扩大授权。'},
+   init: { flags: ['path', 'kind', 'title','mode'], usage: '--path 新目录 --kind novel|screenplay|history|essay --title 作品名 [--mode long|standard]', purpose: '建立作品和随附工具，不覆盖已有目录。明确长篇/跨卷时用long，提前组织全书骨架、卷契约和近期细纲。', example: "--path 'works/雨夜来信' --kind novel --title '雨夜来信' --mode long" },
+   plan: { flags: ['project', 'input'], usage: '--project 作品目录 --input 细纲.json', purpose: '保存下一章、场或篇的细纲。', input: { unit: 1, title: '来信', goal: '确认寄件人', change: '发现寄件时间不符', beats: ['核对邮戳'], cast: [], setting_refs: [], research_refs: [] } },
+   context: { flags: ['project', 'unit', 'max-chars', 'purpose','out'], usage: '--project 作品目录 [--purpose discussion|draft|revision] [--unit 1] [--max-chars 40000] [--out .writer/drafts/context-1.json]', purpose: 'discussion恢复任务/范围/决策；draft及revision须有授权和细纲。超预算不截断，返回总量、分项及主要引用占用；字符量不是模型token数。out可选，写新的内部JSON可读入口，不覆盖旧输入。带out会取得作品写锁；同作品的草案保存须串行，不与模板保存并发。' },
+@@ -9,7 +10,7 @@ export const COMMANDS = {
+   'long-enable-preview':{flags:['project'],usage:'--project 作品目录',purpose:'只读预览长篇迁移与估计journal体积，不创建备份、不改状态；取消即停止，实际启用仍需授权及当前revision。'},
+   record: { flags: ['project', 'input'], usage: '--project 作品目录 --input 登记.json', purpose: '填写写前模板中的实际摘要与追踪，然后顺序登记正文。不要从手册抄写假哈希。' },
+   assemble: { flags: ['project','input'], usage: '--project 作品目录 --input 合章.json', purpose: '按有序分段路径与SHA256连接完整章。省略draft时采用当前context的draft_path，与默认登记模板一致；显式draft必须是正文/下的新.md或.txt文件，不能输出到分段/；parts的输入须在分段/下。只创建新文件、不覆盖、不登记；已有目标另取正文/下新路径。separator只允许空白，换场标记写入片段本身后取实际SHA。须当前revision及正文授权；完成后完整实读，再preview/record。', input: {unit:1,expected_revision:1,draft:'正文/0001.md',parts:[{path:'分段/0001/01.md',sha256:'替换为实际片段SHA256'},{path:'分段/0001/02.md',sha256:'替换为实际片段SHA256'}],separator:'\n\n'} },
+-  status: { flags: ['project', 'view'], usage: '--project 作品目录 [--view compact|full]', purpose: '查看进度、过期来源、未登记正文和建议下一步。' },
++  status: { flags: ['project', 'view'], usage: '--project 作品目录 [--view task|compact|full]', purpose: 'task集中显示授权、恢复位置、阻塞及下一步；compact/full保留详细诊断。只读，不执行或授予写作权限。' },
+   check: { flags: ['project'], usage: '--project 作品目录', purpose: '检查机械一致性与未登记正文；不裁定文学质量。' },
+   rewind: { flags: ['project', 'from', 'expected-revision'], usage: '--project 作品目录 --from 1 --expected-revision 当前修订号', purpose: '备份并作废指定单元及后续追踪，保留正文。schema4及以上须先建立独立修订区，在该区带revision-token回退；不在主稿直接执行。旧协议兼容原路径。' },
+   export: { flags: ['project', 'out'], usage: '--project 作品目录 --out 作品目录外的新目录', purpose: '导出已登记草稿，列出未纳入的正文；不覆盖旧导出。' },
+@@ -42,7 +43,7 @@ export function invocation(root, command, args = []) {
+   return `node ${quote(path.join(root, 'bin/ai-writer.mjs'))} ${command}${args.length ? ' ' + args.map(quote).join(' ') : ''}`;
+ }
+ export function help(root, version, command) {
+-  const legacyEmbedded = path.basename(path.dirname(root)) === '.writer'&&!/^0\.[789]\./.test(version??'');
++  const legacyEmbedded = path.basename(path.dirname(root)) === '.writer'&&!/^0\.(?:[789]|10)\./.test(version??'');
+   const guides = legacyEmbedded ? path.resolve(root, '../../docs') : path.join(root, 'docs');
+   const skills = legacyEmbedded ? path.resolve(root, '../../.agents/skills') : path.join(root, '.agents/skills');
+   const projectHint = command === 'init' ? 'init 使用 --path 指定新作品目录，不接受 --project。'
+diff --git a/lib/longform.mjs b/lib/longform.mjs
+index 6019a1fc9..1488133d5 100644
+--- a/lib/longform.mjs
++++ b/lib/longform.mjs
+@@ -18,7 +18,9 @@ export function createLongform(api) {
+     return title.replace(/[. ]+$/g, '') || '未命名';
+   }
+   function draftPath(p, unit, title = '正文', extension = '.md') {
+-    const directory = p.state.schema_version === 2 || p.state.long_form ? outline(p, unit).draft_directory : '正文';
++    const contracted=p.state.draft_relocations?.directories.find(d=>d.from<=unit&&unit<=d.to);
++    if(p.state.draft_relocations&&!contracted)throw userError('本章超出稳定卷目录契约；先用 draft relocate-plan 和空 mapping 显式补充未来目录范围，不自动套用切片标题',{code:'DRAFT_DIRECTORY_REQUIRED'});
++    const directory = contracted?.directory ?? (p.state.schema_version === 2 || p.state.long_form ? outline(p, unit).draft_directory : '正文');
+     return `${directory}/${unitId(unit)}-${fileTitle(title)}${extension}`;
+   }
+   function long(p) { if (p.state.schema_version < 2 || (p.state.schema_version >= 3 && !p.state.long_form)) fail('先用 long-enable 备份并启用长篇协议'); }
+@@ -65,7 +67,7 @@ export function createLongform(api) {
+     const { ref, value } = candidates[0], arc = value.arcs.find(x => unit >= x.start && unit <= x.end);
+     return { ref, volume: { id: value.id, title: value.title, start: value.start, end: value.end,
+       promises: value.promises, constraints: value.constraints, reserved: value.reserved }, arc,
+-      draft_directory: `正文/${value.id}-${fileTitle(value.title)}`,
++      draft_directory: p.state.draft_relocations?.directories.find(d=>d.from<=unit&&unit<=d.to)?.directory ?? `正文/${value.id}-${fileTitle(value.title)}`,
+       note: '全部是计划；兑现情况须在正文、ledger 及审查中核实' };
+   }
+   function validatePlan(p, result, input) {
+@@ -217,7 +219,7 @@ export function createLongform(api) {
+     const indexed = records.filter(r => !unpublished.includes(r));
+     const valid = indexed.filter(r => !Object.values(p.state.impact_pending ?? {}).some(x => x.from <= r.to && x.through >= r.from)
+       && fs.existsSync(safe(p.root, r.report)) && hash(fs.readFileSync(safe(p.root, r.report))) === r.report_sha256
+-      && r.units.every(u => p.state.units[u.unit - 1]?.sha256 === u.sha256 && (!r.dependencies || r.dependencies[u.unit] === dependency(p.state.units[u.unit - 1])) && fs.existsSync(safe(p.root, u.draft)) && hash(fs.readFileSync(safe(p.root, u.draft))) === u.sha256)
++      && r.units.every(u => p.state.units[u.unit - 1]?.sha256 === u.sha256 && (!r.dependencies || r.dependencies[u.unit] === dependency(p.state.units[u.unit - 1])) && fs.existsSync(safe(p.root, api.resolveDraft(p,u.draft))) && hash(fs.readFileSync(safe(p.root, api.resolveDraft(p,u.draft)))) === u.sha256)
+       && (r.dependencies || !(p.state.committed_revisions ?? []).some(binding => { const c = json(safe(p.root, binding.ref)); return c.scope.from <= r.to && c.scope.through >= r.from; })));
+     const windows = [];
+     for (let end = 3; end <= p.state.units.length; end += 3) {
+diff --git a/lib/relocation.mjs b/lib/relocation.mjs
+new file mode 100644
+index 000000000..88cbb3f27
+--- /dev/null
++++ b/lib/relocation.mjs
+@@ -0,0 +1,100 @@
++import fs from 'node:fs';
++import path from 'node:path';
++import crypto from 'node:crypto';
++import { isDeepStrictEqual as same } from 'node:util';
++import { cleanKeys } from './journal.mjs';
++import { userError } from './help.mjs';
++import { identifyBuild, fileRef } from './tool-build.mjs';
++
++const HEX=/^[a-f0-9]{64}$/, UUID=/^[a-f0-9]{8}-[a-f0-9-]{27}$/;
++const fail=(code,message,extra={})=>{throw userError(message,{code,...extra});};
++const key=s=>s.normalize('NFC').toLowerCase();
++export function createRelocation(api){
++  const {project,safe,json,hash,atomic,withLock,fresh,revisions,writeEvidence,gate,stateLimit,toolRoot}=api;
++  const io=revisions.fileTransactions;
++  const digest=(root,ref)=>io.digest(root,ref);
++  function keys(v,names){cleanKeys(v);if(!v||typeof v!=='object'||Array.isArray(v)||Object.keys(v).some(k=>!names.includes(k)))fail('RELOCATION_INPUT_INVALID','输入不是对象或含未知字段');}
++  function ordinary(root,ref,allowPair=false){
++    const file=safe(root,ref);
++    if(file.length>240||ref.split('/').some(s=>/[<>"|?*]/.test(s)||/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(s)))fail('RELOCATION_UNSAFE_PATH','路径不兼容 Windows 或过长',{ref});
++    let cursor=fs.realpathSync(root);
++    for(const part of ref.split('/')){if(fs.existsSync(cursor)){const matches=fs.readdirSync(cursor).filter(n=>key(n)===key(part));if(matches.some(n=>n!==part))fail('RELOCATION_PATH_ALIAS','路径存在大小写或 Unicode 别名',{ref});}cursor=path.join(cursor,part);if(fs.existsSync(cursor)){const s=fs.lstatSync(cursor);if(s.isSymbolicLink()||(!s.isDirectory()&&(!s.isFile()||s.nlink!==1&&!(allowPair&&s.nlink===2))))fail('RELOCATION_UNSAFE_PATH','路径含链接或特殊文件',{ref});}}
++    return file;
++  }
++  function bodyPath(root,ref,allowPair=false){if(typeof ref!=='string'||!/^正文\/.+\.(md|txt)$/.test(ref))fail('RELOCATION_PATH_INVALID','仅可移动正文中的 md/txt');return ordinary(root,ref,allowPair);}
++  function event(p,b){if(!/^\.writer\/objects\/[a-f0-9-]+\.json$/.test(b?.ref??'')||!HEX.test(b.sha256??'')||digest(p.root,b.ref)!==b.sha256)fail('RELOCATION_CORRUPT','迁移事件损坏');const e=json(safe(p.root,b.ref),stateLimit);if(e.kind!=='draft-relocation'||!Array.isArray(e.mapping)||!Array.isArray(e.directories))fail('RELOCATION_CORRUPT','迁移事件格式损坏');return e;}
++  function resolve(p,ref){let current=ref;for(const b of p.state.draft_relocations?.events??[]){const e=event(p,b),m=e.mapping.find(x=>x.from===current);if(m)current=m.to;}if(current!==ref&&fs.existsSync(safe(p.root,ref)))fail('RELOCATION_ALIAS_SHADOW','历史正文地址重新出现文件，保留现场，不静默忽略');return current;}
++  function equivalent(p,a,b){return resolve(p,a)===resolve(p,b);}
++  function validate(p){
++    if(p.state.schema_version<7){if(p.state.draft_relocations)fail('RELOCATION_CORRUPT','旧协议不能含迁移状态');return;}
++    const r=p.state.draft_relocations;if(!r||!Array.isArray(r.events)||!r.events.length||!Array.isArray(r.directories))fail('RELOCATION_CORRUPT','schema7 缺少迁移事件');
++    let last;const visited=new Set();for(const b of r.events){const e=event(p,b);if(visited.has(e.operation_id))fail('RELOCATION_CORRUPT','迁移操作重复');visited.add(e.operation_id);for(const m of e.mapping){bodyPath(p.root,m.from);bodyPath(p.root,m.to);if(!HEX.test(m.sha256)||m.from===m.to)fail('RELOCATION_CORRUPT','迁移路径或哈希损坏');}const a=e.evidence;if(!a||digest(p.root,a.frozen_ref)!==a.source_sha256||!fs.readFileSync(safe(p.root,a.frozen_ref),'utf8').includes(a.quote))fail('RELOCATION_CORRUPT','迁移作者证据损坏');last=e;}
++    if(!same(r.directories,last.directories))fail('RELOCATION_CORRUPT','卷目录投影与最后事件不符');
++    for(const u of p.state.units)if(resolve(p,u.draft)!==u.draft)fail('RELOCATION_CORRUPT','当前登记仍指向迁移前路径');
++  }
++  function directories(root,value){
++    if(!Array.isArray(value)||!value.length)fail('RELOCATION_INPUT_INVALID','需显式卷目录契约');const ids=new Set(),dirs=new Set();
++    return value.map(d=>{keys(d,['volume_id','directory','from','to']);if(!/^[A-Za-z0-9_-]{1,80}$/.test(d.volume_id??'')||ids.has(d.volume_id)||!Number.isSafeInteger(d.from)||d.from<1||!Number.isSafeInteger(d.to)||d.to<d.from||typeof d.directory!=='string'||!/^正文\/[^/]+$/.test(d.directory)||dirs.has(key(d.directory)))fail('RELOCATION_INPUT_INVALID','卷目录、范围或 ID 无效/重复');ordinary(root,d.directory);if(value.some(o=>o!==d&&o.from<=d.to&&d.from<=o.to))fail('RELOCATION_VOLUME_OVERLAP','目录契约范围重叠');ids.add(d.volume_id);dirs.add(key(d.directory));return {...d};});
++  }
++  function ready(p){if(p.state.schema_version<6)fail('RELOCATION_PROTOCOL_REQUIRED','迁移需要 schema6 及受控更新后的工具');if(revisions.info(p.root)||io.sessions(p.root).some(s=>['open','editing','prepared','interrupted','conflicted'].includes(s.status)))fail('RELOCATION_REVISION_ACTIVE','先结束活跃修订');gate(p,'plan');fresh(p);const build=identifyBuild(p.root);if(!build.ok||!build.supported_state_schemas.includes(7))fail('RELOCATION_TOOL_REQUIRED','先采用支持 schema7 的固定制品，不能直接用外部工具迁移旧随附包');const installed=p.state.tool_control.installed;if(installed&&(installed.runtime_id!==build.runtime_id||installed.source_content_id!==build.observed_content_id))fail('RELOCATION_INSTALLED_BUILD_MISMATCH','实际随附构建与已安装代次不符，不能用迁移追认手工替换');return build;}
++  function plan(root,input){
++    keys(input,['mapping','directories']);const p=project(root),build=ready(p),dirs=directories(root,input.directories);
++    if(!Array.isArray(input.mapping)||(!input.mapping.length&&!p.state.draft_relocations))fail('RELOCATION_INPUT_INVALID','需显式非空章节映射');const units=new Set(),targets=new Set(),sources=new Set();
++    const mapping=input.mapping.map(m=>{keys(m,['unit','from','to','sha256']);const u=p.state.units[m.unit-1];if(!Number.isSafeInteger(m.unit)||units.has(m.unit)||!u||u.draft!==m.from||m.sha256!==u.sha256||m.from===m.to)fail('RELOCATION_MAPPING_INVALID','映射与唯一登记不符');bodyPath(root,m.from);bodyPath(root,m.to);if(digest(root,m.from)!==m.sha256)fail('RELOCATION_HASH_CHANGED','原正文已变化');if(fs.existsSync(safe(root,m.to))||targets.has(key(m.to)))fail('RELOCATION_TARGET_EXISTS','目标已存在或重复');if((p.state.draft_relocations?.events??[]).some(b=>event(p,b).mapping.some(old=>key(old.from)===key(m.to))))fail('RELOCATION_ALIAS_REUSE','不能重用历史正文地址');const d=dirs.find(d=>d.from<=m.unit&&m.unit<=d.to);if(!d||path.posix.dirname(m.to)!==d.directory)fail('RELOCATION_VOLUME_MISMATCH','目标与显式卷目录契约不符');units.add(m.unit);targets.add(key(m.to));sources.add(key(m.from));return {...m,bytes:fs.statSync(safe(root,m.from)).size};});
++    if(mapping.some(m=>sources.has(key(m.to))))fail('RELOCATION_PATH_ALIAS','不支持交换路径或路径循环');
++    for(const u of p.state.units){const d=dirs.find(d=>d.from<=u.unit&&u.unit<=d.to);if(!d)fail('RELOCATION_MAPPING_INCOMPLETE','目录契约须覆盖全部已登记章节');if(d&&!units.has(u.unit)&&path.posix.dirname(u.draft)!==d.directory)fail('RELOCATION_MAPPING_INCOMPLETE','契约覆盖的已登记章节必须全部位于约定目录或在映射中');}
++    const executor=identifyBuild(toolRoot);if(!executor.ok)fail('RELOCATION_TOOL_REQUIRED','执行入口构建不完整');const basis={installed_manifest_sha256:digest(root,'.writer/tool/build-manifest.json'),executor_build_id:executor.observed_content_id,project_id:p.state.project_id,revision:p.state.revision,state_sha256:digest(root,'.writer/state.json'),generation:p.state.tool_control.generation,build_id:build.observed_content_id,mapping,directories:dirs};
++    return {ok:true,read_only:true,...basis,plan_sha256:hash(JSON.stringify(basis)),request:{expected_revision:p.state.revision,expected_generation:basis.generation,expected_build_id:basis.build_id,expected_executor_build_id:basis.executor_build_id,operation_id:crypto.randomUUID(),plan_sha256:hash(JSON.stringify(basis)),mapping:input.mapping,directories:dirs,author_evidence:null},note:'只改变路径；采用后 schema7，旧工具拒绝读取；正文原地移动，不复制正文备份。'};
++  }
++  const txref=id=>`.writer/transactions/${id}/transaction.json`;
++  function list(root){return {ok:true,read_only:true,transactions:io.transactions(root).filter(t=>t.kind==='draft-relocation').map(t=>({id:t.id,status:t.status,operation_id:t.operation_id,conflicts:t.conflicts??[],lock_sha256:digest(root,'.writer/write.lock')}))};}
++  function validateTx(root,t){if(!UUID.test(t.id??'')||t.kind!=='draft-relocation'||hash(JSON.stringify(t.protection))!==t.protection_sha256)fail('RELOCATION_CORRUPT','事务清单损坏');const b=t.protection;for(const side of ['before','after'])if(digest(root,b[side+'_ref'])!==b[side+'_sha256'])fail('RELOCATION_CORRUPT','状态备份损坏');for(const m of b.mapping){bodyPath(root,m.from,true);bodyPath(root,m.to,true);}return b;}
++  function publish(root,t,direction){
++    const b=validateTx(root,t),conflicts=[];
++    function ownedPair(m){const a=safe(root,m.from),z=safe(root,m.to);if(!fs.existsSync(a)||!fs.existsSync(z))return false;const x=fs.lstatSync(a),y=fs.lstatSync(z);return x.isFile()&&y.isFile()&&x.nlink===2&&y.nlink===2&&x.dev===y.dev&&x.ino===y.ino&&digest(root,m.from)===m.sha256&&digest(root,m.to)===m.sha256;}
++    for(const m of b.mapping){const pair=ownedPair(m);ordinary(root,m.from,pair);ordinary(root,m.to,pair);const a=digest(root,m.from),z=digest(root,m.to);if(!((a===m.sha256&&z===null)||(a===null&&z===m.sha256)||pair))conflicts.push({unit:m.unit,from_sha256:a,to_sha256:z});}
++    const state=digest(root,'.writer/state.json');if(![b.before_sha256,b.after_sha256].includes(state))conflicts.push({file:'.writer/state.json',sha256:state});
++    const ignore=new Set(['.writer/state.json',...b.mapping.flatMap(m=>[m.from,m.to])]),filter=x=>Object.fromEntries(Object.entries(x).filter(([r])=>!ignore.has(r)));
++    if(!same(filter(io.inventory(root,b.extra)),filter(b.inventory)))conflicts.push({reason:'非迁移文件发生变化'});
++    if(conflicts.length){t.status='conflicted';t.conflicts=conflicts;io.saveTx(root,t);fail('RELOCATION_EXTERNAL_CONFLICT','保留现场，不覆盖第三方文件',{conflicts});}
++    t.status='applying';io.saveTx(root,t);let count=0;
++    for(const m of b.mapping){
++      const from=direction==='complete'?m.from:m.to,to=direction==='complete'?m.to:m.from;
++      if(digest(root,from)!==null){
++        const pair=ownedPair(m),a=ordinary(root,from,pair),z=ordinary(root,to,pair);fs.mkdirSync(path.dirname(z),{recursive:true});
++        if(!pair){if(digest(root,from)!==m.sha256)fail('RELOCATION_EXTERNAL_CONFLICT','移动前正文变化');
++          // link is an exclusive directory-entry claim: unlike rename, it cannot
++          // replace a target that appeared after inspection. No body bytes copy.
++          try{fs.linkSync(a,z);}catch(error){fail('RELOCATION_MOVE_BLOCKED','目标已出现或文件系统不支持安全同卷移动；保留事务，可回滚',{cause:error.code});}
++          if(process.env.AI_WRITER_TEST_FAULT==='1'&&Number(process.env.AI_WRITER_TEST_RELOCATE_STOP_LINK)===count+1)process.exit(90);
++        }
++        if(!ownedPair(m))fail('RELOCATION_EXTERNAL_CONFLICT','移动期间文件身份或字节变化，保留双方路径');fs.unlinkSync(a);
++      }
++      ordinary(root,to);if(digest(root,to)!==m.sha256||fs.existsSync(safe(root,from)))fail('RELOCATION_HASH_CHANGED','移动后路径或哈希不符');count++;if(process.env.AI_WRITER_TEST_FAULT==='1'&&Number(process.env.AI_WRITER_TEST_RELOCATE_STOP_AFTER)===count)process.exit(94);
++    }
++    for(const m of b.mapping){const to=direction==='complete'?m.to:m.from,from=direction==='complete'?m.from:m.to;ordinary(root,to);if(digest(root,to)!==m.sha256||fs.existsSync(safe(root,from)))fail('RELOCATION_EXTERNAL_CONFLICT','发布状态前正文发生变化');}
++    if(!same(filter(io.inventory(root,b.extra)),filter(b.inventory)))fail('RELOCATION_EXTERNAL_CONFLICT','发布状态前非迁移文件变化');
++    const wanted=direction==='complete'?'after':'before';if(![b.before_sha256,b.after_sha256].includes(digest(root,'.writer/state.json')))fail('RELOCATION_EXTERNAL_CONFLICT','发布前状态变化');io.storeBytes(root,'.writer/state.json',io.bytes(root,b[wanted+'_ref']));
++    if(process.env.AI_WRITER_TEST_FAULT==='1'&&process.env.AI_WRITER_TEST_RELOCATE_STOP_PHASE==='state')process.exit(93);
++    t.status=direction==='complete'?'completed':'rolled-back';t.direction=direction;io.saveTx(root,t);return {ok:true,transaction_id:t.id,status:t.status,revision:json(safe(root,'.writer/state.json'),stateLimit).revision,moved:b.mapping.length,body_copies:0,move_method:'exclusive-link-unlink'};
++  }
++  function relocate(root,input){
++    keys(input,['expected_revision','expected_generation','expected_build_id','expected_executor_build_id','operation_id','plan_sha256','mapping','directories','author_evidence']);return withLock(root,()=>{
++      if(!/^[A-Za-z0-9_-]{1,100}$/.test(input.operation_id??''))fail('RELOCATION_INPUT_INVALID','operation_id 无效');const fingerprint=hash(JSON.stringify(input)),old=io.transactions(root).find(t=>t.kind==='draft-relocation'&&t.operation_id===input.operation_id);if(old){validateTx(root,old);if(old.request_hash!==fingerprint)fail('RELOCATION_OPERATION_CONFLICT','operation_id 输入不同');if(old.status==='completed')return {ok:true,unchanged:true,transaction_id:old.id,status:old.status};fail('RELOCATION_OPERATION_TERMINAL','回滚后重新预览并使用新 operation_id');}
++      const proposed=plan(root,{mapping:input.mapping,directories:input.directories});if(input.expected_revision!==proposed.revision||input.expected_generation!==proposed.generation||input.expected_build_id!==proposed.build_id||input.expected_executor_build_id!==proposed.executor_build_id||input.plan_sha256!==proposed.plan_sha256)fail('RELOCATION_PLAN_CHANGED','预览、修订号、工具代次或构建已变化');
++      if(/^正文\//.test(input.author_evidence?.local_source??''))fail('AUTHOR_EVIDENCE_MISMATCH','作者依据须独立记录，不能把正文当作授权备份');
++      const p=project(root);if(digest(root,'.writer/state.json')!==proposed.state_sha256)fail('RELOCATION_PLAN_CHANGED','锁内核对期间状态变化');const evidence=writeEvidence(p,input.author_evidence),id=crypto.randomUUID(),eventRef=`.writer/objects/${id}.json`,e={kind:'draft-relocation',operation_id:input.operation_id,evidence,mapping:proposed.mapping,directories:proposed.directories,baseline:{revision:proposed.revision,generation:proposed.generation,build_id:proposed.build_id,executor_build_id:proposed.executor_build_id,state_sha256:proposed.state_sha256}};
++      atomic(safe(root,eventRef),e,stateLimit);const after=structuredClone(p.state);after.schema_version=7;after.revision++;after.draft_relocations={events:[...(after.draft_relocations?.events??[]),{ref:eventRef,sha256:digest(root,eventRef)}],directories:proposed.directories};for(const m of proposed.mapping)after.units[m.unit-1].draft=m.to;
++      const dir=`.writer/transactions/${id}`,before_ref=dir+'/before-state.json',after_ref=dir+'/after-state.json';io.storeBytes(root,before_ref,io.bytes(root,'.writer/state.json'),true);io.metadata(root,after_ref,after,true);
++      const build=ready(p);if(build.observed_content_id!==proposed.build_id||digest(root,before_ref)!==proposed.state_sha256)fail('RELOCATION_PLAN_CHANGED','准备事务时构建或状态变化');const extra=[...new Set([...io.extras(p),...build.files.map(r=>'.writer/tool/'+fileRef(r)),'.writer/tool/build-manifest.json'])],inventory=io.inventory(root,extra);if(build.files.some(r=>inventory['.writer/tool/'+fileRef(r)]!==r.sha256)||inventory['.writer/tool/build-manifest.json']!==proposed.installed_manifest_sha256)fail('RELOCATION_PLAN_CHANGED','冻结保护清单时工具文件变化');const protection={mapping:proposed.mapping,extra,inventory,before_ref,after_ref,before_sha256:digest(root,before_ref),after_sha256:digest(root,after_ref)},t={schema_version:1,kind:'draft-relocation',id,status:'prepared',operation_id:input.operation_id,request_hash:fingerprint,protection,protection_sha256:hash(JSON.stringify(protection))};io.saveTx(root,t);
++      if(process.env.AI_WRITER_TEST_FAULT==='1'&&process.env.AI_WRITER_TEST_RELOCATE_STOP_PHASE==='prepared')process.exit(92);return publish(root,t,'complete');
++    });
++  }
++  function recover(root,input){keys(input,['transaction_id','direction','lock_sha256','author_evidence']);if(!UUID.test(input.transaction_id??'')||!['complete','rollback'].includes(input.direction))fail('RELOCATION_INPUT_INVALID','恢复需要事务 ID 与明确方向');const t=json(safe(root,txref(input.transaction_id)),stateLimit);validateTx(root,t);if(['completed','rolled-back'].includes(t.status)){if((t.status==='completed')!==(input.direction==='complete'))fail('RELOCATION_OPERATION_TERMINAL','不能反向恢复终态');return {ok:true,unchanged:true,status:t.status};}
++    // Evidence is checked before releasing only the explicitly identified stale lock.
++    const a=input.author_evidence;keys(a,['quote','local_source','source_sha256','locator','recorded_by']);if(!a.quote||!a.locator||!a.recorded_by||digest(root,a.local_source)!==a.source_sha256||!fs.readFileSync(safe(root,a.local_source),'utf8').includes(a.quote))fail('AUTHOR_EVIDENCE_MISMATCH','恢复作者依据不符');
++    io.releaseStaleLock(root,input);
++    return withLock(root,()=>{const current=json(safe(root,txref(input.transaction_id)),stateLimit);io.metadata(root,`.writer/transactions/${t.id}/recovery-${crypto.randomUUID()}.json`,input,true);return publish(root,current,input.direction);},{coordination:true,toolRecovery:true});
++  }
++  return {plan,relocate,recover,list,resolve,equivalent,validate};
++}
+diff --git a/lib/review-workflow.mjs b/lib/review-workflow.mjs
+index efa0dafb3..8a9fdd170 100644
+--- a/lib/review-workflow.mjs
++++ b/lib/review-workflow.mjs
+@@ -39,7 +39,10 @@ export function createReviewWorkflow(api){
+     }
+   }
+   function basis(p,units){return [...new Set(units)].sort((a,b)=>a-b).map(n=>{const u=p.state.units[n-1];if(!u)fail('REVIEW_RANGE_INVALID','意见章节尚未登记');return {unit:n,draft:u.draft,sha256:u.sha256,dependency:dependency(u)};});}
+-  function current(p,units){return units.every(u=>{const now=p.state.units[u.unit-1];return now?.draft===u.draft&&now.sha256===u.sha256&&dependency(now)===u.dependency&&fs.existsSync(safe(p.root,u.draft))&&digest(p.root,u.draft)===u.sha256;});}
++  function current(p,units){return units.every(u=>{const now=p.state.units[u.unit-1],ref=api.resolveDraft(p,u.draft);return now&&api.equivalentDraft(p,now.draft,u.draft)&&now.sha256===u.sha256&&dependency(now)===u.dependency&&fs.existsSync(safe(p.root,ref))&&digest(p.root,ref)===u.sha256;});}
++  // Only the attested pathname may differ. Hashes, journals, dependencies and
++  // every other registration field must still match the actual publication.
++  function sameRegistration(p,a,b){return Boolean(a&&b)&&same({...a,draft:api.resolveDraft(p,a.draft)},{...b,draft:api.resolveDraft(p,b.draft)});}
+   function canonical(value){return Array.isArray(value)?value.map(canonical):object(value)?Object.fromEntries(Object.keys(value).sort().map(k=>[k,canonical(value[k])])):value;}
+   function trackingBasis(p,state,units){
+     const wanted=new Set(units),found=new Map();let snapshot=structuredClone(state.snapshot);
+@@ -66,11 +69,11 @@ export function createReviewWorkflow(api){
+     const {before,after}=publicationStates(p,proof);
+     for(const old of rows){
+       const prior=before.units[old.unit-1],published=after.units[old.unit-1],now=p.state.units[old.unit-1];
+-      if(!prior||!published||!now||old.draft!==prior.draft||old.sha256!==prior.sha256||old.dependency!==dependency(prior))fail('REVIEW_PUBLICATION_MISMATCH','采用时登记与真实提交前基线不匹配，不能事后替换参考章');
++      if(!prior||!published||!now||!api.equivalentDraft(p,old.draft,prior.draft)||old.sha256!==prior.sha256||old.dependency!==dependency(prior))fail('REVIEW_PUBLICATION_MISMATCH','采用时登记与真实提交前基线不匹配，不能事后替换参考章');
+       if(references.includes(old)){
+-        const change=proof.plan.find(x=>x.file===old.draft);
+-        if(!same(prior,published)||!same(now,published)||digest(p.root,old.draft)!==old.sha256||change&&(change.before!==old.sha256||change.after!==old.sha256))fail('REVIEW_CONTEXT_CHANGED','范围外参考章须在采用、提交前后及当前保持，参考变化不能藏成已修复');
+-      }else if(!same(now,published))fail('REVIEW_PUBLICATION_MISMATCH','当前目标章登记已不匹配该实际提交，不凭旧提交覆盖后续重登');
++        const change=proof.plan.find(x=>api.equivalentDraft(p,x.file,old.draft));
++        if(!sameRegistration(p,prior,published)||!sameRegistration(p,now,published)||digest(p.root,api.resolveDraft(p,old.draft))!==old.sha256||change&&(change.before!==old.sha256||change.after!==old.sha256))fail('REVIEW_CONTEXT_CHANGED','范围外参考章须在采用、提交前后及当前保持，参考变化不能藏成已修复');
++      }else if(!sameRegistration(p,now,published))fail('REVIEW_PUBLICATION_MISMATCH','当前目标章登记已不匹配该实际提交，不凭旧提交覆盖后续重登');
+     }
+     return {reference_units:references.map(old=>old.unit),reference_state_refs:structuredClone(proof.state_refs)};
+   }
+@@ -79,7 +82,7 @@ export function createReviewWorkflow(api){
+     const oldTracking=trackingBasis(p,before,nums),newTracking=trackingBasis(p,after,nums),currentTracking=trackingBasis(p,p.state,nums);
+     const changes=rows.map(old=>{
+       const prior=before.units[old.unit-1],published=after.units[old.unit-1],now=p.state.units[old.unit-1];
+-      if(!prior||!published||!now||old.draft!==prior.draft||old.sha256!==prior.sha256||old.dependency!==dependency(prior)||now.draft!==published.draft||now.sha256!==published.sha256||dependency(now)!==dependency(published)||!same(currentTracking.get(old.unit),newTracking.get(old.unit)))fail('REVIEW_PUBLICATION_MISMATCH','采用时旧登记或当前追踪与实际修订前后基线不匹配');
++      if(!prior||!published||!now||!api.equivalentDraft(p,old.draft,prior.draft)||old.sha256!==prior.sha256||old.dependency!==dependency(prior)||!api.equivalentDraft(p,now.draft,published.draft)||now.sha256!==published.sha256||dependency(now)!==dependency(published)||!same(currentTracking.get(old.unit),newTracking.get(old.unit)))fail('REVIEW_PUBLICATION_MISMATCH','采用时旧登记或当前追踪与实际修订前后基线不匹配');
+       const a=oldTracking.get(old.unit),b=newTracking.get(old.unit);
+       return {unit:old.unit,before:a,after:b,summary_changed:a.summary_sha256!==b.summary_sha256,snapshot_changed:a.snapshot_sha256!==b.snapshot_sha256};
+     });
+@@ -150,14 +153,14 @@ export function createReviewWorkflow(api){
+     if(info?.kind==='continuation-revision'){
+       if(input.commit_id!==undefined||typeof input.local_revision_id!=='string'||input.change_scope!==undefined&&input.change_scope!=='draft')fail('REVIEW_LOCAL_PROOF_REQUIRED','限章候选须使用local_revision_id，不伪造commit或主稿发布');
+       if(issue.status!=='adopted')fail('REVIEW_TRANSITION_INVALID','只有已采用意见才能登记applied');string(input.reason,'reason');const proof=api.localRevisionProof(p.root,input.local_revision_id),rows=issue.resolution.basis_units;
+-      if(!rows.length||rows.some(old=>old.unit!==proof.unit||old.draft!==proof.before_unit.draft||old.sha256!==proof.before_unit.sha256||old.dependency!==dependency(proof.before_unit)))fail('REVIEW_PUBLICATION_MISMATCH','意见采用时的旧稿不匹配该候选修订基线');
++      if(!rows.length||rows.some(old=>old.unit!==proof.unit||!api.equivalentDraft(p,old.draft,proof.before_unit.draft)||old.sha256!==proof.before_unit.sha256||old.dependency!==dependency(proof.before_unit)))fail('REVIEW_PUBLICATION_MISMATCH','意见采用时的旧稿不匹配该候选修订基线');
+       return {status:'applied',application:{local_revision_id:proof.id,local_revision_binding:proof.binding,local_session_id:info.id,scope:'unpublished-candidate-only',publication:false,reason:input.reason,changes:[{unit:proof.unit,draft:proof.after_unit.draft,before:proof.before_unit.sha256,after:proof.after_unit.sha256}],after_units:basis(p,[proof.unit])},verification:null};
+     }
+     if(input.local_revision_id!==undefined)fail('REVIEW_LOCAL_PROOF_REQUIRED','候选凭据不能冒充普通主稿的实际提交');
+     if(revisionInfo(p.root))fail('REVIEW_PUBLICATION_REQUIRED','应用绑定须在主作品实际事务提交后登记，不把分支当已发布');if(issue.status!=='adopted')fail('REVIEW_TRANSITION_INVALID','只有已采用意见才能登记applied');string(input.reason,'reason');
+     const changeScope=input.change_scope===undefined?'draft':input.change_scope;if(!['draft','tracking'].includes(changeScope))fail('REVIEW_INPUT_INVALID','change_scope须为draft或tracking，省略时仍要求正文实际变化');
+     const proof=publication(p.root,input.commit_id),rows=issue.resolution.basis_units,changes=[],references=publicationReferences(p,proof,rows);
+-    for(const old of rows){if(references.reference_units?.includes(old.unit))continue;const now=p.state.units[old.unit-1],change=proof.plan.find(x=>x.file===old.draft);if(!now||now.draft!==old.draft||old.unit<proof.scope.from||old.unit>proof.scope.through||(change?change.before!==old.sha256||change.after!==now.sha256:now.sha256!==old.sha256))fail('REVIEW_PUBLICATION_MISMATCH','实际修订提交与采用时旧稿/当前新稿不匹配');changes.push({unit:old.unit,draft:old.draft,before:old.sha256,after:now.sha256});}
++    for(const old of rows){if(references.reference_units?.includes(old.unit))continue;const now=p.state.units[old.unit-1],change=proof.plan.find(x=>api.equivalentDraft(p,x.file,old.draft));if(!now||!api.equivalentDraft(p,now.draft,old.draft)||old.unit<proof.scope.from||old.unit>proof.scope.through||(change?change.before!==old.sha256||change.after!==now.sha256:now.sha256!==old.sha256))fail('REVIEW_PUBLICATION_MISMATCH','实际修订提交与采用时旧稿/当前新稿不匹配');changes.push({unit:old.unit,draft:old.draft,before:old.sha256,after:now.sha256});}
+     const tracking=changeScope==='tracking'?trackingChanges(p,proof,rows):{};
+     if(changeScope==='draft'&&!changes.some(c=>c.before!==c.after))fail('REVIEW_CHANGE_REQUIRED','没有对应原文的实际修改，不能把采用或保留登记为已修复');
+     const targets=references.reference_units?{target_units:changeScope==='tracking'?tracking.tracking_changes.filter(c=>c.summary_changed||c.snapshot_changed).map(c=>c.unit):changes.filter(c=>c.before!==c.after).map(c=>c.unit)}:{};
+@@ -191,12 +194,12 @@ export function createReviewWorkflow(api){
+     const before=json(safe(p.root,refs.before.ref),stateLimit),after=json(safe(p.root,refs.after.ref),stateLimit),changes=[];
+     for(const old of rows){
+       const prior=before.units[old.unit-1],published=after.units[old.unit-1],now=p.state.units[old.unit-1];
+-      if(!prior||!published||!now||prior.draft!==old.draft||prior.sha256!==old.sha256||dependency(prior)!==old.dependency||!same(now,published))fail('REVIEW_PUBLICATION_MISMATCH','原意见、修复前登记或当前修复后登记不匹配，不倒填新的基线');
++      if(!prior||!published||!now||!api.equivalentDraft(p,prior.draft,old.draft)||prior.sha256!==old.sha256||dependency(prior)!==old.dependency||!sameRegistration(p,now,published))fail('REVIEW_PUBLICATION_MISMATCH','原意见、修复前登记或当前修复后登记不匹配，不倒填新的基线');
+       if(targets.includes(old.unit)){
+-        const change=proof.plan.find(x=>x.file===old.draft);
++        const change=proof.plan.find(x=>api.equivalentDraft(p,x.file,old.draft));
+         if(old.unit<proof.scope.from||old.unit>proof.scope.through||!change||change.before!==old.sha256||change.after!==now.sha256||change.before===change.after)fail('REVIEW_CHANGE_REQUIRED','每个目标章都须有该真实提交中的正文实改');
+         changes.push({unit:old.unit,draft:old.draft,before:old.sha256,after:now.sha256});
+-      }else if(!same(prior,published))fail('REVIEW_CONTEXT_CHANGED','非目标参考章须在修复前后及当前完全保持，不把参考范围藏成修改范围');
++      }else if(!sameRegistration(p,prior,published))fail('REVIEW_CONTEXT_CHANGED','非目标参考章须在修复前后及当前完全保持，不把参考范围藏成修改范围');
+     }
+     const acknowledged_at=new Date().toISOString();
+     return {status:'applied',resolution:{decision_actor:input.decision_actor,authorization:structuredClone(input.authorization),disposition:'adopted',phase:'after-actual-repair',prior_adoption_recorded:false,acknowledged_at,reason:input.reason,author_choice:null,basis_units:structuredClone(rows.filter(u=>targets.includes(u.unit)))},application:{commit_id:proof.id,commit_binding:proof.binding,transaction_id:proof.transaction_id,reason:input.reason,changes,after_units:basis(p,rows.map(u=>u.unit)),acknowledged_existing_repair:true,acknowledged_at,target_units:[...targets],reference_units:rows.filter(u=>!targets.includes(u.unit)).map(u=>u.unit)},verification:null};
+diff --git a/lib/revisions.mjs b/lib/revisions.mjs
+index 08f15727c..a170a38e1 100644
+--- a/lib/revisions.mjs
++++ b/lib/revisions.mjs
+@@ -63,7 +63,7 @@ export function createRevisions(api) {
+   }
+   function assertReady(root) {
+     const parent = marker(root)?.parent ?? root, pending = transactions(parent).filter(t => !['completed', 'rolled-back'].includes(t.status));
+-    if (pending.length) {const tool=pending.some(t=>t.kind==='tool-update');fail(tool?'TOOL_UPDATE_PENDING':'TRANSACTION_PENDING', tool?'存在未完成工具更新，普通读写暂停；从外部新入口tool updates查看，再按明确方向tool recover。':'存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。', { transactions: pending.map(t => ({ id: t.id, kind:t.kind??'revision', session_id: t.session_id, status: t.status })) });}
++    if (pending.length) {const tool=pending.some(t=>t.kind==='tool-update'),relocated=pending.some(t=>t.kind==='draft-relocation');fail(tool?'TOOL_UPDATE_PENDING':'TRANSACTION_PENDING', tool?'存在未完成工具更新，普通读写暂停；从外部新入口tool updates查看，再按明确方向tool recover。':relocated?'存在未完成正文迁移，普通读写暂停；先 draft relocations，再显式 draft relocate-recover。':'存在未完成修订事务，普通读写暂停；先 revision list，再显式 revision recover。', { transactions: pending.map(t => ({ id: t.id, kind:t.kind??'revision', session_id: t.session_id, status: t.status })) });}
+   }
+   function guardLoaded(){if(runtime()!==loadedBuild)fail('TOOL_BUILD_CHANGED','本进程加载后工具模块已改变；重新启动新命令，不使用旧进程写入');}
+   function guardWrite(root, options = {}) {
+diff --git a/lib/sources.mjs b/lib/sources.mjs
+index 0e74c86fe..3422642e0 100644
+--- a/lib/sources.mjs
++++ b/lib/sources.mjs
+@@ -26,15 +26,15 @@ export function createSources(api) {
+   function version(p, id) { if (!Object.hasOwn(p.state.source_versions ?? {}, id)) fail('SOURCE_VERSION_NOT_FOUND', `找不到版本：${id}`); const v = p.state.source_versions[id]; frozen(p, v); return v; }
+   function resolve(p, ref, unit) {
+     assertReference(p, ref);
+-    if (p.state.schema_version < 4) return { ref, file: safe(p.root, ref), binding: null };
++    if (p.state.schema_version < 4) return { ref, file: safe(p.root, api.resolveDraft(p,ref)), binding: null };
+     const ranges = p.state.source_ranges.filter(r => r.ref === ref && r.from <= unit && (r.to === null || unit <= r.to));
+     if (ranges.length > 1) fail('SOURCE_CORRUPT', '来源生效区间重叠');
+-    if (!ranges.length) return { ref, file: safe(p.root, ref), binding: null };
++    if (!ranges.length) return { ref, file: safe(p.root, api.resolveDraft(p,ref)), binding: null };
+     const v = version(p, ranges[0].version_id);
+     return { ref, file: frozen(p, v), binding: { version_id: v.id, object_ref: v.object_ref, sha256: v.sha256 } };
+   }
+   function consumedFile(p, row, ref, expected) {
+-    const binding = row.source_bindings?.[ref]; if (!binding) return safe(p.root, ref);
++    const binding = row.source_bindings?.[ref]; if (!binding) return safe(p.root, api.resolveDraft(p,ref));
+     if (p.state.schema_version < 4) fail('SOURCE_CORRUPT', '旧协议不应包含版本消费绑定');
+     const v = version(p, binding.version_id);
+     if (v.ref !== ref || binding.object_ref !== v.object_ref || binding.sha256 !== v.sha256 || expected !== v.sha256) fail('SOURCE_CORRUPT', '消费绑定与原 source_hashes 不等价，禁止追认当前来源');
+diff --git a/lib/tool-build.mjs b/lib/tool-build.mjs
+index fd4a465bd..0edd3dabf 100644
+--- a/lib/tool-build.mjs
++++ b/lib/tool-build.mjs
+@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
+ import { spawnSync } from 'node:child_process';
+ import { userError } from './help.mjs';
+ 
+-export const RUNTIME_FILES = ['package.json', 'bin/ai-writer.mjs', 'lib/workspace.mjs', 'lib/journal.mjs', 'lib/longform.mjs', 'lib/help.mjs', 'lib/style.mjs', 'lib/governance.mjs', 'lib/tool-build.mjs', 'lib/sources.mjs', 'lib/revisions.mjs', 'lib/review-workflow.mjs', 'lib/tool-update.mjs'];
++export const RUNTIME_FILES = ['package.json', 'bin/ai-writer.mjs', 'lib/workspace.mjs', 'lib/journal.mjs', 'lib/longform.mjs', 'lib/help.mjs', 'lib/style.mjs', 'lib/governance.mjs', 'lib/tool-build.mjs', 'lib/sources.mjs', 'lib/revisions.mjs', 'lib/review-workflow.mjs', 'lib/tool-update.mjs', 'lib/relocation.mjs'];
+ export const WORK_GUIDES = ['quickstart.md', 'user-guide.md', 'workflow.md', 'long-form.md', 'deslop.md', 'attribution.md', 'revision-and-sources.md', 'review-and-registration.md', 'tool-updates.md'];
+ export const WORK_ATTRIBUTION = ['LICENSE.md', 'docs/source-manifest.json', 'docs/oh-story-audit-manifest.json', 'docs/usability-sources.json', 'vendor/oh-story-reference/LICENSE', 'vendor/oh-story-reference-20261015/LICENSE', 'vendor/oh-story-deslop-reference/LICENSE', 'vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md'];
+ export const PACKAGE_CONTENT = [...WORK_GUIDES.map(x=>`docs/${x}`), ...WORK_ATTRIBUTION, 'examples/prompts.md', 'examples/history-fact-card.json'];
+@@ -19,8 +19,8 @@ export function attributionFiles(value) {
+ function packageContent(pkg) {
+   return [...PACKAGE_CONTENT, ...attributionFiles(pkg).filter(ref => !WORK_ATTRIBUTION.includes(ref))];
+ }
+-// 0.8 and 0.9 retain the 0.7 owned-resource/schema6 protocol.
+-export const currentProtocol = version => /^0\.[789]\./.test(version??'');
++// 0.8 through 0.10 retain the 0.7 owned-resource/schema6 protocol.
++export const currentProtocol = version => /^0\.(?:[789]|10)\./.test(version??'');
+ const sha = value => crypto.createHash('sha256').update(value).digest('hex');
+ function ordinary(file) {
+   const absolute = path.resolve(file); let cursor = path.parse(absolute).root;
+@@ -47,7 +47,7 @@ export function identifyBuild(value, { preparingManifest = false } = {}) {
+     if (!fs.existsSync(file)) { missing.push({ group, file: ref }); return; }
+     const bytes = fs.readFileSync(ordinary(file)); files.push({ group, file: ref, bytes: bytes.length, sha256: sha(bytes) });
+   }
+-  for (const ref of legacyFiles) add(path.join(root, ref), 'runtime', ref);
++  for (const ref of legacyFiles.filter(ref=>ref!=='lib/relocation.mjs'||pkg.aiWriter?.draftRelocationProtocol===1)) add(path.join(root, ref), 'runtime', ref);
+   const owned = currentProtocol(pkg.version), resources = owned ? root : contentRoot;
+   for (const ref of owned ? packageContent(pkg) : ['docs/quickstart.md', 'docs/user-guide.md', 'docs/workflow.md', 'docs/long-form.md', 'docs/deslop.md', 'docs/attribution.md', 'LICENSE.md']) add(path.join(resources, ref), 'content', ref);
+   if (/^0\.[56]\./.test(pkg.version??'')) add(path.join(contentRoot, 'docs/revision-and-sources.md'), 'content', 'docs/revision-and-sources.md');
+@@ -81,7 +81,7 @@ export function identifyBuild(value, { preparingManifest = false } = {}) {
+   return { ok: !requiredMissing.length && !mismatches.length, tool_root: root, tool_version: pkg.version, profile, resource_profile: pkg.aiWriter?.resourceProfile ?? null, observed_content_id, runtime_id,
+     attestation: declared ? 'manifest-present-not-a-signature' : owned && embedded ? 'required-manifest-missing' : embedded ? 'legacy-unattested' : 'observed-source-tree', declared_build_id: declared?.build_id ?? null,
+     provenance: declared?.provenance ?? (embedded ? { source_commit: 'unknown', dirty: 'unknown' } : sourceProvenance(root)),
+-    supported_state_schemas: owned ? [1,2,3,4,5,6] : pkg.version?.startsWith('0.6.') ? [1,2,3,4,5] : pkg.version?.startsWith('0.5.') ? [1, 2, 3, 4] : pkg.version?.startsWith('0.4.') ? [1, 2, 3] : pkg.version?.startsWith('0.1.') ? [1] : /^0\.[23]\./.test(pkg.version ?? '') ? [1, 2] : [],
++    supported_state_schemas: owned ? [1,2,3,4,5,6,...(pkg.aiWriter?.draftRelocationProtocol===1?[7]:[])] : pkg.version?.startsWith('0.6.') ? [1,2,3,4,5] : pkg.version?.startsWith('0.5.') ? [1, 2, 3, 4] : pkg.version?.startsWith('0.4.') ? [1, 2, 3] : pkg.version?.startsWith('0.1.') ? [1] : /^0\.[23]\./.test(pkg.version ?? '') ? [1, 2] : [],
+     schema_support_basis: 'known-version-protocol; not a semantic execution probe', files, missing, mismatches,
+     content_scope: owned ? 'tool-root' : 'workspace-root',
+     note: '内容指纹为本次磁盘观测，非作者身份或供应链签名；识别/比较不升级工具。轻量包有意省略引擎，新包资源在tool-root，作品根定制另行保留。' };
+@@ -125,9 +125,9 @@ export function workspaceBaselines(root){
+   const rows=[];for(const ref of [...WORK_GUIDES.map(x=>`docs/${x}`),'AGENTS.md']){const f=path.join(work,ref);if(fs.existsSync(f))rows.push({file:ref,sha256:sha(fs.readFileSync(ordinary(f)))});}return rows;
+ }
+ export function packageFiles(value){
+-  const build=identifyBuild(value);if(!currentProtocol(build.tool_version)||!build.ok)throw userError('来源必须是完整0.7、0.8或0.9本地工具包；先核identify缺项或清单差异',{code:'TOOL_SOURCE_INVALID'});
++  const build=identifyBuild(value);if(!currentProtocol(build.tool_version)||!build.ok)throw userError('来源必须是完整0.7、0.8、0.9或0.10本地工具包；先核identify缺项或清单差异',{code:'TOOL_SOURCE_INVALID'});
+   const pkg = JSON.parse(fs.readFileSync(ordinary(path.join(build.tool_root, 'package.json')), 'utf8'));
+-  const required=new Set([...RUNTIME_FILES,...packageContent(pkg),...['project','novel','screenplay','history','essay','review','research'].map(x=>`.agents/skills/writer-${x}/SKILL.md`)]);for(const r of build.files)required.delete(fileRef(r));
++  const required=new Set([...RUNTIME_FILES.filter(ref=>ref!=='lib/relocation.mjs'||pkg.aiWriter?.draftRelocationProtocol===1),...packageContent(pkg),...['project','novel','screenplay','history','essay','review','research'].map(x=>`.agents/skills/writer-${x}/SKILL.md`)]);for(const r of build.files)required.delete(fileRef(r));
+   if(required.size)throw userError('更新来源缺少必需模块/手册/许可',{code:'TOOL_SOURCE_INCOMPLETE'});
+   for(const r of build.files)if(r.bytes>1024*1024||fs.statSync(ordinary(path.join(build.tool_root,fileRef(r)))).nlink!==1)throw userError('更新包含硬链接或单文件超过1MiB',{code:'TOOL_SOURCE_INVALID'});
+   if(build.files.reduce((n,r)=>n+r.bytes,0)>32*1024*1024)throw userError('轻量工具包超过32MiB',{code:'TOOL_SOURCE_INVALID'});
+diff --git a/lib/tool-update.mjs b/lib/tool-update.mjs
+index 425192e36..1e87be491 100644
+--- a/lib/tool-update.mjs
++++ b/lib/tool-update.mjs
+@@ -9,6 +9,8 @@ import {identifyBuild,packageFiles,fileRef,WORK_GUIDES,writeBuildManifest} from
+ export function initialToolControl(){return {generation:0,installed:null,events:[],operations:{},enable_id:null};}
+ const UUID=/^[a-f0-9]{8}-[a-f0-9-]{27}$/,HEX=/^[a-f0-9]{64}$/;
+ const ACTIVE=['open','editing','prepared','interrupted','conflicted'];
++// This is a bounded mechanical compatibility check, not a model context budget.
++const VALIDATION_CONTEXT_MAX_CHARS=240000;
+ export function createToolUpdates(api){
+   const {project,safe,json,hash,withLock,gate,fresh,stateLimit,revisions,toolRoot}=api;
+   const io=revisions.fileTransactions,seen=new Map(),fail=(code,message,extra={})=>{throw userError(message,{code,...extra});};
+@@ -29,7 +31,7 @@ export function createToolUpdates(api){
+   const within=(base,file)=>{const r=path.relative(base,file);return r===''||(!path.isAbsolute(r)&&r!=='..'&&!r.startsWith('..'+path.sep));};
+   function external(root){const target=safe(root,'.writer/tool');if(within(target,path.resolve(toolRoot)))fail('TOOL_EXTERNAL_ENTRY_REQUIRED','请从被替换工具之外的主项目/可信副本运行更新或恢复');}
+   function cleanSessions(root){if(revisions.info(root))fail('TOOL_REVISION_ACTIVE','修订分支不能更新工具');const active=io.sessions(root).filter(s=>ACTIVE.includes(s.status));if(active.length)fail('TOOL_REVISION_ACTIVE','先结束活跃修订再更新工具',{sessions:active.map(s=>({id:s.id,status:s.status}))});}
+-  function options(input){keys(input,['source','documents','legacy_target_acknowledged']);if(typeof input.source!=='string'||!input.source.trim())fail('TOOL_SOURCE_REQUIRED','需显式本地来源source');const docs=input.documents??[];if(!Array.isArray(docs)||new Set(docs).size!==docs.length||docs.some(x=>!WORK_GUIDES.map(n=>'docs/'+n).includes(x)))fail('TOOL_INPUT_INVALID','documents仅可选择受管手册且不得重复');if(input.legacy_target_acknowledged!==undefined&&typeof input.legacy_target_acknowledged!=='boolean')fail('TOOL_INPUT_INVALID','legacy_target_acknowledged须布尔');return {source:input.source,documents:[...docs].sort(),legacy_target_acknowledged:input.legacy_target_acknowledged??false};}
++  function options(input){keys(input,['source','documents','legacy_target_acknowledged','validation_mode']);if(typeof input.source!=='string'||!input.source.trim())fail('TOOL_SOURCE_REQUIRED','需显式本地来源source');const docs=input.documents??[];if(!Array.isArray(docs)||new Set(docs).size!==docs.length||docs.some(x=>!WORK_GUIDES.map(n=>'docs/'+n).includes(x)))fail('TOOL_INPUT_INVALID','documents仅可选择受管手册且不得重复');if(input.legacy_target_acknowledged!==undefined&&typeof input.legacy_target_acknowledged!=='boolean')fail('TOOL_INPUT_INVALID','legacy_target_acknowledged须布尔');if(input.validation_mode!==undefined&&!['copy','in-place-readonly'].includes(input.validation_mode))fail('TOOL_INPUT_INVALID','validation_mode 须 copy 或 in-place-readonly');return {source:input.source,documents:[...docs].sort(),legacy_target_acknowledged:input.legacy_target_acknowledged??false,validation_mode:input.validation_mode??'copy'};}
+   function plan(root,input){
+     const opts=options(input),p=project(root);const source=packageFiles(opts.source),target=identifyBuild(p.root);
+     if(within(safe(p.root,'.writer/tool'),source.tool_root))fail('TOOL_SOURCE_NESTED','来源不能在被替换工具内');
+@@ -51,9 +53,9 @@ export function createToolUpdates(api){
+       docChanges.push({file:ref,before:actual,after:next});
+     }
+     for(const [ref,sha256] of Object.entries(tree(p.root,'.agents/skills')))local.push({file:ref,current_sha256:sha256,source_sha256:source.files.find(r=>fileRef(r)===ref)?.sha256??null,selected:false,action:'preserve'});
+-    if(p.state.schema_version!==6)blockers.push({code:'TOOL_PROTOCOL_REQUIRED',schema:p.state.schema_version,reason:'先从新主入口显式启用schema6，更新不暗做迁移'});
+-    const body={project_id:p.state.project_id,revision:p.state.revision,schema_version:p.state.schema_version,generation:control(p.state)?.generation??null,source:{root:source.tool_root,version:source.tool_version,content_id:source.observed_content_id,files:source.files},target:{content_id:target.observed_content_id,version:target.tool_version,files:oldFiles,manifest_sha256:digest(p.root,manifestRef)},documents:opts.documents,legacy_target_acknowledged:opts.legacy_target_acknowledged,local_content:local,document_changes:docChanges,blockers};
+-    const plan_sha256=hash(JSON.stringify(body));return {ok:true,read_only:true,can_update:!blockers.length,...body,plan_sha256,package_bytes:source.files.reduce((n,r)=>n+r.bytes,0),request:{expected_revision:p.state.revision,operation_id:crypto.randomUUID(),source:source.tool_root,expected_source_build_id:source.observed_content_id,expected_target_build_id:target.observed_content_id,plan_sha256,documents:opts.documents,legacy_target_acknowledged:opts.legacy_target_acknowledged,author_evidence:null},note:'根AGENTS/技能/手册默认保留；原版资源装入工具包，不改正文或事实。'};
++    if(p.state.schema_version<6)blockers.push({code:'TOOL_PROTOCOL_REQUIRED',schema:p.state.schema_version,reason:'先从新主入口显式启用schema6，更新不暗做迁移'});
++    if(!source.supported_state_schemas.includes(p.state.schema_version))blockers.push({code:'TOOL_SCHEMA_UNSUPPORTED',reason:'来源不支持当前作品状态协议，不能降级'});const body={validation_mode:opts.validation_mode,validation_context_max_chars:VALIDATION_CONTEXT_MAX_CHARS,project_id:p.state.project_id,revision:p.state.revision,schema_version:p.state.schema_version,generation:control(p.state)?.generation??null,source:{root:source.tool_root,version:source.tool_version,content_id:source.observed_content_id,files:source.files},target:{content_id:target.observed_content_id,version:target.tool_version,files:oldFiles,manifest_sha256:digest(p.root,manifestRef)},documents:opts.documents,legacy_target_acknowledged:opts.legacy_target_acknowledged,local_content:local,document_changes:docChanges,blockers};
++    const plan_sha256=hash(JSON.stringify(body));return {ok:true,read_only:true,can_update:!blockers.length,...body,plan_sha256,package_bytes:source.files.reduce((n,r)=>n+r.bytes,0),request:{expected_revision:p.state.revision,operation_id:crypto.randomUUID(),source:source.tool_root,expected_source_build_id:source.observed_content_id,expected_target_build_id:target.observed_content_id,plan_sha256,documents:opts.documents,legacy_target_acknowledged:opts.legacy_target_acknowledged,validation_mode:opts.validation_mode,author_evidence:null},note:'根AGENTS/技能/手册默认保留；原版资源装入工具包，不改正文或事实。'};
+   }
+   function op(p,input){if(!keyId(input.operation_id)||!Number.isSafeInteger(input.expected_revision))fail('TOOL_INPUT_INVALID','需稳定operation_id与expected_revision');const fingerprint=hash(JSON.stringify(input)),operations=control(p.state)?.operations,old=operations&&Object.hasOwn(operations,input.operation_id)?operations[input.operation_id]:null;if(old){if(old.input_hash!==fingerprint)fail('TOOL_OPERATION_CONFLICT','同operation_id输入不同');return {old:old.result,fingerprint};}if(p.state.revision!==input.expected_revision)fail('REVISION_CHANGED','作品业务revision已变化');return {fingerprint};}
+   function enable(root,input){
+@@ -73,9 +75,9 @@ export function createToolUpdates(api){
+     if(hash(before)!==record.before_sha256)fail('TOOL_CONTROL_CORRUPT','启用备份损坏');if(exists(p.root,dir+'/undone.json')&&current===record.before_sha256)return {ok:true,unchanged:true,schema_version:5};
+     if(p.state.schema_version!==6||control(p.state).generation!==0||p.state.tool_control.enable_id!==id||current!==record.after_sha256)fail('TOOL_ROLLBACK_UNSAFE','启用后已有业务变化，不能回填旧state');cleanSessions(p.root);external(p.root);const a=proof(p.root,input.author_evidence);io.storeBytes(p.root,a.evidence.frozen_ref,a.bytes,!exists(p.root,a.evidence.frozen_ref));io.metadata(p.root,dir+'/undo-proof.json',{evidence:a.evidence},!exists(p.root,dir+'/undo-proof.json'));io.storeBytes(p.root,'.writer/state.json',before);io.metadata(p.root,dir+'/undone.json',{state_sha256:record.before_sha256});seen.delete(p.root);return {ok:true,schema_version:5,revision:JSON.parse(before).revision,tool_unchanged:true};
+   });}
+-  function checks(work){
+-    const entry=safe(work,'.writer/tool/bin/ai-writer.mjs'),results=[];
+-    for(const args of [['--help'],['doctor','--project',work],['status','--project',work],['context','--project',work,'--purpose','discussion']]){
++  function checks(work,entry=safe(work,'.writer/tool/bin/ai-writer.mjs')){
++    const results=[];
++    for(const args of [['--help'],['doctor','--project',work],['status','--project',work],['context','--project',work,'--purpose','discussion','--max-chars',String(VALIDATION_CONTEXT_MAX_CHARS)]]){
+       const r=spawnSync(process.execPath,[entry,...args],{encoding:'utf8',windowsHide:true,timeout:60000,maxBuffer:8*1024*1024});const row={args,exit_code:r.status,stdout:r.stdout??'',stderr:r.stderr??'',error:r.error?.message??null};results.push(row);if(r.status!==0)fail('TOOL_VALIDATION_FAILED','独立包新入口验证失败',{checks:results});
+     }return results;
+   }
+@@ -92,16 +94,16 @@ export function createToolUpdates(api){
+   function publish(root,tx,direction){validateTx(root,tx);protect(root,tx);return io.publishFiles(root,tx,direction,{validate:validateTx,beforeState:protect,stopAfter:'AI_WRITER_TEST_TOOL_STOP_AFTER',exitCode:95,finalize(root,tx,d){protect(root,tx);if(d==='complete'){
+     const work=safe(root,`.writer/tool-updates/${tx.id}/validation`);const current=tree(work,'.writer/tool');if(hash(JSON.stringify(current))!==tx.validation_tool_sha256)fail('TOOL_VALIDATION_FAILED','验证副本工具被改，保留现场');
+     if(hash(JSON.stringify(io.inventory(work,tx.protection.extra)))!==tx.validation_inventory_sha256)fail('TOOL_VALIDATION_FAILED','验证副本作品已变化，保留现场');
+-    const outcomes=checks(work);io.metadata(root,`.writer/tool-updates/${tx.id}/validation-results.json`,outcomes);for(const r of tx.plan)if(digest(root,r.file)!==r.after)fail('TOOL_VALIDATION_FAILED','新目标与准备字节不符');
++    accept(root);const outcomes=tx.validation_mode==='in-place-readonly'?api.inspectReadonly(root):checks(work);io.metadata(root,`.writer/tool-updates/${tx.id}/validation-results.json`,outcomes);for(const r of tx.plan)if(digest(root,r.file)!==r.after)fail('TOOL_VALIDATION_FAILED','新目标与准备字节不符');
+     const r=spawnSync(process.execPath,[safe(root,'.writer/tool/bin/ai-writer.mjs'),'--help'],{encoding:'utf8',windowsHide:true,timeout:60000,maxBuffer:2*1024*1024});if(r.status!==0)fail('TOOL_VALIDATION_FAILED','实际目标新入口help失败');
+   }if(process.env.AI_WRITER_TEST_FAULT==='1'&&process.env.AI_WRITER_TEST_TOOL_STOP_PHASE==='validated')process.exit(96);}});}
+   function update(root,input){
+-    keys(input,['expected_revision','operation_id','source','expected_source_build_id','expected_target_build_id','plan_sha256','documents','legacy_target_acknowledged','author_evidence']);return withLock(root,()=>{
+-      const p=project(root);external(p.root);cleanSessions(p.root);if(p.state.schema_version!==6)fail('TOOL_PROTOCOL_REQUIRED','先显式启用schema6');const operation=op(p,input);if(operation.old)return {...operation.old,unchanged:true};gate(p,'plan');fresh(p);
+-      const proposed=plan(p.root,{source:input.source,documents:input.documents,legacy_target_acknowledged:input.legacy_target_acknowledged});if(proposed.blockers.length)fail('TOOL_PLAN_BLOCKED','更新计划有阻断，保留原工具及定制',{blockers:proposed.blockers});
++    keys(input,['expected_revision','operation_id','source','expected_source_build_id','expected_target_build_id','plan_sha256','documents','legacy_target_acknowledged','validation_mode','author_evidence']);return withLock(root,()=>{
++      const p=project(root);external(p.root);cleanSessions(p.root);if(p.state.schema_version<6)fail('TOOL_PROTOCOL_REQUIRED','先显式启用schema6');const operation=op(p,input);if(operation.old)return {...operation.old,unchanged:true};gate(p,'plan');fresh(p);
++      const proposed=plan(p.root,{source:input.source,documents:input.documents,legacy_target_acknowledged:input.legacy_target_acknowledged,validation_mode:input.validation_mode});if(proposed.blockers.length)fail('TOOL_PLAN_BLOCKED','更新计划有阻断，保留原工具及定制',{blockers:proposed.blockers});
+       if(proposed.plan_sha256!==input.plan_sha256||proposed.source.content_id!==input.expected_source_build_id||proposed.target.content_id!==input.expected_target_build_id)fail('TOOL_PLAN_CHANGED','计划、来源或目标已变化；重读后重新plan，不刷新旧输入');
+       const id=crypto.randomUUID(),dir=`.writer/tool-updates/${id}`,validation=safe(p.root,dir+'/validation'),author=proof(p.root,input.author_evidence),eventRef=`.writer/objects/${id}.json`,event={kind:'tool-update',id,from:proposed.target,source:{...proposed.source,files:undefined},documents:proposed.document_changes,evidence:author.evidence,plan_sha256:proposed.plan_sha256};
+-      fs.mkdirSync(validation,{recursive:true});for(const name of ['正文','设定','大纲','研究','审查','参考拆解'])fs.mkdirSync(path.join(validation,name),{recursive:true});const extra=io.extras(p).filter(r=>!r.startsWith('.writer/tool/')),beforeInventory=io.inventory(p.root,extra);for(const ref of Object.keys(beforeInventory))io.storeBytes(validation,ref,read(p.root,ref),true);
++      fs.mkdirSync(validation,{recursive:true});for(const name of ['正文','设定','大纲','研究','审查','参考拆解'])fs.mkdirSync(path.join(validation,name),{recursive:true});const extra=io.extras(p).filter(r=>!r.startsWith('.writer/tool/')),beforeInventory=io.inventory(p.root,extra);if(proposed.validation_mode!=='in-place-readonly')for(const ref of Object.keys(beforeInventory))io.storeBytes(validation,ref,read(p.root,ref),true);
+       const source=packageFiles(input.source);for(const r of source.files){const file=fileRef(r),b=fs.readFileSync(path.join(source.tool_root,file));if(hash(b)!==r.sha256)fail('TOOL_SOURCE_CHANGED','复制时来源变化');io.storeBytes(validation,'.writer/tool/'+file,b,true);}
+       const target=structuredClone(p.state),c=control(target);c.generation++;target.revision++;c.installed={version:source.tool_version,source_content_id:source.observed_content_id,runtime_id:source.runtime_id};
+       freezeProof(validation,author);io.metadata(validation,eventRef,event,true);c.events.push({ref:eventRef,sha256:digest(validation,eventRef)});
+@@ -109,12 +111,12 @@ export function createToolUpdates(api){
+       for(const d of proposed.document_changes)io.storeBytes(validation,d.file,fs.readFileSync(path.join(source.tool_root,d.file)));
+       const oldManifest=exists(p.root,'.writer/tool/build-manifest.json')?json(safe(p.root,'.writer/tool/build-manifest.json')):null,baselineRows=oldManifest?.workspace_baselines??oldManifest?.files.filter(r=>r.group==='content')??[],trusted=new Map(baselineRows.filter(r=>digest(p.root,r.file)===r.sha256).map(r=>[r.file,r.sha256]));for(const d of proposed.document_changes)trusted.set(d.file,d.after);
+       writeBuildManifest(safe(validation,'.writer/tool'),source.provenance,[...trusted].map(([file,sha256])=>({file,sha256})));io.storeBytes(validation,'.writer/state.json',io.encoded(target));
+-      const outcomes=checks(validation);io.metadata(p.root,dir+'/prepared-checks.json',outcomes,true);
+-      if(!same(io.inventory(p.root,extra),beforeInventory)||plan(p.root,{source:input.source,documents:input.documents,legacy_target_acknowledged:input.legacy_target_acknowledged}).plan_sha256!==input.plan_sha256)fail('TOOL_PLAN_CHANGED','验证期间主作品或包变化，候选保留');
++      const outcomes=proposed.validation_mode==='in-place-readonly'?checks(p.root,path.join(source.tool_root,'bin/ai-writer.mjs')):checks(validation);io.metadata(p.root,dir+'/prepared-checks.json',outcomes,true);
++      if(!same(io.inventory(p.root,extra),beforeInventory)||plan(p.root,{source:input.source,documents:input.documents,legacy_target_acknowledged:input.legacy_target_acknowledged,validation_mode:input.validation_mode}).plan_sha256!==input.plan_sha256)fail('TOOL_PLAN_CHANGED','验证期间主作品或包变化，候选保留');
+       const files=[...Object.keys(tree(validation,'.writer/tool')),...proposed.document_changes.map(x=>x.file),author.evidence.frozen_ref,eventRef,'.writer/state.json'],changes=[];
+       for(const file of [...new Set(files)]){const before=digest(p.root,file),after=digest(validation,file);if(before!==after)changes.push({file,before,after});}
+       if(changes.at(-1)?.file!=='.writer/state.json')fail('TOOL_TRANSACTION_CORRUPT','工具状态必须最后发布');
+-      const protection={extra,files:beforeInventory,tool_files:proposed.target.files,next_tool_files:tree(validation,'.writer/tool')};const tx={schema_version:2,kind:'tool-update',id,status:'prepared',operation_id:input.operation_id,request_hash:operation.fingerprint,protection,protection_sha256:hash(JSON.stringify(protection)),validation_inventory_sha256:hash(JSON.stringify(io.inventory(validation,extra))),validation_tool_sha256:hash(JSON.stringify(tree(validation,'.writer/tool'))),plan:[]};
++      const protection={extra,files:beforeInventory,tool_files:proposed.target.files,next_tool_files:tree(validation,'.writer/tool')};const tx={validation_mode:proposed.validation_mode,schema_version:2,kind:'tool-update',id,status:'prepared',operation_id:input.operation_id,request_hash:operation.fingerprint,protection,protection_sha256:hash(JSON.stringify(protection)),validation_inventory_sha256:hash(JSON.stringify(io.inventory(validation,extra))),validation_tool_sha256:hash(JSON.stringify(tree(validation,'.writer/tool'))),plan:[]};
+       for(const [i,r]of changes.entries()){const oldRef=`.writer/transactions/${id}/old/${i}.bin`,newRef=`.writer/transactions/${id}/new/${i}.bin`;if(digest(p.root,r.file)!==r.before)fail('TOOL_PLAN_CHANGED','备份前目标变化');if(r.before!==null)io.storeBytes(p.root,oldRef,read(p.root,r.file),true);io.storeBytes(p.root,newRef,read(validation,r.file),true);tx.plan.push({...r,old_ref:r.before===null?null:oldRef,new_ref:newRef});}
+       tx.plan_sha256=hash(JSON.stringify(tx.plan));if(process.env.AI_WRITER_TEST_FAULT==='1'&&process.env.AI_WRITER_TEST_TOOL_STOP_PHASE==='backups')process.exit(98);io.saveTx(p.root,tx);if(process.env.AI_WRITER_TEST_FAULT==='1'&&process.env.AI_WRITER_TEST_TOOL_STOP_PHASE==='prepared')process.exit(97);
+       const completed=publish(p.root,tx,'complete');accept(p.root);return {...result,...completed};
+diff --git a/lib/workspace.mjs b/lib/workspace.mjs
+index 2d9c0c05d..ed718bc19 100644
+--- a/lib/workspace.mjs
++++ b/lib/workspace.mjs
+@@ -13,6 +13,7 @@ import { createSources, initialSources } from './sources.mjs';
+ import { createRevisions } from './revisions.mjs';
+ import { createReviewWorkflow, initialReviewWorkflow } from './review-workflow.mjs';
+ import { createToolUpdates, initialToolControl } from './tool-update.mjs';
++import { createRelocation } from './relocation.mjs';
+ import { RUNTIME_FILES, WORK_GUIDES, WORK_ATTRIBUTION, attributionFiles, packageFiles, fileRef, identifyBuild, compareBuilds, writeBuildManifest, sourceProvenance, currentProtocol } from './tool-build.mjs';
+ 
+ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+@@ -82,6 +83,9 @@ export function safe(root, ref) {
+ }
+ const id = unit => String(integer(unit, 'unit')).padStart(4, '0');
+ let revisionAccessToken;
++// Only the synchronous update finalizer may inspect a pending transaction.
++// Write guards still reject all pending transactions; this is not a CLI switch.
++let readonlyTransactionRoot;
+ function withLock(root, action, options = {}) {
+   const lock = safe(root, '.writer/write.lock');
+   let fd;
+@@ -97,12 +101,12 @@ function withLock(root, action, options = {}) {
+ function project(root) {
+   if (!fs.existsSync(path.join(root, 'writer.json'))) throw userError(`找不到作品配置：${path.join(root, 'writer.json')}`, { code: 'PROJECT_NOT_FOUND', file: path.join(root, 'writer.json'), next_action: '把 --project 指向含 writer.json 的作品目录；若尚未创建作品，先查看 init --help。', next_command: invocation(ROOT, 'init', ['--help']) });
+   root = fs.realpathSync(root);
+-  revisions.assertReady(root);
++  if(root!==readonlyTransactionRoot)revisions.assertReady(root);
+   const config = json(safe(root, 'writer.json'));
+   if (config.schema_version !== 1 || !KINDS.includes(config.kind)) fail('writer.json 版本或 kind 无效');
+   string(config.title, 'title', 300);
+   const state = json(safe(root, '.writer/state.json'), STATE_LIMIT);
+-  if (![1, 2, 3, 4, 5, 6].includes(state.schema_version) || !Array.isArray(state.units) || !object(state.snapshot)) fail('追踪状态版本不支持或已损坏');
++  if (![1, 2, 3, 4, 5, 6, 7].includes(state.schema_version) || !Array.isArray(state.units) || !object(state.snapshot)) fail('追踪状态版本不支持或已损坏');
+   if (state.schema_version >= 2 && !object(state.baseline)) fail('长篇基线状态损坏');
+   cleanKeys(state);
+   integer(state.revision, 'revision', 0);
+@@ -117,11 +121,11 @@ function project(root) {
+     if(u.adoption!==undefined){
+       const b=u.adoption;
+       if(!object(b)||!/^\.writer\/objects\/[a-f0-9-]+\.json$/.test(b.ref??'')||!/^[a-f0-9]{64}$/.test(b.sha256??'')||!fs.existsSync(safe(root,b.ref))||hash(fs.readFileSync(safe(root,b.ref)))!==b.sha256)throw userError(`已有稿采纳凭据缺失或损坏：单元 ${u.unit}`,{code:'DRAFT_ADOPTION_CORRUPT'});
+-      const receipt=json(safe(root,b.ref));if(receipt.kind!=='existing-draft-adoption'||receipt.unit!==u.unit||receipt.draft!==u.draft||receipt.draft_sha256!==u.sha256)throw userError(`已有稿采纳凭据与登记不符：单元 ${u.unit}`,{code:'DRAFT_ADOPTION_CORRUPT'});
++      const receipt=json(safe(root,b.ref));if(receipt.kind!=='existing-draft-adoption'||receipt.unit!==u.unit||!relocation.equivalent({root,state},receipt.draft,u.draft)||receipt.draft_sha256!==u.sha256)throw userError(`已有稿采纳凭据与登记不符：单元 ${u.unit}`,{code:'DRAFT_ADOPTION_CORRUPT'});
+     }
+     if (state.schema_version >= 2 && (!/^\.writer\/journal\/[a-f0-9-]+\.json$/.test(u.journal ?? '') || !/^[a-f0-9]{64}$/.test(u.journal_sha256 ?? ''))) fail('差量索引损坏');
+   });
+-  const p = { root, config, state }; governance.validate(p); sources.validate(p); reviewWorkflow.validate(p); toolUpdates.observe(p); return p;
++  const p = { root, config, state }; relocation.validate(p); governance.validate(p); sources.validate(p); reviewWorkflow.validate(p); toolUpdates.observe(p); return p;
+ }
+ function drift(p) {
+   return p.state.units.filter(u => !fs.existsSync(safe(p.root, u.draft)) || hash(fs.readFileSync(safe(p.root, u.draft))) !== u.sha256).map(u => u.unit);
+@@ -552,7 +556,7 @@ export function recordTemplate(root, unit, draft) {
+   return { unit, expected_revision: packet.revision, source_hashes: packet.source_hashes, draft,
+     ...(packet.source_bindings ? { source_bindings: packet.source_bindings } : {}),
+     summary: '', ...(isLong ? { changes: { characters: {}, timeline_append: [], ledger: {} } } : { snapshot: structuredClone(packet.snapshot) }),
+-    _instructions: (isLong ? '先读 context 与相关正文，填写真实摘要和 changes。未变项自动保留；ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。' : '先阅读 context 并实写正文，再填写真实摘要和完整快照；空摘要不能登记。未变项保留，已兑现线索移出 threads，不把细纲当作已发生情节。')+' 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。' };
++    _instructions: (isLong ? '先读 context 与相关正文，填写真实摘要和 changes。未填写的角色自动保留；填写 changes.characters 的某个角色时，该角色状态整段替换，须保留仍有效的旧信息并更新真实变化，不能只写增量。ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。' : '先阅读 context 并实写正文，再填写真实摘要和完整快照；空摘要不能登记。未变项保留，已兑现线索移出 threads，不把细纲当作已发生情节。')+' 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。' };
+ }
+ export function adoptContinuation(root,input){
+   if(!object(input) || Object.keys(input).some(k=>!['unit','expected_revision','draft'].includes(k)))fail('采纳输入仅接受unit、expected_revision、draft');
+@@ -608,6 +612,65 @@ function draftInventory(p) {
+   unregistered.sort((a, b) => a.draft.localeCompare(b.draft, 'zh-CN'));
+   return { registered_count: p.state.units.length, unregistered, unsafe_entries: unsafe };
+ }
++function taskView(p, status) {
++  const current = revisions.info(p.root), g = status.governance, unit = status.next_unit;
++  const active = status.revisions.sessions.filter(s => ['open','editing','prepared','interrupted','conflicted'].includes(s.status));
++  const candidates = status.draft_inventory.unregistered.filter(d => d.possible_unit === unit);
++  const result = { ok:true, view:'task', read_only:true, title:p.config.title, project:p.root,
++    revision:p.state.revision, next_unit:unit, identity:current ? {kind:'revision-workspace',...current} : {kind:'main'},
++    governance:g, blockers:[], review_counts:status.review_workflow.counts ?? {},
++    drafts:{ candidates:candidates.slice(0,8), omitted:Math.max(0,candidates.length-8), unregistered_count:status.draft_inventory.unregistered.length,
++      note:'文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。' },
++    sessions:active.map(s=>({id:s.id,owner:s.owner,status:s.status,scope:s.scope,kind:s.kind??'revision',
++      workspace:safe(current?.parent??p.root,`.writer/revisions/${s.id}/workspace`)})),
++    note:'从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。' };
++  const next=(code,action,command,defaults={},requires=[])=>{result.next={code,action,command,defaults,requires};return result;};
++  const cmd=(name,args=[],root=p.root)=>invocation(ROOT,name,['--project',root,...args]);
++  const allowed=(action,n)=>!g.enabled || (g.authorization.allowed_actions.includes(action)&&g.authorization[action==='revise'?'revise_range':'draft_range']&&n>=g.authorization[action==='revise'?'revise_range':'draft_range'].from&&n<=g.authorization[action==='revise'?'revise_range':'draft_range'].to);
++  const pause=()=>{result.blockers.push({code:'ACTION_OUT_OF_SCOPE',unit});return next('confirm-scope','当前阶段或范围不允许此步；先核对作者决定，不自行扩大授权。',cmd('workflow show'));};
++  if(current&&!['open','editing','prepared','interrupted','conflicted'].includes(current.status))return next('closed-candidate','此候选已结束，只供回查；回到主稿任务视图核对当前状态，不复用旧令牌写入。',cmd('status',['--view','task'],current.parent));
++  if(!current&&active.length){
++    result.blockers.push({code:'REVISION_ACTIVE',count:active.length});
++    return active.length===1 ? next('inspect-candidate','主稿已有修订；先查看原候选的任务视图，保留原令牌和基线。',cmd('status',['--view','task'],result.sessions[0].workspace),{id:active[0].id})
++      : next('select-candidate','存在多个修订候选，按作者任务和所有者选择；不自动选分支或合并。',cmd('revision list'));
++  }
++  if(status.stale_units.length||status.changed_sources.length){
++    const from=Math.min(...status.stale_units,...status.changed_sources.map(x=>x.unit));
++    result.blockers.push({code:'CONTEXT_CHANGED',from,stale_units:status.stale_units,changed_sources:status.changed_sources});
++    if(current&&!allowed('revise',from))return pause();
++    return next('review-drift','旧正文或来源已变；先实读影响范围，再在受保护修订区回退、重登。',cmd(current?'rewind':'revision begin',['--help']),
++      {from,through:current?.scope.through??p.state.units.length,expected_revision:p.state.revision},['确认实际影响和授权',current?'原修订令牌':'修订所有者及必要作者证据']);
++  }
++  if(current&&['prepared','interrupted','conflicted'].includes(current.status))return next('inspect-revision','核对原会话准备或冲突状态；不要重新开工或刷新旧基线。',cmd('revision list',[],current.parent),{id:current.id},['原修订令牌','决定恢复方向或冲突处置']);
++  if(current&&current.kind!=='continuation'&&unit>current.scope.through){
++    if(current.status==='open'){
++      if(!allowed('revise',current.scope.from))return pause();
++      return next('start-revision','先实读原稿与影响范围；确认后在本候选回退，正文会保留。',cmd('rewind',['--help']),{from:current.scope.from,expected_revision:p.state.revision},['原修订令牌','实读及确认修订范围']);
++    }
++    if(current.kind==='continuation-revision')return next('review-local-candidate','限章候选已到范围末尾；完成本地复核，不能发布到主稿。',cmd('revision local-proof',['--help']),{id:current.id},['当前实读报告','原修订令牌']);
++    return next('review-revision','范围内登记已完成；复读尾段、处理意见并核对后再准备提交，不把登记完成当作质量通过。',cmd('revision prepare',['--help'],current.parent),{id:current.id},['当前实读报告','原修订令牌']);
++  }
++  if(current?.kind==='continuation'&&unit>current.append_range.to)return next('continuation-limit','已到限章续写末尾；保留候选并复核，本范围不支持发布或自动续写下一章。',cmd('check'));
++  if(!current&&status.impact_pending.length){result.blockers.push({code:'IMPACT_PENDING',items:status.impact_pending});return next('review-impact','先核查来源影响并建立受保护修订，不旁路登记。',cmd('source list'));}
++  if(!current&&g.enabled&&g.authorization.allowed_actions.includes('revise')&&g.authorization.revise_range&&g.authorization.revise_range.from<=p.state.units.length){
++    if(g.authorization.revise_range.to<p.state.units.length){result.blockers.push({code:'REVISION_TAIL_AUTHORIZATION_REQUIRED',from:g.authorization.revise_range.from,through:p.state.units.length});return next('confirm-revision-tail','当前修订授权未覆盖需要重登的尾段；先确认作者允许的实际范围，不能按提示自动扩大。',cmd('workflow show'));}
++    return next('begin-revision','先确认旧章及受影响尾段；在独立候选中修订，不直接改主稿追踪。',cmd('revision begin',['--help']),{from:g.authorization.revise_range.from,through:p.state.units.length,expected_revision:p.state.revision},['作者对实际尾段范围的授权','修订所有者']);
++  }
++  if(!allowed(governance.unitAction(p,unit),unit)){
++    if(!current&&!status.next.plan_exists&&g.enabled&&g.authorization.allowed_actions.includes('plan'))return next('plan-only','当前只进入规划：保存真实细纲并讨论采用，正文仍需另有授权。',cmd('plan',['--help']),{unit},['实际规划内容']);
++    return pause();
++  }
++  if(status.draft_inventory.unsafe_entries.length){result.blockers.push({code:'UNSCANNED_LINK',files:status.draft_inventory.unsafe_entries});return next('inspect-drafts','正文目录有未读取的链接；核对真实文件，不据不完整库存创建或登记新稿。',cmd('check'));}
++  if(!status.next.plan_exists)return next('prepare-plan','先实读已有稿件和规划，保存本章真实细纲；不创建占位计划。',cmd('plan',['--help']),{unit,expected_revision:p.state.revision},['本章目标、变化及事件步骤']);
++  if(!current&&p.state.draft_relocations&&!p.state.draft_relocations.directories.some(d=>d.from<=unit&&unit<=d.to)){
++    result.blockers.push({code:'DRAFT_DIRECTORY_REQUIRED',unit});
++    return next('extend-draft-directory','本章超出稳定卷目录范围；先预览空 mapping 并按实际授权扩展未来目录，保留既有范围和正文。',cmd('draft relocate-plan',['--help']),{unit,expected_revision:p.state.revision},['已有目录范围与新卷目录','作者授权的目录契约']);
++  }
++  result.steps=['读取当前上下文并核对有效细纲','核对已有正文或分段，保留旧稿，必要时按显式分段清单合章','用record-template或replay-input生成机械字段，填写实际变化','record-preview通过后再record；旧输入失效时重新生成并实读核对'];
++  result.input_template_command=cmd(current&&current.kind!=='continuation'?'revision replay-input':'record-template',['--unit',unit]);
++  result.input_template_requires=current&&current.kind!=='continuation'?['附加 --revision-token，并使用原会话令牌；此视图不返回令牌','先完成当前正文修改，再取replay-input；之后改正文须重新取草案','填写replay_review：实际报告、reviewer及summary/characters/timeline/ledger/evidence/downstream六项复核']:['填入实际摘要和变化；模板不代表已完成实读'];
++  return next(current?'resume-replay':candidates.length?'inspect-existing-draft':'read-context',current?'从当前候选的下一登记章恢复；先读上下文，再取当前模板并核对旧登记差量，不能直接重放旧输入。':candidates.length?'发现本章未登记候选；先核对正文/分段和版本，避免重复写稿。':'读取本章上下文后再开始授权创作。',cmd('context',['--unit',unit]),{unit,expected_revision:p.state.revision},['实际读稿','当前来源绑定',...(current?['原修订令牌']:[])]);
++}
+ export function check(root) {
+   const p = project(root), findings = [];
+   for (const impact of sources.pending(p)) findings.push({ severity: 'error', code: 'IMPACT_PENDING', id: impact.id, from: impact.from, through: impact.through });
+@@ -652,20 +715,27 @@ export function exportWork(root, target) {
+   } catch (e) { removeStaging(staging, path.dirname(target), '.ai-writer-export-'); throw e; }
+ }
+ const journal = createJournal({ safe, json, hash, atomic, stateLimit: STATE_LIMIT });
+-const governance = createGovernance({ project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, object, stateLimit: STATE_LIMIT, journal, sessionScope: p => revisions.info(p.root)?.scope,sessionInfo:p=>revisions.info(p.root) });
++const governance = createGovernance({ project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, object, stateLimit: STATE_LIMIT, journal, resolveDraft: (p,ref) => relocation.resolve(p,ref), sessionScope: p => revisions.info(p.root)?.scope,sessionInfo:p=>revisions.info(p.root) });
+ const longform = createLongform({ project, safe, json, text, hash, atomic, withLock, fresh, string, strings, integer, fail, object, reportLimit:LIMIT, registerReview:(...args)=>reviewWorkflow.register(...args),
++  resolveDraft:(p,ref)=>relocation.resolve(p,ref),
+   resolveSource: (p, ref, unit) => sources.resolve(p, ref, unit), revisionInfo: root => revisions.info(root),
+   guard: (p, action, from, to) => governance.gate(p, action === 'write' ? governance.unitAction(p, from) : action, from, to) });
+ const revisions = createRevisions({ project, safe, json, text, hash, atomic, withLock, fresh, string, integer, stateLimit: STATE_LIMIT,
+   gate: (...args) => governance.gate(...args), writeEvidence: (...args) => governance.writeEvidence(...args), journal,
+   runtimeFiles: RUNTIME_FILES, toolRoot: ROOT, getToken: () => revisionAccessToken, reviewStatus: p => longform.reviewStatus(p, true), inspectIntegrity: p => ({ stale_units: drift(p), changed_sources: changedSources(p) }),initProject,promoteDirectory,continuationPacket:contextPacket,setWorkflow:(...args)=>governance.setWorkflow(...args) });
+-const toolUpdates = createToolUpdates({project,safe,json,hash,withLock,fresh,stateLimit:STATE_LIMIT,revisions,toolRoot:ROOT,gate:(...args)=>governance.gate(...args)});
++const toolUpdates = createToolUpdates({project,safe,json,hash,withLock,fresh,stateLimit:STATE_LIMIT,revisions,toolRoot:ROOT,gate:(...args)=>governance.gate(...args),inspectReadonly:root=>{
++  if(readonlyTransactionRoot)fail('事务只读检查不可重入');readonlyTransactionRoot=fs.realpathSync(root);
++  try{const result=check(root);if(!result.ok)throw userError('更新后作品一致性检查失败',{code:'TOOL_VALIDATION_FAILED',check:result});return [{kind:'in-place-readonly',check:result}];}finally{readonlyTransactionRoot=undefined;}
++}});
+ const sources = createSources({ project, safe, json, text, hash, atomic, withLock, string, integer, object, stateLimit: STATE_LIMIT,
++  resolveDraft:(p,ref)=>relocation.resolve(p,ref),
+   gate: (...args) => governance.gate(...args), writeEvidence: (...args) => governance.writeEvidence(...args), revisionInfo: root => revisions.info(root) });
+ const reviewWorkflow=createReviewWorkflow({project,safe,json,text,hash,atomic,withLock,fresh,string,strings,integer,object,stateLimit:STATE_LIMIT,
++  resolveDraft:(p,ref)=>relocation.resolve(p,ref),equivalentDraft:(p,a,b)=>relocation.equivalent(p,a,b),
+   gate:(...args)=>governance.gate(...args),writeEvidence:(...args)=>governance.writeEvidence(...args),reviewData:(...args)=>longform.reviewData(...args),
+   reviewStatus:(...args)=>longform.reviewStatus(...args),dependency:(...args)=>longform.dependency(...args),revisionInfo:root=>revisions.info(root),publication:(...args)=>revisions.publication(...args),localRevisionProof:(...args)=>revisions.localRevisionProof(...args),journal});
+ const styleScan = createStyleTools({ project, safe, text, hash, string });
++const relocation=createRelocation({project,safe,json,hash,atomic,withLock,fresh,revisions,stateLimit:STATE_LIMIT,toolRoot:ROOT,gate:(...a)=>governance.gate(...a),writeEvidence:(...a)=>governance.writeEvidence(...a)});
+ export function enableLong(root, expected) {
+   integer(expected, 'expected-revision', 0);
+   return withLock(root, () => {
+@@ -708,7 +778,7 @@ function doctor(target) {
+   if (!legacy) for (const name of WORK_GUIDES.filter(name => ownedResources || (name==='tool-updates.md'?false:name==='review-and-registration.md'?version?.startsWith('0.6.'):name!=='revision-and-sources.md'||/^0\.[56]\./.test(version??'')))) if (!fs.existsSync(path.join(contentRoot, 'docs', name))) errors.push(`缺少用户文档 ${name}`);
+   if (!legacy) for (const ref of attributionFiles(packageData)) if (!fs.existsSync(path.join(contentRoot, ref))) errors.push(`缺少来源或许可资料 ${ref}`);
+   if(resourceProjectRoot&&ownedResources) for(const ref of WORK_ATTRIBUTION) if(!fs.existsSync(path.join(resourceProjectRoot,ref))) warnings.push(`作品根缺少原来源或许可副本 ${ref}；随附包仍保留原文`);
+-  const modules = ownedResources ? RUNTIME_FILES.filter(ref=>ref.startsWith('lib/')).map(ref=>path.basename(ref)) : version?.startsWith('0.1.') ? ['workspace.mjs'] : legacy ? ['workspace.mjs', 'journal.mjs', 'longform.mjs'] : ['workspace.mjs', 'journal.mjs', 'longform.mjs', 'help.mjs', 'style.mjs', ...(/^0\.[456]\./.test(version ?? '') ? ['governance.mjs', 'tool-build.mjs'] : []), ...(/^0\.[56]\./.test(version??'') ? ['sources.mjs', 'revisions.mjs'] : []), ...(version?.startsWith('0.6.')?['review-workflow.mjs']:[])];
++  const modules = ownedResources ? RUNTIME_FILES.filter(ref=>ref.startsWith('lib/')&&(ref!=='lib/relocation.mjs'||packageData?.aiWriter?.draftRelocationProtocol===1)).map(ref=>path.basename(ref)) : version?.startsWith('0.1.') ? ['workspace.mjs'] : legacy ? ['workspace.mjs', 'journal.mjs', 'longform.mjs'] : ['workspace.mjs', 'journal.mjs', 'longform.mjs', 'help.mjs', 'style.mjs', ...(/^0\.[456]\./.test(version ?? '') ? ['governance.mjs', 'tool-build.mjs'] : []), ...(/^0\.[56]\./.test(version??'') ? ['sources.mjs', 'revisions.mjs'] : []), ...(version?.startsWith('0.6.')?['review-workflow.mjs']:[])];
+   for (const name of modules) if (!fs.existsSync(path.join(toolRoot, 'lib', name))) errors.push(`缺少工具模块 ${name}`);
+   const embedded = path.basename(path.dirname(toolRoot)) === '.writer';
+   const engine = fs.existsSync(path.join(toolRoot, 'vendor/story-gate-studio/scripts/story-gate.js'));
+@@ -731,7 +801,7 @@ function doctor(target) {
+ }
+ export function main(argv) {
+   const [command, ...rest] = argv;
+-  const grouped = ['governance', 'workflow', 'decision', 'tool', 'protection', 'source', 'revision', 'review-workflow', 'review-issues'].includes(command), action = grouped && rest[0] && !rest[0].startsWith('--') ? rest[0] : undefined;
++  const grouped = ['draft', 'governance', 'workflow', 'decision', 'tool', 'protection', 'source', 'revision', 'review-workflow', 'review-issues'].includes(command), action = grouped && rest[0] && !rest[0].startsWith('--') ? rest[0] : undefined;
+   const args = action ? rest.slice(1) : rest;
+   const version = json(path.join(ROOT, 'package.json')).version;
+   if (!command || command === '--help') return { ok: true, help: help(ROOT, version) };
+@@ -772,6 +842,13 @@ export function main(argv) {
+   const req = key => options[key] ?? fail(`缺少 --${key}`);
+   const workRoot = () => options.project ?? (fs.existsSync(path.join(process.cwd(), 'writer.json')) ? process.cwd() : fail('缺少 --project；请提供作品目录，或在含 writer.json 的作品目录中运行'));
+   switch (command) {
++    case 'draft': {
++      if(action==='relocate-plan')return relocation.plan(workRoot(),json(req('input')));
++      if(action==='relocate')return relocation.relocate(workRoot(),json(req('input')));
++      if(action==='relocations')return relocation.list(workRoot());
++      if(action==='relocate-recover')return relocation.recover(workRoot(),json(req('input')));
++      fail('draft 支持 relocate-plan/relocate/relocations/relocate-recover');break;
++    }
+     case 'init': {if(options.mode&&!['long','standard'].includes(options.mode))fail('--mode须long或standard');return initProject(req('path'), req('kind'), req('title'),{longForm:options.mode==='long'});}
+     case 'doctor': return doctor(options.project);
+     case 'protection': {
+@@ -842,8 +919,15 @@ export function main(argv) {
+     case 'record-preview': return outputDraft(workRoot(),options.out,()=>recordPreview(workRoot(),json(req('input'))));
+     case 'long-enable-preview': return longEnablePreview(workRoot());
+     case 'status': {
+-      const p = project(workRoot()), view = options.view ?? (p.state.schema_version >= 2 ? 'compact' : 'full');
+-      if (!['compact', 'full'].includes(view)) fail('view 必须是 compact 或 full');
++      if(options.view&&!['task','compact','full'].includes(options.view))fail('view 必须是 task、compact 或 full');
++      let p;
++      try { p=project(workRoot()); } catch(error) {
++        if(options.view!=='task'||!['TRANSACTION_PENDING','TOOL_UPDATE_PENDING'].includes(error.code))throw error;
++        const tool=error.code==='TOOL_UPDATE_PENDING', recoveryRoot=revisions.info(workRoot())?.parent??workRoot();
++        return {ok:true,view:'task',read_only:true,recovery_only:true,can_write:false,blockers:[{code:error.code,transactions:error.transactions}],
++          next:{code:'recover-transaction',action:'普通读写已暂停；先查看未完成事务，再携原凭据明确选择恢复或回滚。此视图不读取可变业务状态。',command:invocation(ROOT,tool?'tool updates':error.transactions?.some(t=>t.kind==='draft-relocation')?'draft relocations':'revision list',['--project',recoveryRoot]),requires:['原凭据','明确恢复方向','作者恢复证据及遗留锁实际哈希（若有）']}};
++      }
++      const view = options.view ?? (p.state.schema_version >= 2 ? 'compact' : 'full');
+       const stale = drift(p), changed = changedSources(p), inventory = draftInventory(p), unit = p.state.units.length + 1;
+       const affected = [...stale, ...changed.map(row => row.unit)], planExists = fs.existsSync(safe(p.root, `大纲/单元/${id(unit)}.json`));
+       const recovery = affected.length ? driftRecovery(p, Math.min(...affected)) : null;
+@@ -857,11 +941,13 @@ export function main(argv) {
+           command: a.allowed_actions.includes('discuss') ? invocation(ROOT, 'context', ['--project', p.root, '--purpose', 'discussion']) : invocation(ROOT, 'workflow show', ['--project', p.root]) };
+       }
+       if (revisionState.sessions.some(s => ['open', 'editing', 'prepared', 'interrupted', 'conflicted'].includes(s.status)) || impacts.length) next = { action: '先恢复活跃修订或处理待修订影响，保留双方候选；不旁路登记', command: invocation(ROOT, 'revision list', ['--project', p.root]) };
+-      return { ok: true, title: p.config.title, kind: p.config.kind, revision: p.state.revision, schema_version: p.state.schema_version, governance: governed,
++      const status = { ok: true, title: p.config.title, kind: p.config.kind, revision: p.state.revision, schema_version: p.state.schema_version, governance: governed,
+         next_unit: unit, stale_units: stale, changed_sources: changed, impact_pending: impacts, revisions: revisionState, review_workflow:reviewWorkflow.list(p.root,false), tool_control:p.state.tool_control??null,
+         long_form:{enabled:p.state.schema_version===2||Boolean(p.state.long_form),suggestion:p.config.kind==='novel'&&!p.state.long_form&&p.state.schema_version!==2?'跨卷或长篇创作先long-enable-preview，再按已授权范围启用、组织分卷与滚动细纲':'按现有文体与篇幅组织计划'}, view, draft_inventory: inventory, next: { unit, plan_exists: planExists, ...next },
+         ...(view === 'full' ? { snapshot: p.state.snapshot } : { current: { character_count: Object.keys(p.state.snapshot.characters).length,
+           ledger_count: Object.keys(p.state.snapshot.ledger ?? {}).length, recent: p.state.units.slice(-3).map(u => ({ unit: u.unit, summary: u.summary })), timeline_tail: p.state.snapshot.timeline.slice(-6) } }) };
++      if(view==='task')return taskView(p,status);
++      return {...status,task_view_command:invocation(ROOT,'status',['--project',p.root,'--view','task'])};
+     }
+     case 'check': return check(workRoot());
+     case 'rewind': return rewind(workRoot(), Number(req('from')), Number(req('expected-revision')));
+diff --git a/package.json b/package.json
+index 2086c42d0..a8099bb33 100644
+--- a/package.json
++++ b/package.json
+@@ -1,9 +1,10 @@
+ {
+   "name": "ai-writer",
+-  "version": "0.9.0",
++  "version": "0.10.0",
+   "license": "Apache-2.0",
+   "aiWriter": {
+-    "resourceProfile": "apache-2.0-v1"
++    "resourceProfile": "apache-2.0-v1",
++    "draftRelocationProtocol": 1
+   },
+   "private": true,
+   "description": "Codex 驱动的中文小说、剧本、历史散文与非虚构写作工作区",
+diff --git a/release/README.md b/release/README.md
+index e73773383..329ec635e 100644
+--- a/release/README.md
++++ b/release/README.md
+@@ -1,4 +1,4 @@
+-# ai-writer 0.9.0
++# ai-writer 0.10.0（开发中，未发布）
+ 
+ 面向Codex的中文创作工具，支持小说、剧本、历史散文、散文与一般非虚构。作品保存在本地，支持长篇分卷、跨会话恢复、设定版本、保护修订、意见闭环和草稿导出。
+ 
+@@ -18,7 +18,7 @@ node bin/ai-writer.mjs doctor
+ 
+ ## 版本与更新
+ 
+-本包版本为0.9.0，资源配置为`apache-2.0-v1`；`build-manifest.json`记录受管内容ID，`RELEASE-MANIFEST.json`记录包内文件哈希。沿用schema6及受管资源协议，兼容完整0.7/0.8来源。更新已有作品前先备份、比较构建、生成更新计划，保留作者规则与定制；不要覆盖作品目录。
++本包为0.10.0开发候选，尚未正式发布；正式下载仍为[v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0)。资源配置为`apache-2.0-v1`；`build-manifest.json`记录受管内容ID，`RELEASE-MANIFEST.json`记录包内文件哈希。沿用schema6及受管资源协议，兼容完整0.7–0.9来源。更新已有作品前先备份、比较构建、生成更新计划，保留作者规则与定制；不要覆盖作品目录。
+ 
+ [发行说明](RELEASE_NOTES.md)和[更新记录](CHANGELOG.md)介绍能力与边界。历史正式版v0.8.0保留，历史内部同号候选及0.8.1另有独立内容身份。机械检查不代替实读、真人阅读或作者定稿；导出仍为草稿。
+ 
+diff --git a/release/distribution.json b/release/distribution.json
+index 5581737f1..ea26bedca 100644
+--- a/release/distribution.json
++++ b/release/distribution.json
+@@ -2,6 +2,12 @@
+   "format": "ai-writer-distribution@1",
+   "description": "Explicit source allowlist; excludes works, acceptance, machine settings and generated output.",
+   "files": [
++    { "file": "tests/tool-update-budget.test.mjs" },
++    { "file": "lib/relocation.mjs" },
++    { "file": "tests/relocation.test.mjs" },
++    { "file": "docs/registered-draft-relocation-design.md" },
++    { "file": "tests/task-view.test.mjs" },
++    { "file": "docs/next-development.md" },
+     { "file": "docs/release-090-verification.md" },
+     { "file": ".agents/skills/writer-review/references/concrete-language-review.md" },
+     { "file": "tests/limited-revision.test.mjs" },
+diff --git a/scripts/build-release.mjs b/scripts/build-release.mjs
+index 7ba1f49bf..8f47c6fde 100644
+--- a/scripts/build-release.mjs
++++ b/scripts/build-release.mjs
+@@ -67,7 +67,7 @@ function zip(root,prefix,rows){
+ }
+ export function buildRelease({root=ROOT,out}={}){
+   root=path.resolve(root);const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));
+-  if(!/^0\.(?:8|9)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x or 0.9.x package with apache-2.0-v1 resources');
++  if(!/^0\.(?:8|9|10)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x, 0.9.x or 0.10.x package with apache-2.0-v1 resources');
+   out=path.resolve(out??path.join(root,'dist',pkg.version));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
+   const build=identifyBuild(root);if(!build.ok)throw Error('Source build is incomplete');
+   const spec=JSON.parse(fs.readFileSync(path.join(root,'release/distribution.json'))),seen=new Set(),sources=[];
+diff --git a/tests/package-protocol.test.mjs b/tests/package-protocol.test.mjs
+index 0724a68d7..2f1c1412a 100644
+--- a/tests/package-protocol.test.mjs
++++ b/tests/package-protocol.test.mjs
+@@ -6,9 +6,9 @@ import {spawnSync} from 'node:child_process';
+ import {currentProtocol} from '../lib/tool-build.mjs';
+ import {fixture,ROOT} from './protection-fixture.mjs';
+ 
+-test('0.9沿用受管资源协议，旧0.7和0.8兼容；随附诊断不回退到根作者资源',t=>{
+-  for(const version of ['0.7.6','0.8.0','0.9.0'])assert.equal(currentProtocol(version),true);
+-  for(const version of ['0.6.0','0.10.0','1.0.0'])assert.equal(currentProtocol(version),false);
++test('0.10沿用受管资源协议，旧0.7至0.9兼容；随附诊断不回退到根作者资源',t=>{
++  for(const version of ['0.7.6','0.8.0','0.9.0','0.10.0','0.10.1'])assert.equal(currentProtocol(version),true);
++  for(const version of ['0.6.0','0.11.0','1.0.0'])assert.equal(currentProtocol(version),false);
+   const {root}=fixture(t,0),entry=path.join(root,'.writer/tool/bin/ai-writer.mjs');
+   fs.unlinkSync(path.join(root,'docs/user-guide.md'));
+   const run=(args,tool=entry)=>{const r=spawnSync(process.execPath,[tool,...args],{cwd:root,encoding:'utf8',windowsHide:true});return {r,value:args.includes('doctor')?JSON.parse(r.stdout):r.stdout};};
+diff --git a/tests/release.test.mjs b/tests/release.test.mjs
+index 6418fa008..bc5d7f2ad 100644
+--- a/tests/release.test.mjs
++++ b/tests/release.test.mjs
+@@ -35,7 +35,7 @@ test('发行版本拒绝未来协议、路径字符和未知资源配置，拒
+   fs.mkdirSync(path.join(ROOT,'.tmp'),{recursive:true});const dir=fs.mkdtempSync(path.join(ROOT,'.tmp/release-version-'));
+   t.after(async()=>{assert.equal(path.dirname(fs.realpathSync(dir)),fs.realpathSync(path.join(ROOT,'.tmp')));await fs.promises.rm(dir,{recursive:true,force:true,maxRetries:12,retryDelay:150});});
+   const out=path.join(dir,'output');
+-  for(const [version,resourceProfile] of [['0.10.0','apache-2.0-v1'],['0.9.0/../../escape','apache-2.0-v1'],['0.9.0-rc.1','apache-2.0-v1'],['0.9.0','unknown']]){
++  for(const [version,resourceProfile] of [['0.11.0','apache-2.0-v1'],['0.10.0/../../escape','apache-2.0-v1'],['0.10.0-rc.1','apache-2.0-v1'],['0.10.0','unknown']]){
+     fs.writeFileSync(path.join(dir,'package.json'),JSON.stringify({version,aiWriter:{resourceProfile}}));
+     assert.throws(()=>buildRelease({root:dir,out}),/Expected a supported/);assert.equal(fs.existsSync(out),false);
+   }
+diff --git a/tests/relocation.test.mjs b/tests/relocation.test.mjs
+new file mode 100644
+index 000000000..4e3fc8ec7
+--- /dev/null
++++ b/tests/relocation.test.mjs
+@@ -0,0 +1,99 @@
++import fs from 'node:fs';
++import path from 'node:path';
++import assert from 'node:assert/strict';
++import test from 'node:test';
++import {spawnSync} from 'node:child_process';
++import {main} from '../lib/workspace.mjs';
++import {writeBuildManifest} from '../lib/tool-build.mjs';
++import {fixture,ROOT,file,state,sha,call,evidence,review,workflow,begin,rewindBranch,prepare,commit} from './protection-fixture.mjs';
++function spec(root){return {mapping:state(root).units.map(u=>({unit:u.unit,from:u.draft,to:`正文/V1-旧卷/${path.basename(u.draft)}`,sha256:u.sha256})),directories:[{volume_id:'V1',directory:'正文/V1-旧卷',from:1,to:10}]};}
++function request(root){return {...call(root,'draft','relocate-plan',spec(root)).request,author_evidence:evidence(root)};}
++function fault(root,input,env){const f=file(root,'.writer/relocation-input.json',input);return spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'draft','relocate','--project',root,'--input',f],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',...env}});}
++test('规划正文旧引用在迁移后可读，原引用不变，旧地址遮蔽拒绝',t=>{
++  const {root}=fixture(t,3),before=state(root),w=call(root,'workflow','show').workflow;
++  w.planning.structure={status:'adopted',refs:before.units.map(u=>u.draft),unresolved_ids:[]};
++  call(root,'workflow','set',{expected_revision:before.revision,operation_id:'planning-draft-refs',author_evidence:evidence(root),workflow:w});
++  const oldRefs=state(root).governance.planning.structure.refs;
++  call(root,'draft','relocate',request(root));
++  assert.deepEqual(call(root,'workflow','show').workflow.planning.structure.refs,oldRefs);
++  assert.doesNotThrow(()=>main(['status','--project',root]));
++  assert.equal(main(['check','--project',root]).ok,true);
++  call(root,'source','list');
++  const bad=structuredClone(call(root,'workflow','show').workflow);bad.planning.structure.refs=['../outside.md'];
++  assert.throws(()=>call(root,'workflow','set',{expected_revision:state(root).revision,operation_id:'unsafe-planning-ref',author_evidence:evidence(root),workflow:bad}));
++  assert.deepEqual(call(root,'workflow','show').workflow.planning.structure.refs,oldRefs);
++  file(root,oldRefs[0],'占用旧路径');
++  assert.throws(()=>main(['status','--project',root]),e=>e.code==='RELOCATION_ALIAS_SHADOW');
++});
++test('纯移动保持历史消费、差量与审查覆盖，重复执行幂等，稳定目录延续',t=>{
++  const {root}=fixture(t,3);review({workspace:root});const before=state(root),reviews=main(['check','--project',root]).rolling_review;
++  const input=request(root),result=call(root,'draft','relocate',input);assert.equal(result.body_copies,0);assert.equal(state(root).schema_version,7);
++  for(const [i,u]of state(root).units.entries()){assert.equal(sha(fs.readFileSync(path.join(root,u.draft))),before.units[i].sha256);assert.equal(fs.existsSync(path.join(root,before.units[i].draft)),false);assert.deepEqual(u.source_hashes,before.units[i].source_hashes);assert.equal(u.journal_sha256,before.units[i].journal_sha256);}
++  assert.equal(main(['check','--project',root]).ok,true);assert.equal(call(root,'draft','relocate',input).unchanged,true);
++  assert.deepEqual(main(['check','--project',root]).rolling_review,reviews);
++  call(root,'plan',null,{unit:4,title:'下一章',goal:'继续',change:'核对',beats:['核对']});assert.ok(main(['context','--project',root,'--unit','4']).draft_path.startsWith('正文/V1-旧卷/'));
++});
++for(const direction of ['complete','rollback'])test(`正文移动中断可 ${direction}，原文不复制`,t=>{
++  const {root}=fixture(t,3),before=state(root),input=request(root),r=fault(root,input,{AI_WRITER_TEST_RELOCATE_STOP_AFTER:'1'});assert.equal(r.status,94,r.stderr);
++  assert.throws(()=>main(['check','--project',root]),e=>e.code==='TRANSACTION_PENDING');const tx=call(root,'draft','relocations').transactions[0];
++  const out=call(root,'draft','relocate-recover',{transaction_id:tx.id,direction,lock_sha256:tx.lock_sha256,author_evidence:evidence(root)});assert.equal(out.status,direction==='complete'?'completed':'rolled-back');assert.equal(main(['check','--project',root]).ok,true);if(direction==='rollback')assert.deepEqual(state(root),before);
++});
++test('目标占用、坏哈希、错误卷、过期预览不写业务状态；第三方修改不覆盖',t=>{
++  const {root}=fixture(t,2),before=state(root),s=spec(root);s.mapping[0].sha256='0'.repeat(64);assert.throws(()=>call(root,'draft','relocate-plan',s));assert.deepEqual(state(root),before);
++  const wrong=spec(root);wrong.mapping[0].to='正文/另一卷/a.md';assert.throws(()=>call(root,'draft','relocate-plan',wrong),e=>e.code==='RELOCATION_VOLUME_MISMATCH');
++  const input=request(root);assert.throws(()=>call(root,'draft','relocate',{...input,expected_revision:input.expected_revision-1}),e=>e.code==='RELOCATION_PLAN_CHANGED');assert.deepEqual(state(root),before);
++  const r=fault(root,input,{AI_WRITER_TEST_RELOCATE_STOP_AFTER:'1'});assert.equal(r.status,94,r.stderr);file(root,input.mapping[1].from,'第三方版本');const tx=call(root,'draft','relocations').transactions[0];assert.throws(()=>call(root,'draft','relocate-recover',{transaction_id:tx.id,direction:'complete',lock_sha256:tx.lock_sha256,author_evidence:evidence(root)}),e=>e.code==='RELOCATION_EXTERNAL_CONFLICT');assert.equal(fs.readFileSync(path.join(root,input.mapping[1].from),'utf8'),'第三方版本');assert.deepEqual(state(root),before);
++});
++test('原地只读验证的工具更新不在验证目录复制正文',t=>{
++  const {root}=fixture(t,2),before=state(root),p=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'});
++  const r=call(root,'tool','update',{...p.request,author_evidence:evidence(root)});assert.equal(r.ok,true);assert.equal(main(['check','--project',root]).ok,true);
++  const folder=path.join(root,'.writer/tool-updates',r.transaction_id,'validation/正文');assert.deepEqual(fs.readdirSync(folder),[]);assert.deepEqual(state(root).units,before.units);
++});
++test('迁移预览拒绝目标覆盖、路径别名、保留名与硬链接',t=>{
++  const {root}=fixture(t,2),before=state(root);
++  const occupied=spec(root);file(root,occupied.mapping[0].to,'外部文件');assert.throws(()=>call(root,'draft','relocate-plan',occupied),e=>e.code==='RELOCATION_TARGET_EXISTS');
++  for(const target of ['正文/V1-旧卷/CON.md','正文/../outside.md','正文/V1-旧卷/0002.md']){const x=spec(root);x.mapping[0].to=target;assert.throws(()=>call(root,'draft','relocate-plan',x));}
++  const original=path.join(root,before.units[0].draft),link=path.join(root,'研究/hard-link.md');fs.linkSync(original,link);assert.throws(()=>call(root,'draft','relocate-plan',spec(root)),e=>e.code==='RELOCATION_UNSAFE_PATH');assert.deepEqual(state(root),before);
++});
++for(const direction of ['complete','rollback'])test(`状态发布后中断仍可 ${direction}`,t=>{
++  const {root}=fixture(t,2),before=state(root),r=fault(root,request(root),{AI_WRITER_TEST_RELOCATE_STOP_PHASE:'state'});assert.equal(r.status,93,r.stderr);const tx=call(root,'draft','relocations').transactions[0];
++  call(root,'draft','relocate-recover',{transaction_id:tx.id,direction,lock_sha256:tx.lock_sha256,author_evidence:evidence(root)});assert.equal(main(['check','--project',root]).ok,true);if(direction==='rollback')assert.deepEqual(state(root),before);
++});
++for(const direction of ['complete','rollback'])test(`独占目标占位后中断可 ${direction}，只允许事务自己的同 inode 双路径`,t=>{
++  const {root}=fixture(t,2),before=state(root),input=request(root),r=fault(root,input,{AI_WRITER_TEST_RELOCATE_STOP_LINK:'1'});assert.equal(r.status,90,r.stderr);
++  const m=input.mapping[0],a=fs.statSync(path.join(root,m.from)),b=fs.statSync(path.join(root,m.to));assert.equal(a.ino,b.ino);assert.equal(a.nlink,2);
++  const tx=call(root,'draft','relocations').transactions[0];call(root,'draft','relocate-recover',{transaction_id:tx.id,direction,lock_sha256:tx.lock_sha256,author_evidence:evidence(root)});
++  assert.equal(main(['check','--project',root]).ok,true);assert.equal(fs.statSync(path.join(root,direction==='complete'?m.to:m.from)).nlink,1);if(direction==='rollback')assert.deepEqual(state(root),before);
++});
++test('稳定目录到界拒绝默认回退，可显式扩展未来范围且不再移动正文',t=>{
++  const {root}=fixture(t,2),s=spec(root);s.directories[0].to=2;const p=call(root,'draft','relocate-plan',s);call(root,'draft','relocate',{...p.request,author_evidence:evidence(root)});
++  call(root,'plan',null,{unit:3,title:'后续',goal:'核对',change:'继续',beats:['核对']});assert.throws(()=>main(['context','--project',root,'--unit','3']),e=>e.code==='DRAFT_DIRECTORY_REQUIRED');
++  const next=call(root,'draft','relocate-plan',{mapping:[],directories:[{...s.directories[0],to:4}]});assert.equal(call(root,'draft','relocate',{...next.request,author_evidence:evidence(root)}).moved,0);assert.ok(main(['context','--project',root,'--unit','3']).draft_path.startsWith('正文/V1-旧卷/'));
++});
++for(const direction of ['complete','rollback'])test(`不复制正文的工具更新中断可 ${direction}`,t=>{
++  const {root}=fixture(t,2),before=state(root),p=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'}),input=file(root,'.writer/nocopy-update.json',{...p.request,author_evidence:evidence(root)});
++  const r=spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'tool','update','--project',root,'--input',input],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',AI_WRITER_TEST_TOOL_STOP_PHASE:'prepared'}});assert.equal(r.status,97,r.stderr);
++  const tx=call(root,'tool','updates').transactions.find(t=>t.status==='prepared');assert.deepEqual(fs.readdirSync(path.join(root,'.writer/tool-updates',tx.id,'validation/正文')),[]);
++  call(root,'tool','recover',{transaction_id:tx.id,direction,lock_sha256:sha(fs.readFileSync(path.join(root,'.writer/write.lock'))),author_evidence:evidence(root)});assert.equal(main(['check','--project',root]).ok,true);assert.deepEqual(state(root).units,before.units);if(direction==='rollback')assert.deepEqual(state(root),before);
++});
++test('意见先采用再迁移修订，提交后再次迁移，仍按真实变更完成 apply 与 acknowledge',t=>{
++  const {root}=fixture(t,2);let sequence=0;
++  function structured(issues){const s=state(root),report=`审查/迁移结构-${++sequence}.md`;file(root,report,'# 合成接口复核\n仅验证路径与真实修订绑定，不声明文学质量。');return call(root,'review',null,{expected_revision:s.revision,operation_id:`relocation-review-${sequence}`,from:1,to:2,kind:'model-self-review',report,source_hashes:Object.fromEntries(s.units.map(u=>[u.draft,u.sha256])),chapter_functions:s.units.map(u=>({unit:u.unit,...Object.fromEntries(['goal','obstacle','choice','consequence','relationship_change'].map(k=>[k,{status:'unknown',reason:'合成接口样本不作文学判断'}]))})),comparison:{similar_structures:[],distinct_gains:['编号不同'],preserve:['物件事实'],optional_adjustments:[],limits:'合成样本'},issues});}
++  structured([{id:'I_MOVE',type:'continuity',severity:'minor',confidence:'high',statement:'合成第一章核对意见',suggestion:'增加核对动作',evidence:[{unit:1,quote:'林衡把铜片交给阿禾。'}]},{id:'I_ACK',type:'continuity',severity:'minor',confidence:'high',statement:'合成第二章核对意见',suggestion:'增加核对动作',evidence:[{unit:2,quote:'阿禾带着铜片走到第2处桥头。'}]}]);
++  workflow(root,true);call(root,'review-issues','resolve',{expected_revision:state(root).revision,operation_id:'move-adopt',id:'I_MOVE',disposition:'adopted',reason:'合成修订授权',decision_actor:'agent-within-authorized-scope',authorization:state(root).governance_binding});
++  call(root,'draft','relocate',request(root));const original=state(root),b=begin(root);rewindBranch(b);
++  for(let n=1;n<=2;n++){const draft=original.units[n-1].draft;fs.appendFileSync(path.join(b.workspace,draft),'\n阿禾再次核对了交接编号。\n');const x=main(['revision','replay-input','--project',b.workspace,'--unit',String(n),'--revision-token',b.token]),report=`审查/重登迁移-${n}.md`;file(b.workspace,report,'# 合成复核\n核对六项登记与后续承接，不声明文学验收。');x.replay_review={reviewer:'synthetic',report,draft_sha256:sha(fs.readFileSync(path.join(b.workspace,draft))),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};call(b.workspace,'record',null,x,b.token);}
++  review(b);prepare(root,b);commit(root,b);const proof=JSON.parse(fs.readFileSync(path.join(root,state(root).committed_revisions.at(-1).ref)));
++  const p=call(root,'draft','relocate-plan',{mapping:state(root).units.map(u=>({unit:u.unit,from:u.draft,to:`正文/V1-定名/${path.basename(u.draft)}`,sha256:u.sha256})),directories:[{volume_id:'V1',directory:'正文/V1-定名',from:1,to:10}]});call(root,'draft','relocate',{...p.request,author_evidence:evidence(root)});
++  call(root,'review-issues','apply',{expected_revision:state(root).revision,operation_id:'move-apply',id:'I_MOVE',commit_id:proof.id,reason:'按真实提交应用'});
++  call(root,'review-issues','acknowledge',{expected_revision:state(root).revision,operation_id:'move-ack',id:'I_ACK',commit_id:proof.id,target_units:[2],reason:'合成补登记',decision_actor:'agent-within-authorized-scope',authorization:state(root).governance_binding});
++  const r=structured([]);for(const id of ['I_MOVE','I_ACK'])call(root,'review-issues','verify',{expected_revision:state(root).revision,operation_id:`move-verify-${id}`,id,review_ref:r.ref,reviewer:'synthetic',conclusion:'resolved',reason:'合成流程复核'});
++  assert.equal(call(root,'review-issues','list').counts.verified,2);assert.equal(main(['check','--project',root]).ok,true);
++});
++test('迁移不追认手工替换后的安装构建，恢复拒绝中断期间工具改动',t=>{
++  const {root}=fixture(t,2),p=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'});call(root,'tool','update',{...p.request,author_evidence:evidence(root)});
++  const target=path.join(root,'.writer/tool/docs/user-guide.md'),original=fs.readFileSync(target),manifest=path.join(root,'.writer/tool/build-manifest.json'),saved=fs.readFileSync(manifest);
++  fs.appendFileSync(target,'\n合成篡改用例。\n');fs.unlinkSync(manifest);writeBuildManifest(path.join(root,'.writer/tool'));assert.throws(()=>call(root,'draft','relocate-plan',spec(root)),e=>e.code==='RELOCATION_INSTALLED_BUILD_MISMATCH');fs.writeFileSync(target,original);fs.writeFileSync(manifest,saved);
++  const before=state(root),r=fault(root,request(root),{AI_WRITER_TEST_RELOCATE_STOP_AFTER:'1'});assert.equal(r.status,94,r.stderr);fs.appendFileSync(target,'\n中断期间第三方改动。\n');const tx=call(root,'draft','relocations').transactions[0];
++  assert.throws(()=>call(root,'draft','relocate-recover',{transaction_id:tx.id,direction:'complete',lock_sha256:tx.lock_sha256,author_evidence:evidence(root)}),e=>e.code==='RELOCATION_EXTERNAL_CONFLICT');assert.deepEqual(state(root),before);assert.ok(fs.readFileSync(target,'utf8').includes('第三方改动'));
++});
+diff --git a/tests/task-view.test.mjs b/tests/task-view.test.mjs
+new file mode 100644
+index 000000000..1c5782c56
+--- /dev/null
++++ b/tests/task-view.test.mjs
+@@ -0,0 +1,65 @@
++import fs from 'node:fs';
++import path from 'node:path';
++import assert from 'node:assert/strict';
++import test from 'node:test';
++import {spawnSync} from 'node:child_process';
++import {main} from '../lib/workspace.mjs';
++import {fixture,ROOT,file,state,sha,call,workflow,evidence,begin,rewindBranch,unit,review,prepare} from './protection-fixture.mjs';
++function inventory(root){const rows={};function walk(dir,ref=''){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=ref?ref+'/'+e.name:e.name;if(e.isDirectory())walk(path.join(dir,e.name),p);else rows[p]=sha(fs.readFileSync(path.join(dir,e.name)));}}walk(root);return rows;}
++function task(root){const before=inventory(root);const value=main(['status','--project',root,'--view','task']);assert.equal(value.read_only,true);assert.deepEqual(inventory(root),before);return value;}
++test('任务视图只读恢复候选正文，暂停不转成续写授权，规划与正文范围分开',t=>{
++  const {root}=fixture(t,0);assert.equal(task(root).next.code,'prepare-plan');
++  call(root,'plan',null,{unit:1,title:'开篇',goal:'核对',change:'有所发现',beats:['见面']});
++  file(root,'正文/0001-分段草稿.md','# 未完成草稿\n\n保留原稿。\n');
++  let v=task(root);assert.equal(v.next.code,'inspect-existing-draft');assert.equal(v.drafts.candidates.length,1);assert.deepEqual(task(root),v);
++  assert.ok(main(['status','--project',root]).task_view_command.includes('--view'));
++  const w=call(root,'workflow','show').workflow;w.stage='paused';w.task='暂停正文讨论';w.authorization={allowed_actions:['discuss'],draft_range:null,revise_range:null,stop_conditions:['作者决定前不写']};
++  call(root,'workflow','set',{expected_revision:state(root).revision,operation_id:'pause-task',workflow:w,author_evidence:evidence(root)});
++  assert.equal(task(root).next.code,'confirm-scope');assert.throws(()=>main(['context','--project',root,'--unit','1']),e=>e.code==='ACTION_OUT_OF_SCOPE');
++  const frozen=inventory(root);assert.throws(()=>main(['status','--project',root,'--view','unknown']));assert.deepEqual(inventory(root),frozen);
++});
++test('只规划阶段指导真实计划，不要求提前开放正文',t=>{
++  const {root}=fixture(t,0);const w=call(root,'workflow','show').workflow;w.stage='outline';w.authorization={allowed_actions:['discuss','plan'],draft_range:null,revise_range:null,stop_conditions:['先讨论规划']};
++  call(root,'workflow','set',{expected_revision:state(root).revision,operation_id:'plan-task',workflow:w,author_evidence:evidence(root)});
++  assert.equal(task(root).next.code,'plan-only');assert.throws(()=>main(['context','--project',root,'--unit','1']),e=>e.code==='ACTION_OUT_OF_SCOPE');
++});
++test('迁移后的新卷缺目录时任务视图提前提示，扩展后恢复上下文入口',t=>{
++  const {root}=fixture(t,2), units=state(root).units;
++  const directories=[{volume_id:'V1',directory:'正文/V1-旧卷',from:1,to:2}];
++  const mapping=units.map(u=>({unit:u.unit,from:u.draft,to:`正文/V1-旧卷/${path.basename(u.draft)}`,sha256:u.sha256}));
++  let p=call(root,'draft','relocate-plan',{mapping,directories});call(root,'draft','relocate',{...p.request,author_evidence:evidence(root)});
++  call(root,'plan',null,{unit:3,title:'下一章',goal:'继续',change:'核对',beats:['核对']});
++  let v=task(root);assert.equal(v.next.code,'extend-draft-directory');assert.equal(v.blockers[0].code,'DRAFT_DIRECTORY_REQUIRED');assert.ok(v.next.command.includes('relocate-plan'));
++  assert.throws(()=>main(['context','--project',root,'--unit','3']),e=>e.code==='DRAFT_DIRECTORY_REQUIRED');
++  directories[0].to=3;p=call(root,'draft','relocate-plan',{mapping:[],directories});call(root,'draft','relocate',{...p.request,author_evidence:evidence(root)});
++  v=task(root);assert.equal(v.next.code,'read-context');assert.equal(main(['context','--project',root,'--unit','3']).ok,true);
++});
++test('任务视图覆盖修订恢复、旧输入拒绝、真实提交中断和已结束候选',t=>{
++  const {root}=fixture(t,2);workflow(root,true);assert.equal(task(root).next.code,'begin-revision');
++  const narrow=call(root,'workflow','show').workflow;narrow.authorization.revise_range.to=1;
++  call(root,'workflow','set',{expected_revision:state(root).revision,operation_id:'narrow-tail',workflow:narrow,author_evidence:evidence(root)});
++  assert.equal(task(root).next.code,'confirm-revision-tail');workflow(root,true);
++  const b=begin(root);assert.equal(task(root).next.code,'inspect-candidate');const initial=task(b.workspace);assert.equal(initial.next.code,'start-revision');assert.equal(initial.next.defaults.from,1);assert.ok(!JSON.stringify(initial).includes(b.token));
++  rewindBranch(b);const resumed=task(b.workspace);assert.equal(resumed.next.code,'resume-replay');assert.ok(resumed.input_template_requires.some(x=>x.includes('--revision-token')));assert.ok(resumed.input_template_requires.some(x=>x.includes('replay_review')));
++  const old=main(['record-template','--project',b.workspace,'--unit','1','--draft','正文/0001.md']);old.summary='旧输入不能重放';
++  unit(b.workspace,1,b.token,'修订');const input=file(b.workspace,'.writer/stale-task-input.json',old),before=inventory(b.workspace);
++  assert.throws(()=>main(['record','--project',b.workspace,'--input',input,'--revision-token',b.token]));assert.deepEqual(inventory(b.workspace),before);assert.equal(task(b.workspace).next.defaults.unit,2);
++  unit(b.workspace,2,b.token,'修订');assert.equal(task(b.workspace).next.code,'review-revision');review(b);prepare(root,b);
++  const request=file(root,'.writer/task-commit.json',{id:b.id,token:b.token});
++  const r=spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'revision','commit','--project',root,'--input',request],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',AI_WRITER_TEST_STOP_AFTER:'1'}});assert.equal(r.status,91,r.stderr);
++  assert.throws(()=>main(['status','--project',root]),e=>e.code==='TRANSACTION_PENDING');
++  const recovery=task(root);assert.equal(recovery.recovery_only,true);assert.equal(recovery.next.code,'recover-transaction');assert.equal(recovery.blockers[0].transactions.length,1);
++  const tx=call(root,'revision','list').transactions.find(x=>x.status==='applying');
++  call(root,'revision','recover',{transaction_id:tx.id,token:b.token,direction:'complete',lock_sha256:sha(fs.readFileSync(path.join(root,'.writer/write.lock'))),author_evidence:evidence(root)});
++  assert.equal(task(b.workspace).next.code,'closed-candidate');assert.equal(main(['check','--project',root]).ok,true);
++});
++test('工具更新中断仅显示恢复指引，不读取或修改普通业务状态',t=>{
++  const {root}=fixture(t,0),p=call(root,'tool','update-plan',{source:ROOT});
++  const input=file(root,'.writer/task-update.json',{...p.request,author_evidence:evidence(root)});
++  const r=spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'tool','update','--project',root,'--input',input],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',AI_WRITER_TEST_TOOL_STOP_PHASE:'prepared'}});assert.equal(r.status,97,r.stderr);
++  const v=task(root);assert.equal(v.recovery_only,true);assert.equal(v.can_write,false);assert.equal(v.blockers[0].code,'TOOL_UPDATE_PENDING');
++  assert.throws(()=>main(['status','--project',root]),e=>e.code==='TOOL_UPDATE_PENDING');
++  const tx=call(root,'tool','updates').transactions.find(x=>x.status==='prepared');
++  call(root,'tool','recover',{transaction_id:tx.id,direction:'rollback',lock_sha256:sha(fs.readFileSync(path.join(root,'.writer/write.lock'))),author_evidence:evidence(root)});
++  assert.equal(task(root).recovery_only,undefined);
++});
+diff --git a/tests/tool-update-budget.test.mjs b/tests/tool-update-budget.test.mjs
+new file mode 100644
+index 000000000..edf568a0c
+--- /dev/null
++++ b/tests/tool-update-budget.test.mjs
+@@ -0,0 +1,29 @@
++import fs from 'node:fs';
++import path from 'node:path';
++import assert from 'node:assert/strict';
++import test from 'node:test';
++import {spawnSync} from 'node:child_process';
++import {main} from '../lib/workspace.mjs';
++import {fixture,ROOT,file,state,sha,call,evidence,workflow,begin} from './protection-fixture.mjs';
++
++test('无正文副本更新支持较大治理与历史修订，超出固定上限时保留原状态',t=>{
++  const {root}=fixture(t,1);workflow(root,true);
++  for(let i=0;i<2;i++){const b=begin(root);call(root,'revision','abort',{id:b.id,token:b.token,reason:'合成历史修订会话'});}
++  const author_evidence=evidence(root);
++  function decision(id,text){return call(root,'decision','set',{expected_revision:state(root).revision,operation_id:`budget-${id}`,author_evidence,decision:{id,topic:`合成决策 ${id}`,status:'confirmed',options:[],adopted_items:[text],excluded_items:[],unresolved_items:[],effective_range:{from:1,to:null}}});}
++  for(let i=0;i<12;i++)decision(`D${i}`,`合成授权事项${i}：`+'a'.repeat(4200));
++  let originalError;try{main(['context','--project',root,'--purpose','discussion']);}catch(e){originalError=e;}
++  assert.equal(originalError?.code,'CONTEXT_BUDGET_EXCEEDED');assert.ok(originalError.context_budget.required_chars>50000);assert.ok(originalError.context_budget.required_chars<240000);
++  assert.equal(main(['context','--project',root,'--purpose','discussion','--max-chars','240000']).ok,true);
++  const body=fs.readFileSync(path.join(root,'正文/0001.md')),before=state(root),plan=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'});
++  assert.equal(plan.validation_context_max_chars,240000);assert.equal(plan.can_update,true);assert.ok(plan.plan_sha256);
++  assert.throws(()=>call(root,'tool','update',{...plan.request,plan_sha256:'0'.repeat(64),author_evidence}),e=>e.code==='TOOL_PLAN_CHANGED');assert.deepEqual(state(root),before);
++  const input=file(root,'.writer/budget-update.json',{...plan.request,author_evidence});
++  const r=spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'tool','update','--project',root,'--input',input],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',AI_WRITER_TEST_TOOL_STOP_PHASE:'prepared'}});assert.equal(r.status,97,r.stderr);
++  const tx=call(root,'tool','updates').transactions.find(x=>x.status==='prepared');assert.deepEqual(fs.readdirSync(path.join(root,'.writer/tool-updates',tx.id,'validation/正文')),[]);
++  const recovery=call(root,'tool','recover',{transaction_id:tx.id,direction:'complete',lock_sha256:sha(fs.readFileSync(path.join(root,'.writer/write.lock'))),author_evidence});assert.equal(recovery.status,'completed');assert.deepEqual(fs.readFileSync(path.join(root,'正文/0001.md')),body);assert.deepEqual(state(root).units,before.units);
++  const next=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'});assert.equal(call(root,'tool','update',{...next.request,author_evidence}).status,'completed');
++  decision('OVER','z'.repeat(260000));const over=state(root),refusedPlan=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'});let caught;
++  try{call(root,'tool','update',{...refusedPlan.request,author_evidence});}catch(e){caught=e;}
++  assert.equal(caught?.code,'TOOL_VALIDATION_FAILED');const context=caught.checks.find(x=>x.args[0]==='context');assert.ok(context);const error=JSON.parse(context.stderr);assert.equal(error.code,'CONTEXT_BUDGET_EXCEEDED');assert.equal(error.context_budget.limit_chars,240000);assert.ok(error.context_budget.required_chars>240000);assert.deepEqual(state(root),over);assert.deepEqual(fs.readFileSync(path.join(root,'正文/0001.md')),body);
++});
+diff --git a/tests/usability.test.mjs b/tests/usability.test.mjs
+index ebc4f950d..f3bfd3c8f 100644
+--- a/tests/usability.test.mjs
++++ b/tests/usability.test.mjs
+@@ -92,7 +92,8 @@ test('独立作品帮助、所有用户指南链接及新工具可离开主项
+     const file = path.join(root, 'docs', name), body = fs.readFileSync(file, 'utf8');
+     for (const match of body.matchAll(/\]\(([^)]+)\)/g)) {
+       if (/^(?:https?:|#)/.test(match[1])) continue;
+-      assert.ok(fs.existsSync(path.resolve(path.dirname(file), match[1])), `${name}: ${match[1]}`);
++      // A Markdown section fragment is not part of the filesystem filename.
++      assert.ok(fs.existsSync(path.resolve(path.dirname(file), match[1].split('#')[0])), `${name}: ${match[1]}`);
+     }
+   }
+   const child = path.join(root, '子作品');

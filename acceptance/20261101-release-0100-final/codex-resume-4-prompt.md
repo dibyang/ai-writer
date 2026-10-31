@@ -1,0 +1,1 @@
+继续核查隔离实跑的最终状态。新会话已提交，原 conflicted 会话仍造成 REVISION_ACTIVE。根据候选包 docs/revision-and-sources.md，revision abort 只结束占用并保留原分支；本次测试授权你对合成副本中这一个原冲突会话执行正式 abort，前提是先核实手册、原会话 ID、原 token 和保护行为确实保留候选及冲突证据。执行后复查 revision list、status task 和 check，核对原冲突候选与证据仍存在，保留命令输出在本会话 JSONL。不可删除或覆盖任何文件、修改真实作品；如果保护行为或身份不明确则保留现场并报告，不得绕过。
