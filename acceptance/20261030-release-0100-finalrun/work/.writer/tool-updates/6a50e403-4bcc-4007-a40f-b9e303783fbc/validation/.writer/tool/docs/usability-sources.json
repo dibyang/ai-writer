@@ -1,0 +1,32 @@
+{
+  "upstream": "https://github.com/zenstory-ai/oh-story-claudecode",
+  "commit": "6d72f70e5fe3de110b457fd6bc81ede6ea614702",
+  "license": "MIT",
+  "files": [
+    {
+      "upstream_ref": "docs/how-to-remove-ai-flavor-from-web-fiction.md",
+      "file": "vendor/oh-story-deslop-reference/how-to-remove-ai-flavor-from-web-fiction.md",
+      "sha256": "8c652b128c87322f7dfe6087307817e71321685f6349c95029a33b4b1f292156"
+    },
+    {
+      "upstream_ref": "LICENSE",
+      "file": "vendor/oh-story-deslop-reference/LICENSE",
+      "sha256": "3187dacbfb7588fbe5812a17d1c10a7b744e9e781bcbe11dbd214126c280e7cf"
+    }
+  ],
+  "adapted_into": [
+    ".agents/skills/writer-review/references/deslop.md",
+    "docs/deslop.md",
+    "lib/style.mjs"
+  ],
+  "adopted": [
+    "分类定位与上下文实读",
+    "最小修改与内容保护",
+    "改前改后复核"
+  ],
+  "not_adopted": [
+    "按禁词密度判定全篇等级",
+    "固定删减比例",
+    "把普通句式一律阻断"
+  ]
+}

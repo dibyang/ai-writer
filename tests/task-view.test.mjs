@@ -23,6 +23,17 @@ test('只规划阶段指导真实计划，不要求提前开放正文',t=>{
   call(root,'workflow','set',{expected_revision:state(root).revision,operation_id:'plan-task',workflow:w,author_evidence:evidence(root)});
   assert.equal(task(root).next.code,'plan-only');assert.throws(()=>main(['context','--project',root,'--unit','1']),e=>e.code==='ACTION_OUT_OF_SCOPE');
 });
+test('迁移后的新卷缺目录时任务视图提前提示，扩展后恢复上下文入口',t=>{
+  const {root}=fixture(t,2), units=state(root).units;
+  const directories=[{volume_id:'V1',directory:'正文/V1-旧卷',from:1,to:2}];
+  const mapping=units.map(u=>({unit:u.unit,from:u.draft,to:`正文/V1-旧卷/${path.basename(u.draft)}`,sha256:u.sha256}));
+  let p=call(root,'draft','relocate-plan',{mapping,directories});call(root,'draft','relocate',{...p.request,author_evidence:evidence(root)});
+  call(root,'plan',null,{unit:3,title:'下一章',goal:'继续',change:'核对',beats:['核对']});
+  let v=task(root);assert.equal(v.next.code,'extend-draft-directory');assert.equal(v.blockers[0].code,'DRAFT_DIRECTORY_REQUIRED');assert.ok(v.next.command.includes('relocate-plan'));
+  assert.throws(()=>main(['context','--project',root,'--unit','3']),e=>e.code==='DRAFT_DIRECTORY_REQUIRED');
+  directories[0].to=3;p=call(root,'draft','relocate-plan',{mapping:[],directories});call(root,'draft','relocate',{...p.request,author_evidence:evidence(root)});
+  v=task(root);assert.equal(v.next.code,'read-context');assert.equal(main(['context','--project',root,'--unit','3']).ok,true);
+});
 test('任务视图覆盖修订恢复、旧输入拒绝、真实提交中断和已结束候选',t=>{
   const {root}=fixture(t,2);workflow(root,true);assert.equal(task(root).next.code,'begin-revision');
   const narrow=call(root,'workflow','show').workflow;narrow.authorization.revise_range.to=1;

@@ -1,0 +1,64 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-28T06:11:10.172Z",
+  "operation_id": "AO-a-outline-121-124-v1",
+  "base_revision": 482,
+  "payload": {
+    "stage": "outline",
+    "task": "AO会话A：只在AO规划121—124，随后有限创作121—122，每章正文至少4500汉字；保留来源、原稿及失败，留下独立恢复检查点。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan"
+      ],
+      "draft_range": null,
+      "revise_range": null,
+      "stop_conditions": [
+        "本会话正文止于122；123—124只作未来职责。",
+        "仅AO；不改真实作品或已封存目录；不Git提交、不推送。",
+        "任何产品失败先核原因并保留原件；不手改state，不重置旧来源。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AN轮119-122未来规划.md"
+        ],
+        "unresolved_ids": [
+          "123—124后续职责待本轮实际后果细化"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/AN轮119-122未来规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [],
+        "unresolved_ids": [
+          "待建立121、122细纲"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "用户真实授权：继续通过 Codex 从 120 章合成副本扩大长篇实跑，增加章节数量和单章篇幅，重点验证多轮跨会话恢复、跨卷伏笔回收和多处旧章修订后的连续性，发现问题直接修复，保留完整验证记录，暂不修改现有作品，不提交、不推送。\n\n这是 AO 隔离合成副本 acceptance/20261028-long-0100-ao/work，仅在 AO 内操作。先读项目 AGENTS、writer-project/novel/review、AN README 和 session-d-report，原生 status 检查当前状态、未决项、已完成修订。恢复作品，实读 116—120 和需要的旧卷原文，依据用户原话和真实哈希通过 workflow 设置有限授权，保留原话证据，不手改状态或重置旧来源。根据实际故事先规划 121—124，目标至少完成 121、122 两章，每章正文至少 4500 汉字，以情节、人物行动和有意义的细节自然展开，不凑篇幅；旧伏笔仅据实读进行阶段性回收，不将未知当事实。原生分段合章，完整实读、修正高置信问题、逐章报告和纲文回对、record-preview、record 并滚动连读和原生 review；全部失败和原稿保留。每条产品命令经 AO/capture.mjs 唯一 a- 标签，保存输入、双流、实际退出码及前后状态。修改工具发现问题直接修复并运行项目要求的测试和 doctor，不碰已封存目录或真实作品，不提交、不推送。每阶段输出进度和时间，最终保存 session-a-report.md（阅读范围、章节长度、哈希、真实结果、失败和未决），并为独立会话恢复留下可核验检查点。机械门禁和模型自检不可冒称真人文学验收。",
+    "local_source": "研究/AO-a-用户原话.md",
+    "source_sha256": "9a772fe3667bad8ba1c5c255aa7b701aec0ac225af4caed72864ae97eb9f604f",
+    "locator": "本轮用户消息全文；未获得消息ID，不伪造",
+    "recorded_by": "Codex AO session A",
+    "frozen_ref": ".writer/objects/9a772fe3667bad8ba1c5c255aa7b701aec0ac225af4caed72864ae97eb9f604f.txt"
+  }
+}

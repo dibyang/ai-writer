@@ -1,0 +1,1 @@
+import fs from 'node:fs';import path from 'node:path';const b=path.resolve('acceptance/20261030-release-0100-finalrun');fs.writeFileSync(path.join(b,'tool-plan.json'),JSON.stringify({source:path.resolve('acceptance/20261030-release-0100-usability/candidate-0.10.0/ai-writer-0.10.0'),validation_mode:'in-place-readonly'},null,2)+'\n',{flag:'wx'});

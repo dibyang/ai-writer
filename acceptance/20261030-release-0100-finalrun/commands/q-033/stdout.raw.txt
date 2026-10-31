@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "view": "task",
+  "read_only": true,
+  "title": "潮汐信号",
+  "project": "D:\\work\\other\\ai-writer\\acceptance\\20261030-release-0100-finalrun\\work",
+  "revision": 496,
+  "next_unit": 124,
+  "identity": {
+    "kind": "main"
+  },
+  "governance": {
+    "enabled": true,
+    "stage": "revision",
+    "task": "隔离合成作品：修订第122章并复核、重登122—123章",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 122,
+        "to": 123
+      },
+      "stop_conditions": [
+        "仅隔离合成副本；不修改真实作品，不提交、不推送"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AO轮121-124未来规划.md"
+        ],
+        "unresolved_ids": [
+          "123—124后续职责待本轮实际后果细化"
+        ]
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V20.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0123.json"
+        ],
+        "unresolved_ids": []
+      }
+    },
+    "decisions": {
+      "current": [],
+      "candidates": [],
+      "history_count": 0
+    },
+    "note": "作者计划与正文事实分开；未逐项采纳的候选及附带细节不构成定案。登记原话不是作者身份认证。"
+  },
+  "blockers": [],
+  "review_counts": {
+    "needs-recheck": 5
+  },
+  "drafts": {
+    "candidates": [],
+    "omitted": 0,
+    "unregistered_count": 0,
+    "note": "文件名仅提供候选提示；未自动识别分段是否齐全，也不把旧稿当作可登记正文。"
+  },
+  "sessions": [],
+  "note": "从当前文件派生，不保存任务状态；执行前重新核对授权、CAS、来源与令牌。实读和作者决定不能由此视图代替。",
+  "next": {
+    "code": "begin-revision",
+    "action": "先确认旧章及受影响尾段；在独立候选中修订，不直接改主稿追踪。",
+    "command": "node 'D:\\work\\other\\ai-writer\\acceptance\\20261030-release-0100-finalrun\\package-v2-extracted\\ai-writer-0.10.0\\bin\\ai-writer.mjs' revision begin '--project' 'D:\\work\\other\\ai-writer\\acceptance\\20261030-release-0100-finalrun\\work' '--help'",
+    "defaults": {
+      "from": 122,
+      "through": 123,
+      "expected_revision": 496
+    },
+    "requires": [
+      "作者对实际尾段范围的授权",
+      "修订所有者"
+    ]
+  }
+}

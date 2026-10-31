@@ -1,0 +1,20 @@
+{
+  "schema_version": "story-gate-quality-gate-schema@0.1.0",
+  "required_top_level_fields": [
+    "quality_gate_run_id",
+    "plugin_version",
+    "rule_pack_version",
+    "fixture_version",
+    "host",
+    "passed_gates",
+    "failed_gates",
+    "readonly_violation",
+    "mode_isolation_violation"
+  ],
+  "allowed_hosts": [
+    "codex",
+    "cli",
+    "container",
+    "other-agent"
+  ]
+}

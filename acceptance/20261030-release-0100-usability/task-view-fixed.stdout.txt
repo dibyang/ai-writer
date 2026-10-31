@@ -1,0 +1,43 @@
+✔ 任务视图只读恢复候选正文，暂停不转成续写授权，规划与正文范围分开 (3894.0765ms)
+✔ 只规划阶段指导真实计划，不要求提前开放正文 (3521.4544ms)
+✔ 迁移后的新卷缺目录时任务视图提前提示，扩展后恢复上下文入口 (10895.1513ms)
+✔ 任务视图覆盖修订恢复、旧输入拒绝、真实提交中断和已结束候选 (4788.7911ms)
+✖ 工具更新中断仅显示恢复指引，不读取或修改普通业务状态 (9282.2651ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32510.9189
+
+✖ failing tests:
+
+test at tests\task-view.test.mjs:56:1
+✖ 工具更新中断仅显示恢复指引，不读取或修改普通业务状态 (9282.2651ms)
+  AssertionError [ERR_ASSERTION]: {
+    "ok": false,
+    "error": "复制时来源变化",
+    "code": "TOOL_SOURCE_CHANGED",
+    "next_action": "按报错核对输入，查看本命令帮助。",
+    "help_command": "node 'D:\\work\\other\\ai-writer\\bin\\ai-writer.mjs' tool '--help'"
+  }
+  
+  
+  2 !== 97
+  
+      at TestContext.<anonymous> (file:///D:/work/other/ai-writer/tests/task-view.test.mjs:59:256)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 97,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

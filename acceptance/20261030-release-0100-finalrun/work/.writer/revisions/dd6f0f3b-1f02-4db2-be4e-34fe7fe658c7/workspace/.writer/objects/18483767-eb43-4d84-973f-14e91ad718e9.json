@@ -1,0 +1,73 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-27T11:16:09.164Z",
+  "operation_id": "AL-session-b-drafting-115-116",
+  "base_revision": 465,
+  "payload": {
+    "stage": "drafting",
+    "task": "AL会话B：从114恢复，在现有113—118有限草稿授权内细化、分段写作、合章并登记115、116；116登记后停，117不写。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "plan",
+        "draft"
+      ],
+      "draft_range": {
+        "from": 113,
+        "to": 118
+      },
+      "revise_range": null,
+      "stop_conditions": [
+        "116已登记后停止，117未写；只操作合成副本及父目录证据。",
+        "不修改旧章、不提交修订、不访问真实作品、不Git提交/推送/发布。",
+        "写前来源变化先重读核实，禁止刷新哈希绕过；先逐章实读回对再preview/record。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md",
+          "正文/0027-他愿意留下的那一段.md",
+          "正文/0095-先写今天这一页.md",
+          "正文/0100-念到这一页的末尾.md",
+          "正文/0108-先陪你走这一趟.md",
+          "正文/0110-坐下以后还想说话.md"
+        ],
+        "unresolved_ids": []
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/AL轮113-118未来规划.md"
+        ],
+        "unresolved_ids": [
+          "115与116按实际前章细化；117—118仍为未来粗规划"
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "quote": "你是本轮下一独立 Codex 会话。只操作 `D:/work/other/ai-writer/acceptance/20261027-long-0100-al/work` 合成副本与其父目录证据，禁止访问真实作品、不提交 Git、不推送、不发布。先读随附 writer-project、writer-novel、writer-review 技能、父目录 session-a-report.md、baseline-lengths.json 和真实状态；核验授权、版本、登记及失败事项。真实读取并记录 109—114 完整正文与关联的更早线索；原规划是计划，不能假设未来正文已发生。\n\n在现有有限授权和分卷契约内细化、写作并登记 115、116，覆盖 V17→V18 跨卷承接；根据实读使至少一个早卷伏笔取得证据支持的阶段性回收，同时准确区分无证据的未知与未发生。最近 107—112 平均约 3400 汉字，目标每章约 4000—4500 汉字，写充分的场景、人物选择及后果，不灌水；本轮前两个章节若未超过近期篇幅如实记录，后续可通过授权的独立修订改善而不是伪称达标。为长章使用并记录合适的分段、原生 assemble 和逐章纲文回对；填写基于原文的事实差量、引文、人物知识和物证保管，record-preview 后 record。不能刷新来源哈希绕过变化，不能把作者计划/候选写成事实。\n\n所有产品命令通过 `D:/work/other/ai-writer/acceptance/20261027-long-0100-al/capture.mjs` 执行，使用唯一 `b-` 标签、保存输入/双流/前后状态及产品退出码，串行写操作。嵌套沙箱若实际报 helper_unknown_error，可为该合成目录的单条命令请求 require_escalated 审查，禁止绕过审批。写 `session-b-report.md`，列准确实读范围、旧线索原始引文与回收引文、实际章节长度/SHA、逐章登记/上下文/合章结果、未决事项、下一会话恢复入口；停在 116 已登记、117 未写。出现问题保留现场并清楚报告，不为通过而伪造。",
+    "local_source": "研究/AL-b-session-instruction.md",
+    "source_sha256": "24b4db7896ff94921b6f226612d37413b143b18266de80f2005766fd5913b36b",
+    "locator": "本独立会话用户明确指令的本地逐字摘录；无可核会话ID",
+    "recorded_by": "session-b 独立Codex会话",
+    "frozen_ref": ".writer/objects/24b4db7896ff94921b6f226612d37413b143b18266de80f2005766fd5913b36b.txt"
+  }
+}

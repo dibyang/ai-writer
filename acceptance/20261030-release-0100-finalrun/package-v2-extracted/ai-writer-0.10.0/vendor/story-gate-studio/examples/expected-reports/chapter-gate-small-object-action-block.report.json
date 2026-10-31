@@ -1,0 +1,24 @@
+{
+  "report_id": "sgm-fixture-chapter-gate-small-object-action-block",
+  "module_id": "SGM-CHAP-001",
+  "mode": "novel",
+  "rule_pack": "universal-novel@0.1.6",
+  "target_refs": [
+    "examples/fixtures/chapter-gate-small-object-action-block.json"
+  ],
+  "source_refs": [
+    "docs/traceability.md#SGM-CHAP-001"
+  ],
+  "verdict": "blocked",
+  "findings": [
+    {
+      "rule_id": "SGM-PHY-001-R003",
+      "severity": "blocker",
+      "location": "input.physical_operability",
+      "recommendation": "Name the handling action that matches the small object's size and state, such as holding, cupping, grasping, pinching, pressing, tucking, hiding, supporting, covering, or carrying it.",
+      "source_refs": [
+        "docs/traceability.md#SGM-PHY-001"
+      ]
+    }
+  ]
+}

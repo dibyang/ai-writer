@@ -1,0 +1,1 @@
+import fs from 'node:fs';import path from 'node:path';const b=path.resolve('acceptance/20261030-release-0100-usability'),s=JSON.parse(fs.readFileSync(path.join(b,'work/.writer/state.json')));fs.writeFileSync(path.join(b,'revision-begin.json'),JSON.stringify({expected_revision:s.revision,owner:'usability-20261030',from:122,through:123},null,2)+'\n',{flag:'wx'});

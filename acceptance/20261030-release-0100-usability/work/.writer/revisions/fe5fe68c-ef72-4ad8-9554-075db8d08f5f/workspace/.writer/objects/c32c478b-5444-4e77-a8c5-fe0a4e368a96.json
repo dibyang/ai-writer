@@ -1,0 +1,69 @@
+{
+  "kind": "workflow",
+  "at": "2026-10-28T03:04:08.583Z",
+  "operation_id": "AN-b-finite-revise-116-120-v1",
+  "base_revision": 480,
+  "payload": {
+    "stage": "revision",
+    "task": "AN会话B：复核V15/V18至V19边界，独立修订116与120两处表达；116—120尾段保守重登，本会话仅116—118，停点留给下个独立会话resume；禁止prepare/commit。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 116,
+        "to": 120
+      },
+      "stop_conditions": [
+        "本会话只回放116—118；119—120待下一独立会话原ID/token/base恢复后再核读重登。",
+        "禁止prepare/commit，不写121及以后。",
+        "仅写AN目录；主稿正文不动，旧封存、真实作品、工具、Git不动。",
+        "产品失败或来源/基线冲突立即停止依赖步骤并保护现场；不改state或刷新旧哈希。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AN轮119-122未来规划.md"
+        ],
+        "unresolved_ids": [
+          "121—122只保留职责，待120实际后果再细化"
+        ]
+      },
+      "volume": {
+        "status": "draft",
+        "refs": [
+          "大纲/AN轮119-122未来规划.md"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "draft",
+        "refs": [
+          "大纲/单元/0119.json",
+          "大纲/单元/0120.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  },
+  "evidence": {
+    "quote": "按真实授权及原生 workflow 准备跨多处旧章的有限修订范围，选择两处确有净收益的小修订，若找不到则明确标记受控测试改动，不能伪造文学提升；原稿和候选均保留。",
+    "local_source": "研究/AN会话B真实用户授权.md",
+    "source_sha256": "2829b39993f83c9679282d1a15aea28e51a7ed022f0333f04723e3885e3d70df",
+    "locator": "2026-10-28 本独立会话用户消息第二段；本地第7行，无消息ID",
+    "recorded_by": "Codex AN session B actual user instruction",
+    "frozen_ref": ".writer/objects/2829b39993f83c9679282d1a15aea28e51a7ed022f0333f04723e3885e3d70df.txt"
+  }
+}

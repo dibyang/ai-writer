@@ -1,0 +1,24 @@
+{
+  "unit": 123,
+  "expected_revision": 493,
+  "source_hashes": {
+    "writer.json": "e9e0f74ae90e3c008d6ef2d090f14bbba908709a1db9ad564622597d6d4008b3",
+    ".writer/state.json": "72a1e344f450981f677863d2ecde3c2d5364f4c690ad10b90c01146905b298ed",
+    "大纲/单元/0123.json": "dd3ae10836258149271942b8a82db87a2f7f3ae2ef6010a1df4e5dc24968fe48",
+    "设定/作品定位.md": "1149a87c65fe312b292e6879909c7c27ed83b466211a313be9aa22783e510e94",
+    "设定/文风.md": "2fdc05792c2bb688acbf0d1fef354e9cb70ce24bee3a535d056328ba7c5f382c",
+    "设定/权威规则.md": "23f3bed7e8014b4d5e4e6eeef876ed4ef87eb923a4be2a1f2e2c76b0578420e2",
+    "大纲/AO轮121-124未来规划.md": "1a74ae6eac73a2449b88e207d77ffb45c7b0381ad816fcec118736136c5fe569",
+    "大纲/分卷/V20.json": "7e62f8722139109ac3ea432bcb028924a14d900f0451f90cfa280463ee6b2984",
+    "正文/V19-交到别人手里的东西/0122-这一句也在纸上.md": "3e9020c86cd4df961ada785184182e732971a7afe1cfe74b03833f29b45ce35a"
+  },
+  "draft": "正文/V20-留出的时间/0123-空出半天.md",
+  "source_bindings": {},
+  "summary": "",
+  "changes": {
+    "characters": {},
+    "timeline_append": [],
+    "ledger": {}
+  },
+  "_instructions": "先读 context 与相关正文，填写真实摘要和 changes。未填写的角色自动保留；填写 changes.characters 的某个角色时，该角色状态整段替换，须保留仍有效的旧信息并更新真实变化，不能只写增量。ledger 更新需本章引文证据，人物所知与作者真相分开。空摘要不能登记。ledger.type允许fact/thread/object/relationship/observation，status允许active/pending/partial/resolved/intentional-open。 完整章实读报告先保存再登记；可添加draft_review绑定reviewer、审查/报告路径report、当前draft_sha256与report_sha256。先record-preview，退出0才record；任一步失败停止后续步骤，不把文件绑定当文学通过。"
+}

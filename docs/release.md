@@ -1,6 +1,6 @@
 # 发行准备与已发布版本
 
-0.8.0已于2026-10-19[正式发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`，完整执行与验证见[M轮记录](../acceptance/20261019-release-publish-m/README.md)。下文保留维护者操作流程；发布后补交的记录不移动标签，也不覆盖已验证资产。
+0.8.0已于2026-10-19[正式发布](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0)，标签绑定`27a20edd`；完整执行与验证的 M 轮原始记录保存在维护者本地 acceptance 目录，不随下载包分发。下文保留维护者操作流程；发布后补交的记录不移动标签，也不覆盖已验证资产。
 
 本页是维护者的本地准备流程，不自动创建标签、推送或发布。用户批准具体产物后，再执行对应Git和GitHub动作。
 
