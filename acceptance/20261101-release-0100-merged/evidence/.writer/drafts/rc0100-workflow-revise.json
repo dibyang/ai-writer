@@ -1,0 +1,63 @@
+{
+  "expected_revision": 494,
+  "operation_id": "rc0100-revise-122-123",
+  "author_evidence": {
+    "quote": "本次授权在这份隔离合成副本里测试两个主路径：续写并登记第123章、对第122章进行一处实际局部修订并重登受影响的122—123尾段，完成受保护修订及核查。",
+    "local_source": ".writer/drafts/rc0100-author-instruction.txt",
+    "source_sha256": "1a34f72b28329ed9a5622db1c8586264a0707cd297b7b4dea59dce54f5ed05fd",
+    "locator": "本次用户消息，隔离实跑授权段",
+    "recorded_by": "Codex"
+  },
+  "workflow": {
+    "stage": "revision",
+    "task": "在隔离副本对第122章作一处局部修订，重登并复核122—123尾段。",
+    "authorization": {
+      "allowed_actions": [
+        "discuss",
+        "revise"
+      ],
+      "draft_range": null,
+      "revise_range": {
+        "from": 122,
+        "to": 123
+      },
+      "stop_conditions": [
+        "仅修订第122章一处，完整重登并实读122—123。",
+        "不改真实作品，不推送、不发布。"
+      ]
+    },
+    "planning": {
+      "positioning": {
+        "status": "draft",
+        "refs": [
+          "设定/作品定位.md",
+          "设定/文风.md"
+        ],
+        "unresolved_ids": []
+      },
+      "structure": {
+        "status": "draft",
+        "refs": [
+          "大纲/AO轮121-124未来规划.md"
+        ],
+        "unresolved_ids": [
+          "124职责待实际后果细化"
+        ]
+      },
+      "volume": {
+        "status": "adopted",
+        "refs": [
+          "大纲/分卷/V20.json"
+        ],
+        "unresolved_ids": []
+      },
+      "outline": {
+        "status": "adopted",
+        "refs": [
+          "大纲/单元/0123.json"
+        ],
+        "unresolved_ids": []
+      }
+    }
+  }
+}
