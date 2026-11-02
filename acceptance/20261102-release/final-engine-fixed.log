@@ -1,0 +1,42 @@
+
+> ai-writer@0.11.0 test:engine
+> node scripts/test.mjs engine
+
+测试默认最多并行2个文件；同工作区仅允许一批测试。
+✔ QG-001 plugin structure passes (6.1898ms)
+✔ QG-002 rule pack schema passes (0.7524ms)
+✔ QG-003 report schema passes (3.6625ms)
+✔ QG-004 fixture regression and QG-006 mode isolation pass (15.1695ms)
+✔ chapter gate executable returns pass and blocked verdicts (3.2253ms)
+✔ story-gate CLI exposes tasks and chapter-gate command (745.1074ms)
+✔ blind-read gate enforces isolated single and continuous ticket rules (4.2412ms)
+✔ story-gate CLI exposes blind-read-gate command (248.8544ms)
+✔ chapter batch metrics returns a traceable report (1.878ms)
+✔ P6 review scorecard separates cold-read and market risks (164.544ms)
+✔ P7 host adapter returns stable JSON responses (87.1764ms)
+✔ P9 customer pilot completes anonymous customer workflow (108.7601ms)
+✔ P9 support bundle excludes manuscript prose (86.1832ms)
+✔ final arc live-cost fixture stays commercial-safe and measurable (2.4083ms)
+✔ story-gate CLI validates external project rule pack (78.3114ms)
+✔ P5 project rule pack template initializes outside plugin root (83.4216ms)
+✔ private package check passes and is exposed by CLI (2844.2074ms)
+✔ private package build creates a self-validating package directory (6043.1021ms)
+✔ release archive build creates zip and SHA256SUMS (3818.7848ms)
+✔ P4 release metadata is version-consistent and exposed by CLI (86.317ms)
+✔ customer install smoke validates package directory and zip extraction (9199.4136ms)
+✔ P14 install-local creates one-command project installation (4381.805ms)
+✔ QG-008 scripts load (6.201ms)
+✔ QG-009 encoding scan passes (19.0406ms)
+✔ QG-011 design contracts pass (9.3498ms)
+✔ QG-012 task registry passes (1.8997ms)
+✔ QG-013 release metadata passes (1.3172ms)
+✔ BIZ-QG commercial release checks pass (24.7763ms)
+✔ P8 commercial readiness checks pass (99.479ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28285.2108

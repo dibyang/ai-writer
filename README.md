@@ -4,9 +4,11 @@
 
 项目采用 Apache License 2.0。发行状态与下载见[项目 Release](https://github.com/dibyang/ai-writer/releases)；历史 [v0.9.0](https://github.com/dibyang/ai-writer/releases/tag/v0.9.0) 和 [v0.8.0](https://github.com/dibyang/ai-writer/releases/tag/v0.8.0) 保持不变。
 
-当前源码版本为 **0.10.0**，正式发行状态以[项目 Release](https://github.com/dibyang/ai-writer/releases)为准。新作品使用 schema 6 和现有资源配置，不自动更新已有作品。[发行说明](RELEASE_NOTES.md)与[不足和下一步建议](docs/next-development.md)区分本轮已改内容与待实施建议。
+当前版本为 [0.11.0](https://github.com/dibyang/ai-writer/releases/tag/v0.11.0)。新作品使用 schema 6 和现有资源配置，不自动更新已有作品。[更新说明](RELEASE_NOTES.md)与[不足和下一步建议](docs/next-development.md)区分已实现内容与后续目标。更新旧作品先比较构建并按[安全更新流程](docs/tool-updates.md)执行，不直接覆盖作品目录。
 
 0.10.0 新增只读任务视图：`node bin/ai-writer.mjs status --project "作品目录" --view task`，集中查看授权、原候选、阻塞和下一步；它不自动写稿、登记或恢复事务。
+
+0.11.0 的小说与剧本流程补充人物底色、语言行为指纹、关系及状态接续，并完善信息投放、情绪后果、场景收益与篇幅、人物能力和资源边界。创作及审查按需读取共享指引，复用原有角色卡和证据登记；用法见[使用手册](docs/user-guide.md)。
 
 从全书大纲、分卷和近期章纲开始创作，在新会话中恢复进度，并在独立修订区修改旧稿、导出草稿。工具记录创作阶段、授权范围、作者决定及来源版本，支持长章分段、上下文预算诊断、跨章复核和审查意见闭环；文学质量仍需实际读稿判断。
 

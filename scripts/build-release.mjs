@@ -67,7 +67,7 @@ function zip(root,prefix,rows){
 }
 export function buildRelease({root=ROOT,out}={}){
   root=path.resolve(root);const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));
-  if(!/^0\.(?:8|9|10)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x, 0.9.x or 0.10.x package with apache-2.0-v1 resources');
+  if(!/^0\.(?:8|9|10|11)\.(?:0|[1-9]\d*)$/.test(pkg.version??'')||!currentProtocol(pkg.version)||pkg.aiWriter?.resourceProfile!=='apache-2.0-v1')throw Error('Expected a supported 0.8.x through 0.11.x package with apache-2.0-v1 resources');
   out=path.resolve(out??path.join(root,'dist',pkg.version));if(fs.existsSync(out))throw Error('Output already exists; never overwrite a release: '+out);
   const build=identifyBuild(root);if(!build.ok)throw Error('Source build is incomplete');
   const spec=JSON.parse(fs.readFileSync(path.join(root,'release/distribution.json'))),seen=new Set(),sources=[];

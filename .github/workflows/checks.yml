@@ -29,3 +29,75 @@ jobs:
       - run: npm test
       - run: npm run doctor
       - run: npm run test:engine
+  release:
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    needs: workspace
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/acceptance/
+            !/works/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check tag and download previous published package
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(node -p 'require("./package.json").version')
+          test "$GITHUB_REF_NAME" = "v$version"
+          previous=$(gh api "repos/$GH_REPO/releases/latest" --jq .tag_name)
+          [[ "$previous" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          test "$previous" != "$GITHUB_REF_NAME"
+          mkdir -p .tmp/release-previous
+          gh release download "$previous" --pattern "ai-writer-${previous#v}.zip" --pattern SHA256SUMS.txt --dir .tmp/release-previous
+          (cd .tmp/release-previous && sha256sum --check --ignore-missing SHA256SUMS.txt)
+          unzip -q ".tmp/release-previous/ai-writer-${previous#v}.zip" -d .tmp/release-previous/extracted
+          printf 'OLD_PACKAGE=%s/.tmp/release-previous/extracted/ai-writer-%s\n' "$GITHUB_WORKSPACE" "${previous#v}" >> "$GITHUB_ENV"
+      - name: Build final package
+        run: |
+          node scripts/build-release.mjs --out .tmp/release-final
+          unzip -q .tmp/release-final/ai-writer-*.zip -d .tmp/release-extracted
+      - name: Validate final extracted package and actual upgrade
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(node -p 'require("./package.json").version')
+          package="$GITHUB_WORKSPACE/.tmp/release-extracted/ai-writer-$version"
+          mkdir -p "$RUNNER_TEMP/ai-writer-package-checks"
+          (cd "$package" && npm test) | tee "$RUNNER_TEMP/ai-writer-package-checks/tests.log"
+          (cd "$package" && npm run doctor) | tee "$RUNNER_TEMP/ai-writer-package-checks/doctor.log"
+          (cd "$package" && npm run test:engine) | tee "$RUNNER_TEMP/ai-writer-package-checks/engine.log"
+          node "$package/scripts/verify-upgrade.mjs" --old "$OLD_PACKAGE" --new "$package" --out "$RUNNER_TEMP/ai-writer-upgrade"
+          cp -R "$RUNNER_TEMP/ai-writer-package-checks" "$RUNNER_TEMP/ai-writer-upgrade/package-checks"
+          cp "$RUNNER_TEMP/ai-writer-upgrade/verification.json" .tmp/release-final/upgrade-verification.json
+          cp .tmp/release-previous/SHA256SUMS.txt "$RUNNER_TEMP/ai-writer-upgrade/old-SHA256SUMS.txt"
+          cp .tmp/release-final/SHA256SUMS.txt "$RUNNER_TEMP/ai-writer-upgrade/package-SHA256SUMS.txt"
+          (cd "$RUNNER_TEMP/ai-writer-upgrade" && zip -q -r "$GITHUB_WORKSPACE/.tmp/release-final/upgrade-evidence.zip" .)
+          (cd .tmp/release-final && sha256sum upgrade-verification.json upgrade-evidence.zip >> SHA256SUMS.txt)
+          cp .tmp/release-final/SHA256SUMS.txt "$RUNNER_TEMP/ai-writer-upgrade/new-SHA256SUMS.txt"
+      - name: Preserve upgrade evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-upgrade-${{ github.ref_name }}
+          path: |
+            ${{ runner.temp }}/ai-writer-upgrade
+            ${{ runner.temp }}/ai-writer-package-checks
+          if-no-files-found: warn
+          include-hidden-files: true
+      - name: Publish validated package without replacing any release
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$GITHUB_REF_NAME" --verify-tag --title "ai-writer ${GITHUB_REF_NAME#v}" --notes-file RELEASE_NOTES.md .tmp/release-final/ai-writer-*.zip .tmp/release-final/SHA256SUMS.txt .tmp/release-final/release-manifest.json .tmp/release-final/RELEASE_NOTES.md .tmp/release-final/upgrade-verification.json .tmp/release-final/upgrade-evidence.zip

@@ -2,6 +2,8 @@
   "format": "ai-writer-distribution@1",
   "description": "Explicit source allowlist; excludes works, acceptance, machine settings and generated output.",
   "files": [
+    { "file": "scripts/verify-upgrade.mjs" },
+    { "file": "tests/source-provenance.test.mjs" },
     { "file": "tests/tool-update-budget.test.mjs" },
     { "file": "lib/relocation.mjs" },
     { "file": "tests/relocation.test.mjs" },
@@ -61,6 +63,12 @@
     },
     {
       "file": ".agents/skills/writer-project/references/long-form.md"
+    },
+    {
+      "file": ".agents/skills/writer-project/references/character-dynamics.md"
+    },
+    {
+      "file": ".agents/skills/writer-project/references/narrative-causality.md"
     },
     {
       "file": ".agents/skills/writer-research/SKILL.md"

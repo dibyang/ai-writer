@@ -11,8 +11,10 @@ description: 审查小说、剧本、历史散文和非虚构的结构、语言�
 
 ## 按文体选择
 
-- novel：先读 `references/general-review.md` 与 `references/natural-language-authenticity.md`；按题材读 suspense、xianxia、historical、transmigration、dual-world；架构问题读 architecture-continuity；动作场面读 action-scene；角色变化读 character-emotion-consistency；心理问题读 psychology-readability；证据动作读 physical-logic-operability。
-- screenplay：检查场次目的、可表演行动、对白潜台词、空间道具连续性、时长估计与改编因果。小说专属内心叙述与章末门槛不强加到剧本。
+小说/剧本的常规全稿审查及创作自检，先在实际阅读范围核对信息路径、情绪后果、场景收益和能力资源四项；局部任务只检查相关项，不扩成无关的全书审查。疑点或专项任务按下文加载共享指引，不因作者未点名新特性而漏检，也不要求固定四栏报告。
+
+- novel：先读 `references/general-review.md` 与 `references/natural-language-authenticity.md`；审查重要人物的性格、语言或行为时读 `references/character-emotion-consistency.md`，对照已确认角色卡与实际正文，区分变化、证据不足和真实冲突。按题材读 suspense、xianxia、historical、transmigration、dual-world；架构问题读 architecture-continuity；动作场面读 action-scene；心理问题读 psychology-readability；证据动作读 physical-logic-operability。
+- screenplay：检查场次目的、可表演行动、对白潜台词、空间道具连续性、时长估计与改编因果。审查人物时按下文“人物底色与指纹”对照已确认角色卡及实际场次，并读 writer-screenplay 的人物指引；核对人物向谁争取什么、对白/行动策略及受阻后的调整。小说专属内心叙述与章末门槛不强加到剧本。
 - history：分别检查史料、自然表达、易懂、人物亲近、叙述声音、散文性与跨章基调。按 writer-history 的事实边界核对引用；不凭未核网页摘要判史实。
 - essay：按作者的结构与声音目标，检查事实、观点、经验之间的边界及表达、节奏、论证。不能用小说追读门槛否定散文。
 
@@ -22,7 +24,17 @@ description: 审查小说、剧本、历史散文和非虚构的结构、语言�
 
 小说的开篇、转场、对白或章末承接专项审查，按需读[小说局部诊断](../writer-novel/references/scene-connections.md)；长篇供给与卷末兑现问题读[长篇方向](../writer-novel/references/story-development.md)。报告保留有效慢热、合作对白与余韵，不把偏好升级为硬伤；未来章未写只核计划，不声称承接已经落实。
 
+小说与剧本的信息投放、情绪承接、场景功能/篇幅或能力资源任务，读[信息、情绪、场景及能力边界](../writer-project/references/narrative-causality.md)：逐项按实际范围核对获知与理解路径、冲突余波、独特场景收益、行动所需技能/工具/权限及代价，给旧文与当前原句，不以计划自证。区分真实因果损害、证据不足、合理留白/压抑/合作与节奏偏好；剧本用表演证据，小说尊重既定视角。删并场景前回查独有线索、人物资产及承接，按授权落实修订。
+
 长章分段合成或纲文偏差问题读[长章展开与纲文回对](../writer-novel/references/chapter-delivery.md)：以实际正文逐项回查有效细纲，允许多对多及合理调整；缺证不补造映射，计划变化不冒充原稿已落实。判断写进本次报告，继续复用既有修订和意见闭环。
+
+## 人物底色与指纹
+
+小说或剧本涉及人物、关系、群像及跨单元接续时，读[人物、关系及状态接续](../writer-project/references/character-dynamics.md)，按实际范围核对六项并给原文证据，明确不适用和未覆盖项；不将规划或候选当作已发生事实。
+
+审查相关人物时查阅已确认角色卡及被比较的实际正文，核对欲望、底线、习惯判断、关系中的说话和行动。候选与待定不是已确认事实；指出偏移时给角色卡或早期正文依据、当前原句与处境及实际影响，并核查信息、关系和压力变化能否解释。一次反常、有意伪装或成长不自动判错；证据不足明确待核。不要机械要求口头禅、固定动作或每章重复特征。
+
+剧本以实际可见、可听、可表演的证据判断，检查潜台词是否由对白、行动及上下文支持；不能凭作者说明中的心理宣称观众已经理解，也不为证明性格强加内心独白。可以保留有效沉默、合作对白和不同人物的合理相同行动。人物偏移与单纯表演提示不足分开报告；没有足够证据时不自行补造背景或动机。
 
 ## 报告
 

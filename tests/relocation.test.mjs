@@ -3,9 +3,9 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {spawnSync} from 'node:child_process';
-import {main} from '../lib/workspace.mjs';
+import {main,initProject} from '../lib/workspace.mjs';
 import {writeBuildManifest} from '../lib/tool-build.mjs';
-import {fixture,ROOT,file,state,sha,call,evidence,review,workflow,begin,rewindBranch,prepare,commit} from './protection-fixture.mjs';
+import {fixture,ROOT,file,state,sha,call,evidence,review,workflow,begin,rewindBranch,prepare,commit,unit} from './protection-fixture.mjs';
 function spec(root){return {mapping:state(root).units.map(u=>({unit:u.unit,from:u.draft,to:`正文/V1-旧卷/${path.basename(u.draft)}`,sha256:u.sha256})),directories:[{volume_id:'V1',directory:'正文/V1-旧卷',from:1,to:10}]};}
 function request(root){return {...call(root,'draft','relocate-plan',spec(root)).request,author_evidence:evidence(root)};}
 function fault(root,input,env){const f=file(root,'.writer/relocation-input.json',input);return spawnSync(process.execPath,[path.join(ROOT,'bin/ai-writer.mjs'),'draft','relocate','--project',root,'--input',f],{encoding:'utf8',windowsHide:true,env:{...process.env,AI_WRITER_TEST_FAULT:'1',...env}});}
@@ -89,6 +89,15 @@ test('意见先采用再迁移修订，提交后再次迁移，仍按真实变�
   call(root,'review-issues','acknowledge',{expected_revision:state(root).revision,operation_id:'move-ack',id:'I_ACK',commit_id:proof.id,target_units:[2],reason:'合成补登记',decision_actor:'agent-within-authorized-scope',authorization:state(root).governance_binding});
   const r=structured([]);for(const id of ['I_MOVE','I_ACK'])call(root,'review-issues','verify',{expected_revision:state(root).revision,operation_id:`move-verify-${id}`,id,review_ref:r.ref,reviewer:'synthetic',conclusion:'resolved',reason:'合成流程复核'});
   assert.equal(call(root,'review-issues','list').counts.verified,2);assert.equal(main(['check','--project',root]).ok,true);
+});
+test('主稿路径合法时生成的深层修订区不误触迁移路径长度限制',t=>{
+  const {dir}=fixture(t,0),root=path.join(dir,'p'.repeat(Math.max(1,210-dir.length-1)));
+  initProject(root,'novel','长路径合成验证');file(root,'研究/验证授权.md','允许独立验证作品在规定范围内试写、修订、版本发布和中断恢复。');workflow(root);unit(root,1);
+  call(root,'draft','relocate',request(root));workflow(root,true);const branch=begin(root),ref=state(root).units[0].draft;
+  assert.ok(path.join(root,ref).length<=240);assert.ok(path.join(branch.workspace,ref).length>240);
+  rewindBranch(branch);const input=main(['revision','replay-input','--project',branch.workspace,'--unit','1','--revision-token',branch.token]),report='审查/长路径重登.md';file(branch.workspace,report,'# 合成复核\n正文未改，摘要与铜片交接、阿禾位置、时间线、保管人与原文引文一致；没有后章。仅验证路径和协议。');input.replay_review={reviewer:'synthetic',report,draft_sha256:sha(fs.readFileSync(path.join(branch.workspace,ref))),checked_fields:['summary','characters','timeline','ledger','evidence','downstream']};call(branch.workspace,'record',null,input,branch.token);
+  review(branch);prepare(root,branch);commit(root,branch);assert.equal(main(['check','--project',root]).ok,true);
+  const oversized=spec(root);oversized.mapping[0].to='正文/V1-旧卷/'+'z'.repeat(80)+'.md';assert.throws(()=>call(root,'draft','relocate-plan',oversized),e=>e.code==='RELOCATION_UNSAFE_PATH');
 });
 test('迁移不追认手工替换后的安装构建，恢复拒绝中断期间工具改动',t=>{
   const {root}=fixture(t,2),p=call(root,'tool','update-plan',{source:ROOT,validation_mode:'in-place-readonly'});call(root,'tool','update',{...p.request,author_evidence:evidence(root)});

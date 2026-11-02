@@ -25,6 +25,10 @@ description: 在 Codex 中初始化或恢复作品，组织小说、剧本、历
 
 ## 单元写作与登记
 
+小说/剧本的人物、关系与跨章/场/集状态任务按需读[人物、关系及状态接续](references/character-dynamics.md)。以角色卡保存倾向，以既有 characters/timeline/ledger 保存实际变化；写前核对 context 的召回范围，写后核实关键状态能进入下一单元。
+
+涉及信息投放、情绪余波、场景功能或人物能力资源时，按需读[信息、情绪、场景及能力边界](references/narrative-causality.md)。复用计划与同一份状态登记，核对“谁如何知道、发生后怎样影响选择、场景提供什么、当时能否做到”，不新增事实权威或自动迁移现有作品。
+
 1. 小说按章、剧本按场/集、历史散文按章、散文按篇；先读对应 writer 技能。
 2. `plan --input` 保存 unit/title/goal/change/beats，可带 cast/setting_refs/research_refs/forbidden。路径用作品内正斜杠相对路径。需要的大纲、角色卡与规则显式列入引用；默认 context 不自动整读全书大纲。
 3. `context --unit N` 读取设定、当前状态、最近摘要、前章结尾和研究；召回摘要不能代替相关旧原文。预算超限按相关性拆分或显式扩容，不静默截断。
