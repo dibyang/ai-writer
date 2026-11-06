@@ -6,9 +6,9 @@ import {spawnSync} from 'node:child_process';
 import {currentProtocol} from '../lib/tool-build.mjs';
 import {fixture,ROOT} from './protection-fixture.mjs';
 
-test('0.11沿用受管资源协议，旧0.7至0.10兼容；随附诊断不回退到根作者资源',t=>{
-  for(const version of ['0.7.6','0.8.0','0.9.0','0.10.0','0.10.1','0.11.0','0.11.1'])assert.equal(currentProtocol(version),true);
-  for(const version of ['0.6.0','0.12.0','1.0.0'])assert.equal(currentProtocol(version),false);
+test('0.12沿用受管资源协议，旧0.7至0.11兼容；随附诊断不回退到根作者资源',t=>{
+  for(const version of ['0.7.6','0.8.0','0.9.0','0.10.0','0.10.1','0.11.0','0.11.1','0.12.0'])assert.equal(currentProtocol(version),true);
+  for(const version of ['0.6.0','0.13.0','1.0.0'])assert.equal(currentProtocol(version),false);
   const {root}=fixture(t,0),entry=path.join(root,'.writer/tool/bin/ai-writer.mjs');
   fs.unlinkSync(path.join(root,'docs/user-guide.md'));
   const run=(args,tool=entry)=>{const r=spawnSync(process.execPath,[tool,...args],{cwd:root,encoding:'utf8',windowsHide:true});return {r,value:args.includes('doctor')?JSON.parse(r.stdout):r.stdout};};

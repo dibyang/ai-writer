@@ -35,7 +35,7 @@ test('发行版本拒绝未来协议、路径字符和未知资源配置，拒�
   fs.mkdirSync(path.join(ROOT,'.tmp'),{recursive:true});const dir=fs.mkdtempSync(path.join(ROOT,'.tmp/release-version-'));
   t.after(async()=>{assert.equal(path.dirname(fs.realpathSync(dir)),fs.realpathSync(path.join(ROOT,'.tmp')));await fs.promises.rm(dir,{recursive:true,force:true,maxRetries:12,retryDelay:150});});
   const out=path.join(dir,'output');
-  for(const [version,resourceProfile] of [['0.12.0','apache-2.0-v1'],['0.11.0/../../escape','apache-2.0-v1'],['0.11.0-rc.1','apache-2.0-v1'],['0.11.0','unknown']]){
+  for(const [version,resourceProfile] of [['0.13.0','apache-2.0-v1'],['0.11.0/../../escape','apache-2.0-v1'],['0.11.0-rc.1','apache-2.0-v1'],['0.11.0','unknown']]){
     fs.writeFileSync(path.join(dir,'package.json'),JSON.stringify({version,aiWriter:{resourceProfile}}));
     assert.throws(()=>buildRelease({root:dir,out}),/Expected a supported/);assert.equal(fs.existsSync(out),false);
   }

@@ -1,10 +1,10 @@
-# ai-writer 0.11.0
+# ai-writer 0.12.0
 
 面向Codex的中文创作工具，支持小说、剧本、历史散文、散文与一般非虚构。作品保存在本地，支持长篇分卷、跨会话恢复、设定版本、保护修订、意见闭环和草稿导出。
 
 ## 开始使用
 
-需要Codex和Node.js 20或更高版本，无须安装npm依赖。解压到新目录，在Codex中打开本目录，先运行：
+本版支持范围为 Windows 和 Linux；macOS 暂不纳入本版支持与验收范围。需要Codex和Node.js 20或更高版本，无须安装npm依赖。解压到新目录，在Codex中打开本目录，先运行：
 
 ```powershell
 node bin/ai-writer.mjs doctor
@@ -16,9 +16,15 @@ node bin/ai-writer.mjs doctor
 
 [快速入门](docs/quickstart.md)介绍完整第一章流程，[使用手册](docs/user-guide.md)提供日常任务入口。长篇见[长篇流程](docs/long-form.md)，版本与修订见[专项手册](docs/revision-and-sources.md)，更新旧作品见[工具更新](docs/tool-updates.md)。
 
+## 本版新增
+
+新增[只读材料准备](docs/material-view.md)，把当前上下文与登记模板合并返回。既有创作、修订、导入和保存仍走原生流程，保留授权、来源校验和中断恢复。
+
+自动备份和自动升级准备保持关闭；协调器实验不随本包交付，也不是使用普通写作功能的前提。更新仍按[工具更新手册](docs/tool-updates.md)执行；不要把只读材料当作备份。平台与验证范围以随附验收记录为准。
+
 ## 版本与更新
 
-本包版本为[0.11.0](https://github.com/dibyang/ai-writer/releases/tag/v0.11.0)。资源配置为`apache-2.0-v1`；`build-manifest.json`记录受管内容ID，`RELEASE-MANIFEST.json`记录包内文件哈希。沿用现有状态和受管资源协议，兼容完整0.7–0.11来源。更新已有作品前先备份、比较构建、生成更新计划，保留作者规则与定制；不要覆盖作品目录。根技能和手册可能保留旧版或作者定制，更新后的doctor/help会指向当前包内资源。
+本包版本为 0.12.0；[0.11.0](https://github.com/dibyang/ai-writer/releases/tag/v0.11.0) 是此前正式版。资源配置为`apache-2.0-v1`；`build-manifest.json`记录受管内容ID，`RELEASE-MANIFEST.json`记录包内文件哈希。沿用现有状态和受管资源协议，兼容完整0.7–0.11来源。更新已有作品前先备份、比较构建、生成更新计划，保留作者规则与定制；不要覆盖作品目录。根技能和手册可能保留旧版或作者定制，更新后的doctor/help会指向当前包内资源。
 
 [发行说明](RELEASE_NOTES.md)和[更新记录](CHANGELOG.md)介绍能力与边界。历史正式版v0.8.0保留，历史内部同号候选及0.8.1另有独立内容身份。机械检查不代替实读、真人阅读或作者定稿；导出仍为草稿。
 
